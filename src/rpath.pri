@@ -6,6 +6,11 @@ macx {
     QMAKE_RPATHDIR += \$\$ORIGIN
     QMAKE_RPATHDIR += \$\$ORIGIN/..
     QMAKE_RPATHDIR += \$\$ORIGIN/../$$IDE_LIBRARY_BASENAME/qtcreator
+#OPENMV-DIFF#
+# Padding is needed to facilitate chrpath for the longer paths involved with
+# cross-compiled targets (see qt-creator/scripts/common.py):
+    QMAKE_RPATHDIR += ______________________________PADDING______________________________
+#OPENMV-DIFF#
     IDE_PLUGIN_RPATH = $$join(QMAKE_RPATHDIR, ":")
 
     QMAKE_LFLAGS += -Wl,-z,origin \'-Wl,-rpath,$${IDE_PLUGIN_RPATH}\'

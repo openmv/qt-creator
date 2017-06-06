@@ -116,6 +116,13 @@ def fix_rpaths(path, qt_deploy_path, qt_install_info, chrpath=None):
         chrpath = 'chrpath'
     qt_install_prefix = qt_install_info['QT_INSTALL_PREFIX']
     qt_install_libs = qt_install_info['QT_INSTALL_LIBS']
+    #OPENMV-DIFF#
+    qt_sysroot = qt_install_info['QT_SYSROOT']
+    if len(qt_sysroot) > 0:
+        qt_install_libs_dev = qt_install_info['QT_INSTALL_LIBS/dev']
+    else:
+        qt_install_libs_dev = qt_install_libs
+    #OPENMV-DIFF#
 
     def fix_rpaths_helper(filepath):
         rpath = get_rpath(filepath, chrpath)
@@ -126,12 +133,26 @@ def fix_rpaths(path, qt_deploy_path, qt_install_info, chrpath=None):
         #new_rpath = filter(lambda path: not path.startswith(qt_install_prefix) and not path.startswith(qt_install_libs),
         #                   rpath)
         #OPENMV-DIFF#
-        new_rpath = filter(lambda path: not path.startswith(qt_install_prefix) and not path.startswith(qt_install_libs) and not '______________________________PADDING______________________________' in path,
+        new_rpath = filter(lambda path: not path.startswith(qt_install_prefix) and not path.startswith(qt_install_libs) and not path.startswith(qt_install_libs_dev) and not '______________________________PADDING______________________________' in path,
                            rpath)
         #OPENMV-DIFF#
 
         # check for Qt linking
-        lddOutput = subprocess.check_output(['ldd', filepath])
+        #OPENMV-DIFF#
+        #lddOutput = subprocess.check_output(['ldd', filepath])
+        #OPENMV-DIFF#
+        if len(qt_sysroot) > 0:
+            # This is a hack for cross-compiling since calling 'ldd' doesn't work
+            #   as it must be prefixed with the cross-compiler name/path and that
+            #   information isn't normally available in "qmake -query".  So if the
+            #   sysroot is set (which is available), assume that we are cross-compiling
+            #   and will be needing libQt5 to take the correct path below and set
+            #   rpath correctly:
+            lddOutput = 'libQt5'
+        else:
+            lddOutput = subprocess.check_output(['ldd', filepath])
+        #OPENMV-DIFF#
+
         if lddOutput.find('libQt5') >= 0 or lddOutput.find('libicu') >= 0:
             # add Qt RPATH if necessary
             relative_path = os.path.relpath(qt_deploy_path, os.path.dirname(filepath))
