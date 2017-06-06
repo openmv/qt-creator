@@ -13,9 +13,20 @@ defineReplace(prependAll) {
 }
 
 XMLPATTERNS = $$shell_path($$[QT_INSTALL_BINS]/xmlpatterns)
-LUPDATE = $$shell_path($$[QT_INSTALL_BINS]/lupdate) -locations relative -no-ui-lines -no-sort
-LRELEASE = $$shell_path($$[QT_INSTALL_BINS]/lrelease)
-LCONVERT = $$shell_path($$[QT_INSTALL_BINS]/lconvert)
+#OPENMV-DIFF#
+# Note: while this is technically a difference specific to OPENMV to support
+# cross-compiling, it's broken in the original QtCreator code and I will be
+# submitting it to Qt as a patch since the translation tools for building
+# translations should always be found on the host system's bin path, not the
+# target system's install path:
+#LUPDATE = $$shell_path($$[QT_INSTALL_BINS]/lupdate) -locations relative -no-ui-lines -no-sort
+#LRELEASE = $$shell_path($$[QT_INSTALL_BINS]/lrelease)
+#LCONVERT = $$shell_path($$[QT_INSTALL_BINS]/lconvert)
+#OPENMV-DIFF#
+LUPDATE = $$shell_path($$[QT_HOST_BINS]/lupdate) -locations relative -no-ui-lines -no-sort
+LRELEASE = $$shell_path($$[QT_HOST_BINS]/lrelease)
+LCONVERT = $$shell_path($$[QT_HOST_BINS]/lconvert)
+#OPENMV-DIFF#
 
 wd = $$replace(IDE_SOURCE_TREE, /, $$QMAKE_DIR_SEP)
 
