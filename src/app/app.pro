@@ -8,6 +8,10 @@ DESTDIR = $$IDE_APP_PATH
 VERSION = $$QTCREATOR_VERSION
 QT -= testlib
 
+#OPENMV-DIFF#
+QT += qml
+#OPENMV-DIFF#
+
 HEADERS += ../tools/qtcreatorcrashhandler/crashhandlersetup.h
 SOURCES += main.cpp ../tools/qtcreatorcrashhandler/crashhandlersetup.cpp
 
