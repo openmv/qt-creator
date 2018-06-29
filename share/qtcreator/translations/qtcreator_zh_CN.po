@@ -7867,7 +7867,7 @@ msgstr ""
 
 #~ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 #~ msgid "<br/><p>OpenMV IDE English translation by Kwabena W. Agyeman.</p>"
-#~ msgstr "<br/><p>袁旭的OpenMV IDE中文翻译.</p>"
+#~ msgstr "<br/><p>星瞳科技SingTown的OpenMV IDE中文翻译.</p>"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:978
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2683
@@ -7930,12 +7930,12 @@ msgstr "开始(运行脚本)"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:969
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "<p><b>Credits</b></p>"
-msgstr "<p><b>积分</b></p>"
+msgstr "<p><b>致谢</b></p>"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:970
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "<p>OpenMV IDE English translation by Kwabena W. Agyeman.</p>"
-msgstr "<p>袁旭的OpenMV IDE中文翻译.</p>"
+msgstr "<p>星瞳科技SingTown的OpenMV IDE中文翻译.</p>"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1014
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
