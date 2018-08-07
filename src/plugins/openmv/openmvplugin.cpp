@@ -1611,7 +1611,7 @@ bool OpenMVPlugin::delayedInitialize()
             QHostAddress address;
             quint16 port;
 
-            if((socket->readDatagram(datagram.data(), datagram.size(), &address, &port) == datagram.size()) && (port == OPENMVCAM_BROADCAST_PORT))
+            if((socket->readDatagram(datagram.data(), datagram.size(), &address, &port) == datagram.size()) && datagram.endsWith('\0') && (port == OPENMVCAM_BROADCAST_PORT))
             {
                 QRegularExpressionMatch match = QRegularExpression(QStringLiteral("^(\\d+\\.\\d+\\.\\d+\\.\\d+):(\\d+):(.+)$")).match(QString::fromUtf8(datagram).trimmed());
 
@@ -1622,13 +1622,13 @@ bool OpenMVPlugin::delayedInitialize()
                     quint16 hostPort = match.captured(2).toUInt(&hostPortOk);
                     QString hostName = match.captured(3).remove(QLatin1Char(':'));
 
-                    if((address == hostAddress) && hostPortOk && (!hostName.isEmpty()))
+                    if((address.toIPv4Address() == hostAddress.toIPv4Address()) && hostPortOk && (!hostName.isEmpty()))
                     {
                         wifiPort_t wifiPort;
                         wifiPort.addressAndPort = QString(QStringLiteral("%1:%2")).arg(hostAddress.toString()).arg(hostPort);
                         wifiPort.name = hostName;
                         wifiPort.time = QTime::currentTime();
-                        m_availableWifiPorts.append(wifiPort);
+                        if(!m_availableWifiPorts.contains(wifiPort)) m_availableWifiPorts.append(wifiPort);
                     }
                 }
             }
@@ -2705,7 +2705,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             stringList = stringList.filter(QStringLiteral("cu"), Qt::CaseInsensitive);
         }
 
-        foreach(wifiPort_t port, m_availableWifiPorts)
+        if(!forceBootloader) foreach(wifiPort_t port, m_availableWifiPorts)
         {
             stringList.append(QString(QStringLiteral("%1:%2")).arg(port.name).arg(port.addressAndPort));
         }

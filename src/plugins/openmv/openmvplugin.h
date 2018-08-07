@@ -308,13 +308,19 @@ private:
 
     ///////////////////////////////////////////////////////////////////////////
 
-    typedef struct wifiPort
+    class wifiPort_t
     {
+        public:
+
         QString addressAndPort;
         QString name;
         QTime time;
-    }
-    wifiPort_t;
+
+        bool operator ==(const wifiPort_t &port) const
+        {
+            return (addressAndPort == port.addressAndPort) && (name == port.name);
+        }
+    };
 
     QList<wifiPort_t> m_availableWifiPorts;
 
