@@ -25,7 +25,7 @@ msgstr "Kompatible Version:"
 #: ../../../src/libs/extensionsystem/plugindetailsview.ui:-1
 msgctxt "ExtensionSystem::Internal::PluginDetailsView|"
 msgid "Dependencies:"
-msgstr "Abhängigkeiten"
+msgstr "Abhängigkeiten:"
 
 #: ../../../src/libs/extensionsystem/plugindetailsview.ui:-1
 msgctxt "ExtensionSystem::Internal::PluginDetailsView|"
@@ -70,7 +70,7 @@ msgstr "Lizenz:"
 #: ../../../src/libs/extensionsystem/pluginerroroverview.ui:-1
 msgctxt "ExtensionSystem::Internal::PluginErrorOverview|"
 msgid "Qt Creator - Plugin loader messages"
-msgstr "Qt Creator - Plugin-Lader Nachrichten"
+msgstr "Qt Creator - Plugin loader Nachrichten"
 
 #: ../../../src/libs/extensionsystem/pluginerroroverview.ui:-1
 msgctxt "ExtensionSystem::Internal::PluginErrorOverview|"
@@ -2198,7 +2198,7 @@ msgstr "Board Name"
 #: ../../../src/plugins/openmv/openmvcamerasettings.ui:-1
 msgctxt "OpenMVCameraSettings|"
 msgid "Please enter a name for your OpenMV Cam here"
-msgstr "Bitte geben Sie hier einen Namen für Ihre OpenMV-Cam ein"
+msgstr "Bitte geben Sie hier einen Namen für Ihre OpenMV Cam ein"
 
 #: ../../../src/plugins/openmv/openmvcamerasettings.ui:-1
 msgctxt "OpenMVCameraSettings|"
@@ -8476,7 +8476,7 @@ msgstr ""
 "\n"
 "Versuchen Sie Folgendes:\n"
 "\n"
-"Übernehmen Sie User %L1 Dialout\n"
+"sudo adduser %L1 dialout\n"
 "\n"
 " ... in einem Terminal und starten Sie Ihren Computer neu."
 
@@ -8546,7 +8546,7 @@ msgstr "TCP-Clientverbindung - %1:%2"
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Invalid port argument (%1) for -open_tcp_client_terminal"
-msgstr "Ungültiges Port-Argument (%1) für -open_tcp_client_terminal"
+msgstr "Ungültiger Port (%1) für -open_tcp_client_terminal"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2064
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8591,8 +8591,8 @@ msgid ""
 "\n"
 "Would you like to register your OpenMV Cam now?"
 msgstr ""
-"Deine OpenMV Cam ist nicht registriert. Sie müssen Ihre OpenMV Cam mit "
-"OpenMV für unbegrenzte Verwendung mit OpenMV IDE ohne Unterbrechungen "
+"Ihre OpenMV Cam ist nicht registriert. Für unbegrenzte und untebrechungsfreie
+Verwendung mit OpenMV IDE müssen Sie Ihre OpenMV Cam "
 "registrieren.\n"
 "\n"
 "Möchten Sie Ihre OpenMV Cam jetzt registrieren?"
@@ -8606,9 +8606,9 @@ msgid ""
 "\n"
 "Would you like to register your OpenMV Cam now?"
 msgstr ""
-"Nicht registrierte OpenMV Cams schaden dem Open-Source-OpenMV-Ecosystem, "
-"indem sie die OpenMV Cam-Verkäufe unterbieten, was die OpenMV "
-"Cam-Softwareentwicklung unterstützt.\n"
+"Nicht registrierte OpenMV Cams schaden dem quelloffenen OpenMV-Ökosystem, "
+"indem sie die OpenMV Cam Verkäufe untergraben, durch welche die OpenMV "
+"Cam-Softwareentwicklung unterstützt wird.\n"
 "\n"
 "Möchten Sie Ihre OpenMV Cam jetzt registrieren?"
 
@@ -8620,7 +8620,7 @@ msgid ""
 "\n"
 "Would you like to register your OpenMV Cam now?"
 msgstr ""
-"OpenMV IDE zeigt diese drei Meldungsfelder bei jedem Verbindungsaufbau an, "
+"OpenMV IDE zeigt diese drei Meldungen bei jedem Verbindungsaufbau an, "
 "bis Sie Ihre OpenMV Cam registrieren ...\n"
 "\n"
 "Möchten Sie Ihre OpenMV Cam jetzt registrieren?"
@@ -8637,7 +8637,7 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2352
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Register OpenMV Cam"
-msgstr "Registrieren Sie OpenMV Cam"
+msgstr "Registrieren Sie Ihre OpenMV Cam"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2221
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8646,9 +8646,9 @@ msgid ""
 "have a board key you may purchase one from OpenMV <a "
 "href=\"https://openmv.io/products/openmv-cam-board-key\">here</a>."
 msgstr ""
-"Bitte geben Sie einen Boardschlüssel ein, um Ihre OpenMV Cam zu "
-"registrieren.<br/><br/>Wenn Sie keinen Boardschlüssel haben, können Sie "
-"einen von OpenMV erwerben <a href =\"https://openmv.io/products/openmv "
+"Bitte geben Sie einen board key ein, um Ihre OpenMV Cam zu "
+"registrieren.<br/><br/>Wenn Sie keinen board key haben, können Sie "
+"diesen von OpenMV erwerben <a href =\"https://openmv.io/products/openmv "
 "-cam-board-key\">hier</a>."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2268
@@ -8664,7 +8664,7 @@ msgstr "Vielen Dank für die Registrierung Ihrer OpenMV Cam!"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2307
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Invalid Board Key!"
-msgstr "Ungültiger Boardschlüssel!"
+msgstr "Ungültiger Board Key!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2313
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8702,7 +8702,7 @@ msgid ""
 "New OpenMV IDE reources are available (e.g. examples, firmware, "
 "documentation, etc.)."
 msgstr ""
-"Neue OpenMV IDE-Ressourcen sind verfügbar (zB Beispiele, Firmware, "
+"Neue OpenMV IDE-Ressourcen sind verfügbar (z.B. Beispiele, Firmware, "
 "Dokumentation, etc.)."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2429
@@ -8761,18 +8761,18 @@ msgstr "Firmware-Pfad"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2572
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Firmware Binary (*.bin *.dfu)"
-msgstr "Firmware Binär (*.bin *.dfu)"
+msgstr "Firmware Binary (*.bin *.dfu)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2582
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2586
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Erase internal file system"
-msgstr "Löschen Sie das interne Dateisystem"
+msgstr "Lösche das interne Dateisystem"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2593
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Run"
-msgstr "Lauf"
+msgstr "Run"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2637
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8787,7 +8787,7 @@ msgstr "Keine OpenMV Cams gefunden!"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2767
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Do you have an OpenMV Cam connected and is it bricked?"
-msgstr "Hast du eine OpenMV Cam angeschlossen und ist sie gemauert?"
+msgstr "Hast du eine OpenMV Cam angeschlossen und ist sie bricked?"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2775
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8799,7 +8799,7 @@ msgstr "Bitte wählen Sie den Kartentyp aus"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4451
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Erase the internal file system?"
-msgstr "Löschen Sie das interne Dateisystem?"
+msgstr "Internes Filesystem löschen?"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2817
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4626
@@ -8846,7 +8846,7 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2953
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Try to connect again?"
-msgstr "Versuchen Sie sich erneut zu verbinden?"
+msgstr "Erneut verbinden?"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3048
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8857,7 +8857,7 @@ msgstr "Nicht unterstützte Board-Architektur!"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3620
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Timeout error while getting board architecture!"
-msgstr "Timeout-Fehler bei der Board-Architektur!"
+msgstr "Timeout-Fehler während Abruf der Board-Architektur!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3130
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8902,13 +8902,13 @@ msgstr "Löschen ..."
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3339
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Timeout Error!"
-msgstr "Zeitüberschreitung Fehler!"
+msgstr "Zeitüberschreitung!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3300
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3347
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Programming..."
-msgstr "Programmieren"
+msgstr "Programmiert..."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3369
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8921,7 +8921,7 @@ msgstr ""
 "Fertig mit der Aktualisierung der OpenMV Cam-Firmware!\n"
 "\n"
 "Klicke auf die OK-Schaltfläche, nachdem deine OpenMV-Kamera den integrierten "
-"Selbsttest ausgeführt und ausgeführt hat (blaue LED blinkt - das dauert eine "
+"Selbsttest ausgeführt hat (blaue LED blinkt - das dauert eine "
 "Weile)."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3394
@@ -8948,7 +8948,7 @@ msgid ""
 "\n"
 "Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated."
 msgstr ""
-"Trennen Sie Ihre OpenMV Cam von Ihrem Computer, fügen Sie eine "
+"Trennen Sie Ihre OpenMV Cam von Ihrem Computer, fügen Sie ein "
 "Überbrückungskabel zwischen den BOOT- und RST-Pins hinzu und schließen Sie "
 "Ihre OpenMV Cam erneut an Ihren Computer an.\n"
 "\n"
@@ -8995,7 +8995,7 @@ msgid ""
 "running its built-in self test (blue led blinking - this takes a while)."
 msgstr ""
 "Klicken Sie auf die Schaltfläche OK, nachdem Ihre OpenMV-Kamera den "
-"integrierten Selbsttest ausgeführt und ausgeführt hat (blaue LED blinkt - "
+"integrierten Selbsttest ausgeführt hat (blaue LED blinkt - "
 "dies dauert eine Weile)."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3511
@@ -9019,12 +9019,12 @@ msgstr ""
 "PyDFU erfordert die Installation folgender Bibliotheken:\n"
 "\n"
 "MacPorts:\n"
-"sudo portinstallations libusb py-pip\n"
+"sudo port install libusb py-pip\n"
 "sudo pip install pyusb\n"
 "\n"
 "HomeBrew:\n"
-"sudo brauen install libusb python\n"
-"sudo pip installieren pyusb"
+"sudo brew install libusb python\n"
+"sudo pip install pyusb"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3537
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9036,8 +9036,8 @@ msgid ""
 msgstr ""
 "PyDFU benötigt die folgenden Bibliotheken installiert werden:\n"
 "\n"
-"sudo apt-get installieren libusb-1.0 python-pip\n"
-"sudo pip installieren pyusb"
+"sudo apt-get install libusb-1.0 python-pip\n"
+"sudo pip install pyusb"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3653
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9077,7 +9077,7 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3745
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid " - [ latest ]"
-msgstr " - [ Neuerster ]"
+msgstr " - [ latest ]"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3796
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3820
@@ -9099,7 +9099,7 @@ msgstr "Start"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4125
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Configure Settings"
-msgstr "Einstellungen konfigurieren"
+msgstr "Einstellungen"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4135
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4157
@@ -9118,7 +9118,7 @@ msgstr "Kommentare entfernen und Leerzeichen in Tabs konvertieren?"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4204
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Save Image"
-msgstr "BILDSPEICHERUNG"
+msgstr "Bild speichern"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4193
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5379
@@ -9171,7 +9171,7 @@ msgstr "Deskriptor speichern"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5564
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Keypoints Files (*.lbp *.orb)"
-msgstr "Schlüsselpunkte Dateien (*.lbp *.orb)"
+msgstr "Keypoint Dateien (*.lbp *.orb)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4363
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4370
@@ -9187,7 +9187,7 @@ msgstr "Beispiel öffnen"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4383
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Open File"
-msgstr "Öffnen Sie die Datei"
+msgstr "Datei öffnen"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4364
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4377
@@ -9218,7 +9218,7 @@ msgstr "Firmware aktualisieren"
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Update your OpenMV Cam's firmware to the latest version?"
 msgstr ""
-"Aktualisieren Sie die Firmware Ihrer OpenMV Cam auf die neueste Version?"
+"Wollen sie die Firmware Ihrer OpenMV Cam auf die neueste Version updaten?"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4441
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9243,12 +9243,12 @@ msgstr "Firmware.txt kann nicht geöffnet werden!"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4574
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Select Drive"
-msgstr "Wählen Sie Laufwerk"
+msgstr "Laufwerk wählen"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4523
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No valid drives were found to associate with your OpenMV Cam!"
-msgstr "Es wurden keine gültigen Laufwerke mit Ihrer OpenMV Cam gefunden!"
+msgstr "Es wurden keine gültigen Laufwerke gefunden, die mit Ihrer OpenMV Cam assoziert sind!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4534
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
