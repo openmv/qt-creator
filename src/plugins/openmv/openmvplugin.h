@@ -130,7 +130,7 @@
 #define GET_TX_BUFFER_SPACING       5 // in ms
 
 #define FPS_AVERAGE_BUFFER_DEPTH    100 // in samples
-#define WIFI_PORT_RETIRE            60 // in seconds
+#define WIFI_PORT_RETIRE            10 // in seconds
 #define ERROR_FILTER_MAX_SIZE       1000 // in chars
 #define FPS_TIMER_EXPIRATION_TIME   2000 // in milliseconds
 
