@@ -106,7 +106,7 @@ void OpenMVCameraSettings::accept()
     m_settings->setValue(QStringLiteral(ACCESS_POINT_MODE_PASS), m_ui->accessPointModePasswordEntry->text().left(64));
     m_settings->setValue(QStringLiteral(ACCESS_POINT_MODE_TYPE), m_ui->accessPointModeTypeEntry->currentIndex() ? 3 : 1);
     m_settings->setValue(QStringLiteral(ACESSS_POINT_MODE_CHANNEL), m_settings->value(QStringLiteral(ACESSS_POINT_MODE_CHANNEL), 2).toInt());
-    m_settings->setValue(QStringLiteral(BOARD_NAME), m_ui->boardNameEntry->text().left(32));
+    m_settings->setValue(QStringLiteral(BOARD_NAME), m_ui->boardNameEntry->text().left(32).isEmpty() ? QStringLiteral("OpenMV Cam") : m_ui->boardNameEntry->text().left(32));
     m_settings->endGroup();
 
     QDialog::accept();
