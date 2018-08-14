@@ -64,6 +64,10 @@
 #define ICON_PATH ":/openmv/openmv-media/icons/openmv-icon/openmv.png"
 #define SPLASH_PATH ":/openmv/openmv-media/splash/openmv-splash-slate/splash-small.png"
 #define CONNECT_PATH ":/openmv/images/connect.png"
+#define CONNECT_USB_PATH ":/openmv/images/connect-usb.png"
+#define CONNECT_WIFI_PATH ":/openmv/images/connect-wifi.png"
+#define CONNECT_USB_WIFI_PATH ":/openmv/images/connect-usb-wifi.png"
+#define CONNECT_USB_WIFI_PATH_2 ":/openmv/images/connect-usb-wifi.xcf"
 #define DISCONNECT_PATH ":/openmv/images/disconnect.png"
 #define START_PATH ":/openmv/projectexplorer/images/run.png"
 #define STOP_PATH ":/openmv/images/application-exit.png"
@@ -130,7 +134,7 @@
 #define GET_TX_BUFFER_SPACING       5 // in ms
 
 #define FPS_AVERAGE_BUFFER_DEPTH    100 // in samples
-#define WIFI_PORT_RETIRE            60 // in seconds
+#define WIFI_PORT_RETIRE            20 // in seconds
 #define ERROR_FILTER_MAX_SIZE       1000 // in chars
 #define FPS_TIMER_EXPIRATION_TIME   2000 // in milliseconds
 

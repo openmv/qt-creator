@@ -1648,6 +1648,32 @@ bool OpenMVPlugin::delayedInitialize()
                 i.remove();
             }
         }
+
+        bool ok = false;
+
+        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+        {
+            if(port.hasVendorIdentifier() && (port.vendorIdentifier() == OPENMVCAM_VID)
+            && port.hasProductIdentifier() && (port.productIdentifier() == OPENMVCAM_PID))
+            {
+                ok = true;
+                break;
+            }
+        }
+
+        if(!ok) {
+            if(!m_availableWifiPorts.isEmpty()) {
+                m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_WIFI_PATH)));
+            } else {
+                m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_PATH)));
+            }
+        } else {
+            if(!m_availableWifiPorts.isEmpty()) {
+                m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_USB_WIFI_PATH)));
+            } else {
+                m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_USB_PATH)));
+            }
+        }
     });
 
     if(socket->bind(OPENMVCAM_BROADCAST_PORT))

@@ -142,7 +142,7 @@ bool OpenMVPluginSerialPort_thing::open(QIODevice::OpenMode mode)
         }
 
         m_tcpSocket->connectToHost(hostName, portNumber, mode);
-        return m_tcpSocket->waitForConnected();
+        return m_tcpSocket->waitForConnected(3000);
     }
 
     return bool();
