@@ -164,6 +164,8 @@ public:
 
     bool waitForReadyRead(int msecs);
     bool waitForBytesWritten(int msecs);
+    bool setDataTerminalReady(bool set);
+    bool setRequestToSend(bool set);
 
 private:
 

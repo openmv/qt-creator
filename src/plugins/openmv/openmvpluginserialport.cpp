@@ -276,6 +276,36 @@ bool OpenMVPluginSerialPort_thing::waitForBytesWritten(int msecs)
     return bool();
 }
 
+bool OpenMVPluginSerialPort_thing::setDataTerminalReady(bool set)
+{
+    if(m_serialPort)
+    {
+        return m_serialPort->setDataTerminalReady(set);
+    }
+
+    if(m_tcpSocket)
+    {
+        return true;
+    }
+
+    return bool();
+}
+
+bool OpenMVPluginSerialPort_thing::setRequestToSend(bool set)
+{
+    if(m_serialPort)
+    {
+        return m_serialPort->setRequestToSend(set);
+    }
+
+    if(m_tcpSocket)
+    {
+        return true;
+    }
+
+    return bool();
+}
+
 OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(int override_read_timeout, int override_read_stall_timeout, QObject *parent) : QObject(parent)
 {
     m_port = Q_NULLPTR;
@@ -296,7 +326,8 @@ void OpenMVPluginSerialPort_private::open(const QString &portName)
     m_port->setReadBufferSize(1000000);
 
     if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE))
-    || (!m_port->open(QIODevice::ReadWrite)))
+    || (!m_port->open(QIODevice::ReadWrite))
+    || (!m_port->setDataTerminalReady(true)))
     {
         delete m_port;
         m_port = new OpenMVPluginSerialPort_thing(portName, this);
@@ -304,7 +335,8 @@ void OpenMVPluginSerialPort_private::open(const QString &portName)
         m_port->setReadBufferSize(1000000);
 
         if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE_2))
-        || (!m_port->open(QIODevice::ReadWrite)))
+        || (!m_port->open(QIODevice::ReadWrite))
+        || (!m_port->setDataTerminalReady(true)))
         {
             emit openResult(m_port->errorString());
             delete m_port;
@@ -333,7 +365,8 @@ void OpenMVPluginSerialPort_private::write(const QByteArray &data, int startWait
                 m_port->setReadBufferSize(1000000);
 
                 if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE))
-                || (!m_port->open(QIODevice::ReadWrite)))
+                || (!m_port->open(QIODevice::ReadWrite))
+                || (!m_port->setDataTerminalReady(true)))
                 {
                     delete m_port;
                     m_port = new OpenMVPluginSerialPort_thing(portName, this);
@@ -341,7 +374,8 @@ void OpenMVPluginSerialPort_private::write(const QByteArray &data, int startWait
                     m_port->setReadBufferSize(1000000);
 
                     if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE_2))
-                    || (!m_port->open(QIODevice::ReadWrite)))
+                    || (!m_port->open(QIODevice::ReadWrite))
+                    || (!m_port->setDataTerminalReady(true)))
                     {
                         delete m_port;
                         m_port = Q_NULLPTR;
@@ -589,7 +623,8 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
             m_port->setReadBufferSize(1000000);
 
             if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE))
-            || (!m_port->open(QIODevice::ReadWrite)))
+            || (!m_port->open(QIODevice::ReadWrite))
+            || (!m_port->setDataTerminalReady(true)))
             {
                 delete m_port;
                 m_port = new OpenMVPluginSerialPort_thing(portName, this);
@@ -597,7 +632,8 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
                 m_port->setReadBufferSize(1000000);
 
                 if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE_2))
-                || (!m_port->open(QIODevice::ReadWrite)))
+                || (!m_port->open(QIODevice::ReadWrite))
+                || (!m_port->setDataTerminalReady(true)))
                 {
                     delete m_port;
                     m_port = Q_NULLPTR;
