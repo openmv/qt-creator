@@ -31,6 +31,7 @@ DATA_DIRS = \
     examples \
     firmware \
     html \
+	labview \
     models \
     styles \
     themes

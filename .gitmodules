@@ -2,3 +2,6 @@
 	path = src/shared/qbs
 	url = ../../qt-labs/qbs.git
 	ignore = dirty
+[submodule "share/qtcreator/labview"]
+	path = share/qtcreator/labview
+	url = https://github.com/chrisbuerginrogers/LabVIEWOpenMV.git
