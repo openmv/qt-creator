@@ -93,28 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">MicroPython libraries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="array.html"><code class="docutils literal"><span class="pre">array</span></code> &#8211; arrays of numeric data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal"><span class="pre">cmath</span></code> &#8211; mathematical functions for complex numbers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal"><span class="pre">gc</span></code> &#8211; control the garbage collector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal"><span class="pre">math</span></code> &#8211; mathematical functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal"><span class="pre">sys</span></code> &#8211; system specific functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal"><span class="pre">ubinascii</span></code> &#8211; binary/ASCII conversions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal"><span class="pre">ucollections</span></code> &#8211; collection and container types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal"><span class="pre">uerrno</span></code> &#8211; system error codes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uhashlib.html"><code class="docutils literal"><span class="pre">uhashlib</span></code> &#8211; hashing algorithms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uheapq.html"><code class="docutils literal"><span class="pre">uheapq</span></code> &#8211; heap queue algorithm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uio.html"><code class="docutils literal"><span class="pre">uio</span></code> &#8211; input/output streams</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ujson.html"><code class="docutils literal"><span class="pre">ujson</span></code> &#8211; JSON encoding and decoding</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uos.html"><code class="docutils literal"><span class="pre">uos</span></code> &#8211; basic &#8220;operating system&#8221; services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ure.html"><code class="docutils literal"><span class="pre">ure</span></code> &#8211; simple regular expressions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uselect.html"><code class="docutils literal"><span class="pre">uselect</span></code> &#8211; wait for events on a set of streams</a></li>
-<li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal"><span class="pre">usocket</span></code> &#8211; socket module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal"><span class="pre">ustruct</span></code> &#8211; pack and unpack primitive data types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal"><span class="pre">utime</span></code> &#8211; time related functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal"><span class="pre">uzlib</span></code> &#8211; zlib decompression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal"><span class="pre">_thread</span></code> &#8211; multithreading support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#micropython-specific-libraries">MicroPython-specific libraries</a><ul>
@@ -283,31 +262,6 @@ non-u-name can be overridden by a file of that name in your library path (<code 
 For example, <code class="docutils literal"><span class="pre">import</span> <span class="pre">json</span></code> will first search for a file <code class="docutils literal"><span class="pre">json.py</span></code> (or package
 directory <code class="docutils literal"><span class="pre">json</span></code>) and load that module if it is found.  If nothing is found,
 it will fallback to loading the built-in <code class="docutils literal"><span class="pre">ujson</span></code> module.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="array.html"><code class="docutils literal"><span class="pre">array</span></code> &#8211; arrays of numeric data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cmath.html"><code class="docutils literal"><span class="pre">cmath</span></code> &#8211; mathematical functions for complex numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gc.html"><code class="docutils literal"><span class="pre">gc</span></code> &#8211; control the garbage collector</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math.html"><code class="docutils literal"><span class="pre">math</span></code> &#8211; mathematical functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sys.html"><code class="docutils literal"><span class="pre">sys</span></code> &#8211; system specific functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubinascii.html"><code class="docutils literal"><span class="pre">ubinascii</span></code> &#8211; binary/ASCII conversions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ucollections.html"><code class="docutils literal"><span class="pre">ucollections</span></code> &#8211; collection and container types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uerrno.html"><code class="docutils literal"><span class="pre">uerrno</span></code> &#8211; system error codes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uhashlib.html"><code class="docutils literal"><span class="pre">uhashlib</span></code> &#8211; hashing algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uheapq.html"><code class="docutils literal"><span class="pre">uheapq</span></code> &#8211; heap queue algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uio.html"><code class="docutils literal"><span class="pre">uio</span></code> &#8211; input/output streams</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ujson.html"><code class="docutils literal"><span class="pre">ujson</span></code> &#8211; JSON encoding and decoding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uos.html"><code class="docutils literal"><span class="pre">uos</span></code> &#8211; basic &#8220;operating system&#8221; services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ure.html"><code class="docutils literal"><span class="pre">ure</span></code> &#8211; simple regular expressions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uselect.html"><code class="docutils literal"><span class="pre">uselect</span></code> &#8211; wait for events on a set of streams</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usocket.html"><code class="docutils literal"><span class="pre">usocket</span></code> &#8211; socket module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ustruct.html"><code class="docutils literal"><span class="pre">ustruct</span></code> &#8211; pack and unpack primitive data types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utime.html"><code class="docutils literal"><span class="pre">utime</span></code> &#8211; time related functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uzlib.html"><code class="docutils literal"><span class="pre">uzlib</span></code> &#8211; zlib decompression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_thread.html"><code class="docutils literal"><span class="pre">_thread</span></code> &#8211; multithreading support</a></li>
-</ul>
-</div>
 </div>
 <div class="section" id="micropython-specific-libraries">
 <h2>MicroPython-specific libraries<a class="headerlink" href="#micropython-specific-libraries" title="Permalink to this headline">¶</a></h2>
@@ -560,6 +514,7 @@ the following libraries.</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="omv.fir.html"><code class="docutils literal"><span class="pre">fir</span></code> &#8212; thermopile shield driver (fir == far infrared)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="omv.fir.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.fir.html#constants">Constants</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="omv.omv.html"><code class="docutils literal"><span class="pre">omv</span></code> &#8212; OpenMV Cam Information</a><ul>
