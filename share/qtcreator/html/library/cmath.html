@@ -34,7 +34,10 @@
   
 
   
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/> 
+    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
+        <link rel="up" title="MicroPython libraries" href="index.html"/>
+        <link rel="next" title="gc – control the garbage collector" href="gc.html"/>
+        <link rel="prev" title="array – arrays of numeric data" href="array.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -86,11 +89,43 @@
           
             
             
-                <ul>
+                <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">MicroPython libraries</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array.html"><code class="docutils literal"><span class="pre">array</span></code> &#8211; arrays of numeric data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href=""><code class="docutils literal"><span class="pre">cmath</span></code> &#8211; mathematical functions for complex numbers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#constants">Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal"><span class="pre">gc</span></code> &#8211; control the garbage collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal"><span class="pre">math</span></code> &#8211; mathematical functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal"><span class="pre">sys</span></code> &#8211; system specific functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal"><span class="pre">ubinascii</span></code> &#8211; binary/ASCII conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal"><span class="pre">ucollections</span></code> &#8211; collection and container types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal"><span class="pre">uerrno</span></code> &#8211; system error codes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uhashlib.html"><code class="docutils literal"><span class="pre">uhashlib</span></code> &#8211; hashing algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uheapq.html"><code class="docutils literal"><span class="pre">uheapq</span></code> &#8211; heap queue algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uio.html"><code class="docutils literal"><span class="pre">uio</span></code> &#8211; input/output streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ujson.html"><code class="docutils literal"><span class="pre">ujson</span></code> &#8211; JSON encoding and decoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uos.html"><code class="docutils literal"><span class="pre">uos</span></code> &#8211; basic &#8220;operating system&#8221; services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ure.html"><code class="docutils literal"><span class="pre">ure</span></code> &#8211; simple regular expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uselect.html"><code class="docutils literal"><span class="pre">uselect</span></code> &#8211; wait for events on a set of streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal"><span class="pre">usocket</span></code> &#8211; socket module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal"><span class="pre">ustruct</span></code> &#8211; pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal"><span class="pre">utime</span></code> &#8211; time related functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal"><span class="pre">uzlib</span></code> &#8211; zlib decompression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal"><span class="pre">_thread</span></code> &#8211; multithreading support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
@@ -123,6 +158,8 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
       
     <li><code class="docutils literal"><span class="pre">cmath</span></code> &#8211; mathematical functions for complex numbers</li>
       <li class="wy-breadcrumbs-aside">
@@ -224,13 +261,22 @@ working with complex numbers.</p>
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gc.html" class="btn btn-neutral float-right" title="gc – control the garbage collector" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="array.html" class="btn btn-neutral" title="array – arrays of numeric data" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014-2018, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 08 Jul 2018.
+      Last updated on 22 Dec 2018.
 
     </p>
   </div>

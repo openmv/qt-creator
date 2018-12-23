@@ -178,7 +178,7 @@ should know about this flash drive:
         The internal flash drive uses the FAT filesystem which has no ability
         to recover from partial writes due to power failure like modern file
         systems such as NTFS (Windows) on your PC. NTFS does something called
-        journaling which involves writing what it's about to do in a sratch
+        journaling which involves writing what it's about to do in a scratch
         buffer, doing what it wrote in the scratch buffer, and then clearing
         the scratch buffer. This allows NTFS to recover if power is lost by
         looking at the scratch buffer. FAT, the file system used by DOS,

@@ -2834,6 +2834,7 @@ same size as the image being operated on. Only pixels set in the mask are
 modified.</p>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images or bayer images.</p>
+<p>This method is not available on the OpenMV Cam M4.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3649,43 +3650,6 @@ result encodes both possible repsonses.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="image.image.find_number">
-<code class="descclassname">image.</code><code class="descname">find_number</code><span class="sig-paren">(</span><em>roi</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.find_number" title="Permalink to this definition">¶</a></dt>
-<dd><p>Runs a LENET-6 CNN trained with on the MINST data set to detect numers in
-a 28x28 ROI located anywhere on the image. Returns a tuple containing a
-integer and a float representing the number detected (0-9) and the
-confidence of the detection (0-1).</p>
-<p><code class="docutils literal"><span class="pre">roi</span></code> is the region-of-interest rectangle tuple (x, y, w, h). If not
-specified, it is equal to the image rectangle. Only pixels within the
-<code class="docutils literal"><span class="pre">roi</span></code> are operated on.</p>
-<p>Only works on grayscale images.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This method is experimental and likely to be removed in the future once
-running any CNN trained on the PC using Caffe is available.</p>
-</div>
-<p>This method is not available on the OpenMV Cam M4.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="image.image.classify_object">
-<code class="descclassname">image.</code><code class="descname">classify_object</code><span class="sig-paren">(</span><em>roi</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.classify_object" title="Permalink to this definition">¶</a></dt>
-<dd><p>Runs a CIFAR-10 CNN on an ROI in the image to detect airplanes, automobiles,
-birds, cats, deers, dogs, frogs, horses, ships, and trucks. This method
-automatically scales the image image to 32x32 internally to feed to the CNN.</p>
-<p><code class="docutils literal"><span class="pre">roi</span></code> is the region-of-interest rectangle tuple (x, y, w, h). If not
-specified, it is equal to the image rectangle. Only pixels within the
-<code class="docutils literal"><span class="pre">roi</span></code> are operated on.</p>
-<p>Only works on RGB565 images.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This method is experimental and likely to be removed in the future once
-running any CNN trained on the PC using Caffe is available.</p>
-</div>
-<p>This method is not available on the OpenMV Cam M4.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="image.image.find_template">
 <code class="descclassname">image.</code><code class="descname">find_template</code><span class="sig-paren">(</span><em>template</em>, <em>threshold</em><span class="optional">[</span>, <em>roi</em><span class="optional">[</span>, <em>step=2</em><span class="optional">[</span>, <em>search=image.SEARCH_EX</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.find_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tries to find the first location in the image where template matches using
@@ -4010,7 +3974,7 @@ on an image.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014-2018, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 08 Jul 2018.
+      Last updated on 22 Dec 2018.
 
     </p>
   </div>

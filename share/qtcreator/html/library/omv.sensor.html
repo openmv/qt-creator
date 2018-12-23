@@ -228,9 +228,15 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="sensor.sensor_sleep">
-<code class="descclassname">sensor.</code><code class="descname">sensor_sleep</code><span class="sig-paren">(</span><em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor_sleep" title="Permalink to this definition">¶</a></dt>
+<dt id="sensor.sensor.sleep">
+<code class="descclassname">sensor.</code><code class="descname">sleep</code><span class="sig-paren">(</span><em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.sleep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Puts the camera to sleep if enable is True. Otherwise, wakes it back up.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sensor.sensor.hutdown">
+<code class="descclassname">sensor.</code><code class="descname">hutdown</code><span class="sig-paren">(</span><em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.hutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Puts the camera into a lower power mode than sleep (but the camera must be reset on being woken up).</p>
 </dd></dl>
 
 <dl class="function">
@@ -804,7 +810,7 @@ Only works for the OV2640 camera or the OpenMV Cam M7.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014-2018, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 08 Jul 2018.
+      Last updated on 22 Dec 2018.
 
     </p>
   </div>

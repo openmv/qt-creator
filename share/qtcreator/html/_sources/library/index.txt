@@ -171,10 +171,12 @@ it will fallback to loading the built-in ``ujson`` module.
 
        builtins.rst
        array.rst
+       cmath.rst
        gc.rst
        math.rst
        sys.rst
        ubinascii.rst
+       ucollections.rst
        uerrno.rst
        uhashlib.rst
        uheapq.rst

@@ -27,9 +27,13 @@ Functions
 
    Initializes the camera sensor.
 
-.. function:: sensor_sleep(enable)
+.. function:: sensor.sleep(enable)
 
    Puts the camera to sleep if enable is True. Otherwise, wakes it back up.
+
+.. function:: sensor.hutdown(enable)
+
+   Puts the camera into a lower power mode than sleep (but the camera must be reset on being woken up).
 
 .. function:: sensor.flush()
 

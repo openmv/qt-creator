@@ -2452,6 +2452,8 @@ Methods
 
    Not supported on compressed images or bayer images.
 
+   This method is not available on the OpenMV Cam M4.
+
 .. method:: median(size, [percentile=0.5, [threshold=False, [offset=0, [invert=False, [mask=None]]]]])
 
    Runs the median filter on the image. The median filter is the best filter
@@ -3397,45 +3399,6 @@ Methods
       Please use this method on power-of-2 image sizes (e.g. `sensor.B64X64`).
 
    Not supported on compressed images or bayer images.
-
-   This method is not available on the OpenMV Cam M4.
-
-.. method:: image.find_number(roi)
-
-   Runs a LENET-6 CNN trained with on the MINST data set to detect numers in
-   a 28x28 ROI located anywhere on the image. Returns a tuple containing a
-   integer and a float representing the number detected (0-9) and the
-   confidence of the detection (0-1).
-
-   ``roi`` is the region-of-interest rectangle tuple (x, y, w, h). If not
-   specified, it is equal to the image rectangle. Only pixels within the
-   ``roi`` are operated on.
-
-   Only works on grayscale images.
-
-   .. note::
-
-      This method is experimental and likely to be removed in the future once
-      running any CNN trained on the PC using Caffe is available.
-
-   This method is not available on the OpenMV Cam M4.
-
-.. method:: image.classify_object(roi)
-
-   Runs a CIFAR-10 CNN on an ROI in the image to detect airplanes, automobiles,
-   birds, cats, deers, dogs, frogs, horses, ships, and trucks. This method
-   automatically scales the image image to 32x32 internally to feed to the CNN.
-
-   ``roi`` is the region-of-interest rectangle tuple (x, y, w, h). If not
-   specified, it is equal to the image rectangle. Only pixels within the
-   ``roi`` are operated on.
-
-   Only works on RGB565 images.
-
-   .. note::
-
-      This method is experimental and likely to be removed in the future once
-      running any CNN trained on the PC using Caffe is available.
 
    This method is not available on the OpenMV Cam M4.
 

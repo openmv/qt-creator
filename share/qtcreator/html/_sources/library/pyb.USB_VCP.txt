@@ -33,6 +33,10 @@ Methods
 
    Return ``True`` if USB is connected as a serial device, else ``False``.
 
+.. method:: USB_VCP.debug_mode_enabled()
+
+   Return ``True`` if OpenMV IDE is connected to the OpenMV Cam.
+
 .. method:: USB_VCP.any()
 
    Return ``True`` if any characters waiting, else ``False``.
