@@ -2138,7 +2138,7 @@ Beeinflusst den Einzug von Fortsetzungszeilen.
     </message>
     <message>
         <location/>
-        <location filename="../../../src/plugins/openmv/openmvcamerasettings.cpp" line="+79"/>
+        <location filename="../../../src/plugins/openmv/openmvcamerasettings.cpp" line="+59"/>
         <source>Please enter or select your WiFi network here</source>
         <translation>Bitte geben Sie hier Ihr WLAN-Netzwerk ein oder wählen Sie es aus</translation>
     </message>
@@ -7737,7 +7737,7 @@ Wird nicht auf Leerzeichen in Kommentaren und Strings angewendet.</translation>
     <message>
         <location line="+42"/>
         <location line="+15"/>
-        <location line="+2281"/>
+        <location line="+2307"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -7746,7 +7746,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
 Bitte schließen Sie alle Programme, die die Anwendungsdaten von OpenMV IDE anzeigen /bearbeiten, und starten Sie OpenMV IDE neu!</translation>
     </message>
     <message>
-        <location line="-1888"/>
+        <location line="-1914"/>
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Bearbeiten Sie den Schwellenwert für Graustufen mit dem Schwellenwert-Editor</translation>
     </message>
@@ -7826,32 +7826,32 @@ Während (True):
     </message>
     <message>
         <location line="+9"/>
-        <location line="+4416"/>
+        <location line="+4442"/>
         <location line="+47"/>
         <source>Open Terminal</source>
         <translation>öffnen Sie das Terminal</translation>
     </message>
     <message>
-        <location line="-4458"/>
+        <location line="-4484"/>
         <source>Machine Vision</source>
         <translation>Machine Vision</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+4485"/>
+        <location line="+4511"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>Schwellenwert-Editor</translation>
     </message>
     <message>
-        <location line="-4556"/>
-        <location line="+4634"/>
+        <location line="-4582"/>
+        <location line="+4660"/>
         <source>Keypoints Editor</source>
         <translation>Schlüsselpunkte-Editor</translation>
     </message>
     <message>
-        <location line="-4627"/>
-        <location line="+4777"/>
+        <location line="-4653"/>
+        <location line="+4803"/>
         <location line="+96"/>
         <location line="+23"/>
         <location line="+10"/>
@@ -7860,7 +7860,7 @@ Während (True):
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4923"/>
+        <location line="-4949"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 Familie (30 Tags)</translation>
     </message>
@@ -7983,7 +7983,7 @@ Während (True):
     </message>
     <message>
         <location line="+8"/>
-        <location line="+1705"/>
+        <location line="+1731"/>
         <location line="+33"/>
         <location line="+9"/>
         <location line="+10"/>
@@ -8022,8 +8022,8 @@ Während (True):
         <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="-2723"/>
-        <location line="+2759"/>
+        <location line="-2749"/>
+        <location line="+2785"/>
         <location line="+24"/>
         <location line="+7"/>
         <location line="+69"/>
@@ -8031,7 +8031,7 @@ Während (True):
         <translation>Trennen</translation>
     </message>
     <message>
-        <location line="-2851"/>
+        <location line="-2877"/>
         <source>Start (run script)</source>
         <translation>Start (Skript ausführen)</translation>
     </message>
@@ -8075,12 +8075,12 @@ Während (True):
     </message>
     <message>
         <location line="+5"/>
-        <location line="+2872"/>
+        <location line="+2898"/>
         <source>Stop</source>
         <translation>Halt</translation>
     </message>
     <message>
-        <location line="-2871"/>
+        <location line="-2897"/>
         <source>Stop recording</source>
         <translation>Aufnahme beenden</translation>
     </message>
@@ -8108,7 +8108,7 @@ Während (True):
     <message>
         <location line="+17"/>
         <location line="+22"/>
-        <location line="+2567"/>
+        <location line="+2593"/>
         <location line="+136"/>
         <location line="+66"/>
         <location line="+51"/>
@@ -8122,7 +8122,7 @@ Während (True):
         <translation>Beschäftigt ... bitte warten ...</translation>
     </message>
     <message>
-        <location line="-3398"/>
+        <location line="-3424"/>
         <location line="+15"/>
         <source>Disable</source>
         <translation>Deaktivieren</translation>
@@ -8195,58 +8195,58 @@ Während (True):
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2494"/>
+        <location line="+2520"/>
         <source>Firmware Version:</source>
         <translation>Firmware-Version:</translation>
     </message>
     <message>
-        <location line="-2493"/>
+        <location line="-2519"/>
         <source>Camera firmware version</source>
         <translation>Kamera-Firmware-Version</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2489"/>
+        <location line="+2515"/>
         <source>Serial Port:</source>
         <translation>Serieller Port</translation>
     </message>
     <message>
-        <location line="-2488"/>
+        <location line="-2514"/>
         <source>Camera serial port</source>
         <translation>Kamera serielle Schnittstelle</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2308"/>
+        <location line="+2334"/>
         <location line="+176"/>
         <location line="+681"/>
         <source>Drive:</source>
         <translation>Fahrt:</translation>
     </message>
     <message>
-        <location line="-3164"/>
+        <location line="-3190"/>
         <source>Drive associated with port</source>
         <translation>Laufwerk mit Port verbunden</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2479"/>
+        <location line="+2505"/>
         <source>FPS:</source>
         <translation>FPS:</translation>
     </message>
     <message>
-        <location line="-2478"/>
+        <location line="-2504"/>
         <source>May be different from camera FPS</source>
         <translation>Kann von der Kamera FPS abweichen</translation>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+877"/>
+        <location line="+903"/>
         <source>Update Available</source>
         <translation>Aktualisierung verfügbar</translation>
     </message>
     <message>
-        <location line="-877"/>
+        <location line="-903"/>
         <source>A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.</source>
         <translation>Eine neue Version von OpenMV IDE (%L1.%L2.%L3) steht zum Download bereit.</translation>
     </message>
@@ -8256,7 +8256,7 @@ Während (True):
         <translation>Download</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+137"/>
         <source>WiFi Programming Disabled!</source>
         <translation>WLAN-Programmierung deaktiviert!</translation>
     </message>
@@ -9382,7 +9382,7 @@ Möchten Sie, dass OpenMV IDE es auf Ihre OpenMV Cam kopiert?</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location line="-5476"/>
+        <location line="-5502"/>
         <source>New File</source>
         <translation>Neue Datei</translation>
     </message>
@@ -9408,7 +9408,7 @@ Möchten Sie, dass OpenMV IDE es auf Ihre OpenMV Cam kopiert?</translation>
         <translation>Wo kann das Netzwerk auf der OpenMV Cam gespeichert werden?</translation>
     </message>
     <message>
-        <location line="+5052"/>
+        <location line="+5078"/>
         <source>Copy Failed!</source>
         <translation>Kopie fehlgeschlagen!</translation>
     </message>
@@ -9620,7 +9620,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation type="vanished">Videodateien (*.mp4 *.*)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5034"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5060"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-46"/>
         <location line="+64"/>
