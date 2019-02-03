@@ -348,7 +348,7 @@ msgstr "将工具还原为默认值。"
 #: ../../../src/plugins/coreplugin/dialogs/externaltoolconfig.ui:-1
 msgctxt "Core::Internal::ExternalToolConfig|"
 msgid "Reset"
-msgstr "重置"
+msgstr "重启"
 
 #: ../../../src/plugins/coreplugin/dialogs/externaltoolconfig.ui:-1
 msgctxt "Core::Internal::ExternalToolConfig|"
@@ -7803,7 +7803,7 @@ msgstr "条码生成器"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:898
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "CNN Network Library"
-msgstr "CNN网络图书馆"
+msgstr "CNN网络模型库"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:947
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8019,13 +8019,13 @@ msgstr "禁用"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1178
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Disable the Frame Buffer for maximum performance"
-msgstr "禁用帧缓冲区以获得最佳性能"
+msgstr "禁用帧缓冲区以获得最大性能"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1198
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Frame Buffer Disabled - click the disable button again to enable (top right)"
-msgstr "禁用帧缓冲区 - 再次单击禁用按钮以启用(右上角)"
+msgstr "帧缓冲区已禁用 - 再次单击禁用按钮以启用(右上角)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1205
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8066,19 +8066,19 @@ msgstr "使用灰度/LAB进行颜色跟踪"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1308
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res - No Image"
-msgstr "Res - 没有图像"
+msgstr "分辨率 - 没有图像"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1299
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)"
-msgstr "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - 像素 (%7)"
+msgstr "分辨率 (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - 像素 (%7)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1303
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res (w:%1, h:%2)"
-msgstr "Res (w:%1, h:%2)"
+msgstr "分辨率 (w:%1, h:%2)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1377
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8631,7 +8631,7 @@ msgid ""
 "Disconnect your OpenMV Cam and then reconnect it...\n"
 "\n"
 "Hit cancel to skip to DFU reprogramming."
-msgstr "断开OpenMV Cam，然后重新连接......\\n\\n点击取消跳过DFU重新编程。"
+msgstr "断开OpenMV Cam，然后重新连接......\\n\\n点击取消会跳过，会使用DFU重新编程。"
 
 #~ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 #~ msgid "Disconnect your OpenMV Cam and then reconnect it..."
@@ -8681,7 +8681,7 @@ msgid ""
 msgstr ""
 "完成OpenMV Cam的固件升级！\n"
 "\n"
-"在OpenMV Cam完成枚举和内置自检(蓝色led闪烁  - 这需要一段时间)后点击确定按钮。"
+"在OpenMV Cam完成枚举和内置自检(自检可能需要一段时间)后，会闪烁蓝色led，然后点击确定按钮。"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3420
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8747,7 +8747,7 @@ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Click the Ok button after your OpenMV Cam has enumerated and finished "
 "running its built-in self test (blue led blinking - this takes a while)."
-msgstr "在您的OpenMV Cam完成枚举和运行其内置的自检(蓝色指示灯闪烁 - 这需要一段时间)后点击确定按钮。"
+msgstr "在OpenMV Cam完成枚举和内置自检(自检可能需要一段时间)后，会闪烁蓝色led，然后点击确定按钮。"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3537
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8821,7 +8821,7 @@ msgstr "-  [过时 - 点击此处升级]"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3761
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Your OpenMV Cam's firmware is out of date. Would you like to upgrade?"
-msgstr "您的OpenMV Cam的固件已过期。你想升级吗？"
+msgstr "您的OpenMV Cam的固件已过时。你想升级吗？"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3771
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8838,7 +8838,7 @@ msgstr "无法弹出\"%L1\"！"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3921
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Reset"
-msgstr "重置"
+msgstr "重启"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3987
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9792,7 +9792,7 @@ msgstr "运行\"/main.py\""
 #: ../../../src/plugins/openmv/openmvterminal.cpp:888
 msgctxt "OpenMVTerminal|"
 msgid "Run current script in editor window"
-msgstr "在编辑器窗口中运行当前脚本"
+msgstr "运行当前编辑器窗口中的脚本"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:896
 msgctxt "OpenMVTerminal|"
