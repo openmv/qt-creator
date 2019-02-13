@@ -9922,3 +9922,629 @@ msgstr "LAB阈值"
 msgctxt "ThresholdEditor|"
 msgid "Copy the threshold above before closing."
 msgstr "关闭前复制上面的阈值。"
+
+#: firmware
+msgctxt "Firmware::RunTime"
+msgid "address %1 is not aligned to %2 bytes"
+msgstr "address %1 is not aligned to %2 bytes"
+
+msgctxt "Firmware::RunTime"
+msgid "AP mode supports WEP security only."
+msgstr "AP模式只支持WEP加密。"
+
+msgctxt "Firmware::RunTime"
+msgid "argument should be a '%1' not a '%2'"
+msgstr "参数应该是'%1'，而不应该是'%2'"
+
+msgctxt "Firmware::RunTime"
+msgid "byte code not implemented"
+msgstr "byte code 未实现"
+
+msgctxt "Firmware::RunTime"
+msgid "calibration expecting 1, 4 or 6 arguments, got %1"
+msgstr "calibration expecting 1, 4 or 6 arguments, got %1"
+
+msgctxt "Firmware::RunTime"
+msgid "cannot create '%1' instances"
+msgstr "不能创建 '%1' instances"
+
+msgctxt "Firmware::RunTime"
+msgid "cannot import name %1"
+msgstr "无法 import 名称 %1"
+
+msgctxt "Firmware::RunTime"
+msgid "Can not set multimode on ADC1 channel: %1"
+msgstr "Can not set multimode on ADC1 channel: %1"
+
+msgctxt "Firmware::RunTime"
+msgid "CAN port %1 is not supported"
+msgstr "不支持 CAN 端口 %1 "
+
+msgctxt "Firmware::RunTime"
+msgid "CAN(%1) doesn't exist"
+msgstr "CAN(%1) 不存在"
+
+msgctxt "Firmware::RunTime"
+msgid "can't convert '%1' object to %2 implicitly"
+msgstr "无法隐式转换 '%1' 对象到 %2"
+
+msgctxt "Firmware::RunTime"
+msgid "Can't convert %1 to %2"
+msgstr "无法转换 %1 到 %2"
+
+msgctxt "Firmware::RunTime"
+msgid "can't create thread"
+msgstr "无法创建线程"
+
+msgctxt "Firmware::RunTime"
+msgid "channel %1 not available on this board"
+msgstr "在这个板子上，通道 %1 不可用"
+
+msgctxt "Firmware::RunTime"
+msgid "complex values not supported"
+msgstr "不支持complex values"
+
+msgctxt "Firmware::RunTime"
+msgid "constant must be an integer"
+msgstr "constant 必须是一个数字"
+
+msgctxt "Firmware::RunTime"
+msgid "could not connect to ssid=%1, sec=%2, key=%3\n"
+msgstr "不能连接到 ssid=%1, sec=%2, key=%3\n"
+
+msgctxt "Firmware::RunTime"
+msgid "DAC(%1) doesn't exist"
+msgstr "DAC(%1) 不存在"
+
+msgctxt "Firmware::RunTime"
+msgid "decimal numbers not supported"
+msgstr "不支持 decimal numbers"
+
+msgctxt "Firmware::RunTime"
+msgid "Descriptor type is not supported"
+msgstr "不支持 Descriptor type"
+
+msgctxt "Firmware::RunTime"
+msgid "empty heap"
+msgstr "empty heap"
+
+msgctxt "Firmware::RunTime"
+msgid "encoder not supported on timer %1"
+msgstr "在定时器 %1 上，不支持encoder"
+
+msgctxt "Firmware::RunTime"
+msgid "exceptions must derive from BaseException"
+msgstr "异常必须从BaseException派生"
+
+msgctxt "Firmware::RunTime"
+msgid "ExtInt vector %1 < 16, use a Pin object"
+msgstr "中断向量 %1 < 16, 使用 Pin 对象"
+
+msgctxt "Firmware::RunTime"
+msgid "ExtInt vector %1 is already in use"
+msgstr "中断向量 %1 已经被使用"
+
+msgctxt "Firmware::RunTime"
+msgid "ExtInt vector %1 >= max of %2"
+msgstr "中断向量 %1 >= max of %2"
+
+msgctxt "Firmware::RunTime"
+msgid "Failed to dump flash!"
+msgstr "dump flash 失败!"
+
+msgctxt "Firmware::RunTime"
+msgid "Failed to erase the flash!"
+msgstr "擦除 flash 失败!"
+
+msgctxt "Firmware::RunTime"
+msgid "failed to init CC3000 module"
+msgstr "初始化 CC3000 模块失败"
+
+msgctxt "Firmware::RunTime"
+msgid "failed to init WINC1500 module"
+msgstr "初始化 WINC1500 模块失败"
+
+msgctxt "Firmware::RunTime"
+msgid "Failed to read requested bytes!"
+msgstr "读取 requested bytes 失败!"
+
+msgctxt "Firmware::RunTime"
+msgid "failed to start in AP mode"
+msgstr "开始AP模式失败"
+
+msgctxt "Firmware::RunTime"
+msgid "Failed to verify the firmware!"
+msgstr "校验固件失败!"
+
+msgctxt "Firmware::RunTime"
+msgid "Failed to write requested bytes!"
+msgstr "写入 requested bytes 失败!"
+
+msgctxt "Firmware::RunTime"
+msgid "Failed to write the firmware!"
+msgstr "写入固件失败!"
+
+msgctxt "Firmware::RunTime"
+msgid "File corrupted!"
+msgstr "File corrupted!"
+
+msgctxt "Firmware::RunTime"
+msgid "Frequency is set!"
+msgstr "Frequency is set!"
+
+msgctxt "Firmware::RunTime"
+msgid "function expected at most %1 arguments, got %2"
+msgstr "函数最多可以传入 %1 个参数，传入了 %2 个"
+
+msgctxt "Firmware::RunTime"
+msgid "function got multiple values for argument '%1'"
+msgstr "function got multiple values for argument '%1'"
+
+msgctxt "Firmware::RunTime"
+msgid "function missing %1 required positional arguments"
+msgstr "function missing %1 required positional arguments"
+
+msgctxt "Firmware::RunTime"
+msgid "function missing required keyword argument '%1'"
+msgstr "function missing required keyword argument '%1'"
+
+msgctxt "Firmware::RunTime"
+msgid "function missing required positional argument #%1"
+msgstr "function missing required positional argument #%1"
+
+msgctxt "Firmware::RunTime"
+msgid "function takes %1 positional arguments but %2 were given"
+msgstr "function takes %1 positional arguments but %2 were given"
+
+msgctxt "Firmware::RunTime"
+msgid "I2C(%1) doesn't exist"
+msgstr "I2C(%1) 不存在"
+
+msgctxt "Firmware::RunTime"
+msgid "IDE interrupt"
+msgstr "IDE 中断"
+
+msgctxt "Firmware::RunTime"
+msgid "Image is not BAYER!"
+msgstr "图像不是 BAYER!"
+
+msgctxt "Firmware::RunTime"
+msgid "Image is not BMP!"
+msgstr "图像不是 BMP!"
+
+msgctxt "Firmware::RunTime"
+msgid "Image is not PGM!"
+msgstr "图像不是 PGM!"
+
+msgctxt "Firmware::RunTime"
+msgid "Image is not PPM!"
+msgstr "图像不是 PPM!"
+
+msgctxt "Firmware::RunTime"
+msgid "Images not equal!"
+msgstr "图像不相等!"
+
+msgctxt "Firmware::RunTime"
+msgid "__init__() should return None, not '%1'"
+msgstr "__init__() 应该返回 None, 而不是 '%1'"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid channel (%1)"
+msgstr "无效的通道 (%1)"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid ExtInt Mode: %1"
+msgstr "无效的外部中断模式: %1"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid ExtInt Pull: %1"
+msgstr "无效的外部中断Pull: %1"
+
+msgctxt "Firmware::RunTime"
+msgid "Invalid framerate"
+msgstr "无效的framerate"
+
+msgctxt "Firmware::RunTime"
+msgid "Invalid gainceiling"
+msgstr "无效的gainceiling"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid mode (%1)"
+msgstr "无效的mode (%1)"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid pin af: %1"
+msgstr "无效的 pin af: %1"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid pin mode: %1"
+msgstr "无效的 pin mode: %1"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid pin pull: %1"
+msgstr "无效的 pin pull: %1"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid polarity (%1)"
+msgstr "无效的 polarity (%1)"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid syntax"
+msgstr "无效的语法"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid syntax for integer"
+msgstr "整数的语法无效"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid syntax for integer with base %1"
+msgstr "invalid syntax for integer with base %1"
+
+msgctxt "Firmware::RunTime"
+msgid "invalid syntax for number"
+msgstr "数字的语法无效"
+
+msgctxt "Firmware::RunTime"
+msgid "IRQ resource already taken by Pin('%1')"
+msgstr "Pin('%1')已经使用了IRQ资源"
+
+msgctxt "Firmware::RunTime"
+msgid "JPEG config failed!!"
+msgstr "JPEG配置失败!!"
+
+msgctxt "Firmware::RunTime"
+msgid "JPEG encode failed!!"
+msgstr "JPEG编码失败!!"
+
+msgctxt "Firmware::RunTime"
+msgid "label '%1' not defined"
+msgstr "label '%1' 未定义"
+
+msgctxt "Firmware::RunTime"
+msgid "LCD(%1) doesn't exist"
+msgstr "LCD(%1) 不存在"
+
+msgctxt "Firmware::RunTime"
+msgid "LED(%1) doesn't exist"
+msgstr "LED(%1) 不存在"
+
+msgctxt "Firmware::RunTime"
+msgid "local variable referenced before assignment"
+msgstr "局部变量在命名之前就引用"
+
+msgctxt "Firmware::RunTime"
+msgid "memory allocation failed, allocating %1 bytes"
+msgstr "内存分配失败，分配 %1 个字节"
+
+msgctxt "Firmware::RunTime"
+msgid "Missing WEP key!"
+msgstr "缺少WEP key!"
+
+msgctxt "Firmware::RunTime"
+msgid "mktime needs a tuple of length 8 or 9 (%1 given)"
+msgstr "mktime needs a tuple of length 8 or 9 (%1 given)"
+
+msgctxt "Firmware::RunTime"
+msgid "name '%1' is not defined"
+msgstr "名字 '%1' 未定义"
+
+msgctxt "Firmware::RunTime"
+msgid "need more than %1 values to unpack"
+msgstr "需要超过 %1 个值才能unpack"
+
+msgctxt "Firmware::RunTime"
+msgid "no active exception to reraise"
+msgstr "no active exception to reraise"
+
+msgctxt "Firmware::RunTime"
+msgid "no available NIC"
+msgstr "没有可用的NIC"
+
+msgctxt "Firmware::RunTime"
+msgid "No intersection!"
+msgstr "No intersection!"
+
+msgctxt "Firmware::RunTime"
+msgid "No memory!"
+msgstr "没有内存!"
+
+msgctxt "Firmware::RunTime"
+msgid "no module named '%1'"
+msgstr "没有名为 '%1' 的模块"
+
+msgctxt "Firmware::RunTime"
+msgid "not a valid ADC Channel: %1"
+msgstr "不可用的 ADC 通道: %1"
+
+msgctxt "Firmware::RunTime"
+msgid "Not enough memory available!"
+msgstr "没有足够的可用内存!"
+
+msgctxt "Firmware::RunTime"
+msgid "object of type '%1' has no len()"
+msgstr " '%1' 类型的对象没有len()"
+
+msgctxt "Firmware::RunTime"
+msgid "object '%1' is not a tuple or list"
+msgstr " '%1' 类型的对象不是 tuple 或者 list"
+
+msgctxt "Firmware::RunTime"
+msgid "only slices with step=1 (aka None) are supported"
+msgstr "仅支持步长为1的切片"
+
+msgctxt "Firmware::RunTime"
+msgid "Operation not supported"
+msgstr "操作不受支持"
+
+msgctxt "Firmware::RunTime"
+msgid "ord() expected a character, but string of length %1 found"
+msgstr "ord() 需要一个字符，但是找到了长度 %1 的字符串"
+
+msgctxt "Firmware::RunTime"
+msgid "Out of fast Frame Buffer Stack Memory!"
+msgstr "超出了fast Frame Buffer Stack 内存!"
+
+msgctxt "Firmware::RunTime"
+msgid "Out of normal MicroPython Heap Memory!"
+msgstr "超出了正常的 MicroPython Heap 内存!"
+
+msgctxt "Firmware::RunTime"
+msgid "Out of temporary Frame Buffer Heap Memory!"
+msgstr "超出了 temporary Frame Buffer Heap 内存!"
+
+msgctxt "Firmware::RunTime"
+msgid "pin %1 does not have ADC capabilities"
+msgstr "引脚 %1 没有 ADC 功能"
+
+msgctxt "Firmware::RunTime"
+msgid "Pin(%1) doesn't have an af for Timer(%2)"
+msgstr "Pin(%1) 在 Timer(%2) 上没有af"
+
+msgctxt "Firmware::RunTime"
+msgid "Pin(%1) doesn't have DAC capabilities"
+msgstr "Pin(%1) 没有 DAC 功能"
+
+msgctxt "Firmware::RunTime"
+msgid "Pin(%1) doesn't exist"
+msgstr "Pin(%1) 不存在"
+
+msgctxt "Firmware::RunTime"
+msgid "Please reduce the resolution of the image you are running this algorithm on to bypass this issue!"
+msgstr "请降低运行此算法的图像的分辨率以通过这个问题！"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' argument required"
+msgstr "需要 '%1' 个参数"
+
+msgctxt "Firmware::RunTime"
+msgid "%1 index out of range"
+msgstr "%1 索引超出范围"
+
+msgctxt "Firmware::RunTime"
+msgid "%1 indices must be integers, not %2"
+msgstr "%1 索引必须是数字，而不是 %2"
+
+msgctxt "Firmware::RunTime"
+msgid "%1() takes %2 positional arguments but %3 were given"
+msgstr "%1() takes %2 positional arguments but %3 were given"
+
+msgctxt "Firmware::RunTime"
+msgid "RCC CLK Initialization Error!!"
+msgstr "RCC CLK 初始化错误!!"
+
+msgctxt "Firmware::RunTime"
+msgid "RCC OSC Initialization Error!!"
+msgstr "RCC OSC 初始化错误!!"
+
+msgctxt "Firmware::RunTime"
+msgid "requested length %1 but object has length %2"
+msgstr "requested length %1 but object has length %2"
+
+msgctxt "Firmware::RunTime"
+msgid "resolution %1 not supported"
+msgstr "不支持分辨率 %1 "
+
+msgctxt "Firmware::RunTime"
+msgid "sdcard_read_blocks failed [%1]"
+msgstr "sdcard_read_blocks 失败 [%1]"
+
+msgctxt "Firmware::RunTime"
+msgid "sdcard_write_blocks failed [%1]"
+msgstr "sdcard_write_blocks 失败 [%1]"
+
+msgctxt "Firmware::RunTime"
+msgid "Sensor control failed!"
+msgstr "感光元件控制失败!"
+
+msgctxt "Firmware::RunTime"
+msgid "Sensor Timeout!!"
+msgstr "感光元件超时!!"
+
+msgctxt "Firmware::RunTime"
+msgid "Servo(%1) doesn't exist"
+msgstr "Servo(%1) 不存在"
+
+msgctxt "Firmware::RunTime"
+msgid "set baudrate %1 is not within 5%% of desired value"
+msgstr "set baudrate %1 is not within 5%% of desired value"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' expects a label"
+msgstr "'%1' expects a label"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' expects an address of the form [a, b]"
+msgstr "'%1' expects an address of the form [a, b]"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' expects an FPU register"
+msgstr "'%1' 需要一个FPU寄存器"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' expects an integer"
+msgstr "'%1' 需要一个整数"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' expects a register"
+msgstr "'%1' 需要一个寄存器"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' expects a special register"
+msgstr "'%1' 需要一个特殊寄存器"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' expects at most r%2"
+msgstr "'%1' 需要至少 r%2"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' expects {r0, r1, ...}"
+msgstr "'%1' 需要 {r0, r1, ...}"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' integer 0x%x does not fit in mask 0x%x"
+msgstr "'%1' integer 0x%x does not fit in mask 0x%x"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' integer %2 is not within range %3..%4"
+msgstr "'%1' integer %2 is not within range %3..%4"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' object does not support item assignment"
+msgstr "'%1' 对象不支持 item assignment"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' object does not support item deletion"
+msgstr "'%1' 对象不支持 item deletion"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' object has no attribute '%2'"
+msgstr "'%1' 对象没有属性 '%2'"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' object is not an iterator"
+msgstr "'%1' 对象不是迭代器"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' object is not callable"
+msgstr "'%1' 对象不可调用"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' object is not iterable"
+msgstr "'%1' 对象不可迭代"
+
+msgctxt "Firmware::RunTime"
+msgid "'%1' object is not subscriptable"
+msgstr "'%1' 对象不可subscriptable"
+
+msgctxt "Firmware::RunTime"
+msgid "SPI(%1) doesn't exist"
+msgstr "SPI(%1) 不存在"
+
+msgctxt "Firmware::RunTime"
+msgid "string indices must be integers, not %1"
+msgstr "字符串索引必须是整数，而不是 %1"
+
+msgctxt "Firmware::RunTime"
+msgid "struct: index out of range"
+msgstr "struct: 索引超出范围"
+
+msgctxt "Firmware::RunTime"
+msgid "The selected window is outside the bounds of the frame"
+msgstr "The selected window is outside the bounds of the frame"
+
+msgctxt "Firmware::RunTime"
+msgid "The selected window is too small"
+msgstr "所选的窗口太小"
+
+msgctxt "Firmware::RunTime"
+msgid "The tuple/list must either be (x, y, w, h) or (w, h)"
+msgstr "这个 tuple/list 的格式，必须是 (x, y, w, h) 或者 (w, h)"
+
+msgctxt "Firmware::RunTime"
+msgid "Timer(%1) doesn't exist"
+msgstr "Timer(%1) 不存在"
+
+msgctxt "Firmware::RunTime"
+msgid "too many values to unpack (expected %1)"
+msgstr "unpack太多的值 (预期 %1)"
+
+msgctxt "Firmware::RunTime"
+msgid "type object '%1' has no attribute '%1'"
+msgstr "类型 '%1' 的对象，没有属性 '%1'"
+
+msgctxt "Firmware::RunTime"
+msgid "type '%1' is not an acceptable base type"
+msgstr "type '%1' is not an acceptable base type"
+
+msgctxt "Firmware::RunTime"
+msgid "UART(%1) doesn't exist"
+msgstr "UART(%1) 不存在"
+
+msgctxt "Firmware::RunTime"
+msgid "unexpected indent"
+msgstr "缩进不正常"
+
+msgctxt "Firmware::RunTime"
+msgid "unexpected keyword argument '%1'"
+msgstr "意外的关键字参数 '%1'"
+
+msgctxt "Firmware::RunTime"
+msgid "Unexpected value read!"
+msgstr "读取了意外的值!"
+
+msgctxt "Firmware::RunTime"
+msgid "unindent does not match any outer indentation level"
+msgstr "缩进不匹配任何外部的级别"
+
+msgctxt "Firmware::RunTime"
+msgid "unknown conversion specifier %1"
+msgstr "unknown conversion specifier %1"
+
+msgctxt "Firmware::RunTime"
+msgid "unknown format code '%1' for object of type '%2'"
+msgstr "unknown format code '%1' for object of type '%2'"
+
+msgctxt "Firmware::RunTime"
+msgid "Unsupported format!"
+msgstr "Unsupported format!"
+
+msgctxt "Firmware::RunTime"
+msgid "unsupported format character '%1' (0x%2) at index %3"
+msgstr "在索引 %3 处，不支持的格式化字符 '%1' (0x%2)"
+
+msgctxt "Firmware::RunTime"
+msgid "Unsupported frequency!"
+msgstr "不支持的频率!"
+
+msgctxt "Firmware::RunTime"
+msgid "Unsupported I2C baudrate: %1"
+msgstr "不支持 I2C 波特率: %1"
+
+msgctxt "Firmware::RunTime"
+msgid "unsupported Thumb instruction '%1' with %2 arguments"
+msgstr "unsupported Thumb instruction '%1' with %2 arguments"
+
+msgctxt "Firmware::RunTime"
+msgid "unsupported type for %1: '%2'"
+msgstr "不支持类型 %1: '%2'"
+
+msgctxt "Firmware::RunTime"
+msgid "unsupported types for %1: '%2', '%3'"
+msgstr "不支持类型 %1: '%2', '%3'"
+
+msgctxt "Firmware::RunTime"
+msgid "unsupported Xtensa instruction '%1' with %2 arguments"
+msgstr "unsupported Xtensa instruction '%1' with %2 arguments"
+
+msgctxt "Firmware::RunTime"
+msgid "WDT(%1) doesn't exist"
+msgstr "WDT(%1) 不存在"
+
+msgctxt "Firmware::RunTime"
+msgid "WiFi mode is not supported!"
+msgstr "WiFi mode 不支持!"
+
+msgctxt "Firmware::RunTime"
+msgid "writes must be a multiple of %1 bytes"
+msgstr "写入必须是%1字节的倍数"
+
