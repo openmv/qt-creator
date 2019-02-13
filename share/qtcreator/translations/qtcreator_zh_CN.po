@@ -9946,7 +9946,7 @@ msgstr "calibration expecting 1, 4 or 6 arguments, got %1"
 
 msgctxt "Firmware::RunTime"
 msgid "cannot create '%1' instances"
-msgstr "不能创建 '%1' instances"
+msgstr "不能创建 '%1' 实例"
 
 msgctxt "Firmware::RunTime"
 msgid "cannot import name %1"
@@ -9986,7 +9986,7 @@ msgstr "不支持complex values"
 
 msgctxt "Firmware::RunTime"
 msgid "constant must be an integer"
-msgstr "constant 必须是一个数字"
+msgstr "常量必须是一个数字"
 
 msgctxt "Firmware::RunTime"
 msgid "could not connect to ssid=%1, sec=%2, key=%3\n"
@@ -9998,11 +9998,11 @@ msgstr "DAC(%1) 不存在"
 
 msgctxt "Firmware::RunTime"
 msgid "decimal numbers not supported"
-msgstr "不支持 decimal numbers"
+msgstr "不支持小数"
 
 msgctxt "Firmware::RunTime"
 msgid "Descriptor type is not supported"
-msgstr "不支持 Descriptor type"
+msgstr "不支持 Descriptor 类型"
 
 msgctxt "Firmware::RunTime"
 msgid "empty heap"
