@@ -223,6 +223,8 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html#class-mjpeg-mjpeg-recorder">class Mjpeg &#8211; Mjpeg recorder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal"><span class="pre">lcd</span></code> &#8212; lcd shield driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal"><span class="pre">fir</span></code> &#8212; thermopile shield driver (fir == far infrared)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tv.html"><code class="docutils literal"><span class="pre">tv</span></code> &#8212; tv shield driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.cpufreq.html"><code class="docutils literal"><span class="pre">cpufreq</span></code> &#8212; CPU Frequency Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.omv.html"><code class="docutils literal"><span class="pre">omv</span></code> &#8212; OpenMV Cam Information</a></li>
 </ul>
 </li>
@@ -283,46 +285,220 @@
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="image.image.rgb_to_lab">
-<code class="descclassname">image.</code><code class="descname">rgb_to_lab</code><span class="sig-paren">(</span><em>rgb_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.rgb_to_lab" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the LAB tuple (l, a, b) for the RGB888 <code class="docutils literal"><span class="pre">rgb_tuple</span></code> (r, g, b).</p>
+<dt id="image.image.binary_to_grayscale">
+<code class="descclassname">image.</code><code class="descname">binary_to_grayscale</code><span class="sig-paren">(</span><em>binary_image_value</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.binary_to_grayscale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted binary value (0-1) to a grayscale value (0-255).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.binary_to_rgb">
+<code class="descclassname">image.</code><code class="descname">binary_to_rgb</code><span class="sig-paren">(</span><em>binary_image_value</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.binary_to_rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted binary value (0-1) to a 3 value RGB888 tuple.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.binary_to_lab">
+<code class="descclassname">image.</code><code class="descname">binary_to_lab</code><span class="sig-paren">(</span><em>binary_image_value</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.binary_to_lab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted binary value (0-1) to a 3 value LAB tuple.</p>
+<p>L goes between 0 and 100 and A/B go from -128 to 128.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.binary_to_yuv">
+<code class="descclassname">image.</code><code class="descname">binary_to_yuv</code><span class="sig-paren">(</span><em>binary_image_value</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.binary_to_yuv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted binary value (0-1) to a 3 value YUV tuple.</p>
+<p>Y goes between 0 and 255 and U/V go from -128 to 128.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.grayscale_to_binary">
+<code class="descclassname">image.</code><code class="descname">grayscale_to_binary</code><span class="sig-paren">(</span><em>grayscale_value</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.grayscale_to_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted grayscale value (0-255) to a binary value (0-1).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.grayscale_to_rgb">
+<code class="descclassname">image.</code><code class="descname">grayscale_to_rgb</code><span class="sig-paren">(</span><em>grayscale_value</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.grayscale_to_rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted grayscale value to a 3 value RGB888 tuple.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">RGB888 means 8-bits (0-255) for red, green, and blue. For LAB, L
-goes from 0-100 and a/b go from -128 to 127.</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a RGB565-&gt;RGB888 process
+so this method won&#8217;t return the exact values as a pure RGB888 system would.
+However, it&#8217;s true to how the image lib works internally.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
-<dt id="image.image.lab_to_rgb">
-<code class="descclassname">image.</code><code class="descname">lab_to_rgb</code><span class="sig-paren">(</span><em>lab_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.lab_to_rgb" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the RGB888 tuple (r, g, b) for the LAB <code class="docutils literal"><span class="pre">lab_tuple</span></code> (l, a, b).</p>
+<dt id="image.image.grayscale_to_lab">
+<code class="descclassname">image.</code><code class="descname">grayscale_to_lab</code><span class="sig-paren">(</span><em>grayscale_value</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.grayscale_to_lab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted grayscale value to a 3 value LAB tuple.</p>
+<p>L goes between 0 and 100 and A/B go from -128 to 128.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">RGB888 means 8-bits (0-255) for red, green, and blue. For LAB, L
-goes from 0-100 and a/b go from -128 to 127.</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a RGB565-&gt;LAB process
+so this method won&#8217;t return the exact values as a pure LAB system would.
+However, it&#8217;s true to how the image lib works internally.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.grayscale_to_yuv">
+<code class="descclassname">image.</code><code class="descname">grayscale_to_yuv</code><span class="sig-paren">(</span><em>grayscale_value</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.grayscale_to_yuv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted grayscale value to a 3 value YUV tuple.</p>
+<p>Y goes between 0 and 255 and U/V go from -128 to 128.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a RGB565-&gt;YUV process
+so this method won&#8217;t return the exact values as a pure YUV system would.
+However, it&#8217;s true to how the image lib works internally.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.rgb_to_binary">
+<code class="descclassname">image.</code><code class="descname">rgb_to_binary</code><span class="sig-paren">(</span><em>rgb_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.rgb_to_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted 3 value RGB888 tuple to a center range thresholded binary value (0-1).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a RGB888-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure RGB888 system would.
+However, it&#8217;s true to how the image lib works internally.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="image.image.rgb_to_grayscale">
 <code class="descclassname">image.</code><code class="descname">rgb_to_grayscale</code><span class="sig-paren">(</span><em>rgb_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.rgb_to_grayscale" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the grayscale value for the RGB888 <code class="docutils literal"><span class="pre">rgb_tuple</span></code> (r, g, b).</p>
+<dd><p>Returns a converted 3 value RGB888 tuple to a grayscale value (0-255).</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">RGB888 means 8-bits (0-255) for red, green, and blue. The grayscale
-values goes between 0-255.</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a RGB888-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure RGB888 system would.
+However, it&#8217;s true to how the image lib works internally.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
-<dt id="image.image.grayscale_to_rgb">
-<code class="descclassname">image.</code><code class="descname">grayscale_to_rgb</code><span class="sig-paren">(</span><em>g_value</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.grayscale_to_rgb" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the RGB888 tuple (r, a, b) for the grayscale <code class="docutils literal"><span class="pre">g_value</span></code>.</p>
+<dt id="image.image.rgb_to_lab">
+<code class="descclassname">image.</code><code class="descname">rgb_to_lab</code><span class="sig-paren">(</span><em>rgb_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.rgb_to_lab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted 3 value RGB888 tuple to a 3 value LAB tuple.</p>
+<p>L goes between 0 and 100 and A/B go from -128 to 128.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">RGB888 means 8-bits (0-255) for red, green, and blue. The grayscale
-values goes between 0-255.</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a RGB888-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure RGB888 system would.
+However, it&#8217;s true to how the image lib works internally.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.rgb_to_yuv">
+<code class="descclassname">image.</code><code class="descname">rgb_to_yuv</code><span class="sig-paren">(</span><em>rgb_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.rgb_to_yuv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted 3 value RGB888 tuple to a 3 value YUV tuple.</p>
+<p>Y goes between 0 and 255 and U/V go from -128 to 128.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a RGB888-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure RGB888 system would.
+However, it&#8217;s true to how the image lib works internally.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.lab_to_binary">
+<code class="descclassname">image.</code><code class="descname">lab_to_binary</code><span class="sig-paren">(</span><em>lab_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.lab_to_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted 3 value LAB tuple to a center range thresholded binary value (0-1).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a LAB-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure LAB system would.
+However, it&#8217;s true to how the image lib works internally.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.lab_to_grayscale">
+<code class="descclassname">image.</code><code class="descname">lab_to_grayscale</code><span class="sig-paren">(</span><em>lab_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.lab_to_grayscale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted 3 value LAB tuple to a grayscale value (0-255).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a LAB-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure LAB system would.
+However, it&#8217;s true to how the image lib works internally.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.lab_to_rgb">
+<code class="descclassname">image.</code><code class="descname">lab_to_rgb</code><span class="sig-paren">(</span><em>lab_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.lab_to_rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted 3 value LAB tuple to a 3 value RGB888 tuple.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a LAB-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure LAB system would.
+However, it&#8217;s true to how the image lib works internally.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.lab_to_yuv">
+<code class="descclassname">image.</code><code class="descname">lab_to_yuv</code><span class="sig-paren">(</span><em>lab_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.lab_to_yuv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted 3 value LAB tuple to a 3 value YUV tuple.</p>
+<p>Y goes between 0 and 255 and U/V go from -128 to 128.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a LAB-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure LAB system would.
+However, it&#8217;s true to how the image lib works internally.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.yuv_to_binary">
+<code class="descclassname">image.</code><code class="descname">yuv_to_binary</code><span class="sig-paren">(</span><em>yuv_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.yuv_to_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted 3 value YUV tuple to a center range thresholded binary value (0-1).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a YUV-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure YUV system would.
+However, it&#8217;s true to how the image lib works internally.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.yuv_to_grayscale">
+<code class="descclassname">image.</code><code class="descname">yuv_to_grayscale</code><span class="sig-paren">(</span><em>yuv_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.yuv_to_grayscale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted 3 value YUV tuple to a grayscale value (0-255).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a YUV-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure YUV system would.
+However, it&#8217;s true to how the image lib works internally.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.yuv_to_rgb">
+<code class="descclassname">image.</code><code class="descname">yuv_to_rgb</code><span class="sig-paren">(</span><em>lab_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.yuv_to_rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted 3 value YUV tuple to a 3 value RGB888 tuple.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a YUV-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure YUV system would.
+However, it&#8217;s true to how the image lib works internally.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="image.image.yuv_to_lab">
+<code class="descclassname">image.</code><code class="descname">yuv_to_lab</code><span class="sig-paren">(</span><em>yuv_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.yuv_to_lab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a converted 3 value YUV tuple to a 3 value LAB tuple.</p>
+<p>L goes between 0 and 100 and A/B go from -128 to 128.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The OpenMV Cam firmware does the conversion using a YUV-&gt;RGB565 process
+so this method won&#8217;t return the exact values as a pure YUV system would.
+However, it&#8217;s true to how the image lib works internally.</p>
 </div>
 </dd></dl>
 
@@ -897,6 +1073,21 @@ methods.</p>
 <div class="section" id="id11">
 <h2>Methods<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
+<dt id="image.blob.corners">
+<code class="descclassname">blob.</code><code class="descname">corners</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.corners" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of 4 (x,y) tuples of the 4 corners of the object. Corners are
+always returned in sorted clock-wise order starting from the top left.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.min_corners">
+<code class="descclassname">blob.</code><code class="descname">min_corners</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.min_corners" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of 4 (x,y) tuples of the 4 corners than bound the min area
+rectangle of the blob. Unlike <a class="reference internal" href="#image.blob.corners" title="image.blob.corners"><code class="xref any py py-meth docutils literal"><span class="pre">blob.corners()</span></code></a> the min area rectangle corners
+do not necessarily lie on the blob.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="image.blob.rect">
 <code class="descclassname">blob.</code><code class="descname">rect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.rect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a rectangle tuple (x, y, w, h) for use with other <a class="reference internal" href="#module-image" title="image: machine vision"><code class="xref any py py-mod docutils literal"><span class="pre">image</span></code></a> methods
@@ -946,6 +1137,12 @@ like <a class="reference internal" href="#image.image.draw_rectangle" title="ima
 </dd></dl>
 
 <dl class="method">
+<dt id="image.blob.cxf">
+<code class="descclassname">blob.</code><code class="descname">cxf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.cxf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the centroid x position of the blob (float).</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="image.blob.cy">
 <code class="descclassname">blob.</code><code class="descname">cy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.cy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the centroid y position of the blob (int).</p>
@@ -953,19 +1150,37 @@ like <a class="reference internal" href="#image.image.draw_rectangle" title="ima
 </dd></dl>
 
 <dl class="method">
+<dt id="image.blob.cyf">
+<code class="descclassname">blob.</code><code class="descname">cyf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.cyf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the centroid y position of the blob (float).</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="image.blob.rotation">
 <code class="descclassname">blob.</code><code class="descname">rotation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.rotation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the rotation of the blob in radians (float). If the blob is like
 a pencil or pen this value will be unique for 0-180 degrees. If the blob
-is round this value is not useful. You&#8217;ll only be able to get 0-360 degrees
-of rotation from this if the blob has no symmetry at all.</p>
+is round this value is not useful.</p>
 <p>You may also get this value doing <code class="docutils literal"><span class="pre">[7]</span></code> on the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.rotation_deg">
+<code class="descclassname">blob.</code><code class="descname">rotation_deg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.rotation_deg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rotation of the blob in degrees.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.rotation_rad">
+<code class="descclassname">blob.</code><code class="descname">rotation_rad</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.rotation_rad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rotation of the blob in radians. This method is more descriptive
+than just <a class="reference internal" href="#image.blob.rotation" title="image.blob.rotation"><code class="xref any py py-meth docutils literal"><span class="pre">blob.rotation()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="image.blob.code">
 <code class="descclassname">blob.</code><code class="descname">code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.code" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a 16-bit binary number with a bit set in it for each color threshold
+<dd><p>Returns a 32-bit binary number with a bit set in it for each color threshold
 that&#8217;s part of this blob. For example, if you passed <a class="reference internal" href="#image.image.find_blobs" title="image.image.find_blobs"><code class="xref any py py-meth docutils literal"><span class="pre">image.find_blobs()</span></code></a>
 three color thresholds to look for then bits 0/1/2 may be set for this blob.
 Note that only one bit will be set for each blob unless <a class="reference internal" href="#image.image.find_blobs" title="image.image.find_blobs"><code class="xref any py py-meth docutils literal"><span class="pre">image.find_blobs()</span></code></a>
@@ -978,9 +1193,27 @@ along with multiple thresholds to implement color code tracking.</p>
 <dl class="method">
 <dt id="image.blob.count">
 <code class="descclassname">blob.</code><code class="descname">count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of blobs merged into this blob. THis is 1 unless you
+<dd><p>Returns the number of blobs merged into this blob. This is 1 unless you
 called <a class="reference internal" href="#image.image.find_blobs" title="image.image.find_blobs"><code class="xref any py py-meth docutils literal"><span class="pre">image.find_blobs()</span></code></a> with <code class="docutils literal"><span class="pre">merge=True</span></code>.</p>
 <p>You may also get this value doing <code class="docutils literal"><span class="pre">[9]</span></code> on the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.perimeter">
+<code class="descclassname">blob.</code><code class="descname">perimeter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.perimeter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of pixels on this blob&#8217;s perimeter.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.roundness">
+<code class="descclassname">blob.</code><code class="descname">roundness</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.roundness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a value between 0 and 1 representing how round the object is. A circle would be a 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.elongation">
+<code class="descclassname">blob.</code><code class="descname">elongation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.elongation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a value between 0 and 1 representing how long (not round) the object is. A line would be a 1.</p>
 </dd></dl>
 
 <dl class="method">
@@ -994,7 +1227,75 @@ called <a class="reference internal" href="#image.image.find_blobs" title="image
 <code class="descclassname">blob.</code><code class="descname">density</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.density" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the density ratio of the blob. This is the number of pixels in the
 blob over its bounding box area. A low density ratio means in general that
-the lock on the object isn&#8217;t very good.</p>
+the lock on the object isn&#8217;t very good. The result is between 0 and 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.extent">
+<code class="descclassname">blob.</code><code class="descname">extent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.extent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#image.blob.density" title="image.blob.density"><code class="xref any py py-meth docutils literal"><span class="pre">blob.density()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.compactness">
+<code class="descclassname">blob.</code><code class="descname">compactness</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.compactness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like <a class="reference internal" href="#image.blob.density" title="image.blob.density"><code class="xref any py py-meth docutils literal"><span class="pre">blob.density()</span></code></a>, but, uses the perimeter of the blob instead to measure
+the objects density and is thus more accurate. The result is between 0 and 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.solidity">
+<code class="descclassname">blob.</code><code class="descname">solidity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.solidity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like <a class="reference internal" href="#image.blob.density" title="image.blob.density"><code class="xref any py py-meth docutils literal"><span class="pre">blob.density()</span></code></a> but, uses the minimum area rotated rectangle versus the
+bounding rectangle to measure density. The result is between 0 and 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.convexity">
+<code class="descclassname">blob.</code><code class="descname">convexity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.convexity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a value between 0 and 1 representing how convex the object is. A square would be 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.x_hist_bins">
+<code class="descclassname">blob.</code><code class="descname">x_hist_bins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.x_hist_bins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a histogram of the x axis of all columns in a blob. Bin values are
+scaled between 0 and 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.y_hist_bins">
+<code class="descclassname">blob.</code><code class="descname">y_hist_bins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.y_hist_bins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a histogram of the y axis of all the rows in a blob. Bin values are
+scaled between 0 and 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.major_axis_line">
+<code class="descclassname">blob.</code><code class="descname">major_axis_line</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.major_axis_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a line tuple (x1, y1, x2, y2) that can be drawn with <a class="reference internal" href="#image.image.draw_line" title="image.image.draw_line"><code class="xref any py py-meth docutils literal"><span class="pre">image.draw_line()</span></code></a> of the major
+axis of the blob (the line going through the longest side of the min area rectangle).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.minor_axis_line">
+<code class="descclassname">blob.</code><code class="descname">minor_axis_line</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.minor_axis_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a line tuple (x1, y1, x2, y2) that can be drawn with <a class="reference internal" href="#image.image.draw_line" title="image.image.draw_line"><code class="xref any py py-meth docutils literal"><span class="pre">image.draw_line()</span></code></a> of the minor
+axis of the blob (the line going through the shortest side of the min area rectangle).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.enclosing_circle">
+<code class="descclassname">blob.</code><code class="descname">enclosing_circle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.enclosing_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a circle tuple (x, y, r) that can be drawn with <a class="reference internal" href="#image.image.draw_circle" title="image.image.draw_circle"><code class="xref any py py-meth docutils literal"><span class="pre">image.draw_circle()</span></code></a> of
+the circle that encloses the min area rectangle of a blob.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.blob.enclosed_ellipse">
+<code class="descclassname">blob.</code><code class="descname">enclosed_ellipse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.blob.enclosed_ellipse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an ellipse tuple (x, y, rx, ry, rotation) that can be drawn with <a class="reference internal" href="#image.image.draw_ellipse" title="image.image.draw_ellipse"><code class="xref any py py-meth docutils literal"><span class="pre">image.draw_ellipse()</span></code></a>
+of the ellipse that fits inside of the min area rectangle of a blob.</p>
 </dd></dl>
 
 </div>
@@ -1950,6 +2251,16 @@ Note that unless the image is small the heap likely doesn&#8217;t have enough
 space to store the image object. If <code class="docutils literal"><span class="pre">loop</span></code> is True then after the last
 image from the stream is read playback will start from the beginning again.
 Otherwise, this method will return None after all frames have been read.</p>
+<p>You may also set <code class="docutils literal"><span class="pre">copy_to_fb</span></code> equal to another image object and that
+buffer will then be overwritten with the copied image changing the passed
+image object&#8217;s pixel format and resolution.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <code class="docutils literal"><span class="pre">copy_to_fb</span></code> is set to True or another image object do not continue
+using the old image object passed to this method or the frame buffer
+image object. Use the new returned image object reference from this
+method as the old references are now stale.</p>
+</div>
 <p>Note that <a class="reference internal" href="#image.imagereader.next_frame" title="image.imagereader.next_frame"><code class="xref any py py-meth docutils literal"><span class="pre">imagereader.next_frame()</span></code></a> tries to limit playback speed by pausing
 after reading frames to match the speed frames were recorded at. Otherwise
 this method would zoom through all images at 200+ FPS.</p>
@@ -1973,21 +2284,23 @@ not be corrupted if it is not closed...</p>
 <dl class="class">
 <dt id="image.image.Image">
 <em class="property">class </em><code class="descclassname">image.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>path</em><span class="optional">[</span>, <em>copy_to_fb=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.Image" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new image object from a file at <code class="docutils literal"><span class="pre">path</span></code>.</p>
+<dd><p>Creates a new image object from a file at <code class="docutils literal"><span class="pre">path</span></code>. Alternatively, you may
+pass a width, height, and either <a class="reference internal" href="omv.sensor.html#sensor.sensor.BINARY" title="sensor.sensor.BINARY"><code class="xref any py py-data docutils literal"><span class="pre">sensor.BINARY</span></code></a>, <a class="reference internal" href="omv.sensor.html#sensor.sensor.GRAYSCALE" title="sensor.sensor.GRAYSCALE"><code class="xref any py py-data docutils literal"><span class="pre">sensor.GRAYSCALE</span></code></a>, or
+<a class="reference internal" href="omv.sensor.html#sensor.sensor.RGB565" title="sensor.sensor.RGB565"><code class="xref any py py-data docutils literal"><span class="pre">sensor.RGB565</span></code></a> to create new blank image object (initialized to 0 - black).</p>
 <p>Supports bmp/pgm/ppm/jpg/jpeg image files.</p>
 <p><code class="docutils literal"><span class="pre">copy_to_fb</span></code> if True the image is loaded directly into the frame buffer
 allowing you to load up large images. If False, the image is loaded into
 MicroPython&#8217;s heap which is much smaller than the frame buffer.</p>
-<blockquote>
-<div><ul class="simple">
-<li>On the OpenMV Cam M4 you should try to keep images sizes less than
-8KB in size if <code class="docutils literal"><span class="pre">copy_to_fb</span></code> is False. Otherwise, images can be
-up to 160KB in size.</li>
-<li>On the OpenMV Cam M7 you should try to keep images sizes less than
-16KB in size if <code class="docutils literal"><span class="pre">copy_to_fb</span></code> is False. Otherwise, images can be
-up to 320KB in size.</li>
-</ul>
-</div></blockquote>
+<p>You may also set <code class="docutils literal"><span class="pre">copy_to_fb</span></code> equal to another image object and that
+buffer will then be overwritten with the copied image changing the passed
+image object&#8217;s pixel format and resolution.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <code class="docutils literal"><span class="pre">copy_to_fb</span></code> is set to True or another image object do not continue
+using the old image object passed to this method or the frame buffer
+image object. Use the new returned image object reference from this
+method as the old references are now stale.</p>
+</div>
 <p>Images support &#8220;[]&#8221; notation. Do <code class="docutils literal"><span class="pre">image[index]</span> <span class="pre">=</span> <span class="pre">8/16-bit</span> <span class="pre">value</span></code> to assign
 an image pixel or <code class="docutils literal"><span class="pre">image[index]</span></code> to get an image pixel which will be
 either an 8-bit value for grayscale images of a 16-bit RGB565 value for RGB
@@ -2115,40 +2428,61 @@ the max of each area.</p>
 
 <dl class="method">
 <dt id="image.image.to_bitmap">
-<code class="descclassname">image.</code><code class="descname">to_bitmap</code><span class="sig-paren">(</span><span class="optional">[</span><em>copy=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.to_bitmap" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">image.</code><code class="descname">to_bitmap</code><span class="sig-paren">(</span><span class="optional">[</span><em>copy=False</em><span class="optional">[</span>, <em>rgb_channel=-1</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.to_bitmap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts an image to a bitmap image (1 bit per pixel). This method modifies
 the underlying image pixels changing the image size in bytes too so it can
 only be done in place on a Grayscale or an RGB565 image. Otherwise <code class="docutils literal"><span class="pre">copy</span></code>
 must be True to create a new modified image on the heap.</p>
+<p><code class="docutils literal"><span class="pre">rgb_channel</span></code> if set to 0/1/2 creates a bitmap from either the R/G/B channel
+respectively versus the center thresholded grayscale value computed from an
+RGB565 pixel if this method was called on an RGB565 image.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Bitmap images are like grayscale images with only two pixels values - 0
+and 1. Additionally, bitmap images are packed such that they only store
+1 bit per pixel making them very small. The OpenMV image library allows
+bitmap images to be used in all places <a class="reference internal" href="omv.sensor.html#sensor.sensor.GRAYSCALE" title="sensor.sensor.GRAYSCALE"><code class="xref any py py-data docutils literal"><span class="pre">sensor.GRAYSCALE</span></code></a> and <a class="reference internal" href="omv.sensor.html#sensor.sensor.RGB565" title="sensor.sensor.RGB565"><code class="xref any py py-data docutils literal"><span class="pre">sensor.RGB565</span></code></a> images
+can be used. However, many operations when applied on bitmap images don&#8217;t
+make any sense becuase bitmap images only have 2 values. OpenMV recommends
+using bitmap images for <code class="docutils literal"><span class="pre">mask</span></code> values in operations and such as they
+fit on the MicroPython heap quite easily. Finally, bitmap image pixel values
+0 and 1 are interpreted as black and white when being applied to <a class="reference internal" href="omv.sensor.html#sensor.sensor.GRAYSCALE" title="sensor.sensor.GRAYSCALE"><code class="xref any py py-data docutils literal"><span class="pre">sensor.GRAYSCALE</span></code></a>
+or <a class="reference internal" href="omv.sensor.html#sensor.sensor.RGB565" title="sensor.sensor.RGB565"><code class="xref any py py-data docutils literal"><span class="pre">sensor.RGB565</span></code></a> images. The library automatically handles conversion.</p>
+</div>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images or bayer images.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="image.image.to_grayscale">
-<code class="descclassname">image.</code><code class="descname">to_grayscale</code><span class="sig-paren">(</span><span class="optional">[</span><em>copy=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.to_grayscale" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">image.</code><code class="descname">to_grayscale</code><span class="sig-paren">(</span><span class="optional">[</span><em>copy=False</em><span class="optional">[</span>, <em>rgb_channel=-1</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.to_grayscale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts an image to a grayscale image. This method modifies the underlying
 image pixels changing the image size in bytes too so it can only be done
 in place on a Grayscale or an RGB565 image. Otherwise <code class="docutils literal"><span class="pre">copy</span></code> must be True
 to create a new modified image on the heap.</p>
+<p><code class="docutils literal"><span class="pre">rgb_channel</span></code> if set to 0/1/2 creates a grayscale image from either the
+R/G/B channel respectively versus the grayscale value computed from an
+RGB565 pixel if this method was called on an RGB565 image.</p>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images or bayer images.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="image.image.to_rgb565">
-<code class="descclassname">image.</code><code class="descname">to_rgb565</code><span class="sig-paren">(</span><span class="optional">[</span><em>copy=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.to_rgb565" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">image.</code><code class="descname">to_rgb565</code><span class="sig-paren">(</span><span class="optional">[</span><em>copy=False</em><span class="optional">[</span>, <em>rgb_channel=-1</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.to_rgb565" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts an image to an RGB565 image. This method modifies the underlying
 image pixels changing the image size in bytes too so it can only be done
 in place on an RGB565 image. Otherwise <code class="docutils literal"><span class="pre">copy</span></code> must be True to
 create a new modified image on the heap.</p>
+<p><code class="docutils literal"><span class="pre">rgb_channel</span></code> if set to 0/1/2 creates a RGB565 image from either the
+R/G/B channel respectively if this method was called on an RGB565 image.</p>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images or bayer images.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="image.image.to_rainbow">
-<code class="descclassname">image.</code><code class="descname">to_rainbow</code><span class="sig-paren">(</span><span class="optional">[</span><em>copy=False</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.to_rainbow" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">image.</code><code class="descname">to_rainbow</code><span class="sig-paren">(</span><span class="optional">[</span><em>copy=False</em><span class="optional">[</span>, <em>rgb_channel=-1</em><span class="optional">[</span>, <em>color_palette=sensor.PALETTE_RAINBOW</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.to_rainbow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts an image to a rainbow image. This method modifies the underlying
 image pixels changing the image size in bytes too so it can only be done
 in place on a RGB565 image. Otherwise <code class="docutils literal"><span class="pre">copy</span></code> must be True to
@@ -2156,6 +2490,9 @@ create a new modified image on the heap.</p>
 <p>A rainbow image is a color image with a unique color value for each 8-bitmask
 grayscale lighting value in an image. For example, it provides heat-map color
 to a thermal-image.</p>
+<p><code class="docutils literal"><span class="pre">rgb_channel</span></code> if set to 0/1/2 creates a rainbow image from either the
+R/G/B channel respectively if this method was called on an RGB565 image.</p>
+<p><code class="docutils literal"><span class="pre">color_palette</span></code> sets the color palette to use for rainbow conversion.</p>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images or bayer images.</p>
 </dd></dl>
@@ -2214,19 +2551,97 @@ windows created via &#8220;Open Terminal&#8221; in OpenMV IDE.</p>
 
 <dl class="method">
 <dt id="image.image.copy">
-<code class="descclassname">image.</code><code class="descname">copy</code><span class="sig-paren">(</span><span class="optional">[</span><em>roi</em><span class="optional">[</span>, <em>copy_to_fb=False</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.copy" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">image.</code><code class="descname">copy</code><span class="sig-paren">(</span><span class="optional">[</span><em>roi</em><span class="optional">[</span>, <em>x_scale</em><span class="optional">[</span>, <em>y_scale</em><span class="optional">[</span>, <em>copy_to_fb=False</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a deep copy of the image object.</p>
 <p><code class="docutils literal"><span class="pre">roi</span></code> is the region-of-interest rectangle (x, y, w, h) to copy from.
 If not specified, it is equal to the image rectangle which copies the entire
 image. This argument is not applicable for JPEG images.</p>
+<p><code class="docutils literal"><span class="pre">x_scale</span></code> is a floating point value by which to scale the image in the x
+direction.</p>
+<p><code class="docutils literal"><span class="pre">y_scale</span></code> is a floating point value by which to scale the image in the y
+direction.</p>
 <p>Keep in mind that image copies are stored in the MicroPython heap and not
-the frame buffer. As such, you need to keep image copies under 8KB for the
-OpenMV Cam M4 and 16KB for the OpenMV Cam M7. If you attempt a copy
-operation that uses up all the heap space this function will throw an
-exception. Since images are large this is rather easy to trigger.</p>
+the frame buffer. As such, copying images can easily cause you to run out
+of RAM.</p>
 <p>If <code class="docutils literal"><span class="pre">copy_to_fb</span></code> is True then this method instead replaces the frame
 buffer with the image. The frame buffer has a lot more space than the heap
 and can hold large images.</p>
+<p>You may also set <code class="docutils literal"><span class="pre">copy_to_fb</span></code> equal to another image object and that
+buffer will then be overwritten with the copied image changing the passed
+image object&#8217;s pixel format and resolution.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <code class="docutils literal"><span class="pre">copy_to_fb</span></code> is set to True or another image object do not continue
+using the old image object passed to this method or the frame buffer
+image object. Use the new returned image object reference from this
+method as the old references are now stale.</p>
+</div>
+<p>Returns the new image object.</p>
+<p>Not supported on compressed images or bayer images.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.image.crop">
+<code class="descclassname">image.</code><code class="descname">crop</code><span class="sig-paren">(</span><span class="optional">[</span><em>roi</em><span class="optional">[</span>, <em>x_scale</em><span class="optional">[</span>, <em>y_scale</em><span class="optional">[</span>, <em>copy_to_fb=False</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.crop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like <code class="docutils literal"><span class="pre">image.copy()</span></code> but operates on the image object instead of making a
+deep copy.</p>
+<p><code class="docutils literal"><span class="pre">roi</span></code> is the region-of-interest rectangle (x, y, w, h) to copy from.
+If not specified, it is equal to the image rectangle which copies the entire
+image. This argument is not applicable for JPEG images.</p>
+<p><code class="docutils literal"><span class="pre">x_scale</span></code> is a floating point value by which to scale the image in the x
+direction.</p>
+<p><code class="docutils literal"><span class="pre">y_scale</span></code> is a floating point value by which to scale the image in the y
+direction.</p>
+<p>Keep in mind that image copies are stored in the MicroPython heap and not
+the frame buffer. As such, copying images can easily cause you to run out
+of RAM.</p>
+<p>If <code class="docutils literal"><span class="pre">copy_to_fb</span></code> is True then this method instead replaces the frame
+buffer with the image. The frame buffer has a lot more space than the heap
+and can hold large images.</p>
+<p>You may also set <code class="docutils literal"><span class="pre">copy_to_fb</span></code> equal to another image object and that
+buffer will then be overwritten with the copied image changing the passed
+image object&#8217;s pixel format and resolution.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <code class="docutils literal"><span class="pre">copy_to_fb</span></code> is set to True or another image object do not continue
+using the old image object passed to this method or the frame buffer
+image object. Use the new returned image object reference from this
+method as the old references are now stale.</p>
+</div>
+<p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
+<p>Not supported on compressed images or bayer images.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.image.scale">
+<code class="descclassname">image.</code><code class="descname">scale</code><span class="sig-paren">(</span><span class="optional">[</span><em>roi</em><span class="optional">[</span>, <em>x_scale</em><span class="optional">[</span>, <em>y_scale</em><span class="optional">[</span>, <em>copy_to_fb=False</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like <code class="docutils literal"><span class="pre">image.copy()</span></code> but operates on the image object instead of making a
+deep copy.</p>
+<p><code class="docutils literal"><span class="pre">roi</span></code> is the region-of-interest rectangle (x, y, w, h) to copy from.
+If not specified, it is equal to the image rectangle which copies the entire
+image. This argument is not applicable for JPEG images.</p>
+<p><code class="docutils literal"><span class="pre">x_scale</span></code> is a floating point value by which to scale the image in the x
+direction.</p>
+<p><code class="docutils literal"><span class="pre">y_scale</span></code> is a floating point value by which to scale the image in the y
+direction.</p>
+<p>Keep in mind that image copies are stored in the MicroPython heap and not
+the frame buffer. As such, copying images can easily cause you to run out
+of RAM.</p>
+<p>If <code class="docutils literal"><span class="pre">copy_to_fb</span></code> is True then this method instead replaces the frame
+buffer with the image. The frame buffer has a lot more space than the heap
+and can hold large images.</p>
+<p>You may also set <code class="docutils literal"><span class="pre">copy_to_fb</span></code> equal to another image object and that
+buffer will then be overwritten with the copied image changing the passed
+image object&#8217;s pixel format and resolution.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <code class="docutils literal"><span class="pre">copy_to_fb</span></code> is set to True or another image object do not continue
+using the old image object passed to this method or the frame buffer
+image object. Use the new returned image object reference from this
+method as the old references are now stale.</p>
+</div>
+<p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
+<p>Not supported on compressed images or bayer images.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2245,8 +2660,12 @@ format if the image is not already compressed (0-100) (int).</p>
 
 <dl class="method">
 <dt id="image.image.clear">
-<code class="descclassname">image.</code><code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.clear" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">image.</code><code class="descname">clear</code><span class="sig-paren">(</span><span class="optional">[</span><em>mask</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.clear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets all pixels in the image to zero (very fast).</p>
+<p><code class="docutils literal"><span class="pre">mask</span></code> is another image to use as a pixel level mask for the operation.
+The mask should be an image with just black or white pixels and should be the
+same size as the image being operated on. Only pixels set in the mask are
+modified.</p>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images.</p>
 </dd></dl>
@@ -2293,8 +2712,22 @@ grayscale images or a byte-reversed RGB565 value for RGB565 images.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="image.image.draw_ellipse">
+<code class="descclassname">image.</code><code class="descname">draw_ellipse</code><span class="sig-paren">(</span><em>cx</em>, <em>cy</em>, <em>rx</em>, <em>ry</em>, <em>rotation</em><span class="optional">[</span>, <em>color</em><span class="optional">[</span>, <em>thickness=1</em><span class="optional">[</span>, <em>fill=False</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.draw_ellipse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws an ellipse on the image. You may either pass cx, cy, rx, ry, and the
+rotation (in degrees) separately or as a tuple (cx, yc, rx, ry, rotation).</p>
+<p><code class="docutils literal"><span class="pre">color</span></code> is an RGB888 tuple for Grayscale or RGB565 images. Defaults to
+white. However, you may also pass the underlying pixel value (0-255) for
+grayscale images or a byte-reversed RGB565 value for RGB565 images.</p>
+<p><code class="docutils literal"><span class="pre">thickness</span></code> controls how thick the edges are in pixels.</p>
+<p>Pass <code class="docutils literal"><span class="pre">fill</span></code> set to True to fill the ellipse.</p>
+<p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
+<p>Not supported on compressed images or bayer images.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="image.image.draw_string">
-<code class="descclassname">image.</code><code class="descname">draw_string</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>text</em><span class="optional">[</span>, <em>color</em><span class="optional">[</span>, <em>scale=1</em><span class="optional">[</span>, <em>x_spacing=0</em><span class="optional">[</span>, <em>y_spacing=0</em><span class="optional">[</span>, <em>mono_space=True</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.draw_string" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">image.</code><code class="descname">draw_string</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>text</em><span class="optional">[</span>, <em>color</em><span class="optional">[</span>, <em>scale=1</em><span class="optional">[</span>, <em>x_spacing=0</em><span class="optional">[</span>, <em>y_spacing=0</em><span class="optional">[</span>, <em>mono_space=True</em><span class="optional">[</span>, <em>char_rotation=0</em><span class="optional">[</span>, <em>char_hmirror=False</em><span class="optional">[</span>, <em>char_vflip=False</em><span class="optional">[</span>, <em>string_rotation=0</em><span class="optional">[</span>, <em>string_hmirror=False</em><span class="optional">[</span>, <em>string_vflip=False</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.draw_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draws 8x10 text starting at location (x, y) in the image. You may either pass
 x, y separately or as a tuple (x, y).</p>
 <p><code class="docutils literal"><span class="pre">text</span></code> is a string to write to the image. <code class="docutils literal"><span class="pre">\n</span></code>, <code class="docutils literal"><span class="pre">\r</span></code>, and <code class="docutils literal"><span class="pre">\r\n</span></code>
@@ -2302,8 +2735,8 @@ line endings move the cursor to the next line.</p>
 <p><code class="docutils literal"><span class="pre">color</span></code> is an RGB888 tuple for Grayscale or RGB565 images. Defaults to
 white. However, you may also pass the underlying pixel value (0-255) for
 grayscale images or a byte-reversed RGB565 value for RGB565 images.</p>
-<p><code class="docutils literal"><span class="pre">scale</span></code> may be increased to increase the size of the text on the image.
-Integer values only (e.g. 1/2/3/etc.).</p>
+<p><code class="docutils literal"><span class="pre">scale</span></code> may be increased to increase/decrease the size of the text on the
+image. You can pass greater than 0 integer or floating point values.</p>
 <p><code class="docutils literal"><span class="pre">x_spacing</span></code> allows you to add (if positive) or subtract (if negative) x
 pixels between cahracters.</p>
 <p><code class="docutils literal"><span class="pre">y_spacing</span></code> allows you to add (if positive) or subtract (if negative) y
@@ -2311,6 +2744,14 @@ pixels between cahracters (for multi-line text).</p>
 <p><code class="docutils literal"><span class="pre">mono_space</span></code> defaults to True which forces text to be fixed spaced. For
 large text scales this looks terrible. Set the False to get non-fixed width
 character spacing which looks A LOT better.</p>
+<p><code class="docutils literal"><span class="pre">char_rotation</span></code> may be 0, 90, 180, 270 to rotate each character in the
+string by this amount.</p>
+<p><code class="docutils literal"><span class="pre">char_hmirror</span></code> if True horizontally mirrors all characters in the string.</p>
+<p><code class="docutils literal"><span class="pre">char_vflip</span></code> if True vertically flips all characters in the string.</p>
+<p><code class="docutils literal"><span class="pre">string_rotation</span></code> may be 0, 90, 180, 270 to rotate the string by this
+amount.</p>
+<p><code class="docutils literal"><span class="pre">string_hmirror</span></code> if True horizontally mirrors the string.</p>
+<p><code class="docutils literal"><span class="pre">string_vflip</span></code> if True vertically flips the string.</p>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images or bayer images.</p>
 </dd></dl>
@@ -2343,12 +2784,38 @@ grayscale images or a byte-reversed RGB565 value for RGB565 images.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="image.image.draw_edges">
+<code class="descclassname">image.</code><code class="descname">draw_edges</code><span class="sig-paren">(</span><em>image</em>, <em>corners</em><span class="optional">[</span>, <em>color</em><span class="optional">[</span>, <em>size=0</em><span class="optional">[</span>, <em>thickness=1</em><span class="optional">[</span>, <em>fill=False</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.draw_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws line edges between a corner list returned by methods like <a class="reference internal" href="#image.blob.corners" title="image.blob.corners"><code class="xref any py py-meth docutils literal"><span class="pre">blob.corners</span></code></a>. Coners is
+a four valued tuple of two valued x/y tuples. E.g. [(x1,y1),(x2,y2),(x3,y3),(x4,y4)].</p>
+<p><code class="docutils literal"><span class="pre">color</span></code> is an RGB888 tuple for Grayscale or RGB565 images. Defaults to
+white. However, you may also pass the underlying pixel value (0-255) for
+grayscale images or a byte-reversed RGB565 value for RGB565 images.</p>
+<p><code class="docutils literal"><span class="pre">size</span></code> if greater than 0 causes the corners to be drawn as circles of radius <code class="docutils literal"><span class="pre">size</span></code>.</p>
+<p><code class="docutils literal"><span class="pre">thickness</span></code> controls how thick the line is in pixels.</p>
+<p>Pass <code class="docutils literal"><span class="pre">fill</span></code> set to True to fill the corner circles if drawn.</p>
+<p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
+<p>Not supported on compressed images or bayer images.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="image.image.draw_image">
-<code class="descclassname">image.</code><code class="descname">draw_image</code><span class="sig-paren">(</span><em>image</em>, <em>x</em>, <em>y</em><span class="optional">[</span>, <em>x_scale=1.0</em><span class="optional">[</span>, <em>y_scale=1.0</em><span class="optional">[</span>, <em>mask=None</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.draw_image" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">image.</code><code class="descname">draw_image</code><span class="sig-paren">(</span><em>image</em>, <em>x</em>, <em>y</em><span class="optional">[</span>, <em>x_scale=1.0</em><span class="optional">[</span>, <em>y_scale=1.0</em><span class="optional">[</span>, <em>alpha=256</em><span class="optional">[</span>, <em>mask=None</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.draw_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draws an <code class="docutils literal"><span class="pre">image</span></code> whose top-left corner starts at location x, y. You may either
-pass x, y separately or as a tuple (x, y).</p>
-<p><code class="docutils literal"><span class="pre">x_scale</span></code> controls how much the image is scaled by in the x direction (float).</p>
-<p><code class="docutils literal"><span class="pre">y_scale</span></code> controls how much the image is scaled by in the y direction (float).</p>
+pass x, y separately or as a tuple (x, y). This method ia very flexible and does
+not require the image being drawn on the target image to have the same width/height
+and/or pixel format (GRAYSCALE/RGB565). This method also automatically handles
+clipping pixels being drawn off the edge of the target image.</p>
+<p>That said, the above flexiblity comes with the cost of increased drawing time.
+Use the more constrained methods like <a class="reference internal" href="#image.image.replace" title="image.image.replace"><code class="xref any py py-meth docutils literal"><span class="pre">image.replace</span></code></a> which require both images
+to have the same width/height with a mask to more quickly render one image onto
+another if you need more performance.</p>
+<p><code class="docutils literal"><span class="pre">x_scale</span></code> controls how much the drawn image is scaled by in the x direction (float).</p>
+<p><code class="docutils literal"><span class="pre">y_scale</span></code> controls how much the drawn image is scaled by in the y direction (float).</p>
+<p><code class="docutils literal"><span class="pre">alpha</span></code> controls how much of the other image to blend into this image.
+<code class="docutils literal"><span class="pre">alpha</span></code> should be an integer value between 0 and 256. A value closer to
+zero blends more of the other image into this image and a value closer to
+256 does the opposite.</p>
 <p><code class="docutils literal"><span class="pre">mask</span></code> is another image to use as a pixel level mask for the drawing operation.
 The mask should be an image with just black or white pixels and should be the
 same size as the <code class="docutils literal"><span class="pre">image</span></code> you are drawing if passed. You may use the mask
@@ -2360,7 +2827,10 @@ to do sprite style drawing operations.</p>
 <dl class="method">
 <dt id="image.image.draw_keypoints">
 <code class="descclassname">image.</code><code class="descname">draw_keypoints</code><span class="sig-paren">(</span><em>keypoints</em><span class="optional">[</span>, <em>color</em><span class="optional">[</span>, <em>size=10</em><span class="optional">[</span>, <em>thickness=1</em><span class="optional">[</span>, <em>fill=False</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.draw_keypoints" title="Permalink to this definition">¶</a></dt>
-<dd><p>Draws the keypoints of a keypoints object on the image.</p>
+<dd><p>Draws the keypoints of a keypoints object on the image. You may also pass a
+list of three value tuples containing the (x, y, rotation_angle_in_degrees) to
+re-use this method for drawing keypoint glyphs which are a cirle with a line
+pointing in a particular direction.</p>
 <p><code class="docutils literal"><span class="pre">color</span></code> is an RGB888 tuple for Grayscale or RGB565 images. Defaults to
 white. However, you may also pass the underlying pixel value (0-255) for
 grayscale images or a byte-reversed RGB565 value for RGB565 images.</p>
@@ -2397,22 +2867,47 @@ evaluated when flood filling.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="image.image.mask_rectange">
+<code class="descclassname">image.</code><code class="descname">mask_rectange</code><span class="sig-paren">(</span><span class="optional">[</span><em>x</em>, <em>y</em>, <em>w</em>, <em>h</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.mask_rectange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zeros a rectangular part of the image. If no arguments are supplied this
+method zeros the center of the image.</p>
+<p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
+<p>Not supported on compressed images or bayer images.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.image.mask_circle">
+<code class="descclassname">image.</code><code class="descname">mask_circle</code><span class="sig-paren">(</span><span class="optional">[</span><em>x</em>, <em>y</em>, <em>radius</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.mask_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zeros a circular part of the image. If no arguments are supplied this
+method zeros the center of the image.</p>
+<p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
+<p>Not supported on compressed images or bayer images.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.image.mask_ellipse">
+<code class="descclassname">image.</code><code class="descname">mask_ellipse</code><span class="sig-paren">(</span><span class="optional">[</span><em>x</em>, <em>y</em>, <em>radius_x</em>, <em>radius_y</em>, <em>rotation_angle_in_degrees</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.mask_ellipse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zeros an ellipsed shaped part of the image. If no arguments are supplied this
+method zeros the center of the image.</p>
+<p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
+<p>Not supported on compressed images or bayer images.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="image.image.binary">
 <code class="descclassname">image.</code><code class="descname">binary</code><span class="sig-paren">(</span><em>thresholds</em><span class="optional">[</span>, <em>invert=False</em><span class="optional">[</span>, <em>zero=False</em><span class="optional">[</span>, <em>mask=None</em><span class="optional">[</span>, <em>to_bitmap=False</em><span class="optional">[</span>, <em>copy=False</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.binary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets all pixels in the image to black or white depending on if the pixel
 is inside of a threshold in the threshold list <code class="docutils literal"><span class="pre">thresholds</span></code> or not.</p>
-<p><code class="docutils literal"><span class="pre">thresholds</span></code> must be a list of tuples
-<code class="docutils literal"><span class="pre">[(lo,</span> <span class="pre">hi),</span> <span class="pre">(lo,</span> <span class="pre">hi),</span> <span class="pre">...,</span> <span class="pre">(lo,</span> <span class="pre">hi)]</span></code> defining the ranges of color you
-want to track. For
-grayscale images each tuple needs to contain two values - a min grayscale
-value and a max grayscale value. Only pixel regions that fall between these
-thresholds will be considered. For RGB565 images each tuple needs to have
-six values (l_lo, l_hi, a_lo, a_hi, b_lo, b_hi) - which are minimums and
-maximums for the LAB L, A, and B channels respectively. For easy usage this
-function will automatically fix swapped min and max values. Additionally,
-if a tuple is larger than six values the rest are ignored. Conversely, if the
-tuple is too short the rest of the thresholds are assumed to be at maximum
-range.</p>
+<p><code class="docutils literal"><span class="pre">thresholds</span></code> must be a list of tuples <code class="docutils literal"><span class="pre">[(lo,</span> <span class="pre">hi),</span> <span class="pre">(lo,</span> <span class="pre">hi),</span> <span class="pre">...,</span> <span class="pre">(lo,</span> <span class="pre">hi)]</span></code>
+defining the ranges of color you want to track. For grayscale images each tuple
+needs to contain two values - a min grayscale value and a max grayscale value.
+Only pixel regions that fall between these thresholds will be considered.
+For RGB565 images each tuple needs to have six values (l_lo, l_hi, a_lo, a_hi, b_lo, b_hi)
+- which are minimums and maximums for the LAB L, A, and B channels respectively.
+For easy usage this function will automatically fix swapped min and max values.
+Additionally, if a tuple is larger than six values the rest are ignored.
+Conversely, if the tuple is too short the rest of the thresholds are assumed
+to be at maximum range.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>To get the thresholds for the object you want to track just select (click
@@ -2436,9 +2931,24 @@ The mask should be an image with just black or white pixels and should be the
 same size as the image being operated on. Only pixels set in the mask are
 modified.</p>
 <p><code class="docutils literal"><span class="pre">to_bitmap</span></code> turns the image data into a binary bitmap image where each
-pixel is stored in 1 bit. Set <code class="docutils literal"><span class="pre">copy</span></code> to True when using <code class="docutils literal"><span class="pre">to_bitmap</span></code>.</p>
+pixel is stored in 1 bit. For very small images the new bitmap image may
+not fit inside of the original image requiring an out-of-place operation
+using <code class="docutils literal"><span class="pre">copy</span></code>.</p>
 <p><code class="docutils literal"><span class="pre">copy</span></code> if True creates a copy of the binarized image on the heap versus
 modifying the source image.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Bitmap images are like grayscale images with only two pixels values - 0
+and 1. Additionally, bitmap images are packed such that they only store
+1 bit per pixel making them very small. The OpenMV image library allows
+bitmap images to be used in all places <a class="reference internal" href="omv.sensor.html#sensor.sensor.GRAYSCALE" title="sensor.sensor.GRAYSCALE"><code class="xref any py py-data docutils literal"><span class="pre">sensor.GRAYSCALE</span></code></a> and <a class="reference internal" href="omv.sensor.html#sensor.sensor.RGB565" title="sensor.sensor.RGB565"><code class="xref any py py-data docutils literal"><span class="pre">sensor.RGB565</span></code></a> images
+can be used. However, many operations when applied on bitmap images don&#8217;t
+make any sense becuase bitmap images only have 2 values. OpenMV recommends
+using bitmap images for <code class="docutils literal"><span class="pre">mask</span></code> values in operations and such as they
+fit on the MicroPython heap quite easily. Finally, bitmap image pixel values
+0 and 1 are interpreted as black and white when being applied to <a class="reference internal" href="omv.sensor.html#sensor.sensor.GRAYSCALE" title="sensor.sensor.GRAYSCALE"><code class="xref any py py-data docutils literal"><span class="pre">sensor.GRAYSCALE</span></code></a>
+or <a class="reference internal" href="omv.sensor.html#sensor.sensor.RGB565" title="sensor.sensor.RGB565"><code class="xref any py py-data docutils literal"><span class="pre">sensor.RGB565</span></code></a> images. The library automatically handles conversion.</p>
+</div>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images or bayer images.</p>
 </dd></dl>
@@ -2633,29 +3143,83 @@ modified.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="image.image.gamma_corr">
+<code class="descclassname">image.</code><code class="descname">gamma_corr</code><span class="sig-paren">(</span><em>[gamma=1.0, [contrast=1.0, [brightness=0.0]</em><span class="sig-paren">)</span><a class="headerlink" href="#image.image.gamma_corr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quickly changes the image gamma, contrast, and brightness. Please use this
+method instead of <a class="reference internal" href="#image.image.mul" title="image.image.mul"><code class="xref any py py-meth docutils literal"><span class="pre">image.mul</span></code></a> or <a class="reference internal" href="#image.image.div" title="image.image.div"><code class="xref any py py-meth docutils literal"><span class="pre">image.div</span></code></a> which are meant for blending to
+adjust pixels values.</p>
+<p><code class="docutils literal"><span class="pre">gamma</span></code> with values greater than 1.0 makes the image darker in a non-linear
+manner while less than 1.0 makes the image brighter. The gamma value is applied
+to the image by scaling all pixel color channels to be between [0:1) and then
+doing a remapping of <code class="docutils literal"><span class="pre">pow(pixel,</span> <span class="pre">1/gamma)</span></code> on all pixels before scaling back.</p>
+<p><code class="docutils literal"><span class="pre">contrast</span></code> with values greater than 1.0 makes the image brighter in a linear
+manner while less than 1.0 makes the image darker. The contrast value is applied
+to the image by scaling all pixel color channels to be between [0:1) and then
+doing a remapping of <code class="docutils literal"><span class="pre">pixel</span> <span class="pre">*</span> <span class="pre">contrast</span></code> on all pixels before scaling back.</p>
+<p><code class="docutils literal"><span class="pre">brightness</span></code> with values greater than 0.0 makes the image brighter in a constant
+manner while less than 0.0 makes the image darker. The brightness value is applied
+to the image by scaling all pixel color channels to be between [0:1) and then
+doing a remapping of <code class="docutils literal"><span class="pre">pixel</span> <span class="pre">+</span> <span class="pre">brightness</span></code> on all pixels before scaling back.</p>
+<p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
+<p>Not supported on compressed images or bayer images.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="image.image.negate">
 <code class="descclassname">image.</code><code class="descname">negate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.negate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Flips (numerically inverts) all pixels values in an image very quickly.</p>
+<dd><p>Flips (numerically inverts) all pixels values in an image very quickly. E.g.
+for GRAYSCALE images this method changes all pixels from <code class="docutils literal"><span class="pre">pixel</span></code> to <code class="docutils literal"><span class="pre">255</span> <span class="pre">-</span> <span class="pre">pixel</span></code>.</p>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images or bayer images.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="image.image.replace">
-<code class="descclassname">image.</code><code class="descname">replace</code><span class="sig-paren">(</span><em>image</em><span class="optional">[</span>, <em>hmirror=False</em><span class="optional">[</span>, <em>vflip=False</em><span class="optional">[</span>, <em>mask=None</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.replace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replaces all pixels in the image with a new image.</p>
-<p><code class="docutils literal"><span class="pre">image</span></code> can either be an image object, a path to an uncompressed image
+<code class="descclassname">image.</code><code class="descname">replace</code><span class="sig-paren">(</span><em>image</em><span class="optional">[</span>, <em>hmirror=False</em><span class="optional">[</span>, <em>vflip=False</em><span class="optional">[</span>, <em>transpose=False</em><span class="optional">[</span>, <em>mask=None</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.replace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces all pixels in the image object with a new image.</p>
+<p><code class="docutils literal"><span class="pre">image</span></code> can either be another image object, a path to an uncompressed image
 file (bmp/pgm/ppm), or a scalar value. If a scalar value the value can
 either be an RGB888 tuple or the underlying pixel value (e.g. an 8-bit grayscale
 for grayscale images or a byte-reversed RGB565 value for RGB images).</p>
 <p>Set <code class="docutils literal"><span class="pre">hmirror</span></code> to True to horizontally mirror the replacing image.</p>
 <p>Set <code class="docutils literal"><span class="pre">vflip</span></code> to True to vertically flip the replacing image.</p>
+<p>Set <code class="docutils literal"><span class="pre">transpose</span></code> to True to flip the image along the diagonal (this changes
+the image image width/height if the image is non-square).</p>
+<p>If you want to rotate an image by multiples of 90 degrees pass the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li>vflip=False, hmirror=False, transpose=False -&gt; 0 degree rotation</li>
+<li>vflip=True,  hmirror=False, transpose=True  -&gt; 90 degree rotation</li>
+<li>vflip=True,  hmirror=True,  transpose=False -&gt; 180 degree rotation</li>
+<li>vflip=False, hmirror=True,  transpose=True  -&gt; 270 degree rotation</li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you don&#8217;t pass an <code class="docutils literal"><span class="pre">image</span></code> this method will operate on the underlying
+image that you were going to replace by applying the <code class="docutils literal"><span class="pre">hmirror</span></code>, <code class="docutils literal"><span class="pre">vflip</span></code>,
+and <code class="docutils literal"><span class="pre">transpose</span></code> options to rotate the image around. E.g. if you want
+to do <code class="docutils literal"><span class="pre">img.replace(img,</span> <span class="pre">etc...)</span></code> you just need to do <code class="docutils literal"><span class="pre">img.replace(etc..)</span></code>.</p>
+</div>
 <p><code class="docutils literal"><span class="pre">mask</span></code> is another image to use as a pixel level mask for the operation.
 The mask should be an image with just black or white pixels and should be the
 same size as the image being operated on. Only pixels set in the mask are
-modified.</p>
+modified. Note that the mask is applied on the image before hmirror/vflip/transpose
+so the mask should be the same width/height of the initial unmodifed image.</p>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images or bayer images.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.image.assign">
+<code class="descclassname">image.</code><code class="descname">assign</code><span class="sig-paren">(</span><em>image</em><span class="optional">[</span>, <em>hmirror=False</em><span class="optional">[</span>, <em>vflip=False</em><span class="optional">[</span>, <em>transpose=False</em><span class="optional">[</span>, <em>mask=None</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.assign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#image.image.replace" title="image.image.replace"><code class="xref any py py-meth docutils literal"><span class="pre">image.replace</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="image.image.set">
+<code class="descclassname">image.</code><code class="descname">set</code><span class="sig-paren">(</span><em>image</em><span class="optional">[</span>, <em>hmirror=False</em><span class="optional">[</span>, <em>vflip=False</em><span class="optional">[</span>, <em>transpose=False</em><span class="optional">[</span>, <em>mask=None</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#image.image.replace" title="image.image.replace"><code class="xref any py py-meth docutils literal"><span class="pre">image.replace</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2709,11 +3273,16 @@ same size as the image being operated on. Only pixels set in the mask are
 modified.</p>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images or bayer images.</p>
+<p>Note:</p>
+<div class="highlight-python"><div class="highlight"><pre>This method is meant for image blending and cannot multiply the pixels in
+the image by a scalar like ``2``. Use `image.gamma_corr` for that.
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="image.image.div">
-<code class="descclassname">image.</code><code class="descname">div</code><span class="sig-paren">(</span><em>image</em><span class="optional">[</span>, <em>invert=False</em><span class="optional">[</span>, <em>mask=None</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.div" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">image.</code><code class="descname">div</code><span class="sig-paren">(</span><em>image</em><span class="optional">[</span>, <em>invert=False</em><span class="optional">[</span>, <em>mod=False</em><span class="optional">[</span>, <em>mask=None</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.div" title="Permalink to this definition">¶</a></dt>
 <dd><p>Divides this image by another one.</p>
 <p><code class="docutils literal"><span class="pre">image</span></code> can either be an image object, a path to an uncompressed image
 file (bmp/pgm/ppm), or a scalar value. If a scalar value the value can
@@ -2721,12 +3290,18 @@ either be an RGB888 tuple or the underlying pixel value (e.g. an 8-bit grayscale
 for grayscale images or a byte-reversed RGB565 value for RGB images).</p>
 <p>Set <code class="docutils literal"><span class="pre">invert</span></code> to True to change the division direction from <code class="docutils literal"><span class="pre">a/b</span></code> to
 <code class="docutils literal"><span class="pre">b/a</span></code>.</p>
+<p>Set <code class="docutils literal"><span class="pre">mod</span></code> to True to change the division operation to the modulus operation.</p>
 <p><code class="docutils literal"><span class="pre">mask</span></code> is another image to use as a pixel level mask for the operation.
 The mask should be an image with just black or white pixels and should be the
 same size as the image being operated on. Only pixels set in the mask are
 modified.</p>
 <p>Returns the image object so you can call another method using <code class="docutils literal"><span class="pre">.</span></code> notation.</p>
 <p>Not supported on compressed images or bayer images.</p>
+<p>Note:</p>
+<div class="highlight-python"><div class="highlight"><pre>This method is meant for image blending and cannot divide the pixels in
+the image by a scalar like ``2``. Use `image.gamma_corr` for that.
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -2748,7 +3323,7 @@ modified.</p>
 <dl class="method">
 <dt id="image.image.max">
 <code class="descclassname">image.</code><code class="descname">max</code><span class="sig-paren">(</span><em>image</em><span class="optional">[</span>, <em>mask=None</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.max" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the minimum image of two images pixel-wise.</p>
+<dd><p>Returns the maximum image of two images pixel-wise.</p>
 <p><code class="docutils literal"><span class="pre">image</span></code> can either be an image object, a path to an uncompressed image
 file (bmp/pgm/ppm), or a scalar value. If a scalar value the value can
 either be an RGB888 tuple or the underlying pixel value (e.g. an 8-bit grayscale
@@ -3314,13 +3889,13 @@ specified, it is equal to the image rectangle. Only pixels within the
 
 <dl class="method">
 <dt id="image.image.find_blobs">
-<code class="descclassname">image.</code><code class="descname">find_blobs</code><span class="sig-paren">(</span><em>thresholds</em><span class="optional">[</span>, <em>invert=False</em><span class="optional">[</span>, <em>roi</em><span class="optional">[</span>, <em>x_stride=2</em><span class="optional">[</span>, <em>y_stride=1</em><span class="optional">[</span>, <em>area_threshold=10</em><span class="optional">[</span>, <em>pixels_threshold=10</em><span class="optional">[</span>, <em>merge=False</em><span class="optional">[</span>, <em>margin=0</em><span class="optional">[</span>, <em>threshold_cb=None</em><span class="optional">[</span>, <em>merge_cb=None</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.find_blobs" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">image.</code><code class="descname">find_blobs</code><span class="sig-paren">(</span><em>thresholds</em><span class="optional">[</span>, <em>invert=False</em><span class="optional">[</span>, <em>roi</em><span class="optional">[</span>, <em>x_stride=2</em><span class="optional">[</span>, <em>y_stride=1</em><span class="optional">[</span>, <em>area_threshold=10</em><span class="optional">[</span>, <em>pixels_threshold=10</em><span class="optional">[</span>, <em>merge=False</em><span class="optional">[</span>, <em>margin=0</em><span class="optional">[</span>, <em>threshold_cb=None</em><span class="optional">[</span>, <em>merge_cb=None</em><span class="optional">[</span>, <em>x_hist_bins_max=0</em><span class="optional">[</span>, <em>y_hist_bins_max=0</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#image.image.find_blobs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds all blobs (connected pixel regions that pass a threshold test) in the
 image and returns a list of <a class="reference internal" href="#image.image.blob" title="image.image.blob"><code class="xref any py py-class docutils literal"><span class="pre">image.blob</span></code></a> objects which describe each blob.
 Please see the <a class="reference internal" href="#image.image.blob" title="image.image.blob"><code class="xref any py py-class docutils literal"><span class="pre">image.blob</span></code></a> object more more information.</p>
 <p><code class="docutils literal"><span class="pre">thresholds</span></code> must be a list of tuples
 <code class="docutils literal"><span class="pre">[(lo,</span> <span class="pre">hi),</span> <span class="pre">(lo,</span> <span class="pre">hi),</span> <span class="pre">...,</span> <span class="pre">(lo,</span> <span class="pre">hi)]</span></code> defining the ranges of color you
-want to track. You may pass up to 16 threshold tuples in one call. For
+want to track. You may pass up to 32 threshold tuples in one call. For
 grayscale images each tuple needs to contain two values - a min grayscale
 value and a max grayscale value. Only pixel regions that fall between these
 thresholds will be considered. For RGB565 images each tuple needs to have
@@ -3384,6 +3959,12 @@ The call back then must return True to keep the blob and False to filter it.</p>
 be merged to prevent or allow the merge. The call back function will receive
 two arguments - the two blob objects to be merged. The call back then must
 return True to merge the blobs or False to prevent merging the blobs.</p>
+<p><code class="docutils literal"><span class="pre">x_hist_bins_max</span></code> if set to non-zero populates a histogram buffer in each
+blob object with an x_histogram projection of all columns in the object. This
+value then sets the number of bins for that projection.</p>
+<p><code class="docutils literal"><span class="pre">y_hist_bins_max</span></code> if set to non-zero populates a histogram buffer in each
+blob object with an y_histogram projection of all rows in the object. This
+value then sets the number of bins for that projection.</p>
 <p>Not supported on compressed images or bayer images.</p>
 </dd></dl>
 
@@ -3973,8 +4554,8 @@ on an image.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2018, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 22 Dec 2018.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
+      Last updated on 31 Mar 2019.
 
     </p>
   </div>

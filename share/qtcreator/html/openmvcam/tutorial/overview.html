@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Overview &mdash; MicroPython 1.9.4 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="MicroPython 1.9.4 documentation" href="../../index.html"/>
+        <link rel="up" title="OpenMV Cam Tutorial" href="index.html"/>
+        <link rel="next" title="2. Software Setup" href="software_setup.html"/>
+        <link rel="prev" title="OpenMV Cam Tutorial" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> MicroPython
+          
+
+          
+            
+            <img src="../../_static/web-logo-sticky.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.9.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickref.html">Quick reference for the openmvcam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general.html">General information about the openmvcam</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">OpenMV Cam Tutorial</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_setup.html">2. Software Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware_setup.html">3. Hardware Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openmvide_overview.html">4. OpenMV IDE Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="script_structure.html">5. Script Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io_tutorial.html">6. I/O Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_architecture.html">7. System Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more_information.html">8. More Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../library/index.html">MicroPython libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genrst/index.html">MicroPython differences from CPython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">MicroPython license information</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">MicroPython</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">OpenMV Cam Tutorial</a> &raquo;</li>
+      
+    <li>1. Overview</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/openmvcam/tutorial/overview.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../../_images/camera.jpg"><img alt="OpenMV Cam" src="../../_images/camera.jpg" style="width: 700px;" /></a>
+<p>Hi, thanks for reading this tutorial and being interested in the OpenMV Cam! Before
+getting into the tuturial I&#8217;d like to quickly go over why the OpenMV Cam exists
+and what it&#8217;s designed to be used for.</p>
+<p>Currently, doing anything serious involving computer vision requires a computer
+running an operating system running may layers of software and requiring much
+setup before you can get computer vision code working. This is all well and fine
+if you need to do many other things than just processing images, like connecting
+to the internet, running many different applications concurrently, etc.</p>
+<p>But, what if, I just want to make an LED turn on if a red object appears in front
+of a white wall. Why do a need to build up a complex system for that? Or, what
+if I just want to turn on an LED when a face is in view?</p>
+<p>For example, if I wanted to turn an LED on for a short duration when a line sensor was
+broken I&#8217;d use an Arduino to accomplish this. I&#8217;d write about 10 lines of
+code and be done with it. And... after flashing the Arduino that code would run
+happily forever.</p>
+<p>But, if I want to use a 2D sensor like a camera everything changes.
+Since a camera sensor generates tons of data a faster more resourceful computer is
+required to process the sensor data. Now, with this faster more powerful computer
+you can definately do many more things. But, what if my goal were still to just
+turn on an LED? Spin a motor? Or open a valve? Could I still get the Arduino
+like experience with a camera sensor?</p>
+<p>Yes! This is the point behind the OpenMV Cam. A little programmable computer to
+do simple computer vision things!</p>
+<p>Our goal with the OpenMV Cam is to make a flexible system for solving very
+straight forward computer vision problems. To achieve this goal we built the
+OpenMV Cam on-top of MicroPython running on a microcontroller. This approach
+allows you to write Python scripts to execute on the OpenMV which compile and
+load extremely fast while maintaining microcontroller benefits like low power
+consumption and instant on processing for embedded applications.</p>
+<p>Now, the OpenMV Cam isn&#8217;t the answer to all computer vision problems, or even most.
+You should use a single-board-computer running linux and OpenCV when required. But,
+if you just need to do some simple thing with a camera the OpenMV Cam might
+be the right tool for the job.</p>
+<p>For more information about this see our <a class="reference external" href="https://openmv.io/pages/faq">FAQ</a>.</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="software_setup.html" class="btn btn-neutral float-right" title="2. Software Setup" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="OpenMV Cam Tutorial" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
+      Last updated on 31 Mar 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Ports and Versions</span>
+    openmvcam (latest)
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <!--p>
+    <dl>
+      <dt>Ports</dt>
+      
+        <dd><a href="//en/latest/unix">unix</a></dd>
+      
+        <dd><a href="//en/latest/pyboard">pyboard</a></dd>
+      
+        <dd><a href="//en/latest/wipy">wipy</a></dd>
+      
+        <dd><a href="//en/latest/esp8266">esp8266</a></dd>
+      
+        <dd><a href="//en/latest/openmvcam">openmvcam</a></dd>
+      
+    </dl>
+    <dl>
+      <dt>Versions</dt>
+      
+        <dd><a href="//en/latest/openmvcam">latest</a></dd>
+      
+    </dl>
+    <dl>
+      <dt>Downloads</dt>
+      
+        <dd><a href="//en/latest/micropython-openmvcam.pdf">PDF</a></dd>
+      
+    </dl>
+    </p-->
+    <dl>
+        <dt>Language</dt>
+        
+          <dd><a href="http://docs.openmv.io">English</a></dd>
+        
+          <dd><a href="http://doc.singtown.cc/openmv_zh">中文</a></dd>
+        
+    </dl>
+    <hr/>
+    <dl>
+      <dt>External links</dt>
+        <dd>
+          <a href="https://openmv.io">openmv.io</a>
+        </dd>
+        <dd>
+          <a href="http://forums.openmv.io">forums.openmv.io</a>
+        </dd>
+        <dd>
+          <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+        </dd>
+        <dd>
+          <a href="http://micropython.org">micropython.org</a>
+        </dd>
+        <dd>
+          <a href="http://forum.micropython.org">forum.micropython.org</a>
+        </dd>
+        <dd>
+          <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+        </dd>
+    </dl>
+  </div>
+</div>
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.9.4',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

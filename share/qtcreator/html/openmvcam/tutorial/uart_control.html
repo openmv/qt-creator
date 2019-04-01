@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1.4. UART Control &mdash; MicroPython 1.9.4 documentation</title>
+  <title>6.1.4. UART Control &mdash; MicroPython 1.9.4 documentation</title>
   
 
   
@@ -35,9 +35,9 @@
 
   
     <link rel="top" title="MicroPython 1.9.4 documentation" href="../../index.html"/>
-        <link rel="up" title="5. I/O Tutorial" href="io_tutorial.html"/>
-        <link rel="next" title="6. More Information" href="more_information.html"/>
-        <link rel="prev" title="5.1.3. Analog IO" href="analog_io.html"/> 
+        <link rel="up" title="6. I/O Tutorial" href="io_tutorial.html"/>
+        <link rel="next" title="7. System Architecture" href="system_architecture.html"/>
+        <link rel="prev" title="6.1.3. Analog IO" href="analog_io.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -93,21 +93,23 @@
 <li class="toctree-l1"><a class="reference internal" href="../quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">OpenMV Cam Tutorial</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="software_setup.html">1. Software Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hardware_setup.html">2. Hardware Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openmvide_overview.html">3. OpenMV IDE Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="script_structure.html">4. Script Structure</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="io_tutorial.html">5. I/O Tutorial</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="io_tutorial.html#the-pyb-module">5.1. The PYB Module</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="led_control.html">5.1.1. LED Control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gpio_control.html">5.1.2. GPIO Control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="analog_io.html">5.1.3. Analog IO</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">5.1.4. UART Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_setup.html">2. Software Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware_setup.html">3. Hardware Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openmvide_overview.html">4. OpenMV IDE Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="script_structure.html">5. Script Structure</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="io_tutorial.html">6. I/O Tutorial</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="io_tutorial.html#the-pyb-module">6.1. The PYB Module</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="led_control.html">6.1.1. LED Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gpio_control.html">6.1.2. GPIO Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analog_io.html">6.1.3. Analog IO</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">6.1.4. UART Control</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="more_information.html">6. More Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_architecture.html">7. System Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="more_information.html">8. More Information</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../library/index.html">MicroPython libraries</a></li>
@@ -146,9 +148,9 @@
       
           <li><a href="index.html">OpenMV Cam Tutorial</a> &raquo;</li>
       
-          <li><a href="io_tutorial.html">5. I/O Tutorial</a> &raquo;</li>
+          <li><a href="io_tutorial.html">6. I/O Tutorial</a> &raquo;</li>
       
-    <li>5.1.4. UART Control</li>
+    <li>6.1.4. UART Control</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -163,7 +165,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="uart-control">
-<h1>5.1.4. UART Control<a class="headerlink" href="#uart-control" title="Permalink to this headline">¶</a></h1>
+<h1>6.1.4. UART Control<a class="headerlink" href="#uart-control" title="Permalink to this headline">¶</a></h1>
 <p>The OpenMV Cam has a main UART on pins P4 (TX) and P5 (RX) which you can use
 for serial communication. To create a UART object do the following:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pyb</span>
@@ -210,10 +212,10 @@ machine to receive data reliability. For example, see the
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="more_information.html" class="btn btn-neutral float-right" title="6. More Information" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="system_architecture.html" class="btn btn-neutral float-right" title="7. System Architecture" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="analog_io.html" class="btn btn-neutral" title="5.1.3. Analog IO" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="analog_io.html" class="btn btn-neutral" title="6.1.3. Analog IO" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -222,8 +224,8 @@ machine to receive data reliability. For example, see the
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2018, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 22 Dec 2018.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
+      Last updated on 31 Mar 2019.
 
     </p>
   </div>

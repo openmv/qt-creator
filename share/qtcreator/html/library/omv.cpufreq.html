@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cpufreq — CPU Frequency Control &mdash; MicroPython 1.9.4 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
+        <link rel="up" title="MicroPython libraries" href="index.html"/>
+        <link rel="next" title="omv — OpenMV Cam Information" href="omv.omv.html"/>
+        <link rel="prev" title="tv — tv shield driver" href="omv.tv.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MicroPython
+          
+
+          
+            
+            <img src="../_static/web-logo-sticky.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.9.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pyb.html"><code class="docutils literal"><span class="pre">pyb</span></code> &#8212; functions related to the board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.ADC.html">class ADC &#8211; analog to digital conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.CAN.html">class CAN &#8211; controller area network communication bus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.DAC.html">class DAC &#8211; digital to analog conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.ExtInt.html">class ExtInt &#8211; configure I/O pins to interrupt on external events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.I2C.html">class I2C &#8211; a two-wire serial protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.LED.html">class LED &#8211; LED object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.Pin.html">class Pin &#8211; control I/O pins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.Pin.html#class-pinaf-pin-alternate-functions">class PinAF &#8211; Pin Alternate Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.RTC.html">class RTC &#8211; real time clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.Servo.html">class Servo &#8211; 3-wire hobby servo driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.SPI.html">class SPI &#8211; a master-driven serial protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.Timer.html">class Timer &#8211; control internal timers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.Timer.html#class-timerchannel-setup-a-channel-for-a-timer">class TimerChannel &#8212; setup a channel for a timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.UART.html">class UART &#8211; duplex serial communication bus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.USB_VCP.html">class USB_VCP &#8211; USB virtual comm port</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.time.html"><code class="docutils literal"><span class="pre">time</span></code> &#8212; tracking elapsed time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.sensor.html"><code class="docutils literal"><span class="pre">sensor</span></code> &#8212; camera sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html"><code class="docutils literal"><span class="pre">image</span></code> &#8212; machine vision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-haarcascade-feature-descriptor">class HaarCascade &#8211; Feature Descriptor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-similarity-similarity-object">class Similarity &#8211; Similarity Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-histogram-histogram-object">class Histogram &#8211; Histogram Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-percentile-percentile-object">class Percentile &#8211; Percentile Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-threshold-threshold-object">class Threshold &#8211; Threshold Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-statistics-statistics-object">class Statistics &#8211; Statistics Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-blob-blob-object">class Blob &#8211; Blob object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-line-line-object">class Line &#8211; Line object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-circle-circle-object">class Circle &#8211; Circle object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-rect-rectangle-object">class Rect &#8211; Rectangle Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-qrcode-qrcode-object">class QRCode &#8211; QRCode object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-apriltag-apriltag-object">class AprilTag &#8211; AprilTag object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-datamatrix-datamatrix-object">class DataMatrix &#8211; DataMatrix object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-barcode-barcode-object">class BarCode &#8211; BarCode object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-displacement-displacement-object">class Displacement &#8211; Displacement object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-kptmatch-keypoint-object">class kptmatch &#8211; Keypoint Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-imagewriter-imagewriter-object">class ImageWriter &#8211; ImageWriter object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-imagereader-imagereader-object">class ImageReader &#8211; ImageReader object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-image-image-object">class Image &#8211; Image object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.nn.html"><code class="docutils literal"><span class="pre">nn</span></code> &#8212; neural networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.nn.html#class-nn-class-nn-dection-result">class nn_class &#8211; nn dection result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.nn.html#class-net-neural-network">class Net &#8211; Neural Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.gif.html"><code class="docutils literal"><span class="pre">gif</span></code> &#8212; gif recording</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.gif.html#class-gif-gif-recorder">class Gif &#8211; Gif recorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html"><code class="docutils literal"><span class="pre">mjpeg</span></code> &#8212; mjpeg recording</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html#class-mjpeg-mjpeg-recorder">class Mjpeg &#8211; Mjpeg recorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal"><span class="pre">lcd</span></code> &#8212; lcd shield driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal"><span class="pre">fir</span></code> &#8212; thermopile shield driver (fir == far infrared)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tv.html"><code class="docutils literal"><span class="pre">tv</span></code> &#8212; tv shield driver</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href=""><code class="docutils literal"><span class="pre">cpufreq</span></code> &#8212; CPU Frequency Control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="omv.omv.html"><code class="docutils literal"><span class="pre">omv</span></code> &#8212; OpenMV Cam Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">MicroPython</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
+      
+    <li><code class="docutils literal"><span class="pre">cpufreq</span></code> &#8212; CPU Frequency Control</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/library/omv.cpufreq.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cpufreq">
+<span id="cpufreq-cpu-frequency-control"></span><h1><a class="reference internal" href="#module-cpufreq" title="cpufreq: CPU Frequency Control"><code class="xref py py-mod docutils literal"><span class="pre">cpufreq</span></code></a> &#8212; CPU Frequency Control<a class="headerlink" href="#module-cpufreq" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal"><span class="pre">cpufreq</span></code> module is used to get/set the CPU frequency to save power.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This module is not supported on the OpenMV Cam M4 because the CPU frequency
+for various reasons cannot be set independently of peripherals.</p>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="cpufreq.cpufreq.set_frequency">
+<code class="descclassname">cpufreq.</code><code class="descname">set_frequency</code><span class="sig-paren">(</span><em>supported_frequency</em><span class="sig-paren">)</span><a class="headerlink" href="#cpufreq.cpufreq.set_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the CPU frequency to a supported frequency in mhz. Peripherals
+frequencies are not changed. Only the CPU performance.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cpufreq.cpufreq.get_current_frequencies">
+<code class="descclassname">cpufreq.</code><code class="descname">get_current_frequencies</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cpufreq.cpufreq.get_current_frequencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns (cpu_clk_in_mhz, hclk_in_mhz, pclk1_in_mhz, pclk2_in_mhz).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cpufreq.cpufreq.get_supported_frequencies">
+<code class="descclassname">cpufreq.</code><code class="descname">get_supported_frequencies</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cpufreq.cpufreq.get_supported_frequencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the supported CPU frequencies in [120, 144, 168, 192, 216] on the
+OpenMV Cam M7 and [100, 200, 400] on the OpenMV Cam H7 in mhz.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="omv.omv.html" class="btn btn-neutral float-right" title="omv — OpenMV Cam Information" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="omv.tv.html" class="btn btn-neutral" title="tv — tv shield driver" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
+      Last updated on 31 Mar 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Ports and Versions</span>
+    openmvcam (latest)
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <!--p>
+    <dl>
+      <dt>Ports</dt>
+      
+        <dd><a href="//en/latest/unix">unix</a></dd>
+      
+        <dd><a href="//en/latest/pyboard">pyboard</a></dd>
+      
+        <dd><a href="//en/latest/wipy">wipy</a></dd>
+      
+        <dd><a href="//en/latest/esp8266">esp8266</a></dd>
+      
+        <dd><a href="//en/latest/openmvcam">openmvcam</a></dd>
+      
+    </dl>
+    <dl>
+      <dt>Versions</dt>
+      
+        <dd><a href="//en/latest/openmvcam">latest</a></dd>
+      
+    </dl>
+    <dl>
+      <dt>Downloads</dt>
+      
+        <dd><a href="//en/latest/micropython-openmvcam.pdf">PDF</a></dd>
+      
+    </dl>
+    </p-->
+    <dl>
+        <dt>Language</dt>
+        
+          <dd><a href="http://docs.openmv.io">English</a></dd>
+        
+          <dd><a href="http://doc.singtown.cc/openmv_zh">中文</a></dd>
+        
+    </dl>
+    <hr/>
+    <dl>
+      <dt>External links</dt>
+        <dd>
+          <a href="https://openmv.io">openmv.io</a>
+        </dd>
+        <dd>
+          <a href="http://forums.openmv.io">forums.openmv.io</a>
+        </dd>
+        <dd>
+          <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+        </dd>
+        <dd>
+          <a href="http://micropython.org">micropython.org</a>
+        </dd>
+        <dd>
+          <a href="http://forum.micropython.org">forum.micropython.org</a>
+        </dd>
+        <dd>
+          <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+        </dd>
+    </dl>
+  </div>
+</div>
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.9.4',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

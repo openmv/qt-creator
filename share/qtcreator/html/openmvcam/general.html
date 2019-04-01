@@ -160,25 +160,53 @@
 </div>
 <div class="section" id="local-filesystem-and-sd-card">
 <h2><a class="toc-backref" href="#id2">Local filesystem and SD card</a><a class="headerlink" href="#local-filesystem-and-sd-card" title="Permalink to this headline">¶</a></h2>
-<p>There is a small internal filesystem (a drive) on the openmvcam which is stored within the microcontroller&#8217;s flash memory.</p>
+<p>There is a small internal filesystem (a drive) on the openmvcam which is stored
+within the microcontroller&#8217;s flash memory.</p>
 <p>When the openmvcam boots up, it needs to choose a filesystem to boot from.  If
 there is no SD card, then it uses the internal filesystem as the boot
 filesystem, otherwise, it uses the SD card.  After the boot, the current
 directory is set to <code class="docutils literal"><span class="pre">/</span></code>.</p>
 <p>The boot filesystem is used for 2 things: it is the filesystem from which
-the <code class="docutils literal"><span class="pre">main.py</span></code> files are searched for, and it is the filesystem
+<code class="docutils literal"><span class="pre">boot.py</span></code> and <code class="docutils literal"><span class="pre">main.py</span></code> files are searched for, and it is the filesystem
 which is made available on your PC over the USB cable.</p>
 <p>The filesystem will be available as a USB flash drive on your PC.  You can
-save files to the drive, and edit <code class="docutils literal"><span class="pre">main.py</span></code>.</p>
+save files to the drive, and edit <code class="docutils literal"><span class="pre">boot.py</span></code> and <code class="docutils literal"><span class="pre">main.py</span></code>.</p>
 <p><em>Remember to eject (on Linux, unmount) the USB drive before you reset your
 pyboard.</em></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The above behavior is different from the pyboard which allows access to the
+internal file system and SD card at the same time within a script by creating
+a virtual file system with multiple drives for the internal flash and SD
+card.  The OpenMV Cam&#8217;s behavior is different because modern operating systems
+do not mount the OpenMV Cam&#8217;s internal flash drive and/or SD Card as a
+virtual file system but instead as a block device... meaning that modern
+operating systems do not see a pyboard&#8217;s file system the same way as the
+pyboard sees it.  To avoid this situation we only allow one file system at a
+time to keep the operating system the OpenMV Cam is attached to and what the
+OpenMV Cam thinks its file system looks like in sync.</p>
+<p>That said, there is another complication.  Because modern operating systems
+mount the OpenMV Cam&#8217;s internal flash drive or SD card as a block device they
+treat it as if it cannot create files itself.  Because of this if you create
+a file onboard your OpenMV Cam in code you must remount the OpenMV Cam after
+a new file is created for the operating system to rescan the OpenMV Cam to
+detect the change.  Additionally, if both the operating system and the OpenMV
+Cam are changing files on the file system at the same time the operating
+system will ignore and overwrite the OpenMV Cam&#8217;s changes.</p>
+<p class="last">OpenMV reconmends using the internal flash drive or SD card to store assets
+that will be read by the OpenMV Cam.  If you need to saves things to disk
+make sure you have an SD card (and don&#8217;t use the internal flash drive for
+this as it is <em>quite</em> small). Additionally, if you need to write files to the
+disk keep note of the above paragraph about a rescan being required.</p>
+</div>
 </div>
 <div class="section" id="boot-modes">
 <h2><a class="toc-backref" href="#id3">Boot modes</a><a class="headerlink" href="#boot-modes" title="Permalink to this headline">¶</a></h2>
 <p>On powerup, if powered by USB, the OpenMV Cam will run a bootloader program for
 about 3 seconds which allows OpenMV IDE to update the firmware without using DFU.  After
-3 seconds then bootloader will exit and then <code class="docutils literal"><span class="pre">main.py</span></code> will run.  If not powered
-by USB then <code class="docutils literal"><span class="pre">main.py</span></code> will run immediantly.</p>
+3 seconds then bootloader will exit and then <code class="docutils literal"><span class="pre">boot.py</span></code> will run allowing you
+to change the USB mode before executing <code class="docutils literal"><span class="pre">main.py</span></code>.  If not powered
+by USB then <code class="docutils literal"><span class="pre">boot.py</span></code> followed by <code class="docutils literal"><span class="pre">main.py</span></code> will run immediantly.</p>
 </div>
 <div class="section" id="flashing-led-errors">
 <h2><a class="toc-backref" href="#id4">Flashing LED Errors</a><a class="headerlink" href="#flashing-led-errors" title="Permalink to this headline">¶</a></h2>
@@ -207,8 +235,8 @@ may be damaged...</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2018, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 22 Dec 2018.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
+      Last updated on 31 Mar 2019.
 
     </p>
   </div>

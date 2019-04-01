@@ -225,7 +225,7 @@
 <li>Pin(&#8216;P6&#8217;) -&gt; P6 (PA5)</li>
 <li>Pin(&#8216;P7&#8217;) -&gt; P7 (PD12)</li>
 <li>Pin(&#8216;P8&#8217;) -&gt; P8 (PD13)</li>
-<li>Pin(&#8216;P9&#8217;) -&gt; P9 (PD14) (OpenMV Cam M7 Only)</li>
+<li>Pin(&#8216;P9&#8217;) -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
 </ul>
 <p>All pins are 5V tolerant with a 3.3V output (P6 is not 5V tolerant in ADC or DAC mode).</p>
 <p>All pins can sink or source up to 25 mA (Up to 120 mA in total between all pins).</p>
@@ -245,7 +245,7 @@
 <ul class="simple">
 <li>Servo(1) -&gt; P7 (PD12)</li>
 <li>Servo(2) -&gt; P8 (PD13)</li>
-<li>Servo(3) -&gt; P9 (PD14) (OpenMV Cam M7 Only)</li>
+<li>Servo(3) -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
 </ul>
 </div>
 <div class="section" id="external-interrupts">
@@ -268,7 +268,7 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 <li>Pin(&#8216;P6&#8217;) -&gt; P6 (PA5)</li>
 <li>Pin(&#8216;P7&#8217;) -&gt; P7 (PD12)</li>
 <li>Pin(&#8216;P8&#8217;) -&gt; P8 (PD13)</li>
-<li>Pin(&#8216;P9&#8217;) -&gt; P9 (PD14) (OpenMV Cam M7 Only)</li>
+<li>Pin(&#8216;P9&#8217;) -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
 </ul>
 </div>
 <div class="section" id="timers">
@@ -292,7 +292,7 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 <li>Timer 2 Channel 1 Positive -&gt; P6 (PA5)</li>
 <li>Timer 4 Channel 1 Negative -&gt; P7 (PD12)</li>
 <li>Timer 4 Channel 2 Negative -&gt; P8 (PD13)</li>
-<li>Timer 4 Channel 3 Positive -&gt; P9 (PD14) (OpenMV Cam M7 Only)</li>
+<li>Timer 4 Channel 3 Positive -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
 </ul>
 </div>
 <div class="section" id="pwm-pulse-width-modulation">
@@ -316,7 +316,7 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 <li>Timer 2 Channel 1 Positive -&gt; P6 (PA5)</li>
 <li>Timer 4 Channel 1 Negative -&gt; P7 (PD12)</li>
 <li>Timer 4 Channel 2 Negative -&gt; P8 (PD13)</li>
-<li>Timer 4 Channel 3 Positive -&gt; P9 (PD14) (OpenMV Cam M7 Only)</li>
+<li>Timer 4 Channel 3 Positive -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
 </ul>
 </div>
 <div class="section" id="adc-analog-to-digital-conversion">
@@ -363,8 +363,8 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 <ul class="simple">
 <li>UART 3 RX -&gt; P5 (PB11)</li>
 <li>UART 3 TX -&gt; P4 (PB10)</li>
-<li>UART 1 RX -&gt; P0 (PB15) (OpenMV Cam M7 Only)</li>
-<li>UART 1 TX -&gt; P1 (PB14) (OpenMV Cam M7 Only)</li>
+<li>UART 1 RX -&gt; P0 (PB15) (OpenMV Cam M7/H7 Only)</li>
+<li>UART 1 TX -&gt; P1 (PB14) (OpenMV Cam M7/H7 Only)</li>
 </ul>
 </div>
 <div class="section" id="spi-bus">
@@ -372,7 +372,7 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 <p>See <a class="reference internal" href="../library/pyb.SPI.html#pyb-spi"><span>pyb.SPI</span></a>.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyb</span> <span class="kn">import</span> <span class="n">SPI</span>
 
-<span class="n">spi</span> <span class="o">=</span> <span class="n">SPI</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">SPI</span><span class="o">.</span><span class="n">MASTER</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">200000</span><span class="p">,</span> <span class="n">polarity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">spi</span> <span class="o">=</span> <span class="n">SPI</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">SPI</span><span class="o">.</span><span class="n">MASTER</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">polarity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">spi</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s">&#39;hello&#39;</span><span class="p">)</span>
 <span class="n">spi</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c"># receive 5 bytes on the bus</span>
 <span class="n">spi</span><span class="o">.</span><span class="n">send_recv</span><span class="p">(</span><span class="s">&#39;hello&#39;</span><span class="p">)</span> <span class="c"># send a receive 5 bytes</span>
@@ -403,8 +403,8 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 <ul class="simple">
 <li>I2C 2 SCL (Serial Clock) -&gt; P4 (PB10)</li>
 <li>I2C 2 SDA (Serial Data)  -&gt; P5 (PB11)</li>
-<li>I2C 4 SCL (Serial Clock) -&gt; P7 (PD13) (OpenMV Cam M7 Only)</li>
-<li>I2C 4 SDA (Serial Data)  -&gt; P8 (PD12) (OpenMV Cam M7 Only)</li>
+<li>I2C 4 SCL (Serial Clock) -&gt; P7 (PD13) (OpenMV Cam M7/H7 Only)</li>
+<li>I2C 4 SDA (Serial Data)  -&gt; P8 (PD12) (OpenMV Cam M7/H7 Only)</li>
 </ul>
 </div>
 </div>
@@ -428,8 +428,8 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2018, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 22 Dec 2018.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
+      Last updated on 31 Mar 2019.
 
     </p>
   </div>
