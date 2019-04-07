@@ -1,8 +1,8 @@
-/******************** (C) COPYRIGHT 2014 STMicroelectronics ********************
-* File Name          : readme.txt
+/******************** (C) COPYRIGHT 2018 STMicroelectronics ********************
+* File Name          : version.txt
 * Author             : MCD Application Team
-* Version            : V3.0.5
-* Date               : 01-September-2015
+* Version            : V3.0.6
+* Date               : 01-June-2018
 * Description        : read me file for DfuSe Demonstrator
 ********************************************************************************
 * THE PRESENT SOFTWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
@@ -16,11 +16,11 @@
 Last version 
 ***************
 
-        - V3.0.5 - 01-September-2015
+        - V3.0.6 - 01-June-2018
 
 Package content
 ***************
-       + Binaries :([INSTALLATION PATH]\BIN\)
+       + Binaries :([INSTALLATION PATH]\BIN\) and ([INSTALLATION PATH]\BIN\STM32L) Variant with extra time for Erase.
 
          - DfuFileMgr.exe             : DFU File Manager aplication,
          - DfuSeDemo.exe              : DfuSe Demo application,
@@ -49,11 +49,11 @@ Package content
          - STDFUPRT 
          - STTubeDevice		 
          - Tools
-			- GUID Generator application
+		 - GUID Generator application
 Supported OS
 ***************
 
-       + Windows 98SE, 2000, XP, Vista, Seven , 8, 8.1  (x86 & x64 Windows platforms).
+       + Windows 98SE, 2000, XP, Vista, Seven , 8, 8.1, 10  (x86 & x64 Windows platforms).
 
 How to use 
 ***************
@@ -67,5 +67,5 @@ How to use
        4- Use it !
 
 
-******************* (C) COPYRIGHT 2015 STMicroelectronics *****END OF FILE******
+******************* (C) COPYRIGHT 2018 STMicroelectronics *****END OF FILE******
 
