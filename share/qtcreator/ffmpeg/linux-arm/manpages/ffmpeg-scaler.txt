@@ -136,7 +136,7 @@ SCALER OPTIONS
 	       No blending
 
 SEE ALSO
-       ffmpeg(1), ffplay(1), ffprobe(1), ffserver(1), libswscale(3)
+       ffmpeg(1), ffplay(1), ffprobe(1), libswscale(3)
 
 AUTHORS
        The FFmpeg developers.

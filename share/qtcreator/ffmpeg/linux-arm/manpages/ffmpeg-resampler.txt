@@ -253,7 +253,7 @@ RESAMPLER OPTIONS
 	   which means it's not used.
 
 SEE ALSO
-       ffmpeg(1), ffplay(1), ffprobe(1), ffserver(1), libswresample(3)
+       ffmpeg(1), ffplay(1), ffprobe(1), libswresample(3)
 
 AUTHORS
        The FFmpeg developers.

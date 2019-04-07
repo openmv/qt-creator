@@ -1,53 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 6.1, http://www.gnu.org/software/texinfo/ -->
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>
-      General Documentation
-    </title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>FFmpeg documentation</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.min.css" />
+
+<meta name="description" content="General Documentation: ">
+<meta name="keywords" content="FFmpeg documentation : General ">
+<meta name="Generator" content="texi2html 5.0">
+<!-- Created on February 21, 2019 by texi2html 5.0 -->
+<!--
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   </head>
   <body>
     <div class="container">
-      <h1>
-      General Documentation
-      </h1>
-<div align="center">
-</div>
 
-
+<h1 class="titlefont">General Documentation</h1>
+<hr>
 <a name="SEC_Top"></a>
 
 <a name="SEC_Contents"></a>
-<h2 class="contents-heading">Table of Contents</h2>
+<h1>Table of Contents</h1>
 
 <div class="contents">
 
 <ul class="no-bullet">
   <li><a name="toc-External-libraries" href="#External-libraries">1 External libraries</a>
   <ul class="no-bullet">
-    <li><a name="toc-OpenJPEG" href="#OpenJPEG">1.1 OpenJPEG</a></li>
-    <li><a name="toc-OpenCORE_002c-VisualOn_002c-and-Fraunhofer-libraries" href="#OpenCORE_002c-VisualOn_002c-and-Fraunhofer-libraries">1.2 OpenCORE, VisualOn, and Fraunhofer libraries</a>
+    <li><a name="toc-libxavs2" href="#libxavs2">1.1 libxavs2</a></li>
+    <li><a name="toc-libdavs2" href="#libdavs2">1.2 libdavs2</a></li>
+    <li><a name="toc-Alliance-for-Open-Media-libaom" href="#Alliance-for-Open-Media-libaom">1.3 Alliance for Open Media libaom</a></li>
+    <li><a name="toc-OpenJPEG" href="#OpenJPEG">1.4 OpenJPEG</a></li>
+    <li><a name="toc-OpenCORE_002c-VisualOn_002c-and-Fraunhofer-libraries" href="#OpenCORE_002c-VisualOn_002c-and-Fraunhofer-libraries">1.5 OpenCORE, VisualOn, and Fraunhofer libraries</a>
     <ul class="no-bullet">
-      <li><a name="toc-OpenCORE-AMR" href="#OpenCORE-AMR">1.2.1 OpenCORE AMR</a></li>
-      <li><a name="toc-VisualOn-AMR_002dWB-encoder-library" href="#VisualOn-AMR_002dWB-encoder-library">1.2.2 VisualOn AMR-WB encoder library</a></li>
-      <li><a name="toc-Fraunhofer-AAC-library" href="#Fraunhofer-AAC-library">1.2.3 Fraunhofer AAC library</a></li>
+      <li><a name="toc-OpenCORE-AMR" href="#OpenCORE-AMR">1.5.1 OpenCORE AMR</a></li>
+      <li><a name="toc-VisualOn-AMR_002dWB-encoder-library" href="#VisualOn-AMR_002dWB-encoder-library">1.5.2 VisualOn AMR-WB encoder library</a></li>
+      <li><a name="toc-Fraunhofer-AAC-library" href="#Fraunhofer-AAC-library">1.5.3 Fraunhofer AAC library</a></li>
     </ul></li>
-    <li><a name="toc-LAME" href="#LAME">1.3 LAME</a></li>
-    <li><a name="toc-TwoLAME" href="#TwoLAME">1.4 TwoLAME</a></li>
-    <li><a name="toc-libvpx" href="#libvpx">1.5 libvpx</a></li>
-    <li><a name="toc-libwavpack" href="#libwavpack">1.6 libwavpack</a></li>
-    <li><a name="toc-OpenH264" href="#OpenH264">1.7 OpenH264</a></li>
-    <li><a name="toc-x264" href="#x264">1.8 x264</a></li>
-    <li><a name="toc-x265" href="#x265">1.9 x265</a></li>
-    <li><a name="toc-kvazaar" href="#kvazaar">1.10 kvazaar</a></li>
-    <li><a name="toc-libilbc" href="#libilbc">1.11 libilbc</a></li>
-    <li><a name="toc-libzvbi" href="#libzvbi">1.12 libzvbi</a></li>
-    <li><a name="toc-AviSynth" href="#AviSynth">1.13 AviSynth</a></li>
-    <li><a name="toc-Intel-QuickSync-Video" href="#Intel-QuickSync-Video">1.14 Intel QuickSync Video</a></li>
+    <li><a name="toc-LAME" href="#LAME">1.6 LAME</a></li>
+    <li><a name="toc-TwoLAME" href="#TwoLAME">1.7 TwoLAME</a></li>
+    <li><a name="toc-libcodec2-_002f-codec2-general" href="#libcodec2-_002f-codec2-general">1.8 libcodec2 / codec2 general</a></li>
+    <li><a name="toc-libvpx" href="#libvpx">1.9 libvpx</a></li>
+    <li><a name="toc-libwavpack" href="#libwavpack">1.10 libwavpack</a></li>
+    <li><a name="toc-libxavs" href="#libxavs">1.11 libxavs</a></li>
+    <li><a name="toc-OpenH264" href="#OpenH264">1.12 OpenH264</a></li>
+    <li><a name="toc-x264" href="#x264">1.13 x264</a></li>
+    <li><a name="toc-x265" href="#x265">1.14 x265</a></li>
+    <li><a name="toc-kvazaar" href="#kvazaar">1.15 kvazaar</a></li>
+    <li><a name="toc-libilbc" href="#libilbc">1.16 libilbc</a></li>
+    <li><a name="toc-libzvbi" href="#libzvbi">1.17 libzvbi</a></li>
+    <li><a name="toc-AviSynth" href="#AviSynth">1.18 AviSynth</a></li>
+    <li><a name="toc-Intel-QuickSync-Video" href="#Intel-QuickSync-Video">1.19 Intel QuickSync Video</a></li>
+    <li><a name="toc-AMD-VCE" href="#AMD-VCE">1.20 AMD VCE</a></li>
   </ul></li>
   <li><a name="toc-Supported-File-Formats_002c-Codecs-or-Features" href="#Supported-File-Formats_002c-Codecs-or-Features">2 Supported File Formats, Codecs or Features</a>
   <ul class="no-bullet">
@@ -59,35 +74,74 @@
     <li><a name="toc-Network-Protocols" href="#Network-Protocols">2.6 Network Protocols</a></li>
     <li><a name="toc-Input_002fOutput-Devices" href="#Input_002fOutput-Devices">2.7 Input/Output Devices</a></li>
     <li><a name="toc-Timecode" href="#Timecode">2.8 Timecode</a></li>
-  </ul></li>
+  </ul>
+</li>
 </ul>
 </div>
 
 
+<hr size="6">
 <a name="External-libraries"></a>
-<h2 class="chapter">1 External libraries<span class="pull-right"><a class="anchor hidden-xs" href="#External-libraries" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-External-libraries" aria-hidden="true">TOC</a></span></h2>
+<h1 class="chapter"><a href="general.html#toc-External-libraries">1 External libraries</a></h1>
 
 <p>FFmpeg can be hooked up with a number of external libraries to add support
 for more formats. None of them are used by default, their use has to be
 explicitly requested by passing the appropriate flags to
 <code>./configure</code>.
 </p>
+<a name="libxavs2"></a>
+<h2 class="section"><a href="general.html#toc-libxavs2">1.1 libxavs2</a></h2>
+
+<p>FFmpeg can make use of the xavs2 library for AVS2-P2/IEEE1857.4 video encoding.
+</p>
+<p>Go to <a href="https://github.com/pkuvcl/xavs2">https://github.com/pkuvcl/xavs2</a> and follow the instructions for
+installing the library. Then pass <code>--enable-libxavs2</code> to configure to
+enable it.
+</p>
+<div class="float alert alert-info">
+<p>libxavs2 is under the GNU Public License Version 2 or later
+(see <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a> for
+details), you must upgrade FFmpeg&rsquo;s license to GPL in order to use it.
+</p></div>
+<a name="libdavs2"></a>
+<h2 class="section"><a href="general.html#toc-libdavs2">1.2 libdavs2</a></h2>
+
+<p>FFmpeg can make use of the davs2 library for AVS2-P2/IEEE1857.4 video decoding.
+</p>
+<p>Go to <a href="https://github.com/pkuvcl/davs2">https://github.com/pkuvcl/davs2</a> and follow the instructions for
+installing the library. Then pass <code>--enable-libdavs2</code> to configure to
+enable it.
+</p>
+<div class="float alert alert-info">
+<p>libdavs2 is under the GNU Public License Version 2 or later
+(see <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a> for
+details), you must upgrade FFmpeg&rsquo;s license to GPL in order to use it.
+</p></div>
+<a name="Alliance-for-Open-Media-libaom"></a>
+<h2 class="section"><a href="general.html#toc-Alliance-for-Open-Media-libaom">1.3 Alliance for Open Media libaom</a></h2>
+
+<p>FFmpeg can make use of the libaom library for AV1 decoding.
+</p>
+<p>Go to <a href="http://aomedia.org/">http://aomedia.org/</a> and follow the instructions for
+installing the library. Then pass <code>--enable-libaom</code> to configure to
+enable it.
+</p>
 <a name="OpenJPEG"></a>
-<h3 class="section">1.1 OpenJPEG<span class="pull-right"><a class="anchor hidden-xs" href="#OpenJPEG" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-OpenJPEG" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-OpenJPEG">1.4 OpenJPEG</a></h2>
 
 <p>FFmpeg can use the OpenJPEG libraries for encoding/decoding J2K videos.  Go to
 <a href="http://www.openjpeg.org/">http://www.openjpeg.org/</a> to get the libraries and follow the installation
 instructions.  To enable using OpenJPEG in FFmpeg, pass <code>--enable-libopenjpeg</code> to
-<samp>./configure</samp>.
+&lsquo;<tt>./configure</tt>&rsquo;.
 </p>
 
 <a name="OpenCORE_002c-VisualOn_002c-and-Fraunhofer-libraries"></a>
-<h3 class="section">1.2 OpenCORE, VisualOn, and Fraunhofer libraries<span class="pull-right"><a class="anchor hidden-xs" href="#OpenCORE_002c-VisualOn_002c-and-Fraunhofer-libraries" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-OpenCORE_002c-VisualOn_002c-and-Fraunhofer-libraries" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-OpenCORE_002c-VisualOn_002c-and-Fraunhofer-libraries">1.5 OpenCORE, VisualOn, and Fraunhofer libraries</a></h2>
 
 <p>Spun off Google Android sources, OpenCore, VisualOn and Fraunhofer
 libraries provide encoders for a number of audio codecs.
 </p>
-<div class="info">
+<div class="float alert alert-info">
 <p>OpenCORE and VisualOn libraries are under the Apache License 2.0
 (see <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a> for details), which is
 incompatible to the LGPL version 2.1 and GPL version 2. You have to
@@ -95,12 +149,13 @@ upgrade FFmpeg&rsquo;s license to LGPL version 3 (or if you have enabled
 GPL components, GPL version 3) by passing <code>--enable-version3</code> to configure in
 order to use it.
 </p>
-<p>The Fraunhofer AAC library is licensed under a license incompatible to the GPL
-and is not known to be compatible to the LGPL. Therefore, you have to pass
-<code>--enable-nonfree</code> to configure to use it.
+<p>The license of the Fraunhofer AAC library is incompatible with the GPL.
+Therefore, for GPL builds, you have to pass <code>--enable-nonfree</code> to
+configure in order to use it. To the best of our knowledge, it is
+compatible with the LGPL.
 </p></div>
 <a name="OpenCORE-AMR"></a>
-<h4 class="subsection">1.2.1 OpenCORE AMR<span class="pull-right"><a class="anchor hidden-xs" href="#OpenCORE-AMR" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-OpenCORE-AMR" aria-hidden="true">TOC</a></span></h4>
+<h3 class="subsection"><a href="general.html#toc-OpenCORE-AMR">1.5.1 OpenCORE AMR</a></h3>
 
 <p>FFmpeg can make use of the OpenCORE libraries for AMR-NB
 decoding/encoding and AMR-WB decoding.
@@ -111,7 +166,7 @@ Then pass <code>--enable-libopencore-amrnb</code> and/or
 <code>--enable-libopencore-amrwb</code> to configure to enable them.
 </p>
 <a name="VisualOn-AMR_002dWB-encoder-library"></a>
-<h4 class="subsection">1.2.2 VisualOn AMR-WB encoder library<span class="pull-right"><a class="anchor hidden-xs" href="#VisualOn-AMR_002dWB-encoder-library" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-VisualOn-AMR_002dWB-encoder-library" aria-hidden="true">TOC</a></span></h4>
+<h3 class="subsection"><a href="general.html#toc-VisualOn-AMR_002dWB-encoder-library">1.5.2 VisualOn AMR-WB encoder library</a></h3>
 
 <p>FFmpeg can make use of the VisualOn AMR-WBenc library for AMR-WB encoding.
 </p>
@@ -120,16 +175,16 @@ instructions for installing the library.
 Then pass <code>--enable-libvo-amrwbenc</code> to configure to enable it.
 </p>
 <a name="Fraunhofer-AAC-library"></a>
-<h4 class="subsection">1.2.3 Fraunhofer AAC library<span class="pull-right"><a class="anchor hidden-xs" href="#Fraunhofer-AAC-library" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Fraunhofer-AAC-library" aria-hidden="true">TOC</a></span></h4>
+<h3 class="subsection"><a href="general.html#toc-Fraunhofer-AAC-library">1.5.3 Fraunhofer AAC library</a></h3>
 
-<p>FFmpeg can make use of the Fraunhofer AAC library for AAC encoding.
+<p>FFmpeg can make use of the Fraunhofer AAC library for AAC decoding &amp; encoding.
 </p>
 <p>Go to <a href="http://sourceforge.net/projects/opencore-amr/">http://sourceforge.net/projects/opencore-amr/</a> and follow the
 instructions for installing the library.
 Then pass <code>--enable-libfdk-aac</code> to configure to enable it.
 </p>
 <a name="LAME"></a>
-<h3 class="section">1.3 LAME<span class="pull-right"><a class="anchor hidden-xs" href="#LAME" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-LAME" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-LAME">1.6 LAME</a></h2>
 
 <p>FFmpeg can make use of the LAME library for MP3 encoding.
 </p>
@@ -138,7 +193,7 @@ instructions for installing the library.
 Then pass <code>--enable-libmp3lame</code> to configure to enable it.
 </p>
 <a name="TwoLAME"></a>
-<h3 class="section">1.4 TwoLAME<span class="pull-right"><a class="anchor hidden-xs" href="#TwoLAME" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-TwoLAME" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-TwoLAME">1.7 TwoLAME</a></h2>
 
 <p>FFmpeg can make use of the TwoLAME library for MP2 encoding.
 </p>
@@ -146,8 +201,27 @@ Then pass <code>--enable-libmp3lame</code> to configure to enable it.
 instructions for installing the library.
 Then pass <code>--enable-libtwolame</code> to configure to enable it.
 </p>
+<a name="libcodec2-_002f-codec2-general"></a>
+<h2 class="section"><a href="general.html#toc-libcodec2-_002f-codec2-general">1.8 libcodec2 / codec2 general</a></h2>
+
+<p>FFmpeg can make use of libcodec2 for codec2 encoding and decoding.
+There is currently no native decoder, so libcodec2 must be used for decoding.
+</p>
+<p>Go to <a href="http://freedv.org/">http://freedv.org/</a>, download &quot;Codec 2 source archive&quot;.
+Build and install using CMake. Debian users can install the libcodec2-dev package instead.
+Once libcodec2 is installed you can pass <code>--enable-libcodec2</code> to configure to enable it.
+</p>
+<p>The easiest way to use codec2 is with .c2 files, since they contain the mode information required for decoding.
+To encode such a file, use a .c2 file extension and give the libcodec2 encoder the -mode option:
+<code>ffmpeg -i input.wav -mode 700C output.c2</code>.
+Playback is as simple as <code>ffplay output.c2</code>.
+For a list of supported modes, run <code>ffmpeg -h encoder=libcodec2</code>.
+Raw codec2 files are also supported.
+To make sense of them the mode in use needs to be specified as a format option:
+<code>ffmpeg -f codec2raw -mode 1300 -i input.raw output.wav</code>.
+</p>
 <a name="libvpx"></a>
-<h3 class="section">1.5 libvpx<span class="pull-right"><a class="anchor hidden-xs" href="#libvpx" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-libvpx" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-libvpx">1.9 libvpx</a></h2>
 
 <p>FFmpeg can make use of the libvpx library for VP8/VP9 encoding.
 </p>
@@ -156,7 +230,7 @@ installing the library. Then pass <code>--enable-libvpx</code> to configure to
 enable it.
 </p>
 <a name="libwavpack"></a>
-<h3 class="section">1.6 libwavpack<span class="pull-right"><a class="anchor hidden-xs" href="#libwavpack" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-libwavpack" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-libwavpack">1.10 libwavpack</a></h2>
 
 <p>FFmpeg can make use of the libwavpack library for WavPack encoding.
 </p>
@@ -164,8 +238,17 @@ enable it.
 installing the library. Then pass <code>--enable-libwavpack</code> to configure to
 enable it.
 </p>
+<a name="libxavs"></a>
+<h2 class="section"><a href="general.html#toc-libxavs">1.11 libxavs</a></h2>
+
+<p>FFmpeg can make use of the libxavs library for Xavs encoding.
+</p>
+<p>Go to <a href="http://xavs.sf.net/">http://xavs.sf.net/</a> and follow the instructions for
+installing the library. Then pass <code>--enable-libxavs</code> to configure to
+enable it.
+</p>
 <a name="OpenH264"></a>
-<h3 class="section">1.7 OpenH264<span class="pull-right"><a class="anchor hidden-xs" href="#OpenH264" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-OpenH264" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-OpenH264">1.12 OpenH264</a></h2>
 
 <p>FFmpeg can make use of the OpenH264 library for H.264 encoding and decoding.
 </p>
@@ -181,7 +264,7 @@ testing and for taking advantage of Cisco&rsquo;s patent portfolio license
 (<a href="http://www.openh264.org/BINARY_LICENSE.txt">http://www.openh264.org/BINARY_LICENSE.txt</a>).
 </p>
 <a name="x264"></a>
-<h3 class="section">1.8 x264<span class="pull-right"><a class="anchor hidden-xs" href="#x264" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-x264" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-x264">1.13 x264</a></h2>
 
 <p>FFmpeg can make use of the x264 library for H.264 encoding.
 </p>
@@ -189,13 +272,13 @@ testing and for taking advantage of Cisco&rsquo;s patent portfolio license
 instructions for installing the library. Then pass <code>--enable-libx264</code> to
 configure to enable it.
 </p>
-<div class="info">
+<div class="float alert alert-info">
 <p>x264 is under the GNU Public License Version 2 or later
 (see <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a> for
 details), you must upgrade FFmpeg&rsquo;s license to GPL in order to use it.
 </p></div>
 <a name="x265"></a>
-<h3 class="section">1.9 x265<span class="pull-right"><a class="anchor hidden-xs" href="#x265" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-x265" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-x265">1.14 x265</a></h2>
 
 <p>FFmpeg can make use of the x265 library for HEVC encoding.
 </p>
@@ -203,13 +286,13 @@ details), you must upgrade FFmpeg&rsquo;s license to GPL in order to use it.
 for installing the library. Then pass <code>--enable-libx265</code> to configure
 to enable it.
 </p>
-<div class="info">
+<div class="float alert alert-info">
 <p>x265 is under the GNU Public License Version 2 or later
 (see <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a> for
 details), you must upgrade FFmpeg&rsquo;s license to GPL in order to use it.
 </p></div>
 <a name="kvazaar"></a>
-<h3 class="section">1.10 kvazaar<span class="pull-right"><a class="anchor hidden-xs" href="#kvazaar" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-kvazaar" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-kvazaar">1.15 kvazaar</a></h2>
 
 <p>FFmpeg can make use of the kvazaar library for HEVC encoding.
 </p>
@@ -218,7 +301,7 @@ instructions for installing the library. Then pass
 <code>--enable-libkvazaar</code> to configure to enable it.
 </p>
 <a name="libilbc"></a>
-<h3 class="section">1.11 libilbc<span class="pull-right"><a class="anchor hidden-xs" href="#libilbc" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-libilbc" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-libilbc">1.16 libilbc</a></h2>
 
 <p>iLBC is a narrowband speech codec that has been made freely available
 by Google as part of the WebRTC project. libilbc is a packaging friendly
@@ -230,7 +313,7 @@ installing the library. Then pass <code>--enable-libilbc</code> to configure to
 enable it.
 </p>
 <a name="libzvbi"></a>
-<h3 class="section">1.12 libzvbi<span class="pull-right"><a class="anchor hidden-xs" href="#libzvbi" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-libzvbi" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-libzvbi">1.17 libzvbi</a></h2>
 
 <p>libzvbi is a VBI decoding library which can be used by FFmpeg to decode DVB
 teletext pages and DVB teletext subtitles.
@@ -240,7 +323,7 @@ installing the library. Then pass <code>--enable-libzvbi</code> to configure to
 enable it.
 </p>
 <a name="AviSynth"></a>
-<h3 class="section">1.13 AviSynth<span class="pull-right"><a class="anchor hidden-xs" href="#AviSynth" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-AviSynth" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-AviSynth">1.18 AviSynth</a></h2>
 
 <p>FFmpeg can read AviSynth scripts as input. To enable support, pass
 <code>--enable-avisynth</code> to configure.  The correct headers are
@@ -254,7 +337,7 @@ without needing to search for these headers themselves.
 <p>For Linux and OS X, the supported AviSynth variant is
 <a href="https://github.com/avxsynth/avxsynth">AvxSynth</a>.
 </p>
-<div class="info">
+<div class="float alert alert-info">
 <p>There is currently a regression in AviSynth+&rsquo;s <code>capi.h</code> header as of
 October 2016, which interferes with the ability for builds of FFmpeg to use
 MSVC-built binaries of AviSynth. Until this is resolved, you can make sure
@@ -266,14 +349,14 @@ cd AviSynthPlus <br>
 git checkout -b oldheader b4f292b4dbfad149697fb65c6a037bb3810813f9 <br>
 make install PREFIX=/install/prefix</code>
 </p></div>
-<div class="info">
+<div class="float alert alert-info">
 <p>AviSynth and AvxSynth are loaded dynamically.  Distributors can build FFmpeg
 with <code>--enable-avisynth</code>, and the binaries will work regardless of the
 end user having AviSynth or AvxSynth installed - they&rsquo;ll only need to be
 installed to use AviSynth scripts (obviously).
 </p></div>
 <a name="Intel-QuickSync-Video"></a>
-<h3 class="section">1.14 Intel QuickSync Video<span class="pull-right"><a class="anchor hidden-xs" href="#Intel-QuickSync-Video" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Intel-QuickSync-Video" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-Intel-QuickSync-Video">1.19 Intel QuickSync Video</a></h2>
 
 <p>FFmpeg can use Intel QuickSync Video (QSV) for accelerated encoding and decoding
 of multiple codecs. To use QSV, FFmpeg must be linked against the <code>libmfx</code>
@@ -284,14 +367,27 @@ dispatcher, which loads the actual decoding libraries.
 with the <code>--enable-libmfx</code> option and <code>pkg-config</code> needs to be able to
 locate the dispatcher&rsquo;s <code>.pc</code> files.
 </p>
+<a name="AMD-VCE"></a>
+<h2 class="section"><a href="general.html#toc-AMD-VCE">1.20 AMD VCE</a></h2>
+
+<p>FFmpeg can use the AMD Advanced Media Framework library for accelerated H.264
+and HEVC encoding on VCE enabled hardware under Windows.
+</p>
+<p>To enable support you must obtain the AMF framework header files from
+<a href="https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git">https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git</a>.
+</p>
+<p>Create an <code>AMF/</code> directory in the system include path.
+Copy the contents of <code>AMF/amf/public/include/</code> into that directory.
+Then configure FFmpeg with <code>--enable-amf</code>.
+</p>
 
 <a name="Supported-File-Formats_002c-Codecs-or-Features"></a>
-<h2 class="chapter">2 Supported File Formats, Codecs or Features<span class="pull-right"><a class="anchor hidden-xs" href="#Supported-File-Formats_002c-Codecs-or-Features" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Supported-File-Formats_002c-Codecs-or-Features" aria-hidden="true">TOC</a></span></h2>
+<h1 class="chapter"><a href="general.html#toc-Supported-File-Formats_002c-Codecs-or-Features">2 Supported File Formats, Codecs or Features</a></h1>
 
 <p>You can use the <code>-formats</code> and <code>-codecs</code> options to have an exhaustive list.
 </p>
 <a name="File-Formats"></a>
-<h3 class="section">2.1 File Formats<span class="pull-right"><a class="anchor hidden-xs" href="#File-Formats" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-File-Formats" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-File-Formats">2.1 File Formats</a></h2>
 
 <p>FFmpeg supports the following file formats through the <code>libavformat</code>
 library:
@@ -331,6 +427,8 @@ library:
 <tr><td width="40%">BFSTM</td><td width="10%"></td><td width="10%">X</td><td width="40%">Audio format used on the Nintendo WiiU (based on BRSTM).</td></tr>
 <tr><td width="40%">BRSTM</td><td width="10%"></td><td width="10%">X</td><td width="40%">Audio format used on the Nintendo Wii.</td></tr>
 <tr><td width="40%">BWF</td><td width="10%">X</td><td width="10%">X</td></tr>
+<tr><td width="40%">codec2 (raw)</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Must be given -mode format option to decode correctly.</td></tr>
+<tr><td width="40%">codec2 (.c2 files)</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Contains header with version and mode info, simplifying playback.</td></tr>
 <tr><td width="40%">CRI ADX</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Audio-only format used in console video games.</td></tr>
 <tr><td width="40%">Discworld II BMV</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Interplay C93</td><td width="10%"></td><td width="10%">X</td><td width="40%">Used in the game Cyberia from Interplay.</td></tr>
@@ -367,6 +465,7 @@ library:
 <tr><td width="40%">framecrc testing format</td><td width="10%">X</td><td width="10%"></td></tr>
 <tr><td width="40%">FunCom ISS</td><td width="10%"></td><td width="10%">X</td><td width="40%">Audio format used in various games from FunCom like The Longest Journey.</td></tr>
 <tr><td width="40%">G.723.1</td><td width="10%">X</td><td width="10%">X</td></tr>
+<tr><td width="40%">G.726</td><td width="10%"></td><td width="10%">X</td><td width="40%">Both left- and right-justified.</td></tr>
 <tr><td width="40%">G.729 BIT</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">G.729 raw</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">GENH</td><td width="10%"></td><td width="10%">X</td><td width="40%">Audio format for various games.</td></tr>
@@ -382,7 +481,7 @@ library:
 <tr><td width="40%">IFF</td><td width="10%"></td><td width="10%">X</td><td width="40%">Interchange File Format</td></tr>
 <tr><td width="40%">iLBC</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">Interplay MVE</td><td width="10%"></td><td width="10%">X</td><td width="40%">Format used in various Interplay computer games.</td></tr>
-<tr><td width="40%">Iterated Systems ClearVideo</td><td width="10%"></td><td width="10%">X</td></tr>
+<tr><td width="40%">Iterated Systems ClearVideo</td><td width="10%"></td><td width="10%">X</td><td width="40%">I-frames only</td></tr>
 <tr><td width="40%">IV8</td><td width="10%"></td><td width="10%">X</td><td width="40%">A format generated by IndigoVision 8000 video server.</td></tr>
 <tr><td width="40%">IVF (On2)</td><td width="10%">X</td><td width="10%">X</td><td width="40%">A format used by libvpx</td></tr>
 <tr><td width="40%">Internet Video Recording</td><td width="10%"></td><td width="10%">X</td></tr>
@@ -423,6 +522,7 @@ library:
 <tr><td width="40%">Material eXchange Format (MXF), D-10 Mapping</td><td width="10%">X</td><td width="10%">X</td><td width="40%">SMPTE 386M, D-10/IMX Mapping.</td></tr>
 <tr><td width="40%">NC camera feed</td><td width="10%"></td><td width="10%">X</td><td width="40%">NC (AVIP NC4600) camera streams</td></tr>
 <tr><td width="40%">NIST SPeech HEader REsources</td><td width="10%"></td><td width="10%">X</td></tr>
+<tr><td width="40%">Computerized Speech Lab NSP</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">NTT TwinVQ (VQF)</td><td width="10%"></td><td width="10%">X</td><td width="40%">Nippon Telegraph and Telephone Corporation TwinVQ.</td></tr>
 <tr><td width="40%">Nullsoft Streaming Video</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">NuppelVideo</td><td width="10%"></td><td width="10%">X</td></tr>
@@ -434,6 +534,10 @@ library:
 <tr><td width="40%">QCP</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">raw ADTS (AAC)</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw AC-3</td><td width="10%">X</td><td width="10%">X</td></tr>
+<tr><td width="40%">raw AMR-NB</td><td width="10%"></td><td width="10%">X</td></tr>
+<tr><td width="40%">raw AMR-WB</td><td width="10%"></td><td width="10%">X</td></tr>
+<tr><td width="40%">raw aptX</td><td width="10%">X</td><td width="10%">X</td></tr>
+<tr><td width="40%">raw aptX HD</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw Chinese AVS video</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw CRI ADX</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw Dirac</td><td width="10%">X</td><td width="10%">X</td></tr>
@@ -457,12 +561,14 @@ library:
 <tr><td width="40%">raw NULL</td><td width="10%">X</td><td width="10%"></td></tr>
 <tr><td width="40%">raw video</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw id RoQ</td><td width="10%">X</td><td width="10%"></td></tr>
+<tr><td width="40%">raw SBC</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw Shorten</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">raw TAK</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">raw TrueHD</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw VC-1</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw PCM A-law</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw PCM mu-law</td><td width="10%">X</td><td width="10%">X</td></tr>
+<tr><td width="40%">raw PCM Archimedes VIDC</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw PCM signed 8 bit</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw PCM signed 16 bit big-endian</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">raw PCM signed 16 bit little-endian</td><td width="10%">X</td><td width="10%">X</td></tr>
@@ -503,19 +609,21 @@ library:
 <tr><td width="40%">SAP</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">SBG</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">SDP</td><td width="10%"></td><td width="10%">X</td></tr>
-<tr><td width="40%">Sega FILM/CPK</td><td width="10%"></td><td width="10%">X</td><td width="40%">Used in many Sega Saturn console games.</td></tr>
+<tr><td width="40%">SER</td><td width="10%"></td><td width="10%">X</td></tr>
+<tr><td width="40%">Sega FILM/CPK</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Used in many Sega Saturn console games.</td></tr>
 <tr><td width="40%">Silicon Graphics Movie</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Sierra SOL</td><td width="10%"></td><td width="10%">X</td><td width="40%">.sol files used in Sierra Online games.</td></tr>
 <tr><td width="40%">Sierra VMD</td><td width="10%"></td><td width="10%">X</td><td width="40%">Used in Sierra CD-ROM games.</td></tr>
 <tr><td width="40%">Smacker</td><td width="10%"></td><td width="10%">X</td><td width="40%">Multimedia format used by many games.</td></tr>
 <tr><td width="40%">SMJPEG</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Used in certain Loki game ports.</td></tr>
+<tr><td width="40%">SMPTE 337M encapsulation</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Smush</td><td width="10%"></td><td width="10%">X</td><td width="40%">Multimedia format used in some LucasArts games.</td></tr>
 <tr><td width="40%">Sony OpenMG (OMA)</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Audio format used in Sony Sonic Stage and Sony Vegas.</td></tr>
 <tr><td width="40%">Sony PlayStation STR</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Sony Wave64 (W64)</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">SoX native format</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">SUN AU format</td><td width="10%">X</td><td width="10%">X</td></tr>
-<tr><td width="40%">SUP raw PGS subtitles</td><td width="10%"></td><td width="10%">X</td></tr>
+<tr><td width="40%">SUP raw PGS subtitles</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">SVAG</td><td width="10%"></td><td width="10%">X</td><td width="40%">Audio format used in Konami PS2 games.</td></tr>
 <tr><td width="40%">TDSC</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Text files</td><td width="10%"></td><td width="10%">X</td></tr>
@@ -547,7 +655,7 @@ library:
 <p><code>X</code> means that encoding (resp. decoding) is supported.
 </p>
 <a name="Image-Formats"></a>
-<h3 class="section">2.2 Image Formats<span class="pull-right"><a class="anchor hidden-xs" href="#Image-Formats" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Image-Formats" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-Image-Formats">2.2 Image Formats</a></h2>
 
 <p>FFmpeg can read and write images for each frame of a video sequence. The
 following image formats are supported:
@@ -562,6 +670,7 @@ following image formats are supported:
 <tr><td width="40%">BRender PIX</td><td width="10%"></td><td width="10%">X</td><td width="40%">Argonaut BRender 3D engine image format.</td></tr>
 <tr><td width="40%">DPX</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Digital Picture Exchange</td></tr>
 <tr><td width="40%">EXR</td><td width="10%"></td><td width="10%">X</td><td width="40%">OpenEXR</td></tr>
+<tr><td width="40%">FITS</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Flexible Image Transport System</td></tr>
 <tr><td width="40%">JPEG</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Progressive JPEG is not supported.</td></tr>
 <tr><td width="40%">JPEG 2000</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">JPEG-LS</td><td width="10%">X</td><td width="10%">X</td></tr>
@@ -592,7 +701,7 @@ following image formats are supported:
 <p><code>E</code> means that support is provided through an external library.
 </p>
 <a name="Video-Codecs"></a>
-<h3 class="section">2.3 Video Codecs<span class="pull-right"><a class="anchor hidden-xs" href="#Video-Codecs" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Video-Codecs" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-Video-Codecs">2.3 Video Codecs</a></h2>
 
 <table>
 <tr><td width="40%">Name</td><td width="10%">Encoding</td><td width="10%">Decoding</td><td width="40%">Comments</td></tr>
@@ -616,6 +725,7 @@ following image formats are supported:
 <tr><td width="40%">Auravision Aura 2</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Autodesk Animator Flic video</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Autodesk RLE</td><td width="10%"></td><td width="10%">X</td><td width="40%">fourcc: AASC</td></tr>
+<tr><td width="40%">AV1</td><td width="10%"></td><td width="10%">E</td><td width="40%">Supported through external library libaom</td></tr>
 <tr><td width="40%">Avid 1:1 10-bit RGB Packer</td><td width="10%">X</td><td width="10%">X</td><td width="40%">fourcc: AVrp</td></tr>
 <tr><td width="40%">AVS (Audio Video Standard) video</td><td width="10%"></td><td width="10%">X</td><td width="40%">Video encoding used by the Creature Shock game.</td></tr>
 <tr><td width="40%">AYUV</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Microsoft uncompressed packed 4:4:4:4</td></tr>
@@ -639,7 +749,7 @@ following image formats are supported:
 <tr><td width="40%">CPiA Video Format</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Creative YUV (CYUV)</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">DFA</td><td width="10%"></td><td width="10%">X</td><td width="40%">Codec used in Chronomaster game.</td></tr>
-<tr><td width="40%">Dirac</td><td width="10%">E</td><td width="10%">X</td><td width="40%">supported through external library libschroedinger</td></tr>
+<tr><td width="40%">Dirac</td><td width="10%">E</td><td width="10%">X</td><td width="40%">supported though the native vc2 (Dirac Pro) encoder</td></tr>
 <tr><td width="40%">Deluxe Paint Animation</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">DNxHD</td><td width="10%">X</td><td width="10%">X</td><td width="40%">aka SMPTE VC3</td></tr>
 <tr><td width="40%">Duck TrueMotion 1.0</td><td width="10%"></td><td width="10%">X</td><td width="40%">fourcc: DUCK</td></tr>
@@ -664,6 +774,7 @@ following image formats are supported:
 <tr><td width="40%">Fraps</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Go2Meeting</td><td width="10%"></td><td width="10%">X</td><td width="40%">fourcc: G2M2, G2M3</td></tr>
 <tr><td width="40%">Go2Webinar</td><td width="10%"></td><td width="10%">X</td><td width="40%">fourcc: G2M4</td></tr>
+<tr><td width="40%">Gremlin Digital Video</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">H.261</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">H.263 / H.263-1996</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">H.263+ / H.263-1998 / H.263 version 2</td><td width="10%">X</td><td width="10%">X</td></tr>
@@ -677,6 +788,7 @@ following image formats are supported:
 <tr><td width="40%">id RoQ video</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Used in Quake III, Jedi Knight 2, other computer games.</td></tr>
 <tr><td width="40%">IFF ILBM</td><td width="10%"></td><td width="10%">X</td><td width="40%">IFF interleaved bitmap</td></tr>
 <tr><td width="40%">IFF ByteRun1</td><td width="10%"></td><td width="10%">X</td><td width="40%">IFF run length encoded bitmap</td></tr>
+<tr><td width="40%">Infinity IMM4</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Intel H.263</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Intel Indeo 2</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Intel Indeo 3</td><td width="10%"></td><td width="10%">X</td></tr>
@@ -693,7 +805,8 @@ following image formats are supported:
 <tr><td width="40%">LOCO</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">LucasArts SANM/Smush</td><td width="10%"></td><td width="10%">X</td><td width="40%">Used in LucasArts games / SMUSH animations.</td></tr>
 <tr><td width="40%">lossless MJPEG</td><td width="10%">X</td><td width="10%">X</td></tr>
-<tr><td width="40%">MagicYUV Video</td><td width="10%"></td><td width="10%">X</td></tr>
+<tr><td width="40%">MagicYUV Video</td><td width="10%">X</td><td width="10%">X</td></tr>
+<tr><td width="40%">Mandsoft Screen Capture Codec</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Microsoft ATC Screen</td><td width="10%"></td><td width="10%">X</td><td width="40%">Also known as Microsoft Screen 3.</td></tr>
 <tr><td width="40%">Microsoft Expression Encoder Screen</td><td width="10%"></td><td width="10%">X</td><td width="40%">Also known as Microsoft Titanium Screen 2.</td></tr>
 <tr><td width="40%">Microsoft RLE</td><td width="10%"></td><td width="10%">X</td></tr>
@@ -738,6 +851,7 @@ following image formats are supported:
 <tr><td width="40%">RL2 video</td><td width="10%"></td><td width="10%">X</td><td width="40%">used in some games by Entertainment Software Partners</td></tr>
 <tr><td width="40%">ScreenPressor</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Screenpresso</td><td width="10%"></td><td width="10%">X</td></tr>
+<tr><td width="40%">Screen Recorder Gold Codec</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Sierra VMD video</td><td width="10%"></td><td width="10%">X</td><td width="40%">Used in Sierra VMD files.</td></tr>
 <tr><td width="40%">Silicon Graphics Motion Video Compressor 1 (MVC1)</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Silicon Graphics Motion Video Compressor 2 (MVC2)</td><td width="10%"></td><td width="10%">X</td></tr>
@@ -782,7 +896,7 @@ following image formats are supported:
 <p><code>E</code> means that support is provided through an external library.
 </p>
 <a name="Audio-Codecs"></a>
-<h3 class="section">2.4 Audio Codecs<span class="pull-right"><a class="anchor hidden-xs" href="#Audio-Codecs" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Audio-Codecs" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-Audio-Codecs">2.4 Audio Codecs</a></h2>
 
 <table>
 <tr><td width="40%">Name</td><td width="10%">Encoding</td><td width="10%">Decoding</td><td width="40%">Comments</td></tr>
@@ -835,16 +949,21 @@ following image formats are supported:
 <tr><td width="40%">AMR-WB</td><td width="10%">E</td><td width="10%">X</td><td width="40%">encoding supported through external library libvo-amrwbenc</td></tr>
 <tr><td width="40%">Amazing Studio PAF Audio</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Apple lossless audio</td><td width="10%">X</td><td width="10%">X</td><td width="40%">QuickTime fourcc &rsquo;alac&rsquo;</td></tr>
+<tr><td width="40%">aptX</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Used in Bluetooth A2DP</td></tr>
+<tr><td width="40%">aptX HD</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Used in Bluetooth A2DP</td></tr>
 <tr><td width="40%">ATRAC1</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">ATRAC3</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">ATRAC3+</td><td width="10%"></td><td width="10%">X</td></tr>
+<tr><td width="40%">ATRAC9</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Bink Audio</td><td width="10%"></td><td width="10%">X</td><td width="40%">Used in Bink and Smacker files in many games.</td></tr>
 <tr><td width="40%">CELT</td><td width="10%"></td><td width="10%">E</td><td width="40%">decoding supported through external library libcelt</td></tr>
+<tr><td width="40%">codec2</td><td width="10%">E</td><td width="10%">E</td><td width="40%">en/decoding supported through external library libcodec2</td></tr>
 <tr><td width="40%">Delphine Software International CIN audio</td><td width="10%"></td><td width="10%">X</td><td width="40%">Codec used in Delphine Software International games.</td></tr>
 <tr><td width="40%">Digital Speech Standard - Standard Play mode (DSS SP)</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Discworld II BMV Audio</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">COOK</td><td width="10%"></td><td width="10%">X</td><td width="40%">All versions except 5.1 are supported.</td></tr>
 <tr><td width="40%">DCA (DTS Coherent Acoustics)</td><td width="10%">X</td><td width="10%">X</td><td width="40%">supported extensions: XCh, XXCH, X96, XBR, XLL, LBR (partially)</td></tr>
+<tr><td width="40%">Dolby E</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">DPCM id RoQ</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Used in Quake III, Jedi Knight 2 and other computer games.</td></tr>
 <tr><td width="40%">DPCM Interplay</td><td width="10%"></td><td width="10%">X</td><td width="40%">Used in various Interplay computer games.</td></tr>
 <tr><td width="40%">DPCM Squareroot-Delta-Exact</td><td width="10%"></td><td width="10%">X</td><td width="40%">Used in various games.</td></tr>
@@ -884,6 +1003,7 @@ following image formats are supported:
 <tr><td width="40%">Opus</td><td width="10%">E</td><td width="10%">X</td><td width="40%">encoding supported through external library libopus</td></tr>
 <tr><td width="40%">PCM A-law</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">PCM mu-law</td><td width="10%">X</td><td width="10%">X</td></tr>
+<tr><td width="40%">PCM Archimedes VIDC</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">PCM signed 8-bit planar</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">PCM signed 16-bit big-endian planar</td><td width="10%">X</td><td width="10%">X</td></tr>
 <tr><td width="40%">PCM signed 16-bit little-endian planar</td><td width="10%">X</td><td width="10%">X</td></tr>
@@ -918,6 +1038,7 @@ following image formats are supported:
 <tr><td width="40%">RealAudio 3.0 (dnet)</td><td width="10%">IX</td><td width="10%">X</td><td width="40%">Real low bitrate AC-3 codec</td></tr>
 <tr><td width="40%">RealAudio Lossless</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">RealAudio SIPR / ACELP.NET</td><td width="10%"></td><td width="10%">X</td></tr>
+<tr><td width="40%">SBC (low-complexity subband codec)</td><td width="10%">X</td><td width="10%">X</td><td width="40%">Used in Bluetooth A2DP</td></tr>
 <tr><td width="40%">Shorten</td><td width="10%"></td><td width="10%">X</td></tr>
 <tr><td width="40%">Sierra VMD audio</td><td width="10%"></td><td width="10%">X</td><td width="40%">Used in Sierra VMD files.</td></tr>
 <tr><td width="40%">Smacker audio</td><td width="10%"></td><td width="10%">X</td></tr>
@@ -951,7 +1072,7 @@ following image formats are supported:
 performance on systems without hardware floating point support).
 </p>
 <a name="Subtitle-Formats"></a>
-<h3 class="section">2.5 Subtitle Formats<span class="pull-right"><a class="anchor hidden-xs" href="#Subtitle-Formats" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Subtitle-Formats" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-Subtitle-Formats">2.5 Subtitle Formats</a></h2>
 
 <table>
 <tr><td width="40%">Name</td><td width="10%">Muxing</td><td width="10%">Demuxing</td><td width="10%">Encoding</td><td width="10%">Decoding</td></tr>
@@ -985,7 +1106,7 @@ performance on systems without hardware floating point support).
 <p><code>E</code> means that support is provided through an external library.
 </p>
 <a name="Network-Protocols"></a>
-<h3 class="section">2.6 Network Protocols<span class="pull-right"><a class="anchor hidden-xs" href="#Network-Protocols" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Network-Protocols" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-Network-Protocols">2.6 Network Protocols</a></h2>
 
 <table>
 <tr><td width="40%">Name</td><td width="10%">Support</td></tr>
@@ -1021,7 +1142,7 @@ performance on systems without hardware floating point support).
 </p>
 
 <a name="Input_002fOutput-Devices"></a>
-<h3 class="section">2.7 Input/Output Devices<span class="pull-right"><a class="anchor hidden-xs" href="#Input_002fOutput-Devices" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Input_002fOutput-Devices" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-Input_002fOutput-Devices">2.7 Input/Output Devices</a></h2>
 
 <table>
 <tr><td width="40%">Name</td><td width="10%">Input</td><td width="10%">Output</td></tr>
@@ -1048,7 +1169,7 @@ performance on systems without hardware floating point support).
 <p><code>X</code> means that input/output is supported.
 </p>
 <a name="Timecode"></a>
-<h3 class="section">2.8 Timecode<span class="pull-right"><a class="anchor hidden-xs" href="#Timecode" aria-hidden="true">#</a> <a class="anchor hidden-xs"href="#toc-Timecode" aria-hidden="true">TOC</a></span></h3>
+<h2 class="section"><a href="general.html#toc-Timecode">2.8 Timecode</a></h2>
 
 <table>
 <tr><td width="40%">Codec/format</td><td width="10%">Read</td><td width="10%">Write</td></tr>
@@ -1060,10 +1181,7 @@ performance on systems without hardware floating point support).
 <tr><td width="40%">MXF</td><td width="10%">X</td><td width="10%">X</td></tr>
 </table>
 
-
-      <p style="font-size: small;">
-        This document was generated using <a href="http://www.gnu.org/software/texinfo/"><em>makeinfo</em></a>.
-      </p>
     </div>
   </body>
 </html>
+

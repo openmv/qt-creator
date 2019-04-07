@@ -1011,6 +1011,9 @@ EXPRESSION EVALUATION
 	   previously stored with st(var, expr).  The function returns the
 	   loaded value.
 
+       lerp(x, y, z)
+	   Return linear interpolation between x and y by amount of z.
+
        log(x)
 	   Compute natural logarithm of x.
 
@@ -1059,6 +1062,10 @@ EXPRESSION EVALUATION
 	   various input values that the expression can access through ld(0).
 	   When the expression evaluates to 0 then the corresponding input
 	   value will be returned.
+
+       round(expr)
+	   Round the value of expression expr to the nearest integer. For
+	   example, "round(1.5)" is "2.0".
 
        sin(x)
 	   Compute sine of x.
@@ -1189,33 +1196,8 @@ EXPRESSION EVALUATION
 
        Y   10^24 / 2^70
 
-OPENCL OPTIONS
-       When FFmpeg is configured with "--enable-opencl", it is possible to set
-       the options for the global OpenCL context.
-
-       The list of supported options follows:
-
-       build_options
-	   Set build options used to compile the registered kernels.
-
-	   See reference "OpenCL Specification Version: 1.2 chapter 5.6.4".
-
-       platform_idx
-	   Select the index of the platform to run OpenCL code.
-
-	   The specified index must be one of the indexes in the device list
-	   which can be obtained with "ffmpeg -opencl_bench" or
-	   "av_opencl_get_device_list()".
-
-       device_idx
-	   Select the index of the device used to run OpenCL code.
-
-	   The specified index must be one of the indexes in the device list
-	   which can be obtained with "ffmpeg -opencl_bench" or
-	   "av_opencl_get_device_list()".
-
 SEE ALSO
-       ffmpeg(1), ffplay(1), ffprobe(1), ffserver(1), libavutil(3)
+       ffmpeg(1), ffplay(1), ffprobe(1), libavutil(3)
 
 AUTHORS
        The FFmpeg developers.

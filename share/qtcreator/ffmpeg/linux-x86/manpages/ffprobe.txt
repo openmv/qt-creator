@@ -85,10 +85,20 @@ OPTIONS
 	   stream_index is given, then it matches stream number stream_index
 	   of this type. Otherwise, it matches all streams of this type.
 
-       p:program_id[:stream_index]
-	   If stream_index is given, then it matches the stream with number
-	   stream_index in the program with the id program_id. Otherwise, it
-	   matches all streams in the program.
+       p:program_id[:stream_index] or
+       p:program_id[:stream_type[:stream_index]] or
+	   p:program_id:m:key[:value] In first version, if stream_index is
+	   given, then it matches the stream with number stream_index in the
+	   program with the id program_id. Otherwise, it matches all streams
+	   in the program. In the second version, stream_type is one of
+	   following: 'v' for video, 'a' for audio, 's' for subtitle, 'd' for
+	   data. If stream_index is also given, then it matches stream number
+	   stream_index of this type in the program with the id program_id.
+	   Otherwise, if only stream_type is given, it matches all streams of
+	   this type in the program with the id program_id.  In the third
+	   version matches streams in the program with the id program_id with
+	   the metadata tag key having the specified value. If value is not
+	   given, matches streams that contain the given tag with any value.
 
        #stream_id or i:stream_id
 	   Match the stream by stream id (e.g. PID in MPEG-TS container).
@@ -199,7 +209,7 @@ OPTIONS
 	   Show recognized color names.
 
        -sources device[,opt1=val1[,opt2=val2]...]
-	   Show autodetected sources of the intput device.  Some devices may
+	   Show autodetected sources of the input device.  Some devices may
 	   provide system-dependent source names that cannot be autodetected.
 	   The returned list cannot be assumed to be always complete.
 
@@ -212,15 +222,28 @@ OPTIONS
 
 		   ffmpeg -sinks pulse,server=192.168.0.4
 
-       -loglevel [repeat+]loglevel | -v [repeat+]loglevel
-	   Set the logging level used by the library.  Adding "repeat+"
-	   indicates that repeated log output should not be compressed to the
-	   first line and the "Last message repeated n times" line will be
-	   omitted. "repeat" can also be used alone.  If "repeat" is used
-	   alone, and with no prior loglevel set, the default loglevel will be
-	   used. If multiple loglevel parameters are given, using 'repeat'
-	   will not change the loglevel.  loglevel is a string or a number
-	   containing one of the following values:
+       -loglevel [flags+]loglevel | -v [flags+]loglevel
+	   Set logging level and flags used by the library.
+
+	   The optional flags prefix can consist of the following values:
+
+	   repeat
+	       Indicates that repeated log output should not be compressed to
+	       the first line and the "Last message repeated n times" line
+	       will be omitted.
+
+	   level
+	       Indicates that log output should add a "[level]" prefix to each
+	       message line. This can be used as an alternative to log
+	       coloring, e.g. when dumping the log to file.
+
+	   Flags can also be used alone by adding a '+'/'-' prefix to
+	   set/reset a single flag without affecting other flags or changing
+	   loglevel. When setting both flags and loglevel, a '+' separator is
+	   expected between the last flags value and before loglevel.
+
+	   loglevel is a string or a number containing one of the following
+	   values:
 
 	   quiet, -8
 	       Show nothing at all; be silent.
@@ -252,6 +275,16 @@ OPTIONS
 	       Show everything, including debugging information.
 
 	   trace, 56
+
+	   For example to enable repeated log output, add the "level" prefix,
+	   and set loglevel to "verbose":
+
+		   ffmpeg -loglevel repeat+level+verbose -i input output
+
+	   Another example that enables repeated log output without affecting
+	   current state of "level" prefix flag or loglevel:
+
+		   ffmpeg [...] -loglevel +repeat
 
 	   By default the program logs to stderr. If coloring is supported by
 	   the terminal, colors are used to mark errors and warnings. Log
@@ -354,51 +387,6 @@ OPTIONS
 	       athlon
 	       athlonxp
 	       k8
-       -opencl_bench
-	   This option is used to benchmark all available OpenCL devices and
-	   print the results. This option is only available when FFmpeg has
-	   been compiled with "--enable-opencl".
-
-	   When FFmpeg is configured with "--enable-opencl", the options for
-	   the global OpenCL context are set via -opencl_options. See the
-	   "OpenCL Options" section in the ffmpeg-utils manual for the
-	   complete list of supported options. Amongst others, these options
-	   include the ability to select a specific platform and device to run
-	   the OpenCL code on. By default, FFmpeg will run on the first device
-	   of the first platform. While the options for the global OpenCL
-	   context provide flexibility to the user in selecting the OpenCL
-	   device of their choice, most users would probably want to select
-	   the fastest OpenCL device for their system.
-
-	   This option assists the selection of the most efficient
-	   configuration by identifying the appropriate device for the user's
-	   system. The built-in benchmark is run on all the OpenCL devices and
-	   the performance is measured for each device. The devices in the
-	   results list are sorted based on their performance with the fastest
-	   device listed first. The user can subsequently invoke ffmpeg using
-	   the device deemed most appropriate via -opencl_options to obtain
-	   the best performance for the OpenCL accelerated code.
-
-	   Typical usage to use the fastest OpenCL device involve the
-	   following steps.
-
-	   Run the command:
-
-		   ffmpeg -opencl_bench
-
-	   Note down the platform ID (pidx) and device ID (didx) of the first
-	   i.e. fastest device in the list.  Select the platform and device
-	   using the command:
-
-		   ffmpeg -opencl_options platform_idx=<pidx>:device_idx=<didx> ...
-
-       -opencl_options options (global)
-	   Set OpenCL environment options. This option is only available when
-	   FFmpeg has been compiled with "--enable-opencl".
-
-	   options must be a list of key=value option pairs separated by ':'.
-	   See the ``OpenCL Options'' section in the ffmpeg-utils manual for
-	   the list of supported options.
 
    AVOptions
        These options are provided directly by the libavformat, libavdevice and
@@ -810,8 +798,8 @@ WRITERS
 	       Perform no escaping.
 
        print_section, p
-	   Print the section name at the begin of each line if the value is 1,
-	   disable it with value set to 0. Default value is 1.
+	   Print the section name at the beginning of each line if the value
+	   is 1, disable it with value set to 0. Default value is 1.
 
    flat
        Flat format.
@@ -906,7 +894,7 @@ WRITERS
 	   Default value is 0.	This is required for generating an XML file
 	   which can be validated through an XSD file.
 
-       xsd_compliant, x
+       xsd_strict, x
 	   If set to 1 perform more checks for ensuring that the output is XSD
 	   compliant. Default value is 0.  This option automatically sets
 	   fully_qualified to 1.
@@ -927,7 +915,7 @@ TIMECODE
 	   (-show_format, see TAG:timecode).
 
 SEE ALSO
-       ffprobe-all(1), ffmpeg(1), ffplay(1), ffserver(1), ffmpeg-utils(1),
+       ffprobe-all(1), ffmpeg(1), ffplay(1), ffmpeg-utils(1),
        ffmpeg-scaler(1), ffmpeg-resampler(1), ffmpeg-codecs(1),
        ffmpeg-bitstream-filters(1), ffmpeg-formats(1), ffmpeg-devices(1),
        ffmpeg-protocols(1), ffmpeg-filters(1)

@@ -52,11 +52,6 @@ CODEC OPTIONS
 	   qscale
 	       Use fixed qscale.
 
-	   gmc Use gmc.
-
-	   mv0 Always try a mb with mv=<0,0>.
-
-	   input_preserved
 	   pass1
 	       Use internal 2pass ratecontrol in first pass mode.
 
@@ -73,8 +68,6 @@ CODEC OPTIONS
 	       Set error[?] variables during encoding.
 
 	   truncated
-	   naq Normalize adaptive quantization.
-
 	   ildct
 	       Use interlaced DCT.
 
@@ -482,8 +475,6 @@ CODEC OPTIONS
 
 	   qp  per-block quantization parameter (QP)
 
-	   mv  motion vector
-
 	   dct_coeff
 	   green_metadata
 	       display complexity metadata for the upcoming frame, GoP or for
@@ -491,20 +482,12 @@ CODEC OPTIONS
 
 	   skip
 	   startcode
-	   pts
 	   er  error recognition
 
 	   mmco
 	       memory management control operations (H.264)
 
 	   bugs
-	   vis_qp
-	       visualize quantization parameter (QP), lower QP are tinted
-	       greener
-
-	   vis_mb_type
-	       visualize block types
-
 	   buffers
 	       picture buffer allocations
 
@@ -513,19 +496,6 @@ CODEC OPTIONS
 
 	   nomc
 	       skip motion compensation
-
-       vismv integer (decoding,video)
-	   Visualize motion vectors (MVs).
-
-	   This option is deprecated, see the codecview filter instead.
-
-	   Possible values:
-
-	   pf  forward predicted MVs of P-frames
-
-	   bf  forward predicted MVs of B-frames
-
-	   bb  backward predicted MVs of B-frames
 
        cmp integer (encoding,video)
 	   Set full pel me compare function.
@@ -767,7 +737,6 @@ CODEC OPTIONS
 	   Set context model.
 
        slice_flags integer
-       xvmc_acceleration integer
        mbd integer (encoding,video)
 	   Set macroblock decision algorithm (high quality mode).
 
@@ -1003,10 +972,6 @@ CODEC OPTIONS
 
        trellis integer (encoding,audio,video)
 	   Set rate-distortion optimal quantization.
-
-       sc_factor integer (encoding,video)
-	   Set value multiplied by qscale for each frame and added to
-	   scene_change_score.
 
        mv0_threshold integer (encoding,video)
        b_sensitivity integer (encoding,video)
@@ -1251,7 +1216,7 @@ CODEC OPTIONS
 
 	   bt  Interlaced video, bottom coded first, top displayed first
 
-       skip_alpha integer (decoding,video)
+       skip_alpha bool (decoding,video)
 	   Set to 1 to disable processing alpha (transparency). This works
 	   like the gray flag in the flags option which skips chroma
 	   information instead of alpha. Default is 0.
@@ -1270,6 +1235,15 @@ CODEC OPTIONS
        max_pixels integer (decoding/encoding,video)
 	   Maximum number of pixels per image. This value can be used to avoid
 	   out of memory failures due to large images.
+
+       apply_cropping bool (decoding,video)
+	   Enable cropping if cropping parameters are multiples of the
+	   required alignment for the left and top parameters. If the
+	   alignment is not met the cropping will be partially applied to
+	   maintain alignment.	Default is 1 (enabled).  Note: The required
+	   alignment depends on if "AV_CODEC_FLAG_UNALIGNED" is set and the
+	   CPU. "AV_CODEC_FLAG_UNALIGNED" cannot be changed from the command
+	   line. Also hardware decoders will not apply left/top Cropping.
 
 DECODERS
        Decoders are configured elements in FFmpeg which allow the decoding of
@@ -1293,11 +1267,6 @@ VIDEO DECODERS
        A description of some of the currently available video decoders
        follows.
 
-   hevc
-       HEVC / H.265 decoder.
-
-       Note: the skip_loop_filter option has effect only at level "all".
-
    rawvideo
        Raw video decoder.
 
@@ -1313,6 +1282,12 @@ VIDEO DECODERS
 	   0   bottom-field-first is assumed
 
 	   1   top-field-first is assumed
+
+   libdavs2
+       AVS2-P2/IEEE1857.4 video decoder wrapper.
+
+       This decoder allows libavcodec to decode AVS2 streams with davs2
+       library.
 
 AUDIO DECODERS
        A description of some of the currently available audio decoders
@@ -1357,7 +1332,7 @@ AUDIO DECODERS
 	   for decoding.
 
    ffwavesynth
-       Internal wave synthetizer.
+       Internal wave synthesizer.
 
        This decoder generates wave patterns according to predefined sequences.
        Its use is purely internal and the format of the data it accepts is not
@@ -1485,20 +1460,29 @@ SUBTITLES DECODERS
        Options
 
        txt_page
-	   List of teletext page numbers to decode. You may use the special *
-	   string to match all pages. Pages that do not match the specified
-	   list are dropped.  Default value is *.
+	   List of teletext page numbers to decode. Pages that do not match
+	   the specified list are dropped. You may use the special "*" string
+	   to match all pages, or "subtitle" to match all subtitle pages.
+	   Default value is *.
 
        txt_chop_top
 	   Discards the top teletext line. Default value is 1.
 
        txt_format
-	   Specifies the format of the decoded subtitles. The teletext decoder
-	   is capable of decoding the teletext pages to bitmaps or to simple
-	   text, you should use "bitmap" for teletext pages, because certain
-	   graphics and colors cannot be expressed in simple text. You might
-	   use "text" for teletext based subtitles if your application can
-	   handle simple text based subtitles. Default value is bitmap.
+	   Specifies the format of the decoded subtitles.
+
+	   bitmap
+	       The default format, you should use this for teletext pages,
+	       because certain graphics and colors cannot be expressed in
+	       simple text or even ASS.
+
+	   text
+	       Simple text based output without formatting.
+
+	   ass Formatted ASS output, subtitle pages and teletext pages are
+	       returned in different styles, subtitle pages are stripped down
+	       to text, but an effort is made to keep the text alignment and
+	       the formatting.
 
        txt_left
 	   X offset of generated bitmaps, default is 0.
@@ -1511,12 +1495,12 @@ SUBTITLES DECODERS
 	   generated text. This option is useful for teletext based subtitles
 	   where empty spaces may be present at the start or at the end of the
 	   lines or empty lines may be present between the subtitle lines
-	   because of double-sized teletext charactes.	Default value is 1.
+	   because of double-sized teletext characters.  Default value is 1.
 
        txt_duration
 	   Sets the display duration of the decoded teletext pages or
-	   subtitles in milliseconds. Default value is 30000 which is 30
-	   seconds.
+	   subtitles in milliseconds. Default value is -1 which means infinity
+	   or until the next subtitle event comes.
 
        txt_transparent
 	   Force transparent background of the generated teletext bitmaps.
@@ -1584,8 +1568,7 @@ AUDIO ENCODERS
 	       and then tries to find an optimal combination by adding or
 	       subtracting a specific value from all quantizers and adjusting
 	       some individual quantizer a little.  Will tune itself based on
-	       whether aac_is, aac_ms and aac_pns are enabled.	This is the
-	       default choice for a coder.
+	       whether aac_is, aac_ms and aac_pns are enabled.
 
 	   anmr
 	       Average noise to mask ratio (ANMR) trellis-based solution.
@@ -1598,9 +1581,10 @@ AUDIO ENCODERS
 	   fast
 	       Constant quantizer method.
 
-	       This method sets a constant quantizer for all bands. This is
-	       the fastest of all the methods and has no rate control or
-	       support for aac_is or aac_pns.  Not recommended.
+	       Uses a cheaper version of twoloop algorithm that doesn't try to
+	       do as many clever adjustments. Worse with low bitrates (less
+	       than 64kbps), but is better and much faster at higher bitrates.
+	       This is the default choice for a coder
 
        aac_ms
 	   Sets mid/side coding mode. The default value of "auto" will
@@ -1611,12 +1595,12 @@ AUDIO ENCODERS
        aac_is
 	   Sets intensity stereo coding tool usage. By default, it's enabled
 	   and will automatically toggle IS for similar pairs of stereo bands
-	   if it's benefitial.	Can be disabled for debugging by setting the
+	   if it's beneficial.	Can be disabled for debugging by setting the
 	   value to "disable".
 
        aac_pns
 	   Uses perceptual noise substitution to replace low entropy high
-	   frequency bands with imperceivable white noise during the decoding
+	   frequency bands with imperceptible white noise during the decoding
 	   process. By default, it's enabled, but can be disabled for
 	   debugging purposes by using "disable".
 
@@ -2106,7 +2090,7 @@ AUDIO ENCODERS
 	       The mode is chosen automatically for each frame
 
 	   indep
-	       Chanels are independently coded
+	       Channels are independently coded
 
 	   left_side
 	   right_side
@@ -2440,6 +2424,12 @@ AUDIO ENCODERS
 	   Other values include 0 for mono and stereo, 1 for surround sound
 	   with masking and LFE bandwidth optimizations, and 255 for
 	   independent streams with an unspecified channel layout.
+
+       apply_phase_inv (N.A.) (requires libopus >= 1.2)
+	   If set to 0, disables the use of phase inversion for intensity
+	   stereo, improving the quality of mono downmixes, but slightly
+	   reducing normal stereo quality. The default is 1 (phase inversion
+	   enabled).
 
    libshine
        Shine Fixed-Point MP3 encoder wrapper.
@@ -3039,7 +3029,7 @@ VIDEO ENCODERS
 
 	   aq-mode
 	       Set adaptive quantization mode (0: off (default), 1: variance
-	       2: complexity, 3: cyclic refresh).
+	       2: complexity, 3: cyclic refresh, 4: equator360).
 
 	   colorspace color-space
 	       Set input color space. The VP9 bitstream supports signaling the
@@ -3052,6 +3042,18 @@ VIDEO ENCODERS
 	       smpte170m smpte170
 	       smpte240m smpte240
 	       bt2020_ncl bt2020
+	   row-mt boolean
+	       Enable row based multi-threading.
+
+	   tune-content
+	       Set content type: default (0), screen (1), film (2).
+
+	   corpus-complexity
+	       Corpus VBR mode is a variant of standard VBR where the
+	       complexity distribution midpoint is passed in rather than
+	       calculated for a specific clip or chunk.
+
+	       The valid range is [0, 10000]. 0 (default) uses standard VBR.
 
        For more information about libvpx see: <http://www.webmproject.org/>
 
@@ -3162,7 +3164,7 @@ VIDEO ENCODERS
        Options chapter.
 
        To get a more accurate and extensive documentation of the libx264
-       options, invoke the command x264 --full-help or consult the libx264
+       options, invoke the command x264 --fullhelp or consult the libx264
        documentation.
 
        b (bitrate)
@@ -3466,7 +3468,7 @@ VIDEO ENCODERS
 
 	   For example to specify libx264 encoding options with ffmpeg:
 
-		   ffmpeg -i foo.mpg -vcodec libx264 -x264opts keyint=123:min-keyint=20 -an out.mkv
+		   ffmpeg -i foo.mpg -c:v libx264 -x264opts keyint=123:min-keyint=20 -an out.mkv
 
        a53cc boolean
 	   Import closed captions (which must be ATSC compatible format) into
@@ -3503,6 +3505,11 @@ VIDEO ENCODERS
 
        tune
 	   Set the x265 tune parameter.
+
+       profile
+	   Set profile restrictions.
+
+       crf Set the quality for constant quality mode.
 
        forced-idr
 	   Normally, when forcing a I-frame type, the encoder can select any
@@ -3665,6 +3672,12 @@ VIDEO ENCODERS
 	   always
 	       Always write it.
 
+       video_format integer
+	   Specifies the video_format written into the sequence display
+	   extension indicating the source of the video pictures. The default
+	   is unspecified, can be component, pal, ntsc, secam or mac.  For
+	   maximum compatibility, use component.
+
    png
        PNG image encoder.
 
@@ -3692,6 +3705,7 @@ VIDEO ENCODERS
 	   standard
 	   hq
 	   4444
+	   4444xq
        quant_mat integer
 	   Select quantization matrix.
 
@@ -3806,6 +3820,165 @@ VIDEO ENCODERS
        iterative_dia_size
 	   dia size for the iterative motion estimation
 
+   VAAPI encoders
+       Wrappers for hardware encoders accessible via VAAPI.
+
+       These encoders only accept input in VAAPI hardware surfaces.  If you
+       have input in software frames, use the hwupload filter to upload them
+       to the GPU.
+
+       The following standard libavcodec options are used:
+
+       o   g / gop_size
+
+       o   bf / max_b_frames
+
+       o   profile
+
+	   If not set, this will be determined automatically from the format
+	   of the input frames and the profiles supported by the driver.
+
+       o   level
+
+       o   b / bit_rate
+
+       o   maxrate / rc_max_rate
+
+       o   bufsize / rc_buffer_size
+
+       o   rc_init_occupancy / rc_initial_buffer_occupancy
+
+       o   compression_level
+
+	   Speed / quality tradeoff: higher values are faster / worse quality.
+
+       o   q / global_quality
+
+	   Size / quality tradeoff: higher values are smaller / worse quality.
+
+       o   qmin
+
+       o   qmax
+
+       o   i_qfactor / i_quant_factor
+
+       o   i_qoffset / i_quant_offset
+
+       o   b_qfactor / b_quant_factor
+
+       o   b_qoffset / b_quant_offset
+
+       o   slices
+
+       All encoders support the following options:
+
+       o   low_power
+
+	   Some drivers/platforms offer a second encoder for some codecs
+	   intended to use less power than the default encoder; setting this
+	   option will attempt to use that encoder.  Note that it may support
+	   a reduced feature set, so some other options may not be available
+	   in this mode.
+
+       Each encoder also has its own specific options:
+
+       h264_vaapi
+	   profile sets the value of profile_idc and the
+	   constraint_set*_flags.  level sets the value of level_idc.
+
+	   coder
+	       Set entropy encoder (default is cabac).	Possible values:
+
+	       ac
+	       cabac
+		   Use CABAC.
+
+	       vlc
+	       cavlc
+		   Use CAVLC.
+
+	   aud Include access unit delimiters in the stream (not included by
+	       default).
+
+	   sei Set SEI message types to include.  Some combination of the
+	       following values:
+
+	       identifier
+		   Include a user_data_unregistered message containing
+		   information about the encoder.
+
+	       timing
+		   Include picture timing parameters (buffering_period and
+		   pic_timing messages).
+
+	       recovery_point
+		   Include recovery points where appropriate (recovery_point
+		   messages).
+
+       hevc_vaapi
+	   profile and level set the values of general_profile_idc and
+	   general_level_idc respectively.
+
+	   aud Include access unit delimiters in the stream (not included by
+	       default).
+
+	   tier
+	       Set general_tier_flag.  This may affect the level chosen for
+	       the stream if it is not explicitly specified.
+
+	   sei Set SEI message types to include.  Some combination of the
+	       following values:
+
+	       hdr Include HDR metadata if the input frames have it
+		   (mastering_display_colour_volume and content_light_level
+		   messages).
+
+       mjpeg_vaapi
+	   Only baseline DCT encoding is supported.  The encoder always uses
+	   the standard quantisation and huffman tables - global_quality
+	   scales the standard quantisation table (range 1-100).
+
+	   For YUV, 4:2:0, 4:2:2 and 4:4:4 subsampling modes are supported.
+	   RGB is also supported, and will create an RGB JPEG.
+
+	   jfif
+	       Include JFIF header in each frame (not included by default).
+
+	   huffman
+	       Include standard huffman tables (on by default).  Turning this
+	       off will save a few hundred bytes in each output frame, but may
+	       lose compatibility with some JPEG decoders which don't fully
+	       handle MJPEG.
+
+       mpeg2_vaapi
+	   profile and level set the value of profile_and_level_indication.
+
+       vp8_vaapi
+	   B-frames are not supported.
+
+	   global_quality sets the q_idx used for non-key frames (range
+	   0-127).
+
+	   loop_filter_level
+	   loop_filter_sharpness
+	       Manually set the loop filter parameters.
+
+       vp9_vaapi
+	   global_quality sets the q_idx used for P-frames (range 0-255).
+
+	   loop_filter_level
+	   loop_filter_sharpness
+	       Manually set the loop filter parameters.
+
+	   B-frames are supported, but the output stream is always in encode
+	   order rather than display order.  If B-frames are enabled, it may
+	   be necessary to use the vp9_raw_reorder bitstream filter to modify
+	   the output stream to display frames in the correct order.
+
+	   Only normal frames are produced - the vp9_superframe bitstream
+	   filter may be required to produce a stream usable with all
+	   decoders.
+
    vc2
        SMPTE VC-2 (previously BBC Dirac Pro). This codec was primarily aimed
        at professional broadcasting but since it supports yuv420, yuv422 and
@@ -3861,6 +4034,49 @@ VIDEO ENCODERS
 	   -   color Reduces detail but attempts to preserve color at
 	       extremely low bitrates.
 
+   libxavs2
+       xavs2 AVS2-P2/IEEE1857.4 encoder wrapper.
+
+       This encoder requires the presence of the libxavs2 headers and library
+       during configuration. You need to explicitly configure the build with
+       --enable-libxavs2.
+
+       Options
+
+       lcu_row_threads
+	   Set the number of parallel threads for rows from 1 to 8 (default
+	   5).
+
+       initial_qp
+	   Set the xavs2 quantization parameter from 1 to 63 (default 34).
+	   This is used to set the initial qp for the first frame.
+
+       qp  Set the xavs2 quantization parameter from 1 to 63 (default 34).
+	   This is used to set the qp value under constant-QP mode.
+
+       max_qp
+	   Set the max qp for rate control from 1 to 63 (default 55).
+
+       min_qp
+	   Set the min qp for rate control from 1 to 63 (default 20).
+
+       speed_level
+	   Set the Speed level from 0 to 9 (default 0). Higher is better but
+	   slower.
+
+       log_level
+	   Set the log level from -1 to 3 (default 0). -1: none, 0: error, 1:
+	   warning, 2: info, 3: debug.
+
+       xavs2-params
+	   Set xavs2 options using a list of key=value couples separated by
+	   ":".
+
+	   For example to specify libxavs2 encoding options with
+	   -xavs2-params:
+
+		   ffmpeg -i input -c:v libxavs2 -xavs2-params preset_level=5 output.avs2
+
 SUBTITLES ENCODERS
    dvdsub
        This codec encodes the bitmap subtitle format that is used in DVDs.
@@ -3879,7 +4095,7 @@ SUBTITLES ENCODERS
 	   By default, this work-around is disabled.
 
 SEE ALSO
-       ffmpeg(1), ffplay(1), ffprobe(1), ffserver(1), libavcodec(3)
+       ffmpeg(1), ffplay(1), ffprobe(1), libavcodec(3)
 
 AUTHORS
        The FFmpeg developers.

@@ -75,12 +75,45 @@ INPUT DEVICES
        channels
 	   Set the number of channels. Default is 2.
 
+   android_camera
+       Android camera input device.
+
+       This input devices uses the Android Camera2 NDK API which is available
+       on devices with API level 24+. The availability of android_camera is
+       autodetected during configuration.
+
+       This device allows capturing from all cameras on an Android device,
+       which are integrated into the Camera2 NDK API.
+
+       The available cameras are enumerated internally and can be selected
+       with the camera_index parameter. The input file string is discarded.
+
+       Generally the back facing camera has index 0 while the front facing
+       camera has index 1.
+
+       Options
+
+       video_size
+	   Set the video size given as a string such as 640x480 or hd720.
+	   Falls back to the first available configuration reported by Android
+	   if requested video size is not available or by default.
+
+       framerate
+	   Set the video framerate.  Falls back to the first available
+	   configuration reported by Android if requested framerate is not
+	   available or by default (-1).
+
+       camera_index
+	   Set the index of the camera to use. Default is 0.
+
+       input_queue_size
+	   Set the maximum number of frames to buffer. Default is 5.
+
    avfoundation
        AVFoundation input device.
 
        AVFoundation is the currently recommended framework by Apple for
-       streamgrabbing on OSX >= 10.7 as well as on iOS.  The older QTKit
-       framework has been marked deprecated since OSX version 10.7.
+       streamgrabbing on OSX >= 10.7 as well as on iOS.
 
        The input filename has to be given in the following syntax:
 
@@ -201,17 +234,18 @@ INPUT DEVICES
        "--extra-ldflags".  On Windows, you need to run the IDL files through
        widl.
 
-       DeckLink is very picky about the formats it supports. Pixel format is
-       uyvy422 or v210, framerate and video size must be determined for your
-       device with -list_formats 1. Audio sample rate is always 48 kHz and the
-       number of channels can be 2, 8 or 16. Note that all audio channels are
-       bundled in one single audio track.
+       DeckLink is very picky about the formats it supports. Pixel format of
+       the input can be set with raw_format.  Framerate and video size must be
+       determined for your device with -list_formats 1. Audio sample rate is
+       always 48 kHz and the number of channels can be 2, 8 or 16. Note that
+       all audio channels are bundled in one single audio track.
 
        Options
 
        list_devices
 	   If set to true, print a list of devices and exit.  Defaults to
-	   false.
+	   false. Alternatively you can use the "-sources" option of ffmpeg to
+	   list the available input devices.
 
        list_formats
 	   If set to true, print a list of supported formats and exit.
@@ -221,23 +255,38 @@ INPUT DEVICES
 	   This sets the input video format to the format given by the FourCC.
 	   To see the supported values of your device(s) use list_formats.
 	   Note that there is a FourCC 'pal ' that can also be used as pal (3
-	   letters).
+	   letters).  Default behavior is autodetection of the input video
+	   format, if the hardware supports it.
 
        bm_v210
-	   If set to 1, video is captured in 10 bit v210 instead of uyvy422.
-	   Not all Blackmagic devices support this option.
+	   This is a deprecated option, you can use raw_format instead.  If
+	   set to 1, video is captured in 10 bit v210 instead of uyvy422. Not
+	   all Blackmagic devices support this option.
 
+       raw_format
+	   Set the pixel format of the captured video.	Available values are:
+
+	   uyvy422
+	   yuv422p10
+	   argb
+	   bgra
+	   rgb10
        teletext_lines
 	   If set to nonzero, an additional teletext stream will be captured
-	   from the vertical ancillary data. This option is a bitmask of the
-	   VBI lines checked, specifically lines 6 to 22, and lines 318 to
-	   335. Line 6 is the LSB in the mask.	Selected lines which do not
-	   contain teletext information will be ignored. You can use the
-	   special all constant to select all possible lines, or standard to
-	   skip lines 6, 318 and 319, which are not compatible with all
-	   receivers. Capturing teletext only works for SD PAL sources in 8
-	   bit mode.  To use this option, ffmpeg needs to be compiled with
-	   "--enable-libzvbi".
+	   from the vertical ancillary data. Both SD PAL (576i) and HD (1080i
+	   or 1080p) sources are supported. In case of HD sources, OP47
+	   packets are decoded.
+
+	   This option is a bitmask of the SD PAL VBI lines captured,
+	   specifically lines 6 to 22, and lines 318 to 335. Line 6 is the LSB
+	   in the mask. Selected lines which do not contain teletext
+	   information will be ignored. You can use the special all constant
+	   to select all possible lines, or standard to skip lines 6, 318 and
+	   319, which are not compatible with all receivers.
+
+	   For SD sources, ffmpeg needs to be compiled with
+	   "--enable-libzvbi". For HD sources, on older (pre-4K) DeckLink card
+	   models you have to capture in 10 bit mode.
 
        channels
 	   Defines number of audio channels to capture. Must be 2, 8 or 16.
@@ -246,6 +295,11 @@ INPUT DEVICES
        duplex_mode
 	   Sets the decklink device duplex mode. Must be unset, half or full.
 	   Defaults to unset.
+
+       timecode_format
+	   Timecode type to include in the frame and video stream metadata.
+	   Must be none, rp188vitc, rp188vitc2, rp188ltc, rp188any, vitc,
+	   vitc2, or serial. Defaults to none (not included).
 
        video_input
 	   Sets the video input source. Must be unset, sdi, hdmi, optical_sdi,
@@ -257,15 +311,40 @@ INPUT DEVICES
 
        video_pts
 	   Sets the video packet timestamp source. Must be video, audio,
-	   reference or wallclock. Defaults to video.
+	   reference, wallclock or abs_wallclock.  Defaults to video.
 
        audio_pts
 	   Sets the audio packet timestamp source. Must be video, audio,
-	   reference or wallclock. Defaults to audio.
+	   reference, wallclock or abs_wallclock.  Defaults to audio.
 
        draw_bars
 	   If set to true, color bars are drawn in the event of a signal loss.
 	   Defaults to true.
+
+       queue_size
+	   Sets maximum input buffer size in bytes. If the buffering reaches
+	   this value, incoming frames will be dropped.  Defaults to
+	   1073741824.
+
+       audio_depth
+	   Sets the audio sample bit depth. Must be 16 or 32.  Defaults to 16.
+
+       decklink_copyts
+	   If set to true, timestamps are forwarded as they are without
+	   removing the initial offset.  Defaults to false.
+
+       timestamp_align
+	   Capture start time alignment in seconds. If set to nonzero, input
+	   frames are dropped till the system timestamp aligns with configured
+	   value.  Alignment difference of up to one frame duration is
+	   tolerated.  This is useful for maintaining input synchronization
+	   across N different hardware devices deployed for 'N-way'
+	   redundancy. The system time of different hardware devices should be
+	   synchronized with protocols such as NTP or PTP, before using this
+	   option.  Note that this method is not foolproof. In some border
+	   cases input synchronization may not happen due to thread scheduling
+	   jitters in the OS.  Either sync could go wrong by 1 frame or in a
+	   rarer case timestamp_align seconds.	Defaults to 0.
 
        Examples
 
@@ -279,15 +358,15 @@ INPUT DEVICES
 
        o   Capture video clip at 1080i50:
 
-		   ffmpeg -format_code Hi50 -f decklink -i 'Intensity Pro' -acodec copy -vcodec copy output.avi
+		   ffmpeg -format_code Hi50 -f decklink -i 'Intensity Pro' -c:a copy -c:v copy output.avi
 
        o   Capture video clip at 1080i50 10 bit:
 
-		   ffmpeg -bm_v210 1 -format_code Hi50 -f decklink -i 'UltraStudio Mini Recorder' -acodec copy -vcodec copy output.avi
+		   ffmpeg -bm_v210 1 -format_code Hi50 -f decklink -i 'UltraStudio Mini Recorder' -c:a copy -c:v copy output.avi
 
        o   Capture video clip at 1080i50 with 16 audio channels:
 
-		   ffmpeg -channels 16 -format_code Hi50 -f decklink -i 'UltraStudio Mini Recorder' -acodec copy -vcodec copy output.avi
+		   ffmpeg -channels 16 -format_code Hi50 -f decklink -i 'UltraStudio Mini Recorder' -c:a copy -c:v copy output.avi
 
    dshow
        Windows DirectShow input device.
@@ -463,22 +542,6 @@ INPUT DEVICES
 
 		   $ ffmpeg -f dshow -show_video_device_dialog true -crossbar_video_input_pin_number 0
 			-crossbar_audio_input_pin_number 3 -i video="AVerMedia BDA Analog Capture":audio="AVerMedia BDA Analog Capture"
-
-   dv1394
-       Linux DV 1394 input device.
-
-       Options
-
-       framerate
-	   Set the frame rate. Default is 25.
-
-       standard
-	   Available values are:
-
-	   pal
-	   ntsc
-
-	   Default value is "ntsc".
 
    fbdev
        Linux framebuffer input device.
@@ -678,6 +741,60 @@ INPUT DEVICES
        channels
 	   Set the number of channels. Default is 2.
 
+   kmsgrab
+       KMS video input device.
+
+       Captures the KMS scanout framebuffer associated with a specified CRTC
+       or plane as a DRM object that can be passed to other hardware
+       functions.
+
+       Requires either DRM master or CAP_SYS_ADMIN to run.
+
+       If you don't understand what all of that means, you probably don't want
+       this.  Look at x11grab instead.
+
+       Options
+
+       device
+	   DRM device to capture on.  Defaults to /dev/dri/card0.
+
+       format
+	   Pixel format of the framebuffer.  Defaults to bgr0.
+
+       format_modifier
+	   Format modifier to signal on output frames.	This is necessary to
+	   import correctly into some APIs, but can't be autodetected.	See
+	   the libdrm documentation for possible values.
+
+       crtc_id
+	   KMS CRTC ID to define the capture source.  The first active plane
+	   on the given CRTC will be used.
+
+       plane_id
+	   KMS plane ID to define the capture source.  Defaults to the first
+	   active plane found if neither crtc_id nor plane_id are specified.
+
+       framerate
+	   Framerate to capture at.  This is not synchronised to any page
+	   flipping or framebuffer changes - it just defines the interval at
+	   which the framebuffer is sampled.  Sampling faster than the
+	   framebuffer update rate will generate independent frames with the
+	   same content.  Defaults to 30.
+
+       Examples
+
+       o   Capture from the first active plane, download the result to normal
+	   frames and encode.  This will only work if the framebuffer is both
+	   linear and mappable - if not, the result may be scrambled or fail
+	   to download.
+
+		   ffmpeg -f kmsgrab -i - -vf 'hwdownload,format=bgr0' output.mp4
+
+       o   Capture from CRTC ID 42 at 60fps, map the result to VAAPI, convert
+	   to NV12 and encode as H.264.
+
+		   ffmpeg -crtc_id 42 -framerate 60 -f kmsgrab -i - -vf 'hwmap=derive_device=vaapi,scale_vaapi=w=1920:h=1080:format=nv12' -c:v h264_vaapi output.mp4
+
    lavfi
        Libavfilter input virtual device.
 
@@ -791,6 +908,54 @@ INPUT DEVICES
        IIDC1394 input device, based on libdc1394 and libraw1394.
 
        Requires the configure option "--enable-libdc1394".
+
+   libndi_newtek
+       The libndi_newtek input device provides capture capabilities for using
+       NDI (Network Device Interface, standard created by NewTek).
+
+       Input filename is a NDI source name that could be found by sending
+       -find_sources 1 to command line - it has no specific syntax but human-
+       readable formatted.
+
+       To enable this input device, you need the NDI SDK and you need to
+       configure with the appropriate "--extra-cflags" and "--extra-ldflags".
+
+       Options
+
+       find_sources
+	   If set to true, print a list of found/available NDI sources and
+	   exit.  Defaults to false.
+
+       wait_sources
+	   Override time to wait until the number of online sources have
+	   changed.  Defaults to 0.5.
+
+       allow_video_fields
+	   When this flag is false, all video that you receive will be
+	   progressive.  Defaults to true.
+
+       extra_ips
+	   If is set to list of comma separated ip addresses, scan for sources
+	   not only using mDNS but also use unicast ip addresses specified by
+	   this list.
+
+       Examples
+
+       o   List input devices:
+
+		   ffmpeg -f libndi_newtek -find_sources 1 -i dummy
+
+       o   List local and remote input devices:
+
+		   ffmpeg -f libndi_newtek -extra_ips "192.168.10.10" -find_sources 1 -i dummy
+
+       o   Restream to NDI:
+
+		   ffmpeg -f libndi_newtek -i "DEV-5.INTERNAL.M1STEREO.TV (NDI_SOURCE_NAME_1)" -f libndi_newtek -y NDI_SOURCE_NAME_2
+
+       o   Restream remote NDI to local NDI:
+
+		   ffmpeg -f libndi_newtek -extra_ips "192.168.10.10" -i "DEV-5.REMOTE.M1STEREO.TV (NDI_SOURCE_NAME_1)" -f libndi_newtek -y NDI_SOURCE_NAME_2
 
    openal
        The OpenAL input device provides audio capture on all systems with a
@@ -944,38 +1109,6 @@ INPUT DEVICES
        Record a stream from default device:
 
 	       ffmpeg -f pulse -i default /tmp/pulse.wav
-
-   qtkit
-       QTKit input device.
-
-       The filename passed as input is parsed to contain either a device name
-       or index.  The device index can also be given by using
-       -video_device_index.  A given device index will override any given
-       device name.  If the desired device consists of numbers only, use
-       -video_device_index to identify it.  The default device will be chosen
-       if an empty string  or the device name "default" is given.  The
-       available devices can be enumerated by using -list_devices.
-
-	       ffmpeg -f qtkit -i "0" out.mpg
-
-	       ffmpeg -f qtkit -video_device_index 0 -i "" out.mpg
-
-	       ffmpeg -f qtkit -i "default" out.mpg
-
-	       ffmpeg -f qtkit -list_devices true -i ""
-
-       Options
-
-       frame_rate
-	   Set frame rate. Default is 30.
-
-       list_devices
-	   If set to "true", print a list of devices and exit. Default is
-	   "false".
-
-       video_device_index
-	   Select the video device by index for devices with the same name
-	   (starts at 0).
 
    sndio
        sndio input device.
@@ -1303,7 +1436,7 @@ OUTPUT DEVICES
        o   The following command shows the ffmpeg output is an CACA window,
 	   forcing its size to 80x25:
 
-		   ffmpeg -i INPUT -vcodec rawvideo -pix_fmt rgb24 -window_size 80x25 -f caca -
+		   ffmpeg -i INPUT -c:v rawvideo -pix_fmt rgb24 -window_size 80x25 -f caca -
 
        o   Show the list of available drivers and exit:
 
@@ -1331,7 +1464,8 @@ OUTPUT DEVICES
 
        list_devices
 	   If set to true, print a list of devices and exit.  Defaults to
-	   false.
+	   false. Alternatively you can use the "-sinks" option of ffmpeg to
+	   list the available output devices.
 
        list_formats
 	   If set to true, print a list of supported formats and exit.
@@ -1339,6 +1473,10 @@ OUTPUT DEVICES
 
        preroll
 	   Amount of time to preroll video in seconds.	Defaults to 0.5.
+
+       duplex_mode
+	   Sets the decklink device duplex mode. Must be unset, half or full.
+	   Defaults to unset.
 
        Examples
 
@@ -1379,9 +1517,40 @@ OUTPUT DEVICES
        Play a file on framebuffer device /dev/fb0.  Required pixel format
        depends on current framebuffer settings.
 
-	       ffmpeg -re -i INPUT -vcodec rawvideo -pix_fmt bgra -f fbdev /dev/fb0
+	       ffmpeg -re -i INPUT -c:v rawvideo -pix_fmt bgra -f fbdev /dev/fb0
 
        See also <http://linux-fbdev.sourceforge.net/>, and fbset(1).
+
+   libndi_newtek
+       The libndi_newtek output device provides playback capabilities for
+       using NDI (Network Device Interface, standard created by NewTek).
+
+       Output filename is a NDI name.
+
+       To enable this output device, you need the NDI SDK and you need to
+       configure with the appropriate "--extra-cflags" and "--extra-ldflags".
+
+       NDI uses uyvy422 pixel format natively, but also supports bgra, bgr0,
+       rgba and rgb0.
+
+       Options
+
+       reference_level
+	   The audio reference level in dB. This specifies how many dB above
+	   the reference level (+4dBU) is the full range of 16 bit audio.
+	   Defaults to 0.
+
+       clock_video
+	   These specify whether video "clock" themselves.  Defaults to false.
+
+       clock_audio
+	   These specify whether audio "clock" themselves.  Defaults to false.
+
+       Examples
+
+       o   Play video clip:
+
+		   ffmpeg -i "udp://@239.1.1.1:10480?fifo_size=1000000&overrun_nonfatal=1" -vf "scale=720:576,fps=fps=25,setdar=dar=16/9,format=pix_fmts=uyvy422" -f libndi_newtek NEW_NDI1
 
    opengl
        OpenGL output device.
@@ -1518,9 +1687,17 @@ OUTPUT DEVICES
 	   or a video size abbreviation.  If not specified it defaults to the
 	   size of the input video, downscaled according to the aspect ratio.
 
+       window_x
+       window_y
+	   Set the position of the window on the screen.
+
        window_fullscreen
 	   Set fullscreen mode when non-zero value is provided.  Default value
 	   is zero.
+
+       window_enable_quit
+	   Enable quit action (using window button or keyboard key) when non-
+	   zero value is provided.  Default value is 1 (enable quit action)
 
        Interactive commands
 
@@ -1535,10 +1712,13 @@ OUTPUT DEVICES
        The following command shows the ffmpeg output is an SDL window, forcing
        its size to the qcif format:
 
-	       ffmpeg -i INPUT -vcodec rawvideo -pix_fmt yuv420p -window_size qcif -f sdl "SDL output"
+	       ffmpeg -i INPUT -c:v rawvideo -pix_fmt yuv420p -window_size qcif -f sdl "SDL output"
 
    sndio
        sndio audio output device.
+
+   v4l2
+       Video4Linux2 output device.
 
    xv
        XV (XVideo) output device.
@@ -1604,7 +1784,7 @@ OUTPUT DEVICES
 		   ffmpeg -i INPUT -f xv normal -vf negate -f xv negated
 
 SEE ALSO
-       ffmpeg(1), ffplay(1), ffprobe(1), ffserver(1), libavdevice(3)
+       ffmpeg(1), ffplay(1), ffprobe(1), libavdevice(3)
 
 AUTHORS
        The FFmpeg developers.
