@@ -5,7 +5,7 @@
 # details.
 
 """This module implements enough functionality to program the STM32F4xx over
-DFU, without requiring dfu-util.
+DFU, without requiringdfu-util.
 
 See app note AN3156 for a description of the DFU protocol.
 See document UM0391 for a dscription of the DFuse file.
@@ -21,13 +21,14 @@ import usb.core
 import usb.util
 import zlib
 import os
+import time
 
 # VID/PID
 __VID = 0x0483
 __PID = 0xdf11
 
 # USB request __TIMEOUT
-__TIMEOUT = 4000
+__TIMEOUT = 5000
 
 # DFU commands
 __DFU_DETACH    = 0
@@ -51,17 +52,31 @@ __DFU_STATE_DFU_MANIFEST_WAIT_RESET  = 0x08
 __DFU_STATE_DFU_UPLOAD_IDLE          = 0x09
 __DFU_STATE_DFU_ERROR                = 0x0a
 
+__DFU_STATUS = [
+    "DFU_STATE_APP_IDLE",
+    "DFU_STATE_APP_DETACH",
+    "DFU_STATE_DFU_IDLE",
+    "DFU_STATE_DFU_DOWNLOAD_SYNC",
+    "DFU_STATE_DFU_DOWNLOAD_BUSY",
+    "DFU_STATE_DFU_DOWNLOAD_IDLE",
+    "DFU_STATE_DFU_MANIFEST_SYNC",
+    "DFU_STATE_DFU_MANIFEST",
+    "DFU_STATE_DFU_MANIFEST_WAIT_RESET",
+    "DFU_STATE_DFU_UPLOAD_IDLE",
+    "DFU_STATE_DFU_ERROR"
+]
+
 _DFU_DESCRIPTOR_TYPE                 = 0x21
 
 # USB device handle
 __dev = None
+
 __verbose = None
 
 # USB DFU interface
 __DFU_INTERFACE = 0
 
 import inspect
-
 if 'length' in inspect.getargspec(usb.util.get_string).args:
     # PyUSB 1.0.0.b1 has the length argument
     def get_string(dev, index):
@@ -88,18 +103,17 @@ def init():
     # Clear status
     clr_status()
 
-
 def clr_status():
     """Clears any error status (perhaps left over from a previous session)."""
-    __dev.ctrl_transfer(0x21, __DFU_CLRSTATUS, 0, __DFU_INTERFACE,
-                        None, __TIMEOUT)
+    while (get_status() != __DFU_STATE_DFU_IDLE):
+        __dev.ctrl_transfer(0x21, __DFU_CLRSTATUS, 0, __DFU_INTERFACE, None, __TIMEOUT)
+        time.sleep(0.100)
 
 
 def get_status():
     """Get the status of the last operation."""
-    stat = __dev.ctrl_transfer(0xA1, __DFU_GETSTATUS, 0, __DFU_INTERFACE,
-                               6, 20000)
-    # print (__DFU_STAT[stat[4]], stat)
+    stat = __dev.ctrl_transfer(0xA1, __DFU_GETSTATUS, 0, __DFU_INTERFACE, 6, 20000)
+    #print ("DFU Status: ", __DFU_STATUS[stat[4]])
     return stat[4]
 
 
@@ -466,18 +480,17 @@ def write_elements(elements, mass_erase_used, progress=None):
             if progress:
                 progress(elem_addr, addr - elem_addr, elem_size)
 
-
 def write_bin(path, progress=None):
     try:
         with open(path, 'rb') as f:
             buf = f.read()
     except Exception as e:
         print(e)
-        return
-
-    xfer_bytes = 0
+        return               
+    
+    xfer_bytes = 0 
     xfer_total = len(buf)
-
+    
     while xfer_bytes < xfer_total:
         # Send chunk
         chunk = min (64, xfer_total-xfer_bytes)
@@ -485,7 +498,6 @@ def write_bin(path, progress=None):
         xfer_bytes += chunk
         if (progress):
             progress(0x08000000+xfer_bytes, xfer_bytes, xfer_total)
-
 
 def cli_progress(addr, offset, size):
     """Prints a progress report suitable for use on the command line."""
