@@ -33,6 +33,8 @@
 #include <utils/synchronousprocess.h>
 //OPENMV-DIFF//
 #include <utils/fadingindicator.h>
+#include <utils/fileutils.h>
+#include <extensionsystem/pluginmanager.h>
 //OPENMV-DIFF//
 
 #include <QAction>
@@ -40,6 +42,9 @@
 //OPENMV-DIFF//
 #include <QApplication>
 #include <QRegularExpression>
+#include <QSettings>
+#include <QFileDialog>
+#include <QMessageBox>
 //OPENMV-DIFF//
 
 using namespace Utils;
@@ -563,6 +568,49 @@ void OutputWindow::clear()
     d->enforceNewline = false;
     QPlainTextEdit::clear();
 }
+
+//OPENMV-DIFF//
+static const char settingsGroup[] = "OutputWindow";
+static const char saveLogFilePath[] = "SaveLogFilePath";
+
+void OutputWindow::save()
+{
+    QSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->beginGroup(QLatin1String(settingsGroup));
+
+    QString path =
+        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Log"),
+            settings->value(QLatin1String(saveLogFilePath), QDir::homePath()).toString(),
+            tr("Text Files (*.txt);;All files (*)"));
+
+    if(!path.isEmpty())
+    {
+        Utils::FileSaver file(path);
+
+        if(!file.hasError())
+        {
+            if((!file.write(toPlainText().toUtf8())) || (!file.finalize()))
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    tr("Save Log"),
+                    tr("Error: %L1!").arg(file.errorString()));
+            }
+            else
+            {
+                settings->setValue(QLatin1String(saveLogFilePath), path);
+            }
+        }
+        else
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                tr("Save Log"),
+                tr("Error: %L1!").arg(file.errorString()));
+        }
+    }
+
+    settings->endGroup();
+}
+//OPENMV-DIFF//
 
 void OutputWindow::scrollToBottom()
 {

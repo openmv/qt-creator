@@ -27,6 +27,10 @@
 #define MESSAGEOUTPUTWINDOW_H
 
 #include "ioutputpane.h"
+//OPENMV-DIFF//
+#include <QToolButton>
+#include <QAction>
+//OPENMV-DIFF//
 
 namespace Core {
 class OutputWindow;
@@ -42,7 +46,11 @@ public:
     ~MessageOutputWindow();
 
     QWidget *outputWidget(QWidget *parent);
-    QList<QWidget*> toolBarWidgets() const { return QList<QWidget *>(); }
+    //OPENMV-DIFF//
+    //QList<QWidget*> toolBarWidgets() const { return QList<QWidget *>(); }
+    //OPENMV-DIFF//
+    QList<QWidget*> toolBarWidgets() const;
+    //OPENMV-DIFF//
 
     QString displayName() const;
     int priorityInStatusBar() const;
@@ -64,6 +72,10 @@ public:
 //private:
 //OPENMV-DIFF//
     OutputWindow *m_widget;
+    //OPENMV-DIFF//
+    QToolButton *m_saveButton;
+    QAction *m_saveAction;
+    //OPENMV-DIFF//
 };
 
 } // namespace Internal

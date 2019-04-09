@@ -58,6 +58,9 @@ public:
 
     void grayOutOldContent();
     void clear();
+    //OPENMV-DIFF//
+    void save();
+    //OPENMV-DIFF//
 
     void showEvent(QShowEvent *);
 

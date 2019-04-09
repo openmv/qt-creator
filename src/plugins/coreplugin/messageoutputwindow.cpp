@@ -30,6 +30,11 @@
 #include "find/basetextfind.h"
 
 #include <aggregation/aggregate.h>
+//OPENMV-DIFF//
+#include <coreplugin/coreicons.h>
+#include <coreplugin/actionmanager/actionmanager.h>
+#include <coreplugin/actionmanager/command.h>
+//OPENMV-DIFF//
 
 namespace Core {
 namespace Internal {
@@ -56,8 +61,23 @@ MessageOutputWindow::MessageOutputWindow()
     m_widget->setPalette(p);
     m_widget->setMaxLineCount(100000);
     m_widget->setWordWrapEnabled(false);
+    m_saveButton = new QToolButton(m_widget);
+    m_saveButton->setAutoRaise(true);
+    m_saveAction = new QAction(tr("Save"), this);
+    m_saveAction->setIcon(Core::Icons::SAVEFILE_TOOLBAR.icon());
+    Command *cmd = ActionManager::registerAction(m_saveAction, "Core.MessageOutputWindow.Save");
+    cmd->setAttribute(Command::CA_UpdateText);
+    m_saveButton->setDefaultAction(cmd->action());
+    connect(m_saveAction, &QAction::triggered, m_widget, &OutputWindow::save);
     //OPENMV-DIFF//
 }
+
+//OPENMV-DIFF//
+QList<QWidget*> MessageOutputWindow::toolBarWidgets() const
+{
+    return QList<QWidget*>() << m_saveButton;
+}
+//OPENMV-DIFF//
 
 MessageOutputWindow::~MessageOutputWindow()
 {

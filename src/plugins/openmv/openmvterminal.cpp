@@ -8,6 +8,7 @@
 #define FONT_ZOOM_STATE "FontZoomState"
 #define LAST_SAVE_IMAGE_PATH "LastSaveImagePath"
 #define HISTOGRAM_COLOR_SPACE_STATE "HistogramColorSpace"
+#define LAST_SAVE_LOG_PATH "LastSaveLogPath"
 
 MyPlainTextEdit::MyPlainTextEdit(qreal fontPointSizeF, QWidget *parent) : QPlainTextEdit(parent)
 {
@@ -433,6 +434,44 @@ void MyPlainTextEdit::clear()
     m_frameBufferData = QByteArray();
     m_handler = Utils::AnsiEscapeCodeHandler();
     m_lastChar = QChar();
+}
+
+void MyPlainTextEdit::save()
+{
+    QSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->beginGroup(QStringLiteral(TERMINAL_SETTINGS_GROUP));
+
+    QString path =
+        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Log"),
+            settings->value(QStringLiteral(LAST_SAVE_LOG_PATH), QDir::homePath()).toString(),
+            tr("Text Files (*.txt);;All files (*)"));
+
+    if(!path.isEmpty())
+    {
+        Utils::FileSaver file(path);
+
+        if(!file.hasError())
+        {
+            if((!file.write(toPlainText().toUtf8())) || (!file.finalize()))
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    tr("Save Log"),
+                    tr("Error: %L1!").arg(file.errorString()));
+            }
+            else
+            {
+                settings->setValue(QStringLiteral(LAST_SAVE_LOG_PATH), path);
+            }
+        }
+        else
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                tr("Save Log"),
+                tr("Error: %L1!").arg(file.errorString()));
+        }
+    }
+
+    settings->endGroup();
 }
 
 void MyPlainTextEdit::execute(bool standAlone)
@@ -883,6 +922,11 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
     clearButton->setToolTip(tr("Clear"));
     styledBar2Layout->addWidget(clearButton);
 
+    QToolButton *saveButton = new QToolButton;
+    saveButton->setIcon(Utils::Icon({{QStringLiteral(":/core/images/filesave.png"), Utils::Theme::IconsBaseColor}}).icon());
+    saveButton->setToolTip(tr("Save"));
+    styledBar2Layout->addWidget(saveButton);
+
     QToolButton *executeButton = new QToolButton;
     executeButton->setIcon(Utils::Icon({{QStringLiteral(":/core/images/run_small.png"), Utils::Theme::IconsBaseColor}}).icon());
     executeButton->setToolTip(stand_alone ? tr("Run \"/main.py\"") : tr("Run current script in editor window"));
@@ -907,6 +951,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
     connect(m_edit, &MyPlainTextEdit::writeBytes, this, &OpenMVTerminal::writeBytes);
     connect(m_edit, &MyPlainTextEdit::frameBufferData, frameBuffer, &OpenMVPluginFB::frameBufferData);
     connect(clearButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::clear);
+    connect(saveButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::save);
     connect(executeButton, &QToolButton::clicked, this, [this, stand_alone] { m_edit->execute(stand_alone); });
     connect(interruptButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::interrupt);
     connect(reloadButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::reload);
