@@ -583,7 +583,7 @@ static QString getOutputFormats()
 }
 #endif
 
-static bool convertVideoFile(const QString &dst, const QString &src)
+static bool convertVideoFile(const QString &dst, const QString &src, int scale)
 {
     QString newSrc = src;
     QString newDst = dst;
@@ -611,7 +611,7 @@ static bool convertVideoFile(const QString &dst, const QString &src)
         {
             QByteArray command = QString(QStringLiteral("\"") +
                 QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffmpeg.exe"))) + QStringLiteral("\" -hide_banner -y -i \"") +
-                QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\" \"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
+                QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
 
             if(file.write(command) == command.size())
             {
@@ -641,7 +641,7 @@ static bool convertVideoFile(const QString &dst, const QString &src)
         {
             QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
                 QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
-                QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\" \"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
+                QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
 
             if(file.write(command) == command.size())
             {
@@ -664,7 +664,7 @@ static bool convertVideoFile(const QString &dst, const QString &src)
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
                     QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\" \"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
+                    QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
 
                 if(file.write(command) == command.size())
                 {
@@ -694,7 +694,7 @@ static bool convertVideoFile(const QString &dst, const QString &src)
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
                     QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\" \"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
+                    QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
 
                 if(file.write(command) == command.size())
                 {
@@ -724,7 +724,7 @@ static bool convertVideoFile(const QString &dst, const QString &src)
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
                     QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\" \"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
+                    QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
 
                 if(file.write(command) == command.size())
                 {
@@ -1005,21 +1005,46 @@ void convertVideoFileAction(const QString &drivePath)
 
         if(!dst.isEmpty())
         {
-            QString tempSrc = handleImageWriterFiles(src);
+            int rescale = QMessageBox::information(Core::ICore::dialogParent(),
+                QObject::tr("Convert Video"),
+                QObject::tr("Rescale the video?"),
+                QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
 
-            if((!QFile(dst).exists()) || QFile::remove(dst))
+            if (rescale != QMessageBox::Cancel)
             {
-                if((!tempSrc.isEmpty()) && convertVideoFile(dst, tempSrc))
+                bool ok = true;
+                int scale = -1;
+
+                if (rescale == QMessageBox::Yes)
                 {
-                    settings->setValue(QStringLiteral(LAST_CONVERT_VIDEO_SRC_PATH), src);
-                    settings->setValue(QStringLiteral(LAST_CONVERT_VIDEO_DST_PATH), dst);
+                    scale = QInputDialog::getInt(Core::ICore::dialogParent(),
+                            QObject::tr("Convert Video"),
+                            QObject::tr("Enter a new width (the aspect ratio will be kept the same)"),
+                            settings->value(QStringLiteral(LAST_CONVERT_VIDEO_HRES), 320).toInt(), 16, 65535, 1, &ok,
+                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
                 }
-            }
-            else
-            {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    QString(),
-                    QObject::tr("Unable to overwrite output file!"));
+
+                if (ok)
+                {
+                    QString tempSrc = handleImageWriterFiles(src);
+
+                    if((!QFile(dst).exists()) || QFile::remove(dst))
+                    {
+                        if((!tempSrc.isEmpty()) && convertVideoFile(dst, tempSrc, scale))
+                        {
+                            settings->setValue(QStringLiteral(LAST_CONVERT_VIDEO_SRC_PATH), src);
+                            settings->setValue(QStringLiteral(LAST_CONVERT_VIDEO_DST_PATH), dst);
+                            if (scale != -1) settings->setValue(QStringLiteral(LAST_CONVERT_VIDEO_HRES), scale);
+                        }
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            QString(),
+                            QObject::tr("Unable to overwrite output file!"));
+                    }
+                }
             }
         }
     }
@@ -1070,20 +1095,45 @@ void saveVideoFile(const QString &srcPath)
 
     if(!dst.isEmpty())
     {
-        QString tempSrc = handleImageWriterFiles(srcPath);
+        int rescale = QMessageBox::information(Core::ICore::dialogParent(),
+            QObject::tr("Convert Video"),
+            QObject::tr("Rescale the video?"),
+            QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
 
-        if((!QFile(dst).exists()) || QFile::remove(dst))
+        if (rescale != QMessageBox::Cancel)
         {
-            if((!tempSrc.isEmpty()) && convertVideoFile(dst, tempSrc))
+            bool ok = true;
+            int scale = -1;
+
+            if (rescale == QMessageBox::Yes)
             {
-                settings->setValue(QStringLiteral(LAST_SAVE_VIDEO_PATH), dst);
+                scale = QInputDialog::getInt(Core::ICore::dialogParent(),
+                        QObject::tr("Convert Video"),
+                        QObject::tr("Enter a new width (the aspect ratio will be kept the same)"),
+                        settings->value(QStringLiteral(LAST_SAVE_VIDEO_HRES), 320).toInt(), 16, 65535, 1, &ok,
+                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
             }
-        }
-        else
-        {
-            QMessageBox::critical(Core::ICore::dialogParent(),
-                QString(),
-                QObject::tr("Unable to overwrite output file!"));
+
+            if (ok)
+            {
+                QString tempSrc = handleImageWriterFiles(srcPath);
+        
+                if((!QFile(dst).exists()) || QFile::remove(dst))
+                {
+                    if((!tempSrc.isEmpty()) && convertVideoFile(dst, tempSrc, scale))
+                    {
+                        settings->setValue(QStringLiteral(LAST_SAVE_VIDEO_PATH), dst);
+                        if (scale != -1) settings->setValue(QStringLiteral(LAST_SAVE_VIDEO_HRES), scale);
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        QString(),
+                        QObject::tr("Unable to overwrite output file!"));
+                }
+            }
         }
     }
 
