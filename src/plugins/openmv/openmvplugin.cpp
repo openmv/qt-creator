@@ -3392,8 +3392,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             QMessageBox::information(Core::ICore::dialogParent(),
                                 tr("Connect"),
-                                tr("Done upgrading your OpenMV Cam's firmware!\n\n"
-                                   "Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while)."));
+                                tr("Firmware Upgrade complete!\n\n"
+                                   "Your OpenMV Cam is running its built-in self-test... this may take a while.\n\n"
+                                   "Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete."));
 
                             RECONNECT_END();
                         }
@@ -4029,6 +4030,54 @@ void OpenMVPlugin::stopClicked()
         ///////////////////////////////////////////////////////////////////////
 
         m_working = false;
+
+        ///////////////////////////////////////////////////////////////////////
+
+        if(Core::EditorManager::currentEditor()->document()->displayName() == QStringLiteral("helloworld_1.py"))
+        {
+            QTimer::singleShot(2000, this, [this] {
+                QSettings *settings = ExtensionSystem::PluginManager::settings();
+                settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+
+                if(!settings->value(QStringLiteral(DONT_SHOW_EXAMPLES_AGAIN), false).toBool())
+                {
+                    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
+                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                    dialog->setWindowTitle(tr("More Examples"));
+                    QVBoxLayout *v_layout = new QVBoxLayout(dialog);
+
+                    QLabel *label = new QLabel(tr("New to OpenMV?\n\n"
+                                                  "You can find more examples under the File -> Examples menu.\n\n"
+                                                  "In particular, checkout the Color-Tracking examples."));
+                    v_layout->addWidget(label);
+
+                    QWidget *widget = new QWidget();
+                    QHBoxLayout *h_layout = new QHBoxLayout(widget);
+                    h_layout->setMargin(0);
+
+                    QCheckBox *checkBox = new QCheckBox(tr("Don't show this message again."));
+                    h_layout->addWidget(checkBox);
+
+                    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok);
+                    connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+                    connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+                    h_layout->addWidget(box);
+
+                    v_layout->addSpacing(10);
+                    v_layout->addWidget(widget);
+
+                    dialog->exec();
+                    settings->setValue(QStringLiteral(DONT_SHOW_EXAMPLES_AGAIN), checkBox->isChecked());
+
+                    delete dialog;
+                }
+
+                settings->endGroup();
+            });
+        }
+
+        ///////////////////////////////////////////////////////////////////////
 
         QTimer::singleShot(0, this, &OpenMVPlugin::workingDone);
     }

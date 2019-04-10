@@ -81,6 +81,7 @@
 #define JPG_COMPRESS_STATE "JPGCompressState"
 #define DISABLE_FRAME_BUFFER_STATE "DisableFrameBufferState"
 #define HISTOGRAM_COLOR_SPACE_STATE "HistogramColorSpace"
+#define DONT_SHOW_EXAMPLES_AGAIN "DontShowExamplesAgain"
 #define LAST_FIRMWARE_PATH "LastFirmwarePath"
 #define LAST_FLASH_FS_ERASE_STATE "LastFlashFSEraseState"
 #define LAST_BOARD_TYPE_STATE "LastBoardTypeState"
