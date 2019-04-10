@@ -229,6 +229,26 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
         h_layout->addWidget(m_invert);
         connect(m_invert, &QCheckBox::toggled, this, &ThresholdEditor::changed);
 
+        QPushButton *resetButton = new QPushButton(tr("Reset Sliders"));
+        h_layout->addWidget(resetButton);
+
+        connect(resetButton, &QPushButton::clicked, this, [this] {
+            if(!m_combo->currentIndex())
+            {
+                m_GMin->setValue(0);
+                m_GMax->setValue(255);
+            }
+            else
+            {
+                m_LMin->setValue(0);
+                m_LMax->setValue(100);
+                m_AMin->setValue(-128);
+                m_AMax->setValue(127);
+                m_BMin->setValue(-128);
+                m_BMax->setValue(127);
+            }
+        });
+
         QHBoxLayout *t_layout = new QHBoxLayout();
         t_layout->setMargin(0);
         t_layout->addWidget(new QLabel(tr("Select the best color tracking thresholds.")));
