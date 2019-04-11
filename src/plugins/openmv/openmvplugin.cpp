@@ -4141,7 +4141,7 @@ void OpenMVPlugin::errorFilter(const QByteArray &data)
     {
         QString fileName = match.captured(1);
         int lineNumber = match.captured(2).toInt();
-        QString errorMessage = match.captured(3);
+        QString errorMessage = tr(match.captured(3).toUtf8().data());
 
         Core::EditorManager::cutForwardNavigationHistory();
         Core::EditorManager::addCurrentPositionToNavigationHistory();
