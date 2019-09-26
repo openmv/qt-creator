@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="The MicroPython language" href="index.html"/>
-        <link rel="next" title="1. Register move instructions" href="asm_thumb2_mov.html"/>
-        <link rel="prev" title="Distribution packages, package management, and deploying applications" href="packages.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Register move instructions" href="asm_thumb2_mov.html" />
+    <link rel="prev" title="Distribution packages, package management, and deploying applications" href="packages.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -101,7 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="speed_python.html">Maximising MicroPython Speed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="constrained.html">MicroPython on Microcontrollers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="packages.html">Distribution packages, package management, and deploying applications</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Inline Assembler for Thumb2 architectures</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Inline Assembler for Thumb2 architectures</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#document-conventions">Document conventions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#instruction-categories">Instruction Categories</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_mov.html">1. Register move instructions</a></li>
@@ -139,36 +140,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">The MicroPython language</a> &raquo;</li>
-      
-    <li>Inline Assembler for Thumb2 architectures</li>
+        
+      <li>Inline Assembler for Thumb2 architectures</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/reference/asm_thumb2_index.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/reference/asm_thumb2_index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -182,17 +203,17 @@ Architecture Reference Manual detailed below.
 The inline assembler supports a subset of the ARM Thumb-2 instruction set described here. The syntax tries
 to be as close as possible to that defined in the above ARM manual, converted to Python function calls.</p>
 <p>Instructions operate on 32 bit signed integer data except where stated otherwise. Most supported instructions
-operate on registers <code class="docutils literal"><span class="pre">R0-R7</span></code> only: where <code class="docutils literal"><span class="pre">R8-R15</span></code> are supported this is stated. Registers <code class="docutils literal"><span class="pre">R8-R12</span></code> must be
-restored to their initial value before return from a function. Registers <code class="docutils literal"><span class="pre">R13-R15</span></code> constitute the Link Register,
+operate on registers <code class="docutils literal notranslate"><span class="pre">R0-R7</span></code> only: where <code class="docutils literal notranslate"><span class="pre">R8-R15</span></code> are supported this is stated. Registers <code class="docutils literal notranslate"><span class="pre">R8-R12</span></code> must be
+restored to their initial value before return from a function. Registers <code class="docutils literal notranslate"><span class="pre">R13-R15</span></code> constitute the Link Register,
 Stack Pointer and Program Counter respectively.</p>
 <div class="section" id="document-conventions">
 <h2>Document conventions<a class="headerlink" href="#document-conventions" title="Permalink to this headline">¶</a></h2>
 <p>Where possible the behaviour of each instruction is described in Python, for example</p>
 <ul class="simple">
-<li>add(Rd, Rn, Rm) <code class="docutils literal"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">+</span> <span class="pre">Rm</span></code></li>
+<li>add(Rd, Rn, Rm) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">+</span> <span class="pre">Rm</span></code></li>
 </ul>
 <p>This enables the effect of instructions to be demonstrated in Python. In certain case this is impossible
-because Python doesn&#8217;t support concepts such as indirection. The pseudocode employed in such cases is
+because Python doesn’t support concepts such as indirection. The pseudocode employed in such cases is
 described on the relevant page.</p>
 </div>
 <div class="section" id="instruction-categories">
@@ -242,15 +263,16 @@ ARM site after a simple registration procedure. Also available on academic sites
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="asm_thumb2_mov.html" class="btn btn-neutral float-right" title="1. Register move instructions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="asm_thumb2_mov.html" class="btn btn-neutral float-right" title="1. Register move instructions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="packages.html" class="btn btn-neutral" title="Distribution packages, package management, and deploying applications" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="packages.html" class="btn btn-neutral float-left" title="Distribution packages, package management, and deploying applications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -259,12 +281,14 @@ ARM site after a simple registration procedure. Also available on academic sites
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -342,35 +366,15 @@ ARM site after a simple registration procedure. Also available on academic sites
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

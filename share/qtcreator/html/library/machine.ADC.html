@@ -15,40 +15,39 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -57,7 +56,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -86,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -105,47 +107,67 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>class ADC &#8211; analog to digital conversion</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>class ADC – analog to digital conversion</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/machine.ADC.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/machine.ADC.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="class-adc-analog-to-digital-conversion">
-<span id="machine-adc"></span><h1>class ADC &#8211; analog to digital conversion<a class="headerlink" href="#class-adc-analog-to-digital-conversion" title="Permalink to this headline">¶</a></h1>
+<span id="machine-adc"></span><h1>class ADC – analog to digital conversion<a class="headerlink" href="#class-adc-analog-to-digital-conversion" title="Permalink to this headline">¶</a></h1>
 <p>Usage:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">machine</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
 
-<span class="n">adc</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">ADC</span><span class="p">()</span>             <span class="c"># create an ADC object</span>
-<span class="n">apin</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="n">pin</span><span class="o">=</span><span class="s">&#39;GP3&#39;</span><span class="p">)</span>   <span class="c"># create an analog pin on GP3</span>
-<span class="n">val</span> <span class="o">=</span> <span class="n">apin</span><span class="p">()</span>                    <span class="c"># read an analog value</span>
+<span class="n">adc</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">ADC</span><span class="p">()</span>             <span class="c1"># create an ADC object</span>
+<span class="n">apin</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="n">pin</span><span class="o">=</span><span class="s1">&#39;GP3&#39;</span><span class="p">)</span>   <span class="c1"># create an analog pin on GP3</span>
+<span class="n">val</span> <span class="o">=</span> <span class="n">apin</span><span class="p">()</span>                    <span class="c1"># read an analog value</span>
 </pre></div>
 </div>
 <div class="section" id="constructors">
@@ -175,10 +197,10 @@ then the maximum allowed input is 3.6V.</p>
 <dd><p>Create an analog pin. If only channel ID is given, the correct pin will
 be selected. Alternatively, only the pin can be passed and the correct
 channel will be selected. Examples:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># all of these are equivalent and enable ADC channel 1 on GP3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># all of these are equivalent and enable ADC channel 1 on GP3</span>
 <span class="n">apin</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">apin</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="n">pin</span><span class="o">=</span><span class="s">&#39;GP3&#39;</span><span class="p">)</span>
-<span class="n">apin</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="s">&#39;GP3&#39;</span><span class="p">)</span>
+<span class="n">apin</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="n">pin</span><span class="o">=</span><span class="s1">&#39;GP3&#39;</span><span class="p">)</span>
+<span class="n">apin</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="s1">&#39;GP3&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -198,7 +220,7 @@ channel will be selected. Examples:</p>
 </div>
 </div>
 <div class="section" id="class-adcchannel-read-analog-values-from-internal-or-external-sources">
-<h1>class ADCChannel &#8212; read analog values from internal or external sources<a class="headerlink" href="#class-adcchannel-read-analog-values-from-internal-or-external-sources" title="Permalink to this headline">¶</a></h1>
+<h1>class ADCChannel — read analog values from internal or external sources<a class="headerlink" href="#class-adcchannel-read-analog-values-from-internal-or-external-sources" title="Permalink to this headline">¶</a></h1>
 <p>ADC channels can be connected to internal points of the MCU or to GPIO pins.
 ADC channels are created using the ADC.channel method.</p>
 <dl class="method">
@@ -229,6 +251,7 @@ ADC channels are created using the ADC.channel method.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
@@ -237,12 +260,14 @@ ADC channels are created using the ADC.channel method.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -320,35 +345,15 @@ ADC channels are created using the ADC.channel method.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

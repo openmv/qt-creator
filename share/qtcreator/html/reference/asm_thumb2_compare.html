@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="Inline Assembler for Thumb2 architectures" href="asm_thumb2_index.html"/>
-        <link rel="next" title="7. Branch instructions" href="asm_thumb2_label_branch.html"/>
-        <link rel="prev" title="5. Arithmetic instructions" href="asm_thumb2_arith.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Branch instructions" href="asm_thumb2_label_branch.html" />
+    <link rel="prev" title="5. Arithmetic instructions" href="asm_thumb2_arith.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -109,7 +110,7 @@
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_str.html">3. Store register to memory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_logical_bit.html">4. Logical &amp; Bitwise instructions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_arith.html">5. Arithmetic instructions</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">6. Comparison instructions</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6. Comparison instructions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_label_branch.html">7. Branch instructions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_stack.html">8. Stack push and pop</a></li>
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_misc.html">9. Miscellaneous instructions</a></li>
@@ -136,38 +137,58 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">The MicroPython language</a> &raquo;</li>
-      
+        
           <li><a href="asm_thumb2_index.html">Inline Assembler for Thumb2 architectures</a> &raquo;</li>
-      
-    <li>6. Comparison instructions</li>
+        
+      <li>6. Comparison instructions</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/reference/asm_thumb2_compare.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/reference/asm_thumb2_compare.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -180,16 +201,16 @@ but setting the condition flags. Typically these are used to test data values wi
 them prior to executing a conditional branch.</p>
 <div class="section" id="document-conventions">
 <h2>6.1. Document conventions<a class="headerlink" href="#document-conventions" title="Permalink to this headline">¶</a></h2>
-<p>Notation: <code class="docutils literal"><span class="pre">Rd,</span> <span class="pre">Rm,</span> <span class="pre">Rn</span></code> denote ARM registers R0-R7. <code class="docutils literal"><span class="pre">imm8</span></code> denotes an immediate
+<p>Notation: <code class="docutils literal notranslate"><span class="pre">Rd,</span> <span class="pre">Rm,</span> <span class="pre">Rn</span></code> denote ARM registers R0-R7. <code class="docutils literal notranslate"><span class="pre">imm8</span></code> denotes an immediate
 value having a width of 8 bits.</p>
 </div>
 <div class="section" id="the-application-program-status-register-apsr">
 <h2>6.2. The Application Program Status Register (APSR)<a class="headerlink" href="#the-application-program-status-register-apsr" title="Permalink to this headline">¶</a></h2>
 <p>This contains four bits which are tested by the conditional branch instructions. Typically a
-conditional branch will test multiple bits, for example <code class="docutils literal"><span class="pre">bge(LABEL)</span></code>. The meaning of
+conditional branch will test multiple bits, for example <code class="docutils literal notranslate"><span class="pre">bge(LABEL)</span></code>. The meaning of
 condition codes can depend on whether the operands of an arithmetic instruction are viewed as
-signed or unsigned integers. Thus <code class="docutils literal"><span class="pre">bhi(LABEL)</span></code> assumes unsigned numbers were processed while
-<code class="docutils literal"><span class="pre">bgt(LABEL)</span></code> assumes signed operands.</p>
+signed or unsigned integers. Thus <code class="docutils literal notranslate"><span class="pre">bhi(LABEL)</span></code> assumes unsigned numbers were processed while
+<code class="docutils literal notranslate"><span class="pre">bgt(LABEL)</span></code> assumes signed operands.</p>
 </div>
 <div class="section" id="apsr-bits">
 <h2>6.3. APSR Bits<a class="headerlink" href="#apsr-bits" title="Permalink to this headline">¶</a></h2>
@@ -205,15 +226,15 @@ signed or unsigned integers. Thus <code class="docutils literal"><span class="pr
 <li>C (carry)</li>
 </ul>
 <p>An addition sets the carry flag when the result overflows out of the MSB, for example adding
-0x80000000 and 0x80000000. By the nature of two&#8217;s complement arithmetic this behaviour is reversed
+0x80000000 and 0x80000000. By the nature of two’s complement arithmetic this behaviour is reversed
 on subtraction, with a borrow indicated by the carry bit being clear. Thus 0x10 - 0x01 is executed
 as 0x10 + 0xffffffff which will set the carry bit.</p>
 <ul class="simple">
 <li>V (overflow)</li>
 </ul>
-<p>The overflow flag is set if the result, viewed as a two&#8217;s compliment number, has the &#8220;wrong&#8221; sign
+<p>The overflow flag is set if the result, viewed as a two’s compliment number, has the “wrong” sign
 in relation to the operands. For example adding 1 to 0x7fffffff will set the overflow bit because
-the result (0x8000000), viewed as a two&#8217;s complement integer, is negative. Note that in this instance
+the result (0x8000000), viewed as a two’s complement integer, is negative. Note that in this instance
 the carry bit is not set.</p>
 </div>
 <div class="section" id="id1">
@@ -221,24 +242,24 @@ the carry bit is not set.</p>
 <p>These set the APSR (Application Program Status Register) N (negative), Z (zero), C (carry) and V
 (overflow) flags.</p>
 <ul class="simple">
-<li>cmp(Rn, imm8) <code class="docutils literal"><span class="pre">Rn</span> <span class="pre">-</span> <span class="pre">imm8</span></code></li>
-<li>cmp(Rn, Rm) <code class="docutils literal"><span class="pre">Rn</span> <span class="pre">-</span> <span class="pre">Rm</span></code></li>
-<li>cmn(Rn, Rm) <code class="docutils literal"><span class="pre">Rn</span> <span class="pre">+</span> <span class="pre">Rm</span></code></li>
-<li>tst(Rn, Rm) <code class="docutils literal"><span class="pre">Rn</span> <span class="pre">&amp;</span> <span class="pre">Rm</span></code></li>
+<li>cmp(Rn, imm8) <code class="docutils literal notranslate"><span class="pre">Rn</span> <span class="pre">-</span> <span class="pre">imm8</span></code></li>
+<li>cmp(Rn, Rm) <code class="docutils literal notranslate"><span class="pre">Rn</span> <span class="pre">-</span> <span class="pre">Rm</span></code></li>
+<li>cmn(Rn, Rm) <code class="docutils literal notranslate"><span class="pre">Rn</span> <span class="pre">+</span> <span class="pre">Rm</span></code></li>
+<li>tst(Rn, Rm) <code class="docutils literal notranslate"><span class="pre">Rn</span> <span class="pre">&amp;</span> <span class="pre">Rm</span></code></li>
 </ul>
 </div>
 <div class="section" id="conditional-execution">
 <h2>6.5. Conditional execution<a class="headerlink" href="#conditional-execution" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal"><span class="pre">it</span></code> and <code class="docutils literal"><span class="pre">ite</span></code> instructions provide a means of conditionally executing from one to four subsequent
+<p>The <code class="docutils literal notranslate"><span class="pre">it</span></code> and <code class="docutils literal notranslate"><span class="pre">ite</span></code> instructions provide a means of conditionally executing from one to four subsequent
 instructions without the need for a label.</p>
 <ul class="simple">
 <li>it(&lt;condition&gt;) If then</li>
 </ul>
 <p>Execute the next instruction if &lt;condition&gt; is true:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="nb">cmp</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">r1</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">cmp</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">r1</span><span class="p">)</span>
 <span class="n">it</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>
-<span class="n">mov</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c"># runs if r0 == r1</span>
-<span class="c"># execution continues here</span>
+<span class="n">mov</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c1"># runs if r0 == r1</span>
+<span class="c1"># execution continues here</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -246,11 +267,11 @@ instructions without the need for a label.</p>
 </ul>
 <p>If &lt;condtion&gt; is true, execute the next instruction, otherwise execute the
 subsequent one. Thus:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="nb">cmp</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">r1</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">cmp</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">r1</span><span class="p">)</span>
 <span class="n">ite</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>
-<span class="n">mov</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c"># runs if r0 == r1</span>
-<span class="n">mov</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="c"># runs if r0 != r1</span>
-<span class="c"># execution continues here</span>
+<span class="n">mov</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c1"># runs if r0 == r1</span>
+<span class="n">mov</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="c1"># runs if r0 != r1</span>
+<span class="c1"># execution continues here</span>
 </pre></div>
 </div>
 <p>This may be extended to control the execution of upto four subsequent instructions: it[x[y[z]]]
@@ -260,15 +281,16 @@ where x,y,z=t/e; e.g. itt, itee, itete, ittte, itttt, iteee, etc.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="asm_thumb2_label_branch.html" class="btn btn-neutral float-right" title="7. Branch instructions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="asm_thumb2_label_branch.html" class="btn btn-neutral float-right" title="7. Branch instructions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="asm_thumb2_arith.html" class="btn btn-neutral" title="5. Arithmetic instructions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="asm_thumb2_arith.html" class="btn btn-neutral float-left" title="5. Arithmetic instructions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -277,12 +299,14 @@ where x,y,z=t/e; e.g. itt, itee, itete, ittte, itttt, iteee, etc.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -360,35 +384,15 @@ where x,y,z=t/e; e.g. itt, itee, itete, ittte, itttt, iteee, etc.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

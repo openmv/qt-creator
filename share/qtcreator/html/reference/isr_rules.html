@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="The MicroPython language" href="index.html"/>
-        <link rel="next" title="Maximising MicroPython Speed" href="speed_python.html"/>
-        <link rel="prev" title="The MicroPython Interactive Interpreter Mode (aka REPL)" href="repl.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Maximising MicroPython Speed" href="speed_python.html" />
+    <link rel="prev" title="The MicroPython Interactive Interpreter Mode (aka REPL)" href="repl.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -97,7 +98,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">The MicroPython language</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="repl.html">The MicroPython Interactive Interpreter Mode (aka REPL)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Writing interrupt handlers</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Writing interrupt handlers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#tips-and-recommended-practices">Tips and recommended practices</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#micropython-issues">MicroPython Issues</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#the-emergency-exception-buffer">The emergency exception buffer</a></li>
@@ -139,36 +140,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">The MicroPython language</a> &raquo;</li>
-      
-    <li>Writing interrupt handlers</li>
+        
+      <li>Writing interrupt handlers</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/reference/isr_rules.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/reference/isr_rules.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -177,12 +198,12 @@
   <div class="section" id="writing-interrupt-handlers">
 <span id="isr-rules"></span><h1>Writing interrupt handlers<a class="headerlink" href="#writing-interrupt-handlers" title="Permalink to this headline">¶</a></h1>
 <p>On suitable hardware MicroPython offers the ability to write interrupt handlers in Python. Interrupt handlers
-- also known as interrupt service routines (ISR&#8217;s) - are defined as callback functions. These are executed
+- also known as interrupt service routines (ISR’s) - are defined as callback functions. These are executed
 in response to an event such as a timer trigger or a voltage change on a pin. Such events can occur at any point
 in the execution of the program code. This carries significant consequences, some specific to the MicroPython
 language. Others are common to all systems capable of responding to real time events. This document covers
 the language specific issues first, followed by a brief introduction to real time programming for those new to it.</p>
-<p>This introduction uses vague terms like &#8220;slow&#8221; or &#8220;as fast as possible&#8221;. This is deliberate, as speeds are
+<p>This introduction uses vague terms like “slow” or “as fast as possible”. This is deliberate, as speeds are
 application dependent. Acceptable durations for an ISR are dependent on the rate at which interrupts occur,
 the nature of the main program, and the presence of other concurrent events.</p>
 <div class="section" id="tips-and-recommended-practices">
@@ -191,9 +212,9 @@ the nature of the main program, and the presence of other concurrent events.</p>
 <ul class="simple">
 <li>Keep the code as short and simple as possible.</li>
 <li>Avoid memory allocation: no appending to lists or insertion into dictionaries, no floating point.</li>
-<li>Consider using <code class="docutils literal"><span class="pre">micropython.schedule</span></code> to work around the above constraint.</li>
-<li>Where an ISR returns multiple bytes use a pre-allocated <code class="docutils literal"><span class="pre">bytearray</span></code>. If multiple integers are to be
-shared between an ISR and the main program consider an array (<code class="docutils literal"><span class="pre">array.array</span></code>).</li>
+<li>Consider using <code class="docutils literal notranslate"><span class="pre">micropython.schedule</span></code> to work around the above constraint.</li>
+<li>Where an ISR returns multiple bytes use a pre-allocated <code class="docutils literal notranslate"><span class="pre">bytearray</span></code>. If multiple integers are to be
+shared between an ISR and the main program consider an array (<code class="docutils literal notranslate"><span class="pre">array.array</span></code>).</li>
 <li>Where data is shared between the main program and an ISR, consider disabling interrupts prior to accessing
 the data in the main program and re-enabling them immediately afterwards (see Critical Sections).</li>
 <li>Allocate an emergency exception buffer (see below).</li>
@@ -205,7 +226,7 @@ the data in the main program and re-enabling them immediately afterwards (see Cr
 <h3>The emergency exception buffer<a class="headerlink" href="#the-emergency-exception-buffer" title="Permalink to this headline">¶</a></h3>
 <p>If an error occurs in an ISR, MicroPython is unable to produce an error report unless a special buffer is created
 for the purpose. Debugging is simplified if the following code is included in any program using interrupts.</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">micropython</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">micropython</span>
 <span class="n">micropython</span><span class="o">.</span><span class="n">alloc_emergency_exception_buf</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -217,21 +238,21 @@ has to be done immediately after the event which caused it: operations which can
 to the main program loop. Typically an ISR will deal with the hardware device which caused the interrupt, making
 it ready for the next interrupt to occur. It will communicate with the main loop by updating shared data to indicate
 that the interrupt has occurred, and it will return. An ISR should return control to the main loop as quickly
-as possible. This is not a specific MicroPython issue so is covered in more detail <a class="reference internal" href="#isr"><span>below</span></a>.</p>
+as possible. This is not a specific MicroPython issue so is covered in more detail <a class="reference internal" href="#isr"><span class="std std-ref">below</span></a>.</p>
 </div>
 <div class="section" id="communication-between-an-isr-and-the-main-program">
 <h3>Communication between an ISR and the main program<a class="headerlink" href="#communication-between-an-isr-and-the-main-program" title="Permalink to this headline">¶</a></h3>
 <p>Normally an ISR needs to communicate with the main program. The simplest means of doing this is via one or more
 shared data objects, either declared as global or shared via a class (see below). There are various restrictions
-and hazards around doing this, which are covered in more detail below. Integers, <code class="docutils literal"><span class="pre">bytes</span></code> and <code class="docutils literal"><span class="pre">bytearray</span></code> objects
+and hazards around doing this, which are covered in more detail below. Integers, <code class="docutils literal notranslate"><span class="pre">bytes</span></code> and <code class="docutils literal notranslate"><span class="pre">bytearray</span></code> objects
 are commonly used for this purpose along with arrays (from the array module) which can store various data types.</p>
 </div>
 <div class="section" id="the-use-of-object-methods-as-callbacks">
 <h3>The use of object methods as callbacks<a class="headerlink" href="#the-use-of-object-methods-as-callbacks" title="Permalink to this headline">¶</a></h3>
 <p>MicroPython supports this powerful technique which enables an ISR to share instance variables with the underlying
 code. It also enables a class implementing a device driver to support multiple device instances. The following
-example causes two LED&#8217;s to flash at different rates.</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pyb</span><span class="o">,</span> <span class="nn">micropython</span>
+example causes two LED’s to flash at different rates.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyb</span><span class="o">,</span> <span class="nn">micropython</span>
 <span class="n">micropython</span><span class="o">.</span><span class="n">alloc_emergency_exception_buf</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timer</span><span class="p">,</span> <span class="n">led</span><span class="p">):</span>
@@ -244,47 +265,47 @@ example causes two LED&#8217;s to flash at different rates.</p>
 <span class="n">green</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">(</span><span class="n">pyb</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mf">0.8</span><span class="p">),</span> <span class="n">pyb</span><span class="o">.</span><span class="n">LED</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>In this example the <code class="docutils literal"><span class="pre">red</span></code> instance associates timer 4 with LED 1: when a timer 4 interrupt occurs <code class="docutils literal"><span class="pre">red.cb()</span></code>
-is called causing LED 1 to change state. The <code class="docutils literal"><span class="pre">green</span></code> instance operates similarly: a timer 2 interrupt
-results in the execution of <code class="docutils literal"><span class="pre">green.cb()</span></code> and toggles LED 2. The use of instance methods confers two
+<p>In this example the <code class="docutils literal notranslate"><span class="pre">red</span></code> instance associates timer 4 with LED 1: when a timer 4 interrupt occurs <code class="docutils literal notranslate"><span class="pre">red.cb()</span></code>
+is called causing LED 1 to change state. The <code class="docutils literal notranslate"><span class="pre">green</span></code> instance operates similarly: a timer 2 interrupt
+results in the execution of <code class="docutils literal notranslate"><span class="pre">green.cb()</span></code> and toggles LED 2. The use of instance methods confers two
 benefits. Firstly a single class enables code to be shared between multiple hardware instances. Secondly, as
-a bound method the callback function&#8217;s first argument is <code class="docutils literal"><span class="pre">self</span></code>. This enables the callback to access instance
-data and to save state between successive calls. For example, if the class above had a variable <code class="docutils literal"><span class="pre">self.count</span></code>
-set to zero in the constructor, <code class="docutils literal"><span class="pre">cb()</span></code> could increment the counter. The <code class="docutils literal"><span class="pre">red</span></code> and <code class="docutils literal"><span class="pre">green</span></code> instances would
+a bound method the callback function’s first argument is <code class="docutils literal notranslate"><span class="pre">self</span></code>. This enables the callback to access instance
+data and to save state between successive calls. For example, if the class above had a variable <code class="docutils literal notranslate"><span class="pre">self.count</span></code>
+set to zero in the constructor, <code class="docutils literal notranslate"><span class="pre">cb()</span></code> could increment the counter. The <code class="docutils literal notranslate"><span class="pre">red</span></code> and <code class="docutils literal notranslate"><span class="pre">green</span></code> instances would
 then maintain independent counts of the number of times each LED had changed state.</p>
 </div>
 <div class="section" id="creation-of-python-objects">
 <h3>Creation of Python objects<a class="headerlink" href="#creation-of-python-objects" title="Permalink to this headline">¶</a></h3>
-<p>ISR&#8217;s cannot create instances of Python objects. This is because MicroPython needs to allocate memory for the
+<p>ISR’s cannot create instances of Python objects. This is because MicroPython needs to allocate memory for the
 object from a store of free memory block called the heap. This is not permitted in an interrupt handler because
 heap allocation is not re-entrant. In other words the interrupt might occur when the main program is part way
 through performing an allocation - to maintain the integrity of the heap the interpreter disallows memory
 allocations in ISR code.</p>
-<p>A consequence of this is that ISR&#8217;s can&#8217;t use floating point arithmetic; this is because floats are Python objects. Similarly
-an ISR can&#8217;t append an item to a list. In practice it can be hard to determine exactly which code constructs will
+<p>A consequence of this is that ISR’s can’t use floating point arithmetic; this is because floats are Python objects. Similarly
+an ISR can’t append an item to a list. In practice it can be hard to determine exactly which code constructs will
 attempt to perform memory allocation and provoke an error message: another reason for keeping ISR code short and simple.</p>
 <p>One way to avoid this issue is for the ISR to use pre-allocated buffers. For example a class constructor
-creates a <code class="docutils literal"><span class="pre">bytearray</span></code> instance and a boolean flag. The ISR method assigns data to locations in the buffer and sets
+creates a <code class="docutils literal notranslate"><span class="pre">bytearray</span></code> instance and a boolean flag. The ISR method assigns data to locations in the buffer and sets
 the flag. The memory allocation occurs in the main program code when the object is instantiated rather than in the ISR.</p>
 <p>The MicroPython library I/O methods usually provide an option to use a pre-allocated buffer. For
-example <code class="docutils literal"><span class="pre">pyb.i2c.recv()</span></code> can accept a mutable buffer as its first argument: this enables its use in an ISR.</p>
+example <code class="docutils literal notranslate"><span class="pre">pyb.i2c.recv()</span></code> can accept a mutable buffer as its first argument: this enables its use in an ISR.</p>
 <p>A means of creating an object without employing a class or globals is as follows:</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">set_volume</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">buf</span><span class="o">=</span><span class="nb">bytearray</span><span class="p">(</span><span class="mi">3</span><span class="p">)):</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_volume</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">buf</span><span class="o">=</span><span class="nb">bytearray</span><span class="p">(</span><span class="mi">3</span><span class="p">)):</span>
     <span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0xa5</span>
     <span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span>
     <span class="n">buf</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x5a</span>
     <span class="k">return</span> <span class="n">buf</span>
 </pre></div>
 </div>
-<p>The compiler instantiates the default <code class="docutils literal"><span class="pre">buf</span></code> argument when the function is
-loaded for the first time (usually when the module it&#8217;s in is imported).</p>
+<p>The compiler instantiates the default <code class="docutils literal notranslate"><span class="pre">buf</span></code> argument when the function is
+loaded for the first time (usually when the module it’s in is imported).</p>
 <p>An instance of object creation occurs when a reference to a bound method is
 created. This means that an ISR cannot pass a bound method to a function. One
 solution is to create a reference to the bound method in the class constructor
 and to pass that reference in the ISR. For example:</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Foo</span><span class="p">():</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span><span class="p">():</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">bar_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bar</span>  <span class="c"># Allocation occurs here</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bar_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bar</span>  <span class="c1"># Allocation occurs here</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span>
         <span class="n">tim</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
         <span class="n">tim</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -292,19 +313,19 @@ and to pass that reference in the ISR. For example:</p>
 
     <span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">*=</span> <span class="mf">1.2</span>
-        <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
-        <span class="c"># Passing self.bar would cause allocation.</span>
+        <span class="c1"># Passing self.bar would cause allocation.</span>
         <span class="n">micropython</span><span class="o">.</span><span class="n">schedule</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bar_ref</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Other techniques are to define and instantiate the method in the constructor
-or to pass <code class="xref py py-meth docutils literal"><span class="pre">Foo.bar()</span></code> with the argument <em>self</em>.</p>
+or to pass <code class="xref py py-meth docutils literal notranslate"><span class="pre">Foo.bar()</span></code> with the argument <em>self</em>.</p>
 </div>
 <div class="section" id="use-of-python-objects">
 <h3>Use of Python objects<a class="headerlink" href="#use-of-python-objects" title="Permalink to this headline">¶</a></h3>
-<p>A further restriction on objects arises because of the way Python works. When an <code class="docutils literal"><span class="pre">import</span></code> statement is executed the
+<p>A further restriction on objects arises because of the way Python works. When an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement is executed the
 Python code is compiled to bytecode, with one line of code typically mapping to multiple bytecodes. When the code
 runs the interpreter reads each bytecode and executes it as a series of machine code instructions. Given that an
 interrupt can occur at any time between machine code instructions, the original line of Python code may be only
@@ -313,7 +334,7 @@ may lack internal consistency at the moment the interrupt occurs.</p>
 <p>A typical outcome is as follows. On rare occasions the ISR will run at the precise moment in time when the object
 is partially updated. When the ISR tries to read the object, a crash results. Because such problems typically occur
 on rare, random occasions they can be hard to diagnose. There are ways to circumvent this issue, described in
-<a class="reference internal" href="#critical"><span>Critical Sections</span></a> below.</p>
+<a class="reference internal" href="#critical"><span class="std std-ref">Critical Sections</span></a> below.</p>
 <p>It is important to be clear about what constitutes the modification of an object. An alteration to a built-in type
 such as a dictionary is problematic. Altering the contents of an array or bytearray is not. This is because bytes
 or words are written as a single machine code instruction which is not interruptible: in the parlance of real time
@@ -321,8 +342,8 @@ programming the write is atomic. A user defined object might instantiate an inte
 for both the main loop and the ISR to alter the contents of these.</p>
 <p>MicroPython supports integers of arbitrary precision. Values between 2**30 -1 and -2**30 will be stored in
 a single machine word. Larger values are stored as Python objects. Consequently changes to long integers cannot
-be considered atomic. The use of long integers in ISR&#8217;s is unsafe because memory allocation may be
-attempted as the variable&#8217;s value changes.</p>
+be considered atomic. The use of long integers in ISR’s is unsafe because memory allocation may be
+attempted as the variable’s value changes.</p>
 </div>
 <div class="section" id="overcoming-the-float-limitation">
 <h3>Overcoming the float limitation<a class="headerlink" href="#overcoming-the-float-limitation" title="Permalink to this headline">¶</a></h3>
@@ -334,7 +355,7 @@ between the ISR and main program code via an array of floats.</p>
 </div>
 <div class="section" id="using-micropython-schedule">
 <h3>Using micropython.schedule<a class="headerlink" href="#using-micropython-schedule" title="Permalink to this headline">¶</a></h3>
-<p>This function enables an ISR to schedule a callback for execution &#8220;very soon&#8221;. The callback is queued for
+<p>This function enables an ISR to schedule a callback for execution “very soon”. The callback is queued for
 execution which will take place at a time when the heap is not locked. Hence it can create Python objects
 and use floats. The callback is also guaranteed to run at a time when the main program has completed any
 update of Python objects, so the callback will not encounter partially updated objects.</p>
@@ -346,9 +367,9 @@ which pre-empts the main program loop.</p>
 <p>Execution time needs to be considered in relation to the frequency with which interrupts can occur. If an
 interrupt occurs while the previous callback is executing, a further instance of the callback will be queued
 for execution; this will run after the current instance has completed. A sustained high interrupt repetition
-rate therefore carries a risk of unconstrained queue growth and eventual failure with a <code class="docutils literal"><span class="pre">RuntimeError</span></code>.</p>
-<p>If the callback to be passed to <a class="reference internal" href="../library/micropython.html#micropython.schedule" title="micropython.schedule"><code class="xref any py py-func docutils literal"><span class="pre">schedule()</span></code></a> is a bound method, consider the
-note in &#8220;Creation of Python objects&#8221;.</p>
+rate therefore carries a risk of unconstrained queue growth and eventual failure with a <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code>.</p>
+<p>If the callback to be passed to <a class="reference internal" href="../library/micropython.html#micropython.schedule" title="micropython.schedule"><code class="xref any py py-func docutils literal notranslate"><span class="pre">schedule()</span></code></a> is a bound method, consider the
+note in “Creation of Python objects”.</p>
 </div>
 </div>
 <div class="section" id="exceptions">
@@ -365,7 +386,7 @@ to anticipate issues before they arise. Both interrupt handlers and the main pro
 with an appreciation of the following issues.</p>
 <div class="section" id="interrupt-handler-design">
 <span id="isr"></span><h3>Interrupt Handler Design<a class="headerlink" href="#interrupt-handler-design" title="Permalink to this headline">¶</a></h3>
-<p>As mentioned above, ISR&#8217;s should be designed to be as simple as possible. They should always return in a short,
+<p>As mentioned above, ISR’s should be designed to be as simple as possible. They should always return in a short,
 predictable period of time. This is important because when the ISR is running, the main loop is not: inevitably
 the main loop experiences pauses in its execution at random points in the code. Such pauses can be a source of hard
 to diagnose bugs particularly if their duration is long or variable. In order to understand the implications of
@@ -374,11 +395,11 @@ ISR run time, a basic grasp of interrupt priorities is required.</p>
 interrupt. This has implications if the two interrupts share data (see Critical Sections below). If such an interrupt
 occurs it interposes a delay into the ISR code. If a lower priority interrupt occurs while the ISR is running, it
 will be delayed until the ISR is complete: if the delay is too long, the lower priority interrupt may fail. A
-further issue with slow ISR&#8217;s is the case where a second interrupt of the same type occurs during its execution.
+further issue with slow ISR’s is the case where a second interrupt of the same type occurs during its execution.
 The second interrupt will be handled on termination of the first. However if the rate of incoming interrupts
 consistently exceeds the capacity of the ISR to service them the outcome will not be a happy one.</p>
 <p>Consequently looping constructs should be avoided or minimised. I/O to devices other than to the interrupting device
-should normally be avoided: I/O such as disk access, <code class="docutils literal"><span class="pre">print</span></code> statements and UART access is relatively slow, and
+should normally be avoided: I/O such as disk access, <code class="docutils literal notranslate"><span class="pre">print</span></code> statements and UART access is relatively slow, and
 its duration may vary. A further issue here is that filesystem functions are not reentrant: using filesystem I/O
 in an ISR and the main program would be hazardous. Crucially ISR code should not wait on an event. I/O is acceptable
 if the code can be guaranteed to return in a predictable period, for example toggling a pin or LED. Accessing the
@@ -400,8 +421,8 @@ to use a structure with inherent thread safety other ways are described below.</
 </div>
 <div class="section" id="reentrancy">
 <h3>Reentrancy<a class="headerlink" href="#reentrancy" title="Permalink to this headline">¶</a></h3>
-<p>A potential hazard may occur if a function or method is shared between the main program and one or more ISR&#8217;s or
-between multiple ISR&#8217;s. The issue here is that the function may itself be interrupted and a further instance of
+<p>A potential hazard may occur if a function or method is shared between the main program and one or more ISR’s or
+between multiple ISR’s. The issue here is that the function may itself be interrupted and a further instance of
 that function run. If this is to occur, the function must be designed to be reentrant. How this is done is an
 advanced topic beyond the scope of this tutorial.</p>
 </div>
@@ -411,9 +432,9 @@ advanced topic beyond the scope of this tutorial.</p>
 the interrupt happens to occur between accesses to the individual variables, their values will be inconsistent. This is
 an instance of a hazard known as a race condition: the ISR and the main program loop race to alter the variables. To
 avoid inconsistency a means must be employed to ensure that the ISR does not alter the values for the duration of
-the critical section. One way to achieve this is to issue <code class="docutils literal"><span class="pre">pyb.disable_irq()</span></code> before the start of the section, and
-<code class="docutils literal"><span class="pre">pyb.enable_irq()</span></code> at the end. Here is an example of this approach:</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pyb</span><span class="o">,</span> <span class="nn">micropython</span><span class="o">,</span> <span class="nn">array</span>
+the critical section. One way to achieve this is to issue <code class="docutils literal notranslate"><span class="pre">pyb.disable_irq()</span></code> before the start of the section, and
+<code class="docutils literal notranslate"><span class="pre">pyb.enable_irq()</span></code> at the end. Here is an example of this approach:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyb</span><span class="o">,</span> <span class="nn">micropython</span><span class="o">,</span> <span class="nn">array</span>
 <span class="n">micropython</span><span class="o">.</span><span class="n">alloc_emergency_exception_buf</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">BoundsException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
@@ -421,50 +442,50 @@ the critical section. One way to achieve this is to issue <code class="docutils 
 
 <span class="n">ARRAYSIZE</span> <span class="o">=</span> <span class="n">const</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s">&#39;i&#39;</span><span class="p">,</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ARRAYSIZE</span><span class="p">))</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ARRAYSIZE</span><span class="p">))</span>
 
 <span class="k">def</span> <span class="nf">callback1</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">data</span><span class="p">,</span> <span class="n">index</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-        <span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">rng</span><span class="p">()</span> <span class="c"># simulate input</span>
+        <span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">rng</span><span class="p">()</span> <span class="c1"># simulate input</span>
         <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="n">ARRAYSIZE</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">BoundsException</span><span class="p">(</span><span class="s">&#39;Array bounds exceeded&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">BoundsException</span><span class="p">(</span><span class="s1">&#39;Array bounds exceeded&#39;</span><span class="p">)</span>
 
 <span class="n">tim4</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">callback1</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">loop</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">irq_state</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">disable_irq</span><span class="p">()</span> <span class="c"># Start of critical section</span>
+        <span class="n">irq_state</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">disable_irq</span><span class="p">()</span> <span class="c1"># Start of critical section</span>
         <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
-            <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
         <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">pyb</span><span class="o">.</span><span class="n">enable_irq</span><span class="p">(</span><span class="n">irq_state</span><span class="p">)</span> <span class="c"># End of critical section</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&#39;loop {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">loop</span><span class="p">))</span>
+        <span class="n">pyb</span><span class="o">.</span><span class="n">enable_irq</span><span class="p">(</span><span class="n">irq_state</span><span class="p">)</span> <span class="c1"># End of critical section</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;loop </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">loop</span><span class="p">))</span>
     <span class="n">pyb</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">tim4</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+<span class="n">tim4</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A critical section can comprise a single line of code and a single variable. Consider the following code fragment.</p>
-<div class="code python highlight-python"><div class="highlight"><pre><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">def</span> <span class="nf">cb</span><span class="p">():</span> <span class="c"># An interrupt callback</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">def</span> <span class="nf">cb</span><span class="p">():</span> <span class="c1"># An interrupt callback</span>
     <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="c"># Code to set up the interrupt callback omitted</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="c1"># Code to set up the interrupt callback omitted</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>This example illustrates a subtle source of bugs. The line <code class="docutils literal"><span class="pre">count</span> <span class="pre">+=</span> <span class="pre">1</span></code> in the main loop carries a specific race
+<p>This example illustrates a subtle source of bugs. The line <code class="docutils literal notranslate"><span class="pre">count</span> <span class="pre">+=</span> <span class="pre">1</span></code> in the main loop carries a specific race
 condition hazard known as a read-modify-write. This is a classic cause of bugs in real time systems. In the main loop
-MicroPython reads the value of <code class="docutils literal"><span class="pre">t.counter</span></code>, adds 1 to it, and writes it back. On rare occasions the  interrupt occurs
-after the read and before the write. The interrupt modifies <code class="docutils literal"><span class="pre">t.counter</span></code> but its change is overwritten by the main
+MicroPython reads the value of <code class="docutils literal notranslate"><span class="pre">t.counter</span></code>, adds 1 to it, and writes it back. On rare occasions the  interrupt occurs
+after the read and before the write. The interrupt modifies <code class="docutils literal notranslate"><span class="pre">t.counter</span></code> but its change is overwritten by the main
 loop when the ISR returns. In a real system this could lead to rare, unpredictable failures.</p>
 <p>As mentioned above, care should be taken if an instance of a Python built in type is modified in the main code and
 that instance is accessed in an ISR. The code performing the modification should be regarded as a critical
 section to ensure that the instance is in a valid state when the ISR runs.</p>
-<p>Particular care needs to be taken if a dataset is shared between different ISR&#8217;s. The hazard here is that the higher
+<p>Particular care needs to be taken if a dataset is shared between different ISR’s. The hazard here is that the higher
 priority interrupt may occur when the lower priority one has partially updated the shared data. Dealing with this
 situation is an advanced topic beyond the scope of this introduction other than to note that mutex objects described
 below can sometimes be used.</p>
@@ -472,7 +493,7 @@ below can sometimes be used.</p>
 all interrupts rather than merely the one with the potential to cause problems. It is generally undesirable to disable
 an interrupt for long. In the case of timer interrupts it introduces variability to the time when a callback occurs.
 In the case of device interrupts, it can lead to the device being serviced too late with possible loss of data or
-overrun errors in the device hardware. Like ISR&#8217;s, a critical section in the main code should have a short, predictable
+overrun errors in the device hardware. Like ISR’s, a critical section in the main code should have a short, predictable
 duration.</p>
 <p>An approach to dealing with critical sections which radically reduces the time for which interrupts are disabled is to
 use an object termed a mutex (name derived from the notion of mutual exclusion). The main program locks the mutex
@@ -489,29 +510,30 @@ virtually unaffected.</p>
 after a program terminates.  This may produce unexpected results where you might
 have expected the object raising the callback to have gone out of scope.  For
 example on the Pyboard:</p>
-<div class="code python highlight-python"><div class="highlight"><pre>def bar():
-    foo = pyb.Timer(2, freq=4, callback=lambda t: print(&#39;.&#39;, end=&#39;&#39;))
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
+    <span class="n">foo</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
 
-bar()
+<span class="n">bar</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>This continues to run until the timer is explicitly disabled or the board is
-reset with <code class="docutils literal"><span class="pre">ctrl</span> <span class="pre">D</span></code>.</p>
+reset with <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">D</span></code>.</p>
 </div>
 </div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="speed_python.html" class="btn btn-neutral float-right" title="Maximising MicroPython Speed" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="speed_python.html" class="btn btn-neutral float-right" title="Maximising MicroPython Speed" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="repl.html" class="btn btn-neutral" title="The MicroPython Interactive Interpreter Mode (aka REPL)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="repl.html" class="btn btn-neutral float-left" title="The MicroPython Interactive Interpreter Mode (aka REPL)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -520,12 +542,14 @@ reset with <code class="docutils literal"><span class="pre">ctrl</span> <span cl
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -603,35 +627,15 @@ reset with <code class="docutils literal"><span class="pre">ctrl</span> <span cl
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

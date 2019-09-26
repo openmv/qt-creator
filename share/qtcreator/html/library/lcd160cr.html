@@ -15,40 +15,39 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -57,7 +56,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -86,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -105,41 +107,61 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li><code class="docutils literal"><span class="pre">lcd160cr</span></code> &#8212; control of LCD160CR display</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">lcd160cr</span></code> — control of LCD160CR display</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/lcd160cr.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/lcd160cr.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="module-lcd160cr">
-<span id="lcd160cr-control-of-lcd160cr-display"></span><h1><a class="reference internal" href="#module-lcd160cr" title="lcd160cr: control of LCD160CR display"><code class="xref py py-mod docutils literal"><span class="pre">lcd160cr</span></code></a> &#8212; control of LCD160CR display<a class="headerlink" href="#module-lcd160cr" title="Permalink to this headline">¶</a></h1>
+<span id="lcd160cr-control-of-lcd160cr-display"></span><h1><a class="reference internal" href="#module-lcd160cr" title="lcd160cr: control of LCD160CR display"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lcd160cr</span></code></a> — control of LCD160CR display<a class="headerlink" href="#module-lcd160cr" title="Permalink to this headline">¶</a></h1>
 <p>This module provides control of the MicroPython LCD160CR display.</p>
 <a class="reference internal image-reference" href="http://micropython.org/resources/LCD160CRv10-persp.jpg"><img alt="LCD160CRv1.0 picture" src="http://micropython.org/resources/LCD160CRv10-persp.jpg" style="width: 640px;" /></a>
 <p>Further resources are available via the following links:</p>
@@ -153,15 +175,15 @@
 instance of this class and use its methods to draw to the LCD and get
 the status of the touch panel.</p>
 <p>For example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">lcd160cr</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lcd160cr</span>
 
-<span class="n">lcd</span> <span class="o">=</span> <span class="n">lcd160cr</span><span class="o">.</span><span class="n">LCD160CR</span><span class="p">(</span><span class="s">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">lcd</span> <span class="o">=</span> <span class="n">lcd160cr</span><span class="o">.</span><span class="n">LCD160CR</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
 <span class="n">lcd</span><span class="o">.</span><span class="n">set_orient</span><span class="p">(</span><span class="n">lcd160cr</span><span class="o">.</span><span class="n">PORTRAIT</span><span class="p">)</span>
 <span class="n">lcd</span><span class="o">.</span><span class="n">set_pos</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">lcd</span><span class="o">.</span><span class="n">set_text_color</span><span class="p">(</span><span class="n">lcd</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">lcd</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 <span class="n">lcd</span><span class="o">.</span><span class="n">set_font</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">lcd</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;Hello MicroPython!&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;touch:&#39;</span><span class="p">,</span> <span class="n">lcd</span><span class="o">.</span><span class="n">get_touch</span><span class="p">())</span>
+<span class="n">lcd</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hello MicroPython!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;touch:&#39;</span><span class="p">,</span> <span class="n">lcd</span><span class="o">.</span><span class="n">get_touch</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -174,33 +196,33 @@ the status of the touch panel.</p>
 <blockquote>
 <div><ul class="simple">
 <li><em>connect</em> is a string specifying the physical connection of the LCD
-display to the board; valid values are &#8220;X&#8221;, &#8220;Y&#8221;, &#8220;XY&#8221;, &#8220;YX&#8221;.
-Use &#8220;X&#8221; when the display is connected to a pyboard in the X-skin
-position, and &#8220;Y&#8221; when connected in the Y-skin position.  &#8220;XY&#8221;
-and &#8220;YX&#8221; are used when the display is connected to the right or
+display to the board; valid values are “X”, “Y”, “XY”, “YX”.
+Use “X” when the display is connected to a pyboard in the X-skin
+position, and “Y” when connected in the Y-skin position.  “XY”
+and “YX” are used when the display is connected to the right or
 left side of the pyboard, respectively.</li>
-<li><em>pwr</em> is a Pin object connected to the LCD&#8217;s power/enabled pin.</li>
-<li><em>i2c</em> is an I2C object connected to the LCD&#8217;s I2C interface.</li>
-<li><em>spi</em> is an SPI object connected to the LCD&#8217;s SPI interface.</li>
+<li><em>pwr</em> is a Pin object connected to the LCD’s power/enabled pin.</li>
+<li><em>i2c</em> is an I2C object connected to the LCD’s I2C interface.</li>
+<li><em>spi</em> is an SPI object connected to the LCD’s SPI interface.</li>
 <li><em>i2c_addr</em> is the I2C address of the display.</li>
 </ul>
 </div></blockquote>
 <p>One must specify either a valid <em>connect</em> or all of <em>pwr</em>, <em>i2c</em> and <em>spi</em>.
 If a valid <em>connect</em> is given then any of <em>pwr</em>, <em>i2c</em> or <em>spi</em> which are
-not passed as parameters (i.e. they are <code class="docutils literal"><span class="pre">None</span></code>) will be created based on the
+not passed as parameters (i.e. they are <code class="docutils literal notranslate"><span class="pre">None</span></code>) will be created based on the
 value of <em>connect</em>.  This allows to override the default interface to the
 display if needed.</p>
 <p>The default values are:</p>
 <blockquote>
 <div><ul class="simple">
-<li>&#8220;X&#8221; is for the X-skin and uses:
-<code class="docutils literal"><span class="pre">pwr=Pin(&quot;X4&quot;)</span></code>, <code class="docutils literal"><span class="pre">i2c=I2C(&quot;X&quot;)</span></code>, <code class="docutils literal"><span class="pre">spi=SPI(&quot;X&quot;)</span></code></li>
-<li>&#8220;Y&#8221; is for the Y-skin and uses:
-<code class="docutils literal"><span class="pre">pwr=Pin(&quot;Y4&quot;)</span></code>, <code class="docutils literal"><span class="pre">i2c=I2C(&quot;Y&quot;)</span></code>, <code class="docutils literal"><span class="pre">spi=SPI(&quot;Y&quot;)</span></code></li>
-<li>&#8220;XY&#8221; is for the right-side and uses:
-<code class="docutils literal"><span class="pre">pwr=Pin(&quot;X4&quot;)</span></code>, <code class="docutils literal"><span class="pre">i2c=I2C(&quot;Y&quot;)</span></code>, <code class="docutils literal"><span class="pre">spi=SPI(&quot;X&quot;)</span></code></li>
-<li>&#8220;YX&#8221; is for the left-side and uses:
-<code class="docutils literal"><span class="pre">pwr=Pin(&quot;Y4&quot;)</span></code>, <code class="docutils literal"><span class="pre">i2c=I2C(&quot;X&quot;)</span></code>, <code class="docutils literal"><span class="pre">spi=SPI(&quot;Y&quot;)</span></code></li>
+<li>“X” is for the X-skin and uses:
+<code class="docutils literal notranslate"><span class="pre">pwr=Pin(&quot;X4&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">i2c=I2C(&quot;X&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">spi=SPI(&quot;X&quot;)</span></code></li>
+<li>“Y” is for the Y-skin and uses:
+<code class="docutils literal notranslate"><span class="pre">pwr=Pin(&quot;Y4&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">i2c=I2C(&quot;Y&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">spi=SPI(&quot;Y&quot;)</span></code></li>
+<li>“XY” is for the right-side and uses:
+<code class="docutils literal notranslate"><span class="pre">pwr=Pin(&quot;X4&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">i2c=I2C(&quot;Y&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">spi=SPI(&quot;X&quot;)</span></code></li>
+<li>“YX” is for the left-side and uses:
+<code class="docutils literal notranslate"><span class="pre">pwr=Pin(&quot;Y4&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">i2c=I2C(&quot;X&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">spi=SPI(&quot;Y&quot;)</span></code></li>
 </ul>
 </div></blockquote>
 <p>See <a class="reference external" href="http://micropython.org/resources/LCD160CRv10-positions.jpg">this image</a>
@@ -215,7 +237,7 @@ for how the display can be connected to the pyboard.</p>
 <em class="property">static </em><code class="descclassname">LCD160CR.</code><code class="descname">rgb</code><span class="sig-paren">(</span><em>r</em>, <em>g</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.rgb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a 16-bit integer representing the given rgb color values.  The
 16-bit value can be used to set the font color (see
-<a class="reference internal" href="#lcd160cr.LCD160CR.set_text_color" title="lcd160cr.LCD160CR.set_text_color"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.set_text_color()</span></code></a>) pen color (see <a class="reference internal" href="#lcd160cr.LCD160CR.set_pen" title="lcd160cr.LCD160CR.set_pen"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.set_pen()</span></code></a>)
+<a class="reference internal" href="#lcd160cr.LCD160CR.set_text_color" title="lcd160cr.LCD160CR.set_text_color"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.set_text_color()</span></code></a>) pen color (see <a class="reference internal" href="#lcd160cr.LCD160CR.set_pen" title="lcd160cr.LCD160CR.set_pen"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.set_pen()</span></code></a>)
 and draw individual pixels.</p>
 </dd></dl>
 
@@ -238,7 +260,7 @@ and draw individual pixels.</p>
 <dt id="lcd160cr.LCD160CR.h">
 <code class="descclassname">LCD160CR.</code><code class="descname">h</code><a class="headerlink" href="#lcd160cr.LCD160CR.h" title="Permalink to this definition">¶</a></dt>
 <dd><p>The width and height of the display, respectively, in pixels.  These
-members are updated when calling <a class="reference internal" href="#lcd160cr.LCD160CR.set_orient" title="lcd160cr.LCD160CR.set_orient"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.set_orient()</span></code></a> and should
+members are updated when calling <a class="reference internal" href="#lcd160cr.LCD160CR.set_orient" title="lcd160cr.LCD160CR.set_orient"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.set_orient()</span></code></a> and should
 be considered read-only.</p>
 </dd></dl>
 
@@ -248,15 +270,15 @@ be considered read-only.</p>
 <dl class="method">
 <dt id="lcd160cr.LCD160CR.set_power">
 <code class="descclassname">LCD160CR.</code><code class="descname">set_power</code><span class="sig-paren">(</span><em>on</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.set_power" title="Permalink to this definition">¶</a></dt>
-<dd><p>Turn the display on or off, depending on the given value of <em>on</em>: 0 or <code class="docutils literal"><span class="pre">False</span></code>
-will turn the display off, and 1 or <code class="docutils literal"><span class="pre">True</span></code> will turn it on.</p>
+<dd><p>Turn the display on or off, depending on the given value of <em>on</em>: 0 or <code class="docutils literal notranslate"><span class="pre">False</span></code>
+will turn the display off, and 1 or <code class="docutils literal notranslate"><span class="pre">True</span></code> will turn it on.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lcd160cr.LCD160CR.set_orient">
 <code class="descclassname">LCD160CR.</code><code class="descname">set_orient</code><span class="sig-paren">(</span><em>orient</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.set_orient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the orientation of the display.  The <em>orient</em> parameter can be one
-of <a class="reference internal" href="#lcd160cr.lcd160cr.PORTRAIT" title="lcd160cr.lcd160cr.PORTRAIT"><code class="xref any py py-data docutils literal"><span class="pre">PORTRAIT</span></code></a>, <a class="reference internal" href="#lcd160cr.lcd160cr.LANDSCAPE" title="lcd160cr.lcd160cr.LANDSCAPE"><code class="xref any py py-data docutils literal"><span class="pre">LANDSCAPE</span></code></a>, <a class="reference internal" href="#lcd160cr.lcd160cr.PORTRAIT_UPSIDEDOWN" title="lcd160cr.lcd160cr.PORTRAIT_UPSIDEDOWN"><code class="xref any py py-data docutils literal"><span class="pre">PORTRAIT_UPSIDEDOWN</span></code></a>, <a class="reference internal" href="#lcd160cr.lcd160cr.LANDSCAPE_UPSIDEDOWN" title="lcd160cr.lcd160cr.LANDSCAPE_UPSIDEDOWN"><code class="xref any py py-data docutils literal"><span class="pre">LANDSCAPE_UPSIDEDOWN</span></code></a>.</p>
+of <a class="reference internal" href="#lcd160cr.lcd160cr.PORTRAIT" title="lcd160cr.lcd160cr.PORTRAIT"><code class="xref any py py-data docutils literal notranslate"><span class="pre">PORTRAIT</span></code></a>, <a class="reference internal" href="#lcd160cr.lcd160cr.LANDSCAPE" title="lcd160cr.lcd160cr.LANDSCAPE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">LANDSCAPE</span></code></a>, <a class="reference internal" href="#lcd160cr.lcd160cr.PORTRAIT_UPSIDEDOWN" title="lcd160cr.lcd160cr.PORTRAIT_UPSIDEDOWN"><code class="xref any py py-data docutils literal notranslate"><span class="pre">PORTRAIT_UPSIDEDOWN</span></code></a>, <a class="reference internal" href="#lcd160cr.lcd160cr.LANDSCAPE_UPSIDEDOWN" title="lcd160cr.lcd160cr.LANDSCAPE_UPSIDEDOWN"><code class="xref any py py-data docutils literal notranslate"><span class="pre">LANDSCAPE_UPSIDEDOWN</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -282,7 +304,7 @@ lower 2 bits cleared.</p>
 <dt id="lcd160cr.LCD160CR.set_startup_deco">
 <code class="descclassname">LCD160CR.</code><code class="descname">set_startup_deco</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.set_startup_deco" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the start-up decoration of the display.  The <em>value</em> parameter can be a
-logical or of <a class="reference internal" href="#lcd160cr.lcd160cr.STARTUP_DECO_NONE" title="lcd160cr.lcd160cr.STARTUP_DECO_NONE"><code class="xref any py py-data docutils literal"><span class="pre">STARTUP_DECO_NONE</span></code></a>, <a class="reference internal" href="#lcd160cr.lcd160cr.STARTUP_DECO_MLOGO" title="lcd160cr.lcd160cr.STARTUP_DECO_MLOGO"><code class="xref any py py-data docutils literal"><span class="pre">STARTUP_DECO_MLOGO</span></code></a>, <a class="reference internal" href="#lcd160cr.lcd160cr.STARTUP_DECO_INFO" title="lcd160cr.lcd160cr.STARTUP_DECO_INFO"><code class="xref any py py-data docutils literal"><span class="pre">STARTUP_DECO_INFO</span></code></a>.</p>
+logical or of <a class="reference internal" href="#lcd160cr.lcd160cr.STARTUP_DECO_NONE" title="lcd160cr.lcd160cr.STARTUP_DECO_NONE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">STARTUP_DECO_NONE</span></code></a>, <a class="reference internal" href="#lcd160cr.lcd160cr.STARTUP_DECO_MLOGO" title="lcd160cr.lcd160cr.STARTUP_DECO_MLOGO"><code class="xref any py py-data docutils literal notranslate"><span class="pre">STARTUP_DECO_MLOGO</span></code></a>, <a class="reference internal" href="#lcd160cr.lcd160cr.STARTUP_DECO_INFO" title="lcd160cr.lcd160cr.STARTUP_DECO_INFO"><code class="xref any py py-data docutils literal notranslate"><span class="pre">STARTUP_DECO_INFO</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -300,7 +322,7 @@ initial decoration, orientation, brightness, UART baud rate, I2C address.</p>
 <dt id="lcd160cr.LCD160CR.set_pixel">
 <code class="descclassname">LCD160CR.</code><code class="descname">set_pixel</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>c</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.set_pixel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the specified pixel to the given color.  The color should be a 16-bit
-integer and can be created by <a class="reference internal" href="#lcd160cr.LCD160CR.rgb" title="lcd160cr.LCD160CR.rgb"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.rgb()</span></code></a>.</p>
+integer and can be created by <a class="reference internal" href="#lcd160cr.LCD160CR.rgb" title="lcd160cr.LCD160CR.rgb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.rgb()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -323,9 +345,9 @@ pixels in the line starting at coordinate <em>(x, y)</em>.</p>
 <code class="descclassname">LCD160CR.</code><code class="descname">screen_dump</code><span class="sig-paren">(</span><em>buf</em>, <em>x=0</em>, <em>y=0</em>, <em>w=None</em>, <em>h=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.screen_dump" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dump the contents of the screen to the given buffer.  The parameters <em>x</em> and <em>y</em>
 specify the starting coordinate, and <em>w</em> and <em>h</em> the size of the region.  If <em>w</em>
-or <em>h</em> are <code class="docutils literal"><span class="pre">None</span></code> then they will take on their maximum values, set by the size
+or <em>h</em> are <code class="docutils literal notranslate"><span class="pre">None</span></code> then they will take on their maximum values, set by the size
 of the screen minus the given <em>x</em> and <em>y</em> values.  <em>buf</em> should be large enough
-to hold <code class="docutils literal"><span class="pre">2*w*h</span></code> bytes.  If it&#8217;s smaller then only the initial horizontal lines
+to hold <code class="docutils literal notranslate"><span class="pre">2*w*h</span></code> bytes.  If it’s smaller then only the initial horizontal lines
 will be stored.</p>
 </dd></dl>
 
@@ -339,11 +361,11 @@ will be stored.</p>
 <div class="section" id="drawing-text">
 <h2>Drawing text<a class="headerlink" href="#drawing-text" title="Permalink to this headline">¶</a></h2>
 <p>To draw text one sets the position, color and font, and then uses
-<a class="reference internal" href="#lcd160cr.LCD160CR.write" title="lcd160cr.LCD160CR.write"><code class="xref any py py-meth docutils literal"><span class="pre">LCD160CR.write</span></code></a> to draw the text.</p>
+<a class="reference internal" href="#lcd160cr.LCD160CR.write" title="lcd160cr.LCD160CR.write"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">LCD160CR.write</span></code></a> to draw the text.</p>
 <dl class="method">
 <dt id="lcd160cr.LCD160CR.set_pos">
 <code class="descclassname">LCD160CR.</code><code class="descname">set_pos</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.set_pos" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the position for text output using <a class="reference internal" href="#lcd160cr.LCD160CR.write" title="lcd160cr.LCD160CR.write"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.write()</span></code></a>.  The position
+<dd><p>Set the position for text output using <a class="reference internal" href="#lcd160cr.LCD160CR.write" title="lcd160cr.LCD160CR.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.write()</span></code></a>.  The position
 is the upper-left corner of the text.</p>
 </dd></dl>
 
@@ -356,7 +378,7 @@ is the upper-left corner of the text.</p>
 <dl class="method">
 <dt id="lcd160cr.LCD160CR.set_font">
 <code class="descclassname">LCD160CR.</code><code class="descname">set_font</code><span class="sig-paren">(</span><em>font</em>, <em>scale=0</em>, <em>bold=0</em>, <em>trans=0</em>, <em>scroll=0</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.set_font" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the font for the text.  Subsequent calls to <a class="reference internal" href="#lcd160cr.LCD160CR.write" title="lcd160cr.LCD160CR.write"><code class="xref any py py-meth docutils literal"><span class="pre">write</span></code></a> will use the newly
+<dd><p>Set the font for the text.  Subsequent calls to <a class="reference internal" href="#lcd160cr.LCD160CR.write" title="lcd160cr.LCD160CR.write"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">write</span></code></a> will use the newly
 configured font.  The parameters are:</p>
 <blockquote>
 <div><ul class="simple">
@@ -389,7 +411,7 @@ display supports basic VT100 control codes such as newline and backspace.</p>
 <div class="section" id="drawing-primitive-shapes">
 <h2>Drawing primitive shapes<a class="headerlink" href="#drawing-primitive-shapes" title="Permalink to this headline">¶</a></h2>
 <p>Primitive drawing commands use a foreground and background color set by the
-<a class="reference internal" href="#lcd160cr.LCD160CR.set_pen" title="lcd160cr.LCD160CR.set_pen"><code class="xref any py py-meth docutils literal"><span class="pre">set_pen</span></code></a> method.</p>
+<a class="reference internal" href="#lcd160cr.LCD160CR.set_pen" title="lcd160cr.LCD160CR.set_pen"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">set_pen</span></code></a> method.</p>
 <dl class="method">
 <dt id="lcd160cr.LCD160CR.set_pen">
 <code class="descclassname">LCD160CR.</code><code class="descname">set_pen</code><span class="sig-paren">(</span><em>line</em>, <em>fill</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.set_pen" title="Permalink to this definition">¶</a></dt>
@@ -423,7 +445,7 @@ display supports basic VT100 control codes such as newline and backspace.</p>
 <code class="descclassname">LCD160CR.</code><code class="descname">rect_interior</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>w</em>, <em>h</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.rect_interior" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draw a rectangle at the given location and size using the pen line
 color for the outline, and the pen fill color for the interior.
-The <a class="reference internal" href="#lcd160cr.LCD160CR.rect" title="lcd160cr.LCD160CR.rect"><code class="xref any py py-meth docutils literal"><span class="pre">rect</span></code></a> method draws the outline and interior, while the other methods
+The <a class="reference internal" href="#lcd160cr.LCD160CR.rect" title="lcd160cr.LCD160CR.rect"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">rect</span></code></a> method draws the outline and interior, while the other methods
 just draw one or the other.</p>
 </dd></dl>
 
@@ -456,7 +478,7 @@ just draw one or the other.</p>
 <dl class="method">
 <dt id="lcd160cr.LCD160CR.line_no_clip">
 <code class="descclassname">LCD160CR.</code><code class="descname">line_no_clip</code><span class="sig-paren">(</span><em>x1</em>, <em>y1</em>, <em>x2</em>, <em>y2</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.line_no_clip" title="Permalink to this definition">¶</a></dt>
-<dd><p>These methods are as above but don&#8217;t do any clipping on the input
+<dd><p>These methods are as above but don’t do any clipping on the input
 coordinates.  They are faster than the clipping versions and can be
 used when you know that the coordinates are within the display.</p>
 </dd></dl>
@@ -472,7 +494,7 @@ bytes corresponding to coordinate pairs (x, y).</p>
 <dl class="method">
 <dt id="lcd160cr.LCD160CR.poly_line">
 <code class="descclassname">LCD160CR.</code><code class="descname">poly_line</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.poly_line" title="Permalink to this definition">¶</a></dt>
-<dd><p>Similar to <a class="reference internal" href="#lcd160cr.LCD160CR.poly_dot" title="lcd160cr.LCD160CR.poly_dot"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.poly_dot()</span></code></a> but draws lines between the dots.</p>
+<dd><p>Similar to <a class="reference internal" href="#lcd160cr.LCD160CR.poly_dot" title="lcd160cr.LCD160CR.poly_dot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.poly_dot()</span></code></a> but draws lines between the dots.</p>
 </dd></dl>
 
 </div>
@@ -484,14 +506,14 @@ bytes corresponding to coordinate pairs (x, y).</p>
 <dd><p>Configure the touch panel:</p>
 <blockquote>
 <div><ul class="simple">
-<li>If <em>calib</em> is <code class="docutils literal"><span class="pre">True</span></code> then the call will trigger a touch calibration of
+<li>If <em>calib</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code> then the call will trigger a touch calibration of
 the resistive touch sensor.  This requires the user to touch various
 parts of the screen.</li>
-<li>If <em>save</em> is <code class="docutils literal"><span class="pre">True</span></code> then the touch parameters will be saved to NVRAM
+<li>If <em>save</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code> then the touch parameters will be saved to NVRAM
 to persist across reset/power up.</li>
-<li>If <em>irq</em> is <code class="docutils literal"><span class="pre">True</span></code> then the display will be configured to pull the IRQ
-line low when a touch force is detected.  If <em>irq</em> is <code class="docutils literal"><span class="pre">False</span></code> then this
-feature is disabled.  If <em>irq</em> is <code class="docutils literal"><span class="pre">None</span></code> (the default value) then no
+<li>If <em>irq</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code> then the display will be configured to pull the IRQ
+line low when a touch force is detected.  If <em>irq</em> is <code class="docutils literal notranslate"><span class="pre">False</span></code> then this
+feature is disabled.  If <em>irq</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code> (the default value) then no
 change is made to this setting.</li>
 </ul>
 </div></blockquote>
@@ -500,8 +522,8 @@ change is made to this setting.</li>
 <dl class="method">
 <dt id="lcd160cr.LCD160CR.is_touched">
 <code class="descclassname">LCD160CR.</code><code class="descname">is_touched</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.is_touched" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a boolean: <code class="docutils literal"><span class="pre">True</span></code> if there is currently a touch force on the screen,
-<code class="docutils literal"><span class="pre">False</span></code> otherwise.</p>
+<dd><p>Returns a boolean: <code class="docutils literal notranslate"><span class="pre">True</span></code> if there is currently a touch force on the screen,
+<code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 </dd></dl>
 
 <dl class="method">
@@ -526,12 +548,12 @@ indicate the position of the current or most recent touch.</p>
 <code class="descclassname">LCD160CR.</code><code class="descname">fast_spi</code><span class="sig-paren">(</span><em>flush=True</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.fast_spi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ready the display to accept RGB pixel data on the SPI bus, resetting the location
 of the first byte to go to the top-left corner of the window set by
-<a class="reference internal" href="#lcd160cr.LCD160CR.set_spi_win" title="lcd160cr.LCD160CR.set_spi_win"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.set_spi_win()</span></code></a>.
+<a class="reference internal" href="#lcd160cr.LCD160CR.set_spi_win" title="lcd160cr.LCD160CR.set_spi_win"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.set_spi_win()</span></code></a>.
 The method returns an SPI object which can be used to write the pixel data.</p>
 <p>Pixels should be sent as 16-bit RGB values in the 5-6-5 format.  The destination
 counter will increase as data is sent, and data can be sent in arbitrary sized
 chunks.  Once the destination counter reaches the end of the window specified by
-<a class="reference internal" href="#lcd160cr.LCD160CR.set_spi_win" title="lcd160cr.LCD160CR.set_spi_win"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.set_spi_win()</span></code></a> it will wrap around to the top-left corner of that window.</p>
+<a class="reference internal" href="#lcd160cr.LCD160CR.set_spi_win" title="lcd160cr.LCD160CR.set_spi_win"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.set_spi_win()</span></code></a> it will wrap around to the top-left corner of that window.</p>
 </dd></dl>
 
 <dl class="method">
@@ -539,7 +561,7 @@ chunks.  Once the destination counter reaches the end of the window specified by
 <code class="descclassname">LCD160CR.</code><code class="descname">show_framebuf</code><span class="sig-paren">(</span><em>buf</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.show_framebuf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show the given buffer on the display.  <em>buf</em> should be an array of bytes containing
 the 16-bit RGB values for the pixels, and they will be written to the area
-specified by <a class="reference internal" href="#lcd160cr.LCD160CR.set_spi_win" title="lcd160cr.LCD160CR.set_spi_win"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.set_spi_win()</span></code></a>, starting from the top-left corner.</p>
+specified by <a class="reference internal" href="#lcd160cr.LCD160CR.set_spi_win" title="lcd160cr.LCD160CR.set_spi_win"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.set_spi_win()</span></code></a>, starting from the top-left corner.</p>
 <p>The <a class="reference external" href="framebuf.html">framebuf</a> module can be used to construct frame buffers
 and provides drawing primitives. Using a frame buffer will improve
 performance of animations when compared to drawing directly to the screen.</p>
@@ -562,7 +584,7 @@ scroll.</p>
 general purpose use.  Window 8 is the text scroll window (the ticker).</li>
 <li><em>x</em>, <em>y</em>, <em>w</em>, <em>h</em> specify the location of the window in the display.</li>
 <li><em>vec</em> specifies the direction and speed of scroll: it is a 16-bit value
-of the form <code class="docutils literal"><span class="pre">0bF.ddSSSSSSSSSSSS</span></code>.  <em>dd</em> is 0, 1, 2, 3 for +x, +y, -x,
+of the form <code class="docutils literal notranslate"><span class="pre">0bF.ddSSSSSSSSSSSS</span></code>.  <em>dd</em> is 0, 1, 2, 3 for +x, +y, -x,
 -y scrolling. <em>F</em> sets the speed format, with 0 meaning that the window
 is shifted <em>S % 256</em> pixel every frame, and 1 meaning that the window
 is shifted 1 pixel every <em>S</em> frames.</li>
@@ -581,7 +603,7 @@ is shifted 1 pixel every <em>S</em> frames.</li>
 <div><ul class="simple">
 <li><em>win</em> is the window id, 0..8.</li>
 <li><em>param</em> is the parameter number to configure, 0..7, and corresponds
-to the parameters in the <a class="reference internal" href="#lcd160cr.LCD160CR.set_scroll_win" title="lcd160cr.LCD160CR.set_scroll_win"><code class="xref any py py-meth docutils literal"><span class="pre">set_scroll_win</span></code></a> method.</li>
+to the parameters in the <a class="reference internal" href="#lcd160cr.LCD160CR.set_scroll_win" title="lcd160cr.LCD160CR.set_scroll_win"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">set_scroll_win</span></code></a> method.</li>
 <li><em>value</em> is the value to set.</li>
 </ul>
 </div></blockquote>
@@ -600,7 +622,7 @@ with length 32 or less.</p>
 <dd><p>Display a JPEG.  <em>buf</em> should contain the entire JPEG data. JPEG data should
 not include EXIF information. The following encodings are supported: Baseline
 DCT, Huffman coding, 8 bits per sample, 3 color components, YCbCr4:2:2.
-The origin of the JPEG is set by <a class="reference internal" href="#lcd160cr.LCD160CR.set_pos" title="lcd160cr.LCD160CR.set_pos"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.set_pos()</span></code></a>.</p>
+The origin of the JPEG is set by <a class="reference internal" href="#lcd160cr.LCD160CR.set_pos" title="lcd160cr.LCD160CR.set_pos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.set_pos()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -612,15 +634,15 @@ The origin of the JPEG is set by <a class="reference internal" href="#lcd160cr.L
 <dt id="lcd160cr.LCD160CR.jpeg_data">
 <code class="descclassname">LCD160CR.</code><code class="descname">jpeg_data</code><span class="sig-paren">(</span><em>buf</em><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.jpeg_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display a JPEG with the data split across multiple buffers.  There must be
-a single call to <a class="reference internal" href="#lcd160cr.LCD160CR.jpeg_start" title="lcd160cr.LCD160CR.jpeg_start"><code class="xref any py py-meth docutils literal"><span class="pre">jpeg_start</span></code></a> to begin with, specifying the total number of
+a single call to <a class="reference internal" href="#lcd160cr.LCD160CR.jpeg_start" title="lcd160cr.LCD160CR.jpeg_start"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">jpeg_start</span></code></a> to begin with, specifying the total number of
 bytes in the JPEG.  Then this number of bytes must be transferred to the
-display using one or more calls to the <a class="reference internal" href="#lcd160cr.LCD160CR.jpeg_data" title="lcd160cr.LCD160CR.jpeg_data"><code class="xref any py py-meth docutils literal"><span class="pre">jpeg_data</span></code></a> command.</p>
+display using one or more calls to the <a class="reference internal" href="#lcd160cr.LCD160CR.jpeg_data" title="lcd160cr.LCD160CR.jpeg_data"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">jpeg_data</span></code></a> command.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="lcd160cr.LCD160CR.feed_wdt">
 <code class="descclassname">LCD160CR.</code><code class="descname">feed_wdt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lcd160cr.LCD160CR.feed_wdt" title="Permalink to this definition">¶</a></dt>
-<dd><p>The first call to this method will start the display&#8217;s internal watchdog
+<dd><p>The first call to this method will start the display’s internal watchdog
 timer.  Subsequent calls will feed the watchdog.  The timeout is roughly 30
 seconds.</p>
 </dd></dl>
@@ -643,7 +665,7 @@ seconds.</p>
 <code class="descclassname">lcd160cr.</code><code class="descname">PORTRAIT_UPSIDEDOWN</code><a class="headerlink" href="#lcd160cr.lcd160cr.PORTRAIT_UPSIDEDOWN" title="Permalink to this definition">¶</a></dt>
 <dt id="lcd160cr.lcd160cr.LANDSCAPE_UPSIDEDOWN">
 <code class="descclassname">lcd160cr.</code><code class="descname">LANDSCAPE_UPSIDEDOWN</code><a class="headerlink" href="#lcd160cr.lcd160cr.LANDSCAPE_UPSIDEDOWN" title="Permalink to this definition">¶</a></dt>
-<dd><p>Orientations of the display, used by <a class="reference internal" href="#lcd160cr.LCD160CR.set_orient" title="lcd160cr.LCD160CR.set_orient"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.set_orient()</span></code></a>.</p>
+<dd><p>Orientations of the display, used by <a class="reference internal" href="#lcd160cr.LCD160CR.set_orient" title="lcd160cr.LCD160CR.set_orient"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.set_orient()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
@@ -653,8 +675,8 @@ seconds.</p>
 <code class="descclassname">lcd160cr.</code><code class="descname">STARTUP_DECO_MLOGO</code><a class="headerlink" href="#lcd160cr.lcd160cr.STARTUP_DECO_MLOGO" title="Permalink to this definition">¶</a></dt>
 <dt id="lcd160cr.lcd160cr.STARTUP_DECO_INFO">
 <code class="descclassname">lcd160cr.</code><code class="descname">STARTUP_DECO_INFO</code><a class="headerlink" href="#lcd160cr.lcd160cr.STARTUP_DECO_INFO" title="Permalink to this definition">¶</a></dt>
-<dd><p>Types of start-up decoration, can be OR&#8217;ed together, used by
-<a class="reference internal" href="#lcd160cr.LCD160CR.set_startup_deco" title="lcd160cr.LCD160CR.set_startup_deco"><code class="xref py py-meth docutils literal"><span class="pre">LCD160CR.set_startup_deco()</span></code></a>.</p>
+<dd><p>Types of start-up decoration, can be OR’ed together, used by
+<a class="reference internal" href="#lcd160cr.LCD160CR.set_startup_deco" title="lcd160cr.LCD160CR.set_startup_deco"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LCD160CR.set_startup_deco()</span></code></a>.</p>
 </dd></dl>
 
 </div>
@@ -662,6 +684,7 @@ seconds.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
@@ -670,12 +693,14 @@ seconds.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -753,35 +778,15 @@ seconds.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

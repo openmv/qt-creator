@@ -15,42 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="next" title="OpenMV Cam Tutorial" href="tutorial/index.html"/>
-        <link rel="prev" title="Quick reference for the openmvcam" href="quickref.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OpenMV Cam Tutorial" href="tutorial/index.html" />
+    <link rel="prev" title="Quick reference for the openmvcam" href="quickref.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -59,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -88,9 +87,12 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">General information about the openmvcam</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">General information about the openmvcam</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#local-filesystem-and-sd-card">Local filesystem and SD card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#boot-modes">Boot modes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#flashing-led-errors">Flashing LED Errors</a></li>
@@ -112,34 +114,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>General information about the openmvcam</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>General information about the openmvcam</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/openmvcam/general.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/openmvcam/general.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -161,16 +183,16 @@
 <div class="section" id="local-filesystem-and-sd-card">
 <h2><a class="toc-backref" href="#id2">Local filesystem and SD card</a><a class="headerlink" href="#local-filesystem-and-sd-card" title="Permalink to this headline">¶</a></h2>
 <p>There is a small internal filesystem (a drive) on the openmvcam which is stored
-within the microcontroller&#8217;s flash memory.</p>
+within the microcontroller’s flash memory.</p>
 <p>When the openmvcam boots up, it needs to choose a filesystem to boot from.  If
 there is no SD card, then it uses the internal filesystem as the boot
 filesystem, otherwise, it uses the SD card.  After the boot, the current
-directory is set to <code class="docutils literal"><span class="pre">/</span></code>.</p>
+directory is set to <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
 <p>The boot filesystem is used for 2 things: it is the filesystem from which
-<code class="docutils literal"><span class="pre">boot.py</span></code> and <code class="docutils literal"><span class="pre">main.py</span></code> files are searched for, and it is the filesystem
+<code class="docutils literal notranslate"><span class="pre">boot.py</span></code> and <code class="docutils literal notranslate"><span class="pre">main.py</span></code> files are searched for, and it is the filesystem
 which is made available on your PC over the USB cable.</p>
 <p>The filesystem will be available as a USB flash drive on your PC.  You can
-save files to the drive, and edit <code class="docutils literal"><span class="pre">boot.py</span></code> and <code class="docutils literal"><span class="pre">main.py</span></code>.</p>
+save files to the drive, and edit <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> and <code class="docutils literal notranslate"><span class="pre">main.py</span></code>.</p>
 <p><em>Remember to eject (on Linux, unmount) the USB drive before you reset your
 pyboard.</em></p>
 <div class="admonition note">
@@ -178,24 +200,24 @@ pyboard.</em></p>
 <p>The above behavior is different from the pyboard which allows access to the
 internal file system and SD card at the same time within a script by creating
 a virtual file system with multiple drives for the internal flash and SD
-card.  The OpenMV Cam&#8217;s behavior is different because modern operating systems
-do not mount the OpenMV Cam&#8217;s internal flash drive and/or SD Card as a
-virtual file system but instead as a block device... meaning that modern
-operating systems do not see a pyboard&#8217;s file system the same way as the
+card.  The OpenMV Cam’s behavior is different because modern operating systems
+do not mount the OpenMV Cam’s internal flash drive and/or SD Card as a
+virtual file system but instead as a block device… meaning that modern
+operating systems do not see a pyboard’s file system the same way as the
 pyboard sees it.  To avoid this situation we only allow one file system at a
 time to keep the operating system the OpenMV Cam is attached to and what the
 OpenMV Cam thinks its file system looks like in sync.</p>
 <p>That said, there is another complication.  Because modern operating systems
-mount the OpenMV Cam&#8217;s internal flash drive or SD card as a block device they
+mount the OpenMV Cam’s internal flash drive or SD card as a block device they
 treat it as if it cannot create files itself.  Because of this if you create
 a file onboard your OpenMV Cam in code you must remount the OpenMV Cam after
 a new file is created for the operating system to rescan the OpenMV Cam to
 detect the change.  Additionally, if both the operating system and the OpenMV
 Cam are changing files on the file system at the same time the operating
-system will ignore and overwrite the OpenMV Cam&#8217;s changes.</p>
+system will ignore and overwrite the OpenMV Cam’s changes.</p>
 <p class="last">OpenMV reconmends using the internal flash drive or SD card to store assets
 that will be read by the OpenMV Cam.  If you need to saves things to disk
-make sure you have an SD card (and don&#8217;t use the internal flash drive for
+make sure you have an SD card (and don’t use the internal flash drive for
 this as it is <em>quite</em> small). Additionally, if you need to write files to the
 disk keep note of the above paragraph about a rescan being required.</p>
 </div>
@@ -204,29 +226,30 @@ disk keep note of the above paragraph about a rescan being required.</p>
 <h2><a class="toc-backref" href="#id3">Boot modes</a><a class="headerlink" href="#boot-modes" title="Permalink to this headline">¶</a></h2>
 <p>On powerup, if powered by USB, the OpenMV Cam will run a bootloader program for
 about 3 seconds which allows OpenMV IDE to update the firmware without using DFU.  After
-3 seconds then bootloader will exit and then <code class="docutils literal"><span class="pre">boot.py</span></code> will run allowing you
-to change the USB mode before executing <code class="docutils literal"><span class="pre">main.py</span></code>.  If not powered
-by USB then <code class="docutils literal"><span class="pre">boot.py</span></code> followed by <code class="docutils literal"><span class="pre">main.py</span></code> will run immediantly.</p>
+3 seconds then bootloader will exit and then <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> will run allowing you
+to change the USB mode before executing <code class="docutils literal notranslate"><span class="pre">main.py</span></code>.  If not powered
+by USB then <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> followed by <code class="docutils literal notranslate"><span class="pre">main.py</span></code> will run immediantly.</p>
 </div>
 <div class="section" id="flashing-led-errors">
 <h2><a class="toc-backref" href="#id4">Flashing LED Errors</a><a class="headerlink" href="#flashing-led-errors" title="Permalink to this headline">¶</a></h2>
 <p>If all colors of the RGB LED are flashing quickly there was a hard fault.  Reflash
-your OpenMV Cam&#8217;s firmware to fix this issue.  If this does not work your OpenMV Cam
-may be damaged...</p>
+your OpenMV Cam’s firmware to fix this issue.  If this does not work your OpenMV Cam
+may be damaged…</p>
 </div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tutorial/index.html" class="btn btn-neutral float-right" title="OpenMV Cam Tutorial" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tutorial/index.html" class="btn btn-neutral float-right" title="OpenMV Cam Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="quickref.html" class="btn btn-neutral" title="Quick reference for the openmvcam" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="quickref.html" class="btn btn-neutral float-left" title="Quick reference for the openmvcam" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -235,12 +258,14 @@ may be damaged...</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -318,35 +343,15 @@ may be damaged...</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

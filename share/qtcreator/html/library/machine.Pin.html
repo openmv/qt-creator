@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="machine — functions related to the hardware" href="machine.html"/>
-        <link rel="next" title="class Signal – control and sense external I/O devices" href="machine.Signal.html"/>
-        <link rel="prev" title="machine — functions related to the hardware" href="machine.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class Signal – control and sense external I/O devices" href="machine.Signal.html" />
+    <link rel="prev" title="machine — functions related to the hardware" href="machine.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,15 +87,18 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal"><span class="pre">btree</span></code> &#8211; simple BTree database</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="machine.html"><code class="docutils literal"><span class="pre">machine</span></code> &#8212; functions related to the hardware</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="machine.html#reset-related-functions">Reset related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#interrupt-related-functions">Interrupt related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#power-related-functions">Power related functions</a></li>
@@ -106,9 +107,9 @@
 <li class="toctree-l4 current"><a class="reference internal" href="machine.html#classes">Classes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal"><span class="pre">micropython</span></code> &#8211; access and control MicroPython internals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal"><span class="pre">network</span></code> &#8212; network configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal"><span class="pre">uctypes</span></code> &#8211; access binary data in a structured way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a></li>
@@ -128,76 +129,96 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
-      
-          <li><a href="machine.html"><code class="docutils literal"><span class="pre">machine</span></code> &#8212; functions related to the hardware</a> &raquo;</li>
-      
-    <li>class Pin &#8211; control I/O pins</li>
+        
+          <li><a href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &raquo;</li>
+        
+      <li>class Pin – control I/O pins</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/machine.Pin.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/machine.Pin.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="class-pin-control-i-o-pins">
-<span id="machine-pin"></span><h1>class Pin &#8211; control I/O pins<a class="headerlink" href="#class-pin-control-i-o-pins" title="Permalink to this headline">¶</a></h1>
+<span id="machine-pin"></span><h1>class Pin – control I/O pins<a class="headerlink" href="#class-pin-control-i-o-pins" title="Permalink to this headline">¶</a></h1>
 <p>A pin object is used to control I/O pins (also known as GPIO - general-purpose
 input/output).  Pin objects are commonly associated with a physical pin that can
 drive an output voltage and read input voltages.  The pin class has methods to set the mode of
 the pin (IN, OUT, etc) and methods to get and set the digital logic level.
-For analog control of a pin, see the <a class="reference internal" href="machine.ADC.html#machine.ADC" title="machine.ADC"><code class="xref py py-class docutils literal"><span class="pre">ADC</span></code></a> class.</p>
+For analog control of a pin, see the <a class="reference internal" href="machine.ADC.html#machine.ADC" title="machine.ADC"><code class="xref py py-class docutils literal notranslate"><span class="pre">ADC</span></code></a> class.</p>
 <p>A pin object is constructed by using an identifier which unambiguously
 specifies a certain I/O pin.  The allowed forms of the identifier and the
 physical pin that the identifier maps to are port-specific.  Possibilities
 for the identifier are an integer, a string or a tuple with port and pin
 number.</p>
 <p>Usage Model:</p>
-<div class="highlight-python"><div class="highlight"><pre>from machine import Pin
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="k">import</span> <span class="n">Pin</span>
 
-# create an output pin on pin #0
-p0 = Pin(0, Pin.OUT)
+<span class="c1"># create an output pin on pin #0</span>
+<span class="n">p0</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
 
-# set the value low then high
-p0.value(0)
-p0.value(1)
+<span class="c1"># set the value low then high</span>
+<span class="n">p0</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">p0</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-# create an input pin on pin #2, with a pull up resistor
-p2 = Pin(2, Pin.IN, Pin.PULL_UP)
+<span class="c1"># create an input pin on pin #2, with a pull up resistor</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
 
-# read and print the pin value
-print(p2.value())
+<span class="c1"># read and print the pin value</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">value</span><span class="p">())</span>
 
-# reconfigure pin #0 in input mode
-p0.mode(p0.IN)
+<span class="c1"># reconfigure pin #0 in input mode</span>
+<span class="n">p0</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">p0</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>
 
-# configure an irq callback
-p0.irq(lambda p:print(p))
+<span class="c1"># configure an irq callback</span>
+<span class="n">p0</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="section" id="constructors">
@@ -205,46 +226,46 @@ p0.irq(lambda p:print(p))
 <dl class="class">
 <dt id="machine.Pin">
 <em class="property">class </em><code class="descclassname">machine.</code><code class="descname">Pin</code><span class="sig-paren">(</span><em>id</em>, <em>mode=-1</em>, <em>pull=-1</em>, <em>*</em>, <em>value</em>, <em>drive</em>, <em>alt</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Access the pin peripheral (GPIO pin) associated with the given <code class="docutils literal"><span class="pre">id</span></code>.  If
+<dd><p>Access the pin peripheral (GPIO pin) associated with the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.  If
 additional arguments are given in the constructor then they are used to initialise
 the pin.  Any settings that are not specified will remain in their previous state.</p>
 <p>The arguments are:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">id</span></code> is mandatory and can be an arbitrary object.  Among possible value
+<li><code class="docutils literal notranslate"><span class="pre">id</span></code> is mandatory and can be an arbitrary object.  Among possible value
 types are: int (an internal Pin identifier), str (a Pin name), and tuple
 (pair of [port, pin]).</li>
-<li><code class="docutils literal"><span class="pre">mode</span></code> specifies the pin mode, which can be one of:<ul>
-<li><code class="docutils literal"><span class="pre">Pin.IN</span></code> - Pin is configured for input.  If viewed as an output the pin
+<li><code class="docutils literal notranslate"><span class="pre">mode</span></code> specifies the pin mode, which can be one of:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">Pin.IN</span></code> - Pin is configured for input.  If viewed as an output the pin
 is in high-impedance state.</li>
-<li><code class="docutils literal"><span class="pre">Pin.OUT</span></code> - Pin is configured for (normal) output.</li>
-<li><code class="docutils literal"><span class="pre">Pin.OPEN_DRAIN</span></code> - Pin is configured for open-drain output. Open-drain
+<li><code class="docutils literal notranslate"><span class="pre">Pin.OUT</span></code> - Pin is configured for (normal) output.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Pin.OPEN_DRAIN</span></code> - Pin is configured for open-drain output. Open-drain
 output works in the following way: if the output value is set to 0 the pin
 is active at a low level; if the output value is 1 the pin is in a high-impedance
 state.  Not all ports implement this mode, or some might only on certain pins.</li>
-<li><code class="docutils literal"><span class="pre">Pin.ALT</span></code> - Pin is configured to perform an alternative function, which is
+<li><code class="docutils literal notranslate"><span class="pre">Pin.ALT</span></code> - Pin is configured to perform an alternative function, which is
 port specific.  For a pin configured in such a way any other Pin methods
-(except <a class="reference internal" href="#machine.Pin.init" title="machine.Pin.init"><code class="xref py py-meth docutils literal"><span class="pre">Pin.init()</span></code></a>) are not applicable (calling them will lead to undefined,
+(except <a class="reference internal" href="#machine.Pin.init" title="machine.Pin.init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Pin.init()</span></code></a>) are not applicable (calling them will lead to undefined,
 or a hardware-specific, result).  Not all ports implement this mode.</li>
-<li><code class="docutils literal"><span class="pre">Pin.ALT_OPEN_DRAIN</span></code> - The Same as <code class="docutils literal"><span class="pre">Pin.ALT</span></code>, but the pin is configured as
+<li><code class="docutils literal notranslate"><span class="pre">Pin.ALT_OPEN_DRAIN</span></code> - The Same as <code class="docutils literal notranslate"><span class="pre">Pin.ALT</span></code>, but the pin is configured as
 open-drain.  Not all ports implement this mode.</li>
 </ul>
 </li>
-<li><code class="docutils literal"><span class="pre">pull</span></code> specifies if the pin has a (weak) pull resistor attached, and can be
+<li><code class="docutils literal notranslate"><span class="pre">pull</span></code> specifies if the pin has a (weak) pull resistor attached, and can be
 one of:<ul>
-<li><code class="docutils literal"><span class="pre">None</span></code> - No pull up or down resistor.</li>
-<li><code class="docutils literal"><span class="pre">Pin.PULL_UP</span></code> - Pull up resistor enabled.</li>
-<li><code class="docutils literal"><span class="pre">Pin.PULL_DOWN</span></code> - Pull down resistor enabled.</li>
+<li><code class="docutils literal notranslate"><span class="pre">None</span></code> - No pull up or down resistor.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Pin.PULL_UP</span></code> - Pull up resistor enabled.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Pin.PULL_DOWN</span></code> - Pull down resistor enabled.</li>
 </ul>
 </li>
-<li><code class="docutils literal"><span class="pre">value</span></code> is valid only for Pin.OUT and Pin.OPEN_DRAIN modes and specifies initial
+<li><code class="docutils literal notranslate"><span class="pre">value</span></code> is valid only for Pin.OUT and Pin.OPEN_DRAIN modes and specifies initial
 output pin value if given, otherwise the state of the pin peripheral remains
 unchanged.</li>
-<li><code class="docutils literal"><span class="pre">drive</span></code> specifies the output power of the pin and can be one of: <code class="docutils literal"><span class="pre">Pin.LOW_POWER</span></code>,
-<code class="docutils literal"><span class="pre">Pin.MED_POWER</span></code> or <code class="docutils literal"><span class="pre">Pin.HIGH_POWER</span></code>.  The actual current driving capabilities
+<li><code class="docutils literal notranslate"><span class="pre">drive</span></code> specifies the output power of the pin and can be one of: <code class="docutils literal notranslate"><span class="pre">Pin.LOW_POWER</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Pin.MED_POWER</span></code> or <code class="docutils literal notranslate"><span class="pre">Pin.HIGH_POWER</span></code>.  The actual current driving capabilities
 are port dependent.  Not all ports implement this argument.</li>
-<li><code class="docutils literal"><span class="pre">alt</span></code> specifies an alternate function for the pin and the values it can take are
-port dependent.  This argument is valid only for <code class="docutils literal"><span class="pre">Pin.ALT</span></code> and <code class="docutils literal"><span class="pre">Pin.ALT_OPEN_DRAIN</span></code>
+<li><code class="docutils literal notranslate"><span class="pre">alt</span></code> specifies an alternate function for the pin and the values it can take are
+port dependent.  This argument is valid only for <code class="docutils literal notranslate"><span class="pre">Pin.ALT</span></code> and <code class="docutils literal notranslate"><span class="pre">Pin.ALT_OPEN_DRAIN</span></code>
 modes.  It may be used when a pin supports more than one alternate function.  If only
 one pin alternate function is supported the this argument is not required.  Not all
 ports implement this argument.</li>
@@ -254,9 +275,9 @@ ports implement this argument.</li>
 pin, but it does not specify any further operations on such a pin.  Pins configured in
 alternate-function mode are usually not used as GPIO but are instead driven by other
 hardware peripherals.  The only operation supported on such a pin is re-initialising,
-by calling the constructor or <a class="reference internal" href="#machine.Pin.init" title="machine.Pin.init"><code class="xref py py-meth docutils literal"><span class="pre">Pin.init()</span></code></a> method.  If a pin that is configured in
-alternate-function mode is re-initialised with <code class="docutils literal"><span class="pre">Pin.IN</span></code>, <code class="docutils literal"><span class="pre">Pin.OUT</span></code>, or
-<code class="docutils literal"><span class="pre">Pin.OPEN_DRAIN</span></code>, the alternate function will be removed from the pin.</p>
+by calling the constructor or <a class="reference internal" href="#machine.Pin.init" title="machine.Pin.init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Pin.init()</span></code></a> method.  If a pin that is configured in
+alternate-function mode is re-initialised with <code class="docutils literal notranslate"><span class="pre">Pin.IN</span></code>, <code class="docutils literal notranslate"><span class="pre">Pin.OUT</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">Pin.OPEN_DRAIN</span></code>, the alternate function will be removed from the pin.</p>
 </dd></dl>
 
 </div>
@@ -268,44 +289,44 @@ alternate-function mode is re-initialised with <code class="docutils literal"><s
 <dd><p>Re-initialise the pin using the given parameters.  Only those arguments that
 are specified will be set.  The rest of the pin peripheral state will remain
 unchanged.  See the constructor documentation for details of the arguments.</p>
-<p>Returns <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="machine.Pin.value">
 <code class="descclassname">Pin.</code><code class="descname">value</code><span class="sig-paren">(</span><span class="optional">[</span><em>x</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.value" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method allows to set and get the value of the pin, depending on whether
-the argument <code class="docutils literal"><span class="pre">x</span></code> is supplied or not.</p>
+the argument <code class="docutils literal notranslate"><span class="pre">x</span></code> is supplied or not.</p>
 <p>If the argument is omitted then this method gets the digital logic level of
 the pin, returning 0 or 1 corresponding to low and high voltage signals
 respectively.  The behaviour of this method depends on the mode of the pin:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">Pin.IN</span></code> - The method returns the actual input value currently present
+<li><code class="docutils literal notranslate"><span class="pre">Pin.IN</span></code> - The method returns the actual input value currently present
 on the pin.</li>
-<li><code class="docutils literal"><span class="pre">Pin.OUT</span></code> - The behaviour and return value of the method is undefined.</li>
-<li><code class="docutils literal"><span class="pre">Pin.OPEN_DRAIN</span></code> - If the pin is in state &#8216;0&#8217; then the behaviour and
+<li><code class="docutils literal notranslate"><span class="pre">Pin.OUT</span></code> - The behaviour and return value of the method is undefined.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Pin.OPEN_DRAIN</span></code> - If the pin is in state ‘0’ then the behaviour and
 return value of the method is undefined.  Otherwise, if the pin is in
-state &#8216;1&#8217;, the method returns the actual input value currently present
+state ‘1’, the method returns the actual input value currently present
 on the pin.</li>
 </ul>
 </div></blockquote>
 <p>If the argument is supplied then this method sets the digital logic level of
-the pin.  The argument <code class="docutils literal"><span class="pre">x</span></code> can be anything that converts to a boolean.
-If it converts to <code class="docutils literal"><span class="pre">True</span></code>, the pin is set to state &#8216;1&#8217;, otherwise it is set
-to state &#8216;0&#8217;.  The behaviour of this method depends on the mode of the pin:</p>
+the pin.  The argument <code class="docutils literal notranslate"><span class="pre">x</span></code> can be anything that converts to a boolean.
+If it converts to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the pin is set to state ‘1’, otherwise it is set
+to state ‘0’.  The behaviour of this method depends on the mode of the pin:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">Pin.IN</span></code> - The value is stored in the output buffer for the pin.  The
+<li><code class="docutils literal notranslate"><span class="pre">Pin.IN</span></code> - The value is stored in the output buffer for the pin.  The
 pin state does not change, it remains in the high-impedance state.  The
 stored value will become active on the pin as soon as it is changed to
-<code class="docutils literal"><span class="pre">Pin.OUT</span></code> or <code class="docutils literal"><span class="pre">Pin.OPEN_DRAIN</span></code> mode.</li>
-<li><code class="docutils literal"><span class="pre">Pin.OUT</span></code> - The output buffer is set to the given value immediately.</li>
-<li><code class="docutils literal"><span class="pre">Pin.OPEN_DRAIN</span></code> - If the value is &#8216;0&#8217; the pin is set to a low voltage
+<code class="docutils literal notranslate"><span class="pre">Pin.OUT</span></code> or <code class="docutils literal notranslate"><span class="pre">Pin.OPEN_DRAIN</span></code> mode.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Pin.OUT</span></code> - The output buffer is set to the given value immediately.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Pin.OPEN_DRAIN</span></code> - If the value is ‘0’ the pin is set to a low voltage
 state.  Otherwise the pin is set to high-impedance state.</li>
 </ul>
 </div></blockquote>
-<p>When setting the value this method returns <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<p>When setting the value this method returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -313,40 +334,40 @@ state.  Otherwise the pin is set to high-impedance state.</li>
 <code class="descclassname">Pin.</code><code class="descname">__call__</code><span class="sig-paren">(</span><span class="optional">[</span><em>x</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.__call__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pin objects are callable.  The call method provides a (fast) shortcut to set
 and get the value of the pin.  It is equivalent to Pin.value([x]).
-See <a class="reference internal" href="#machine.Pin.value" title="machine.Pin.value"><code class="xref py py-meth docutils literal"><span class="pre">Pin.value()</span></code></a> for more details.</p>
+See <a class="reference internal" href="#machine.Pin.value" title="machine.Pin.value"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Pin.value()</span></code></a> for more details.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="machine.Pin.on">
 <code class="descclassname">Pin.</code><code class="descname">on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.on" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set pin to &#8220;1&#8221; output level.</p>
+<dd><p>Set pin to “1” output level.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="machine.Pin.off">
 <code class="descclassname">Pin.</code><code class="descname">off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.off" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set pin to &#8220;0&#8221; output level.</p>
+<dd><p>Set pin to “0” output level.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="machine.Pin.mode">
 <code class="descclassname">Pin.</code><code class="descname">mode</code><span class="sig-paren">(</span><span class="optional">[</span><em>mode</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get or set the pin mode.
-See the constructor documentation for details of the <code class="docutils literal"><span class="pre">mode</span></code> argument.</p>
+See the constructor documentation for details of the <code class="docutils literal notranslate"><span class="pre">mode</span></code> argument.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="machine.Pin.pull">
 <code class="descclassname">Pin.</code><code class="descname">pull</code><span class="sig-paren">(</span><span class="optional">[</span><em>pull</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.pull" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get or set the pin pull state.
-See the constructor documentation for details of the <code class="docutils literal"><span class="pre">pull</span></code> argument.</p>
+See the constructor documentation for details of the <code class="docutils literal notranslate"><span class="pre">pull</span></code> argument.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="machine.Pin.drive">
 <code class="descclassname">Pin.</code><code class="descname">drive</code><span class="sig-paren">(</span><span class="optional">[</span><em>drive</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.drive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get or set the pin drive strength.
-See the constructor documentation for details of the <code class="docutils literal"><span class="pre">drive</span></code> argument.</p>
+See the constructor documentation for details of the <code class="docutils literal notranslate"><span class="pre">drive</span></code> argument.</p>
 <p>Not all ports implement this method.</p>
 <p>Availability: WiPy.</p>
 </dd></dl>
@@ -355,34 +376,34 @@ See the constructor documentation for details of the <code class="docutils liter
 <dt id="machine.Pin.irq">
 <code class="descclassname">Pin.</code><code class="descname">irq</code><span class="sig-paren">(</span><em>handler=None</em>, <em>trigger=(Pin.IRQ_FALLING | Pin.IRQ_RISING)</em>, <em>*</em>, <em>priority=1</em>, <em>wake=None</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.irq" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure an interrupt handler to be called when the trigger source of the
-pin is active.  If the pin mode is <code class="docutils literal"><span class="pre">Pin.IN</span></code> then the trigger source is
-the external value on the pin.  If the pin mode is <code class="docutils literal"><span class="pre">Pin.OUT</span></code> then the
+pin is active.  If the pin mode is <code class="docutils literal notranslate"><span class="pre">Pin.IN</span></code> then the trigger source is
+the external value on the pin.  If the pin mode is <code class="docutils literal notranslate"><span class="pre">Pin.OUT</span></code> then the
 trigger source is the output buffer of the pin.  Otherwise, if the pin mode
-is <code class="docutils literal"><span class="pre">Pin.OPEN_DRAIN</span></code> then the trigger source is the output buffer for
-state &#8216;0&#8217; and the external pin value for state &#8216;1&#8217;.</p>
+is <code class="docutils literal notranslate"><span class="pre">Pin.OPEN_DRAIN</span></code> then the trigger source is the output buffer for
+state ‘0’ and the external pin value for state ‘1’.</p>
 <p>The arguments are:</p>
 <blockquote>
 <div><ul>
-<li><p class="first"><code class="docutils literal"><span class="pre">handler</span></code> is an optional function to be called when the interrupt
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">handler</span></code> is an optional function to be called when the interrupt
 triggers.</p>
 </li>
-<li><p class="first"><code class="docutils literal"><span class="pre">trigger</span></code> configures the event which can generate an interrupt.
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">trigger</span></code> configures the event which can generate an interrupt.
 Possible values are:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">Pin.IRQ_FALLING</span></code> interrupt on falling edge.</li>
-<li><code class="docutils literal"><span class="pre">Pin.IRQ_RISING</span></code> interrupt on rising edge.</li>
-<li><code class="docutils literal"><span class="pre">Pin.IRQ_LOW_LEVEL</span></code> interrupt on low level.</li>
-<li><code class="docutils literal"><span class="pre">Pin.IRQ_HIGH_LEVEL</span></code> interrupt on high level.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Pin.IRQ_FALLING</span></code> interrupt on falling edge.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Pin.IRQ_RISING</span></code> interrupt on rising edge.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Pin.IRQ_LOW_LEVEL</span></code> interrupt on low level.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Pin.IRQ_HIGH_LEVEL</span></code> interrupt on high level.</li>
 </ul>
-<p>These values can be OR&#8217;ed together to trigger on multiple events.</p>
+<p>These values can be OR’ed together to trigger on multiple events.</p>
 </li>
-<li><p class="first"><code class="docutils literal"><span class="pre">priority</span></code> sets the priority level of the interrupt.  The values it
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">priority</span></code> sets the priority level of the interrupt.  The values it
 can take are port-specific, but higher values always represent higher
 priorities.</p>
 </li>
-<li><p class="first"><code class="docutils literal"><span class="pre">wake</span></code> selects the power mode in which this interrupt can wake up the
-system.  It can be <code class="docutils literal"><span class="pre">machine.IDLE</span></code>, <code class="docutils literal"><span class="pre">machine.SLEEP</span></code> or <code class="docutils literal"><span class="pre">machine.DEEPSLEEP</span></code>.
-These values can also be OR&#8217;ed together to make a pin generate interrupts in
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">wake</span></code> selects the power mode in which this interrupt can wake up the
+system.  It can be <code class="docutils literal notranslate"><span class="pre">machine.IDLE</span></code>, <code class="docutils literal notranslate"><span class="pre">machine.SLEEP</span></code> or <code class="docutils literal notranslate"><span class="pre">machine.DEEPSLEEP</span></code>.
+These values can also be OR’ed together to make a pin generate interrupts in
 more than one power mode.</p>
 </li>
 </ul>
@@ -415,7 +436,7 @@ not all constants are available on all ports.</p>
 <dt id="machine.Pin.PULL_DOWN">
 <code class="descclassname">Pin.</code><code class="descname">PULL_DOWN</code><a class="headerlink" href="#machine.Pin.PULL_DOWN" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selects whether there is a pull up/down resistor.  Use the value
-<code class="docutils literal"><span class="pre">None</span></code> for no pull.</p>
+<code class="docutils literal notranslate"><span class="pre">None</span></code> for no pull.</p>
 </dd></dl>
 
 <dl class="data">
@@ -445,15 +466,16 @@ not all constants are available on all ports.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="machine.Signal.html" class="btn btn-neutral float-right" title="class Signal – control and sense external I/O devices" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="machine.Signal.html" class="btn btn-neutral float-right" title="class Signal – control and sense external I/O devices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="machine.html" class="btn btn-neutral" title="machine — functions related to the hardware" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="machine.html" class="btn btn-neutral float-left" title="machine — functions related to the hardware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -462,12 +484,14 @@ not all constants are available on all ports.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -545,35 +569,15 @@ not all constants are available on all ports.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

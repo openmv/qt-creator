@@ -15,40 +15,39 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -57,7 +56,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -86,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -105,42 +107,62 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li><code class="docutils literal"><span class="pre">esp</span></code> &#8212; functions related to the ESP8266</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">esp</span></code> — functions related to the ESP8266</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/esp.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/esp.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="esp-functions-related-to-the-esp8266">
-<h1><code class="xref py py-mod docutils literal"><span class="pre">esp</span></code> &#8212; functions related to the ESP8266<a class="headerlink" href="#esp-functions-related-to-the-esp8266" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal"><span class="pre">esp</span></code> module contains specific functions related to the ESP8266 module.</p>
+<h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">esp</span></code> — functions related to the ESP8266<a class="headerlink" href="#esp-functions-related-to-the-esp8266" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">esp</span></code> module contains specific functions related to the ESP8266 module.</p>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
@@ -153,9 +175,9 @@ sleep type.</p>
 <p>The possible sleep types are defined as constants:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">SLEEP_NONE</span></code> &#8211; all functions enabled,</li>
-<li><code class="docutils literal"><span class="pre">SLEEP_MODEM</span></code> &#8211; modem sleep, shuts down the WiFi Modem circuit.</li>
-<li><code class="docutils literal"><span class="pre">SLEEP_LIGHT</span></code> &#8211; light sleep, shuts down the WiFi Modem circuit
+<li><code class="docutils literal notranslate"><span class="pre">SLEEP_NONE</span></code> – all functions enabled,</li>
+<li><code class="docutils literal notranslate"><span class="pre">SLEEP_MODEM</span></code> – modem sleep, shuts down the WiFi Modem circuit.</li>
+<li><code class="docutils literal notranslate"><span class="pre">SLEEP_LIGHT</span></code> – light sleep, shuts down the WiFi Modem circuit
 and suspends the processor periodically.</li>
 </ul>
 </div></blockquote>
@@ -197,18 +219,18 @@ reset.</p>
 <dt>
 <code class="descclassname">esp.</code><code class="descname">set_native_code_location</code><span class="sig-paren">(</span><em>start</em>, <em>length</em><span class="sig-paren">)</span></dt>
 <dd><p>Set the location that native code will be placed for execution after it is
-compiled.  Native code is emitted when the <code class="docutils literal"><span class="pre">&#64;micropython.native</span></code>,
-<code class="docutils literal"><span class="pre">&#64;micropython.viper</span></code> and <code class="docutils literal"><span class="pre">&#64;micropython.asm_xtensa</span></code> decorators are applied
+compiled.  Native code is emitted when the <code class="docutils literal notranslate"><span class="pre">&#64;micropython.native</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&#64;micropython.viper</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;micropython.asm_xtensa</span></code> decorators are applied
 to a function.  The ESP8266 must execute code from either iRAM or the lower
 1MByte of flash (which is memory mapped), and this function controls the
 location.</p>
-<p>If <em>start</em> and <em>length</em> are both <code class="docutils literal"><span class="pre">None</span></code> then the native code location is
+<p>If <em>start</em> and <em>length</em> are both <code class="docutils literal notranslate"><span class="pre">None</span></code> then the native code location is
 set to the unused portion of memory at the end of the iRAM1 region.  The
 size of this unused portion depends on the firmware and is typically quite
 small (around 500 bytes), and is enough to store a few very small
 functions.  The advantage of using this iRAM1 region is that it does not
 get worn out by writing to it.</p>
-<p>If neither <em>start</em> nor <em>length</em> are <code class="docutils literal"><span class="pre">None</span></code> then they should be integers.
+<p>If neither <em>start</em> nor <em>length</em> are <code class="docutils literal notranslate"><span class="pre">None</span></code> then they should be integers.
 <em>start</em> should specify the byte offset from the beginning of the flash at
 which native code should be stored.  <em>length</em> specifies how many bytes of
 flash from <em>start</em> can be used to store native code.  <em>start</em> and <em>length</em>
@@ -223,7 +245,7 @@ In particular, native code needs to be recompiled and rewritten to flash
 on each boot (including wake from deepsleep).</p>
 <p>In both cases above, using iRAM1 or flash, if there is no more room left
 in the specified region then the use of a native decorator on a function
-will lead to <a class="reference internal" href="builtins.html#MemoryError" title="MemoryError"><code class="xref any py py-exc docutils literal"><span class="pre">MemoryError</span></code></a> exception being raised during compilation of
+will lead to <a class="reference internal" href="builtins.html#MemoryError" title="MemoryError"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">MemoryError</span></code></a> exception being raised during compilation of
 that function.</p>
 </dd></dl>
 
@@ -232,6 +254,7 @@ that function.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
@@ -240,12 +263,14 @@ that function.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -323,35 +348,15 @@ that function.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

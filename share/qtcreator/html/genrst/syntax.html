@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="MicroPython differences from CPython" href="index.html"/>
-        <link rel="next" title="Core Language" href="core_language.html"/>
-        <link rel="prev" title="MicroPython differences from CPython" href="index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Core Language" href="core_language.html" />
+    <link rel="prev" title="MicroPython differences from CPython" href="index.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,16 +87,19 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">MicroPython libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython differences from CPython</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Syntax</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Syntax</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#spaces">Spaces</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#upy-requires-spaces-between-literal-numbers-and-keywords-cpy-doesn-t">uPy requires spaces between literal numbers and keywords, CPy doesn&#8217;t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upy-requires-spaces-between-literal-numbers-and-keywords-cpy-doesn-t">uPy requires spaces between literal numbers and keywords, CPy doesn’t</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#unicode">Unicode</a><ul>
@@ -124,36 +125,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">MicroPython differences from CPython</a> &raquo;</li>
-      
-    <li>Syntax</li>
+        
+      <li>Syntax</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/genrst/syntax.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/genrst/syntax.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -165,20 +186,20 @@
 <div class="section" id="spaces">
 <h2>Spaces<a class="headerlink" href="#spaces" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="upy-requires-spaces-between-literal-numbers-and-keywords-cpy-doesn-t">
-<span id="cpydiff-syntax-spaces"></span><h3>uPy requires spaces between literal numbers and keywords, CPy doesn&#8217;t<a class="headerlink" href="#upy-requires-spaces-between-literal-numbers-and-keywords-cpy-doesn-t" title="Permalink to this headline">¶</a></h3>
+<span id="cpydiff-syntax-spaces"></span><h3>uPy requires spaces between literal numbers and keywords, CPy doesn’t<a class="headerlink" href="#upy-requires-spaces-between-literal-numbers-and-keywords-cpy-doesn-t" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">try</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s">&#39;1and 0&#39;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;1and 0&#39;</span><span class="p">))</span>
 <span class="k">except</span> <span class="ne">SyntaxError</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Should have worked&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should have worked&#39;</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s">&#39;1or 0&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;1or 0&#39;</span><span class="p">))</span>
 <span class="k">except</span> <span class="ne">SyntaxError</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Should have worked&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should have worked&#39;</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s">&#39;1if 1else 0&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;1if 1else 0&#39;</span><span class="p">))</span>
 <span class="k">except</span> <span class="ne">SyntaxError</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Should have worked&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should have worked&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -190,15 +211,15 @@
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="mi">0</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
 <span class="mi">1</span>
 <span class="mi">1</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Should have worked
-Should have worked
-Should have worked
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Should</span> <span class="n">have</span> <span class="n">worked</span>
+<span class="n">Should</span> <span class="n">have</span> <span class="n">worked</span>
+<span class="n">Should</span> <span class="n">have</span> <span class="n">worked</span>
 </pre></div>
 </div>
 </td>
@@ -212,7 +233,7 @@ Should have worked
 <div class="section" id="unicode-name-escapes-are-not-implemented">
 <span id="cpydiff-syntax-unicode-nameesc"></span><h3>Unicode name escapes are not implemented<a class="headerlink" href="#unicode-name-escapes-are-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\N{LATIN SMALL LETTER A}</span><span class="s">&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\N{LATIN SMALL LETTER A}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -224,11 +245,11 @@ Should have worked
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="n">a</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>NotImplementedError: unicode name escapes
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">unicode</span> <span class="n">name</span> <span class="n">escapes</span>
 </pre></div>
 </div>
 </td>
@@ -241,15 +262,16 @@ Should have worked
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="core_language.html" class="btn btn-neutral float-right" title="Core Language" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="core_language.html" class="btn btn-neutral float-right" title="Core Language" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="MicroPython differences from CPython" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="MicroPython differences from CPython" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -258,12 +280,14 @@ Should have worked
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -341,35 +365,15 @@ Should have worked
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

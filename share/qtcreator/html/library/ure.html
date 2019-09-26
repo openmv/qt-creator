@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="MicroPython libraries" href="index.html"/>
-        <link rel="next" title="uselect – wait for events on a set of streams" href="uselect.html"/>
-        <link rel="prev" title="uos – basic “operating system” services" href="uos.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="uselect – wait for events on a set of streams" href="uselect.html" />
+    <link rel="prev" title="uos – basic “operating system” services" href="uos.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,38 +87,41 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="array.html"><code class="docutils literal"><span class="pre">array</span></code> &#8211; arrays of numeric data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal"><span class="pre">cmath</span></code> &#8211; mathematical functions for complex numbers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal"><span class="pre">gc</span></code> &#8211; control the garbage collector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal"><span class="pre">math</span></code> &#8211; mathematical functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal"><span class="pre">sys</span></code> &#8211; system specific functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal"><span class="pre">ubinascii</span></code> &#8211; binary/ASCII conversions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal"><span class="pre">ucollections</span></code> &#8211; collection and container types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal"><span class="pre">uerrno</span></code> &#8211; system error codes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uhashlib.html"><code class="docutils literal"><span class="pre">uhashlib</span></code> &#8211; hashing algorithms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uheapq.html"><code class="docutils literal"><span class="pre">uheapq</span></code> &#8211; heap queue algorithm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uio.html"><code class="docutils literal"><span class="pre">uio</span></code> &#8211; input/output streams</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ujson.html"><code class="docutils literal"><span class="pre">ujson</span></code> &#8211; JSON encoding and decoding</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uos.html"><code class="docutils literal"><span class="pre">uos</span></code> &#8211; basic &#8220;operating system&#8221; services</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href=""><code class="docutils literal"><span class="pre">ure</span></code> &#8211; simple regular expressions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="array.html"><code class="docutils literal notranslate"><span class="pre">array</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uhashlib.html"><code class="docutils literal notranslate"><span class="pre">uhashlib</span></code> – hashing algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uheapq.html"><code class="docutils literal notranslate"><span class="pre">uheapq</span></code> – heap queue algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uio.html"><code class="docutils literal notranslate"><span class="pre">uio</span></code> – input/output streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ujson.html"><code class="docutils literal notranslate"><span class="pre">ujson</span></code> – JSON encoding and decoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uos.html"><code class="docutils literal notranslate"><span class="pre">uos</span></code> – basic “operating system” services</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ure</span></code> – simple regular expressions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#regex-objects">Regex objects</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#match-objects">Match objects</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="uselect.html"><code class="docutils literal"><span class="pre">uselect</span></code> &#8211; wait for events on a set of streams</a></li>
-<li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal"><span class="pre">usocket</span></code> &#8211; socket module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal"><span class="pre">ustruct</span></code> &#8211; pack and unpack primitive data types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal"><span class="pre">utime</span></code> &#8211; time related functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal"><span class="pre">uzlib</span></code> &#8211; zlib decompression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal"><span class="pre">_thread</span></code> &#8211; multithreading support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uselect.html"><code class="docutils literal notranslate"><span class="pre">uselect</span></code> – wait for events on a set of streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a></li>
@@ -141,86 +142,106 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
-      
-    <li><code class="docutils literal"><span class="pre">ure</span></code> &#8211; simple regular expressions</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">ure</span></code> – simple regular expressions</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/ure.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/ure.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="module-ure">
-<span id="ure-simple-regular-expressions"></span><h1><a class="reference internal" href="#module-ure" title="ure: regular expressions"><code class="xref py py-mod docutils literal"><span class="pre">ure</span></code></a> &#8211; simple regular expressions<a class="headerlink" href="#module-ure" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal"><span class="pre">CPython</span></code></a> <em>module,
+<span id="ure-simple-regular-expressions"></span><h1><a class="reference internal" href="#module-ure" title="ure: regular expressions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ure</span></code></a> – simple regular expressions<a class="headerlink" href="#module-ure" title="Permalink to this headline">¶</a></h1>
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
 as described below. For more information, refer to the original
-CPython documentation:</em> <a class="reference external" href="http://docs.python.org/3.5/library/re.html#module-re" title="(in Python v3.5)"><code class="docutils literal"><span class="pre">re</span></code></a>.</p>
+CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/re.html#module-re" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">re</span></code></a>.</p>
 <p>This module implements regular expression operations. Regular expression
-syntax supported is a subset of CPython <code class="docutils literal"><span class="pre">re</span></code> module (and actually is
+syntax supported is a subset of CPython <code class="docutils literal notranslate"><span class="pre">re</span></code> module (and actually is
 a subset of POSIX extended regular expressions).</p>
 <p>Supported operators are:</p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">'.'</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">'.'</span></code></dt>
 <dd>Match any character.</dd>
-<dt><code class="docutils literal"><span class="pre">'[...]'</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">'[...]'</span></code></dt>
 <dd>Match set of characters. Individual characters and ranges are supported,
-including negated sets (e.g. <code class="docutils literal"><span class="pre">[^a-c]</span></code>).</dd>
-<dt><code class="docutils literal"><span class="pre">'^'</span></code></dt>
+including negated sets (e.g. <code class="docutils literal notranslate"><span class="pre">[^a-c]</span></code>).</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">'^'</span></code></dt>
 <dd>Match the start of the string.</dd>
-<dt><code class="docutils literal"><span class="pre">'$'</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">'$'</span></code></dt>
 <dd>Match the end of the string.</dd>
-<dt><code class="docutils literal"><span class="pre">'?'</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">'?'</span></code></dt>
 <dd>Match zero or one of the previous entity.</dd>
-<dt><code class="docutils literal"><span class="pre">'*'</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">'*'</span></code></dt>
 <dd>Match zero or more of the previous entity.</dd>
-<dt><code class="docutils literal"><span class="pre">'+'</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">'+'</span></code></dt>
 <dd>Match one or more of the previous entity.</dd>
 </dl>
-<p><code class="docutils literal"><span class="pre">'??'</span></code></p>
-<p><code class="docutils literal"><span class="pre">'*?'</span></code></p>
-<p><code class="docutils literal"><span class="pre">'+?'</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">'??'</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">'*?'</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">'+?'</span></code></p>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">'|'</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">'|'</span></code></dt>
 <dd>Match either the LHS or the RHS of this operator.</dd>
-<dt><code class="docutils literal"><span class="pre">'(...)'</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">'(...)'</span></code></dt>
 <dd>Grouping. Each group is capturing (a substring it captures can be accessed
-with <a class="reference internal" href="#ure.match.group" title="ure.match.group"><code class="xref any py py-meth docutils literal"><span class="pre">match.group()</span></code></a> method).</dd>
+with <a class="reference internal" href="#ure.match.group" title="ure.match.group"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">match.group()</span></code></a> method).</dd>
 </dl>
-<p><strong>NOT SUPPORTED</strong>: Counted repetitions (<code class="docutils literal"><span class="pre">{m,n}</span></code>), more advanced assertions
-(<code class="docutils literal"><span class="pre">\b</span></code>, <code class="docutils literal"><span class="pre">\B</span></code>), named groups (<code class="docutils literal"><span class="pre">(?P&lt;name&gt;...)</span></code>), non-capturing groups
-(<code class="docutils literal"><span class="pre">(?:...)</span></code>), etc.</p>
+<p><strong>NOT SUPPORTED</strong>: Counted repetitions (<code class="docutils literal notranslate"><span class="pre">{m,n}</span></code>), more advanced assertions
+(<code class="docutils literal notranslate"><span class="pre">\b</span></code>, <code class="docutils literal notranslate"><span class="pre">\B</span></code>), named groups (<code class="docutils literal notranslate"><span class="pre">(?P&lt;name&gt;...)</span></code>), non-capturing groups
+(<code class="docutils literal notranslate"><span class="pre">(?:...)</span></code>), etc.</p>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="ure.compile">
 <code class="descclassname">ure.</code><code class="descname">compile</code><span class="sig-paren">(</span><em>regex_str</em><span class="optional">[</span>, <em>flags</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#ure.compile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compile regular expression, return <a class="reference internal" href="#regex"><span>regex</span></a> object.</p>
+<dd><p>Compile regular expression, return <a class="reference internal" href="#regex"><span class="std std-ref">regex</span></a> object.</p>
 </dd></dl>
 
 <dl class="function">
@@ -233,7 +254,7 @@ from starting position in a string.</p>
 <dl class="function">
 <dt id="ure.search">
 <code class="descclassname">ure.</code><code class="descname">search</code><span class="sig-paren">(</span><em>regex_str</em>, <em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.search" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compile <em>regex_str</em> and search it in a <em>string</em>. Unlike <a class="reference internal" href="#ure.match" title="ure.match"><code class="xref any py py-func docutils literal"><span class="pre">match</span></code></a>, this will search
+<dd><p>Compile <em>regex_str</em> and search it in a <em>string</em>. Unlike <a class="reference internal" href="#ure.match" title="ure.match"><code class="xref any py py-func docutils literal notranslate"><span class="pre">match</span></code></a>, this will search
 string for first position which matches regex (which still may be
 0 if regex is anchored).</p>
 </dd></dl>
@@ -244,27 +265,27 @@ string for first position which matches regex (which still may be
 <dd><p>Compile <em>regex_str</em> and search for it in <em>string</em>, replacing all matches
 with <em>replace</em>, and returning the new string.</p>
 <p><em>replace</em> can be a string or a function.  If it is a string then escape
-sequences of the form <code class="docutils literal"><span class="pre">\&lt;number&gt;</span></code> and <code class="docutils literal"><span class="pre">\g&lt;number&gt;</span></code> can be used to
+sequences of the form <code class="docutils literal notranslate"><span class="pre">\&lt;number&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">\g&lt;number&gt;</span></code> can be used to
 expand to the corresponding group (or an empty string for unmatched groups).
 If <em>replace</em> is a function then it must take a single argument (the match)
 and should return a replacement string.</p>
 <p>If <em>count</em> is specified and non-zero then substitution will stop after
 this many substitutions are made.  The <em>flags</em> argument is ignored.</p>
-<p>Note: availability of this function depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+<p>Note: availability of this function depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="ure.DEBUG">
 <code class="descclassname">ure.</code><code class="descname">DEBUG</code><a class="headerlink" href="#ure.DEBUG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag value, display debug information about compiled expression.
-(Availability depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.)</p>
+(Availability depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.)</p>
 </dd></dl>
 
 </div>
 <div class="section" id="regex-objects">
 <span id="regex"></span><h2>Regex objects<a class="headerlink" href="#regex-objects" title="Permalink to this headline">¶</a></h2>
 <p>Compiled regular expression. Instances of this class are created using
-<a class="reference internal" href="#ure.compile" title="ure.compile"><code class="xref any py py-func docutils literal"><span class="pre">ure.compile()</span></code></a>.</p>
+<a class="reference internal" href="#ure.compile" title="ure.compile"><code class="xref any py py-func docutils literal notranslate"><span class="pre">ure.compile()</span></code></a>.</p>
 <dl class="method">
 <dt id="ure.regex.match">
 <code class="descclassname">regex.</code><code class="descname">match</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.regex.match" title="Permalink to this definition">¶</a></dt>
@@ -272,8 +293,8 @@ this many substitutions are made.  The <em>flags</em> argument is ignored.</p>
 <code class="descclassname">regex.</code><code class="descname">search</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.regex.search" title="Permalink to this definition">¶</a></dt>
 <dt id="ure.regex.sub">
 <code class="descclassname">regex.</code><code class="descname">sub</code><span class="sig-paren">(</span><em>replace</em>, <em>string</em>, <em>count=0</em>, <em>flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.regex.sub" title="Permalink to this definition">¶</a></dt>
-<dd><p>Similar to the module-level functions <a class="reference internal" href="#ure.match" title="ure.match"><code class="xref py py-meth docutils literal"><span class="pre">match()</span></code></a>, <a class="reference internal" href="#ure.search" title="ure.search"><code class="xref py py-meth docutils literal"><span class="pre">search()</span></code></a>
-and <a class="reference internal" href="#ure.sub" title="ure.sub"><code class="xref py py-meth docutils literal"><span class="pre">sub()</span></code></a>.
+<dd><p>Similar to the module-level functions <a class="reference internal" href="#ure.match" title="ure.match"><code class="xref py py-meth docutils literal notranslate"><span class="pre">match()</span></code></a>, <a class="reference internal" href="#ure.search" title="ure.search"><code class="xref py py-meth docutils literal notranslate"><span class="pre">search()</span></code></a>
+and <a class="reference internal" href="#ure.sub" title="ure.sub"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sub()</span></code></a>.
 Using methods is (much) more efficient if the same regex is applied to
 multiple strings.</p>
 </dd></dl>
@@ -283,14 +304,14 @@ multiple strings.</p>
 <code class="descclassname">regex.</code><code class="descname">split</code><span class="sig-paren">(</span><em>string</em>, <em>max_split=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.regex.split" title="Permalink to this definition">¶</a></dt>
 <dd><p>Split a <em>string</em> using regex. If <em>max_split</em> is given, it specifies
 maximum number of splits to perform. Returns list of strings (there
-may be up to <em>max_split+1</em> elements if it&#8217;s specified).</p>
+may be up to <em>max_split+1</em> elements if it’s specified).</p>
 </dd></dl>
 
 </div>
 <div class="section" id="match-objects">
 <h2>Match objects<a class="headerlink" href="#match-objects" title="Permalink to this headline">¶</a></h2>
-<p>Match objects as returned by <a class="reference internal" href="#ure.match" title="ure.match"><code class="xref any py py-func docutils literal"><span class="pre">match()</span></code></a> and <a class="reference internal" href="#ure.search" title="ure.search"><code class="xref any py py-func docutils literal"><span class="pre">search()</span></code></a> methods, and passed
-to the replacement function in <a class="reference internal" href="#ure.sub" title="ure.sub"><code class="xref any py py-func docutils literal"><span class="pre">sub()</span></code></a>.</p>
+<p>Match objects as returned by <a class="reference internal" href="#ure.match" title="ure.match"><code class="xref any py py-func docutils literal notranslate"><span class="pre">match()</span></code></a> and <a class="reference internal" href="#ure.search" title="ure.search"><code class="xref any py py-func docutils literal notranslate"><span class="pre">search()</span></code></a> methods, and passed
+to the replacement function in <a class="reference internal" href="#ure.sub" title="ure.sub"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sub()</span></code></a>.</p>
 <dl class="method">
 <dt id="ure.match.group">
 <code class="descclassname">match.</code><code class="descname">group</code><span class="sig-paren">(</span><span class="optional">[</span><em>index</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#ure.match.group" title="Permalink to this definition">¶</a></dt>
@@ -302,7 +323,7 @@ to the replacement function in <a class="reference internal" href="#ure.sub" tit
 <dt id="ure.match.groups">
 <code class="descclassname">match.</code><code class="descname">groups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ure.match.groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a tuple containing all the substrings of the groups of the match.</p>
-<p>Note: availability of this method depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+<p>Note: availability of this method depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -313,14 +334,14 @@ to the replacement function in <a class="reference internal" href="#ure.sub" tit
 <dd><p>Return the index in the original string of the start or end of the
 substring group that was matched.  <em>index</em> defaults to the entire
 group, otherwise it will select a group.</p>
-<p>Note: availability of these methods depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+<p>Note: availability of these methods depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="ure.match.span">
 <code class="descclassname">match.</code><code class="descname">span</code><span class="sig-paren">(</span><span class="optional">[</span><em>index</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#ure.match.span" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the 2-tuple <code class="docutils literal"><span class="pre">(match.start(index),</span> <span class="pre">match.end(index))</span></code>.</p>
-<p>Note: availability of this method depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+<dd><p>Returns the 2-tuple <code class="docutils literal notranslate"><span class="pre">(match.start(index),</span> <span class="pre">match.end(index))</span></code>.</p>
+<p>Note: availability of this method depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
 </dd></dl>
 
 </div>
@@ -328,15 +349,16 @@ group, otherwise it will select a group.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="uselect.html" class="btn btn-neutral float-right" title="uselect – wait for events on a set of streams" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="uselect.html" class="btn btn-neutral float-right" title="uselect – wait for events on a set of streams" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="uos.html" class="btn btn-neutral" title="uos – basic “operating system” services" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="uos.html" class="btn btn-neutral float-left" title="uos – basic “operating system” services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -345,12 +367,14 @@ group, otherwise it will select a group.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -428,35 +452,15 @@ group, otherwise it will select a group.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

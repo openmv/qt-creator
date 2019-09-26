@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="machine — functions related to the hardware" href="machine.html"/>
-        <link rel="next" title="class SPI – a Serial Peripheral Interface bus protocol (master side)" href="machine.SPI.html"/>
-        <link rel="prev" title="class Signal – control and sense external I/O devices" href="machine.Signal.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class SPI – a Serial Peripheral Interface bus protocol (master side)" href="machine.SPI.html" />
+    <link rel="prev" title="class Signal – control and sense external I/O devices" href="machine.Signal.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,15 +87,18 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal"><span class="pre">btree</span></code> &#8211; simple BTree database</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="machine.html"><code class="docutils literal"><span class="pre">machine</span></code> &#8212; functions related to the hardware</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="machine.html#reset-related-functions">Reset related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#interrupt-related-functions">Interrupt related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#power-related-functions">Power related functions</a></li>
@@ -106,9 +107,9 @@
 <li class="toctree-l4 current"><a class="reference internal" href="machine.html#classes">Classes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal"><span class="pre">micropython</span></code> &#8211; access and control MicroPython internals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal"><span class="pre">network</span></code> &#8212; network configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal"><span class="pre">uctypes</span></code> &#8211; access binary data in a structured way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a></li>
@@ -128,54 +129,74 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
-      
-          <li><a href="machine.html"><code class="docutils literal"><span class="pre">machine</span></code> &#8212; functions related to the hardware</a> &raquo;</li>
-      
-    <li>class UART &#8211; duplex serial communication bus</li>
+        
+          <li><a href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &raquo;</li>
+        
+      <li>class UART – duplex serial communication bus</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/machine.UART.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/machine.UART.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="class-uart-duplex-serial-communication-bus">
-<span id="machine-uart"></span><h1>class UART &#8211; duplex serial communication bus<a class="headerlink" href="#class-uart-duplex-serial-communication-bus" title="Permalink to this headline">¶</a></h1>
+<span id="machine-uart"></span><h1>class UART – duplex serial communication bus<a class="headerlink" href="#class-uart-duplex-serial-communication-bus" title="Permalink to this headline">¶</a></h1>
 <p>UART implements the standard UART/USART duplex serial communications protocol.  At
 the physical level it consists of 2 lines: RX and TX.  The unit of communication
 is a character (not to be confused with a string character) which can be 8 or 9
 bits wide.</p>
 <p>UART objects can be created and initialised using:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">UART</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="k">import</span> <span class="n">UART</span>
 
-<span class="n">uart</span> <span class="o">=</span> <span class="n">UART</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9600</span><span class="p">)</span>                         <span class="c"># init with given baudrate</span>
-<span class="n">uart</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">9600</span><span class="p">,</span> <span class="n">bits</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">parity</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c"># init with given parameters</span>
+<span class="n">uart</span> <span class="o">=</span> <span class="n">UART</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9600</span><span class="p">)</span>                         <span class="c1"># init with given baudrate</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">9600</span><span class="p">,</span> <span class="n">bits</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">parity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># init with given parameters</span>
 </pre></div>
 </div>
 <p>Supported parameters differ on a board:</p>
@@ -183,13 +204,13 @@ bits wide.</p>
 only 8 and 9 bits are supported.  With parity enabled, only 7 and 8 bits
 are supported.</p>
 <p>WiPy/CC3200: Bits can be 5, 6, 7, 8. Stop can be 1 or 2.</p>
-<p>A UART object acts like a <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal"><span class="pre">stream</span></code></a> object and reading and writing is done
+<p>A UART object acts like a <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a> object and reading and writing is done
 using the standard stream methods:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">uart</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>       <span class="c"># read 10 characters, returns a bytes object</span>
-<span class="n">uart</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>         <span class="c"># read all available characters</span>
-<span class="n">uart</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>     <span class="c"># read a line</span>
-<span class="n">uart</span><span class="o">.</span><span class="n">readinto</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>  <span class="c"># read and store into the given buffer</span>
-<span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;abc&#39;</span><span class="p">)</span>   <span class="c"># write the 3 characters</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">uart</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>       <span class="c1"># read 10 characters, returns a bytes object</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>         <span class="c1"># read all available characters</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>     <span class="c1"># read a line</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">readinto</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>  <span class="c1"># read and store into the given buffer</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>   <span class="c1"># write the 3 characters</span>
 </pre></div>
 </div>
 <div class="section" id="constructors">
@@ -217,7 +238,7 @@ blocking.  It will return 0 if there are no characters available and a positive
 number if there are characters.  The method may return 1 even if there is more
 than one character available for reading.</p>
 <p>For more sophisticated querying of available characters use select.poll:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">poll</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poll</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span>
 <span class="n">poll</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">uart</span><span class="p">,</span> <span class="n">select</span><span class="o">.</span><span class="n">POLLIN</span><span class="p">)</span>
 <span class="n">poll</span><span class="o">.</span><span class="n">poll</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
 </pre></div>
@@ -227,18 +248,18 @@ than one character available for reading.</p>
 <dl class="method">
 <dt id="machine.UART.read">
 <code class="descclassname">UART.</code><code class="descname">read</code><span class="sig-paren">(</span><span class="optional">[</span><em>nbytes</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.read" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read characters.  If <code class="docutils literal"><span class="pre">nbytes</span></code> is specified then read at most that many bytes,
+<dd><p>Read characters.  If <code class="docutils literal notranslate"><span class="pre">nbytes</span></code> is specified then read at most that many bytes,
 otherwise read as much data as possible.</p>
-<p>Return value: a bytes object containing the bytes read in.  Returns <code class="docutils literal"><span class="pre">None</span></code>
+<p>Return value: a bytes object containing the bytes read in.  Returns <code class="docutils literal notranslate"><span class="pre">None</span></code>
 on timeout.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="machine.UART.readinto">
 <code class="descclassname">UART.</code><code class="descname">readinto</code><span class="sig-paren">(</span><em>buf</em><span class="optional">[</span>, <em>nbytes</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.readinto" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read bytes into the <code class="docutils literal"><span class="pre">buf</span></code>.  If <code class="docutils literal"><span class="pre">nbytes</span></code> is specified then read at most
-that many bytes.  Otherwise, read at most <code class="docutils literal"><span class="pre">len(buf)</span></code> bytes.</p>
-<p>Return value: number of bytes read and stored into <code class="docutils literal"><span class="pre">buf</span></code> or <code class="docutils literal"><span class="pre">None</span></code> on
+<dd><p>Read bytes into the <code class="docutils literal notranslate"><span class="pre">buf</span></code>.  If <code class="docutils literal notranslate"><span class="pre">nbytes</span></code> is specified then read at most
+that many bytes.  Otherwise, read at most <code class="docutils literal notranslate"><span class="pre">len(buf)</span></code> bytes.</p>
+<p>Return value: number of bytes read and stored into <code class="docutils literal notranslate"><span class="pre">buf</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code> on
 timeout.</p>
 </dd></dl>
 
@@ -246,14 +267,14 @@ timeout.</p>
 <dt id="machine.UART.readline">
 <code class="descclassname">UART.</code><code class="descname">readline</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.readline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read a line, ending in a newline character.</p>
-<p>Return value: the line read or <code class="docutils literal"><span class="pre">None</span></code> on timeout.</p>
+<p>Return value: the line read or <code class="docutils literal notranslate"><span class="pre">None</span></code> on timeout.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="machine.UART.write">
 <code class="descclassname">UART.</code><code class="descname">write</code><span class="sig-paren">(</span><em>buf</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write the buffer of bytes to the bus.</p>
-<p>Return value: number of bytes written or <code class="docutils literal"><span class="pre">None</span></code> on timeout.</p>
+<p>Return value: number of bytes written or <code class="docutils literal notranslate"><span class="pre">None</span></code> on timeout.</p>
 </dd></dl>
 
 <dl class="method">
@@ -268,15 +289,16 @@ longer than required for a normal transmission of a character.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="machine.SPI.html" class="btn btn-neutral float-right" title="class SPI – a Serial Peripheral Interface bus protocol (master side)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="machine.SPI.html" class="btn btn-neutral float-right" title="class SPI – a Serial Peripheral Interface bus protocol (master side)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="machine.Signal.html" class="btn btn-neutral" title="class Signal – control and sense external I/O devices" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="machine.Signal.html" class="btn btn-neutral float-left" title="class Signal – control and sense external I/O devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -285,12 +307,14 @@ longer than required for a normal transmission of a character.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -368,35 +392,15 @@ longer than required for a normal transmission of a character.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../../index.html"/>
-        <link rel="up" title="6. I/O Tutorial" href="io_tutorial.html"/>
-        <link rel="next" title="7. System Architecture" href="system_architecture.html"/>
-        <link rel="prev" title="6.1.3. Analog IO" href="analog_io.html"/> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="7. System Architecture" href="system_architecture.html" />
+    <link rel="prev" title="6.1.3. Analog IO" href="analog_io.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../../_static/web-logo-sticky.png" class="logo" />
+            <img src="../../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">OpenMV Cam Tutorial</a><ul class="current">
@@ -103,7 +104,7 @@
 <li class="toctree-l4"><a class="reference internal" href="led_control.html">6.1.1. LED Control</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gpio_control.html">6.1.2. GPIO Control</a></li>
 <li class="toctree-l4"><a class="reference internal" href="analog_io.html">6.1.3. Analog IO</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">6.1.4. UART Control</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6.1.4. UART Control</a></li>
 </ul>
 </li>
 </ul>
@@ -127,38 +128,58 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">OpenMV Cam Tutorial</a> &raquo;</li>
-      
+        
           <li><a href="io_tutorial.html">6. I/O Tutorial</a> &raquo;</li>
-      
-    <li>6.1.4. UART Control</li>
+        
+      <li>6.1.4. UART Control</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/openmvcam/tutorial/uart_control.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/openmvcam/tutorial/uart_control.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -168,54 +189,55 @@
 <h1>6.1.4. UART Control<a class="headerlink" href="#uart-control" title="Permalink to this headline">¶</a></h1>
 <p>The OpenMV Cam has a main UART on pins P4 (TX) and P5 (RX) which you can use
 for serial communication. To create a UART object do the following:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pyb</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyb</span>
 
 <span class="n">uart</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">UART</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">115200</span><span class="p">,</span> <span class="n">timeout_char</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>First, let&#8217;s breakdown what we did. The first argument is the UART bus. This
+<p>First, let’s breakdown what we did. The first argument is the UART bus. This
 is the index of the UART bus on the OpenMV Cam. You have to call the UART
-constructor with this value because we&#8217;re leveraging the <a class="reference internal" href="../../library/pyb.html#module-pyb" title="pyb: functions related to the board"><code class="xref any py py-mod docutils literal"><span class="pre">pyb</span></code></a> module from
-MicroPython&#8217;s pyboard. The second value is the baudrate which can be any
+constructor with this value because we’re leveraging the <a class="reference internal" href="../../library/pyb.html#module-pyb" title="pyb: functions related to the board"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">pyb</span></code></a> module from
+MicroPython’s pyboard. The second value is the baudrate which can be any
 standard baudrate value you like. Finally, the third argument tells the driver
 to wait up to 1 second between sending chars if the UART is busy. The default
-value for <code class="docutils literal"><span class="pre">timeout_char</span></code> of 0 causes the driver to abadon sending characters
+value for <code class="docutils literal notranslate"><span class="pre">timeout_char</span></code> of 0 causes the driver to abadon sending characters
 if your code ever has to block waiting for space in the UART buffer which is
-something you don&#8217;t want (generally).</p>
-<p>Anyway, once you&#8217;ve got a UART object then sending data is easy. Just do:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;Hello World</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+something you don’t want (generally).</p>
+<p>Anyway, once you’ve got a UART object then sending data is easy. Just do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello World</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>And that&#8217;s it.</p>
-<p>But, if you&#8217;d like to send binary data instead, use the <a class="reference internal" href="../../library/ustruct.html#module-ustruct" title="ustruct: pack and unpack primitive data types"><code class="xref any py py-mod docutils literal"><span class="pre">ustruct</span></code></a> module. The
-<a class="reference internal" href="../../library/ustruct.html#module-ustruct" title="ustruct: pack and unpack primitive data types"><code class="xref any py py-mod docutils literal"><span class="pre">ustruct</span></code></a> module will let you serialize data easily. Here&#8217;s an example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">ustruct</span>
+<p>And that’s it.</p>
+<p>But, if you’d like to send binary data instead, use the <a class="reference internal" href="../../library/ustruct.html#module-ustruct" title="ustruct: pack and unpack primitive data types"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">ustruct</span></code></a> module. The
+<a class="reference internal" href="../../library/ustruct.html#module-ustruct" title="ustruct: pack and unpack primitive data types"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">ustruct</span></code></a> module will let you serialize data easily. Here’s an example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ustruct</span>
 
-<span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">ustruct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s">&quot;&lt;lhb&quot;</span><span class="p">,</span> <span class="n">a_32_bit_value</span><span class="p">,</span> <span class="n">a_16_bit_value</span><span class="p">,</span> <span class="n">a_8_bit_value</span><span class="p">))</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">ustruct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s2">&quot;&lt;lhb&quot;</span><span class="p">,</span> <span class="n">a_32_bit_value</span><span class="p">,</span> <span class="n">a_16_bit_value</span><span class="p">,</span> <span class="n">a_8_bit_value</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>The first string above tells ustruct how to pack data into a byte stream. &#8220;&lt;&#8221;
-means the data will be packed in little-endian format. &#8220;l&#8221; means pack a long,
-&#8220;h&#8221; means pack a short, and &#8220;b&#8221; means pack a byte. See the
+<p>The first string above tells ustruct how to pack data into a byte stream. “&lt;”
+means the data will be packed in little-endian format. “l” means pack a long,
+“h” means pack a short, and “b” means pack a byte. See the
 <a class="reference external" href="https://docs.python.org/3/library/struct.html">Python Struct Module</a> for
 more information.</p>
-<p>Now, if you&#8217;d like to receive data just use the <a class="reference internal" href="../../library/pyb.UART.html#pyb.UART.any" title="pyb.UART.any"><code class="xref any py py-meth docutils literal"><span class="pre">pyb.UART.any()</span></code></a> method along with
-the <a class="reference internal" href="../../library/pyb.UART.html#pyb.UART.read" title="pyb.UART.read"><code class="xref any py py-meth docutils literal"><span class="pre">pyb.UART.read()</span></code></a> method. Note that you&#8217;ll need to code up some sort of state
+<p>Now, if you’d like to receive data just use the <a class="reference internal" href="../../library/pyb.UART.html#pyb.UART.any" title="pyb.UART.any"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">pyb.UART.any()</span></code></a> method along with
+the <a class="reference internal" href="../../library/pyb.UART.html#pyb.UART.read" title="pyb.UART.read"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">pyb.UART.read()</span></code></a> method. Note that you’ll need to code up some sort of state
 machine to receive data reliability. For example, see the
-<code class="docutils literal"><span class="pre">Examples-&gt;Pixy</span> <span class="pre">Emulation-&gt;pixy_uart_emulation.py</span></code> example.</p>
+<code class="docutils literal notranslate"><span class="pre">Examples-&gt;Pixy</span> <span class="pre">Emulation-&gt;pixy_uart_emulation.py</span></code> example.</p>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="system_architecture.html" class="btn btn-neutral float-right" title="7. System Architecture" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="system_architecture.html" class="btn btn-neutral float-right" title="7. System Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="analog_io.html" class="btn btn-neutral" title="6.1.3. Analog IO" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="analog_io.html" class="btn btn-neutral float-left" title="6.1.3. Analog IO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -224,12 +246,14 @@ machine to receive data reliability. For example, see the
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -307,35 +331,15 @@ machine to receive data reliability. For example, see the
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

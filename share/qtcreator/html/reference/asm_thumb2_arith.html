@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="Inline Assembler for Thumb2 architectures" href="asm_thumb2_index.html"/>
-        <link rel="next" title="6. Comparison instructions" href="asm_thumb2_compare.html"/>
-        <link rel="prev" title="4. Logical &amp; Bitwise instructions" href="asm_thumb2_logical_bit.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Comparison instructions" href="asm_thumb2_compare.html" />
+    <link rel="prev" title="4. Logical &amp; Bitwise instructions" href="asm_thumb2_logical_bit.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -108,7 +109,7 @@
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_ldr.html">2. Load register from memory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_str.html">3. Store register to memory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_logical_bit.html">4. Logical &amp; Bitwise instructions</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">5. Arithmetic instructions</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">5. Arithmetic instructions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_compare.html">6. Comparison instructions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_label_branch.html">7. Branch instructions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="asm_thumb2_stack.html">8. Stack push and pop</a></li>
@@ -136,38 +137,58 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">The MicroPython language</a> &raquo;</li>
-      
+        
           <li><a href="asm_thumb2_index.html">Inline Assembler for Thumb2 architectures</a> &raquo;</li>
-      
-    <li>5. Arithmetic instructions</li>
+        
+      <li>5. Arithmetic instructions</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/reference/asm_thumb2_arith.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/reference/asm_thumb2_arith.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -177,9 +198,9 @@
 <h1>5. Arithmetic instructions<a class="headerlink" href="#arithmetic-instructions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="document-conventions">
 <h2>5.1. Document conventions<a class="headerlink" href="#document-conventions" title="Permalink to this headline">¶</a></h2>
-<p>Notation: <code class="docutils literal"><span class="pre">Rd,</span> <span class="pre">Rm,</span> <span class="pre">Rn</span></code> denote ARM registers R0-R7. <code class="docutils literal"><span class="pre">immN</span></code> denotes an immediate
-value having a width of N bits e.g. <code class="docutils literal"><span class="pre">imm8</span></code>, <code class="docutils literal"><span class="pre">imm3</span></code>. <code class="docutils literal"><span class="pre">carry</span></code> denotes
-the carry condition flag, <code class="docutils literal"><span class="pre">not(carry)</span></code> denotes its complement. In the case of instructions
+<p>Notation: <code class="docutils literal notranslate"><span class="pre">Rd,</span> <span class="pre">Rm,</span> <span class="pre">Rn</span></code> denote ARM registers R0-R7. <code class="docutils literal notranslate"><span class="pre">immN</span></code> denotes an immediate
+value having a width of N bits e.g. <code class="docutils literal notranslate"><span class="pre">imm8</span></code>, <code class="docutils literal notranslate"><span class="pre">imm3</span></code>. <code class="docutils literal notranslate"><span class="pre">carry</span></code> denotes
+the carry condition flag, <code class="docutils literal notranslate"><span class="pre">not(carry)</span></code> denotes its complement. In the case of instructions
 with more than one register argument, it is permissible for some to be identical. For example
 the following will add the contents of R0 to itself, placing the result in R0:</p>
 <ul class="simple">
@@ -190,37 +211,37 @@ the following will add the contents of R0 to itself, placing the result in R0:</
 <div class="section" id="addition">
 <h2>5.2. Addition<a class="headerlink" href="#addition" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>add(Rdn, imm8) <code class="docutils literal"><span class="pre">Rdn</span> <span class="pre">=</span> <span class="pre">Rdn</span> <span class="pre">+</span> <span class="pre">imm8</span></code></li>
-<li>add(Rd, Rn, imm3) <code class="docutils literal"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">+</span> <span class="pre">imm3</span></code></li>
-<li>add(Rd, Rn, Rm) <code class="docutils literal"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">+Rm</span></code></li>
-<li>adc(Rd, Rn) <code class="docutils literal"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rd</span> <span class="pre">+</span> <span class="pre">Rn</span> <span class="pre">+</span> <span class="pre">carry</span></code></li>
+<li>add(Rdn, imm8) <code class="docutils literal notranslate"><span class="pre">Rdn</span> <span class="pre">=</span> <span class="pre">Rdn</span> <span class="pre">+</span> <span class="pre">imm8</span></code></li>
+<li>add(Rd, Rn, imm3) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">+</span> <span class="pre">imm3</span></code></li>
+<li>add(Rd, Rn, Rm) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">+Rm</span></code></li>
+<li>adc(Rd, Rn) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rd</span> <span class="pre">+</span> <span class="pre">Rn</span> <span class="pre">+</span> <span class="pre">carry</span></code></li>
 </ul>
 </div>
 <div class="section" id="subtraction">
 <h2>5.3. Subtraction<a class="headerlink" href="#subtraction" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>sub(Rdn, imm8) <code class="docutils literal"><span class="pre">Rdn</span> <span class="pre">=</span> <span class="pre">Rdn</span> <span class="pre">-</span> <span class="pre">imm8</span></code></li>
-<li>sub(Rd, Rn, imm3) <code class="docutils literal"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">-</span> <span class="pre">imm3</span></code></li>
-<li>sub(Rd, Rn, Rm) <code class="docutils literal"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">-</span> <span class="pre">Rm</span></code></li>
-<li>sbc(Rd, Rn) <code class="docutils literal"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rd</span> <span class="pre">-</span> <span class="pre">Rn</span> <span class="pre">-</span> <span class="pre">not(carry)</span></code></li>
+<li>sub(Rdn, imm8) <code class="docutils literal notranslate"><span class="pre">Rdn</span> <span class="pre">=</span> <span class="pre">Rdn</span> <span class="pre">-</span> <span class="pre">imm8</span></code></li>
+<li>sub(Rd, Rn, imm3) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">-</span> <span class="pre">imm3</span></code></li>
+<li>sub(Rd, Rn, Rm) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">-</span> <span class="pre">Rm</span></code></li>
+<li>sbc(Rd, Rn) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rd</span> <span class="pre">-</span> <span class="pre">Rn</span> <span class="pre">-</span> <span class="pre">not(carry)</span></code></li>
 </ul>
 </div>
 <div class="section" id="negation">
 <h2>5.4. Negation<a class="headerlink" href="#negation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>neg(Rd, Rn) <code class="docutils literal"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">-Rn</span></code></li>
+<li>neg(Rd, Rn) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">-Rn</span></code></li>
 </ul>
 </div>
 <div class="section" id="multiplication-and-division">
 <h2>5.5. Multiplication and division<a class="headerlink" href="#multiplication-and-division" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>mul(Rd, Rn) <code class="docutils literal"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rd</span> <span class="pre">*</span> <span class="pre">Rn</span></code></li>
+<li>mul(Rd, Rn) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rd</span> <span class="pre">*</span> <span class="pre">Rn</span></code></li>
 </ul>
 <p>This produces a 32 bit result with overflow lost. The result may be treated as
 signed or unsigned according to the definition of the operands.</p>
 <ul class="simple">
-<li>sdiv(Rd, Rn, Rm) <code class="docutils literal"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">/</span> <span class="pre">Rm</span></code></li>
-<li>udiv(Rd, Rn, Rm) <code class="docutils literal"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">/</span> <span class="pre">Rm</span></code></li>
+<li>sdiv(Rd, Rn, Rm) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">/</span> <span class="pre">Rm</span></code></li>
+<li>udiv(Rd, Rn, Rm) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span> <span class="pre">/</span> <span class="pre">Rm</span></code></li>
 </ul>
 <p>These functions perform signed and unsigned division respectively. Condition flags
 are not affected.</p>
@@ -229,15 +250,16 @@ are not affected.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="asm_thumb2_compare.html" class="btn btn-neutral float-right" title="6. Comparison instructions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="asm_thumb2_compare.html" class="btn btn-neutral float-right" title="6. Comparison instructions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="asm_thumb2_logical_bit.html" class="btn btn-neutral" title="4. Logical &amp; Bitwise instructions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="asm_thumb2_logical_bit.html" class="btn btn-neutral float-left" title="4. Logical &amp; Bitwise instructions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -246,12 +268,14 @@ are not affected.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -329,35 +353,15 @@ are not affected.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

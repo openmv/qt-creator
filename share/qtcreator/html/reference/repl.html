@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="The MicroPython language" href="index.html"/>
-        <link rel="next" title="Writing interrupt handlers" href="isr_rules.html"/>
-        <link rel="prev" title="Glossary" href="glossary.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Writing interrupt handlers" href="isr_rules.html" />
+    <link rel="prev" title="Glossary" href="glossary.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,14 +87,17 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">MicroPython libraries</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">The MicroPython language</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossary</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">The MicroPython Interactive Interpreter Mode (aka REPL)</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">The MicroPython Interactive Interpreter Mode (aka REPL)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#auto-indent">Auto-indent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#auto-completion">Auto-completion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#interrupting-a-running-program">Interrupting a running program</a></li>
@@ -126,36 +127,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">The MicroPython language</a> &raquo;</li>
-      
-    <li>The MicroPython Interactive Interpreter Mode (aka REPL)</li>
+        
+      <li>The MicroPython Interactive Interpreter Mode (aka REPL)</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/reference/repl.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/reference/repl.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -169,37 +190,37 @@ which will be used to refer to this interactive prompt.</p>
 <div class="section" id="auto-indent">
 <h2>Auto-indent<a class="headerlink" href="#auto-indent" title="Permalink to this headline">¶</a></h2>
 <p>When typing python statements which end in a colon (for example if, for, while)
-then the prompt will change to three dots (...) and the cursor will be indented
+then the prompt will change to three dots (…) and the cursor will be indented
 by 4 spaces. When you press return, the next line will continue at the same
 level of indentation for regular statements or an additional level of indentation
 where appropriate. If you press the backspace key then it will undo one
 level of indentation.</p>
 <p>If your cursor is all the way back at the beginning, pressing RETURN will then
-execute the code that you&#8217;ve entered. The following shows what you&#8217;d see
+execute the code that you’ve entered. The following shows what you’d see
 after entering a for statement (the underscore shows where the cursor winds up):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="n">_</span>
 </pre></div>
 </div>
 <p>If you then enter an if statement, an additional level of indentation will be
 provided:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
 <span class="gp">... </span>        <span class="n">_</span>
 </pre></div>
 </div>
-<p>Now enter <code class="docutils literal"><span class="pre">break</span></code> followed by RETURN and press BACKSPACE:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
+<p>Now enter <code class="docutils literal notranslate"><span class="pre">break</span></code> followed by RETURN and press BACKSPACE:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
 <span class="gp">... </span>        <span class="k">break</span>
 <span class="gp">... </span>    <span class="n">_</span>
 </pre></div>
 </div>
-<p>Finally type <code class="docutils literal"><span class="pre">print(i)</span></code>, press RETURN, press BACKSPACE and press RETURN again:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
+<p>Finally type <code class="docutils literal notranslate"><span class="pre">print(i)</span></code>, press RETURN, press BACKSPACE and press RETURN again:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
 <span class="gp">... </span>        <span class="k">break</span>
-<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="gp">...</span>
 <span class="go">0</span>
 <span class="go">1</span>
@@ -208,7 +229,7 @@ provided:</p>
 <span class="go">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
-<p>Auto-indent won&#8217;t be applied if the previous two lines were all spaces.  This
+<p>Auto-indent won’t be applied if the previous two lines were all spaces.  This
 means that you can finish entering a compound statement by pressing RETURN
 twice, and then a third press will finish and execute.</p>
 </div>
@@ -217,10 +238,10 @@ twice, and then a third press will finish and execute.</p>
 <p>While typing a command at the REPL, if the line typed so far corresponds to
 the beginning of the name of something, then pressing TAB will show
 possible things that could be entered. For example, first import the machine
-module by entering <code class="docutils literal"><span class="pre">import</span> <span class="pre">machine</span></code> and pressing RETURN.
-Then type <code class="docutils literal"><span class="pre">m</span></code> and press TAB and it should expand to <code class="docutils literal"><span class="pre">machine</span></code>.
-Enter a dot <code class="docutils literal"><span class="pre">.</span></code> and press TAB again. You should see something like:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">machine</span><span class="o">.</span>
+module by entering <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">machine</span></code> and pressing RETURN.
+Then type <code class="docutils literal notranslate"><span class="pre">m</span></code> and press TAB and it should expand to <code class="docutils literal notranslate"><span class="pre">machine</span></code>.
+Enter a dot <code class="docutils literal notranslate"><span class="pre">.</span></code> and press TAB again. You should see something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">machine</span><span class="o">.</span>
 <span class="go">__name__        info            unique_id       reset</span>
 <span class="go">bootloader      freq            rng             idle</span>
 <span class="go">sleep           deepsleep       disable_irq     enable_irq</span>
@@ -228,10 +249,10 @@ Enter a dot <code class="docutils literal"><span class="pre">.</span></code> and
 </pre></div>
 </div>
 <p>The word will be expanded as much as possible until multiple possibilities exist.
-For example, type <code class="docutils literal"><span class="pre">machine.Pin.AF3</span></code> and press TAB and it will expand to
-<code class="docutils literal"><span class="pre">machine.Pin.AF3_TIM</span></code>. Pressing TAB a second time will show the possible
+For example, type <code class="docutils literal notranslate"><span class="pre">machine.Pin.AF3</span></code> and press TAB and it will expand to
+<code class="docutils literal notranslate"><span class="pre">machine.Pin.AF3_TIM</span></code>. Pressing TAB a second time will show the possible
 expansions:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="o">.</span><span class="n">AF3_TIM</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="o">.</span><span class="n">AF3_TIM</span>
 <span class="go">AF3_TIM10       AF3_TIM11       AF3_TIM8        AF3_TIM9</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="o">.</span><span class="n">AF3_TIM</span>
 </pre></div>
@@ -240,11 +261,11 @@ expansions:</p>
 <div class="section" id="interrupting-a-running-program">
 <h2>Interrupting a running program<a class="headerlink" href="#interrupting-a-running-program" title="Permalink to this headline">¶</a></h2>
 <p>You can interrupt a running program by pressing Ctrl-C. This will raise a KeyboardInterrupt
-which will bring you back to the REPL, providing your program doesn&#8217;t intercept the
+which will bring you back to the REPL, providing your program doesn’t intercept the
 KeyboardInterrupt exception.</p>
 <p>For example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="gp">...</span>
 <span class="go">0</span>
 <span class="go">1</span>
@@ -265,17 +286,17 @@ KeyboardInterrupt exception.</p>
 <h2>Paste Mode<a class="headerlink" href="#paste-mode" title="Permalink to this headline">¶</a></h2>
 <p>If you want to paste some code into your terminal window, the auto-indent feature
 will mess things up. For example, if you had the following python code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;This is a test to show paste mode&#39;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Here is a second line&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is a test to show paste mode&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Here is a second line&#39;</span><span class="p">)</span>
 <span class="n">foo</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>and you try to paste this into the normal REPL, then you will see something like
 this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-<span class="gp">... </span>        <span class="k">print</span><span class="p">(</span><span class="s">&#39;This is a test to show paste mode&#39;</span><span class="p">)</span>
-<span class="gp">... </span>            <span class="k">print</span><span class="p">(</span><span class="s">&#39;Here is a second line&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is a test to show paste mode&#39;</span><span class="p">)</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Here is a second line&#39;</span><span class="p">)</span>
 <span class="gp">... </span>            <span class="n">foo</span><span class="p">()</span>
 <span class="gp">...</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">3</span>
@@ -283,8 +304,8 @@ this:</p>
 </pre></div>
 </div>
 <p>If you press Ctrl-E, then you will enter paste mode, which essentially turns off
-the auto-indent feature, and changes the prompt from <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code> to <code class="docutils literal"><span class="pre">===</span></code>. For example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="go">&gt;&gt;&gt;</span>
+the auto-indent feature, and changes the prompt from <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">===</span></code>. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
 <span class="go">paste mode; Ctrl-C to cancel, Ctrl-D to finish</span>
 <span class="go">=== def foo():</span>
 <span class="go">===     print(&#39;This is a test to show paste mode&#39;)</span>
@@ -302,35 +323,35 @@ it were a file. Pressing Ctrl-D exits paste mode and initiates the compilation.<
 <div class="section" id="soft-reset">
 <h2>Soft Reset<a class="headerlink" href="#soft-reset" title="Permalink to this headline">¶</a></h2>
 <p>A soft reset will reset the python interpreter, but tries not to reset the
-method by which you&#8217;re connected to the MicroPython board (USB-serial, or Wifi).</p>
+method by which you’re connected to the MicroPython board (USB-serial, or Wifi).</p>
 <p>You can perform a soft reset from the REPL by pressing Ctrl-D, or from your python
 code by executing:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">machine</span><span class="o">.</span><span class="n">soft_reset</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">machine</span><span class="o">.</span><span class="n">soft_reset</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>For example, if you reset your MicroPython board, and you execute a dir()
-command, you&#8217;d see something like this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">()</span>
+command, you’d see something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">()</span>
 <span class="go">[&#39;__name__&#39;, &#39;pyb&#39;]</span>
 </pre></div>
 </div>
 <p>Now create some variables and repeat the dir() command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">j</span> <span class="o">=</span> <span class="mi">23</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;abc&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">()</span>
 <span class="go">[&#39;j&#39;, &#39;x&#39;, &#39;__name__&#39;, &#39;pyb&#39;, &#39;i&#39;]</span>
 <span class="go">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
-<p>Now if you enter Ctrl-D, and repeat the dir() command, you&#8217;ll see that your
+<p>Now if you enter Ctrl-D, and repeat the dir() command, you’ll see that your
 variables no longer exist:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">PYB</span><span class="p">:</span> <span class="n">sync</span> <span class="n">filesystems</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PYB</span><span class="p">:</span> <span class="n">sync</span> <span class="n">filesystems</span>
 <span class="n">PYB</span><span class="p">:</span> <span class="n">soft</span> <span class="n">reboot</span>
 <span class="n">MicroPython</span> <span class="n">v1</span><span class="o">.</span><span class="mi">5</span><span class="o">-</span><span class="mi">51</span><span class="o">-</span><span class="n">g6f70283</span><span class="o">-</span><span class="n">dirty</span> <span class="n">on</span> <span class="mi">2015</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">30</span><span class="p">;</span> <span class="n">PYBv1</span><span class="o">.</span><span class="mi">0</span> <span class="k">with</span> <span class="n">STM32F405RG</span>
-<span class="n">Type</span> <span class="s">&quot;help()&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="n">Type</span> <span class="s2">&quot;help()&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">()</span>
-<span class="p">[</span><span class="s">&#39;__name__&#39;</span><span class="p">,</span> <span class="s">&#39;pyb&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;__name__&#39;</span><span class="p">,</span> <span class="s1">&#39;pyb&#39;</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
@@ -340,7 +361,7 @@ variables no longer exist:</p>
 <p>When you use the REPL, you may perform computations and see the results.
 MicroPython stores the results of the previous statement in the variable _ (underscore).
 So you can use the underscore to save the result in a variable. For example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span>
 <span class="go">15</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">_</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
@@ -354,25 +375,26 @@ So you can use the underscore to save the result in a variable. For example:</p>
 <p>Raw mode is not something that a person would normally use. It is intended for
 programmatic use. It essentially behaves like paste mode with echo turned off.</p>
 <p>Raw mode is entered using Ctrl-A. You then send your python code, followed by
-a Ctrl-D. The Ctrl-D will be acknowledged by &#8216;OK&#8217; and then the python code will
+a Ctrl-D. The Ctrl-D will be acknowledged by ‘OK’ and then the python code will
 be compiled and executed. Any output (or errors) will be sent back. Entering
 Ctrl-B will leave raw mode and return the the regular (aka friendly) REPL.</p>
-<p>The <code class="docutils literal"><span class="pre">tools/pyboard.py</span></code> program uses the raw REPL to execute python files on the
+<p>The <code class="docutils literal notranslate"><span class="pre">tools/pyboard.py</span></code> program uses the raw REPL to execute python files on the
 MicroPython board.</p>
 </div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="isr_rules.html" class="btn btn-neutral float-right" title="Writing interrupt handlers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="isr_rules.html" class="btn btn-neutral float-right" title="Writing interrupt handlers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="glossary.html" class="btn btn-neutral" title="Glossary" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="glossary.html" class="btn btn-neutral float-left" title="Glossary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -381,12 +403,14 @@ MicroPython board.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -464,35 +488,15 @@ MicroPython board.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

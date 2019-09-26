@@ -15,40 +15,39 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -57,7 +56,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -86,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -105,45 +107,65 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>class USB_HID &#8211; USB Human Interface Device (HID)</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>class USB_HID – USB Human Interface Device (HID)</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/pyb.USB_HID.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/pyb.USB_HID.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="class-usb-hid-usb-human-interface-device-hid">
-<span id="pyb-usb-hid"></span><h1>class USB_HID &#8211; USB Human Interface Device (HID)<a class="headerlink" href="#class-usb-hid-usb-human-interface-device-hid" title="Permalink to this headline">¶</a></h1>
+<span id="pyb-usb-hid"></span><h1>class USB_HID – USB Human Interface Device (HID)<a class="headerlink" href="#class-usb-hid-usb-human-interface-device-hid" title="Permalink to this headline">¶</a></h1>
 <p>The USB_HID class allows creation of an object representing the USB
 Human Interface Device (HID) interface.  It can be used to emulate
 a peripheral such as a mouse or keyboard.</p>
-<p>Before you can use this class, you need to use <code class="xref py py-meth docutils literal"><span class="pre">pyb.usb_mode()</span></code> to set the USB mode to include the HID interface.</p>
+<p>Before you can use this class, you need to use <code class="xref py py-meth docutils literal notranslate"><span class="pre">pyb.usb_mode()</span></code> to set the USB mode to include the HID interface.</p>
 <div class="section" id="constructors">
 <h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
@@ -161,13 +183,13 @@ a peripheral such as a mouse or keyboard.</p>
 <dd><p>Receive data on the bus:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">data</span></code> can be an integer, which is the number of bytes to receive,
+<li><code class="docutils literal notranslate"><span class="pre">data</span></code> can be an integer, which is the number of bytes to receive,
 or a mutable buffer, which will be filled with received bytes.</li>
-<li><code class="docutils literal"><span class="pre">timeout</span></code> is the timeout in milliseconds to wait for the receive.</li>
+<li><code class="docutils literal notranslate"><span class="pre">timeout</span></code> is the timeout in milliseconds to wait for the receive.</li>
 </ul>
 </div></blockquote>
-<p>Return value: if <code class="docutils literal"><span class="pre">data</span></code> is an integer then a new buffer of the bytes received,
-otherwise the number of bytes read into <code class="docutils literal"><span class="pre">data</span></code> is returned.</p>
+<p>Return value: if <code class="docutils literal notranslate"><span class="pre">data</span></code> is an integer then a new buffer of the bytes received,
+otherwise the number of bytes read into <code class="docutils literal notranslate"><span class="pre">data</span></code> is returned.</p>
 </dd></dl>
 
 <dl class="method">
@@ -176,7 +198,7 @@ otherwise the number of bytes read into <code class="docutils literal"><span cla
 <dd><p>Send data over the USB HID interface:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">data</span></code> is the data to send (a tuple/list of integers, or a
+<li><code class="docutils literal notranslate"><span class="pre">data</span></code> is the data to send (a tuple/list of integers, or a
 bytearray).</li>
 </ul>
 </div></blockquote>
@@ -187,6 +209,7 @@ bytearray).</li>
 
 
            </div>
+           
           </div>
           <footer>
   
@@ -195,12 +218,14 @@ bytearray).</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -278,35 +303,15 @@ bytearray).</li>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

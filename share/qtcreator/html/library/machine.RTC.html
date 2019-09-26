@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="machine — functions related to the hardware" href="machine.html"/>
-        <link rel="next" title="class Timer – control hardware timers" href="machine.Timer.html"/>
-        <link rel="prev" title="class I2C – a two-wire serial protocol" href="machine.I2C.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class Timer – control hardware timers" href="machine.Timer.html" />
+    <link rel="prev" title="class I2C – a two-wire serial protocol" href="machine.I2C.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,15 +87,18 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal"><span class="pre">btree</span></code> &#8211; simple BTree database</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="machine.html"><code class="docutils literal"><span class="pre">machine</span></code> &#8212; functions related to the hardware</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="machine.html#reset-related-functions">Reset related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#interrupt-related-functions">Interrupt related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#power-related-functions">Power related functions</a></li>
@@ -106,9 +107,9 @@
 <li class="toctree-l4 current"><a class="reference internal" href="machine.html#classes">Classes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal"><span class="pre">micropython</span></code> &#8211; access and control MicroPython internals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal"><span class="pre">network</span></code> &#8212; network configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal"><span class="pre">uctypes</span></code> &#8211; access binary data in a structured way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a></li>
@@ -128,51 +129,71 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
-      
-          <li><a href="machine.html"><code class="docutils literal"><span class="pre">machine</span></code> &#8212; functions related to the hardware</a> &raquo;</li>
-      
-    <li>class RTC &#8211; real time clock</li>
+        
+          <li><a href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &raquo;</li>
+        
+      <li>class RTC – real time clock</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/machine.RTC.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/machine.RTC.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="class-rtc-real-time-clock">
-<span id="machine-rtc"></span><h1>class RTC &#8211; real time clock<a class="headerlink" href="#class-rtc-real-time-clock" title="Permalink to this headline">¶</a></h1>
+<span id="machine-rtc"></span><h1>class RTC – real time clock<a class="headerlink" href="#class-rtc-real-time-clock" title="Permalink to this headline">¶</a></h1>
 <p>The RTC is and independent clock that keeps track of the date
 and time.</p>
 <p>Example usage:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">rtc</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">RTC</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rtc</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">RTC</span><span class="p">()</span>
 <span class="n">rtc</span><span class="o">.</span><span class="n">init</span><span class="p">((</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">rtc</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rtc</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
 </pre></div>
 </div>
 <div class="section" id="constructors">
@@ -191,7 +212,7 @@ and time.</p>
 <code class="descclassname">RTC.</code><code class="descname">init</code><span class="sig-paren">(</span><em>datetime</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC.init" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialise the RTC. Datetime is a tuple of the form:</p>
 <blockquote>
-<div><code class="docutils literal"><span class="pre">(year,</span> <span class="pre">month,</span> <span class="pre">day[,</span> <span class="pre">hour[,</span> <span class="pre">minute[,</span> <span class="pre">second[,</span> <span class="pre">microsecond[,</span> <span class="pre">tzinfo]]]]])</span></code></div></blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">(year,</span> <span class="pre">month,</span> <span class="pre">day[,</span> <span class="pre">hour[,</span> <span class="pre">minute[,</span> <span class="pre">second[,</span> <span class="pre">microsecond[,</span> <span class="pre">tzinfo]]]]])</span></code></div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -211,7 +232,7 @@ and time.</p>
 <code class="descclassname">RTC.</code><code class="descname">alarm</code><span class="sig-paren">(</span><em>id</em>, <em>time</em>, <em>*</em>, <em>repeat=False</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC.alarm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the RTC alarm. Time might be either a millisecond value to program the alarm to
 current time + time_in_ms in the future, or a datetimetuple. If the time passed is in
-milliseconds, repeat can be set to <code class="docutils literal"><span class="pre">True</span></code> to make the alarm periodic.</p>
+milliseconds, repeat can be set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to make the alarm periodic.</p>
 </dd></dl>
 
 <dl class="method">
@@ -232,9 +253,9 @@ milliseconds, repeat can be set to <code class="docutils literal"><span class="p
 <dd><p>Create an irq object triggered by a real time clock alarm.</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">trigger</span></code> must be <code class="docutils literal"><span class="pre">RTC.ALARM0</span></code></li>
-<li><code class="docutils literal"><span class="pre">handler</span></code> is the function to be called when the callback is triggered.</li>
-<li><code class="docutils literal"><span class="pre">wake</span></code> specifies the sleep mode from where this interrupt can wake
+<li><code class="docutils literal notranslate"><span class="pre">trigger</span></code> must be <code class="docutils literal notranslate"><span class="pre">RTC.ALARM0</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">handler</span></code> is the function to be called when the callback is triggered.</li>
+<li><code class="docutils literal notranslate"><span class="pre">wake</span></code> specifies the sleep mode from where this interrupt can wake
 up the system.</li>
 </ul>
 </div></blockquote>
@@ -254,15 +275,16 @@ up the system.</li>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="machine.Timer.html" class="btn btn-neutral float-right" title="class Timer – control hardware timers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="machine.Timer.html" class="btn btn-neutral float-right" title="class Timer – control hardware timers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="machine.I2C.html" class="btn btn-neutral" title="class I2C – a two-wire serial protocol" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="machine.I2C.html" class="btn btn-neutral float-left" title="class I2C – a two-wire serial protocol" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -271,12 +293,14 @@ up the system.</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -354,35 +378,15 @@ up the system.</li>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

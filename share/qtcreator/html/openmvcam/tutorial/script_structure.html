@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../../index.html"/>
-        <link rel="up" title="OpenMV Cam Tutorial" href="index.html"/>
-        <link rel="next" title="6. I/O Tutorial" href="io_tutorial.html"/>
-        <link rel="prev" title="4. OpenMV IDE Overview" href="openmvide_overview.html"/> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6. I/O Tutorial" href="io_tutorial.html" />
+    <link rel="prev" title="4. OpenMV IDE Overview" href="openmvide_overview.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../../_static/web-logo-sticky.png" class="logo" />
+            <img src="../../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">OpenMV Cam Tutorial</a><ul class="current">
@@ -97,7 +98,7 @@
 <li class="toctree-l2"><a class="reference internal" href="software_setup.html">2. Software Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hardware_setup.html">3. Hardware Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="openmvide_overview.html">4. OpenMV IDE Overview</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5. Script Structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5. Script Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io_tutorial.html">6. I/O Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="system_architecture.html">7. System Architecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="more_information.html">8. More Information</a></li>
@@ -118,36 +119,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">OpenMV Cam Tutorial</a> &raquo;</li>
-      
-    <li>5. Script Structure</li>
+        
+      <li>5. Script Structure</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/openmvcam/tutorial/script_structure.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/openmvcam/tutorial/script_structure.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -155,56 +176,56 @@
             
   <div class="section" id="script-structure">
 <h1>5. Script Structure<a class="headerlink" href="#script-structure" title="Permalink to this headline">¶</a></h1>
-<p>Let&#8217;s learn how to program your OpenMV Cam now! Note that this tuturial assumes
-you know how the python language works. If you don&#8217;t know how python works
+<p>Let’s learn how to program your OpenMV Cam now! Note that this tuturial assumes
+you know how the python language works. If you don’t know how python works
 please study up on it. There are plenty of web tuturials about how to write
 python code (finally, if you know any other C like programming language you can
-pick up python easily since it&#8217;s VERY similar).</p>
+pick up python easily since it’s VERY similar).</p>
 <p>Anyway, any script you write is going to have three distinct parts:</p>
-<div class="highlight-python"><div class="highlight"><pre>import ...
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">...</span>
 
-...
+<span class="o">...</span>
 
-one time setup ...
+<span class="n">one</span> <span class="n">time</span> <span class="n">setup</span> <span class="o">...</span>
 
-...
+<span class="o">...</span>
 
-while(True): # Loop
-    ...
+<span class="k">while</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span> <span class="c1"># Loop</span>
+    <span class="o">...</span>
 </pre></div>
 </div>
 <p>The first part of your OpenMV Cam code should include some header comments,
 import statements to bring modules into scope, and finally constants and global
 variables in your code.</p>
-<p>Next, you&#8217;re going to want to do one-time setup code. This includes things like
+<p>Next, you’re going to want to do one-time setup code. This includes things like
 creating I/O pin objects, setting up the camera, defining helper functions,
 etc.</p>
-<p>Finally, you&#8217;ll create a <code class="docutils literal"><span class="pre">while(True):</span></code> loop under which you&#8217;ll put all code
+<p>Finally, you’ll create a <code class="docutils literal notranslate"><span class="pre">while(True):</span></code> loop under which you’ll put all code
 that gets called in a loop repeatedly until power-off.</p>
-<p>Here&#8217;s an example of this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">### Header comments, import statements, etc.</span>
+<p>Here’s an example of this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### Header comments, import statements, etc.</span>
 
-<span class="c"># Hello World Example</span>
-<span class="c">#</span>
-<span class="c"># Welcome to the OpenMV IDE! Click on the green run arrow button below to run the script!</span>
+<span class="c1"># Hello World Example</span>
+<span class="c1">#</span>
+<span class="c1"># Welcome to the OpenMV IDE! Click on the green run arrow button below to run the script!</span>
 
 <span class="kn">import</span> <span class="nn">sensor</span><span class="o">,</span> <span class="nn">image</span><span class="o">,</span> <span class="nn">time</span>
 
-<span class="c">### One time setup</span>
+<span class="c1">### One time setup</span>
 
-<span class="n">sensor</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>                      <span class="c"># Reset and initialize the sensor.</span>
-<span class="n">sensor</span><span class="o">.</span><span class="n">set_pixformat</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">RGB565</span><span class="p">)</span> <span class="c"># Set pixel format to RGB565 (or GRAYSCALE)</span>
-<span class="n">sensor</span><span class="o">.</span><span class="n">set_framesize</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">QVGA</span><span class="p">)</span>   <span class="c"># Set frame size to QVGA (320x240)</span>
-<span class="n">sensor</span><span class="o">.</span><span class="n">skip_frames</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">)</span>     <span class="c"># Wait for settings take effect.</span>
-<span class="n">clock</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">()</span>                <span class="c"># Create a clock object to track the FPS.</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>                      <span class="c1"># Reset and initialize the sensor.</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">set_pixformat</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">RGB565</span><span class="p">)</span> <span class="c1"># Set pixel format to RGB565 (or GRAYSCALE)</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">set_framesize</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">QVGA</span><span class="p">)</span>   <span class="c1"># Set frame size to QVGA (320x240)</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">skip_frames</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">)</span>     <span class="c1"># Wait for settings take effect.</span>
+<span class="n">clock</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">()</span>                <span class="c1"># Create a clock object to track the FPS.</span>
 
-<span class="c">### Infinite loop</span>
+<span class="c1">### Infinite loop</span>
 
-<span class="k">while</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
-    <span class="n">clock</span><span class="o">.</span><span class="n">tick</span><span class="p">()</span>                    <span class="c"># Update the FPS clock.</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">sensor</span><span class="o">.</span><span class="n">snapshot</span><span class="p">()</span>         <span class="c"># Take a picture and return the image.</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">clock</span><span class="o">.</span><span class="n">fps</span><span class="p">())</span>              <span class="c"># Note: OpenMV Cam runs about half as fast when connected</span>
-                                    <span class="c"># to the IDE. The FPS should increase once disconnected.</span>
+<span class="k">while</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">clock</span><span class="o">.</span><span class="n">tick</span><span class="p">()</span>                    <span class="c1"># Update the FPS clock.</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">sensor</span><span class="o">.</span><span class="n">snapshot</span><span class="p">()</span>         <span class="c1"># Take a picture and return the image.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">clock</span><span class="o">.</span><span class="n">fps</span><span class="p">())</span>              <span class="c1"># Note: OpenMV Cam runs about half as fast when connected</span>
+                                    <span class="c1"># to the IDE. The FPS should increase once disconnected.</span>
 </pre></div>
 </div>
 <p>Note that if you do not have an infinite while loop in your code then once your
@@ -213,15 +234,16 @@ OpenMV Cam finishes running the script it will sit there and do nothing.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="io_tutorial.html" class="btn btn-neutral float-right" title="6. I/O Tutorial" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="io_tutorial.html" class="btn btn-neutral float-right" title="6. I/O Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="openmvide_overview.html" class="btn btn-neutral" title="4. OpenMV IDE Overview" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="openmvide_overview.html" class="btn btn-neutral float-left" title="4. OpenMV IDE Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -230,12 +252,14 @@ OpenMV Cam finishes running the script it will sit there and do nothing.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -313,35 +337,15 @@ OpenMV Cam finishes running the script it will sit there and do nothing.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

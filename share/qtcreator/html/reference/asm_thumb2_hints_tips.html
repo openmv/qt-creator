@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="Inline Assembler for Thumb2 architectures" href="asm_thumb2_index.html"/>
-        <link rel="next" title="MicroPython differences from CPython" href="../genrst/index.html"/>
-        <link rel="prev" title="11. Assembler Directives" href="asm_thumb2_directives.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MicroPython differences from CPython" href="../genrst/index.html" />
+    <link rel="prev" title="11. Assembler Directives" href="asm_thumb2_directives.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -105,7 +106,7 @@
 <li class="toctree-l3"><a class="reference internal" href="asm_thumb2_index.html#document-conventions">Document conventions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="asm_thumb2_index.html#instruction-categories">Instruction Categories</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="asm_thumb2_index.html#usage-examples">Usage examples</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="">1. Hints and tips</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1. Hints and tips</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="asm_thumb2_index.html#references">References</a></li>
@@ -126,38 +127,58 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">The MicroPython language</a> &raquo;</li>
-      
+        
           <li><a href="asm_thumb2_index.html">Inline Assembler for Thumb2 architectures</a> &raquo;</li>
-      
-    <li>1. Hints and tips</li>
+        
+      <li>1. Hints and tips</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/reference/asm_thumb2_hints_tips.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/reference/asm_thumb2_hints_tips.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -167,26 +188,26 @@
 <h1>1. Hints and tips<a class="headerlink" href="#hints-and-tips" title="Permalink to this headline">¶</a></h1>
 <p>The following are some examples of the use of the inline assembler and some
 information on how to work around its limitations. In this document the term
-&#8220;assembler function&#8221; refers to a function declared in Python with the
-<code class="docutils literal"><span class="pre">&#64;micropython.asm_thumb</span></code> decorator, whereas &#8220;subroutine&#8221; refers to assembler
+“assembler function” refers to a function declared in Python with the
+<code class="docutils literal notranslate"><span class="pre">&#64;micropython.asm_thumb</span></code> decorator, whereas “subroutine” refers to assembler
 code called from within an assembler function.</p>
 <div class="section" id="code-branches-and-subroutines">
 <h2>1.1. Code branches and subroutines<a class="headerlink" href="#code-branches-and-subroutines" title="Permalink to this headline">¶</a></h2>
 <p>It is important to appreciate that labels are local to an assembler function.
 There is currently no way for a subroutine defined in one function to be called
 from another.</p>
-<p>To call a subroutine the instruction <code class="docutils literal"><span class="pre">bl(LABEL)</span></code> is issued. This transfers
-control to the instruction following the <code class="docutils literal"><span class="pre">label(LABEL)</span></code> directive and stores
-the return address in the link register (<code class="docutils literal"><span class="pre">lr</span></code> or <code class="docutils literal"><span class="pre">r14</span></code>). To return the
-instruction <code class="docutils literal"><span class="pre">bx(lr)</span></code> is issued which causes execution to continue with
+<p>To call a subroutine the instruction <code class="docutils literal notranslate"><span class="pre">bl(LABEL)</span></code> is issued. This transfers
+control to the instruction following the <code class="docutils literal notranslate"><span class="pre">label(LABEL)</span></code> directive and stores
+the return address in the link register (<code class="docutils literal notranslate"><span class="pre">lr</span></code> or <code class="docutils literal notranslate"><span class="pre">r14</span></code>). To return the
+instruction <code class="docutils literal notranslate"><span class="pre">bx(lr)</span></code> is issued which causes execution to continue with
 the instruction following the subroutine call. This mechanism implies that, if
 a subroutine is to call another, it must save the link register prior to
 the call and restore it before terminating.</p>
 <p>The following rather contrived example illustrates a function call. Note that
-it&#8217;s necessary at the start to branch around all subroutine calls: subroutines
-end execution with <code class="docutils literal"><span class="pre">bx(lr)</span></code> while the outer function simply &#8220;drops off the end&#8221;
+it’s necessary at the start to branch around all subroutine calls: subroutines
+end execution with <code class="docutils literal notranslate"><span class="pre">bx(lr)</span></code> while the outer function simply “drops off the end”
 in the style of Python functions.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="nd">@micropython.asm_thumb</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@micropython</span><span class="o">.</span><span class="n">asm_thumb</span>
 <span class="k">def</span> <span class="nf">quad</span><span class="p">(</span><span class="n">r0</span><span class="p">):</span>
     <span class="n">b</span><span class="p">(</span><span class="n">START</span><span class="p">)</span>
     <span class="n">label</span><span class="p">(</span><span class="n">DOUBLE</span><span class="p">)</span>
@@ -196,13 +217,13 @@ in the style of Python functions.</p>
     <span class="n">bl</span><span class="p">(</span><span class="n">DOUBLE</span><span class="p">)</span>
     <span class="n">bl</span><span class="p">(</span><span class="n">DOUBLE</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">quad</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quad</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>The following code example demonstrates a nested (recursive) call: the classic
 Fibonacci sequence. Here, prior to a recursive call, the link register is saved
 along with other registers which the program logic requires to be preserved.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="nd">@micropython.asm_thumb</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@micropython</span><span class="o">.</span><span class="n">asm_thumb</span>
 <span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">r0</span><span class="p">):</span>
     <span class="n">b</span><span class="p">(</span><span class="n">START</span><span class="p">)</span>
     <span class="n">label</span><span class="p">(</span><span class="n">DOFIB</span><span class="p">)</span>
@@ -210,11 +231,11 @@ along with other registers which the program logic requires to be preserved.</p>
     <span class="nb">cmp</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
     <span class="n">ble</span><span class="p">(</span><span class="n">FIBDONE</span><span class="p">)</span>
     <span class="n">sub</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">mov</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="n">r0</span><span class="p">)</span> <span class="c"># r2 = n -1</span>
+    <span class="n">mov</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="n">r0</span><span class="p">)</span> <span class="c1"># r2 = n -1</span>
     <span class="n">bl</span><span class="p">(</span><span class="n">DOFIB</span><span class="p">)</span>
-    <span class="n">mov</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span> <span class="n">r0</span><span class="p">)</span> <span class="c"># r1 = fib(n -1)</span>
+    <span class="n">mov</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span> <span class="n">r0</span><span class="p">)</span> <span class="c1"># r1 = fib(n -1)</span>
     <span class="n">sub</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">r2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">bl</span><span class="p">(</span><span class="n">DOFIB</span><span class="p">)</span>   <span class="c"># r0 = fib(n -2)</span>
+    <span class="n">bl</span><span class="p">(</span><span class="n">DOFIB</span><span class="p">)</span>   <span class="c1"># r0 = fib(n -2)</span>
     <span class="n">add</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">r0</span><span class="p">,</span> <span class="n">r1</span><span class="p">)</span>
     <span class="n">label</span><span class="p">(</span><span class="n">FIBDONE</span><span class="p">)</span>
     <span class="n">pop</span><span class="p">({</span><span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">,</span> <span class="n">lr</span><span class="p">})</span>
@@ -223,30 +244,30 @@ along with other registers which the program logic requires to be preserved.</p>
     <span class="n">bl</span><span class="p">(</span><span class="n">DOFIB</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="argument-passing-and-return">
 <h2>1.2. Argument passing and return<a class="headerlink" href="#argument-passing-and-return" title="Permalink to this headline">¶</a></h2>
 <p>The tutorial details the fact that assembler functions can support from zero to
-three arguments, which must (if used) be named <code class="docutils literal"><span class="pre">r0</span></code>, <code class="docutils literal"><span class="pre">r1</span></code> and <code class="docutils literal"><span class="pre">r2</span></code>. When
+three arguments, which must (if used) be named <code class="docutils literal notranslate"><span class="pre">r0</span></code>, <code class="docutils literal notranslate"><span class="pre">r1</span></code> and <code class="docutils literal notranslate"><span class="pre">r2</span></code>. When
 the code executes the registers will be initialised to those values.</p>
 <p>The data types which can be passed in this way are integers and memory
 addresses. With current firmware all possible 32 bit values may be passed and
 returned. If the return value may have the most significant bit set a Python
 type hint should be employed to enable MicroPython to determine whether the
 value should be interpreted as a signed or unsigned integer: types are
-<code class="docutils literal"><span class="pre">int</span></code> or <code class="docutils literal"><span class="pre">uint</span></code>.</p>
-<div class="highlight-python"><div class="highlight"><pre>@micropython.asm_thumb
-def uadd(r0, r1) -&gt; uint:
-    add(r0, r0, r1)
+<code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">uint</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@micropython</span><span class="o">.</span><span class="n">asm_thumb</span>
+<span class="k">def</span> <span class="nf">uadd</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">r1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">uint</span><span class="p">:</span>
+    <span class="n">add</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">r0</span><span class="p">,</span> <span class="n">r1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">hex(uadd(0x40000000,0x40000000))</span></code> will return 0x80000000, demonstrating the
+<p><code class="docutils literal notranslate"><span class="pre">hex(uadd(0x40000000,0x40000000))</span></code> will return 0x80000000, demonstrating the
 passing and return of integers where bits 30 and 31 differ.</p>
 <p>The limitations on the number of arguments and return values can be overcome by means
-of the <code class="docutils literal"><span class="pre">array</span></code> module which enables any number of values of any type to be accessed.</p>
+of the <code class="docutils literal notranslate"><span class="pre">array</span></code> module which enables any number of values of any type to be accessed.</p>
 <div class="section" id="multiple-arguments">
 <h3>1.2.1. Multiple arguments<a class="headerlink" href="#multiple-arguments" title="Permalink to this headline">¶</a></h3>
 <p>If a Python array of integers is passed as an argument to an assembler
@@ -256,20 +277,20 @@ function can return multiple values by assigning them to array elements.
 Assembler functions have no means of determining the length of an array:
 this will need to be passed to the function.</p>
 <p>This use of arrays can be extended to enable more than three arrays to be used.
-This is done using indirection: the <code class="docutils literal"><span class="pre">uctypes</span></code> module supports <code class="docutils literal"><span class="pre">addressof()</span></code>
+This is done using indirection: the <code class="docutils literal notranslate"><span class="pre">uctypes</span></code> module supports <code class="docutils literal notranslate"><span class="pre">addressof()</span></code>
 which will return the address of an array passed as its argument. Thus you can
 populate an integer array with the addresses of other arrays:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">uctypes</span> <span class="kn">import</span> <span class="n">addressof</span>
-<span class="nd">@micropython.asm_thumb</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">uctypes</span> <span class="k">import</span> <span class="n">addressof</span>
+<span class="nd">@micropython</span><span class="o">.</span><span class="n">asm_thumb</span>
 <span class="k">def</span> <span class="nf">getindirect</span><span class="p">(</span><span class="n">r0</span><span class="p">):</span>
-    <span class="n">ldr</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="p">[</span><span class="n">r0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="c"># Address of array loaded from passed array</span>
-    <span class="n">ldr</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="p">[</span><span class="n">r0</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span> <span class="c"># Return element 1 of indirect array (24)</span>
+    <span class="n">ldr</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="p">[</span><span class="n">r0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="c1"># Address of array loaded from passed array</span>
+    <span class="n">ldr</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="p">[</span><span class="n">r0</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span> <span class="c1"># Return element 1 of indirect array (24)</span>
 
 <span class="k">def</span> <span class="nf">testindirect</span><span class="p">():</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s">&#39;i&#39;</span><span class="p">,[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">])</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s">&#39;i&#39;</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">])</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">addressof</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">getindirect</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">getindirect</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -279,9 +300,9 @@ populate an integer array with the addresses of other arrays:</p>
 example, single precision floating point data may be processed as follows.
 This code example takes an array of floats and replaces its contents with
 their squares.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">array</span> <span class="kn">import</span> <span class="n">array</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">array</span> <span class="k">import</span> <span class="n">array</span>
 
-<span class="nd">@micropython.asm_thumb</span>
+<span class="nd">@micropython</span><span class="o">.</span><span class="n">asm_thumb</span>
 <span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">r1</span><span class="p">):</span>
     <span class="n">label</span><span class="p">(</span><span class="n">LOOP</span><span class="p">)</span>
     <span class="n">vldr</span><span class="p">(</span><span class="n">s0</span><span class="p">,</span> <span class="p">[</span><span class="n">r0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
@@ -291,9 +312,9 @@ their squares.</p>
     <span class="n">sub</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
     <span class="n">bgt</span><span class="p">(</span><span class="n">LOOP</span><span class="p">)</span>
 
-<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s">&#39;f&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
 <span class="n">square</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The uctypes module supports the use of data structures beyond simple
@@ -306,9 +327,9 @@ instance which may then be passed to the assembler function.</p>
 <p>Assembler code may be made more readable and maintainable by using named
 constants rather than littering code with numbers. This may be achieved
 thus:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">MYDATA</span> <span class="o">=</span> <span class="n">const</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MYDATA</span> <span class="o">=</span> <span class="n">const</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
 
-<span class="nd">@micropython.asm_thumb</span>
+<span class="nd">@micropython</span><span class="o">.</span><span class="n">asm_thumb</span>
 <span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
     <span class="n">mov</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">MYDATA</span><span class="p">)</span>
 </pre></div>
@@ -323,9 +344,9 @@ with Python code.</p>
 <p>MicroPython passes the address of the object instance as the first argument
 to class methods. This is normally of little use to an assembler function.
 It can be avoided by declaring the function as a static method thus:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">foo</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">foo</span><span class="p">:</span>
   <span class="nd">@staticmethod</span>
-  <span class="nd">@micropython.asm_thumb</span>
+  <span class="nd">@micropython</span><span class="o">.</span><span class="n">asm_thumb</span>
   <span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">r0</span><span class="p">):</span>
     <span class="n">add</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">r0</span><span class="p">,</span> <span class="n">r0</span><span class="p">)</span>
 </pre></div>
@@ -334,24 +355,24 @@ It can be avoided by declaring the function as a static method thus:</p>
 <div class="section" id="use-of-unsupported-instructions">
 <h2>1.5. Use of unsupported instructions<a class="headerlink" href="#use-of-unsupported-instructions" title="Permalink to this headline">¶</a></h2>
 <p>These can be coded using the data statement as shown below. While
-<code class="docutils literal"><span class="pre">push()</span></code> and <code class="docutils literal"><span class="pre">pop()</span></code> are supported the example below illustrates the
+<code class="docutils literal notranslate"><span class="pre">push()</span></code> and <code class="docutils literal notranslate"><span class="pre">pop()</span></code> are supported the example below illustrates the
 principle. The necessary machine code may be found in the ARM v7-M
 Architecture Reference Manual. Note that the first argument of data
 calls such as</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">data</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mh">0xe92d</span><span class="p">,</span> <span class="mh">0x0f00</span><span class="p">)</span> <span class="c"># push r8,r9,r10,r11</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mh">0xe92d</span><span class="p">,</span> <span class="mh">0x0f00</span><span class="p">)</span> <span class="c1"># push r8,r9,r10,r11</span>
 </pre></div>
 </div>
 <p>indicates that each subsequent argument is a two byte quantity.</p>
 </div>
 <div class="section" id="overcoming-micropython-s-integer-restriction">
-<h2>1.6. Overcoming MicroPython&#8217;s integer restriction<a class="headerlink" href="#overcoming-micropython-s-integer-restriction" title="Permalink to this headline">¶</a></h2>
+<h2>1.6. Overcoming MicroPython’s integer restriction<a class="headerlink" href="#overcoming-micropython-s-integer-restriction" title="Permalink to this headline">¶</a></h2>
 <p>The Pyboard chip includes a CRC generator. Its use presents a problem in
 MicroPython because the returned values cover the full gamut of 32 bit
 quantities whereas small integers in MicroPython cannot have differing values
 in bits 30 and 31. This limitation is overcome with the following code, which
 uses assembler to put the result into an array and Python code to
 coerce the result into an arbitrary precision unsigned integer.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">array</span> <span class="kn">import</span> <span class="n">array</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">array</span> <span class="k">import</span> <span class="n">array</span>
 <span class="kn">import</span> <span class="nn">stm</span>
 
 <span class="k">def</span> <span class="nf">enable_crc</span><span class="p">():</span>
@@ -360,7 +381,7 @@ coerce the result into an arbitrary precision unsigned integer.</p>
 <span class="k">def</span> <span class="nf">reset_crc</span><span class="p">():</span>
     <span class="n">stm</span><span class="o">.</span><span class="n">mem32</span><span class="p">[</span><span class="n">stm</span><span class="o">.</span><span class="n">CRC</span><span class="o">+</span><span class="n">stm</span><span class="o">.</span><span class="n">CRC_CR</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="nd">@micropython.asm_thumb</span>
+<span class="nd">@micropython</span><span class="o">.</span><span class="n">asm_thumb</span>
 <span class="k">def</span> <span class="nf">getval</span><span class="p">(</span><span class="n">r0</span><span class="p">,</span> <span class="n">r1</span><span class="p">):</span>
     <span class="n">movwt</span><span class="p">(</span><span class="n">r3</span><span class="p">,</span> <span class="n">stm</span><span class="o">.</span><span class="n">CRC</span> <span class="o">+</span> <span class="n">stm</span><span class="o">.</span><span class="n">CRC_DR</span><span class="p">)</span>
     <span class="nb">str</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span> <span class="p">[</span><span class="n">r3</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
@@ -368,14 +389,14 @@ coerce the result into an arbitrary precision unsigned integer.</p>
     <span class="nb">str</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="p">[</span><span class="n">r0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 
 <span class="k">def</span> <span class="nf">getcrc</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s">&#39;i&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">getval</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0xffffffff</span> <span class="c"># coerce to arbitrary precision</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0xffffffff</span> <span class="c1"># coerce to arbitrary precision</span>
 
 <span class="n">enable_crc</span><span class="p">()</span>
 <span class="n">reset_crc</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">getcrc</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">getcrc</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -383,15 +404,16 @@ coerce the result into an arbitrary precision unsigned integer.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../genrst/index.html" class="btn btn-neutral float-right" title="MicroPython differences from CPython" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../genrst/index.html" class="btn btn-neutral float-right" title="MicroPython differences from CPython" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="asm_thumb2_directives.html" class="btn btn-neutral" title="11. Assembler Directives" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="asm_thumb2_directives.html" class="btn btn-neutral float-left" title="11. Assembler Directives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -400,12 +422,14 @@ coerce the result into an arbitrary precision unsigned integer.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -483,35 +507,15 @@ coerce the result into an arbitrary precision unsigned integer.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

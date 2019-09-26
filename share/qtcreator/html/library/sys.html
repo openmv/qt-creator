@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="MicroPython libraries" href="index.html"/>
-        <link rel="next" title="ubinascii – binary/ASCII conversions" href="ubinascii.html"/>
-        <link rel="prev" title="math – mathematical functions" href="math.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ubinascii – binary/ASCII conversions" href="ubinascii.html" />
+    <link rel="prev" title="math – mathematical functions" href="math.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,37 +87,40 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="array.html"><code class="docutils literal"><span class="pre">array</span></code> &#8211; arrays of numeric data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal"><span class="pre">cmath</span></code> &#8211; mathematical functions for complex numbers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal"><span class="pre">gc</span></code> &#8211; control the garbage collector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal"><span class="pre">math</span></code> &#8211; mathematical functions</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href=""><code class="docutils literal"><span class="pre">sys</span></code> &#8211; system specific functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="array.html"><code class="docutils literal notranslate"><span class="pre">array</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#constants">Constants</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal"><span class="pre">ubinascii</span></code> &#8211; binary/ASCII conversions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal"><span class="pre">ucollections</span></code> &#8211; collection and container types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal"><span class="pre">uerrno</span></code> &#8211; system error codes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uhashlib.html"><code class="docutils literal"><span class="pre">uhashlib</span></code> &#8211; hashing algorithms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uheapq.html"><code class="docutils literal"><span class="pre">uheapq</span></code> &#8211; heap queue algorithm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uio.html"><code class="docutils literal"><span class="pre">uio</span></code> &#8211; input/output streams</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ujson.html"><code class="docutils literal"><span class="pre">ujson</span></code> &#8211; JSON encoding and decoding</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uos.html"><code class="docutils literal"><span class="pre">uos</span></code> &#8211; basic &#8220;operating system&#8221; services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ure.html"><code class="docutils literal"><span class="pre">ure</span></code> &#8211; simple regular expressions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uselect.html"><code class="docutils literal"><span class="pre">uselect</span></code> &#8211; wait for events on a set of streams</a></li>
-<li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal"><span class="pre">usocket</span></code> &#8211; socket module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal"><span class="pre">ustruct</span></code> &#8211; pack and unpack primitive data types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal"><span class="pre">utime</span></code> &#8211; time related functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal"><span class="pre">uzlib</span></code> &#8211; zlib decompression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal"><span class="pre">_thread</span></code> &#8211; multithreading support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uhashlib.html"><code class="docutils literal notranslate"><span class="pre">uhashlib</span></code> – hashing algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uheapq.html"><code class="docutils literal notranslate"><span class="pre">uheapq</span></code> – heap queue algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uio.html"><code class="docutils literal notranslate"><span class="pre">uio</span></code> – input/output streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ujson.html"><code class="docutils literal notranslate"><span class="pre">ujson</span></code> – JSON encoding and decoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uos.html"><code class="docutils literal notranslate"><span class="pre">uos</span></code> – basic “operating system” services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ure.html"><code class="docutils literal notranslate"><span class="pre">ure</span></code> – simple regular expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uselect.html"><code class="docutils literal notranslate"><span class="pre">uselect</span></code> – wait for events on a set of streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a></li>
@@ -140,69 +141,89 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
-      
-    <li><code class="docutils literal"><span class="pre">sys</span></code> &#8211; system specific functions</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/sys.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/sys.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="module-sys">
-<span id="sys-system-specific-functions"></span><h1><a class="reference internal" href="#module-sys" title="sys: system specific functions"><code class="xref py py-mod docutils literal"><span class="pre">sys</span></code></a> &#8211; system specific functions<a class="headerlink" href="#module-sys" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal"><span class="pre">CPython</span></code></a> <em>module,
+<span id="sys-system-specific-functions"></span><h1><a class="reference internal" href="#module-sys" title="sys: system specific functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sys</span></code></a> – system specific functions<a class="headerlink" href="#module-sys" title="Permalink to this headline">¶</a></h1>
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
 as described below. For more information, refer to the original
-CPython documentation:</em> <a class="reference external" href="http://docs.python.org/3.5/library/sys.html#module-sys" title="(in Python v3.5)"><code class="docutils literal"><span class="pre">sys</span></code></a>.</p>
+CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/sys.html#module-sys" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">sys</span></code></a>.</p>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="sys.exit">
 <code class="descclassname">sys.</code><code class="descname">exit</code><span class="sig-paren">(</span><em>retval=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sys.exit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Terminate current program with a given exit code. Underlyingly, this
-function raise as <a class="reference internal" href="builtins.html#SystemExit" title="SystemExit"><code class="xref any py py-exc docutils literal"><span class="pre">SystemExit</span></code></a> exception. If an argument is given, its
-value given as an argument to <a class="reference internal" href="builtins.html#SystemExit" title="SystemExit"><code class="xref any py py-exc docutils literal"><span class="pre">SystemExit</span></code></a>.</p>
+function raise as <a class="reference internal" href="builtins.html#SystemExit" title="SystemExit"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a> exception. If an argument is given, its
+value given as an argument to <a class="reference internal" href="builtins.html#SystemExit" title="SystemExit"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sys.print_exception">
 <code class="descclassname">sys.</code><code class="descname">print_exception</code><span class="sig-paren">(</span><em>exc</em>, <em>file=sys.stdout</em><span class="sig-paren">)</span><a class="headerlink" href="#sys.print_exception" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print exception with a traceback to a file-like object <em>file</em> (or
-<a class="reference internal" href="#sys.stdout" title="sys.stdout"><code class="xref any py py-data docutils literal"><span class="pre">sys.stdout</span></code></a> by default).</p>
+<a class="reference internal" href="#sys.stdout" title="sys.stdout"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sys.stdout</span></code></a> by default).</p>
 <div class="attention admonition">
 <p class="first admonition-title">Difference to CPython</p>
 <p class="last">This is simplified version of a function which appears in the
-<code class="docutils literal"><span class="pre">traceback</span></code> module in CPython. Unlike <code class="docutils literal"><span class="pre">traceback.print_exception()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">traceback</span></code> module in CPython. Unlike <code class="docutils literal notranslate"><span class="pre">traceback.print_exception()</span></code>,
 this function takes just exception value instead of exception type,
 exception value, and traceback object; <em>file</em> argument should be
 positional; further arguments are not supported. CPython-compatible
-<code class="docutils literal"><span class="pre">traceback</span></code> module can be found in <a class="reference internal" href="../reference/glossary.html#term-micropython-lib"><code class="xref any std std-term docutils literal"><span class="pre">micropython-lib</span></code></a>.</p>
+<code class="docutils literal notranslate"><span class="pre">traceback</span></code> module can be found in <a class="reference internal" href="../reference/glossary.html#term-micropython-lib"><code class="xref any std std-term docutils literal notranslate"><span class="pre">micropython-lib</span></code></a>.</p>
 </div>
 </dd></dl>
 
@@ -218,7 +239,7 @@ positional; further arguments are not supported. CPython-compatible
 <dl class="data">
 <dt id="sys.byteorder">
 <code class="descclassname">sys.</code><code class="descname">byteorder</code><a class="headerlink" href="#sys.byteorder" title="Permalink to this definition">¶</a></dt>
-<dd><p>The byte order of the system (<code class="docutils literal"><span class="pre">&quot;little&quot;</span></code> or <code class="docutils literal"><span class="pre">&quot;big&quot;</span></code>).</p>
+<dd><p>The byte order of the system (<code class="docutils literal notranslate"><span class="pre">&quot;little&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;big&quot;</span></code>).</p>
 </dd></dl>
 
 <dl class="data">
@@ -227,7 +248,7 @@ positional; further arguments are not supported. CPython-compatible
 <dd><p>Object with information about the current Python implementation. For
 MicroPython, it has following attributes:</p>
 <ul class="simple">
-<li><em>name</em> - string &#8220;micropython&#8221;</li>
+<li><em>name</em> - string “micropython”</li>
 <li><em>version</em> - tuple (major, minor, micro), e.g. (1, 7, 0)</li>
 </ul>
 <p>This object is the recommended way to distinguish MicroPython from other
@@ -244,25 +265,25 @@ bare minimum is implemented in MicroPython.</p>
 <dt id="sys.maxsize">
 <code class="descclassname">sys.</code><code class="descname">maxsize</code><a class="headerlink" href="#sys.maxsize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum value which a native integer type can hold on the current platform,
-or maximum value representable by MicroPython integer type, if it&#8217;s smaller
+or maximum value representable by MicroPython integer type, if it’s smaller
 than platform max value (that is the case for MicroPython ports without
 long int support).</p>
-<p>This attribute is useful for detecting &#8220;bitness&#8221; of a platform (32-bit vs
-64-bit, etc.). It&#8217;s recommended to not compare this attribute to some
+<p>This attribute is useful for detecting “bitness” of a platform (32-bit vs
+64-bit, etc.). It’s recommended to not compare this attribute to some
 value directly, but instead count number of bits in it:</p>
-<div class="highlight-python"><div class="highlight"><pre>bits = 0
-v = sys.maxsize
-while v:
-    bits += 1
-    v &gt;&gt;= 1
-if bits &gt; 32:
-    # 64-bit (or more) platform
-    ...
-else:
-    # 32-bit (or less) platform
-    # Note that on 32-bit platform, value of bits may be less than 32
-    # (e.g. 31) due to peculiarities described above, so use &quot;&gt; 16&quot;,
-    # &quot;&gt; 32&quot;, &quot;&gt; 64&quot; style of comparisons.
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bits</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span>
+<span class="k">while</span> <span class="n">v</span><span class="p">:</span>
+    <span class="n">bits</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">v</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">bits</span> <span class="o">&gt;</span> <span class="mi">32</span><span class="p">:</span>
+    <span class="c1"># 64-bit (or more) platform</span>
+    <span class="o">...</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># 32-bit (or less) platform</span>
+    <span class="c1"># Note that on 32-bit platform, value of bits may be less than 32</span>
+    <span class="c1"># (e.g. 31) due to peculiarities described above, so use &quot;&gt; 16&quot;,</span>
+    <span class="c1"># &quot;&gt; 32&quot;, &quot;&gt; 64&quot; style of comparisons.</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -284,29 +305,29 @@ modules.</p>
 <dt id="sys.platform">
 <code class="descclassname">sys.</code><code class="descname">platform</code><a class="headerlink" href="#sys.platform" title="Permalink to this definition">¶</a></dt>
 <dd><p>The platform that MicroPython is running on. For OS/RTOS ports, this is
-usually an identifier of the OS, e.g. <code class="docutils literal"><span class="pre">&quot;linux&quot;</span></code>. For baremetal ports it
-is an identifier of a board, e.g. <code class="docutils literal"><span class="pre">&quot;pyboard&quot;</span></code> for the original MicroPython
+usually an identifier of the OS, e.g. <code class="docutils literal notranslate"><span class="pre">&quot;linux&quot;</span></code>. For baremetal ports it
+is an identifier of a board, e.g. <code class="docutils literal notranslate"><span class="pre">&quot;pyboard&quot;</span></code> for the original MicroPython
 reference board. It thus can be used to distinguish one board from another.
 If you need to check whether your program runs on MicroPython (vs other
-Python implementation), use <a class="reference internal" href="#sys.implementation" title="sys.implementation"><code class="xref any py py-data docutils literal"><span class="pre">sys.implementation</span></code></a> instead.</p>
+Python implementation), use <a class="reference internal" href="#sys.implementation" title="sys.implementation"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sys.implementation</span></code></a> instead.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="sys.stderr">
 <code class="descclassname">sys.</code><code class="descname">stderr</code><a class="headerlink" href="#sys.stderr" title="Permalink to this definition">¶</a></dt>
-<dd><p>Standard error <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal"><span class="pre">stream</span></code></a>.</p>
+<dd><p>Standard error <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="sys.stdin">
 <code class="descclassname">sys.</code><code class="descname">stdin</code><a class="headerlink" href="#sys.stdin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Standard input <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal"><span class="pre">stream</span></code></a>.</p>
+<dd><p>Standard input <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="sys.stdout">
 <code class="descclassname">sys.</code><code class="descname">stdout</code><a class="headerlink" href="#sys.stdout" title="Permalink to this definition">¶</a></dt>
-<dd><p>Standard output <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal"><span class="pre">stream</span></code></a>.</p>
+<dd><p>Standard output <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a>.</p>
 </dd></dl>
 
 <dl class="data">
@@ -326,15 +347,16 @@ Python implementation), use <a class="reference internal" href="#sys.implementat
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ubinascii.html" class="btn btn-neutral float-right" title="ubinascii – binary/ASCII conversions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ubinascii.html" class="btn btn-neutral float-right" title="ubinascii – binary/ASCII conversions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="math.html" class="btn btn-neutral" title="math – mathematical functions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="math.html" class="btn btn-neutral float-left" title="math – mathematical functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -343,12 +365,14 @@ Python implementation), use <a class="reference internal" href="#sys.implementat
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -426,35 +450,15 @@ Python implementation), use <a class="reference internal" href="#sys.implementat
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

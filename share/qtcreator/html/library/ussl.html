@@ -15,40 +15,39 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -57,7 +56,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -86,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -105,44 +107,64 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li><code class="docutils literal"><span class="pre">ussl</span></code> &#8211; SSL/TLS module</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/ussl.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/ussl.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="module-ussl">
-<span id="ussl-ssl-tls-module"></span><h1><a class="reference internal" href="#module-ussl" title="ussl: TLS/SSL wrapper for socket objects"><code class="xref py py-mod docutils literal"><span class="pre">ussl</span></code></a> &#8211; SSL/TLS module<a class="headerlink" href="#module-ussl" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal"><span class="pre">CPython</span></code></a> <em>module,
+<span id="ussl-ssl-tls-module"></span><h1><a class="reference internal" href="#module-ussl" title="ussl: TLS/SSL wrapper for socket objects"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ussl</span></code></a> – SSL/TLS module<a class="headerlink" href="#module-ussl" title="Permalink to this headline">¶</a></h1>
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
 as described below. For more information, refer to the original
-CPython documentation:</em> <a class="reference external" href="http://docs.python.org/3.5/library/ssl.html#module-ssl" title="(in Python v3.5)"><code class="docutils literal"><span class="pre">ssl</span></code></a>.</p>
+CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/ssl.html#module-ssl" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">ssl</span></code></a>.</p>
 <p>This module provides access to Transport Layer Security (previously and
 widely known as “Secure Sockets Layer”) encryption and peer authentication
 facilities for network sockets, both client-side and server-side.</p>
@@ -151,20 +173,20 @@ facilities for network sockets, both client-side and server-side.</p>
 <dl class="function">
 <dt id="ussl.ussl.wrap_socket">
 <code class="descclassname">ussl.</code><code class="descname">wrap_socket</code><span class="sig-paren">(</span><em>sock</em>, <em>server_side=False</em>, <em>keyfile=None</em>, <em>certfile=None</em>, <em>cert_reqs=CERT_NONE</em>, <em>ca_certs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ussl.ussl.wrap_socket" title="Permalink to this definition">¶</a></dt>
-<dd><p>Takes a <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal"><span class="pre">stream</span></code></a> <em>sock</em> (usually usocket.socket instance of <code class="docutils literal"><span class="pre">SOCK_STREAM</span></code> type),
+<dd><p>Takes a <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a> <em>sock</em> (usually usocket.socket instance of <code class="docutils literal notranslate"><span class="pre">SOCK_STREAM</span></code> type),
 and returns an instance of ssl.SSLSocket, which wraps the underlying stream in
-an SSL context. Returned object has the usual <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal"><span class="pre">stream</span></code></a> interface methods like
-<code class="docutils literal"><span class="pre">read()</span></code>, <code class="docutils literal"><span class="pre">write()</span></code>, etc. In MicroPython, the returned object does not expose
-socket interface and methods like <code class="docutils literal"><span class="pre">recv()</span></code>, <code class="docutils literal"><span class="pre">send()</span></code>. In particular, a
+an SSL context. Returned object has the usual <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a> interface methods like
+<code class="docutils literal notranslate"><span class="pre">read()</span></code>, <code class="docutils literal notranslate"><span class="pre">write()</span></code>, etc. In MicroPython, the returned object does not expose
+socket interface and methods like <code class="docutils literal notranslate"><span class="pre">recv()</span></code>, <code class="docutils literal notranslate"><span class="pre">send()</span></code>. In particular, a
 server-side SSL socket should be created from a normal socket returned from
-<a class="reference internal" href="usocket.html#usocket.socket.accept" title="usocket.socket.accept"><code class="xref py py-meth docutils literal"><span class="pre">accept()</span></code></a> on a non-SSL listening server socket.</p>
+<a class="reference internal" href="usocket.html#usocket.socket.accept" title="usocket.socket.accept"><code class="xref py py-meth docutils literal notranslate"><span class="pre">accept()</span></code></a> on a non-SSL listening server socket.</p>
 <p>Depending on the underlying module implementation in a particular
-<a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>, some or all keyword arguments above may be not supported.</p>
+<a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>, some or all keyword arguments above may be not supported.</p>
 </dd></dl>
 
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Some implementations of <code class="docutils literal"><span class="pre">ussl</span></code> module do NOT validate server certificates,
+<p class="last">Some implementations of <code class="docutils literal notranslate"><span class="pre">ussl</span></code> module do NOT validate server certificates,
 which makes an SSL connection established prone to man-in-the-middle attacks.</p>
 </div>
 </div>
@@ -194,6 +216,7 @@ which makes an SSL connection established prone to man-in-the-middle attacks.</p
 
 
            </div>
+           
           </div>
           <footer>
   
@@ -202,12 +225,14 @@ which makes an SSL connection established prone to man-in-the-middle attacks.</p
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -285,35 +310,15 @@ which makes an SSL connection established prone to man-in-the-middle attacks.</p
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

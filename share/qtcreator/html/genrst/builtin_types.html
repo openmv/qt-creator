@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="MicroPython differences from CPython" href="index.html"/>
-        <link rel="next" title="Modules" href="modules.html"/>
-        <link rel="prev" title="Core Language" href="core_language.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="Core Language" href="core_language.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -98,7 +99,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython differences from CPython</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="core_language.html">Core Language</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Builtin Types</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Builtin Types</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#exception">Exception</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#exception-chaining-not-implemented">Exception chaining not implemented</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#user-defined-attributes-for-builtin-exceptions-are-not-supported">User-defined attributes for builtin exceptions are not supported</a></li>
@@ -132,7 +133,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#str">str</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#start-end-indices-such-as-str-endswith-s-start-not-implemented">Start/end indices such as str.endswith(s, start) not implemented</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#attributes-subscr-not-implemented">Attributes/subscr not implemented</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#str-with-keywords-not-implemented">str(...) with keywords not implemented</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#str-with-keywords-not-implemented">str(…) with keywords not implemented</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#str-ljust-and-str-rjust-not-implemented">str.ljust() and str.rjust() not implemented</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#none-as-first-argument-for-rsplit-such-as-str-rsplit-none-n-not-implemented">None as first argument for rsplit such as str.rsplit(None, n) not implemented</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#instance-of-a-subclass-of-str-cannot-be-compared-for-equality-with-an-instance-of-a-str">Instance of a subclass of str cannot be compared for equality with an instance of a str</a></li>
@@ -160,36 +161,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">MicroPython differences from CPython</a> &raquo;</li>
-      
-    <li>Builtin Types</li>
+        
+      <li>Builtin Types</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/genrst/builtin_types.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/genrst/builtin_types.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -203,7 +224,7 @@
 <div class="section" id="exception-chaining-not-implemented">
 <span id="cpydiff-types-exception-chaining"></span><h3>Exception chaining not implemented<a class="headerlink" href="#exception-chaining-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">try</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="k">raise</span> <span class="ne">TypeError</span>
 <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
     <span class="k">raise</span> <span class="ne">ValueError</span>
@@ -218,21 +239,21 @@
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 8, in &lt;module&gt;
-TypeError
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span>
 
-During handling of the above exception, another exception occurred:
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 10, in &lt;module&gt;
-ValueError
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">10</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ValueError</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 10, in &lt;module&gt;
-ValueError:
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">10</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ValueError</span><span class="p">:</span>
 </pre></div>
 </div>
 </td>
@@ -245,9 +266,9 @@ ValueError:
 <p><strong>Cause:</strong> MicroPython is highly optimized for memory usage.</p>
 <p><strong>Workaround:</strong> Use user-defined exception subclasses.</p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">e</span> <span class="o">=</span> <span class="ne">Exception</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="ne">Exception</span><span class="p">()</span>
 <span class="n">e</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -259,13 +280,13 @@ ValueError:
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="mi">0</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 8, in &lt;module&gt;
-AttributeError: &#39;Exception&#39; object has no attribute &#39;x&#39;
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;Exception&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;x&#39;</span>
 </pre></div>
 </div>
 </td>
@@ -277,11 +298,11 @@ AttributeError: &#39;Exception&#39; object has no attribute &#39;x&#39;
 <span id="cpydiff-types-exception-loops"></span><h3>Exception in while loop condition may have unexpected line number<a class="headerlink" href="#exception-in-while-loop-condition-may-have-unexpected-line-number" title="Permalink to this headline">¶</a></h3>
 <p><strong>Cause:</strong> Condition checks are optimized to happen at the end of loop body, and that line number is reported.</p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;-foo&quot;</span><span class="p">,</span> <span class="s">&quot;-bar&quot;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;-foo&quot;</span><span class="p">,</span> <span class="s2">&quot;-bar&quot;</span><span class="p">]</span>
 
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;-&quot;</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;iter&quot;</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;-&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;iter&quot;</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 </div>
@@ -294,19 +315,19 @@ AttributeError: &#39;Exception&#39; object has no attribute &#39;x&#39;
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre>iter
-iter
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 10, in &lt;module&gt;
-IndexError: list index out of range
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">iter</span>
+<span class="nb">iter</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">10</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">IndexError</span><span class="p">:</span> <span class="nb">list</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>iter
-iter
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 12, in &lt;module&gt;
-IndexError: list index out of range
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">iter</span>
+<span class="nb">iter</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">12</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">IndexError</span><span class="p">:</span> <span class="nb">list</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
 </pre></div>
 </div>
 </td>
@@ -317,16 +338,16 @@ IndexError: list index out of range
 <div class="section" id="exception-init-method-does-not-exist">
 <span id="cpydiff-types-exception-subclassinit"></span><h3>Exception.__init__ method does not exist.<a class="headerlink" href="#exception-init-method-does-not-exist" title="Permalink to this headline">¶</a></h3>
 <p><strong>Cause:</strong> Subclassing native classes is not fully supported in MicroPython.</p>
-<p><strong>Workaround:</strong> Call using <code class="docutils literal"><span class="pre">super()</span></code> instead:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<p><strong>Workaround:</strong> Call using <code class="docutils literal notranslate"><span class="pre">super()</span></code> instead:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="ne">Exception</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="ne">Exception</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">()</span>
 </pre></div>
@@ -340,11 +361,11 @@ IndexError: list index out of range
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 15, in &lt;module&gt;
-  File &quot;&lt;stdin&gt;&quot;, line 13, in __init__
-AttributeError: type object &#39;Exception&#39; has no attribute &#39;__init__&#39;
+<tr class="row-even"><td>&#160;</td>
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">15</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">13</span><span class="p">,</span> <span class="ow">in</span> <span class="fm">__init__</span>
+<span class="ne">AttributeError</span><span class="p">:</span> <span class="nb">type</span> <span class="nb">object</span> <span class="s1">&#39;Exception&#39;</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;__init__&#39;</span>
 </pre></div>
 </div>
 </td>
@@ -358,9 +379,9 @@ AttributeError: type object &#39;Exception&#39; has no attribute &#39;__init__&#
 <div class="section" id="array-slice-assignment-with-unsupported-rhs">
 <span id="cpydiff-types-bytearray-sliceassign"></span><h3>Array slice assignment with unsupported RHS<a class="headerlink" href="#array-slice-assignment-with-unsupported-rhs" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">b</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -372,13 +393,13 @@ AttributeError: type object &#39;Exception&#39; has no attribute &#39;__init__&#
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;</span><span class="se">\x01\x02\x00\x00\x00</span><span class="s">&#39;</span><span class="p">)</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">bytearray</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x02\x00\x00\x00</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 8, in &lt;module&gt;
-NotImplementedError: array/bytes required on right side
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">array</span><span class="o">/</span><span class="nb">bytes</span> <span class="n">required</span> <span class="n">on</span> <span class="n">right</span> <span class="n">side</span>
 </pre></div>
 </div>
 </td>
@@ -391,9 +412,9 @@ NotImplementedError: array/bytes required on right side
 <h2>bytes<a class="headerlink" href="#bytes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="bytes-with-keywords-not-implemented">
 <span id="cpydiff-types-bytes-keywords"></span><h3>bytes() with keywords not implemented<a class="headerlink" href="#bytes-with-keywords-not-implemented" title="Permalink to this headline">¶</a></h3>
-<p><strong>Workaround:</strong> Pass the encoding as a positional paramter, e.g. <code class="docutils literal"><span class="pre">print(bytes('abc',</span> <span class="pre">'utf-8'))</span></code></p>
+<p><strong>Workaround:</strong> Pass the encoding as a positional paramter, e.g. <code class="docutils literal notranslate"><span class="pre">print(bytes('abc',</span> <span class="pre">'utf-8'))</span></code></p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="s">&#39;abc&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">&#39;utf8&#39;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -405,13 +426,13 @@ NotImplementedError: array/bytes required on right side
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="n">b</span><span class="s">&#39;abc&#39;</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sa">b</span><span class="s1">&#39;abc&#39;</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 7, in &lt;module&gt;
-NotImplementedError: keyword argument(s) not yet implemented - use normal args instead
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">keyword</span> <span class="n">argument</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">implemented</span> <span class="o">-</span> <span class="n">use</span> <span class="n">normal</span> <span class="n">args</span> <span class="n">instead</span>
 </pre></div>
 </div>
 </td>
@@ -424,7 +445,7 @@ NotImplementedError: keyword argument(s) not yet implemented - use normal args i
 <p><strong>Cause:</strong> MicroPython is highly optimized for memory usage.</p>
 <p><strong>Workaround:</strong> Use explicit loop for this very rare operation.</p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;123&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;123&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -436,13 +457,13 @@ NotImplementedError: keyword argument(s) not yet implemented - use normal args i
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="n">b</span><span class="s">&#39;13&#39;</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sa">b</span><span class="s1">&#39;13&#39;</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 7, in &lt;module&gt;
-NotImplementedError: only slices with step=1 (aka None) are supported
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">only</span> <span class="n">slices</span> <span class="k">with</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span> <span class="p">(</span><span class="n">aka</span> <span class="kc">None</span><span class="p">)</span> <span class="n">are</span> <span class="n">supported</span>
 </pre></div>
 </div>
 </td>
@@ -456,7 +477,7 @@ NotImplementedError: only slices with step=1 (aka None) are supported
 <div class="section" id="upy-and-cpython-outputs-formats-may-differ">
 <span id="cpydiff-types-float-rounding"></span><h3>uPy and CPython outputs formats may differ<a class="headerlink" href="#upy-and-cpython-outputs-formats-may-differ" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%.1g</span><span class="s">&#39;</span> <span class="o">%</span> <span class="o">-</span><span class="mf">9.9</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%.1g</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="o">-</span><span class="mf">9.9</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -468,11 +489,11 @@ NotImplementedError: only slices with step=1 (aka None) are supported
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="o">-</span><span class="mf">1e+01</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mf">1e+01</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre><span class="o">-</span><span class="mi">10</span>
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">10</span>
 </pre></div>
 </div>
 </td>
@@ -487,11 +508,11 @@ NotImplementedError: only slices with step=1 (aka None) are supported
 <span id="cpydiff-types-int-subclassconv"></span><h3>No int conversion for int-derived types available<a class="headerlink" href="#no-int-conversion-for-int-derived-types-available" title="Permalink to this headline">¶</a></h3>
 <p><strong>Workaround:</strong> Avoid subclassing builtin types unless really needed. Prefer <a class="reference external" href="https://en.wikipedia.org/wiki/Composition_over_inheritance">https://en.wikipedia.org/wiki/Composition_over_inheritance</a> .</p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="nb">int</span><span class="p">):</span>
-    <span class="n">__add__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">A</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="n">other</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="nb">int</span><span class="p">):</span>
+    <span class="fm">__add__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">A</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="n">other</span><span class="p">)</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -503,14 +524,14 @@ NotImplementedError: only slices with step=1 (aka None) are supported
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="mi">84</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">84</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 11, in &lt;module&gt;
-  File &quot;&lt;stdin&gt;&quot;, line 8, in &lt;lambda&gt;
-TypeError: can&#39;t convert A to int
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">11</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="k">lambda</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">can</span><span class="s1">&#39;t convert A to int</span>
 </pre></div>
 </div>
 </td>
@@ -525,9 +546,9 @@ TypeError: can&#39;t convert A to int
 <span id="cpydiff-types-list-delete-subscrstep"></span><h3>List delete with step != 1 not implemented<a class="headerlink" href="#list-delete-with-step-1-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p><strong>Workaround:</strong> Use explicit loop for this rare operation.</p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="k">del</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -539,13 +560,13 @@ TypeError: can&#39;t convert A to int
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 8, in &lt;module&gt;
-NotImplementedError:
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span>
 </pre></div>
 </div>
 </td>
@@ -556,11 +577,11 @@ NotImplementedError:
 <div class="section" id="list-slice-store-with-non-iterable-on-rhs-is-not-implemented">
 <span id="cpydiff-types-list-store-noniter"></span><h3>List slice-store with non-iterable on RHS is not implemented<a class="headerlink" href="#list-slice-store-with-non-iterable-on-rhs-is-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p><strong>Cause:</strong> RHS is restricted to be a tuple or list</p>
-<p><strong>Workaround:</strong> Use <code class="docutils literal"><span class="pre">list(&lt;iter&gt;)</span></code> on RHS to convert the iterable to a list</p>
+<p><strong>Workaround:</strong> Use <code class="docutils literal notranslate"><span class="pre">list(&lt;iter&gt;)</span></code> on RHS to convert the iterable to a list</p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -572,13 +593,13 @@ NotImplementedError:
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 8, in &lt;module&gt;
-TypeError: object &#39;range&#39; is not a tuple or list
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="nb">object</span> <span class="s1">&#39;range&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="nb">tuple</span> <span class="ow">or</span> <span class="nb">list</span>
 </pre></div>
 </div>
 </td>
@@ -590,9 +611,9 @@ TypeError: object &#39;range&#39; is not a tuple or list
 <span id="cpydiff-types-list-store-subscrstep"></span><h3>List store with step != 1 not implemented<a class="headerlink" href="#list-store-with-step-1-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p><strong>Workaround:</strong> Use explicit loop for this rare operation.</p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -604,13 +625,13 @@ TypeError: object &#39;range&#39; is not a tuple or list
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 8, in &lt;module&gt;
-NotImplementedError:
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span>
 </pre></div>
 </div>
 </td>
@@ -624,7 +645,7 @@ NotImplementedError:
 <div class="section" id="start-end-indices-such-as-str-endswith-s-start-not-implemented">
 <span id="cpydiff-types-str-endswith"></span><h3>Start/end indices such as str.endswith(s, start) not implemented<a class="headerlink" href="#start-end-indices-such-as-str-endswith-s-start-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&#39;abc&#39;</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -636,13 +657,13 @@ NotImplementedError:
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="bp">True</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 7, in &lt;module&gt;
-NotImplementedError: start/end indices
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">start</span><span class="o">/</span><span class="n">end</span> <span class="n">indices</span>
 </pre></div>
 </div>
 </td>
@@ -653,7 +674,7 @@ NotImplementedError: start/end indices
 <div class="section" id="attributes-subscr-not-implemented">
 <span id="cpydiff-types-str-formatsubscr"></span><h3>Attributes/subscr not implemented<a class="headerlink" href="#attributes-subscr-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&#39;{a[0]}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{a[0]}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -665,13 +686,13 @@ NotImplementedError: start/end indices
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="mi">1</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 7, in &lt;module&gt;
-NotImplementedError: attributes not supported yet
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">attributes</span> <span class="ow">not</span> <span class="n">supported</span> <span class="n">yet</span>
 </pre></div>
 </div>
 </td>
@@ -680,10 +701,10 @@ NotImplementedError: attributes not supported yet
 </table>
 </div>
 <div class="section" id="str-with-keywords-not-implemented">
-<span id="cpydiff-types-str-keywords"></span><h3>str(...) with keywords not implemented<a class="headerlink" href="#str-with-keywords-not-implemented" title="Permalink to this headline">¶</a></h3>
-<p><strong>Workaround:</strong> Input the encoding format directly. eg <code class="docutils literal"><span class="pre">print(bytes('abc',</span> <span class="pre">'utf-8'))</span></code></p>
+<span id="cpydiff-types-str-keywords"></span><h3>str(…) with keywords not implemented<a class="headerlink" href="#str-with-keywords-not-implemented" title="Permalink to this headline">¶</a></h3>
+<p><strong>Workaround:</strong> Input the encoding format directly. eg <code class="docutils literal notranslate"><span class="pre">print(bytes('abc',</span> <span class="pre">'utf-8'))</span></code></p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;abc&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">&#39;utf8&#39;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -695,13 +716,13 @@ NotImplementedError: attributes not supported yet
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="n">abc</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">abc</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 7, in &lt;module&gt;
-NotImplementedError: keyword argument(s) not yet implemented - use normal args instead
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">keyword</span> <span class="n">argument</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">implemented</span> <span class="o">-</span> <span class="n">use</span> <span class="n">normal</span> <span class="n">args</span> <span class="n">instead</span>
 </pre></div>
 </div>
 </td>
@@ -712,9 +733,9 @@ NotImplementedError: keyword argument(s) not yet implemented - use normal args i
 <div class="section" id="str-ljust-and-str-rjust-not-implemented">
 <span id="cpydiff-types-str-ljust-rjust"></span><h3>str.ljust() and str.rjust() not implemented<a class="headerlink" href="#str-ljust-and-str-rjust-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p><strong>Cause:</strong> MicroPython is highly optimized for memory usage. Easy workarounds available.</p>
-<p><strong>Workaround:</strong> Instead of <code class="docutils literal"><span class="pre">s.ljust(10)</span></code> use <code class="docutils literal"><span class="pre">&quot;%-10s&quot;</span> <span class="pre">%</span> <span class="pre">s</span></code>, instead of <code class="docutils literal"><span class="pre">s.rjust(10)</span></code> use <code class="docutils literal"><span class="pre">&quot;%</span> <span class="pre">10s&quot;</span> <span class="pre">%</span> <span class="pre">s</span></code>. Alternatively, <code class="docutils literal"><span class="pre">&quot;{:&lt;10}&quot;.format(s)</span></code> or <code class="docutils literal"><span class="pre">&quot;{:&gt;10}&quot;.format(s)</span></code>.</p>
+<p><strong>Workaround:</strong> Instead of <code class="docutils literal notranslate"><span class="pre">s.ljust(10)</span></code> use <code class="docutils literal notranslate"><span class="pre">&quot;%-10s&quot;</span> <span class="pre">%</span> <span class="pre">s</span></code>, instead of <code class="docutils literal notranslate"><span class="pre">s.rjust(10)</span></code> use <code class="docutils literal notranslate"><span class="pre">&quot;%</span> <span class="pre">10s&quot;</span> <span class="pre">%</span> <span class="pre">s</span></code>. Alternatively, <code class="docutils literal notranslate"><span class="pre">&quot;{:&lt;10}&quot;.format(s)</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;{:&gt;10}&quot;.format(s)</span></code>.</p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&#39;abc&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -726,13 +747,13 @@ NotImplementedError: keyword argument(s) not yet implemented - use normal args i
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="n">abc</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">abc</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 7, in &lt;module&gt;
-AttributeError: &#39;str&#39; object has no attribute &#39;ljust&#39;
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;ljust&#39;</span>
 </pre></div>
 </div>
 </td>
@@ -743,7 +764,7 @@ AttributeError: &#39;str&#39; object has no attribute &#39;ljust&#39;
 <div class="section" id="none-as-first-argument-for-rsplit-such-as-str-rsplit-none-n-not-implemented">
 <span id="cpydiff-types-str-rsplitnone"></span><h3>None as first argument for rsplit such as str.rsplit(None, n) not implemented<a class="headerlink" href="#none-as-first-argument-for-rsplit-such-as-str-rsplit-none-n-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&#39;a a a&#39;</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a a a&#39;</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -755,13 +776,13 @@ AttributeError: &#39;str&#39; object has no attribute &#39;ljust&#39;
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="s">&#39;a a&#39;</span><span class="p">,</span> <span class="s">&#39;a&#39;</span><span class="p">]</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;a a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 7, in &lt;module&gt;
-NotImplementedError: rsplit(None,n)
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">rsplit</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
 </td>
@@ -772,11 +793,11 @@ NotImplementedError: rsplit(None,n)
 <div class="section" id="instance-of-a-subclass-of-str-cannot-be-compared-for-equality-with-an-instance-of-a-str">
 <span id="cpydiff-types-str-subclassequality"></span><h3>Instance of a subclass of str cannot be compared for equality with an instance of a str<a class="headerlink" href="#instance-of-a-subclass-of-str-cannot-be-compared-for-equality-with-an-instance-of-a-str" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">S</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">S</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
     <span class="k">pass</span>
 
-<span class="n">s</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="s">&#39;hello&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="s">&#39;hello&#39;</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -788,11 +809,11 @@ NotImplementedError: rsplit(None,n)
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="bp">True</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre><span class="bp">False</span>
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span>
 </pre></div>
 </div>
 </td>
@@ -803,7 +824,7 @@ NotImplementedError: rsplit(None,n)
 <div class="section" id="subscript-with-step-1-is-not-yet-implemented">
 <span id="cpydiff-types-str-subscrstep"></span><h3>Subscript with step != 1 is not yet implemented<a class="headerlink" href="#subscript-with-step-1-is-not-yet-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&#39;abcdefghi&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;abcdefghi&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -815,13 +836,13 @@ NotImplementedError: rsplit(None,n)
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="n">acegi</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">acegi</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 7, in &lt;module&gt;
-NotImplementedError: only slices with step=1 (aka None) are supported
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">only</span> <span class="n">slices</span> <span class="k">with</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span> <span class="p">(</span><span class="n">aka</span> <span class="kc">None</span><span class="p">)</span> <span class="n">are</span> <span class="n">supported</span>
 </pre></div>
 </div>
 </td>
@@ -835,7 +856,7 @@ NotImplementedError: only slices with step=1 (aka None) are supported
 <div class="section" id="tuple-load-with-step-1-not-implemented">
 <span id="cpydiff-types-tuple-subscrstep"></span><h3>Tuple load with step != 1 not implemented<a class="headerlink" href="#tuple-load-with-step-1-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -847,13 +868,13 @@ NotImplementedError: only slices with step=1 (aka None) are supported
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 7, in &lt;module&gt;
-NotImplementedError: only slices with step=1 (aka None) are supported
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">only</span> <span class="n">slices</span> <span class="k">with</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span> <span class="p">(</span><span class="n">aka</span> <span class="kc">None</span><span class="p">)</span> <span class="n">are</span> <span class="n">supported</span>
 </pre></div>
 </div>
 </td>
@@ -866,15 +887,16 @@ NotImplementedError: only slices with step=1 (aka None) are supported
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="modules.html" class="btn btn-neutral float-right" title="Modules" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="core_language.html" class="btn btn-neutral" title="Core Language" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="core_language.html" class="btn btn-neutral float-left" title="Core Language" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -883,12 +905,14 @@ NotImplementedError: only slices with step=1 (aka None) are supported
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -966,35 +990,15 @@ NotImplementedError: only slices with step=1 (aka None) are supported
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

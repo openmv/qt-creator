@@ -15,40 +15,39 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -57,7 +56,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -86,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -105,56 +107,76 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>class SD &#8211; secure digital memory card</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>class SD – secure digital memory card</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/machine.SD.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/machine.SD.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="class-sd-secure-digital-memory-card">
-<span id="machine-sd"></span><h1>class SD &#8211; secure digital memory card<a class="headerlink" href="#class-sd-secure-digital-memory-card" title="Permalink to this headline">¶</a></h1>
+<span id="machine-sd"></span><h1>class SD – secure digital memory card<a class="headerlink" href="#class-sd-secure-digital-memory-card" title="Permalink to this headline">¶</a></h1>
 <p>The SD card class allows to configure and enable the memory card
-module of the WiPy and automatically mount it as <code class="docutils literal"><span class="pre">/sd</span></code> as part
+module of the WiPy and automatically mount it as <code class="docutils literal notranslate"><span class="pre">/sd</span></code> as part
 of the file system. There are several pin combinations that can be
 used to wire the SD card socket to the WiPy and the pins used can
 be specified in the constructor. Please check the <a class="reference external" href="https://raw.githubusercontent.com/wipy/wipy/master/docs/PinOUT.png">pinout and alternate functions
 table.</a> for
 more info regarding the pins which can be remapped to be used with a SD card.</p>
 <p>Example usage:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">SD</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="k">import</span> <span class="n">SD</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="c"># clk cmd and dat0 pins must be passed along with</span>
-<span class="c"># their respective alternate functions</span>
-<span class="n">sd</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">SD</span><span class="p">(</span><span class="n">pins</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;GP10&#39;</span><span class="p">,</span> <span class="s">&#39;GP11&#39;</span><span class="p">,</span> <span class="s">&#39;GP15&#39;</span><span class="p">))</span>
-<span class="n">os</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="s">&#39;/sd&#39;</span><span class="p">)</span>
-<span class="c"># do normal file operations</span>
+<span class="c1"># clk cmd and dat0 pins must be passed along with</span>
+<span class="c1"># their respective alternate functions</span>
+<span class="n">sd</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">SD</span><span class="p">(</span><span class="n">pins</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;GP10&#39;</span><span class="p">,</span> <span class="s1">&#39;GP11&#39;</span><span class="p">,</span> <span class="s1">&#39;GP15&#39;</span><span class="p">))</span>
+<span class="n">os</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="s1">&#39;/sd&#39;</span><span class="p">)</span>
+<span class="c1"># do normal file operations</span>
 </pre></div>
 </div>
 <div class="section" id="constructors">
@@ -162,7 +184,7 @@ more info regarding the pins which can be remapped to be used with a SD card.</p
 <dl class="class">
 <dt id="machine.SD">
 <em class="property">class </em><code class="descclassname">machine.</code><code class="descname">SD</code><span class="sig-paren">(</span><em>id</em>, <em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.SD" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SD card object. See <code class="docutils literal"><span class="pre">init()</span></code> for parameters if initialization.</p>
+<dd><p>Create a SD card object. See <code class="docutils literal notranslate"><span class="pre">init()</span></code> for parameters if initialization.</p>
 </dd></dl>
 
 </div>
@@ -172,7 +194,7 @@ more info regarding the pins which can be remapped to be used with a SD card.</p
 <dt id="machine.SD.init">
 <code class="descclassname">SD.</code><code class="descname">init</code><span class="sig-paren">(</span><em>id=0</em>, <em>pins=('GP10'</em>, <em>'GP11'</em>, <em>'GP15')</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.SD.init" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable the SD card. In order to initialize the card, give it a 3-tuple:
-<code class="docutils literal"><span class="pre">(clk_pin,</span> <span class="pre">cmd_pin,</span> <span class="pre">dat0_pin)</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">(clk_pin,</span> <span class="pre">cmd_pin,</span> <span class="pre">dat0_pin)</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -186,6 +208,7 @@ more info regarding the pins which can be remapped to be used with a SD card.</p
 
 
            </div>
+           
           </div>
           <footer>
   
@@ -194,12 +217,14 @@ more info regarding the pins which can be remapped to be used with a SD card.</p
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -277,35 +302,15 @@ more info regarding the pins which can be remapped to be used with a SD card.</p
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

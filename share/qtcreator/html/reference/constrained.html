@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="The MicroPython language" href="index.html"/>
-        <link rel="next" title="Distribution packages, package management, and deploying applications" href="packages.html"/>
-        <link rel="prev" title="Maximising MicroPython Speed" href="speed_python.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Distribution packages, package management, and deploying applications" href="packages.html" />
+    <link rel="prev" title="Maximising MicroPython Speed" href="speed_python.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -99,7 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="repl.html">The MicroPython Interactive Interpreter Mode (aka REPL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="isr_rules.html">Writing interrupt handlers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="speed_python.html">Maximising MicroPython Speed</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">MicroPython on Microcontrollers</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MicroPython on Microcontrollers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#flash-memory">Flash Memory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ram">RAM</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#compilation-phase">Compilation Phase</a></li>
@@ -136,36 +137,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">The MicroPython language</a> &raquo;</li>
-      
-    <li>MicroPython on Microcontrollers</li>
+        
+      <li>MicroPython on Microcontrollers</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/reference/constrained.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/reference/constrained.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -176,7 +197,7 @@
 <p>MicroPython is designed to be capable of running on microcontrollers. These
 have hardware limitations which may be unfamiliar to programmers more familiar
 with conventional computers. In particular the amount of RAM and nonvolatile
-&#8220;disk&#8221; (flash memory) storage is limited. This tutorial offers ways to make
+“disk” (flash memory) storage is limited. This tutorial offers ways to make
 the most of the limited resources. Because MicroPython runs on controllers
 based on a variety of architectures, the methods presented are generic: in some
 cases it will be necessary to obtain detailed information from platform specific
@@ -196,7 +217,7 @@ flashed to the device.</p>
 modules store the Python source with the firmware. Frozen bytecode uses the
 cross compiler to convert the source to bytecode which is then stored with the
 firmware. In either case the module may be accessed with an import statement:</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">mymodule</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mymodule</span>
 </pre></div>
 </div>
 <p>The procedure for producing frozen modules and bytecode is platform dependent;
@@ -248,8 +269,8 @@ is run directly from flash rather than being stored in RAM.</p>
 <h3>Execution Phase<a class="headerlink" href="#execution-phase" title="Permalink to this headline">¶</a></h3>
 <p>There are a number of coding techniques for reducing RAM usage.</p>
 <p><strong>Constants</strong></p>
-<p>MicroPython provides a <code class="docutils literal"><span class="pre">const</span></code> keyword which may be used as follows:</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">micropython</span> <span class="kn">import</span> <span class="n">const</span>
+<p>MicroPython provides a <code class="docutils literal notranslate"><span class="pre">const</span></code> keyword which may be used as follows:</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">micropython</span> <span class="k">import</span> <span class="n">const</span>
 <span class="n">ROWS</span> <span class="o">=</span> <span class="n">const</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
 <span class="n">_COLS</span> <span class="o">=</span> <span class="n">const</span><span class="p">(</span><span class="mh">0x10</span><span class="p">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">ROWS</span>
@@ -258,43 +279,43 @@ is run directly from flash rather than being stored in RAM.</p>
 </div>
 <p>In both instances where the constant is assigned to a variable the compiler
 will avoid coding a lookup to the name of the constant by substituting its
-literal value. This saves bytecode and hence RAM. However the <code class="docutils literal"><span class="pre">ROWS</span></code> value
+literal value. This saves bytecode and hence RAM. However the <code class="docutils literal notranslate"><span class="pre">ROWS</span></code> value
 will occupy at least two machine words, one each for the key and value in the
 globals dictionary. The presence in the dictionary is necessary because another
 module might import or use it. This RAM can be saved by prepending the name
-with an underscore as in <code class="docutils literal"><span class="pre">_COLS</span></code>: this symbol is not visible outside the
+with an underscore as in <code class="docutils literal notranslate"><span class="pre">_COLS</span></code>: this symbol is not visible outside the
 module so will not occupy RAM.</p>
-<p>The argument to <code class="docutils literal"><span class="pre">const()</span></code> may be anything which, at compile time, evaluates
-to an integer e.g. <code class="docutils literal"><span class="pre">0x100</span></code> or <code class="docutils literal"><span class="pre">1</span> <span class="pre">&lt;&lt;</span> <span class="pre">8</span></code>. It can even include other const
-symbols that have already been defined, e.g. <code class="docutils literal"><span class="pre">1</span> <span class="pre">&lt;&lt;</span> <span class="pre">BIT</span></code>.</p>
+<p>The argument to <code class="docutils literal notranslate"><span class="pre">const()</span></code> may be anything which, at compile time, evaluates
+to an integer e.g. <code class="docutils literal notranslate"><span class="pre">0x100</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">&lt;&lt;</span> <span class="pre">8</span></code>. It can even include other const
+symbols that have already been defined, e.g. <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">&lt;&lt;</span> <span class="pre">BIT</span></code>.</p>
 <p><strong>Constant data structures</strong></p>
 <p>Where there is a substantial volume of constant data and the platform supports
 execution from Flash, RAM may be saved as follows. The data should be located in
-Python modules and frozen as bytecode. The data must be defined as <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal"><span class="pre">bytes</span></code></a>
-objects. The compiler &#8216;knows&#8217; that <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal"><span class="pre">bytes</span></code></a> objects are immutable and ensures
+Python modules and frozen as bytecode. The data must be defined as <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>
+objects. The compiler ‘knows’ that <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> objects are immutable and ensures
 that the objects remain in flash memory rather than being copied to RAM. The
-<a class="reference internal" href="../library/ustruct.html#module-ustruct" title="ustruct: pack and unpack primitive data types"><code class="xref any py py-mod docutils literal"><span class="pre">ustruct</span></code></a> module can assist in converting between <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal"><span class="pre">bytes</span></code></a> types and other
+<a class="reference internal" href="../library/ustruct.html#module-ustruct" title="ustruct: pack and unpack primitive data types"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">ustruct</span></code></a> module can assist in converting between <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> types and other
 Python built-in types.</p>
 <p>When considering the implications of frozen bytecode, note that in Python
 strings, floats, bytes, integers and complex numbers are immutable. Accordingly
 these will be frozen into flash. Thus, in the line</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="n">mystring</span> <span class="o">=</span> <span class="s">&quot;The quick brown fox&quot;</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mystring</span> <span class="o">=</span> <span class="s2">&quot;The quick brown fox&quot;</span>
 </pre></div>
 </div>
-<p>the actual string &#8220;The quick brown fox&#8221; will reside in flash. At runtime a
-reference to the string is assigned to the <em>variable</em> <code class="docutils literal"><span class="pre">mystring</span></code>. The reference
+<p>the actual string “The quick brown fox” will reside in flash. At runtime a
+reference to the string is assigned to the <em>variable</em> <code class="docutils literal notranslate"><span class="pre">mystring</span></code>. The reference
 occupies a single machine word. In principle a long integer could be used to
 store constant data:</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="n">bar</span> <span class="o">=</span> <span class="mh">0xDEADBEEF0000DEADBEEF</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bar</span> <span class="o">=</span> <span class="mh">0xDEADBEEF0000DEADBEEF</span>
 </pre></div>
 </div>
 <p>As in the string example, at runtime a reference to the arbitrarily large
-integer is assigned to the variable <code class="docutils literal"><span class="pre">bar</span></code>. That reference occupies a
+integer is assigned to the variable <code class="docutils literal notranslate"><span class="pre">bar</span></code>. That reference occupies a
 single machine word.</p>
 <p>It might be expected that tuples of integers could be employed for the purpose
 of storing constant data with minimal RAM use. With the current compiler this
 is ineffective (the code works, but RAM is not saved).</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="n">foo</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>At runtime the tuple will be located in RAM. This may be subject to future
@@ -305,11 +326,11 @@ destroyed. This can reduce the usability of RAM through fragmentation. The
 following sections discuss instances of this.</p>
 <p><strong>String concatenation</strong></p>
 <p>Consider the following code fragments which aim to produce constant strings:</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="n">var</span> <span class="o">=</span> <span class="s">&quot;foo&quot;</span> <span class="o">+</span> <span class="s">&quot;bar&quot;</span>
-<span class="n">var1</span> <span class="o">=</span> <span class="s">&quot;foo&quot;</span> <span class="s">&quot;bar&quot;</span>
-<span class="n">var2</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span><span class="se">\</span>
-<span class="s">foo</span><span class="se">\</span>
-<span class="s">bar&quot;&quot;&quot;</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span> <span class="o">+</span> <span class="s2">&quot;bar&quot;</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span> <span class="s2">&quot;bar&quot;</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">foo</span><span class="se">\</span>
+<span class="s2">bar&quot;&quot;&quot;</span>
 </pre></div>
 </div>
 <p>Each produces the same outcome, however the first needlessly creates two string
@@ -320,67 +341,67 @@ efficient, reducing fragmentation.</p>
 a file it will save RAM if this is done in a piecemeal fashion. Rather than
 creating a large string object, create a substring and feed it to the stream
 before dealing with the next.</p>
-<p>The best way to create dynamic strings is by means of the string <code class="docutils literal"><span class="pre">format()</span></code>
+<p>The best way to create dynamic strings is by means of the string <code class="docutils literal notranslate"><span class="pre">format()</span></code>
 method:</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="n">var</span> <span class="o">=</span> <span class="s">&quot;Temperature {:5.2f} Pressure {:06d}</span><span class="se">\n</span><span class="s">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">press</span><span class="p">)</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;Temperature </span><span class="si">{:5.2f}</span><span class="s2"> Pressure </span><span class="si">{:06d}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">press</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><strong>Buffers</strong></p>
 <p>When accessing devices such as instances of UART, I2C and SPI interfaces, using
 pre-allocated buffers avoids the creation of needless objects. Consider these
 two loops:</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">var</span> <span class="o">=</span> <span class="n">spi</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-    <span class="c"># process data</span>
+    <span class="c1"># process data</span>
 
 <span class="n">buf</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">spi</span><span class="o">.</span><span class="n">readinto</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
-    <span class="c"># process data in buf</span>
+    <span class="c1"># process data in buf</span>
 </pre></div>
 </div>
 <p>The first creates a buffer on each pass whereas the second re-uses a pre-allocated
 buffer; this is both faster and more efficient in terms of memory fragmentation.</p>
 <p><strong>Bytes are smaller than ints</strong></p>
 <p>On most platforms an integer consumes four bytes. Consider the two calls to the
-function <code class="docutils literal"><span class="pre">foo()</span></code>:</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">bar</span><span class="p">):</span>
+function <code class="docutils literal notranslate"><span class="pre">foo()</span></code>:</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">bar</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bar</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="n">foo</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mh">0xff</span><span class="p">))</span>
-<span class="n">foo</span><span class="p">(</span><span class="n">b</span><span class="s">&#39;</span><span class="se">\1\2\xff</span><span class="s">&#39;</span><span class="p">)</span>
+<span class="n">foo</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\1\2\xff</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>In the first call a tuple of integers is created in RAM. The second efficiently
-creates a <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal"><span class="pre">bytes</span></code></a> object consuming the minimum amount of RAM. If the module
-were frozen as bytecode, the <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal"><span class="pre">bytes</span></code></a> object would reside in flash.</p>
+creates a <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object consuming the minimum amount of RAM. If the module
+were frozen as bytecode, the <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object would reside in flash.</p>
 <p><strong>Strings Versus Bytes</strong></p>
 <p>Python3 introduced Unicode support. This introduced a distinction between a
 string and an array of bytes. MicroPython ensures that Unicode strings take no
 additional space so long as all characters in the string are ASCII (i.e. have
-a value &lt; 126). If values in the full 8-bit range are required <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal"><span class="pre">bytes</span></code></a> and
-<a class="reference internal" href="../library/builtins.html#bytearray" title="bytearray"><code class="xref any py py-class docutils literal"><span class="pre">bytearray</span></code></a> objects can be used to ensure that no additional space will be
-required. Note that most string methods (e.g. <a class="reference external" href="http://docs.python.org/3.5/library/stdtypes.html#str.strip" title="(in Python v3.5)"><code class="xref py py-meth docutils literal"><span class="pre">str.strip()</span></code></a>) apply also to <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal"><span class="pre">bytes</span></code></a>
+a value &lt; 126). If values in the full 8-bit range are required <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> and
+<a class="reference internal" href="../library/builtins.html#bytearray" title="bytearray"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> objects can be used to ensure that no additional space will be
+required. Note that most string methods (e.g. <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str.strip" title="(in Python v3.5)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.strip()</span></code></a>) apply also to <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>
 instances so the process of eliminating Unicode can be painless.</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="n">s</span> <span class="o">=</span> <span class="s">&#39;the quick brown fox&#39;</span>   <span class="c"># A string instance</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="s">&#39;the quick brown fox&#39;</span>  <span class="c"># A bytes instance</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;the quick brown fox&#39;</span>   <span class="c1"># A string instance</span>
+<span class="n">b</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;the quick brown fox&#39;</span>  <span class="c1"># A bytes instance</span>
 </pre></div>
 </div>
-<p>Where it is necessary to convert between strings and bytes the <a class="reference external" href="http://docs.python.org/3.5/library/stdtypes.html#str.encode" title="(in Python v3.5)"><code class="xref py py-meth docutils literal"><span class="pre">str.encode()</span></code></a>
-and the <a class="reference external" href="http://docs.python.org/3.5/library/stdtypes.html#bytes.decode" title="(in Python v3.5)"><code class="xref py py-meth docutils literal"><span class="pre">bytes.decode()</span></code></a> methods can be used. Note that both strings and bytes
+<p>Where it is necessary to convert between strings and bytes the <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str.encode" title="(in Python v3.5)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.encode()</span></code></a>
+and the <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#bytes.decode" title="(in Python v3.5)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytes.decode()</span></code></a> methods can be used. Note that both strings and bytes
 are immutable. Any operation which takes as input such an object and produces
 another implies at least one RAM allocation to produce the result. In the
-second line below a new bytes object is allocated. This would also occur if <code class="docutils literal"><span class="pre">foo</span></code>
+second line below a new bytes object is allocated. This would also occur if <code class="docutils literal notranslate"><span class="pre">foo</span></code>
 were a string.</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="n">foo</span> <span class="o">=</span> <span class="n">b</span><span class="s">&#39;   empty whitespace&#39;</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;   empty whitespace&#39;</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="n">foo</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
 </pre></div>
 </div>
 <p><strong>Runtime compiler execution</strong></p>
-<p>The Python funcitons <a class="reference internal" href="../library/builtins.html#eval" title="eval"><code class="xref any py py-func docutils literal"><span class="pre">eval</span></code></a> and <a class="reference internal" href="../library/builtins.html#exec" title="exec"><code class="xref any py py-func docutils literal"><span class="pre">exec</span></code></a> invoke the compiler at runtime, which
-requires significant amounts of RAM. Note that the <code class="docutils literal"><span class="pre">pickle</span></code> library from
-<a class="reference internal" href="glossary.html#term-micropython-lib"><code class="xref any std std-term docutils literal"><span class="pre">micropython-lib</span></code></a> employs <a class="reference internal" href="../library/builtins.html#exec" title="exec"><code class="xref any py py-func docutils literal"><span class="pre">exec</span></code></a>. It may be more RAM efficient to use the
-<a class="reference internal" href="../library/ujson.html#module-ujson" title="ujson: JSON encoding and decoding"><code class="xref any py py-mod docutils literal"><span class="pre">ujson</span></code></a> library for object serialisation.</p>
+<p>The Python funcitons <a class="reference internal" href="../library/builtins.html#eval" title="eval"><code class="xref any py py-func docutils literal notranslate"><span class="pre">eval</span></code></a> and <a class="reference internal" href="../library/builtins.html#exec" title="exec"><code class="xref any py py-func docutils literal notranslate"><span class="pre">exec</span></code></a> invoke the compiler at runtime, which
+requires significant amounts of RAM. Note that the <code class="docutils literal notranslate"><span class="pre">pickle</span></code> library from
+<a class="reference internal" href="glossary.html#term-micropython-lib"><code class="xref any std std-term docutils literal notranslate"><span class="pre">micropython-lib</span></code></a> employs <a class="reference internal" href="../library/builtins.html#exec" title="exec"><code class="xref any py py-func docutils literal notranslate"><span class="pre">exec</span></code></a>. It may be more RAM efficient to use the
+<a class="reference internal" href="../library/ujson.html#module-ujson" title="ujson: JSON encoding and decoding"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">ujson</span></code></a> library for object serialisation.</p>
 <p><strong>Storing strings in flash</strong></p>
 <p>Python strings are immutable hence have the potential to be stored in read only
 memory. The compiler can place in flash strings defined in Python code. As with
@@ -388,7 +409,7 @@ frozen modules it is necessary to have a copy of the source tree on the PC and
 the toolchain to build the firmware. The procedure will work even if the
 modules have not been fully debugged, so long as they can be imported and run.</p>
 <p>After importing the modules, execute:</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="n">micropython</span><span class="o">.</span><span class="n">qstr_info</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">micropython</span><span class="o">.</span><span class="n">qstr_info</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Then copy and paste all the Q(xxx) lines into a text editor. Check for and
@@ -397,7 +418,7 @@ will be found in ports/stm32 (or the equivalent directory for the architecture i
 use). Copy and paste the corrected lines at the end of the file. Save the file,
 rebuild and flash the firmware. The outcome can be checked by importing the
 modules and again issuing:</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="n">micropython</span><span class="o">.</span><span class="n">qstr_info</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">micropython</span><span class="o">.</span><span class="n">qstr_info</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The Q(xxx) lines should be gone.</p>
@@ -408,22 +429,22 @@ modules and again issuing:</p>
 <p>When a running program instantiates an object the necessary RAM is allocated
 from a fixed size pool known as the heap. When the object goes out of scope (in
 other words becomes inaccessible to code) the redundant object is known as
-&#8220;garbage&#8221;. A process known as &#8220;garbage collection&#8221; (GC) reclaims that memory,
+“garbage”. A process known as “garbage collection” (GC) reclaims that memory,
 returning it to the free heap. This process runs automatically, however it can
-be invoked directly by issuing <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal"><span class="pre">gc.collect()</span></code></a>.</p>
-<p>The discourse on this is somewhat involved. For a &#8216;quick fix&#8217; issue the
+be invoked directly by issuing <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal notranslate"><span class="pre">gc.collect()</span></code></a>.</p>
+<p>The discourse on this is somewhat involved. For a ‘quick fix’ issue the
 following periodically:</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
 <span class="n">gc</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">mem_free</span><span class="p">()</span> <span class="o">//</span> <span class="mi">4</span> <span class="o">+</span> <span class="n">gc</span><span class="o">.</span><span class="n">mem_alloc</span><span class="p">())</span>
 </pre></div>
 </div>
 <div class="section" id="fragmentation">
 <h3>Fragmentation<a class="headerlink" href="#fragmentation" title="Permalink to this headline">¶</a></h3>
-<p>Say a program creates an object <code class="docutils literal"><span class="pre">foo</span></code>, then an object <code class="docutils literal"><span class="pre">bar</span></code>. Subsequently
-<code class="docutils literal"><span class="pre">foo</span></code> goes out of scope but <code class="docutils literal"><span class="pre">bar</span></code> remains. The RAM used by <code class="docutils literal"><span class="pre">foo</span></code> will be
-reclaimed by GC. However if <code class="docutils literal"><span class="pre">bar</span></code> was allocated to a higher address, the
-RAM reclaimed from <code class="docutils literal"><span class="pre">foo</span></code> will only be of use for objects no bigger than
-<code class="docutils literal"><span class="pre">foo</span></code>. In a complex or long running program the heap can become fragmented:
+<p>Say a program creates an object <code class="docutils literal notranslate"><span class="pre">foo</span></code>, then an object <code class="docutils literal notranslate"><span class="pre">bar</span></code>. Subsequently
+<code class="docutils literal notranslate"><span class="pre">foo</span></code> goes out of scope but <code class="docutils literal notranslate"><span class="pre">bar</span></code> remains. The RAM used by <code class="docutils literal notranslate"><span class="pre">foo</span></code> will be
+reclaimed by GC. However if <code class="docutils literal notranslate"><span class="pre">bar</span></code> was allocated to a higher address, the
+RAM reclaimed from <code class="docutils literal notranslate"><span class="pre">foo</span></code> will only be of use for objects no bigger than
+<code class="docutils literal notranslate"><span class="pre">foo</span></code>. In a complex or long running program the heap can become fragmented:
 despite there being a substantial amount of RAM available, there is insufficient
 contiguous space to allocate a particular object, and the program fails with a
 memory error.</p>
@@ -436,42 +457,42 @@ outlined below.</p>
 <div class="section" id="reporting">
 <h3>Reporting<a class="headerlink" href="#reporting" title="Permalink to this headline">¶</a></h3>
 <p>A number of library functions are available to report on memory allocation and
-to control GC. These are to be found in the <a class="reference internal" href="../library/gc.html#module-gc" title="gc: control the garbage collector"><code class="xref any py py-mod docutils literal"><span class="pre">gc</span></code></a> and <a class="reference internal" href="../library/micropython.html#module-micropython" title="micropython: access and control MicroPython internals"><code class="xref any py py-mod docutils literal"><span class="pre">micropython</span></code></a> modules.
-The following example may be pasted at the REPL (<code class="docutils literal"><span class="pre">ctrl</span> <span class="pre">e</span></code> to enter paste mode,
-<code class="docutils literal"><span class="pre">ctrl</span> <span class="pre">d</span></code> to run it).</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">gc</span>
+to control GC. These are to be found in the <a class="reference internal" href="../library/gc.html#module-gc" title="gc: control the garbage collector"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">gc</span></code></a> and <a class="reference internal" href="../library/micropython.html#module-micropython" title="micropython: access and control MicroPython internals"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">micropython</span></code></a> modules.
+The following example may be pasted at the REPL (<code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">e</span></code> to enter paste mode,
+<code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">d</span></code> to run it).</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gc</span>
 <span class="kn">import</span> <span class="nn">micropython</span>
 <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
 <span class="n">micropython</span><span class="o">.</span><span class="n">mem_info</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;-----------------------------&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;Initial free: {} allocated: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">mem_free</span><span class="p">(),</span> <span class="n">gc</span><span class="o">.</span><span class="n">mem_alloc</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----------------------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Initial free: </span><span class="si">{}</span><span class="s1"> allocated: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">mem_free</span><span class="p">(),</span> <span class="n">gc</span><span class="o">.</span><span class="n">mem_alloc</span><span class="p">()))</span>
 <span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
     <span class="n">a</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
 <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;Func definition: {} allocated: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">mem_free</span><span class="p">(),</span> <span class="n">gc</span><span class="o">.</span><span class="n">mem_alloc</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Func definition: </span><span class="si">{}</span><span class="s1"> allocated: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">mem_free</span><span class="p">(),</span> <span class="n">gc</span><span class="o">.</span><span class="n">mem_alloc</span><span class="p">()))</span>
 <span class="n">func</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;Func run free: {} allocated: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">mem_free</span><span class="p">(),</span> <span class="n">gc</span><span class="o">.</span><span class="n">mem_alloc</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Func run free: </span><span class="si">{}</span><span class="s1"> allocated: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">mem_free</span><span class="p">(),</span> <span class="n">gc</span><span class="o">.</span><span class="n">mem_alloc</span><span class="p">()))</span>
 <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;Garbage collect free: {} allocated: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">mem_free</span><span class="p">(),</span> <span class="n">gc</span><span class="o">.</span><span class="n">mem_alloc</span><span class="p">()))</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;-----------------------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Garbage collect free: </span><span class="si">{}</span><span class="s1"> allocated: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">mem_free</span><span class="p">(),</span> <span class="n">gc</span><span class="o">.</span><span class="n">mem_alloc</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----------------------------&#39;</span><span class="p">)</span>
 <span class="n">micropython</span><span class="o">.</span><span class="n">mem_info</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Methods employed above:</p>
 <ul class="simple">
-<li><a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal"><span class="pre">gc.collect()</span></code></a> Force a garbage collection. See footnote.</li>
-<li><a class="reference internal" href="../library/micropython.html#micropython.mem_info" title="micropython.mem_info"><code class="xref any py py-func docutils literal"><span class="pre">micropython.mem_info()</span></code></a> Print a summary of RAM utilisation.</li>
-<li><a class="reference internal" href="../library/gc.html#gc.mem_free" title="gc.mem_free"><code class="xref any py py-func docutils literal"><span class="pre">gc.mem_free()</span></code></a> Return the free heap size in bytes.</li>
-<li><a class="reference internal" href="../library/gc.html#gc.mem_alloc" title="gc.mem_alloc"><code class="xref any py py-func docutils literal"><span class="pre">gc.mem_alloc()</span></code></a> Return the number of bytes currently allocated.</li>
-<li><code class="docutils literal"><span class="pre">micropython.mem_info(1)</span></code> Print a table of heap utilisation (detailed below).</li>
+<li><a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal notranslate"><span class="pre">gc.collect()</span></code></a> Force a garbage collection. See footnote.</li>
+<li><a class="reference internal" href="../library/micropython.html#micropython.mem_info" title="micropython.mem_info"><code class="xref any py py-func docutils literal notranslate"><span class="pre">micropython.mem_info()</span></code></a> Print a summary of RAM utilisation.</li>
+<li><a class="reference internal" href="../library/gc.html#gc.mem_free" title="gc.mem_free"><code class="xref any py py-func docutils literal notranslate"><span class="pre">gc.mem_free()</span></code></a> Return the free heap size in bytes.</li>
+<li><a class="reference internal" href="../library/gc.html#gc.mem_alloc" title="gc.mem_alloc"><code class="xref any py py-func docutils literal notranslate"><span class="pre">gc.mem_alloc()</span></code></a> Return the number of bytes currently allocated.</li>
+<li><code class="docutils literal notranslate"><span class="pre">micropython.mem_info(1)</span></code> Print a table of heap utilisation (detailed below).</li>
 </ul>
 <p>The numbers produced are dependent on the platform, but it can be seen that
 declaring the function uses a small amount of RAM in the form of bytecode
 emitted by the compiler (the RAM used by the compiler has been reclaimed).
-Running the function uses over 10KiB, but on return <code class="docutils literal"><span class="pre">a</span></code> is garbage because it
-is out of scope and cannot be referenced. The final <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal"><span class="pre">gc.collect()</span></code></a> recovers
+Running the function uses over 10KiB, but on return <code class="docutils literal notranslate"><span class="pre">a</span></code> is garbage because it
+is out of scope and cannot be referenced. The final <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal notranslate"><span class="pre">gc.collect()</span></code></a> recovers
 that memory.</p>
-<p>The final output produced by <code class="docutils literal"><span class="pre">micropython.mem_info(1)</span></code> will vary in detail but
+<p>The final output produced by <code class="docutils literal notranslate"><span class="pre">micropython.mem_info(1)</span></code> will vary in detail but
 may be interpreted as follows:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -521,7 +542,7 @@ line of the heap dump represents 0x400 bytes or 1KiB of RAM.</p>
 </div>
 <div class="section" id="control-of-garbage-collection">
 <h3>Control of Garbage Collection<a class="headerlink" href="#control-of-garbage-collection" title="Permalink to this headline">¶</a></h3>
-<p>A GC can be demanded at any time by issuing <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal"><span class="pre">gc.collect()</span></code></a>. It is advantageous
+<p>A GC can be demanded at any time by issuing <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal notranslate"><span class="pre">gc.collect()</span></code></a>. It is advantageous
 to do this at intervals, firstly to pre-empt fragmentation and secondly for
 performance. A GC can take several milliseconds but is quicker when there is
 little work to do (about 1ms on the Pyboard). An explicit call can minimise that
@@ -531,7 +552,7 @@ allocation fails, a GC is performed and the allocation re-tried. Only if this
 fails is an exception raised. Secondly an automatic GC will be triggered if the
 amount of free RAM falls below a threshold. This threshold can be adapted as
 execution progresses:</p>
-<div class="code highlight-python"><div class="highlight"><pre><span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
 <span class="n">gc</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">mem_free</span><span class="p">()</span> <span class="o">//</span> <span class="mi">4</span> <span class="o">+</span> <span class="n">gc</span><span class="o">.</span><span class="n">mem_alloc</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -540,7 +561,7 @@ occupied.</p>
 <p>In general modules should instantiate data objects at runtime using constructors
 or other initialisation functions. The reason is that if this occurs on
 initialisation the compiler may be starved of RAM when subsequent modules are
-imported. If modules do instantiate data on import then <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal"><span class="pre">gc.collect()</span></code></a> issued
+imported. If modules do instantiate data on import then <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal notranslate"><span class="pre">gc.collect()</span></code></a> issued
 after the import will ameliorate the problem.</p>
 </div>
 </div>
@@ -549,7 +570,7 @@ after the import will ameliorate the problem.</p>
 <p>MicroPython handles strings in an efficient manner and understanding this can
 help in designing applications to run on microcontrollers. When a module
 is compiled, strings which occur multiple times are stored once only, a process
-known as string interning. In MicroPython an interned string is known as a <code class="docutils literal"><span class="pre">qstr</span></code>.
+known as string interning. In MicroPython an interned string is known as a <code class="docutils literal notranslate"><span class="pre">qstr</span></code>.
 In a module imported normally that single instance will be located in RAM, but
 as described above, in modules frozen as bytecode it will be located in flash.</p>
 <p>String comparisons are also performed efficiently using hashing rather than
@@ -564,11 +585,11 @@ reference occupies a single machine word so these processes are efficient in
 RAM usage and speed.</p>
 <p>Where variables are required whose size is neither a byte nor a machine word
 there are standard libraries which can assist in storing these efficiently and
-in performing conversions. See the <a class="reference internal" href="../library/array.html#module-array" title="array: efficient arrays of numeric data"><code class="xref any py py-mod docutils literal"><span class="pre">array</span></code></a>, <a class="reference internal" href="../library/ustruct.html#module-ustruct" title="ustruct: pack and unpack primitive data types"><code class="xref any py py-mod docutils literal"><span class="pre">ustruct</span></code></a> and <a class="reference internal" href="../library/uctypes.html#module-uctypes" title="uctypes: access binary data in a structured way"><code class="xref any py py-mod docutils literal"><span class="pre">uctypes</span></code></a>
+in performing conversions. See the <a class="reference internal" href="../library/array.html#module-array" title="array: efficient arrays of numeric data"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">array</span></code></a>, <a class="reference internal" href="../library/ustruct.html#module-ustruct" title="ustruct: pack and unpack primitive data types"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">ustruct</span></code></a> and <a class="reference internal" href="../library/uctypes.html#module-uctypes" title="uctypes: access binary data in a structured way"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">uctypes</span></code></a>
 modules.</p>
 <div class="section" id="footnote-gc-collect-return-value">
 <h3>Footnote: gc.collect() return value<a class="headerlink" href="#footnote-gc-collect-return-value" title="Permalink to this headline">¶</a></h3>
-<p>On Unix and Windows platforms the <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal"><span class="pre">gc.collect()</span></code></a> method returns an integer
+<p>On Unix and Windows platforms the <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal notranslate"><span class="pre">gc.collect()</span></code></a> method returns an integer
 which signifies the number of distinct memory regions that were reclaimed in the
 collection (more precisely, the number of heads that were turned into frees). For
 efficiency reasons bare metal ports do not return this value.</p>
@@ -578,15 +599,16 @@ efficiency reasons bare metal ports do not return this value.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="packages.html" class="btn btn-neutral float-right" title="Distribution packages, package management, and deploying applications" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="packages.html" class="btn btn-neutral float-right" title="Distribution packages, package management, and deploying applications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="speed_python.html" class="btn btn-neutral" title="Maximising MicroPython Speed" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="speed_python.html" class="btn btn-neutral float-left" title="Maximising MicroPython Speed" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -595,12 +617,14 @@ efficiency reasons bare metal ports do not return this value.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -678,35 +702,15 @@ efficiency reasons bare metal ports do not return this value.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="MicroPython libraries" href="index.html"/>
-        <link rel="next" title="gc – control the garbage collector" href="gc.html"/>
-        <link rel="prev" title="array – arrays of numeric data" href="array.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="gc – control the garbage collector" href="gc.html" />
+    <link rel="prev" title="array – arrays of numeric data" href="array.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,37 +87,40 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="array.html"><code class="docutils literal"><span class="pre">array</span></code> &#8211; arrays of numeric data</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href=""><code class="docutils literal"><span class="pre">cmath</span></code> &#8211; mathematical functions for complex numbers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="array.html"><code class="docutils literal notranslate"><span class="pre">array</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#constants">Constants</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal"><span class="pre">gc</span></code> &#8211; control the garbage collector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal"><span class="pre">math</span></code> &#8211; mathematical functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal"><span class="pre">sys</span></code> &#8211; system specific functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal"><span class="pre">ubinascii</span></code> &#8211; binary/ASCII conversions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal"><span class="pre">ucollections</span></code> &#8211; collection and container types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal"><span class="pre">uerrno</span></code> &#8211; system error codes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uhashlib.html"><code class="docutils literal"><span class="pre">uhashlib</span></code> &#8211; hashing algorithms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uheapq.html"><code class="docutils literal"><span class="pre">uheapq</span></code> &#8211; heap queue algorithm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uio.html"><code class="docutils literal"><span class="pre">uio</span></code> &#8211; input/output streams</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ujson.html"><code class="docutils literal"><span class="pre">ujson</span></code> &#8211; JSON encoding and decoding</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uos.html"><code class="docutils literal"><span class="pre">uos</span></code> &#8211; basic &#8220;operating system&#8221; services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ure.html"><code class="docutils literal"><span class="pre">ure</span></code> &#8211; simple regular expressions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uselect.html"><code class="docutils literal"><span class="pre">uselect</span></code> &#8211; wait for events on a set of streams</a></li>
-<li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal"><span class="pre">usocket</span></code> &#8211; socket module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal"><span class="pre">ustruct</span></code> &#8211; pack and unpack primitive data types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal"><span class="pre">utime</span></code> &#8211; time related functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal"><span class="pre">uzlib</span></code> &#8211; zlib decompression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal"><span class="pre">_thread</span></code> &#8211; multithreading support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uhashlib.html"><code class="docutils literal notranslate"><span class="pre">uhashlib</span></code> – hashing algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uheapq.html"><code class="docutils literal notranslate"><span class="pre">uheapq</span></code> – heap queue algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uio.html"><code class="docutils literal notranslate"><span class="pre">uio</span></code> – input/output streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ujson.html"><code class="docutils literal notranslate"><span class="pre">ujson</span></code> – JSON encoding and decoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uos.html"><code class="docutils literal notranslate"><span class="pre">uos</span></code> – basic “operating system” services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ure.html"><code class="docutils literal notranslate"><span class="pre">ure</span></code> – simple regular expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uselect.html"><code class="docutils literal notranslate"><span class="pre">uselect</span></code> – wait for events on a set of streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a></li>
@@ -140,102 +141,122 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
-      
-    <li><code class="docutils literal"><span class="pre">cmath</span></code> &#8211; mathematical functions for complex numbers</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/cmath.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/cmath.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="module-cmath">
-<span id="cmath-mathematical-functions-for-complex-numbers"></span><h1><a class="reference internal" href="#module-cmath" title="cmath: mathematical functions for complex numbers"><code class="xref py py-mod docutils literal"><span class="pre">cmath</span></code></a> &#8211; mathematical functions for complex numbers<a class="headerlink" href="#module-cmath" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal"><span class="pre">CPython</span></code></a> <em>module,
+<span id="cmath-mathematical-functions-for-complex-numbers"></span><h1><a class="reference internal" href="#module-cmath" title="cmath: mathematical functions for complex numbers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code></a> – mathematical functions for complex numbers<a class="headerlink" href="#module-cmath" title="Permalink to this headline">¶</a></h1>
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
 as described below. For more information, refer to the original
-CPython documentation:</em> <a class="reference external" href="http://docs.python.org/3.5/library/cmath.html#module-cmath" title="(in Python v3.5)"><code class="docutils literal"><span class="pre">cmath</span></code></a>.</p>
-<p>The <code class="docutils literal"><span class="pre">cmath</span></code> module provides some basic mathematical functions for
+CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/cmath.html#module-cmath" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">cmath</span></code></a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">cmath</span></code> module provides some basic mathematical functions for
 working with complex numbers.</p>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="cmath.cos">
 <code class="descclassname">cmath.</code><code class="descname">cos</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#cmath.cos" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the cosine of <code class="docutils literal"><span class="pre">z</span></code>.</p>
+<dd><p>Return the cosine of <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="cmath.exp">
 <code class="descclassname">cmath.</code><code class="descname">exp</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#cmath.exp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the exponential of <code class="docutils literal"><span class="pre">z</span></code>.</p>
+<dd><p>Return the exponential of <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="cmath.log">
 <code class="descclassname">cmath.</code><code class="descname">log</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#cmath.log" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the natural logarithm of <code class="docutils literal"><span class="pre">z</span></code>.  The branch cut is along the negative real axis.</p>
+<dd><p>Return the natural logarithm of <code class="docutils literal notranslate"><span class="pre">z</span></code>.  The branch cut is along the negative real axis.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="cmath.log10">
 <code class="descclassname">cmath.</code><code class="descname">log10</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#cmath.log10" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the base-10 logarithm of <code class="docutils literal"><span class="pre">z</span></code>.  The branch cut is along the negative real axis.</p>
+<dd><p>Return the base-10 logarithm of <code class="docutils literal notranslate"><span class="pre">z</span></code>.  The branch cut is along the negative real axis.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="cmath.phase">
 <code class="descclassname">cmath.</code><code class="descname">phase</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#cmath.phase" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the phase of the number <code class="docutils literal"><span class="pre">z</span></code>, in the range (-pi, +pi].</p>
+<dd><p>Returns the phase of the number <code class="docutils literal notranslate"><span class="pre">z</span></code>, in the range (-pi, +pi].</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="cmath.polar">
 <code class="descclassname">cmath.</code><code class="descname">polar</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#cmath.polar" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns, as a tuple, the polar form of <code class="docutils literal"><span class="pre">z</span></code>.</p>
+<dd><p>Returns, as a tuple, the polar form of <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="cmath.rect">
 <code class="descclassname">cmath.</code><code class="descname">rect</code><span class="sig-paren">(</span><em>r</em>, <em>phi</em><span class="sig-paren">)</span><a class="headerlink" href="#cmath.rect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the complex number with modulus <code class="docutils literal"><span class="pre">r</span></code> and phase <code class="docutils literal"><span class="pre">phi</span></code>.</p>
+<dd><p>Returns the complex number with modulus <code class="docutils literal notranslate"><span class="pre">r</span></code> and phase <code class="docutils literal notranslate"><span class="pre">phi</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="cmath.sin">
 <code class="descclassname">cmath.</code><code class="descname">sin</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#cmath.sin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the sine of <code class="docutils literal"><span class="pre">z</span></code>.</p>
+<dd><p>Return the sine of <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="cmath.sqrt">
 <code class="descclassname">cmath.</code><code class="descname">sqrt</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#cmath.sqrt" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the square-root of <code class="docutils literal"><span class="pre">z</span></code>.</p>
+<dd><p>Return the square-root of <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd></dl>
 
 </div>
@@ -250,7 +271,7 @@ working with complex numbers.</p>
 <dl class="data">
 <dt id="cmath.pi">
 <code class="descclassname">cmath.</code><code class="descname">pi</code><a class="headerlink" href="#cmath.pi" title="Permalink to this definition">¶</a></dt>
-<dd><p>the ratio of a circle&#8217;s circumference to its diameter</p>
+<dd><p>the ratio of a circle’s circumference to its diameter</p>
 </dd></dl>
 
 </div>
@@ -258,15 +279,16 @@ working with complex numbers.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="gc.html" class="btn btn-neutral float-right" title="gc – control the garbage collector" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="gc.html" class="btn btn-neutral float-right" title="gc – control the garbage collector" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="array.html" class="btn btn-neutral" title="array – arrays of numeric data" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="array.html" class="btn btn-neutral float-left" title="array – arrays of numeric data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -275,12 +297,14 @@ working with complex numbers.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -358,35 +382,15 @@ working with complex numbers.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

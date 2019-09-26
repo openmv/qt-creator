@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="MicroPython differences from CPython" href="index.html"/>
-        <link rel="next" title="MicroPython license information" href="../license.html"/>
-        <link rel="prev" title="Builtin Types" href="builtin_types.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MicroPython license information" href="../license.html" />
+    <link rel="prev" title="Builtin Types" href="builtin_types.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
@@ -99,7 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="core_language.html">Core Language</a></li>
 <li class="toctree-l2"><a class="reference internal" href="builtin_types.html">Builtin Types</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Modules</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Modules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#array">array</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#looking-for-integer-not-implemented">Looking for integer not implemented</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#array-deletion-not-implemented">Array deletion not implemented</a></li>
@@ -143,36 +144,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">MicroPython differences from CPython</a> &raquo;</li>
-      
-    <li>Modules</li>
+        
+      <li>Modules</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/genrst/modules.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/genrst/modules.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -186,8 +207,8 @@
 <div class="section" id="looking-for-integer-not-implemented">
 <span id="cpydiff-modules-array-containment"></span><h3>Looking for integer not implemented<a class="headerlink" href="#looking-for-integer-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">array</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s">&#39;B&#39;</span><span class="p">,</span> <span class="n">b</span><span class="s">&#39;12&#39;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">array</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;12&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -199,13 +220,13 @@
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="bp">False</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 8, in &lt;module&gt;
-NotImplementedError:
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span>
 </pre></div>
 </div>
 </td>
@@ -216,10 +237,10 @@ NotImplementedError:
 <div class="section" id="array-deletion-not-implemented">
 <span id="cpydiff-modules-array-deletion"></span><h3>Array deletion not implemented<a class="headerlink" href="#array-deletion-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">array</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">array</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="k">del</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -231,13 +252,13 @@ NotImplementedError:
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="n">array</span><span class="p">(</span><span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 9, in &lt;module&gt;
-TypeError: &#39;array&#39; object does not support item deletion
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">9</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;array&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">deletion</span>
 </pre></div>
 </div>
 </td>
@@ -248,9 +269,9 @@ TypeError: &#39;array&#39; object does not support item deletion
 <div class="section" id="subscript-with-step-1-is-not-yet-implemented">
 <span id="cpydiff-modules-array-subscrstep"></span><h3>Subscript with step != 1 is not yet implemented<a class="headerlink" href="#subscript-with-step-1-is-not-yet-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">array</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">array</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -262,13 +283,13 @@ TypeError: &#39;array&#39; object does not support item deletion
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="n">array</span><span class="p">(</span><span class="s">&#39;b&#39;</span><span class="p">)</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 9, in &lt;module&gt;
-NotImplementedError: only slices with step=1 (aka None) are supported
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">9</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">only</span> <span class="n">slices</span> <span class="k">with</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span> <span class="p">(</span><span class="n">aka</span> <span class="kc">None</span><span class="p">)</span> <span class="n">are</span> <span class="n">supported</span>
 </pre></div>
 </div>
 </td>
@@ -282,15 +303,15 @@ NotImplementedError: only slices with step=1 (aka None) are supported
 <div class="section" id="second-argument-to-next-is-not-implemented">
 <span id="cpydiff-builtin-next-arg2"></span><h3>Second argument to next() is not implemented<a class="headerlink" href="#second-argument-to-next-is-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p><strong>Cause:</strong> MicroPython is optimised for code space.</p>
-<p><strong>Workaround:</strong> Instead of <code class="docutils literal"><span class="pre">val</span> <span class="pre">=</span> <span class="pre">next(it,</span> <span class="pre">deflt)</span></code> use:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">try</span><span class="p">:</span>
+<p><strong>Workaround:</strong> Instead of <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">=</span> <span class="pre">next(it,</span> <span class="pre">deflt)</span></code> use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">val</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
     <span class="n">val</span> <span class="o">=</span> <span class="n">deflt</span>
 </pre></div>
 </div>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span> <span class="mi">42</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span> <span class="mi">42</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -302,13 +323,13 @@ NotImplementedError: only slices with step=1 (aka None) are supported
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="mi">42</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 12, in &lt;module&gt;
-TypeError: function takes 1 positional arguments but 2 were given
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">12</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">function</span> <span class="n">takes</span> <span class="mi">1</span> <span class="n">positional</span> <span class="n">arguments</span> <span class="n">but</span> <span class="mi">2</span> <span class="n">were</span> <span class="n">given</span>
 </pre></div>
 </div>
 </td>
@@ -323,9 +344,9 @@ TypeError: function takes 1 positional arguments but 2 were given
 <span id="cpydiff-modules-deque"></span><h3>Deque not implemented<a class="headerlink" href="#deque-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p><strong>Workaround:</strong> Use regular lists. micropython-lib has implementation of collections.deque.</p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">collections</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">collections</span>
 <span class="n">D</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -337,13 +358,13 @@ TypeError: function takes 1 positional arguments but 2 were given
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="n">deque</span><span class="p">([])</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deque</span><span class="p">([])</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 8, in &lt;module&gt;
-TypeError: function missing 2 required positional arguments
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">function</span> <span class="n">missing</span> <span class="mi">2</span> <span class="n">required</span> <span class="n">positional</span> <span class="n">arguments</span>
 </pre></div>
 </div>
 </td>
@@ -357,14 +378,14 @@ TypeError: function missing 2 required positional arguments
 <div class="section" id="json-module-does-not-throw-exception-when-object-is-not-serialisable">
 <span id="cpydiff-modules-json-nonserializable"></span><h3>JSON module does not throw exception when object is not serialisable<a class="headerlink" href="#json-module-does-not-throw-exception-when-object-is-not-serialisable" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="n">a</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">))</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">z</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Should not get here&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should not get here&#39;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;TypeError&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;TypeError&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -376,11 +397,11 @@ TypeError: function missing 2 required positional arguments
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="ne">TypeError</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">TypeError</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Should not get here
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Should</span> <span class="ow">not</span> <span class="n">get</span> <span class="n">here</span>
 </pre></div>
 </div>
 </td>
@@ -394,12 +415,12 @@ TypeError: function missing 2 required positional arguments
 <div class="section" id="struct-pack-with-too-few-args-not-checked-by-upy">
 <span id="cpydiff-modules-struct-fewargs"></span><h3>Struct pack with too few args, not checked by uPy<a class="headerlink" href="#struct-pack-with-too-few-args-not-checked-by-upy" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">struct</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">struct</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Should not get here&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should not get here&#39;</span><span class="p">)</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;struct.error&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;struct.error&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -411,12 +432,12 @@ TypeError: function missing 2 required positional arguments
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">error</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span><span class="o">.</span><span class="n">error</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>b&#39;\x01\x00&#39;
-Should not get here
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x00</span><span class="s1">&#39;</span>
+<span class="n">Should</span> <span class="ow">not</span> <span class="n">get</span> <span class="n">here</span>
 </pre></div>
 </div>
 </td>
@@ -427,12 +448,12 @@ Should not get here
 <div class="section" id="struct-pack-with-too-many-args-not-checked-by-upy">
 <span id="cpydiff-modules-struct-manyargs"></span><h3>Struct pack with too many args, not checked by uPy<a class="headerlink" href="#struct-pack-with-too-many-args-not-checked-by-upy" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">struct</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">struct</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Should not get here&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should not get here&#39;</span><span class="p">)</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;struct.error&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;struct.error&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -444,12 +465,12 @@ Should not get here
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="n">struct</span><span class="o">.</span><span class="n">error</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span><span class="o">.</span><span class="n">error</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>b&#39;\x01\x02&#39;
-Should not get here
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x02</span><span class="s1">&#39;</span>
+<span class="n">Should</span> <span class="ow">not</span> <span class="n">get</span> <span class="n">here</span>
 </pre></div>
 </div>
 </td>
@@ -464,9 +485,9 @@ Should not get here
 <span id="cpydiff-modules-sys-stdassign"></span><h3>Overriding sys.stdin, sys.stdout and sys.stderr not possible<a class="headerlink" href="#overriding-sys-stdin-sys-stdout-and-sys-stderr-not-possible" title="Permalink to this headline">¶</a></h3>
 <p><strong>Cause:</strong> They are stored in read-only memory.</p>
 <p>Sample code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">stdin</span> <span class="o">=</span> <span class="bp">None</span>
-<span class="k">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdin</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -478,13 +499,13 @@ Should not get here
 <tr class="row-odd"><td>CPy output:</td>
 <td>uPy output:</td>
 </tr>
-<tr class="row-even"><td><div class="first last highlight-python"><div class="highlight"><pre><span class="bp">None</span>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-python"><div class="highlight"><pre>Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 8, in &lt;module&gt;
-AttributeError: &#39;module&#39; object has no attribute &#39;stdin&#39;
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;module&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;stdin&#39;</span>
 </pre></div>
 </div>
 </td>
@@ -497,15 +518,16 @@ AttributeError: &#39;module&#39; object has no attribute &#39;stdin&#39;
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../license.html" class="btn btn-neutral float-right" title="MicroPython license information" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../license.html" class="btn btn-neutral float-right" title="MicroPython license information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="builtin_types.html" class="btn btn-neutral" title="Builtin Types" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="builtin_types.html" class="btn btn-neutral float-left" title="Builtin Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -514,12 +536,14 @@ AttributeError: &#39;module&#39; object has no attribute &#39;stdin&#39;
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -597,35 +621,15 @@ AttributeError: &#39;module&#39; object has no attribute &#39;stdin&#39;
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

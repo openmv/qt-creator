@@ -15,42 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="next" title="General information about the openmvcam" href="general.html"/>
-        <link rel="prev" title="MicroPython documentation and references" href="../openmvcam_index.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="General information about the openmvcam" href="general.html" />
+    <link rel="prev" title="MicroPython documentation and references" href="../openmvcam_index.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -59,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -88,8 +87,11 @@
           
             
             
-                <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Quick reference for the openmvcam</a><ul>
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick reference for the openmvcam</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#general-board-control">General board control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#delay-and-timing">Delay and timing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#leds">LEDs</a></li>
@@ -122,34 +124,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Quick reference for the openmvcam</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Quick reference for the openmvcam</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/openmvcam/quickref.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/openmvcam/quickref.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -160,34 +182,34 @@
 <a class="reference internal image-reference" href="../_images/pinout.png"><img alt="OpenMV Cam pinout" src="../_images/pinout.png" style="width: 700px;" /></a>
 <div class="section" id="general-board-control">
 <h2>General board control<a class="headerlink" href="#general-board-control" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.html#module-pyb" title="pyb: functions related to the board"><code class="xref py py-mod docutils literal"><span class="pre">pyb</span></code></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pyb</span>
+<p>See <a class="reference internal" href="../library/pyb.html#module-pyb" title="pyb: functions related to the board"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyb</span></code></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyb</span>
 
-<span class="n">pyb</span><span class="o">.</span><span class="n">repl_uart</span><span class="p">(</span><span class="n">pyb</span><span class="o">.</span><span class="n">UART</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9600</span><span class="p">,</span> <span class="n">timeout_char</span><span class="o">=</span><span class="mi">1000</span><span class="p">))</span> <span class="c"># duplicate REPL on UART(3)</span>
-<span class="n">pyb</span><span class="o">.</span><span class="n">wfi</span><span class="p">()</span> <span class="c"># pause CPU, waiting for interrupt</span>
-<span class="n">pyb</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span> <span class="c"># stop CPU, waiting for external interrupt</span>
+<span class="n">pyb</span><span class="o">.</span><span class="n">repl_uart</span><span class="p">(</span><span class="n">pyb</span><span class="o">.</span><span class="n">UART</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9600</span><span class="p">,</span> <span class="n">timeout_char</span><span class="o">=</span><span class="mi">1000</span><span class="p">))</span> <span class="c1"># duplicate REPL on UART(3)</span>
+<span class="n">pyb</span><span class="o">.</span><span class="n">wfi</span><span class="p">()</span> <span class="c1"># pause CPU, waiting for interrupt</span>
+<span class="n">pyb</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span> <span class="c1"># stop CPU, waiting for external interrupt</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="delay-and-timing">
 <h2>Delay and timing<a class="headerlink" href="#delay-and-timing" title="Permalink to this headline">¶</a></h2>
-<p>Use the <a class="reference internal" href="../library/utime.html#module-utime" title="utime: time related functions"><code class="xref py py-mod docutils literal"><span class="pre">time</span></code></a> module:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">utime</span>
+<p>Use the <a class="reference internal" href="../library/utime.html#module-utime" title="utime: time related functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">utime</span>
 
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>           <span class="c"># sleep for 1 second</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>      <span class="c"># sleep for 500 milliseconds</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep_us</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>       <span class="c"># sleep for 10 microseconds</span>
-<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">()</span> <span class="c"># get value of millisecond counter</span>
-<span class="n">delta</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">(),</span> <span class="n">start</span><span class="p">)</span> <span class="c"># compute time difference</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>           <span class="c1"># sleep for 1 second</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>      <span class="c1"># sleep for 500 milliseconds</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep_us</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>       <span class="c1"># sleep for 10 microseconds</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">()</span> <span class="c1"># get value of millisecond counter</span>
+<span class="n">delta</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">(),</span> <span class="n">start</span><span class="p">)</span> <span class="c1"># compute time difference</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="leds">
 <h2>LEDs<a class="headerlink" href="#leds" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.LED.html#pyb-led"><span>pyb.LED</span></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyb</span> <span class="kn">import</span> <span class="n">LED</span>
+<p>See <a class="reference internal" href="../library/pyb.LED.html#pyb-led"><span class="std std-ref">pyb.LED</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">LED</span>
 
-<span class="n">led</span> <span class="o">=</span> <span class="n">LED</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># red led</span>
+<span class="n">led</span> <span class="o">=</span> <span class="n">LED</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># red led</span>
 <span class="n">led</span><span class="o">.</span><span class="n">toggle</span><span class="p">()</span>
 <span class="n">led</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
 <span class="n">led</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
@@ -203,42 +225,42 @@
 </div>
 <div class="section" id="pins-and-gpio">
 <h2>Pins and GPIO<a class="headerlink" href="#pins-and-gpio" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.Pin.html#pyb-pin"><span>pyb.Pin</span></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyb</span> <span class="kn">import</span> <span class="n">Pin</span>
+<p>See <a class="reference internal" href="../library/pyb.Pin.html#pyb-pin"><span class="std std-ref">pyb.Pin</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">Pin</span>
 
-<span class="n">p_out</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="s">&#39;P7&#39;</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT_PP</span><span class="p">)</span>
+<span class="n">p_out</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;P7&#39;</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT_PP</span><span class="p">)</span>
 <span class="n">p_out</span><span class="o">.</span><span class="n">high</span><span class="p">()</span>
 <span class="n">p_out</span><span class="o">.</span><span class="n">low</span><span class="p">()</span>
 
-<span class="n">p_in</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="s">&#39;P8&#39;</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
-<span class="n">p_in</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="c"># get value, 0 or 1</span>
+<span class="n">p_in</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;P8&#39;</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
+<span class="n">p_in</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="c1"># get value, 0 or 1</span>
 </pre></div>
 </div>
 <p>GPIO Pinout:</p>
 <ul class="simple">
-<li>Pin(&#8216;P0&#8217;) -&gt; P0 (PB15)</li>
-<li>Pin(&#8216;P1&#8217;) -&gt; P1 (PB14)</li>
-<li>Pin(&#8216;P2&#8217;) -&gt; P2 (PB13)</li>
-<li>Pin(&#8216;P3&#8217;) -&gt; P3 (PB12)</li>
-<li>Pin(&#8216;P4&#8217;) -&gt; P4 (PB10)</li>
-<li>Pin(&#8216;P5&#8217;) -&gt; P5 (PB11)</li>
-<li>Pin(&#8216;P6&#8217;) -&gt; P6 (PA5)</li>
-<li>Pin(&#8216;P7&#8217;) -&gt; P7 (PD12)</li>
-<li>Pin(&#8216;P8&#8217;) -&gt; P8 (PD13)</li>
-<li>Pin(&#8216;P9&#8217;) -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
+<li>Pin(‘P0’) -&gt; P0 (PB15)</li>
+<li>Pin(‘P1’) -&gt; P1 (PB14)</li>
+<li>Pin(‘P2’) -&gt; P2 (PB13)</li>
+<li>Pin(‘P3’) -&gt; P3 (PB12)</li>
+<li>Pin(‘P4’) -&gt; P4 (PB10)</li>
+<li>Pin(‘P5’) -&gt; P5 (PB11)</li>
+<li>Pin(‘P6’) -&gt; P6 (PA5)</li>
+<li>Pin(‘P7’) -&gt; P7 (PD12)</li>
+<li>Pin(‘P8’) -&gt; P8 (PD13)</li>
+<li>Pin(‘P9’) -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
 </ul>
 <p>All pins are 5V tolerant with a 3.3V output (P6 is not 5V tolerant in ADC or DAC mode).</p>
 <p>All pins can sink or source up to 25 mA (Up to 120 mA in total between all pins).</p>
 </div>
 <div class="section" id="servo-control">
 <h2>Servo control<a class="headerlink" href="#servo-control" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.Servo.html#pyb-servo"><span>pyb.Servo</span></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyb</span> <span class="kn">import</span> <span class="n">Servo</span>
+<p>See <a class="reference internal" href="../library/pyb.Servo.html#pyb-servo"><span class="std std-ref">pyb.Servo</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">Servo</span>
 
-<span class="n">s1</span> <span class="o">=</span> <span class="n">Servo</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># servo on position 1 (P7)</span>
-<span class="n">s1</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span> <span class="c"># move to 45 degrees</span>
-<span class="n">s1</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">1500</span><span class="p">)</span> <span class="c"># move to -60 degrees in 1500ms</span>
-<span class="n">s1</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="c"># for continuous rotation servos</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Servo</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># servo on position 1 (P7)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span> <span class="c1"># move to 45 degrees</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">1500</span><span class="p">)</span> <span class="c1"># move to -60 degrees in 1500ms</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="c1"># for continuous rotation servos</span>
 </pre></div>
 </div>
 <p>Servo Pinout:</p>
@@ -250,35 +272,35 @@
 </div>
 <div class="section" id="external-interrupts">
 <h2>External interrupts<a class="headerlink" href="#external-interrupts" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.ExtInt.html#pyb-extint"><span>pyb.ExtInt</span></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre>from pyb import Pin, ExtInt
+<p>See <a class="reference internal" href="../library/pyb.ExtInt.html#pyb-extint"><span class="std std-ref">pyb.ExtInt</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">ExtInt</span>
 
-callback = lambda e: print(&quot;intr&quot;)
-ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
+<span class="n">callback</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;intr&quot;</span><span class="p">)</span>
+<span class="n">ext</span> <span class="o">=</span> <span class="n">ExtInt</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;P7&#39;</span><span class="p">),</span> <span class="n">ExtInt</span><span class="o">.</span><span class="n">IRQ_RISING</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_NONE</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>GPIO Pinout:</p>
 <ul class="simple">
-<li>Pin(&#8216;P0&#8217;) -&gt; P0 (PB15)</li>
-<li>Pin(&#8216;P1&#8217;) -&gt; P1 (PB14)</li>
-<li>Pin(&#8216;P2&#8217;) -&gt; P2 (PB13)</li>
-<li>Pin(&#8216;P3&#8217;) -&gt; P3 (PB12)</li>
-<li>Pin(&#8216;P4&#8217;) -&gt; P4 (PB10)</li>
-<li>Pin(&#8216;P5&#8217;) -&gt; P5 (PB11)</li>
-<li>Pin(&#8216;P6&#8217;) -&gt; P6 (PA5)</li>
-<li>Pin(&#8216;P7&#8217;) -&gt; P7 (PD12)</li>
-<li>Pin(&#8216;P8&#8217;) -&gt; P8 (PD13)</li>
-<li>Pin(&#8216;P9&#8217;) -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
+<li>Pin(‘P0’) -&gt; P0 (PB15)</li>
+<li>Pin(‘P1’) -&gt; P1 (PB14)</li>
+<li>Pin(‘P2’) -&gt; P2 (PB13)</li>
+<li>Pin(‘P3’) -&gt; P3 (PB12)</li>
+<li>Pin(‘P4’) -&gt; P4 (PB10)</li>
+<li>Pin(‘P5’) -&gt; P5 (PB11)</li>
+<li>Pin(‘P6’) -&gt; P6 (PA5)</li>
+<li>Pin(‘P7’) -&gt; P7 (PD12)</li>
+<li>Pin(‘P8’) -&gt; P8 (PD13)</li>
+<li>Pin(‘P9’) -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
 </ul>
 </div>
 <div class="section" id="timers">
 <h2>Timers<a class="headerlink" href="#timers" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.Timer.html#pyb-timer"><span>pyb.Timer</span></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyb</span> <span class="kn">import</span> <span class="n">Timer</span>
+<p>See <a class="reference internal" href="../library/pyb.Timer.html#pyb-timer"><span class="std std-ref">pyb.Timer</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">Timer</span>
 
 <span class="n">tim</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">tim</span><span class="o">.</span><span class="n">counter</span><span class="p">()</span> <span class="c"># get counter value</span>
-<span class="n">tim</span><span class="o">.</span><span class="n">freq</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="c"># 0.5 Hz</span>
+<span class="n">tim</span><span class="o">.</span><span class="n">counter</span><span class="p">()</span> <span class="c1"># get counter value</span>
+<span class="n">tim</span><span class="o">.</span><span class="n">freq</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1"># 0.5 Hz</span>
 <span class="n">tim</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">pyb</span><span class="o">.</span><span class="n">LED</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">toggle</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -297,10 +319,10 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 </div>
 <div class="section" id="pwm-pulse-width-modulation">
 <h2>PWM (pulse width modulation)<a class="headerlink" href="#pwm-pulse-width-modulation" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.Pin.html#pyb-pin"><span>pyb.Pin</span></a> and <a class="reference internal" href="../library/pyb.Timer.html#pyb-timer"><span>pyb.Timer</span></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyb</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">Timer</span>
+<p>See <a class="reference internal" href="../library/pyb.Pin.html#pyb-pin"><span class="std std-ref">pyb.Pin</span></a> and <a class="reference internal" href="../library/pyb.Timer.html#pyb-timer"><span class="std std-ref">pyb.Timer</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">Timer</span>
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="s">&#39;P7&#39;</span><span class="p">)</span> <span class="c"># P7 has TIM4, CH1</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;P7&#39;</span><span class="p">)</span> <span class="c1"># P7 has TIM4, CH1</span>
 <span class="n">tim</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
 <span class="n">ch</span> <span class="o">=</span> <span class="n">tim</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Timer</span><span class="o">.</span><span class="n">PWM</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
 <span class="n">ch</span><span class="o">.</span><span class="n">pulse_width_percent</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
@@ -321,42 +343,42 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 </div>
 <div class="section" id="adc-analog-to-digital-conversion">
 <h2>ADC (analog to digital conversion)<a class="headerlink" href="#adc-analog-to-digital-conversion" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.Pin.html#pyb-pin"><span>pyb.Pin</span></a> and <a class="reference internal" href="../library/pyb.ADC.html#pyb-adc"><span>pyb.ADC</span></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyb</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">ADC</span>
+<p>See <a class="reference internal" href="../library/pyb.Pin.html#pyb-pin"><span class="std std-ref">pyb.Pin</span></a> and <a class="reference internal" href="../library/pyb.ADC.html#pyb-adc"><span class="std std-ref">pyb.ADC</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">ADC</span>
 
-<span class="n">adc</span> <span class="o">=</span> <span class="n">ADC</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="s">&#39;P6&#39;</span><span class="p">))</span>
-<span class="n">adc</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="c"># read value, 0-4095</span>
+<span class="n">adc</span> <span class="o">=</span> <span class="n">ADC</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;P6&#39;</span><span class="p">))</span>
+<span class="n">adc</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="c1"># read value, 0-4095</span>
 </pre></div>
 </div>
 <p>ADC Pinout:</p>
 <ul class="simple">
-<li>ADC(Pin(&#8216;P6&#8217;)) -&gt; P6 (PA5)</li>
+<li>ADC(Pin(‘P6’)) -&gt; P6 (PA5)</li>
 </ul>
 <p>P6 is 3.3V tolerant in ADC mode - NOT 5V TOLERANT!</p>
 </div>
 <div class="section" id="dac-digital-to-analog-conversion">
 <h2>DAC (digital to analog conversion)<a class="headerlink" href="#dac-digital-to-analog-conversion" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.Pin.html#pyb-pin"><span>pyb.Pin</span></a> and <a class="reference internal" href="../library/pyb.DAC.html#pyb-dac"><span>pyb.DAC</span></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyb</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">DAC</span>
+<p>See <a class="reference internal" href="../library/pyb.Pin.html#pyb-pin"><span class="std std-ref">pyb.Pin</span></a> and <a class="reference internal" href="../library/pyb.DAC.html#pyb-dac"><span class="std std-ref">pyb.DAC</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">DAC</span>
 
-<span class="n">dac</span> <span class="o">=</span> <span class="n">DAC</span><span class="p">(</span><span class="s">&#39;P6&#39;</span><span class="p">)</span>
-<span class="n">dac</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span> <span class="c"># output between 0 and 255</span>
+<span class="n">dac</span> <span class="o">=</span> <span class="n">DAC</span><span class="p">(</span><span class="s1">&#39;P6&#39;</span><span class="p">)</span>
+<span class="n">dac</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span> <span class="c1"># output between 0 and 255</span>
 </pre></div>
 </div>
 <p>DAC Pinout:</p>
 <ul class="simple">
-<li>DAC(Pin(&#8216;P6&#8217;)) -&gt; P6 (PA5)</li>
+<li>DAC(Pin(‘P6’)) -&gt; P6 (PA5)</li>
 </ul>
 <p>P6 is 3.3V tolerant in DAC mode - NOT 5V TOLERANT!</p>
 </div>
 <div class="section" id="uart-serial-bus">
 <h2>UART (serial bus)<a class="headerlink" href="#uart-serial-bus" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.UART.html#pyb-uart"><span>pyb.UART</span></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyb</span> <span class="kn">import</span> <span class="n">UART</span>
+<p>See <a class="reference internal" href="../library/pyb.UART.html#pyb-uart"><span class="std std-ref">pyb.UART</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">UART</span>
 
 <span class="n">uart</span> <span class="o">=</span> <span class="n">UART</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9600</span><span class="p">,</span> <span class="n">timeout_char</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;hello&#39;</span><span class="p">)</span>
-<span class="n">uart</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c"># read up to 5 bytes</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># read up to 5 bytes</span>
 </pre></div>
 </div>
 <p>UART Pinout:</p>
@@ -369,13 +391,13 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 </div>
 <div class="section" id="spi-bus">
 <h2>SPI bus<a class="headerlink" href="#spi-bus" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.SPI.html#pyb-spi"><span>pyb.SPI</span></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyb</span> <span class="kn">import</span> <span class="n">SPI</span>
+<p>See <a class="reference internal" href="../library/pyb.SPI.html#pyb-spi"><span class="std std-ref">pyb.SPI</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">SPI</span>
 
 <span class="n">spi</span> <span class="o">=</span> <span class="n">SPI</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">SPI</span><span class="o">.</span><span class="n">MASTER</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">polarity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">spi</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s">&#39;hello&#39;</span><span class="p">)</span>
-<span class="n">spi</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c"># receive 5 bytes on the bus</span>
-<span class="n">spi</span><span class="o">.</span><span class="n">send_recv</span><span class="p">(</span><span class="s">&#39;hello&#39;</span><span class="p">)</span> <span class="c"># send a receive 5 bytes</span>
+<span class="n">spi</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="n">spi</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># receive 5 bytes on the bus</span>
+<span class="n">spi</span><span class="o">.</span><span class="n">send_recv</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span> <span class="c1"># send a receive 5 bytes</span>
 </pre></div>
 </div>
 <p>SPI Pinout:</p>
@@ -388,15 +410,15 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 </div>
 <div class="section" id="i2c-bus">
 <h2>I2C bus<a class="headerlink" href="#i2c-bus" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../library/pyb.I2C.html#pyb-i2c"><span>pyb.I2C</span></a>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyb</span> <span class="kn">import</span> <span class="n">I2C</span>
+<p>See <a class="reference internal" href="../library/pyb.I2C.html#pyb-i2c"><span class="std std-ref">pyb.I2C</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">I2C</span>
 
 <span class="n">i2c</span> <span class="o">=</span> <span class="n">I2C</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">I2C</span><span class="o">.</span><span class="n">MASTER</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
-<span class="n">i2c</span><span class="o">.</span><span class="n">scan</span><span class="p">()</span> <span class="c"># returns list of slave addresses</span>
-<span class="n">i2c</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s">&#39;hello&#39;</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">)</span> <span class="c"># send 5 bytes to slave with address 0x42</span>
-<span class="n">i2c</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">)</span> <span class="c"># receive 5 bytes from slave</span>
-<span class="n">i2c</span><span class="o">.</span><span class="n">mem_read</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">)</span> <span class="c"># read 2 bytes from slave 0x42, slave memory 0x10</span>
-<span class="n">i2c</span><span class="o">.</span><span class="n">mem_write</span><span class="p">(</span><span class="s">&#39;xy&#39;</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">)</span> <span class="c"># write 2 bytes to slave 0x42, slave memory 0x10</span>
+<span class="n">i2c</span><span class="o">.</span><span class="n">scan</span><span class="p">()</span> <span class="c1"># returns list of slave addresses</span>
+<span class="n">i2c</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">)</span> <span class="c1"># send 5 bytes to slave with address 0x42</span>
+<span class="n">i2c</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">)</span> <span class="c1"># receive 5 bytes from slave</span>
+<span class="n">i2c</span><span class="o">.</span><span class="n">mem_read</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">)</span> <span class="c1"># read 2 bytes from slave 0x42, slave memory 0x10</span>
+<span class="n">i2c</span><span class="o">.</span><span class="n">mem_write</span><span class="p">(</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">)</span> <span class="c1"># write 2 bytes to slave 0x42, slave memory 0x10</span>
 </pre></div>
 </div>
 <p>I2C Pinout:</p>
@@ -411,15 +433,16 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="general.html" class="btn btn-neutral float-right" title="General information about the openmvcam" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="general.html" class="btn btn-neutral float-right" title="General information about the openmvcam" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../openmvcam_index.html" class="btn btn-neutral" title="MicroPython documentation and references" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../openmvcam_index.html" class="btn btn-neutral float-left" title="MicroPython documentation and references" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -428,12 +451,14 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -511,35 +536,15 @@ ext = ExtInt(Pin(&#39;P7&#39;), ExtInt.IRQ_RISING, Pin.PULL_NONE, callback)
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

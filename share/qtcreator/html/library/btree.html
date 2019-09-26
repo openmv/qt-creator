@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="MicroPython libraries" href="index.html"/>
-        <link rel="next" title="machine — functions related to the hardware" href="machine.html"/>
-        <link rel="prev" title="_thread – multithreading support" href="_thread.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="machine — functions related to the hardware" href="machine.html" />
+    <link rel="prev" title="_thread – multithreading support" href="_thread.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,23 +87,26 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href=""><code class="docutils literal"><span class="pre">btree</span></code> &#8211; simple BTree database</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#constants">Constants</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal"><span class="pre">machine</span></code> &#8212; functions related to the hardware</a></li>
-<li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal"><span class="pre">micropython</span></code> &#8211; access and control MicroPython internals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal"><span class="pre">network</span></code> &#8212; network configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal"><span class="pre">uctypes</span></code> &#8211; access binary data in a structured way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a></li>
@@ -125,106 +126,126 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
-      
-    <li><code class="docutils literal"><span class="pre">btree</span></code> &#8211; simple BTree database</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/btree.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/btree.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="module-btree">
-<span id="btree-simple-btree-database"></span><h1><a class="reference internal" href="#module-btree" title="btree: simple BTree database"><code class="xref py py-mod docutils literal"><span class="pre">btree</span></code></a> &#8211; simple BTree database<a class="headerlink" href="#module-btree" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal"><span class="pre">btree</span></code> module implements a simple key-value database using external
-storage (disk files, or in general case, a random-access <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal"><span class="pre">stream</span></code></a>). Keys are
+<span id="btree-simple-btree-database"></span><h1><a class="reference internal" href="#module-btree" title="btree: simple BTree database"><code class="xref py py-mod docutils literal notranslate"><span class="pre">btree</span></code></a> – simple BTree database<a class="headerlink" href="#module-btree" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">btree</span></code> module implements a simple key-value database using external
+storage (disk files, or in general case, a random-access <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a>). Keys are
 stored sorted in the database, and besides efficient retrieval by a key
 value, a database also supports efficient ordered range scans (retrieval
 of values with the keys in a given range). On the application interface
-side, BTree database work as close a possible to a way standard <a class="reference internal" href="builtins.html#dict" title="dict"><code class="xref any py py-class docutils literal"><span class="pre">dict</span></code></a>
+side, BTree database work as close a possible to a way standard <a class="reference internal" href="builtins.html#dict" title="dict"><code class="xref any py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>
 type works, one notable difference is that both keys and values must
-be <a class="reference internal" href="builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal"><span class="pre">bytes</span></code></a> objects (so, if you want to store objects of other types, you
-need to serialize them to <a class="reference internal" href="builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal"><span class="pre">bytes</span></code></a> first).</p>
+be <a class="reference internal" href="builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> objects (so, if you want to store objects of other types, you
+need to serialize them to <a class="reference internal" href="builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> first).</p>
 <p>The module is based on the well-known BerkelyDB library, version 1.xx.</p>
 <p>Example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">btree</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">btree</span>
 
-<span class="c"># First, we need to open a stream which holds a database</span>
-<span class="c"># This is usually a file, but can be in-memory database</span>
-<span class="c"># using uio.BytesIO, a raw flash partition, etc.</span>
-<span class="c"># Oftentimes, you want to create a database file if it doesn&#39;t</span>
-<span class="c"># exist and open if it exists. Idiom below takes care of this.</span>
-<span class="c"># DO NOT open database with &quot;a+b&quot; access mode.</span>
+<span class="c1"># First, we need to open a stream which holds a database</span>
+<span class="c1"># This is usually a file, but can be in-memory database</span>
+<span class="c1"># using uio.BytesIO, a raw flash partition, etc.</span>
+<span class="c1"># Oftentimes, you want to create a database file if it doesn&#39;t</span>
+<span class="c1"># exist and open if it exists. Idiom below takes care of this.</span>
+<span class="c1"># DO NOT open database with &quot;a+b&quot; access mode.</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;mydb&quot;</span><span class="p">,</span> <span class="s">&quot;r+b&quot;</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span> <span class="s2">&quot;r+b&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;mydb&quot;</span><span class="p">,</span> <span class="s">&quot;w+b&quot;</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;mydb&quot;</span><span class="p">,</span> <span class="s2">&quot;w+b&quot;</span><span class="p">)</span>
 
-<span class="c"># Now open a database itself</span>
+<span class="c1"># Now open a database itself</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">btree</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 
-<span class="c"># The keys you add will be sorted internally in the database</span>
-<span class="n">db</span><span class="p">[</span><span class="n">b</span><span class="s">&quot;3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="s">&quot;three&quot;</span>
-<span class="n">db</span><span class="p">[</span><span class="n">b</span><span class="s">&quot;1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="s">&quot;one&quot;</span>
-<span class="n">db</span><span class="p">[</span><span class="n">b</span><span class="s">&quot;2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="s">&quot;two&quot;</span>
+<span class="c1"># The keys you add will be sorted internally in the database</span>
+<span class="n">db</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;three&quot;</span>
+<span class="n">db</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;one&quot;</span>
+<span class="n">db</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;two&quot;</span>
 
-<span class="c"># Assume that any changes are cached in memory unless</span>
-<span class="c"># explicitly flushed (or database closed). Flush database</span>
-<span class="c"># at the end of each &quot;transaction&quot;.</span>
+<span class="c1"># Assume that any changes are cached in memory unless</span>
+<span class="c1"># explicitly flushed (or database closed). Flush database</span>
+<span class="c1"># at the end of each &quot;transaction&quot;.</span>
 <span class="n">db</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
 
-<span class="c"># Prints b&#39;two&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="n">b</span><span class="s">&quot;2&quot;</span><span class="p">])</span>
+<span class="c1"># Prints b&#39;two&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;2&quot;</span><span class="p">])</span>
 
-<span class="c"># Iterate over sorted keys in the database, starting from b&quot;2&quot;</span>
-<span class="c"># until the end of the database, returning only values.</span>
-<span class="c"># Mind that arguments passed to values() method are *key* values.</span>
-<span class="c"># Prints:</span>
-<span class="c">#   b&#39;two&#39;</span>
-<span class="c">#   b&#39;three&#39;</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">db</span><span class="o">.</span><span class="n">values</span><span class="p">(</span><span class="n">b</span><span class="s">&quot;2&quot;</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+<span class="c1"># Iterate over sorted keys in the database, starting from b&quot;2&quot;</span>
+<span class="c1"># until the end of the database, returning only values.</span>
+<span class="c1"># Mind that arguments passed to values() method are *key* values.</span>
+<span class="c1"># Prints:</span>
+<span class="c1">#   b&#39;two&#39;</span>
+<span class="c1">#   b&#39;three&#39;</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">db</span><span class="o">.</span><span class="n">values</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;2&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
 
-<span class="k">del</span> <span class="n">db</span><span class="p">[</span><span class="n">b</span><span class="s">&quot;2&quot;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">db</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;2&quot;</span><span class="p">]</span>
 
-<span class="c"># No longer true, prints False</span>
-<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="s">&quot;2&quot;</span> <span class="ow">in</span> <span class="n">db</span><span class="p">)</span>
+<span class="c1"># No longer true, prints False</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;2&quot;</span> <span class="ow">in</span> <span class="n">db</span><span class="p">)</span>
 
-<span class="c"># Prints:</span>
-<span class="c">#  b&quot;1&quot;</span>
-<span class="c">#  b&quot;3&quot;</span>
+<span class="c1"># Prints:</span>
+<span class="c1">#  b&quot;1&quot;</span>
+<span class="c1">#  b&quot;3&quot;</span>
 <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">db</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
 <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-<span class="c"># Don&#39;t forget to close the underlying stream!</span>
+<span class="c1"># Don&#39;t forget to close the underlying stream!</span>
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -233,14 +254,14 @@ need to serialize them to <a class="reference internal" href="builtins.html#byte
 <dl class="function">
 <dt id="btree.open">
 <code class="descclassname">btree.</code><code class="descname">open</code><span class="sig-paren">(</span><em>stream</em>, <em>*</em>, <em>flags=0</em>, <em>pagesize=0</em>, <em>cachesize=0</em>, <em>minkeypage=0</em><span class="sig-paren">)</span><a class="headerlink" href="#btree.open" title="Permalink to this definition">¶</a></dt>
-<dd><p>Open a database from a random-access <code class="docutils literal"><span class="pre">stream</span></code> (like an open file). All
+<dd><p>Open a database from a random-access <code class="docutils literal notranslate"><span class="pre">stream</span></code> (like an open file). All
 other parameters are optional and keyword-only, and allow to tweak advanced
 parameters of the database operation (most users will not need them):</p>
 <ul class="simple">
 <li><em>flags</em> - Currently unused.</li>
 <li><em>pagesize</em> - Page size used for the nodes in BTree. Acceptable range
 is 512-65536. If 0, a port-specific default will be used, optimized for
-port&#8217;s memory usage and/or performance.</li>
+port’s memory usage and/or performance.</li>
 <li><em>cachesize</em> - Suggested memory cache size in bytes. For a
 board with enough memory using larger values may improve performance.
 Cache policy is as follows: entire cache is not allocated at once;
@@ -248,7 +269,7 @@ instead, accessing a new page in database will allocate a memory buffer
 for it, until value specified by <em>cachesize</em> is reached. Then, these
 buffers will be managed using LRU (least recently used) policy. More
 buffers may still be allocated if needed (e.g., if a database contains
-big keys and/or values). Allocated cache buffers aren&#8217;t reclaimed.</li>
+big keys and/or values). Allocated cache buffers aren’t reclaimed.</li>
 <li><em>minkeypage</em> - Minimum number of keys to store per page. Default value
 of 0 equivalent to 2.</li>
 </ul>
@@ -262,7 +283,7 @@ of methods), and some additional methods described below.</p>
 <dl class="method">
 <dt id="btree.btree.close">
 <code class="descclassname">btree.</code><code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#btree.btree.close" title="Permalink to this definition">¶</a></dt>
-<dd><p>Close the database. It&#8217;s mandatory to close the database at the end of
+<dd><p>Close the database. It’s mandatory to close the database at the end of
 processing, as some unwritten data may be still in the cache. Note that
 this does not close underlying stream with which the database was opened,
 it should be closed separately (which is also mandatory to make sure that
@@ -306,14 +327,14 @@ to get access to all keys in order.</p>
 <dd><p>These methods are similar to standard dictionary methods, but also can
 take optional parameters to iterate over a key sub-range, instead of
 the entire database. Note that for all 3 methods, <em>start_key</em> and
-<em>end_key</em> arguments represent key values. For example, <a class="reference internal" href="#btree.btree.values" title="btree.btree.values"><code class="xref any py py-meth docutils literal"><span class="pre">values()</span></code></a>
+<em>end_key</em> arguments represent key values. For example, <a class="reference internal" href="#btree.btree.values" title="btree.btree.values"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">values()</span></code></a>
 method will iterate over values corresponding to they key range
-given. None values for <em>start_key</em> means &#8220;from the first key&#8221;, no
-<em>end_key</em> or its value of None means &#8220;until the end of database&#8221;.
+given. None values for <em>start_key</em> means “from the first key”, no
+<em>end_key</em> or its value of None means “until the end of database”.
 By default, range is inclusive of <em>start_key</em> and exclusive of
 <em>end_key</em>, you can include <em>end_key</em> in iteration by passing <em>flags</em>
-of <a class="reference internal" href="#btree.INCL" title="btree.INCL"><code class="xref any py py-data docutils literal"><span class="pre">btree.INCL</span></code></a>. You can iterate in descending key direction
-by passing <em>flags</em> of <a class="reference internal" href="#btree.DESC" title="btree.DESC"><code class="xref any py py-data docutils literal"><span class="pre">btree.DESC</span></code></a>. The flags values can be ORed
+of <a class="reference internal" href="#btree.INCL" title="btree.INCL"><code class="xref any py py-data docutils literal notranslate"><span class="pre">btree.INCL</span></code></a>. You can iterate in descending key direction
+by passing <em>flags</em> of <a class="reference internal" href="#btree.DESC" title="btree.DESC"><code class="xref any py py-data docutils literal notranslate"><span class="pre">btree.DESC</span></code></a>. The flags values can be ORed
 together.</p>
 </dd></dl>
 
@@ -323,14 +344,14 @@ together.</p>
 <dl class="data">
 <dt id="btree.INCL">
 <code class="descclassname">btree.</code><code class="descname">INCL</code><a class="headerlink" href="#btree.INCL" title="Permalink to this definition">¶</a></dt>
-<dd><p>A flag for <a class="reference internal" href="#btree.btree.keys" title="btree.btree.keys"><code class="xref any py py-meth docutils literal"><span class="pre">keys()</span></code></a>, <a class="reference internal" href="#btree.btree.values" title="btree.btree.values"><code class="xref any py py-meth docutils literal"><span class="pre">values()</span></code></a>, <a class="reference internal" href="#btree.btree.items" title="btree.btree.items"><code class="xref any py py-meth docutils literal"><span class="pre">items()</span></code></a> methods to specify that
+<dd><p>A flag for <a class="reference internal" href="#btree.btree.keys" title="btree.btree.keys"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">keys()</span></code></a>, <a class="reference internal" href="#btree.btree.values" title="btree.btree.values"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">values()</span></code></a>, <a class="reference internal" href="#btree.btree.items" title="btree.btree.items"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">items()</span></code></a> methods to specify that
 scanning should be inclusive of the end key.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="btree.DESC">
 <code class="descclassname">btree.</code><code class="descname">DESC</code><a class="headerlink" href="#btree.DESC" title="Permalink to this definition">¶</a></dt>
-<dd><p>A flag for <a class="reference internal" href="#btree.btree.keys" title="btree.btree.keys"><code class="xref any py py-meth docutils literal"><span class="pre">keys()</span></code></a>, <a class="reference internal" href="#btree.btree.values" title="btree.btree.values"><code class="xref any py py-meth docutils literal"><span class="pre">values()</span></code></a>, <a class="reference internal" href="#btree.btree.items" title="btree.btree.items"><code class="xref any py py-meth docutils literal"><span class="pre">items()</span></code></a> methods to specify that
+<dd><p>A flag for <a class="reference internal" href="#btree.btree.keys" title="btree.btree.keys"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">keys()</span></code></a>, <a class="reference internal" href="#btree.btree.values" title="btree.btree.values"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">values()</span></code></a>, <a class="reference internal" href="#btree.btree.items" title="btree.btree.items"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">items()</span></code></a> methods to specify that
 scanning should be in descending direction of keys.</p>
 </dd></dl>
 
@@ -339,15 +360,16 @@ scanning should be in descending direction of keys.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="machine.html" class="btn btn-neutral float-right" title="machine — functions related to the hardware" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="machine.html" class="btn btn-neutral float-right" title="machine — functions related to the hardware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="_thread.html" class="btn btn-neutral" title="_thread – multithreading support" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="_thread.html" class="btn btn-neutral float-left" title="_thread – multithreading support" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -356,12 +378,14 @@ scanning should be in descending direction of keys.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -439,35 +463,15 @@ scanning should be in descending direction of keys.</p>
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

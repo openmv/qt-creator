@@ -15,43 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
-  
-
-  
-    <link rel="top" title="MicroPython 1.9.4 documentation" href="../index.html"/>
-        <link rel="up" title="MicroPython libraries" href="index.html"/>
-        <link rel="next" title="network — network configuration" href="network.html"/>
-        <link rel="prev" title="class WDT – watchdog timer" href="machine.WDT.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="network — network configuration" href="network.html" />
+    <link rel="prev" title="class WDT – watchdog timer" href="machine.WDT.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -60,7 +58,7 @@
 
           
             
-            <img src="../_static/web-logo-sticky.png" class="logo" />
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -89,21 +87,24 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal"><span class="pre">btree</span></code> &#8211; simple BTree database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal"><span class="pre">machine</span></code> &#8212; functions related to the hardware</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href=""><code class="docutils literal"><span class="pre">micropython</span></code> &#8211; access and control MicroPython internals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal"><span class="pre">network</span></code> &#8212; network configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal"><span class="pre">uctypes</span></code> &#8211; access binary data in a structured way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a></li>
@@ -123,43 +124,63 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">MicroPython</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
-      
-    <li><code class="docutils literal"><span class="pre">micropython</span></code> &#8211; access and control MicroPython internals</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/library/micropython.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/library/micropython.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="module-micropython">
-<span id="micropython-access-and-control-micropython-internals"></span><h1><a class="reference internal" href="#module-micropython" title="micropython: access and control MicroPython internals"><code class="xref py py-mod docutils literal"><span class="pre">micropython</span></code></a> &#8211; access and control MicroPython internals<a class="headerlink" href="#module-micropython" title="Permalink to this headline">¶</a></h1>
+<span id="micropython-access-and-control-micropython-internals"></span><h1><a class="reference internal" href="#module-micropython" title="micropython: access and control MicroPython internals"><code class="xref py py-mod docutils literal notranslate"><span class="pre">micropython</span></code></a> – access and control MicroPython internals<a class="headerlink" href="#module-micropython" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
@@ -167,7 +188,7 @@
 <code class="descclassname">micropython.</code><code class="descname">const</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#micropython.const" title="Permalink to this definition">¶</a></dt>
 <dd><p>Used to declare that the expression is a constant so that the compile can
 optimise it.  The use of this function should be as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">micropython</span> <span class="kn">import</span> <span class="n">const</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">micropython</span> <span class="k">import</span> <span class="n">const</span>
 
 <span class="n">CONST_X</span> <span class="o">=</span> <span class="n">const</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
 <span class="n">CONST_Y</span> <span class="o">=</span> <span class="n">const</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">CONST_X</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -177,8 +198,8 @@ optimise it.  The use of this function should be as follows:</p>
 outside the module they are declared in.  On the other hand, if a constant
 begins with an underscore then it is hidden, it is not available as a global
 variable, and does not take up any memory during execution.</p>
-<p>This <a class="reference internal" href="#micropython.const" title="micropython.const"><code class="xref any py py-func docutils literal"><span class="pre">const</span></code></a> function is recognised directly by the MicroPython parser and is
-provided as part of the <a class="reference internal" href="#module-micropython" title="micropython: access and control MicroPython internals"><code class="xref py py-mod docutils literal"><span class="pre">micropython</span></code></a> module mainly so that scripts can be
+<p>This <a class="reference internal" href="#micropython.const" title="micropython.const"><code class="xref any py py-func docutils literal notranslate"><span class="pre">const</span></code></a> function is recognised directly by the MicroPython parser and is
+provided as part of the <a class="reference internal" href="#module-micropython" title="micropython: access and control MicroPython internals"><code class="xref py py-mod docutils literal notranslate"><span class="pre">micropython</span></code></a> module mainly so that scripts can be
 written which run under both CPython and MicroPython, by following the above
 pattern.</p>
 </dd></dl>
@@ -187,14 +208,14 @@ pattern.</p>
 <dt id="micropython.opt_level">
 <code class="descclassname">micropython.</code><code class="descname">opt_level</code><span class="sig-paren">(</span><span class="optional">[</span><em>level</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#micropython.opt_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>If <em>level</em> is given then this function sets the optimisation level for subsequent
-compilation of scripts, and returns <code class="docutils literal"><span class="pre">None</span></code>.  Otherwise it returns the current
+compilation of scripts, and returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.  Otherwise it returns the current
 optimisation level.</p>
 <p>The optimisation level controls the following compilation features:</p>
 <ul class="simple">
 <li>Assertions: at level 0 assertion statements are enabled and compiled into the
 bytecode; at levels 1 and higher assertions are not compiled.</li>
-<li>Built-in <code class="docutils literal"><span class="pre">__debug__</span></code> variable: at level 0 this variable expands to <code class="docutils literal"><span class="pre">True</span></code>;
-at levels 1 and higher it expands to <code class="docutils literal"><span class="pre">False</span></code>.</li>
+<li>Built-in <code class="docutils literal notranslate"><span class="pre">__debug__</span></code> variable: at level 0 this variable expands to <code class="docutils literal notranslate"><span class="pre">True</span></code>;
+at levels 1 and higher it expands to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</li>
 <li>Source-code line numbers: at levels 0, 1 and 2 source-code line number are
 stored along with the bytecode so that exceptions can report the line number
 they occurred at; at levels 3 and higher line numbers are not stored.</li>
@@ -210,7 +231,7 @@ size is around 100 bytes).  The buffer is used to create exceptions in cases
 when normal RAM allocation would fail (eg within an interrupt handler) and
 therefore give useful traceback information in these situations.</p>
 <p>A good way to use this function is to put it at the start of your main script
-(eg <code class="docutils literal"><span class="pre">boot.py</span></code> or <code class="docutils literal"><span class="pre">main.py</span></code>) and then the emergency exception buffer will be active
+(eg <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> or <code class="docutils literal notranslate"><span class="pre">main.py</span></code>) and then the emergency exception buffer will be active
 for all the code following it.</p>
 </dd></dl>
 
@@ -251,16 +272,16 @@ should be used to compute differences in stack usage at different points.</p>
 <dt id="micropython.heap_unlock">
 <code class="descclassname">micropython.</code><code class="descname">heap_unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#micropython.heap_unlock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lock or unlock the heap.  When locked no memory allocation can occur and a
-<a class="reference internal" href="builtins.html#MemoryError" title="MemoryError"><code class="xref any py py-exc docutils literal"><span class="pre">MemoryError</span></code></a> will be raised if any heap allocation is attempted.</p>
-<p>These functions can be nested, ie <a class="reference internal" href="#micropython.heap_lock" title="micropython.heap_lock"><code class="xref any py py-func docutils literal"><span class="pre">heap_lock()</span></code></a> can be called multiple times
-in a row and the lock-depth will increase, and then <a class="reference internal" href="#micropython.heap_unlock" title="micropython.heap_unlock"><code class="xref any py py-func docutils literal"><span class="pre">heap_unlock()</span></code></a> must be
+<a class="reference internal" href="builtins.html#MemoryError" title="MemoryError"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">MemoryError</span></code></a> will be raised if any heap allocation is attempted.</p>
+<p>These functions can be nested, ie <a class="reference internal" href="#micropython.heap_lock" title="micropython.heap_lock"><code class="xref any py py-func docutils literal notranslate"><span class="pre">heap_lock()</span></code></a> can be called multiple times
+in a row and the lock-depth will increase, and then <a class="reference internal" href="#micropython.heap_unlock" title="micropython.heap_unlock"><code class="xref any py py-func docutils literal notranslate"><span class="pre">heap_unlock()</span></code></a> must be
 called the same number of times to make the heap available again.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="micropython.kbd_intr">
 <code class="descclassname">micropython.</code><code class="descname">kbd_intr</code><span class="sig-paren">(</span><em>chr</em><span class="sig-paren">)</span><a class="headerlink" href="#micropython.kbd_intr" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the character that will raise a <a class="reference internal" href="builtins.html#KeyboardInterrupt" title="KeyboardInterrupt"><code class="xref any py py-exc docutils literal"><span class="pre">KeyboardInterrupt</span></code></a> exception.  By
+<dd><p>Set the character that will raise a <a class="reference internal" href="builtins.html#KeyboardInterrupt" title="KeyboardInterrupt"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code></a> exception.  By
 default this is set to 3 during script execution, corresponding to Ctrl-C.
 Passing -1 to this function will disable capture of Ctrl-C, and passing 3
 will restore it.</p>
@@ -272,17 +293,17 @@ that stream is used for other purposes.</p>
 <dl class="function">
 <dt id="micropython.schedule">
 <code class="descclassname">micropython.</code><code class="descname">schedule</code><span class="sig-paren">(</span><em>func</em>, <em>arg</em><span class="sig-paren">)</span><a class="headerlink" href="#micropython.schedule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Schedule the function <em>func</em> to be executed &#8220;very soon&#8221;.  The function
-is passed the value <em>arg</em> as its single argument.  &#8220;Very soon&#8221; means that
+<dd><p>Schedule the function <em>func</em> to be executed “very soon”.  The function
+is passed the value <em>arg</em> as its single argument.  “Very soon” means that
 the MicroPython runtime will do its best to execute the function at the
 earliest possible time, given that it is also trying to be efficient, and
 that the following conditions hold:</p>
 <ul class="simple">
 <li>A scheduled function will never preempt another scheduled function.</li>
-<li>Scheduled functions are always executed &#8220;between opcodes&#8221; which means
+<li>Scheduled functions are always executed “between opcodes” which means
 that all fundamental Python operations (such as appending to a list)
 are guaranteed to be atomic.</li>
-<li>A given port may define &#8220;critical regions&#8221; within which scheduled
+<li>A given port may define “critical regions” within which scheduled
 functions will never be executed.  Functions may be scheduled within
 a critical region but they will not be executed until that region
 is exited.  An example of a critical region is a preempting interrupt
@@ -292,16 +313,16 @@ handler (an IRQ).</li>
 Such an IRQ puts restrictions on the code that runs in the IRQ (for example
 the heap may be locked) and scheduling a function to call later will lift
 those restrictions.</p>
-<p>Note: If <a class="reference internal" href="#micropython.schedule" title="micropython.schedule"><code class="xref any py py-func docutils literal"><span class="pre">schedule()</span></code></a> is called from a preempting IRQ, when memory
-allocation is not allowed and the callback to be passed to <a class="reference internal" href="#micropython.schedule" title="micropython.schedule"><code class="xref any py py-func docutils literal"><span class="pre">schedule()</span></code></a> is
+<p>Note: If <a class="reference internal" href="#micropython.schedule" title="micropython.schedule"><code class="xref any py py-func docutils literal notranslate"><span class="pre">schedule()</span></code></a> is called from a preempting IRQ, when memory
+allocation is not allowed and the callback to be passed to <a class="reference internal" href="#micropython.schedule" title="micropython.schedule"><code class="xref any py py-func docutils literal notranslate"><span class="pre">schedule()</span></code></a> is
 a bound method, passing this directly will fail. This is because creating a
 reference to a bound method causes memory allocation. A solution is to
 create a reference to the method in the class constructor and to pass that
-reference to <a class="reference internal" href="#micropython.schedule" title="micropython.schedule"><code class="xref any py py-func docutils literal"><span class="pre">schedule()</span></code></a>. This is discussed in detail here
-<a class="reference internal" href="../reference/isr_rules.html#isr-rules"><span>reference documentation</span></a> under &#8220;Creation of Python
-objects&#8221;.</p>
-<p>There is a finite stack to hold the scheduled functions and <a class="reference internal" href="#micropython.schedule" title="micropython.schedule"><code class="xref any py py-func docutils literal"><span class="pre">schedule()</span></code></a>
-will raise a <a class="reference internal" href="builtins.html#RuntimeError" title="RuntimeError"><code class="xref any py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> if the stack is full.</p>
+reference to <a class="reference internal" href="#micropython.schedule" title="micropython.schedule"><code class="xref any py py-func docutils literal notranslate"><span class="pre">schedule()</span></code></a>. This is discussed in detail here
+<a class="reference internal" href="../reference/isr_rules.html#isr-rules"><span class="std std-ref">reference documentation</span></a> under “Creation of Python
+objects”.</p>
+<p>There is a finite stack to hold the scheduled functions and <a class="reference internal" href="#micropython.schedule" title="micropython.schedule"><code class="xref any py py-func docutils literal notranslate"><span class="pre">schedule()</span></code></a>
+will raise a <a class="reference internal" href="builtins.html#RuntimeError" title="RuntimeError"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> if the stack is full.</p>
 </dd></dl>
 
 </div>
@@ -309,15 +330,16 @@ will raise a <a class="reference internal" href="builtins.html#RuntimeError" tit
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="network.html" class="btn btn-neutral float-right" title="network — network configuration" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="network.html" class="btn btn-neutral float-right" title="network — network configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="machine.WDT.html" class="btn btn-neutral" title="class WDT – watchdog timer" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="machine.WDT.html" class="btn btn-neutral float-left" title="class WDT – watchdog timer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -326,12 +348,14 @@ will raise a <a class="reference internal" href="builtins.html#RuntimeError" tit
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors.
-      Last updated on 31 Mar 2019.
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 25 Sep 2019.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -409,35 +433,15 @@ will raise a <a class="reference internal" href="builtins.html#RuntimeError" tit
   </div>
 </div>
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.9.4',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>
