@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pyb — functions related to the board &mdash; MicroPython 1.9.4 documentation</title>
+  <title>pyb — functions related to the board &mdash; MicroPython 1.11 documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/openmv.ico"/>
   
   
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.9.4
+                1.11
               </div>
             
           
@@ -147,6 +147,9 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.nn.html"><code class="docutils literal notranslate"><span class="pre">nn</span></code> — neural networks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.nn.html#class-nn-class-nn-dection-result">class nn_class – nn dection result</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.nn.html#class-net-neural-network">class Net – Neural Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code> — Tensor Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html#class-tf-classification-tf-classification-dection-result">class tf_classification – tf classification dection result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html#class-tf-model-tensorflow-model">class tf_model – TensorFlow Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html"><code class="docutils literal notranslate"><span class="pre">gif</span></code> — gif recording</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html#class-gif-gif-recorder">class Gif – Gif recorder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html"><code class="docutils literal notranslate"><span class="pre">mjpeg</span></code> — mjpeg recording</a></li>
@@ -158,6 +161,7 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.omv.html"><code class="docutils literal notranslate"><span class="pre">omv</span></code> — OpenMV Cam Information</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
@@ -305,7 +309,7 @@ number. This means it can be used to measure periods up to about 17.8 minutes.</
 <dl class="function">
 <dt id="pyb.hard_reset">
 <code class="descclassname">pyb.</code><code class="descname">hard_reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.hard_reset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resets the pyboard in a manner similar to pushing the external RESET
+<dd><p>Resets the OpenMV Cam in a manner similar to pushing the external RESET
 button.</p>
 </dd></dl>
 
@@ -366,7 +370,7 @@ at most 1ms.</p>
 <dl class="function">
 <dt id="pyb.stop">
 <code class="descclassname">pyb.</code><code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.stop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Put the openmvcam in a “sleeping” state.</p>
+<dd><p>Put the OpenMV Cam in a “sleeping” state.</p>
 <p>This reduces power consumption to less than 500 uA.  To wake from this
 sleep state requires an external interrupt or a real-time-clock event.
 Upon waking execution continues where it left off.</p>
@@ -376,7 +380,7 @@ Upon waking execution continues where it left off.</p>
 <dl class="function">
 <dt id="pyb.standby">
 <code class="descclassname">pyb.</code><code class="descname">standby</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.standby" title="Permalink to this definition">¶</a></dt>
-<dd><p>Put the openmvcam into a “deep sleep” state.</p>
+<dd><p>Put the OpenMV Cam into a “deep sleep” state.</p>
 <p>This reduces power consumption to less than 50 uA.  To wake from this
 sleep state requires a real-time-clock event.
 Upon waking the system undergoes a hard reset.</p>
@@ -387,16 +391,52 @@ Upon waking the system undergoes a hard reset.</p>
 <div class="section" id="miscellaneous-functions">
 <h2>Miscellaneous functions<a class="headerlink" href="#miscellaneous-functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
+<dt id="pyb.have_cdc">
+<code class="descclassname">pyb.</code><code class="descname">have_cdc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.have_cdc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if USB is connected as a serial device, False otherwise.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function is deprecated.  Use pyb.USB_VCP().isconnected() instead.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyb.hid">
+<code class="descclassname">pyb.</code><code class="descname">hid</code><span class="sig-paren">(</span><em>(buttons</em>, <em>x</em>, <em>y</em>, <em>z)</em><span class="sig-paren">)</span><a class="headerlink" href="#pyb.hid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a 4-tuple (or list) and sends it to the USB host (the PC) to
+signal a HID mouse-motion event.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function is deprecated.  Use <a class="reference internal" href="pyb.USB_HID.html#pyb.USB_HID.send" title="pyb.USB_HID.send"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pyb.USB_HID.send()</span></code></a> instead.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="pyb.info">
 <code class="descclassname">pyb.</code><code class="descname">info</code><span class="sig-paren">(</span><span class="optional">[</span><em>dump_alloc_table</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print out lots of information about the board.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="pyb.main">
+<code class="descclassname">pyb.</code><code class="descname">main</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pyb.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the filename of the main script to run after boot.py is finished.  If
+this function is not called then the default file main.py will be executed.</p>
+<p>It only makes sense to call this function from within boot.py.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pyb.mount">
 <code class="descclassname">pyb.</code><code class="descname">mount</code><span class="sig-paren">(</span><em>device</em>, <em>mountpoint</em>, <em>*</em>, <em>readonly=False</em>, <em>mkfs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyb.mount" title="Permalink to this definition">¶</a></dt>
-<dd><p>Mount a block device and make it available as part of the filesystem.
-<code class="docutils literal notranslate"><span class="pre">device</span></code> must be an object that provides the block protocol:</p>
+<dd><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function is deprecated. Mounting and unmounting devices should
+be performed by <a class="reference internal" href="uos.html#uos.mount" title="uos.mount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">uos.mount()</span></code></a> and <a class="reference internal" href="uos.html#uos.umount" title="uos.umount"><code class="xref py py-meth docutils literal notranslate"><span class="pre">uos.umount()</span></code></a> instead.</p>
+</div>
+<p>Mount a block device and make it available as part of the filesystem.
+<code class="docutils literal notranslate"><span class="pre">device</span></code> must be an object that provides the block protocol. (The
+following is also deprecated. See <a class="reference internal" href="uos.html#uos.AbstractBlockDev" title="uos.AbstractBlockDev"><code class="xref py py-class docutils literal notranslate"><span class="pre">uos.AbstractBlockDev</span></code></a> for the
+correct way to create a block device.)</p>
 <blockquote>
 <div><ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">readblocks(self,</span> <span class="pre">blocknum,</span> <span class="pre">buf)</span></code></li>
@@ -418,8 +458,6 @@ to mount the device.  It must begin with a forward-slash.</p>
 otherwise it is mounted read-write.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">mkfs</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then a new filesystem is created if one does not
 already exist.</p>
-<p>To unmount a device, pass <code class="docutils literal notranslate"><span class="pre">None</span></code> as the device and the mount location
-as <code class="docutils literal notranslate"><span class="pre">mountpoint</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
@@ -446,6 +484,33 @@ as <code class="docutils literal notranslate"><span class="pre">mountpoint</span
 <dd><p>Returns a string of 12 bytes (96 bits), which is the unique ID of the MCU.</p>
 </dd></dl>
 
+<dl class="function">
+<dt id="pyb.usb_mode">
+<code class="descclassname">pyb.</code><code class="descname">usb_mode</code><span class="sig-paren">(</span><span class="optional">[</span><em>modestr</em>, <span class="optional">]</span><em>vid=0xf055</em>, <em>pid=0x9801</em>, <em>hid=pyb.hid_mouse</em><span class="sig-paren">)</span><a class="headerlink" href="#pyb.usb_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>If called with no arguments, return the current USB mode as a string.</p>
+<p>If called with <code class="docutils literal notranslate"><span class="pre">modestr</span></code> provided, attempts to set USB mode.
+This can only be done when called from <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> before
+<a class="reference internal" href="#pyb.main" title="pyb.main"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pyb.main()</span></code></a> has been called.  The following values of
+<code class="docutils literal notranslate"><span class="pre">modestr</span></code> are understood:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">None</span></code>: disables USB</li>
+<li><code class="docutils literal notranslate"><span class="pre">'VCP'</span></code>: enable with VCP (Virtual COM Port) interface</li>
+<li><code class="docutils literal notranslate"><span class="pre">'MSC'</span></code>: enable with MSC (mass storage device class) interface</li>
+<li><code class="docutils literal notranslate"><span class="pre">'VCP+MSC'</span></code>: enable with VCP and MSC</li>
+<li><code class="docutils literal notranslate"><span class="pre">'VCP+HID'</span></code>: enable with VCP and HID (human interface device)</li>
+</ul>
+<p>For backwards compatibility, <code class="docutils literal notranslate"><span class="pre">'CDC'</span></code> is understood to mean
+<code class="docutils literal notranslate"><span class="pre">'VCP'</span></code> (and similarly for <code class="docutils literal notranslate"><span class="pre">'CDC+MSC'</span></code> and <code class="docutils literal notranslate"><span class="pre">'CDC+HID'</span></code>).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">vid</span></code> and <code class="docutils literal notranslate"><span class="pre">pid</span></code> parameters allow you to specify the VID
+(vendor id) and PID (product id).</p>
+<p>If enabling HID mode, you may also specify the HID details by
+passing the <code class="docutils literal notranslate"><span class="pre">hid</span></code> keyword parameter.  It takes a tuple of
+(subclass, protocol, max packet length, polling interval, report
+descriptor).  By default it will set appropriate values for a USB
+mouse.  There is also a <code class="docutils literal notranslate"><span class="pre">pyb.hid_keyboard</span></code> constant, which is an
+appropriate tuple for a USB keyboard.</p>
+</dd></dl>
+
 </div>
 <div class="section" id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
@@ -465,6 +530,7 @@ as <code class="docutils literal notranslate"><span class="pre">mountpoint</span
 <li class="toctree-l1"><a class="reference internal" href="pyb.Timer.html">class Timer – control internal timers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyb.Timer.html#class-timerchannel-setup-a-channel-for-a-timer">class TimerChannel — setup a channel for a timer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyb.UART.html">class UART – duplex serial communication bus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyb.USB_HID.html">class USB_HID – USB Human Interface Device (HID)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyb.USB_VCP.html">class USB_VCP – USB virtual comm port</a></li>
 </ul>
 </div>
@@ -493,7 +559,7 @@ as <code class="docutils literal notranslate"><span class="pre">mountpoint</span
     <p>
         &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 25 Sep 2019.
+        Last updated on 11 Nov 2019.
       </span>
 
     </p>
@@ -510,68 +576,40 @@ as <code class="docutils literal notranslate"><span class="pre">mountpoint</span
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
-    <span class="fa fa-book"> Ports and Versions</span>
-    openmvcam (latest)
+    <span class="fa fa-book"> Language and External Links</span>
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-    <!--p>
     <dl>
-      <dt>Ports</dt>
-      
-        <dd><a href="//en/latest/unix">unix</a></dd>
-      
-        <dd><a href="//en/latest/pyboard">pyboard</a></dd>
-      
-        <dd><a href="//en/latest/wipy">wipy</a></dd>
-      
-        <dd><a href="//en/latest/esp8266">esp8266</a></dd>
-      
-        <dd><a href="//en/latest/openmvcam">openmvcam</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Versions</dt>
-      
-        <dd><a href="//en/latest/openmvcam">latest</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Downloads</dt>
-      
-        <dd><a href="//en/latest/micropython-openmvcam.pdf">PDF</a></dd>
-      
-    </dl>
-    </p-->
-    <dl>
-        <dt>Language</dt>
-        
-          <dd><a href="http://docs.openmv.io">English</a></dd>
-        
-          <dd><a href="http://doc.singtown.cc/openmv_zh">中文</a></dd>
-        
+      <dt>Language</dt>
+      <dd>
+        <a href="https://openmv.io">English</a>
+      </dd>
+      <dd>
+        <a href="http://doc.singtown.cc>中文</a>
+      </dd>
     </dl>
     <hr/>
     <dl>
       <dt>External links</dt>
-        <dd>
-          <a href="https://openmv.io">openmv.io</a>
-        </dd>
-        <dd>
-          <a href="http://forums.openmv.io">forums.openmv.io</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
-        </dd>
-        <dd>
-          <a href="http://micropython.org">micropython.org</a>
-        </dd>
-        <dd>
-          <a href="http://forum.micropython.org">forum.micropython.org</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
-        </dd>
+      <dd>
+        <a href="https://openmv.io">openmv.io</a>
+      </dd>
+      <dd>
+        <a href="http://forums.openmv.io">forums.openmv.io</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+      </dd>
+      <dd>
+        <a href="http://micropython.org">micropython.org</a>
+      </dd>
+      <dd>
+        <a href="http://forum.micropython.org">forum.micropython.org</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+      </dd>
     </dl>
   </div>
 </div>

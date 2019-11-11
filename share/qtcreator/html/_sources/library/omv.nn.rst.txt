@@ -119,7 +119,7 @@ Methods
 
    ``scale_mul`` controls how many different scales are tested out. The sliding
    window method works by multiplying a default scale of 1 by ``scale_mul``
-   while the result is over ``min_scale``. The default value of ``scale_mull``,
+   while the result is over ``min_scale``. The default value of ``scale_mul``,
    0.5, tests out a 50% size reduction per scale change. However, a value of
    0.95 would only be a 5% size reductioin.
 

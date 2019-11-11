@@ -15,8 +15,6 @@ Example usage::
     wdt = WDT(timeout=2000)  # enable it with a timeout of 2s
     wdt.feed()
 
-Availability of this class: pyboard, openmvcam, WiPy.
-
 Constructors
 ------------
 

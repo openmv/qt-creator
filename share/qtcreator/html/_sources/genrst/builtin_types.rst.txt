@@ -2,7 +2,7 @@
 
 Builtin Types
 =============
-Generated Sun 08 Jul 2018 04:25:25 UTC
+Generated Mon 11 Nov 2019 00:40:25 UTC
 
 Exception
 ---------
@@ -147,6 +147,29 @@ Sample code::
 bytes
 -----
 
+.. _cpydiff_types_bytes_format:
+
+bytes objects support .format() method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Cause:** MicroPython strives to be a more regular implementation, so if both `str` and `bytes` support ``__mod__()`` (the % operator), it makes sense to support ``format()`` for both too. Support for ``__mod__`` can also be compiled out, which leaves only ``format()`` for bytes formatting.
+
+**Workaround:** If you are interested in CPython compatibility, don't use ``.format()`` on bytes objects.
+
+Sample code::
+
+    print(b'{}'.format(1))
+
++--------------------------------------------------------------+-------------+
+| CPy output:                                                  | uPy output: |
++--------------------------------------------------------------+-------------+
+| ::                                                           | ::          |
+|                                                              |             |
+|     Traceback (most recent call last):                       |     b'1'    |
+|       File "<stdin>", line 7, in <module>                    |             |
+|     AttributeError: 'bytes' object has no attribute 'format' |             |
++--------------------------------------------------------------+-------------+
+
 .. _cpydiff_types_bytes_keywords:
 
 bytes() with keywords not implemented
@@ -229,16 +252,16 @@ Sample code::
     a = A(42)
     print(a+a)
 
-+-------------+--------------------------------------------+
-| CPy output: | uPy output:                                |
-+-------------+--------------------------------------------+
-| ::          | ::                                         |
-|             |                                            |
-|     84      |     Traceback (most recent call last):     |
-|             |       File "<stdin>", line 11, in <module> |
-|             |       File "<stdin>", line 8, in <lambda>  |
-|             |     TypeError: can't convert A to int      |
-+-------------+--------------------------------------------+
++-------------+-------------------------------------------------------------+
+| CPy output: | uPy output:                                                 |
++-------------+-------------------------------------------------------------+
+| ::          | ::                                                          |
+|             |                                                             |
+|     84      |     Traceback (most recent call last):                      |
+|             |       File "<stdin>", line 11, in <module>                  |
+|             |       File "<stdin>", line 8, in <lambda>                   |
+|             |     TypeError: unsupported types for __radd__: 'int', 'int' |
++-------------+-------------------------------------------------------------+
 
 list
 ----
@@ -281,15 +304,15 @@ Sample code::
     l[0:1] = range(4)
     print(l)
 
-+----------------------+------------------------------------------------------+
-| CPy output:          | uPy output:                                          |
-+----------------------+------------------------------------------------------+
-| ::                   | ::                                                   |
-|                      |                                                      |
-|     [0, 1, 2, 3, 20] |     Traceback (most recent call last):               |
-|                      |       File "<stdin>", line 8, in <module>            |
-|                      |     TypeError: object 'range' is not a tuple or list |
-+----------------------+------------------------------------------------------+
++----------------------+-----------------------------------------------------+
+| CPy output:          | uPy output:                                         |
++----------------------+-----------------------------------------------------+
+| ::                   | ::                                                  |
+|                      |                                                     |
+|     [0, 1, 2, 3, 20] |     Traceback (most recent call last):              |
+|                      |       File "<stdin>", line 8, in <module>           |
+|                      |     TypeError: object 'range' isn't a tuple or list |
++----------------------+-----------------------------------------------------+
 
 .. _cpydiff_types_list_store_subscrstep:
 

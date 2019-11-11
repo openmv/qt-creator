@@ -40,6 +40,11 @@ best place to find general information of the availability/non-availability
 of a particular feature is the "General Information" section which contains
 information pertaining to a specific `MicroPython port`.
 
+On some ports you are able to discover the available, built-in libraries that
+can be imported by entering the following at the REPL::
+
+    help('modules')
+
 Beyond the built-in libraries described in this documentation, many more
 modules from the Python standard library, as well as further MicroPython
 extensions to it, can be found in `micropython-lib`.
@@ -65,131 +70,31 @@ For example, ``import json`` will first search for a file ``json.py`` (or packag
 directory ``json``) and load that module if it is found.  If nothing is found,
 it will fallback to loading the built-in ``ujson`` module.
 
-.. only:: port_unix
+.. toctree::
+   :maxdepth: 1
 
-    .. toctree::
-       :maxdepth: 1
-
-       builtins.rst
-       array.rst
-       cmath.rst
-       gc.rst
-       math.rst
-       sys.rst
-       ubinascii.rst
-       ucollections.rst
-       uerrno.rst
-       uhashlib.rst
-       uheapq.rst
-       uio.rst
-       ujson.rst
-       uos.rst
-       ure.rst
-       uselect.rst
-       usocket.rst
-       ussl.rst
-       ustruct.rst
-       utime.rst
-       uzlib.rst
-       _thread.rst
-
-.. only:: port_pyboard
-
-    .. toctree::
-       :maxdepth: 1
-
-       builtins.rst
-       array.rst
-       cmath.rst
-       gc.rst
-       math.rst
-       sys.rst
-       ubinascii.rst
-       ucollections.rst
-       uerrno.rst
-       uhashlib.rst
-       uheapq.rst
-       uio.rst
-       ujson.rst
-       uos.rst
-       ure.rst
-       uselect.rst
-       usocket.rst
-       ustruct.rst
-       utime.rst
-       uzlib.rst
-       _thread.rst
-
-.. only:: port_wipy
-
-    .. toctree::
-       :maxdepth: 1
-
-       builtins.rst
-       array.rst
-       gc.rst
-       sys.rst
-       ubinascii.rst
-       ujson.rst
-       uos.rst
-       ure.rst
-       uselect.rst
-       usocket.rst
-       ussl.rst
-       utime.rst
-
-.. only:: port_esp8266
-
-    .. toctree::
-       :maxdepth: 1
-
-       builtins.rst
-       array.rst
-       gc.rst
-       math.rst
-       sys.rst
-       ubinascii.rst
-       ucollections.rst
-       uerrno.rst
-       uhashlib.rst
-       uheapq.rst
-       uio.rst
-       ujson.rst
-       uos.rst
-       ure.rst
-       uselect.rst
-       usocket.rst
-       ussl.rst
-       ustruct.rst
-       utime.rst
-       uzlib.rst
-
-.. only:: port_openmvcam
-
-    .. toctree::
-       :maxdepth: 1
-
-       builtins.rst
-       array.rst
-       cmath.rst
-       gc.rst
-       math.rst
-       sys.rst
-       ubinascii.rst
-       ucollections.rst
-       uerrno.rst
-       uhashlib.rst
-       uheapq.rst
-       uio.rst
-       ujson.rst
-       uos.rst
-       ure.rst
-       uselect.rst
-       usocket.rst
-       ustruct.rst
-       utime.rst
-       uzlib.rst
-       _thread.rst
+   builtins.rst
+   array.rst
+   cmath.rst
+   gc.rst
+   math.rst
+   sys.rst
+   ubinascii.rst
+   ucollections.rst
+   uerrno.rst
+   uhashlib.rst
+   uheapq.rst
+   uio.rst
+   ujson.rst
+   uos.rst
+   ure.rst
+   uselect.rst
+   usocket.rst
+   ussl.rst
+   ustruct.rst
+   utime.rst
+   uzlib.rst
+   _thread.rst
 
 
 MicroPython-specific libraries
@@ -202,82 +107,75 @@ the following libraries.
    :maxdepth: 1
 
    btree.rst
+   framebuf.rst
    machine.rst
    micropython.rst
    network.rst
+   ucryptolib.rst
    uctypes.rst
 
-.. only:: port_pyboard
 
-   Libraries specific to the pyboard
-   ---------------------------------
+Libraries specific to the OpenMV Cam
+------------------------------------
 
-   The following libraries are specific to the pyboard.
+The following libraries are specific to the OpenMV Cam.
 
-   .. toctree::
-      :maxdepth: 2
+.. toctree::
+   :maxdepth: 2
 
-      pyb.rst
-      lcd160cr.rst
+   pyb.rst
+   pyb.ADC.rst
+   pyb.CAN.rst
+   pyb.DAC.rst
+   pyb.ExtInt.rst
+   pyb.I2C.rst
+   pyb.LED.rst
+   pyb.Pin.rst
+   pyb.RTC.rst
+   pyb.Servo.rst
+   pyb.SPI.rst
+   pyb.Timer.rst
+   pyb.UART.rst
+   pyb.USB_VCP.rst
+   omv.time.rst
+   omv.sensor.rst
+   omv.image.rst
+   omv.nn.rst
+   omv.tf.rst
+   omv.gif.rst
+   omv.mjpeg.rst
+   omv.lcd.rst
+   omv.fir.rst
+   omv.tv.rst
+   omv.cpufreq.rst
+   omv.omv.rst
 
-.. only:: port_wipy
+Third-party libraries on the OpenMV Cam
+---------------------------------------
 
-   Libraries specific to the WiPy
-   ---------------------------------
+The following third-party math libraries are built-in to your OpenMV Cam's firmware:
 
-   The following libraries are specific to the WiPy.
+   * `OpenRV <https://github.com/nickoala/openrv>`_ (Hu moments, Planar homography, and Quickshift++)
+      * `vec <https://gitlab.com/nickoala/micropython-vec>`_ (Vector Operations)
+      * `mtx <https://gitlab.com/nickoala/micropython-mtx>`_ (Fast Matrix Multiplication and Linear Solver)
+   * `ulab <https://micropython-ulab.readthedocs.io/en/latest/>`_ (numpy-like array manipulation library)
+   * `umatrix <https://github.com/iyassou/umatrix>`_ (a matrix library)
+   * `ulinalg <https://github.com/jalawson/ulinalg>`_ (linear algebra routines)
+   * `pid <https://github.com/openmv/openmv/blob/master/scripts/libraries/pid.py>`_ (Proportional/Integral/Derivative Control)
 
-   .. toctree::
-      :maxdepth: 2
+The following third-party driver libraries are built-in to your OpenMV Cam's firmware:
 
-      wipy.rst
+   * `BNO055 <https://github.com/openmv/openmv/blob/master/scripts/libraries/bno055.py>`_ IMU Driver
+      * Examples scripts are located in OpenMV IDE under the ``IMU Shield`` examples folder.
+   * `SSD1306 <https://github.com/openmv/openmv/blob/master/scripts/libraries/ssd1306.py>`_ OLED Driver
+   * `TB6612 <https://github.com/openmv/openmv/blob/master/scripts/libraries/tb6612.py>`_ Stepper Motor Driver
+      * Examples scripts are located in OpenMV IDE under the ``Motor Shield`` examples folder.
+   * `VL51L1X <https://github.com/openmv/openmv/blob/master/scripts/libraries/vl53l1x.py>`_ ToF Distance Sensor Driver
+      * Examples scripts are located in OpenMV IDE under the ``Distance Shield`` examples folder.
 
+The following third-party protocol libraries are built-in to your OpenMV Cam's firmware:
 
-.. only:: port_esp8266
-
-   Libraries specific to the ESP8266
-   ---------------------------------
-
-   The following libraries are specific to the ESP8266.
-
-   .. toctree::
-      :maxdepth: 2
-
-      esp.rst
-
-
-.. only:: port_openmvcam
-
-   Libraries specific to the OpenMV Cam
-   ------------------------------------
-
-   The following libraries are specific to the OpenMV Cam.
-
-   .. toctree::
-      :maxdepth: 2
-
-      pyb.rst
-      pyb.ADC.rst
-      pyb.CAN.rst
-      pyb.DAC.rst
-      pyb.ExtInt.rst
-      pyb.I2C.rst
-      pyb.LED.rst
-      pyb.Pin.rst
-      pyb.RTC.rst
-      pyb.Servo.rst
-      pyb.SPI.rst
-      pyb.Timer.rst
-      pyb.UART.rst
-      pyb.USB_VCP.rst
-      omv.time.rst
-      omv.sensor.rst
-      omv.image.rst
-      omv.nn.rst
-      omv.gif.rst
-      omv.mjpeg.rst
-      omv.lcd.rst
-      omv.fir.rst
-      omv.tv.rst
-      omv.cpufreq.rst
-      omv.omv.rst
+   * `modbus <https://github.com/openmv/openmv/blob/master/scripts/libraries/modbus.py>`_ protocol library
+      * Examples scripts are located in OpenMV IDE under the ``Modbus`` examples folder.
+   * `mqtt <https://github.com/openmv/openmv/blob/master/scripts/libraries/mqtt.py>`_ protocol library
+      * Examples scripts are located in OpenMV IDE under the ``WiFi Shield`` examples folder.

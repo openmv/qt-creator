@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>esp — functions related to the ESP8266 &mdash; MicroPython 1.9.4 documentation</title>
+  <title>esp — functions related to the ESP8266 and ESP32 &mdash; MicroPython 1.11 documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/openmv.ico"/>
   
   
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                1.9.4
+                1.11
               </div>
             
           
@@ -141,7 +141,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><code class="docutils literal notranslate"><span class="pre">esp</span></code> — functions related to the ESP8266</li>
+      <li><code class="docutils literal notranslate"><span class="pre">esp</span></code> — functions related to the ESP8266 and ESP32</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -160,15 +160,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="esp-functions-related-to-the-esp8266">
-<h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">esp</span></code> — functions related to the ESP8266<a class="headerlink" href="#esp-functions-related-to-the-esp8266" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">esp</span></code> module contains specific functions related to the ESP8266 module.</p>
+  <div class="section" id="module-esp">
+<span id="esp-functions-related-to-the-esp8266-and-esp32"></span><h1><a class="reference internal" href="#module-esp" title="esp: functions related to the ESP8266 and ESP32"><code class="xref py py-mod docutils literal notranslate"><span class="pre">esp</span></code></a> — functions related to the ESP8266 and ESP32<a class="headerlink" href="#module-esp" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">esp</span></code> module contains specific functions related to both the ESP8266 and
+ESP32 modules.  Some functions are only available on one or the other of these
+ports.</p>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt>
-<code class="descclassname">esp.</code><code class="descname">sleep_type</code><span class="sig-paren">(</span><span class="optional">[</span><em>sleep_type</em><span class="optional">]</span><span class="sig-paren">)</span></dt>
-<dd><p>Get or set the sleep type.</p>
+<dt id="esp.sleep_type">
+<code class="descclassname">esp.</code><code class="descname">sleep_type</code><span class="sig-paren">(</span><span class="optional">[</span><em>sleep_type</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#esp.sleep_type" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Note</strong>: ESP8266 only</p>
+<p>Get or set the sleep type.</p>
 <p>If the <em>sleep_type</em> parameter is provided, sets the sleep type to its
 value. If the function is called without parameters, returns the current
 sleep type.</p>
@@ -185,9 +188,10 @@ and suspends the processor periodically.</li>
 </dd></dl>
 
 <dl class="function">
-<dt>
-<code class="descclassname">esp.</code><code class="descname">deepsleep</code><span class="sig-paren">(</span><em>time=0</em><span class="sig-paren">)</span></dt>
-<dd><p>Enter deep sleep.</p>
+<dt id="esp.deepsleep">
+<code class="descclassname">esp.</code><code class="descname">deepsleep</code><span class="sig-paren">(</span><em>time=0</em><span class="sig-paren">)</span><a class="headerlink" href="#esp.deepsleep" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Note</strong>: ESP8266 only - use <a class="reference internal" href="machine.html#machine.deepsleep" title="machine.deepsleep"><code class="xref any py py-func docutils literal notranslate"><span class="pre">machine.deepsleep()</span></code></a> on ESP32</p>
+<p>Enter deep sleep.</p>
 <p>The whole module powers down, except for the RTC clock circuit, which can
 be used to restart the module after the specified time if the pin 16 is
 connected to the reset pin. Otherwise the module will sleep until manually
@@ -195,30 +199,44 @@ reset.</p>
 </dd></dl>
 
 <dl class="function">
-<dt>
-<code class="descclassname">esp.</code><code class="descname">flash_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
-<dd><p>Read the device ID of the flash memory.</p>
+<dt id="esp.flash_id">
+<code class="descclassname">esp.</code><code class="descname">flash_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#esp.flash_id" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Note</strong>: ESP8266 only</p>
+<p>Read the device ID of the flash memory.</p>
 </dd></dl>
 
 <dl class="function">
-<dt>
-<code class="descclassname">esp.</code><code class="descname">flash_read</code><span class="sig-paren">(</span><em>byte_offset</em>, <em>length_or_buffer</em><span class="sig-paren">)</span></dt>
+<dt id="esp.flash_size">
+<code class="descclassname">esp.</code><code class="descname">flash_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#esp.flash_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the total size of the flash memory.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="esp.flash_user_start">
+<code class="descclassname">esp.</code><code class="descname">flash_user_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#esp.flash_user_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the memory offset at which the user flash space begins.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="esp.flash_read">
+<code class="descclassname">esp.</code><code class="descname">flash_read</code><span class="sig-paren">(</span><em>byte_offset</em>, <em>length_or_buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#esp.flash_read" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt>
-<code class="descclassname">esp.</code><code class="descname">flash_write</code><span class="sig-paren">(</span><em>byte_offset</em>, <em>bytes</em><span class="sig-paren">)</span></dt>
+<dt id="esp.flash_write">
+<code class="descclassname">esp.</code><code class="descname">flash_write</code><span class="sig-paren">(</span><em>byte_offset</em>, <em>bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#esp.flash_write" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt>
-<code class="descclassname">esp.</code><code class="descname">flash_erase</code><span class="sig-paren">(</span><em>sector_no</em><span class="sig-paren">)</span></dt>
+<dt id="esp.flash_erase">
+<code class="descclassname">esp.</code><code class="descname">flash_erase</code><span class="sig-paren">(</span><em>sector_no</em><span class="sig-paren">)</span><a class="headerlink" href="#esp.flash_erase" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt>
-<code class="descclassname">esp.</code><code class="descname">set_native_code_location</code><span class="sig-paren">(</span><em>start</em>, <em>length</em><span class="sig-paren">)</span></dt>
-<dd><p>Set the location that native code will be placed for execution after it is
+<dt id="esp.set_native_code_location">
+<code class="descclassname">esp.</code><code class="descname">set_native_code_location</code><span class="sig-paren">(</span><em>start</em>, <em>length</em><span class="sig-paren">)</span><a class="headerlink" href="#esp.set_native_code_location" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Note</strong>: ESP8266 only</p>
+<p>Set the location that native code will be placed for execution after it is
 compiled.  Native code is emitted when the <code class="docutils literal notranslate"><span class="pre">&#64;micropython.native</span></code>,
 <code class="docutils literal notranslate"><span class="pre">&#64;micropython.viper</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;micropython.asm_xtensa</span></code> decorators are applied
 to a function.  The ESP8266 must execute code from either iRAM or the lower
@@ -265,7 +283,7 @@ that function.</p>
     <p>
         &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 25 Sep 2019.
+        Last updated on 11 Nov 2019.
       </span>
 
     </p>
@@ -282,68 +300,40 @@ that function.</p>
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
-    <span class="fa fa-book"> Ports and Versions</span>
-    openmvcam (latest)
+    <span class="fa fa-book"> Language and External Links</span>
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-    <!--p>
     <dl>
-      <dt>Ports</dt>
-      
-        <dd><a href="//en/latest/unix">unix</a></dd>
-      
-        <dd><a href="//en/latest/pyboard">pyboard</a></dd>
-      
-        <dd><a href="//en/latest/wipy">wipy</a></dd>
-      
-        <dd><a href="//en/latest/esp8266">esp8266</a></dd>
-      
-        <dd><a href="//en/latest/openmvcam">openmvcam</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Versions</dt>
-      
-        <dd><a href="//en/latest/openmvcam">latest</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Downloads</dt>
-      
-        <dd><a href="//en/latest/micropython-openmvcam.pdf">PDF</a></dd>
-      
-    </dl>
-    </p-->
-    <dl>
-        <dt>Language</dt>
-        
-          <dd><a href="http://docs.openmv.io">English</a></dd>
-        
-          <dd><a href="http://doc.singtown.cc/openmv_zh">中文</a></dd>
-        
+      <dt>Language</dt>
+      <dd>
+        <a href="https://openmv.io">English</a>
+      </dd>
+      <dd>
+        <a href="http://doc.singtown.cc>中文</a>
+      </dd>
     </dl>
     <hr/>
     <dl>
       <dt>External links</dt>
-        <dd>
-          <a href="https://openmv.io">openmv.io</a>
-        </dd>
-        <dd>
-          <a href="http://forums.openmv.io">forums.openmv.io</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
-        </dd>
-        <dd>
-          <a href="http://micropython.org">micropython.org</a>
-        </dd>
-        <dd>
-          <a href="http://forum.micropython.org">forum.micropython.org</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
-        </dd>
+      <dd>
+        <a href="https://openmv.io">openmv.io</a>
+      </dd>
+      <dd>
+        <a href="http://forums.openmv.io">forums.openmv.io</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+      </dd>
+      <dd>
+        <a href="http://micropython.org">micropython.org</a>
+      </dd>
+      <dd>
+        <a href="http://forum.micropython.org">forum.micropython.org</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+      </dd>
     </dl>
   </div>
 </div>

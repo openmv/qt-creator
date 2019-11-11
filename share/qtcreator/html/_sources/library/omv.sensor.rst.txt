@@ -31,7 +31,7 @@ Functions
 
    Puts the camera to sleep if enable is True. Otherwise, wakes it back up.
 
-.. function:: sensor.hutdown(enable)
+.. function:: sensor.shutdown(enable)
 
    Puts the camera into a lower power mode than sleep (but the camera must be reset on being woken up).
 

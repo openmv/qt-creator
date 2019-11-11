@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class WLANWiPy – WiPy specific WiFi control &mdash; MicroPython 1.11 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/openmv.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MicroPython
+          
+
+          
+            
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.11
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">MicroPython libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>class WLANWiPy – WiPy specific WiFi control</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/library/network.WLANWiPy.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-wlanwipy-wipy-specific-wifi-control">
+<span id="network-wlanwipy"></span><h1>class WLANWiPy – WiPy specific WiFi control<a class="headerlink" href="#class-wlanwipy-wipy-specific-wifi-control" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This class is a non-standard WLAN implementation for the WiPy.
+It is available simply as <code class="docutils literal notranslate"><span class="pre">network.WLAN</span></code> on the WiPy but is named in the
+documentation below as <code class="docutils literal notranslate"><span class="pre">network.WLANWiPy</span></code> to distinguish it from the
+more general <a class="reference internal" href="network.WLAN.html#network-wlan"><span class="std std-ref">network.WLAN</span></a> class.</p>
+</div>
+<p>This class provides a driver for the WiFi network processor in the WiPy. Example usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">network</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="c1"># setup as a station</span>
+<span class="n">wlan</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="n">WLAN</span><span class="o">.</span><span class="n">STA</span><span class="p">)</span>
+<span class="n">wlan</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;your-ssid&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="n">WLAN</span><span class="o">.</span><span class="n">WPA2</span><span class="p">,</span> <span class="s1">&#39;your-key&#39;</span><span class="p">))</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">wlan</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wlan</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>
+
+<span class="c1"># now use socket as usual</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="network.WLANWiPy">
+<em class="property">class </em><code class="descclassname">network.</code><code class="descname">WLANWiPy</code><span class="sig-paren">(</span><em>id=0</em>, <em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a WLAN object, and optionally configure it. See <a class="reference internal" href="#network.WLANWiPy.init" title="network.WLANWiPy.init"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">init()</span></code></a> for params of configuration.</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal notranslate"><span class="pre">WLAN</span></code> constructor is special in the sense that if no arguments besides the id are given,
+it will return the already existing <code class="docutils literal notranslate"><span class="pre">WLAN</span></code> instance without re-configuring it. This is
+because <code class="docutils literal notranslate"><span class="pre">WLAN</span></code> is a system feature of the WiPy. If the already existing instance is not
+initialized it will do the same as the other constructors an will initialize it with default
+values.</p>
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="network.WLANWiPy.init">
+<code class="descclassname">WLANWiPy.</code><code class="descname">init</code><span class="sig-paren">(</span><em>mode</em>, <em>*</em>, <em>ssid</em>, <em>auth</em>, <em>channel</em>, <em>antenna</em><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set or get the WiFi network processor configuration.</p>
+<p>Arguments are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>mode</em> can be either <code class="docutils literal notranslate"><span class="pre">WLAN.STA</span></code> or <code class="docutils literal notranslate"><span class="pre">WLAN.AP</span></code>.</li>
+<li><em>ssid</em> is a string with the ssid name. Only needed when mode is <code class="docutils literal notranslate"><span class="pre">WLAN.AP</span></code>.</li>
+<li><em>auth</em> is a tuple with (sec, key). Security can be <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">WLAN.WEP</span></code>,
+<code class="docutils literal notranslate"><span class="pre">WLAN.WPA</span></code> or <code class="docutils literal notranslate"><span class="pre">WLAN.WPA2</span></code>. The key is a string with the network password.
+If <code class="docutils literal notranslate"><span class="pre">sec</span></code> is <code class="docutils literal notranslate"><span class="pre">WLAN.WEP</span></code> the key must be a string representing hexadecimal
+values (e.g. ‘ABC1DE45BF’). Only needed when mode is <code class="docutils literal notranslate"><span class="pre">WLAN.AP</span></code>.</li>
+<li><em>channel</em> a number in the range 1-11. Only needed when mode is <code class="docutils literal notranslate"><span class="pre">WLAN.AP</span></code>.</li>
+<li><em>antenna</em> selects between the internal and the external antenna. Can be either
+<code class="docutils literal notranslate"><span class="pre">WLAN.INT_ANT</span></code> or <code class="docutils literal notranslate"><span class="pre">WLAN.EXT_ANT</span></code>.</li>
+</ul>
+</div></blockquote>
+<p>For example, you can do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create and configure as an access point</span>
+<span class="n">wlan</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="n">WLAN</span><span class="o">.</span><span class="n">AP</span><span class="p">,</span> <span class="n">ssid</span><span class="o">=</span><span class="s1">&#39;wipy-wlan&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="n">WLAN</span><span class="o">.</span><span class="n">WPA2</span><span class="p">,</span><span class="s1">&#39;www.wipy.io&#39;</span><span class="p">),</span> <span class="n">channel</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">antenna</span><span class="o">=</span><span class="n">WLAN</span><span class="o">.</span><span class="n">INT_ANT</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># configure as an station</span>
+<span class="n">wlan</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="n">WLAN</span><span class="o">.</span><span class="n">STA</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.connect">
+<code class="descclassname">WLANWiPy.</code><code class="descname">connect</code><span class="sig-paren">(</span><em>ssid</em>, <em>*</em>, <em>auth=None</em>, <em>bssid=None</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect to a WiFi access point using the given SSID, and other security
+parameters.</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>auth</em> is a tuple with (sec, key). Security can be <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">WLAN.WEP</span></code>,
+<code class="docutils literal notranslate"><span class="pre">WLAN.WPA</span></code> or <code class="docutils literal notranslate"><span class="pre">WLAN.WPA2</span></code>. The key is a string with the network password.
+If <code class="docutils literal notranslate"><span class="pre">sec</span></code> is <code class="docutils literal notranslate"><span class="pre">WLAN.WEP</span></code> the key must be a string representing hexadecimal
+values (e.g. ‘ABC1DE45BF’).</li>
+<li><em>bssid</em> is the MAC address of the AP to connect to. Useful when there are several
+APs with the same ssid.</li>
+<li><em>timeout</em> is the maximum time in milliseconds to wait for the connection to succeed.</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.scan">
+<code class="descclassname">WLANWiPy.</code><code class="descname">scan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.scan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a network scan and returns a list of named tuples with (ssid, bssid, sec, channel, rssi).
+Note that channel is always <code class="docutils literal notranslate"><span class="pre">None</span></code> since this info is not provided by the WiPy.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.disconnect">
+<code class="descclassname">WLANWiPy.</code><code class="descname">disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnect from the WiFi access point.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.isconnected">
+<code class="descclassname">WLANWiPy.</code><code class="descname">isconnected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.isconnected" title="Permalink to this definition">¶</a></dt>
+<dd><p>In case of STA mode, returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if connected to a WiFi access point and has a valid IP address.
+In AP mode returns <code class="docutils literal notranslate"><span class="pre">True</span></code> when a station is connected, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.ifconfig">
+<code class="descclassname">WLANWiPy.</code><code class="descname">ifconfig</code><span class="sig-paren">(</span><em>if_id=0, config=['dhcp' or configtuple]</em><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.ifconfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>With no parameters given returns a 4-tuple of <em>(ip, subnet_mask, gateway, DNS_server)</em>.</p>
+<p>if <code class="docutils literal notranslate"><span class="pre">'dhcp'</span></code> is passed as a parameter then the DHCP client is enabled and the IP params
+are negotiated with the AP.</p>
+<p>If the 4-tuple config is given then a static IP is configured. For instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wlan</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;192.168.0.4&#39;</span><span class="p">,</span> <span class="s1">&#39;255.255.255.0&#39;</span><span class="p">,</span> <span class="s1">&#39;192.168.0.1&#39;</span><span class="p">,</span> <span class="s1">&#39;8.8.8.8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.mode">
+<code class="descclassname">WLANWiPy.</code><code class="descname">mode</code><span class="sig-paren">(</span><span class="optional">[</span><em>mode</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the WLAN mode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.ssid">
+<code class="descclassname">WLANWiPy.</code><code class="descname">ssid</code><span class="sig-paren">(</span><span class="optional">[</span><em>ssid</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.ssid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the SSID when in AP mode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.auth">
+<code class="descclassname">WLANWiPy.</code><code class="descname">auth</code><span class="sig-paren">(</span><span class="optional">[</span><em>auth</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.auth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the authentication type when in AP mode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.channel">
+<code class="descclassname">WLANWiPy.</code><code class="descname">channel</code><span class="sig-paren">(</span><span class="optional">[</span><em>channel</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the channel (only applicable in AP mode).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.antenna">
+<code class="descclassname">WLANWiPy.</code><code class="descname">antenna</code><span class="sig-paren">(</span><span class="optional">[</span><em>antenna</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.antenna" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the antenna type (external or internal).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.mac">
+<code class="descclassname">WLANWiPy.</code><code class="descname">mac</code><span class="sig-paren">(</span><span class="optional">[</span><em>mac_addr</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.mac" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a 6-byte long bytes object with the MAC address.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.WLANWiPy.irq">
+<code class="descclassname">WLANWiPy.</code><code class="descname">irq</code><span class="sig-paren">(</span><em>*</em>, <em>handler</em>, <em>wake</em><span class="sig-paren">)</span><a class="headerlink" href="#network.WLANWiPy.irq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a callback to be triggered when a WLAN event occurs during <code class="docutils literal notranslate"><span class="pre">machine.SLEEP</span></code>
+mode. Events are triggered by socket activity or by WLAN connection/disconnection.</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>handler</em> is the function that gets called when the IRQ is triggered.</li>
+<li><em>wake</em> must be <code class="docutils literal notranslate"><span class="pre">machine.SLEEP</span></code>.</li>
+</ul>
+</div></blockquote>
+<p>Returns an IRQ object.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="network.WLANWiPy.STA">
+<code class="descclassname">WLANWiPy.</code><code class="descname">STA</code><a class="headerlink" href="#network.WLANWiPy.STA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="network.WLANWiPy.AP">
+<code class="descclassname">WLANWiPy.</code><code class="descname">AP</code><a class="headerlink" href="#network.WLANWiPy.AP" title="Permalink to this definition">¶</a></dt>
+<dd><p>selects the WLAN mode</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="network.WLANWiPy.WEP">
+<code class="descclassname">WLANWiPy.</code><code class="descname">WEP</code><a class="headerlink" href="#network.WLANWiPy.WEP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="network.WLANWiPy.WPA">
+<code class="descclassname">WLANWiPy.</code><code class="descname">WPA</code><a class="headerlink" href="#network.WLANWiPy.WPA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="network.WLANWiPy.WPA2">
+<code class="descclassname">WLANWiPy.</code><code class="descname">WPA2</code><a class="headerlink" href="#network.WLANWiPy.WPA2" title="Permalink to this definition">¶</a></dt>
+<dd><p>selects the network security</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="network.WLANWiPy.INT_ANT">
+<code class="descclassname">WLANWiPy.</code><code class="descname">INT_ANT</code><a class="headerlink" href="#network.WLANWiPy.INT_ANT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="network.WLANWiPy.EXT_ANT">
+<code class="descclassname">WLANWiPy.</code><code class="descname">EXT_ANT</code><a class="headerlink" href="#network.WLANWiPy.EXT_ANT" title="Permalink to this definition">¶</a></dt>
+<dd><p>selects the antenna type</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 11 Nov 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Language and External Links</span>
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Language</dt>
+      <dd>
+        <a href="https://openmv.io">English</a>
+      </dd>
+      <dd>
+        <a href="http://doc.singtown.cc>中文</a>
+      </dd>
+    </dl>
+    <hr/>
+    <dl>
+      <dt>External links</dt>
+      <dd>
+        <a href="https://openmv.io">openmv.io</a>
+      </dd>
+      <dd>
+        <a href="http://forums.openmv.io">forums.openmv.io</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+      </dd>
+      <dd>
+        <a href="http://micropython.org">micropython.org</a>
+      </dd>
+      <dd>
+        <a href="http://forum.micropython.org">forum.micropython.org</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

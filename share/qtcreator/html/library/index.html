@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>MicroPython libraries &mdash; MicroPython 1.9.4 documentation</title>
+  <title>MicroPython libraries &mdash; MicroPython 1.11 documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/openmv.ico"/>
   
   
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.9.4
+                1.11
               </div>
             
           
@@ -113,6 +113,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ure.html"><code class="docutils literal notranslate"><span class="pre">ure</span></code> – simple regular expressions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uselect.html"><code class="docutils literal notranslate"><span class="pre">uselect</span></code> – wait for events on a set of streams</a></li>
 <li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
@@ -121,9 +122,11 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#micropython-specific-libraries">MicroPython-specific libraries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ucryptolib.html"><code class="docutils literal notranslate"><span class="pre">ucryptolib</span></code> – cryptographic ciphers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 </ul>
 </li>
@@ -169,6 +172,9 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.nn.html"><code class="docutils literal notranslate"><span class="pre">nn</span></code> — neural networks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.nn.html#class-nn-class-nn-dection-result">class nn_class – nn dection result</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.nn.html#class-net-neural-network">class Net – Neural Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code> — Tensor Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html#class-tf-classification-tf-classification-dection-result">class tf_classification – tf classification dection result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html#class-tf-model-tensorflow-model">class tf_model – TensorFlow Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html"><code class="docutils literal notranslate"><span class="pre">gif</span></code> — gif recording</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html#class-gif-gif-recorder">class Gif – Gif recorder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html"><code class="docutils literal notranslate"><span class="pre">mjpeg</span></code> — mjpeg recording</a></li>
@@ -180,6 +186,7 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.omv.html"><code class="docutils literal notranslate"><span class="pre">omv</span></code> — OpenMV Cam Information</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
@@ -286,6 +293,11 @@ unavailable</strong> in a particular build of MicroPython on a particular system
 best place to find general information of the availability/non-availability
 of a particular feature is the “General Information” section which contains
 information pertaining to a specific <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+<p>On some ports you are able to discover the available, built-in libraries that
+can be imported by entering the following at the REPL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;modules&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Beyond the built-in libraries described in this documentation, many more
 modules from the Python standard library, as well as further MicroPython
 extensions to it, can be found in <a class="reference internal" href="../reference/glossary.html#term-micropython-lib"><code class="xref any std std-term docutils literal notranslate"><span class="pre">micropython-lib</span></code></a>.</p>
@@ -326,6 +338,7 @@ it will fallback to loading the built-in <code class="docutils literal notransla
 <li class="toctree-l1"><a class="reference internal" href="ure.html"><code class="docutils literal notranslate"><span class="pre">ure</span></code> – simple regular expressions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uselect.html"><code class="docutils literal notranslate"><span class="pre">uselect</span></code> – wait for events on a set of streams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
@@ -340,9 +353,11 @@ the following libraries.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ucryptolib.html"><code class="docutils literal notranslate"><span class="pre">ucryptolib</span></code> – cryptographic ciphers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 </ul>
 </div>
@@ -566,6 +581,20 @@ the following libraries.</p>
 <li class="toctree-l2"><a class="reference internal" href="omv.nn.html#id2">Methods</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="omv.tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code> — Tensor Flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="omv.tf.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="omv.tf.html#class-tf-classification-tf-classification-dection-result">class tf_classification – tf classification dection result</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="omv.tf.html#constructors">Constructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.tf.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="omv.tf.html#class-tf-model-tensorflow-model">class tf_model – TensorFlow Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="omv.tf.html#id1">Constructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.tf.html#id2">Methods</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="omv.gif.html"><code class="docutils literal notranslate"><span class="pre">gif</span></code> — gif recording</a></li>
 <li class="toctree-l1"><a class="reference internal" href="omv.gif.html#class-gif-gif-recorder">class Gif – Gif recorder</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="omv.gif.html#constructors">Constructors</a></li>
@@ -602,6 +631,78 @@ the following libraries.</p>
 </ul>
 </div>
 </div>
+<div class="section" id="third-party-libraries-on-the-openmv-cam">
+<h2>Third-party libraries on the OpenMV Cam<a class="headerlink" href="#third-party-libraries-on-the-openmv-cam" title="Permalink to this headline">¶</a></h2>
+<p>The following third-party math libraries are built-in to your OpenMV Cam’s firmware:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/nickoala/openrv">OpenRV</a> (Hu moments, Planar homography, and Quickshift++)</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://gitlab.com/nickoala/micropython-vec">vec</a> (Vector Operations)</li>
+<li><a class="reference external" href="https://gitlab.com/nickoala/micropython-mtx">mtx</a> (Fast Matrix Multiplication and Linear Solver)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><a class="reference external" href="https://micropython-ulab.readthedocs.io/en/latest/">ulab</a> (numpy-like array manipulation library)</li>
+<li><a class="reference external" href="https://github.com/iyassou/umatrix">umatrix</a> (a matrix library)</li>
+<li><a class="reference external" href="https://github.com/jalawson/ulinalg">ulinalg</a> (linear algebra routines)</li>
+<li><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/pid.py">pid</a> (Proportional/Integral/Derivative Control)</li>
+</ul>
+</div></blockquote>
+<p>The following third-party driver libraries are built-in to your OpenMV Cam’s firmware:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/bno055.py">BNO055</a> IMU Driver</dt>
+<dd><ul class="first last">
+<li>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">IMU</span> <span class="pre">Shield</span></code> examples folder.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/ssd1306.py">SSD1306</a> OLED Driver</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/tb6612.py">TB6612</a> Stepper Motor Driver</dt>
+<dd><ul class="first last">
+<li>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">Motor</span> <span class="pre">Shield</span></code> examples folder.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/vl53l1x.py">VL51L1X</a> ToF Distance Sensor Driver</dt>
+<dd><ul class="first last">
+<li>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">Distance</span> <span class="pre">Shield</span></code> examples folder.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>The following third-party protocol libraries are built-in to your OpenMV Cam’s firmware:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/modbus.py">modbus</a> protocol library</dt>
+<dd><ul class="first last">
+<li>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">Modbus</span></code> examples folder.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/mqtt.py">mqtt</a> protocol library</dt>
+<dd><ul class="first last">
+<li>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">WiFi</span> <span class="pre">Shield</span></code> examples folder.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -626,7 +727,7 @@ the following libraries.</p>
     <p>
         &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 25 Sep 2019.
+        Last updated on 11 Nov 2019.
       </span>
 
     </p>
@@ -643,68 +744,40 @@ the following libraries.</p>
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
-    <span class="fa fa-book"> Ports and Versions</span>
-    openmvcam (latest)
+    <span class="fa fa-book"> Language and External Links</span>
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-    <!--p>
     <dl>
-      <dt>Ports</dt>
-      
-        <dd><a href="//en/latest/unix">unix</a></dd>
-      
-        <dd><a href="//en/latest/pyboard">pyboard</a></dd>
-      
-        <dd><a href="//en/latest/wipy">wipy</a></dd>
-      
-        <dd><a href="//en/latest/esp8266">esp8266</a></dd>
-      
-        <dd><a href="//en/latest/openmvcam">openmvcam</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Versions</dt>
-      
-        <dd><a href="//en/latest/openmvcam">latest</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Downloads</dt>
-      
-        <dd><a href="//en/latest/micropython-openmvcam.pdf">PDF</a></dd>
-      
-    </dl>
-    </p-->
-    <dl>
-        <dt>Language</dt>
-        
-          <dd><a href="http://docs.openmv.io">English</a></dd>
-        
-          <dd><a href="http://doc.singtown.cc/openmv_zh">中文</a></dd>
-        
+      <dt>Language</dt>
+      <dd>
+        <a href="https://openmv.io">English</a>
+      </dd>
+      <dd>
+        <a href="http://doc.singtown.cc>中文</a>
+      </dd>
     </dl>
     <hr/>
     <dl>
       <dt>External links</dt>
-        <dd>
-          <a href="https://openmv.io">openmv.io</a>
-        </dd>
-        <dd>
-          <a href="http://forums.openmv.io">forums.openmv.io</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
-        </dd>
-        <dd>
-          <a href="http://micropython.org">micropython.org</a>
-        </dd>
-        <dd>
-          <a href="http://forum.micropython.org">forum.micropython.org</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
-        </dd>
+      <dd>
+        <a href="https://openmv.io">openmv.io</a>
+      </dd>
+      <dd>
+        <a href="http://forums.openmv.io">forums.openmv.io</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+      </dd>
+      <dd>
+        <a href="http://micropython.org">micropython.org</a>
+      </dd>
+      <dd>
+        <a href="http://forum.micropython.org">forum.micropython.org</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+      </dd>
     </dl>
   </div>
 </div>

@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>nn — neural networks &mdash; MicroPython 1.9.4 documentation</title>
+  <title>nn — neural networks &mdash; MicroPython 1.11 documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/openmv.ico"/>
   
   
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="gif — gif recording" href="omv.gif.html" />
+    <link rel="next" title="tf — Tensor Flow" href="omv.tf.html" />
     <link rel="prev" title="image — machine vision" href="omv.image.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.9.4
+                1.11
               </div>
             
           
@@ -147,6 +147,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#id2">Methods</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code> — Tensor Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html#class-tf-classification-tf-classification-dection-result">class tf_classification – tf classification dection result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html#class-tf-model-tensorflow-model">class tf_model – TensorFlow Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html"><code class="docutils literal notranslate"><span class="pre">gif</span></code> — gif recording</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html#class-gif-gif-recorder">class Gif – Gif recorder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html"><code class="docutils literal notranslate"><span class="pre">mjpeg</span></code> — mjpeg recording</a></li>
@@ -158,6 +161,7 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.omv.html"><code class="docutils literal notranslate"><span class="pre">omv</span></code> — OpenMV Cam Information</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
@@ -347,7 +351,7 @@ default value the network is not scaled. However, a value of 0.5 would allow
 for detecting objects 50% in size of the image roi size…</p>
 <p><code class="docutils literal notranslate"><span class="pre">scale_mul</span></code> controls how many different scales are tested out. The sliding
 window method works by multiplying a default scale of 1 by <code class="docutils literal notranslate"><span class="pre">scale_mul</span></code>
-while the result is over <code class="docutils literal notranslate"><span class="pre">min_scale</span></code>. The default value of <code class="docutils literal notranslate"><span class="pre">scale_mull</span></code>,
+while the result is over <code class="docutils literal notranslate"><span class="pre">min_scale</span></code>. The default value of <code class="docutils literal notranslate"><span class="pre">scale_mul</span></code>,
 0.5, tests out a 50% size reduction per scale change. However, a value of
 0.95 would only be a 5% size reductioin.</p>
 <p><code class="docutils literal notranslate"><span class="pre">x_overlap</span></code> controls the percentage of overlap with the next detector
@@ -375,7 +379,7 @@ any output in the list of outputs may be between 0 and 1.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="omv.gif.html" class="btn btn-neutral float-right" title="gif — gif recording" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="omv.tf.html" class="btn btn-neutral float-right" title="tf — Tensor Flow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="omv.image.html" class="btn btn-neutral float-left" title="image — machine vision" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -389,7 +393,7 @@ any output in the list of outputs may be between 0 and 1.</p>
     <p>
         &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 25 Sep 2019.
+        Last updated on 11 Nov 2019.
       </span>
 
     </p>
@@ -406,68 +410,40 @@ any output in the list of outputs may be between 0 and 1.</p>
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
-    <span class="fa fa-book"> Ports and Versions</span>
-    openmvcam (latest)
+    <span class="fa fa-book"> Language and External Links</span>
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-    <!--p>
     <dl>
-      <dt>Ports</dt>
-      
-        <dd><a href="//en/latest/unix">unix</a></dd>
-      
-        <dd><a href="//en/latest/pyboard">pyboard</a></dd>
-      
-        <dd><a href="//en/latest/wipy">wipy</a></dd>
-      
-        <dd><a href="//en/latest/esp8266">esp8266</a></dd>
-      
-        <dd><a href="//en/latest/openmvcam">openmvcam</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Versions</dt>
-      
-        <dd><a href="//en/latest/openmvcam">latest</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Downloads</dt>
-      
-        <dd><a href="//en/latest/micropython-openmvcam.pdf">PDF</a></dd>
-      
-    </dl>
-    </p-->
-    <dl>
-        <dt>Language</dt>
-        
-          <dd><a href="http://docs.openmv.io">English</a></dd>
-        
-          <dd><a href="http://doc.singtown.cc/openmv_zh">中文</a></dd>
-        
+      <dt>Language</dt>
+      <dd>
+        <a href="https://openmv.io">English</a>
+      </dd>
+      <dd>
+        <a href="http://doc.singtown.cc>中文</a>
+      </dd>
     </dl>
     <hr/>
     <dl>
       <dt>External links</dt>
-        <dd>
-          <a href="https://openmv.io">openmv.io</a>
-        </dd>
-        <dd>
-          <a href="http://forums.openmv.io">forums.openmv.io</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
-        </dd>
-        <dd>
-          <a href="http://micropython.org">micropython.org</a>
-        </dd>
-        <dd>
-          <a href="http://forum.micropython.org">forum.micropython.org</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
-        </dd>
+      <dd>
+        <a href="https://openmv.io">openmv.io</a>
+      </dd>
+      <dd>
+        <a href="http://forums.openmv.io">forums.openmv.io</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+      </dd>
+      <dd>
+        <a href="http://micropython.org">micropython.org</a>
+      </dd>
+      <dd>
+        <a href="http://forum.micropython.org">forum.micropython.org</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+      </dd>
     </dl>
   </div>
 </div>

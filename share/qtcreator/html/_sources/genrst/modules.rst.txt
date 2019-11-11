@@ -2,7 +2,7 @@
 
 Modules
 =======
-Generated Sun 08 Jul 2018 04:25:25 UTC
+Generated Mon 11 Nov 2019 00:40:25 UTC
 
 array
 -----
@@ -39,15 +39,15 @@ Sample code::
     del a[1]
     print(a)
 
-+------------------------+--------------------------------------------------------------+
-| CPy output:            | uPy output:                                                  |
-+------------------------+--------------------------------------------------------------+
-| ::                     | ::                                                           |
-|                        |                                                              |
-|     array('b', [1, 3]) |     Traceback (most recent call last):                       |
-|                        |       File "<stdin>", line 9, in <module>                    |
-|                        |     TypeError: 'array' object does not support item deletion |
-+------------------------+--------------------------------------------------------------+
++------------------------+-------------------------------------------------------------+
+| CPy output:            | uPy output:                                                 |
++------------------------+-------------------------------------------------------------+
+| ::                     | ::                                                          |
+|                        |                                                             |
+|     array('b', [1, 3]) |     Traceback (most recent call last):                      |
+|                        |       File "<stdin>", line 9, in <module>                   |
+|                        |     TypeError: 'array' object doesn't support item deletion |
++------------------------+-------------------------------------------------------------+
 
 .. _cpydiff_modules_array_subscrstep:
 

@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class TimerWiPy – control hardware timers &mdash; MicroPython 1.11 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/openmv.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MicroPython
+          
+
+          
+            
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.11
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">MicroPython libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>class TimerWiPy – control hardware timers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/library/machine.TimerWiPy.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-timerwipy-control-hardware-timers">
+<span id="machine-timerwipy"></span><h1>class TimerWiPy – control hardware timers<a class="headerlink" href="#class-timerwipy-control-hardware-timers" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This class is a non-standard Timer implementation for the WiPy.
+It is available simply as <code class="docutils literal notranslate"><span class="pre">machine.Timer</span></code> on the WiPy but is named in the
+documentation below as <code class="docutils literal notranslate"><span class="pre">machine.TimerWiPy</span></code> to distinguish it from the
+more general <a class="reference internal" href="machine.Timer.html#machine-timer"><span class="std std-ref">machine.Timer</span></a> class.</p>
+</div>
+<p>Hardware timers deal with timing of periods and events. Timers are perhaps
+the most flexible and heterogeneous kind of hardware in MCUs and SoCs,
+differently greatly from a model to a model. MicroPython’s Timer class
+defines a baseline operation of executing a callback with a given period
+(or once after some delay), and allow specific boards to define more
+non-standard behavior (which thus won’t be portable to other boards).</p>
+<p>See discussion of <a class="reference internal" href="machine.html#machine-callbacks"><span class="std std-ref">important constraints</span></a> on
+Timer callbacks.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Memory can’t be allocated inside irq handlers (an interrupt) and so
+exceptions raised within a handler don’t give much information.  See
+<a class="reference internal" href="micropython.html#micropython.alloc_emergency_exception_buf" title="micropython.alloc_emergency_exception_buf"><code class="xref py py-func docutils literal notranslate"><span class="pre">micropython.alloc_emergency_exception_buf()</span></code></a> for how to get around this
+limitation.</p>
+</div>
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="machine.TimerWiPy">
+<em class="property">class </em><code class="descclassname">machine.</code><code class="descname">TimerWiPy</code><span class="sig-paren">(</span><em>id</em>, <em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.TimerWiPy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a new timer object of the given id. Id of -1 constructs a
+virtual timer (if supported by a board).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="machine.TimerWiPy.init">
+<code class="descclassname">TimerWiPy.</code><code class="descname">init</code><span class="sig-paren">(</span><em>mode</em>, <em>*</em>, <em>width=16</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.TimerWiPy.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialise the timer. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tim</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">Timer</span><span class="o">.</span><span class="n">PERIODIC</span><span class="p">)</span>             <span class="c1"># periodic 16-bit timer</span>
+<span class="n">tim</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">Timer</span><span class="o">.</span><span class="n">ONE_SHOT</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>   <span class="c1"># one shot 32-bit timer</span>
+</pre></div>
+</div>
+<p>Keyword arguments:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">mode</span></code> can be one of:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">TimerWiPy.ONE_SHOT</span></code> - The timer runs once until the configured
+period of the channel expires.</li>
+<li><code class="docutils literal notranslate"><span class="pre">TimerWiPy.PERIODIC</span></code> - The timer runs periodically at the configured
+frequency of the channel.</li>
+<li><code class="docutils literal notranslate"><span class="pre">TimerWiPy.PWM</span></code>      - Output a PWM signal on a pin.</li>
+</ul>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">width</span></code> must be either 16 or 32 (bits). For really low frequencies &lt; 5Hz
+(or large periods), 32-bit timers should be used. 32-bit mode is only available
+for <code class="docutils literal notranslate"><span class="pre">ONE_SHOT</span></code> AND <code class="docutils literal notranslate"><span class="pre">PERIODIC</span></code> modes.</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="machine.TimerWiPy.deinit">
+<code class="descclassname">TimerWiPy.</code><code class="descname">deinit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.TimerWiPy.deinit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deinitialises the timer. Stops the timer, and disables the timer peripheral.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="machine.TimerWiPy.channel">
+<code class="descclassname">TimerWiPy.</code><code class="descname">channel</code><span class="sig-paren">(</span><em>channel</em>, <em>**</em>, <em>freq</em>, <em>period</em>, <em>polarity=TimerWiPy.POSITIVE</em>, <em>duty_cycle=0</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.TimerWiPy.channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>If only a channel identifier passed, then a previously initialized channel
+object is returned (or <code class="docutils literal notranslate"><span class="pre">None</span></code> if there is no previous channel).</p>
+<p>Otherwise, a TimerChannel object is initialized and returned.</p>
+<p>The operating mode is is the one configured to the Timer object that was used to
+create the channel.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">channel</span></code> if the width of the timer is 16-bit, then must be either <code class="docutils literal notranslate"><span class="pre">TIMER.A</span></code>, <code class="docutils literal notranslate"><span class="pre">TIMER.B</span></code>.
+If the width is 32-bit then it <strong>must be</strong> <code class="docutils literal notranslate"><span class="pre">TIMER.A</span> <span class="pre">|</span> <span class="pre">TIMER.B</span></code>.</li>
+</ul>
+<p>Keyword only arguments:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">freq</span></code> sets the frequency in Hz.</li>
+<li><code class="docutils literal notranslate"><span class="pre">period</span></code> sets the period in microseconds.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Either <code class="docutils literal notranslate"><span class="pre">freq</span></code> or <code class="docutils literal notranslate"><span class="pre">period</span></code> must be given, never both.</p>
+</div>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">polarity</span></code> this is applicable for <code class="docutils literal notranslate"><span class="pre">PWM</span></code>, and defines the polarity of the duty cycle</li>
+<li><code class="docutils literal notranslate"><span class="pre">duty_cycle</span></code> only applicable to <code class="docutils literal notranslate"><span class="pre">PWM</span></code>. It’s a percentage (0.00-100.00). Since the WiPy
+doesn’t support floating point numbers the duty cycle must be specified in the range 0-10000,
+where 10000 would represent 100.00, 5050 represents 50.50, and so on.</li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>When the channel is in PWM mode, the corresponding pin is assigned automatically, therefore
+there’s no need to assign the alternate function of the pin via the <code class="docutils literal notranslate"><span class="pre">Pin</span></code> class. The pins which
+support PWM functionality are the following:</p>
+<ul class="last simple">
+<li><code class="docutils literal notranslate"><span class="pre">GP24</span></code> on Timer 0 channel A.</li>
+<li><code class="docutils literal notranslate"><span class="pre">GP25</span></code> on Timer 1 channel A.</li>
+<li><code class="docutils literal notranslate"><span class="pre">GP9</span></code>  on Timer 2 channel B.</li>
+<li><code class="docutils literal notranslate"><span class="pre">GP10</span></code> on Timer 3 channel A.</li>
+<li><code class="docutils literal notranslate"><span class="pre">GP11</span></code> on Timer 3 channel B.</li>
+</ul>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="class-timerchannel-setup-a-channel-for-a-timer">
+<h1>class TimerChannel — setup a channel for a timer<a class="headerlink" href="#class-timerchannel-setup-a-channel-for-a-timer" title="Permalink to this headline">¶</a></h1>
+<p>Timer channels are used to generate/capture a signal using a timer.</p>
+<p>TimerChannel objects are created using the Timer.channel() method.</p>
+<div class="section" id="id1">
+<h2>Methods<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="machine.timerchannel.irq">
+<code class="descclassname">timerchannel.</code><code class="descname">irq</code><span class="sig-paren">(</span><em>*</em>, <em>trigger</em>, <em>priority=1</em>, <em>handler=None</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.timerchannel.irq" title="Permalink to this definition">¶</a></dt>
+<dd><p>The behavior of this callback is heavily dependent on the operating
+mode of the timer channel:</p>
+<blockquote>
+<div><ul class="simple">
+<li>If mode is <code class="docutils literal notranslate"><span class="pre">TimerWiPy.PERIODIC</span></code> the callback is executed periodically
+with the configured frequency or period.</li>
+<li>If mode is <code class="docutils literal notranslate"><span class="pre">TimerWiPy.ONE_SHOT</span></code> the callback is executed once when
+the configured timer expires.</li>
+<li>If mode is <code class="docutils literal notranslate"><span class="pre">TimerWiPy.PWM</span></code> the callback is executed when reaching the duty
+cycle value.</li>
+</ul>
+</div></blockquote>
+<p>The accepted params are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">priority</span></code> level of the interrupt. Can take values in the range 1-7.
+Higher values represent higher priorities.</li>
+<li><code class="docutils literal notranslate"><span class="pre">handler</span></code> is an optional function to be called when the interrupt is triggered.</li>
+<li><code class="docutils literal notranslate"><span class="pre">trigger</span></code> must be <code class="docutils literal notranslate"><span class="pre">TimerWiPy.TIMEOUT</span></code> when the operating mode is either <code class="docutils literal notranslate"><span class="pre">TimerWiPy.PERIODIC</span></code> or
+<code class="docutils literal notranslate"><span class="pre">TimerWiPy.ONE_SHOT</span></code>. In the case that mode is <code class="docutils literal notranslate"><span class="pre">TimerWiPy.PWM</span></code> then trigger must be equal to
+<code class="docutils literal notranslate"><span class="pre">TimerWiPy.MATCH</span></code>.</li>
+</ul>
+</div></blockquote>
+<p>Returns a callback object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="machine.timerchannel.freq">
+<code class="descclassname">timerchannel.</code><code class="descname">freq</code><span class="sig-paren">(</span><span class="optional">[</span><em>value</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.timerchannel.freq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the timer channel frequency (in Hz).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="machine.timerchannel.period">
+<code class="descclassname">timerchannel.</code><code class="descname">period</code><span class="sig-paren">(</span><span class="optional">[</span><em>value</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.timerchannel.period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the timer channel period (in microseconds).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="machine.timerchannel.duty_cycle">
+<code class="descclassname">timerchannel.</code><code class="descname">duty_cycle</code><span class="sig-paren">(</span><span class="optional">[</span><em>value</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.timerchannel.duty_cycle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the duty cycle of the PWM signal. It’s a percentage (0.00-100.00). Since the WiPy
+doesn’t support floating point numbers the duty cycle must be specified in the range 0-10000,
+where 10000 would represent 100.00, 5050 represents 50.50, and so on.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="machine.TimerWiPy.ONE_SHOT">
+<code class="descclassname">TimerWiPy.</code><code class="descname">ONE_SHOT</code><a class="headerlink" href="#machine.TimerWiPy.ONE_SHOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="machine.TimerWiPy.PERIODIC">
+<code class="descclassname">TimerWiPy.</code><code class="descname">PERIODIC</code><a class="headerlink" href="#machine.TimerWiPy.PERIODIC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timer operating mode.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 11 Nov 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Language and External Links</span>
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Language</dt>
+      <dd>
+        <a href="https://openmv.io">English</a>
+      </dd>
+      <dd>
+        <a href="http://doc.singtown.cc>中文</a>
+      </dd>
+    </dl>
+    <hr/>
+    <dl>
+      <dt>External links</dt>
+      <dd>
+        <a href="https://openmv.io">openmv.io</a>
+      </dd>
+      <dd>
+        <a href="http://forums.openmv.io">forums.openmv.io</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+      </dd>
+      <dd>
+        <a href="http://micropython.org">micropython.org</a>
+      </dd>
+      <dd>
+        <a href="http://forum.micropython.org">forum.micropython.org</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

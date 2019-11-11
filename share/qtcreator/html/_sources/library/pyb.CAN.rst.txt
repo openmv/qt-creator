@@ -10,74 +10,35 @@ to connect the pyboard to a CAN bus you must use a CAN transceiver
 to convert the CAN logic signals from the pyboard to the correct
 voltage levels on the bus.
 
-.. only:: port_pyboard
+Example usage (works without anything connected)::
 
-   Example usage (works without anything connected)::
-
-       from pyb import CAN
-       can = CAN(1, CAN.LOOPBACK)
-       can.setfilter(0, CAN.LIST16, 0, (123, 124, 125, 126))  # set a filter to receive messages with id=123, 124, 125 and 126
-       can.send('message!', 123)   # send a message with id 123
-       can.recv(0)                 # receive message on FIFO 0
-
-.. only:: port_openmvcam
-
-   Example usage (works without anything connected)::
-
-       from pyb import CAN
-       can = CAN(2, CAN.LOOPBACK)
-       can.setfilter(0, CAN.LIST16, 0, (123, 124, 125, 126))  # set a filter to receive messages with id=123, 124, 125 and 126
-       can.send('message!', 123)   # send a message with id 123
-       can.recv(0)                 # receive message on FIFO 0
+   from pyb import CAN
+   can = CAN(2, CAN.LOOPBACK)
+   can.setfilter(0, CAN.LIST16, 0, (123, 124, 125, 126))  # set a filter to receive messages with id=123, 124, 125 and 126
+   can.send('message!', 123)   # send a message with id 123
+   can.recv(0)                 # receive message on FIFO 0
 
 Constructors
 ------------
 
-.. only:: port_pyboard
+.. class:: pyb.CAN(bus, ...)
 
-   .. class:: pyb.CAN(bus, ...)
+  Construct a CAN object on the given bus.  *bus* can be 2.
+  With no additional parameters, the CAN object is created but not
+  initialised (it has the settings from the last initialisation of
+  the bus, if any).  If extra arguments are given, the bus is initialised.
+  See :meth:`CAN.init` for parameters of initialisation.
 
-      Construct a CAN object on the given bus.  *bus* can be 1-2, or ``'YA'`` or ``'YB'``.
-      With no additional parameters, the CAN object is created but not
-      initialised (it has the settings from the last initialisation of
-      the bus, if any).  If extra arguments are given, the bus is initialised.
-      See :meth:`CAN.init` for parameters of initialisation.
+  The physical pins of the CAN bus are:
 
-      The physical pins of the CAN busses are:
-
-        - ``CAN(1)`` is on ``YA``: ``(RX, TX) = (Y3, Y4) = (PB8, PB9)``
-        - ``CAN(2)`` is on ``YB``: ``(RX, TX) = (Y5, Y6) = (PB12, PB13)``
-
-.. only:: port_openmvcam
-
-   .. class:: pyb.CAN(bus, ...)
-
-      Construct a CAN object on the given bus.  *bus* can be 2.
-      With no additional parameters, the CAN object is created but not
-      initialised (it has the settings from the last initialisation of
-      the bus, if any).  If extra arguments are given, the bus is initialised.
-      See :meth:`CAN.init` for parameters of initialisation.
-
-      The physical pins of the CAN bus are:
-
-        - ``CAN(2): ``(RX, TX) = (PB12, PB13)``
+    - ``CAN(2): (RX, TX) = (PB12, PB13)``
 
 Class Methods
 -------------
+
 .. classmethod:: CAN.initfilterbanks(nr)
 
-   .. only:: port_pyboard
-
-      Reset and disable all filter banks and assign how many banks should be available for CAN(1).
-
-      STM32F405 has 28 filter banks that are shared between the two available CAN bus controllers.
-      This function configures how many filter banks should be assigned to each. *nr* is the number of banks
-      that will be assigned to CAN(1), the rest of the 28 are assigned to CAN(2).
-      At boot, 14 banks are assigned to each controller.
-
-   .. only:: port_openmvcam
-
-      Assign ``28 - nr`` filter banks to CAN(2).
+   Assign ``28 - nr`` filter banks to CAN(2).
 
 Methods
 -------
@@ -114,8 +75,6 @@ Methods
    For example, with PCLK1=42MHz, prescaler=100, sjw=1, bs1=6, bs2=8, the value of
    tq is 2.38 microseconds.  The bittime is 35.7 microseconds, and the baudrate
    is 28kHz.
-
-   See page 680 of the STM32F405 datasheet for more details.
 
 .. method:: CAN.deinit()
 

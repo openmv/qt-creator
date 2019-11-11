@@ -33,8 +33,6 @@ it. Once imported you'll have access to the ADC, CAN, DAC, I2C, Pin, Servo, SPI,
 and UART classes along with being able to control the board's power consumption.
 
 .. toctree::
-   :maxdepth: 1
-   :numbered:
 
    led_control.rst
    gpio_control.rst

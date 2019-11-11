@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>class DAC – digital to analog conversion &mdash; MicroPython 1.9.4 documentation</title>
+  <title>class DAC – digital to analog conversion &mdash; MicroPython 1.11 documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/openmv.ico"/>
   
   
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.9.4
+                1.11
               </div>
             
           
@@ -151,6 +151,9 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.nn.html"><code class="docutils literal notranslate"><span class="pre">nn</span></code> — neural networks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.nn.html#class-nn-class-nn-dection-result">class nn_class – nn dection result</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.nn.html#class-net-neural-network">class Net – Neural Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code> — Tensor Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html#class-tf-classification-tf-classification-dection-result">class tf_classification – tf classification dection result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html#class-tf-model-tensorflow-model">class tf_model – TensorFlow Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html"><code class="docutils literal notranslate"><span class="pre">gif</span></code> — gif recording</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html#class-gif-gif-recorder">class Gif – Gif recorder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html"><code class="docutils literal notranslate"><span class="pre">mjpeg</span></code> — mjpeg recording</a></li>
@@ -162,6 +165,7 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.omv.html"><code class="docutils literal notranslate"><span class="pre">omv</span></code> — OpenMV Cam Information</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
@@ -237,10 +241,8 @@
             
   <div class="section" id="class-dac-digital-to-analog-conversion">
 <span id="pyb-dac"></span><h1>class DAC – digital to analog conversion<a class="headerlink" href="#class-dac-digital-to-analog-conversion" title="Permalink to this headline">¶</a></h1>
-<dl class="docutils">
-<dt>The DAC is used to output analog values (a specific voltage) on pin P6.</dt>
-<dd>The voltage will be between 0 and 3.3V.</dd>
-</dl>
+<p>The DAC is used to output analog values (a specific voltage) on pin P6.
+The voltage will be between 0 and 3.3V.</p>
 <p><em>This module will undergo changes to the API.</em></p>
 <p>Example usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">DAC</span>
@@ -291,7 +293,7 @@
 </dl>
 <p><code class="docutils literal notranslate"><span class="pre">bits</span></code> is an integer specifying the resolution, and can be 8 or 12.
 The maximum value for the write and write_timed methods will be
-2**``bits``-1.</p>
+2**(<code class="docutils literal notranslate"><span class="pre">bits</span></code>)-1.</p>
 <p>The <em>buffering</em> parameter selects the behaviour of the DAC op-amp output
 buffer, whose purpose is to reduce the output impedance.  It can be
 <code class="docutils literal notranslate"><span class="pre">None</span></code> to select the default (buffering enabled for <a class="reference internal" href="#pyb.DAC.noise" title="pyb.DAC.noise"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DAC.noise()</span></code></a>,
@@ -341,7 +343,7 @@ itself is 2048 times smaller.</p>
 <dt id="pyb.DAC.write">
 <code class="descclassname">DAC.</code><code class="descname">write</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pyb.DAC.write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Direct access to the DAC output.  The minimum value is 0.  The maximum
-value is 2**``bits``-1, where <code class="docutils literal notranslate"><span class="pre">bits</span></code> is set when creating the DAC
+value is 2**(<code class="docutils literal notranslate"><span class="pre">bits</span></code>)-1, where <code class="docutils literal notranslate"><span class="pre">bits</span></code> is set when creating the DAC
 object or by using the <code class="docutils literal notranslate"><span class="pre">init</span></code> method.</p>
 </dd></dl>
 
@@ -356,11 +358,6 @@ samples at, using Timer(6).  Or it can be an already-initialised
 Timer object which is used to trigger the DAC sample.  Valid timers
 are 2, 4, 5, 6, 7 and 8.</p>
 <p><code class="docutils literal notranslate"><span class="pre">mode</span></code> can be <code class="docutils literal notranslate"><span class="pre">DAC.NORMAL</span></code> or <code class="docutils literal notranslate"><span class="pre">DAC.CIRCULAR</span></code>.</p>
-<p>Example using both DACs at the same time:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dac</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">DAC</span><span class="p">(</span><span class="n">pyb</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s2">&quot;P6&quot;</span><span class="p">))</span>
-<span class="n">dac</span><span class="o">.</span><span class="n">write_timed</span><span class="p">(</span><span class="n">buf1</span><span class="p">,</span> <span class="n">pyb</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">100</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="n">DAC</span><span class="o">.</span><span class="n">CIRCULAR</span><span class="p">)</span>
-</pre></div>
-</div>
 </dd></dl>
 
 </div>
@@ -388,7 +385,7 @@ are 2, 4, 5, 6, 7 and 8.</p>
     <p>
         &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 25 Sep 2019.
+        Last updated on 11 Nov 2019.
       </span>
 
     </p>
@@ -405,68 +402,40 @@ are 2, 4, 5, 6, 7 and 8.</p>
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
-    <span class="fa fa-book"> Ports and Versions</span>
-    openmvcam (latest)
+    <span class="fa fa-book"> Language and External Links</span>
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-    <!--p>
     <dl>
-      <dt>Ports</dt>
-      
-        <dd><a href="//en/latest/unix">unix</a></dd>
-      
-        <dd><a href="//en/latest/pyboard">pyboard</a></dd>
-      
-        <dd><a href="//en/latest/wipy">wipy</a></dd>
-      
-        <dd><a href="//en/latest/esp8266">esp8266</a></dd>
-      
-        <dd><a href="//en/latest/openmvcam">openmvcam</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Versions</dt>
-      
-        <dd><a href="//en/latest/openmvcam">latest</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Downloads</dt>
-      
-        <dd><a href="//en/latest/micropython-openmvcam.pdf">PDF</a></dd>
-      
-    </dl>
-    </p-->
-    <dl>
-        <dt>Language</dt>
-        
-          <dd><a href="http://docs.openmv.io">English</a></dd>
-        
-          <dd><a href="http://doc.singtown.cc/openmv_zh">中文</a></dd>
-        
+      <dt>Language</dt>
+      <dd>
+        <a href="https://openmv.io">English</a>
+      </dd>
+      <dd>
+        <a href="http://doc.singtown.cc>中文</a>
+      </dd>
     </dl>
     <hr/>
     <dl>
       <dt>External links</dt>
-        <dd>
-          <a href="https://openmv.io">openmv.io</a>
-        </dd>
-        <dd>
-          <a href="http://forums.openmv.io">forums.openmv.io</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
-        </dd>
-        <dd>
-          <a href="http://micropython.org">micropython.org</a>
-        </dd>
-        <dd>
-          <a href="http://forum.micropython.org">forum.micropython.org</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
-        </dd>
+      <dd>
+        <a href="https://openmv.io">openmv.io</a>
+      </dd>
+      <dd>
+        <a href="http://forums.openmv.io">forums.openmv.io</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+      </dd>
+      <dd>
+        <a href="http://micropython.org">micropython.org</a>
+      </dd>
+      <dd>
+        <a href="http://forum.micropython.org">forum.micropython.org</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+      </dd>
     </dl>
   </div>
 </div>

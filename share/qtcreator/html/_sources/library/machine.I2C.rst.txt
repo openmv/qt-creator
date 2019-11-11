@@ -64,8 +64,6 @@ General Methods
 
    Turn off the I2C bus.
 
-   Availability: WiPy.
-
 .. method:: I2C.scan()
 
    Scan all I2C addresses between 0x08 and 0x77 inclusive and return a list of
@@ -79,17 +77,15 @@ The following methods implement the primitive I2C master bus operations and can
 be combined to make any I2C transaction.  They are provided if you need more
 control over the bus, otherwise the standard methods (see below) can be used.
 
+These methods are available on software I2C only.
+
 .. method:: I2C.start()
 
    Generate a START condition on the bus (SDA transitions to low while SCL is high).
 
-   Availability: ESP8266.
-
 .. method:: I2C.stop()
 
    Generate a STOP condition on the bus (SDA transitions to high while SCL is high).
-
-   Availability: ESP8266.
 
 .. method:: I2C.readinto(buf, nack=True)
 
@@ -99,15 +95,11 @@ control over the bus, otherwise the standard methods (see below) can be used.
    is true then a NACK will be sent, otherwise an ACK will be sent (and in this
    case the slave assumes more bytes are going to be read in a later call).
 
-   Availability: ESP8266.
-
 .. method:: I2C.write(buf)
 
    Write the bytes from *buf* to the bus.  Checks that an ACK is received
    after each byte and stops transmitting the remaining bytes if a NACK is
    received.  The function returns the number of ACKs that were received.
-
-   Availability: ESP8266.
 
 Standard bus operations
 -----------------------
@@ -136,6 +128,20 @@ operations that target a given slave device.
    remaining bytes are not sent.  If *stop* is true then a STOP condition is
    generated at the end of the transfer, even if a NACK is received.
    The function returns the number of ACKs that were received.
+
+.. method:: I2C.writevto(addr, vector, stop=True)
+
+   Write the bytes contained in *vector* to the slave specified by *addr*.
+   *vector* should be a tuple or list of objects with the buffer protocol.
+   The *addr* is sent once and then the bytes from each object in *vector*
+   are written out sequentially.  The objects in *vector* may be zero bytes
+   in length in which case they don't contribute to the output.
+
+   If a NACK is received following the write of a byte from one of the
+   objects in *vector* then the remaining bytes, and any remaining objects,
+   are not sent.  If *stop* is true then a STOP condition is generated at
+   the end of the transfer, even if a NACK is received.  The function
+   returns the number of ACKs that were received.
 
 Memory operations
 -----------------

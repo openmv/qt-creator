@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Builtin Types &mdash; MicroPython 1.9.4 documentation</title>
+  <title>Builtin Types &mdash; MicroPython 1.11 documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/openmv.ico"/>
   
   
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.9.4
+                1.11
               </div>
             
           
@@ -112,6 +112,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#bytes">bytes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bytes-objects-support-format-method">bytes objects support .format() method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bytes-with-keywords-not-implemented">bytes() with keywords not implemented</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bytes-subscription-with-step-1-not-implemented">Bytes subscription with step != 1 not implemented</a></li>
 </ul>
@@ -218,7 +219,7 @@
             
   <div class="section" id="builtin-types">
 <h1>Builtin Types<a class="headerlink" href="#builtin-types" title="Permalink to this headline">¶</a></h1>
-<p>Generated Sun 08 Jul 2018 04:25:25 UTC</p>
+<p>Generated Mon 11 Nov 2019 00:40:25 UTC</p>
 <div class="section" id="exception">
 <h2>Exception<a class="headerlink" href="#exception" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="exception-chaining-not-implemented">
@@ -410,6 +411,37 @@
 </div>
 <div class="section" id="bytes">
 <h2>bytes<a class="headerlink" href="#bytes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bytes-objects-support-format-method">
+<span id="cpydiff-types-bytes-format"></span><h3>bytes objects support .format() method<a class="headerlink" href="#bytes-objects-support-format-method" title="Permalink to this headline">¶</a></h3>
+<p><strong>Cause:</strong> MicroPython strives to be a more regular implementation, so if both <a class="reference internal" href="../library/builtins.html#str" title="str"><code class="xref any py py-class docutils literal notranslate"><span class="pre">str</span></code></a> and <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> support <code class="docutils literal notranslate"><span class="pre">__mod__()</span></code> (the % operator), it makes sense to support <code class="docutils literal notranslate"><span class="pre">format()</span></code> for both too. Support for <code class="docutils literal notranslate"><span class="pre">__mod__</span></code> can also be compiled out, which leaves only <code class="docutils literal notranslate"><span class="pre">format()</span></code> for bytes formatting.</p>
+<p><strong>Workaround:</strong> If you are interested in CPython compatibility, don’t use <code class="docutils literal notranslate"><span class="pre">.format()</span></code> on bytes objects.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="83%" />
+<col width="17%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>CPy output:</td>
+<td>uPy output:</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;bytes&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;format&#39;</span>
+</pre></div>
+</div>
+</td>
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sa">b</span><span class="s1">&#39;1&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="bytes-with-keywords-not-implemented">
 <span id="cpydiff-types-bytes-keywords"></span><h3>bytes() with keywords not implemented<a class="headerlink" href="#bytes-with-keywords-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p><strong>Workaround:</strong> Pass the encoding as a positional paramter, e.g. <code class="docutils literal notranslate"><span class="pre">print(bytes('abc',</span> <span class="pre">'utf-8'))</span></code></p>
@@ -517,8 +549,8 @@
 </div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="23%" />
-<col width="77%" />
+<col width="18%" />
+<col width="82%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>CPy output:</td>
@@ -531,7 +563,7 @@
 <td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
   <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">11</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
   <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="k">lambda</span><span class="o">&gt;</span>
-<span class="ne">TypeError</span><span class="p">:</span> <span class="n">can</span><span class="s1">&#39;t convert A to int</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">types</span> <span class="k">for</span> <span class="fm">__radd__</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span> <span class="s1">&#39;int&#39;</span>
 </pre></div>
 </div>
 </td>
@@ -599,7 +631,7 @@
 </td>
 <td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
   <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">TypeError</span><span class="p">:</span> <span class="nb">object</span> <span class="s1">&#39;range&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="nb">tuple</span> <span class="ow">or</span> <span class="nb">list</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="nb">object</span> <span class="s1">&#39;range&#39;</span> <span class="n">isn</span><span class="s1">&#39;t a tuple or list</span>
 </pre></div>
 </div>
 </td>
@@ -907,7 +939,7 @@
     <p>
         &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 25 Sep 2019.
+        Last updated on 11 Nov 2019.
       </span>
 
     </p>
@@ -924,68 +956,40 @@
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
-    <span class="fa fa-book"> Ports and Versions</span>
-    openmvcam (latest)
+    <span class="fa fa-book"> Language and External Links</span>
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-    <!--p>
     <dl>
-      <dt>Ports</dt>
-      
-        <dd><a href="//en/latest/unix">unix</a></dd>
-      
-        <dd><a href="//en/latest/pyboard">pyboard</a></dd>
-      
-        <dd><a href="//en/latest/wipy">wipy</a></dd>
-      
-        <dd><a href="//en/latest/esp8266">esp8266</a></dd>
-      
-        <dd><a href="//en/latest/openmvcam">openmvcam</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Versions</dt>
-      
-        <dd><a href="//en/latest/openmvcam">latest</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Downloads</dt>
-      
-        <dd><a href="//en/latest/micropython-openmvcam.pdf">PDF</a></dd>
-      
-    </dl>
-    </p-->
-    <dl>
-        <dt>Language</dt>
-        
-          <dd><a href="http://docs.openmv.io">English</a></dd>
-        
-          <dd><a href="http://doc.singtown.cc/openmv_zh">中文</a></dd>
-        
+      <dt>Language</dt>
+      <dd>
+        <a href="https://openmv.io">English</a>
+      </dd>
+      <dd>
+        <a href="http://doc.singtown.cc>中文</a>
+      </dd>
     </dl>
     <hr/>
     <dl>
       <dt>External links</dt>
-        <dd>
-          <a href="https://openmv.io">openmv.io</a>
-        </dd>
-        <dd>
-          <a href="http://forums.openmv.io">forums.openmv.io</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
-        </dd>
-        <dd>
-          <a href="http://micropython.org">micropython.org</a>
-        </dd>
-        <dd>
-          <a href="http://forum.micropython.org">forum.micropython.org</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
-        </dd>
+      <dd>
+        <a href="https://openmv.io">openmv.io</a>
+      </dd>
+      <dd>
+        <a href="http://forums.openmv.io">forums.openmv.io</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+      </dd>
+      <dd>
+        <a href="http://micropython.org">micropython.org</a>
+      </dd>
+      <dd>
+        <a href="http://forum.micropython.org">forum.micropython.org</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+      </dd>
     </dl>
   </div>
 </div>

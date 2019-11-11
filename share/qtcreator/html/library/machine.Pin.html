@@ -8,12 +8,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>class Pin – control I/O pins &mdash; MicroPython 1.9.4 documentation</title>
+  <title>class Pin – control I/O pins &mdash; MicroPython 1.11 documentation</title>
   
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/openmv.ico"/>
   
   
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.9.4
+                1.11
               </div>
             
           
@@ -98,6 +98,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="machine.html#reset-related-functions">Reset related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#interrupt-related-functions">Interrupt related functions</a></li>
@@ -109,10 +110,12 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ucryptolib.html"><code class="docutils literal notranslate"><span class="pre">ucryptolib</span></code> – cryptographic ciphers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
@@ -374,7 +377,7 @@ See the constructor documentation for details of the <code class="docutils liter
 
 <dl class="method">
 <dt id="machine.Pin.irq">
-<code class="descclassname">Pin.</code><code class="descname">irq</code><span class="sig-paren">(</span><em>handler=None</em>, <em>trigger=(Pin.IRQ_FALLING | Pin.IRQ_RISING)</em>, <em>*</em>, <em>priority=1</em>, <em>wake=None</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.irq" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Pin.</code><code class="descname">irq</code><span class="sig-paren">(</span><em>handler=None</em>, <em>trigger=(Pin.IRQ_FALLING | Pin.IRQ_RISING)</em>, <em>*</em>, <em>priority=1</em>, <em>wake=None</em>, <em>hard=False</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.irq" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure an interrupt handler to be called when the trigger source of the
 pin is active.  If the pin mode is <code class="docutils literal notranslate"><span class="pre">Pin.IN</span></code> then the trigger source is
 the external value on the pin.  If the pin mode is <code class="docutils literal notranslate"><span class="pre">Pin.OUT</span></code> then the
@@ -385,7 +388,8 @@ state ‘0’ and the external pin value for state ‘1’.</p>
 <blockquote>
 <div><ul>
 <li><p class="first"><code class="docutils literal notranslate"><span class="pre">handler</span></code> is an optional function to be called when the interrupt
-triggers.</p>
+triggers. The handler must take exactly one argument which is the
+<code class="docutils literal notranslate"><span class="pre">Pin</span></code> instance.</p>
 </li>
 <li><p class="first"><code class="docutils literal notranslate"><span class="pre">trigger</span></code> configures the event which can generate an interrupt.
 Possible values are:</p>
@@ -405,6 +409,10 @@ priorities.</p>
 system.  It can be <code class="docutils literal notranslate"><span class="pre">machine.IDLE</span></code>, <code class="docutils literal notranslate"><span class="pre">machine.SLEEP</span></code> or <code class="docutils literal notranslate"><span class="pre">machine.DEEPSLEEP</span></code>.
 These values can also be OR’ed together to make a pin generate interrupts in
 more than one power mode.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">hard</span></code> if true a hardware interrupt is used. This reduces the delay
+between the pin change and the handler being called. Hard interrupt
+handlers may not allocate memory; see <a class="reference internal" href="../reference/isr_rules.html#isr-rules"><span class="std std-ref">Writing interrupt handlers</span></a>.</p>
 </li>
 </ul>
 </div></blockquote>
@@ -435,6 +443,8 @@ not all constants are available on all ports.</p>
 <code class="descclassname">Pin.</code><code class="descname">PULL_UP</code><a class="headerlink" href="#machine.Pin.PULL_UP" title="Permalink to this definition">¶</a></dt>
 <dt id="machine.Pin.PULL_DOWN">
 <code class="descclassname">Pin.</code><code class="descname">PULL_DOWN</code><a class="headerlink" href="#machine.Pin.PULL_DOWN" title="Permalink to this definition">¶</a></dt>
+<dt id="machine.Pin.PULL_HOLD">
+<code class="descclassname">Pin.</code><code class="descname">PULL_HOLD</code><a class="headerlink" href="#machine.Pin.PULL_HOLD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selects whether there is a pull up/down resistor.  Use the value
 <code class="docutils literal notranslate"><span class="pre">None</span></code> for no pull.</p>
 </dd></dl>
@@ -486,7 +496,7 @@ not all constants are available on all ports.</p>
     <p>
         &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 25 Sep 2019.
+        Last updated on 11 Nov 2019.
       </span>
 
     </p>
@@ -503,68 +513,40 @@ not all constants are available on all ports.</p>
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
-    <span class="fa fa-book"> Ports and Versions</span>
-    openmvcam (latest)
+    <span class="fa fa-book"> Language and External Links</span>
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-    <!--p>
     <dl>
-      <dt>Ports</dt>
-      
-        <dd><a href="//en/latest/unix">unix</a></dd>
-      
-        <dd><a href="//en/latest/pyboard">pyboard</a></dd>
-      
-        <dd><a href="//en/latest/wipy">wipy</a></dd>
-      
-        <dd><a href="//en/latest/esp8266">esp8266</a></dd>
-      
-        <dd><a href="//en/latest/openmvcam">openmvcam</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Versions</dt>
-      
-        <dd><a href="//en/latest/openmvcam">latest</a></dd>
-      
-    </dl>
-    <dl>
-      <dt>Downloads</dt>
-      
-        <dd><a href="//en/latest/micropython-openmvcam.pdf">PDF</a></dd>
-      
-    </dl>
-    </p-->
-    <dl>
-        <dt>Language</dt>
-        
-          <dd><a href="http://docs.openmv.io">English</a></dd>
-        
-          <dd><a href="http://doc.singtown.cc/openmv_zh">中文</a></dd>
-        
+      <dt>Language</dt>
+      <dd>
+        <a href="https://openmv.io">English</a>
+      </dd>
+      <dd>
+        <a href="http://doc.singtown.cc>中文</a>
+      </dd>
     </dl>
     <hr/>
     <dl>
       <dt>External links</dt>
-        <dd>
-          <a href="https://openmv.io">openmv.io</a>
-        </dd>
-        <dd>
-          <a href="http://forums.openmv.io">forums.openmv.io</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
-        </dd>
-        <dd>
-          <a href="http://micropython.org">micropython.org</a>
-        </dd>
-        <dd>
-          <a href="http://forum.micropython.org">forum.micropython.org</a>
-        </dd>
-        <dd>
-          <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
-        </dd>
+      <dd>
+        <a href="https://openmv.io">openmv.io</a>
+      </dd>
+      <dd>
+        <a href="http://forums.openmv.io">forums.openmv.io</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+      </dd>
+      <dd>
+        <a href="http://micropython.org">micropython.org</a>
+      </dd>
+      <dd>
+        <a href="http://forum.micropython.org">forum.micropython.org</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+      </dd>
     </dl>
   </div>
 </div>

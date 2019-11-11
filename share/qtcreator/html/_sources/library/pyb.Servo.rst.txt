@@ -4,69 +4,33 @@
 class Servo -- 3-wire hobby servo driver
 ========================================
 
-.. only:: port_pyboard
+Servo objects control standard hobby servo motors with 3-wires (ground, power,
+signal).
 
-    Servo objects control standard hobby servo motors with 3-wires (ground, power,
-    signal).  There are 4 positions on the pyboard where these motors can be plugged
-    in: pins X1 through X4 are the signal pins, and next to them are 4 sets of power
-    and ground pins.
+Example usage::
 
-    Example usage::
+    import pyb
 
-        import pyb
+    s1 = pyb.Servo(1)   # create a servo object on position P7
+    s2 = pyb.Servo(2)   # create a servo object on position P8
 
-        s1 = pyb.Servo(1)   # create a servo object on position X1
-        s2 = pyb.Servo(2)   # create a servo object on position X2
+    s1.angle(45)        # move servo 1 to 45 degrees
+    s2.angle(0)         # move servo 2 to 0 degrees
 
-        s1.angle(45)        # move servo 1 to 45 degrees
-        s2.angle(0)         # move servo 2 to 0 degrees
+    # move servo1 and servo2 synchronously, taking 1500ms
+    s1.angle(-60, 1500)
+    s2.angle(30, 1500)
 
-        # move servo1 and servo2 synchronously, taking 1500ms
-        s1.angle(-60, 1500)
-        s2.angle(30, 1500)
-
-    .. note:: The Servo objects use Timer(5) to produce the PWM output.  You can
-       use Timer(5) for Servo control, or your own purposes, but not both at the
-       same time.
-
-.. only:: port_openmvcam
-
-    Servo objects control standard hobby servo motors with 3-wires (ground, power,
-    signal).
-
-    Example usage::
-
-        import pyb
-
-        s1 = pyb.Servo(1)   # create a servo object on position P7
-        s2 = pyb.Servo(2)   # create a servo object on position P8
-
-        s1.angle(45)        # move servo 1 to 45 degrees
-        s2.angle(0)         # move servo 2 to 0 degrees
-
-        # move servo1 and servo2 synchronously, taking 1500ms
-        s1.angle(-60, 1500)
-        s2.angle(30, 1500)
-
-    .. note:: The Servo objects use Timer(5) to produce the PWM output.  You can
-       use Timer(5) for Servo control, or your own purposes, but not both at the
-       same time.
+.. note:: The Servo objects use Timer(5) to produce the PWM output.  You can
+   use Timer(5) for Servo control, or your own purposes, but not both at the
+   same time.
 
 Constructors
 ------------
 
-.. only:: port_pyboard
+.. class:: pyb.Servo(id)
 
-    .. class:: pyb.Servo(id)
-
-       Create a servo object.  ``id`` is 1-4, and corresponds to pins X1 through X4.
-
-.. only:: port_pyboard
-
-    .. class:: pyb.Servo(id)
-
-       Create a servo object.  ``id`` is 1-3, and corresponds to pins P7 through P9.
-
+   Create a servo object.  ``id`` is 1-3, and corresponds to pins P7 through P9.
 
 Methods
 -------
