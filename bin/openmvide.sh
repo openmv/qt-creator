@@ -1,4 +1,4 @@
-#!/bin/sh -i
+#!/bin/bash -i
 
 # Use this script if you add paths to LD_LIBRARY_PATH
 # that contain libraries that conflict with the
