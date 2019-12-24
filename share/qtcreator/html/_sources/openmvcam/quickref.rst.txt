@@ -97,7 +97,7 @@ Servo Pinout:
 
 * Servo(1) -> P7 (PD12)
 * Servo(2) -> P8 (PD13)
-* Servo(3) -> P9 (PD14) (OpenMV Cam M7/H7 Only)
+* Servo(3) -> P9 (PD14) (OpenMV Cam M7/H7 Only - Not OpenMV Cam H7 Plus)
 
 External interrupts
 -------------------
@@ -129,10 +129,14 @@ See :ref:`pyb.Timer <pyb.Timer>`. ::
 
     from pyb import Timer
 
-    tim = Timer(4, freq=1000)
+    tim = Timer(2, freq=1000)
     tim.counter() # get counter value
     tim.freq(0.5) # 0.5 Hz
     tim.callback(lambda t: pyb.LED(1).toggle())
+
+* For OpenMV Cam M4: TIM2 and TIM3
+* For OpenMV Cam F7: TIM2, TIM3 and TIM7 through TIM14
+* For OpenMV Cam H7: TIM2, TIM3, TIM7, TIM8 and TIM12 through TIM17
 
 Timer Pinout:
 
@@ -144,7 +148,7 @@ Timer Pinout:
 * Timer 2 Channel 1 Positive -> P6 (PA5)
 * Timer 4 Channel 1 Negative -> P7 (PD12)
 * Timer 4 Channel 2 Negative -> P8 (PD13)
-* Timer 4 Channel 3 Positive -> P9 (PD14) (OpenMV Cam M7/H7 Only)
+* Timer 4 Channel 3 Positive -> P9 (PD14) (OpenMV Cam M7/H7 Only - Not OpenMV Cam H7 Plus)
 
 PWM (pulse width modulation)
 ----------------------------
@@ -153,10 +157,14 @@ See :ref:`pyb.Pin <pyb.Pin>` and :ref:`pyb.Timer <pyb.Timer>`. ::
 
     from pyb import Pin, Timer
 
-    p = Pin('P7') # P7 has TIM4, CH1
-    tim = Timer(4, freq=1000)
-    ch = tim.channel(1, Timer.PWM, pin=p)
+    p = Pin('P4') # P4 has TIM2, CH3
+    tim = Timer(2, freq=1000)
+    ch = tim.channel(3, Timer.PWM, pin=p)
     ch.pulse_width_percent(50)
+
+* For OpenMV Cam M4: TIM2 and TIM3
+* For OpenMV Cam F7: TIM2, TIM3 and TIM7 through TIM14
+* For OpenMV Cam H7: TIM2, TIM3, TIM7, TIM8 and TIM12 through TIM17
 
 Timer Pinout:
 
@@ -168,7 +176,7 @@ Timer Pinout:
 * Timer 2 Channel 1 Positive -> P6 (PA5)
 * Timer 4 Channel 1 Negative -> P7 (PD12)
 * Timer 4 Channel 2 Negative -> P8 (PD13)
-* Timer 4 Channel 3 Positive -> P9 (PD14) (OpenMV Cam M7/H7 Only)
+* Timer 4 Channel 3 Positive -> P9 (PD14) (OpenMV Cam M7/H7 Only - Not OpenMV Cam H7 Plus)
 
 ADC (analog to digital conversion)
 ----------------------------------

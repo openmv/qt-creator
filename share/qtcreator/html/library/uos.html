@@ -368,7 +368,7 @@ the slot given by <em>index</em>.</p>
 “real” filesystems within this VFS.  Filesystem objects can be mounted at either
 the root of the VFS, or at a subdirectory that lives in the root.  This allows
 dynamic and flexible configuration of the filesystem that is seen by Python
-programs.  Ports that have this functionality provide the <a class="reference internal" href="../wipy/general.html#mount" title="mount"><code class="xref py py-func docutils literal notranslate"><span class="pre">mount()</span></code></a> and
+programs.  Ports that have this functionality provide the <a class="reference internal" href="#uos.mount" title="uos.mount"><code class="xref py py-func docutils literal notranslate"><span class="pre">mount()</span></code></a> and
 <a class="reference internal" href="#uos.umount" title="uos.umount"><code class="xref py py-func docutils literal notranslate"><span class="pre">umount()</span></code></a> functions, and possibly various filesystem implementations
 represented by VFS classes.</p>
 <dl class="function">
@@ -400,7 +400,7 @@ method <code class="docutils literal notranslate"><span class="pre">umount()</sp
 <em class="property">class </em><code class="descclassname">uos.</code><code class="descname">VfsFat</code><span class="sig-paren">(</span><em>block_dev</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsFat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a filesystem object that uses the FAT filesystem format.  Storage of
 the FAT filesystem is provided by <em>block_dev</em>.
-Objects created by this constructor can be mounted using <a class="reference internal" href="../wipy/general.html#mount" title="mount"><code class="xref py py-func docutils literal notranslate"><span class="pre">mount()</span></code></a>.</p>
+Objects created by this constructor can be mounted using <a class="reference internal" href="#uos.mount" title="uos.mount"><code class="xref py py-func docutils literal notranslate"><span class="pre">mount()</span></code></a>.</p>
 <dl class="staticmethod">
 <dt id="uos.VfsFat.mkfs">
 <em class="property">static </em><code class="descname">mkfs</code><span class="sig-paren">(</span><em>block_dev</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsFat.mkfs" title="Permalink to this definition">¶</a></dt>
@@ -517,7 +517,7 @@ its data in RAM using a <code class="docutils literal notranslate"><span class="
     <p>
         &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 11 Nov 2019.
+        Last updated on 20 Dec 2019.
       </span>
 
     </p>

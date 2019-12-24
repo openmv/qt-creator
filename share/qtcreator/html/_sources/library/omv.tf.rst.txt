@@ -11,11 +11,21 @@ You can read more about how to create your own models that can run on the
 OpenMV Cam `here <https://www.tensorflow.org/lite/microcontrollers>`__. In
 particular:
 
-   * Supported operations are listed `here <https://github.com/openmv/tensorflow/blob/master/tensorflow/lite/experimental/micro/kernels/all_ops_resolver.cc>`__.
+   * Supported operations are listed `here <https://github.com/openmv/tensorflow/blob/openmv/tensorflow/lite/micro/kernels/all_ops_resolver.cc>`__.
+
+     * Note that tensorflow lite operations are versioned. If no version numbers
+       are listed after the operation then the min and max version supported are
+       1. If there are numbers after an operation those numbers represent the
+       minimum and maximum operation version supported.
+     * If you are using Keras to generate your model be careful about only using
+       operators that are supported by tensorflow lite for microcontrollers. Otherwise,
+       your model will not be runnable by your OpenMV Cam.
+
    * Convert your model to a FlatBuffer by following the instructions `here <https://www.tensorflow.org/lite/microcontrollers/build_convert#model_conversion>`__.
    * Finally, quantize your model by following the instructions `here <https://www.tensorflow.org/lite/microcontrollers/build_convert#quantization>`__.
 
-Alternatively, just follow Google's in-depth guide `here <https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/experimental/micro/examples/person_detection/training_a_model.md>`__.
+Alternatively, just follow Google's in-depth guide `here <https://github.com/openmv/tensorflow/blob/openmv/tensorflow/lite/micro/examples/person_detection/training_a_model.md>`__.
+If you have problems with Google's in-depth guide please contact Google for help.
 
 The final output ``.tflite`` model can be directly loaded and run by your
 OpenMV Cam. That said, the model and the model's required sratch RAM must
@@ -28,7 +38,7 @@ fit within the available frame buffer stack RAM on your OpenMV Cam.
    * The OpenMV Cam H7 Plus has about 31MB of frame buffer RAM. That
      said, running a model anywhere near the that size will be extremely slow.
 
-Alternatively, you can also load a model onto the MicroPython Heap.
+Alternatively, you can also load a model onto the MicroPython Heap or the OpenMV Cam frame buffer.
 However, this significantly limits the model size on all OpenMV Cams.
 
 Functions
@@ -84,6 +94,30 @@ Functions
    ``roi`` is the region-of-interest rectangle tuple (x, y, w, h). If not
    specified, it is equal to the image rectangle. Only pixels within the
    ``roi`` are operated on.
+
+.. function:: tf.load(path, [load_to_fb=False])
+
+   ``path`` a path to a ``.tflite`` model to load into memory on the MicroPython heap by default.
+
+   NOTE! The MicroPython heap is only ~50 KB on the OpenMV Cam M7 and ~256 KB on the OpenMV Cam H7.
+
+   Pass ``"person_detection"`` to load the built-in person detection model from your
+   OpenMV Cam's internal flash. This built-in model does not use any Micropython Heap
+   as all the weights are stored in flash which is accessible in the same way as RAM.
+
+   ``load_to_fb`` if passed as True will instead reserve part of the OpenMV Cam frame buffer
+   stack for storing the TensorFlow Lite model. You will get the most efficent execution
+   performance for large models that do not fit on the heap by loading them into frame buffer
+   memory once from disk and then repeatedly executing the model. That said, the frame buffer
+   space used will not be available anymore for other algorithms.
+
+   Returns a `tf_model` object which can operate on an image.
+
+.. function:: tf.free_from_fb()
+
+   Deallocates a previously allocated `tf_model` object created with ``load_to_fb`` set to True.
+
+   Note that deallocations happen in the reverse order of allocation.
 
 class tf_classification -- tf classification dection result
 ===========================================================
@@ -142,7 +176,7 @@ Methods
 class tf_model -- TensorFlow Model
 ==================================
 
-If your model size is small enough and you have enough heap space you may wish
+If your model size is small enough and you have enough heap or frame buffer space you may wish
 to directly load the model into memory to save from having to load it from disk
 each time you wish to execute it.
 
@@ -151,14 +185,8 @@ Constructors
 
 .. class:: tf.tf_model()
 
-   Please call ``tf.load(path)`` to create this object. ``path`` a path to a ``.tflite``
-   model to load into memory. NOTE! This method stores the model on your micropython heap
-   which is only ~50 KB on the OpenMV Cam M7 and ~256 KB on the OpenMV Cam H7. Pass
-   ``"person_detection"`` to load the built-in person detection model from your
-   OpenMV Cam's internal flash. This built-in model does not use any Micropython Heap
-   as all the weights are stored in flash which is accessible in the same way as RAM.
-
-   Returns a `tf_model` object which can operate on an image.
+   Please call `tf.load()` to create the TensorFlow Model object. TensorFlow Model objects allow
+   you to execute a model from RAM versus having to load it from disk repeatedly.
 
 Methods
 -------

@@ -267,7 +267,7 @@
 <ul class="simple">
 <li>Servo(1) -&gt; P7 (PD12)</li>
 <li>Servo(2) -&gt; P8 (PD13)</li>
-<li>Servo(3) -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
+<li>Servo(3) -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only - Not OpenMV Cam H7 Plus)</li>
 </ul>
 </div>
 <div class="section" id="external-interrupts">
@@ -298,12 +298,17 @@
 <p>See <a class="reference internal" href="../library/pyb.Timer.html#pyb-timer"><span class="std std-ref">pyb.Timer</span></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">Timer</span>
 
-<span class="n">tim</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">tim</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
 <span class="n">tim</span><span class="o">.</span><span class="n">counter</span><span class="p">()</span> <span class="c1"># get counter value</span>
 <span class="n">tim</span><span class="o">.</span><span class="n">freq</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1"># 0.5 Hz</span>
 <span class="n">tim</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">pyb</span><span class="o">.</span><span class="n">LED</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">toggle</span><span class="p">())</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li>For OpenMV Cam M4: TIM2 and TIM3</li>
+<li>For OpenMV Cam F7: TIM2, TIM3 and TIM7 through TIM14</li>
+<li>For OpenMV Cam H7: TIM2, TIM3, TIM7, TIM8 and TIM12 through TIM17</li>
+</ul>
 <p>Timer Pinout:</p>
 <ul class="simple">
 <li>Timer 1 Channel 3 Negative -&gt; P0 (PB15)</li>
@@ -314,7 +319,7 @@
 <li>Timer 2 Channel 1 Positive -&gt; P6 (PA5)</li>
 <li>Timer 4 Channel 1 Negative -&gt; P7 (PD12)</li>
 <li>Timer 4 Channel 2 Negative -&gt; P8 (PD13)</li>
-<li>Timer 4 Channel 3 Positive -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
+<li>Timer 4 Channel 3 Positive -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only - Not OpenMV Cam H7 Plus)</li>
 </ul>
 </div>
 <div class="section" id="pwm-pulse-width-modulation">
@@ -322,12 +327,17 @@
 <p>See <a class="reference internal" href="../library/pyb.Pin.html#pyb-pin"><span class="std std-ref">pyb.Pin</span></a> and <a class="reference internal" href="../library/pyb.Timer.html#pyb-timer"><span class="std std-ref">pyb.Timer</span></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyb</span> <span class="k">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">Timer</span>
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;P7&#39;</span><span class="p">)</span> <span class="c1"># P7 has TIM4, CH1</span>
-<span class="n">tim</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">ch</span> <span class="o">=</span> <span class="n">tim</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Timer</span><span class="o">.</span><span class="n">PWM</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;P4&#39;</span><span class="p">)</span> <span class="c1"># P4 has TIM2, CH3</span>
+<span class="n">tim</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">ch</span> <span class="o">=</span> <span class="n">tim</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">Timer</span><span class="o">.</span><span class="n">PWM</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
 <span class="n">ch</span><span class="o">.</span><span class="n">pulse_width_percent</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li>For OpenMV Cam M4: TIM2 and TIM3</li>
+<li>For OpenMV Cam F7: TIM2, TIM3 and TIM7 through TIM14</li>
+<li>For OpenMV Cam H7: TIM2, TIM3, TIM7, TIM8 and TIM12 through TIM17</li>
+</ul>
 <p>Timer Pinout:</p>
 <ul class="simple">
 <li>Timer 1 Channel 3 Negative -&gt; P0 (PB15)</li>
@@ -338,7 +348,7 @@
 <li>Timer 2 Channel 1 Positive -&gt; P6 (PA5)</li>
 <li>Timer 4 Channel 1 Negative -&gt; P7 (PD12)</li>
 <li>Timer 4 Channel 2 Negative -&gt; P8 (PD13)</li>
-<li>Timer 4 Channel 3 Positive -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only)</li>
+<li>Timer 4 Channel 3 Positive -&gt; P9 (PD14) (OpenMV Cam M7/H7 Only - Not OpenMV Cam H7 Plus)</li>
 </ul>
 </div>
 <div class="section" id="adc-analog-to-digital-conversion">
@@ -453,7 +463,7 @@
     <p>
         &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 11 Nov 2019.
+        Last updated on 20 Dec 2019.
       </span>
 
     </p>
