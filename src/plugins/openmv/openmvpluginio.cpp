@@ -30,6 +30,10 @@ enum
     BOOTLDR_ERASE_CPL,
     BOOTLDR_WRITE_CPL,
     BOOTLDR_QUERY_CPL,
+    BOOTLDR_QSPIF_ERASE_CPL,
+    BOOTLDR_QSPIF_WRITE_CPL,
+    BOOTLDR_QSPIF_LAYOUT_CPL,
+    BOOTLDR_QSPIF_MEMTEST_CPL,
     CLOSE_CPL
 };
 
@@ -325,7 +329,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 case BOOTLDR_START_CPL:
                 {
                     int result = deserializeLong(data);
-                    emit gotBootloaderStart((result == OLD_BOOTLDR) || (result == NEW_BOOTLDR), result);
+                    emit gotBootloaderStart((result == V1_BOOTLDR) || (result == V2_BOOTLDR) || (result == V3_BOOTLDR), result);
                     break;
                 }
                 case BOOTLDR_RESET_CPL:
@@ -350,6 +354,31 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     int start = deserializeLong(data);
                     int last = deserializeLong(data);
                     emit bootloaderQueryDone(all_start, start, last);
+                    break;
+                }
+                case BOOTLDR_QSPIF_ERASE_CPL:
+                {
+                    emit bootloaderQSPIFEraseDone(true);
+                    break;
+                }
+                case BOOTLDR_QSPIF_WRITE_CPL:
+                {
+                    emit bootloaderQSPIFWriteDone(true);
+                    break;
+                }
+                case BOOTLDR_QSPIF_LAYOUT_CPL:
+                {
+                    // The optimizer will mess up the order if executed in emit.
+                    int start_block = deserializeLong(data);
+                    int max_block = deserializeLong(data);
+                    int block_size_in_bytes = deserializeLong(data);
+                    emit bootloaderQSPIFLayoutDone(start_block, max_block, block_size_in_bytes);
+                    break;
+                }
+                case BOOTLDR_QSPIF_MEMTEST_CPL:
+                {
+                    bool result = deserializeLong(data);
+                    emit bootloaderQSPIFMemtestDone(result);
                     break;
                 }
                 case CLOSE_CPL:
@@ -508,6 +537,26 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     case BOOTLDR_QUERY_CPL:
                     {
                         emit bootloaderQueryDone(int(), int(), int());
+                        break;
+                    }
+                    case BOOTLDR_QSPIF_ERASE_CPL:
+                    {
+                        emit bootloaderQSPIFEraseDone(false);
+                        break;
+                    }
+                    case BOOTLDR_QSPIF_WRITE_CPL:
+                    {
+                        emit bootloaderQSPIFWriteDone(false);
+                        break;
+                    }
+                    case BOOTLDR_QSPIF_LAYOUT_CPL:
+                    {
+                        emit bootloaderQSPIFLayoutDone(int(), int(), int());
+                        break;
+                    }
+                    case BOOTLDR_QSPIF_MEMTEST_CPL:
+                    {
+                        emit bootloaderQSPIFMemtestDone(false);
                         break;
                     }
                     case CLOSE_CPL:
@@ -800,6 +849,43 @@ void OpenMVPluginIO::bootloaderQuery()
     serializeLong(buffer, __BOOTLDR_QUERY);
     m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QUERY_RESPONSE_LEN, BOOTLDR_QUERY_START_DELAY, BOOTLDR_QUERY_END_DELAY));
     m_completionQueue.enqueue(BOOTLDR_QUERY_CPL);
+    command();
+}
+
+void OpenMVPluginIO::bootloaderQSPIFErase(int sector)
+{
+    QByteArray buffer;
+    serializeLong(buffer, __BOOTLDR_QSPIF_ERASE);
+    serializeLong(buffer, sector);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_QSPIF_ERASE_START_DELAY, BOOTLDR_QSPIF_ERASE_END_DELAY));
+    m_completionQueue.enqueue(BOOTLDR_QSPIF_ERASE_CPL);
+    command();
+}
+
+void OpenMVPluginIO::bootloaderQSPIFWrite(const QByteArray &data)
+{
+    QByteArray buffer;
+    serializeLong(buffer, __BOOTLDR_QSPIF_WRITE);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer + data, int(), BOOTLDR_QSPIF_WRITE_START_DELAY, BOOTLDR_QSPIF_WRITE_END_DELAY));
+    m_completionQueue.enqueue(BOOTLDR_QSPIF_WRITE_CPL);
+    command();
+}
+
+void OpenMVPluginIO::bootloaderQSPIFLayout()
+{
+    QByteArray buffer;
+    serializeLong(buffer, __BOOTLDR_QSPIF_LAYOUT);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QSPIF_LAYOUT_RESPONSE_LEN, BOOTLDR_QSPIF_LAYOUT_START_DELAY, BOOTLDR_QSPIF_LAYOUT_END_DELAY));
+    m_completionQueue.enqueue(BOOTLDR_QSPIF_LAYOUT_CPL);
+    command();
+}
+
+void OpenMVPluginIO::bootloaderQSPIFMemtest()
+{
+    QByteArray buffer;
+    serializeLong(buffer, __BOOTLDR_QSPIF_MEMTEST);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QSPIF_MEMTEST_RESPONSE_LEN, BOOTLDR_QSPIF_MEMTEST_START_DELAY, BOOTLDR_QSPIF_MEMTEST_END_DELAY));
+    m_completionQueue.enqueue(BOOTLDR_QSPIF_MEMTEST_CPL);
     command();
 }
 

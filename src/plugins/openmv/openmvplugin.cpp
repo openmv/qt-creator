@@ -774,6 +774,11 @@ void OpenMVPlugin::extensionsInitialized()
     m_bootloaderCommand = Core::ActionManager::registerAction(bootloaderCommand, Core::Id("OpenMV.Bootloader"));
     toolsMenu->addAction(m_bootloaderCommand);
     connect(bootloaderCommand, &QAction::triggered, this, &OpenMVPlugin::bootloaderClicked);
+
+    QAction *eraseCommand = new QAction(tr("Erase Onboard Data Flash"), this);
+    m_eraseCommand = Core::ActionManager::registerAction(eraseCommand, Core::Id("OpenMV.Erase"));
+    toolsMenu->addAction(m_eraseCommand);
+    connect(eraseCommand, &QAction::triggered, this, [this] {connectClicked(true, QString(), true, true);});
     toolsMenu->addSeparator();
 
     QAction *configureSettingsCommand = new QAction(tr("Configure OpenMV Cam settings file"), this);
@@ -2709,10 +2714,26 @@ do { \
     return; \
 } while(0)
 
-void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePath, bool forceFlashFSErase)
+void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePath, bool forceFlashFSErase, bool justEraseFlashFs)
 {
     if(!m_working)
     {
+        if(m_connect_disconnect)
+        {
+            disconnect(m_connect_disconnect);
+        }
+
+        if(m_connected)
+        {
+            m_connect_disconnect = connect(this, &OpenMVPlugin::disconnectDone, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs] {
+                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs] {connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs);});
+            });
+
+            QTimer::singleShot(0, this, [this] {disconnectClicked();});
+
+            return;
+        }
+
         m_working = true;
 
         QStringList stringList;
@@ -2997,7 +3018,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         if(forceBootloader)
         {
-            if(!forceBootloaderBricked)
+            if((!justEraseFlashFs) && (!forceBootloaderBricked))
             {
                 if(firmwarePath.isEmpty())
                 {
@@ -3111,17 +3132,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             // BIN Bootloader /////////////////////////////////////////////////
 
-            while(firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
+            while(justEraseFlashFs || firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
             {
                 QFile file(firmwarePath);
 
-                if(file.open(QIODevice::ReadOnly))
+                if(justEraseFlashFs || file.open(QIODevice::ReadOnly))
                 {
-                    QByteArray data = file.readAll();
+                    QByteArray data = justEraseFlashFs ? QByteArray() : file.readAll();
 
-                    if((file.error() == QFile::NoError) && (!data.isEmpty()))
+                    if(justEraseFlashFs || ((file.error() == QFile::NoError) && (!data.isEmpty())))
                     {
-                        file.close();
+                        if(!justEraseFlashFs) file.close();
 
                         QList<QByteArray> dataChunks;
 
@@ -3130,10 +3151,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             dataChunks.append(data.mid(i, qMin(FLASH_WRITE_CHUNK_SIZE, data.size() - i)));
                         }
 
-                        if(dataChunks.last().size() % FLASH_WRITE_CHUNK_SIZE)
+                        if(dataChunks.size() && (dataChunks.last().size() % FLASH_WRITE_CHUNK_SIZE))
                         {
                             dataChunks.last().append(QByteArray(FLASH_WRITE_CHUNK_SIZE - dataChunks.last().size(), 255));
                         }
+
+                        int qspif_start_block = int();
+                        int qspif_max_block = int();
+                        int qspif_block_size_in_bytes = int();
 
                         // Start Bootloader ///////////////////////////////////
                         {
@@ -3153,7 +3178,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 *done2Ptr2 = true;
                             });
 
-                            QProgressDialog dialog(forceBootloaderBricked ? tr("Disconnect your OpenMV Cam and then reconnect it...\n\nHit cancel to skip to DFU reprogramming.") : tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                            QProgressDialog dialog(forceBootloaderBricked ? QString(QStringLiteral("%1%2")).arg(tr("Disconnect your OpenMV Cam and then reconnect it...")).arg(justEraseFlashFs ? QString() : tr("\n\nHit cancel to skip to DFU reprogramming.")) : tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
@@ -3206,7 +3231,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     tr("Connect"),
                                     tr("Unable to connect to your OpenMV Cam's normal bootloader!"));
 
-                                if(forceFirmwarePath.isEmpty() && QMessageBox::question(Core::ICore::dialogParent(),
+                                if((!justEraseFlashFs) && forceFirmwarePath.isEmpty() && QMessageBox::question(Core::ICore::dialogParent(),
                                     tr("Connect"),
                                     tr("OpenMV IDE can still try to upgrade your OpenMV Cam using your OpenMV Cam's DFU Bootloader.\n\n"
                                        "Continue?"),
@@ -3220,7 +3245,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 CONNECT_END();
                             }
 
-                            if(version2 == NEW_BOOTLDR)
+                            if((version2 == V2_BOOTLDR) || (version2 == V3_BOOTLDR))
                             {
                                 int all_start2 = int(), *all_start2Ptr = &all_start2;
                                 int start2 = int(), *start2Ptr = &start2;
@@ -3253,6 +3278,31 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     originalEraseFlashSectorAllEnd = last2;
                                 }
                             }
+
+                            if(version2 == V3_BOOTLDR)
+                            {
+                                int *start_block2Ptr = &qspif_start_block;
+                                int *max_block2Ptr = &qspif_max_block;
+                                int *block_size_in_bytes2Ptr = &qspif_block_size_in_bytes;
+
+                                QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::bootloaderQSPIFLayoutDone,
+                                    this, [this, start_block2Ptr, max_block2Ptr, block_size_in_bytes2Ptr] (int start_block, int max_block, int block_size_in_bytes) {
+                                    *start_block2Ptr = start_block;
+                                    *max_block2Ptr = max_block;
+                                    *block_size_in_bytes2Ptr = block_size_in_bytes;
+                                });
+
+                                QEventLoop loop;
+
+                                connect(m_iodevice, &OpenMVPluginIO::bootloaderQSPIFLayoutDone,
+                                        &loop, &QEventLoop::quit);
+
+                                m_iodevice->bootloaderQSPIFLayout();
+
+                                loop.exec();
+
+                                disconnect(conn);
+                            }
                         }
 
                         // Erase Flash ////////////////////////////////////////
@@ -3260,13 +3310,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             int flash_start = forceFlashFSErase ? originalEraseFlashSectorAllStart : originalEraseFlashSectorStart;
                             int flash_end = forceFlashFSErase ? originalEraseFlashSectorAllEnd : originalEraseFlashSectorEnd;
 
-                            bool ok2 = bool();
-                            bool *ok2Ptr = &ok2;
-
-                            QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::flashEraseDone,
-                                this, [this, ok2Ptr] (bool ok) {
-                                *ok2Ptr = ok;
-                            });
+                            if(justEraseFlashFs)
+                            {
+                                flash_end = originalEraseFlashSectorStart - 1;
+                            }
 
                             QProgressDialog dialog(tr("Erasing..."), tr("Cancel"), flash_start, flash_end, Core::ICore::dialogParent(),
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
@@ -3275,6 +3322,54 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                             dialog.setCancelButton(Q_NULLPTR);
                             dialog.show();
+
+                            if(forceFlashFSErase && (qspif_start_block || qspif_max_block || qspif_block_size_in_bytes))
+                            {
+                                bool ok2 = bool();
+                                bool *ok2Ptr = &ok2;
+
+                                QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::bootloaderQSPIFEraseDone,
+                                    this, [this, ok2Ptr] (bool ok) {
+                                    *ok2Ptr = ok;
+                                });
+
+                                QEventLoop loop0, loop1;
+
+                                connect(m_iodevice, &OpenMVPluginIO::bootloaderQSPIFEraseDone,
+                                        &loop0, &QEventLoop::quit);
+
+                                m_iodevice->bootloaderQSPIFErase(qspif_start_block);
+
+                                loop0.exec();
+
+                                if(ok2)
+                                {
+                                    QTimer::singleShot(FLASH_ERASE_DELAY, &loop1, &QEventLoop::quit);
+
+                                    loop1.exec();
+                                }
+
+                                disconnect(conn2);
+
+                                if(!ok2)
+                                {
+                                    dialog.close();
+
+                                    QMessageBox::critical(Core::ICore::dialogParent(),
+                                        tr("Connect"),
+                                        tr("Timeout Error!"));
+
+                                    CLOSE_CONNECT_END();
+                                }
+                            }
+
+                            bool ok2 = bool();
+                            bool *ok2Ptr = &ok2;
+
+                            QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::flashEraseDone,
+                                this, [this, ok2Ptr] (bool ok) {
+                                *ok2Ptr = ok;
+                            });
 
                             for(int i = flash_start; i <= flash_end; i++)
                             {
@@ -3314,6 +3409,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         }
 
                         // Program Flash //////////////////////////////////////
+
+                        if(!justEraseFlashFs)
                         {
                             bool ok2 = bool();
                             bool *ok2Ptr = &ok2;
@@ -3392,9 +3489,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             QMessageBox::information(Core::ICore::dialogParent(),
                                 tr("Connect"),
-                                tr("Firmware Upgrade complete!\n\n"
-                                   "Your OpenMV Cam is running its built-in self-test... this may take a while.\n\n"
-                                   "Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete."));
+                                QString(QStringLiteral("%1%2%3")).arg((justEraseFlashFs ? tr("Onboard Data Flash Erased!\n\n") : tr("Firmware Upgrade complete!\n\n")))
+                                .arg(tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
+                                .arg(tr("Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.")));
 
                             RECONNECT_END();
                         }
@@ -3710,7 +3807,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_patch = patch2;
         m_errorFilterString = QString();
 
-        m_bootloaderCommand->action()->setEnabled(false);
         m_configureSettingsCommand->action()->setEnabled(false);
         m_saveCommand->action()->setEnabled(false);
         m_resetCommand->action()->setEnabled(true);
@@ -3887,7 +3983,6 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_portPath = QString();
             m_errorFilterString = QString();
 
-            m_bootloaderCommand->action()->setEnabled(true);
             m_configureSettingsCommand->action()->setEnabled(false);
             m_saveCommand->action()->setEnabled(false);
             m_resetCommand->action()->setEnabled(false);
@@ -5932,7 +6027,7 @@ void OpenMVPlugin::parseImports(const QString &fileText, const QString &moduleFo
 
                         foreach(const importData_t &data, targetModules)
                         {
-                            if(data.moduleName == importLinePath) 
+                            if(data.moduleName == importLinePath)
                             {
                                 contains = true;
                                 break;

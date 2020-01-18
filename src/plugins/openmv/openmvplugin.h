@@ -224,7 +224,7 @@ public slots: // private
     bool registerOpenMVCamDialog(const QString board, const QString id);
     void packageUpdate();
     void bootloaderClicked();
-    void connectClicked(bool forceBootloader = false, QString forceFirmwarePath = QString(), bool forceFlashFSErase = false);
+    void connectClicked(bool forceBootloader = false, QString forceFirmwarePath = QString(), bool forceFlashFSErase = false, bool justEraseFlashFs = false);
     void disconnectClicked(bool reset = false);
     void startClicked();
     void stopClicked();
@@ -263,6 +263,7 @@ private:
     bool m_working;
     bool m_connected;
     bool m_running;
+    QMetaObject::Connection m_connect_disconnect;
     int m_major;
     int m_minor;
     int m_patch;
@@ -274,6 +275,7 @@ private:
     QString m_errorFilterString;
 
     Core::Command *m_bootloaderCommand;
+    Core::Command *m_eraseCommand;
     Core::Command *m_configureSettingsCommand;
     Core::Command *m_saveCommand;
     Core::Command *m_resetCommand;

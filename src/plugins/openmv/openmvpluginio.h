@@ -68,6 +68,10 @@ public slots:
     void flashErase(int sector);
     void flashWrite(const QByteArray &data);
     void bootloaderQuery();
+    void bootloaderQSPIFErase(int sector);
+    void bootloaderQSPIFWrite(const QByteArray &data);
+    void bootloaderQSPIFLayout();
+    void bootloaderQSPIFMemtest();
     void close();
 
 public slots: // private
@@ -97,6 +101,10 @@ signals:
     void flashEraseDone(bool ok);
     void flashWriteDone(bool ok);
     void bootloaderQueryDone(int all_start, int start, int last);
+    void bootloaderQSPIFEraseDone(bool ok);
+    void bootloaderQSPIFWriteDone(bool ok);
+    void bootloaderQSPIFLayoutDone(int start_block, int max_block, int block_size_in_bytes);
+    void bootloaderQSPIFMemtestDone(bool ok);
     void closeResponse();
 
 private:

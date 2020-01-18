@@ -683,8 +683,9 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
                     {
                         int result = deserializeLong(response);
 
-                        if((result == OLD_BOOTLDR)
-                        || (result == NEW_BOOTLDR))
+                        if((result == V1_BOOTLDR)
+                        || (result == V2_BOOTLDR)
+                        || (result == V3_BOOTLDR))
                         {
                             emit bootloaderStartResponse(true, result);
                             return;
