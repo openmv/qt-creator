@@ -770,7 +770,7 @@ void OpenMVPlugin::extensionsInitialized()
     Core::ActionContainer *toolsMenu = Core::ActionManager::actionContainer(Core::Constants::M_TOOLS);
     Core::ActionContainer *helpMenu = Core::ActionManager::actionContainer(Core::Constants::M_HELP);
 
-    QAction *bootloaderCommand = new QAction(tr("Run Bootloader"), this);
+    QAction *bootloaderCommand = new QAction(tr("Run Bootloader (Load Firmware)"), this);
     m_bootloaderCommand = Core::ActionManager::registerAction(bootloaderCommand, Core::Id("OpenMV.Bootloader"));
     toolsMenu->addAction(m_bootloaderCommand);
     connect(bootloaderCommand, &QAction::triggered, this, &OpenMVPlugin::bootloaderClicked);
@@ -910,7 +910,7 @@ void OpenMVPlugin::extensionsInitialized()
         QString src =
             QFileDialog::getOpenFileName(Core::ICore::dialogParent(), QObject::tr("Network to copy to OpenMV Cam"),
                 Core::ICore::userResourcePath() + QStringLiteral("/models"),
-                QObject::tr("Neural Network Model (*.network)"));
+                QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network)"));
 
         if(!src.isEmpty())
         {
@@ -919,7 +919,7 @@ void OpenMVPlugin::extensionsInitialized()
                     m_portPath.isEmpty()
                     ? settings->value(QStringLiteral(LAST_MODEL_NO_CAM_PATH), QDir::homePath()).toString()
                     : settings->value(QStringLiteral(LAST_MODEL_WITH_CAM_PATH), QString(m_portPath + QFileInfo(src).fileName())).toString(),
-                    QObject::tr("Neural Network Model (*.network)"));
+                    QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network)"));
 
             if(!dst.isEmpty())
             {
@@ -4496,15 +4496,16 @@ QMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const QStrin
 
         if(it.fileInfo().isDir())
         {
-            QMenu *menu = new QMenu(it.fileName(), parent);
+            QMenu *menu = new QMenu(notExamples ? it.fileName() : it.fileName().remove(QRegularExpression(QStringLiteral("^\\d+-"))), parent);
             QMap<QString, QAction *> menuActions = aboutToShowExamplesRecursive(filePath, menu, notExamples);
             menu->addActions(menuActions.values());
             menu->setDisabled(menuActions.values().isEmpty());
-            actions.insertMulti(it.fileName(), menu->menuAction());
+            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName());
+            actions.insertMulti(QString(QStringLiteral("%1-")).arg(match.hasMatch() ? match.captured(1).toInt() : INT_MAX, 10) + it.fileName(), menu->menuAction());
         }
         else
         {
-            QAction *action = new QAction(it.fileName(), parent);
+            QAction *action = new QAction(notExamples ? it.fileName() : it.fileName().remove(QRegularExpression(QStringLiteral("^\\d+-"))), parent);
             connect(action, &QAction::triggered, this, [this, filePath, notExamples]
             {
                 QFile file(filePath);
@@ -4555,7 +4556,8 @@ QMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const QStrin
                 }
             });
 
-            actions.insertMulti(it.fileName(), action);
+            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName());
+            actions.insertMulti(QString(QStringLiteral("%1-")).arg(match.hasMatch() ? match.captured(1).toInt() : INT_MAX, 10) + it.fileName(), action);
         }
     }
 
