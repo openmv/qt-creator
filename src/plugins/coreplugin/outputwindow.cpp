@@ -67,6 +67,9 @@ public:
         , m_originalFontSize(0)
         , maxLineCount(100000)
         , cursor(document)
+        //OPENMV-DIFF//
+        , tabWidth(4)
+        //OPENMV-DIFF//
     {
     }
 
@@ -87,6 +90,9 @@ public:
     float m_originalFontSize;
     int maxLineCount;
     QTextCursor cursor;
+    //OPENMV-DIFF//
+    int tabWidth;
+    //OPENMV-DIFF//
 };
 
 } // namespace Internal
@@ -453,9 +459,9 @@ void OutputWindow::appendText(const QString &textIn, const QTextCharFormat &form
 
             case 9: // Tab
             {
-                for(int k = 8 - (column % 8); k > 0; k--)
+                for(int k = d->tabWidth - (column % d->tabWidth); k > 0; k--)
                 {
-                    string.append(text.at(i));
+                    string.append(QLatin1Char(' '));
                     column += 1;
                 }
 
@@ -609,6 +615,11 @@ void OutputWindow::save()
     }
 
     settings->endGroup();
+}
+
+void OutputWindow::setTabSettings(int tabWidth)
+{
+    d->tabWidth = tabWidth;
 }
 //OPENMV-DIFF//
 

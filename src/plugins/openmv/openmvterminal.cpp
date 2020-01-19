@@ -289,7 +289,7 @@ void MyPlainTextEdit::readBytes(const QByteArray &data)
                 {
                     for(int k = m_tabWidth - (column % m_tabWidth); k > 0; k--)
                     {
-                        string.append(text.text.at(i));
+                        string.append(QLatin1Char(' '));
                         column += 1;
                     }
 

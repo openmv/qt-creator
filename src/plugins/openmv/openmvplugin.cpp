@@ -778,7 +778,13 @@ void OpenMVPlugin::extensionsInitialized()
     QAction *eraseCommand = new QAction(tr("Erase Onboard Data Flash"), this);
     m_eraseCommand = Core::ActionManager::registerAction(eraseCommand, Core::Id("OpenMV.Erase"));
     toolsMenu->addAction(m_eraseCommand);
-    connect(eraseCommand, &QAction::triggered, this, [this] {connectClicked(true, QString(), true, true);});
+    connect(eraseCommand, &QAction::triggered, this, [this] {
+        if(QMessageBox::warning(Core::ICore::dialogParent(),
+            tr("Erase Onboard Data Flash"),
+            tr("Are you sure you want to erase your OpenMV Cam's onboard flash drive?"),
+            QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
+        == QMessageBox::Yes)connectClicked(true, QString(), true, true);
+    });
     toolsMenu->addSeparator();
 
     QAction *configureSettingsCommand = new QAction(tr("Configure OpenMV Cam settings file"), this);
@@ -1432,6 +1438,10 @@ void OpenMVPlugin::extensionsInitialized()
     Core::MessageManager::outputWindow()->setWheelZoomEnabled(true);
     Core::MessageManager::outputWindow()->setFontZoom(
         settings->value(QStringLiteral(OUTPUT_WINDOW_FONT_ZOOM_STATE)).toFloat());
+    Core::MessageManager::outputWindow()->setTabSettings(TextEditor::TextEditorSettings::codeStyle()->tabSettings().m_serialTerminalTabSize);
+    connect(TextEditor::TextEditorSettings::codeStyle(), &TextEditor::ICodeStylePreferences::tabSettingsChanged, this, [this] (const TextEditor::TabSettings &settings) {
+        Core::MessageManager::outputWindow()->setTabSettings(settings.m_serialTerminalTabSize);
+    });
     settings->endGroup();
 
     connect(q_check_ptr(qobject_cast<Core::Internal::MainWindow *>(Core::ICore::mainWindow())), &Core::Internal::MainWindow::showEventSignal, this, [this, widget, settings, hsplitter, vsplitter] {
@@ -5970,7 +5980,8 @@ QByteArray loadFilter(const QByteArray &data)
                     in_state = IN_NONE;
                     int size = i - k; // excluding the newline character
                     data2.remove(k, size);
-                    i = k - 1; // reset backwards
+                    // reset backwards
+                    i = k - 1;
                     j -= size;
                 }
                 break;
@@ -5992,7 +6003,6 @@ QByteArray loadFilter(const QByteArray &data)
     data2.remove(QRegularExpression(QStringLiteral("^\\s*?\n"), QRegularExpression::MultilineOption));
     data2.remove(QRegularExpression(QStringLiteral("^\\s*#.*?\n"), QRegularExpression::MultilineOption));
     data2.remove(QRegularExpression(QStringLiteral("^\\s*['\"]['\"]['\"].*?['\"]['\"]['\"]\\s*?\n"), QRegularExpression::MultilineOption | QRegularExpression::DotMatchesEverythingOption));
-
     return data2.replace(QStringLiteral("    "), QStringLiteral("\t")).toUtf8();
 }
 

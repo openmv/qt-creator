@@ -60,6 +60,7 @@ public:
     void clear();
     //OPENMV-DIFF//
     void save();
+    void setTabSettings(int tabWidth);
     //OPENMV-DIFF//
 
     void showEvent(QShowEvent *);
