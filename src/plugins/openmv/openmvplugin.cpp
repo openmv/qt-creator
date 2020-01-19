@@ -5932,9 +5932,60 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
 QByteArray loadFilter(const QByteArray &data)
 {
     QString data2 = QString::fromUtf8(data);
+
+    enum
+    {
+        IN_NONE,
+        IN_COMMENT,
+        IN_STRING_0,
+        IN_STRING_1
+    }
+    in_state = IN_NONE;
+
+    for(int i = 0, j = data2.size(), k; i < j; i++)
+    {
+        switch(in_state)
+        {
+            case IN_NONE:
+            {
+                if((data2.at(i) == QLatin1Char('#')) && ((!i) || (data2.at(i-1) != QLatin1Char('\\'))))
+                {
+                    in_state = IN_COMMENT;
+                    k = i;
+                }
+                if((data2.at(i) == QLatin1Char('\'')) && ((!i) || (data2.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_0;
+                if((data2.at(i) == QLatin1Char('\"')) && ((!i) || (data2.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_1;
+                break;
+            }
+            case IN_COMMENT:
+            {
+                if((data2.at(i) == QLatin1Char('\n')) && (data2.at(i-1) != QLatin1Char('\\')))
+                {
+                    in_state = IN_NONE;
+                    int size = i - k; // excluding the newline character
+                    data2.remove(k, size);
+                    i = k - 1; // reset backwards
+                    j -= size;
+                }
+                break;
+            }
+            case IN_STRING_0:
+            {
+                if((data2.at(i) == QLatin1Char('\'')) && (data2.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                break;
+            }
+            case IN_STRING_1:
+            {
+                if((data2.at(i) == QLatin1Char('\"')) && (data2.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                break;
+            }
+        }
+    }
+
+    data2.remove(QRegularExpression(QStringLiteral("\\s*$"), QRegularExpression::MultilineOption));
     data2.remove(QRegularExpression(QStringLiteral("^\\s*?\n"), QRegularExpression::MultilineOption));
     data2.remove(QRegularExpression(QStringLiteral("^\\s*#.*?\n"), QRegularExpression::MultilineOption));
-    data2.remove(QRegularExpression(QStringLiteral("\\s*#.*?$"), QRegularExpression::MultilineOption));
+    data2.remove(QRegularExpression(QStringLiteral("^\\s*['\"]['\"]['\"].*?['\"]['\"]['\"]\\s*?\n"), QRegularExpression::MultilineOption | QRegularExpression::DotMatchesEverythingOption));
     return data2.replace(QStringLiteral("    "), QStringLiteral("\t")).toUtf8();
 }
 
