@@ -130,6 +130,11 @@
 #define LEARN_MTU_ADDED_MINOR 9
 #define LEARN_MTU_ADDED_PATCH 9
 
+#define OPENMV_DISK_ADDED_MAJOR 3
+#define OPENMV_DISK_ADDED_MINOR 2
+#define OPENMV_DISK_ADDED_PATCH 0
+#define OPENMV_DISK_ADDED_NAME "/.openmv_disk"
+
 #define FRAME_SIZE_DUMP_SPACING     5 // in ms
 #define GET_SCRIPT_RUNNING_SPACING  100 // in ms
 #define GET_TX_BUFFER_SPACING       5 // in ms
