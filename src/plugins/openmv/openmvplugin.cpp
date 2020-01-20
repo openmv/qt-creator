@@ -2948,7 +2948,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 {
                     QMessageBox::information(Core::ICore::dialogParent(),
                         tr("Connect"),
-                        tr("Try doing:\n\nsudo adduser %L1 dialout\n\n...in a terminal and then restart your computer.").arg(Utils::Environment::systemEnvironment().userName()));
+                        tr("Try doing:\n\n") + QString(QStringLiteral("sudo adduser %L1 dialout\n\n")).arg(Utils::Environment::systemEnvironment().userName()) + tr("...in a terminal and then restart your computer."));
                 }
 
                 CONNECT_END();
@@ -3655,22 +3655,22 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             {
                                 QMessageBox::information(Core::ICore::dialogParent(),
                                     tr("Connect"),
-                                    tr("PyDFU requires the following libraries to be installed:\n\n"
-                                       "MacPorts:\n"
-                                       "    sudo port install libusb py-pip\n"
-                                       "    sudo pip install pyusb\n\n"
-                                       "HomeBrew:\n"
-                                       "    sudo brew install libusb python\n"
-                                       "    sudo pip install pyusb"));
+                                    tr("PyDFU requires the following libraries to be installed:\n\n") +
+                                    QStringLiteral("MacPorts:\n"
+                                                   "    sudo port install libusb py-pip\n"
+                                                   "    sudo pip install pyusb\n\n"
+                                                   "HomeBrew:\n"
+                                                   "    sudo brew install libusb python\n"
+                                                   "    sudo pip install pyusb"));
                             }
 
                             if(Utils::HostOsInfo::isLinuxHost())
                             {
                                 QMessageBox::information(Core::ICore::dialogParent(),
                                     tr("Connect"),
-                                    tr("PyDFU requires the following libraries to be installed:\n\n"
-                                       "    sudo apt-get install libusb-1.0 python-pip\n"
-                                       "    sudo pip install pyusb"));
+                                    tr("PyDFU requires the following libraries to be installed:\n\n") +
+                                    QStringLiteral("    sudo apt-get install libusb-1.0 python-pip\n"
+                                                   "    sudo pip install pyusb"));
                             }
                         }
                     }
@@ -4920,7 +4920,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     {
                                         QMessageBox::information(Core::ICore::dialogParent(),
                                             tr("New Terminal"),
-                                            tr("Try doing:\n\nsudo adduser %L1 dialout\n\n...in a terminal and then restart your computer.").arg(Utils::Environment::systemEnvironment().userName()));
+                                            tr("Try doing:\n\n") + QStringLiteral("sudo adduser %L1 dialout\n\n").arg(Utils::Environment::systemEnvironment().userName()) + tr("...in a terminal and then restart your computer."));
                                     }
 
                                     delete terminalDevice;
