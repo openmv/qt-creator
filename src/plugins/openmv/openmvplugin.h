@@ -82,6 +82,7 @@
 #define DISABLE_FRAME_BUFFER_STATE "DisableFrameBufferState"
 #define HISTOGRAM_COLOR_SPACE_STATE "HistogramColorSpace"
 #define DONT_SHOW_EXAMPLES_AGAIN "DontShowExamplesAgain"
+#define DONT_SHOW_LED_STATES_AGAIN "DontShowLEDStatesAgain"
 #define LAST_FIRMWARE_PATH "LastFirmwarePath"
 #define LAST_FLASH_FS_ERASE_STATE "LastFlashFSEraseState"
 #define LAST_BOARD_TYPE_STATE "LastBoardTypeState"
@@ -126,6 +127,7 @@
 #define OLD_API_MINOR 7
 #define OLD_API_PATCH 0
 #define OLD_API_BOARD "OPENMV2"
+
 #define LEARN_MTU_ADDED_MAJOR 9
 #define LEARN_MTU_ADDED_MINOR 9
 #define LEARN_MTU_ADDED_PATCH 9
