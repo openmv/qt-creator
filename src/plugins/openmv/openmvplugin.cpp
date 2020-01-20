@@ -3792,6 +3792,24 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         // Stopping ///////////////////////////////////////////////////////////
 
+        if((major2 < OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR)
+        || ((major2 == OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR) && (minor2 < OPENMV_DBG_PROTOCOL_CHNAGE_MINOR))
+        || ((major2 == OPENMV_DBG_PROTOCOL_CHNAGE_PATCH) && (minor2 == OPENMV_DBG_PROTOCOL_CHNAGE_PATCH) && (patch2 < OPENMV_DBG_PROTOCOL_CHNAGE_PATCH)))
+        {
+            m_iodevice->breakUpGetAttributeCommand(false);
+            m_iodevice->breakUpSetAttributeCommand(false);
+            m_iodevice->breakUpFBEnable(false);
+            m_iodevice->breakUpJPEGEnable(false);
+        }
+        else
+        {
+
+            m_iodevice->breakUpGetAttributeCommand(true);
+            m_iodevice->breakUpSetAttributeCommand(true);
+            m_iodevice->breakUpFBEnable(true);
+            m_iodevice->breakUpJPEGEnable(true);
+        }
+
         m_iodevice->scriptStop();
         m_iodevice->jpegEnable(m_jpgCompress->isChecked());
         m_iodevice->fbEnable(!m_disableFrameBuffer->isChecked());

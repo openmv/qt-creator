@@ -78,6 +78,10 @@ public slots: // private
 
     void command();
     void commandResult(const OpenMVPluginSerialPortCommandResult &commandResult);
+    void breakUpGetAttributeCommand(bool on) { m_breakUpGetAttributeCommand = on; }
+    void breakUpSetAttributeCommand(bool on) { m_breakUpSetAttributeCommand = on; }
+    void breakUpFBEnable(bool on) { m_breakUpFBEnable = on; }
+    void breakUpJPEGEnable(bool on) { m_breakUpJPEGEnable = on; }
 
 signals:
 
@@ -118,6 +122,10 @@ private:
     int m_frameSizeW, m_frameSizeH, m_frameSizeBPP, m_mtu;
     QByteArray m_pixelBuffer, m_lineBuffer;
     bool m_timeout;
+    bool m_breakUpGetAttributeCommand;
+    bool m_breakUpSetAttributeCommand;
+    bool m_breakUpFBEnable;
+    bool m_breakUpJPEGEnable;
 };
 
 #endif // OPENMVPLUGINIO_H

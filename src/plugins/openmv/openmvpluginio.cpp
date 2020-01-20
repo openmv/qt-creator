@@ -19,10 +19,18 @@ enum
     USBDBG_DESCRIPTOR_SAVE_CPL_0,
     USBDBG_DESCRIPTOR_SAVE_CPL_1,
     USBDBG_ATTR_READ_CPL,
+    USBDBG_ATTR_READ_CPL_0,
+    USBDBG_ATTR_READ_CPL_1,
     USBDBG_ATTR_WRITE_CPL,
+    USBDBG_ATTR_WRITE_CPL_0,
+    USBDBG_ATTR_WRITE_CPL_1,
     USBDBG_SYS_RESET_CPL,
     USBDBG_FB_ENABLE_CPL,
+    USBDBG_FB_ENABLE_CPL_0,
+    USBDBG_FB_ENABLE_CPL_1,
     USBDBG_JPEG_ENABLE_CPL,
+    USBDBG_JPEG_ENABLE_CPL_0,
+    USBDBG_JPEG_ENABLE_CPL_1,
     USBDBG_TX_BUF_LEN_CPL,
     USBDBG_TX_BUF_CPL,
     BOOTLDR_START_CPL,
@@ -125,6 +133,10 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
     m_pixelBuffer = QByteArray();
     m_lineBuffer = QByteArray();
     m_timeout = bool();
+    m_breakUpGetAttributeCommand = bool();
+    m_breakUpSetAttributeCommand = bool();
+    m_breakUpFBEnable = bool();
+    m_breakUpJPEGEnable = bool();
 }
 
 void OpenMVPluginIO::command()
@@ -261,6 +273,24 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     emit attribute(deserializeByte(data));
                     break;
                 }
+                case USBDBG_ATTR_READ_CPL_0:
+                {
+                    break;
+                }
+                case USBDBG_ATTR_READ_CPL_1:
+                {
+                    emit attribute(deserializeByte(data));
+                    break;
+                }
+                case USBDBG_ATTR_WRITE_CPL_0:
+                {
+                    break;
+                }
+                case USBDBG_ATTR_WRITE_CPL_1:
+                {
+                    emit setAttrributeDone();
+                    break;
+                }
                 case USBDBG_ATTR_WRITE_CPL:
                 {
                     emit setAttrributeDone();
@@ -276,7 +306,25 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     emit fbEnableDone();
                     break;
                 }
+                case USBDBG_FB_ENABLE_CPL_0:
+                {
+                    break;
+                }
+                case USBDBG_FB_ENABLE_CPL_1:
+                {
+                    emit fbEnableDone();
+                    break;
+                }
                 case USBDBG_JPEG_ENABLE_CPL:
+                {
+                    emit jpegEnableDone();
+                    break;
+                }
+                case USBDBG_JPEG_ENABLE_CPL_0:
+                {
+                    break;
+                }
+                case USBDBG_JPEG_ENABLE_CPL_1:
                 {
                     emit jpegEnableDone();
                     break;
@@ -474,7 +522,25 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                         emit attribute(int());
                         break;
                     }
+                    case USBDBG_ATTR_READ_CPL_0:
+                    {
+                        break;
+                    }
+                    case USBDBG_ATTR_READ_CPL_1:
+                    {
+                        emit attribute(int());
+                        break;
+                    }
                     case USBDBG_ATTR_WRITE_CPL:
+                    {
+                        emit setAttrributeDone();
+                        break;
+                    }
+                    case USBDBG_ATTR_WRITE_CPL_0:
+                    {
+                        break;
+                    }
+                    case USBDBG_ATTR_WRITE_CPL_1:
                     {
                         emit setAttrributeDone();
                         break;
@@ -489,7 +555,25 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                         emit fbEnableDone();
                         break;
                     }
+                    case USBDBG_FB_ENABLE_CPL_0:
+                    {
+                        break;
+                    }
+                    case USBDBG_FB_ENABLE_CPL_1:
+                    {
+                        emit fbEnableDone();
+                        break;
+                    }
                     case USBDBG_JPEG_ENABLE_CPL:
+                    {
+                        emit jpegEnableDone();
+                        break;
+                    }
+                    case USBDBG_JPEG_ENABLE_CPL_0:
+                    {
+                        break;
+                    }
+                    case USBDBG_JPEG_ENABLE_CPL_1:
                     {
                         emit jpegEnableDone();
                         break;
@@ -736,27 +820,64 @@ void OpenMVPluginIO::descriptorSave(int x, int y, int w, int h, const QByteArray
 
 void OpenMVPluginIO::getAttribute(int attribute)
 {
-    QByteArray buffer;
-    serializeByte(buffer, __USBDBG_CMD);
-    serializeByte(buffer, __USBDBG_ATTR_READ);
-    serializeLong(buffer, ATTR_READ_RESPONSE_LEN);
-    serializeWord(buffer, attribute);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, ATTR_READ_RESPONSE_LEN, ATTR_READ_START_DELAY, ATTR_READ_END_DELAY));
-    m_completionQueue.enqueue(USBDBG_ATTR_READ_CPL);
-    command();
+    if(!m_breakUpGetAttributeCommand)
+    {
+        QByteArray buffer;
+        serializeByte(buffer, __USBDBG_CMD);
+        serializeByte(buffer, __USBDBG_ATTR_READ);
+        serializeLong(buffer, ATTR_READ_RESPONSE_LEN);
+        serializeWord(buffer, attribute);
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, ATTR_READ_RESPONSE_LEN, ATTR_READ_START_DELAY, ATTR_READ_END_DELAY));
+        m_completionQueue.enqueue(USBDBG_ATTR_READ_CPL);
+        command();
+    }
+    else
+    {
+        QByteArray buffer;
+        serializeByte(buffer, __USBDBG_CMD);
+        serializeByte(buffer, __USBDBG_ATTR_READ);
+        serializeLong(buffer, ATTR_READ_RESPONSE_LEN);
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), ATTR_READ_0_START_DELAY, ATTR_READ_0_END_DELAY));
+        m_completionQueue.enqueue(USBDBG_ATTR_READ_CPL_0);
+        command();
+        buffer.clear();
+        serializeWord(buffer, attribute);
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, ATTR_READ_RESPONSE_LEN, ATTR_READ_1_START_DELAY, ATTR_READ_1_END_DELAY));
+        m_completionQueue.enqueue(USBDBG_ATTR_READ_CPL_1);
+        command();
+    }
 }
 
 void OpenMVPluginIO::setAttribute(int attribute, int value)
 {
-    QByteArray buffer;
-    serializeByte(buffer, __USBDBG_CMD);
-    serializeByte(buffer, __USBDBG_ATTR_WRITE);
-    serializeLong(buffer, int());
-    serializeWord(buffer, attribute);
-    serializeWord(buffer, value);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), ATTR_WRITE_START_DELAY, ATTR_WRITE_END_DELAY));
-    m_completionQueue.enqueue(USBDBG_ATTR_WRITE_CPL);
-    command();
+    if(!m_breakUpSetAttributeCommand)
+    {
+        QByteArray buffer;
+        serializeByte(buffer, __USBDBG_CMD);
+        serializeByte(buffer, __USBDBG_ATTR_WRITE);
+        serializeLong(buffer, int());
+        serializeWord(buffer, attribute);
+        serializeWord(buffer, value);
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), ATTR_WRITE_START_DELAY, ATTR_WRITE_END_DELAY));
+        m_completionQueue.enqueue(USBDBG_ATTR_WRITE_CPL);
+        command();
+    }
+    else
+    {
+        QByteArray buffer;
+        serializeByte(buffer, __USBDBG_CMD);
+        serializeByte(buffer, __USBDBG_ATTR_WRITE);
+        serializeLong(buffer, int());
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), ATTR_WRITE_0_START_DELAY, ATTR_WRITE_0_END_DELAY));
+        m_completionQueue.enqueue(USBDBG_ATTR_WRITE_CPL_0);
+        command();
+        buffer.clear();
+        serializeWord(buffer, attribute);
+        serializeWord(buffer, value);
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), ATTR_WRITE_1_START_DELAY, ATTR_WRITE_1_END_DELAY));
+        m_completionQueue.enqueue(USBDBG_ATTR_WRITE_CPL_1);
+        command();
+    }
 }
 
 void OpenMVPluginIO::sysReset()
@@ -772,27 +893,64 @@ void OpenMVPluginIO::sysReset()
 
 void OpenMVPluginIO::fbEnable(bool enabled)
 {
-    QByteArray buffer;
-    serializeByte(buffer, __USBDBG_CMD);
-    serializeByte(buffer, __USBDBG_FB_ENABLE);
-    serializeLong(buffer, int());
-    serializeWord(buffer, enabled ? true : false);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), FB_ENABLE_START_DELAY, FB_ENABLE_END_DELAY));
-    m_completionQueue.enqueue(USBDBG_FB_ENABLE_CPL);
-    command();
+    if(!m_breakUpFBEnable)
+    {
+        QByteArray buffer;
+        serializeByte(buffer, __USBDBG_CMD);
+        serializeByte(buffer, __USBDBG_FB_ENABLE);
+        serializeLong(buffer, int());
+        serializeWord(buffer, enabled ? true : false);
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), FB_ENABLE_START_DELAY, FB_ENABLE_END_DELAY));
+        m_completionQueue.enqueue(USBDBG_FB_ENABLE_CPL);
+        command();
+    }
+    else
+    {
+        QByteArray buffer;
+        serializeByte(buffer, __USBDBG_CMD);
+        serializeByte(buffer, __USBDBG_FB_ENABLE);
+        serializeLong(buffer, int());
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), FB_ENABLE_0_START_DELAY, FB_ENABLE_0_END_DELAY));
+        m_completionQueue.enqueue(USBDBG_FB_ENABLE_CPL_0);
+        command();
+        buffer.clear();
+        serializeWord(buffer, enabled ? true : false);
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), FB_ENABLE_1_START_DELAY, FB_ENABLE_1_END_DELAY));
+        m_completionQueue.enqueue(USBDBG_FB_ENABLE_CPL_1);
+        command();
+    }
 }
 
 void OpenMVPluginIO::jpegEnable(bool enabled)
 {
     Q_UNUSED(enabled)
-//  QByteArray buffer;
-//  serializeByte(buffer, __USBDBG_CMD);
-//  serializeByte(buffer, __USBDBG_JPEG_ENABLE);
-//  serializeLong(buffer, int());
-//  serializeWord(buffer, enabled ? true : false);
-//  m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), JPEG_ENABLE_START_DELAY, JPEG_ENABLE_END_DELAY));
-//  m_completionQueue.enqueue(USBDBG_JPEG_ENABLE_CPL);
-//  command();
+
+//    if(!m_breakUpJPEGEnable)
+//    {
+//        QByteArray buffer;
+//        serializeByte(buffer, __USBDBG_CMD);
+//        serializeByte(buffer, __USBDBG_JPEG_ENABLE);
+//        serializeLong(buffer, int());
+//        serializeWord(buffer, enabled ? true : false);
+//        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), JPEG_ENABLE_START_DELAY, JPEG_ENABLE_END_DELAY));
+//        m_completionQueue.enqueue(USBDBG_JPEG_ENABLE_CPL);
+//        command();
+//    }
+//    else
+//    {
+//        QByteArray buffer;
+//        serializeByte(buffer, __USBDBG_CMD);
+//        serializeByte(buffer, __USBDBG_JPEG_ENABLE);
+//        serializeLong(buffer, int());
+//        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), JPEG_ENABLE_0_START_DELAY, JPEG_ENABLE_0_END_DELAY));
+//        m_completionQueue.enqueue(USBDBG_JPEG_ENABLE_CPL_0);
+//        command();
+//        buffer.clear();
+//        serializeWord(buffer, enabled ? true : false);
+//        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), JPEG_ENABLE_1_START_DELAY, JPEG_ENABLE_1_END_DELAY));
+//        m_completionQueue.enqueue(USBDBG_JPEG_ENABLE_CPL_1);
+//        command();
+//    }
 }
 
 void OpenMVPluginIO::getTxBuffer()
