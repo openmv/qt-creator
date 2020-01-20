@@ -28,7 +28,8 @@
 #define __USBDBG_SCRIPT_RUNNING             0x87
 #define __USBDBG_TEMPLATE_SAVE              0x08
 #define __USBDBG_DESCRIPTOR_SAVE            0x09
-#define __USBDBG_ATTR_READ                  0x8A
+#define __USBDBG_ATTR_READ                  0x8A // old
+#define __USBDBG_ATTR_READ_2                0xCA // new
 #define __USBDBG_ATTR_WRITE                 0x0B
 #define __USBDBG_SYS_RESET                  0x0C
 #define __USBDBG_FB_ENABLE                  0x0D
@@ -51,6 +52,11 @@
 #define FRAME_SIZE_RESPONSE_LEN             12
 #define SCRIPT_RUNNING_RESPONSE_LEN         4
 #define ATTR_READ_RESPONSE_LEN              1
+#define ATTR_READ_2_PAYLOAD_LEN             4
+#define ATTR_READ_2_REPONSE_LEN             4
+#define ATTR_WRITE_PAYLOAD_LEN              8
+#define FB_ENABLE_PAYLOAD_LEN               4
+#define JPEG_ENABLE_PAYLOAD_LEN             4
 #define TX_BUF_LEN_RESPONSE_LEN             4
 
 #define BOOTLDR_START_RESPONSE_LEN          4

@@ -299,9 +299,9 @@ void OpenMVPluginHistogram::updatePlot(QCPGraph *graph, int channel)
     m_lowerQuartile = 0;
     m_upperQuartile = 0;
 
-    int sum = 0;
-    int avg = 0;
-    int mode_count = 0;
+    long long sum = 0;
+    long long avg = 0;
+    long long mode_count = 0;
     bool min_flag = false;
 
     for(int i = 0; i < vector.size(); i++)
@@ -331,12 +331,12 @@ void OpenMVPluginHistogram::updatePlot(QCPGraph *graph, int channel)
 
     m_mean = sum ? round(avg / double(sum)) : 0;
 
-    int lower_q = ((sum * 1) + 3) / 4; // 1/4th
-    int median = (sum + 1) / 2; // 1/2th
-    int upper_q = ((sum * 3) + 3) / 4; // 3/4th
+    long long lower_q = ((sum * 1) + 3) / 4; // 1/4th
+    long long median = (sum + 1) / 2; // 1/2th
+    long long upper_q = ((sum * 3) + 3) / 4; // 3/4th
 
-    int st_dev_count = 0;
-    int median_count = 0;
+    long long st_dev_count = 0;
+    long long median_count = 0;
 
     for(int i = 0; i < vector.size(); i++)
     {

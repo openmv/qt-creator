@@ -6028,7 +6028,7 @@ QByteArray loadFilter(const QByteArray &data)
     }
     in_state = IN_NONE;
 
-    for(int i = 0, j = data2.size(), k; i < j; i++)
+    for(int i = 0, j = data2.size(), k = 0; i < j; i++)
     {
         switch(in_state)
         {
