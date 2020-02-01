@@ -8387,7 +8387,7 @@ msgstr "Error al crear la carpeta de documentos!"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1727
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "OpenMV Cam LED Colors"
-msgstr ""
+msgstr "Colores LED de la cámara OpenMV"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1730
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8420,6 +8420,20 @@ msgid ""
 "Please check that your OpenMV Cam's camera module is installed securely.\n"
 "\n"
 msgstr ""
+"¡Gracias por usar OpenMV Cam y OpenMV IDE!\\n\\nEl LED a bordo de su OpenMV "
+"Cam parpadea con diferentes colores para indicar su estado:\\n\\nVerde "
+"parpadeante:\\n\\nEl gestor de arranque a bordo de su OpenMV Cam se está "
+"ejecutando. El gestor de arranque integrado funciona durante unos segundos "
+"cuando su OpenMV Cam se alimenta a través de USB para permitir que OpenMV "
+"IDE reprograme su OpenMV Cam.\\n\\nAzul intermitente:\\n\\nSu OpenMV Cam "
+"está ejecutando el script main.py predeterminado a bordo.\\n\\nSi tiene una "
+"tarjeta SD instalada o sobrescribió el script main.py en su OpenMV Cam, "
+"ejecutará el código que cargó en su lugar.\\n\\nSi el LED parpadea en azul "
+"pero OpenMV IDE no se puede conectar a su OpenMV Cam, asegúrese de conectar "
+"su OpenMV Cam a su PC con un cable USB que suministre datos y "
+"energía.\\n\\nBlanco parpadeante:\\n\\nEl firmware de su OpenMV Cam está "
+"entrando en pánico debido a una falla de hardware. Compruebe que el módulo "
+"de cámara de su cámara OpenMV Cam esté instalado de forma segura.\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1828
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4908
@@ -9165,18 +9179,20 @@ msgstr "No muestres este mensaje otra vez."
 #: ../../../src/plugins/openmv/openmvplugin.cpp:773
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Run Bootloader (Load Firmware)"
-msgstr ""
+msgstr "Ejecutar Bootloader (cargar firmware)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:778
 #: ../../../src/plugins/openmv/openmvplugin.cpp:783
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Erase Onboard Data Flash"
-msgstr ""
+msgstr "Borrar a bordo de datos Flash"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:784
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Are you sure you want to erase your OpenMV Cam's onboard flash drive?"
 msgstr ""
+"¿Está seguro de que desea borrar la unidad flash incorporada de su OpenMV "
+"Cam?"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3003
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4973
@@ -9184,13 +9200,13 @@ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Try doing:\n"
 "\n"
-msgstr ""
+msgstr "Trata de hacerlo:\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3003
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4973
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "...in a terminal and then restart your computer."
-msgstr ""
+msgstr "... en una terminal y luego reinicie su computadora."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3243
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9198,21 +9214,21 @@ msgid ""
 "\n"
 "\n"
 "Hit cancel to skip to DFU reprogramming."
-msgstr ""
+msgstr "\\n\\nPresione cancelar para saltar a la reprogramación de DFU."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3554
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Onboard Data Flash Erased!\n"
 "\n"
-msgstr ""
+msgstr "Flash de datos a bordo borrado!\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3554
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Firmware Upgrade complete!\n"
 "\n"
-msgstr ""
+msgstr "Actualización de firmware completada!\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3555
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9221,6 +9237,8 @@ msgid ""
 "attached... this may take a while.\n"
 "\n"
 msgstr ""
+"Su OpenMV Cam comenzará a ejecutar su autocomprobación incorporada si no "
+"tiene una tarjeta SD conectada ... esto puede llevar un tiempo.\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3556
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9228,6 +9246,8 @@ msgid ""
 "Click OK when your OpenMV Cam's RGB LED starts blinking blue - which "
 "indicates the self-test is complete."
 msgstr ""
+"Haga clic en Aceptar cuando el LED RGB de su OpenMV Cam comience a parpadear "
+"en azul, lo que indica que la autocomprobación se ha completado."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3710
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3723
@@ -9235,12 +9255,12 @@ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "PyDFU requires the following libraries to be installed:\n"
 "\n"
-msgstr ""
+msgstr "PyDFU requiere la instalación de las siguientes bibliotecas:\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4002
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Syncing..."
-msgstr ""
+msgstr "Sincronizando ..."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4373
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9768,7 +9788,7 @@ msgstr "Red para copiar a la cámara OpenMV"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:928
 msgctxt "QObject|"
 msgid "TensorFlow Model (*.tflite);;Neural Network Model (*.network)"
-msgstr ""
+msgstr "Modelo TensorFlow (*.tflite);;Modelo de red neuronal (*.network)"
 
 #~ msgctxt "QObject|"
 #~ msgid "Neural Network Model (*.network)"

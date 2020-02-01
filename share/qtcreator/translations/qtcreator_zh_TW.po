@@ -8196,7 +8196,7 @@ msgstr "无法创建文档文件夹！"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1727
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "OpenMV Cam LED Colors"
-msgstr ""
+msgstr "OpenMV凸輪LED顏色"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1730
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8229,6 +8229,14 @@ msgid ""
 "Please check that your OpenMV Cam's camera module is installed securely.\n"
 "\n"
 msgstr ""
+"感謝您使用OpenMV Cam和OpenMV IDE！\\n\\nOpenMV "
+"Cam的板載LED閃爍著不同的顏色，以指示其狀態：\\n\\n呈綠色閃爍：\\n\\n您的OpenMV "
+"Cam的內置引導加載程序正在運行。通過USB為您的OpenMV Cam供電時，板載引導程序會運行幾秒鐘，以允許OpenMV "
+"IDE重新編程您的OpenMV Cam。\\n\\n呈藍色閃爍：\\n\\n您的OpenMV "
+"Cam正在板上運行默認的main.py腳本。\\n\\n如果您已安裝SD卡或在OpenMV "
+"Cam上覆蓋了main.py腳本，則它將運行您加載在其中的任何代碼。\\n\\n如果LED閃爍藍色，但OpenMV IDE無法連接到OpenMV "
+"Cam，請確保使用提供數據和電源的USB電纜將OpenMV Cam連接到PC。\\n\\n閃爍白色：\\n\\n由於硬件故障，您的OpenMV "
+"Cam的固件崩潰了。請檢查是否已正確安裝OpenMV Cam的攝像頭模塊。\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1828
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4908
@@ -8940,18 +8948,18 @@ msgstr "不要再显示此消息。"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:773
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Run Bootloader (Load Firmware)"
-msgstr ""
+msgstr "運行引導加載程序（加載固件）"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:778
 #: ../../../src/plugins/openmv/openmvplugin.cpp:783
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Erase Onboard Data Flash"
-msgstr ""
+msgstr "擦除板載數據閃存"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:784
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Are you sure you want to erase your OpenMV Cam's onboard flash drive?"
-msgstr ""
+msgstr "您確定要刪除OpenMV Cam的內置閃存驅動器嗎？"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3003
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4973
@@ -8959,13 +8967,13 @@ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Try doing:\n"
 "\n"
-msgstr ""
+msgstr "嘗試做：\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3003
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4973
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "...in a terminal and then restart your computer."
-msgstr ""
+msgstr "...在終端中，然後重新啟動計算機。"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3243
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8973,21 +8981,21 @@ msgid ""
 "\n"
 "\n"
 "Hit cancel to skip to DFU reprogramming."
-msgstr ""
+msgstr "\\n\\n點擊取消可跳至DFU重新編程。"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3554
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Onboard Data Flash Erased!\n"
 "\n"
-msgstr ""
+msgstr "板載數據閃存已擦除！\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3554
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Firmware Upgrade complete!\n"
 "\n"
-msgstr ""
+msgstr "固件升級完成！\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3555
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8995,14 +9003,14 @@ msgid ""
 "Your OpenMV Cam will start running its built-in self-test if no sd card is "
 "attached... this may take a while.\n"
 "\n"
-msgstr ""
+msgstr "如果未連接sd卡，則OpenMV Cam將開始運行其內置的自檢功能，這可能需要一段時間。\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3556
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Click OK when your OpenMV Cam's RGB LED starts blinking blue - which "
 "indicates the self-test is complete."
-msgstr ""
+msgstr "當您的OpenMV Cam的RGB LED開始閃爍藍色時，單擊“確定”，這表明自檢完成。"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3710
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3723
@@ -9010,12 +9018,12 @@ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "PyDFU requires the following libraries to be installed:\n"
 "\n"
-msgstr ""
+msgstr "PyDFU需要安裝以下庫：\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4002
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Syncing..."
-msgstr ""
+msgstr "同步中..."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4373
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9530,7 +9538,7 @@ msgstr "Yào fùzhì dào OpenMV Cam de wǎngluò"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:928
 msgctxt "QObject|"
 msgid "TensorFlow Model (*.tflite);;Neural Network Model (*.network)"
-msgstr ""
+msgstr "TensorFlow模型 (*.tflite);;神經網絡模型(*.network)"
 
 #~ msgctxt "QObject|"
 #~ msgid "Neural Network Model (*.network)"

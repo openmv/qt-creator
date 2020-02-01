@@ -8195,7 +8195,7 @@ msgstr "无法创建文档文件夹！"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1727
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "OpenMV Cam LED Colors"
-msgstr ""
+msgstr "OpenMV凸轮LED颜色"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1730
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8228,6 +8228,14 @@ msgid ""
 "Please check that your OpenMV Cam's camera module is installed securely.\n"
 "\n"
 msgstr ""
+"感谢您使用OpenMV Cam和OpenMV IDE！\\n\\nOpenMV "
+"Cam的板载LED闪烁着不同的颜色，以指示其状态：\\n\\n呈绿色闪烁：\\n\\n您的OpenMV "
+"Cam的内置引导加载程序正在运行。通过USB为您的OpenMV Cam供电时，板载引导程序会运行几秒钟，以允许OpenMV "
+"IDE重新编程您的OpenMV Cam。\\n\\n呈蓝色闪烁：\\n\\n您的OpenMV "
+"Cam正在板上运行默认的main.py脚本。\\n\\n如果您已安装SD卡或在OpenMV "
+"Cam上覆盖了main.py脚本，则它将运行您加载在其中的任何代码。\\n\\n如果LED闪烁蓝色，但OpenMV IDE无法连接到OpenMV "
+"Cam，请确保使用提供数据和电源的USB电缆将OpenMV Cam连接到PC。\\n\\n闪烁白色：\\n\\n由于硬件故障，您的OpenMV "
+"Cam的固件崩溃了。请检查是否已正确安装OpenMV Cam的摄像头模块。\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1828
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4908
@@ -8938,18 +8946,18 @@ msgstr "不要再显示此消息。"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:773
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Run Bootloader (Load Firmware)"
-msgstr ""
+msgstr "运行引导加载程序（加载固件）"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:778
 #: ../../../src/plugins/openmv/openmvplugin.cpp:783
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Erase Onboard Data Flash"
-msgstr ""
+msgstr "擦除板载数据闪存"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:784
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Are you sure you want to erase your OpenMV Cam's onboard flash drive?"
-msgstr ""
+msgstr "您确定要删除OpenMV Cam的内置闪存驱动器吗？"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3003
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4973
@@ -8957,13 +8965,13 @@ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Try doing:\n"
 "\n"
-msgstr ""
+msgstr "尝试做：\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3003
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4973
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "...in a terminal and then restart your computer."
-msgstr ""
+msgstr "...在终端中，然后重新启动计算机。"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3243
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8971,21 +8979,21 @@ msgid ""
 "\n"
 "\n"
 "Hit cancel to skip to DFU reprogramming."
-msgstr ""
+msgstr "\\n\\n点击取消可跳至DFU重新编程。"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3554
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Onboard Data Flash Erased!\n"
 "\n"
-msgstr ""
+msgstr "板载数据闪存已擦除！\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3554
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Firmware Upgrade complete!\n"
 "\n"
-msgstr ""
+msgstr "固件升级完成！\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3555
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8993,14 +9001,14 @@ msgid ""
 "Your OpenMV Cam will start running its built-in self-test if no sd card is "
 "attached... this may take a while.\n"
 "\n"
-msgstr ""
+msgstr "如果未连接sd卡，则OpenMV Cam将开始运行其内置的自检功能，这可能需要一段时间。\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3556
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Click OK when your OpenMV Cam's RGB LED starts blinking blue - which "
 "indicates the self-test is complete."
-msgstr ""
+msgstr "当您的OpenMV Cam的RGB LED开始闪烁蓝色时，单击“确定”，这表明自检完成。"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3710
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3723
@@ -9008,12 +9016,12 @@ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "PyDFU requires the following libraries to be installed:\n"
 "\n"
-msgstr ""
+msgstr "PyDFU需要安装以下库：\\n\\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4002
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Syncing..."
-msgstr ""
+msgstr "同步中..."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4373
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9528,7 +9536,7 @@ msgstr "要复制到OpenMV Cam的网络"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:928
 msgctxt "QObject|"
 msgid "TensorFlow Model (*.tflite);;Neural Network Model (*.network)"
-msgstr ""
+msgstr "TensorFlow模型 (*.tflite);;神经网络模型 (*.network)"
 
 #~ msgctxt "QObject|"
 #~ msgid "Neural Network Model (*.network)"
@@ -10168,7 +10176,7 @@ msgstr "关闭前复制上面的阈值。"
 #, qt-format
 #~ msgctxt "Firmware::RunTime"
 #~ msgid "cannot create '%1' instances"
-#~ msgstr "不能创建 '%1' 实例"
+#~ msgstr "不能创建 '%1' instances"
 
 #, qt-format
 #~ msgctxt "Firmware::RunTime"
@@ -10215,7 +10223,7 @@ msgstr "关闭前复制上面的阈值。"
 
 #~ msgctxt "Firmware::RunTime"
 #~ msgid "constant must be an integer"
-#~ msgstr "常量必须是一个数字"
+#~ msgstr "constant 必须是一个数字"
 
 #, qt-format
 #~ msgctxt "Firmware::RunTime"
@@ -10229,11 +10237,11 @@ msgstr "关闭前复制上面的阈值。"
 
 #~ msgctxt "Firmware::RunTime"
 #~ msgid "decimal numbers not supported"
-#~ msgstr "不支持小数"
+#~ msgstr "不支持 decimal numbers"
 
 #~ msgctxt "Firmware::RunTime"
 #~ msgid "Descriptor type is not supported"
-#~ msgstr "不支持 Descriptor 类型"
+#~ msgstr "不支持 Descriptor type"
 
 #~ msgctxt "Firmware::RunTime"
 #~ msgid "empty heap"
