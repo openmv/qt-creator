@@ -10168,7 +10168,7 @@ msgstr "关闭前复制上面的阈值。"
 #, qt-format
 #~ msgctxt "Firmware::RunTime"
 #~ msgid "cannot create '%1' instances"
-#~ msgstr "不能创建 '%1' instances"
+#~ msgstr "不能创建 '%1' 实例"
 
 #, qt-format
 #~ msgctxt "Firmware::RunTime"
@@ -10215,7 +10215,7 @@ msgstr "关闭前复制上面的阈值。"
 
 #~ msgctxt "Firmware::RunTime"
 #~ msgid "constant must be an integer"
-#~ msgstr "constant 必须是一个数字"
+#~ msgstr "常量必须是一个数字"
 
 #, qt-format
 #~ msgctxt "Firmware::RunTime"
@@ -10229,11 +10229,11 @@ msgstr "关闭前复制上面的阈值。"
 
 #~ msgctxt "Firmware::RunTime"
 #~ msgid "decimal numbers not supported"
-#~ msgstr "不支持 decimal numbers"
+#~ msgstr "不支持小数"
 
 #~ msgctxt "Firmware::RunTime"
 #~ msgid "Descriptor type is not supported"
-#~ msgstr "不支持 Descriptor type"
+#~ msgstr "不支持 Descriptor 类型"
 
 #~ msgctxt "Firmware::RunTime"
 #~ msgid "empty heap"
