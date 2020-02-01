@@ -3999,29 +3999,27 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                                 tr("Failed to eject \"%L1\"!").arg(m_portPath));
                         }
 #elif defined(Q_OS_LINUX)
-                        bool ok = false;
+                        QProgressDialog *dialog = new QProgressDialog(tr("Syncing..."), QString(), 0, 0, Core::ICore::dialogParent(),
+                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                        dialog.setWindowModality(Qt::ApplicationModal);
+                        dialog.setAttribute(Qt::WA_ShowWithoutActivating);
+                        dialog.setCancelButton(Q_NULLPTR);
+                        QTimer::singleShot(1000, dialog, &QProgressDialog::show);
 
-                        DIR *dirp = opendir(m_portPath.toUtf8().constData());
+                        Utils::SynchronousProcess process;
+                        Utils::SynchronousProcessResponse response;
 
-                        if(dirp)
-                        {
-                            if(syncfs(dirfd(dirp)) >= 0)
-                            {
-                                ok = true;
-                            }
+                        response = process.run(QStringLiteral("sync"), QStringList());
 
-                            if(closedir(dirp) < 0)
-                            {
-                                ok = false;
-                            }
-                        }
-
-                        if(!ok)
+                        if(response.result != Utils::SynchronousProcessResponse::Finished)
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
                                 tr("Disconnect"),
                                 tr("Failed to eject \"%L1\"!").arg(m_portPath));
                         }
+
+                        delete dialog;
 #elif defined(Q_OS_MAC)
                         if(sync_volume_np(m_portPath.toUtf8().constData(), SYNC_VOLUME_FULLSYNC | SYNC_VOLUME_WAIT) < 0)
                         {
