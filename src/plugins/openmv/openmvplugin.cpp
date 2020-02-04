@@ -787,13 +787,19 @@ void OpenMVPlugin::extensionsInitialized()
     });
     toolsMenu->addSeparator();
 
+    QAction *openDriveFolderCommand = new QAction(tr("Open OpenMV Cam Drive folder"), this);
+    m_openDriveFolderCommand = Core::ActionManager::registerAction(openDriveFolderCommand, Core::Id("OpenMV.OpenDriveFolder"));
+    toolsMenu->addAction(m_openDriveFolderCommand);
+    openDriveFolderCommand->setEnabled(false);
+    connect(openDriveFolderCommand, &QAction::triggered, this, [this] {Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(), m_portPath);});
+
     QAction *configureSettingsCommand = new QAction(tr("Configure OpenMV Cam settings file"), this);
     m_configureSettingsCommand = Core::ActionManager::registerAction(configureSettingsCommand, Core::Id("OpenMV.Settings"));
     toolsMenu->addAction(m_configureSettingsCommand);
     configureSettingsCommand->setEnabled(false);
     connect(configureSettingsCommand, &QAction::triggered, this, &OpenMVPlugin::configureSettings);
 
-    QAction *saveCommand = new QAction(tr("Save open script to OpenMV Cam"), this);
+    QAction *saveCommand = new QAction(tr("Save open script to OpenMV Cam (as main.py)"), this);
     m_saveCommand = Core::ActionManager::registerAction(saveCommand, Core::Id("OpenMV.Save"));
     toolsMenu->addAction(m_saveCommand);
     saveCommand->setEnabled(false);
@@ -1061,6 +1067,7 @@ void OpenMVPlugin::extensionsInitialized()
 
         if(m_connected)
         {
+            m_openDriveFolderCommand->action()->setEnabled(!m_portPath.isEmpty());
             m_configureSettingsCommand->action()->setEnabled(!m_portPath.isEmpty());
             m_saveCommand->action()->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
             m_startCommand->action()->setEnabled((!m_running) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
@@ -1082,6 +1089,7 @@ void OpenMVPlugin::extensionsInitialized()
         if(m_connected)
         {
             Core::IEditor *editor = Core::EditorManager::currentEditor();
+            m_openDriveFolderCommand->action()->setEnabled(!m_portPath.isEmpty());
             m_configureSettingsCommand->action()->setEnabled(!m_portPath.isEmpty());
             m_saveCommand->action()->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
             m_startCommand->action()->setEnabled((!running) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
@@ -3887,6 +3895,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_patch = patch2;
         m_errorFilterString = QString();
 
+        m_openDriveFolderCommand->action()->setEnabled(false);
         m_configureSettingsCommand->action()->setEnabled(false);
         m_saveCommand->action()->setEnabled(false);
         m_resetCommand->action()->setEnabled(true);
@@ -4061,6 +4070,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_portPath = QString();
             m_errorFilterString = QString();
 
+            m_openDriveFolderCommand->action()->setEnabled(false);
             m_configureSettingsCommand->action()->setEnabled(false);
             m_saveCommand->action()->setEnabled(false);
             m_resetCommand->action()->setEnabled(false);
@@ -4818,6 +4828,7 @@ void OpenMVPlugin::setPortPath(bool silent)
         m_pathButton->setText((!m_portPath.isEmpty()) ? tr("Drive: %L1").arg(m_portPath) : tr("Drive:"));
 
         Core::IEditor *editor = Core::EditorManager::currentEditor();
+        m_openDriveFolderCommand->action()->setEnabled(!m_portPath.isEmpty());
         m_configureSettingsCommand->action()->setEnabled(!m_portPath.isEmpty());
         m_saveCommand->action()->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
 

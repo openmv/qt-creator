@@ -12,6 +12,7 @@
 #include <coreplugin/actionmanager/actioncontainer.h>
 #include <coreplugin/actionmanager/actionmanager.h>
 #include <coreplugin/editormanager/editormanager.h>
+#include <coreplugin/fileutils.h>
 #include <coreplugin/fancyactionbar.h>
 #include <coreplugin/fancytabwidget.h>
 #include <coreplugin/icore.h>
@@ -287,6 +288,7 @@ private:
 
     Core::Command *m_bootloaderCommand;
     Core::Command *m_eraseCommand;
+    Core::Command *m_openDriveFolderCommand;
     Core::Command *m_configureSettingsCommand;
     Core::Command *m_saveCommand;
     Core::Command *m_resetCommand;
