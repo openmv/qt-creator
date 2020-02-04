@@ -4100,9 +4100,9 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                         QProgressDialog *dialog = new QProgressDialog(tr("Syncing..."), QString(), 0, 0, Core::ICore::dialogParent(),
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
-                        dialog.setWindowModality(Qt::ApplicationModal);
-                        dialog.setAttribute(Qt::WA_ShowWithoutActivating);
-                        dialog.setCancelButton(Q_NULLPTR);
+                        dialog->setWindowModality(Qt::ApplicationModal);
+                        dialog->setAttribute(Qt::WA_ShowWithoutActivating);
+                        dialog->setCancelButton(Q_NULLPTR);
                         QTimer::singleShot(1000, dialog, &QProgressDialog::show);
 
                         Utils::SynchronousProcess process;
