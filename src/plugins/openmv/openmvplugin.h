@@ -279,6 +279,8 @@ private:
     int m_major;
     int m_minor;
     int m_patch;
+    QString m_boardType;
+    QString m_sensorType;
     int m_reconnects;
     QString m_portName;
     QString m_portPath;
@@ -303,6 +305,8 @@ private:
     OpenMVPluginFB *m_frameBuffer;
     OpenMVPluginHistogram *m_histogram;
 
+    Utils::ElidingLabel *m_boardLabel;
+    Utils::ElidingLabel *m_sensorLabel;
     Utils::ElidingToolButton *m_versionButton;
     Utils::ElidingLabel *m_portLabel;
     Utils::ElidingToolButton *m_pathButton;

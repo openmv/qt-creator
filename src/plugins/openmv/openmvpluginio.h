@@ -63,6 +63,7 @@ public slots:
     void fbEnable(bool enable);
     void jpegEnable(bool enabled);
     void getTxBuffer();
+    void sensorId();
     void bootloaderStart();
     void bootloaderReset();
     void flashErase(int sector);
@@ -100,6 +101,7 @@ signals:
     void fbEnableDone();
     void jpegEnableDone();
     void printData(const QByteArray &data);
+    void sensorIdDone(int id);
     void gotBootloaderStart(bool ok, int version);
     void bootloaderResetDone(bool ok);
     void flashEraseDone(bool ok);

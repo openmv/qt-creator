@@ -33,6 +33,7 @@ enum
     USBDBG_JPEG_ENABLE_CPL_1,
     USBDBG_TX_BUF_LEN_CPL,
     USBDBG_TX_BUF_CPL,
+    USBDBG_SENSOR_ID_CPL,
     BOOTLDR_START_CPL,
     BOOTLDR_RESET_CPL,
     BOOTLDR_ERASE_CPL,
@@ -374,6 +375,11 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
 
                     break;
                 }
+                case USBDBG_SENSOR_ID_CPL:
+                {
+                    emit sensorIdDone(deserializeLong(data));
+                    break;
+                }
                 case BOOTLDR_START_CPL:
                 {
                     int result = deserializeLong(data);
@@ -596,6 +602,11 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                             m_lineBuffer.clear();
                         }
 
+                        break;
+                    }
+                    case USBDBG_SENSOR_ID_CPL:
+                    {
+                        emit sensorIdDone(int());
                         break;
                     }
                     case BOOTLDR_START_CPL:
@@ -961,6 +972,17 @@ void OpenMVPluginIO::getTxBuffer()
     serializeLong(buffer, TX_BUF_LEN_RESPONSE_LEN);
     m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, TX_BUF_LEN_RESPONSE_LEN, TX_BUF_LEN_START_DELAY, TX_BUF_LEN_END_DELAY));
     m_completionQueue.enqueue(USBDBG_TX_BUF_LEN_CPL);
+    command();
+}
+
+void OpenMVPluginIO::sensorId()
+{
+    QByteArray buffer;
+    serializeByte(buffer, __USBDBG_CMD);
+    serializeByte(buffer, __USBDBG_SENSOR_ID);
+    serializeLong(buffer, SENSOR_ID_RESPONSE_LEN);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, SENSOR_ID_RESPONSE_LEN, SENSOR_ID_START_DELAY, SENSOR_ID_END_DELAY));
+    m_completionQueue.enqueue(USBDBG_SENSOR_ID_CPL);
     command();
 }
 

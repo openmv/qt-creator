@@ -26,6 +26,8 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_major = int();
     m_minor = int();
     m_patch = int();
+    m_boardType = QString();
+    m_sensorType = QString();
     m_reconnects = int();
     m_portName = QString();
     m_portPath = QString();
@@ -922,7 +924,7 @@ void OpenMVPlugin::extensionsInitialized()
         QString src =
             QFileDialog::getOpenFileName(Core::ICore::dialogParent(), QObject::tr("Network to copy to OpenMV Cam"),
                 Core::ICore::userResourcePath() + QStringLiteral("/models"),
-                QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network)"));
+                QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label File (*.txt);;All Files (*.*)"));
 
         if(!src.isEmpty())
         {
@@ -931,7 +933,7 @@ void OpenMVPlugin::extensionsInitialized()
                     m_portPath.isEmpty()
                     ? settings->value(QStringLiteral(LAST_MODEL_NO_CAM_PATH), QDir::homePath()).toString()
                     : settings->value(QStringLiteral(LAST_MODEL_WITH_CAM_PATH), QString(m_portPath + QFileInfo(src).fileName())).toString(),
-                    QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network)"));
+                    QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label File (*.txt);;All Files (*.*)"));
 
             if(!dst.isEmpty())
             {
@@ -1397,6 +1399,18 @@ void OpenMVPlugin::extensionsInitialized()
     });
 
     ///////////////////////////////////////////////////////////////////////////
+
+    m_boardLabel = new Utils::ElidingLabel(tr("Board:"));
+    m_boardLabel->setToolTip(tr("Camera board type"));
+    m_boardLabel->setDisabled(true);
+    Core::ICore::statusBar()->addPermanentWidget(m_boardLabel);
+    Core::ICore::statusBar()->addPermanentWidget(new QLabel());
+
+    m_sensorLabel = new Utils::ElidingLabel(tr("Sensor:"));
+    m_sensorLabel->setToolTip(tr("Camera sensor module"));
+    m_sensorLabel->setDisabled(true);
+    Core::ICore::statusBar()->addPermanentWidget(m_sensorLabel);
+    Core::ICore::statusBar()->addPermanentWidget(new QLabel());
 
     m_versionButton = new Utils::ElidingToolButton;
     m_versionButton->setText(tr("Firmware Version:"));
@@ -2643,7 +2657,7 @@ void OpenMVPlugin::packageUpdate()
         reply->deleteLater();
     });
 
-    QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("http://upload.openmv.io/openmv-ide-resources-version.txt")));
+    QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("http://upload.openmv.io/openmv-ide-resources-version-v2.txt")));
 #if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
     request.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
 #endif
@@ -3742,6 +3756,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         // Check ID ///////////////////////////////////////////////////////////
 
+        m_boardType = QString();
+
         if((major2 > OLD_API_MAJOR)
         || ((major2 == OLD_API_MAJOR) && (minor2 > OLD_API_MINOR))
         || ((major2 == OLD_API_MAJOR) && (minor2 == OLD_API_MINOR) && (patch2 >= OLD_API_PATCH)))
@@ -3773,6 +3789,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 {
                     QString board = match.captured(1);
                     QString id = match.captured(2);
+
+                    m_boardType = board;
 
                     // Skip OpenMV Cam M4's...
                     if(board != QStringLiteral("M4"))
@@ -3852,9 +3870,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         // Stopping ///////////////////////////////////////////////////////////
 
+        m_sensorType = QString();
+
         if((major2 < OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR)
         || ((major2 == OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR) && (minor2 < OPENMV_DBG_PROTOCOL_CHNAGE_MINOR))
-        || ((major2 == OPENMV_DBG_PROTOCOL_CHNAGE_PATCH) && (minor2 == OPENMV_DBG_PROTOCOL_CHNAGE_PATCH) && (patch2 < OPENMV_DBG_PROTOCOL_CHNAGE_PATCH)))
+        || ((major2 == OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR) && (minor2 == OPENMV_DBG_PROTOCOL_CHNAGE_MINOR) && (patch2 < OPENMV_DBG_PROTOCOL_CHNAGE_PATCH)))
         {
             m_iodevice->breakUpGetAttributeCommand(false);
             m_iodevice->breakUpSetAttributeCommand(false);
@@ -3863,11 +3883,76 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         }
         else
         {
-
             m_iodevice->breakUpGetAttributeCommand(true);
             m_iodevice->breakUpSetAttributeCommand(true);
             m_iodevice->breakUpFBEnable(true);
             m_iodevice->breakUpJPEGEnable(true);
+
+            // Get Sensor Type
+            {
+                int id2 = int();
+                int *id2Ptr = &id2;
+
+                QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::sensorIdDone,
+                    this, [this, id2Ptr] (int id) {
+                    *id2Ptr = id;
+                });
+
+                QEventLoop loop;
+
+                connect(m_iodevice, &OpenMVPluginIO::sensorIdDone,
+                        &loop, &QEventLoop::quit);
+
+                m_iodevice->sensorId();
+
+                loop.exec();
+
+                disconnect(conn);
+
+                if(id2)
+                {
+                    QFile sensors(Core::ICore::userResourcePath() + QStringLiteral("/firmware/sensors.txt"));
+
+                    if(sensors.open(QIODevice::ReadOnly))
+                    {
+                        QMap<int, QString> mappings;
+
+                        forever
+                        {
+                            QByteArray data = sensors.readLine();
+
+                            if((sensors.error() == QFile::NoError) && (!data.isEmpty()))
+                            {
+                                QRegularExpressionMatch mapping = QRegularExpression(QStringLiteral("(\\S+)\\s+(\\S+)")).match(QString::fromUtf8(data));
+                                mappings.insert(mapping.captured(2).toInt(nullptr, 0), mapping.captured(1));
+                            }
+                            else
+                            {
+                                sensors.close();
+                                break;
+                            }
+                        }
+
+                        m_sensorType = mappings.value(id2, tr("Unknown"));
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            tr("Connect"),
+                            tr("Error: %L1!").arg(sensors.errorString()));
+
+                        CLOSE_CONNECT_END();
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        tr("Connect"),
+                        tr("Timeout error while getting sensor type!"));
+
+                    CLOSE_CONNECT_END();
+                }
+            }
         }
 
         m_iodevice->scriptStop();
@@ -3909,6 +3994,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_stopCommand->action()->setEnabled(false);
         m_stopCommand->action()->setVisible(false);
 
+        m_boardLabel->setEnabled(true);
+        m_boardLabel->setText(tr("Board: %L1").arg(m_boardType));
+        m_sensorLabel->setEnabled(true);
+        m_sensorLabel->setText(tr("Sensor: %L1").arg(m_sensorType));
         m_versionButton->setEnabled(true);
         m_versionButton->setText(tr("Firmware Version: %L1.%L2.%L3").arg(major2).arg(minor2).arg(patch2));
         m_portLabel->setEnabled(true);
@@ -4066,6 +4155,8 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_major = int();
             m_minor = int();
             m_patch = int();
+            m_boardType = QString();
+            m_sensorType = QString();
             m_portName = QString();
             m_portPath = QString();
             m_errorFilterString = QString();
@@ -4083,6 +4174,10 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_stopCommand->action()->setEnabled(false);
             m_stopCommand->action()->setVisible(false);
 
+            m_boardLabel->setDisabled(true);
+            m_boardLabel->setText(tr("Board:"));
+            m_sensorLabel->setDisabled(true);
+            m_sensorLabel->setText(tr("Sensor:"));
             m_versionButton->setDisabled(true);
             m_versionButton->setText(tr("Firmware Version:"));
             m_portLabel->setDisabled(true);
