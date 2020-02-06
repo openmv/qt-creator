@@ -4097,18 +4097,10 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                                 tr("Failed to eject \"%L1\"!").arg(m_portPath));
                         }
 #elif defined(Q_OS_LINUX)
-                        QProgressDialog *dialog = new QProgressDialog(tr("Unmounting..."), QString(), 0, 0, Core::ICore::dialogParent(),
-                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
-                        dialog->setWindowModality(Qt::ApplicationModal);
-                        dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-                        dialog->setCancelButton(Q_NULLPTR);
-                        QTimer::singleShot(1000, dialog, &QProgressDialog::show);
-
                         Utils::SynchronousProcess process;
                         Utils::SynchronousProcessResponse response;
 
-                        response = process.run(QStringLiteral("umount"), QStringList() << QStringLiteral("-fr") << QDir::cleanPath(QDir::toNativeSeparators(m_portPath)));
+                        response = process.run(QStringLiteral("umount"), QStringList() << QDir::cleanPath(QDir::toNativeSeparators(m_portPath)));
 
                         if(response.result != Utils::SynchronousProcessResponse::Finished)
                         {
@@ -4116,8 +4108,6 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                                 tr("Disconnect"),
                                 tr("Failed to eject \"%L1\"!").arg(m_portPath));
                         }
-
-                        delete dialog;
 #elif defined(Q_OS_MAC)
                         if(sync_volume_np(m_portPath.toUtf8().constData(), SYNC_VOLUME_FULLSYNC | SYNC_VOLUME_WAIT) < 0)
                         {
