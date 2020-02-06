@@ -55,10 +55,14 @@ def signFile(file):
                 print "Failure"
                 raise
         if signtoolAvailable and PFXFile and PFXPass:
-            if not os.system("signtool sign" + \
+            if not os.system("signtool sign " + \
             " /f " + PFXFile.replace("/", "\\") + \
             " /p " + PFXPass + \
-            " " + file.replace("/", "\\")):
+            " /t http://timestamp.comodoca.com /v " + file.replace("/", "\\") + \
+            " && signtool sign " + \
+            " /f " + PFXFile.replace("/", "\\") + \
+            " /p " + PFXPass + \
+            " /fd sha256 /tr http://timestamp.comodoca.com/?td=sha256 /td sha256 /as /v " + file.replace("/", "\\")):
                 print "Success"
             else:
                 print "Failure"
