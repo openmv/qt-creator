@@ -69,14 +69,14 @@
 #define V2_BOOTLDR                          static_cast<int>(0xABCD0002)
 #define V3_BOOTLDR                          static_cast<int>(0xABCD0003)
 
-#define FW_VERSION_START_DELAY              25
-#define FW_VERSION_END_DELAY                25
+#define FW_VERSION_START_DELAY              0
+#define FW_VERSION_END_DELAY                0
 #define FRAME_SIZE_START_DELAY              0
 #define FRAME_SIZE_END_DELAY                0
 #define FRAME_DUMP_START_DELAY              0
 #define FRAME_DUMP_END_DELAY                0
-#define ARCH_STR_START_DELAY                25
-#define ARCH_STR_END_DELAY                  25
+#define ARCH_STR_START_DELAY                0
+#define ARCH_STR_END_DELAY                  0
 #define LEARN_MTU_START_DELAY               0
 #define LEARN_MTU_END_DELAY                 0
 #define SCRIPT_EXEC_START_DELAY             50
@@ -100,15 +100,15 @@
 #define ATTR_READ_START_DELAY               0
 #define ATTR_READ_END_DELAY                 0
 #define ATTR_READ_0_START_DELAY             0
-#define ATTR_READ_0_END_DELAY               0
-#define ATTR_READ_1_START_DELAY             0
+#define ATTR_READ_0_END_DELAY               50
+#define ATTR_READ_1_START_DELAY             50
 #define ATTR_READ_1_END_DELAY               0
-#define ATTR_WRITE_START_DELAY              0
-#define ATTR_WRITE_END_DELAY                0
-#define ATTR_WRITE_0_START_DELAY            0
-#define ATTR_WRITE_0_END_DELAY              0
-#define ATTR_WRITE_1_START_DELAY            0
-#define ATTR_WRITE_1_END_DELAY              0
+#define ATTR_WRITE_START_DELAY              50
+#define ATTR_WRITE_END_DELAY                50
+#define ATTR_WRITE_0_START_DELAY            50
+#define ATTR_WRITE_0_END_DELAY              25
+#define ATTR_WRITE_1_START_DELAY            25
+#define ATTR_WRITE_1_END_DELAY              50
 #define SYS_RESET_START_DELAY               50
 #define SYS_RESET_END_DELAY                 50
 #define FB_ENABLE_START_DELAY               50
@@ -127,8 +127,8 @@
 #define TX_BUF_LEN_END_DELAY                0
 #define TX_BUF_START_DELAY                  0
 #define TX_BUF_END_DELAY                    0
-#define SENSOR_ID_START_DELAY               50
-#define SENSOR_ID_END_DELAY                 50
+#define SENSOR_ID_START_DELAY               0
+#define SENSOR_ID_END_DELAY                 0
 
 #define BOOTLDR_START_START_DELAY           0
 #define BOOTLDR_START_END_DELAY             0
