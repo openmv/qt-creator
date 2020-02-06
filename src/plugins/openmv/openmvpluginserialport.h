@@ -113,9 +113,9 @@
 #define SYS_RESET_END_DELAY                 50
 #define FB_ENABLE_START_DELAY               50
 #define FB_ENABLE_END_DELAY                 50
-#define FB_ENABLE_0_START_DELAY             0
-#define FB_ENABLE_0_END_DELAY               0
-#define FB_ENABLE_1_START_DELAY             50
+#define FB_ENABLE_0_START_DELAY             50
+#define FB_ENABLE_0_END_DELAY               25
+#define FB_ENABLE_1_START_DELAY             25
 #define FB_ENABLE_1_END_DELAY               50
 #define JPEG_ENABLE_START_DELAY             0
 #define JPEG_ENABLE_END_DELAY               0
@@ -127,8 +127,8 @@
 #define TX_BUF_LEN_END_DELAY                0
 #define TX_BUF_START_DELAY                  0
 #define TX_BUF_END_DELAY                    0
-#define SENSOR_ID_START_DELAY               0
-#define SENSOR_ID_END_DELAY                 0
+#define SENSOR_ID_START_DELAY               50
+#define SENSOR_ID_END_DELAY                 50
 
 #define BOOTLDR_START_START_DELAY           0
 #define BOOTLDR_START_END_DELAY             0
