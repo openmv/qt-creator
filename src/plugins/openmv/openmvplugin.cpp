@@ -924,7 +924,7 @@ void OpenMVPlugin::extensionsInitialized()
         QString src =
             QFileDialog::getOpenFileName(Core::ICore::dialogParent(), QObject::tr("Network to copy to OpenMV Cam"),
                 Core::ICore::userResourcePath() + QStringLiteral("/models"),
-                QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label File (*.txt);;All Files (*.*)"));
+                QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)"));
 
         if(!src.isEmpty())
         {
@@ -933,7 +933,7 @@ void OpenMVPlugin::extensionsInitialized()
                     m_portPath.isEmpty()
                     ? settings->value(QStringLiteral(LAST_MODEL_NO_CAM_PATH), QDir::homePath()).toString()
                     : settings->value(QStringLiteral(LAST_MODEL_WITH_CAM_PATH), QString(m_portPath + QFileInfo(src).fileName())).toString(),
-                    QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label File (*.txt);;All Files (*.*)"));
+                    QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)"));
 
             if(!dst.isEmpty())
             {
@@ -4097,7 +4097,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                                 tr("Failed to eject \"%L1\"!").arg(m_portPath));
                         }
 #elif defined(Q_OS_LINUX)
-                        QProgressDialog *dialog = new QProgressDialog(tr("Syncing..."), QString(), 0, 0, Core::ICore::dialogParent(),
+                        QProgressDialog *dialog = new QProgressDialog(tr("Unmounting..."), QString(), 0, 0, Core::ICore::dialogParent(),
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
                         dialog->setWindowModality(Qt::ApplicationModal);
@@ -4108,7 +4108,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                         Utils::SynchronousProcess process;
                         Utils::SynchronousProcessResponse response;
 
-                        response = process.run(QStringLiteral("sync"), QStringList());
+                        response = process.run(QStringLiteral("umount"), QStringList() << QStringLiteral("-fr") << QDir::cleanPath(QDir::toNativeSeparators(m_portPath)));
 
                         if(response.result != Utils::SynchronousProcessResponse::Finished)
                         {
@@ -4858,7 +4858,7 @@ void OpenMVPlugin::setPortPath(bool silent)
             && info.isReady()
             && (!info.isRoot())
             && (!info.isReadOnly())
-            && (QString::fromUtf8(info.fileSystemType()).contains(QStringLiteral("fat"), Qt::CaseInsensitive) || QString::fromUtf8(info.fileSystemType()).contains(QStringLiteral("msdos"), Qt::CaseInsensitive))
+            && (QString::fromUtf8(info.fileSystemType()).contains(QStringLiteral("fat"), Qt::CaseInsensitive) || QString::fromUtf8(info.fileSystemType()).contains(QStringLiteral("msdos"), Qt::CaseInsensitive) || QString::fromUtf8(info.fileSystemType()).contains(QStringLiteral("fuseblk"), Qt::CaseInsensitive))
             && ((!Utils::HostOsInfo::isMacHost()) || info.rootPath().startsWith(QStringLiteral("/volumes/"), Qt::CaseInsensitive))
             && ((!Utils::HostOsInfo::isLinuxHost()) || info.rootPath().startsWith(QStringLiteral("/media/"), Qt::CaseInsensitive) || info.rootPath().startsWith(QStringLiteral("/mnt/"), Qt::CaseInsensitive) || info.rootPath().startsWith(QStringLiteral("/run/"), Qt::CaseInsensitive)))
             {

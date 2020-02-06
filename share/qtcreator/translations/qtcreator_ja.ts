@@ -7743,7 +7743,7 @@ Will not be applied to whitespace in comments and strings.</source>
 <context>
     <name>OpenMV::Internal::OpenMVPlugin</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+96"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+98"/>
         <source>Invalid argument (%1) for -override_read_timeout</source>
         <translation>-override_read_timeoutの無効なアーギュメント（%1）</translation>
     </message>
@@ -7765,7 +7765,7 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+42"/>
         <location line="+15"/>
-        <location line="+2374"/>
+        <location line="+2394"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -7774,7 +7774,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
  OpenMV IDEのアプリケーションデータを表示/編集しているプログラムを閉じて、OpenMV IDEを再起動してください！</translation>
     </message>
     <message>
-        <location line="-1981"/>
+        <location line="-2001"/>
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>しきい値エディタでグレースケールしきい値を編集</translation>
     </message>
@@ -7837,48 +7837,47 @@ while(True):
         <translation type="vanished">ブートローダを実行する</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+35"/>
         <source>Configure OpenMV Cam settings file</source>
         <translation>OpenMV Cam設定ファイルを設定する</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Save open script to OpenMV Cam</source>
-        <translation>OpenMV Camにオープンスクリプトを保存する</translation>
+        <translation type="vanished">OpenMV Camにオープンスクリプトを保存する</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+12"/>
         <source>Reset OpenMV Cam</source>
         <translation>OpenMV Camをリセットする</translation>
     </message>
     <message>
         <location line="+9"/>
-        <location line="+4661"/>
+        <location line="+4759"/>
         <location line="+47"/>
         <source>Open Terminal</source>
         <translation>ターミナルを開く</translation>
     </message>
     <message>
-        <location line="-4703"/>
+        <location line="-4801"/>
         <source>Machine Vision</source>
         <translation>マシンビジョン</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+4730"/>
+        <location line="+4828"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>しきい値エディタ</translation>
     </message>
     <message>
-        <location line="-4801"/>
-        <location line="+4879"/>
+        <location line="-4899"/>
+        <location line="+4977"/>
         <source>Keypoints Editor</source>
         <translation>キーポイントエディタ</translation>
     </message>
     <message>
-        <location line="-4872"/>
-        <location line="+5022"/>
+        <location line="-4970"/>
+        <location line="+5120"/>
         <location line="+96"/>
         <location line="+23"/>
         <location line="+10"/>
@@ -7887,7 +7886,7 @@ while(True):
         <translation>AprilTagジェネレータ</translation>
     </message>
     <message>
-        <location line="-5168"/>
+        <location line="-5266"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5ファミリー（30タグ）</translation>
     </message>
@@ -7928,12 +7927,12 @@ while(True):
         <location line="+79"/>
         <location line="+14"/>
         <location line="+16"/>
-        <location line="+568"/>
+        <location line="+582"/>
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>オープンに失敗しました：&quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-701"/>
+        <location line="-715"/>
         <source>DataMatrix Generator</source>
         <translation>データマトリックスジェネレータ</translation>
     </message>
@@ -8010,7 +8009,7 @@ while(True):
     </message>
     <message>
         <location line="+8"/>
-        <location line="+1803"/>
+        <location line="+1817"/>
         <location line="+33"/>
         <location line="+9"/>
         <location line="+10"/>
@@ -8038,9 +8037,11 @@ while(True):
         <location line="+9"/>
         <location line="+12"/>
         <location line="+13"/>
-        <location line="+83"/>
+        <location line="+87"/>
         <location line="+33"/>
-        <location line="+99"/>
+        <location line="+77"/>
+        <location line="+9"/>
+        <location line="+85"/>
         <location line="+25"/>
         <source>Connect</source>
         <translation>接続する</translation>
@@ -8050,16 +8051,16 @@ while(True):
         <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="-2915"/>
-        <location line="+2951"/>
+        <location line="-3005"/>
+        <location line="+3041"/>
         <location line="+20"/>
         <location line="+9"/>
-        <location line="+68"/>
+        <location line="+75"/>
         <source>Disconnect</source>
         <translation>切断する</translation>
     </message>
     <message>
-        <location line="-3040"/>
+        <location line="-3137"/>
         <source>Start (run script)</source>
         <translation>開始（スクリプトの実行）</translation>
     </message>
@@ -8068,7 +8069,7 @@ while(True):
         <translation type="vanished">Ctrl+R</translation>
     </message>
     <message>
-        <location line="-314"/>
+        <location line="-320"/>
         <source>Documents Folder</source>
         <translation>ドキュメントフォルダ</translation>
     </message>
@@ -8082,12 +8083,12 @@ while(True):
         <translation type="vanished">&lt;br/&gt;&lt;p&gt;OpenMV IDE Kwabena W. Agyemanによる日本語翻訳。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+333"/>
         <source>Stop (halt script)</source>
         <translation>停止（停止スクリプト）</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+66"/>
         <source>Frame Buffer</source>
         <translation>フレームバッファ</translation>
     </message>
@@ -8103,12 +8104,12 @@ while(True):
     </message>
     <message>
         <location line="+5"/>
-        <location line="+3109"/>
+        <location line="+3204"/>
         <source>Stop</source>
         <translation>停止</translation>
     </message>
     <message>
-        <location line="-3108"/>
+        <location line="-3203"/>
         <source>Stop recording</source>
         <translation>記録を停止</translation>
     </message>
@@ -8136,8 +8137,8 @@ while(True):
     <message>
         <location line="+17"/>
         <location line="+22"/>
-        <location line="+2759"/>
-        <location line="+133"/>
+        <location line="+2847"/>
+        <location line="+140"/>
         <location line="+66"/>
         <location line="+99"/>
         <location line="+113"/>
@@ -8145,12 +8146,12 @@ while(True):
         <location line="+80"/>
         <location line="+53"/>
         <location line="+178"/>
-        <location line="+91"/>
+        <location line="+92"/>
         <source>Busy... please wait...</source>
         <translation>ビジー状態...お待ちください...</translation>
     </message>
     <message>
-        <location line="-3643"/>
+        <location line="-3739"/>
         <location line="+15"/>
         <source>Disable</source>
         <translation>不可能</translation>
@@ -8222,48 +8223,70 @@ while(True):
         <translation>FPS： %L1</translation>
     </message>
     <message>
+        <location line="+5"/>
+        <location line="+2775"/>
+        <source>Board:</source>
+        <translation>ボード:</translation>
+    </message>
+    <message>
+        <location line="-2774"/>
+        <source>Camera board type</source>
+        <translation>カメラボードタイプ</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+2771"/>
+        <source>Sensor:</source>
+        <translation>センサー:</translation>
+    </message>
+    <message>
+        <location line="-2770"/>
+        <source>Camera sensor module</source>
+        <translation>カメラセンサーモジュール</translation>
+    </message>
+    <message>
         <location line="+6"/>
-        <location line="+2683"/>
+        <location line="+2766"/>
         <source>Firmware Version:</source>
         <translation>ファームウェアのバージョン：</translation>
     </message>
     <message>
-        <location line="-2682"/>
+        <location line="-2765"/>
         <source>Camera firmware version</source>
         <translation>カメラのファームウェアのバージョン</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2678"/>
+        <location line="+2761"/>
         <source>Serial Port:</source>
         <translation>シリアル・ポート：</translation>
     </message>
     <message>
-        <location line="-2677"/>
+        <location line="-2760"/>
         <source>Camera serial port</source>
         <translation>カメラのシリアルポート</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2500"/>
-        <location line="+173"/>
+        <location line="+2576"/>
+        <location line="+180"/>
         <location line="+737"/>
         <source>Drive:</source>
         <translation>ドライブ：</translation>
     </message>
     <message>
-        <location line="-3409"/>
+        <location line="-3492"/>
         <source>Drive associated with port</source>
         <translation>ドライブはポートに関連付けられています</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2668"/>
+        <location line="+2751"/>
         <source>FPS:</source>
         <translation>FPS：</translation>
     </message>
     <message>
-        <location line="-2667"/>
+        <location line="-2750"/>
         <source>May be different from camera FPS</source>
         <translation>カメラのFPSと異なる場合があります</translation>
     </message>
@@ -8335,17 +8358,17 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
     </message>
     <message>
         <location line="+98"/>
-        <location line="+3080"/>
+        <location line="+3164"/>
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>シリアルポート - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-3060"/>
+        <location line="-3144"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
-        <location line="+2743"/>
+        <location line="+2827"/>
         <location line="+126"/>
         <location line="+102"/>
         <location line="+117"/>
@@ -8355,7 +8378,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>接続中...（30秒のタイムアウト）</translation>
     </message>
     <message>
-        <location line="-3647"/>
+        <location line="-3731"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
@@ -8368,7 +8391,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <location line="+105"/>
         <location line="+47"/>
         <location line="+95"/>
-        <location line="+1315"/>
+        <location line="+1399"/>
         <location line="+126"/>
         <location line="+102"/>
         <location line="+117"/>
@@ -8379,7 +8402,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="-4041"/>
+        <location line="-4125"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
@@ -8390,13 +8413,14 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <location line="+169"/>
         <location line="+399"/>
         <location line="+31"/>
-        <location line="+810"/>
+        <location line="+324"/>
+        <location line="+569"/>
         <location line="+14"/>
         <location line="+200"/>
         <location line="+13"/>
         <location line="+87"/>
         <location line="+13"/>
-        <location line="+234"/>
+        <location line="+235"/>
         <location line="+126"/>
         <location line="+102"/>
         <location line="+117"/>
@@ -8406,7 +8430,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>エラー：%L1！</translation>
     </message>
     <message>
-        <location line="-3645"/>
+        <location line="-3729"/>
         <source>
 
 Try doing:
@@ -8459,12 +8483,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+3130"/>
+        <location line="+3214"/>
         <source>UDP Server Connection - %1</source>
         <translation>UDPサーバー接続 - %1</translation>
     </message>
     <message>
-        <location line="-3068"/>
+        <location line="-3152"/>
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>-open_udp_server_terminalの無効なポートアーギュメント（%1）</translation>
     </message>
@@ -8495,12 +8519,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+3176"/>
+        <location line="+3260"/>
         <source>TCP Server Connection - %1</source>
         <translation>TCPサーバー接続 - %1</translation>
     </message>
     <message>
-        <location line="-3114"/>
+        <location line="-3198"/>
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>-open_tcp_server_terminalの無効なポートアーギュメント（%1）</translation>
     </message>
@@ -8699,19 +8723,19 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+11"/>
-        <location line="+1778"/>
+        <location line="+1861"/>
         <location line="+28"/>
         <source>Erase the internal file system?</source>
         <translation>内部ファイルシステムを消去しますか？</translation>
     </message>
     <message>
-        <location line="-1775"/>
-        <location line="+1956"/>
+        <location line="-1858"/>
+        <location line="+2040"/>
         <source>Please select a serial port</source>
         <translation>シリアルポートを選択してください</translation>
     </message>
     <message>
-        <location line="-1925"/>
+        <location line="-2009"/>
         <location line="+286"/>
         <source>Connecting... (Hit cancel if this takes more than 5 seconds).</source>
         <translation>接続しています…（5秒以上かかるとヒットキャンセル）。</translation>
@@ -8750,7 +8774,7 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+18"/>
-        <location line="+631"/>
+        <location line="+635"/>
         <source>Timeout error while getting board architecture!</source>
         <translation>ボードアーキテクチャを取得中にタイムアウトエラーが発生しました！</translation>
     </message>
@@ -8773,7 +8797,7 @@ Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indica
 OpenMV CamのRGB​​ LEDが青く点滅し始めたらOKをクリックしてください - セルフテストが完了したことを示します。</translation>
     </message>
     <message>
-        <location line="-563"/>
+        <location line="-567"/>
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>OpenMV Camを外してから再接続してください...</translation>
     </message>
@@ -8908,12 +8932,32 @@ HomeBrew:
     sudo pip install pyusb</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+146"/>
         <source>Timeout error while learning MTU!</source>
         <translation>MTUの学習中にタイムアウトエラーが発生しました。</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+71"/>
+        <source>Unknown</source>
+        <translation>不明</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Timeout error while getting sensor type!</source>
+        <translation>センサータイプの取得中にタイムアウトエラーが発生しました！</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Board: %L1</source>
+        <translation>ボード: %L1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Sensor: %L1</source>
+        <translation>センサー: %L1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Firmware Version: %L1.%L2.%L3</source>
         <translation>ファームウェアバージョン：%L1。%L2。%L3</translation>
     </message>
@@ -8924,14 +8968,14 @@ HomeBrew:
     </message>
     <message>
         <location line="+4"/>
-        <location line="+239"/>
+        <location line="+246"/>
         <location line="+52"/>
         <location line="+99"/>
         <source>FPS: 0</source>
         <translation>FPS： 0</translation>
     </message>
     <message>
-        <location line="-367"/>
+        <location line="-374"/>
         <source> - [ out of date - click here to updgrade ]</source>
         <translation>-  [アウトオブデート - ここをクリックして更新する]</translation>
     </message>
@@ -8953,7 +8997,12 @@ HomeBrew:
         <translation>&quot;%L1&quot;の取り出しに失敗しました！</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="-26"/>
+        <source>Unmounting...</source>
+        <translation>マウント解除しています...</translation>
+    </message>
+    <message>
+        <location line="+100"/>
         <source>Reset</source>
         <translation>リセット</translation>
     </message>
@@ -8981,13 +9030,13 @@ In particular, checkout the Color-Tracking examples.</source>
 特に、カラートラッキングの例をご覧ください。</translation>
     </message>
     <message>
-        <location line="-2476"/>
-        <location line="+2485"/>
+        <location line="-2559"/>
+        <location line="+2568"/>
         <source>Don&apos;t show this message again.</source>
         <translation>このメッセージをもう一度表示しないでください。</translation>
     </message>
     <message>
-        <location line="-3459"/>
+        <location line="-3562"/>
         <source>Run Bootloader (Load Firmware)</source>
         <translation>ブートローダーの実行（ファームウェアのロード）</translation>
     </message>
@@ -9003,21 +9052,31 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>OpenMV Camのオンボードフラッシュドライブを消去してもよろしいですか？</translation>
     </message>
     <message>
-        <location line="+2219"/>
-        <location line="+1970"/>
+        <location line="+6"/>
+        <source>Open OpenMV Cam Drive folder</source>
+        <translation>OpenMV Cam Driveフォルダーを開く</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Save open script to OpenMV Cam (as main.py)</source>
+        <translation>OpenMV Camに開いているスクリプトを保存します（main.pyとして）</translation>
+    </message>
+    <message>
+        <location line="+2221"/>
+        <location line="+2054"/>
         <source>Try doing:
 
 </source>
         <translation>やってみてください：\n\n</translation>
     </message>
     <message>
-        <location line="-1970"/>
-        <location line="+1970"/>
+        <location line="-2054"/>
+        <location line="+2054"/>
         <source>...in a terminal and then restart your computer.</source>
         <translation>...端末で、コンピューターを再起動します。</translation>
     </message>
     <message>
-        <location line="-1730"/>
+        <location line="-1814"/>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
@@ -9058,12 +9117,11 @@ Hit cancel to skip to DFU reprogramming.</source>
         <translation>PyDFUでは、次のライブラリをインストールする必要があります。\n\n</translation>
     </message>
     <message>
-        <location line="+279"/>
         <source>Syncing...</source>
-        <translation>同期しています...</translation>
+        <translation type="vanished">同期しています...</translation>
     </message>
     <message>
-        <location line="+371"/>
+        <location line="+733"/>
         <source>Configure Settings</source>
         <translation>設定を構成する</translation>
     </message>
@@ -9088,18 +9146,18 @@ Hit cancel to skip to DFU reprogramming.</source>
     </message>
     <message>
         <location line="-11"/>
-        <location line="+1194"/>
+        <location line="+1195"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>画像ファイル(*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1182"/>
-        <location line="+1531"/>
+        <location line="-1183"/>
+        <location line="+1532"/>
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>未知の理由でイメージファイルを保存できませんでした。</translation>
     </message>
     <message>
-        <location line="-1514"/>
+        <location line="-1515"/>
         <location line="+12"/>
         <location line="+15"/>
         <location line="+11"/>
@@ -9133,14 +9191,14 @@ Hit cancel to skip to DFU reprogramming.</source>
     </message>
     <message>
         <location line="-36"/>
-        <location line="+1198"/>
+        <location line="+1199"/>
         <location line="+80"/>
         <location line="+17"/>
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>キーポイントファイル(*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1208"/>
+        <location line="-1209"/>
         <location line="+7"/>
         <location line="+6"/>
         <location line="+7"/>
@@ -9204,12 +9262,12 @@ Hit cancel to skip to DFU reprogramming.</source>
         <location line="+52"/>
         <location line="+11"/>
         <location line="+15"/>
-        <location line="+26"/>
+        <location line="+27"/>
         <source>Select Drive</source>
         <translation>ドライブを選択</translation>
     </message>
     <message>
-        <location line="-51"/>
+        <location line="-52"/>
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>OpenMV Camと関連付ける有効なドライブが見つかりませんでした！</translation>
     </message>
@@ -9229,7 +9287,7 @@ Hit cancel to skip to DFU reprogramming.</source>
         <translation>ドライブ：%L1</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+25"/>
         <location line="+13"/>
         <location line="+27"/>
         <location line="+9"/>
@@ -9547,7 +9605,7 @@ OpenMV IDEをOpenMV Camにコピーしますか？</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location line="-5784"/>
+        <location line="-5888"/>
         <source>New File</source>
         <translation>新しいファイル</translation>
     </message>
@@ -9557,15 +9615,19 @@ OpenMV IDEをOpenMV Camにコピーしますか？</translation>
         <translation>新しいファイルを開くことができません！</translation>
     </message>
     <message>
-        <location line="+184"/>
+        <location line="+190"/>
         <source>Network to copy to OpenMV Cam</source>
         <translation>OpenMV Camにコピーするネットワーク</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+9"/>
+        <source>TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)</source>
+        <translation>TensorFlowモデル(*.tflite);;ニューラルネットワークモデル(*.network);;ラベルファイル(*.txt);;すべてのファイル(*.*)</translation>
+    </message>
+    <message>
         <source>TensorFlow Model (*.tflite);;Neural Network Model (*.network)</source>
-        <translation>TensorFlowモデル (*.tflite);;ニューラルネットワークモデル (*.network)</translation>
+        <translation type="vanished">TensorFlowモデル (*.tflite);;ニューラルネットワークモデル (*.network)</translation>
     </message>
     <message>
         <source>Neural Network Model (*.network)</source>
@@ -9577,7 +9639,7 @@ OpenMV IDEをOpenMV Camにコピーしますか？</translation>
         <translation>OpenMV Camにネットワークを保存する場所</translation>
     </message>
     <message>
-        <location line="+5349"/>
+        <location line="+5447"/>
         <source>Copy Failed!</source>
         <translation>コピーに失敗しました！</translation>
     </message>
@@ -9805,7 +9867,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation type="vanished">ビデオファイル(*.mp4 *.*)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5331"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5429"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-67"/>
         <location line="+89"/>
