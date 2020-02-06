@@ -23,6 +23,7 @@ def which(program):
         if try_which(program + '.' + exe): return program
     return None
 kSignCMDAvailable = which("kSignCMD")
+signtoolAvailable = which("signtool")
 codsignAvailable = which("codesign")
 
 def getPFXFile():
@@ -46,6 +47,15 @@ def signFile(file):
     if sys.platform.startswith("win"):
         if kSignCMDAvailable and PFXFile and PFXPass:
             if not os.system("kSignCMD" + \
+            " /f " + PFXFile.replace("/", "\\") + \
+            " /p " + PFXPass + \
+            " " + file.replace("/", "\\")):
+                print "Success"
+            else:
+                print "Failure"
+                raise
+        if signtoolAvailable and PFXFile and PFXPass:
+            if not os.system("signtool sign" + \
             " /f " + PFXFile.replace("/", "\\") + \
             " /p " + PFXPass + \
             " " + file.replace("/", "\\")):
