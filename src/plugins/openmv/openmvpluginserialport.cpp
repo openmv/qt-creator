@@ -597,8 +597,8 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
 
         foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
         {
-            if(port.hasVendorIdentifier() && (port.vendorIdentifier() == OPENMVCAM_VID)
-            && port.hasProductIdentifier() && (port.productIdentifier() == OPENMVCAM_PID))
+            if(port.hasVendorIdentifier() && ((port.vendorIdentifier() == OPENMVCAM_VID) || (port.vendorIdentifier() == ARDUINOCAM_VID))
+            && port.hasProductIdentifier() && ((port.productIdentifier() == OPENMVCAM_PID) || ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID)))
             {
                 stringList.append(port.portName());
             }
