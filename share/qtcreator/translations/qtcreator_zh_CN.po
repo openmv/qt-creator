@@ -8251,14 +8251,14 @@ msgid ""
 "Please check that your OpenMV Cam's camera module is installed securely.\n"
 "\n"
 msgstr ""
-"感谢您使用OpenMV Cam和OpenMV IDE！\\n\\nOpenMV "
-"Cam的板载LED闪烁着不同的颜色，以指示其状态：\\n\\n呈绿色闪烁：\\n\\n您的OpenMV "
+"感谢您使用OpenMV Cam和OpenMV IDE！\n\nOpenMV "
+"Cam的板载LED闪烁着不同的颜色，以指示其状态：\n\n呈绿色闪烁：\n\n您的OpenMV "
 "Cam的内置引导加载程序正在运行。通过USB为您的OpenMV Cam供电时，板载引导程序会运行几秒钟，以允许OpenMV "
-"IDE重新编程您的OpenMV Cam。\\n\\n呈蓝色闪烁：\\n\\n您的OpenMV "
-"Cam正在板上运行默认的main.py脚本。\\n\\n如果您已安装SD卡或在OpenMV "
-"Cam上覆盖了main.py脚本，则它将运行您加载在其中的任何代码。\\n\\n如果LED闪烁蓝色，但OpenMV IDE无法连接到OpenMV "
-"Cam，请确保使用提供数据和电源的USB电缆将OpenMV Cam连接到PC。\\n\\n闪烁白色：\\n\\n由于硬件故障，您的OpenMV "
-"Cam的固件崩溃了。请检查是否已正确安装OpenMV Cam的摄像头模块。\\n\\n"
+"IDE重新编程您的OpenMV Cam。\n\n呈蓝色闪烁：\n\n您的OpenMV "
+"Cam正在板上运行默认的main.py脚本。\n\n如果您已安装SD卡或在OpenMV "
+"Cam上覆盖了main.py脚本，则它将运行您加载在其中的任何代码。\n\n如果LED闪烁蓝色，但OpenMV IDE无法连接到OpenMV "
+"Cam，请确保使用提供数据和电源的USB电缆将OpenMV Cam连接到PC。\n\n闪烁白色：\n\n由于硬件故障，您的OpenMV "
+"Cam的固件崩溃了。请检查是否已正确安装OpenMV Cam的摄像头模块。\n\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1850
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5014
@@ -8720,7 +8720,7 @@ msgstr "获取主板架构时出现超时错误！"
 #~ "Disconnect your OpenMV Cam and then reconnect it...\n"
 #~ "\n"
 #~ "Hit cancel to skip to DFU reprogramming."
-#~ msgstr "断开OpenMV Cam，然后重新连接......\\n\\n点击取消会跳过，会使用DFU重新编程。"
+#~ msgstr "断开OpenMV Cam，然后重新连接......\n\n点击取消会跳过，会使用DFU重新编程。"
 
 #~ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 #~ msgid ""
@@ -8732,7 +8732,7 @@ msgstr "获取主板架构时出现超时错误！"
 #~ "Click OK when your OpenMV Cam's RGB LED starts blinking blue - which "
 #~ "indicates the self-test is complete."
 #~ msgstr ""
-#~ "固件升级完成！\\n\\n您的OpenMV Cam正在运行其内置的自检......这可能需要一段时间。\\n\\n当OpenMV Cam的RGB "
+#~ "固件升级完成！\n\n您的OpenMV Cam正在运行其内置的自检......这可能需要一段时间。\n\n当OpenMV Cam的RGB "
 #~ "LED开始闪烁蓝色时单击确定 - 这表示自检已完成。"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3265
@@ -8984,7 +8984,7 @@ msgid ""
 "You can find more examples under the File -> Examples menu.\n"
 "\n"
 "In particular, checkout the Color-Tracking examples."
-msgstr "OpenMV新手？\\n\\n您可以在文件 - >示例菜单下找到更多示例。\\n\\n特别是，请查看颜色跟踪示例。"
+msgstr "OpenMV新手？\n您可以在文件 -> 示例菜单下找到更多示例。\n特别是，请查看颜色跟踪（Color-Tracking）示例。"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1769
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4337
@@ -9024,7 +9024,7 @@ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Try doing:\n"
 "\n"
-msgstr "尝试做：\\n\\n"
+msgstr "尝试做：\n\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3025
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5079
@@ -9038,21 +9038,21 @@ msgid ""
 "\n"
 "\n"
 "Hit cancel to skip to DFU reprogramming."
-msgstr "\\n\\n点击取消可跳至DFU重新编程。"
+msgstr "\n\n点击取消可跳至DFU重新编程。"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3576
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Onboard Data Flash Erased!\n"
 "\n"
-msgstr "板载数据闪存已擦除！\\n\\n"
+msgstr "板载数据闪存已擦除！\n\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3576
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "Firmware Upgrade complete!\n"
 "\n"
-msgstr "固件升级完成！\\n\\n"
+msgstr "固件升级完成！\n\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3577
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9060,7 +9060,7 @@ msgid ""
 "Your OpenMV Cam will start running its built-in self-test if no sd card is "
 "attached... this may take a while.\n"
 "\n"
-msgstr "如果未连接sd卡，则OpenMV Cam将开始运行其内置的自检功能，这可能需要一段时间。\\n\\n"
+msgstr "如果未连接sd卡，则OpenMV Cam将开始运行其内置的自检功能，这可能需要一段时间。\n\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3578
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9075,7 +9075,7 @@ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "PyDFU requires the following libraries to be installed:\n"
 "\n"
-msgstr "PyDFU需要安装以下库：\\n\\n"
+msgstr "PyDFU需要安装以下库：\n\n"
 
 #~ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 #~ msgid "Syncing..."
@@ -9764,7 +9764,7 @@ msgid ""
 "\n"
 "OpenMV IDE is unable to automatically determine when FFMPEG finishes without "
 "hiding FFMPEG output."
-msgstr "FFMPEG完成后，请单击“确定”按钮继续。\\n\\nOpenMV IDE无法自动确定FFMPEG何时完成而不隐藏FFMPEG输出。"
+msgstr "FFMPEG完成后，请单击“确定”按钮继续。\n\nOpenMV IDE无法自动确定FFMPEG何时完成而不隐藏FFMPEG输出。"
 
 #: ../../../src/plugins/openmv/tools/videotools.cpp:805
 msgctxt "QObject|"
