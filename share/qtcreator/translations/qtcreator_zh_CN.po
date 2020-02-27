@@ -8218,7 +8218,7 @@ msgstr "无法创建文档文件夹！"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1749
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "OpenMV Cam LED Colors"
-msgstr "OpenMV凸轮LED颜色"
+msgstr "OpenMV摄像头LED颜色"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1752
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9536,7 +9536,7 @@ msgid ""
 "\n"
 "Would you like OpenMV IDE to update the module on your OpenMV Cam?"
 msgstr ""
-"OpenMV凸轮上的模块\"%L1\"与计算机上的副本不同。\n"
+"OpenMV摄像头上的模块\"%L1\"与计算机上的副本不同。\n"
 "\n"
 "您是否希望OpenMV IDE更新OpenMV Cam上的模块？"
 
