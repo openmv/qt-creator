@@ -36,12 +36,12 @@ DATA_DIRS = \
     ros \
     styles \
     themes
-win32: DATA_DIRS += drivers dfuse ffmpeg/windows
+win32: DATA_DIRS += drivers dfuse ffmpeg/windows dfu-util/windows
 else: DATA_DIRS += pydfu
-macx: DATA_DIRS += ffmpeg/mac
-linux-*:contains(QT_ARCH, i386): DATA_DIRS += ffmpeg/linux-x86
-linux-*:contains(QT_ARCH, x86_64): DATA_DIRS += ffmpeg/linux-x86_64
-linux-*:contains(QT_ARCH, arm): DATA_DIRS += ffmpeg/linux-arm
+macx: DATA_DIRS += ffmpeg/mac dfu-util/osx
+linux-*:contains(QT_ARCH, i386): DATA_DIRS += ffmpeg/linux-x86 dfu-util/linux32
+linux-*:contains(QT_ARCH, x86_64): DATA_DIRS += ffmpeg/linux-x86_64 dfu-util/linux64
+linux-*:contains(QT_ARCH, arm): DATA_DIRS += ffmpeg/linux-arm dfu-util/arm
 #OPENMV-DIFF#
 
 for(data_dir, DATA_DIRS) {
