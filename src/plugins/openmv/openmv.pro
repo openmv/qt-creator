@@ -8,6 +8,7 @@ HEADERS += openmvplugin.h \
            openmvterminal.h \
            openmvcamerasettings.h \
            histogram/openmvpluginhistogram.h \
+           tools/dfu-util.h \
            tools/thresholdeditor.h \
            tools/keypointseditor.h \
            tools/tag16h5.h \
@@ -29,6 +30,7 @@ SOURCES += openmvplugin.cpp \
            histogram/rgb2rgb_tab.c \
            histogram/lab_tab.c \
            histogram/yuv_tab.c  \
+           tools/dfu-util.cpp \
            tools/thresholdeditor.cpp \
            tools/keypointseditor.cpp \
            tools/tag16h5.c \
