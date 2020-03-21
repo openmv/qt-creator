@@ -3659,7 +3659,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         Utils::SynchronousProcessResponse response;
                         process.setTimeoutS(300); // 5 minutes...
                         process.setProcessChannelMode(QProcess::MergedChannels);
-                        downloadFirmware(command, process, response, QDir::cleanPath(QDir::toNativeSeparators(firmwarePath)));
+                        downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)));
 
                         // OLD
                         //
@@ -3667,14 +3667,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         // {
                         //     for(int i = 0; i < 10; i++) // try multiple times...
                         //     {
-                        //         command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/dfuse/DfuSeCommand.exe")));
+                        //         command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfuse/DfuSeCommand.exe")));
                         //         response = process.run(command, QStringList()
                         //             << QStringLiteral("-c")
                         //             << QStringLiteral("-d")
                         //             << QStringLiteral("--v")
                         //             << QStringLiteral("--o")
                         //             << QStringLiteral("--fn")
-                        //             << QDir::cleanPath(QDir::toNativeSeparators(firmwarePath)));
+                        //             << QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)));
                         //
                         //         if(response.result == Utils::SynchronousProcessResponse::Finished)
                         //         {
@@ -3690,11 +3690,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         // {
                         //     for(int i = 0; i < 10; i++) // try multiple times...
                         //     {
-                        //         command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/pydfu/pydfu.py")));
+                        //         command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/pydfu/pydfu.py")));
                         //         response = process.run(QStringLiteral("python"), QStringList()
                         //             << command
                         //             << QStringLiteral("-u")
-                        //             << QDir::cleanPath(QDir::toNativeSeparators(firmwarePath)));
+                        //             << QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)));
                         //
                         //         if(response.result == Utils::SynchronousProcessResponse::Finished)
                         //         {
@@ -4107,7 +4107,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                         Utils::SynchronousProcess process;
                         Utils::SynchronousProcessResponse response;
 
-                        response = process.run(QStringLiteral("umount"), QStringList() << QDir::cleanPath(QDir::toNativeSeparators(m_portPath)));
+                        response = process.run(QStringLiteral("umount"), QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath)));
 
                         if(response.result != Utils::SynchronousProcessResponse::Finished)
                         {

@@ -433,14 +433,14 @@ static QString getInputFormats()
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffmpeg.exe")));
+        command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffmpeg.exe")));
         response = process.run(command, QStringList()
             << QStringLiteral("-hide_banner")
             << QStringLiteral("-muxers"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffmpeg")));
+        command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffmpeg")));
         response = process.run(command, QStringList()
             << QStringLiteral("-hide_banner")
             << QStringLiteral("-muxers"));
@@ -449,21 +449,21 @@ static QString getInputFormats()
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffmpeg")));
+            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffmpeg")));
             response = process.run(command, QStringList()
                 << QStringLiteral("-hide_banner")
                 << QStringLiteral("-muxers"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffmpeg")));
+            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffmpeg")));
             response = process.run(command, QStringList()
                 << QStringLiteral("-hide_banner")
                 << QStringLiteral("-muxers"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
-            command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffmpeg")));
+            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffmpeg")));
             response = process.run(command, QStringList()
                 << QStringLiteral("-hide_banner")
                 << QStringLiteral("-muxers"));
@@ -514,14 +514,14 @@ static QString getOutputFormats()
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffmpeg.exe")));
+        command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffmpeg.exe")));
         response = process.run(command, QStringList()
             << QStringLiteral("-hide_banner")
             << QStringLiteral("-demuxers"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffmpeg")));
+        command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffmpeg")));
         response = process.run(command, QStringList()
             << QStringLiteral("-hide_banner")
             << QStringLiteral("-demuxers"));
@@ -530,21 +530,21 @@ static QString getOutputFormats()
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffmpeg")));
+            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffmpeg")));
             response = process.run(command, QStringList()
                 << QStringLiteral("-hide_banner")
                 << QStringLiteral("-demuxers"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffmpeg")));
+            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffmpeg")));
             response = process.run(command, QStringList()
                 << QStringLiteral("-hide_banner")
                 << QStringLiteral("-demuxers"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
-            command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffmpeg")));
+            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffmpeg")));
             response = process.run(command, QStringList()
                 << QStringLiteral("-hide_banner")
                 << QStringLiteral("-demuxers"));
@@ -609,9 +609,9 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale)
 
         if(file.open(QIODevice::WriteOnly))
         {
-            QByteArray command = QString(QStringLiteral("\"") +
-                QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffmpeg.exe"))) + QStringLiteral("\" -hide_banner -y -i \"") +
-                QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
+            QByteArray command = QString(QStringLiteral("start /wait \"ffmpeg.exe\" \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffmpeg.exe"))) + QStringLiteral("\" -hide_banner -y -i \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::toNativeSeparators(QDir::cleanPath(newDst)) + QStringLiteral("\"\n")).toUtf8();
 
             if(file.write(command) == command.size())
             {
@@ -627,11 +627,11 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale)
         //
         //result = QProcess::startDetached(QStringLiteral("cmd.exe"), QStringList()
         //    << QStringLiteral("/c")
-        //    << QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffmpeg.exe")))
+        //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffmpeg.exe")))
         //    << QStringLiteral("-hide_banner")
         //    << QStringLiteral("-i")
-        //    << QDir::cleanPath(QDir::toNativeSeparators(newSrc))
-        //    << QDir::cleanPath(QDir::toNativeSeparators(newDst)));
+        //    << QDir::toNativeSeparators(QDir::cleanPath(newSrc))
+        //    << QDir::toNativeSeparators(QDir::cleanPath(newDst)));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
@@ -640,8 +640,8 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale)
         if(file.open(QIODevice::WriteOnly))
         {
             QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
-                QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
+                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::toNativeSeparators(QDir::cleanPath(newDst)) + QStringLiteral("\"\n")).toUtf8();
 
             if(file.write(command) == command.size())
             {
@@ -663,8 +663,8 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale)
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::toNativeSeparators(QDir::cleanPath(newDst)) + QStringLiteral("\"\n")).toUtf8();
 
                 if(file.write(command) == command.size())
                 {
@@ -680,11 +680,11 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale)
             //
             //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
             //    << QStringLiteral("-e")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffmpeg")))
+            //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffmpeg")))
             //    << QStringLiteral("-hide_banner")
             //    << QStringLiteral("-i")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(newSrc))
-            //    << QDir::cleanPath(QDir::toNativeSeparators(newDst)));
+            //    << QDir::toNativeSeparators(QDir::cleanPath(newSrc))
+            //    << QDir::toNativeSeparators(QDir::cleanPath(newDst)));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
@@ -693,8 +693,8 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale)
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::toNativeSeparators(QDir::cleanPath(newDst)) + QStringLiteral("\"\n")).toUtf8();
 
                 if(file.write(command) == command.size())
                 {
@@ -710,11 +710,11 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale)
             //
             //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
             //    << QStringLiteral("-e")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffmpeg")))
+            //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffmpeg")))
             //    << QStringLiteral("-hide_banner")
             //    << QStringLiteral("-i")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(newSrc))
-            //    << QDir::cleanPath(QDir::toNativeSeparators(newDst)));
+            //    << QDir::toNativeSeparators(QDir::cleanPath(newSrc))
+            //    << QDir::toNativeSeparators(QDir::cleanPath(newDst)));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
@@ -723,8 +723,8 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale)
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::cleanPath(QDir::toNativeSeparators(newDst)) + QStringLiteral("\"\n")).toUtf8();
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(newSrc)) + QStringLiteral("\"") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::toNativeSeparators(QDir::cleanPath(newDst)) + QStringLiteral("\"\n")).toUtf8();
 
                 if(file.write(command) == command.size())
                 {
@@ -740,11 +740,11 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale)
             //
             //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
             //    << QStringLiteral("-e")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffmpeg")))
+            //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffmpeg")))
             //    << QStringLiteral("-hide_banner")
             //    << QStringLiteral("-i")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(newSrc))
-            //    << QDir::cleanPath(QDir::toNativeSeparators(newDst)));
+            //    << QDir::toNativeSeparators(QDir::cleanPath(newSrc))
+            //    << QDir::toNativeSeparators(QDir::cleanPath(newDst)));
         }
     }
 
@@ -837,9 +837,9 @@ static bool playVideoFile(const QString &path)
 
         if(file.open(QIODevice::WriteOnly))
         {
-            QByteArray command = QString(QStringLiteral("\"") +
-                QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffplay.exe"))) + QStringLiteral("\" -hide_banner \"") +
-                QDir::cleanPath(QDir::toNativeSeparators(path)) + QStringLiteral("\"\n")).toUtf8();
+            QByteArray command = QString(QStringLiteral("start /wait \"ffplay.exe\" \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffplay.exe"))) + QStringLiteral("\" -hide_banner \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n")).toUtf8();
 
             if(file.write(command) == command.size())
             {
@@ -855,9 +855,9 @@ static bool playVideoFile(const QString &path)
         //
         //result = QProcess::startDetached(QStringLiteral("cmd.exe"), QStringList()
         //    << QStringLiteral("/c")
-        //    << QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffplay.exe")))
+        //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffplay.exe")))
         //    << QStringLiteral("-hide_banner")
-        //    << QDir::cleanPath(QDir::toNativeSeparators(path)));
+        //    << QDir::toNativeSeparators(QDir::cleanPath(path)));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
@@ -866,8 +866,8 @@ static bool playVideoFile(const QString &path)
         if(file.open(QIODevice::WriteOnly))
         {
             QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
-                QDir::cleanPath(QDir::toNativeSeparators(path)) + QStringLiteral("\"\n")).toUtf8();
+                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n")).toUtf8();
 
             if(file.write(command) == command.size())
             {
@@ -889,8 +889,8 @@ static bool playVideoFile(const QString &path)
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(path)) + QStringLiteral("\"\n")).toUtf8();
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n")).toUtf8();
 
                 if(file.write(command) == command.size())
                 {
@@ -906,9 +906,9 @@ static bool playVideoFile(const QString &path)
             //
             //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
             //    << QStringLiteral("-e")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffplay")))
+            //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffplay")))
             //    << QStringLiteral("-hide_banner")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(path)));
+            //    << QDir::toNativeSeparators(QDir::cleanPath(path)));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
@@ -917,8 +917,8 @@ static bool playVideoFile(const QString &path)
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(path)) + QStringLiteral("\"\n")).toUtf8();
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n")).toUtf8();
 
                 if(file.write(command) == command.size())
                 {
@@ -934,9 +934,9 @@ static bool playVideoFile(const QString &path)
             //
             //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
             //    << QStringLiteral("-e")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffplay")))
+            //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffplay")))
             //    << QStringLiteral("-hide_banner")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(path)));
+            //    << QDir::toNativeSeparators(QDir::cleanPath(path)));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
@@ -945,8 +945,8 @@ static bool playVideoFile(const QString &path)
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
-                    QDir::cleanPath(QDir::toNativeSeparators(path)) + QStringLiteral("\"\n")).toUtf8();
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n")).toUtf8();
 
                 if(file.write(command) == command.size())
                 {
@@ -962,9 +962,9 @@ static bool playVideoFile(const QString &path)
             //
             //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
             //    << QStringLiteral("-e")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffplay")))
+            //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffplay")))
             //    << QStringLiteral("-hide_banner")
-            //    << QDir::cleanPath(QDir::toNativeSeparators(path)));
+            //    << QDir::toNativeSeparators(QDir::cleanPath(path)));
         }
     }
 
@@ -1118,7 +1118,7 @@ void saveVideoFile(const QString &srcPath)
             if (ok)
             {
                 QString tempSrc = handleImageWriterFiles(srcPath);
-        
+
                 if((!QFile(dst).exists()) || QFile::remove(dst))
                 {
                     if((!tempSrc.isEmpty()) && convertVideoFile(dst, tempSrc, scale))
