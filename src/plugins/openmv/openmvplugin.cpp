@@ -3659,50 +3659,53 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         Utils::SynchronousProcessResponse response;
                         process.setTimeoutS(300); // 5 minutes...
                         process.setProcessChannelMode(QProcess::MergedChannels);
+                        downloadFirmware(command, process, response, QDir::cleanPath(QDir::toNativeSeparators(firmwarePath)));
 
-                        if(Utils::HostOsInfo::isWindowsHost())
-                        {
-                            for(int i = 0; i < 10; i++) // try multiple times...
-                            {
-                                command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/dfuse/DfuSeCommand.exe")));
-                                response = process.run(command, QStringList()
-                                    << QStringLiteral("-c")
-                                    << QStringLiteral("-d")
-                                    << QStringLiteral("--v")
-                                    << QStringLiteral("--o")
-                                    << QStringLiteral("--fn")
-                                    << QDir::cleanPath(QDir::toNativeSeparators(firmwarePath)));
-
-                                if(response.result == Utils::SynchronousProcessResponse::Finished)
-                                {
-                                    break;
-                                }
-                                else
-                                {
-                                    QApplication::processEvents();
-                                }
-                            }
-                        }
-                        else
-                        {
-                            for(int i = 0; i < 10; i++) // try multiple times...
-                            {
-                                command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/pydfu/pydfu.py")));
-                                response = process.run(QStringLiteral("python"), QStringList()
-                                    << command
-                                    << QStringLiteral("-u")
-                                    << QDir::cleanPath(QDir::toNativeSeparators(firmwarePath)));
-
-                                if(response.result == Utils::SynchronousProcessResponse::Finished)
-                                {
-                                    break;
-                                }
-                                else
-                                {
-                                    QApplication::processEvents();
-                                }
-                            }
-                        }
+                        // OLD
+                        //
+                        // if(Utils::HostOsInfo::isWindowsHost())
+                        // {
+                        //     for(int i = 0; i < 10; i++) // try multiple times...
+                        //     {
+                        //         command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/dfuse/DfuSeCommand.exe")));
+                        //         response = process.run(command, QStringList()
+                        //             << QStringLiteral("-c")
+                        //             << QStringLiteral("-d")
+                        //             << QStringLiteral("--v")
+                        //             << QStringLiteral("--o")
+                        //             << QStringLiteral("--fn")
+                        //             << QDir::cleanPath(QDir::toNativeSeparators(firmwarePath)));
+                        //
+                        //         if(response.result == Utils::SynchronousProcessResponse::Finished)
+                        //         {
+                        //             break;
+                        //         }
+                        //         else
+                        //         {
+                        //             QApplication::processEvents();
+                        //         }
+                        //     }
+                        // }
+                        // else
+                        // {
+                        //     for(int i = 0; i < 10; i++) // try multiple times...
+                        //     {
+                        //         command = QDir::cleanPath(QDir::toNativeSeparators(Core::ICore::resourcePath() + QStringLiteral("/pydfu/pydfu.py")));
+                        //         response = process.run(QStringLiteral("python"), QStringList()
+                        //             << command
+                        //             << QStringLiteral("-u")
+                        //             << QDir::cleanPath(QDir::toNativeSeparators(firmwarePath)));
+                        //
+                        //         if(response.result == Utils::SynchronousProcessResponse::Finished)
+                        //         {
+                        //             break;
+                        //         }
+                        //         else
+                        //         {
+                        //             QApplication::processEvents();
+                        //         }
+                        //     }
+                        // }
 
                         if(response.result == Utils::SynchronousProcessResponse::Finished)
                         {
@@ -3725,27 +3728,31 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             box.setEscapeButton(QMessageBox::Cancel);
                             box.exec();
 
-                            if(Utils::HostOsInfo::isMacHost())
-                            {
-                                QMessageBox::information(Core::ICore::dialogParent(),
-                                    tr("Connect"),
-                                    tr("PyDFU requires the following libraries to be installed:\n\n") +
-                                    QStringLiteral("MacPorts:\n"
-                                                   "    sudo port install libusb py-pip\n"
-                                                   "    sudo pip install pyusb\n\n"
-                                                   "HomeBrew:\n"
-                                                   "    sudo brew install libusb python\n"
-                                                   "    sudo pip install pyusb"));
-                            }
+                            // OLD
+                            //
+                            // if(Utils::HostOsInfo::isMacHost())
+                            // {
+                            //     QMessageBox::information(Core::ICore::dialogParent(),
+                            //         tr("Connect"),
+                            //         tr("PyDFU requires the following libraries to be installed:\n\n") +
+                            //         QStringLiteral("MacPorts:\n"
+                            //                        "    sudo port install libusb py-pip\n"
+                            //                        "    sudo pip install pyusb\n\n"
+                            //                        "HomeBrew:\n"
+                            //                        "    sudo brew install libusb python\n"
+                            //                        "    sudo pip install pyusb"));
+                            // }
 
-                            if(Utils::HostOsInfo::isLinuxHost())
-                            {
-                                QMessageBox::information(Core::ICore::dialogParent(),
-                                    tr("Connect"),
-                                    tr("PyDFU requires the following libraries to be installed:\n\n") +
-                                    QStringLiteral("    sudo apt-get install libusb-1.0 python-pip\n"
-                                                   "    sudo pip install pyusb"));
-                            }
+                            // OLD
+                            //
+                            // if(Utils::HostOsInfo::isLinuxHost())
+                            // {
+                            //     QMessageBox::information(Core::ICore::dialogParent(),
+                            //         tr("Connect"),
+                            //         tr("PyDFU requires the following libraries to be installed:\n\n") +
+                            //         QStringLiteral("    sudo apt-get install libusb-1.0 python-pip\n"
+                            //                        "    sudo pip install pyusb"));
+                            // }
                         }
                     }
                 }

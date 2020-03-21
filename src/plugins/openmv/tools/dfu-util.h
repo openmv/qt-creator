@@ -2,13 +2,11 @@
 #define DFU_UTIL_H
 
 #include <QtCore>
-#include <QtGui>
-#include <QtWidgets>
 
 #include <coreplugin/icore.h>
 #include <utils/hostosinfo.h>
 #include <utils/synchronousprocess.h>
 
-bool downloadFirmware(const QString &path);
+void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Utils::SynchronousProcessResponse &response, const QString &path);
 
 #endif // DFU_UTIL_H
