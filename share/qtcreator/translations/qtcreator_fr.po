@@ -7903,7 +7903,7 @@ msgstr "Exemples"
 
 #~ msgctxt "OpenMV::Internal::OpenMVPlugin|"
 #~ msgid "Run Bootloader"
-#~ msgstr "Exécuter le bootloader"
+#~ msgstr "Exécuter LE Bootloader"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:798
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8319,7 +8319,7 @@ msgstr "FPS :%L1"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4178
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Board:"
-msgstr "Planche:"
+msgstr "Carte:"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1404
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9160,7 +9160,7 @@ msgstr "Erreur de temporisation lors de l'obtention du type de capteur!"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3998
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Board: %L1"
-msgstr "Planche: %L1"
+msgstr "Carte: %L1"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4000
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9258,7 +9258,7 @@ msgstr "Exécutez Bootloader (Load Firmware)"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:785
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Erase Onboard Data Flash"
-msgstr "Effacer le Flash de données embarqué"
+msgstr "Exécuter LA Flash de données embarquéE"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:786
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -10418,7 +10418,7 @@ msgstr "Terminé"
 #: ../../../src/plugins/openmv/tools/thresholdeditor.cpp:148
 msgctxt "ThresholdEditor|"
 msgid "Threhsold Editor"
-msgstr "Éditeur de seuil"
+msgstr "Éditeur de seuils"
 
 #: ../../../src/plugins/openmv/tools/thresholdeditor.cpp:174
 msgctxt "ThresholdEditor|"
