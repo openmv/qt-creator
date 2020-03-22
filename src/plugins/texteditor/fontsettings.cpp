@@ -399,7 +399,11 @@ static QString defaultFontFamily()
     if (Utils::HostOsInfo::isMacHost())
         return QLatin1String("Monaco");
     if (Utils::HostOsInfo::isAnyUnixHost())
-        return QLatin1String("Monospace");
+        //OPENMV-DIFF//
+        //return QLatin1String("Monospace");
+        //OPENMV-DIFF//
+        return (QSysInfo::buildCpuArchitecture() == QStringLiteral("arm")) ? QLatin1String("DejaVu Sans Mono") : QLatin1String("Monospace");
+        //OPENMV-DIFF//
     return QLatin1String("Courier");
 }
 
