@@ -243,8 +243,8 @@ void OpenMVPluginFB::mousePressEvent(QMouseEvent *event)
     {
         m_unlocked = m_pixmap && (m_pixmap == itemAt(event->pos()));
         m_origin = event->pos();
-        m_band->setGeometry(QRect());
-        m_band->hide();
+        m_band->setGeometry(QRect(m_origin, event->pos() + QPoint(1, 1)).normalized().intersected(mapFromScene(sceneRect()).boundingRect()));
+        m_band->setVisible(m_pixmap && getROI().isValid());
 
         // Broadcast the new pixmap
         emit pixmapUpdate(getPixmap());
