@@ -487,6 +487,7 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     mainLayout->setSpacing(1);
     mainLayout->addWidget(m_selectionWidget);
     //OPENMV-DIFF//
+    m_msplitter = new MiniSplitter;
     m_hsplitter = new MiniSplitter;
     m_vsplitter = new MiniSplitter(Qt::Vertical);
 
@@ -569,7 +570,10 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     tempLayout3->addWidget(rightBar);
 
     tempWidget3->setLayout(tempLayout3);
-    vlayout->insertWidget(0, tempWidget3);
+    m_msplitter->insertWidget(0, tempWidget3);
+    m_msplitter->setStretchFactor(0, 1);
+    m_msplitter->setCollapsible(0, false);
+    vlayout->insertWidget(0, m_msplitter);
 
     //OPENMV-DIFF//
     mainLayout->addLayout(vlayout);

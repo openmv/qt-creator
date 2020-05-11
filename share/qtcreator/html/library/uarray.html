@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>array – arrays of numeric data &mdash; MicroPython 1.11 documentation</title>
+  <title>uarray – arrays of numeric data &mdash; MicroPython 1.12 documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="cmath – mathematical functions for complex numbers" href="cmath.html" />
-    <link rel="prev" title="Builtin functions and exceptions" href="builtins.html" /> 
+    <link rel="next" title="ubinascii – binary/ASCII conversions" href="ubinascii.html" />
+    <link rel="prev" title="sys – system specific functions" href="sys.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.11
+                1.12
               </div>
             
           
@@ -97,14 +97,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">array</span></code> – arrays of numeric data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#classes">Classes</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#classes">Classes</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
@@ -178,13 +178,13 @@
         
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
         
-      <li><code class="docutils literal notranslate"><span class="pre">array</span></code> – arrays of numeric data</li>
+      <li><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/library/array.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/library/uarray.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -197,8 +197,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-array">
-<span id="array-arrays-of-numeric-data"></span><h1><a class="reference internal" href="#module-array" title="array: efficient arrays of numeric data"><code class="xref py py-mod docutils literal notranslate"><span class="pre">array</span></code></a> – arrays of numeric data<a class="headerlink" href="#module-array" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-uarray">
+<span id="uarray-arrays-of-numeric-data"></span><h1><a class="reference internal" href="#module-uarray" title="uarray: efficient arrays of numeric data"><code class="xref py py-mod docutils literal notranslate"><span class="pre">uarray</span></code></a> – arrays of numeric data<a class="headerlink" href="#module-uarray" title="Permalink to this headline">¶</a></h1>
 <p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
 as described below. For more information, refer to the original
 CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/array.html#module-array" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">array</span></code></a>.</p>
@@ -208,20 +208,20 @@ floating-point support).</p>
 <div class="section" id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="array.array.array">
-<em class="property">class </em><code class="descclassname">array.</code><code class="descname">array</code><span class="sig-paren">(</span><em>typecode</em><span class="optional">[</span>, <em>iterable</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#array.array.array" title="Permalink to this definition">¶</a></dt>
+<dt id="uarray.array">
+<em class="property">class </em><code class="descclassname">uarray.</code><code class="descname">array</code><span class="sig-paren">(</span><em>typecode</em><span class="optional">[</span>, <em>iterable</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#uarray.array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create array with elements of given type. Initial contents of the
 array are given by <em>iterable</em>. If it is not provided, an empty
 array is created.</p>
 <dl class="method">
-<dt id="array.array.array.append">
-<code class="descname">append</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.array.append" title="Permalink to this definition">¶</a></dt>
+<dt id="uarray.array.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#uarray.array.append" title="Permalink to this definition">¶</a></dt>
 <dd><p>Append new element <em>val</em> to the end of array, growing it.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="array.array.array.extend">
-<code class="descname">extend</code><span class="sig-paren">(</span><em>iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.array.extend" title="Permalink to this definition">¶</a></dt>
+<dt id="uarray.array.extend">
+<code class="descname">extend</code><span class="sig-paren">(</span><em>iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#uarray.array.extend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Append new elements as contained in <em>iterable</em> to the end of
 array, growing it.</p>
 </dd></dl>
@@ -239,10 +239,10 @@ array, growing it.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cmath.html" class="btn btn-neutral float-right" title="cmath – mathematical functions for complex numbers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ubinascii.html" class="btn btn-neutral float-right" title="ubinascii – binary/ASCII conversions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="builtins.html" class="btn btn-neutral float-left" title="Builtin functions and exceptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="sys.html" class="btn btn-neutral float-left" title="sys – system specific functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -251,9 +251,9 @@ array, growing it.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 20 Dec 2019.
+        Last updated on 11 May 2020.
       </span>
 
     </p>

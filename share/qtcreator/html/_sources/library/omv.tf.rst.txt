@@ -11,7 +11,7 @@ You can read more about how to create your own models that can run on the
 OpenMV Cam `here <https://www.tensorflow.org/lite/microcontrollers>`__. In
 particular:
 
-   * Supported operations are listed `here <https://github.com/openmv/tensorflow/blob/openmv/tensorflow/lite/micro/kernels/all_ops_resolver.cc>`__.
+   * Supported operations are listed `here <https://github.com/openmv/tensorflow/blob/master/tensorflow/lite/micro/kernels/all_ops_resolver.cc>`__.
 
      * Note that tensorflow lite operations are versioned. If no version numbers
        are listed after the operation then the min and max version supported are
@@ -24,7 +24,7 @@ particular:
    * Convert your model to a FlatBuffer by following the instructions `here <https://www.tensorflow.org/lite/microcontrollers/build_convert#model_conversion>`__.
    * Finally, quantize your model by following the instructions `here <https://www.tensorflow.org/lite/microcontrollers/build_convert#quantization>`__.
 
-Alternatively, just follow Google's in-depth guide `here <https://github.com/openmv/tensorflow/blob/openmv/tensorflow/lite/micro/examples/person_detection/training_a_model.md>`__.
+Alternatively, just follow Google's in-depth guide `here <https://github.com/openmv/tensorflow/blob/master/tensorflow/lite/micro/examples/person_detection/training_a_model.md>`__.
 If you have problems with Google's in-depth guide please contact Google for help.
 
 The final output ``.tflite`` model can be directly loaded and run by your

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Maximising MicroPython Speed &mdash; MicroPython 1.11 documentation</title>
+  <title>Maximising MicroPython Speed &mdash; MicroPython 1.12 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.11
+                1.12
               </div>
             
           
@@ -98,6 +98,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">The MicroPython language</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="repl.html">The MicroPython Interactive Interpreter Mode (aka REPL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpyfiles.html">MicroPython .mpy files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="isr_rules.html">Writing interrupt handlers</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Maximising MicroPython Speed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#designing-for-speed">Designing for speed</a><ul>
@@ -121,8 +122,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="constrained.html">MicroPython on Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages.html">Distribution packages, package management, and deploying applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="asm_thumb2_index.html">Inline Assembler for Thumb2 architectures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filesystem.html">Working with filesystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyboard.py.html">The pyboard.py tool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
@@ -289,7 +291,7 @@ convert them to floating-point numbers for signal processing.</p>
 <div class="section" id="arrays">
 <h3><a class="toc-backref" href="#id7">Arrays</a><a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h3>
 <p>Consider the use of the various types of array classes as an alternative to lists.
-The <a class="reference internal" href="../library/array.html#module-array" title="array: efficient arrays of numeric data"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">array</span></code></a> module supports various element types with 8-bit elements supported
+The <a class="reference internal" href="../library/uarray.html#uarray.array" title="uarray.array"><code class="xref any py py-class docutils literal notranslate"><span class="pre">array</span></code></a> module supports various element types with 8-bit elements supported
 by Python’s built in <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> and <a class="reference internal" href="../library/builtins.html#bytearray" title="bytearray"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> classes. These data structures all store
 elements in contiguous memory locations. Once again to avoid memory allocation in critical
 code these should be pre-allocated and passed as arguments or as bound objects.</p>
@@ -356,7 +358,7 @@ compile time, evaluates to an integer e.g. <code class="docutils literal notrans
 by caching the object in a local variable:</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">ba</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ba</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj_display</span><span class="p">):</span>
         <span class="n">ba_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ba</span>
         <span class="n">fb</span> <span class="o">=</span> <span class="n">obj_display</span><span class="o">.</span><span class="n">framebuffer</span>
@@ -400,7 +402,7 @@ no adaptation (but see below). It is invoked by means of a function decorator:</
 <li>Generators are not supported.</li>
 <li>If <code class="docutils literal notranslate"><span class="pre">raise</span></code> is used an argument must be supplied.</li>
 </ul>
-<p>The trade-off for the improved performance (roughly twices as fast as bytecode) is an
+<p>The trade-off for the improved performance (roughly twice as fast as bytecode) is an
 increase in compiled code size.</p>
 </div>
 <div class="section" id="the-viper-code-emitter">
@@ -471,10 +473,11 @@ must be of integral type and the value of that integral object is returned.</li>
 <li>The argument to a bool cast must be integral type (boolean or integer); when used as a return
 type the viper function will return True or False objects.</li>
 <li>If the argument is a Python object and the cast is <code class="docutils literal notranslate"><span class="pre">ptr</span></code>, <code class="docutils literal notranslate"><span class="pre">ptr</span></code>, <code class="docutils literal notranslate"><span class="pre">ptr16</span></code> or <code class="docutils literal notranslate"><span class="pre">ptr32</span></code>,
-then the Python object must either have the buffer protocol with read-write capabilities
-(in which case a pointer to the start of the buffer is returned) or it must be of integral
-type (in which case the value of that integral object is returned).</li>
+then the Python object must either have the buffer protocol (in which case a pointer to the
+start of the buffer is returned) or it must be of integral type (in which case the value of
+that integral object is returned).</li>
 </ul>
+<p>Writing to a pointer which points to a read-only object will lead to undefined behaviour.</p>
 <p>The following example illustrates the use of a <code class="docutils literal notranslate"><span class="pre">ptr16</span></code> cast to toggle pin X1 <code class="docutils literal notranslate"><span class="pre">n</span></code> times:</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BIT0</span> <span class="o">=</span> <span class="n">const</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="nd">@micropython</span><span class="o">.</span><span class="n">viper</span>
@@ -537,9 +540,9 @@ can be performed as follows:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 20 Dec 2019.
+        Last updated on 11 May 2020.
       </span>
 
     </p>

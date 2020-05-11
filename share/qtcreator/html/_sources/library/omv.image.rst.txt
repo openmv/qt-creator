@@ -1795,6 +1795,16 @@ Methods
 
    Returns the image size in bytes.
 
+.. method:: image.bytearray()
+
+   Returns a `bytearray` object that points to the image data for byte-level read/write access.
+
+   .. note::
+
+      Image objects are automatically cast as `bytes` objects when passed to MicroPython driver
+      that requires a `bytes` like object. This is read-only access.
+      Call `bytearray()` to get read/write access.
+
 .. method:: image.get_pixel(x, y, [rgbtuple])
 
    For grayscale images: Returns the grayscale pixel value at location (x, y).
@@ -1971,6 +1981,8 @@ Methods
 
    ``quality`` is the compression quality (0-100) (int).
 
+   Returns the compressed image if called on a compressed image.
+
 .. method:: image.compress_for_ide([quality=50])
 
    JPEG compresses the image in place. Use this method versus `image.compressed()`
@@ -1989,6 +2001,9 @@ Methods
 
    ``quality`` is the compression quality (0-100) (int).
 
+   Returns the image compressed for the IDE if called on a compressed image.
+   Do not call this on an image already compressed for the IDE.
+
 .. method:: image.compressed([quality=50])
 
    Returns a JPEG compressed image - the original image is untouched. However,
@@ -1997,6 +2012,8 @@ Methods
    than what you could do with `image.compress()`.
 
    ``quality`` is the compression quality (0-100) (int).
+
+   Returns a compressed image copy if called on a compressed image.
 
 .. method:: image.compressed_for_ide([quality=50])
 
@@ -2014,6 +2031,9 @@ Methods
    windows created via "Open Terminal" in OpenMV IDE.
 
    ``quality`` is the compression quality (0-100) (int).
+
+   Returns a image compressed for the IDE copy if called on a compressed image.
+   Do not call this on an image already compressed for the IDE.
 
 .. method: image.jpeg_encode_for_ide()
 
@@ -2347,7 +2367,7 @@ Methods
 
    Not supported on compressed images or bayer images.
 
-.. method:: image.draw_image(image, x, y, [x_scale=1.0, [y_scale=1.0, [alpha=256, [mask=None]]]])
+.. method:: image.draw_image(image, x, y, [x_scale=1.0, [y_scale=1.0, [alpha=256, [mask=None, [color_palette=-1]]]]])
 
    Draws an ``image`` whose top-left corner starts at location x, y. You may either
    pass x, y separately or as a tuple (x, y). This method ia very flexible and does
@@ -2373,6 +2393,10 @@ Methods
    The mask should be an image with just black or white pixels and should be the
    same size as the ``image`` you are drawing if passed. You may use the mask
    to do sprite style drawing operations.
+
+   ``color_palette`` if not ``-1`` can be `sensor.PALETTE_RAINBOW`, `sensor.PALETTE_IRONBOW`, or
+   a 256 pixel in total RGB565 image to use as a color palette to draw a GRAYSCALE image on an
+   RGB565 image in color.
 
    Returns the image object so you can call another method using ``.`` notation.
 
@@ -3376,7 +3400,7 @@ Methods
 
    Not supported on compressed images or bayer images.
 
-.. method:: img.rotation_corr([x_rotation=0.0, [y_rotation=0.0, [z_rotation=0.0, [x_translation=0.0, [y_translation=0.0, [zoom=1.0]]]]]])
+.. method:: img.rotation_corr([x_rotation=0.0, [y_rotation=0.0, [z_rotation=0.0, [x_translation=0.0, [y_translation=0.0, [zoom=1.0, [fov=60.0, [corners]]]]]]]])
 
    Corrects perspective issues in the image by doing a 3D rotation of the frame buffer.
 
@@ -3396,6 +3420,24 @@ Methods
    after rotation. Because this translation is applied in 3D space the units aren't pixels...
 
    ``zoom`` is the amount to zoom in on the image by. 1.0 by default.
+
+   ``fov`` is the field-of-view to use internally when doing 2D->3D projection before
+   rotating the image in 3D space. As this value approaches 0 the image is placed at infinity away
+   from the viewport. As this value approaches 180 the image is placed within the viewport. Typically,
+   you should not change this value but you can modify it to change the 2D->3D mapping effect.
+
+   ``corners`` is a list of four (x,y) tuples representing four corners used to create a 4-point
+   correspondence homography that will map the first corner to (0, 0), the second corner to
+   (image_width-1, 0), the third corner to (image_width-1, image_height-1), and the fourth corner
+   to (0, image_height-1). The 3D rotation is then applied after the image is re-mapped. This
+   argument lets you use `rotation_corr` to do things like birds-eye-view transforms. E.g::
+
+       top_tilt = 10 # if the difference between top/bottom_tilt become to large this method will stop working
+       bottom_tilt = 0
+
+       points = [(tilt, 0), (img.width()-tilt, 0), (img.width()-1-bottom_tilt, img.height()-1), (bottom_tilt, img.height()-1)]
+
+       img.rotation_corr(corners=points)
 
    Returns the image object so you can call another method using ``.`` notation.
 

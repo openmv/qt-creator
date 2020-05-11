@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>class CAN – controller area network communication bus &mdash; MicroPython 1.11 documentation</title>
+  <title>class CAN – controller area network communication bus &mdash; MicroPython 1.12 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.11
+                1.12
               </div>
             
           
@@ -164,6 +164,23 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermopile shield driver (fir == far infrared)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.tv.html"><code class="docutils literal notranslate"><span class="pre">tv</span></code> — tv shield driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.cpufreq.html"><code class="docutils literal notranslate"><span class="pre">cpufreq</span></code> — CPU Frequency Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.imu.html"><code class="docutils literal notranslate"><span class="pre">imu</span></code> — imu sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html"><code class="docutils literal notranslate"><span class="pre">rpc</span></code> — rpc library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-rpc-virtual-class">class rpc - rpc virtual class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-master-rpc-master-virtual-class">class rpc_master - rpc_master virtual class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-slave-rpc-slave-virtual-class">class rpc_slave - rpc_slave virtual class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-can-master-can-master-interface">class rpc_can_master - CAN Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-can-slave-can-slave-interface">class rpc_can_slave - CAN Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-i2c-master-i2c-master-interface">class rpc_i2c_master - I2C Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-i2c-slave-i2c-slave-interface">class rpc_i2c_slave - I2C Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-spi-master-spi-master-interface">class rpc_spi_master - SPI Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-spi-slave-spi-slave-interface">class rpc_spi_slave - SPI Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-uart-master-uart-master-interface">class rpc_uart_master - UART Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-uart-slave-uart-slave-interface">class rpc_uart_slave - UART Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-usb-vcp-master-usb-vcp-master-interface">class rpc_usb_vcp_master - USB VCP Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-usb-vcp-slave-usb-vcp-slave-interface">class rpc_usb_vcp_slave - USB VCP Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-wifi-master-wifi-master-interface">class rpc_wifi_master - WiFi Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#id10">class rpc_wifi_master - WiFi Master Interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.omv.html"><code class="docutils literal notranslate"><span class="pre">omv</span></code> — OpenMV Cam Information</a></li>
 </ul>
 </li>
@@ -308,17 +325,27 @@ communications after entering the bus-off state; if this is disabled then
 <a class="reference internal" href="#pyb.CAN.restart" title="pyb.CAN.restart"><code class="xref py py-meth docutils literal notranslate"><span class="pre">restart()</span></code></a> can be used to leave the bus-off state</li>
 </ul>
 </div></blockquote>
-<p>The time quanta tq is the basic unit of time for the CAN bus.  tq is the CAN
-prescaler value divided by PCLK1 (the frequency of internal peripheral bus 1);
-see <code class="xref py py-meth docutils literal notranslate"><span class="pre">pyb.freq()</span></code> to determine PCLK1.</p>
+<p>The time quanta tq is the basic unit of time for the CAN bus.</p>
 <p>A single bit is made up of the synchronisation segment, which is always 1 tq.
 Then follows bit segment 1, then bit segment 2.  The sample point is after bit
 segment 1 finishes.  The transmit point is after bit segment 2 finishes.
 The baud rate will be 1/bittime, where the bittime is 1 + BS1 + BS2 multiplied
 by the time quanta tq.</p>
-<p>For example, with PCLK1=42MHz, prescaler=100, sjw=1, bs1=6, bs2=8, the value of
-tq is 2.38 microseconds.  The bittime is 35.7 microseconds, and the baudrate
-is 28kHz.</p>
+<p>Use the following code to calculate CAN settings:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_can_settings</span><span class="p">(</span><span class="n">bit_rate</span><span class="p">,</span> <span class="n">sampling_point</span><span class="p">):</span>
+    <span class="n">clk</span> <span class="o">=</span> <span class="mi">48000000</span> <span class="k">if</span> <span class="n">omv</span><span class="o">.</span><span class="n">board_type</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;H7&quot;</span> <span class="k">else</span> <span class="n">pyb</span><span class="o">.</span><span class="n">freq</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">prescaler</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">bs1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">bs2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">bit_rate</span> <span class="o">==</span> <span class="p">((</span><span class="n">clk</span> <span class="o">&gt;&gt;</span> <span class="n">prescaler</span><span class="p">)</span> <span class="o">//</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">bs1</span> <span class="o">+</span> <span class="n">bs2</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="n">sampling_point</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="p">(((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">bs1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">//</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">bs1</span> <span class="o">+</span> <span class="n">bs2</span><span class="p">)):</span>
+                    <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">prescaler</span><span class="p">,</span> <span class="n">bs1</span><span class="p">,</span> <span class="n">bs2</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid bit_rate and/or sampling_point!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>bit_rate - CAN bit rate.</li>
+<li>sampling_point - Tseg1/Tseg2 ratio. Typically 75%. (50.0, 62.5, 75, 87.5, etc.)</li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -647,9 +674,9 @@ a integer that indicates the reason for the callback.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 20 Dec 2019.
+        Last updated on 11 May 2020.
       </span>
 
     </p>

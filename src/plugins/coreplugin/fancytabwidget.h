@@ -196,6 +196,7 @@ private:
     QStatusBar *m_statusBar;
 //OPENMV-DIFF//
 public:
+    MiniSplitter *m_msplitter;
     MiniSplitter *m_hsplitter;
     MiniSplitter *m_vsplitter;
     QToolButton *m_topDrawer;

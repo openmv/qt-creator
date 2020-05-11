@@ -1,0 +1,818 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rpc — rpc library &mdash; MicroPython 1.12 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/openmv.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="omv — OpenMV Cam Information" href="omv.omv.html" />
+    <link rel="prev" title="imu — imu sensor" href="omv.imu.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MicroPython
+          
+
+          
+            
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.12
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pyb.html"><code class="docutils literal notranslate"><span class="pre">pyb</span></code> — functions related to the board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.ADC.html">class ADC – analog to digital conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.CAN.html">class CAN – controller area network communication bus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.DAC.html">class DAC – digital to analog conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.ExtInt.html">class ExtInt – configure I/O pins to interrupt on external events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.I2C.html">class I2C – a two-wire serial protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.LED.html">class LED – LED object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.Pin.html">class Pin – control I/O pins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.Pin.html#class-pinaf-pin-alternate-functions">class PinAF – Pin Alternate Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.RTC.html">class RTC – real time clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.Servo.html">class Servo – 3-wire hobby servo driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.SPI.html">class SPI – a master-driven serial protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.Timer.html">class Timer – control internal timers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.Timer.html#class-timerchannel-setup-a-channel-for-a-timer">class TimerChannel — setup a channel for a timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.UART.html">class UART – duplex serial communication bus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyb.USB_VCP.html">class USB_VCP – USB virtual comm port</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.time.html"><code class="docutils literal notranslate"><span class="pre">time</span></code> — tracking elapsed time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.sensor.html"><code class="docutils literal notranslate"><span class="pre">sensor</span></code> — camera sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html"><code class="docutils literal notranslate"><span class="pre">image</span></code> — machine vision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-haarcascade-feature-descriptor">class HaarCascade – Feature Descriptor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-similarity-similarity-object">class Similarity – Similarity Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-histogram-histogram-object">class Histogram – Histogram Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-percentile-percentile-object">class Percentile – Percentile Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-threshold-threshold-object">class Threshold – Threshold Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-statistics-statistics-object">class Statistics – Statistics Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-blob-blob-object">class Blob – Blob object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-line-line-object">class Line – Line object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-circle-circle-object">class Circle – Circle object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-rect-rectangle-object">class Rect – Rectangle Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-qrcode-qrcode-object">class QRCode – QRCode object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-apriltag-apriltag-object">class AprilTag – AprilTag object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-datamatrix-datamatrix-object">class DataMatrix – DataMatrix object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-barcode-barcode-object">class BarCode – BarCode object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-displacement-displacement-object">class Displacement – Displacement object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-kptmatch-keypoint-object">class kptmatch – Keypoint Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-imagewriter-imagewriter-object">class ImageWriter – ImageWriter object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-imagereader-imagereader-object">class ImageReader – ImageReader object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.image.html#class-image-image-object">class Image – Image object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.nn.html"><code class="docutils literal notranslate"><span class="pre">nn</span></code> — neural networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.nn.html#class-nn-class-nn-dection-result">class nn_class – nn dection result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.nn.html#class-net-neural-network">class Net – Neural Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code> — Tensor Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html#class-tf-classification-tf-classification-dection-result">class tf_classification – tf classification dection result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tf.html#class-tf-model-tensorflow-model">class tf_model – TensorFlow Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.gif.html"><code class="docutils literal notranslate"><span class="pre">gif</span></code> — gif recording</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.gif.html#class-gif-gif-recorder">class Gif – Gif recorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html"><code class="docutils literal notranslate"><span class="pre">mjpeg</span></code> — mjpeg recording</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html#class-mjpeg-mjpeg-recorder">class Mjpeg – Mjpeg recorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd shield driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermopile shield driver (fir == far infrared)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.tv.html"><code class="docutils literal notranslate"><span class="pre">tv</span></code> — tv shield driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.cpufreq.html"><code class="docutils literal notranslate"><span class="pre">cpufreq</span></code> — CPU Frequency Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.imu.html"><code class="docutils literal notranslate"><span class="pre">imu</span></code> — imu sensor</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">rpc</span></code> — rpc library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-use-the-library">How to use the Library</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-rpc-virtual-class">class rpc - rpc virtual class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#constructors">Constructors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-master-rpc-master-virtual-class">class rpc_master - rpc_master virtual class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Constructors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-slave-rpc-slave-virtual-class">class rpc_slave - rpc_slave virtual class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Constructors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-can-master-can-master-interface">class rpc_can_master - CAN Master Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Constructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-can-slave-can-slave-interface">class rpc_can_slave - CAN Slave Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Constructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-i2c-master-i2c-master-interface">class rpc_i2c_master - I2C Master Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Constructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-i2c-slave-i2c-slave-interface">class rpc_i2c_slave - I2C Slave Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Constructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-spi-master-spi-master-interface">class rpc_spi_master - SPI Master Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Constructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-spi-slave-spi-slave-interface">class rpc_spi_slave - SPI Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-uart-master-uart-master-interface">class rpc_uart_master - UART Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-uart-slave-uart-slave-interface">class rpc_uart_slave - UART Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-usb-vcp-master-usb-vcp-master-interface">class rpc_usb_vcp_master - USB VCP Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-usb-vcp-slave-usb-vcp-slave-interface">class rpc_usb_vcp_slave - USB VCP Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class-rpc-wifi-master-wifi-master-interface">class rpc_wifi_master - WiFi Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">class rpc_wifi_master - WiFi Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.omv.html"><code class="docutils literal notranslate"><span class="pre">omv</span></code> — OpenMV Cam Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">rpc</span></code> — rpc library</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/library/omv.rpc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-rpc">
+<span id="rpc-rpc-library"></span><h1><a class="reference internal" href="#module-rpc" title="rpc: rpc library"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rpc</span></code></a> — rpc library<a class="headerlink" href="#module-rpc" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">rpc</span></code> module on the OpenMV Cam allows you to connect your OpenMV Cam to another microcontroller
+or computer and execute remote python (or procedure) calls on your OpenMV Cam. The <code class="docutils literal notranslate"><span class="pre">rpc</span></code> module also
+allows for the reverse too if you want your OpenMV Cam to be able to execute remote procedure
+(or python) calls on another microcontroller or computer.</p>
+<div class="section" id="how-to-use-the-library">
+<h2>How to use the Library<a class="headerlink" href="#how-to-use-the-library" title="Permalink to this headline">¶</a></h2>
+<p>Please checkout the example scripts in OpenMV IDE under <code class="docutils literal notranslate"><span class="pre">Remote</span> <span class="pre">Control</span></code>.</p>
+<p>You will need to edit the example code to choose which interface you want to use and to play with
+the settings the scripts use.</p>
+<p>In general, for the controller device to use the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library you will create an interface object
+using the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">interface</span> <span class="o">=</span> <span class="n">rpc</span><span class="o">.</span><span class="n">rpc_uart_master</span><span class="p">(</span><span class="n">baudrate</span><span class="o">=</span><span class="mi">115200</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This create a UART interface to talk to an <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave.</p>
+<p>Once the interface is created you just need to do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">memory_view_object_result</span> <span class="o">=</span> <span class="n">interface</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="s2">&quot;remote_function_or_method_name&quot;</span><span class="p">,</span> <span class="n">bytes_object_argument</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library will try to execute that <code class="docutils literal notranslate"><span class="pre">&quot;remote_function_or_method_name&quot;</span></code> on the slave. The
+remote function or method will receive the <code class="docutils literal notranslate"><span class="pre">bytes_object_argument</span></code> which can be up to 2^32-1 bytes in
+size. Once the remote method finishes executing it will return a <code class="docutils literal notranslate"><span class="pre">memory_view_object_result</span></code> which
+can also be up to 2^32-1 bytes in size. Because the argument and response are both generic byte
+containers you can pass anything through the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library and receive any type of response. A simple
+way to pass arguments is to use <code class="docutils literal notranslate"><span class="pre">struct.pack()</span></code> to create the argument and <code class="docutils literal notranslate"><span class="pre">struct.unpack()</span></code> to
+receieve the argument on the other side. For the response, the other side may send a string
+object or json string as the result which the master can then interpret.</p>
+<p>As for errors, if you try to execute a non-existant function or method name the
+<code class="docutils literal notranslate"><span class="pre">rpc_master.call()</span></code> method will return an empty <code class="docutils literal notranslate"><span class="pre">bytes()</span></code> object. If the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library failed to communicate with the
+slave the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library will return None.</p>
+<p>To keep things simple the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library doesn’t maintain a connection between the master and slave
+devices. The <code class="docutils literal notranslate"><span class="pre">rpc_master.call()</span></code> method encapsulates trying to connect to the slave, starting execution of
+the remote function or method, and getting the result.</p>
+<p>Now, on the slave side of things you have to create an <code class="docutils literal notranslate"><span class="pre">rpc</span></code> interface to communicate with the
+master. This looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">interface</span> <span class="o">=</span> <span class="n">rpc</span><span class="o">.</span><span class="n">rpc_uart_slave</span><span class="p">(</span><span class="n">baudrate</span><span class="o">=</span><span class="mi">115200</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will create the UART interface layer to talk to an <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master.</p>
+<p>Once you create the slave interface you then need to register call backs that the master can call
+with the interface object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remote_function_or_method_name</span><span class="p">(</span><span class="n">memoryview_object_argument</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">lots</span> <span class="n">of</span> <span class="n">code</span><span class="o">&gt;</span>
+    <span class="k">return</span> <span class="n">bytes_object_result</span>
+
+<span class="n">interface</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="n">remote_function_or_method_name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You may register as many callbacks as you like on the slave.
+Finally, once you are done registering callbacks you just need to execute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">interface</span><span class="o">.</span><span class="n">loop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>On the slave to start the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library up and begin listening for the master. Note that the
+<code class="docutils literal notranslate"><span class="pre">rpc_slave.loop()</span></code> method does not return. Also, to make your slave more robust against errors you may
+want to wrap the <code class="docutils literal notranslate"><span class="pre">rpc_slave.loop()</span></code> with <code class="docutils literal notranslate"><span class="pre">try:</span></code> and <code class="docutils literal notranslate"><span class="pre">except:</span></code> for whatever exceptions might be thrown by your
+callback methods. The <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library will not generate any exceptions itself. Note: passing large data
+structures around (like jpeg images) can potentially exhaust the heap on the OpenMV Cam and generate
+<a class="reference internal" href="builtins.html#MemoryError" title="MemoryError"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">MemoryError</span></code></a> exceptions.</p>
+<p>And that is it! The <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library is designed to be simple to use.</p>
+</div>
+</div>
+<div class="section" id="class-rpc-rpc-virtual-class">
+<h1>class rpc - rpc virtual class<a class="headerlink" href="#class-rpc-rpc-virtual-class" title="Permalink to this headline">¶</a></h1>
+<p>The rpc base class is reimplemented by the <a class="reference internal" href="#rpc.rpc.rpc_master" title="rpc.rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc.rpc_slave" title="rpc.rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a> classes to create the master
+and slave interfaces. It is a pure virtual class and not meant to be used directly.</p>
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="rpc.rpc.rpc">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc</code><a class="headerlink" href="#rpc.rpc.rpc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an rpc object. This constructor is not meant to be used directly.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt>
+<code class="descname">rpc.get_bytes(buff, timeout_ms):</code></dt>
+<dd><p>This method is meant to be reimplemented by specific interface classes of <a class="reference internal" href="#rpc.rpc.rpc_master" title="rpc.rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc.rpc_slave" title="rpc.rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a>.
+It should fill the <code class="docutils literal notranslate"><span class="pre">buff</span></code> argument which is either a <a class="reference internal" href="builtins.html#bytearray" title="bytearray"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> or <a class="reference internal" href="builtins.html#memoryview" title="memoryview"><code class="xref any py py-class docutils literal notranslate"><span class="pre">memoryview</span></code></a> object of bytes from the
+interface equal to the length of the <code class="docutils literal notranslate"><span class="pre">buff</span></code> object in <code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code> milliseconds. On timeout this method
+should return <code class="docutils literal notranslate"><span class="pre">None</span></code>. Note that for master and slave synchronization this method should try to always
+complete in at least <code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code> milliseconds and not faster as the <a class="reference internal" href="#rpc.rpc.rpc_master" title="rpc.rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc.rpc_slave" title="rpc.rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a> objects
+will automatically increase the <code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code> to synchronize.</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">rpc.put_bytes(data, timeout_ms):</code></dt>
+<dd><p>This method is meant to be reimplemented by specific interface classes of <a class="reference internal" href="#rpc.rpc.rpc_master" title="rpc.rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc.rpc_slave" title="rpc.rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a>.
+It should send <code class="docutils literal notranslate"><span class="pre">data</span></code> bytes on the interface within <code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code> milliseconds. If it completes faster
+than the timeout that is okay. No return value is expected.</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">rpc.stream_reader(call_back, queue_depth=1, read_timeout_ms=5000):</code></dt>
+<dd><p>This method is meant to be called directly. After synchronization of the master and slave on return
+of a callback <code class="docutils literal notranslate"><span class="pre">stream_reader</span></code> may be called to receive data as fast as possible from the master or
+slave device. <code class="docutils literal notranslate"><span class="pre">call_back</span></code> will be called repeatedly with a <code class="docutils literal notranslate"><span class="pre">bytes_or_memory_view</span> <span class="pre">argument</span></code> that was
+sent by the <code class="docutils literal notranslate"><span class="pre">stream_writer</span></code>. <code class="docutils literal notranslate"><span class="pre">call_back</span></code> is not expected to return anything. <code class="docutils literal notranslate"><span class="pre">queue_depth</span></code> defines how
+many frames of data the <code class="docutils literal notranslate"><span class="pre">stream_writer</span></code> may generate before slowing down and waiting on the
+<code class="docutils literal notranslate"><span class="pre">stream_reader</span></code>. Higher <code class="docutils literal notranslate"><span class="pre">queue_depth</span></code> values lead to higher performance (up to a point) but require the
+<code class="docutils literal notranslate"><span class="pre">stream_reader</span></code> to be able to handle outstanding packets in its interface layer. If you make the
+<code class="docutils literal notranslate"><span class="pre">queue_depth</span></code> larger than 1 then <code class="docutils literal notranslate"><span class="pre">call_back</span></code> should return very quickly and not block. Finally,
+<code class="docutils literal notranslate"><span class="pre">read_timeout_ms</span></code> defines how many milliseconds to wait to receive the <code class="docutils literal notranslate"><span class="pre">bytes_or_memory_view</span></code> payload per call_back.</p>
+<p>On any errors <code class="docutils literal notranslate"><span class="pre">stream_reader</span></code> will return. The master and slave devices can try to setup the stream
+again afterwards to continue.</p>
+<p>If you need to cancel the <code class="docutils literal notranslate"><span class="pre">stream_reader</span></code> just raise an exception in the <code class="docutils literal notranslate"><span class="pre">call_back</span></code> and catch it. The
+remote side will automatically timeout.</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">rpc.stream_writer(call_back, write_timeout_ms=5000):</code></dt>
+<dd><p>This method is meant to be called directly. After synchronization of the master and slave on return
+of a <code class="docutils literal notranslate"><span class="pre">callback</span></code> <code class="docutils literal notranslate"><span class="pre">stream_writer</span></code> may be called to send data as fast as possible from the master or slave
+device. <code class="docutils literal notranslate"><span class="pre">call_back</span></code> will be called repeatedly and should return a <code class="docutils literal notranslate"><span class="pre">bytes_or_memory_view</span></code> object that
+will be sent to the <code class="docutils literal notranslate"><span class="pre">stream_reader</span></code>. <code class="docutils literal notranslate"><span class="pre">call_back</span></code> should not take any arguments. Finally,
+<code class="docutils literal notranslate"><span class="pre">write_timeout_ms</span></code> defines how many milliseconds to wait to send the <code class="docutils literal notranslate"><span class="pre">bytes_or_memory_view</span></code> object
+returned by <code class="docutils literal notranslate"><span class="pre">call_back</span></code>.</p>
+<p>On any errors <code class="docutils literal notranslate"><span class="pre">stream_writer</span></code> will return. The master and slave devices can try to setup the stream
+again afterwards to continue.</p>
+<p>If you need to cancel the <code class="docutils literal notranslate"><span class="pre">stream_writer</span></code> just raise an exception in the <code class="docutils literal notranslate"><span class="pre">call_back</span></code> and catch it. The
+remote side will automatically timeout.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="class-rpc-master-rpc-master-virtual-class">
+<h1>class rpc_master - rpc_master virtual class<a class="headerlink" href="#class-rpc-master-rpc-master-virtual-class" title="Permalink to this headline">¶</a></h1>
+<p>The rpc_master is a pure virtual class and not meant to be used directly. Specific interface
+classes should reimplement rpc_master.</p>
+<div class="section" id="id1">
+<h2>Constructors<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="rpc.rpc.rpc_master">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_master</code><a class="headerlink" href="#rpc.rpc.rpc_master" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an rpc_master object. This constructor is not meant to be used directly.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h2>Methods<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt>
+<code class="descname">rpc_master.call(name, data=bytes(), send_timeout=1000, recv_timeout=1000):</code></dt>
+<dd><p>Executes a remote call on the slave device. <code class="docutils literal notranslate"><span class="pre">name</span></code> is a string name of the remote function or method
+to execute. <code class="docutils literal notranslate"><span class="pre">data</span></code> is the <code class="docutils literal notranslate"><span class="pre">bytes</span></code> like object that will be sent as the argument of the remote function
+or method to exeucte. <code class="docutils literal notranslate"><span class="pre">send_timeout</span></code> defines how many milliseconds to wait while trying to connect to
+the slave and get it to execute the remote function or method. Once the master starts sending the
+argument to the slave deivce <code class="docutils literal notranslate"><span class="pre">send_timeout</span></code> does not apply. The library will allow the argument to
+take up to 5 seconds to be sent. <code class="docutils literal notranslate"><span class="pre">recv_timeout</span></code> defines how many milliseconds to wait after the slave
+started executing the remote method to receive the repsonse. Note that once the master starts
+receiving the repsonse <code class="docutils literal notranslate"><span class="pre">recv_timeout</span></code> does not apply. The library will allow the response to take up
+to 5 seconds to be received.</p>
+<p>Note that a new packet that includes a copy of <code class="docutils literal notranslate"><span class="pre">data</span></code> will be created internally inside the <code class="docutils literal notranslate"><span class="pre">rpc</span></code>
+library. You may encounter memory issues on the OpenMV Cam if you try to pass very large data
+arguments.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="class-rpc-slave-rpc-slave-virtual-class">
+<h1>class rpc_slave - rpc_slave virtual class<a class="headerlink" href="#class-rpc-slave-rpc-slave-virtual-class" title="Permalink to this headline">¶</a></h1>
+<p>The rpc_slave is a pure virtual class and not meant to be used directly. Specific interface
+classes should reimplement rpc_slave.</p>
+<div class="section" id="id3">
+<h2>Constructors<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="rpc.rpc.rpc_slave">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_slave</code><a class="headerlink" href="#rpc.rpc.rpc_slave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an rpc_slave object. This constructor is not meant to be used directly.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id4">
+<h2>Methods<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt>
+<code class="descname">rpc_slave.register_callback(cb):</code></dt>
+<dd><p>Registers a call back that can be executed by the master device. The call back should take one
+argument which will be a <code class="docutils literal notranslate"><span class="pre">memoryview</span></code> object and it should return a <code class="docutils literal notranslate"><span class="pre">bytes()</span></code> like object as the
+result. The call back should return in less than 1 second if possible.</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">rpc_slave.schedule_callback(cb):</code></dt>
+<dd><p>After you execute <code class="docutils literal notranslate"><span class="pre">rpc_slave.loop()</span></code> it is not possible to execute long running operations outside of the <code class="docutils literal notranslate"><span class="pre">rpc</span></code>
+library. <code class="docutils literal notranslate"><span class="pre">schedule_callback</span></code> allows you to break out of the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library temporarily after completion
+of an call back. You should execute <code class="docutils literal notranslate"><span class="pre">schedule_callback</span></code> during the execution of an <code class="docutils literal notranslate"><span class="pre">rpc</span></code> call back
+method to register a new non-rpc call back that will be executed immediately after the successful
+completion of that call back you executed <code class="docutils literal notranslate"><span class="pre">schedule_callback</span></code> in. The function or method should not
+take any arguments. After the the call back that was registered returns it must be registered again
+in the next parent call back. On any error of the parent call back the registered call back will
+not be called and must be registered again. Here’s how to use this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function_or_method_that_takes_a_long_time_to_execute</span><span class="p">():</span>
+    <span class="o">&lt;</span><span class="n">do</span> <span class="n">stuff</span><span class="o">&gt;</span>
+
+<span class="k">def</span> <span class="nf">normal_rpc_call_back</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">process</span> <span class="n">data</span><span class="o">&gt;</span>
+    <span class="n">interface</span><span class="o">.</span><span class="n">schedule_callback</span><span class="p">(</span><span class="n">some_function_or_method_that_takes_a_long_time_to_execute</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+
+<span class="n">interface</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="n">normal_rpc_call_back</span><span class="p">)</span>
+
+<span class="n">interface</span><span class="o">.</span><span class="n">loop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">schedule_callback</span></code> in particular allows you to use the <code class="docutils literal notranslate"><span class="pre">get_bytes</span></code> and <code class="docutils literal notranslate"><span class="pre">put_bytes</span></code> methods for
+cut-through data transfer between one device and another without the cost of packetization which
+limits the size of the data moved inside the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library without running out of memory on the
+OpenMV Cam.</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">rpc_slave.setup_loop_callback(cb):</code></dt>
+<dd><p>The loop call back is called every loop iteration of <code class="docutils literal notranslate"><span class="pre">rpc_slave.loop()</span></code>. Unlike the <code class="docutils literal notranslate"><span class="pre">rpc.schedule_callback()</span></code> call
+back this call back stays registered after being registered once. You can use the loop call back to
+blink an activity LED or something like that. You should not use the loop call back to execute any
+blocking code as this will get in the way of polling for communication from the master.
+Additionally, the loop call back will be called at a variable rate depending on when and what call
+backs the master is trying to execute. Given this, the loop call back is not suitable for any
+method that needs to be executed at a fixed frequency.</p>
+<p>On the OpenMV Cam, if you need to execute something at a fixed frequency, you should setup a timer
+before executing <code class="docutils literal notranslate"><span class="pre">rpc_slave.loop()</span></code> and use a timer interrupt based callback to execute some function or method
+at a fixed frequency. Please see how to Write Interrupt Handlers for more information. Note: The
+<a class="reference internal" href="mutex.html#mutex.Mutex" title="mutex.Mutex"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Mutex</span></code></a> library is installed on your OpenMV Cam along with the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library.</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">rpc_slave.loop(recv_timeout=1000, send_timeout=1000):</code></dt>
+<dd><p>Starts execution of the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library on the slave to receive data. This method does not return
+(except via an exception from a call back). You should register all call backs first before
+executing this method. However, it is possible to register new call backs inside of a call back
+previously being registered that is executing.</p>
+<p><code class="docutils literal notranslate"><span class="pre">recv_timeout</span></code> defines how long to wait to receive a command from the master device before trying
+again. <code class="docutils literal notranslate"><span class="pre">send_timeout</span></code> defines how long the slave will wait for the master to receive the call back
+response before going back to trying to receive. The loop call back will be executed before trying
+to receive again.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="class-rpc-can-master-can-master-interface">
+<h1>class rpc_can_master - CAN Master Interface<a class="headerlink" href="#class-rpc-can-master-can-master-interface" title="Permalink to this headline">¶</a></h1>
+<p>Control another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over CAN.</p>
+<div class="section" id="id5">
+<h2>Constructors<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt>
+<code class="descname">rpc.rpc_can_master(message_if=0x7FF, bit_rate=250000, sampling_point=75):</code></dt>
+<dd><p>Creates a CAN <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move up to 1 Mb/s.</p>
+<ul class="simple">
+<li>message_id - CAN message to use for data transport on the can bus (11-bit).</li>
+<li>bit_rate - CAN bit rate.</li>
+<li>sampling_point - Tseg1/Tseg2 ratio. Typically 75%. (50.0, 62.5, 75, 87.5, etc.)</li>
+</ul>
+<p>NOTE: Master and slave message ids and can bit rates must match. Connect master can high to slave
+can high and master can low to slave can lo. The can bus must be terminated with 120 ohms.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="class-rpc-can-slave-can-slave-interface">
+<h1>class rpc_can_slave - CAN Slave Interface<a class="headerlink" href="#class-rpc-can-slave-can-slave-interface" title="Permalink to this headline">¶</a></h1>
+<p>Be controlled by another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over CAN.</p>
+<div class="section" id="id6">
+<h2>Constructors<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt>
+<code class="descname">rpc.rpc_can_slave(message_id=0x7FF, bit_rate=250000, sampling_point=75):</code></dt>
+<dd><p>Creates a CAN <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move up to 1 Mb/s.</p>
+<ul class="simple">
+<li>message_id - CAN message to use for data transport on the can bus (11-bit).</li>
+<li>bit_rate - CAN bit rate.</li>
+<li>sampling_point - Tseg1/Tseg2 ratio. Typically 75%. (50.0, 62.5, 75, 87.5, etc.)</li>
+</ul>
+<p>NOTE: Master and slave message ids and can bit rates must match. Connect master can high to slave
+can high and master can low to slave can lo. The can bus must be terminated with 120 ohms.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="class-rpc-i2c-master-i2c-master-interface">
+<h1>class rpc_i2c_master - I2C Master Interface<a class="headerlink" href="#class-rpc-i2c-master-i2c-master-interface" title="Permalink to this headline">¶</a></h1>
+<p>Control another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over I2C.</p>
+<div class="section" id="id7">
+<h2>Constructors<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="rpc.rpc.rpc_i2c_master">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_i2c_master</code><span class="sig-paren">(</span><em>slave_addr=0x12</em>, <em>rate=100000</em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_i2c_master" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a I2C <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move up to 1 Mb/s.</p>
+<ul class="simple">
+<li>slave_addr - I2C address.</li>
+<li>rate - I2C Bus Clock Frequency.</li>
+</ul>
+<p>NOTE: Master and slave addresses must match. Connect master scl to slave scl and master sda
+to slave sda. You must use external pull ups. Finally, both devices must share a ground.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="class-rpc-i2c-slave-i2c-slave-interface">
+<h1>class rpc_i2c_slave - I2C Slave Interface<a class="headerlink" href="#class-rpc-i2c-slave-i2c-slave-interface" title="Permalink to this headline">¶</a></h1>
+<p>Be controlled by another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over I2C.</p>
+<div class="section" id="id8">
+<h2>Constructors<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="rpc.rpc.rpc_i2c_slave">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_i2c_slave</code><span class="sig-paren">(</span><em>slave_addr=0x12</em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_i2c_slave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a I2C <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move up to 1 Mb/s.</p>
+<ul class="simple">
+<li>slave_addr - I2C address.</li>
+</ul>
+<p>NOTE: Master and slave addresses must match. Connect master scl to slave scl and master sda
+to slave sda. You must use external pull ups. Finally, both devices must share a ground.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="class-rpc-spi-master-spi-master-interface">
+<h1>class rpc_spi_master - SPI Master Interface<a class="headerlink" href="#class-rpc-spi-master-spi-master-interface" title="Permalink to this headline">¶</a></h1>
+<p>Control another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over SPI.</p>
+<div class="section" id="id9">
+<h2>Constructors<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="rpc.rpc.rpc_spi_master">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_spi_master</code><span class="sig-paren">(</span><em>cs_pin=&quot;P3&quot;</em>, <em>freq=10000000</em>, <em>clk_polarity=1</em>, <em>clk_phase=0</em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_spi_master" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a SPI <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move up to 80 Mb/s.</p>
+<ul class="simple">
+<li>cs_pin - Slave Select Pin.</li>
+<li>freq - SPI Bus Clock Frequency.</li>
+<li>clk_polarity - Idle clock level (0 or 1).</li>
+<li>clk_phase - Sample data on the first (0) or second edge (1) of the clock.</li>
+</ul>
+<p>NOTE: Master and slave settings much match. Connect CS, SCLK, MOSI, MISO to CS, SCLK, MOSI, MISO.
+Finally, both devices must share a common ground.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="class-rpc-spi-slave-spi-slave-interface">
+<h1>class rpc_spi_slave - SPI Slave Interface<a class="headerlink" href="#class-rpc-spi-slave-spi-slave-interface" title="Permalink to this headline">¶</a></h1>
+<p>Be controlled by another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over SPI.</p>
+<dl class="class">
+<dt id="rpc.rpc.rpc_spi_slave">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_spi_slave</code><span class="sig-paren">(</span><em>cs_pin=&quot;P3&quot;</em>, <em>clk_polarity=1</em>, <em>clk_phase=0</em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_spi_slave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a SPI <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move up to 80 Mb/s.</p>
+<ul class="simple">
+<li>cs_pin - Slave Select Pin.</li>
+<li>clk_polarity - Idle clock level (0 or 1).</li>
+<li>clk_phase - Sample data on the first (0) or second edge (1) of the clock.</li>
+</ul>
+<p>NOTE: Master and slave settings much match. Connect CS, SCLK, MOSI, MISO to CS, SCLK, MOSI, MISO.
+Finally, both devices must share a common ground.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="class-rpc-uart-master-uart-master-interface">
+<h1>class rpc_uart_master - UART Master Interface<a class="headerlink" href="#class-rpc-uart-master-uart-master-interface" title="Permalink to this headline">¶</a></h1>
+<p>Control another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over Async Serial (UART).</p>
+<dl class="class">
+<dt id="rpc.rpc.rpc_uart_master">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_uart_master</code><span class="sig-paren">(</span><em>baudrate=115200</em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_uart_master" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a UART <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move up to 7.5 Mb/s.</p>
+<ul class="simple">
+<li>baudrate - Serial Baudrate.</li>
+</ul>
+<p>NOTE: Master and slave baud rates must match. Connect master tx to slave rx and master rx to
+slave tx. Finally, both devices must share a common ground.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="class-rpc-uart-slave-uart-slave-interface">
+<h1>class rpc_uart_slave - UART Slave Interface<a class="headerlink" href="#class-rpc-uart-slave-uart-slave-interface" title="Permalink to this headline">¶</a></h1>
+<p>Be controlled by another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over Async Serial (UART).</p>
+<dl class="class">
+<dt id="rpc.rpc.rpc_uart_slave">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_uart_slave</code><span class="sig-paren">(</span><em>baudrate=115200</em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_uart_slave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a UART <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move up to 7.5 Mb/s.</p>
+<ul class="simple">
+<li>baudrate - Serial Baudrate.</li>
+</ul>
+<p>NOTE: Master and slave baud rates must match. Connect master tx to slave rx and master rx to
+slave tx. Finally, both devices must share a common ground.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="class-rpc-usb-vcp-master-usb-vcp-master-interface">
+<h1>class rpc_usb_vcp_master - USB VCP Master Interface<a class="headerlink" href="#class-rpc-usb-vcp-master-usb-vcp-master-interface" title="Permalink to this headline">¶</a></h1>
+<p>Control another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over a USB Virtual COM Port.</p>
+<dl class="class">
+<dt id="rpc.rpc.rpc_usb_vcp_master">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_usb_vcp_master</code><a class="headerlink" href="#rpc.rpc.rpc_usb_vcp_master" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a USB VCP <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move up to 12 Mb/s.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="class-rpc-usb-vcp-slave-usb-vcp-slave-interface">
+<h1>class rpc_usb_vcp_slave - USB VCP Slave Interface<a class="headerlink" href="#class-rpc-usb-vcp-slave-usb-vcp-slave-interface" title="Permalink to this headline">¶</a></h1>
+<p>Be controlled by another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over a USB Virtual COM Port.</p>
+<dl class="class">
+<dt id="rpc.rpc.rpc_usb_vcp_slave">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_usb_vcp_slave</code><a class="headerlink" href="#rpc.rpc.rpc_usb_vcp_slave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a USB VCP <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move up to 12 Mb/s.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="class-rpc-wifi-master-wifi-master-interface">
+<h1>class rpc_wifi_master - WiFi Master Interface<a class="headerlink" href="#class-rpc-wifi-master-wifi-master-interface" title="Permalink to this headline">¶</a></h1>
+<p>Control another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over a WiFi.</p>
+<dl class="class">
+<dt id="rpc.rpc.rpc_wifi_master">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_wifi_master</code><span class="sig-paren">(</span><em>ssid</em>, <em>ssid_key</em>, <em>ssid_security</em>, <em>ip</em>, <em>port=0x1DBA</em>, <em>mode=network.WINC.MODE_STA</em>, <em>static_ip=None</em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_wifi_master" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a WiFi <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move over 12 Mb/s.</p>
+<ul class="simple">
+<li>ssid - WiFi network to connect to.</li>
+<li>ssid_key - WiFi network password.</li>
+<li>ssid_security - WiFi security.</li>
+<li>ip - Slave IP Address.</li>
+<li>port - Port to route traffic to.</li>
+<li>mode - Regular or access-point mode.</li>
+<li>static_ip - If not None then a tuple of the (IP Address, Subnet Mask, Gateway, DNS Address)</li>
+</ul>
+</dd></dl>
+
+</div>
+<div class="section" id="id10">
+<h1>class rpc_wifi_master - WiFi Master Interface<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h1>
+<p>Be controlled by another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over WiFi.</p>
+<dl class="class">
+<dt id="rpc.rpc.rpc_wifi_slave">
+<em class="property">class </em><code class="descclassname">rpc.</code><code class="descname">rpc_wifi_slave</code><span class="sig-paren">(</span><em>ssid</em>, <em>ssid_key</em>, <em>ssid_security</em>, <em>port=0x1DBA</em>, <em>mode=network.WINC.MODE_STA</em>, <em>static_ip=None</em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_wifi_slave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a WiFi <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move over 12 Mb/s.</p>
+<ul class="simple">
+<li>ssid - WiFi network to connect to.</li>
+<li>ssid_key - WiFi network password.</li>
+<li>ssid_security - WiFi security.</li>
+<li>port - Port to route traffic to.</li>
+<li>mode - Regular or access-point mode.</li>
+<li>static_ip - If not None then a tuple of the (IP Address, Subnet Mask, Gateway, DNS Address)</li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="omv.omv.html" class="btn btn-neutral float-right" title="omv — OpenMV Cam Information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="omv.imu.html" class="btn btn-neutral float-left" title="imu — imu sensor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 11 May 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Language and External Links</span>
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Language</dt>
+      <dd>
+        <a href="https://openmv.io">English</a>
+      </dd>
+      <dd>
+        <a href="http://doc.singtown.cc">中文</a>
+      </dd>
+    </dl>
+    <hr/>
+    <dl>
+      <dt>External links</dt>
+      <dd>
+        <a href="https://openmv.io">openmv.io</a>
+      </dd>
+      <dd>
+        <a href="http://forums.openmv.io">forums.openmv.io</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+      </dd>
+      <dd>
+        <a href="http://micropython.org">micropython.org</a>
+      </dd>
+      <dd>
+        <a href="http://forum.micropython.org">forum.micropython.org</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -51,6 +51,7 @@
 #include "openmvpluginfb.h"
 #include "openmvterminal.h"
 #include "openmvcamerasettings.h"
+#include "openmvmodeleditor.h"
 #include "histogram/openmvpluginhistogram.h"
 #include "tools/dfu-util.h"
 #include "tools/thresholdeditor.h"
@@ -73,9 +74,12 @@
 #define DISCONNECT_PATH ":/openmv/images/disconnect.png"
 #define START_PATH ":/openmv/projectexplorer/images/run.png"
 #define STOP_PATH ":/openmv/images/application-exit.png"
+#define NEW_FOLDER_PATH ":/openmv/images/new-folder.png"
+#define SNAPSHOT_PATH ":/openmv/images/snapshot.png"
 
 #define SETTINGS_GROUP "OpenMV"
 #define EDITOR_MANAGER_STATE "EditorManagerState"
+#define MSPLITTER_STATE "MSplitterState"
 #define HSPLITTER_STATE "HSplitterState"
 #define VSPLITTER_STATE "VSplitterState"
 #define ZOOM_STATE "ZoomState"
@@ -113,6 +117,8 @@
 #define LAST_APRILTAG_PATH "LastAprilTagPath"
 #define LAST_MODEL_NO_CAM_PATH "LastModelNoCamPath"
 #define LAST_MODEL_WITH_CAM_PATH "LastModelWithCamPath"
+#define LAST_MODEL_EDITOR_PATH "LastModelEditorPath"
+#define LAST_MODEL_EDITOR_LOADED "LastModeleditorLoaded"
 #define RESOURCES_MAJOR "ResourcesMajor"
 #define RESOURCES_MINOR "ResourcesMinor"
 #define RESOURCES_PATCH "ResourcesPatch"
@@ -289,8 +295,6 @@ private:
     QRegularExpression m_errorFilterRegex;
     QString m_errorFilterString;
 
-    Core::Command *m_bootloaderCommand;
-    Core::Command *m_eraseCommand;
     Core::Command *m_openDriveFolderCommand;
     Core::Command *m_configureSettingsCommand;
     Core::Command *m_saveCommand;
@@ -303,6 +307,7 @@ private:
 
     QToolButton *m_jpgCompress;
     QToolButton *m_disableFrameBuffer;
+    OpenMVModelEditor *m_modelEditor;
     OpenMVPluginFB *m_frameBuffer;
     OpenMVPluginHistogram *m_histogram;
 

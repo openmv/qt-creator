@@ -18,6 +18,7 @@ public:
     QPixmap pixmap() const;
     bool beginImageWriter();
     void endImageWriter();
+    void enableInteraction(bool enable) { m_enableInteraction = enable; }
 
 public slots:
 
@@ -55,6 +56,7 @@ private:
     QGraphicsPixmapItem *m_pixmap;
     bool m_enableSaveTemplate;
     bool m_enableSaveDescriptor;
+    bool m_enableInteraction;
 
     bool m_unlocked;
     QPoint m_origin;

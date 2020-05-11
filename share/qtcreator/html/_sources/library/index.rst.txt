@@ -74,11 +74,11 @@ it will fallback to loading the built-in ``ujson`` module.
    :maxdepth: 1
 
    builtins.rst
-   array.rst
    cmath.rst
    gc.rst
    math.rst
    sys.rst
+   uarray.rst
    ubinascii.rst
    ucollections.rst
    uerrno.rst
@@ -113,6 +113,7 @@ the following libraries.
    network.rst
    ucryptolib.rst
    uctypes.rst
+   mutex.rst
 
 
 Libraries specific to the OpenMV Cam
@@ -148,6 +149,8 @@ The following libraries are specific to the OpenMV Cam.
    omv.fir.rst
    omv.tv.rst
    omv.cpufreq.rst
+   omv.imu.rst
+   omv.rpc.rst
    omv.omv.rst
 
 Third-party libraries on the OpenMV Cam

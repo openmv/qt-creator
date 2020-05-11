@@ -11,5 +11,9 @@
         <file>../projectexplorer/images/run.png</file>
         <file>images/application-exit.png</file>
         <file>images/filesave.png</file>
+        <file>images/branch-closed.png</file>
+        <file>images/branch-open.png</file>
+        <file>images/new-folder.png</file>
+        <file>images/snapshot.png</file>
     </qresource>
 </RCC>

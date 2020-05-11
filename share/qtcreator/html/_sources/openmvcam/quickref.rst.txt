@@ -134,9 +134,9 @@ See :ref:`pyb.Timer <pyb.Timer>`. ::
     tim.freq(0.5) # 0.5 Hz
     tim.callback(lambda t: pyb.LED(1).toggle())
 
-* For OpenMV Cam M4: TIM2 and TIM3
-* For OpenMV Cam F7: TIM2, TIM3 and TIM7 through TIM14
-* For OpenMV Cam H7: TIM2, TIM3, TIM7, TIM8 and TIM12 through TIM17
+* For OpenMV Cam M4: TIM2, TIM3, and TIM4
+* For OpenMV Cam F7: TIM2, TIM3, TIM4 and TIM7 through TIM14
+* For OpenMV Cam H7: TIM2, TIM3, TIM4, TIM7, TIM8 and TIM12 through TIM17
 
 Timer Pinout:
 
@@ -162,9 +162,9 @@ See :ref:`pyb.Pin <pyb.Pin>` and :ref:`pyb.Timer <pyb.Timer>`. ::
     ch = tim.channel(3, Timer.PWM, pin=p)
     ch.pulse_width_percent(50)
 
-* For OpenMV Cam M4: TIM2 and TIM3
-* For OpenMV Cam F7: TIM2, TIM3 and TIM7 through TIM14
-* For OpenMV Cam H7: TIM2, TIM3, TIM7, TIM8 and TIM12 through TIM17
+* For OpenMV Cam M4: TIM2, TIM3, and TIM4
+* For OpenMV Cam F7: TIM2, TIM3, TIM4 and TIM7 through TIM14
+* For OpenMV Cam H7: TIM2, TIM3, TIM4, TIM7, TIM8 and TIM12 through TIM17
 
 Timer Pinout:
 

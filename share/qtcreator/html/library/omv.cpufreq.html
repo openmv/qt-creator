@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>cpufreq — CPU Frequency Control &mdash; MicroPython 1.11 documentation</title>
+  <title>cpufreq — CPU Frequency Control &mdash; MicroPython 1.12 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="omv — OpenMV Cam Information" href="omv.omv.html" />
+    <link rel="next" title="imu — imu sensor" href="omv.imu.html" />
     <link rel="prev" title="tv — tv shield driver" href="omv.tv.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.11
+                1.12
               </div>
             
           
@@ -153,6 +153,23 @@
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="omv.imu.html"><code class="docutils literal notranslate"><span class="pre">imu</span></code> — imu sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html"><code class="docutils literal notranslate"><span class="pre">rpc</span></code> — rpc library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-rpc-virtual-class">class rpc - rpc virtual class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-master-rpc-master-virtual-class">class rpc_master - rpc_master virtual class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-slave-rpc-slave-virtual-class">class rpc_slave - rpc_slave virtual class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-can-master-can-master-interface">class rpc_can_master - CAN Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-can-slave-can-slave-interface">class rpc_can_slave - CAN Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-i2c-master-i2c-master-interface">class rpc_i2c_master - I2C Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-i2c-slave-i2c-slave-interface">class rpc_i2c_slave - I2C Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-spi-master-spi-master-interface">class rpc_spi_master - SPI Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-spi-slave-spi-slave-interface">class rpc_spi_slave - SPI Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-uart-master-uart-master-interface">class rpc_uart_master - UART Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-uart-slave-uart-slave-interface">class rpc_uart_slave - UART Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-usb-vcp-master-usb-vcp-master-interface">class rpc_usb_vcp_master - USB VCP Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-usb-vcp-slave-usb-vcp-slave-interface">class rpc_usb_vcp_slave - USB VCP Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-wifi-master-wifi-master-interface">class rpc_wifi_master - WiFi Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#id10">class rpc_wifi_master - WiFi Master Interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.omv.html"><code class="docutils literal notranslate"><span class="pre">omv</span></code> — OpenMV Cam Information</a></li>
 </ul>
 </li>
@@ -269,7 +286,7 @@ OpenMV Cam M7 and [120, 240, 480] on the OpenMV Cam H7 in mhz.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="omv.omv.html" class="btn btn-neutral float-right" title="omv — OpenMV Cam Information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="omv.imu.html" class="btn btn-neutral float-right" title="imu — imu sensor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="omv.tv.html" class="btn btn-neutral float-left" title="tv — tv shield driver" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -281,9 +298,9 @@ OpenMV Cam M7 and [120, 240, 480] on the OpenMV Cam H7 in mhz.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 20 Dec 2019.
+        Last updated on 11 May 2020.
       </span>
 
     </p>

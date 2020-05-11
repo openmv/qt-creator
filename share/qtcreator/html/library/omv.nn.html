@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>nn — neural networks &mdash; MicroPython 1.11 documentation</title>
+  <title>nn — neural networks &mdash; MicroPython 1.12 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.11
+                1.12
               </div>
             
           
@@ -158,6 +158,23 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermopile shield driver (fir == far infrared)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.tv.html"><code class="docutils literal notranslate"><span class="pre">tv</span></code> — tv shield driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.cpufreq.html"><code class="docutils literal notranslate"><span class="pre">cpufreq</span></code> — CPU Frequency Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.imu.html"><code class="docutils literal notranslate"><span class="pre">imu</span></code> — imu sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html"><code class="docutils literal notranslate"><span class="pre">rpc</span></code> — rpc library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-rpc-virtual-class">class rpc - rpc virtual class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-master-rpc-master-virtual-class">class rpc_master - rpc_master virtual class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-slave-rpc-slave-virtual-class">class rpc_slave - rpc_slave virtual class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-can-master-can-master-interface">class rpc_can_master - CAN Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-can-slave-can-slave-interface">class rpc_can_slave - CAN Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-i2c-master-i2c-master-interface">class rpc_i2c_master - I2C Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-i2c-slave-i2c-slave-interface">class rpc_i2c_slave - I2C Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-spi-master-spi-master-interface">class rpc_spi_master - SPI Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-spi-slave-spi-slave-interface">class rpc_spi_slave - SPI Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-uart-master-uart-master-interface">class rpc_uart_master - UART Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-uart-slave-uart-slave-interface">class rpc_uart_slave - UART Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-usb-vcp-master-usb-vcp-master-interface">class rpc_usb_vcp_master - USB VCP Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-usb-vcp-slave-usb-vcp-slave-interface">class rpc_usb_vcp_slave - USB VCP Slave Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#class-rpc-wifi-master-wifi-master-interface">class rpc_wifi_master - WiFi Master Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.rpc.html#id10">class rpc_wifi_master - WiFi Master Interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.omv.html"><code class="docutils literal notranslate"><span class="pre">omv</span></code> — OpenMV Cam Information</a></li>
 </ul>
 </li>
@@ -391,9 +408,9 @@ any output in the list of outputs may be between 0 and 1.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 20 Dec 2019.
+        Last updated on 11 May 2020.
       </span>
 
     </p>

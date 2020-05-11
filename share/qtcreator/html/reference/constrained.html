@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>MicroPython on Microcontrollers &mdash; MicroPython 1.11 documentation</title>
+  <title>MicroPython on Microcontrollers &mdash; MicroPython 1.12 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Distribution packages, package management, and deploying applications" href="packages.html" />
+    <link rel="next" title="Inline Assembler for Thumb2 architectures" href="asm_thumb2_index.html" />
     <link rel="prev" title="Maximising MicroPython Speed" href="speed_python.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.11
+                1.12
               </div>
             
           
@@ -98,6 +98,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">The MicroPython language</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="repl.html">The MicroPython Interactive Interpreter Mode (aka REPL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpyfiles.html">MicroPython .mpy files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="isr_rules.html">Writing interrupt handlers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="speed_python.html">Maximising MicroPython Speed</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">MicroPython on Microcontrollers</a><ul>
@@ -120,8 +121,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="packages.html">Distribution packages, package management, and deploying applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="asm_thumb2_index.html">Inline Assembler for Thumb2 architectures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filesystem.html">Working with filesystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyboard.py.html">The pyboard.py tool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
@@ -585,7 +587,7 @@ reference occupies a single machine word so these processes are efficient in
 RAM usage and speed.</p>
 <p>Where variables are required whose size is neither a byte nor a machine word
 there are standard libraries which can assist in storing these efficiently and
-in performing conversions. See the <a class="reference internal" href="../library/array.html#module-array" title="array: efficient arrays of numeric data"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">array</span></code></a>, <a class="reference internal" href="../library/ustruct.html#module-ustruct" title="ustruct: pack and unpack primitive data types"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">ustruct</span></code></a> and <a class="reference internal" href="../library/uctypes.html#module-uctypes" title="uctypes: access binary data in a structured way"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">uctypes</span></code></a>
+in performing conversions. See the <a class="reference internal" href="../library/uarray.html#uarray.array" title="uarray.array"><code class="xref any py py-class docutils literal notranslate"><span class="pre">array</span></code></a>, <a class="reference internal" href="../library/ustruct.html#module-ustruct" title="ustruct: pack and unpack primitive data types"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">ustruct</span></code></a> and <a class="reference internal" href="../library/uctypes.html#module-uctypes" title="uctypes: access binary data in a structured way"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">uctypes</span></code></a>
 modules.</p>
 <div class="section" id="footnote-gc-collect-return-value">
 <h3>Footnote: gc.collect() return value<a class="headerlink" href="#footnote-gc-collect-return-value" title="Permalink to this headline">¶</a></h3>
@@ -605,7 +607,7 @@ efficiency reasons bare metal ports do not return this value.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="packages.html" class="btn btn-neutral float-right" title="Distribution packages, package management, and deploying applications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="asm_thumb2_index.html" class="btn btn-neutral float-right" title="Inline Assembler for Thumb2 architectures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="speed_python.html" class="btn btn-neutral float-left" title="Maximising MicroPython Speed" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -617,9 +619,9 @@ efficiency reasons bare metal ports do not return this value.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 20 Dec 2019.
+        Last updated on 11 May 2020.
       </span>
 
     </p>

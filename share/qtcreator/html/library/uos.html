@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>uos – basic “operating system” services &mdash; MicroPython 1.11 documentation</title>
+  <title>uos – basic “operating system” services &mdash; MicroPython 1.12 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.11
+                1.12
               </div>
             
           
@@ -97,11 +97,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="array.html"><code class="docutils literal notranslate"><span class="pre">array</span></code> – arrays of numeric data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
@@ -320,10 +320,10 @@ entries.</li>
 <li><code class="docutils literal notranslate"><span class="pre">f_frsize</span></code> – fragment size</li>
 <li><code class="docutils literal notranslate"><span class="pre">f_blocks</span></code> – size of fs in f_frsize units</li>
 <li><code class="docutils literal notranslate"><span class="pre">f_bfree</span></code> – number of free blocks</li>
-<li><code class="docutils literal notranslate"><span class="pre">f_bavail</span></code> – number of free blocks for unpriviliged users</li>
+<li><code class="docutils literal notranslate"><span class="pre">f_bavail</span></code> – number of free blocks for unprivileged users</li>
 <li><code class="docutils literal notranslate"><span class="pre">f_files</span></code> – number of inodes</li>
 <li><code class="docutils literal notranslate"><span class="pre">f_ffree</span></code> – number of free inodes</li>
-<li><code class="docutils literal notranslate"><span class="pre">f_favail</span></code> – number of free inodes for unpriviliged users</li>
+<li><code class="docutils literal notranslate"><span class="pre">f_favail</span></code> – number of free inodes for unprivileged users</li>
 <li><code class="docutils literal notranslate"><span class="pre">f_flag</span></code> – mount flags</li>
 <li><code class="docutils literal notranslate"><span class="pre">f_namemax</span></code> – maximum filename length</li>
 </ul>
@@ -409,6 +409,48 @@ Objects created by this constructor can be mounted using <a class="reference int
 
 </dd></dl>
 
+<dl class="class">
+<dt id="uos.VfsLfs1">
+<em class="property">class </em><code class="descclassname">uos.</code><code class="descname">VfsLfs1</code><span class="sig-paren">(</span><em>block_dev</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a filesystem object that uses the <a class="reference external" href="https://github.com/ARMmbed/littlefs/tree/v1">littlefs v1 filesystem format</a>.
+Storage of the littlefs filesystem is provided by <em>block_dev</em>, which must
+support the <a class="reference internal" href="#block-device-interface"><span class="std std-ref">extended interface</span></a>.
+Objects created by this constructor can be mounted using <a class="reference internal" href="#uos.mount" title="uos.mount"><code class="xref py py-func docutils literal notranslate"><span class="pre">mount()</span></code></a>.</p>
+<p>See <a class="reference internal" href="../reference/filesystem.html#filesystem"><span class="std std-ref">Working with filesystems</span></a> for more information.</p>
+<dl class="staticmethod">
+<dt id="uos.VfsLfs1.mkfs">
+<em class="property">static </em><code class="descname">mkfs</code><span class="sig-paren">(</span><em>block_dev</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs1.mkfs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a Lfs1 filesystem on <em>block_dev</em>.</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are reports of littlefs v1 failing in certain situations,
+for details see <a class="reference external" href="https://github.com/ARMmbed/littlefs/issues/347">littlefs issue 347</a>.</p>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="uos.VfsLfs2">
+<em class="property">class </em><code class="descclassname">uos.</code><code class="descname">VfsLfs2</code><span class="sig-paren">(</span><em>block_dev</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a filesystem object that uses the <a class="reference external" href="https://github.com/ARMmbed/littlefs">littlefs v2 filesystem format</a>.
+Storage of the littlefs filesystem is provided by <em>block_dev</em>, which must
+support the <a class="reference internal" href="#block-device-interface"><span class="std std-ref">extended interface</span></a>.
+Objects created by this constructor can be mounted using <a class="reference internal" href="#uos.mount" title="uos.mount"><code class="xref py py-func docutils literal notranslate"><span class="pre">mount()</span></code></a>.</p>
+<p>See <a class="reference internal" href="../reference/filesystem.html#filesystem"><span class="std std-ref">Working with filesystems</span></a> for more information.</p>
+<dl class="staticmethod">
+<dt id="uos.VfsLfs2.mkfs">
+<em class="property">static </em><code class="descname">mkfs</code><span class="sig-paren">(</span><em>block_dev</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs2.mkfs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a Lfs2 filesystem on <em>block_dev</em>.</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are reports of littlefs v2 failing in certain situations,
+for details see <a class="reference external" href="https://github.com/ARMmbed/littlefs/issues/295">littlefs issue 295</a>.</p>
+</div>
+</dd></dl>
+
 </div>
 <div class="section" id="block-devices">
 <h2>Block devices<a class="headerlink" href="#block-devices" title="Permalink to this headline">¶</a></h2>
@@ -417,6 +459,15 @@ of methods described below by the <a class="reference internal" href="#uos.Abstr
 implementation of this class will usually allow access to the memory-like
 functionality a piece of hardware (like flash memory).  A block device can be
 used by a particular filesystem driver to store the data for its filesystem.</p>
+<div class="section" id="simple-and-extended-interface">
+<span id="block-device-interface"></span><h3>Simple and extended interface<a class="headerlink" href="#simple-and-extended-interface" title="Permalink to this headline">¶</a></h3>
+<p>There are two compatible signatures for the <code class="docutils literal notranslate"><span class="pre">readblocks</span></code> and <code class="docutils literal notranslate"><span class="pre">writeblocks</span></code>
+methods (see below), in order to support a variety of use cases.  A given block
+device may implement one form or the other, or both at the same time. The second
+form (with the offset parameter) is referred to as the “extended interface”.</p>
+<p>Some filesystems (such as littlefs) that require more control over write
+operations, for example writing to sub-block regions without erasing, may require
+that the block device supports the extended interface.</p>
 <dl class="class">
 <dt id="uos.AbstractBlockDev">
 <em class="property">class </em><code class="descclassname">uos.</code><code class="descname">AbstractBlockDev</code><span class="sig-paren">(</span><em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.AbstractBlockDev" title="Permalink to this definition">¶</a></dt>
@@ -425,19 +476,46 @@ dependent on the specific block device.</p>
 <dl class="method">
 <dt id="uos.AbstractBlockDev.readblocks">
 <code class="descname">readblocks</code><span class="sig-paren">(</span><em>block_num</em>, <em>buf</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.AbstractBlockDev.readblocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Starting at the block given by the index <em>block_num</em>, read blocks from
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">readblocks</code><span class="sig-paren">(</span><em>block_num</em>, <em>buf</em>, <em>offset</em><span class="sig-paren">)</span></dt>
+<dd><p>The first form reads aligned, multiples of blocks.
+Starting at the block given by the index <em>block_num</em>, read blocks from
 the device into <em>buf</em> (an array of bytes).
 The number of blocks to read is given by the length of <em>buf</em>,
 which will be a multiple of the block size.</p>
+<p>The second form allows reading at arbitrary locations within a block,
+and arbitrary lengths.
+Starting at block index <em>block_num</em>, and byte offset within that block
+of <em>offset</em>, read bytes from the device into <em>buf</em> (an array of bytes).
+The number of bytes to read is given by the length of <em>buf</em>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="uos.AbstractBlockDev.writeblocks">
 <code class="descname">writeblocks</code><span class="sig-paren">(</span><em>block_num</em>, <em>buf</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.AbstractBlockDev.writeblocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Starting at the block given by the index <em>block_num</em>, write blocks from
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">writeblocks</code><span class="sig-paren">(</span><em>block_num</em>, <em>buf</em>, <em>offset</em><span class="sig-paren">)</span></dt>
+<dd><p>The first form writes aligned, multiples of blocks, and requires that the
+blocks that are written to be first erased (if necessary) by this method.
+Starting at the block given by the index <em>block_num</em>, write blocks from
 <em>buf</em> (an array of bytes) to the device.
 The number of blocks to write is given by the length of <em>buf</em>,
 which will be a multiple of the block size.</p>
+<p>The second form allows writing at arbitrary locations within a block,
+and arbitrary lengths.  Only the bytes being written should be changed,
+and the caller of this method must ensure that the relevant blocks are
+erased via a prior <code class="docutils literal notranslate"><span class="pre">ioctl</span></code> call.
+Starting at block index <em>block_num</em>, and byte offset within that block
+of <em>offset</em>, write bytes from <em>buf</em> (an array of bytes) to the device.
+The number of bytes to write is given by the length of <em>buf</em>.</p>
+<p>Note that implementations must never implicitly erase blocks if the offset
+argument is specified, even if it is zero.</p>
 </dd></dl>
 
 <dl class="method">
@@ -455,42 +533,15 @@ perform is given by <em>op</em> which is one of the following integers:</p>
 <li>5 – get the number of bytes in a block, should return an integer,
 or <code class="docutils literal notranslate"><span class="pre">None</span></code> in which case the default value of 512 is used
 (<em>arg</em> is unused)</li>
+<li>6 – erase a block, <em>arg</em> is the block number to erase</li>
 </ul>
 </div></blockquote>
 </dd></dl>
 
 </dd></dl>
 
-<p>By way of example, the following class will implement a block device that stores
-its data in RAM using a <code class="docutils literal notranslate"><span class="pre">bytearray</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">RAMBlockDev</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">block_size</span><span class="p">,</span> <span class="n">num_blocks</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">block_size</span> <span class="o">=</span> <span class="n">block_size</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">block_size</span> <span class="o">*</span> <span class="n">num_blocks</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">readblocks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">block_num</span><span class="p">,</span> <span class="n">buf</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">buf</span><span class="p">)):</span>
-            <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">block_num</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">block_size</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">writeblocks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">block_num</span><span class="p">,</span> <span class="n">buf</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">buf</span><span class="p">)):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">block_num</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">block_size</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">ioctl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span> <span class="c1"># get number of blocks</span>
-            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">block_size</span>
-        <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span> <span class="c1"># get block size</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">block_size</span>
-</pre></div>
-</div>
-<p>It can be used as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">uos</span>
-
-<span class="n">bdev</span> <span class="o">=</span> <span class="n">RAMBlockDev</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-<span class="n">uos</span><span class="o">.</span><span class="n">VfsFat</span><span class="o">.</span><span class="n">mkfs</span><span class="p">(</span><span class="n">bdev</span><span class="p">)</span>
-<span class="n">vfs</span> <span class="o">=</span> <span class="n">uos</span><span class="o">.</span><span class="n">VfsFat</span><span class="p">(</span><span class="n">bdev</span><span class="p">)</span>
-<span class="n">uos</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">vfs</span><span class="p">,</span> <span class="s1">&#39;/ramdisk&#39;</span><span class="p">)</span>
-</pre></div>
+<p>See <a class="reference internal" href="../reference/filesystem.html#filesystem"><span class="std std-ref">Working with filesystems</span></a> for example implementations of block devices using both
+protocols.</p>
 </div>
 </div>
 </div>
@@ -515,9 +566,9 @@ its data in RAM using a <code class="docutils literal notranslate"><span class="
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 20 Dec 2019.
+        Last updated on 11 May 2020.
       </span>
 
     </p>

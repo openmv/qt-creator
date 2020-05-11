@@ -772,15 +772,15 @@ void OpenMVPlugin::extensionsInitialized()
     Core::ActionContainer *toolsMenu = Core::ActionManager::actionContainer(Core::Constants::M_TOOLS);
     Core::ActionContainer *helpMenu = Core::ActionManager::actionContainer(Core::Constants::M_HELP);
 
-    QAction *bootloaderCommand = new QAction(tr("Run Bootloader (Load Firmware)"), this);
-    m_bootloaderCommand = Core::ActionManager::registerAction(bootloaderCommand, Core::Id("OpenMV.Bootloader"));
-    toolsMenu->addAction(m_bootloaderCommand);
-    connect(bootloaderCommand, &QAction::triggered, this, &OpenMVPlugin::bootloaderClicked);
+    QAction *bootloaderAction = new QAction(tr("Run Bootloader (Load Firmware)"), this);
+    Core::Command *bootloaderCommand = Core::ActionManager::registerAction(bootloaderAction, Core::Id("OpenMV.Bootloader"));
+    toolsMenu->addAction(bootloaderCommand);
+    connect(bootloaderAction, &QAction::triggered, this, &OpenMVPlugin::bootloaderClicked);
 
-    QAction *eraseCommand = new QAction(tr("Erase Onboard Data Flash"), this);
-    m_eraseCommand = Core::ActionManager::registerAction(eraseCommand, Core::Id("OpenMV.Erase"));
-    toolsMenu->addAction(m_eraseCommand);
-    connect(eraseCommand, &QAction::triggered, this, [this] {
+    QAction *eraseAction = new QAction(tr("Erase Onboard Data Flash"), this);
+    Core::Command *eraseCommand = Core::ActionManager::registerAction(eraseAction, Core::Id("OpenMV.Erase"));
+    toolsMenu->addAction(eraseCommand);
+    connect(eraseAction, &QAction::triggered, this, [this] {
         if(QMessageBox::warning(Core::ICore::dialogParent(),
             tr("Erase Onboard Data Flash"),
             tr("Are you sure you want to erase your OpenMV Cam's onboard flash drive?"),
@@ -976,6 +976,51 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Command *playVideoFileCommand = Core::ActionManager::registerAction(playVideoFile, Core::Id("OpenMV.PlayVideoFile"));
     if(!Utils::HostOsInfo::isLinuxHost()) videoToolsMenu->addAction(playVideoFileCommand);
     connect(playVideoFile, &QAction::triggered, this, [this] {playVideoFileAction(m_portPath);});
+
+    Core::ActionContainer *modelEditorMenu = Core::ActionManager::createMenu(Core::Id("OpenMV.ModelEditor"));
+    modelEditorMenu->menu()->setTitle(tr("Model Editor"));
+    modelEditorMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
+    toolsMenu->addMenu(modelEditorMenu);
+
+    QAction *newModelAction = new QAction(tr("New Model"), this);
+    Core::Command *newModelCommand = Core::ActionManager::registerAction(newModelAction, Core::Id("OpenMV.NewModel"));
+    modelEditorMenu->addAction(newModelCommand);
+    connect(newModelAction, &QAction::triggered, this, [this] {
+        QSettings *settings = ExtensionSystem::PluginManager::settings();
+        settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+
+        QString path =
+            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), tr("Model Editor - Choose a folder to build the model in"),
+                settings->value(QStringLiteral(LAST_MODEL_EDITOR_PATH), QDir::homePath()).toString());
+
+        if(!path.isEmpty())
+        {
+            m_modelEditor->setRootPath(path);
+            settings->setValue(QStringLiteral(LAST_MODEL_EDITOR_PATH), path);
+        }
+
+        settings->endGroup();
+    });
+
+    QAction *openModelAction = new QAction(tr("Open Model"), this);
+    Core::Command *openModelCommand = Core::ActionManager::registerAction(openModelAction, Core::Id("OpenMV.OpenModel"));
+    modelEditorMenu->addAction(openModelCommand);
+    connect(openModelAction, &QAction::triggered, this, [this] {
+        QSettings *settings = ExtensionSystem::PluginManager::settings();
+        settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+
+        QString path =
+            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), tr("Model Editor - Choose a model folder to open"),
+                settings->value(QStringLiteral(LAST_MODEL_EDITOR_PATH), QDir::homePath()).toString());
+
+        if(!path.isEmpty())
+        {
+            m_modelEditor->setRootPath(path);
+            settings->setValue(QStringLiteral(LAST_MODEL_EDITOR_PATH), path);
+        }
+
+        settings->endGroup();
+    });
 
     QAction *docsAction = new QAction(tr("OpenMV Docs"), this);
     Core::Command *docsCommand = Core::ActionManager::registerAction(docsAction, Core::Id("OpenMV.Docs"));
@@ -1338,6 +1383,7 @@ void OpenMVPlugin::extensionsInitialized()
         }
     });
 
+    Core::MiniSplitter *msplitter = widget->m_msplitter;
     Core::MiniSplitter *hsplitter = widget->m_hsplitter;
     Core::MiniSplitter *vsplitter = widget->m_vsplitter;
     vsplitter->insertWidget(0, tempWidget0);
@@ -1408,6 +1454,88 @@ void OpenMVPlugin::extensionsInitialized()
 
     ///////////////////////////////////////////////////////////////////////////
 
+    Utils::StyledBar *modelEditorStyledBar0 = new Utils::StyledBar;
+    QHBoxLayout *modelEditorStyledBarLayout0 = new QHBoxLayout;
+    modelEditorStyledBarLayout0->setMargin(0);
+    modelEditorStyledBarLayout0->setSpacing(0);
+    modelEditorStyledBarLayout0->addSpacing(4);
+    modelEditorStyledBarLayout0->addWidget(new QLabel(tr("Model Editor")));
+    modelEditorStyledBarLayout0->addSpacing(6);
+    modelEditorStyledBar0->setLayout(modelEditorStyledBarLayout0);
+
+    QToolButton *modelEditorCloseButton = new QToolButton;
+    modelEditorCloseButton->setIcon(Utils::Icon({{QStringLiteral(":/core/images/close.png"), Utils::Theme::IconsBaseColor}}).icon());
+    modelEditorCloseButton->setToolTip(tr("Close"));
+    modelEditorStyledBarLayout0->addWidget(modelEditorCloseButton);
+
+    m_modelEditor = new OpenMVModelEditor;
+    connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, m_modelEditor, &OpenMVModelEditor::frameBufferData);
+
+    Utils::StyledBar *modelEditorStyledBar1 = new Utils::StyledBar;
+    QHBoxLayout *modelEditorStyledBarLayout1 = new QHBoxLayout;
+    modelEditorStyledBarLayout1->setMargin(0);
+    modelEditorStyledBarLayout1->setSpacing(0);
+    modelEditorStyledBarLayout1->addSpacing(4);
+    modelEditorStyledBarLayout1->addWidget(new QLabel(tr("Image Preview")));
+    modelEditorStyledBarLayout1->addSpacing(6);
+    modelEditorStyledBar1->setLayout(modelEditorStyledBarLayout1);
+
+    OpenMVPluginFB *modelEditorFB = new OpenMVPluginFB;
+    modelEditorFB->enableInteraction(false);
+    modelEditorFB->enableFitInView(true);
+    connect(m_modelEditor, &OpenMVModelEditor::pixmapUpdate, modelEditorFB, &OpenMVPluginFB::frameBufferData);
+
+    Core::Command *modelEditorNewFolder = Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(NEW_FOLDER_PATH)),
+    tr("New Class Folder"), this), Core::Id("OpenMV.NewClassFolder"));
+    //modelEditorNewFolder->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
+    modelEditorNewFolder->action()->setEnabled(false);
+    modelEditorNewFolder->action()->setVisible(false);
+    connect(modelEditorNewFolder->action(), &QAction::triggered, m_modelEditor, &OpenMVModelEditor::newClassFolder);
+
+    Core::Command *modelEditorSnapshot = Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(SNAPSHOT_PATH)),
+    tr("Capture Data"), this), Core::Id("OpenMV.CaptureData"));
+    //modelEditorSnapshot->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
+    modelEditorSnapshot->action()->setEnabled(false);
+    modelEditorSnapshot->action()->setVisible(false);
+    connect(m_modelEditor, &OpenMVModelEditor::snapshotEnable, modelEditorSnapshot->action(), &QAction::setEnabled);
+    connect(modelEditorSnapshot->action(), &QAction::triggered, m_modelEditor, &OpenMVModelEditor::snapshot);
+
+    Core::Internal::FancyActionBar *modelEditorActionBar = new Core::Internal::FancyActionBar(widget);
+    widget->insertCornerWidget(2, modelEditorActionBar);
+
+    modelEditorActionBar->insertAction(0, modelEditorNewFolder->action());
+    modelEditorActionBar->insertAction(1, modelEditorSnapshot->action());
+
+    modelEditorActionBar->setProperty("no_separator", false);
+    modelEditorActionBar->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
+
+    QWidget *modelEditorWidget = new QWidget;
+    QVBoxLayout *modelEditorLayout = new QVBoxLayout;
+    modelEditorLayout->setMargin(0);
+    modelEditorLayout->setSpacing(0);
+    modelEditorLayout->addWidget(modelEditorStyledBar0);
+    modelEditorLayout->addWidget(m_modelEditor);
+    modelEditorLayout->addWidget(modelEditorStyledBar1);
+    modelEditorLayout->addWidget(modelEditorFB);
+    modelEditorWidget->setLayout(modelEditorLayout);
+
+    connect(modelEditorCloseButton, &QToolButton::clicked, modelEditorWidget, &QWidget::hide);
+    connect(m_modelEditor, &OpenMVModelEditor::rootPathSet, modelEditorWidget, &QWidget::show);
+
+    connect(m_modelEditor, &OpenMVModelEditor::visibilityChanged, this, [this, modelEditorNewFolder, modelEditorSnapshot, modelEditorActionBar] (bool visible) {
+        modelEditorNewFolder->action()->setVisible(visible);
+        modelEditorSnapshot->action()->setVisible(visible);
+        modelEditorActionBar->setVisible(visible);
+    });
+
+    modelEditorWidget->hide();
+
+    msplitter->insertWidget(0, modelEditorWidget);
+    msplitter->setStretchFactor(0, 0);
+    msplitter->setCollapsible(0, false);
+
+    ///////////////////////////////////////////////////////////////////////////
+
     m_boardLabel = new Utils::ElidingLabel(tr("Board:"));
     m_boardLabel->setToolTip(tr("Camera board type"));
     m_boardLabel->setDisabled(true);
@@ -1474,8 +1602,10 @@ void OpenMVPlugin::extensionsInitialized()
     });
     settings->endGroup();
 
-    connect(q_check_ptr(qobject_cast<Core::Internal::MainWindow *>(Core::ICore::mainWindow())), &Core::Internal::MainWindow::showEventSignal, this, [this, widget, settings, hsplitter, vsplitter] {
+    connect(q_check_ptr(qobject_cast<Core::Internal::MainWindow *>(Core::ICore::mainWindow())), &Core::Internal::MainWindow::showEventSignal, this, [this, widget, settings, msplitter, hsplitter, vsplitter] {
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+        if(settings->contains(QStringLiteral(LAST_MODEL_EDITOR_PATH)) && settings->value(QStringLiteral(LAST_MODEL_EDITOR_LOADED)).toBool()) m_modelEditor->setRootPath(settings->value(QStringLiteral(LAST_MODEL_EDITOR_PATH)).toString());
+        if(settings->contains(QStringLiteral(MSPLITTER_STATE))) msplitter->restoreState(settings->value(QStringLiteral(MSPLITTER_STATE)).toByteArray());
         if(settings->contains(QStringLiteral(HSPLITTER_STATE))) hsplitter->restoreState(settings->value(QStringLiteral(HSPLITTER_STATE)).toByteArray());
         if(settings->contains(QStringLiteral(VSPLITTER_STATE))) vsplitter->restoreState(settings->value(QStringLiteral(VSPLITTER_STATE)).toByteArray());
         widget->m_leftDrawer->parentWidget()->setVisible(settings->contains(QStringLiteral(HSPLITTER_STATE)) ? (!hsplitter->sizes().at(0)) : false);
@@ -1500,11 +1630,15 @@ void OpenMVPlugin::extensionsInitialized()
 
     settings->endArray();
 
-    connect(Core::ICore::instance(), &Core::ICore::saveSettingsRequested, this, [this, zoomButton, colorSpace, hsplitter, vsplitter] {
+    connect(Core::ICore::instance(), &Core::ICore::saveSettingsRequested, this, [this, zoomButton, colorSpace, msplitter, hsplitter, vsplitter] {
         QSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
         settings->setValue(QStringLiteral(EDITOR_MANAGER_STATE),
             Core::EditorManager::saveState());
+        if(!isNoShow()) settings->setValue(QStringLiteral(LAST_MODEL_EDITOR_LOADED),
+            m_modelEditor->parentWidget()->isVisible());
+        if(!isNoShow()) settings->setValue(QStringLiteral(MSPLITTER_STATE),
+            msplitter->saveState());
         if(!isNoShow()) settings->setValue(QStringLiteral(HSPLITTER_STATE),
             hsplitter->saveState());
         if(!isNoShow()) settings->setValue(QStringLiteral(VSPLITTER_STATE),
@@ -4986,121 +5120,130 @@ void OpenMVPlugin::openTerminalAboutToShow()
                         stringList = stringList.filter(QStringLiteral("cu"), Qt::CaseInsensitive);
                     }
 
-                    int index = stringList.indexOf(settings->value(QStringLiteral(LAST_OPEN_TERMINAL_SERIAL_PORT)).toString());
-
-                    bool portNameValueOk;
-                    QString portNameValue = QInputDialog::getItem(Core::ICore::dialogParent(),
-                        tr("New Terminal"), tr("Please select a serial port"),
-                        stringList, (index != -1) ? index : 0, false, &portNameValueOk,
-                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-
-                    if(portNameValueOk)
+                    if(!stringList.isEmpty())
                     {
-                        bool baudRateOk;
-                        QString baudRate = QInputDialog::getText(Core::ICore::dialogParent(),
-                            tr("New Terminal"), tr("Please enter a baud rate"),
-                            QLineEdit::Normal, settings->value(QStringLiteral(LAST_OPEN_TERMINAL_SERIAL_PORT_BAUD_RATE), QStringLiteral("115200")).toString(), &baudRateOk,
+                        int index = stringList.indexOf(settings->value(QStringLiteral(LAST_OPEN_TERMINAL_SERIAL_PORT)).toString());
+
+                        bool portNameValueOk;
+                        QString portNameValue = QInputDialog::getItem(Core::ICore::dialogParent(),
+                            tr("New Terminal"), tr("Please select a serial port"),
+                            stringList, (index != -1) ? index : 0, false, &portNameValueOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
-                        if(baudRateOk && (!baudRate.isEmpty()))
+                        if(portNameValueOk)
                         {
-                            bool buadRateValueOk;
-                            int baudRateValue = baudRate.toInt(&buadRateValueOk);
+                            bool baudRateOk;
+                            QString baudRate = QInputDialog::getText(Core::ICore::dialogParent(),
+                                tr("New Terminal"), tr("Please enter a baud rate"),
+                                QLineEdit::Normal, settings->value(QStringLiteral(LAST_OPEN_TERMINAL_SERIAL_PORT_BAUD_RATE), QStringLiteral("115200")).toString(), &baudRateOk,
+                                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
-                            if(buadRateValueOk)
+                            if(baudRateOk && (!baudRate.isEmpty()))
                             {
-                                settings->setValue(QStringLiteral(LAST_OPEN_TERMINAL_SELECT), optionName);
-                                settings->setValue(QStringLiteral(LAST_OPEN_TERMINAL_SERIAL_PORT), portNameValue);
-                                settings->setValue(QStringLiteral(LAST_OPEN_TERMINAL_SERIAL_PORT_BAUD_RATE), baudRateValue);
+                                bool buadRateValueOk;
+                                int baudRateValue = baudRate.toInt(&buadRateValueOk);
 
-                                openTerminalMenuData_t data;
-                                data.displayName = tr("Serial Port - %L1 - %L2 BPS").arg(portNameValue).arg(baudRateValue);
-                                data.optionIndex = connectToSerialPortIndex;
-                                data.commandStr = portNameValue;
-                                data.commandVal = baudRateValue;
-
-                                if(!openTerminalMenuDataContains(data.displayName))
+                                if(buadRateValueOk)
                                 {
-                                    m_openTerminalMenuData.append(data);
+                                    settings->setValue(QStringLiteral(LAST_OPEN_TERMINAL_SELECT), optionName);
+                                    settings->setValue(QStringLiteral(LAST_OPEN_TERMINAL_SERIAL_PORT), portNameValue);
+                                    settings->setValue(QStringLiteral(LAST_OPEN_TERMINAL_SERIAL_PORT_BAUD_RATE), baudRateValue);
 
-                                    if(m_openTerminalMenuData.size() > 10)
+                                    openTerminalMenuData_t data;
+                                    data.displayName = tr("Serial Port - %L1 - %L2 BPS").arg(portNameValue).arg(baudRateValue);
+                                    data.optionIndex = connectToSerialPortIndex;
+                                    data.commandStr = portNameValue;
+                                    data.commandVal = baudRateValue;
+
+                                    if(!openTerminalMenuDataContains(data.displayName))
                                     {
-                                        m_openTerminalMenuData.removeFirst();
+                                        m_openTerminalMenuData.append(data);
+
+                                        if(m_openTerminalMenuData.size() > 10)
+                                        {
+                                            m_openTerminalMenuData.removeFirst();
+                                        }
                                     }
-                                }
 
-                                OpenMVTerminal *terminal = new OpenMVTerminal(data.displayName, ExtensionSystem::PluginManager::settings(), Core::Context(Core::Id::fromString(data.displayName)));
-                                OpenMVTerminalSerialPort *terminalDevice = new OpenMVTerminalSerialPort(terminal);
+                                    OpenMVTerminal *terminal = new OpenMVTerminal(data.displayName, ExtensionSystem::PluginManager::settings(), Core::Context(Core::Id::fromString(data.displayName)));
+                                    OpenMVTerminalSerialPort *terminalDevice = new OpenMVTerminalSerialPort(terminal);
 
-                                connect(terminal, &OpenMVTerminal::writeBytes,
-                                        terminalDevice, &OpenMVTerminalPort::writeBytes);
+                                    connect(terminal, &OpenMVTerminal::writeBytes,
+                                            terminalDevice, &OpenMVTerminalPort::writeBytes);
 
-                                connect(terminalDevice, &OpenMVTerminalPort::readBytes,
-                                        terminal, &OpenMVTerminal::readBytes);
+                                    connect(terminalDevice, &OpenMVTerminalPort::readBytes,
+                                            terminal, &OpenMVTerminal::readBytes);
 
-                                QString errorMessage2 = QString();
-                                QString *errorMessage2Ptr = &errorMessage2;
+                                    QString errorMessage2 = QString();
+                                    QString *errorMessage2Ptr = &errorMessage2;
 
-                                QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                                    this, [this, errorMessage2Ptr] (const QString &errorMessage) {
-                                    *errorMessage2Ptr = errorMessage;
-                                });
+                                    QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
+                                        this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                                        *errorMessage2Ptr = errorMessage;
+                                    });
 
-                                // QProgressDialog scoping...
-                                {
-                                    QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
-                                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
-                                    dialog.setWindowModality(Qt::ApplicationModal);
-                                    dialog.setAttribute(Qt::WA_ShowWithoutActivating);
-                                    dialog.setCancelButton(Q_NULLPTR);
-                                    QTimer::singleShot(1000, &dialog, &QWidget::show);
-
-                                    QEventLoop loop;
-
-                                    connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                                            &loop, &QEventLoop::quit);
-
-                                    terminalDevice->open(data.commandStr, data.commandVal);
-
-                                    loop.exec();
-                                    dialog.close();
-                                }
-
-                                disconnect(conn);
-
-                                if(!errorMessage2.isEmpty())
-                                {
-                                    QMessageBox::critical(Core::ICore::dialogParent(),
-                                        tr("New Terminal"),
-                                        tr("Error: %L1!").arg(errorMessage2));
-
-                                    if(Utils::HostOsInfo::isLinuxHost() && errorMessage2.contains(QStringLiteral("Permission Denied"), Qt::CaseInsensitive))
+                                    // QProgressDialog scoping...
                                     {
-                                        QMessageBox::information(Core::ICore::dialogParent(),
+                                        QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+                                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                        dialog.setWindowModality(Qt::ApplicationModal);
+                                        dialog.setAttribute(Qt::WA_ShowWithoutActivating);
+                                        dialog.setCancelButton(Q_NULLPTR);
+                                        QTimer::singleShot(1000, &dialog, &QWidget::show);
+
+                                        QEventLoop loop;
+
+                                        connect(terminalDevice, &OpenMVTerminalPort::openResult,
+                                                &loop, &QEventLoop::quit);
+
+                                        terminalDevice->open(data.commandStr, data.commandVal);
+
+                                        loop.exec();
+                                        dialog.close();
+                                    }
+
+                                    disconnect(conn);
+
+                                    if(!errorMessage2.isEmpty())
+                                    {
+                                        QMessageBox::critical(Core::ICore::dialogParent(),
                                             tr("New Terminal"),
-                                            tr("Try doing:\n\n") + QStringLiteral("sudo adduser %L1 dialout\n\n").arg(Utils::Environment::systemEnvironment().userName()) + tr("...in a terminal and then restart your computer."));
-                                    }
+                                            tr("Error: %L1!").arg(errorMessage2));
 
-                                    delete terminalDevice;
-                                    delete terminal;
+                                        if(Utils::HostOsInfo::isLinuxHost() && errorMessage2.contains(QStringLiteral("Permission Denied"), Qt::CaseInsensitive))
+                                        {
+                                            QMessageBox::information(Core::ICore::dialogParent(),
+                                                tr("New Terminal"),
+                                                tr("Try doing:\n\n") + QStringLiteral("sudo adduser %L1 dialout\n\n").arg(Utils::Environment::systemEnvironment().userName()) + tr("...in a terminal and then restart your computer."));
+                                        }
+
+                                        delete terminalDevice;
+                                        delete terminal;
+                                    }
+                                    else
+                                    {
+                                        terminal->show();
+                                        connect(Core::ICore::instance(), &Core::ICore::coreAboutToClose,
+                                                terminal, &OpenMVTerminal::close);
+                                    }
                                 }
                                 else
                                 {
-                                    terminal->show();
-                                    connect(Core::ICore::instance(), &Core::ICore::coreAboutToClose,
-                                            terminal, &OpenMVTerminal::close);
+                                    QMessageBox::critical(Core::ICore::dialogParent(),
+                                        tr("New Terminal"),
+                                        tr("Invalid string: \"%L1\"!").arg(baudRate));
                                 }
                             }
-                            else
-                            {
-                                QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("New Terminal"),
-                                    tr("Invalid string: \"%L1\"!").arg(baudRate));
-                            }
                         }
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            tr("New Terminal"),
+                            tr("No serial ports found!"));
                     }
 
                     break;

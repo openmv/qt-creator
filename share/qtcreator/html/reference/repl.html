@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The MicroPython Interactive Interpreter Mode (aka REPL) &mdash; MicroPython 1.11 documentation</title>
+  <title>The MicroPython Interactive Interpreter Mode (aka REPL) &mdash; MicroPython 1.12 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Writing interrupt handlers" href="isr_rules.html" />
+    <link rel="next" title="MicroPython .mpy files" href="mpyfiles.html" />
     <link rel="prev" title="Glossary" href="glossary.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.11
+                1.12
               </div>
             
           
@@ -107,11 +107,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#raw-mode">Raw Mode</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="mpyfiles.html">MicroPython .mpy files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="isr_rules.html">Writing interrupt handlers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="speed_python.html">Maximising MicroPython Speed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="constrained.html">MicroPython on Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages.html">Distribution packages, package management, and deploying applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="asm_thumb2_index.html">Inline Assembler for Thumb2 architectures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filesystem.html">Working with filesystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyboard.py.html">The pyboard.py tool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
@@ -391,7 +393,7 @@ MicroPython board.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="isr_rules.html" class="btn btn-neutral float-right" title="Writing interrupt handlers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mpyfiles.html" class="btn btn-neutral float-right" title="MicroPython .mpy files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="glossary.html" class="btn btn-neutral float-left" title="Glossary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -403,9 +405,9 @@ MicroPython board.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 20 Dec 2019.
+        Last updated on 11 May 2020.
       </span>
 
     </p>

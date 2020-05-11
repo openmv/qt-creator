@@ -24,7 +24,7 @@ Example usage::
 Functions
 ---------
 
-.. function:: lcd.init([type=1])
+.. function:: lcd.init([type=1, [bgr=0]])
 
    Initializes an attached lcd shield using I/O pins P0, P2, P3, P6, P7, and P8.
 
@@ -32,6 +32,8 @@ Functions
 
       * 0: None
       * 1: lcd shield
+
+    Set ``bgr`` to ``1`` if you notice your LCD shield colors are swapped.
 
 .. function:: lcd.deinit()
 

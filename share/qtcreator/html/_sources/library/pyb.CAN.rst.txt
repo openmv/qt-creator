@@ -62,9 +62,7 @@ Methods
        communications after entering the bus-off state; if this is disabled then
        :meth:`~CAN.restart()` can be used to leave the bus-off state
 
-   The time quanta tq is the basic unit of time for the CAN bus.  tq is the CAN
-   prescaler value divided by PCLK1 (the frequency of internal peripheral bus 1);
-   see :meth:`pyb.freq()` to determine PCLK1.
+   The time quanta tq is the basic unit of time for the CAN bus.
 
    A single bit is made up of the synchronisation segment, which is always 1 tq.
    Then follows bit segment 1, then bit segment 2.  The sample point is after bit
@@ -72,9 +70,19 @@ Methods
    The baud rate will be 1/bittime, where the bittime is 1 + BS1 + BS2 multiplied
    by the time quanta tq.
 
-   For example, with PCLK1=42MHz, prescaler=100, sjw=1, bs1=6, bs2=8, the value of
-   tq is 2.38 microseconds.  The bittime is 35.7 microseconds, and the baudrate
-   is 28kHz.
+   Use the following code to calculate CAN settings::
+
+       def get_can_settings(bit_rate, sampling_point):
+           clk = 48000000 if omv.board_type() == "H7" else pyb.freq()[2]
+           for prescaler in range(8):
+               for bs1 in range(16):
+                   for bs2 in range(8):
+                       if bit_rate == ((clk >> prescaler) // (1 + bs1 + bs2)) and (sampling_point * 10) == (((1 + bs1) * 1000) // (1 + bs1 + bs2)):
+                           return (1 << prescaler, bs1, bs2)
+           raise ValueError("Invalid bit_rate and/or sampling_point!")
+
+   * bit_rate - CAN bit rate.
+   * sampling_point - Tseg1/Tseg2 ratio. Typically 75%. (50.0, 62.5, 75, 87.5, etc.)
 
 .. method:: CAN.deinit()
 

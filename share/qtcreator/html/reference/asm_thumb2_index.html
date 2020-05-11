@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Inline Assembler for Thumb2 architectures &mdash; MicroPython 1.11 documentation</title>
+  <title>Inline Assembler for Thumb2 architectures &mdash; MicroPython 1.12 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. Register move instructions" href="asm_thumb2_mov.html" />
-    <link rel="prev" title="Distribution packages, package management, and deploying applications" href="packages.html" /> 
+    <link rel="prev" title="MicroPython on Microcontrollers" href="constrained.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.11
+                1.12
               </div>
             
           
@@ -98,10 +98,10 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">The MicroPython language</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="repl.html">The MicroPython Interactive Interpreter Mode (aka REPL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpyfiles.html">MicroPython .mpy files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="isr_rules.html">Writing interrupt handlers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="speed_python.html">Maximising MicroPython Speed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="constrained.html">MicroPython on Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages.html">Distribution packages, package management, and deploying applications</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Inline Assembler for Thumb2 architectures</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#document-conventions">Document conventions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#instruction-categories">Instruction Categories</a><ul>
@@ -125,6 +125,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="filesystem.html">Working with filesystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyboard.py.html">The pyboard.py tool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
@@ -271,7 +273,7 @@ ARM site after a simple registration procedure. Also available on academic sites
         <a href="asm_thumb2_mov.html" class="btn btn-neutral float-right" title="1. Register move instructions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="packages.html" class="btn btn-neutral float-left" title="Distribution packages, package management, and deploying applications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="constrained.html" class="btn btn-neutral float-left" title="MicroPython on Microcontrollers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -280,9 +282,9 @@ ARM site after a simple registration procedure. Also available on academic sites
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 20 Dec 2019.
+        Last updated on 11 May 2020.
       </span>
 
     </p>

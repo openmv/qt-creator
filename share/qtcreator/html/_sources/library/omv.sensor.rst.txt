@@ -60,6 +60,9 @@ Functions
    If you need room to hold multiple frames you may "steal" frame buffer space
    by calling `sensor.alloc_extra_fb()`.
 
+   If `sensor.set_auto_rotation()` is enabled this method will return a new
+   already rotated `image` object.
+
 .. function:: sensor.skip_frames([n, time])
 
    Takes ``n`` number of snapshots to let the camera image stabilize after
@@ -97,9 +100,12 @@ Functions
 
       * `sensor.OV9650`: First gen OpenMV Cam sensor - never released.
       * `sensor.OV2640`: Second gen OpenMV Cam sensor - never released.
+      * `sensor.OV5640`: High-res OpenMV Cam H7 sensor.
       * `sensor.OV7725`: Rolling shutter sensor module.
+      * `sensor.OV7690`: OpenMV Cam Micro sensor module.
       * `sensor.MT9V034`: Global shutter sensor module.
       * `sensor.LEPTON`: Lepton1/2/3 sensor module.
+      * `sensor.HM01B0`: Arduino Portenta H7 sensor module.
 
 .. function:: sensor.alloc_extra_fb(width, height, pixformat)
 
@@ -108,6 +114,9 @@ Functions
 
    You may call this function as many times as you like as long as there's
    memory available to allocate any number of extra frame buffers.
+
+   If ``pixformat`` is a number >= 4 then this will allocate a JPEG image. You
+   can then do `image.bytearray()` to get byte level read/write access to the JPEG image.
 
    .. note::
 
@@ -144,6 +153,15 @@ Functions
       * `sensor.GRAYSCALE`: 8-bits per pixel.
       * `sensor.RGB565`: 16-bits per pixel.
       * `sensor.BAYER`: 8-bits per pixel bayer pattern.
+      * `sensor.JPEG`: Compressed JPEG data. Only for the OV2640/OV5640.
+
+   If you are trying to take JPEG images with the OV2640 or OV5640 camera modules at high
+   resolutions you should set the pixformat to `sensor.JPEG`. You can control the image
+   quality then with `sensor.set_quality()`.
+
+.. function:: sensor.get_pixformat()
+
+   Returns the pixformat for the camera module.
 
 .. function:: sensor.set_framesize(framesize)
 
@@ -171,9 +189,20 @@ Functions
       * `sensor.QQVGA2`: 128x160 (for use with the lcd shield)
       * `sensor.WVGA`: 720x480 (for the MT9V034)
       * `sensor.WVGA2`:752x480 (for the MT9V034)
-      * `sensor.SVGA`: 800x600 (only in JPEG mode for the OV2640 sensor)
-      * `sensor.SXGA`: 1280x1024 (only in JPEG mode for the OV2640 sensor)
-      * `sensor.UXGA`: 1600x1200 (only in JPEG mode for the OV2640 sensor)
+      * `sensor.SVGA`: 800x600 (only for the OV2640/OV5640 sensor)
+      * `sensor.XGA`: 1024x768 (only for the OV2640/OV5640 sensor)
+      * `sensor.SXGA`: 1280x1024 (only for the OV2640/OV5640 sensor)
+      * `sensor.UXGA`: 1600x1200 (only for the OV2640/OV5640 sensor)
+      * `sensor.HD`: 1280x720 (only for the OV2640/OV5640 sensor)
+      * `sensor.FHD`: 1920x1080 (only for the OV5640 sensor)
+      * `sensor.QHD`: 2560x1440 (only for the OV5640 sensor)
+      * `sensor.QXGA`: 2048x1536 (only for the OV5640 sensor)
+      * `sensor.WQXGA`: 2560x1600 (only for the OV5640 sensor)
+      * `sensor.WQXGA2`: 2592x1944 (only for the OV5640 sensor)
+
+.. function:: sensor.get_framesize()
+
+   Returns the frame size for the camera module.
 
 .. function:: sensor.set_windowing(roi)
 
@@ -186,6 +215,10 @@ Functions
 
    ``roi`` is a rect tuple (x, y, w, h). However, you may just pass (w, h) and
    the ``roi`` will be centered on the frame.
+
+.. function:: sensor.get_windowing()
+
+   Returns the ``roi`` tuple (x, y, w, h) previously set with `sensor.set_windowing()`.
 
 .. function:: sensor.set_gainceiling(gainceiling)
 
@@ -209,7 +242,7 @@ Functions
 
    .. note::
 
-      Only for the OV2640 camera.
+      Only for the OV2640/OV5640 cameras.
 
 .. function:: sensor.set_colorbar(enable)
 
@@ -273,9 +306,46 @@ Functions
 
    Turns horizontal mirror mode on (True) or off (False). Defaults to off.
 
+.. function:: sensor.get_hmirror()
+
+   Returns if horizontal mirror mode is enabled.
+
 .. function:: sensor.set_vflip(enable)
 
    Turns vertical flip mode on (True) or off (False). Defaults to off.
+
+.. function:: sensor.get_vflip()
+
+   Returns if vertical flip mode is enabled.
+
+.. function:: sensor.set_transpose(enable)
+
+   Turns transpose mode on (True) or off (False). Defaults to off.
+
+      * vflip=False, hmirror=False, transpose=False -> 0 degree rotation
+      * vflip=True,  hmirror=False, transpose=True  -> 90 degree rotation
+      * vflip=True,  hmirror=True,  transpose=False -> 180 degree rotation
+      * vflip=False, hmirror=True,  transpose=True  -> 270 degree rotation
+
+.. function:: sensor.get_transpose()
+
+   Returns if transpose mode is enabled.
+
+.. function:: sensor.set_auto_rotation(enable)
+
+   Turns auto rotation mode on (True) or off (False). Defaults to off.
+
+   .. note::
+
+      This function only works when the OpenMV Cam has an `imu` installed and is enabled automatically.
+
+.. function:: sensor.get_auto_rotation()
+
+   Returns if auto rotation mode is enabled.
+
+   .. note::
+
+      This function only works when the OpenMV Cam has an `imu` installed and is enabled automatically.
 
 .. function:: sensor.set_lens_correction(enable, radi, coef)
 
@@ -370,19 +440,29 @@ Constants
 
 .. data:: sensor.JPEG
 
-   JPEG mode. Only works for the OV2640 camera.
-
-.. data:: sensor.OV9650
-
-   `sensor.get_id()` returns this for the OV9650 camera.
+   JPEG mode. The camera module outputs compressed jpeg images.
+   Use `sensor.set_quality()` to control the jpeg quality.
+   Only works for the OV2640/OV5640 cameras.
 
 .. data:: sensor.OV2640
 
    `sensor.get_id()` returns this for the OV2640 camera.
 
+.. data:: sensor.OV5640
+
+   `sensor.get_id()` returns this for the OV5640 camera.
+
+.. data:: sensor.OV7690
+
+   `sensor.get_id()` returns this for the OV7690 camera.
+
 .. data:: sensor.OV7725
 
    `sensor.get_id()` returns this for the OV7725 camera.
+
+.. data:: sensor.OV9650
+
+   `sensor.get_id()` returns this for the OV9650 camera.
 
 .. data:: sensor.MT9V034
 
@@ -391,6 +471,10 @@ Constants
 .. data:: sensor.LEPTON
 
    `sensor.get_id()` returns this for the LEPTON1/2/3 cameras.
+
+.. data:: sensor.HM01B0
+
+   `sensor.get_id()` returns this for the HM01B0 camera.
 
 .. data:: sensor.QQCIF
 
@@ -490,19 +574,43 @@ Constants
 
 .. data:: sensor.SVGA
 
-   800x600 resolution for the camera sensor. Only works for the OV2640 camera.
+   800x600 resolution for the camera sensor. Only works for the OV2640/OV5640 cameras.
 
 .. data:: sensor.XGA
 
-   1024x768 resolution for the camera sensor. Only works for the OV2640 camera.
+   1024x768 resolution for the camera sensor. Only works for the OV2640/OV5640 cameras.
 
 .. data:: sensor.SXGA
 
-   1280x1024 resolution for the camera sensor. Only works for the OV2640 camera.
+   1280x1024 resolution for the camera sensor. Only works for the OV2640/OV5640 cameras.
 
 .. data:: sensor.UXGA
 
-   1600x1200 resolution for the camera sensor. Only works for the OV2640 camera.
+   1600x1200 resolution for the camera sensor. Only works for the OV2640/OV5640 cameras.
+
+.. data:: sensor.HD
+
+   1280x720 resolution for the camera sensor. Only works for the OV2640/OV5640 cameras.
+
+.. data:: sensor.FHD
+
+   1920x1080 resolution for the camera sensor. Only works for the OV5640 camera.
+
+.. data:: sensor.QHD
+
+   2560x1440 resolution for the camera sensor. Only works for the OV5640 camera.
+
+.. data:: sensor.QXGA
+
+   2048x1536 resolution for the camera sensor. Only works for the OV5640 camera.
+
+.. data:: sensor.WQXGA
+
+   2560x1600 resolution for the camera sensor. Only works for the OV5640 camera.
+
+.. data:: sensor.WQXGA2
+
+   2592x1944 resolution for the camera sensor. Only works for the OV5640 camera.
 
 .. data:: sensor.PALETTE_RAINBOW
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>sys – system specific functions &mdash; MicroPython 1.11 documentation</title>
+  <title>sys – system specific functions &mdash; MicroPython 1.12 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ubinascii – binary/ASCII conversions" href="ubinascii.html" />
+    <link rel="next" title="uarray – arrays of numeric data" href="uarray.html" />
     <link rel="prev" title="math – mathematical functions" href="math.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.11
+                1.12
               </div>
             
           
@@ -97,7 +97,6 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="array.html"><code class="docutils literal notranslate"><span class="pre">array</span></code> – arrays of numeric data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
@@ -106,6 +105,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#constants">Constants</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
@@ -211,6 +211,20 @@ CPython documentation:</em> <a class="reference external" href="https://docs.pyt
 <dd><p>Terminate current program with a given exit code. Underlyingly, this
 function raise as <a class="reference internal" href="builtins.html#SystemExit" title="SystemExit"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a> exception. If an argument is given, its
 value given as an argument to <a class="reference internal" href="builtins.html#SystemExit" title="SystemExit"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">SystemExit</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sys.atexit">
+<code class="descclassname">sys.</code><code class="descname">atexit</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#sys.atexit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register <em>func</em> to be called upon termination.  <em>func</em> must be a callable
+that takes no arguments, or <code class="docutils literal notranslate"><span class="pre">None</span></code> to disable the call.  The <code class="docutils literal notranslate"><span class="pre">atexit</span></code>
+function will return the previous value set by this function, which is
+initially <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="attention admonition">
+<p class="first admonition-title">Difference to CPython</p>
+<p class="last">This function is a MicroPython extension intended to provide similar
+functionality to the <a class="reference external" href="https://docs.python.org/3.5/library/atexit.html#module-atexit" title="(in Python v3.5)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">atexit</span></code></a> module in CPython.</p>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -342,6 +356,13 @@ Python implementation), use <a class="reference internal" href="#sys.implementat
 <dt id="sys.version_info">
 <code class="descclassname">sys.</code><code class="descname">version_info</code><a class="headerlink" href="#sys.version_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Python language version that this implementation conforms to, as a tuple of ints.</p>
+<blockquote>
+<div><div class="attention admonition">
+<p class="first admonition-title">Difference to CPython</p>
+<p class="last">Only the first three version numbers (major, minor, micro) are supported and
+they can be referenced only by index, not by name.</p>
+</div>
+</div></blockquote>
 </dd></dl>
 
 </div>
@@ -355,7 +376,7 @@ Python implementation), use <a class="reference internal" href="#sys.implementat
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ubinascii.html" class="btn btn-neutral float-right" title="ubinascii – binary/ASCII conversions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="uarray.html" class="btn btn-neutral float-right" title="uarray – arrays of numeric data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="math.html" class="btn btn-neutral float-left" title="math – mathematical functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -367,9 +388,9 @@ Python implementation), use <a class="reference internal" href="#sys.implementat
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2019, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 20 Dec 2019.
+        Last updated on 11 May 2020.
       </span>
 
     </p>

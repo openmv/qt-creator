@@ -1,6 +1,6 @@
 #include "openmvpluginfb.h"
 
-OpenMVPluginFB::OpenMVPluginFB(QWidget *parent) : QGraphicsView(parent)
+OpenMVPluginFB::OpenMVPluginFB(QWidget *parent) : QGraphicsView(parent), m_enableSaveTemplate(false), m_enableSaveDescriptor(false), m_enableInteraction(true)
 {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -20,8 +20,6 @@ OpenMVPluginFB::OpenMVPluginFB(QWidget *parent) : QGraphicsView(parent)
 
     m_enableFitInView = false;
     m_pixmap = Q_NULLPTR;
-    m_enableSaveTemplate = false;
-    m_enableSaveDescriptor = false;
     m_unlocked = false;
     m_origin = QPoint();
 
@@ -98,10 +96,7 @@ void OpenMVPluginFB::enableFitInView(bool enable)
 {
     m_enableFitInView = enable;
 
-    if(m_pixmap)
-    {
-        myFitInView();
-    }
+    if(m_pixmap) myFitInView(); else setTransform(QTransform());
 
     if(m_band->isVisible())
     {
@@ -122,9 +117,23 @@ void OpenMVPluginFB::frameBufferData(const QPixmap &data)
     delete scene();
     setScene(new QGraphicsScene(this));
 
-    m_pixmap = scene()->addPixmap(data);
+    if(!data.isNull())
+    {
+        m_pixmap = scene()->addPixmap(data);
+    }
+    else
+    {
+        m_pixmap = Q_NULLPTR;
+        QGraphicsTextItem *item = new QGraphicsTextItem;
+        item->setHtml(tr("<html><body style=\"color:#909090;font-size:14px\">"
+        "<div align=\"center\">"
+        "<div style=\"font-size:20px\">No Image</div>"
+        "</div>"
+        "</body></html>"));
+        scene()->addItem(item);
+    }
 
-    myFitInView();
+    if(m_pixmap) myFitInView(); else setTransform(QTransform());
 
     // Broadcast the new pixmap
     emit pixmapUpdate(getPixmap());
@@ -239,7 +248,7 @@ void OpenMVPluginFB::private_timerCallBack()
 
 void OpenMVPluginFB::mousePressEvent(QMouseEvent *event)
 {
-    if(event->button() == Qt::LeftButton)
+    if(m_enableInteraction && (event->button() == Qt::LeftButton))
     {
         m_unlocked = m_pixmap && (m_pixmap == itemAt(event->pos()));
         m_origin = event->pos();
@@ -282,7 +291,7 @@ void OpenMVPluginFB::mouseReleaseEvent(QMouseEvent *event)
 
 void OpenMVPluginFB::contextMenuEvent(QContextMenuEvent *event)
 {
-    if(m_pixmap && (m_pixmap == itemAt(event->pos())))
+    if(m_enableInteraction && m_pixmap && (m_pixmap == itemAt(event->pos())))
     {
         bool cropped;
         QRect croppedRect;
@@ -316,10 +325,7 @@ void OpenMVPluginFB::contextMenuEvent(QContextMenuEvent *event)
 
 void OpenMVPluginFB::resizeEvent(QResizeEvent *event)
 {
-    if(m_pixmap)
-    {
-        myFitInView();
-    }
+    if(m_pixmap) myFitInView(); else setTransform(QTransform());
 
     if(m_band->isVisible())
     {

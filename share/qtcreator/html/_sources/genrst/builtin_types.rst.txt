@@ -2,7 +2,7 @@
 
 Builtin Types
 =============
-Generated Mon 11 Nov 2019 00:40:25 UTC
+Generated Mon 11 May 2020 17:55:38 UTC
 
 Exception
 ---------
@@ -175,7 +175,7 @@ Sample code::
 bytes() with keywords not implemented
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Workaround:** Pass the encoding as a positional paramter, e.g. ``print(bytes('abc', 'utf-8'))``
+**Workaround:** Pass the encoding as a positional parameter, e.g. ``print(bytes('abc', 'utf-8'))``
 
 Sample code::
 
