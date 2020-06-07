@@ -7,7 +7,7 @@
 The ``mutex`` module is used for creating mutexes.
 
 class Mutex -- mutex object
-===========================
+---------------------------
 
 A mutex is an object enabling threads of execution to protect critical sections of code from
 reentrancy or to temporarily protect critical data sets from being updated by other threads.
@@ -57,14 +57,14 @@ References describing mutex and semaphore objects
 | `differencebetween <http://www.differencebetween.net/language/difference-between-mutex-and-semaphore/>`_
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: Mutex()
 
    Creates an unlocked mutex object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: mjpeg.release()
 

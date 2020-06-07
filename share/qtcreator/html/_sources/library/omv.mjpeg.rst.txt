@@ -7,7 +7,7 @@
 The ``mjpeg`` module is used for mjpeg recording.
 
 class Mjpeg -- Mjpeg recorder
-=============================
+-----------------------------
 
 You can use the mjpeg module to record large video clips. Note that mjpeg files save
 compressed image data. So, they are best for recording long video clips that
@@ -36,7 +36,7 @@ Example usage::
     m.close(c.fps())
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: mjpeg.Mjpeg(filename, [width, [height]])
 
@@ -50,7 +50,7 @@ Constructors
    unless explicitly overridden.
 
 Methods
--------
+~~~~~~~
 
 .. method:: mjpeg.width()
 

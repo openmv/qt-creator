@@ -208,7 +208,7 @@ CPython documentation:</em> <a class="reference external" href="https://docs.pyt
 <p>This module provides access to the BSD socket interface.</p>
 <div class="attention admonition">
 <p class="first admonition-title">Difference to CPython</p>
-<p class="last">For efficiency and consistency, socket objects in MicroPython implement a <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a>
+<p class="last">For efficiency and consistency, socket objects in MicroPython implement a <a class="reference internal" href="../reference/glossary.html#term-stream"><span class="xref std std-term">stream</span></a>
 (file-like) interface directly. In CPython, you need to convert a socket to
 a file-like object using <a class="reference internal" href="#usocket.socket.makefile" title="usocket.socket.makefile"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">makefile()</span></code></a> method. This method is still supported
 by MicroPython (but is a no-op), so where compatibility with CPython matters,
@@ -491,7 +491,7 @@ is put in blocking mode.</p>
 <p>Not every <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a> supports this method. A more portable and
 generic solution is to use <a class="reference internal" href="uselect.html#uselect.poll" title="uselect.poll"><code class="xref any py py-func docutils literal notranslate"><span class="pre">uselect.poll</span></code></a> object. This allows to wait on
 multiple objects at the same time (and not just on sockets, but on generic
-<a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a> objects which support polling). Example:</p>
+<a class="reference internal" href="../reference/glossary.html#term-stream"><span class="xref std std-term">stream</span></a> objects which support polling). Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Instead of:</span>
 <span class="n">s</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>  <span class="c1"># time in seconds</span>
 <span class="n">s</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># may timeout</span>
@@ -615,7 +615,7 @@ and is an alias of <a class="reference internal" href="builtins.html#OSError" ti
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 11 May 2020.
+        Last updated on 07 Jun 2020.
       </span>
 
     </p>

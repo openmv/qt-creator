@@ -224,13 +224,13 @@ Functions
    keypoints allow you to raise the ``threshold``. Defaults to False.
 
 class HaarCascade -- Feature Descriptor
-=======================================
+---------------------------------------
 
 The Haar Cascade feature descriptor is used for the `image.find_features()`
 method. It doesn't have any methods itself for you to call.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.HaarCascade(path, [stages=Auto])
 
@@ -274,19 +274,19 @@ Constructors
     produce a Haar Cascade that detects cats.
 
 class Similarity -- Similarity Object
-=====================================
+-------------------------------------
 
 The similarity object is returned by `image.get_similarity()`.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.similarity()
 
    Please call `image.get_similarity()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: similarity.mean()
 
@@ -326,7 +326,7 @@ Methods
       of pixels between two images is the same. I.e. this is much greater than -1.
 
 class Histogram -- Histogram Object
-===================================
+-----------------------------------
 
 The histogram object is returned by `image.get_histogram()`.
 
@@ -337,14 +337,14 @@ RGB565 histograms have three channels with some number of bins each. All bins
 are normalized so that all bins in a channel sum to 1.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.histogram()
 
    Please call `image.get_histogram()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: histogram.bins()
 
@@ -397,7 +397,7 @@ Methods
    as aliases for this method.
 
 class Percentile -- Percentile Object
-=====================================
+-------------------------------------
 
 The percentile object is returned by `histogram.get_percentile()`.
 
@@ -408,14 +408,14 @@ RGB565 percentiles have three channels. Use the ``l_*``, ``a_*``, and ``b_*``
 methods.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.percentile()
 
    Please call `histogram.get_percentile()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: percentile.value()
 
@@ -442,7 +442,7 @@ Methods
    You may also get this value doing ``[2]`` on the object.
 
 class Threshold -- Threshold Object
-===================================
+-----------------------------------
 
 The threshold object is returned by `histogram.get_threshold()`.
 
@@ -453,14 +453,14 @@ RGB565 thresholds have three channels. Use the ``l_*``, ``a_*``, and ``b_*``
 methods.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.threshold()
 
    Please call `histogram.get_threshold()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: threshold.value()
 
@@ -487,7 +487,7 @@ Methods
    You may also get this value doing ``[2]`` on the object.
 
 class Statistics -- Statistics Object
-=====================================
+-------------------------------------
 
 The percentile object is returned by `histogram.get_statistics()` or
 `image.get_statistics()`.
@@ -499,14 +499,14 @@ RGB565 statistics have three channels. Use the ``l_*``, ``a_*``, and ``b_*``
 methods.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.statistics()
 
    Please call `histogram.get_statistics()` or `image.get_statistics()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: statistics.mean()
 
@@ -701,19 +701,19 @@ Methods
    You may also get this value doing ``[23]`` on the object.
 
 class Blob -- Blob object
-=========================
+-------------------------
 
 The blob object is returned by `image.find_blobs()`.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.blob()
 
    Please call `image.find_blobs()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: blob.corners()
 
@@ -888,19 +888,19 @@ Methods
    of the ellipse that fits inside of the min area rectangle of a blob.
 
 class Line -- Line object
-=========================
+-------------------------
 
 The line object is returned by `image.find_lines()`, `image.find_line_segments()`, or `image.get_regression()`.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.line()
 
    Please call `image.find_lines()`, `image.find_line_segments()`, or `image.get_regression()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: line.line()
 
@@ -956,19 +956,19 @@ Methods
    You may also get this value doing ``[8]`` on the object.
 
 class Circle -- Circle object
-=============================
+-----------------------------
 
 The circle object is returned by `image.find_circles()`.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.circle()
 
    Please call `image.find_circles()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: circle.x()
 
@@ -995,19 +995,19 @@ Methods
    You may also get this value doing ``[3]`` on the object.
 
 class Rect -- Rectangle Object
-==============================
+------------------------------
 
 The rect object is returned by `image.find_rects()`.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.rect()
 
    Please call `image.find_rects()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: rect.corners()
 
@@ -1050,19 +1050,19 @@ Methods
    You may also get this value doing ``[4]`` on the object.
 
 class QRCode -- QRCode object
-=============================
+-----------------------------
 
 The qrcode object is returned by `image.find_qrcodes()`.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.qrcode()
 
    Please call `image.find_qrcodes()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: qrcode.corners()
 
@@ -1159,19 +1159,19 @@ Methods
    payload in this case must be treated as just a large byte array.
 
 class AprilTag -- AprilTag object
-=================================
+---------------------------------
 
 The apriltag object is returned by `image.find_apriltags()`.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.apriltag()
 
    Please call `image.find_apriltags()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: apriltag.corners()
 
@@ -1348,19 +1348,19 @@ Methods
    You may also get this value doing ``[17]`` on the object.
 
 class DataMatrix -- DataMatrix object
-=====================================
+-------------------------------------
 
 The datamatrix object is returned by `image.find_datamatrices()`.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.datamatrix()
 
    Please call `image.find_datamatrices()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: datamatrix.corners()
 
@@ -1433,19 +1433,19 @@ Methods
    You may also get this value doing ``[9]`` on the object.
 
 class BarCode -- BarCode object
-===============================
+-------------------------------
 
 The barcode object is returned by `image.find_barcodes()`.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.barcode()
 
    Please call `image.find_barcodes()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: barcode.corners()
 
@@ -1526,19 +1526,19 @@ Methods
    You may also get this value doing ``[7]`` on the object.
 
 class Displacement -- Displacement object
-=========================================
+-----------------------------------------
 
 The displacement object is returned by `image.find_displacement()`.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.displacement()
 
    Please call `image.find_displacement()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: displacement.x_translation()
 
@@ -1574,19 +1574,19 @@ Methods
    You may also get this value doing ``[4]`` on the object.
 
 class kptmatch -- Keypoint Object
-=================================
+---------------------------------
 
 The kptmatch object is returned by `image.match_descriptor()` for keypoint matches.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.kptmatch()
 
    Please call `image.match_descriptor()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: kptmatch.rect()
 
@@ -1648,12 +1648,12 @@ Methods
    You may also get this value doing ``[8]`` on the object.
 
 class ImageWriter -- ImageWriter object
-=======================================
+---------------------------------------
 
 The ImageWriter object allows you to write uncompressed images to disk quickly.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.ImageWriter(path)
 
@@ -1662,7 +1662,7 @@ Constructors
    may then read back in using the ImageReader class.
 
 Methods
--------
+~~~~~~~
 
 .. method:: imagewriter.size()
 
@@ -1678,12 +1678,12 @@ Methods
    Closes the image stream file. You must close files or they become corrupted.
 
 class ImageReader -- ImageReader object
-=======================================
+---------------------------------------
 
 The ImageReader object allows you to read uncompressed images from disk quickly.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.ImageReader(path)
 
@@ -1692,7 +1692,7 @@ Constructors
    be played back at the same FPS as they were written to disk at.
 
 Methods
--------
+~~~~~~~
 
 .. method:: imagereader.size()
 
@@ -1730,12 +1730,12 @@ Methods
    not be corrupted if it is not closed...
 
 class Image -- Image object
-===========================
+---------------------------
 
 The image object is the basic object for machine vision operations.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: image.Image(path, [copy_to_fb=False])
 
@@ -1775,7 +1775,7 @@ Constructors
    UART/SPI/I2C write functions to be transmitted automatically.
 
 Methods
--------
+~~~~~~~
 
 .. method:: image.width()
 
@@ -1827,7 +1827,8 @@ Methods
       `image.get_pixel()` and `image.set_pixel()` are the only methods that allow
       you to manipulate bayer pattern images. Bayer pattern images are literal images
       where pixels in the image are R/G/R/G/etc. for even rows and G/B/G/B/etc. for
-      odd rows. Each pixel is 8-bits.
+      odd rows. Each pixel is 8-bits. If you call this method with ``rgbtuple`` set then `image.get_pixel()`
+      will debayer the source image at that pixel location and return a valid RGB888 tuple for the pixel location.
 
 .. method:: image.set_pixel(x, y, pixel)
 
@@ -1850,7 +1851,8 @@ Methods
       `image.get_pixel()` and `image.set_pixel()` are the only methods that allow
       you to manipulate bayer pattern images. Bayer pattern images are literal images
       where pixels in the image are R/G/R/G/etc. for even rows and G/B/G/B/etc. for
-      odd rows. Each pixel is 8-bits.
+      odd rows. Each pixel is 8-bits. If you call this method with an RGB888 tuple the grayscale
+      value of that RGB888 tuple is extracted and set to the pixel location.
 
 .. method:: image.mean_pool(x_div, y_div)
 
@@ -2367,7 +2369,7 @@ Methods
 
    Not supported on compressed images or bayer images.
 
-.. method:: image.draw_image(image, x, y, [x_scale=1.0, [y_scale=1.0, [alpha=256, [mask=None, [color_palette=-1]]]]])
+.. method:: image.draw_image(image, x, y, [x_scale=1.0, [y_scale=1.0, [alpha=256, [mask=None, [color_palette=-1, [alpha_palette=-1]]]]]])
 
    Draws an ``image`` whose top-left corner starts at location x, y. You may either
    pass x, y separately or as a tuple (x, y). This method ia very flexible and does
@@ -2397,6 +2399,9 @@ Methods
    ``color_palette`` if not ``-1`` can be `sensor.PALETTE_RAINBOW`, `sensor.PALETTE_IRONBOW`, or
    a 256 pixel in total RGB565 image to use as a color palette to draw a GRAYSCALE image on an
    RGB565 image in color.
+
+   ``alpha_palette`` if not ``-1`` can be a 256 pixel in total GRAYSCALE image to use as a alpha
+   palette to draw a GRAYSCALE image on an RGB565 or GRAYSCALE image with transparency.
 
    Returns the image object so you can call another method using ``.`` notation.
 
@@ -3386,7 +3391,7 @@ Methods
 
    This method is not available on the OpenMV Cam M4.
 
-.. method:: image.lens_corr([strength=1.8, [zoom=1.0]])
+.. method:: image.lens_corr([strength=1.8, [zoom=1.0, [x_corr=0.0, [y_corr=0.0]]]])
 
    Performs lens correction to un-fisheye the image due to the lens distortion.
 
@@ -3395,6 +3400,10 @@ Methods
    looks good.
 
    ``zoom`` is the amount to zoom in on the image by. 1.0 by default.
+
+   ``x_corr`` floating point pixel offset from center. Can be negative or positive.
+
+   ``y_corr`` floating point pixel offset from center. Can be negative or positive.
 
    Returns the image object so you can call another method using ``.`` notation.
 
@@ -3459,7 +3468,7 @@ Methods
 
    This method is not available on the OpenMV Cam M4.
 
-.. method:: image.get_histogram([thresholds, [invert=False, [roi, [bins, [l_bins, [a_bins, [b_bins]]]]]]])
+.. method:: image.get_histogram([thresholds, [invert=False, [roi, [bins, [l_bins, [a_bins, [b_bins, [difference]]]]]]]])
 
    Computes the normalized histogram on all color channels for an ``roi`` and
    returns a `image.histogram` object. Please see the `image.histogram` object for more
@@ -3513,9 +3522,13 @@ Methods
    the number of unique pixel values for each channel. By default, the historgram
    will have the maximum number of bins per channel.
 
+   ``difference`` may be set to an image object to cause this method to operate
+   on the difference image between the current image and the ``difference`` image
+   object. This saves having to use a separate buffer.
+
    Not supported on compressed images or bayer images.
 
-.. method:: image.get_statistics([thresholds, [invert=False, [roi, [bins, [l_bins, [a_bins, [b_bins]]]]]]])
+.. method:: image.get_statistics([thresholds, [invert=False, [roi, [bins, [l_bins, [a_bins, [b_bins, [difference]]]]]]]])
 
    Computes the mean, median, mode, standard deviation, min, max, lower
    quartile, and upper quartile for all color channels for an ``roi`` and
@@ -3572,6 +3585,10 @@ Methods
    channel. Additionally, it makes no sense to set the bin count larger than
    the number of unique pixel values for each channel. By default, the historgram
    will have the maximum number of bins per channel.
+
+   ``difference`` may be set to an image object to cause this method to operate
+   on the difference image between the current image and the ``difference`` image
+   object. This saves having to use a separate buffer.
 
    Not supported on compressed images or bayer images.
 

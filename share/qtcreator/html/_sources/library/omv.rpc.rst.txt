@@ -76,20 +76,20 @@ structures around (like jpeg images) can potentially exhaust the heap on the Ope
 And that is it! The ``rpc`` library is designed to be simple to use.
 
 class rpc - rpc virtual class
-=============================
+-----------------------------
 
 The rpc base class is reimplemented by the `rpc_master` and `rpc_slave` classes to create the master
 and slave interfaces. It is a pure virtual class and not meant to be used directly.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: rpc.rpc()
 
    Creates an rpc object. This constructor is not meant to be used directly.
 
 Methods
--------
+~~~~~~~
 
 .. method:: rpc.get_bytes(buff, timeout_ms):
 
@@ -140,20 +140,20 @@ Methods
    remote side will automatically timeout.
 
 class rpc_master - rpc_master virtual class
-===========================================
+-------------------------------------------
 
 The rpc_master is a pure virtual class and not meant to be used directly. Specific interface
 classes should reimplement rpc_master.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: rpc.rpc_master()
 
    Creates an rpc_master object. This constructor is not meant to be used directly.
 
 Methods
--------
+~~~~~~~
 
 .. method:: rpc_master.call(name, data=bytes(), send_timeout=1000, recv_timeout=1000):
 
@@ -172,20 +172,20 @@ Methods
    arguments.
 
 class rpc_slave - rpc_slave virtual class
-=========================================
+-----------------------------------------
 
 The rpc_slave is a pure virtual class and not meant to be used directly. Specific interface
 classes should reimplement rpc_slave.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: rpc.rpc_slave()
 
    Creates an rpc_slave object. This constructor is not meant to be used directly.
 
 Methods
--------
+~~~~~~~
 
 .. method:: rpc_slave.register_callback(cb):
 
@@ -249,12 +249,12 @@ Methods
    to receive again.
 
 class rpc_can_master - CAN Master Interface
-===========================================
+-------------------------------------------
 
 Control another ``rpc`` device over CAN.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: rpc.rpc_can_master(message_if=0x7FF, bit_rate=250000, sampling_point=75):
 
@@ -268,12 +268,12 @@ Constructors
    can high and master can low to slave can lo. The can bus must be terminated with 120 ohms.
 
 class rpc_can_slave - CAN Slave Interface
-=========================================
+-----------------------------------------
 
 Be controlled by another ``rpc`` device over CAN.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: rpc.rpc_can_slave(message_id=0x7FF, bit_rate=250000, sampling_point=75):
 
@@ -287,12 +287,12 @@ Constructors
    can high and master can low to slave can lo. The can bus must be terminated with 120 ohms.
 
 class rpc_i2c_master - I2C Master Interface
-===========================================
+-------------------------------------------
 
 Control another ``rpc`` device over I2C.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: rpc.rpc_i2c_master(slave_addr=0x12, rate=100000)
 
@@ -305,12 +305,12 @@ Constructors
    to slave sda. You must use external pull ups. Finally, both devices must share a ground.
 
 class rpc_i2c_slave - I2C Slave Interface
-=========================================
+-----------------------------------------
 
 Be controlled by another ``rpc`` device over I2C.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: rpc.rpc_i2c_slave(slave_addr=0x12)
 
@@ -322,12 +322,12 @@ Constructors
    to slave sda. You must use external pull ups. Finally, both devices must share a ground.
 
 class rpc_spi_master - SPI Master Interface
-===========================================
+-------------------------------------------
 
 Control another ``rpc`` device over SPI.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: rpc.rpc_spi_master(cs_pin="P3", freq=10000000, clk_polarity=1, clk_phase=0)
 
@@ -342,7 +342,7 @@ Constructors
    Finally, both devices must share a common ground.
 
 class rpc_spi_slave - SPI Slave Interface
-=========================================
+-----------------------------------------
 
 Be controlled by another ``rpc`` device over SPI.
 
@@ -358,7 +358,7 @@ Be controlled by another ``rpc`` device over SPI.
    Finally, both devices must share a common ground.
 
 class rpc_uart_master - UART Master Interface
-=============================================
+---------------------------------------------
 
 Control another ``rpc`` device over Async Serial (UART).
 
@@ -372,7 +372,7 @@ Control another ``rpc`` device over Async Serial (UART).
    slave tx. Finally, both devices must share a common ground.
 
 class rpc_uart_slave - UART Slave Interface
-===========================================
+-------------------------------------------
 
 Be controlled by another ``rpc`` device over Async Serial (UART).
 
@@ -386,7 +386,7 @@ Be controlled by another ``rpc`` device over Async Serial (UART).
    slave tx. Finally, both devices must share a common ground.
 
 class rpc_usb_vcp_master - USB VCP Master Interface
-===================================================
+---------------------------------------------------
 
 Control another ``rpc`` device over a USB Virtual COM Port.
 
@@ -395,7 +395,7 @@ Control another ``rpc`` device over a USB Virtual COM Port.
    Creates a USB VCP ``rpc`` master. This interface can move up to 12 Mb/s.
 
 class rpc_usb_vcp_slave - USB VCP Slave Interface
-=================================================
+-------------------------------------------------
 
 Be controlled by another ``rpc`` device over a USB Virtual COM Port.
 
@@ -404,7 +404,7 @@ Be controlled by another ``rpc`` device over a USB Virtual COM Port.
    Creates a USB VCP ``rpc`` slave. This interface can move up to 12 Mb/s.
 
 class rpc_wifi_master - WiFi Master Interface
-=============================================
+---------------------------------------------
 
 Control another ``rpc`` device over a WiFi.
 
@@ -421,7 +421,7 @@ Control another ``rpc`` device over a WiFi.
    * static_ip - If not None then a tuple of the (IP Address, Subnet Mask, Gateway, DNS Address)
 
 class rpc_wifi_master - WiFi Master Interface
-=============================================
+---------------------------------------------
 
 Be controlled by another ``rpc`` device over WiFi.
 

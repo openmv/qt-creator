@@ -7,7 +7,7 @@
 The ``gif`` module is used for gif recording.
 
 class Gif -- Gif recorder
-=========================
+-------------------------
 
 You can use the gif module to record small video clips. Note that gif files save
 uncompressed image data. So, they are best for recording short video clips that
@@ -34,7 +34,7 @@ Example usage::
     g.close()
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: gif.Gif(filename, [width, [height, [color, [loop=True]]]])
 
@@ -56,7 +56,7 @@ Constructors
    ``loop`` when True results in the gif automatically looping on playback.
 
 Methods
--------
+~~~~~~~
 
 .. method:: gif.width()
 

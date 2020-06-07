@@ -12,19 +12,19 @@ For more information about creating your own NN examples see please see the
 `README on our github here <https://github.com/openmv/openmv/tree/master/ml/cmsisnn>`_.
 
 class nn_class -- nn dection result
-===================================
+-----------------------------------
 
 The nn_class object is returned by `net.search()`.
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: nn.nn_class()
 
    Please call `net.search()` to create this object.
 
 Methods
--------
+~~~~~~~
 
 .. method:: nn_class.rect()
 
@@ -68,10 +68,10 @@ Methods
    You may also get this value doing ``[5]`` on the object.
 
 class Net -- Neural Network
-===========================
+---------------------------
 
 Constructors
-------------
+~~~~~~~~~~~~
 
 .. class:: nn.load(path)
 
@@ -81,7 +81,7 @@ Constructors
    Returns a ``Net`` object which can operate on an image.
 
 Methods
--------
+~~~~~~~
 
 .. method:: net.forward(image, [roi, [softmax=False, [dry_run=False]]])
 

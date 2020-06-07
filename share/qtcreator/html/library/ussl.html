@@ -212,9 +212,9 @@ facilities for network sockets, both client-side and server-side.</p>
 <dl class="function">
 <dt id="ussl.ussl.wrap_socket">
 <code class="descclassname">ussl.</code><code class="descname">wrap_socket</code><span class="sig-paren">(</span><em>sock</em>, <em>server_side=False</em>, <em>keyfile=None</em>, <em>certfile=None</em>, <em>cert_reqs=CERT_NONE</em>, <em>ca_certs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ussl.ussl.wrap_socket" title="Permalink to this definition">¶</a></dt>
-<dd><p>Takes a <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a> <em>sock</em> (usually usocket.socket instance of <code class="docutils literal notranslate"><span class="pre">SOCK_STREAM</span></code> type),
+<dd><p>Takes a <a class="reference internal" href="../reference/glossary.html#term-stream"><span class="xref std std-term">stream</span></a> <em>sock</em> (usually usocket.socket instance of <code class="docutils literal notranslate"><span class="pre">SOCK_STREAM</span></code> type),
 and returns an instance of ssl.SSLSocket, which wraps the underlying stream in
-an SSL context. Returned object has the usual <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a> interface methods like
+an SSL context. Returned object has the usual <a class="reference internal" href="../reference/glossary.html#term-stream"><span class="xref std std-term">stream</span></a> interface methods like
 <code class="docutils literal notranslate"><span class="pre">read()</span></code>, <code class="docutils literal notranslate"><span class="pre">write()</span></code>, etc. In MicroPython, the returned object does not expose
 socket interface and methods like <code class="docutils literal notranslate"><span class="pre">recv()</span></code>, <code class="docutils literal notranslate"><span class="pre">send()</span></code>. In particular, a
 server-side SSL socket should be created from a normal socket returned from
@@ -275,7 +275,7 @@ which makes an SSL connection established prone to man-in-the-middle attacks.</p
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 11 May 2020.
+        Last updated on 07 Jun 2020.
       </span>
 
     </p>

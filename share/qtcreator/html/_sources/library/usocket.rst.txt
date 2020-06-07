@@ -12,7 +12,7 @@ This module provides access to the BSD socket interface.
 .. admonition:: Difference to CPython
    :class: attention
 
-   For efficiency and consistency, socket objects in MicroPython implement a `stream`
+   For efficiency and consistency, socket objects in MicroPython implement a :std:term:`stream`
    (file-like) interface directly. In CPython, you need to convert a socket to
    a file-like object using `makefile()` method. This method is still supported
    by MicroPython (but is a no-op), so where compatibility with CPython matters,
@@ -81,7 +81,7 @@ Functions
 
 .. function:: getaddrinfo(host, port, af=0, type=0, proto=0, flags=0)
 
-   Translate the host/port argument into a sequence of 5-tuples that contain all the 
+   Translate the host/port argument into a sequence of 5-tuples that contain all the
    necessary arguments for creating a socket connected to that service. Arguments
    *af*, *type*, and *proto* (which have the same meaning as for the `socket()` function)
    can be used to filter which kind of addresses are returned. If a parameter is not
@@ -185,7 +185,7 @@ Methods
    on the socket object will fail. The remote end will receive EOF indication if
    supported by protocol.
 
-   Sockets are automatically closed when they are garbage-collected, but it is recommended 
+   Sockets are automatically closed when they are garbage-collected, but it is recommended
    to `close()` them explicitly as soon you finished working with them.
 
 .. method:: socket.bind(address)
@@ -262,7 +262,7 @@ Methods
    Not every `MicroPython port` supports this method. A more portable and
    generic solution is to use `uselect.poll` object. This allows to wait on
    multiple objects at the same time (and not just on sockets, but on generic
-   `stream` objects which support polling). Example::
+   :std:term:`stream` objects which support polling). Example::
 
         # Instead of:
         s.settimeout(1.0)  # time in seconds

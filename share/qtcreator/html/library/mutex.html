@@ -104,10 +104,8 @@
 <li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucryptolib.html"><code class="docutils literal notranslate"><span class="pre">ucryptolib</span></code> – cryptographic ciphers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">mutex</span></code> — mutex module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#class-mutex-mutex-object">class Mutex – mutex object</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#constructors">Constructors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">mutex</span></code> — mutex module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#class-mutex-mutex-object">class Mutex – mutex object</a></li>
 </ul>
 </li>
 </ul>
@@ -188,9 +186,8 @@
   <div class="section" id="module-mutex">
 <span id="mutex-mutex-module"></span><h1><a class="reference internal" href="#module-mutex" title="mutex: mutex module"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mutex</span></code></a> — mutex module<a class="headerlink" href="#module-mutex" title="Permalink to this headline">¶</a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">mutex</span></code> module is used for creating mutexes.</p>
-</div>
 <div class="section" id="class-mutex-mutex-object">
-<h1>class Mutex – mutex object<a class="headerlink" href="#class-mutex-mutex-object" title="Permalink to this headline">¶</a></h1>
+<h2>class Mutex – mutex object<a class="headerlink" href="#class-mutex-mutex-object" title="Permalink to this headline">¶</a></h2>
 <p>A mutex is an object enabling threads of execution to protect critical sections of code from
 reentrancy or to temporarily protect critical data sets from being updated by other threads.
 The term “mutex” derives from the notion of mutual exclusion. A mutex usually provides three methods:</p>
@@ -236,7 +233,7 @@ the same mutex instance.</p>
 <div class="line"><a class="reference external" href="http://www.differencebetween.net/language/difference-between-mutex-and-semaphore/">differencebetween</a></div>
 </div>
 <div class="section" id="constructors">
-<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<h3>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
 <dt id="mutex.Mutex">
 <em class="property">class </em><code class="descclassname">mutex.</code><code class="descname">Mutex</code><a class="headerlink" href="#mutex.Mutex" title="Permalink to this definition">¶</a></dt>
@@ -245,7 +242,7 @@ the same mutex instance.</p>
 
 </div>
 <div class="section" id="methods">
-<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="mutex.mjpeg.release">
 <code class="descclassname">mjpeg.</code><code class="descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mutex.mjpeg.release" title="Permalink to this definition">¶</a></dt>
@@ -259,6 +256,7 @@ the same mutex instance.</p>
 <p>You may also acquire the mutex in a blocking way by using <code class="docutils literal notranslate"><span class="pre">with</span></code>.</p>
 </dd></dl>
 
+</div>
 </div>
 </div>
 
@@ -284,7 +282,7 @@ the same mutex instance.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 11 May 2020.
+        Last updated on 07 Jun 2020.
       </span>
 
     </p>

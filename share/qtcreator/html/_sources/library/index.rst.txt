@@ -104,7 +104,7 @@ Functionality specific to the MicroPython implementation is available in
 the following libraries.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
 
    btree.rst
    framebuf.rst
@@ -122,22 +122,9 @@ Libraries specific to the OpenMV Cam
 The following libraries are specific to the OpenMV Cam.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    pyb.rst
-   pyb.ADC.rst
-   pyb.CAN.rst
-   pyb.DAC.rst
-   pyb.ExtInt.rst
-   pyb.I2C.rst
-   pyb.LED.rst
-   pyb.Pin.rst
-   pyb.RTC.rst
-   pyb.Servo.rst
-   pyb.SPI.rst
-   pyb.Timer.rst
-   pyb.UART.rst
-   pyb.USB_VCP.rst
    omv.time.rst
    omv.sensor.rst
    omv.image.rst
@@ -151,6 +138,7 @@ The following libraries are specific to the OpenMV Cam.
    omv.cpufreq.rst
    omv.imu.rst
    omv.rpc.rst
+   omv.rtsp.rst
    omv.omv.rst
 
 Third-party libraries on the OpenMV Cam

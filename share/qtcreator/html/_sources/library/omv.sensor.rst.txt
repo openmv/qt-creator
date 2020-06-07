@@ -63,6 +63,10 @@ Functions
    If `sensor.set_auto_rotation()` is enabled this method will return a new
    already rotated `image` object.
 
+   Note: `sensor.snapshot()` may apply cropping parameters to fit the snapshot in the available
+   frame buffer space given the pixformat and framesize. The cropping parameters will be applied
+   to maintain the aspect ratio and will stay until `sensor.set_framesize()` or `sensor.set_windowing()` are called.
+
 .. function:: sensor.skip_frames([n, time])
 
    Takes ``n`` number of snapshots to let the camera image stabilize after
@@ -79,6 +83,10 @@ Functions
 
    If both are specified this method skips ``n`` number of frames but will
    timeout after ``time`` milliseconds.
+
+   Note: `sensor.skip_frames()` may apply cropping parameters to fit the snapshot in the available
+   frame buffer space given the pixformat and framesize. The cropping parameters will be applied
+   to maintain the aspect ratio and will stay until `sensor.set_framesize()` or `sensor.set_windowing()` are called.
 
 .. function:: sensor.width()
 
@@ -215,6 +223,10 @@ Functions
 
    ``roi`` is a rect tuple (x, y, w, h). However, you may just pass (w, h) and
    the ``roi`` will be centered on the frame.
+
+   Note that `sensor.set_windowing()` forces (x, y, w, h) to be even rounded down. This is done to
+   ensure that RGB565/GRAYSCALE/BAYER images all have the same offsets and display correctly given
+   windowing as BAYER images must have an even width/height.
 
 .. function:: sensor.get_windowing()
 
@@ -365,6 +377,12 @@ Functions
 
    * `sensor.IOCTL_SET_TRIGGERED_MODE` - Pass this enum followed by True or False set triggered mode for the MT9V034 sensor.
    * `sensor.IOCTL_GET_TRIGGERED_MODE` - Pass this enum for `sensor.ioctl` to return the current triggered mode state.
+   * `sensor.IOCTL_SET_READOUT_WINDOW` - Pass this enum followed by a rect tuple (x, y, w, h) or a size tuple (w, h).
+      * This IOCTL allows you to control the readout window of the camera sensor which dramatically improves the frame rate at the cost of field-of-view.
+      * If you pass a rect tuple (x, y, w, h) the readout window will be positoned on that rect tuple. The rect tuple's x/y position will be adjusted so the size w/h fits. Additionally, the size w/h will be adjusted to not be smaller than the ``framesize``.
+      * If you pass a size tuple (w, h) the readout window will be centered given the w/h. Additionally, the size w/h will be adjusted to not be smaller than the ``framesize``.
+      * This IOCTL is extremely helpful for increasing the frame rate on higher resolution cameras like the OV2640/OV5640.
+   * `sensor.IOCTL_GET_READOUT_WINDOW` - Pass this enum for `sensor.ioctl` to return the current readout window rect tuple (x, y, w, h). By default this is (0, 0, maximum_camera_sensor_pixel_width, maximum_camera_sensor_pixel_height).
    * `sensor.IOCTL_LEPTON_GET_WIDTH` - Pass this enum to get the FLIR Lepton image width in pixels.
    * `sensor.IOCTL_LEPTON_GET_HEIGHT` - Pass this enum to get the FLIR Lepton image height in pixels.
    * `sensor.IOCTL_LEPTON_GET_RADIOMETRY` - Pass this enum to get the FLIR Lepton type (radiometric or not).
@@ -627,6 +645,14 @@ Constants
 .. data:: sensor.IOCTL_GET_TRIGGERED_MODE
 
    Lets you get the triggered mode for the MT9V034.
+
+.. data:: sensor.IOCTL_SET_READOUT_WINDOW
+
+   Lets you set the readout window for the OV5640.
+
+.. data:: sensor.IOCTL_GET_READOUT_WINDOW
+
+   Lets you get the readout window for the OV5640.
 
 .. data:: sensor.IOCTL_LEPTON_GET_WIDTH
 

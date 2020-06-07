@@ -117,15 +117,15 @@ Constants
 
 .. data:: stderr
 
-   Standard error `stream`.
+   Standard error :std:term:`stream`.
 
 .. data:: stdin
 
-   Standard input `stream`.
+   Standard input :std:term:`stream`.
 
 .. data:: stdout
 
-   Standard output `stream`.
+   Standard output :std:term:`stream`.
 
 .. data:: version
 

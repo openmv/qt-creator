@@ -205,9 +205,7 @@ should know about this flash drive:
         Finally, if you insert a micro-sd card into the micro-sd card slot on
         your OpenMV Cam the micro-sd card will replace the internal flash drive
         for all of the above. The OpenMV Cam supports micro-sd cards up to
-        32 GB in size. In particular, we support SD and SDHC micro-sd cards,
-        but, not SDXC cards which are the ones larger than 32 GB. However, this
-        is only because SDXC cards aren't formatted using the FAT file system.
-        If you format an SDXC card with FAT then it may work with the OpenMV
-        Cam. Last, feel free to save pictures/video on a micro-sd card. Just
+        2 TB in size that are formatted with a FAT12, FAT16, FAT32, and ex-FAT
+        filesystem. In particular, we support SD, SDHC, and SDXC micro-sd cards.
+        Last, feel free to save pictures/video on a micro-sd card. Just
         don't do this on your OpenMV Cam's internal flash drive.
