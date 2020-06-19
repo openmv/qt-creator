@@ -2690,21 +2690,24 @@ void OpenMVPlugin::packageUpdate()
 
                     if(box.clickedButton() == button)
                     {
-                        QProgressDialog *dialog = new QProgressDialog(tr("Installing..."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                        QProgressDialog *dialog = new QProgressDialog(tr("Downloading..."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
                         dialog->setWindowModality(Qt::ApplicationModal);
                         dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-                        dialog->setCancelButton(Q_NULLPTR);
+                        dialog->setAutoClose(false);
 
                         QNetworkAccessManager *manager2 = new QNetworkAccessManager(this);
 
                         connect(manager2, &QNetworkAccessManager::finished, this, [this, new_major, new_minor, new_patch, dialog] (QNetworkReply *reply2) {
-
-                            QByteArray data2 = reply2->readAll();
+                            QByteArray data2 = reply2->error() == QNetworkReply::NoError ? reply2->readAll() : QByteArray();
 
                             if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
                             {
+                                dialog->setLabelText(tr("Installing..."));
+                                dialog->setRange(0, 0);
+                                dialog->setCancelButton(Q_NULLPTR);
+
                                 QSettings *settings2 = ExtensionSystem::PluginManager::settings();
                                 settings2->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
@@ -2755,13 +2758,13 @@ void OpenMVPlugin::packageUpdate()
 
                                 settings2->endGroup();
                             }
-                            else if(reply2->error() != QNetworkReply::NoError)
+                            else if((reply2->error() != QNetworkReply::NoError) && (reply2->error() != QNetworkReply::OperationCanceledError))
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
                                     tr("Package Update"),
                                     tr("Error: %L1!").arg(reply2->errorString()));
                             }
-                            else
+                            else if (reply2->error() != QNetworkReply::OperationCanceledError)
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
                                     tr("Package Update"),
@@ -2781,7 +2784,12 @@ void OpenMVPlugin::packageUpdate()
 
                         if(reply2)
                         {
+                            connect(dialog, QProgressDialog::canceled, reply2, QNetworkReply::abort);
                             connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
+                            connect(reply2, QNetworkReply::downloadProgress, this, [this, dialog, reply2] (qint64 bytesReceived, qint64 bytesTotal) {
+                                dialog->setMaximum(bytesTotal);
+                                dialog->setValue(bytesReceived);
+                            });
 
                             dialog->show();
                         }
