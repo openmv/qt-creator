@@ -26,7 +26,7 @@
     <message>
         <location/>
         <source>Version:</source>
-        <translation>版本： </translation>
+        <translation>版本：</translation>
     </message>
     <message>
         <location/>
@@ -581,7 +581,7 @@
     <message>
         <location/>
         <source>Select all, if possible: </source>
-        <translation>如果可能，选择全部：</translation>
+        <translation>如果可能，选择全部： </translation>
     </message>
 </context>
 <context>
@@ -859,7 +859,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location/>
         <source> min</source>
-        <translation>分</translation>
+        <translation> 分</translation>
     </message>
 </context>
 <context>
@@ -1082,7 +1082,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location/>
         <source>Warn before opening text files greater than</source>
-        <translation>打开大于此大小的文本文件之前发出警告：</translation>
+        <translation>打开大于此大小的文本文件之前发出警告</translation>
     </message>
     <message>
         <location/>
@@ -1413,7 +1413,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location/>
         <source>Default encoding: </source>
-        <translation>默认编码：</translation>
+        <translation>默认编码： </translation>
     </message>
     <message>
         <location/>
@@ -1848,7 +1848,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location/>
         <source>Group: </source>
-        <translation>组：</translation>
+        <translation>组： </translation>
     </message>
 </context>
 <context>
@@ -3252,7 +3252,7 @@ will also disable the following plugins:
         <location line="+6"/>
         <source>Open Preferences dialog.</source>
         <comment>msgShowOptionsDialogToolTip (mac version)</comment>
-        <translation>打开首选项对话框</translation>
+        <translation>打开首选项对话框.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3337,7 +3337,7 @@ will also disable the following plugins:
     <message>
         <location line="+10"/>
         <source>Full path: &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation>完整路径：&lt;b&gt;%1&lt;/b&gt; </translation>
+        <translation>完整路径：&lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -6320,7 +6320,7 @@ Filter: %2
         <location filename="../../../src/plugins/texteditor/generichighlighter/highlighter.cpp" line="+248"/>
         <location filename="../../../src/plugins/texteditor/generichighlighter/manager.cpp" line="+227"/>
         <source>Generic highlighter error: </source>
-        <translation>通用荧光笔错误：</translation>
+        <translation>通用荧光笔错误： </translation>
     </message>
     <message>
         <location line="+229"/>
@@ -8350,7 +8350,25 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>感谢您使用OpenMV Cam和OpenMV IDE！\n\nOpenMV Cam的板载LED闪烁着不同的颜色，以指示其状态：\n\n呈绿色闪烁：\n\n您的OpenMV Cam的内置引导加载程序正在运行。通过USB为您的OpenMV Cam供电时，板载引导程序会运行几秒钟，以允许OpenMV IDE重新编程您的OpenMV Cam。\n\n呈蓝色闪烁：\n\n您的OpenMV Cam正在板上运行默认的main.py脚本。\n\n如果您已安装SD卡或在OpenMV Cam上覆盖了main.py脚本，则它将运行您加载在其中的任何代码。\n\n如果LED闪烁蓝色，但OpenMV IDE无法连接到OpenMV Cam，请确保使用提供数据和电源的USB电缆将OpenMV Cam连接到PC。\n\n闪烁白色：\n\n由于硬件故障，您的OpenMV Cam的固件崩溃了。请检查是否已正确安装OpenMV Cam的摄像头模块。\n\n</translation>
+        <translation>感谢您使用OpenMV Cam和OpenMV IDE！
+
+OpenMV Cam的板载LED闪烁着不同的颜色，以指示其状态：
+
+呈绿色闪烁：
+
+您的OpenMV Cam的内置引导加载程序正在运行。通过USB为您的OpenMV Cam供电时，板载引导程序会运行几秒钟，以允许OpenMV IDE重新编程您的OpenMV Cam。
+
+呈蓝色闪烁：\n\n您的OpenMV Cam正在板上运行默认的main.py脚本。
+
+如果您已安装SD卡或在OpenMV Cam上覆盖了main.py脚本，则它将运行您加载在其中的任何代码。
+
+如果LED闪烁蓝色，但OpenMV IDE无法连接到OpenMV Cam，请确保使用提供数据和电源的USB电缆将OpenMV Cam连接到PC。
+
+闪烁白色：
+
+由于硬件故障，您的OpenMV Cam的固件崩溃了。请检查是否已正确安装OpenMV Cam的摄像头模块。
+
+</translation>
     </message>
     <message>
         <location line="+98"/>
@@ -8941,7 +8959,7 @@ HomeBrew：
     <message>
         <location line="+47"/>
         <source>Board: %L1</source>
-        <translation type="unfinished"></translation>
+        <translation>董事会：%L1</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -8969,7 +8987,7 @@ HomeBrew：
     <message>
         <location line="-374"/>
         <source> - [ out of date - click here to updgrade ]</source>
-        <translation>-  [过时 - 点击此处升级]</translation>
+        <translation> - [过时 - 点击此处升级]</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -8979,7 +8997,7 @@ HomeBrew：
     <message>
         <location line="+10"/>
         <source> - [ latest ]</source>
-        <translation>-  [最新]</translation>
+        <translation> - [最新]</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -9055,7 +9073,9 @@ In particular, checkout the Color-Tracking examples.</source>
         <source>Try doing:
 
 </source>
-        <translation>尝试做：\n\n</translation>
+        <translation>尝试做：
+
+</translation>
     </message>
     <message>
         <location line="-2054"/>
@@ -9068,28 +9088,36 @@ In particular, checkout the Color-Tracking examples.</source>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
-        <translation>\n\n点击取消可跳至DFU重新编程。</translation>
+        <translation>
+
+点击取消可跳至DFU重新编程。</translation>
     </message>
     <message>
         <location line="+311"/>
         <source>Onboard Data Flash Erased!
 
 </source>
-        <translation>板载数据闪存已擦除！\n\n</translation>
+        <translation>板载数据闪存已擦除！
+
+</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Firmware Upgrade complete!
 
 </source>
-        <translation>固件升级完成！\n\n</translation>
+        <translation>固件升级完成！
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
-        <translation>如果未连接sd卡，则OpenMV Cam将开始运行其内置的自检功能，这可能需要一段时间。\n\n</translation>
+        <translation>如果未连接sd卡，则OpenMV Cam将开始运行其内置的自检功能，这可能需要一段时间。
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9102,7 +9130,9 @@ Hit cancel to skip to DFU reprogramming.</source>
         <source>PyDFU requires the following libraries to be installed:
 
 </source>
-        <translation>PyDFU需要安装以下库：\n\n</translation>
+        <translation>PyDFU需要安装以下库：
+
+</translation>
     </message>
     <message>
         <source>Syncing...</source>
@@ -9342,13 +9372,13 @@ Hit cancel to skip to DFU reprogramming.</source>
         <location line="+3"/>
         <location line="+219"/>
         <source> Connect to a Server </source>
-        <translation>连接到服务器</translation>
+        <translation> 连接到服务器 </translation>
     </message>
     <message>
         <location line="-218"/>
         <location line="+219"/>
         <source> Start a Server </source>
-        <translation>启动服务器</translation>
+        <translation> 启动服务器 </translation>
     </message>
     <message>
         <location line="-210"/>
@@ -9395,12 +9425,12 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+3"/>
         <source> Frame Buffer </source>
-        <translation>帧缓冲区</translation>
+        <translation> 帧缓冲区 </translation>
     </message>
     <message>
         <location line="+1"/>
         <source> Image File </source>
-        <translation>图像文件</translation>
+        <translation> 图像文件 </translation>
     </message>
     <message>
         <location line="+20"/>
@@ -9426,12 +9456,12 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+3"/>
         <source> Edit File </source>
-        <translation> 编辑文件</translation>
+        <translation> 编辑文件 </translation>
     </message>
     <message>
         <location line="+1"/>
         <source> Merge Files </source>
-        <translation> 合并文件</translation>
+        <translation> 合并文件 </translation>
     </message>
     <message>
         <location line="+13"/>

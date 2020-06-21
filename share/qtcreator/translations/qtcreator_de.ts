@@ -21,7 +21,7 @@
     <message>
         <location/>
         <source>Dependencies:</source>
-        <translation>Abhängigkeiten</translation>
+        <translation>Abhängigkeiten:</translation>
     </message>
     <message>
         <location/>
@@ -256,7 +256,7 @@
     <message>
         <location line="+56"/>
         <source>Name is empty.</source>
-        <translation>Der Name ist leer</translation>
+        <translation>Der Name ist leer.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -380,7 +380,7 @@
     <message>
         <location/>
         <source>Working directory:</source>
-        <translation>Arbeitsverzeichnis</translation>
+        <translation>Arbeitsverzeichnis:</translation>
     </message>
     <message>
         <location/>
@@ -433,7 +433,7 @@
     <message>
         <location/>
         <source>Environment:</source>
-        <translation>Umwelt</translation>
+        <translation>Umwelt:</translation>
     </message>
     <message>
         <location/>
@@ -637,27 +637,27 @@
     <message>
         <location/>
         <source>Sear&amp;ch for:</source>
-        <translation>Suchen nach:</translation>
+        <translation>Su&amp;chen nach:</translation>
     </message>
     <message>
         <location/>
         <source>Case sensiti&amp;ve</source>
-        <translation>Schreibungsabhängig</translation>
+        <translation>&amp;Schreibungsabhängig</translation>
     </message>
     <message>
         <location/>
         <source>Whole words o&amp;nly</source>
-        <translation>Nur ganze Wörter</translation>
+        <translation>&amp;Nur ganze Wörter</translation>
     </message>
     <message>
         <location/>
         <source>Use re&amp;gular expressions</source>
-        <translation>Wiederkehrende Ausdrücke verwenden</translation>
+        <translation>Wiederkehrende Ausdrücke &amp;verwenden</translation>
     </message>
     <message>
         <location/>
         <source>Sco&amp;pe:</source>
-        <translation>Umfang:</translation>
+        <translation>&amp;Umfang:</translation>
     </message>
 </context>
 <context>
@@ -856,7 +856,7 @@ Um dies zu tun, tippen Sie diese Verknüpfung und ein Leerzeichen in das Eingabe
     <message>
         <location/>
         <source> min</source>
-        <translation> Min.</translation>
+        <translation> Min</translation>
     </message>
 </context>
 <context>
@@ -1055,12 +1055,12 @@ Um dies zu tun, tippen Sie diese Verknüpfung und ein Leerzeichen in das Eingabe
     <message>
         <location/>
         <source>&amp;Delete file permanently</source>
-        <translation>&amp; Datei dauerhaft löschen </translation>
+        <translation>&amp;Datei dauerhaft löschen</translation>
     </message>
     <message>
         <location/>
         <source>&amp;Remove from Version Control</source>
-        <translation>&amp; Aus Versionskontrolle entfernen</translation>
+        <translation>&amp;Aus Versionskontrolle entfernen</translation>
     </message>
 </context>
 <context>
@@ -1106,7 +1106,7 @@ Um dies zu tun, tippen Sie diese Verknüpfung und ein Leerzeichen in das Eingabe
         <source>min</source>
         <extracomment>unit for minutes
 </extracomment>
-        <translation>Min.</translation>
+        <translation>Min</translation>
     </message>
     <message>
         <location/>
@@ -1224,12 +1224,12 @@ Um dies zu tun, tippen Sie diese Verknüpfung und ein Leerzeichen in das Eingabe
     <message>
         <location/>
         <source>Enable &amp;mouse navigation</source>
-        <translation>Aktivieren und Mausnavigation</translation>
+        <translation>Aktivieren und &amp;Mausnavigation</translation>
     </message>
     <message>
         <location/>
         <source>Enable scroll &amp;wheel zooming</source>
-        <translation>Scroll- und Radzoom aktivieren</translation>
+        <translation>Scroll- und &amp;Radzoom aktivieren</translation>
     </message>
     <message>
         <location/>
@@ -1581,7 +1581,7 @@ Gibt an, wie die Rücktaste mit dem Einzug interagiert.
     <message>
         <location/>
         <source>Display right &amp;margin at column:</source>
-        <translation>Anzeige rechts und Rand in der Spalte:</translation>
+        <translation>&amp;Anzeige rechts und Rand in der Spalte:</translation>
     </message>
     <message>
         <location/>
@@ -1596,32 +1596,32 @@ Gibt an, wie die Rücktaste mit dem Einzug interagiert.
     <message>
         <location/>
         <source>Center &amp;cursor on scroll</source>
-        <translation>Zentrieren &amp;Cursor bei Blättern </translation>
+        <translation>Zentrieren &amp;Cursor bei Blättern</translation>
     </message>
     <message>
         <location/>
         <source>Highlight &amp;blocks</source>
-        <translation>Markieren und Blöcke</translation>
+        <translation>Markieren und &amp;Blöcke</translation>
     </message>
     <message>
         <location/>
         <source>Auto-fold first &amp;comment</source>
-        <translation>Automatisch zuerst falten und kommentieren</translation>
+        <translation>Automatisch zuerst falten und &amp;kommentieren</translation>
     </message>
     <message>
         <location/>
         <source>&amp;Animate matching parentheses</source>
-        <translation>Passende Klammern animieren</translation>
+        <translation>Passende Klammern &amp;animieren</translation>
     </message>
     <message>
         <location/>
         <source>Highlight current &amp;line</source>
-        <translation>Aktuell und Linie highlighten</translation>
+        <translation>Aktuell und &amp;Linie highlighten</translation>
     </message>
     <message>
         <location/>
         <source>Display line &amp;numbers</source>
-        <translation>Zeile und Zahlen anzeigen</translation>
+        <translation>Zeile und Zahlen &amp;anzeigen</translation>
     </message>
     <message>
         <location/>
@@ -2229,7 +2229,7 @@ Beeinflusst den Einzug von Fortsetzungszeilen.
         <location line="+1"/>
         <location line="+1"/>
         <source>N/A</source>
-        <translation>k.A.</translation>
+        <translation>k/a</translation>
     </message>
 </context>
 <context>
@@ -2314,7 +2314,7 @@ Beeinflusst den Einzug von Fortsetzungszeilen.
     <message>
         <location line="+3"/>
         <source>Resolved</source>
-        <translation>gelöst wird.</translation>
+        <translation>gelöst wird</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2438,7 +2438,7 @@ Grund: %3</translation>
     <message>
         <location line="+19"/>
         <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
-        <translation>Die Abhängigkeit &apos;%1(%2)&apos; konnte nicht aufgelöst werden.</translation>
+        <translation>Die Abhängigkeit &apos;%1(%2)&apos; konnte nicht aufgelöst werden</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -2687,8 +2687,8 @@ deaktivieren, werden auch die folgenden Plugins deaktiviert:
         <location line="+92"/>
         <source>%1 not found in PATH
 </source>
-        <translation>%1 wurde nicht in PATH
- gefunden</translation>
+        <translation>%1 wurde nicht in PATH gefunden
+</translation>
     </message>
 </context>
 <context>
@@ -2713,7 +2713,7 @@ deaktivieren, werden auch die folgenden Plugins deaktiviert:
         <source>The process returned exit code %1:
 %2</source>
         <translation>Der Prozess hat den Beendigungscode %1:
-%2 zurückgegeben.</translation>
+%2 zurückgegeben</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -2731,23 +2731,23 @@ deaktivieren, werden auch die folgenden Plugins deaktiviert:
         <location line="+13"/>
         <source>Running %1 %2...
 </source>
-        <translation>%1 %2...
-wird ausgeführt</translation>
+        <translation>%1 %2... wird ausgeführt
+</translation>
     </message>
     <message>
         <location line="+15"/>
         <location line="+12"/>
         <source>Running %1 %2 ...
 </source>
-        <translation>%1 %2 ...
-wird ausgeführt</translation>
+        <translation>%1 %2 ... wird ausgeführt
+</translation>
     </message>
     <message>
         <location line="-4"/>
         <source>%1 not found in PATH
 </source>
-        <translation>%1 wurde nicht in PATH
- gefunden</translation>
+        <translation>%1 wurde nicht in PATH gefunden
+</translation>
     </message>
 </context>
 <context>
@@ -2765,7 +2765,7 @@ wird ausgeführt</translation>
     <message>
         <location line="+9"/>
         <source>Do not &amp;show again</source>
-        <translation>Nicht mehr anzeigen</translation>
+        <translation>Nicht &amp;mehr anzeigen</translation>
     </message>
 </context>
 <context>
@@ -3024,7 +3024,7 @@ wird ausgeführt</translation>
     <message>
         <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+111"/>
         <source>Name is empty.</source>
-        <translation>Der Name ist leer</translation>
+        <translation>Der Name ist leer.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3034,7 +3034,7 @@ wird ausgeführt</translation>
     <message>
         <location line="+2"/>
         <source>Invalid character &quot;%1&quot;.</source>
-        <translation>Ungültiges Zeichen &quot;%1&quot;</translation>
+        <translation>Ungültiges Zeichen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3191,7 +3191,7 @@ wird ausgeführt</translation>
     <message>
         <location line="+8"/>
         <source>%1: File name without path.</source>
-        <translation>%1: Dateiname ohne Pfad</translation>
+        <translation>%1: Dateiname ohne Pfad.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3206,7 +3206,7 @@ wird ausgeführt</translation>
     <message>
         <location line="+1"/>
         <source>Access environment variables.</source>
-        <translation>Zugriff auf Umgebungsvariablen</translation>
+        <translation>Zugriff auf Umgebungsvariablen.</translation>
     </message>
 </context>
 <context>
@@ -3350,7 +3350,7 @@ wird ausgeführt</translation>
     <message>
         <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+126"/>
         <source>Insert...</source>
-        <translation>Einfügen</translation>
+        <translation>Einfügen...</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3419,12 +3419,12 @@ wird ausgeführt</translation>
     <message>
         <location line="+3"/>
         <source>C&amp;lose All</source>
-        <translation>Alle schließen</translation>
+        <translation>Alle &amp;schließen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Save &amp;as...</source>
-        <translation>Speichern als...</translation>
+        <translation>Speichern &amp;als...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3463,7 +3463,7 @@ wird ausgeführt</translation>
     <message>
         <location line="+2"/>
         <source>Rename...</source>
-        <translation>Umbenennen</translation>
+        <translation>Umbenennen...</translation>
     </message>
 </context>
 <context>
@@ -3509,7 +3509,7 @@ wird ausgeführt</translation>
     <message>
         <location line="+4"/>
         <source>Failed.</source>
-        <translation>Fehlgeschlagen</translation>
+        <translation>Fehlgeschlagen.</translation>
     </message>
 </context>
 <context>
@@ -3566,7 +3566,7 @@ wird ausgeführt</translation>
         <location filename="../../../src/libs/utils/textfileformat.cpp" line="+217"/>
         <location line="+64"/>
         <source>Out of memory.</source>
-        <translation>Nicht genügend Arbeitsspeicher</translation>
+        <translation>Nicht genügend Arbeitsspeicher.</translation>
     </message>
     <message>
         <location line="-55"/>
@@ -3666,7 +3666,7 @@ wird ausgeführt</translation>
     <message>
         <location line="+1"/>
         <source>[folder]</source>
-        <translation>[folder]:</translation>
+        <translation>[folder]</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3942,7 +3942,7 @@ Kein Versionskontrollsystem gefunden.</translation>
     <message>
         <location line="+135"/>
         <source>Change &amp;Permission</source>
-        <translation>Änderung und Erlaubnis</translation>
+        <translation>Änderung und &amp;Erlaubnis</translation>
     </message>
     <message>
         <location line="+80"/>
@@ -4024,7 +4024,7 @@ Möchten Sie sie jetzt auschecken?</translation>
     <message>
         <location line="+1"/>
         <source>Reset to default.</source>
-        <translation>Auf Standardeinstellung zurücksetzen</translation>
+        <translation>Auf Standardeinstellung zurücksetzen.</translation>
     </message>
     <message>
         <location line="+106"/>
@@ -4034,7 +4034,7 @@ Möchten Sie sie jetzt auschecken?</translation>
     <message>
         <location line="+3"/>
         <source>Invalid key sequence.</source>
-        <translation>Ungültige Tastenfolge</translation>
+        <translation>Ungültige Tastenfolge.</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -4210,7 +4210,7 @@ Möchten Sie sie jetzt auschecken?</translation>
         <location line="+1329"/>
         <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+10"/>
         <source>Save &amp;As...</source>
-        <translation>Speichern als...</translation>
+        <translation>Speichern &amp;als...</translation>
     </message>
     <message>
         <location line="-1016"/>
@@ -4224,7 +4224,7 @@ Möchten Sie sie jetzt auschecken?</translation>
 Continue?</source>
         <translation>Die Textdatei &quot;%1&quot; hat die Größe %2MB und benötigt möglicherweise mehr Arbeitsspeicher zum Öffnen und Verarbeiten als verfügbar.
 
-Weiter? </translation>
+Weiter?</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -4655,7 +4655,7 @@ Weiter? </translation>
     <message>
         <location line="+1"/>
         <source>Could not delete file %1.</source>
-        <translation>Datei %1 konnte nicht gelöscht werden</translation>
+        <translation>Datei %1 konnte nicht gelöscht werden.</translation>
     </message>
 </context>
 <context>
@@ -4814,7 +4814,7 @@ Weiter? </translation>
     <message>
         <location line="+10"/>
         <source>Replace with...</source>
-        <translation>Ersetzen Durch</translation>
+        <translation>Ersetzen Durch...</translation>
     </message>
 </context>
 <context>
@@ -4941,7 +4941,7 @@ Weiter? </translation>
     <message>
         <location line="-396"/>
         <source>History:</source>
-        <translation>History</translation>
+        <translation>History:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -5171,7 +5171,7 @@ Möchten Sie ihn beenden?</translation>
     <message>
         <location line="+5"/>
         <source>Prefix:</source>
-        <translation>Präfix</translation>
+        <translation>Präfix:</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5276,7 +5276,7 @@ Möchten Sie ihn beenden?</translation>
     <message>
         <location line="+13"/>
         <source>Locate...</source>
-        <translation>Lokalisieren</translation>
+        <translation>Lokalisieren...</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -5317,7 +5317,7 @@ Möchten Sie ihn beenden?</translation>
     <message>
         <location line="+11"/>
         <source>&amp;Tools</source>
-        <translation>Werkzeuge</translation>
+        <translation>&amp;Werkzeuge</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5327,7 +5327,7 @@ Möchten Sie ihn beenden?</translation>
     <message>
         <location line="+12"/>
         <source>&amp;Help</source>
-        <translation>Helfen</translation>
+        <translation>&amp;Helfen</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -5392,7 +5392,7 @@ Möchten Sie ihn beenden?</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Undo</source>
-        <translation>Rückgängig</translation>
+        <translation>&amp;Rückgängig</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -5422,7 +5422,7 @@ Möchten Sie ihn beenden?</translation>
     <message>
         <location line="+8"/>
         <source>&amp;Paste</source>
-        <translation>Einfügen</translation>
+        <translation>&amp;Einfügen</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5442,7 +5442,7 @@ Möchten Sie ihn beenden?</translation>
     <message>
         <location line="+8"/>
         <source>&amp;Options...</source>
-        <translation>&amp;Optionen</translation>
+        <translation>&amp;Optionen...</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -5689,7 +5689,7 @@ Möchten Sie ihn beenden?</translation>
     <message>
         <location line="+9"/>
         <source>A timeout occurred running &quot;%1&quot;</source>
-        <translation>Es ist ein Timeout aufgetreten, bei dem &quot;%1&quot; ausgeführt wurde.</translation>
+        <translation>Es ist ein Timeout aufgetreten, bei dem &quot;%1&quot; ausgeführt wurde</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -5904,8 +5904,8 @@ to version control (%2)
 </source>
         <translation>Die Datei
 %1
-zur Versionskontrolle (%2)
-konnte nicht hinzugefügt werden</translation>
+zur Versionskontrolle (%2) konnte nicht hinzugefügt werden
+</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -5984,7 +5984,7 @@ konnte nicht hinzugefügt werden</translation>
     <message>
         <location line="+79"/>
         <source>%1 found</source>
-        <translation>found</translation>
+        <translation>%1 found</translation>
     </message>
 </context>
 <context>
@@ -6205,7 +6205,7 @@ Filter: %2
     <message>
         <location line="+17"/>
         <source>Director&amp;y:</source>
-        <translation>Verzeichnis:</translation>
+        <translation>&amp;Verzeichnis:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6215,7 +6215,7 @@ Filter: %2
     <message>
         <location line="+17"/>
         <source>Fi&amp;le pattern:</source>
-        <translation>Dateimuster:</translation>
+        <translation>&amp;Dateimuster:</translation>
     </message>
 </context>
 <context>
@@ -6330,7 +6330,7 @@ Filter: %2
     <message>
         <location line="+229"/>
         <source>Reached empty context.</source>
-        <translation>Erreichter leerer Kontext</translation>
+        <translation>Erreichter leerer Kontext.</translation>
     </message>
 </context>
 <context>
@@ -6391,7 +6391,7 @@ Filter: %2
     <message>
         <location line="+2"/>
         <source>Please check the directory&apos;s access rights.</source>
-        <translation>Zugriffsrechte des Verzeichnisses überprüfen</translation>
+        <translation>Zugriffsrechte des Verzeichnisses überprüfen.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6560,7 +6560,7 @@ Filter: %2
     <message>
         <location line="+2"/>
         <source>Select Encoding</source>
-        <translation>Wählen Sie &quot;Codierung&quot;.</translation>
+        <translation>Wählen Sie &quot;Codierung&quot;</translation>
     </message>
     <message>
         <location line="+6099"/>
@@ -6611,7 +6611,7 @@ Filter: %2
     <message>
         <location filename="../../../src/plugins/texteditor/texteditoractionhandler.cpp" line="+262"/>
         <source>&amp;Undo</source>
-        <translation>Rückgängig</translation>
+        <translation>&amp;Rückgängig</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -6833,7 +6833,7 @@ Filter: %2
     <message>
         <location line="+20"/>
         <source>&amp;Visualize Whitespace</source>
-        <translation>Whitespace visualisieren</translation>
+        <translation>Whitespace &amp;visualisieren</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6868,7 +6868,7 @@ Filter: %2
     <message>
         <location line="+4"/>
         <source>Toggle Comment &amp;Selection</source>
-        <translation>Kommentar und Auswahl umschalten</translation>
+        <translation>Kommentar und Auswahl &amp;umschalten</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6878,7 +6878,7 @@ Filter: %2
     <message>
         <location line="+3"/>
         <source>Cut &amp;Line</source>
-        <translation>Schnittlinie</translation>
+        <translation>&amp;Schnittlinie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6888,7 +6888,7 @@ Filter: %2
     <message>
         <location line="+3"/>
         <source>Copy &amp;Line</source>
-        <translation>Kopieren und Linie</translation>
+        <translation>Kopieren und &amp;Linie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7144,7 +7144,7 @@ Filter: %2
     <message>
         <location line="+7"/>
         <source>Number of columns visible in current document.</source>
-        <translation>Anzahl der im aktuellen Dokument sichtbaren Spalten</translation>
+        <translation>Anzahl der im aktuellen Dokument sichtbaren Spalten.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7184,7 +7184,7 @@ An Text angepasst, wenn keine anderen Regeln übereinstimmen.</translation>
     <message>
         <location line="+0"/>
         <source>Selected text.</source>
-        <translation>Ausgewählter Text</translation>
+        <translation>Ausgewählter Text.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7244,7 +7244,7 @@ An Text angepasst, wenn keine anderen Regeln übereinstimmen.</translation>
     <message>
         <location line="+1"/>
         <source>Line where the cursor is placed in.</source>
-        <translation>Zeile, in der sich der Cursor befindet</translation>
+        <translation>Zeile, in der sich der Cursor befindet.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7296,7 +7296,7 @@ An Text angepasst, wenn keine anderen Regeln übereinstimmen.</translation>
     <message>
         <location line="+0"/>
         <source>Number literal.</source>
-        <translation>Zahlenliteral</translation>
+        <translation>Zahlenliteral.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7316,7 +7316,7 @@ An Text angepasst, wenn keine anderen Regeln übereinstimmen.</translation>
     <message>
         <location line="+1"/>
         <source>Name of a primitive data type.</source>
-        <translation>Name eines primitiven Datentyps</translation>
+        <translation>Name eines primitiven Datentyps.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7326,7 +7326,7 @@ An Text angepasst, wenn keine anderen Regeln übereinstimmen.</translation>
     <message>
         <location line="+0"/>
         <source>Name of a type.</source>
-        <translation>Name eines Typs</translation>
+        <translation>Name eines Typs.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7366,7 +7366,7 @@ An Text angepasst, wenn keine anderen Regeln übereinstimmen.</translation>
     <message>
         <location line="+0"/>
         <source>Name of a function.</source>
-        <translation>Name einer Funktion</translation>
+        <translation>Name einer Funktion.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7386,7 +7386,7 @@ An Text angepasst, wenn keine anderen Regeln übereinstimmen.</translation>
     <message>
         <location line="+1"/>
         <source>QML item property, that allows a binding to another property.</source>
-        <translation>QML-Elementeigenschaft, die eine Bindung an eine andere Eigenschaft ermöglicht</translation>
+        <translation>QML-Elementeigenschaft, die eine Bindung an eine andere Eigenschaft ermöglicht.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7406,7 +7406,7 @@ An Text angepasst, wenn keine anderen Regeln übereinstimmen.</translation>
     <message>
         <location line="+1"/>
         <source>QML property of a parent item.</source>
-        <translation>QML-Eigenschaft eines übergeordneten Elements</translation>
+        <translation>QML-Eigenschaft eines übergeordneten Elements.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7416,7 +7416,7 @@ An Text angepasst, wenn keine anderen Regeln übereinstimmen.</translation>
     <message>
         <location line="+1"/>
         <source>Property of the same QML item.</source>
-        <translation>Eigenschaft des gleichen QML-Elements</translation>
+        <translation>Eigenschaft des gleichen QML-Elements.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7426,7 +7426,7 @@ An Text angepasst, wenn keine anderen Regeln übereinstimmen.</translation>
     <message>
         <location line="+1"/>
         <source>Name of a QML state.</source>
-        <translation>Name eines QML-Status</translation>
+        <translation>Name eines QML-Status.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7436,7 +7436,7 @@ An Text angepasst, wenn keine anderen Regeln übereinstimmen.</translation>
     <message>
         <location line="+1"/>
         <source>Name of a QML type.</source>
-        <translation>Name eines QML-Typs</translation>
+        <translation>Name eines QML-Typs.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8260,7 +8260,7 @@ Während (True):
         <location line="+6"/>
         <location line="+2761"/>
         <source>Serial Port:</source>
-        <translation>Serieller Port</translation>
+        <translation>Serieller Port:</translation>
     </message>
     <message>
         <location line="-2760"/>
@@ -8355,7 +8355,27 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>Vielen Dank, dass Sie OpenMV Cam und OpenMV IDE verwenden!\n\nDie Onboard-LED Ihrer OpenMV-Kamera blinkt in verschiedenen Farben, um den Status anzuzeigen:\n\nGrün blinkend:\n\nDer integrierte Bootloader Ihrer OpenMV-Kamera wird ausgeführt. Der integrierte Bootloader wird einige Sekunden lang ausgeführt, wenn Ihre OpenMV-Kamera über USB mit Strom versorgt wird, damit OpenMV IDE Ihre OpenMV-Kamera neu programmieren kann.\n\nBlau blinkend:\n\nAuf Ihrer OpenMV-Kamera wird das standardmäßige main.py-Skript ausgeführt.\n\nWenn Sie eine SD-Karte installiert haben oder das Skript main.py auf Ihrer OpenMV Cam überschrieben haben, wird der Code ausgeführt, den Sie stattdessen geladen haben.\n\nWenn die LED blau blinkt, OpenMV IDE jedoch keine Verbindung zu Ihrer OpenMV-Kamera herstellen kann, stellen Sie bitte sicher, dass Sie Ihre OpenMV-Kamera mit einem USB-Kabel an Ihren PC anschließen, das sowohl Daten als auch Strom liefert.\n\nBlinkendes Weiß:\n\nDie Firmware Ihrer OpenMV-Kamera gerät aufgrund eines Hardwarefehlers in Panik. Bitte überprüfen Sie, ob das Kameramodul Ihrer OpenMV-Kamera sicher installiert ist.\n\n</translation>
+        <translation>Vielen Dank, dass Sie OpenMV Cam und OpenMV IDE verwenden!
+
+Die Onboard-LED Ihrer OpenMV-Kamera blinkt in verschiedenen Farben, um den Status anzuzeigen:
+
+Grün blinkend:
+
+Der integrierte Bootloader Ihrer OpenMV-Kamera wird ausgeführt. Der integrierte Bootloader wird einige Sekunden lang ausgeführt, wenn Ihre OpenMV-Kamera über USB mit Strom versorgt wird, damit OpenMV IDE Ihre OpenMV-Kamera neu programmieren kann.
+
+Blau blinkend:
+
+Auf Ihrer OpenMV-Kamera wird das standardmäßige main.py-Skript ausgeführt.
+
+Wenn Sie eine SD-Karte installiert haben oder das Skript main.py auf Ihrer OpenMV Cam überschrieben haben, wird der Code ausgeführt, den Sie stattdessen geladen haben.
+
+Wenn die LED blau blinkt, OpenMV IDE jedoch keine Verbindung zu Ihrer OpenMV-Kamera herstellen kann, stellen Sie bitte sicher, dass Sie Ihre OpenMV-Kamera mit einem USB-Kabel an Ihren PC anschließen, das sowohl Daten als auch Strom liefert.
+
+Blinkendes Weiß:
+
+Die Firmware Ihrer OpenMV-Kamera gerät aufgrund eines Hardwarefehlers in Panik. Bitte überprüfen Sie, ob das Kameramodul Ihrer OpenMV-Kamera sicher installiert ist.
+
+</translation>
     </message>
     <message>
         <location line="+98"/>
@@ -8615,7 +8635,7 @@ Möchten Sie Ihre OpenMV Cam jetzt registrieren?</translation>
     <message>
         <location line="+6"/>
         <source>Database Error!</source>
-        <translation>Datenbankfehler</translation>
+        <translation>Datenbankfehler!</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -8832,7 +8852,7 @@ Weiter?</translation>
         <location line="-39"/>
         <location line="+47"/>
         <source>Programming...</source>
-        <translation>Programmieren</translation>
+        <translation>Programmieren...</translation>
     </message>
     <message>
         <source>Done upgrading your OpenMV Cam&apos;s firmware!
@@ -9068,7 +9088,9 @@ Weitere Beispiele finden Sie im Menü Datei -&gt; Beispiele.
         <source>Try doing:
 
 </source>
-        <translation>Versuchen Sie es:\n\n</translation>
+        <translation>Versuchen Sie es:
+
+</translation>
     </message>
     <message>
         <location line="-2054"/>
@@ -9081,28 +9103,36 @@ Weitere Beispiele finden Sie im Menü Datei -&gt; Beispiele.
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
-        <translation>\n\nDrücken Sie Abbrechen, um zur DFU-Neuprogrammierung zu gelangen.</translation>
+        <translation>
+
+Drücken Sie Abbrechen, um zur DFU-Neuprogrammierung zu gelangen.</translation>
     </message>
     <message>
         <location line="+311"/>
         <source>Onboard Data Flash Erased!
 
 </source>
-        <translation>Onboard Data Flash gelöscht!\n\n</translation>
+        <translation>Onboard Data Flash gelöscht!
+
+</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Firmware Upgrade complete!
 
 </source>
-        <translation>Firmware Upgrade abgeschlossen!\n\n</translation>
+        <translation>Firmware Upgrade abgeschlossen!
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
-        <translation>Ihre OpenMV-Kamera startet den eingebauten Selbsttest, wenn keine SD-Karte angeschlossen ist. Dies kann eine Weile dauern.\n\n</translation>
+        <translation>Ihre OpenMV-Kamera startet den eingebauten Selbsttest, wenn keine SD-Karte angeschlossen ist. Dies kann eine Weile dauern.
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9115,7 +9145,9 @@ Hit cancel to skip to DFU reprogramming.</source>
         <source>PyDFU requires the following libraries to be installed:
 
 </source>
-        <translation>Für PyDFU müssen die folgenden Bibliotheken installiert sein:\n\n</translation>
+        <translation>Für PyDFU müssen die folgenden Bibliotheken installiert sein:
+
+</translation>
     </message>
     <message>
         <source>Syncing...</source>
@@ -9330,7 +9362,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+6"/>
         <source>Please select an option</source>
-        <translation>Wählen Sie eine Option aus.</translation>
+        <translation>Wählen Sie eine Option aus</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -9638,7 +9670,7 @@ Möchten Sie, dass OpenMV IDE es auf Ihre OpenMV Cam kopiert?</translation>
     <message>
         <location line="-4"/>
         <source>Where to save the network on the OpenMV Cam</source>
-        <translation>Wo kann das Netzwerk auf der OpenMV Cam gespeichert werden?</translation>
+        <translation>Wo kann das Netzwerk auf der OpenMV Cam gespeichert werden</translation>
     </message>
     <message>
         <location line="+5447"/>
@@ -9846,7 +9878,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <location line="-88"/>
         <location line="+90"/>
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin)</source>
-        <translation>Videodateien (*.mp4 *.*);;OpenMV ImageReader Dateien (*.bin) </translation>
+        <translation>Videodateien (*.mp4 *.*);;OpenMV ImageReader Dateien (*.bin)</translation>
     </message>
     <message>
         <location line="-83"/>

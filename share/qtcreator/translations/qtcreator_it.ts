@@ -123,7 +123,7 @@
     <message>
         <location/>
         <source>&amp;Base class:</source>
-        <translation>&amp; Classe base:</translation>
+        <translation>Classe &amp;base:</translation>
     </message>
     <message>
         <location/>
@@ -635,32 +635,32 @@
     <message>
         <location/>
         <source>Search &amp;&amp; &amp;Replace</source>
-        <translation>Cerca &amp; Sostituisci</translation>
+        <translation>Cerca &amp;&amp; &amp;Sostituisci</translation>
     </message>
     <message>
         <location/>
         <source>Sear&amp;ch for:</source>
-        <translation>Cerca per:</translation>
+        <translation>&amp;Cerca per:</translation>
     </message>
     <message>
         <location/>
         <source>Case sensiti&amp;ve</source>
-        <translation>Considera maiuscolo e minuscolo</translation>
+        <translation>Considera &amp;maiuscolo e minuscolo</translation>
     </message>
     <message>
         <location/>
         <source>Whole words o&amp;nly</source>
-        <translation>Solo parole intere</translation>
+        <translation>Solo parole &amp;intere</translation>
     </message>
     <message>
         <location/>
         <source>Use re&amp;gular expressions</source>
-        <translation>Usa espressioni regolari</translation>
+        <translation>Usa espressioni &amp;regolari</translation>
     </message>
     <message>
         <location/>
         <source>Sco&amp;pe:</source>
-        <translation>Scopo:</translation>
+        <translation>&amp;Scopo:</translation>
     </message>
 </context>
 <context>
@@ -877,7 +877,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location/>
         <source>Value:</source>
-        <translation>Valore&gt;</translation>
+        <translation>Valore:</translation>
     </message>
     <message>
         <location/>
@@ -1227,17 +1227,17 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location/>
         <source>Enable &amp;mouse navigation</source>
-        <translation>Attiva navigazione con mouse</translation>
+        <translation>Attiva navigazione con &amp;mouse</translation>
     </message>
     <message>
         <location/>
         <source>Enable scroll &amp;wheel zooming</source>
-        <translation>Abilita scorrimento e zoom attraverso la rotella del mouse</translation>
+        <translation>Abilita scorrimento e zoom attraverso la &amp;rotella del mouse</translation>
     </message>
     <message>
         <location/>
         <source>Enable built-in camel case &amp;navigation</source>
-        <translation>Abilita CamelCase &amp; Navigazione</translation>
+        <translation>Abilita CamelCase &amp;Navigazione</translation>
     </message>
     <message>
         <location/>
@@ -1302,7 +1302,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location/>
         <source>In entire &amp;document</source>
-        <translation>In tutto il documento</translation>
+        <translation>In tutto il &amp;documento</translation>
     </message>
     <message>
         <location/>
@@ -1332,7 +1332,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location/>
         <source>Enable automatic &amp;indentation</source>
-        <translation>Abilita indentazione automatica</translation>
+        <translation>Abilita &amp;indentazione automatica</translation>
     </message>
     <message>
         <location/>
@@ -1579,12 +1579,12 @@ Specifica in che modo il Backspace interagisce con l&apos;indentazione.
     <message>
         <location/>
         <source>Enable text &amp;wrapping</source>
-        <translation>Abilita disposizione del testo</translation>
+        <translation>Abilita &amp;disposizione del testo</translation>
     </message>
     <message>
         <location/>
         <source>Display right &amp;margin at column:</source>
-        <translation>Mostra margine destro alla colonna:</translation>
+        <translation>Mostra &amp;margine destro alla colonna:</translation>
     </message>
     <message>
         <location/>
@@ -1594,22 +1594,22 @@ Specifica in che modo il Backspace interagisce con l&apos;indentazione.
     <message>
         <location/>
         <source>Display &amp;folding markers</source>
-        <translation>Mostra marker per folding</translation>
+        <translation>Mostra marker per &amp;folding</translation>
     </message>
     <message>
         <location/>
         <source>Center &amp;cursor on scroll</source>
-        <translation>Centro e cursore su scroll</translation>
+        <translation>Centro e &amp;cursore su scroll</translation>
     </message>
     <message>
         <location/>
         <source>Highlight &amp;blocks</source>
-        <translation>Evidenzia i blocchi</translation>
+        <translation>Evidenzia i &amp;blocchi</translation>
     </message>
     <message>
         <location/>
         <source>Auto-fold first &amp;comment</source>
-        <translation>Folding automatico prima e commenta</translation>
+        <translation>Folding automatico prima e &amp;commenta</translation>
     </message>
     <message>
         <location/>
@@ -1619,12 +1619,12 @@ Specifica in che modo il Backspace interagisce con l&apos;indentazione.
     <message>
         <location/>
         <source>Highlight current &amp;line</source>
-        <translation>Evidenzia la riga corrente</translation>
+        <translation>&amp;Evidenzia la riga corrente</translation>
     </message>
     <message>
         <location/>
         <source>Display line &amp;numbers</source>
-        <translation>Mostra numeri delle righe</translation>
+        <translation>Mostra &amp;numeri delle righe</translation>
     </message>
     <message>
         <location/>
@@ -1654,7 +1654,7 @@ Specifica in che modo il Backspace interagisce con l&apos;indentazione.
     <message>
         <location/>
         <source>Mark &amp;text changes</source>
-        <translation>Segna le modifiche al testo</translation>
+        <translation>Segna le modifiche al &amp;testo</translation>
     </message>
     <message>
         <location/>
@@ -1697,7 +1697,7 @@ Specifica in che modo il Backspace interagisce con l&apos;indentazione.
     <message>
         <location/>
         <source>Color Scheme</source>
-        <translation>Schema colore:</translation>
+        <translation>Schema colore</translation>
     </message>
     <message>
         <location/>
@@ -1881,12 +1881,12 @@ Specifica in che modo il Backspace interagisce con l&apos;indentazione.
     <message>
         <location/>
         <source>Ta&amp;b size:</source>
-        <translation>Dimensione tabulazione:</translation>
+        <translation>Dimensione ta&amp;bulazione:</translation>
     </message>
     <message>
         <location/>
         <source>&amp;Indent size:</source>
-        <translation>Dimensione indentazione:</translation>
+        <translation>Dimensione &amp;indentazione:</translation>
     </message>
     <message>
         <location/>
@@ -1969,7 +1969,7 @@ Influenza l&apos;indentazione delle righe di continuazione.
     <message>
         <location/>
         <source>Serial Terminal Ta&amp;b size:</source>
-        <translation>Dimensione tabulazione terminale seriale:</translation>
+        <translation>Dimensione ta&amp;bulazione terminale seriale:</translation>
     </message>
     <message>
         <location/>
@@ -2721,7 +2721,7 @@ disabiliterai anche i seguenti plugin:
     <message>
         <location line="+26"/>
         <source>Error running &quot;%1&quot; in %2: %3</source>
-        <translation>Errore durante l&apos;esecuzione di &quot;%1&quot; in %2: %3 </translation>
+        <translation>Errore durante l&apos;esecuzione di &quot;%1&quot; in %2: %3</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -2742,7 +2742,7 @@ disabiliterai anche i seguenti plugin:
         <location line="+12"/>
         <source>Running %1 %2 ...
 </source>
-        <translation>Esecuzione %1 %2..
+        <translation>Esecuzione %1 %2...
 </translation>
     </message>
     <message>
@@ -2763,12 +2763,12 @@ disabiliterai anche i seguenti plugin:
     <message>
         <location line="+338"/>
         <source>Do not &amp;ask again</source>
-        <translation>Non chiedere di nuovo</translation>
+        <translation>Non &amp;chiedere di nuovo</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Do not &amp;show again</source>
-        <translation>Non mostrare più</translation>
+        <translation>Non &amp;mostrare più</translation>
     </message>
 </context>
 <context>
@@ -3114,7 +3114,7 @@ disabiliterai anche i seguenti plugin:
     <message>
         <location line="+172"/>
         <source>Cannot open %1 for reading: %2</source>
-        <translation>Impossibile aprire %1 per la lettura: %2 </translation>
+        <translation>Impossibile aprire %1 per la lettura: %2</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3422,12 +3422,12 @@ disabiliterai anche i seguenti plugin:
     <message>
         <location line="+3"/>
         <source>C&amp;lose All</source>
-        <translation>Chiudi tutto</translation>
+        <translation>&amp;Chiudi tutto</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Save &amp;as...</source>
-        <translation>Salva come...</translation>
+        <translation>S&amp;alva come...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3569,7 +3569,7 @@ disabiliterai anche i seguenti plugin:
         <location filename="../../../src/libs/utils/textfileformat.cpp" line="+217"/>
         <location line="+64"/>
         <source>Out of memory.</source>
-        <translation>Memoria piena</translation>
+        <translation>Memoria piena.</translation>
     </message>
     <message>
         <location line="-55"/>
@@ -3945,7 +3945,7 @@ Nessun sistema di controllo versione trovato.</translation>
     <message>
         <location line="+135"/>
         <source>Change &amp;Permission</source>
-        <translation>Modifica autorizzazione</translation>
+        <translation>Modifica &amp;autorizzazione</translation>
     </message>
     <message>
         <location line="+80"/>
@@ -3978,7 +3978,7 @@ Vuoi controllarli ora?</translation>
     <message>
         <location line="+2"/>
         <source>Stop Recording</source>
-        <translation>Interrompere la registrazione?</translation>
+        <translation>Interrompere la registrazione</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4213,7 +4213,7 @@ Vuoi controllarli ora?</translation>
         <location line="+1329"/>
         <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+10"/>
         <source>Save &amp;As...</source>
-        <translation>Salva come...</translation>
+        <translation>S&amp;alva come...</translation>
     </message>
     <message>
         <location line="-1016"/>
@@ -4342,7 +4342,7 @@ Continuare?</translation>
     <message>
         <location line="+9"/>
         <source>Ad&amp;vanced</source>
-        <translation>Avanzate</translation>
+        <translation>A&amp;vanzate</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -4402,7 +4402,7 @@ Continuare?</translation>
     <message>
         <location line="+1"/>
         <source>Save %1 &amp;As...</source>
-        <translation>Salva %1 come ...</translation>
+        <translation>S&amp;alva %1 come ...</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4638,7 +4638,7 @@ Continuare?</translation>
     <message>
         <location line="+1"/>
         <source>Show Containing Folder</source>
-        <translation>Mostra cartella </translation>
+        <translation>Mostra cartella</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4817,7 +4817,7 @@ Continuare?</translation>
     <message>
         <location line="+10"/>
         <source>Replace with...</source>
-        <translation>Sostituito con</translation>
+        <translation>Sostituito con...</translation>
     </message>
 </context>
 <context>
@@ -5350,12 +5350,12 @@ Vuoi interromperlo?</translation>
     <message>
         <location line="+11"/>
         <source>Open File &amp;With...</source>
-        <translation>Apri file con ...</translation>
+        <translation>Apri file &amp;con ...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Recent &amp;Files</source>
-        <translation>File recenti</translation>
+        <translation>&amp;File recenti</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -5375,7 +5375,7 @@ Vuoi interromperlo?</translation>
     <message>
         <location line="+4"/>
         <source>Save A&amp;ll</source>
-        <translation>Salva tutto</translation>
+        <translation>Salva &amp;tutto</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5385,7 +5385,7 @@ Vuoi interromperlo?</translation>
     <message>
         <location line="+8"/>
         <source>E&amp;xit</source>
-        <translation>Esci</translation>
+        <translation>&amp;Esci</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5415,7 +5415,7 @@ Vuoi interromperlo?</translation>
     <message>
         <location line="+6"/>
         <source>Cu&amp;t</source>
-        <translation>Taglia</translation>
+        <translation>&amp;Taglia</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5430,7 +5430,7 @@ Vuoi interromperlo?</translation>
     <message>
         <location line="+8"/>
         <source>Select &amp;All</source>
-        <translation>Seleziona tutto</translation>
+        <translation>Seleziona tu&amp;tto</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5495,17 +5495,17 @@ Vuoi interromperlo?</translation>
     <message>
         <location line="+10"/>
         <source>About &amp;Qt Creator</source>
-        <translation>Informazioni su Qt Creator</translation>
+        <translation>Informazioni su &amp;Qt Creator</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>About &amp;Qt Creator...</source>
-        <translation>Informazioni su Qt Creator...</translation>
+        <translation>Informazioni su &amp;Qt Creator...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>About &amp;Plugins...</source>
-        <translation>Informazioni e plugin ...</translation>
+        <translation>Informazioni e &amp;plugin ...</translation>
     </message>
     <message>
         <location line="+390"/>
@@ -5643,7 +5643,7 @@ Vuoi interromperlo?</translation>
     <message>
         <location line="+71"/>
         <source>Output &amp;Panes</source>
-        <translation>Riquadri output</translation>
+        <translation>&amp;Riquadri output</translation>
     </message>
 </context>
 <context>
@@ -5682,7 +5682,7 @@ Vuoi interromperlo?</translation>
     <message>
         <location line="+23"/>
         <source>Executing in %1: %2 %3</source>
-        <translation>Esecuzione in %1: %2%3</translation>
+        <translation>Esecuzione in %1: %2 %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5935,7 +5935,7 @@ al controllo della versione (%2)
     <message>
         <location line="+4"/>
         <source>&lt;br/&gt;Built on %1 %2&lt;br/&gt;</source>
-        <translation>&lt;br/&gt; Realizzato su %1%2&lt;br/&gt;</translation>
+        <translation>&lt;br/&gt;Realizzato su %1 %2&lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6208,7 +6208,7 @@ Filtro: %2
     <message>
         <location line="+17"/>
         <source>Director&amp;y:</source>
-        <translation>Directory:</translation>
+        <translation>Director&amp;y:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6218,7 +6218,7 @@ Filtro: %2
     <message>
         <location line="+17"/>
         <source>Fi&amp;le pattern:</source>
-        <translation>Pattern file:</translation>
+        <translation>Pattern fi&amp;le:</translation>
     </message>
 </context>
 <context>
@@ -6629,7 +6629,7 @@ Filtro: %2
     <message>
         <location line="+21"/>
         <source>Delete &amp;Line</source>
-        <translation>Elimina la riga</translation>
+        <translation>Elimina la &amp;riga</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -6836,7 +6836,7 @@ Filtro: %2
     <message>
         <location line="+20"/>
         <source>&amp;Visualize Whitespace</source>
-        <translation>Visualizza lo spazio bianco</translation>
+        <translation>&amp;Visualizza lo spazio bianco</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6856,7 +6856,7 @@ Filtro: %2
     <message>
         <location line="+11"/>
         <source>Enable Text &amp;Wrapping</source>
-        <translation>Abilita disposizione del testo</translation>
+        <translation>Abilita &amp;disposizione del testo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6871,7 +6871,7 @@ Filtro: %2
     <message>
         <location line="+4"/>
         <source>Toggle Comment &amp;Selection</source>
-        <translation>Attiva/disattiva selezione commento</translation>
+        <translation>Attiva/disattiva &amp;selezione commento</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6881,7 +6881,7 @@ Filtro: %2
     <message>
         <location line="+3"/>
         <source>Cut &amp;Line</source>
-        <translation>Riga di taglio</translation>
+        <translation>Riga di &amp;taglio</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6891,7 +6891,7 @@ Filtro: %2
     <message>
         <location line="+3"/>
         <source>Copy &amp;Line</source>
-        <translation>Copia riga</translation>
+        <translation>Copia &amp;riga</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6951,7 +6951,7 @@ Filtro: %2
     <message>
         <location line="+3"/>
         <source>Toggle &amp;Fold All</source>
-        <translation>Attiva piega tutto</translation>
+        <translation>Attiva &amp;piega tutto</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7549,7 +7549,7 @@ Applicato al testo, se non ci sono altre regole corrispondenti.</translation>
     <message>
         <location line="+1"/>
         <source>Doxygen comments.</source>
-        <translation>Commenti Doxygen</translation>
+        <translation>Commenti Doxygen.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8358,7 +8358,27 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>Grazie per aver utilizzato OpenMV Cam e OpenMV IDE!\n\nIl LED di bordo della videocamera OpenMV lampeggia con colori diversi per indicarne lo stato:\n\nVerde lampeggiante:\n\nIl bootloader di bordo della tua OpenMV Cam è in esecuzione. Il bootloader di bordo funziona per alcuni secondi quando OpenMV Cam è alimentato tramite USB per consentire a OpenMV IDE di riprogrammare la tua OpenMV Cam.\n\nBlu lampeggiante:\n\nLa tua OpenMV Cam esegue lo script main.py predefinito a bordo.\n\nSe hai una scheda SD installata o sovrascrivi lo script main.py su OpenMV Cam, eseguirà invece il codice che hai caricato su di essa.\n\nSe il LED lampeggia in blu ma OpenMV IDE non è in grado di connettersi alla tua OpenMV Cam, assicurati di collegare la tua OpenMV Cam al PC con un cavo USB che fornisce sia dati che alimentazione.\n\nLampeggiante bianco:\n\nIl firmware di OpenMV Cam è in panico a causa di un errore hardware. Verifica che il modulo della videocamera OpenMV Cam sia installato in modo sicuro.\n\n</translation>
+        <translation>Grazie per aver utilizzato OpenMV Cam e OpenMV IDE!
+
+Il LED di bordo della videocamera OpenMV lampeggia con colori diversi per indicarne lo stato:
+
+Verde lampeggiante:
+
+Il bootloader di bordo della tua OpenMV Cam è in esecuzione. Il bootloader di bordo funziona per alcuni secondi quando OpenMV Cam è alimentato tramite USB per consentire a OpenMV IDE di riprogrammare la tua OpenMV Cam.
+
+Blu lampeggiante:
+
+La tua OpenMV Cam esegue lo script main.py predefinito a bordo.
+
+Se hai una scheda SD installata o sovrascrivi lo script main.py su OpenMV Cam, eseguirà invece il codice che hai caricato su di essa.
+
+Se il LED lampeggia in blu ma OpenMV IDE non è in grado di connettersi alla tua OpenMV Cam, assicurati di collegare la tua OpenMV Cam al PC con un cavo USB che fornisce sia dati che alimentazione.
+
+Lampeggiante bianco:
+
+Il firmware di OpenMV Cam è in panico a causa di un errore hardware. Verifica che il modulo della videocamera OpenMV Cam sia installato in modo sicuro.
+
+</translation>
     </message>
     <message>
         <location line="+98"/>
@@ -8822,7 +8842,7 @@ Continuare?</translation>
     <message>
         <location line="+82"/>
         <source>Erasing...</source>
-        <translation>Cancellazione in corso</translation>
+        <translation>Cancellazione in corso...</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -8991,7 +9011,7 @@ HomeBrew:
     <message>
         <location line="+10"/>
         <source> - [ latest ]</source>
-        <translation>- [ ultimo ]</translation>
+        <translation> - [ ultimo ]</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -9071,7 +9091,9 @@ In particolare, controlla gli esempi di tracciamento del colore.</translation>
         <source>Try doing:
 
 </source>
-        <translation>Prova a fare:\n\n</translation>
+        <translation>Prova a fare:
+
+</translation>
     </message>
     <message>
         <location line="-2054"/>
@@ -9084,28 +9106,36 @@ In particolare, controlla gli esempi di tracciamento del colore.</translation>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
-        <translation>\n\nPremi Annulla per saltare alla riprogrammazione DFU.</translation>
+        <translation>
+
+Premi Annulla per saltare alla riprogrammazione DFU.</translation>
     </message>
     <message>
         <location line="+311"/>
         <source>Onboard Data Flash Erased!
 
 </source>
-        <translation>Flash dati integrato cancellato!\n\n</translation>
+        <translation>Flash dati integrato cancellato!
+
+</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Firmware Upgrade complete!
 
 </source>
-        <translation>Aggiornamento firmware completato!\n\n</translation>
+        <translation>Aggiornamento firmware completato!
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
-        <translation>La tua OpenMV Cam inizierà a eseguire l&apos;autotest integrato se non è collegata alcuna scheda SD ... ciò potrebbe richiedere del tempo.\n\n</translation>
+        <translation>La tua OpenMV Cam inizierà a eseguire l&apos;autotest integrato se non è collegata alcuna scheda SD ... ciò potrebbe richiedere del tempo.
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9118,7 +9148,9 @@ Hit cancel to skip to DFU reprogramming.</source>
         <source>PyDFU requires the following libraries to be installed:
 
 </source>
-        <translation>PyDFU richiede l&apos;installazione delle seguenti librerie:\n\n</translation>
+        <translation>PyDFU richiede l&apos;installazione delle seguenti librerie:
+
+</translation>
     </message>
     <message>
         <source>Syncing...</source>

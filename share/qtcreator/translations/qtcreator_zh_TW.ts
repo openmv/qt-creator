@@ -74,12 +74,12 @@
     <message>
         <location/>
         <source>The following plugins have errors and cannot be loaded:</source>
-        <translation>以下外掛程式有錯誤，無法載入： </translation>
+        <translation>以下外掛程式有錯誤，無法載入：</translation>
     </message>
     <message>
         <location/>
         <source>Details:</source>
-        <translation>詳情： </translation>
+        <translation>詳情：</translation>
     </message>
 </context>
 <context>
@@ -581,7 +581,7 @@
     <message>
         <location/>
         <source>Select all, if possible: </source>
-        <translation>如果可能，選擇全部：</translation>
+        <translation>如果可能，選擇全部： </translation>
     </message>
 </context>
 <context>
@@ -859,7 +859,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location/>
         <source> min</source>
-        <translation>分</translation>
+        <translation> 分</translation>
     </message>
 </context>
 <context>
@@ -1082,7 +1082,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location/>
         <source>Warn before opening text files greater than</source>
-        <translation>開啟大於此大小的文字檔之前發出警告：</translation>
+        <translation>開啟大於此大小的文字檔之前發出警告</translation>
     </message>
     <message>
         <location/>
@@ -1414,7 +1414,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location/>
         <source>Default encoding: </source>
-        <translation>預設編碼：</translation>
+        <translation>預設編碼： </translation>
     </message>
     <message>
         <location/>
@@ -1698,7 +1698,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location/>
         <source>Color Scheme</source>
-        <translation>顏色方案：</translation>
+        <translation>顏色方案</translation>
     </message>
     <message>
         <location/>
@@ -1849,7 +1849,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location/>
         <source>Group: </source>
-        <translation>群組：</translation>
+        <translation>群組： </translation>
     </message>
 </context>
 <context>
@@ -3253,7 +3253,7 @@ will also disable the following plugins:
         <location line="+6"/>
         <source>Open Preferences dialog.</source>
         <comment>msgShowOptionsDialogToolTip (mac version)</comment>
-        <translation>開啟喜好設定對話方塊</translation>
+        <translation>開啟喜好設定對話方塊.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4939,7 +4939,7 @@ Continue?</source>
     <message>
         <location line="-396"/>
         <source>History:</source>
-        <translation>歷程記錄</translation>
+        <translation>歷程記錄:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -6321,7 +6321,7 @@ Filter: %2
         <location filename="../../../src/plugins/texteditor/generichighlighter/highlighter.cpp" line="+248"/>
         <location filename="../../../src/plugins/texteditor/generichighlighter/manager.cpp" line="+227"/>
         <source>Generic highlighter error: </source>
-        <translation>通用螢光筆錯誤：</translation>
+        <translation>通用螢光筆錯誤： </translation>
     </message>
     <message>
         <location line="+229"/>
@@ -8351,7 +8351,25 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>感謝您使用OpenMV Cam和OpenMV IDE！\n\nOpenMV Cam的板載LED閃爍著不同的顏色，以指示其狀態：\n\n呈綠色閃爍：\n\n您的OpenMV Cam的內置引導加載程序正在運行。通過USB為您的OpenMV Cam供電時，板載引導程序會運行幾秒鐘，以允許OpenMV IDE重新編程您的OpenMV Cam。\n\n呈藍色閃爍：\n\n您的OpenMV Cam正在板上運行默認的main.py腳本。\n\n如果您已安裝SD卡或在OpenMV Cam上覆蓋了main.py腳本，則它將運行您加載在其中的任何代碼。\n\n如果LED閃爍藍色，但OpenMV IDE無法連接到OpenMV Cam，請確保使用提供數據和電源的USB電纜將OpenMV Cam連接到PC。\n\n閃爍白色：\n\n由於硬件故障，您的OpenMV Cam的固件崩潰了。請檢查是否已正確安裝OpenMV Cam的攝像頭模塊。\n\n</translation>
+        <translation>感謝您使用OpenMV Cam和OpenMV IDE！
+
+OpenMV Cam的板載LED閃爍著不同的顏色，以指示其狀態：
+
+呈綠色閃爍：
+
+您的OpenMV Cam的內置引導加載程序正在運行。通過USB為您的OpenMV Cam供電時，板載引導程序會運行幾秒鐘，以允許OpenMV IDE重新編程您的OpenMV Cam。
+
+呈藍色閃爍：\n\n您的OpenMV Cam正在板上運行默認的main.py腳本。
+
+如果您已安裝SD卡或在OpenMV Cam上覆蓋了main.py腳本，則它將運行您加載在其中的任何代碼。
+
+如果LED閃爍藍色，但OpenMV IDE無法連接到OpenMV Cam，請確保使用提供數據和電源的USB電纜將OpenMV Cam連接到PC。
+
+閃爍白色：
+
+由於硬件故障，您的OpenMV Cam的固件崩潰了。請檢查是否已正確安裝OpenMV Cam的攝像頭模塊。
+
+</translation>
     </message>
     <message>
         <location line="+98"/>
@@ -8970,7 +8988,7 @@ HomeBrew：
     <message>
         <location line="-374"/>
         <source> - [ out of date - click here to updgrade ]</source>
-        <translation>- [過時 - 按一下此處升級]</translation>
+        <translation> - [過時 - 按一下此處升級]</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -8980,7 +8998,7 @@ HomeBrew：
     <message>
         <location line="+10"/>
         <source> - [ latest ]</source>
-        <translation>- [最新]</translation>
+        <translation> - [最新]</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -9056,7 +9074,9 @@ In particular, checkout the Color-Tracking examples.</source>
         <source>Try doing:
 
 </source>
-        <translation>嘗試做：\n\n</translation>
+        <translation>嘗試做：
+
+</translation>
     </message>
     <message>
         <location line="-2054"/>
@@ -9069,28 +9089,36 @@ In particular, checkout the Color-Tracking examples.</source>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
-        <translation>\n\n點擊取消可跳至DFU重新編程。</translation>
+        <translation>
+
+點擊取消可跳至DFU重新編程。</translation>
     </message>
     <message>
         <location line="+311"/>
         <source>Onboard Data Flash Erased!
 
 </source>
-        <translation>板載數據閃存已擦除！\n\n</translation>
+        <translation>板載數據閃存已擦除！
+
+</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Firmware Upgrade complete!
 
 </source>
-        <translation>固件升級完成！\n\n</translation>
+        <translation>固件升級完成！
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
-        <translation>如果未連接sd卡，則OpenMV Cam將開始運行其內置的自檢功能，這可能需要一段時間。\n\n</translation>
+        <translation>如果未連接sd卡，則OpenMV Cam將開始運行其內置的自檢功能，這可能需要一段時間。
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9103,7 +9131,9 @@ Hit cancel to skip to DFU reprogramming.</source>
         <source>PyDFU requires the following libraries to be installed:
 
 </source>
-        <translation>PyDFU需要安裝以下庫：\n\n</translation>
+        <translation>PyDFU需要安裝以下庫：
+
+</translation>
     </message>
     <message>
         <source>Syncing...</source>
@@ -9343,13 +9373,13 @@ Hit cancel to skip to DFU reprogramming.</source>
         <location line="+3"/>
         <location line="+219"/>
         <source> Connect to a Server </source>
-        <translation>連線到伺服器</translation>
+        <translation> 連線到伺服器 </translation>
     </message>
     <message>
         <location line="-218"/>
         <location line="+219"/>
         <source> Start a Server </source>
-        <translation>啟動伺服器</translation>
+        <translation> 啟動伺服器 </translation>
     </message>
     <message>
         <location line="-210"/>
@@ -9396,12 +9426,12 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+3"/>
         <source> Frame Buffer </source>
-        <translation>畫面緩衝區</translation>
+        <translation> 畫面緩衝區 </translation>
     </message>
     <message>
         <location line="+1"/>
         <source> Image File </source>
-        <translation>影像檔</translation>
+        <translation> 影像檔 </translation>
     </message>
     <message>
         <location line="+20"/>
@@ -9427,12 +9457,12 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+3"/>
         <source> Edit File </source>
-        <translation>編輯檔案</translation>
+        <translation> 編輯檔案 </translation>
     </message>
     <message>
         <location line="+1"/>
         <source> Merge Files </source>
-        <translation>合併檔案</translation>
+        <translation> 合併檔案 </translation>
     </message>
     <message>
         <location line="+13"/>

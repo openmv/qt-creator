@@ -515,7 +515,7 @@
     <message>
         <location line="+4"/>
         <source>%1 Templates</source>
-        <translation>Шаблоны %1 </translation>
+        <translation>Шаблоны %1</translation>
     </message>
     <message>
         <location line="+153"/>
@@ -717,7 +717,7 @@
         <location/>
         <source>Reset to default.</source>
         <comment>Color</comment>
-        <translation>Восстановить настройки по умолчанию</translation>
+        <translation>Восстановить настройки по умолчанию.</translation>
     </message>
     <message>
         <location/>
@@ -972,7 +972,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+57"/>
         <source>Internal error: Type is invalid</source>
-        <translation>Внутренняя ошибка: Недопустимый тип.</translation>
+        <translation>Внутренняя ошибка: Недопустимый тип</translation>
     </message>
 </context>
 <context>
@@ -1145,7 +1145,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <location/>
         <source>Reset to default.</source>
         <comment>File Browser</comment>
-        <translation>Восстановить настройки по умолчанию</translation>
+        <translation>Восстановить настройки по умолчанию.</translation>
     </message>
     <message>
         <location/>
@@ -1161,7 +1161,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <location/>
         <source>Reset to default.</source>
         <comment>Terminal</comment>
-        <translation>Восстановить настройки по умолчанию</translation>
+        <translation>Восстановить настройки по умолчанию.</translation>
     </message>
     <message>
         <location/>
@@ -1677,7 +1677,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location/>
         <source>Family:</source>
-        <translation>Семейство: </translation>
+        <translation>Семейство:</translation>
     </message>
     <message>
         <location/>
@@ -1760,7 +1760,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location/>
         <source>Definitions</source>
-        <translation>Определения </translation>
+        <translation>Определения</translation>
     </message>
     <message>
         <location/>
@@ -1843,7 +1843,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location/>
         <source>Reset All</source>
-        <translation>Сбросить все </translation>
+        <translation>Сбросить все</translation>
     </message>
     <message>
         <location/>
@@ -1992,7 +1992,7 @@ Influences the indentation of continuation lines.
     <message>
         <location/>
         <source>Max</source>
-        <translation>Макс.</translation>
+        <translation>Макс</translation>
     </message>
     <message>
         <location/>
@@ -2022,7 +2022,7 @@ Influences the indentation of continuation lines.
     <message>
         <location/>
         <source>Min</source>
-        <translation>Мин.</translation>
+        <translation>Мин</translation>
     </message>
     <message>
         <location/>
@@ -2113,7 +2113,7 @@ Influences the indentation of continuation lines.
     <message>
         <location/>
         <source>Please enter your WiFi network password here</source>
-        <translation>Введите здесь свой пароль в сети WiFi.</translation>
+        <translation>Введите здесь свой пароль в сети WiFi</translation>
     </message>
     <message>
         <location/>
@@ -2154,7 +2154,7 @@ Influences the indentation of continuation lines.
     <message>
         <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
-        <translation>Введите имя сети Wi-Fi, чтобы создать пароль здесь.</translation>
+        <translation>Введите имя сети Wi-Fi, чтобы создать пароль здесь</translation>
     </message>
     <message>
         <location/>
@@ -3028,7 +3028,7 @@ will also disable the following plugins:
     <message>
         <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+111"/>
         <source>Name is empty.</source>
-        <translation>Имя - пустое</translation>
+        <translation>Имя - пустое.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3241,7 +3241,7 @@ will also disable the following plugins:
     <message>
         <location line="+7"/>
         <source>Environment</source>
-        <translation>Среда </translation>
+        <translation>Среда</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -3623,7 +3623,7 @@ will also disable the following plugins:
     <message>
         <location line="-80"/>
         <source>Reset All</source>
-        <translation>Сбросить все </translation>
+        <translation>Сбросить все</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4030,12 +4030,12 @@ Do you want to check them out now?</source>
     <message>
         <location line="+1"/>
         <source>Reset to default.</source>
-        <translation>Восстановить настройки по умолчанию</translation>
+        <translation>Восстановить настройки по умолчанию.</translation>
     </message>
     <message>
         <location line="+106"/>
         <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
-        <translation>Последовательность клавиш имеет потенциальные конфликты. &lt;a href=&quot;#conflicts&quot;&gt;Показать&lt;/a&gt;.</translation>
+        <translation>Последовательность клавиш имеет потенциальные конфликты. &lt;a href=&quot;#conflicts&quot;&gt;Показать&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4859,7 +4859,7 @@ Continue?</source>
     <message>
         <location line="+2"/>
         <source>, </source>
-        <translation>,  </translation>
+        <translation>, </translation>
     </message>
 </context>
 <context>
@@ -5181,7 +5181,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+5"/>
         <source>Prefix:</source>
-        <translation>Префиксы</translation>
+        <translation>Префиксы:</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -6239,7 +6239,7 @@ Filter: %2
     <message>
         <location line="+34"/>
         <source>Open documents:</source>
-        <translation>Открыть документы</translation>
+        <translation>Открыть документы:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6647,7 +6647,7 @@ Filter: %2
     <message>
         <location line="+2"/>
         <source>Delete Word Camel Case from Cursor On</source>
-        <translation>Удалить Camel Case для слова, появляющегося при наведении курсора </translation>
+        <translation>Удалить Camel Case для слова, появляющегося при наведении курсора</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7039,12 +7039,12 @@ Filter: %2
     <message>
         <location line="+2"/>
         <source>Go to Previous Word Camel Case</source>
-        <translation>Перейти к Camel Case предыдущего слова </translation>
+        <translation>Перейти к Camel Case предыдущего слова</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Go to Next Word Camel Case</source>
-        <translation>Перейти к Camel Case следующего слова </translation>
+        <translation>Перейти к Camel Case следующего слова</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7195,7 +7195,7 @@ Applied to text, if no other rules matching.</source>
     <message>
         <location line="+0"/>
         <source>Selected text.</source>
-        <translation>Выделенный текст</translation>
+        <translation>Выделенный текст.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7277,7 +7277,7 @@ Applied to text, if no other rules matching.</source>
         <source>Occurrences of the symbol under the cursor.
 (Only the background will be applied.)</source>
         <translation>События символа под курсором.
-(Будет применен только фон).</translation>
+(Будет применен только фон)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7689,7 +7689,7 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+1"/>
         <source>Applied to added characters in differences (in side-by-side diff editor).</source>
-        <translation>Применяется к добавленным символам в разностях (в параллельном редакторе diff </translation>
+        <translation>Применяется к добавленным символам в разностях (в параллельном редакторе diff.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7842,7 +7842,7 @@ while(True):
     <message>
         <location line="+57"/>
         <source>Examples</source>
-        <translation>Примеры </translation>
+        <translation>Примеры</translation>
     </message>
     <message>
         <source>Run Bootloader</source>
@@ -8243,7 +8243,7 @@ while(True):
     <message>
         <location line="-2774"/>
         <source>Camera board type</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип платы камеры</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -8295,12 +8295,12 @@ while(True):
         <location line="+6"/>
         <location line="+2751"/>
         <source>FPS:</source>
-        <translation>FPS</translation>
+        <translation>FPS:</translation>
     </message>
     <message>
         <location line="-2750"/>
         <source>May be different from camera FPS</source>
-        <translation>Может отличаться от FPS камеры </translation>
+        <translation>Может отличаться от FPS камеры</translation>
     </message>
     <message>
         <location line="+148"/>
@@ -8366,7 +8366,27 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>Спасибо за использование OpenMV Cam и OpenMV IDE!\n\nВстроенный светодиод вашего OpenMV Cam мигает разными цветами, указывая на его состояние:\n\nМигающий зеленый:\n\nВстроенный загрузчик вашей камеры OpenMV работает. Встроенный загрузчик работает в течение нескольких секунд, когда ваша камера OpenMV запитана через USB, что позволяет OpenMV IDE перепрограммировать вашу камеру OpenMV.\n\nМигающий синий:\n\nНа вашей OpenMV Cam работает скрипт main.py по умолчанию.\n\nЕсли у вас установлена ​​SD-карта или вы перезаписали скрипт main.py на вашей OpenMV Cam, тогда он будет запускать любой код, который вы загрузили на нее.\n\nЕсли светодиод мигает синим, но OpenMV IDE не может подключиться к вашей камере OpenMV, пожалуйста, убедитесь, что вы подключаете свою камеру OpenMV к своему компьютеру с помощью USB-кабеля, который обеспечивает как питание, так и питание.\n\nМигающий белый:\n\nПрошивка вашего OpenMV Cam паникует из-за аппаратного сбоя. Пожалуйста, убедитесь, что модуль камеры вашего OpenMV Cam установлен надежно.\n\n</translation>
+        <translation>Спасибо за использование OpenMV Cam и OpenMV IDE!
+
+Встроенный светодиод вашего OpenMV Cam мигает разными цветами, указывая на его состояние:
+
+Мигающий зеленый:
+
+Встроенный загрузчик вашей камеры OpenMV работает. Встроенный загрузчик работает в течение нескольких секунд, когда ваша камера OpenMV запитана через USB, что позволяет OpenMV IDE перепрограммировать вашу камеру OpenMV.
+
+Мигающий синий:
+
+На вашей OpenMV Cam работает скрипт main.py по умолчанию.
+
+Если у вас установлена ​​SD-карта или вы перезаписали скрипт main.py на вашей OpenMV Cam, тогда он будет запускать любой код, который вы загрузили на нее.
+
+Если светодиод мигает синим, но OpenMV IDE не может подключиться к вашей камере OpenMV, пожалуйста, убедитесь, что вы подключаете свою камеру OpenMV к своему компьютеру с помощью USB-кабеля, который обеспечивает как питание, так и питание.
+
+Мигающий белый:
+
+Прошивка вашего OpenMV Cam паникует из-за аппаратного сбоя. Пожалуйста, убедитесь, что модуль камеры вашего OpenMV Cam установлен надежно.
+
+</translation>
     </message>
     <message>
         <location line="+98"/>
@@ -9075,7 +9095,9 @@ In particular, checkout the Color-Tracking examples.</source>
         <source>Try doing:
 
 </source>
-        <translation>Попробуйте сделать:\n\n</translation>
+        <translation>Попробуйте сделать:
+
+</translation>
     </message>
     <message>
         <location line="-2054"/>
@@ -9088,28 +9110,36 @@ In particular, checkout the Color-Tracking examples.</source>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
-        <translation>\n\nНажмите «Отмена», чтобы перейти к перепрограммированию DFU.</translation>
+        <translation>
+
+Нажмите «Отмена», чтобы перейти к перепрограммированию DFU.</translation>
     </message>
     <message>
         <location line="+311"/>
         <source>Onboard Data Flash Erased!
 
 </source>
-        <translation>Флэш-память данных удалена!\n\n</translation>
+        <translation>Флэш-память данных удалена!
+
+</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Firmware Upgrade complete!
 
 </source>
-        <translation>Обновление прошивки завершено!\n\n</translation>
+        <translation>Обновление прошивки завершено!
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
-        <translation>Ваша OpenMV Cam начнет выполнять встроенную самопроверку, если SD-карта не подключена ... это может занять некоторое время.\n\n</translation>
+        <translation>Ваша OpenMV Cam начнет выполнять встроенную самопроверку, если SD-карта не подключена ... это может занять некоторое время.
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9122,7 +9152,9 @@ Hit cancel to skip to DFU reprogramming.</source>
         <source>PyDFU requires the following libraries to be installed:
 
 </source>
-        <translation>PyDFU требует установки следующих библиотек:\n\n</translation>
+        <translation>PyDFU требует установки следующих библиотек:
+
+</translation>
     </message>
     <message>
         <source>Syncing...</source>
@@ -10217,32 +10249,32 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="+39"/>
         <source>L Min</source>
-        <translation>L мин.</translation>
+        <translation>L мин</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>L Max</source>
-        <translation>L макс.</translation>
+        <translation>L макс</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>A Min</source>
-        <translation>A мин.</translation>
+        <translation>A мин</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>A Max</source>
-        <translation>A макс.</translation>
+        <translation>A макс</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>B Min</source>
-        <translation>B мин.</translation>
+        <translation>B мин</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>B Max</source>
-        <translation>B макс.</translation>
+        <translation>B макс</translation>
     </message>
     <message>
         <location line="+5"/>

@@ -335,7 +335,7 @@
     <message>
         <location/>
         <source>Add tool.</source>
-        <translation>Ajouter un outil</translation>
+        <translation>Ajouter un outil.</translation>
     </message>
     <message>
         <location/>
@@ -995,7 +995,7 @@ Pour ce faire, vous tapez ce raccourci et un espace dans le champ de saisie Loca
     <message>
         <location/>
         <source>Reset all to default.</source>
-        <translation>Tout réinitialiser aux paramètres par défaut</translation>
+        <translation>Tout réinitialiser aux paramètres par défaut.</translation>
     </message>
     <message>
         <location/>
@@ -1010,7 +1010,7 @@ Pour ce faire, vous tapez ce raccourci et un espace dans le champ de saisie Loca
     <message>
         <location/>
         <source>Patterns:</source>
-        <translation>Motifs</translation>
+        <translation>Motifs:</translation>
     </message>
     <message>
         <location/>
@@ -1171,7 +1171,7 @@ Pour ce faire, vous tapez ce raccourci et un espace dans le champ de saisie Loca
     <message>
         <location/>
         <source>File system case sensitivity:</source>
-        <translation>Sensibilité à la casse du système de fichiers</translation>
+        <translation>Sensibilité à la casse du système de fichiers:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+35"/>
@@ -1463,7 +1463,7 @@ Spécifie comment la touche de retour arrière interagit avec les retraits.
     <message>
         <location/>
         <source>Current settings:</source>
-        <translation>Paramètres actuels</translation>
+        <translation>Paramètres actuels:</translation>
     </message>
     <message>
         <location/>
@@ -1969,7 +1969,7 @@ Influence le retrait des lignes de continuation.
     <message>
         <location/>
         <source>Serial Terminal Ta&amp;b size:</source>
-        <translation>Taille de ta&amp;bulation du terminal de série</translation>
+        <translation>Taille de ta&amp;bulation du terminal de série:</translation>
     </message>
     <message>
         <location/>
@@ -1992,7 +1992,7 @@ Influence le retrait des lignes de continuation.
     <message>
         <location/>
         <source>Max</source>
-        <translation>Max.</translation>
+        <translation>Max</translation>
     </message>
     <message>
         <location/>
@@ -2022,7 +2022,7 @@ Influence le retrait des lignes de continuation.
     <message>
         <location/>
         <source>Min</source>
-        <translation>Min.</translation>
+        <translation>Min</translation>
     </message>
     <message>
         <location/>
@@ -2232,7 +2232,7 @@ Influence le retrait des lignes de continuation.
         <location line="+1"/>
         <location line="+1"/>
         <source>N/A</source>
-        <translation>s. o.</translation>
+        <translation>s. o</translation>
     </message>
 </context>
 <context>
@@ -3609,7 +3609,7 @@ désactivera également les plug-ins suivants :
         <location line="+1"/>
         <location line="+83"/>
         <source>Label</source>
-        <translation>Titre </translation>
+        <translation>Titre</translation>
     </message>
     <message>
         <location line="-82"/>
@@ -3625,7 +3625,7 @@ désactivera également les plug-ins suivants :
     <message>
         <location line="+1"/>
         <source>Reset all to default.</source>
-        <translation>Tout réinitialiser aux paramètres par défaut</translation>
+        <translation>Tout réinitialiser aux paramètres par défaut.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3772,7 +3772,7 @@ désactivera également les plug-ins suivants :
     <message>
         <location line="+2"/>
         <source>Generate a new UUID.</source>
-        <translation>Générer un nouvel UUID</translation>
+        <translation>Générer un nouvel UUID.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4993,7 +4993,7 @@ Continuer ?</translation>
     <message>
         <location line="+2"/>
         <source>Qt Creator %1%2</source>
-        <translation>Qt Creator %1 %2</translation>
+        <translation>Qt Creator %1%2</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6501,7 +6501,7 @@ Filtre : %2
     <message>
         <location line="+52"/>
         <source>Error reverting snippet.</source>
-        <translation>Erreur lors de la restauration du fragment</translation>
+        <translation>Erreur lors de la restauration du fragment.</translation>
     </message>
 </context>
 <context>
@@ -6524,7 +6524,7 @@ Filtre : %2
     <message>
         <location line="+0"/>
         <source>No snippet selected.</source>
-        <translation>Aucun fragment sélectionné</translation>
+        <translation>Aucun fragment sélectionné.</translation>
     </message>
 </context>
 <context>
@@ -7187,7 +7187,7 @@ Appliqué au texte, si aucune autre règle ne correspond.</translation>
     <message>
         <location line="+0"/>
         <source>Selected text.</source>
-        <translation>Texte sélectionné</translation>
+        <translation>Texte sélectionné.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7339,7 +7339,7 @@ Appliqué au texte, si aucune autre règle ne correspond.</translation>
     <message>
         <location line="+0"/>
         <source>Local variables.</source>
-        <translation>Variables locales</translation>
+        <translation>Variables locales.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7369,7 +7369,7 @@ Appliqué au texte, si aucune autre règle ne correspond.</translation>
     <message>
         <location line="+0"/>
         <source>Name of a function.</source>
-        <translation>Nom d&apos;une fonction</translation>
+        <translation>Nom d&apos;une fonction.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7524,7 +7524,7 @@ Appliqué au texte, si aucune autre règle ne correspond.</translation>
     <message>
         <location line="+1"/>
         <source>Label</source>
-        <translation>Titre </translation>
+        <translation>Titre</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8252,7 +8252,7 @@ while(True):
         <location line="+6"/>
         <location line="+2766"/>
         <source>Firmware Version:</source>
-        <translation>Version du micrologiciel</translation>
+        <translation>Version du micrologiciel:</translation>
     </message>
     <message>
         <location line="-2765"/>
@@ -8358,7 +8358,27 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>Merci d&apos;avoir utilisé OpenMV Cam et OpenMV IDE!\n\nLa LED embarquée de votre OpenMV Cam clignote avec des couleurs différentes pour indiquer son état:\n\nVert clignotant:\n\nLe chargeur de démarrage intégré de votre OpenMV Cam est en cours d&apos;exécution. Le chargeur de démarrage intégré fonctionne pendant quelques secondes lorsque votre OpenMV Cam est alimenté via USB pour permettre à OpenMV IDE de reprogrammer votre OpenMV Cam.\n\nBleu clignotant:\n\nVotre OpenMV Cam exécute le script main.py par défaut à bord.\n\nSi vous avez une carte SD installée ou écrasé le script main.py sur votre OpenMV Cam, il exécutera le code que vous y avez chargé à la place.\n\nSi le voyant clignote en bleu mais OpenMV IDE ne peut pas se connecter à votre OpenMV Cam, assurez-vous de connecter votre OpenMV Cam à votre PC avec un câble USB qui fournit à la fois les données et l&apos;alimentation.\n\nBlanc clignotant:\n\nLe firmware de votre OpenMV Cam panique à cause d&apos;une panne matérielle. Veuillez vérifier que le module de caméra de votre OpenMV Cam est correctement installé.\n\n</translation>
+        <translation>Merci d&apos;avoir utilisé OpenMV Cam et OpenMV IDE!
+
+La LED embarquée de votre OpenMV Cam clignote avec des couleurs différentes pour indiquer son état:
+
+Vert clignotant:
+
+Le chargeur de démarrage intégré de votre OpenMV Cam est en cours d&apos;exécution. Le chargeur de démarrage intégré fonctionne pendant quelques secondes lorsque votre OpenMV Cam est alimenté via USB pour permettre à OpenMV IDE de reprogrammer votre OpenMV Cam.
+
+Bleu clignotant:
+
+Votre OpenMV Cam exécute le script main.py par défaut à bord.
+
+Si vous avez une carte SD installée ou écrasé le script main.py sur votre OpenMV Cam, il exécutera le code que vous y avez chargé à la place.
+
+Si le voyant clignote en bleu mais OpenMV IDE ne peut pas se connecter à votre OpenMV Cam, assurez-vous de connecter votre OpenMV Cam à votre PC avec un câble USB qui fournit à la fois les données et l&apos;alimentation.
+
+Blanc clignotant:
+
+Le firmware de votre OpenMV Cam panique à cause d&apos;une panne matérielle. Veuillez vérifier que le module de caméra de votre OpenMV Cam est correctement installé.
+
+</translation>
     </message>
     <message>
         <location line="+98"/>
@@ -9071,7 +9091,9 @@ En particulier, consultez les exemples de suivi des couleurs.</translation>
         <source>Try doing:
 
 </source>
-        <translation>Essayez de faire:\n\n</translation>
+        <translation>Essayez de faire:
+
+</translation>
     </message>
     <message>
         <location line="-2054"/>
@@ -9084,28 +9106,36 @@ En particulier, consultez les exemples de suivi des couleurs.</translation>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
-        <translation>\n\nAppuyez sur Annuler pour passer à la reprogrammation DFU.</translation>
+        <translation>
+
+Appuyez sur Annuler pour passer à la reprogrammation DFU.</translation>
     </message>
     <message>
         <location line="+311"/>
         <source>Onboard Data Flash Erased!
 
 </source>
-        <translation>Flash de données embarqué effacé!\n\n</translation>
+        <translation>Flash de données embarqué effacé!
+
+</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Firmware Upgrade complete!
 
 </source>
-        <translation>Mise à niveau du firmware terminée!\n\n</translation>
+        <translation>Mise à niveau du firmware terminée!
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
-        <translation>Votre OpenMV Cam commencera à exécuter son auto-test intégré si aucune carte SD n&apos;est connectée ... cela peut prendre un certain temps.\n\n</translation>
+        <translation>Votre OpenMV Cam commencera à exécuter son auto-test intégré si aucune carte SD n&apos;est connectée ... cela peut prendre un certain temps.
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9118,7 +9148,9 @@ Hit cancel to skip to DFU reprogramming.</source>
         <source>PyDFU requires the following libraries to be installed:
 
 </source>
-        <translation>PyDFU nécessite l&apos;installation des bibliothèques suivantes:\n\n</translation>
+        <translation>PyDFU nécessite l&apos;installation des bibliothèques suivantes:
+
+</translation>
     </message>
     <message>
         <source>Syncing...</source>
@@ -9843,7 +9875,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <location line="+3"/>
         <location line="+90"/>
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
-        <translation>Fichiers vidéo (*.mp4 *.*);;Fichiers OpenMV ImageReader (*.bin);; </translation>
+        <translation>Fichiers vidéo (*.mp4 *.*);;Fichiers OpenMV ImageReader (*.bin);;</translation>
     </message>
     <message>
         <location line="-88"/>
@@ -10197,12 +10229,12 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="+33"/>
         <source>Grayscale Min</source>
-        <translation>Nuances de gris min.</translation>
+        <translation>Nuances de gris min</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Grayscale Max</source>
-        <translation>Nuances de gris max.</translation>
+        <translation>Nuances de gris max</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -10212,32 +10244,32 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="+39"/>
         <source>L Min</source>
-        <translation>L min.</translation>
+        <translation>L min</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>L Max</source>
-        <translation>L max.</translation>
+        <translation>L max</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>A Min</source>
-        <translation>A min.</translation>
+        <translation>A min</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>A Max</source>
-        <translation>A max.</translation>
+        <translation>A max</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>B Min</source>
-        <translation>B min.</translation>
+        <translation>B min</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>B Max</source>
-        <translation>B max.</translation>
+        <translation>B max</translation>
     </message>
     <message>
         <location line="+5"/>

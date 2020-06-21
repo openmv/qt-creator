@@ -16,7 +16,7 @@
     <message>
         <location/>
         <source>Compatibility version:</source>
-        <translation>Versión de compatibilidad: </translation>
+        <translation>Versión de compatibilidad:</translation>
     </message>
     <message>
         <location/>
@@ -74,7 +74,7 @@
     <message>
         <location/>
         <source>The following plugins have errors and cannot be loaded:</source>
-        <translation>Los siguientes complementos tienen errores y no se pueden cargar: </translation>
+        <translation>Los siguientes complementos tienen errores y no se pueden cargar:</translation>
     </message>
     <message>
         <location/>
@@ -138,12 +138,12 @@
     <message>
         <location/>
         <source>Inherits QObject</source>
-        <translation>Hereda QObject </translation>
+        <translation>Hereda QObject</translation>
     </message>
     <message>
         <location/>
         <source>Inherits QWidget</source>
-        <translation>Hereda QWidget </translation>
+        <translation>Hereda QWidget</translation>
     </message>
     <message>
         <location/>
@@ -153,7 +153,7 @@
     <message>
         <location/>
         <source>Inherits QQuickItem - Qt Quick 2</source>
-        <translation>Hereda QQuickItem - Qt Quick 2 </translation>
+        <translation>Hereda QQuickItem - Qt Quick 2</translation>
     </message>
     <message>
         <location/>
@@ -163,12 +163,12 @@
     <message>
         <location/>
         <source>&amp;Header file:</source>
-        <translation>&amp;Archivo de cabecera: </translation>
+        <translation>&amp;Archivo de cabecera:</translation>
     </message>
     <message>
         <location/>
         <source>&amp;Source file:</source>
-        <translation>&amp;Archivo fuente: </translation>
+        <translation>&amp;Archivo fuente:</translation>
     </message>
     <message>
         <location/>
@@ -188,7 +188,7 @@
     <message>
         <location filename="../../../src/libs/utils/newclasswidget.cpp" line="+495"/>
         <source>Invalid base class name</source>
-        <translation>Nombre de clase base no válido </translation>
+        <translation>Nombre de clase base no válido</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -211,7 +211,7 @@
     <message>
         <location filename="../../../src/libs/utils/projectintropage.ui"/>
         <source>Introduction and Project Location</source>
-        <translation>Introducción y ubicación del proyecto </translation>
+        <translation>Introducción y ubicación del proyecto</translation>
     </message>
     <message>
         <location/>
@@ -221,12 +221,12 @@
     <message>
         <location/>
         <source>Create in:</source>
-        <translation>Crear en: </translation>
+        <translation>Crear en:</translation>
     </message>
     <message>
         <location/>
         <source>Use as default project location</source>
-        <translation>Usar como ubicación predeterminada del proyecto </translation>
+        <translation>Usar como ubicación predeterminada del proyecto</translation>
     </message>
     <message>
         <location/>
@@ -236,7 +236,7 @@
     <message>
         <location filename="../../../src/libs/utils/projectintropage.cpp" line="+88"/>
         <source>&lt;Enter_Name&gt;</source>
-        <translation>&lt;Enter_Name&gt; </translation>
+        <translation>&lt;Enter_Name&gt;</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -251,12 +251,12 @@
     <message>
         <location line="+4"/>
         <source>A file with that name already exists.</source>
-        <translation>Ya existe un archivo con ese nombre. </translation>
+        <translation>Ya existe un archivo con ese nombre.</translation>
     </message>
     <message>
         <location line="+56"/>
         <source>Name is empty.</source>
-        <translation>El nombre está vacío. </translation>
+        <translation>El nombre está vacío.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -271,7 +271,7 @@
     <message>
         <location line="+7"/>
         <source>Invalid character &quot;%1&quot; found.</source>
-        <translation>Se ha encontrado el siguiente carácter no válido: &quot;%1&quot;</translation>
+        <translation>Se ha encontrado el siguiente carácter no válido: &quot;%1&quot;.</translation>
     </message>
 </context>
 <context>
@@ -380,7 +380,7 @@
     <message>
         <location/>
         <source>Working directory:</source>
-        <translation>Directorio de trabajo: </translation>
+        <translation>Directorio de trabajo:</translation>
     </message>
     <message>
         <location/>
@@ -406,12 +406,12 @@
     <message>
         <location/>
         <source>Show in Pane</source>
-        <translation>Mostrar en el panel </translation>
+        <translation>Mostrar en el panel</translation>
     </message>
     <message>
         <location/>
         <source>Replace Selection</source>
-        <translation>Reemplazar selección </translation>
+        <translation>Reemplazar selección</translation>
     </message>
     <message>
         <location/>
@@ -457,7 +457,7 @@
     <message>
         <location/>
         <source>Modifies current document</source>
-        <translation>Modifica el documento actual </translation>
+        <translation>Modifica el documento actual</translation>
     </message>
     <message>
         <location/>
@@ -490,7 +490,7 @@
     <message>
         <location/>
         <source>Choose a template:</source>
-        <translation>Elija una plantilla: </translation>
+        <translation>Elija una plantilla:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/newdialog.cpp" line="+210"/>
@@ -505,7 +505,7 @@
     <message>
         <location line="+3"/>
         <source>Files and Classes</source>
-        <translation>Archivos y clases </translation>
+        <translation>Archivos y clases</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -520,12 +520,12 @@
     <message>
         <location line="+153"/>
         <source>Platform independent</source>
-        <translation>Plataforma independiente </translation>
+        <translation>Plataforma independiente</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Supported Platforms</source>
-        <translation>Plataformas compatibles </translation>
+        <translation>Plataformas compatibles</translation>
     </message>
 </context>
 <context>
@@ -551,7 +551,7 @@
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.ui"/>
         <source>Files Without Write Permissions</source>
-        <translation>Archivos sin permisos de escritura </translation>
+        <translation>Archivos sin permisos de escritura</translation>
     </message>
     <message>
         <location/>
@@ -594,7 +594,7 @@
     <message>
         <location/>
         <source>The following files have unsaved changes:</source>
-        <translation>Los siguientes archivos tienen cambios no guardados: </translation>
+        <translation>Los siguientes archivos tienen cambios no guardados:</translation>
     </message>
     <message>
         <location/>
@@ -622,7 +622,7 @@
         <location line="-9"/>
         <location line="+11"/>
         <source>Save Selected</source>
-        <translation>Guardar seleccionados </translation>
+        <translation>Guardar seleccionados</translation>
     </message>
 </context>
 <context>
@@ -683,7 +683,7 @@
     <message>
         <location/>
         <source>Replace</source>
-        <translation>Reemplazar </translation>
+        <translation>Reemplazar</translation>
     </message>
     <message>
         <location/>
@@ -743,7 +743,7 @@
         <location/>
         <source>Reset Warnings</source>
         <comment>Button text</comment>
-        <translation>Reiniciar advertencias </translation>
+        <translation>Reiniciar advertencias</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+51"/>
@@ -763,7 +763,7 @@
     <message>
         <location line="+1"/>
         <source>The language change will take effect after a restart of Qt Creator.</source>
-        <translation>El cambio de idioma tendrá efecto después de reiniciar Qt Creator. </translation>
+        <translation>El cambio de idioma tendrá efecto después de reiniciar Qt Creator.</translation>
     </message>
 </context>
 <context>
@@ -781,7 +781,7 @@
     <message>
         <location/>
         <source>Specify file name filters, separated by comma. Filters may contain wildcards.</source>
-        <translation>Especifique los filtros de nombre de archivo, separados por comas. Los filtros pueden contener comodines. </translation>
+        <translation>Especifique los filtros de nombre de archivo, separados por comas. Los filtros pueden contener comodines.</translation>
     </message>
     <message>
         <location/>
@@ -816,7 +816,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.ui"/>
         <source>Include hidden files</source>
-        <translation>Incluir archivos ocultos </translation>
+        <translation>Incluir archivos ocultos</translation>
     </message>
     <message>
         <location/>
@@ -829,7 +829,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.ui"/>
         <source>Configure Filters</source>
-        <translation>Configurar filtros </translation>
+        <translation>Configurar filtros</translation>
     </message>
     <message>
         <location/>
@@ -854,7 +854,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location/>
         <source>Refresh interval:</source>
-        <translation>Intervalo de actualización: </translation>
+        <translation>Intervalo de actualización:</translation>
     </message>
     <message>
         <location/>
@@ -892,7 +892,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location/>
         <source>RegExp</source>
-        <translation>RegExp </translation>
+        <translation>RegExp</translation>
     </message>
     <message>
         <location/>
@@ -937,7 +937,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location/>
         <source>Use Recommended</source>
-        <translation>Uso recomendado </translation>
+        <translation>Uso recomendado</translation>
     </message>
     <message>
         <location/>
@@ -972,7 +972,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location line="+57"/>
         <source>Internal error: Type is invalid</source>
-        <translation>Error interno: el tipo no es válido </translation>
+        <translation>Error interno: el tipo no es válido</translation>
     </message>
 </context>
 <context>
@@ -985,7 +985,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location/>
         <source>Registered MIME Types</source>
-        <translation>Tipos MIME registrados </translation>
+        <translation>Tipos MIME registrados</translation>
     </message>
     <message>
         <location/>
@@ -1005,7 +1005,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location/>
         <source>Details</source>
-        <translation>Detalles </translation>
+        <translation>Detalles</translation>
     </message>
     <message>
         <location/>
@@ -1097,7 +1097,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location/>
         <source>Auto-save modified files</source>
-        <translation>Guardar automáticamente los archivos modificados </translation>
+        <translation>Guardar automáticamente los archivos modificados</translation>
     </message>
     <message>
         <location/>
@@ -1114,12 +1114,12 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location/>
         <source>When files are externally modified:</source>
-        <translation>Cuando los archivos se modifican externamente: </translation>
+        <translation>Cuando los archivos se modifican externamente:</translation>
     </message>
     <message>
         <location/>
         <source>Always Ask</source>
-        <translation>Preguntar siempre </translation>
+        <translation>Preguntar siempre</translation>
     </message>
     <message>
         <location/>
@@ -1129,7 +1129,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location/>
         <source>Ignore Modifications</source>
-        <translation>Ignorar modificaciones </translation>
+        <translation>Ignorar modificaciones</translation>
     </message>
     <message>
         <location/>
@@ -1217,7 +1217,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.ui"/>
         <source>Mouse and Keyboard</source>
-        <translation>Ratón y teclado </translation>
+        <translation>Ratón y teclado</translation>
     </message>
     <message>
         <location/>
@@ -1287,7 +1287,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location/>
         <source>Removes trailing whitespace upon saving.</source>
-        <translation>Elimina los espacios en blanco finales al guardar. </translation>
+        <translation>Elimina los espacios en blanco finales al guardar.</translation>
     </message>
     <message>
         <location/>
@@ -1378,7 +1378,7 @@ Especifica cómo interactúa el retroceso con la sangría.
     <message>
         <location/>
         <source>Follows Previous Indents</source>
-        <translation>Sigue las sangrías anteriores </translation>
+        <translation>Sigue las sangrías anteriores</translation>
     </message>
     <message>
         <location/>
@@ -1413,7 +1413,7 @@ Especifica cómo interactúa el retroceso con la sangría.
     <message>
         <location/>
         <source>Default encoding: </source>
-        <translation>Codificación predeterminada:  </translation>
+        <translation>Codificación predeterminada: </translation>
     </message>
     <message>
         <location/>
@@ -1440,12 +1440,12 @@ Especifica cómo interactúa el retroceso con la sangría.
     <message>
         <location/>
         <source>Keep If Already Present</source>
-        <translation>Mantener si ya está presente </translation>
+        <translation>Mantener si ya está presente</translation>
     </message>
     <message>
         <location/>
         <source>Always Delete</source>
-        <translation>Eliminar siempre </translation>
+        <translation>Eliminar siempre</translation>
     </message>
     <message>
         <location/>
@@ -1501,7 +1501,7 @@ Especifica cómo interactúa el retroceso con la sangría.
     <message>
         <location/>
         <source>Erase foreground.</source>
-        <translation>Borra el primer plano. </translation>
+        <translation>Borra el primer plano.</translation>
     </message>
     <message>
         <location/>
@@ -1536,7 +1536,7 @@ Especifica cómo interactúa el retroceso con la sangría.
     <message>
         <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+460"/>
         <source>No Underline</source>
-        <translation>Sin subrayar </translation>
+        <translation>Sin subrayar</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1672,7 +1672,7 @@ Especifica cómo interactúa el retroceso con la sangría.
     <message>
         <location/>
         <source>Antialias</source>
-        <translation>Antialias </translation>
+        <translation>Antialias</translation>
     </message>
     <message>
         <location/>
@@ -1727,7 +1727,7 @@ Especifica cómo interactúa el retroceso con la sangría.
     <message>
         <location/>
         <source>Syntax Highlight Definition Files</source>
-        <translation>Archivos de definición de resaltado de sintaxis </translation>
+        <translation>Archivos de definición de resaltado de sintaxis</translation>
     </message>
     <message>
         <location/>
@@ -1747,7 +1747,7 @@ Especifica cómo interactúa el retroceso con la sangría.
     <message>
         <location/>
         <source>Ignored file patterns:</source>
-        <translation>Patrones de archivo ignorados: </translation>
+        <translation>Patrones de archivo ignorados:</translation>
     </message>
 </context>
 <context>
@@ -1760,7 +1760,7 @@ Especifica cómo interactúa el retroceso con la sangría.
     <message>
         <location/>
         <source>Definitions</source>
-        <translation>Definiciones </translation>
+        <translation>Definiciones</translation>
     </message>
     <message>
         <location/>
@@ -1949,12 +1949,12 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location/>
         <source>With Spaces</source>
-        <translation>Con espacios </translation>
+        <translation>Con espacios</translation>
     </message>
     <message>
         <location/>
         <source>With Regular Indent</source>
-        <translation>Con sangría regular </translation>
+        <translation>Con sangría regular</translation>
     </message>
     <message>
         <location/>
@@ -1964,12 +1964,12 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location/>
         <source>Align continuation lines:</source>
-        <translation>Alinear líneas de continuación: </translation>
+        <translation>Alinear líneas de continuación:</translation>
     </message>
     <message>
         <location/>
         <source>Serial Terminal Ta&amp;b size:</source>
-        <translation>Tamaño de tabulación terminal serie:</translation>
+        <translation>Tamaño de ta&amp;bulación terminal serie:</translation>
     </message>
     <message>
         <location/>
@@ -1992,7 +1992,7 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location/>
         <source>Max</source>
-        <translation>Máx.</translation>
+        <translation>Máx</translation>
     </message>
     <message>
         <location/>
@@ -2007,22 +2007,22 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location/>
         <source>LQ</source>
-        <translation>LQ </translation>
+        <translation>LQ</translation>
     </message>
     <message>
         <location/>
         <source>UQ</source>
-        <translation>UQ </translation>
+        <translation>UQ</translation>
     </message>
     <message>
         <location/>
         <source>StDev</source>
-        <translation>StDev </translation>
+        <translation>StDev</translation>
     </message>
     <message>
         <location/>
         <source>Min</source>
-        <translation>Mín.</translation>
+        <translation>Mín</translation>
     </message>
     <message>
         <location/>
@@ -2098,7 +2098,7 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location/>
         <source>Turn on WiFi Shield on startup</source>
-        <translation>Activar WiFi Shield al inicio </translation>
+        <translation>Activar WiFi Shield al inicio</translation>
     </message>
     <message>
         <location/>
@@ -2128,17 +2128,17 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location/>
         <source>WPA (Modern WiFi Security)</source>
-        <translation>WPA (seguridad WiFi moderna) </translation>
+        <translation>WPA (seguridad WiFi moderna)</translation>
     </message>
     <message>
         <location/>
         <source>WEP (Hexadecimal password)</source>
-        <translation>WEP (contraseña hexadecimal) </translation>
+        <translation>WEP (contraseña hexadecimal)</translation>
     </message>
     <message>
         <location/>
         <source>SSID</source>
-        <translation>SSID </translation>
+        <translation>SSID</translation>
     </message>
     <message>
         <location/>
@@ -2149,7 +2149,7 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location/>
         <source>Acess Point Mode</source>
-        <translation>Modo de punto de acceso </translation>
+        <translation>Modo de punto de acceso</translation>
     </message>
     <message>
         <location/>
@@ -2222,7 +2222,7 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location line="+5"/>
         <source>OpenMV plugin is disabled.</source>
-        <translation>El complemento OpenMV está deshabilitado. </translation>
+        <translation>El complemento OpenMV está deshabilitado.</translation>
     </message>
 </context>
 <context>
@@ -2232,7 +2232,7 @@ Influye en el sangrado de las líneas de continuación.
         <location line="+1"/>
         <location line="+1"/>
         <source>N/A</source>
-        <translation>N/A </translation>
+        <translation>N/A</translation>
     </message>
 </context>
 <context>
@@ -2258,7 +2258,7 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location line="+112"/>
         <source>Unknown option %1</source>
-        <translation>Opción desconocida: %1 </translation>
+        <translation>Opción desconocida: %1</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2289,7 +2289,7 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+42"/>
         <source>Continue</source>
-        <translation>Continuar </translation>
+        <translation>Continuar</translation>
     </message>
 </context>
 <context>
@@ -2302,7 +2302,7 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location line="+1"/>
         <source>Description file found, but error on read.</source>
-        <translation>Archivo de descripción encontrado, pero error en lectura. </translation>
+        <translation>Archivo de descripción encontrado, pero error en lectura.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2312,7 +2312,7 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location line="+1"/>
         <source>Description successfully read.</source>
-        <translation>Descripción leída con éxito. </translation>
+        <translation>Descripción leída con éxito.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2332,7 +2332,7 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location line="+1"/>
         <source>Library is loaded.</source>
-        <translation>La biblioteca está cargada. </translation>
+        <translation>La biblioteca está cargada.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2367,7 +2367,7 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location line="+3"/>
         <source>Deleted</source>
-        <translation>Eliminado </translation>
+        <translation>Eliminado</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2380,7 +2380,7 @@ Influye en el sangrado de las líneas de continuación.
     <message>
         <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1305"/>
         <source>Circular dependency detected:</source>
-        <translation>Dependencia circular detectada: </translation>
+        <translation>Dependencia circular detectada:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2451,7 +2451,7 @@ Motivo:%3</translation>
     <message>
         <location line="+13"/>
         <source>Plugin is not valid (does not derive from IPlugin)</source>
-        <translation>El complemento no es válido (no deriva de IPlugin) </translation>
+        <translation>El complemento no es válido (no deriva de IPlugin)</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -2489,7 +2489,7 @@ Motivo:%3</translation>
     <message>
         <location line="-376"/>
         <source>Plugin meta data not found</source>
-        <translation>No se encuentran los metadatos del complemento </translation>
+        <translation>No se encuentran los metadatos del complemento</translation>
     </message>
     <message>
         <location line="+83"/>
@@ -2562,7 +2562,7 @@ El complemento está deshabilitado por el argumento de la línea de comando.</tr
     <message>
         <location line="+17"/>
         <source>Plugin is not available on this platform.</source>
-        <translation>El complemento no está disponible en esta plataforma. </translation>
+        <translation>El complemento no está disponible en esta plataforma.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2572,12 +2572,12 @@ El complemento está deshabilitado por el argumento de la línea de comando.</tr
     <message>
         <location line="+5"/>
         <source>Load on startup</source>
-        <translation>Cargar al inicio </translation>
+        <translation>Cargar al inicio</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Load on Startup</source>
-        <translation>Cargar al inicio </translation>
+        <translation>Cargar al inicio</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -2592,22 +2592,22 @@ El complemento está deshabilitado por el argumento de la línea de comando.</tr
     <message>
         <location line="+0"/>
         <source>Version</source>
-        <translation>Versión </translation>
+        <translation>Versión</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Vendor</source>
-        <translation>Vendedor </translation>
+        <translation>Vendedor</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Utilities</source>
-        <translation>Utilidades </translation>
+        <translation>Utilidades</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Enabling Plugins</source>
-        <translation>Habilitar complementos </translation>
+        <translation>Habilitar complementos</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2625,7 +2625,7 @@ también habilitará los siguientes complementos:
     <message>
         <location line="+16"/>
         <source>Disabling Plugins</source>
-        <translation>Deshabilitar complementos </translation>
+        <translation>Deshabilitar complementos</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2646,7 +2646,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/extensionsystem/test/manual/pluginview/plugindialog.cpp" line="+51"/>
         <source>Details</source>
-        <translation>Detalles </translation>
+        <translation>Detalles</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2763,12 +2763,12 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+338"/>
         <source>Do not &amp;ask again</source>
-        <translation>No preguntar de nuevo</translation>
+        <translation>No &amp;preguntar de nuevo</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Do not &amp;show again</source>
-        <translation>No mostrar de nuevo </translation>
+        <translation>No &amp;mostrar de nuevo</translation>
     </message>
 </context>
 <context>
@@ -2776,7 +2776,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+112"/>
         <source>The class name must not contain namespace delimiters.</source>
-        <translation>El nombre de clase no debe contener delimitadores de espacios de nombres. </translation>
+        <translation>El nombre de clase no debe contener delimitadores de espacios de nombres.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2809,7 +2809,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+5"/>
         <source>Cannot write temporary file. Disk full?</source>
-        <translation>No se puede escribir el archivo temporal. ¿Disco lleno? </translation>
+        <translation>No se puede escribir el archivo temporal. ¿Disco lleno?</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2834,17 +2834,17 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/consoleprocess_unix.cpp" line="+92"/>
         <source>Quoting error in command.</source>
-        <translation>Citando error en el comando. </translation>
+        <translation>Citando error en el comando.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Debugging complex shell commands in a terminal is currently not supported.</source>
-        <translation>Actualmente, no se admite la depuración de comandos de shell complejos en un terminal. </translation>
+        <translation>Actualmente, no se admite la depuración de comandos de shell complejos en un terminal.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Quoting error in terminal command.</source>
-        <translation>Citando el error en el comando del terminal. </translation>
+        <translation>Citando el error en el comando del terminal.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2882,7 +2882,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/detailsbutton.cpp" line="+76"/>
         <source>Details</source>
-        <translation>Detalles </translation>
+        <translation>Detalles</translation>
     </message>
 </context>
 <context>
@@ -2915,12 +2915,12 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+17"/>
         <source>unexpected e_shsize</source>
-        <translation>inesperado e_shsize </translation>
+        <translation>inesperado e_shsize</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>unexpected e_shentsize</source>
-        <translation>inesperado e_shentsize </translation>
+        <translation>inesperado e_shentsize</translation>
     </message>
     <message numerus="yes">
         <location line="+9"/>
@@ -2946,7 +2946,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+48"/>
         <source>&lt;UNSET&gt;</source>
-        <translation>&lt;UNSET&gt; </translation>
+        <translation>&lt;UNSET&gt;</translation>
     </message>
     <message>
         <location line="+131"/>
@@ -2963,7 +2963,7 @@ también deshabilitará los siguientes complementos:
         <source>&lt;VARIABLE&gt;</source>
         <extracomment>Name when inserting a new variable
 </extracomment>
-        <translation>&lt;VARIABLE&gt; </translation>
+        <translation>&lt;VARIABLE&gt;</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2983,7 +2983,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+1"/>
         <source>Clear text</source>
-        <translation>Borrar texto </translation>
+        <translation>Borrar texto</translation>
     </message>
 </context>
 <context>
@@ -3014,7 +3014,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+175"/>
         <source>Reset to Default Layout</source>
-        <translation>Restablecer al diseño predeterminado </translation>
+        <translation>Restablecer al diseño predeterminado</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3027,7 +3027,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+111"/>
         <source>Name is empty.</source>
-        <translation>El nombre está vacío. </translation>
+        <translation>El nombre está vacío.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3084,12 +3084,12 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+86"/>
         <source>Refusing to remove root directory.</source>
-        <translation>Negarse a eliminar el directorio raíz. </translation>
+        <translation>Negarse a eliminar el directorio raíz.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Refusing to remove your home directory.</source>
-        <translation>Negarse a eliminar su directorio principal. </translation>
+        <translation>Negarse a eliminar su directorio principal.</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -3161,7 +3161,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+87"/>
         <source>Cannot create OpenGL context.</source>
-        <translation>No se puede crear el contexto OpenGL. </translation>
+        <translation>No se puede crear el contexto OpenGL.</translation>
     </message>
 </context>
 <context>
@@ -3169,7 +3169,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/macroexpander.cpp" line="+283"/>
         <source>Infinite recursion error</source>
-        <translation>Error de recursión infinito </translation>
+        <translation>Error de recursión infinito</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -3209,7 +3209,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+1"/>
         <source>Access environment variables.</source>
-        <translation>Acceso a variables de entorno </translation>
+        <translation>Acceso a variables de entorno.</translation>
     </message>
 </context>
 <context>
@@ -3255,13 +3255,13 @@ también deshabilitará los siguientes complementos:
         <location line="+6"/>
         <source>Open Preferences dialog.</source>
         <comment>msgShowOptionsDialogToolTip (mac version)</comment>
-        <translation>Abrir el cuadro de diálogo Preferencias. </translation>
+        <translation>Abrir el cuadro de diálogo Preferencias.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Open Options dialog.</source>
         <comment>msgShowOptionsDialogToolTip (non-mac version)</comment>
-        <translation>Abre el cuadro de diálogo Opciones. </translation>
+        <translation>Abre el cuadro de diálogo Opciones.</translation>
     </message>
 </context>
 <context>
@@ -3296,7 +3296,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+84"/>
         <source>The path must not be empty.</source>
-        <translation>La ruta no debe estar vacía. </translation>
+        <translation>La ruta no debe estar vacía.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3353,12 +3353,12 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+126"/>
         <source>Insert...</source>
-        <translation>Insertar... </translation>
+        <translation>Insertar...</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Delete Line</source>
-        <translation>Eliminar línea </translation>
+        <translation>Eliminar línea</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3371,7 +3371,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+728"/>
         <source>Error in command line.</source>
-        <translation>Error en la linea de comando. </translation>
+        <translation>Error en la linea de comando.</translation>
     </message>
 </context>
 <context>
@@ -3379,7 +3379,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+41"/>
         <source>File Changed</source>
-        <translation>Archivo cambiado </translation>
+        <translation>Archivo cambiado</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3402,7 +3402,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+21"/>
         <source>File has been removed</source>
-        <translation>El archivo ha sido eliminado </translation>
+        <translation>El archivo ha sido eliminado</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3497,7 +3497,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+15"/>
         <source>Run Command</source>
-        <translation>Ejecutar comando </translation>
+        <translation>Ejecutar comando</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -3545,12 +3545,12 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+297"/>
         <source>Process not Responding</source>
-        <translation>El proceso no responde </translation>
+        <translation>El proceso no responde</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>The process is not responding.</source>
-        <translation>El proceso no responde. </translation>
+        <translation>El proceso no responde.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3569,7 +3569,7 @@ también deshabilitará los siguientes complementos:
         <location filename="../../../src/libs/utils/textfileformat.cpp" line="+217"/>
         <location line="+64"/>
         <source>Out of memory.</source>
-        <translation>Sin memoria. </translation>
+        <translation>Sin memoria.</translation>
     </message>
     <message>
         <location line="-55"/>
@@ -3590,7 +3590,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/libs/utils/wizard.cpp" line="+142"/>
         <source>...</source>
-        <translation>... </translation>
+        <translation>...</translation>
     </message>
 </context>
 <context>
@@ -3603,13 +3603,13 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+12"/>
         <source>Target</source>
-        <translation>Objetivo </translation>
+        <translation>Objetivo</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+83"/>
         <source>Label</source>
-        <translation>Etiqueta </translation>
+        <translation>Etiqueta</translation>
     </message>
     <message>
         <location line="-82"/>
@@ -3643,7 +3643,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+95"/>
         <source>Existing files</source>
-        <translation>Archivos existentes </translation>
+        <translation>Archivos existentes</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -3674,7 +3674,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+1"/>
         <source>[symbolic link]</source>
-        <translation>[enlace simbólico] </translation>
+        <translation>[enlace simbólico]</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -3702,22 +3702,22 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+25"/>
         <source>The current date (ISO).</source>
-        <translation>La fecha actual (ISO). </translation>
+        <translation>La fecha actual (ISO).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>The current time (ISO).</source>
-        <translation>La hora actual (ISO). </translation>
+        <translation>La hora actual (ISO).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>The current date (RFC2822).</source>
-        <translation>La fecha actual (RFC2822). </translation>
+        <translation>La fecha actual (RFC2822).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>The current time (RFC2822).</source>
-        <translation>La hora actual (RFC2822). </translation>
+        <translation>La hora actual (RFC2822).</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3732,7 +3732,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+2"/>
         <source>The configured default directory for projects.</source>
-        <translation>El directorio predeterminado configurado para proyectos. </translation>
+        <translation>El directorio predeterminado configurado para proyectos.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3742,7 +3742,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+2"/>
         <source>Is Qt Creator running on Windows?</source>
-        <translation>¿Qt Creator se está ejecutando en Windows? </translation>
+        <translation>¿Qt Creator se está ejecutando en Windows?</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3772,12 +3772,12 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+2"/>
         <source>Generate a new UUID.</source>
-        <translation>Genera un nuevo UUID. </translation>
+        <translation>Genera un nuevo UUID.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>A comment.</source>
-        <translation>Un comentario. </translation>
+        <translation>Un comentario.</translation>
     </message>
 </context>
 <context>
@@ -3785,7 +3785,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+95"/>
         <source>Design</source>
-        <translation>Diseño </translation>
+        <translation>Diseño</translation>
     </message>
 </context>
 <context>
@@ -3793,34 +3793,34 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-374"/>
         <source>Uncategorized</source>
-        <translation>Sin categoría </translation>
+        <translation>Sin categoría</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Tools that will appear directly under the External Tools menu.</source>
-        <translation>Herramientas que aparecerán directamente debajo del menú Herramientas externas. </translation>
+        <translation>Herramientas que aparecerán directamente debajo del menú Herramientas externas.</translation>
     </message>
     <message>
         <location line="+206"/>
         <source>New Category</source>
-        <translation>Nueva categoría </translation>
+        <translation>Nueva categoría</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>New Tool</source>
-        <translation>Nueva herramienta </translation>
+        <translation>Nueva herramienta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This tool prints a line of useful text</source>
-        <translation>Esta herramienta imprime una línea de texto útil </translation>
+        <translation>Esta herramienta imprime una línea de texto útil</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Useful text</source>
         <extracomment>Sample external tool text
 </extracomment>
-        <translation>Texto útil </translation>
+        <translation>Texto útil</translation>
     </message>
 </context>
 <context>
@@ -3828,12 +3828,12 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+51"/>
         <source>Edit Environment Changes</source>
-        <translation>Editar cambios de entorno </translation>
+        <translation>Editar cambios de entorno</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Change system environment by assigning one environment variable per line:</source>
-        <translation>Cambie el entorno del sistema asignando una variable de entorno por línea: </translation>
+        <translation>Cambie el entorno del sistema asignando una variable de entorno por línea:</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3851,7 +3851,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+63"/>
         <source>Overwrite Existing Files</source>
-        <translation>Sobrescribir archivos existentes </translation>
+        <translation>Sobrescribir archivos existentes</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3910,7 +3910,7 @@ No se ha encontrado ningún sistema de control de versiones.</translation>
     <message>
         <location line="+9"/>
         <source>Cannot Set Permissions</source>
-        <translation>No se pueden establecer permisos </translation>
+        <translation>No se pueden establecer permisos</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3920,7 +3920,7 @@ No se ha encontrado ningún sistema de control de versiones.</translation>
     <message>
         <location line="+6"/>
         <source>Cannot Save File</source>
-        <translation>No se puede guardar el archivo </translation>
+        <translation>No se puede guardar el archivo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3935,12 +3935,12 @@ No se ha encontrado ningún sistema de control de versiones.</translation>
     <message>
         <location line="+5"/>
         <source>Could Not Change Permissions on Some Files</source>
-        <translation>No se pudieron cambiar los permisos en algunos archivos </translation>
+        <translation>No se pudieron cambiar los permisos en algunos archivos</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>See details for a complete list of files.</source>
-        <translation>Ver detalles para una lista completa de archivos. </translation>
+        <translation>Ver detalles para una lista completa de archivos.</translation>
     </message>
     <message>
         <location line="+135"/>
@@ -3973,7 +3973,7 @@ Do you want to check them out now?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+115"/>
         <source>Click and type the new key sequence.</source>
-        <translation>Haga clic y escriba la nueva secuencia de teclas. </translation>
+        <translation>Haga clic y escriba la nueva secuencia de teclas.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3991,13 +3991,13 @@ Do you want to check them out now?</source>
     <message>
         <location line="+95"/>
         <source>Keyboard Shortcuts</source>
-        <translation>Atajos de teclado </translation>
+        <translation>Atajos de teclado</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Shortcut</source>
-        <translation>Atajo </translation>
+        <translation>Atajo</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4042,7 +4042,7 @@ Do you want to check them out now?</source>
     <message>
         <location line="+51"/>
         <source>Import Keyboard Mapping Scheme</source>
-        <translation>Importar esquema de asignación de teclado </translation>
+        <translation>Importar esquema de asignación de teclado</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4053,7 +4053,7 @@ Do you want to check them out now?</source>
     <message>
         <location line="-2"/>
         <source>Export Keyboard Mapping Scheme</source>
-        <translation>Exportar el esquema de asignación de teclado </translation>
+        <translation>Exportar el esquema de asignación de teclado</translation>
     </message>
 </context>
 <context>
@@ -4061,7 +4061,7 @@ Do you want to check them out now?</source>
     <message>
         <location line="-170"/>
         <source>Keyboard</source>
-        <translation>Teclado </translation>
+        <translation>Teclado</translation>
     </message>
 </context>
 <context>
@@ -4070,7 +4070,7 @@ Do you want to check them out now?</source>
         <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+631"/>
         <source>Could not save the files.</source>
         <comment>error message</comment>
-        <translation>No se han podido guardar los archivos. </translation>
+        <translation>No se han podido guardar los archivos.</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -4096,7 +4096,7 @@ Do you want to check them out now?</source>
     <message>
         <location line="+63"/>
         <source>Save File As</source>
-        <translation>Guardar archivo como </translation>
+        <translation>Guardar archivo como</translation>
     </message>
     <message>
         <location line="+142"/>
@@ -4122,7 +4122,7 @@ Do you want to check them out now?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+515"/>
         <source>&lt;no document&gt;</source>
-        <translation>&lt;no document&gt; </translation>
+        <translation>&lt;no document&gt;</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4162,7 +4162,7 @@ Do you want to check them out now?</source>
         <location line="-13"/>
         <location line="+14"/>
         <source>Close All Except Visible</source>
-        <translation>Cerrar todo excepto visible </translation>
+        <translation>Cerrar todo excepto visible</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -4189,12 +4189,12 @@ Do you want to check them out now?</source>
     <message>
         <location line="+1"/>
         <source>Copy Full Path</source>
-        <translation>Copiar ruta completa </translation>
+        <translation>Copiar ruta completa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy Path and Line Number</source>
-        <translation>Copiar ruta y número de línea </translation>
+        <translation>Copiar ruta y número de línea</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4244,7 +4244,7 @@ Continue?</source>
     <message>
         <location line="+1"/>
         <source>Close Editor</source>
-        <translation>Cerrar Editor </translation>
+        <translation>Cerrar Editor</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4254,7 +4254,7 @@ Continue?</source>
     <message>
         <location line="+1"/>
         <source>Close Other Editors</source>
-        <translation>Cerrar otros editores </translation>
+        <translation>Cerrar otros editores</translation>
     </message>
     <message>
         <location line="+430"/>
@@ -4264,12 +4264,12 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+4"/>
         <source>Split</source>
-        <translation>División </translation>
+        <translation>División</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Split Side by Side</source>
-        <translation>Dividir lado a lado </translation>
+        <translation>Dividir lado a lado</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4279,7 +4279,7 @@ Continue?</source>
     <message>
         <location line="+286"/>
         <source>Close Document</source>
-        <translation>Cerrar documento </translation>
+        <translation>Cerrar documento</translation>
     </message>
 </context>
 <context>
@@ -4287,7 +4287,7 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2375"/>
         <source>Revert File to Saved</source>
-        <translation>Revertir archivo a guardado </translation>
+        <translation>Revertir archivo a guardado</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -4307,12 +4307,12 @@ Continue?</source>
     <message>
         <location line="+84"/>
         <source>Split</source>
-        <translation>División </translation>
+        <translation>División</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Split Side by Side</source>
-        <translation>Dividir lado a lado </translation>
+        <translation>Dividir lado a lado</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4322,17 +4322,17 @@ Continue?</source>
     <message>
         <location line="+7"/>
         <source>Remove Current Split</source>
-        <translation>Eliminar la división actual </translation>
+        <translation>Eliminar la división actual</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Remove All Splits</source>
-        <translation>Eliminar todas las divisiones </translation>
+        <translation>Eliminar todas las divisiones</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Go to Previous Split or Window</source>
-        <translation>Ir a la división o ventana anterior </translation>
+        <translation>Ir a la división o ventana anterior</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4347,17 +4347,17 @@ Continue?</source>
     <message>
         <location line="+38"/>
         <source>Current document</source>
-        <translation>Documento actual </translation>
+        <translation>Documento actual</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
-        <translation>Coordenada X de la esquina superior izquierda del editor actual, relativa a la pantalla. </translation>
+        <translation>Coordenada X de la esquina superior izquierda del editor actual, relativa a la pantalla.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
-        <translation>Coordenada Y de la esquina superior izquierda del editor actual, relativa a la pantalla. </translation>
+        <translation>Coordenada Y de la esquina superior izquierda del editor actual, relativa a la pantalla.</translation>
     </message>
     <message>
         <location line="+113"/>
@@ -4437,12 +4437,12 @@ Continue?</source>
     <message>
         <location line="+125"/>
         <source>Cannot Open File</source>
-        <translation>No puede abrir el archivo </translation>
+        <translation>No puede abrir el archivo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cannot open the file for editing with VCS.</source>
-        <translation>No se puede abrir el archivo para editarlo con VCS. </translation>
+        <translation>No se puede abrir el archivo para editarlo con VCS.</translation>
     </message>
     <message>
         <location line="+73"/>
@@ -4463,12 +4463,12 @@ Continue?</source>
     <message>
         <location line="+2"/>
         <source>Proceed</source>
-        <translation>Proceder </translation>
+        <translation>Proceder</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cancel</source>
-        <translation>Cancelar </translation>
+        <translation>Cancelar</translation>
     </message>
 </context>
 <context>
@@ -4498,7 +4498,7 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorswindow.cpp" line="+228"/>
         <source>*</source>
-        <translation>* </translation>
+        <translation>*</translation>
     </message>
 </context>
 <context>
@@ -4506,7 +4506,7 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+53"/>
         <source>System Editor</source>
-        <translation>Editor de sistema </translation>
+        <translation>Editor de sistema</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4524,12 +4524,12 @@ Continue?</source>
     <message>
         <location line="+34"/>
         <source>Split</source>
-        <translation>División </translation>
+        <translation>División</translation>
     </message>
     <message>
         <location line="+226"/>
         <source>Remove Split</source>
-        <translation>Eliminar división </translation>
+        <translation>Eliminar división</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -4565,7 +4565,7 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+86"/>
         <source>&amp;External</source>
-        <translation>&amp;Externo </translation>
+        <translation>&amp;Externo</translation>
     </message>
     <message>
         <location line="+61"/>
@@ -4586,7 +4586,7 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+53"/>
         <source>Launching a file browser failed</source>
-        <translation>Error al iniciar navegador de archivos </translation>
+        <translation>Error al iniciar navegador de archivos</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4638,7 +4638,7 @@ Continue?</source>
     <message>
         <location line="+1"/>
         <source>Show Containing Folder</source>
-        <translation>Mostrar carpeta contenedora </translation>
+        <translation>Mostrar carpeta contenedora</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4682,12 +4682,12 @@ Continue?</source>
     <message>
         <location line="+10"/>
         <source>Advanced Find</source>
-        <translation>Búsqueda avanzada </translation>
+        <translation>Búsqueda avanzada</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Open Advanced Find...</source>
-        <translation>Abrir búsqueda avanzada... </translation>
+        <translation>Abrir búsqueda avanzada...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4762,7 +4762,7 @@ Continue?</source>
     <message>
         <location line="+5"/>
         <source>Replace</source>
-        <translation>Reemplazar </translation>
+        <translation>Reemplazar</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4792,12 +4792,12 @@ Continue?</source>
     <message>
         <location line="+8"/>
         <source>Whole Words Only</source>
-        <translation>Solo palabras completas </translation>
+        <translation>Solo palabras completas</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Use Regular Expressions</source>
-        <translation>Usar expresiones regulares </translation>
+        <translation>Usar expresiones regulares</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4830,7 +4830,7 @@ Continue?</source>
     <message>
         <location line="+2"/>
         <source>Whole words</source>
-        <translation>Palabras completas </translation>
+        <translation>Palabras completas</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4840,7 +4840,7 @@ Continue?</source>
     <message>
         <location line="+2"/>
         <source>Preserve case</source>
-        <translation>Conservar mayús./minús.</translation>
+        <translation>Conservar mayús./minús</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4863,18 +4863,18 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+133"/>
         <source>Search was canceled.</source>
-        <translation>La búsqueda se ha cancelado</translation>
+        <translation>La búsqueda se ha cancelado.</translation>
     </message>
     <message>
         <location line="+31"/>
         <location line="+119"/>
         <source>Cancel</source>
-        <translation>Cancelar </translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location line="-115"/>
         <source>Repeat the search with same parameters.</source>
-        <translation>Repetir la búsqueda con los mismos parámetros. </translation>
+        <translation>Repetir la búsqueda con los mismos parámetros.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4894,30 +4894,30 @@ Continue?</source>
     <message>
         <location line="+1"/>
         <source>Replace</source>
-        <translation>Reemplazar </translation>
+        <translation>Reemplazar</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Preserve case</source>
-        <translation>Conservar mayús./minús.</translation>
+        <translation>Conservar mayús./minús</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>This change cannot be undone.</source>
-        <translation>Este cambio no puede deshacerse. </translation>
+        <translation>Este cambio no puede deshacerse.</translation>
     </message>
     <message numerus="yes">
         <location line="+25"/>
         <source>The search resulted in more than %n items, do you still want to continue?</source>
         <translation>
-            <numerusform>La búsqueda dio como resultado más de %n elementos, ¿aún desea continuar? </numerusform>
-            <numerusform>La búsqueda dio como resultado más de %n elementos, ¿aún desea continuar? </numerusform>
+            <numerusform>La búsqueda dio como resultado más de %n elementos, ¿aún desea continuar?</numerusform>
+            <numerusform>La búsqueda dio como resultado más de %n elementos, ¿aún desea continuar?</numerusform>
         </translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Continue</source>
-        <translation>Continuar </translation>
+        <translation>Continuar</translation>
     </message>
     <message>
         <location line="+234"/>
@@ -4928,8 +4928,8 @@ Continue?</source>
         <location line="+2"/>
         <source>%n matches found.</source>
         <translation>
-            <numerusform>%n coincidencias encontradas. </numerusform>
-            <numerusform>%n coincidencias encontradas. </numerusform>
+            <numerusform>%n coincidencias encontradas.</numerusform>
+            <numerusform>%n coincidencias encontradas.</numerusform>
         </translation>
     </message>
 </context>
@@ -4939,7 +4939,7 @@ Continue?</source>
         <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+111"/>
         <location line="+398"/>
         <source>Expand All</source>
-        <translation>Expandir todo </translation>
+        <translation>Expandir todo</translation>
     </message>
     <message>
         <location line="-396"/>
@@ -4949,7 +4949,7 @@ Continue?</source>
     <message>
         <location line="+11"/>
         <source>New Search</source>
-        <translation>Nueva búsqueda </translation>
+        <translation>Nueva búsqueda</translation>
     </message>
     <message>
         <location line="+280"/>
@@ -4959,12 +4959,12 @@ Continue?</source>
     <message>
         <location line="+102"/>
         <source>Collapse All</source>
-        <translation>Desplegar todo </translation>
+        <translation>Desplegar todo</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.h" line="+149"/>
         <source>Search Results</source>
-        <translation>Resultados de la búsqueda </translation>
+        <translation>Resultados de la búsqueda</translation>
     </message>
 </context>
 <context>
@@ -4980,7 +4980,7 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/helpmanager.cpp" line="+381"/>
         <source>Unfiltered</source>
-        <translation>Sin filtrar </translation>
+        <translation>Sin filtrar</translation>
     </message>
 </context>
 <context>
@@ -5014,7 +5014,7 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/infobar.cpp" line="+231"/>
         <source>Do Not Show Again</source>
-        <translation>No mostrar de nuevo. </translation>
+        <translation>No mostrar de nuevo</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -5071,7 +5071,7 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+42"/>
         <source>Generic Directory Filter</source>
-        <translation>Filtro de directorio genérico </translation>
+        <translation>Filtro de directorio genérico</translation>
     </message>
     <message>
         <location line="+101"/>
@@ -5103,7 +5103,7 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+40"/>
         <source>Execute Custom Commands</source>
-        <translation>Ejecutar comandos personalizados </translation>
+        <translation>Ejecutar comandos personalizados</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -5148,7 +5148,7 @@ Do you want to kill it?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+39"/>
         <source>Run External Tool</source>
-        <translation>Ejecutar herramienta externa </translation>
+        <translation>Ejecutar herramienta externa</translation>
     </message>
 </context>
 <context>
@@ -5156,7 +5156,7 @@ Do you want to kill it?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+58"/>
         <source>Files in File System</source>
-        <translation>Archivos en el sistema de archivos </translation>
+        <translation>Archivos en el sistema de archivos</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -5169,27 +5169,27 @@ Do you want to kill it?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+149"/>
         <source>Filter Configuration</source>
-        <translation>Configuración del filtro </translation>
+        <translation>Configuración del filtro</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Prefix:</source>
-        <translation>Prefijo: </translation>
+        <translation>Prefijo:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Type the prefix followed by a space and search term to restrict search to the filter.</source>
-        <translation>Escriba el prefijo seguido de un espacio y un término de búsqueda para restringir la búsqueda al filtro. </translation>
+        <translation>Escriba el prefijo seguido de un espacio y un término de búsqueda para restringir la búsqueda al filtro.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Include by default</source>
-        <translation>Incluir por defecto </translation>
+        <translation>Incluir por defecto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Include the filter when not using a prefix for searches.</source>
-        <translation>Incluya el filtro cuando no use un prefijo para búsquedas. </translation>
+        <translation>Incluya el filtro cuando no use un prefijo para búsquedas.</translation>
     </message>
 </context>
 <context>
@@ -5197,7 +5197,7 @@ Do you want to kill it?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+139"/>
         <source>Type to locate</source>
-        <translation>Escriba para ubicar </translation>
+        <translation>Escriba para ubicar</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -5238,7 +5238,7 @@ Do you want to kill it?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+45"/>
         <source>Available filters</source>
-        <translation>Filtros disponibles </translation>
+        <translation>Filtros disponibles</translation>
     </message>
 </context>
 <context>
@@ -5289,7 +5289,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+341"/>
         <source>&lt;type here&gt;</source>
-        <translation>&lt;type here&gt; </translation>
+        <translation>&lt;type here&gt;</translation>
     </message>
 </context>
 <context>
@@ -5315,7 +5315,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+14"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Editar </translation>
+        <translation>&amp;Editar</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -5340,12 +5340,12 @@ Do you want to kill it?</source>
     <message>
         <location line="+8"/>
         <source>&amp;New File...</source>
-        <translation>&amp;Archivo nuevo... </translation>
+        <translation>&amp;Archivo nuevo...</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Open File...</source>
-        <translation>&amp;Abrir documento... </translation>
+        <translation>&amp;Abrir documento...</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -5370,7 +5370,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+2"/>
         <source>Save As...</source>
-        <translation>Guardar como... </translation>
+        <translation>Guardar como...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -5400,17 +5400,17 @@ Do you want to kill it?</source>
     <message>
         <location line="+4"/>
         <source>Undo</source>
-        <translation>Deshacer </translation>
+        <translation>Deshacer</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Redo</source>
-        <translation>&amp;Rehacer </translation>
+        <translation>&amp;Rehacer</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Redo</source>
-        <translation>Rehacer </translation>
+        <translation>Rehacer</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5425,7 +5425,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+8"/>
         <source>&amp;Paste</source>
-        <translation>&amp;Pegar </translation>
+        <translation>&amp;Pegar</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5455,7 +5455,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+3"/>
         <source>Ctrl+M</source>
-        <translation>Ctrl+M </translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -5485,7 +5485,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+25"/>
         <source>Show Mode Selector</source>
-        <translation>Mostrar selector de modo </translation>
+        <translation>Mostrar selector de modo</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5523,7 +5523,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+52"/>
         <source>Serial Terminal</source>
-        <translation>Terminal serie </translation>
+        <translation>Terminal serie</translation>
     </message>
 </context>
 <context>
@@ -5531,7 +5531,7 @@ Do you want to kill it?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+115"/>
         <source>MIME Type</source>
-        <translation>Tipo MIME </translation>
+        <translation>Tipo MIME</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -5549,12 +5549,12 @@ Do you want to kill it?</source>
     <message>
         <location line="+248"/>
         <source>Reset MIME Types</source>
-        <translation>Restablecer tipos MIME </translation>
+        <translation>Restablecer tipos MIME</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Changes will take effect after Qt Creator restart.</source>
-        <translation>Los cambios tendrán efecto después de reiniciar Qt Creator. </translation>
+        <translation>Los cambios tendrán efecto después de reiniciar Qt Creator.</translation>
     </message>
 </context>
 <context>
@@ -5562,7 +5562,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+160"/>
         <source>MIME Types</source>
-        <translation>Tipos MIME </translation>
+        <translation>Tipos MIME</translation>
     </message>
 </context>
 <context>
@@ -5578,7 +5578,7 @@ Do you want to kill it?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+73"/>
         <source>Split</source>
-        <translation>División </translation>
+        <translation>División</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -5613,7 +5613,7 @@ Do you want to kill it?</source>
         <location line="+7"/>
         <location line="+44"/>
         <source>Maximize</source>
-        <translation>Maximizar </translation>
+        <translation>Maximizar</translation>
     </message>
     <message>
         <location line="-24"/>
@@ -5669,7 +5669,7 @@ Do you want to kill it?</source>
         <location line="+12"/>
         <location line="+11"/>
         <source>Error: %L1!</source>
-        <translation>Error: %L1</translation>
+        <translation>Error: %L1!</translation>
     </message>
 </context>
 <context>
@@ -5710,7 +5710,7 @@ Do you want to kill it?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+63"/>
         <source>Details</source>
-        <translation>Detalles </translation>
+        <translation>Detalles</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5775,7 +5775,7 @@ Do you want to kill it?</source>
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+73"/>
         <location line="+1"/>
         <source>Split</source>
-        <translation>División </translation>
+        <translation>División</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5802,7 +5802,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+1"/>
         <source>The theme change will take effect after a restart of Qt Creator.</source>
-        <translation>El cambio de tema tendrá efecto después de reiniciar Qt Creator. </translation>
+        <translation>El cambio de tema tendrá efecto después de reiniciar Qt Creator.</translation>
     </message>
 </context>
 <context>
@@ -5810,7 +5810,7 @@ Do you want to kill it?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/toolsettings.cpp" line="+48"/>
         <source>External Tools</source>
-        <translation>Herramientas externas </translation>
+        <translation>Herramientas externas</translation>
     </message>
 </context>
 <context>
@@ -5818,7 +5818,7 @@ Do you want to kill it?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/variablechooser.cpp" line="+91"/>
         <source>Insert Variable</source>
-        <translation>Insertar variable </translation>
+        <translation>Insertar variable</translation>
     </message>
     <message>
         <location line="+90"/>
@@ -5828,7 +5828,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+30"/>
         <source>Insert Unexpanded Value</source>
-        <translation>Insertar valor sin expandir </translation>
+        <translation>Insertar valor sin expandir</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5839,12 +5839,12 @@ Do you want to kill it?</source>
     <message>
         <location line="-3"/>
         <source>Insert Expanded Value</source>
-        <translation>Insertar valor expandido </translation>
+        <translation>Insertar valor expandido</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select a variable to insert.</source>
-        <translation>Seleccione una variable para insertar. </translation>
+        <translation>Seleccione una variable para insertar.</translation>
     </message>
     <message>
         <location line="+109"/>
@@ -5874,7 +5874,7 @@ Nota: Esto podría eliminar el archivo local.</translation>
     <message>
         <location line="+11"/>
         <source>Add to Version Control</source>
-        <translation>Agregar al control de versiones </translation>
+        <translation>Agregar al control de versiones</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5923,7 +5923,7 @@ al control de versión (%2)
     <message>
         <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+52"/>
         <source>About Qt Creator</source>
-        <translation>Acerca de Qt Creator </translation>
+        <translation>Acerca de Qt Creator</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5948,7 +5948,7 @@ al control de versión (%2)
     <message>
         <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+141"/>
         <source>Exit Full Screen</source>
-        <translation>Salir de pantalla completa </translation>
+        <translation>Salir de pantalla completa</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5974,7 +5974,7 @@ al control de versión (%2)
     <message>
         <location line="+45"/>
         <source>List of comma separated wildcard filters</source>
-        <translation>Lista de filtros comodín separados por comas </translation>
+        <translation>Lista de filtros comodín separados por comas</translation>
     </message>
     <message>
         <location line="+138"/>
@@ -6025,12 +6025,12 @@ al control de versión (%2)
     <message>
         <location filename="../../../src/plugins/texteditor/codecselector.cpp" line="+71"/>
         <source>Text Encoding</source>
-        <translation>Codificacion de texto </translation>
+        <translation>Codificacion de texto</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>The following encodings are likely to fit:</source>
-        <translation>Es probable que las siguientes codificaciones encajen: </translation>
+        <translation>Es probable que las siguientes codificaciones encajen:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6061,12 +6061,12 @@ al control de versión (%2)
     <message>
         <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+76"/>
         <source>Edit Code Style</source>
-        <translation>Editar estilo de código </translation>
+        <translation>Editar estilo de código</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Code style name:</source>
-        <translation>Nombre de estilo de código: </translation>
+        <translation>Nombre de estilo de código:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6089,22 +6089,22 @@ al control de versión (%2)
     <message>
         <location line="+129"/>
         <source>Copy Code Style</source>
-        <translation>Copiar estilo de código </translation>
+        <translation>Copiar estilo de código</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Code style name:</source>
-        <translation>Nombre de estilo de código: </translation>
+        <translation>Nombre de estilo de código:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 (Copy)</source>
-        <translation>Copiar</translation>
+        <translation>%1 Copiar</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Delete Code Style</source>
-        <translation>Eliminar estilo de código </translation>
+        <translation>Eliminar estilo de código</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6120,7 +6120,7 @@ al control de versión (%2)
         <location line="+12"/>
         <location line="+8"/>
         <source>Import Code Style</source>
-        <translation>Importar estilo de código </translation>
+        <translation>Importar estilo de código</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -6136,7 +6136,7 @@ al control de versión (%2)
     <message>
         <location line="+7"/>
         <source>Export Code Style</source>
-        <translation>Exportar estilo de código </translation>
+        <translation>Exportar estilo de código</translation>
     </message>
     <message>
         <location line="+73"/>
@@ -6154,7 +6154,7 @@ al control de versión (%2)
     <message>
         <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+282"/>
         <source>Not a color scheme file.</source>
-        <translation>No es un archivo de esquema de color. </translation>
+        <translation>No es un archivo de esquema de color.</translation>
     </message>
 </context>
 <context>
@@ -6182,7 +6182,7 @@ al control de versión (%2)
     <message>
         <location filename="../../../src/plugins/texteditor/findinfiles.cpp" line="+77"/>
         <source>Files in File System</source>
-        <translation>Archivos en el sistema de archivos </translation>
+        <translation>Archivos en el sistema de archivos</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6213,7 +6213,7 @@ Filtro: %2
     <message>
         <location line="+4"/>
         <source>Directory to Search</source>
-        <translation>Directorio para buscar </translation>
+        <translation>Directorio para buscar</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -6246,7 +6246,7 @@ Filtro: %2
     <message>
         <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+161"/>
         <source>Unused variable</source>
-        <translation>Variable sin usar </translation>
+        <translation>Variable sin usar</translation>
     </message>
 </context>
 <context>
@@ -6304,7 +6304,7 @@ Filtro: %2
     <message>
         <location line="+7"/>
         <source>Discard</source>
-        <translation>Descartar </translation>
+        <translation>Descartar</translation>
     </message>
 </context>
 <context>
@@ -6312,7 +6312,7 @@ Filtro: %2
     <message>
         <location filename="../../../src/plugins/texteditor/generichighlighter/highlightdefinition.cpp" line="+46"/>
         <source>Element name is empty.</source>
-        <translation>El nombre del elemento está vacío. </translation>
+        <translation>El nombre del elemento está vacío.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -6341,7 +6341,7 @@ Filtro: %2
     <message>
         <location filename="../../../src/plugins/texteditor/generichighlighter/highlightersettingspage.cpp" line="+60"/>
         <source>Generic Highlighter</source>
-        <translation>Resaltador genérico </translation>
+        <translation>Resaltador genérico</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -6351,12 +6351,12 @@ Filtro: %2
     <message>
         <location line="+4"/>
         <source>Autodetect</source>
-        <translation>Detección automática </translation>
+        <translation>Detección automática</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Autodetect Definitions</source>
-        <translation>Detección automática de definiciones </translation>
+        <translation>Detección automática de definiciones</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6366,12 +6366,12 @@ Filtro: %2
     <message>
         <location line="+37"/>
         <source>Error connecting to server.</source>
-        <translation>Error al conectarse al servidor. </translation>
+        <translation>Error al conectarse al servidor.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not possible to retrieve data.</source>
-        <translation>No es posible recuperar datos. </translation>
+        <translation>No es posible recuperar datos.</translation>
     </message>
 </context>
 <context>
@@ -6379,7 +6379,7 @@ Filtro: %2
     <message>
         <location filename="../../../src/plugins/texteditor/generichighlighter/manager.cpp" line="+210"/>
         <source>Downloading Highlighting Definitions</source>
-        <translation>Descargar definiciones de resaltado </translation>
+        <translation>Descargar definiciones de resaltado</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -6389,12 +6389,12 @@ Filtro: %2
     <message>
         <location line="+2"/>
         <source>Error downloading one or more definitions.</source>
-        <translation>Error al descargar una o más definiciones. </translation>
+        <translation>Error al descargar una o más definiciones.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Please check the directory&apos;s access rights.</source>
-        <translation>Verifique los derechos de acceso del directorio. </translation>
+        <translation>Verifique los derechos de acceso del directorio.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6430,7 +6430,7 @@ Filtro: %2
     <message>
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+47"/>
         <source>No outline available</source>
-        <translation>No hay un esquema disponible </translation>
+        <translation>No hay un esquema disponible</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6440,7 +6440,7 @@ Filtro: %2
     <message>
         <location line="+6"/>
         <source>Filter tree</source>
-        <translation>Árbol de filtro </translation>
+        <translation>Árbol de filtro</translation>
     </message>
 </context>
 <context>
@@ -6501,7 +6501,7 @@ Filtro: %2
     <message>
         <location line="+52"/>
         <source>Error reverting snippet.</source>
-        <translation>Error al revertir el fragmento. </translation>
+        <translation>Error al revertir el fragmento.</translation>
     </message>
 </context>
 <context>
@@ -6514,7 +6514,7 @@ Filtro: %2
     <message>
         <location line="+89"/>
         <source>Error While Saving Snippet Collection</source>
-        <translation>Error al guardar colección de fragmentos </translation>
+        <translation>Error al guardar colección de fragmentos</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -6563,7 +6563,7 @@ Filtro: %2
     <message>
         <location line="+2"/>
         <source>Select Encoding</source>
-        <translation>Seleccionar codificación </translation>
+        <translation>Seleccionar codificación</translation>
     </message>
     <message>
         <location line="+6099"/>
@@ -6581,7 +6581,7 @@ Filtro: %2
     <message>
         <location line="-6368"/>
         <source>Print Document</source>
-        <translation>Imprimir documento </translation>
+        <translation>Imprimir documento</translation>
     </message>
     <message>
         <location line="+213"/>
@@ -6619,7 +6619,7 @@ Filtro: %2
     <message>
         <location line="+2"/>
         <source>&amp;Redo</source>
-        <translation>&amp;Rehacer </translation>
+        <translation>&amp;Rehacer</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -6704,7 +6704,7 @@ Filtro: %2
     <message>
         <location line="+2"/>
         <source>Copy Line Down</source>
-        <translation>Copiar línea abajo </translation>
+        <translation>Copiar línea abajo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6714,7 +6714,7 @@ Filtro: %2
     <message>
         <location line="+2"/>
         <source>Join Lines</source>
-        <translation>Unir líneas </translation>
+        <translation>Unir líneas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6734,7 +6734,7 @@ Filtro: %2
     <message>
         <location line="+2"/>
         <source>Insert Line Below Current Line</source>
-        <translation>Insertar línea debajo de la línea actual </translation>
+        <translation>Insertar línea debajo de la línea actual</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6776,12 +6776,12 @@ Filtro: %2
     <message>
         <location line="-4"/>
         <source>Jump to File Under Cursor</source>
-        <translation>Saltar a archivo debajo del cursor </translation>
+        <translation>Saltar a archivo debajo del cursor</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Jump to File Under Cursor in Next Split</source>
-        <translation>Saltar al archivo debajo del cursor en la siguiente división </translation>
+        <translation>Saltar al archivo debajo del cursor en la siguiente división</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6826,7 +6826,7 @@ Filtro: %2
     <message>
         <location line="+8"/>
         <source>Paste from Clipboard History</source>
-        <translation>Pegar desde el historial del portapapeles </translation>
+        <translation>Pegar desde el historial del portapapeles</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6966,7 +6966,7 @@ Filtro: %2
     <message>
         <location line="+3"/>
         <source>Decrease Font Size</source>
-        <translation>Disminuir tamaño de fuente </translation>
+        <translation>Disminuir tamaño de fuente</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6991,7 +6991,7 @@ Filtro: %2
     <message>
         <location line="+23"/>
         <source>Go to Line Start</source>
-        <translation>Ir a inicio de línea </translation>
+        <translation>Ir a inicio de línea</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7001,12 +7001,12 @@ Filtro: %2
     <message>
         <location line="+2"/>
         <source>Go to Next Line</source>
-        <translation>Ir a la línea siguiente </translation>
+        <translation>Ir a la línea siguiente</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Go to Previous Line</source>
-        <translation>Ir a la línea anterior </translation>
+        <translation>Ir a la línea anterior</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7021,12 +7021,12 @@ Filtro: %2
     <message>
         <location line="+2"/>
         <source>Go to Previous Word</source>
-        <translation>Ir a la palabra anterior </translation>
+        <translation>Ir a la palabra anterior</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Go to Next Word</source>
-        <translation>Ir a la siguiente palabra </translation>
+        <translation>Ir a la siguiente palabra</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7041,7 +7041,7 @@ Filtro: %2
     <message>
         <location line="+4"/>
         <source>Go to Line Start with Selection</source>
-        <translation>Ir a inicio de línea con selección </translation>
+        <translation>Ir a inicio de línea con selección</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7051,12 +7051,12 @@ Filtro: %2
     <message>
         <location line="+2"/>
         <source>Go to Next Line with Selection</source>
-        <translation>Ir a la siguiente línea con selección </translation>
+        <translation>Ir a la siguiente línea con selección</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Go to Previous Line with Selection</source>
-        <translation>Ir a la línea anterior con selección </translation>
+        <translation>Ir a la línea anterior con selección</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7071,7 +7071,7 @@ Filtro: %2
     <message>
         <location line="+2"/>
         <source>Go to Previous Word with Selection</source>
-        <translation>Ir a la palabra anterior con selección </translation>
+        <translation>Ir a la palabra anterior con selección</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7094,7 +7094,7 @@ Filtro: %2
     <message>
         <location filename="../../../src/plugins/texteditor/texteditorconstants.h" line="+189"/>
         <source>Text Editor</source>
-        <translation>Editor de texto </translation>
+        <translation>Editor de texto</translation>
     </message>
 </context>
 <context>
@@ -7127,32 +7127,32 @@ Filtro: %2
     <message>
         <location line="+41"/>
         <source>Selected text within the current document.</source>
-        <translation>Texto seleccionado dentro del documento actual. </translation>
+        <translation>Texto seleccionado dentro del documento actual.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Line number of the text cursor position in current document (starts with 1).</source>
-        <translation>Número de línea de la posición del cursor de texto en el documento actual (comienza con 1). </translation>
+        <translation>Número de línea de la posición del cursor de texto en el documento actual (comienza con 1).</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Column number of the text cursor position in current document (starts with 0).</source>
-        <translation>Número de columna de la posición del cursor de texto en el documento actual (comienza con 0). </translation>
+        <translation>Número de columna de la posición del cursor de texto en el documento actual (comienza con 0).</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Number of lines visible in current document.</source>
-        <translation>Número de líneas visibles en el documento actual. </translation>
+        <translation>Número de líneas visibles en el documento actual.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Number of columns visible in current document.</source>
-        <translation>Número de columnas visibles en el documento actual. </translation>
+        <translation>Número de columnas visibles en el documento actual.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Current document&apos;s font size in points.</source>
-        <translation>Tamaño de fuente del documento actual en puntos. </translation>
+        <translation>Tamaño de fuente del documento actual en puntos.</translation>
     </message>
 </context>
 <context>
@@ -7177,7 +7177,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+1"/>
         <source>Links that follow symbol under cursor.</source>
-        <translation>Enlaces que siguen al símbolo debajo del cursor. </translation>
+        <translation>Enlaces que siguen al símbolo debajo del cursor.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7192,12 +7192,12 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+2"/>
         <source>Line Number</source>
-        <translation>Número de línea </translation>
+        <translation>Número de línea</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line numbers located on the left side of the editor.</source>
-        <translation>Números de línea ubicados en el lado izquierdo del editor. </translation>
+        <translation>Números de línea ubicados en el lado izquierdo del editor.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7212,7 +7212,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+2"/>
         <source>Search Scope</source>
-        <translation>Buscar ámbito </translation>
+        <translation>Buscar ámbito</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7222,7 +7222,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+2"/>
         <source>Parentheses</source>
-        <translation>Paréntesis </translation>
+        <translation>Paréntesis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7232,7 +7232,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+2"/>
         <source>Mismatched Parentheses</source>
-        <translation>Paréntesis sin coincidencia </translation>
+        <translation>Paréntesis sin coincidencia</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7242,7 +7242,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+2"/>
         <source>Current Line</source>
-        <translation>Línea actual </translation>
+        <translation>Línea actual</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7252,12 +7252,12 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+4"/>
         <source>Current Line Number</source>
-        <translation>Número de línea actual </translation>
+        <translation>Número de línea actual</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line number located on the left side of the editor where the cursor is placed in.</source>
-        <translation>Número de línea ubicado en el lado izquierdo del editor donde se coloca el cursor. </translation>
+        <translation>Número de línea ubicado en el lado izquierdo del editor donde se coloca el cursor.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7269,7 +7269,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
         <source>Occurrences of the symbol under the cursor.
 (Only the background will be applied.)</source>
         <translation>Repeticiones del símbolo debajo del cursor.
-(Solo se aplicará el fondo).</translation>
+(Solo se aplicará el fondo)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7299,7 +7299,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+0"/>
         <source>Number literal.</source>
-        <translation>Número literal. </translation>
+        <translation>Número literal.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7309,17 +7309,17 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+1"/>
         <source>Character and string literals.</source>
-        <translation>Caracteres y cadenas literales. </translation>
+        <translation>Caracteres y cadenas literales.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Primitive Type</source>
-        <translation>Tipo primitivo </translation>
+        <translation>Tipo primitivo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Name of a primitive data type.</source>
-        <translation>Nombre de un tipo de datos primitivo. </translation>
+        <translation>Nombre de un tipo de datos primitivo.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7329,7 +7329,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+0"/>
         <source>Name of a type.</source>
-        <translation>Nombre de un tipo. </translation>
+        <translation>Nombre de un tipo.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7349,17 +7349,17 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+1"/>
         <source>Class&apos; data members.</source>
-        <translation>Miembros de datos de clase. </translation>
+        <translation>Miembros de datos de clase.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Enumeration</source>
-        <translation>Enumeración </translation>
+        <translation>Enumeración</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Applied to enumeration items.</source>
-        <translation>Aplicado a elementos de enumeración. </translation>
+        <translation>Aplicado a elementos de enumeración.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7374,12 +7374,12 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+3"/>
         <source>Virtual Function</source>
-        <translation>Función virtual </translation>
+        <translation>Función virtual</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Name of function declared as virtual.</source>
-        <translation>Nombre de la función declarada como virtual. </translation>
+        <translation>Nombre de la función declarada como virtual.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7409,7 +7409,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+1"/>
         <source>QML property of a parent item.</source>
-        <translation>Propiedad QML de un elemento principal. </translation>
+        <translation>Propiedad QML de un elemento principal.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7419,27 +7419,27 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+1"/>
         <source>Property of the same QML item.</source>
-        <translation>Propiedad del mismo elemento QML. </translation>
+        <translation>Propiedad del mismo elemento QML.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>QML State Name</source>
-        <translation>Nombre de estado QML </translation>
+        <translation>Nombre de estado QML</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Name of a QML state.</source>
-        <translation>Nombre de un estado QML. </translation>
+        <translation>Nombre de un estado QML.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>QML Type Name</source>
-        <translation>Nombre de tipo QML </translation>
+        <translation>Nombre de tipo QML</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Name of a QML type.</source>
-        <translation>Nombre de un tipo QML. </translation>
+        <translation>Nombre de un tipo QML.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7459,7 +7459,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+1"/>
         <source>QML property defined in another QML file.</source>
-        <translation>Propiedad QML definida en otro archivo QML. </translation>
+        <translation>Propiedad QML definida en otro archivo QML.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7469,27 +7469,27 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+1"/>
         <source>Variables defined inside the JavaScript file.</source>
-        <translation>Variables definidas dentro del archivo JavaScript. </translation>
+        <translation>Variables definidas dentro del archivo JavaScript.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>JavaScript Import</source>
-        <translation>Importación de JavaScript </translation>
+        <translation>Importación de JavaScript</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Name of a JavaScript import inside a QML file.</source>
-        <translation>Nombre de una importación de JavaScript dentro de un archivo QML. </translation>
+        <translation>Nombre de una importación de JavaScript dentro de un archivo QML.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>JavaScript Global Variable</source>
-        <translation>Variable global de JavaScript </translation>
+        <translation>Variable global de JavaScript</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Variables defined outside the script.</source>
-        <translation>Variables definidas fuera del script </translation>
+        <translation>Variables definidas fuera del script.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7499,7 +7499,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+1"/>
         <source>Reserved keywords of the programming language except keywords denoting primitive types.</source>
-        <translation>Palabras clave reservadas del lenguaje de programación, excepto palabras clave que denotan tipos primitivos. </translation>
+        <translation>Palabras clave reservadas del lenguaje de programación, excepto palabras clave que denotan tipos primitivos.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7524,12 +7524,12 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+1"/>
         <source>Label</source>
-        <translation>Etiqueta </translation>
+        <translation>Etiqueta</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Labels for goto statements.</source>
-        <translation>Etiquetas para declaraciones goto. </translation>
+        <translation>Etiquetas para declaraciones goto.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7539,12 +7539,12 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+1"/>
         <source>All style of comments except Doxygen comments.</source>
-        <translation>Todo estilo de comentarios, excepto los comentarios de Doxygen. </translation>
+        <translation>Todo estilo de comentarios, excepto los comentarios de Doxygen.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Doxygen Comment</source>
-        <translation>Comentario de Doxygen </translation>
+        <translation>Comentario de Doxygen</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7554,7 +7554,7 @@ Aplicado al texto, si no hay otras reglas que coincidan.</translation>
     <message>
         <location line="+1"/>
         <source>Doxygen Tag</source>
-        <translation>Etiqueta Doxygen </translation>
+        <translation>Etiqueta Doxygen</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7576,12 +7576,12 @@ No se aplicará a espacios en blanco en comentarios y cadenas.</translation>
     <message>
         <location line="+2"/>
         <source>Disabled Code</source>
-        <translation>Código deshabilitado </translation>
+        <translation>Código deshabilitado</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Code disabled by preprocessor directives.</source>
-        <translation>Código deshabilitado por las directivas del preprocesador. </translation>
+        <translation>Código deshabilitado por las directivas del preprocesador.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7596,7 +7596,7 @@ No se aplicará a espacios en blanco en comentarios y cadenas.</translation>
     <message>
         <location line="+2"/>
         <source>Removed Line</source>
-        <translation>Línea eliminada </translation>
+        <translation>Línea eliminada</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7691,7 +7691,7 @@ No se aplicará a espacios en blanco en comentarios y cadenas.</translation>
     <message>
         <location line="+1"/>
         <source>Applied to lines describing changes in VCS log.</source>
-        <translation>Aplicado a líneas que describen cambios en el registro de VCS. </translation>
+        <translation>Aplicado a líneas que describen cambios en el registro de VCS.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7701,7 +7701,7 @@ No se aplicará a espacios en blanco en comentarios y cadenas.</translation>
     <message>
         <location line="+1"/>
         <source>Underline color of error diagnostics.</source>
-        <translation>Subrayar color de diagnóstico de error. </translation>
+        <translation>Subrayar color de diagnóstico de error.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7711,7 +7711,7 @@ No se aplicará a espacios en blanco en comentarios y cadenas.</translation>
     <message>
         <location line="+1"/>
         <source>Underline color of the contexts of error diagnostics.</source>
-        <translation>Subrayar el color de los contextos de diagnóstico de error. </translation>
+        <translation>Subrayar el color de los contextos de diagnóstico de error.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7726,7 +7726,7 @@ No se aplicará a espacios en blanco en comentarios y cadenas.</translation>
     <message>
         <location line="+5"/>
         <source>Warning Context</source>
-        <translation>Contexto de advertencia </translation>
+        <translation>Contexto de advertencia</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7754,7 +7754,7 @@ No se aplicará a espacios en blanco en comentarios y cadenas.</translation>
     <message>
         <location line="+6"/>
         <source>Missing argument for -override_read_timeout</source>
-        <translation>Falta el argumento para -override_read_timeout </translation>
+        <translation>Falta el argumento para -override_read_timeout</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -7764,7 +7764,7 @@ No se aplicará a espacios en blanco en comentarios y cadenas.</translation>
     <message>
         <location line="+6"/>
         <source>Missing argument for -override_read_stall_timeout</source>
-        <translation>Falta el argumento para -override_read_stall_timeout </translation>
+        <translation>Falta el argumento para -override_read_stall_timeout</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -7775,7 +7775,7 @@ No se aplicará a espacios en blanco en comentarios y cadenas.</translation>
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
-Cierre todos los programas que estén viendo / editando los datos de la aplicación IDM de OpenMV y luego reinicie OpenMV IDE.</translation>
+Cierre todos los programas que estén viendo / editando los datos de la aplicación IDM de OpenMV y luego reinicie OpenMV IDE!</translation>
     </message>
     <message>
         <location line="-2001"/>
@@ -7864,20 +7864,20 @@ while(True):
     <message>
         <location line="-4801"/>
         <source>Machine Vision</source>
-        <translation>Visión de máquina </translation>
+        <translation>Visión de máquina</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4828"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
-        <translation>Editor de umbrales </translation>
+        <translation>Editor de umbrales</translation>
     </message>
     <message>
         <location line="-4899"/>
         <location line="+4977"/>
         <source>Keypoints Editor</source>
-        <translation>Editor de puntos clave </translation>
+        <translation>Editor de puntos clave</translation>
     </message>
     <message>
         <location line="-4970"/>
@@ -7887,27 +7887,27 @@ while(True):
         <location line="+10"/>
         <location line="+20"/>
         <source>AprilTag Generator</source>
-        <translation>Generador de AprilTag </translation>
+        <translation>Generador de AprilTag</translation>
     </message>
     <message>
         <location line="-5266"/>
         <source>TAG16H5 Family (30 Tags)</source>
-        <translation>Familia TAG16H5 (30 etiquetas) </translation>
+        <translation>Familia TAG16H5 (30 etiquetas)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TAG25H7 Family (242 Tags)</source>
-        <translation>Familia TAG25H7 (242 etiquetas) </translation>
+        <translation>Familia TAG25H7 (242 etiquetas)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TAG25H9 Family (35 Tags)</source>
-        <translation>Familia TAG25H9 (35 etiquetas) </translation>
+        <translation>Familia TAG25H9 (35 etiquetas)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TAG36H10 Family (2320 Tags)</source>
-        <translation>Familia TAG36H10 (2320 Tags) </translation>
+        <translation>Familia TAG36H10 (2320 Tags)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7917,7 +7917,7 @@ while(True):
     <message>
         <location line="+5"/>
         <source>ARKTOOLKIT Family (512 Tags)</source>
-        <translation>Familia ARKTOOLKIT (512 etiquetas) </translation>
+        <translation>Familia ARKTOOLKIT (512 etiquetas)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7938,12 +7938,12 @@ while(True):
     <message>
         <location line="-715"/>
         <source>DataMatrix Generator</source>
-        <translation>Generador DataMatrix </translation>
+        <translation>Generador DataMatrix</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Barcode Generator</source>
-        <translation>Generador de código de barras </translation>
+        <translation>Generador de código de barras</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -7968,12 +7968,12 @@ while(True):
     <message>
         <location line="+5"/>
         <source>OpenMV Docs</source>
-        <translation>Documentos de OpenMV </translation>
+        <translation>Documentos de OpenMV</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>OpenMV Forums</source>
-        <translation>Foros de OpenMV </translation>
+        <translation>Foros de OpenMV</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -7989,7 +7989,7 @@ while(True):
         <location line="+16"/>
         <location line="+5"/>
         <source>About OpenMV IDE</source>
-        <translation>Acerca de OpenMV IDE </translation>
+        <translation>Acerca de OpenMV IDE</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -8125,7 +8125,7 @@ while(True):
     <message>
         <location line="+1"/>
         <source>Zoom to fit</source>
-        <translation>Zoom para encajar </translation>
+        <translation>Zoom para encajar</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8178,27 +8178,27 @@ while(True):
     <message>
         <location line="+56"/>
         <source>Histogram</source>
-        <translation>Histograma </translation>
+        <translation>Histograma</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>RGB Color Space</source>
-        <translation>Espacio de color RGB </translation>
+        <translation>Espacio de color RGB</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Grayscale Color Space</source>
-        <translation>Espacio de color en escala de grises </translation>
+        <translation>Espacio de color en escala de grises</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>LAB Color Space</source>
-        <translation>Espacio de color LAB </translation>
+        <translation>Espacio de color LAB</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>YUV Color Space</source>
-        <translation>Espacio de color YUV </translation>
+        <translation>Espacio de color YUV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -8209,7 +8209,7 @@ while(True):
         <location line="+3"/>
         <location line="+32"/>
         <source>Res - No Image</source>
-        <translation>Res - Sin imagen </translation>
+        <translation>Res - Sin imagen</translation>
     </message>
     <message>
         <location line="-9"/>
@@ -8257,7 +8257,7 @@ while(True):
     <message>
         <location line="-2765"/>
         <source>Camera firmware version</source>
-        <translation>Versión de firmware de la cámara </translation>
+        <translation>Versión de firmware de la cámara</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8268,7 +8268,7 @@ while(True):
     <message>
         <location line="-2760"/>
         <source>Camera serial port</source>
-        <translation>Puerto serie de la cámara </translation>
+        <translation>Puerto serie de la cámara</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8281,7 +8281,7 @@ while(True):
     <message>
         <location line="-3492"/>
         <source>Drive associated with port</source>
-        <translation>Unidad asociada con el puerto </translation>
+        <translation>Unidad asociada con el puerto</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8292,7 +8292,7 @@ while(True):
     <message>
         <location line="-2750"/>
         <source>May be different from camera FPS</source>
-        <translation>Puede ser diferente de la cámara FPS </translation>
+        <translation>Puede ser diferente de la cámara FPS</translation>
     </message>
     <message>
         <location line="+148"/>
@@ -8313,7 +8313,7 @@ while(True):
     <message>
         <location line="+137"/>
         <source>WiFi Programming Disabled!</source>
-        <translation>¡Programación WiFi deshabilitada! </translation>
+        <translation>¡Programación WiFi deshabilitada!</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8358,7 +8358,27 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>¡Gracias por usar OpenMV Cam y OpenMV IDE!\n\nEl LED a bordo de su OpenMV Cam parpadea con diferentes colores para indicar su estado:\n\nVerde parpadeante:\n\nEl gestor de arranque a bordo de su OpenMV Cam se está ejecutando. El gestor de arranque integrado funciona durante unos segundos cuando su OpenMV Cam se alimenta a través de USB para permitir que OpenMV IDE reprograme su OpenMV Cam.\n\nAzul intermitente:\n\nSu OpenMV Cam está ejecutando el script main.py predeterminado a bordo.\n\nSi tiene una tarjeta SD instalada o sobrescribió el script main.py en su OpenMV Cam, ejecutará el código que cargó en su lugar.\n\nSi el LED parpadea en azul pero OpenMV IDE no se puede conectar a su OpenMV Cam, asegúrese de conectar su OpenMV Cam a su PC con un cable USB que suministre datos y energía.\n\nBlanco parpadeante:\n\nEl firmware de su OpenMV Cam está entrando en pánico debido a una falla de hardware. Compruebe que el módulo de cámara de su cámara OpenMV Cam esté instalado de forma segura.\n\n</translation>
+        <translation>¡Gracias por usar OpenMV Cam y OpenMV IDE!
+
+El LED a bordo de su OpenMV Cam parpadea con diferentes colores para indicar su estado:
+
+Verde parpadeante:
+
+El gestor de arranque a bordo de su OpenMV Cam se está ejecutando. El gestor de arranque integrado funciona durante unos segundos cuando su OpenMV Cam se alimenta a través de USB para permitir que OpenMV IDE reprograme su OpenMV Cam.
+
+Azul intermitente:
+
+Su OpenMV Cam está ejecutando el script main.py predeterminado a bordo.
+
+Si tiene una tarjeta SD instalada o sobrescribió el script main.py en su OpenMV Cam, ejecutará el código que cargó en su lugar.
+
+Si el LED parpadea en azul pero OpenMV IDE no se puede conectar a su OpenMV Cam, asegúrese de conectar su OpenMV Cam a su PC con un cable USB que suministre datos y energía.
+
+Blanco parpadeante:
+
+El firmware de su OpenMV Cam está entrando en pánico debido a una falla de hardware. Compruebe que el módulo de cámara de su cámara OpenMV Cam esté instalado de forma segura.
+
+</translation>
     </message>
     <message>
         <location line="+98"/>
@@ -8403,7 +8423,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <location line="+106"/>
         <location line="+417"/>
         <source>Cancel</source>
-        <translation>Cancelar </translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location line="-4125"/>
@@ -8431,7 +8451,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <location line="+102"/>
         <location line="+106"/>
         <source>Error: %L1!</source>
-        <translation>Error: %L1</translation>
+        <translation>Error: %L1!</translation>
     </message>
     <message>
         <location line="-3729"/>
@@ -8463,7 +8483,7 @@ sudo adduser%L1 dialout
     <message>
         <location line="+5"/>
         <source>Missing arguments for -open_serial_terminal</source>
-        <translation>Faltan argumentos para -open_serial_terminal </translation>
+        <translation>Faltan argumentos para -open_serial_terminal</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -8478,12 +8498,12 @@ sudo adduser%L1 dialout
     <message>
         <location line="+5"/>
         <source>-open_udp_client_terminal requires two arguments &lt;host_name:port&gt;</source>
-        <translation>-open_udp_client_terminal requiere dos argumentos &lt;host_name: port&gt; </translation>
+        <translation>-open_udp_client_terminal requiere dos argumentos &lt;host_name: port&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Missing arguments for -open_udp_client_terminal</source>
-        <translation>Faltan argumentos para -open_udp_client_terminal </translation>
+        <translation>Faltan argumentos para -open_udp_client_terminal</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -8499,7 +8519,7 @@ sudo adduser%L1 dialout
     <message>
         <location line="+5"/>
         <source>Missing arguments for -open_udp_server_terminal</source>
-        <translation>Faltan argumentos para -open_udp_server_terminal </translation>
+        <translation>Faltan argumentos para -open_udp_server_terminal</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -8509,17 +8529,17 @@ sudo adduser%L1 dialout
     <message>
         <location line="+57"/>
         <source>Invalid port argument (%1) for -open_tcp_client_terminal</source>
-        <translation>Argumento de puerto no válido (%1) para -open_tcp_client_terminal </translation>
+        <translation>Argumento de puerto no válido (%1) para -open_tcp_client_terminal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>-open_tcp_client_terminal requires two arguments &lt;host_name:port&gt;</source>
-        <translation>-open_tcp_client_terminal requiere dos argumentos &lt;host_name: port&gt; </translation>
+        <translation>-open_tcp_client_terminal requiere dos argumentos &lt;host_name: port&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Missing arguments for -open_tcp_client_terminal</source>
-        <translation>Faltan argumentos para -open_tcp_client_terminal </translation>
+        <translation>Faltan argumentos para -open_tcp_client_terminal</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -8535,14 +8555,14 @@ sudo adduser%L1 dialout
     <message>
         <location line="+5"/>
         <source>Missing arguments for -open_tcp_server_terminal</source>
-        <translation>Faltan argumentos para -open_tcp_server_terminal </translation>
+        <translation>Faltan argumentos para -open_tcp_server_terminal</translation>
     </message>
     <message>
         <location line="+28"/>
         <location line="+10"/>
         <location line="+10"/>
         <source>Unregistered OpenMV Cam Detected</source>
-        <translation>OpenMV Cam no registrada detectada </translation>
+        <translation>OpenMV Cam no registrada detectada</translation>
     </message>
     <message>
         <location line="-19"/>
@@ -8638,7 +8658,7 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+73"/>
         <source>New OpenMV IDE reources are available (e.g. examples, firmware, documentation, etc.).</source>
-        <translation>Se encuentran disponibles nuevos recursos de IDE de OpenMV (por ejemplo, ejemplos, firmware, documentación, etc.). </translation>
+        <translation>Se encuentran disponibles nuevos recursos de IDE de OpenMV (por ejemplo, ejemplos, firmware, documentación, etc.).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8736,7 +8756,7 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="-1858"/>
         <location line="+2040"/>
         <source>Please select a serial port</source>
-        <translation>Seleccione un puerto serie </translation>
+        <translation>Seleccione un puerto serie</translation>
     </message>
     <message>
         <location line="-2009"/>
@@ -8829,7 +8849,7 @@ Continue?</source>
         <location line="+45"/>
         <location line="+57"/>
         <source>Timeout Error!</source>
-        <translation>¡Error de tiempo de espera! </translation>
+        <translation>¡Error de tiempo de espera!</translation>
     </message>
     <message>
         <location line="-39"/>
@@ -8848,7 +8868,7 @@ Haga clic en el botón Aceptar después de que su OpenMV Cam haya enumerado y te
     <message>
         <location line="+48"/>
         <source>The firmware file is empty!</source>
-        <translation>¡El archivo de firmware está vacío! </translation>
+        <translation>¡El archivo de firmware está vacío!</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -8903,7 +8923,7 @@ Haga clic en el botón Aceptar después de que el gestor de arranque DFU de su O
     <message>
         <location line="+6"/>
         <source>DFU firmware update failed!</source>
-        <translation>¡Error en la actualización del firmware DFU! </translation>
+        <translation>¡Error en la actualización del firmware DFU!</translation>
     </message>
     <message>
         <source>PyDFU requires the following libraries to be installed:
@@ -9071,7 +9091,9 @@ En particular, verifique los ejemplos de seguimiento de color.</translation>
         <source>Try doing:
 
 </source>
-        <translation>Trata de hacerlo:\n\n</translation>
+        <translation>Trata de hacerlo:
+
+</translation>
     </message>
     <message>
         <location line="-2054"/>
@@ -9084,28 +9106,36 @@ En particular, verifique los ejemplos de seguimiento de color.</translation>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
-        <translation>\n\nPresione cancelar para saltar a la reprogramación de DFU.</translation>
+        <translation>
+
+Presione cancelar para saltar a la reprogramación de DFU.</translation>
     </message>
     <message>
         <location line="+311"/>
         <source>Onboard Data Flash Erased!
 
 </source>
-        <translation>Flash de datos a bordo borrado!\n\n</translation>
+        <translation>Flash de datos a bordo borrado!
+
+</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Firmware Upgrade complete!
 
 </source>
-        <translation>Actualización de firmware completada!\n\n</translation>
+        <translation>Actualización de firmware completada!
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
-        <translation>Su OpenMV Cam comenzará a ejecutar su autocomprobación incorporada si no tiene una tarjeta SD conectada ... esto puede llevar un tiempo.\n\n</translation>
+        <translation>Su OpenMV Cam comenzará a ejecutar su autocomprobación incorporada si no tiene una tarjeta SD conectada ... esto puede llevar un tiempo.
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9118,7 +9148,9 @@ Hit cancel to skip to DFU reprogramming.</source>
         <source>PyDFU requires the following libraries to be installed:
 
 </source>
-        <translation>PyDFU requiere la instalación de las siguientes bibliotecas:\n\n</translation>
+        <translation>PyDFU requiere la instalación de las siguientes bibliotecas:
+
+</translation>
     </message>
     <message>
         <source>Syncing...</source>
@@ -9158,7 +9190,7 @@ Hit cancel to skip to DFU reprogramming.</source>
         <location line="-1183"/>
         <location line="+1532"/>
         <source>Failed to save the image file for an unknown reason!</source>
-        <translation>Error al guardar el archivo de imagen por un motivo desconocido.</translation>
+        <translation>Error al guardar el archivo de imagen por un motivo desconocido!</translation>
     </message>
     <message>
         <location line="-1515"/>
@@ -9166,7 +9198,7 @@ Hit cancel to skip to DFU reprogramming.</source>
         <location line="+15"/>
         <location line="+11"/>
         <source>Save Template</source>
-        <translation>Guardar plantilla </translation>
+        <translation>Guardar plantilla</translation>
     </message>
     <message>
         <location line="-36"/>
@@ -9191,7 +9223,7 @@ Hit cancel to skip to DFU reprogramming.</source>
         <location line="+15"/>
         <location line="+11"/>
         <source>Save Descriptor</source>
-        <translation>Guardar descriptor </translation>
+        <translation>Guardar descriptor</translation>
     </message>
     <message>
         <location line="-36"/>
@@ -9250,7 +9282,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+24"/>
         <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
-        <translation>El firmware de su OpenMV Cam está actualizado. </translation>
+        <translation>El firmware de su OpenMV Cam está actualizado.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9260,7 +9292,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+31"/>
         <source>Cannot open firmware.txt!</source>
-        <translation>¡No se puede abrir firmware.txt! </translation>
+        <translation>¡No se puede abrir firmware.txt!</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -9347,12 +9379,12 @@ Hit cancel to skip to DFU reprogramming.</source>
         <location line="+212"/>
         <location line="+7"/>
         <source>Invalid string: &quot;%L1&quot;!</source>
-        <translation>Cadena no válida: &quot;%L1&quot;</translation>
+        <translation>Cadena no válida: &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="-336"/>
         <source>Connect to a UDP server as a client or start a UDP Server?</source>
-        <translation>¿Conectarse a un servidor UDP como cliente o iniciar un servidor UDP? </translation>
+        <translation>¿Conectarse a un servidor UDP como cliente o iniciar un servidor UDP?</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9386,7 +9418,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="-125"/>
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
-        <translation>¿Conectarse a un servidor TCP como cliente o iniciar un servidor TCP? </translation>
+        <translation>¿Conectarse a un servidor TCP como cliente o iniciar un servidor TCP?</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -9427,7 +9459,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="-18"/>
         <source>No image loaded!</source>
-        <translation>¡No hay imagen cargada! </translation>
+        <translation>¡No hay imagen cargada!</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9447,24 +9479,24 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+1"/>
         <source> Merge Files </source>
-        <translation> Combinar archivos  </translation>
+        <translation> Combinar archivos </translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+65"/>
         <location line="+7"/>
         <source>Edit Keypoints</source>
-        <translation>Editar puntos clave </translation>
+        <translation>Editar puntos clave</translation>
     </message>
     <message>
         <location line="-20"/>
         <source>Save Edited Keypoints</source>
-        <translation>Guardar puntos clave editados </translation>
+        <translation>Guardar puntos clave editados</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Failed to save the edited keypoints for an unknown reason!</source>
-        <translation>Error al guardar los puntos clave editados por un motivo desconocido. </translation>
+        <translation>Error al guardar los puntos clave editados por un motivo desconocido!</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -9474,7 +9506,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+7"/>
         <source>Failed to load the keypoints file for an unknown reason!</source>
-        <translation>Error al cargar el archivo de puntos clave por un motivo desconocido. </translation>
+        <translation>Error al cargar el archivo de puntos clave por un motivo desconocido!</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -9617,7 +9649,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     <message>
         <location line="+1"/>
         <source>Can&apos;t open the new file!</source>
-        <translation>¡No se puede abrir el nuevo archivo! </translation>
+        <translation>¡No se puede abrir el nuevo archivo!</translation>
     </message>
     <message>
         <location line="+190"/>
@@ -9646,7 +9678,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     <message>
         <location line="+5447"/>
         <source>Copy Failed!</source>
-        <translation>Copia fallida</translation>
+        <translation>Copia fallida!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+230"/>
@@ -9668,14 +9700,14 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <location line="+63"/>
         <location line="+569"/>
         <source>Cancel</source>
-        <translation>Cancelar </translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location line="-621"/>
         <location line="+20"/>
         <location line="+11"/>
         <source>Reading File</source>
-        <translation>Leyendo archivo </translation>
+        <translation>Leyendo archivo</translation>
     </message>
     <message>
         <location line="-30"/>
@@ -9730,7 +9762,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <location line="+12"/>
         <location line="+11"/>
         <source>Transcoder</source>
-        <translation>Transcodificador </translation>
+        <translation>Transcodificador</translation>
     </message>
     <message>
         <location line="-59"/>
@@ -9741,7 +9773,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <location line="+7"/>
         <location line="+15"/>
         <source>Seek failed!</source>
-        <translation>¡Búsqueda fallida! </translation>
+        <translation>¡Búsqueda fallida!</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -9753,24 +9785,24 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <location line="+19"/>
         <location line="+11"/>
         <source>Error: %L1!</source>
-        <translation>Error: %L1</translation>
+        <translation>Error: %L1!</translation>
     </message>
     <message>
         <location line="-23"/>
         <source>Unsupported OpenMV ImageWriter File version!</source>
-        <translation>Versión de archivo OpenMV ImageWriter no compatible </translation>
+        <translation>Versión de archivo OpenMV ImageWriter no compatible!</translation>
     </message>
     <message>
         <location line="+96"/>
         <location line="+81"/>
         <source>Get Input Formats</source>
-        <translation>Obtener formatos de entrada </translation>
+        <translation>Obtener formatos de entrada</translation>
     </message>
     <message>
         <location line="-81"/>
         <location line="+81"/>
         <source>Query failed!</source>
-        <translation>¡Consulta fallida! </translation>
+        <translation>¡Consulta fallida!</translation>
     </message>
     <message>
         <location line="+182"/>
@@ -9782,12 +9814,12 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <location line="+78"/>
         <location line="+12"/>
         <source>Convert Video</source>
-        <translation>Convertir vídeo </translation>
+        <translation>Convertir vídeo</translation>
     </message>
     <message>
         <location line="-356"/>
         <source>Failed to launch ffmpeg!</source>
-        <translation>¡No se ha podido ejecutar ffmpeg! </translation>
+        <translation>¡No se ha podido ejecutar ffmpeg!</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -9877,7 +9909,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-67"/>
         <location line="+89"/>
         <source>Unable to overwrite output file!</source>
-        <translation>¡No se puede sobrescribir el archivo de salida! </translation>
+        <translation>¡No se puede sobrescribir el archivo de salida!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-46"/>
@@ -9902,7 +9934,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <location line="-6"/>
         <location line="+7"/>
         <source>Error: %L1!</source>
-        <translation>Error: %L1</translation>
+        <translation>Error: %L1!</translation>
     </message>
     <message>
         <location line="+218"/>
@@ -9953,7 +9985,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <location line="+12"/>
         <location line="+11"/>
         <source>Error: %L1!</source>
-        <translation>Error: %L1</translation>
+        <translation>Error: %L1!</translation>
     </message>
     <message>
         <location line="+212"/>
@@ -10016,7 +10048,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="+1"/>
         <source>Zoom to fit</source>
-        <translation>Zoom para encajar </translation>
+        <translation>Zoom para encajar</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -10037,32 +10069,32 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="+12"/>
         <source>Failed to save the image file for an unknown reason!</source>
-        <translation>Error al guardar el archivo de imagen por un motivo desconocido.</translation>
+        <translation>Error al guardar el archivo de imagen por un motivo desconocido!</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Histogram</source>
-        <translation>Histograma </translation>
+        <translation>Histograma</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>RGB Color Space</source>
-        <translation>Espacio de color RGB </translation>
+        <translation>Espacio de color RGB</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Grayscale Color Space</source>
-        <translation>Espacio de color en escala de grises </translation>
+        <translation>Espacio de color en escala de grises</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>LAB Color Space</source>
-        <translation>Espacio de color LAB </translation>
+        <translation>Espacio de color LAB</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>YUV Color Space</source>
-        <translation>Espacio de color YUV </translation>
+        <translation>Espacio de color YUV</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10073,7 +10105,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <location line="+3"/>
         <location line="+34"/>
         <source>Res - No Image</source>
-        <translation>Res - Sin imagen </translation>
+        <translation>Res - Sin imagen</translation>
     </message>
     <message>
         <location line="-9"/>
@@ -10088,7 +10120,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="+16"/>
         <source>Serial Terminal</source>
-        <translation>Terminal serie </translation>
+        <translation>Terminal serie</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10118,7 +10150,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="+5"/>
         <source>Soft reset</source>
-        <translation>Reinicio suave </translation>
+        <translation>Reinicio suave</translation>
     </message>
     <message>
         <source>Ctrl+E</source>
@@ -10134,7 +10166,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+179"/>
         <source>Keypoints Editor</source>
-        <translation>Editor de puntos clave </translation>
+        <translation>Editor de puntos clave</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -10162,7 +10194,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="+26"/>
         <source>Source Image</source>
-        <translation>Imagen de origen </translation>
+        <translation>Imagen de origen</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -10207,7 +10239,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="+5"/>
         <source>Grayscale Threshold</source>
-        <translation>Umbral de escala de grises </translation>
+        <translation>Umbral de escala de grises</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -10242,7 +10274,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="+5"/>
         <source>LAB Threshold</source>
-        <translation>Umbral de LAB </translation>
+        <translation>Umbral de LAB</translation>
     </message>
     <message>
         <location line="+15"/>

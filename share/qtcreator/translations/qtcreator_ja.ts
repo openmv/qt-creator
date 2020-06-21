@@ -426,7 +426,7 @@
 &lt;ul&gt;&lt;li&gt;無視する：何もしない&lt;/li&gt;
 &lt;li&gt;ペインに表示：汎用出力ペインに表示&lt;/li&gt;
 &lt;li&gt;選択内容を置換：現在の文書の現在の選択内容をその文書に置き換えます。&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt; </translation>
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location/>
@@ -581,7 +581,7 @@
     <message>
         <location/>
         <source>Select all, if possible: </source>
-        <translation>可能であれば、すべてを選択します:</translation>
+        <translation>可能であれば、すべてを選択します: </translation>
     </message>
 </context>
 <context>
@@ -859,7 +859,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location/>
         <source> min</source>
-        <translation>分</translation>
+        <translation> 分</translation>
     </message>
 </context>
 <context>
@@ -1413,7 +1413,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location/>
         <source>Default encoding: </source>
-        <translation>デフォルトのエンコーディング：</translation>
+        <translation>デフォルトのエンコーディング： </translation>
     </message>
     <message>
         <location/>
@@ -1692,7 +1692,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location/>
         <source>Size:</source>
-        <translation>サイズ: </translation>
+        <translation>サイズ:</translation>
     </message>
     <message>
         <location/>
@@ -1848,7 +1848,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location/>
         <source>Group: </source>
-        <translation>グループ：</translation>
+        <translation>グループ： </translation>
     </message>
 </context>
 <context>
@@ -2616,8 +2616,7 @@ Plugin is disabled by command line argument.</source>
 will also enable the following plugins:
 
 %2</source>
-        <translation>
-%1
+        <translation>%1
 を有効にすると、次のプラグインも有効になります：
 
 %2</translation>
@@ -2634,8 +2633,7 @@ will also enable the following plugins:
 will also disable the following plugins:
 
 %2</source>
-        <translation>
-%1
+        <translation>%1
 を無効にすると、次のプラグインも無効になります：
 
 %2</translation>
@@ -2728,13 +2726,14 @@ will also disable the following plugins:
         <source>Building helper &quot;%1&quot; in %2
 </source>
         <translation>ヘルパー&quot;%1&quot;を%2
-に作成しています</translation>
+に作成しています
+</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Running %1 %2...
 </source>
-        <translation>%1%2を実行中...
+        <translation>%1 %2を実行中...
 </translation>
     </message>
     <message>
@@ -2742,7 +2741,7 @@ will also disable the following plugins:
         <location line="+12"/>
         <source>Running %1 %2 ...
 </source>
-        <translation>%1%2を実行中...
+        <translation>%1 %2を実行中...
 </translation>
     </message>
     <message>
@@ -3463,7 +3462,7 @@ will also disable the following plugins:
     <message>
         <location line="+2"/>
         <source>Rename...</source>
-        <translation>名前を変更する</translation>
+        <translation>名前を変更する...</translation>
     </message>
 </context>
 <context>
@@ -3800,7 +3799,7 @@ will also disable the following plugins:
     <message>
         <location line="+206"/>
         <source>New Category</source>
-        <translation>新しいカテゴリ:</translation>
+        <translation>新しいカテゴリ</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -4024,7 +4023,7 @@ Do you want to check them out now?</source>
     <message>
         <location line="+1"/>
         <source>Reset to default.</source>
-        <translation>デフォルトにリセット</translation>
+        <translation>デフォルトにリセット.</translation>
     </message>
     <message>
         <location line="+106"/>
@@ -4399,7 +4398,7 @@ Continue?</source>
     <message>
         <location line="+1"/>
         <source>Save %1 &amp;As...</source>
-        <translation>%1を保存する</translation>
+        <translation>%1を保存する...</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4943,7 +4942,7 @@ Continue?</source>
     <message>
         <location line="+11"/>
         <source>New Search</source>
-        <translation>新規の検索:</translation>
+        <translation>新規の検索</translation>
     </message>
     <message>
         <location line="+280"/>
@@ -6324,7 +6323,7 @@ Filter: %2
         <location filename="../../../src/plugins/texteditor/generichighlighter/highlighter.cpp" line="+248"/>
         <location filename="../../../src/plugins/texteditor/generichighlighter/manager.cpp" line="+227"/>
         <source>Generic highlighter error: </source>
-        <translation>一般的なハイライターエラー：</translation>
+        <translation>一般的なハイライターエラー： </translation>
     </message>
     <message>
         <location line="+229"/>
@@ -7755,7 +7754,7 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+21"/>
         <source>Invalid argument (%1) for -override_read_stall_timeout</source>
-        <translation>-override_read_stall_timeoutのアーギュメントが無効です（%1）。</translation>
+        <translation>-override_read_stall_timeoutのアーギュメントが無効です（%1）</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7771,7 +7770,7 @@ Will not be applied to whitespace in comments and strings.</source>
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
- OpenMV IDEのアプリケーションデータを表示/編集しているプログラムを閉じて、OpenMV IDEを再起動してください！</translation>
+OpenMV IDEのアプリケーションデータを表示/編集しているプログラムを閉じて、OpenMV IDEを再起動してください！</translation>
     </message>
     <message>
         <location line="-2001"/>
@@ -8354,7 +8353,21 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>OpenMV CamとOpenMV IDEをご利用いただきありがとうございます！\n\nOpenMV CamのオンボードLEDはさまざまな色で点滅し、その状態を示します。\n\n緑色に点滅：\n\nOpenMV Camのオンボードブートローダーが実行されています。OpenMV CamにUSB経由で電源を入れると、OpenMV IDEがOpenMV Camを再プログラムできるようにするため、オンボードブートローダーが数秒間実行されます。\n\n青色に点滅：\n\nOpenMV Camは、デフォルトのmain.pyスクリプトをオンボードで実行しています。\n\nSDカードがインストールされているか、OpenMV Camのmain.pyスクリプトを上書きした場合、代わりにロードしたコードが実行されます。\n\nLEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できない場合は、データと電力の両方を供給するUSB​​ケーブルでOpenMV CamをPCに接続していることを確認してください。\n\n白く点滅：\n\nOpenMV Camのファームウェアは、ハードウェア障害のためにパニック状態です。OpenMV Camのカメラモジュールがしっかりとインストールされていることを確認してください。\n\n</translation>
+        <translation>OpenMV CamとOpenMV IDEをご利用いただきありがとうございます！
+
+OpenMV CamのオンボードLEDはさまざまな色で点滅し、その状態を示します。\n\n緑色に点滅：
+
+OpenMV Camのオンボードブートローダーが実行されています。OpenMV CamにUSB経由で電源を入れると、OpenMV IDEがOpenMV Camを再プログラムできるようにするため、オンボードブートローダーが数秒間実行されます。
+
+n青色に点滅：\n\nOpenMV Camは、デフォルトのmain.pyスクリプトをオンボードで実行しています。
+
+SDカードがインストールされているか、OpenMV Camのmain.pyスクリプトを上書きした場合、代わりにロードしたコードが実行されます。
+
+LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できない場合は、データと電力の両方を供給するUSB​​ケーブルでOpenMV CamをPCに接続していることを確認してください。
+
+白く点滅：\n\nOpenMV Camのファームウェアは、ハードウェア障害のためにパニック状態です。OpenMV Camのカメラモジュールがしっかりとインストールされていることを確認してください。
+
+</translation>
     </message>
     <message>
         <location line="+98"/>
@@ -8584,7 +8597,7 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="-131"/>
         <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
-        <translation>ボードキーを入力してOpenMV Camを登録してください。&lt;br/&gt;&lt;br/&gt;ボードキーをお持ちでない場合は、ここで購入することができますOpenMV&lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;ここに&lt;/a&gt;</translation>
+        <translation>ボードキーを入力してOpenMV Camを登録してください。&lt;br/&gt;&lt;br/&gt;ボードキーをお持ちでない場合は、ここで購入することができますOpenMV&lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;ここに&lt;/a&gt;。</translation>
     </message>
     <message>
         <location line="+47"/>
@@ -8934,7 +8947,7 @@ HomeBrew:
     <message>
         <location line="+146"/>
         <source>Timeout error while learning MTU!</source>
-        <translation>MTUの学習中にタイムアウトエラーが発生しました。</translation>
+        <translation>MTUの学習中にタイムアウトエラーが発生しました！</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -8977,7 +8990,7 @@ HomeBrew:
     <message>
         <location line="-374"/>
         <source> - [ out of date - click here to updgrade ]</source>
-        <translation>-  [アウトオブデート - ここをクリックして更新する]</translation>
+        <translation> - [アウトオブデート - ここをクリックして更新する]</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -8987,7 +9000,7 @@ HomeBrew:
     <message>
         <location line="+10"/>
         <source> - [ latest ]</source>
-        <translation>-  [最新]</translation>
+        <translation> - [最新]</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -9067,7 +9080,9 @@ In particular, checkout the Color-Tracking examples.</source>
         <source>Try doing:
 
 </source>
-        <translation>やってみてください：\n\n</translation>
+        <translation>やってみてください：
+
+</translation>
     </message>
     <message>
         <location line="-2054"/>
@@ -9080,28 +9095,36 @@ In particular, checkout the Color-Tracking examples.</source>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
-        <translation>\n\nキャンセルを押して、DFU再プログラミングにスキップします。</translation>
+        <translation>
+
+キャンセルを押して、DFU再プログラミングにスキップします。</translation>
     </message>
     <message>
         <location line="+311"/>
         <source>Onboard Data Flash Erased!
 
 </source>
-        <translation>オンボードデータフラッシュが消去されました！\n\n</translation>
+        <translation>オンボードデータフラッシュが消去されました！
+
+</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Firmware Upgrade complete!
 
 </source>
-        <translation>ファームウェアのアップグレードが完了しました！\n\n</translation>
+        <translation>ファームウェアのアップグレードが完了しました！
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
-        <translation>OpenMV Camは、SDカードが接続されていない場合、組み込みのセルフテストの実行を開始します。これにはしばらく時間がかかる場合があります。\n\n</translation>
+        <translation>OpenMV Camは、SDカードが接続されていない場合、組み込みのセルフテストの実行を開始します。これにはしばらく時間がかかる場合があります。
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9114,7 +9137,9 @@ Hit cancel to skip to DFU reprogramming.</source>
         <source>PyDFU requires the following libraries to be installed:
 
 </source>
-        <translation>PyDFUでは、次のライブラリをインストールする必要があります。\n\n</translation>
+        <translation>PyDFUでは、次のライブラリをインストールする必要があります:
+
+</translation>
     </message>
     <message>
         <source>Syncing...</source>
@@ -9154,7 +9179,7 @@ Hit cancel to skip to DFU reprogramming.</source>
         <location line="-1183"/>
         <location line="+1532"/>
         <source>Failed to save the image file for an unknown reason!</source>
-        <translation>未知の理由でイメージファイルを保存できませんでした。</translation>
+        <translation>未知の理由でイメージファイルを保存できませんでした！</translation>
     </message>
     <message>
         <location line="-1515"/>
@@ -9354,19 +9379,19 @@ Hit cancel to skip to DFU reprogramming.</source>
         <location line="+3"/>
         <location line="+219"/>
         <source> Connect to a Server </source>
-        <translation>サーバーに接続する</translation>
+        <translation> サーバーに接続する </translation>
     </message>
     <message>
         <location line="-218"/>
         <location line="+219"/>
         <source> Start a Server </source>
-        <translation>サーバーの起動</translation>
+        <translation> サーバーの起動 </translation>
     </message>
     <message>
         <location line="-210"/>
         <location line="+219"/>
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
-        <translation>IPアドレス（またはドメイン名）とポート(例：xxx.xxx.xxx.xxx:xxxx)を入力してください。</translation>
+        <translation>IPアドレス（またはドメイン名）とポート(例：xxx.xxx.xxx.xxx:xxxx)を入力してください</translation>
     </message>
     <message>
         <location line="-197"/>
@@ -9407,12 +9432,12 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+3"/>
         <source> Frame Buffer </source>
-        <translation>フレームバッファ</translation>
+        <translation> フレームバッファ </translation>
     </message>
     <message>
         <location line="+1"/>
         <source> Image File </source>
-        <translation>画像ファイル</translation>
+        <translation> 画像ファイル </translation>
     </message>
     <message>
         <location line="+20"/>
@@ -9438,12 +9463,12 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+3"/>
         <source> Edit File </source>
-        <translation>ファイルの編集</translation>
+        <translation> ファイルの編集 </translation>
     </message>
     <message>
         <location line="+1"/>
         <source> Merge Files </source>
-        <translation>ファイルをマージする</translation>
+        <translation> ファイルをマージする </translation>
     </message>
     <message>
         <location line="+13"/>
@@ -9470,7 +9495,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+7"/>
         <source>Failed to load the keypoints file for an unknown reason!</source>
-        <translation>不明な理由でキーポイントファイルを読み込めませんでした。</translation>
+        <translation>不明な理由でキーポイントファイルを読み込めませんでした！</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10032,7 +10057,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="+12"/>
         <source>Failed to save the image file for an unknown reason!</source>
-        <translation>未知の理由でイメージファイルを保存できませんでした。</translation>
+        <translation>未知の理由でイメージファイルを保存できませんでした！</translation>
     </message>
     <message>
         <location line="+38"/>
