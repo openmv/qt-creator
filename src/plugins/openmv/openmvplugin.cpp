@@ -2011,7 +2011,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                         {
                             QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Q_NULLPTR,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
                             dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                             dialog.setCancelButton(Q_NULLPTR);
@@ -2105,7 +2105,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                         {
                             QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Q_NULLPTR,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
                             dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                             dialog.setCancelButton(Q_NULLPTR);
@@ -2189,7 +2189,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                     {
                         QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Q_NULLPTR,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                            (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                         dialog.setWindowModality(Qt::ApplicationModal);
                         dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                         dialog.setCancelButton(Q_NULLPTR);
@@ -2278,7 +2278,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                         {
                             QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Q_NULLPTR,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
                             dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                             dialog.setCancelButton(Q_NULLPTR);
@@ -2362,7 +2362,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                     {
                         QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Q_NULLPTR,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                            (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                         dialog.setWindowModality(Qt::ApplicationModal);
                         dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                         dialog.setCancelButton(Q_NULLPTR);
@@ -3128,7 +3128,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             QProgressDialog dialog(tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-               (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+               (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
             dialog.setWindowModality(Qt::ApplicationModal);
             dialog.setAttribute(Qt::WA_ShowWithoutActivating);
 
@@ -3414,7 +3414,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             QProgressDialog dialog(forceBootloaderBricked ? QString(QStringLiteral("%1%2")).arg(tr("Disconnect your OpenMV Cam and then reconnect it...")).arg(justEraseFlashFs ? QString() : tr("\n\nHit cancel to skip to DFU reprogramming.")) : tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
                             dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                             dialog.show();
@@ -3551,7 +3551,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             QProgressDialog dialog(tr("Erasing..."), tr("Cancel"), flash_start, flash_end, Core::ICore::dialogParent(),
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
                             dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                             dialog.setCancelButton(Q_NULLPTR);
@@ -3656,7 +3656,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             QProgressDialog dialog(tr("Programming..."), tr("Cancel"), 0, dataChunks.size() - 1, Core::ICore::dialogParent(),
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
                             dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                             dialog.setCancelButton(Q_NULLPTR);
@@ -3703,7 +3703,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         {
                             QProgressDialog dialog(tr("Programming..."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
                             dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                             dialog.setCancelButton(Q_NULLPTR);
@@ -3798,7 +3798,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         QProgressDialog dialog(tr("Reprogramming...\n\n(may take up to 5 minutes)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                            (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                         dialog.setWindowModality(Qt::ApplicationModal);
                         dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                         dialog.setCancelButton(Q_NULLPTR);
@@ -5196,7 +5196,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     {
                                         QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                            (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                                         dialog.setWindowModality(Qt::ApplicationModal);
                                         dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                                         dialog.setCancelButton(Q_NULLPTR);
@@ -5329,7 +5329,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     {
                                         QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                            (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                                         dialog.setWindowModality(Qt::ApplicationModal);
                                         dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                                         dialog.setCancelButton(Q_NULLPTR);
@@ -5431,7 +5431,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             {
                                 QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                    (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                                 dialog.setWindowModality(Qt::ApplicationModal);
                                 dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                                 dialog.setCancelButton(Q_NULLPTR);
@@ -5548,7 +5548,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     {
                                         QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                            (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                                         dialog.setWindowModality(Qt::ApplicationModal);
                                         dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                                         dialog.setCancelButton(Q_NULLPTR);
@@ -5650,7 +5650,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             {
                                 QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                                    (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                                 dialog.setWindowModality(Qt::ApplicationModal);
                                 dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                                 dialog.setCancelButton(Q_NULLPTR);
@@ -5756,7 +5756,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
             {
                 QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+                    (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                 dialog.setWindowModality(Qt::ApplicationModal);
                 dialog.setAttribute(Qt::WA_ShowWithoutActivating);
                 dialog.setCancelButton(Q_NULLPTR);

@@ -30,7 +30,7 @@ QMAKE_CLEAN = openmvide.sh
 #OPENMV-DIFF#
 
 target.path  = $$INSTALL_BIN_PATH
-INSTALLS    += target
+INSTALLS    += target openmv.png
 
 #OPENMV-DIFF#
 #DISTFILES = $$PWD/qtcreator.sh

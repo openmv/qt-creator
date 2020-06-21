@@ -50,7 +50,7 @@ private:
 
     QRect getROI();
     QPixmap getPixmap(bool pointValid = false, const QPoint &point = QPoint(), bool *cropped = Q_NULLPTR, QRect *croppedRect = Q_NULLPTR);
-    void myFitInView();
+    void myFitInView(QGraphicsPixmapItem *item);
 
     bool m_enableFitInView;
     QGraphicsPixmapItem *m_pixmap;

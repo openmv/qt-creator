@@ -60,6 +60,7 @@ Component.prototype.createOperationsForArchive = function(archive)
 Component.prototype.beginInstallation = function()
 {
     component.qtCreatorBinaryPath = installer.value("TargetDir");
+    component.qtCreatorIconPath = installer.value("TargetDir");
 
     if (installer.value("os") == "win") {
         //OPENMV-DIFF//
@@ -74,6 +75,7 @@ Component.prototype.beginInstallation = function()
         //component.qtCreatorBinaryPath = component.qtCreatorBinaryPath + "/bin/qtcreator";
         //OPENMV-DIFF//
         component.qtCreatorBinaryPath = component.qtCreatorBinaryPath + "/bin/openmvide";
+        component.qtCreatorIconPath = component.qtCreatorIconPath + "/bin/openmv.png";
         //OPENMV-DIFF//
     else if (installer.value("os") == "mac")
         //OPENMV-DIFF//
@@ -229,7 +231,7 @@ Component.prototype.createOperations = function()
                                 //OPENMV-DIFF//
                                 //"Type=Application\nExec=" + component.qtCreatorBinaryPath + "\nPath=@TargetDir@\nName=Qt Creator\nGenericName=The IDE of choice for Qt development.\nGenericName[de]=Die IDE der Wahl zur Qt Entwicklung\nIcon=QtProject-qtcreator\nTerminal=false\nCategories=Development;IDE;Qt;\nMimeType=text/x-c++src;text/x-c++hdr;text/x-xsrc;application/x-designer;application/vnd.nokia.qt.qmakeprofile;application/vnd.nokia.xml.qt.resource;text/x-qml;text/x-qt.qml;text/x-qt.qbs;"
                                 //OPENMV-DIFF//
-                                "Type=Application\nExec=" + component.qtCreatorBinaryPath + "\nPath=@TargetDir@\nName=OpenMV IDE\nGenericName=The IDE of choice for OpenMV Cam Development.\nGenericName[de]=Die IDE der Wahl zur OpenMV Cam Entwicklung\nIcon=OpenMV-openmvide\nTerminal=false\nCategories=Development;IDE;\nMimeType=text/x-python;"
+                                "Type=Application\nExec=" + component.qtCreatorBinaryPath + "\nPath=@TargetDir@\nName=OpenMV IDE\nGenericName=The IDE of choice for OpenMV Cam Development.\nGenericName[de]=Die IDE der Wahl zur OpenMV Cam Entwicklung\nIcon=" + qtCreatorIconPath + "\nTerminal=false\nCategories=Development;IDE;\nMimeType=text/x-python;"
                                 //OPENMV-DIFF//
                                 );
         //OPENMV-DIFF//

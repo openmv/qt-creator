@@ -96,7 +96,7 @@ void OpenMVPluginFB::enableFitInView(bool enable)
 {
     m_enableFitInView = enable;
 
-    if(m_pixmap) myFitInView(); else setTransform(QTransform());
+    myFitInView(m_pixmap);
 
     if(m_band->isVisible())
     {
@@ -133,7 +133,7 @@ void OpenMVPluginFB::frameBufferData(const QPixmap &data)
         scene()->addItem(item);
     }
 
-    if(m_pixmap) myFitInView(); else setTransform(QTransform());
+    myFitInView(m_pixmap);
 
     // Broadcast the new pixmap
     emit pixmapUpdate(getPixmap());
@@ -325,7 +325,7 @@ void OpenMVPluginFB::contextMenuEvent(QContextMenuEvent *event)
 
 void OpenMVPluginFB::resizeEvent(QResizeEvent *event)
 {
-    if(m_pixmap) myFitInView(); else setTransform(QTransform());
+    myFitInView(m_pixmap);
 
     if(m_band->isVisible())
     {
@@ -377,15 +377,17 @@ QPixmap OpenMVPluginFB::getPixmap(bool pointValid, const QPoint &point, bool *cr
     return m_pixmap->pixmap();
 }
 
-void OpenMVPluginFB::myFitInView()
+void OpenMVPluginFB::myFitInView(QGraphicsPixmapItem *item)
 {
     qreal scale = qMin(width() / sceneRect().width(), height() / sceneRect().height());
     QTransform matrix(1, 0, 0, 0, 1, 0, 0, 0, 1);
 
-    if(m_enableFitInView)
+    if(item && m_enableFitInView)
     {
         matrix.scale(scale, scale);
     }
 
     setTransform(matrix);
+
+    if(item) centerOn(item);
 }
