@@ -70,7 +70,7 @@ Component.prototype.beginInstallation = function()
         //OPENMV-DIFF//
         component.qtCreatorBinaryPath = component.qtCreatorBinaryPath.replace(/\//g, "\\");
     }
-    else if (installer.value("os") == "x11 {
+    else if (installer.value("os") == "x11") {
         //OPENMV-DIFF//
         //component.qtCreatorBinaryPath = component.qtCreatorBinaryPath + "/bin/qtcreator";
         //OPENMV-DIFF//
