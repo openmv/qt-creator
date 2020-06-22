@@ -70,19 +70,21 @@ Component.prototype.beginInstallation = function()
         //OPENMV-DIFF//
         component.qtCreatorBinaryPath = component.qtCreatorBinaryPath.replace(/\//g, "\\");
     }
-    else if (installer.value("os") == "x11")
+    else if (installer.value("os") == "x11 {
         //OPENMV-DIFF//
         //component.qtCreatorBinaryPath = component.qtCreatorBinaryPath + "/bin/qtcreator";
         //OPENMV-DIFF//
         component.qtCreatorBinaryPath = component.qtCreatorBinaryPath + "/bin/openmvide";
         component.qtCreatorIconPath = component.qtCreatorIconPath + "/bin/openmv.png";
         //OPENMV-DIFF//
-    else if (installer.value("os") == "mac")
+    }
+    else if (installer.value("os") == "mac") {
         //OPENMV-DIFF//
         //component.qtCreatorBinaryPath = component.qtCreatorBinaryPath + "/Qt Creator.app/Contents/MacOS/Qt Creator";
         //OPENMV-DIFF//
         component.qtCreatorBinaryPath = component.qtCreatorBinaryPath + "/OpenMV IDE.app/Contents/MacOS/OpenMV IDE";
         //OPENMV-DIFF//
+    }
 
     if ( installer.value("os") === "win" )
         component.setStopProcessForUpdateRequest(component.qtCreatorBinaryPath, true);
