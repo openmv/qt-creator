@@ -1,17 +1,17 @@
-#include "openmvmodeleditor.h"
+#include "openmvdataseteditor.h"
 
-OpenMVModelEditorModel::OpenMVModelEditorModel(QObject *parent) : QFileSystemModel(parent)
+OpenMVDatasetEditorModel::OpenMVDatasetEditorModel(QObject *parent) : QFileSystemModel(parent)
 {
 
 }
 
-int OpenMVModelEditorModel::columnCount(const QModelIndex &parent) const
+int OpenMVDatasetEditorModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
     return 1;
 }
 
-OpenMVModelEditor::OpenMVModelEditor(QWidget *parent) : QTreeView(parent)
+OpenMVDatasetEditor::OpenMVDatasetEditor(QWidget *parent) : QTreeView(parent)
 {
     setContextMenuPolicy(Qt::DefaultContextMenu);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
@@ -21,24 +21,34 @@ OpenMVModelEditor::OpenMVModelEditor(QWidget *parent) : QTreeView(parent)
                                  "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/openmv/images/branch-open.png);}"));
     setHeaderHidden(true);
     setUniformRowHeights(true);
-    m_model = new OpenMVModelEditorModel(this);
+    m_model = new OpenMVDatasetEditorModel(this);
     m_model->setReadOnly(false);
     setModel(m_model);
 }
 
-void OpenMVModelEditor::setRootPath(const QString &path)
+QString OpenMVDatasetEditor::rootPath()
 {
-    setRootIndex(m_model->setRootPath(path));
-    emit rootPathSet();
+    return m_model->rootPath();
 }
 
-void OpenMVModelEditor::frameBufferData(const QPixmap &data)
+void OpenMVDatasetEditor::setRootPath(const QString &path)
+{
+    if(m_model->rootPath() != path)
+    {
+        emit rootPathClosed(m_model->rootPath());
+    }
+
+    setRootIndex(m_model->setRootPath(path));
+    emit rootPathSet(path);
+}
+
+void OpenMVDatasetEditor::frameBufferData(const QPixmap &data)
 {
     m_pixmap = data;
     emit snapshotEnable((!getClassFolderPath().isEmpty()) && (!m_pixmap.isNull()));
 }
 
-void OpenMVModelEditor::newClassFolder()
+void OpenMVDatasetEditor::newClassFolder()
 {
     bool ok;
     QString name = QInputDialog::getText(Core::ICore::dialogParent(),
@@ -107,7 +117,7 @@ void OpenMVModelEditor::newClassFolder()
     }
 }
 
-void OpenMVModelEditor::snapshot()
+void OpenMVDatasetEditor::snapshot()
 {
     QString path = getClassFolderPath();
     QRegularExpression regex = QRegularExpression(QStringLiteral("(\\d+)\\.(jpg|jpeg)"));
@@ -138,7 +148,7 @@ void OpenMVModelEditor::snapshot()
     }
 }
 
-void OpenMVModelEditor::keyPressEvent(QKeyEvent *event)
+void OpenMVDatasetEditor::keyPressEvent(QKeyEvent *event)
 {
     switch(event->key())
     {
@@ -170,7 +180,7 @@ void OpenMVModelEditor::keyPressEvent(QKeyEvent *event)
     QTreeView::keyPressEvent(event);
 }
 
-void OpenMVModelEditor::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
+void OpenMVDatasetEditor::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
     emit snapshotEnable((!getClassFolderPath().isEmpty()) && (!m_pixmap.isNull()));
 
@@ -219,7 +229,7 @@ void OpenMVModelEditor::selectionChanged(const QItemSelection &selected, const Q
     QTreeView::selectionChanged(selected, deselected);
 }
 
-void OpenMVModelEditor::contextMenuEvent(QContextMenuEvent *event)
+void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)
 {
     QModelIndex index = indexAt(event->pos());
 
@@ -258,19 +268,19 @@ void OpenMVModelEditor::contextMenuEvent(QContextMenuEvent *event)
     QTreeView::contextMenuEvent(event);
 }
 
-void OpenMVModelEditor::hideEvent(QHideEvent *event)
+void OpenMVDatasetEditor::hideEvent(QHideEvent *event)
 {
     emit visibilityChanged(false);
     QTreeView::hideEvent(event);
 }
 
-void OpenMVModelEditor::showEvent(QShowEvent *event)
+void OpenMVDatasetEditor::showEvent(QShowEvent *event)
 {
     emit visibilityChanged(true);
     QTreeView::showEvent(event);
 }
 
-QString OpenMVModelEditor::getClassFolderPath()
+QString OpenMVDatasetEditor::getClassFolderPath()
 {
     QModelIndexList list = selectedIndexes();
     QString result;

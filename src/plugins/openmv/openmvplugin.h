@@ -51,7 +51,7 @@
 #include "openmvpluginfb.h"
 #include "openmvterminal.h"
 #include "openmvcamerasettings.h"
-#include "openmvmodeleditor.h"
+#include "openmvdataseteditor.h"
 #include "histogram/openmvpluginhistogram.h"
 #include "tools/dfu-util.h"
 #include "tools/thresholdeditor.h"
@@ -117,8 +117,8 @@
 #define LAST_APRILTAG_PATH "LastAprilTagPath"
 #define LAST_MODEL_NO_CAM_PATH "LastModelNoCamPath"
 #define LAST_MODEL_WITH_CAM_PATH "LastModelWithCamPath"
-#define LAST_MODEL_EDITOR_PATH "LastModelEditorPath"
-#define LAST_MODEL_EDITOR_LOADED "LastModeleditorLoaded"
+#define LAST_DATASET_EDITOR_PATH "LastDatasetEditorPath"
+#define LAST_DATASET_EDITOR_LOADED "LastDataseteditorLoaded"
 #define RESOURCES_MAJOR "ResourcesMajor"
 #define RESOURCES_MINOR "ResourcesMinor"
 #define RESOURCES_PATCH "ResourcesPatch"
@@ -307,7 +307,7 @@ private:
 
     QToolButton *m_jpgCompress;
     QToolButton *m_disableFrameBuffer;
-    OpenMVModelEditor *m_modelEditor;
+    OpenMVDatasetEditor *m_datasetEditor;
     OpenMVPluginFB *m_frameBuffer;
     OpenMVPluginHistogram *m_histogram;
 

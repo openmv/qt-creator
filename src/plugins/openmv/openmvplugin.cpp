@@ -138,7 +138,10 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     ///////////////////////////////////////////////////////////////////////////
 
+    QSettings *settings = ExtensionSystem::PluginManager::settings();
     QSplashScreen *splashScreen = new QSplashScreen(QPixmap(QStringLiteral(SPLASH_PATH)));
+    Core::ICore::mainWindow()->restoreGeometry(settings->value(QStringLiteral("MainWindow/WindowGeometry")).toByteArray()); // Move to the correct screen for moving splash...
+    splashScreen->move(QApplication::desktop()->availableGeometry(QApplication::desktop()->screenNumber(Core::ICore::mainWindow())).center() - splashScreen->rect().center());
 
     connect(Core::ICore::instance(), &Core::ICore::coreOpened,
             splashScreen, &QSplashScreen::deleteLater);
@@ -147,7 +150,6 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     ///////////////////////////////////////////////////////////////////////////
 
-    QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
     int major = settings->value(QStringLiteral(RESOURCES_MAJOR), 0).toInt();
@@ -977,50 +979,167 @@ void OpenMVPlugin::extensionsInitialized()
     if(!Utils::HostOsInfo::isLinuxHost()) videoToolsMenu->addAction(playVideoFileCommand);
     connect(playVideoFile, &QAction::triggered, this, [this] {playVideoFileAction(m_portPath);});
 
-    Core::ActionContainer *modelEditorMenu = Core::ActionManager::createMenu(Core::Id("OpenMV.ModelEditor"));
-    modelEditorMenu->menu()->setTitle(tr("Model Editor"));
-    modelEditorMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
-    toolsMenu->addMenu(modelEditorMenu);
+    Core::ActionContainer *datasetEditorMenu = Core::ActionManager::createMenu(Core::Id("OpenMV.DatasetEditor"));
+    datasetEditorMenu->menu()->setTitle(tr("Dataset Editor"));
+    datasetEditorMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
+    toolsMenu->addMenu(datasetEditorMenu);
 
-    QAction *newModelAction = new QAction(tr("New Model"), this);
-    Core::Command *newModelCommand = Core::ActionManager::registerAction(newModelAction, Core::Id("OpenMV.NewModel"));
-    modelEditorMenu->addAction(newModelCommand);
-    connect(newModelAction, &QAction::triggered, this, [this] {
+    QAction *newDatasetAction = new QAction(tr("New Dataset"), this);
+    Core::Command *newDatasetCommand = Core::ActionManager::registerAction(newDatasetAction, Core::Id("OpenMV.NewDataset"));
+    datasetEditorMenu->addAction(newDatasetCommand);
+    connect(newDatasetAction, &QAction::triggered, this, [this] {
         QSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
         QString path =
-            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), tr("Model Editor - Choose a folder to build the model in"),
-                settings->value(QStringLiteral(LAST_MODEL_EDITOR_PATH), QDir::homePath()).toString());
+            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), tr("Dataset Editor - Choose a folder to build the dataset in"),
+                settings->value(QStringLiteral(LAST_DATASET_EDITOR_PATH), QDir::homePath()).toString());
 
         if(!path.isEmpty())
         {
-            m_modelEditor->setRootPath(path);
-            settings->setValue(QStringLiteral(LAST_MODEL_EDITOR_PATH), path);
+            bool ok = QDir(path).isEmpty();
+
+            if(!ok)
+            {
+                if(QMessageBox::warning(Core::ICore::dialogParent(),
+                    tr("New Dataset"),
+                    tr("The selected folder is not empty and the contents will be deleted. Continue?"),
+                    QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)
+                == QMessageBox::Yes)
+                {
+                    if(QDir::cleanPath(QDir::fromNativeSeparators(m_datasetEditor->rootPath())) == QDir::cleanPath(QDir::fromNativeSeparators(path)))
+                    {
+                        m_datasetEditor->setRootPath(QString());
+                    }
+
+                    QString error;
+
+                    if(!Utils::FileUtils::removeRecursively(Utils::FileName::fromString(path), &error))
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            tr("New Dataset"),
+                            tr("Failed to remove \"%L1\"!").arg(path));
+                    }
+                    else if(!QDir().mkdir(path))
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            tr("New Dataset"),
+                            tr("Failed to create \"%L1\"!").arg(path));
+                    }
+                    else
+                    {
+                        ok = true;
+                    }
+                }
+            }
+
+            if(ok)
+            {
+                QByteArray contents = QStringLiteral("# Dataset Capture Script - By: %L1 - %L2\n"
+                                                     "\n"
+                                                     "# Use this script to control how your OpenMV Cam captures images for your dataset.\n"
+                                                     "# You should apply the same image pre-processing steps you expect to run on images\n"
+                                                     "# that you will feed to your model during run-time.\n"
+                                                     "\n"
+                                                     "import sensor, image, time\n"
+                                                     "\n"
+                                                     "sensor.reset()\n"
+                                                     "sensor.set_pixformat(sensor.RGB565) # Modify as you like.\n"
+                                                     "sensor.set_framesize(sensor.QVGA) # Modify as you like.\n"
+                                                     "sensor.skip_frames(time = 2000)\n"
+                                                     "\n"
+                                                     "clock = time.clock()\n"
+                                                     "\n"
+                                                     "while(True):\n"
+                                                     "    clock.tick()\n"
+                                                     "    img = sensor.snapshot()\n"
+                                                     "    # Apply lens correction if you need it.\n"
+                                                     "    # img.lens_corr()\n"
+                                                     "    # Apply rotation correction if you need it.\n"
+                                                     "    # img.rotation_corr()\n"
+                                                     "    # Apply other filters...\n"
+                                                     "    # E.g. mean/median/mode/midpoint/etc.\n"
+                                                     "    print(clock.fps())\n").
+                                      arg(Utils::Environment::systemEnvironment().userName()).arg(QDate::currentDate().toString()).toUtf8();
+
+                Utils::FileSaver file(path + QStringLiteral("/dataset_capture_script.py"));
+
+                if(!file.hasError())
+                {
+                    if((!file.write(contents)) || (!file.finalize()))
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            tr("New Dataset"),
+                            tr("Error: %L1!").arg(file.errorString()));
+                    }
+                    else
+                    {
+                        TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditor(file.fileName()));
+
+                        if(editor)
+                        {
+                            m_datasetEditor->setRootPath(path);
+                            Core::EditorManager::addCurrentPositionToNavigationHistory();
+                            Core::EditorManager::activateEditor(editor);
+                            settings->setValue(QStringLiteral(LAST_DATASET_EDITOR_PATH), path);
+                        }
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        tr("New Dataset"),
+                        tr("Error: %L1!").arg(file.errorString()));
+                }
+            }
         }
 
         settings->endGroup();
     });
 
-    QAction *openModelAction = new QAction(tr("Open Model"), this);
-    Core::Command *openModelCommand = Core::ActionManager::registerAction(openModelAction, Core::Id("OpenMV.OpenModel"));
-    modelEditorMenu->addAction(openModelCommand);
-    connect(openModelAction, &QAction::triggered, this, [this] {
+    QAction *openDatasetAction = new QAction(tr("Open Dataset"), this);
+    Core::Command *openDatasetCommand = Core::ActionManager::registerAction(openDatasetAction, Core::Id("OpenMV.OpenDataset"));
+    datasetEditorMenu->addAction(openDatasetCommand);
+    connect(openDatasetAction, &QAction::triggered, this, [this] {
         QSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
         QString path =
-            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), tr("Model Editor - Choose a model folder to open"),
-                settings->value(QStringLiteral(LAST_MODEL_EDITOR_PATH), QDir::homePath()).toString());
+            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), tr("Dataset Editor - Choose a dataset folder to open"),
+                settings->value(QStringLiteral(LAST_DATASET_EDITOR_PATH), QDir::homePath()).toString());
 
         if(!path.isEmpty())
         {
-            m_modelEditor->setRootPath(path);
-            settings->setValue(QStringLiteral(LAST_MODEL_EDITOR_PATH), path);
+            QString name = path + QStringLiteral("/dataset_capture_script.py");
+
+            if(QFile(name).exists())
+            {
+                TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditor(name));
+
+                if(editor)
+                {
+                    m_datasetEditor->setRootPath(path);
+                    Core::EditorManager::addCurrentPositionToNavigationHistory();
+                    Core::EditorManager::activateEditor(editor);
+                    settings->setValue(QStringLiteral(LAST_DATASET_EDITOR_PATH), path);
+                }
+            }
+            else
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    tr("Open Dataset"),
+                    tr("The selected folder does not appear to be a valid OpenMV Cam Image Dataset!"));
+            }
         }
 
         settings->endGroup();
     });
+
+    datasetEditorMenu->addSeparator();
+
+    QAction *closeDatasetAction = new QAction(tr("Close Dataset"), this);
+    Core::Command *closeDatasetCommand = Core::ActionManager::registerAction(closeDatasetAction, Core::Id("OpenMV.CloseDataset"));
+    datasetEditorMenu->addAction(closeDatasetCommand);
 
     QAction *docsAction = new QAction(tr("OpenMV Docs"), this);
     Core::Command *docsCommand = Core::ActionManager::registerAction(docsAction, Core::Id("OpenMV.Docs"));
@@ -1454,83 +1573,86 @@ void OpenMVPlugin::extensionsInitialized()
 
     ///////////////////////////////////////////////////////////////////////////
 
-    Utils::StyledBar *modelEditorStyledBar0 = new Utils::StyledBar;
-    QHBoxLayout *modelEditorStyledBarLayout0 = new QHBoxLayout;
-    modelEditorStyledBarLayout0->setMargin(0);
-    modelEditorStyledBarLayout0->setSpacing(0);
-    modelEditorStyledBarLayout0->addSpacing(4);
-    modelEditorStyledBarLayout0->addWidget(new QLabel(tr("Model Editor")));
-    modelEditorStyledBarLayout0->addSpacing(6);
-    modelEditorStyledBar0->setLayout(modelEditorStyledBarLayout0);
+    Utils::StyledBar *datasetEditorStyledBar0 = new Utils::StyledBar;
+    QHBoxLayout *datasetEditorStyledBarLayout0 = new QHBoxLayout;
+    datasetEditorStyledBarLayout0->setMargin(0);
+    datasetEditorStyledBarLayout0->setSpacing(0);
+    datasetEditorStyledBarLayout0->addSpacing(4);
+    datasetEditorStyledBarLayout0->addWidget(new QLabel(tr("Dataset Editor")));
+    datasetEditorStyledBarLayout0->addSpacing(6);
+    datasetEditorStyledBar0->setLayout(datasetEditorStyledBarLayout0);
 
-    QToolButton *modelEditorCloseButton = new QToolButton;
-    modelEditorCloseButton->setIcon(Utils::Icon({{QStringLiteral(":/core/images/close.png"), Utils::Theme::IconsBaseColor}}).icon());
-    modelEditorCloseButton->setToolTip(tr("Close"));
-    modelEditorStyledBarLayout0->addWidget(modelEditorCloseButton);
+    QToolButton *datasetEditorCloseButton = new QToolButton;
+    datasetEditorCloseButton->setIcon(Utils::Icon({{QStringLiteral(":/core/images/close.png"), Utils::Theme::IconsBaseColor}}).icon());
+    datasetEditorCloseButton->setToolTip(tr("Close"));
+    datasetEditorStyledBarLayout0->addWidget(datasetEditorCloseButton);
 
-    m_modelEditor = new OpenMVModelEditor;
-    connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, m_modelEditor, &OpenMVModelEditor::frameBufferData);
+    m_datasetEditor = new OpenMVDatasetEditor;
+    connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, m_datasetEditor, &OpenMVDatasetEditor::frameBufferData);
 
-    Utils::StyledBar *modelEditorStyledBar1 = new Utils::StyledBar;
-    QHBoxLayout *modelEditorStyledBarLayout1 = new QHBoxLayout;
-    modelEditorStyledBarLayout1->setMargin(0);
-    modelEditorStyledBarLayout1->setSpacing(0);
-    modelEditorStyledBarLayout1->addSpacing(4);
-    modelEditorStyledBarLayout1->addWidget(new QLabel(tr("Image Preview")));
-    modelEditorStyledBarLayout1->addSpacing(6);
-    modelEditorStyledBar1->setLayout(modelEditorStyledBarLayout1);
+    Utils::StyledBar *datasetEditorStyledBar1 = new Utils::StyledBar;
+    QHBoxLayout *datasetEditorStyledBarLayout1 = new QHBoxLayout;
+    datasetEditorStyledBarLayout1->setMargin(0);
+    datasetEditorStyledBarLayout1->setSpacing(0);
+    datasetEditorStyledBarLayout1->addSpacing(4);
+    datasetEditorStyledBarLayout1->addWidget(new QLabel(tr("Image Preview")));
+    datasetEditorStyledBarLayout1->addSpacing(6);
+    datasetEditorStyledBar1->setLayout(datasetEditorStyledBarLayout1);
 
-    OpenMVPluginFB *modelEditorFB = new OpenMVPluginFB;
-    modelEditorFB->enableInteraction(false);
-    modelEditorFB->enableFitInView(true);
-    connect(m_modelEditor, &OpenMVModelEditor::pixmapUpdate, modelEditorFB, &OpenMVPluginFB::frameBufferData);
+    OpenMVPluginFB *datasetEditorFB = new OpenMVPluginFB;
+    datasetEditorFB->enableInteraction(false);
+    datasetEditorFB->enableFitInView(true);
+    connect(m_datasetEditor, &OpenMVDatasetEditor::pixmapUpdate, datasetEditorFB, &OpenMVPluginFB::frameBufferData);
 
-    Core::Command *modelEditorNewFolder = Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(NEW_FOLDER_PATH)),
+    Core::Command *datasetEditorNewFolder = Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(NEW_FOLDER_PATH)),
     tr("New Class Folder"), this), Core::Id("OpenMV.NewClassFolder"));
-    //modelEditorNewFolder->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
-    modelEditorNewFolder->action()->setEnabled(false);
-    modelEditorNewFolder->action()->setVisible(false);
-    connect(modelEditorNewFolder->action(), &QAction::triggered, m_modelEditor, &OpenMVModelEditor::newClassFolder);
+    //datasetEditorNewFolder->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
+    datasetEditorNewFolder->action()->setEnabled(false);
+    datasetEditorNewFolder->action()->setVisible(false);
+    connect(datasetEditorNewFolder->action(), &QAction::triggered, m_datasetEditor, &OpenMVDatasetEditor::newClassFolder);
 
-    Core::Command *modelEditorSnapshot = Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(SNAPSHOT_PATH)),
+    Core::Command *datasetEditorSnapshot = Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(SNAPSHOT_PATH)),
     tr("Capture Data"), this), Core::Id("OpenMV.CaptureData"));
-    //modelEditorSnapshot->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
-    modelEditorSnapshot->action()->setEnabled(false);
-    modelEditorSnapshot->action()->setVisible(false);
-    connect(m_modelEditor, &OpenMVModelEditor::snapshotEnable, modelEditorSnapshot->action(), &QAction::setEnabled);
-    connect(modelEditorSnapshot->action(), &QAction::triggered, m_modelEditor, &OpenMVModelEditor::snapshot);
+    //datasetEditorSnapshot->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
+    datasetEditorSnapshot->action()->setEnabled(false);
+    datasetEditorSnapshot->action()->setVisible(false);
+    connect(m_datasetEditor, &OpenMVDatasetEditor::snapshotEnable, datasetEditorSnapshot->action(), &QAction::setEnabled);
+    connect(datasetEditorSnapshot->action(), &QAction::triggered, m_datasetEditor, &OpenMVDatasetEditor::snapshot);
 
-    Core::Internal::FancyActionBar *modelEditorActionBar = new Core::Internal::FancyActionBar(widget);
-    widget->insertCornerWidget(2, modelEditorActionBar);
+    Core::Internal::FancyActionBar *datasetEditorActionBar = new Core::Internal::FancyActionBar(widget);
+    widget->insertCornerWidget(2, datasetEditorActionBar);
 
-    modelEditorActionBar->insertAction(0, modelEditorNewFolder->action());
-    modelEditorActionBar->insertAction(1, modelEditorSnapshot->action());
+    datasetEditorActionBar->insertAction(0, datasetEditorNewFolder->action());
+    datasetEditorActionBar->insertAction(1, datasetEditorSnapshot->action());
 
-    modelEditorActionBar->setProperty("no_separator", false);
-    modelEditorActionBar->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
+    datasetEditorActionBar->setProperty("no_separator", false);
+    datasetEditorActionBar->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
 
-    QWidget *modelEditorWidget = new QWidget;
-    QVBoxLayout *modelEditorLayout = new QVBoxLayout;
-    modelEditorLayout->setMargin(0);
-    modelEditorLayout->setSpacing(0);
-    modelEditorLayout->addWidget(modelEditorStyledBar0);
-    modelEditorLayout->addWidget(m_modelEditor);
-    modelEditorLayout->addWidget(modelEditorStyledBar1);
-    modelEditorLayout->addWidget(modelEditorFB);
-    modelEditorWidget->setLayout(modelEditorLayout);
+    QWidget *datasetEditorWidget = new QWidget;
+    QVBoxLayout *datasetEditorLayout = new QVBoxLayout;
+    datasetEditorLayout->setMargin(0);
+    datasetEditorLayout->setSpacing(0);
+    datasetEditorLayout->addWidget(datasetEditorStyledBar0);
+    datasetEditorLayout->addWidget(m_datasetEditor);
+    datasetEditorLayout->addWidget(datasetEditorStyledBar1);
+    datasetEditorLayout->addWidget(datasetEditorFB);
+    datasetEditorWidget->setLayout(datasetEditorLayout);
 
-    connect(modelEditorCloseButton, &QToolButton::clicked, modelEditorWidget, &QWidget::hide);
-    connect(m_modelEditor, &OpenMVModelEditor::rootPathSet, modelEditorWidget, &QWidget::show);
-
-    connect(m_modelEditor, &OpenMVModelEditor::visibilityChanged, this, [this, modelEditorNewFolder, modelEditorSnapshot, modelEditorActionBar] (bool visible) {
-        modelEditorNewFolder->action()->setVisible(visible);
-        modelEditorSnapshot->action()->setVisible(visible);
-        modelEditorActionBar->setVisible(visible);
+    connect(closeDatasetAction, &QAction::triggered, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
+    connect(datasetEditorCloseButton, &QToolButton::clicked, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
+    connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathClosed, this, [this] (const QString &path) { Core::EditorManager::closeEditors(Core::DocumentModel::editorsForFilePath(path + QStringLiteral("/dataset_capture_script.py"))); });
+    connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, datasetEditorWidget, &QWidget::show);
+    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, closeDatasetCommand, datasetEditorNewFolder, datasetEditorSnapshot, datasetEditorActionBar] (bool visible) {
+        closeDatasetCommand->action()->setEnabled(visible);
+        datasetEditorNewFolder->action()->setVisible(visible);
+        datasetEditorSnapshot->action()->setVisible(visible);
+        datasetEditorActionBar->setVisible(visible);
     });
 
-    modelEditorWidget->hide();
+    closeDatasetCommand->action()->setDisabled(true);
+    datasetEditorWidget->hide();
 
-    msplitter->insertWidget(0, modelEditorWidget);
+    msplitter->insertWidget(0, datasetEditorWidget);
     msplitter->setStretchFactor(0, 0);
     msplitter->setCollapsible(0, false);
 
@@ -1604,7 +1726,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     connect(q_check_ptr(qobject_cast<Core::Internal::MainWindow *>(Core::ICore::mainWindow())), &Core::Internal::MainWindow::showEventSignal, this, [this, widget, settings, msplitter, hsplitter, vsplitter] {
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
-        if(settings->contains(QStringLiteral(LAST_MODEL_EDITOR_PATH)) && settings->value(QStringLiteral(LAST_MODEL_EDITOR_LOADED)).toBool()) m_modelEditor->setRootPath(settings->value(QStringLiteral(LAST_MODEL_EDITOR_PATH)).toString());
+        if(settings->contains(QStringLiteral(LAST_DATASET_EDITOR_PATH)) && settings->value(QStringLiteral(LAST_DATASET_EDITOR_LOADED)).toBool()) m_datasetEditor->setRootPath(settings->value(QStringLiteral(LAST_DATASET_EDITOR_PATH)).toString());
         if(settings->contains(QStringLiteral(MSPLITTER_STATE))) msplitter->restoreState(settings->value(QStringLiteral(MSPLITTER_STATE)).toByteArray());
         if(settings->contains(QStringLiteral(HSPLITTER_STATE))) hsplitter->restoreState(settings->value(QStringLiteral(HSPLITTER_STATE)).toByteArray());
         if(settings->contains(QStringLiteral(VSPLITTER_STATE))) vsplitter->restoreState(settings->value(QStringLiteral(VSPLITTER_STATE)).toByteArray());
@@ -1635,8 +1757,8 @@ void OpenMVPlugin::extensionsInitialized()
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
         settings->setValue(QStringLiteral(EDITOR_MANAGER_STATE),
             Core::EditorManager::saveState());
-        if(!isNoShow()) settings->setValue(QStringLiteral(LAST_MODEL_EDITOR_LOADED),
-            m_modelEditor->parentWidget()->isVisible());
+        if(!isNoShow()) settings->setValue(QStringLiteral(LAST_DATASET_EDITOR_LOADED),
+            m_datasetEditor->parentWidget()->isVisible());
         if(!isNoShow()) settings->setValue(QStringLiteral(MSPLITTER_STATE),
             msplitter->saveState());
         if(!isNoShow()) settings->setValue(QStringLiteral(HSPLITTER_STATE),

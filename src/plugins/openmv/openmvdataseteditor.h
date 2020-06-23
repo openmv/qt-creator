@@ -1,5 +1,5 @@
-#ifndef OPENMVMODELEDITOR_H
-#define OPENMVMODELEDITOR_H
+#ifndef OPENMVDATASETEDITOR_H
+#define OPENMVDATASETEDITOR_H
 
 #include <QtCore>
 #include <QtGui>
@@ -13,13 +13,13 @@
 #include <texteditor/fontsettings.h>
 #include <texteditor/texteditorsettings.h>
 
-class OpenMVModelEditorModel : public QFileSystemModel
+class OpenMVDatasetEditorModel : public QFileSystemModel
 {
     Q_OBJECT
 
 public:
 
-    explicit OpenMVModelEditorModel(QObject *parent = Q_NULLPTR);
+    explicit OpenMVDatasetEditorModel(QObject *parent = Q_NULLPTR);
     virtual int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
 signals:
@@ -28,13 +28,14 @@ public slots:
 
 };
 
-class OpenMVModelEditor : public QTreeView
+class OpenMVDatasetEditor : public QTreeView
 {
     Q_OBJECT
 
 public:
 
-    explicit OpenMVModelEditor(QWidget *parent = Q_NULLPTR);
+    explicit OpenMVDatasetEditor(QWidget *parent = Q_NULLPTR);
+    QString rootPath();
 
 public slots:
 
@@ -45,7 +46,8 @@ public slots:
 
 signals:
 
-    void rootPathSet();
+    void rootPathClosed(const QString &path);
+    void rootPathSet(const QString &path);
     void snapshotEnable(bool enable);
     void pixmapUpdate(const QPixmap &data);
     void visibilityChanged(bool visible);
@@ -62,8 +64,8 @@ private:
 
     QString getClassFolderPath();
 
-    OpenMVModelEditorModel *m_model;
+    OpenMVDatasetEditorModel *m_model;
     QPixmap m_pixmap;
 };
 
-#endif // OPENMVMODELEDITOR_H
+#endif // OPENMVDATASETEDITOR_H
