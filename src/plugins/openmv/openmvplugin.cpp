@@ -876,7 +876,7 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Command *QRCodeGeneratorCommand = Core::ActionManager::registerAction(QRCodeGeneratorAction, Core::Id("OpenMV.QRCodeGenerator"));
     machineVisionToolsMenu->addAction(QRCodeGeneratorCommand);
     connect(QRCodeGeneratorAction, &QAction::triggered, this, [this] {
-        QUrl url = QUrl(QStringLiteral("http://www.google.com/search?q=qr+code+generator"));
+        QUrl url = QUrl(QStringLiteral("https://www.google.com/search?q=qr+code+generator"));
 
         if(!QDesktopServices::openUrl(url))
         {
@@ -890,7 +890,7 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Command *DataMatrixGeneratorCommand = Core::ActionManager::registerAction(DatamatrixGeneratorAction, Core::Id("OpenMV.DataMatrixGenerator"));
     machineVisionToolsMenu->addAction(DataMatrixGeneratorCommand);
     connect(DatamatrixGeneratorAction, &QAction::triggered, this, [this] {
-        QUrl url = QUrl(QStringLiteral("http://www.google.com/search?q=data+matrix+generator"));
+        QUrl url = QUrl(QStringLiteral("https://www.google.com/search?q=data+matrix+generator"));
 
         if(!QDesktopServices::openUrl(url))
         {
@@ -904,7 +904,7 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Command *BarcodeGeneratorCommand = Core::ActionManager::registerAction(BarcodeGeneratorAction, Core::Id("OpenMV.BarcodeGenerator"));
     machineVisionToolsMenu->addAction(BarcodeGeneratorCommand);
     connect(BarcodeGeneratorAction, &QAction::triggered, this, [this] {
-        QUrl url = QUrl(QStringLiteral("http://www.google.com/search?q=barcode+generator"));
+        QUrl url = QUrl(QStringLiteral("https://www.google.com/search?q=barcode+generator"));
 
         if(!QDesktopServices::openUrl(url))
         {
@@ -1159,7 +1159,7 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Command *forumsCommand = Core::ActionManager::registerAction(forumsAction, Core::Id("OpenMV.Forums"));
     helpMenu->addAction(forumsCommand, Core::Constants::G_HELP_SUPPORT);
     connect(forumsAction, &QAction::triggered, this, [this] {
-        QUrl url = QUrl(QStringLiteral("http://forums.openmv.io/"));
+        QUrl url = QUrl(QStringLiteral("https://forums.openmv.io/"));
 
         if(!QDesktopServices::openUrl(url))
         {
@@ -1196,7 +1196,7 @@ void OpenMVPlugin::extensionsInitialized()
         "<p>By: Ibrahim Abdelkader & Kwabena W. Agyeman</p>"
         "<p><b>GNU GENERAL PUBLIC LICENSE</b></p>"
         "<p>Copyright (C) %L2 %L3</p>"
-        "<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href=\"http://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT\">GNU General Public License</a> for more details.</p>"
+        "<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href=\"https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT\">GNU General Public License</a> for more details.</p>"
         "<p><b>Questions or Comments?</b></p>"
         "<p>Contact us at <a href=\"mailto:openmv@openmv.io\">openmv@openmv.io</a>.</p>"
         ).arg(QLatin1String(Core::Constants::OMV_IDE_VERSION_LONG)).arg(QLatin1String(Core::Constants::OMV_IDE_YEAR)).arg(QLatin1String(Core::Constants::OMV_IDE_AUTHOR)) + tr(
@@ -1825,7 +1825,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     ///////////////////////////////////////////////////////////////////////////
 
-    QLoggingCategory::setFilterRules(QStringLiteral("qt.network.ssl.warning=false")); // http://stackoverflow.com/questions/26361145/qsslsocket-error-when-ssl-is-not-used
+    QLoggingCategory::setFilterRules(QStringLiteral("qt.network.ssl.warning=false")); // https://stackoverflow.com/questions/26361145/qsslsocket-error-when-ssl-is-not-used
 
     if(!isNoShow()) connect(Core::ICore::instance(), &Core::ICore::coreOpened, this, [this] {
 
@@ -1857,7 +1857,7 @@ void OpenMVPlugin::extensionsInitialized()
 
                     if(box.clickedButton() == button)
                     {
-                        QUrl url = QUrl(QStringLiteral("http://openmv.io/pages/download"));
+                        QUrl url = QUrl(QStringLiteral("https://openmv.io/pages/download"));
 
                         if(!QDesktopServices::openUrl(url))
                         {
