@@ -1573,12 +1573,18 @@ void OpenMVPlugin::extensionsInitialized()
 
     ///////////////////////////////////////////////////////////////////////////
 
+    m_datasetEditor = new OpenMVDatasetEditor;
+    connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, m_datasetEditor, &OpenMVDatasetEditor::frameBufferData);
+
+    QLabel *dataSetEditorLabel = new QLabel(tr("Dataset Editor"));
+    connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, this, [this, dataSetEditorLabel] (const QString &path) { dataSetEditorLabel->setToolTip(path); });
+
     Utils::StyledBar *datasetEditorStyledBar0 = new Utils::StyledBar;
     QHBoxLayout *datasetEditorStyledBarLayout0 = new QHBoxLayout;
     datasetEditorStyledBarLayout0->setMargin(0);
     datasetEditorStyledBarLayout0->setSpacing(0);
     datasetEditorStyledBarLayout0->addSpacing(4);
-    datasetEditorStyledBarLayout0->addWidget(new QLabel(tr("Dataset Editor")));
+    datasetEditorStyledBarLayout0->addWidget(dataSetEditorLabel);
     datasetEditorStyledBarLayout0->addSpacing(6);
     datasetEditorStyledBar0->setLayout(datasetEditorStyledBarLayout0);
 
@@ -1586,9 +1592,6 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorCloseButton->setIcon(Utils::Icon({{QStringLiteral(":/core/images/close.png"), Utils::Theme::IconsBaseColor}}).icon());
     datasetEditorCloseButton->setToolTip(tr("Close"));
     datasetEditorStyledBarLayout0->addWidget(datasetEditorCloseButton);
-
-    m_datasetEditor = new OpenMVDatasetEditor;
-    connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, m_datasetEditor, &OpenMVDatasetEditor::frameBufferData);
 
     Utils::StyledBar *datasetEditorStyledBar1 = new Utils::StyledBar;
     QHBoxLayout *datasetEditorStyledBarLayout1 = new QHBoxLayout;
@@ -1606,14 +1609,15 @@ void OpenMVPlugin::extensionsInitialized()
 
     Core::Command *datasetEditorNewFolder = Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(NEW_FOLDER_PATH)),
     tr("New Class Folder"), this), Core::Id("OpenMV.NewClassFolder"));
-    //datasetEditorNewFolder->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
+    datasetEditorNewFolder->setDefaultKeySequence(QStringLiteral("Ctrl+Shift+N"));
     datasetEditorNewFolder->action()->setEnabled(false);
     datasetEditorNewFolder->action()->setVisible(false);
+    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, datasetEditorNewFolder->action(), &QAction::setEnabled);
     connect(datasetEditorNewFolder->action(), &QAction::triggered, m_datasetEditor, &OpenMVDatasetEditor::newClassFolder);
 
     Core::Command *datasetEditorSnapshot = Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(SNAPSHOT_PATH)),
     tr("Capture Data"), this), Core::Id("OpenMV.CaptureData"));
-    //datasetEditorSnapshot->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
+    datasetEditorSnapshot->setDefaultKeySequence(QStringLiteral("Ctrl+Shift+S"));
     datasetEditorSnapshot->action()->setEnabled(false);
     datasetEditorSnapshot->action()->setVisible(false);
     connect(m_datasetEditor, &OpenMVDatasetEditor::snapshotEnable, datasetEditorSnapshot->action(), &QAction::setEnabled);
@@ -1642,7 +1646,8 @@ void OpenMVPlugin::extensionsInitialized()
     connect(datasetEditorCloseButton, &QToolButton::clicked, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathClosed, this, [this] (const QString &path) { Core::EditorManager::closeEditors(Core::DocumentModel::editorsForFilePath(path + QStringLiteral("/dataset_capture_script.py"))); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, datasetEditorWidget, &QWidget::show);
-    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, closeDatasetCommand, datasetEditorNewFolder, datasetEditorSnapshot, datasetEditorActionBar] (bool visible) {
+    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, actionBar1, closeDatasetCommand, datasetEditorNewFolder, datasetEditorSnapshot, datasetEditorActionBar] (bool visible) {
+        actionBar1->setSizePolicy(QSizePolicy::Preferred, visible ? QSizePolicy::Maximum : QSizePolicy::Minimum);
         closeDatasetCommand->action()->setEnabled(visible);
         datasetEditorNewFolder->action()->setVisible(visible);
         datasetEditorSnapshot->action()->setVisible(visible);
@@ -1650,6 +1655,7 @@ void OpenMVPlugin::extensionsInitialized()
     });
 
     closeDatasetCommand->action()->setDisabled(true);
+    datasetEditorActionBar->hide();
     datasetEditorWidget->hide();
 
     msplitter->insertWidget(0, datasetEditorWidget);
@@ -1758,7 +1764,7 @@ void OpenMVPlugin::extensionsInitialized()
         settings->setValue(QStringLiteral(EDITOR_MANAGER_STATE),
             Core::EditorManager::saveState());
         if(!isNoShow()) settings->setValue(QStringLiteral(LAST_DATASET_EDITOR_LOADED),
-            m_datasetEditor->parentWidget()->isVisible());
+            !m_datasetEditor->rootPath().isEmpty());
         if(!isNoShow()) settings->setValue(QStringLiteral(MSPLITTER_STATE),
             msplitter->saveState());
         if(!isNoShow()) settings->setValue(QStringLiteral(HSPLITTER_STATE),
@@ -1999,7 +2005,11 @@ bool OpenMVPlugin::delayedInitialize()
                     tr("Failed to create the documents folder!"));
     }
 
-    if(Core::EditorManager::currentEditor()->document()->displayName() == QStringLiteral("helloworld_1.py"))
+    if(Core::EditorManager::currentEditor()
+        ? Core::EditorManager::currentEditor()->document()
+            ? Core::EditorManager::currentEditor()->document()->displayName() == QStringLiteral("helloworld_1.py")
+            : false
+        : false)
     {
         QTimer::singleShot(2000, this, [this] {
             QSettings *settings = ExtensionSystem::PluginManager::settings();
@@ -4509,7 +4519,7 @@ void OpenMVPlugin::startClicked()
 
         ///////////////////////////////////////////////////////////////////////
 
-        QByteArray contents = Core::EditorManager::currentEditor()->document()->contents();
+        QByteArray contents = Core::EditorManager::currentEditor() ? Core::EditorManager::currentEditor()->document() ? Core::EditorManager::currentEditor()->document()->contents() : QByteArray() : QByteArray();
 
         if(importHelper(contents))
         {
@@ -4580,7 +4590,11 @@ void OpenMVPlugin::stopClicked()
 
         ///////////////////////////////////////////////////////////////////////
 
-        if(Core::EditorManager::currentEditor()->document()->displayName() == QStringLiteral("helloworld_1.py"))
+        if(Core::EditorManager::currentEditor()
+            ? Core::EditorManager::currentEditor()->document()
+                ? Core::EditorManager::currentEditor()->document()->displayName() == QStringLiteral("helloworld_1.py")
+                : false
+            : false)
         {
             QTimer::singleShot(2000, this, [this] {
                 QSettings *settings = ExtensionSystem::PluginManager::settings();
@@ -4760,7 +4774,7 @@ void OpenMVPlugin::saveScript()
 
         if((answer == QMessageBox::Yes) || (answer == QMessageBox::No))
         {
-            QByteArray contents = Core::EditorManager::currentEditor()->document()->contents();
+            QByteArray contents = Core::EditorManager::currentEditor() ? Core::EditorManager::currentEditor()->document() ? Core::EditorManager::currentEditor()->document()->contents() : QByteArray() : QByteArray();
 
             if(importHelper(contents))
             {

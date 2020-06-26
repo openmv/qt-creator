@@ -11,19 +11,35 @@ int OpenMVDatasetEditorModel::columnCount(const QModelIndex &parent) const
     return 1;
 }
 
-OpenMVDatasetEditor::OpenMVDatasetEditor(QWidget *parent) : QTreeView(parent)
+OpenMVDatasetEditor::OpenMVDatasetEditor(QWidget *parent) : QTreeView(parent), m_model(new OpenMVDatasetEditorModel(this)), m_pixmap(QPixmap())
 {
     setContextMenuPolicy(Qt::DefaultContextMenu);
-    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     setFrameStyle(QFrame::NoFrame);
+    setHeaderHidden(true);
+    setModel(m_model);
     setStyleSheet(QStringLiteral("QAbstractScrollArea{background-color:#1E1E27;color:#FFFFFF;}" // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
                                  "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings{border-image:none;image:url(:/openmv/images/branch-closed.png);}"
                                  "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/openmv/images/branch-open.png);}"));
-    setHeaderHidden(true);
-    setUniformRowHeights(true);
-    m_model = new OpenMVDatasetEditorModel(this);
-    m_model->setReadOnly(false);
-    setModel(m_model);
+    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+
+    m_classFolderRegex = QRegularExpression(QStringLiteral("^(\\d+)\\.(\\w+)\\.class$"));
+    m_classFolderRegex.optimize();
+
+    m_snapshotRegex = QRegularExpression(QStringLiteral("^(\\d+)\\.(jpg|jpeg)$"));
+    m_snapshotRegex.optimize();
+
+    connect(this, &OpenMVDatasetEditor::doubleClicked, this, [this] (const QModelIndex &index) {
+        QString file = m_model->fileInfo(index).filePath();
+
+        if (QFileInfo(file).isFile()) {
+            TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditor(file));
+
+            if(editor) {
+                Core::EditorManager::addCurrentPositionToNavigationHistory();
+                Core::EditorManager::activateEditor(editor);
+            }
+        }
+    });
 }
 
 QString OpenMVDatasetEditor::rootPath()
@@ -39,13 +55,24 @@ void OpenMVDatasetEditor::setRootPath(const QString &path)
     }
 
     setRootIndex(m_model->setRootPath(path));
-    emit rootPathSet(path);
+
+    if(!path.isEmpty())
+    {
+        datasetCaptureScriptPath = QDir::cleanPath(QDir::fromNativeSeparators(m_model->rootPath() + QStringLiteral("/dataset_capture_script.py")));
+        labelsPath = QDir::cleanPath(QDir::fromNativeSeparators(m_model->rootPath() + QStringLiteral("/labels.txt")));
+
+        emit rootPathSet(path);
+    }
 }
 
 void OpenMVDatasetEditor::frameBufferData(const QPixmap &data)
 {
-    m_pixmap = data;
-    emit snapshotEnable((!getClassFolderPath().isEmpty()) && (!m_pixmap.isNull()));
+    if(!m_model->rootPath().isEmpty())
+    {
+        m_pixmap = data;
+
+        emit snapshotEnable((!getClassFolderPath().isEmpty()) && (!m_pixmap.isNull()));
+    }
 }
 
 void OpenMVDatasetEditor::newClassFolder()
@@ -59,14 +86,12 @@ void OpenMVDatasetEditor::newClassFolder()
 
     if(ok)
     {
-        QRegularExpression regex = QRegularExpression(QStringLiteral("(\\d+)\\.(\\w+)\\.class"));
-
         QStringList list = m_model->rootDirectory().entryList(QStringList() << QStringLiteral("*.class"), QDir::Dirs, QDir::Name);
         int number = 0;
 
         if(!list.isEmpty())
         {
-            QRegularExpressionMatch match = regex.match(list.last());
+            QRegularExpressionMatch match = m_classFolderRegex.match(list.last());
 
             if(match.hasMatch())
             {
@@ -78,7 +103,7 @@ void OpenMVDatasetEditor::newClassFolder()
 
         if(m_model->rootDirectory().mkdir(dir_name))
         {
-            Utils::FileSaver file(QDir::cleanPath(QDir::fromNativeSeparators(m_model->rootPath()) + QStringLiteral("/labels.txt")));
+            Utils::FileSaver file(QDir::cleanPath(QDir::fromNativeSeparators(m_model->rootPath() + QStringLiteral("/labels.txt"))));
 
             if(!file.hasError())
             {
@@ -86,7 +111,7 @@ void OpenMVDatasetEditor::newClassFolder()
 
                 foreach(const QString &string, list << dir_name)
                 {
-                    QRegularExpressionMatch match = regex.match(string);
+                    QRegularExpressionMatch match = m_classFolderRegex.match(string);
 
                     if(match.hasMatch())
                     {
@@ -120,13 +145,12 @@ void OpenMVDatasetEditor::newClassFolder()
 void OpenMVDatasetEditor::snapshot()
 {
     QString path = getClassFolderPath();
-    QRegularExpression regex = QRegularExpression(QStringLiteral("(\\d+)\\.(jpg|jpeg)"));
-    QStringList list = QDir(path).entryList(QStringList() << QStringLiteral("*.jpg") << QStringLiteral("*.jpeg"), QDir::Files, QDir::Name).filter(regex);
+    QStringList list = QDir(path).entryList(QStringList() << QStringLiteral("*.jpg") << QStringLiteral("*.jpeg"), QDir::Files, QDir::Name).filter(m_snapshotRegex);
     int number = 0;
 
     if(!list.isEmpty())
     {
-        QRegularExpressionMatch match = regex.match(list.last());
+        QRegularExpressionMatch match = m_snapshotRegex.match(list.last());
 
         if(match.hasMatch())
         {
@@ -148,6 +172,113 @@ void OpenMVDatasetEditor::snapshot()
     }
 }
 
+void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)
+{
+    QModelIndex index = indexAt(event->pos());
+
+    if(index.isValid())
+    {
+        QString path = QDir::cleanPath(QDir::fromNativeSeparators(m_model->fileInfo(index).canonicalFilePath()));
+
+        if((path != datasetCaptureScriptPath) && (path != labelsPath))
+        {
+            QMenu menu;
+
+            connect(menu.addAction(tr("Delete")), &QAction::triggered, this, [this] {
+                foreach(const QModelIndex &index, selectedIndexes())
+                {
+                    if(QMessageBox::question(Core::ICore::dialogParent(),
+                                             tr("Dataset Editor"),
+                                             tr("Are you sure you want to permanetly delete \"%L1\"?").arg(m_model->fileName(index)),
+                                             QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)
+                    == QMessageBox::Yes)
+                    {
+                        bool wasClassFolder = getClassFolderPath() == m_model->fileInfo(index).canonicalFilePath();
+                        QString error;
+
+                        if(!Utils::FileUtils::removeRecursively(Utils::FileName(m_model->fileInfo(index)), &error))
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                tr("Dataset Editor"),
+                                tr("Error: %L1!").arg(error));
+                        }
+                        else if(wasClassFolder)
+                        {
+                            updateLabels();
+                        }
+                    }
+                }
+            });
+
+            connect(menu.addAction(tr("Rename")), &QAction::triggered, this, [this, index] {
+                if(getClassFolderPath() == m_model->fileInfo(index).canonicalFilePath())
+                {
+                    QRegularExpressionMatch match = m_classFolderRegex.match(m_model->fileName(index));
+
+                    if(Q_LIKELY(match.hasMatch()))
+                    {
+                        bool ok;
+                        QString name = QInputDialog::getText(Core::ICore::dialogParent(),
+                                                             tr("Dataset Editor"), tr("Please enter a new name"),
+                                                             QLineEdit::Normal, match.captured(2), &ok,
+                                                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                                                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+
+                        if(ok)
+                        {
+                            if(!QDir().rename(m_model->fileInfo(index).filePath(), QString(QStringLiteral("%1/%2.%3.class")).arg(m_model->fileInfo(index).path()).arg(match.captured(1)).arg(name)))
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                    tr("Dataset Editor"),
+                                    tr("Failed to rename the folder for an unknown reason!"));
+                            }
+                            else
+                            {
+                                updateLabels();
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    bool ok;
+                    QString name = QInputDialog::getText(Core::ICore::dialogParent(),
+                                                         tr("Dataset Editor"), tr("Please enter a new name"),
+                                                         QLineEdit::Normal, m_model->fileName(index), &ok,
+                                                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                                                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+
+                    if(ok)
+                    {
+                        if(m_model->fileInfo(index).isDir())
+                        {
+                            if(!QDir().rename(m_model->fileInfo(index).filePath(), m_model->fileInfo(index).path() + QDir::separator() + name))
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                    tr("Dataset Editor"),
+                                    tr("Failed to rename the folder for an unknown reason!"));
+                            }
+                        }
+                        else
+                        {
+                            if(!QFile(m_model->fileInfo(index).filePath()).rename(m_model->fileInfo(index).path() + QDir::separator() + name))
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                    tr("Dataset Editor"),
+                                    tr("Failed to rename the file for an unknown reason!"));
+                            }
+                        }
+                    }
+                }
+            });
+
+            menu.exec(event->globalPos());
+        }
+    }
+
+    QTreeView::contextMenuEvent(event);
+}
+
 void OpenMVDatasetEditor::keyPressEvent(QKeyEvent *event)
 {
     switch(event->key())
@@ -156,12 +287,20 @@ void OpenMVDatasetEditor::keyPressEvent(QKeyEvent *event)
         {
             foreach(const QModelIndex &index, selectedIndexes())
             {
+                QString path = QDir::cleanPath(QDir::fromNativeSeparators(m_model->fileInfo(index).canonicalFilePath()));
+
+                if((path == datasetCaptureScriptPath) || (path == labelsPath))
+                {
+                    continue;
+                }
+
                 if(QMessageBox::question(Core::ICore::dialogParent(),
                                          tr("Dataset Editor"),
                                          tr("Are you sure you want to permanetly delete \"%L1\"?").arg(m_model->fileName(index)),
-                                         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
+                                         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)
                 == QMessageBox::Yes)
                 {
+                    bool wasClassFolder = getClassFolderPath() == m_model->fileInfo(index).canonicalFilePath();
                     QString error;
 
                     if(!Utils::FileUtils::removeRecursively(Utils::FileName(m_model->fileInfo(index)), &error))
@@ -169,6 +308,10 @@ void OpenMVDatasetEditor::keyPressEvent(QKeyEvent *event)
                         QMessageBox::critical(Core::ICore::dialogParent(),
                             tr("Dataset Editor"),
                             tr("Error: %L1!").arg(error));
+                    }
+                    else if(wasClassFolder)
+                    {
+                        updateLabels();
                     }
                 }
             }
@@ -184,88 +327,47 @@ void OpenMVDatasetEditor::selectionChanged(const QItemSelection &selected, const
 {
     emit snapshotEnable((!getClassFolderPath().isEmpty()) && (!m_pixmap.isNull()));
 
-    Utils::MimeDatabase db;
+//  Utils::MimeDatabase db;
 
     foreach(const QModelIndex &index, selectedIndexes())
     {
         QString file = m_model->fileInfo(index).filePath();
         QPixmap pixmap(file);
 
-        if(pixmap.isNull())
-        {
-            Utils::MimeType mt = db.mimeTypeForFile(file);
-
-            if(mt.isValid() && (mt.name().startsWith(QStringLiteral("text"))))
-            {
-                QPixmap textPixmap(400, 400);
-                textPixmap.fill();
-
-                QPainter painter;
-
-                if(painter.begin(&textPixmap))
-                {
-                    QFile textFile(file);
-
-                    if(textFile.open(QIODevice::ReadOnly))
-                    {
-                        QTextDocument document(QString::fromUtf8(textFile.readAll()));
-                        QFont font = TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily();
-                        font.setBold(true);
-                        document.setDefaultFont(font);
-                        document.drawContents(&painter);
-
-                        if(painter.end())
-                        {
-                            pixmap = textPixmap;
-                        }
-                    }
-                }
-            }
-        }
+//      if(pixmap.isNull())
+//      {
+//          Utils::MimeType mt = db.mimeTypeForFile(file);
+//
+//          if(mt.isValid() && (mt.name().startsWith(QStringLiteral("text"))))
+//          {
+//              QPixmap textPixmap(400, 400);
+//              textPixmap.fill();
+//
+//              QPainter painter;
+//
+//              if(painter.begin(&textPixmap))
+//              {
+//                  QFile textFile(file);
+//
+//                  if(textFile.open(QIODevice::ReadOnly))
+//                  {
+//                      QTextDocument document(QString::fromUtf8(textFile.readAll()));
+//                      document.setDefaultFont(TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily());
+//                      document.drawContents(&painter);
+//
+//                      if(painter.end())
+//                      {
+//                          pixmap = textPixmap;
+//                      }
+//                  }
+//              }
+//          }
+//      }
 
         emit pixmapUpdate(pixmap);
     }
 
     QTreeView::selectionChanged(selected, deselected);
-}
-
-void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)
-{
-    QModelIndex index = indexAt(event->pos());
-
-    if(index.isValid())
-    {
-        QMenu menu;
-
-        connect(menu.addAction(tr("Delete")), &QAction::triggered, this, [this, index] {
-            foreach(const QModelIndex &index, selectedIndexes())
-            {
-                if(QMessageBox::question(Core::ICore::dialogParent(),
-                                         tr("Dataset Editor"),
-                                         tr("Are you sure you want to permanetly delete \"%L1\"?").arg(m_model->fileName(index)),
-                                         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
-                == QMessageBox::Yes)
-                {
-                    QString error;
-
-                    if(!Utils::FileUtils::removeRecursively(Utils::FileName(m_model->fileInfo(index)), &error))
-                    {
-                        QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("Dataset Editor"),
-                            tr("Error: %L1!").arg(error));
-                    }
-                }
-            }
-        });
-
-        connect(menu.addAction(tr("Rename")), &QAction::triggered, this, [this, index] {
-            edit(index);
-        });
-
-        menu.exec(event->globalPos());
-    }
-
-    QTreeView::contextMenuEvent(event);
 }
 
 void OpenMVDatasetEditor::hideEvent(QHideEvent *event)
@@ -283,7 +385,6 @@ void OpenMVDatasetEditor::showEvent(QShowEvent *event)
 QString OpenMVDatasetEditor::getClassFolderPath()
 {
     QModelIndexList list = selectedIndexes();
-    QString result;
 
     if(!list.isEmpty())
     {
@@ -292,17 +393,57 @@ QString OpenMVDatasetEditor::getClassFolderPath()
 
         if(QDir(path).canonicalPath() != m_model->rootDirectory().canonicalPath())
         {
-            while(QFileInfo(path).dir().canonicalPath() != m_model->rootDirectory().canonicalPath())
+            forever
             {
-                path = QFileInfo(path).dir().canonicalPath();
+                QString temp = QFileInfo(path).dir().canonicalPath();
+
+                if(temp == m_model->rootDirectory().canonicalPath())
+                {
+                    break;
+                }
+
+                path = temp;
             }
 
-            if(QRegularExpression(QStringLiteral("^(\\d+)\\.(\\w+)\\.class$")).match(QDir(path).dirName()).hasMatch())
+            if(m_classFolderRegex.match(QDir(path).dirName()).hasMatch())
             {
-                result = path;
+                return path;
             }
         }
     }
 
-    return result;
+    return QString();
+}
+
+void OpenMVDatasetEditor::updateLabels()
+{
+    Utils::FileSaver file(QDir::cleanPath(QDir::fromNativeSeparators(m_model->rootPath() + QStringLiteral("/labels.txt"))));
+
+    if(!file.hasError())
+    {
+        bool write_ok = true;
+
+        foreach(const QString &string, m_model->rootDirectory().entryList(QStringList() << QStringLiteral("*.class"), QDir::Dirs, QDir::Name))
+        {
+            QRegularExpressionMatch match = m_classFolderRegex.match(string);
+
+            if(match.hasMatch())
+            {
+                if(!file.write(QString(match.captured(2) + QLatin1Char('\n')).toUtf8())) write_ok = false;
+            }
+        }
+
+        if((!write_ok) || (!file.finalize()))
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                tr("Dataset Editor"),
+                tr("Error: %L1!").arg(file.errorString()));
+        }
+    }
+    else
+    {
+        QMessageBox::critical(Core::ICore::dialogParent(),
+            tr("Dataset Editor"),
+            tr("Error: %L1!").arg(file.errorString()));
+    }
 }
