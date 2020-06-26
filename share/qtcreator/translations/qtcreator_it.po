@@ -10448,13 +10448,13 @@ msgstr "Utilizza Scala grigi/LAB per il tracciamento del colore"
 #: ../../../src/plugins/openmv/openmvterminal.cpp:912
 msgctxt "OpenMVTerminal|"
 msgid "Res - No Image"
-msgstr "Res - Nessuna immagine"
+msgstr "Risoluzione - Nessuna immagine"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:898
 #, qt-format
 msgctxt "OpenMVTerminal|"
 msgid "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)"
-msgstr "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixel (%7)"
+msgstr "Risoluzione (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixel (%7)"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:902
 #, qt-format
@@ -10466,7 +10466,7 @@ msgstr "Risoluzione (w:%1, h:%2) - Punto (x:%3, y:%4)"
 #, qt-format
 msgctxt "OpenMVTerminal|"
 msgid "Res (w:%1, h:%2)"
-msgstr "Res (w:%1, h:%2)"
+msgstr "Risoluzione (w:%1, h:%2)"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:923
 msgctxt "OpenMVTerminal|"

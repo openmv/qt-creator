@@ -8276,19 +8276,19 @@ msgstr "Utilizar escala de grises/LAB para el seguimiento del color"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1579
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res - No Image"
-msgstr "Res - Sin imagen"
+msgstr "Resolución - Sin imagen"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1565
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)"
-msgstr "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Píxeles (%7)"
+msgstr "Resolución (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Píxeles (%7)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1574
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res (w:%1, h:%2)"
-msgstr "Res (w:%1, h:%2)"
+msgstr "Resolución (w:%1, h:%2)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1649
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -10463,7 +10463,7 @@ msgstr "Utilizar escala de grises/LAB para el seguimiento del color"
 #: ../../../src/plugins/openmv/openmvterminal.cpp:912
 msgctxt "OpenMVTerminal|"
 msgid "Res - No Image"
-msgstr "Res - Sin imagen"
+msgstr "Resolución - Sin imagen"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:898
 #, qt-format

@@ -8318,7 +8318,7 @@ msgstr "取消"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1657
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Dataset Editor"
-msgstr ""
+msgstr "数据集编辑器"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:987
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1005
@@ -8328,18 +8328,18 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1091
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "New Dataset"
-msgstr ""
+msgstr "新数据集"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:995
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Dataset Editor - Choose a folder to build the dataset in"
-msgstr ""
+msgstr "数据集编辑器-选择要在其中构建数据集的文件夹"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1006
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "The selected folder is not empty and the contents will be deleted. Continue?"
-msgstr ""
+msgstr "所选文件夹不为空，内容将被删除。继续？"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1073
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1092
@@ -8376,18 +8376,18 @@ msgstr "错误：%L1!"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1130
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Open Dataset"
-msgstr ""
+msgstr "打开数据集"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1108
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Dataset Editor - Choose a dataset folder to open"
-msgstr ""
+msgstr "数据集编辑器-选择要打开的数据集文件夹"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1131
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "The selected folder does not appear to be a valid OpenMV Cam Image Dataset!"
-msgstr ""
+msgstr "所选文件夹似乎不是有效的OpenMV Cam图像数据集！"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1140
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1148
@@ -8395,22 +8395,22 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1208
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Export Dataset"
-msgstr ""
+msgstr "导出数据集"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1150
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Zip Files (*.zip)"
-msgstr ""
+msgstr "压缩文件 (*.zip)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1160
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Exporting..."
-msgstr ""
+msgstr "出口..."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1218
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Close Dataset"
-msgstr ""
+msgstr "关闭数据集"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1272
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8425,15 +8425,20 @@ msgid ""
 "Comments?</b></p><p>Contact us at <a "
 "href=\"mailto:openmv@openmv.io\">openmv@openmv.io</a>.</p>"
 msgstr ""
+"<p><b>关于OpenMV IDE %L1</b></p><p>通过: Ibrahim Abdelkader & Kwabena W. "
+"Agyeman</p><p><b>GNU GENERAL PUBLIC LICENSE</b></p><p>Copyright (C) %L2 "
+"%L3</p><p>分发该程序的目的是希望它会有用，但不作任何担保；甚至没有对适销性或特定用途适用性的暗示保证。见 <a "
+"href=\"https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT\">GNU "
+"General Public License</a> 更多细节.</p><p><b>有疑问或意见吗？</b></p><p>与我们联系 <a "
+"href=\"mailto:openmv@openmv.io\">openmv@openmv.io</a>.</p>"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1569
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res (w:%1, h:%2) - Point (x:%3, y:%4)"
-msgstr ""
+msgstr "解析度 (w:%1, h:%2) - 点 (x:%3, y:%4)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1671
-#, fuzzy
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Close"
 msgstr "关闭"
@@ -8441,17 +8446,17 @@ msgstr "关闭"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1679
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Image Preview"
-msgstr ""
+msgstr "图片预览"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1689
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "New Class Folder"
-msgstr ""
+msgstr "新类文件夹"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1697
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Capture Data"
-msgstr ""
+msgstr "采集数据"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2251
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8697,7 +8702,7 @@ msgstr "安装"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2905
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Downloading..."
-msgstr ""
+msgstr "正在下载..."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2919
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9446,7 +9451,7 @@ msgstr "无效的字符串：\"%L1\"！"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5470
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No serial ports found!"
-msgstr ""
+msgstr "找不到串行端口！"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5477
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -10185,25 +10190,25 @@ msgstr "使用灰度/LAB进行颜色跟踪"
 #: ../../../src/plugins/openmv/openmvterminal.cpp:912
 msgctxt "OpenMVTerminal|"
 msgid "Res - No Image"
-msgstr "Res  - 没有图像"
+msgstr "解析度 - 没有图像"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:898
 #, qt-format
 msgctxt "OpenMVTerminal|"
 msgid "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)"
-msgstr "Res(w：%1，h：%2) -  ROI(x：%3，y：%4，w：%5，h：%6) - 像素(%7)"
+msgstr "解析度 (w：%1，h：%2) -  ROI(x：%3，y：%4，w：%5，h：%6) - 像素(%7)"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:902
 #, qt-format
 msgctxt "OpenMVTerminal|"
 msgid "Res (w:%1, h:%2) - Point (x:%3, y:%4)"
-msgstr ""
+msgstr "解析度 (w:%1, h:%2) - 点 (x:%3, y:%4)"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:907
 #, qt-format
 msgctxt "OpenMVTerminal|"
 msgid "Res (w:%1, h:%2)"
-msgstr "Res(w：%1，h：%2)"
+msgstr "解析度 (w：%1，h：%2)"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:923
 msgctxt "OpenMVTerminal|"
@@ -11105,12 +11110,12 @@ msgstr "关闭前复制上面的阈值。"
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:446
 msgctxt "OpenMVDatasetEditor|"
 msgid "Dataset Editor"
-msgstr ""
+msgstr "数据集编辑器"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:82
 msgctxt "OpenMVDatasetEditor|"
 msgid "Please enter a class name"
-msgstr ""
+msgstr "请输入班级名称"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:126
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:133
@@ -11118,25 +11123,21 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:310
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:440
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:447
-#, fuzzy
 msgctxt "OpenMVDatasetEditor|"
 msgid "Error: %L1!"
 msgstr "错误：%L1!"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:140
-#, fuzzy
 msgctxt "OpenMVDatasetEditor|"
 msgid "Failed to create \"%L1\"!"
 msgstr "无法创建\"%L1\"!"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:171
-#, fuzzy
 msgctxt "OpenMVDatasetEditor|"
 msgid "Failed to save the image file for an unknown reason!"
 msgstr "因为未知的原因，无法保存图像文件！"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:187
-#, fuzzy
 msgctxt "OpenMVDatasetEditor|"
 msgid "Delete"
 msgstr "删除"
@@ -11145,10 +11146,9 @@ msgstr "删除"
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:299
 msgctxt "OpenMVDatasetEditor|"
 msgid "Are you sure you want to permanetly delete \"%L1\"?"
-msgstr ""
+msgstr "您确定要永久删除\"%L1\"吗？"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:213
-#, fuzzy
 msgctxt "OpenMVDatasetEditor|"
 msgid "Rename"
 msgstr "重命名"
@@ -11157,15 +11157,15 @@ msgstr "重命名"
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:246
 msgctxt "OpenMVDatasetEditor|"
 msgid "Please enter a new name"
-msgstr ""
+msgstr "请输入新名称"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:233
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:259
 msgctxt "OpenMVDatasetEditor|"
 msgid "Failed to rename the folder for an unknown reason!"
-msgstr ""
+msgstr "由于未知原因，无法重命名文件夹！"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:268
 msgctxt "OpenMVDatasetEditor|"
 msgid "Failed to rename the file for an unknown reason!"
-msgstr ""
+msgstr "由于未知原因，无法重命名文件！"

@@ -1000,7 +1000,7 @@ msgstr "Сбросить всё до значений по умолчанию."
 #: ../../../src/plugins/coreplugin/mimetypesettingspage.ui:-1
 msgctxt "Core::Internal::MimeTypeSettingsPage|"
 msgid "Reset All"
-msgstr "Сбросить все "
+msgstr "Сбросить все"
 
 #: ../../../src/plugins/coreplugin/mimetypesettingspage.ui:-1
 msgctxt "Core::Internal::MimeTypeSettingsPage|"
@@ -8264,19 +8264,19 @@ msgstr "Используйте оттенки серого/LAB для отсле
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1579
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res - No Image"
-msgstr "Res - Нет изображения"
+msgstr "разрешение - Нет изображения"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1565
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)"
-msgstr "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Пиксели (%7)"
+msgstr "разрешение (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Пиксели (%7)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1574
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res (w:%1, h:%2)"
-msgstr "Res (w:%1, h:%2)"
+msgstr "разрешение (w:%1, h:%2)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1649
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8508,7 +8508,7 @@ msgstr "Отменить"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1657
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Dataset Editor"
-msgstr ""
+msgstr "Редактор набора данных"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:987
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1005
@@ -8518,18 +8518,18 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1091
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "New Dataset"
-msgstr ""
+msgstr "Новый набор данных"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:995
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Dataset Editor - Choose a folder to build the dataset in"
-msgstr ""
+msgstr "Редактор набора данных - выберите папку для построения набора данных"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1006
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "The selected folder is not empty and the contents will be deleted. Continue?"
-msgstr ""
+msgstr "Выбранная папка не пуста, и ее содержимое будет удалено. Продолжать?"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1073
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1092
@@ -8566,18 +8566,18 @@ msgstr "Ошибка: %L1!"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1130
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Open Dataset"
-msgstr ""
+msgstr "Открытый набор данных"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1108
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Dataset Editor - Choose a dataset folder to open"
-msgstr ""
+msgstr "Редактор набора данных - выберите папку набора данных для открытия"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1131
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid ""
 "The selected folder does not appear to be a valid OpenMV Cam Image Dataset!"
-msgstr ""
+msgstr "Выбранная папка не является допустимым набором изображений OpenMV Cam!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1140
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1148
@@ -8585,22 +8585,22 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1208
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Export Dataset"
-msgstr ""
+msgstr "Экспорт данных"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1150
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Zip Files (*.zip)"
-msgstr ""
+msgstr "Zip файлы (*.zip)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1160
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Exporting..."
-msgstr ""
+msgstr "Экспорт..."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1218
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Close Dataset"
-msgstr ""
+msgstr "Закрыть набор данных"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1272
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8615,15 +8615,23 @@ msgid ""
 "Comments?</b></p><p>Contact us at <a "
 "href=\"mailto:openmv@openmv.io\">openmv@openmv.io</a>.</p>"
 msgstr ""
+"<p><b>Об OpenMV IDE %L1</b></p><p>По: Ibrahim Abdelkader & Kwabena W. "
+"Agyeman</p><p><b>GNU GENERAL PUBLIC LICENSE</b></p><p>авторское право (C) "
+"%L2 %L3</p><p>Эта программа распространяется в надежде, что она будет "
+"полезна, но БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; даже без подразумеваемой гарантии "
+"ТОВАРНОГО ОБЕСПЕЧЕНИЯ или ПРИГОДНОСТИ ДЛЯ ОСОБЫХ ЦЕЛЕЙ. См <a "
+"href=\"https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT\">GNU "
+"General Public License</a> для получения дополнительной "
+"информации.</p><p><b>Вопросы или комментарии?</b></p><p>Свяжитесь с нами по "
+"адресу <a href=\"mailto:openmv@openmv.io\">openmv@openmv.io</a>.</p>"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1569
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res (w:%1, h:%2) - Point (x:%3, y:%4)"
-msgstr ""
+msgstr "разрешение (w:%1, h:%2) - точка (x:%3, y:%4)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1671
-#, fuzzy
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Close"
 msgstr "Закрыть"
@@ -8631,17 +8639,17 @@ msgstr "Закрыть"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1679
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Image Preview"
-msgstr ""
+msgstr "Предварительный просмотр изображения"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1689
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "New Class Folder"
-msgstr ""
+msgstr "Папка нового класса"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1697
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Capture Data"
-msgstr ""
+msgstr "Захват данных"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:2251
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9672,7 +9680,7 @@ msgstr "Неверная строка: \"%L1\"!"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5470
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No serial ports found!"
-msgstr ""
+msgstr "Последовательные порты не найдены!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5477
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -10428,25 +10436,25 @@ msgstr "Используйте оттенки серого/LAB для отсле
 #: ../../../src/plugins/openmv/openmvterminal.cpp:912
 msgctxt "OpenMVTerminal|"
 msgid "Res - No Image"
-msgstr "Res - Нет изображения"
+msgstr "разрешение - Нет изображения"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:898
 #, qt-format
 msgctxt "OpenMVTerminal|"
 msgid "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)"
-msgstr "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Пиксели (%7)"
+msgstr "разрешение (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Пиксели (%7)"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:902
 #, qt-format
 msgctxt "OpenMVTerminal|"
 msgid "Res (w:%1, h:%2) - Point (x:%3, y:%4)"
-msgstr ""
+msgstr "разрешение (w:%1, h:%2) - точка (x:%3, y:%4)"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:907
 #, qt-format
 msgctxt "OpenMVTerminal|"
 msgid "Res (w:%1, h:%2)"
-msgstr "Res (w:%1, h:%2)"
+msgstr "разрешение (w:%1, h:%2)"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:923
 msgctxt "OpenMVTerminal|"
@@ -10627,12 +10635,12 @@ msgstr "Скопируйте порог, указанный выше, перед
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:446
 msgctxt "OpenMVDatasetEditor|"
 msgid "Dataset Editor"
-msgstr ""
+msgstr "Редактор набора данных"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:82
 msgctxt "OpenMVDatasetEditor|"
 msgid "Please enter a class name"
-msgstr ""
+msgstr "Пожалуйста, введите название класса"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:126
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:133
@@ -10640,25 +10648,21 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:310
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:440
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:447
-#, fuzzy
 msgctxt "OpenMVDatasetEditor|"
 msgid "Error: %L1!"
 msgstr "Ошибка: %L1!"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:140
-#, fuzzy
 msgctxt "OpenMVDatasetEditor|"
 msgid "Failed to create \"%L1\"!"
 msgstr "Не удалось создать \"%L1\"!"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:171
-#, fuzzy
 msgctxt "OpenMVDatasetEditor|"
 msgid "Failed to save the image file for an unknown reason!"
 msgstr "Не удалось сохранить файл изображения по неизвестной причине!"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:187
-#, fuzzy
 msgctxt "OpenMVDatasetEditor|"
 msgid "Delete"
 msgstr "Удалить"
@@ -10667,10 +10671,9 @@ msgstr "Удалить"
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:299
 msgctxt "OpenMVDatasetEditor|"
 msgid "Are you sure you want to permanetly delete \"%L1\"?"
-msgstr ""
+msgstr "Вы уверены, что хотите удалить \"%L1\"  навсегда?"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:213
-#, fuzzy
 msgctxt "OpenMVDatasetEditor|"
 msgid "Rename"
 msgstr "Переименовать"
@@ -10679,15 +10682,15 @@ msgstr "Переименовать"
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:246
 msgctxt "OpenMVDatasetEditor|"
 msgid "Please enter a new name"
-msgstr ""
+msgstr "Пожалуйста, введите новое имя"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:233
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:259
 msgctxt "OpenMVDatasetEditor|"
 msgid "Failed to rename the folder for an unknown reason!"
-msgstr ""
+msgstr "Не удалось переименовать папку по неизвестной причине!"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:268
 msgctxt "OpenMVDatasetEditor|"
 msgid "Failed to rename the file for an unknown reason!"
-msgstr ""
+msgstr "Не удалось переименовать файл по неизвестной причине!"

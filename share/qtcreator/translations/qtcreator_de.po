@@ -8294,19 +8294,19 @@ msgstr "Verwenden Sie Graustufen/LAB für die Farbverfolgung"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1579
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res - No Image"
-msgstr "Res - Kein Bild"
+msgstr "Auflösung - Kein Bild"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1565
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)"
-msgstr "Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixel (%7)"
+msgstr "Auflösung (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixel (%7)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1574
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res (w:%1, h:%2)"
-msgstr "Res (w:%1, h:%2)"
+msgstr "Auflösung (w:%1, h:%2)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1649
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -10495,7 +10495,7 @@ msgstr "Verwenden Sie Graustufen/LAB für die Farbverfolgung"
 #: ../../../src/plugins/openmv/openmvterminal.cpp:912
 msgctxt "OpenMVTerminal|"
 msgid "Res - No Image"
-msgstr "Res - Kein Bild"
+msgstr "Auflösung - Kein Bild"
 
 #: ../../../src/plugins/openmv/openmvterminal.cpp:898
 #, qt-format
