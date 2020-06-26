@@ -1107,8 +1107,7 @@ Para ello, escriba este acceso directo y un espacio en el campo de entrada del l
     <message>
         <location/>
         <source>min</source>
-        <extracomment>unit for minutes
-</extracomment>
+        <extracomment>unit for minutes</extracomment>
         <translation>min</translation>
     </message>
     <message>
@@ -2961,15 +2960,13 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+71"/>
         <source>&lt;VARIABLE&gt;</source>
-        <extracomment>Name when inserting a new variable
-</extracomment>
+        <extracomment>Name when inserting a new variable</extracomment>
         <translation>&lt;VARIABLE&gt;</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&lt;VALUE&gt;</source>
-        <extracomment>Value when inserting a new variable
-</extracomment>
+        <extracomment>Value when inserting a new variable</extracomment>
         <translation>&lt;VALUE&gt;</translation>
     </message>
 </context>
@@ -3818,8 +3815,7 @@ también deshabilitará los siguientes complementos:
     <message>
         <location line="+2"/>
         <source>Useful text</source>
-        <extracomment>Sample external tool text
-</extracomment>
+        <extracomment>Sample external tool text</extracomment>
         <translation>Texto útil</translation>
     </message>
 </context>
@@ -5928,8 +5924,7 @@ al control de versión (%2)
     <message>
         <location line="+8"/>
         <source>&lt;br/&gt;From revision %1&lt;br/&gt;</source>
-        <extracomment>This gets conditionally inserted as argument %8 into the description string.
-</extracomment>
+        <extracomment>This gets conditionally inserted as argument %8 into the description string.</extracomment>
         <translation>&lt;br/&gt;De la revisión %1&lt;br/&gt;</translation>
     </message>
     <message>
@@ -6199,8 +6194,7 @@ al control de versión (%2)
         <source>Path: %1
 Filter: %2
 %3</source>
-        <extracomment>%3 is filled by BaseFileFind::runNewSearch
-</extracomment>
+        <extracomment>%3 is filled by BaseFileFind::runNewSearch</extracomment>
         <translation>Ruta de acceso: %1
 Filtro: %2
 %3</translation>
@@ -7767,9 +7761,9 @@ No se aplicará a espacios en blanco en comentarios y cadenas.</translation>
         <translation>Falta el argumento para -override_read_stall_timeout</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+44"/>
         <location line="+15"/>
-        <location line="+2394"/>
+        <location line="+2749"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -7778,7 +7772,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
 Cierre todos los programas que estén viendo / editando los datos de la aplicación IDM de OpenMV y luego reinicie OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="-2001"/>
+        <location line="-2356"/>
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Editar umbral de escala de grises con editor de umbrales</translation>
     </message>
@@ -7856,32 +7850,32 @@ while(True):
     </message>
     <message>
         <location line="+9"/>
-        <location line="+4759"/>
+        <location line="+5129"/>
         <location line="+47"/>
         <source>Open Terminal</source>
         <translation>Abrir terminal</translation>
     </message>
     <message>
-        <location line="-4801"/>
+        <location line="-5171"/>
         <source>Machine Vision</source>
         <translation>Visión de máquina</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+4828"/>
+        <location line="+5198"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>Editor de umbrales</translation>
     </message>
     <message>
-        <location line="-4899"/>
-        <location line="+4977"/>
+        <location line="-5269"/>
+        <location line="+5347"/>
         <source>Keypoints Editor</source>
         <translation>Editor de puntos clave</translation>
     </message>
     <message>
-        <location line="-4970"/>
-        <location line="+5120"/>
+        <location line="-5340"/>
+        <location line="+5490"/>
         <location line="+96"/>
         <location line="+23"/>
         <location line="+10"/>
@@ -7890,7 +7884,7 @@ while(True):
         <translation>Generador de AprilTag</translation>
     </message>
     <message>
-        <location line="-5266"/>
+        <location line="-5636"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Familia TAG16H5 (30 etiquetas)</translation>
     </message>
@@ -7928,15 +7922,15 @@ while(True):
         <location line="+10"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location line="+79"/>
+        <location line="+319"/>
         <location line="+14"/>
         <location line="+16"/>
-        <location line="+582"/>
+        <location line="+690"/>
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Error al abrir: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-715"/>
+        <location line="-1063"/>
         <source>DataMatrix Generator</source>
         <translation>Generador DataMatrix</translation>
     </message>
@@ -7966,7 +7960,7 @@ while(True):
         <translation>Reproducir archivo de vídeo</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+245"/>
         <source>OpenMV Docs</source>
         <translation>Documentos de OpenMV</translation>
     </message>
@@ -7997,12 +7991,11 @@ while(True):
         <translation>Acerca de OpenMV IDE...</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;http://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Acerca de OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Por: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;LICENCIA PÚBLICA GENERAL DE GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; sin ni siquiera la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD PARA UN FIN PARTICULAR. Vea la &lt;a href=&quot;http://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt; Licencia Pública General de GNU&lt;/a&gt; para más información.&lt;/p&gt;&lt;p&gt;&lt;b&gt;¿Tiene preguntas o comentarios?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contáctenos en &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Acerca de OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Por: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;LICENCIA PÚBLICA GENERAL DE GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; sin ni siquiera la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD PARA UN FIN PARTICULAR. Vea la &lt;a href=&quot;http://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt; Licencia Pública General de GNU&lt;/a&gt; para más información.&lt;/p&gt;&lt;p&gt;&lt;b&gt;¿Tiene preguntas o comentarios?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contáctenos en &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+13"/>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Créditos&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -8013,7 +8006,7 @@ while(True):
     </message>
     <message>
         <location line="+8"/>
-        <location line="+1817"/>
+        <location line="+1937"/>
         <location line="+33"/>
         <location line="+9"/>
         <location line="+10"/>
@@ -8037,11 +8030,9 @@ while(True):
         <location line="+16"/>
         <location line="+19"/>
         <location line="+7"/>
-        <location line="+67"/>
+        <location line="+70"/>
         <location line="+9"/>
-        <location line="+12"/>
-        <location line="+13"/>
-        <location line="+87"/>
+        <location line="+116"/>
         <location line="+33"/>
         <location line="+77"/>
         <location line="+9"/>
@@ -8055,16 +8046,16 @@ while(True):
         <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="-3005"/>
-        <location line="+3041"/>
-        <location line="+20"/>
-        <location line="+9"/>
+        <location line="-3132"/>
+        <location line="+3168"/>
+        <location line="+12"/>
+        <location line="+7"/>
         <location line="+75"/>
         <source>Disconnect</source>
         <translation>Desconectar</translation>
     </message>
     <message>
-        <location line="-3137"/>
+        <location line="-3254"/>
         <source>Start (run script)</source>
         <translation>Iniciar (ejecutar script)</translation>
     </message>
@@ -8073,7 +8064,7 @@ while(True):
         <translation type="vanished">Ctrl+R</translation>
     </message>
     <message>
-        <location line="-320"/>
+        <location line="-560"/>
         <source>Documents Folder</source>
         <translation>Carpeta de documentos</translation>
     </message>
@@ -8087,7 +8078,7 @@ while(True):
         <translation type="vanished">&lt;br/&gt;&lt;p&gt;OpenMV IDE Traducción al español por Kwabena W. Agyeman.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+333"/>
+        <location line="+573"/>
         <source>Stop (halt script)</source>
         <translation>Detener (detener script)</translation>
     </message>
@@ -8108,12 +8099,12 @@ while(True):
     </message>
     <message>
         <location line="+5"/>
-        <location line="+3204"/>
+        <location line="+3325"/>
         <source>Stop</source>
         <translation>Detener</translation>
     </message>
     <message>
-        <location line="-3203"/>
+        <location line="-3324"/>
         <source>Stop recording</source>
         <translation>Dejar de grabar</translation>
     </message>
@@ -8141,10 +8132,10 @@ while(True):
     <message>
         <location line="+17"/>
         <location line="+22"/>
-        <location line="+2847"/>
-        <location line="+140"/>
+        <location line="+2974"/>
+        <location line="+130"/>
         <location line="+66"/>
-        <location line="+99"/>
+        <location line="+103"/>
         <location line="+113"/>
         <location line="+55"/>
         <location line="+80"/>
@@ -8155,7 +8146,7 @@ while(True):
         <translation>Ocupado... por favor, espere...</translation>
     </message>
     <message>
-        <location line="-3739"/>
+        <location line="-3860"/>
         <location line="+15"/>
         <source>Disable</source>
         <translation>Deshabilitar</translation>
@@ -8207,101 +8198,101 @@ while(True):
     </message>
     <message>
         <location line="+3"/>
-        <location line="+32"/>
+        <location line="+40"/>
         <source>Res - No Image</source>
-        <translation>Res - Sin imagen</translation>
+        <translation>Resolución - Sin imagen</translation>
     </message>
     <message>
-        <location line="-9"/>
+        <location line="-14"/>
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)</source>
-        <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Píxeles (%7)</translation>
+        <translation>Resolución (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Píxeles (%7)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+9"/>
         <source>Res (w:%1, h:%2)</source>
-        <translation>Res (w:%1, h:%2)</translation>
+        <translation>Resolución (w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+75"/>
         <source>FPS: %L1</source>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <location line="+2775"/>
+        <location line="+98"/>
+        <location line="+2790"/>
         <source>Board:</source>
         <translation>Tablero:</translation>
     </message>
     <message>
-        <location line="-2774"/>
+        <location line="-2789"/>
         <source>Camera board type</source>
         <translation>Tipo de placa de cámara</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+2771"/>
+        <location line="+2786"/>
         <source>Sensor:</source>
         <translation>Sensor:</translation>
     </message>
     <message>
-        <location line="-2770"/>
+        <location line="-2785"/>
         <source>Camera sensor module</source>
         <translation>Módulo sensor de cámara</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2766"/>
+        <location line="+2781"/>
         <source>Firmware Version:</source>
         <translation>Versión del firmware:</translation>
     </message>
     <message>
-        <location line="-2765"/>
+        <location line="-2780"/>
         <source>Camera firmware version</source>
         <translation>Versión de firmware de la cámara</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2761"/>
+        <location line="+2776"/>
         <source>Serial Port:</source>
         <translation>Puerto serie:</translation>
     </message>
     <message>
-        <location line="-2760"/>
+        <location line="-2775"/>
         <source>Camera serial port</source>
         <translation>Puerto serie de la cámara</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2576"/>
-        <location line="+180"/>
-        <location line="+737"/>
+        <location line="+2601"/>
+        <location line="+170"/>
+        <location line="+741"/>
         <source>Drive:</source>
         <translation>Unidad:</translation>
     </message>
     <message>
-        <location line="-3492"/>
+        <location line="-3511"/>
         <source>Drive associated with port</source>
         <translation>Unidad asociada con el puerto</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2751"/>
+        <location line="+2766"/>
         <source>FPS:</source>
         <translation>FPS:</translation>
     </message>
     <message>
-        <location line="-2750"/>
+        <location line="-2765"/>
         <source>May be different from camera FPS</source>
         <translation>Puede ser diferente de la cámara FPS</translation>
     </message>
     <message>
-        <location line="+148"/>
-        <location line="+955"/>
+        <location line="+154"/>
+        <location line="+959"/>
         <source>Update Available</source>
         <translation>Actualización disponible</translation>
     </message>
     <message>
-        <location line="-955"/>
+        <location line="-959"/>
         <source>A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.</source>
         <translation>Una nueva versión de OpenMV IDE (%L1.%L2.%L3) está disponible para descargar.</translation>
     </message>
@@ -8331,7 +8322,7 @@ while(True):
         <translation>Error al crear la carpeta de documentos!</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>OpenMV Cam LED Colors</source>
         <translation>Colores LED de la cámara OpenMV</translation>
     </message>
@@ -8382,18 +8373,18 @@ El firmware de su OpenMV Cam está entrando en pánico debido a una falla de har
     </message>
     <message>
         <location line="+98"/>
-        <location line="+3164"/>
+        <location line="+3175"/>
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Puerto serie - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-3144"/>
+        <location line="-3155"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
-        <location line="+2827"/>
-        <location line="+126"/>
+        <location line="+2838"/>
+        <location line="+133"/>
         <location line="+102"/>
         <location line="+117"/>
         <location line="+102"/>
@@ -8402,21 +8393,22 @@ El firmware de su OpenMV Cam está entrando en pánico debido a una falla de har
         <translation>Conectando... (tiempo de espera de 30 segundos)</translation>
     </message>
     <message>
-        <location line="-3731"/>
+        <location line="-4813"/>
+        <location line="+1064"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
         <location line="+162"/>
         <location line="+168"/>
-        <location line="+428"/>
+        <location line="+436"/>
         <location line="+286"/>
         <location line="+137"/>
         <location line="+105"/>
         <location line="+47"/>
         <location line="+95"/>
-        <location line="+1399"/>
-        <location line="+126"/>
+        <location line="+1402"/>
+        <location line="+133"/>
         <location line="+102"/>
         <location line="+117"/>
         <location line="+102"/>
@@ -8426,26 +8418,55 @@ El firmware de su OpenMV Cam está entrando en pánico debido a una falla de har
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-4125"/>
+        <location line="-5407"/>
+        <location line="+674"/>
+        <source>Dataset Editor</source>
+        <translation>Editor de conjunto de datos</translation>
+    </message>
+    <message>
+        <location line="-670"/>
+        <location line="+18"/>
+        <location line="+15"/>
+        <location line="+6"/>
+        <location line="+46"/>
+        <location line="+19"/>
+        <source>New Dataset</source>
+        <translation>Nuevo conjunto de datos</translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <source>Dataset Editor - Choose a folder to build the dataset in</source>
+        <translation>Editor de conjunto de datos: elija una carpeta para construir el conjunto de datos</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>The selected folder is not empty and the contents will be deleted. Continue?</source>
+        <translation>La carpeta seleccionada no está vacía y el contenido se eliminará. ¿Seguir?</translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <location line="+19"/>
+        <location line="+93"/>
+        <location line="+1062"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
         <location line="+203"/>
-        <location line="+173"/>
-        <location line="+399"/>
+        <location line="+176"/>
+        <location line="+404"/>
         <location line="+169"/>
         <location line="+399"/>
         <location line="+31"/>
-        <location line="+324"/>
-        <location line="+569"/>
+        <location line="+331"/>
+        <location line="+563"/>
         <location line="+14"/>
         <location line="+200"/>
         <location line="+13"/>
         <location line="+87"/>
         <location line="+13"/>
-        <location line="+235"/>
-        <location line="+126"/>
+        <location line="+237"/>
+        <location line="+133"/>
         <location line="+102"/>
         <location line="+117"/>
         <location line="+102"/>
@@ -8454,7 +8475,76 @@ El firmware de su OpenMV Cam está entrando en pánico debido a una falla de har
         <translation>Error: %L1!</translation>
     </message>
     <message>
-        <location line="-3729"/>
+        <location line="-4898"/>
+        <location line="+30"/>
+        <source>Open Dataset</source>
+        <translation>Conjunto de datos abierto</translation>
+    </message>
+    <message>
+        <location line="-22"/>
+        <source>Dataset Editor - Choose a dataset folder to open</source>
+        <translation>Editor de conjunto de datos: elija una carpeta de conjunto de datos para abrir</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>The selected folder does not appear to be a valid OpenMV Cam Image Dataset!</source>
+        <translation>¡La carpeta seleccionada no parece ser un conjunto de datos de imagen de cámara OpenMV válido!</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+8"/>
+        <location line="+36"/>
+        <location line="+24"/>
+        <source>Export Dataset</source>
+        <translation>Exportar conjunto de datos</translation>
+    </message>
+    <message>
+        <location line="-58"/>
+        <source>Zip Files (*.zip)</source>
+        <translation>Archivos zip (*.zip)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Exporting...</source>
+        <translation>Exportador...</translation>
+    </message>
+    <message>
+        <location line="+58"/>
+        <source>Close Dataset</source>
+        <translation>Cerrar conjunto de datos</translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Sobre OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Por: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Derechos de autor (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implícita de COMERCIABILIDAD o APTITUD PARA UN PROPÓSITO EN PARTICULAR. Consulte la &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; para obtener más detalles.&lt;/p&gt;&lt;p&gt;&lt;b&gt;¿Preguntas o comentarios?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contacta con nosotros en &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+297"/>
+        <source>Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
+        <translation>Resolución (w:%1, h:%2) - Punto (x:%3, y:%4)</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Close</source>
+        <translation>Cerrar</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Image Preview</source>
+        <translation>Vista previa de imagen</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>New Class Folder</source>
+        <translation>Nueva carpeta de clase</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Capture Data</source>
+        <translation>Captura de datos</translation>
+    </message>
+    <message>
+        <location line="+554"/>
         <source>
 
 Try doing:
@@ -8507,12 +8597,12 @@ sudo adduser%L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+3214"/>
+        <location line="+3232"/>
         <source>UDP Server Connection - %1</source>
         <translation>Conexión de servidor UDP - %1</translation>
     </message>
     <message>
-        <location line="-3152"/>
+        <location line="-3170"/>
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Argumento de puerto no válido (%1) para -open_udp_server_terminal</translation>
     </message>
@@ -8543,12 +8633,12 @@ sudo adduser%L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+3260"/>
+        <location line="+3278"/>
         <source>TCP Server Connection - %1</source>
         <translation>Conexión de servidor TCP - %1</translation>
     </message>
     <message>
-        <location line="-3198"/>
+        <location line="-3216"/>
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Argumento de puerto no válido (%1) para -open_tcp_server_terminal</translation>
     </message>
@@ -8667,11 +8757,16 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+7"/>
+        <source>Downloading...</source>
+        <translation>Descargando...</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Installing...</source>
         <translation>Instalando...</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+31"/>
         <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>¡Cierre cualquier programa que esté viendo/editando los datos de la aplicación IDE de OpenMV y reinicie OpenMV IDE!</translation>
     </message>
@@ -8683,17 +8778,17 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+10"/>
         <location line="+6"/>
-        <location line="+24"/>
+        <location line="+29"/>
         <source>Package Update</source>
         <translation>Actualización de paquetes</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-28"/>
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>¡No se puede abrir el archivo de recursos &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+29"/>
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>¡Solicitud de red fallida &quot;%L1&quot;!</translation>
     </message>
@@ -8747,19 +8842,19 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+11"/>
-        <location line="+1861"/>
+        <location line="+1862"/>
         <location line="+28"/>
         <source>Erase the internal file system?</source>
         <translation>¿Borrar el sistema de archivos interno?</translation>
     </message>
     <message>
-        <location line="-1858"/>
-        <location line="+2040"/>
+        <location line="-1859"/>
+        <location line="+2043"/>
         <source>Please select a serial port</source>
         <translation>Seleccione un puerto serie</translation>
     </message>
     <message>
-        <location line="-2009"/>
+        <location line="-2012"/>
         <location line="+286"/>
         <source>Connecting... (Hit cancel if this takes more than 5 seconds).</source>
         <translation>Conectando... (pulse cancelar si tarda más de 5 segundos).</translation>
@@ -8798,7 +8893,7 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+18"/>
-        <location line="+635"/>
+        <location line="+642"/>
         <source>Timeout error while getting board architecture!</source>
         <translation>¡Error de tiempo de espera al obtener la arquitectura de la placa!</translation>
     </message>
@@ -8821,7 +8916,7 @@ Su OpenMV Cam está ejecutando su autoprueba incorporada ... esto puede llevar u
 Haga clic en Aceptar cuando el LED RGB de su cámara OpenMV comience a parpadear en azul, lo que indica que la autoprueba ha finalizado.</translation>
     </message>
     <message>
-        <location line="-567"/>
+        <location line="-574"/>
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Desconecte su OpenMV Cam y luego vuelva a conectarla...</translation>
     </message>
@@ -8898,7 +8993,7 @@ Haga clic en el botón Aceptar después de que el gestor de arranque DFU de su O
 (puede tardar hasta 5 minutos)</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+65"/>
         <source>DFU firmware update complete!
 
 </source>
@@ -8956,7 +9051,7 @@ HomeBrew:
    sudo pip install pyusb</translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+150"/>
         <source>Timeout error while learning MTU!</source>
         <translation>¡Error de tiempo de espera al adquirir MTU!</translation>
     </message>
@@ -8992,14 +9087,14 @@ HomeBrew:
     </message>
     <message>
         <location line="+4"/>
-        <location line="+246"/>
+        <location line="+236"/>
         <location line="+52"/>
-        <location line="+99"/>
+        <location line="+103"/>
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
     <message>
-        <location line="-374"/>
+        <location line="-368"/>
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ desactualizado - haga clic aquí para actualizar ]</translation>
     </message>
@@ -9015,18 +9110,17 @@ HomeBrew:
     </message>
     <message>
         <location line="+51"/>
-        <location line="+20"/>
-        <location line="+9"/>
+        <location line="+12"/>
+        <location line="+7"/>
         <source>Failed to eject &quot;%L1&quot;!</source>
         <translation>¡Error al expulsar &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-26"/>
         <source>Unmounting...</source>
-        <translation>Desmontaje ...</translation>
+        <translation type="vanished">Desmontaje ...</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+74"/>
         <source>Reset</source>
         <translation>Restablecer</translation>
     </message>
@@ -9036,7 +9130,7 @@ HomeBrew:
         <translation>Iniciar</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+63"/>
         <source>More Examples</source>
         <translation>Más ejemplos</translation>
     </message>
@@ -9054,13 +9148,13 @@ Puede encontrar más ejemplos en el menú Archivo -&gt; Ejemplos.
 En particular, verifique los ejemplos de seguimiento de color.</translation>
     </message>
     <message>
-        <location line="-2559"/>
-        <location line="+2568"/>
+        <location line="-2568"/>
+        <location line="+2577"/>
         <source>Don&apos;t show this message again.</source>
         <translation>No muestres este mensaje otra vez.</translation>
     </message>
     <message>
-        <location line="-3562"/>
+        <location line="-3923"/>
         <source>Run Bootloader (Load Firmware)</source>
         <translation>Ejecutar Bootloader (cargar firmware)</translation>
     </message>
@@ -9086,8 +9180,8 @@ En particular, verifique los ejemplos de seguimiento de color.</translation>
         <translation>Guardar script abierto en OpenMV Cam (como main.py)</translation>
     </message>
     <message>
-        <location line="+2221"/>
-        <location line="+2054"/>
+        <location line="+2581"/>
+        <location line="+2057"/>
         <source>Try doing:
 
 </source>
@@ -9096,13 +9190,13 @@ En particular, verifique los ejemplos de seguimiento de color.</translation>
 </translation>
     </message>
     <message>
-        <location line="-2054"/>
-        <location line="+2054"/>
+        <location line="-2057"/>
+        <location line="+2057"/>
         <source>...in a terminal and then restart your computer.</source>
         <translation>... en una terminal y luego reinicie su computadora.</translation>
     </message>
     <message>
-        <location line="-1814"/>
+        <location line="-1817"/>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
@@ -9143,12 +9237,10 @@ Presione cancelar para saltar a la reprogramación de DFU.</translation>
         <translation>Haga clic en Aceptar cuando el LED RGB de su OpenMV Cam comience a parpadear en azul, lo que indica que la autocomprobación se ha completado.</translation>
     </message>
     <message>
-        <location line="+154"/>
-        <location line="+13"/>
         <source>PyDFU requires the following libraries to be installed:
 
 </source>
-        <translation>PyDFU requiere la instalación de las siguientes bibliotecas:
+        <translation type="vanished">PyDFU requiere la instalación de las siguientes bibliotecas:
 
 </translation>
     </message>
@@ -9157,7 +9249,7 @@ Presione cancelar para saltar a la reprogramación de DFU.</translation>
         <translation type="vanished">Sincronizando ...</translation>
     </message>
     <message>
-        <location line="+733"/>
+        <location line="+901"/>
         <source>Configure Settings</source>
         <translation>Configurar ajustes</translation>
     </message>
@@ -9182,18 +9274,18 @@ Presione cancelar para saltar a la reprogramación de DFU.</translation>
     </message>
     <message>
         <location line="-11"/>
-        <location line="+1195"/>
+        <location line="+1204"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Archivos de imagen (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1183"/>
-        <location line="+1532"/>
+        <location line="-1192"/>
+        <location line="+1541"/>
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Error al guardar el archivo de imagen por un motivo desconocido!</translation>
     </message>
     <message>
-        <location line="-1515"/>
+        <location line="-1524"/>
         <location line="+12"/>
         <location line="+15"/>
         <location line="+11"/>
@@ -9227,14 +9319,14 @@ Presione cancelar para saltar a la reprogramación de DFU.</translation>
     </message>
     <message>
         <location line="-36"/>
-        <location line="+1199"/>
+        <location line="+1208"/>
         <location line="+80"/>
         <location line="+17"/>
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>Archivos de puntos clave (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1209"/>
+        <location line="-1218"/>
         <location line="+7"/>
         <location line="+6"/>
         <location line="+7"/>
@@ -9325,12 +9417,13 @@ Presione cancelar para saltar a la reprogramación de DFU.</translation>
     <message>
         <location line="+25"/>
         <location line="+13"/>
-        <location line="+27"/>
+        <location line="+29"/>
         <location line="+9"/>
         <location line="+75"/>
         <location line="+6"/>
         <location line="+17"/>
-        <location line="+10"/>
+        <location line="+9"/>
+        <location line="+8"/>
         <location line="+13"/>
         <location line="+80"/>
         <location line="+16"/>
@@ -9348,7 +9441,7 @@ Presione cancelar para saltar a la reprogramación de DFU.</translation>
         <translation>Nuevo terminal</translation>
     </message>
     <message>
-        <location line="-566"/>
+        <location line="-575"/>
         <source>Connect to serial port</source>
         <translation>Conectar al puerto serie</translation>
     </message>
@@ -9368,13 +9461,13 @@ Presione cancelar para saltar a la reprogramación de DFU.</translation>
         <translation>Seleccione una opción</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Please enter a baud rate</source>
         <translation>Introduzca una velocidad en baudios</translation>
     </message>
     <message>
         <location line="+99"/>
-        <location line="+119"/>
+        <location line="+126"/>
         <location line="+7"/>
         <location line="+212"/>
         <location line="+7"/>
@@ -9382,7 +9475,12 @@ Presione cancelar para saltar a la reprogramación de DFU.</translation>
         <translation>Cadena no válida: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-336"/>
+        <location line="-343"/>
+        <source>No serial ports found!</source>
+        <translation>¡No se encontraron puertos seriales!</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Connect to a UDP server as a client or start a UDP Server?</source>
         <translation>¿Conectarse a un servidor UDP como cliente o iniciar un servidor UDP?</translation>
     </message>
@@ -9606,7 +9704,9 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
 ¿Le gustaría OpenMV IDE para actualizar el módulo en su cámara OpenMV?</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-5811"/>
+        <location line="+188"/>
+        <location line="+5640"/>
         <location line="+34"/>
         <location line="+50"/>
         <location line="+25"/>
@@ -9614,7 +9714,8 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
         <translation>Error al eliminar &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-100"/>
+        <location line="-5931"/>
+        <location line="+5831"/>
         <location line="+34"/>
         <location line="+51"/>
         <location line="+25"/>
@@ -9642,7 +9743,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
 <context>
     <name>QObject</name>
     <message>
-        <location line="-5888"/>
+        <location line="-6258"/>
         <source>New File</source>
         <translation>Nuevo archivo</translation>
     </message>
@@ -9676,12 +9777,12 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>Dónde guardar la red en la cámara OpenMV</translation>
     </message>
     <message>
-        <location line="+5447"/>
+        <location line="+5817"/>
         <source>Copy Failed!</source>
         <translation>Copia fallida!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+230"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+239"/>
         <source>Video Recorder</source>
         <translation>Grabadora de vídeo</translation>
     </message>
@@ -9904,7 +10005,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation type="vanished">Archivos de vídeo (*.mp4 *.*)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5429"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5799"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-67"/>
         <location line="+89"/>
@@ -9920,12 +10021,13 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
 <context>
     <name>OpenMVPluginFB</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="-217"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="-226"/>
+        <location line="+114"/>
         <source>&lt;html&gt;&lt;body style=&quot;color:#909090;font-size:14px&quot;&gt;&lt;div align=&quot;center&quot;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;No Image&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;body style=&quot;color:#909090;font-size:14px&quot;&gt;&lt;div align=&quot;center&quot;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Sin imagen&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="-63"/>
         <location line="+7"/>
         <source>Video Record</source>
         <translation>Grabación de vídeo</translation>
@@ -9937,7 +10039,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation>Error: %L1!</translation>
     </message>
     <message>
-        <location line="+218"/>
+        <location line="+229"/>
         <source>Save Image selection to PC</source>
         <translation>Guardar selección de imagen en el PC</translation>
     </message>
@@ -10103,19 +10205,24 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     </message>
     <message>
         <location line="+3"/>
-        <location line="+34"/>
+        <location line="+42"/>
         <source>Res - No Image</source>
-        <translation>Res - Sin imagen</translation>
+        <translation>Resolución - Sin imagen</translation>
     </message>
     <message>
-        <location line="-9"/>
+        <location line="-14"/>
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)</source>
-        <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Píxeles (%7)</translation>
+        <translation>Resolución (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Píxeles (%7)</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
+        <translation>Resolución (w:%1, h:%2) - Punto (x:%3, y:%4)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Res (w:%1, h:%2)</source>
-        <translation>Res (w:%1, h:%2)</translation>
+        <translation>Resolución (w:%1, h:%2)</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -10280,6 +10387,87 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <location line="+15"/>
         <source>Copy the threshold above before closing.</source>
         <translation>Copiar el umbral anterior antes de cerrar.</translation>
+    </message>
+</context>
+<context>
+    <name>OpenMVDatasetEditor</name>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+82"/>
+        <location line="+43"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <location line="+31"/>
+        <location line="+21"/>
+        <location line="+11"/>
+        <location line="+20"/>
+        <location line="+10"/>
+        <location line="+14"/>
+        <location line="+12"/>
+        <location line="+9"/>
+        <location line="+31"/>
+        <location line="+11"/>
+        <location line="+130"/>
+        <location line="+7"/>
+        <source>Dataset Editor</source>
+        <translation>Editor de conjunto de datos</translation>
+    </message>
+    <message>
+        <location line="-364"/>
+        <source>Please enter a class name</source>
+        <translation>Por favor ingrese un nombre de clase</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+7"/>
+        <location line="+70"/>
+        <location line="+107"/>
+        <location line="+130"/>
+        <location line="+7"/>
+        <source>Error: %L1!</source>
+        <translation>Error: %L1!</translation>
+    </message>
+    <message>
+        <location line="-307"/>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>Error al crear &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Failed to save the image file for an unknown reason!</source>
+        <translation>Error al guardar el archivo de imagen por un motivo desconocido!</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Delete</source>
+        <translation>Eliminar</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+107"/>
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>¿Estás segura de que quieres eliminar permanentemente &quot;%L1&quot;?</translation>
+    </message>
+    <message>
+        <location line="-86"/>
+        <source>Rename</source>
+        <translation>Cambiar nombre</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+24"/>
+        <source>Please enter a new name</source>
+        <translation>Por favor ingrese un nuevo nombre</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <location line="+26"/>
+        <source>Failed to rename the folder for an unknown reason!</source>
+        <translation>¡No se pudo cambiar el nombre de la carpeta por un motivo desconocido!</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Failed to rename the file for an unknown reason!</source>
+        <translation>¡No se pudo cambiar el nombre del archivo por un motivo desconocido!</translation>
     </message>
 </context>
 </TS>
