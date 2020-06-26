@@ -5,6 +5,7 @@
 #include <QtCore>
 #include <QtGui>
 #include <QtGui/private/qzipreader_p.h>
+#include <QtGui/private/qzipwriter_p.h>
 #include <QtNetwork>
 #include <QtSerialPort>
 #include <QtWidgets>
@@ -118,7 +119,8 @@
 #define LAST_MODEL_NO_CAM_PATH "LastModelNoCamPath"
 #define LAST_MODEL_WITH_CAM_PATH "LastModelWithCamPath"
 #define LAST_DATASET_EDITOR_PATH "LastDatasetEditorPath"
-#define LAST_DATASET_EDITOR_LOADED "LastDataseteditorLoaded"
+#define LAST_DATASET_EDITOR_LOADED "LastDatasetEditorLoaded"
+#define LAST_DATASET_EDITOR_EXPORT_PATH "LastDatasetEditorExportPath"
 #define RESOURCES_MAJOR "ResourcesMajor"
 #define RESOURCES_MINOR "ResourcesMinor"
 #define RESOURCES_PATCH "ResourcesPatch"

@@ -1137,6 +1137,84 @@ void OpenMVPlugin::extensionsInitialized()
 
     datasetEditorMenu->addSeparator();
 
+    QAction *exportDatasetAction = new QAction(tr("Export Dataset"), this);
+    Core::Command *exportDatasetCommand = Core::ActionManager::registerAction(exportDatasetAction, Core::Id("OpenMV.ExportDataset"));
+    datasetEditorMenu->addAction(exportDatasetCommand);
+    connect(exportDatasetAction, &QAction::triggered, this, [this] {
+        QSettings *settings = ExtensionSystem::PluginManager::settings();
+        settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+
+        QString path =
+            QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Export Dataset"),
+                settings->value(QStringLiteral(LAST_DATASET_EDITOR_EXPORT_PATH), QDir::homePath()).toString(),
+                tr("Zip Files (*.zip)"));
+
+        if(!path.isEmpty())
+        {
+            QZipWriter writer(path);
+            QDir rootPath(m_datasetEditor->rootPath());
+            QDirIterator it(m_datasetEditor->rootPath(), QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot, QDirIterator::Subdirectories);
+            QDirIterator it_counter(m_datasetEditor->rootPath(), QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot, QDirIterator::Subdirectories);
+            int count = 0; while(it_counter.hasNext()) { it_counter.next(); count += 1; }
+
+            QProgressDialog progress(tr("Exporting..."), tr("Cancel"), 0, count, Core::ICore::dialogParent(),
+                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+            progress.setWindowModality(Qt::ApplicationModal);
+
+            while(it.hasNext())
+            {
+                QString relativePath = rootPath.relativeFilePath(it.next());
+
+                if(it.fileInfo().isDir())
+                {
+                    writer.addDirectory(relativePath);
+                }
+                else
+                {
+                    QFile file(it.filePath());
+
+                    if(file.open(QIODevice::ReadOnly))
+                    {
+                        writer.addFile(relativePath, file.readAll());
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            tr("Export Dataset"),
+                            tr("Error: %L1!").arg(file.errorString()));
+
+                        break;
+                    }
+                }
+
+                if(progress.wasCanceled())
+                {
+                    break;
+                }
+
+                progress.setValue(progress.value() + 1);
+            }
+
+            writer.close();
+
+            if(!progress.wasCanceled())
+            {
+                settings->setValue(QStringLiteral(LAST_DATASET_EDITOR_EXPORT_PATH), path);
+            }
+            else if(!QFile::remove(path))
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    tr("Export Dataset"),
+                    tr("Failed to remove \"%L1\"!").arg(path));
+            }
+        }
+
+        settings->endGroup();
+    });
+
+    datasetEditorMenu->addSeparator();
+
     QAction *closeDatasetAction = new QAction(tr("Close Dataset"), this);
     Core::Command *closeDatasetCommand = Core::ActionManager::registerAction(closeDatasetAction, Core::Id("OpenMV.CloseDataset"));
     datasetEditorMenu->addAction(closeDatasetCommand);
@@ -1646,14 +1724,16 @@ void OpenMVPlugin::extensionsInitialized()
     connect(datasetEditorCloseButton, &QToolButton::clicked, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathClosed, this, [this] (const QString &path) { Core::EditorManager::closeEditors(Core::DocumentModel::editorsForFilePath(path + QStringLiteral("/dataset_capture_script.py"))); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, datasetEditorWidget, &QWidget::show);
-    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, actionBar1, closeDatasetCommand, datasetEditorNewFolder, datasetEditorSnapshot, datasetEditorActionBar] (bool visible) {
+    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, actionBar1, exportDatasetCommand, closeDatasetCommand, datasetEditorNewFolder, datasetEditorSnapshot, datasetEditorActionBar] (bool visible) {
         actionBar1->setSizePolicy(QSizePolicy::Preferred, visible ? QSizePolicy::Maximum : QSizePolicy::Minimum);
+        exportDatasetCommand->action()->setEnabled(visible);
         closeDatasetCommand->action()->setEnabled(visible);
         datasetEditorNewFolder->action()->setVisible(visible);
         datasetEditorSnapshot->action()->setVisible(visible);
         datasetEditorActionBar->setVisible(visible);
     });
 
+    exportDatasetCommand->action()->setDisabled(true);
     closeDatasetCommand->action()->setDisabled(true);
     datasetEditorActionBar->hide();
     datasetEditorWidget->hide();
