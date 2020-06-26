@@ -7764,7 +7764,7 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+44"/>
         <location line="+15"/>
-        <location line="+2749"/>
+        <location line="+2747"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -7773,7 +7773,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
 OpenMV IDEのアプリケーションデータを表示/編集しているプログラムを閉じて、OpenMV IDEを再起動してください！</translation>
     </message>
     <message>
-        <location line="-2356"/>
+        <location line="-2354"/>
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>しきい値エディタでグレースケールしきい値を編集</translation>
     </message>
@@ -7851,32 +7851,32 @@ while(True):
     </message>
     <message>
         <location line="+9"/>
-        <location line="+5129"/>
+        <location line="+5127"/>
         <location line="+47"/>
         <source>Open Terminal</source>
         <translation>ターミナルを開く</translation>
     </message>
     <message>
-        <location line="-5171"/>
+        <location line="-5169"/>
         <source>Machine Vision</source>
         <translation>マシンビジョン</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+5198"/>
+        <location line="+5196"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>しきい値エディタ</translation>
     </message>
     <message>
-        <location line="-5269"/>
-        <location line="+5347"/>
+        <location line="-5267"/>
+        <location line="+5345"/>
         <source>Keypoints Editor</source>
         <translation>キーポイントエディタ</translation>
     </message>
     <message>
-        <location line="-5340"/>
-        <location line="+5490"/>
+        <location line="-5338"/>
+        <location line="+5488"/>
         <location line="+96"/>
         <location line="+23"/>
         <location line="+10"/>
@@ -7885,7 +7885,7 @@ while(True):
         <translation>AprilTagジェネレータ</translation>
     </message>
     <message>
-        <location line="-5636"/>
+        <location line="-5634"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5ファミリー（30タグ）</translation>
     </message>
@@ -7923,7 +7923,7 @@ while(True):
         <location line="+10"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location line="+319"/>
+        <location line="+317"/>
         <location line="+14"/>
         <location line="+16"/>
         <location line="+690"/>
@@ -7931,7 +7931,7 @@ while(True):
         <translation>オープンに失敗しました：&quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1063"/>
+        <location line="-1061"/>
         <source>DataMatrix Generator</source>
         <translation>データマトリックスジェネレータ</translation>
     </message>
@@ -7961,7 +7961,7 @@ while(True):
         <translation>ビデオファイルを再生する</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+243"/>
         <source>OpenMV Docs</source>
         <translation>OpenMV Docs</translation>
     </message>
@@ -8065,7 +8065,7 @@ while(True):
         <translation type="vanished">Ctrl+R</translation>
     </message>
     <message>
-        <location line="-560"/>
+        <location line="-558"/>
         <source>Documents Folder</source>
         <translation>ドキュメントフォルダ</translation>
     </message>
@@ -8079,7 +8079,7 @@ while(True):
         <translation type="vanished">&lt;br/&gt;&lt;p&gt;OpenMV IDE Kwabena W. Agyemanによる日本語翻訳。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+573"/>
+        <location line="+571"/>
         <source>Stop (halt script)</source>
         <translation>停止（停止スクリプト）</translation>
     </message>
@@ -8388,8 +8388,8 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
         <translation>接続中...（30秒のタイムアウト）</translation>
     </message>
     <message>
-        <location line="-4813"/>
-        <location line="+1064"/>
+        <location line="-4807"/>
+        <location line="+1058"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
@@ -8413,13 +8413,13 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="-5407"/>
-        <location line="+674"/>
+        <location line="-5405"/>
+        <location line="+672"/>
         <source>Dataset Editor</source>
         <translation>データセットエディター</translation>
     </message>
     <message>
-        <location line="-670"/>
+        <location line="-668"/>
         <location line="+18"/>
         <location line="+15"/>
         <location line="+6"/>
@@ -8441,8 +8441,8 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
     <message>
         <location line="+67"/>
         <location line="+19"/>
-        <location line="+93"/>
-        <location line="+1062"/>
+        <location line="+92"/>
+        <location line="+1061"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
@@ -8470,7 +8470,7 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
         <translation>エラー：%L1！</translation>
     </message>
     <message>
-        <location line="-4898"/>
+        <location line="-4896"/>
         <location line="+30"/>
         <source>Open Dataset</source>
         <translation>データセットを開く</translation>
@@ -8488,23 +8488,23 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
     <message>
         <location line="+9"/>
         <location line="+8"/>
-        <location line="+36"/>
-        <location line="+24"/>
+        <location line="+35"/>
+        <location line="+23"/>
         <source>Export Dataset</source>
         <translation>データセットのエクスポート</translation>
     </message>
     <message>
-        <location line="-58"/>
+        <location line="-56"/>
         <source>Zip Files (*.zip)</source>
         <translation>Zipファイル (*.zip)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Exporting...</source>
         <translation>エクスポートしています...</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+52"/>
         <source>Close Dataset</source>
         <translation>データセットを閉じる</translation>
     </message>
@@ -9149,7 +9149,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>このメッセージをもう一度表示しないでください。</translation>
     </message>
     <message>
-        <location line="-3923"/>
+        <location line="-3921"/>
         <source>Run Bootloader (Load Firmware)</source>
         <translation>ブートローダーの実行（ファームウェアのロード）</translation>
     </message>
@@ -9175,7 +9175,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>OpenMV Camに開いているスクリプトを保存します（main.pyとして）</translation>
     </message>
     <message>
-        <location line="+2581"/>
+        <location line="+2579"/>
         <location line="+2057"/>
         <source>Try doing:
 
@@ -9698,8 +9698,8 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
 OpenMV IDEでOpenMV Camのモジュールを更新しますか？</translation>
     </message>
     <message>
-        <location line="-5811"/>
-        <location line="+188"/>
+        <location line="-5809"/>
+        <location line="+186"/>
         <location line="+5640"/>
         <location line="+34"/>
         <location line="+50"/>
@@ -9708,8 +9708,8 @@ OpenMV IDEでOpenMV Camのモジュールを更新しますか？</translation>
         <translation>&quot;%L1&quot;を削除できませんでした！</translation>
     </message>
     <message>
-        <location line="-5931"/>
-        <location line="+5831"/>
+        <location line="-5929"/>
+        <location line="+5829"/>
         <location line="+34"/>
         <location line="+51"/>
         <location line="+25"/>
@@ -9737,7 +9737,7 @@ OpenMV IDEをOpenMV Camにコピーしますか？</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location line="-6258"/>
+        <location line="-6256"/>
         <source>New File</source>
         <translation>新しいファイル</translation>
     </message>
@@ -9771,7 +9771,7 @@ OpenMV IDEをOpenMV Camにコピーしますか？</translation>
         <translation>OpenMV Camにネットワークを保存する場所</translation>
     </message>
     <message>
-        <location line="+5817"/>
+        <location line="+5815"/>
         <source>Copy Failed!</source>
         <translation>コピーに失敗しました！</translation>
     </message>
@@ -9999,7 +9999,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation type="vanished">ビデオファイル(*.mp4 *.*)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5799"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5797"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-67"/>
         <location line="+89"/>
@@ -10386,7 +10386,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
 <context>
     <name>OpenMVDatasetEditor</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+82"/>
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+92"/>
         <location line="+43"/>
         <location line="+7"/>
         <location line="+7"/>

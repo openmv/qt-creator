@@ -7777,7 +7777,7 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+44"/>
         <location line="+15"/>
-        <location line="+2749"/>
+        <location line="+2747"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -7786,7 +7786,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
 Закройте все программы, которые просматривают/редактируют данные приложения OpenMV IDE, а затем перезапустите OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="-2356"/>
+        <location line="-2354"/>
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Изменить порог шкалы оттенков серого с помощью Threshold Editor</translation>
     </message>
@@ -7864,32 +7864,32 @@ while(True):
     </message>
     <message>
         <location line="+9"/>
-        <location line="+5129"/>
+        <location line="+5127"/>
         <location line="+47"/>
         <source>Open Terminal</source>
         <translation>Открыть терминал</translation>
     </message>
     <message>
-        <location line="-5171"/>
+        <location line="-5169"/>
         <source>Machine Vision</source>
         <translation>Машинное зрение</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+5198"/>
+        <location line="+5196"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>Threshold Editor</translation>
     </message>
     <message>
-        <location line="-5269"/>
-        <location line="+5347"/>
+        <location line="-5267"/>
+        <location line="+5345"/>
         <source>Keypoints Editor</source>
         <translation>Редактор ключевых точек</translation>
     </message>
     <message>
-        <location line="-5340"/>
-        <location line="+5490"/>
+        <location line="-5338"/>
+        <location line="+5488"/>
         <location line="+96"/>
         <location line="+23"/>
         <location line="+10"/>
@@ -7898,7 +7898,7 @@ while(True):
         <translation>Генератор AprilTag</translation>
     </message>
     <message>
-        <location line="-5636"/>
+        <location line="-5634"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Семейство TAG16H5 (30 тегов)</translation>
     </message>
@@ -7936,7 +7936,7 @@ while(True):
         <location line="+10"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location line="+319"/>
+        <location line="+317"/>
         <location line="+14"/>
         <location line="+16"/>
         <location line="+690"/>
@@ -7944,7 +7944,7 @@ while(True):
         <translation>Не удалось открыть: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1063"/>
+        <location line="-1061"/>
         <source>DataMatrix Generator</source>
         <translation>Генератор DataMatrix</translation>
     </message>
@@ -7974,7 +7974,7 @@ while(True):
         <translation>Воспроизвести видеофайл</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+243"/>
         <source>OpenMV Docs</source>
         <translation>Документы OpenMV</translation>
     </message>
@@ -8078,7 +8078,7 @@ while(True):
         <translation type="vanished">Ctrl+R</translation>
     </message>
     <message>
-        <location line="-560"/>
+        <location line="-558"/>
         <source>Documents Folder</source>
         <translation>Папка документов</translation>
     </message>
@@ -8092,7 +8092,7 @@ while(True):
         <translation type="vanished">&lt;br/&gt;&lt;p&gt;OpenMV IDE Русский перевод Сергея Сваздина.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+573"/>
+        <location line="+571"/>
         <source>Stop (halt script)</source>
         <translation>Стоп (сценарий остановки)</translation>
     </message>
@@ -8407,8 +8407,8 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>Подключение... (30 секундный тайм-аут)</translation>
     </message>
     <message>
-        <location line="-4813"/>
-        <location line="+1064"/>
+        <location line="-4807"/>
+        <location line="+1058"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
@@ -8432,13 +8432,13 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-5407"/>
-        <location line="+674"/>
+        <location line="-5405"/>
+        <location line="+672"/>
         <source>Dataset Editor</source>
         <translation>Редактор набора данных</translation>
     </message>
     <message>
-        <location line="-670"/>
+        <location line="-668"/>
         <location line="+18"/>
         <location line="+15"/>
         <location line="+6"/>
@@ -8460,8 +8460,8 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
     <message>
         <location line="+67"/>
         <location line="+19"/>
-        <location line="+93"/>
-        <location line="+1062"/>
+        <location line="+92"/>
+        <location line="+1061"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
@@ -8489,7 +8489,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>Ошибка: %L1!</translation>
     </message>
     <message>
-        <location line="-4898"/>
+        <location line="-4896"/>
         <location line="+30"/>
         <source>Open Dataset</source>
         <translation>Открытый набор данных</translation>
@@ -8507,23 +8507,23 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
     <message>
         <location line="+9"/>
         <location line="+8"/>
-        <location line="+36"/>
-        <location line="+24"/>
+        <location line="+35"/>
+        <location line="+23"/>
         <source>Export Dataset</source>
         <translation>Экспорт данных</translation>
     </message>
     <message>
-        <location line="-58"/>
+        <location line="-56"/>
         <source>Zip Files (*.zip)</source>
         <translation>Zip файлы (*.zip)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Exporting...</source>
         <translation>Экспорт...</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+52"/>
         <source>Close Dataset</source>
         <translation>Закрыть набор данных</translation>
     </message>
@@ -9164,7 +9164,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>Не показывать это сообщение снова.</translation>
     </message>
     <message>
-        <location line="-3923"/>
+        <location line="-3921"/>
         <source>Run Bootloader (Load Firmware)</source>
         <translation>Запустить загрузчик (загрузить прошивку)</translation>
     </message>
@@ -9190,7 +9190,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>Сохранить открытый скрипт в OpenMV Cam (как main.py)</translation>
     </message>
     <message>
-        <location line="+2581"/>
+        <location line="+2579"/>
         <location line="+2057"/>
         <source>Try doing:
 
@@ -9715,8 +9715,8 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
 Вы хотите, чтобы OpenMV IDE обновил модуль на вашем OpenMV Cam?</translation>
     </message>
     <message>
-        <location line="-5811"/>
-        <location line="+188"/>
+        <location line="-5809"/>
+        <location line="+186"/>
         <location line="+5640"/>
         <location line="+34"/>
         <location line="+50"/>
@@ -9725,8 +9725,8 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
         <translation>Не удалось удалить &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-5931"/>
-        <location line="+5831"/>
+        <location line="-5929"/>
+        <location line="+5829"/>
         <location line="+34"/>
         <location line="+51"/>
         <location line="+25"/>
@@ -9754,7 +9754,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
 <context>
     <name>QObject</name>
     <message>
-        <location line="-6258"/>
+        <location line="-6256"/>
         <source>New File</source>
         <translation>Новый файл</translation>
     </message>
@@ -9788,7 +9788,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>Где сохранить сеть на OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+5817"/>
+        <location line="+5815"/>
         <source>Copy Failed!</source>
         <translation>Ошибка копирования!</translation>
     </message>
@@ -10016,7 +10016,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation type="vanished">Видеофайлы (*.mp4 *.*)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5799"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5797"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-67"/>
         <location line="+89"/>
@@ -10403,7 +10403,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
 <context>
     <name>OpenMVDatasetEditor</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+82"/>
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+92"/>
         <location line="+43"/>
         <location line="+7"/>
         <location line="+7"/>

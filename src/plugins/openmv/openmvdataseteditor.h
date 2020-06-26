@@ -31,6 +31,8 @@ class OpenMVDatasetEditor : public QTreeView
 public:
 
     explicit OpenMVDatasetEditor(QWidget *parent = Q_NULLPTR);
+    QStringList classFolderList();
+    QStringList snapshotList(const QString &classFolder);
     QString rootPath();
 
 public slots:

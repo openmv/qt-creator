@@ -42,6 +42,16 @@ OpenMVDatasetEditor::OpenMVDatasetEditor(QWidget *parent) : QTreeView(parent), m
     });
 }
 
+QStringList OpenMVDatasetEditor::classFolderList()
+{
+    return m_model->rootDirectory().entryList(QStringList() << QStringLiteral("*.class"), QDir::Dirs, QDir::Name);
+}
+
+QStringList OpenMVDatasetEditor::snapshotList(const QString &classFolder)
+{
+    return QDir(m_model->rootPath() + QDir::separator() + classFolder).entryList(QStringList() << QStringLiteral("*.jpg") << QStringLiteral("*.jpeg"), QDir::Files, QDir::Name).filter(m_snapshotRegex);
+}
+
 QString OpenMVDatasetEditor::rootPath()
 {
     return m_model->rootPath();
@@ -86,7 +96,7 @@ void OpenMVDatasetEditor::newClassFolder()
 
     if(ok)
     {
-        QStringList list = m_model->rootDirectory().entryList(QStringList() << QStringLiteral("*.class"), QDir::Dirs, QDir::Name);
+        QStringList list = classFolderList();
         int number = 0;
 
         if(!list.isEmpty())
@@ -145,7 +155,7 @@ void OpenMVDatasetEditor::newClassFolder()
 void OpenMVDatasetEditor::snapshot()
 {
     QString path = getClassFolderPath();
-    QStringList list = QDir(path).entryList(QStringList() << QStringLiteral("*.jpg") << QStringLiteral("*.jpeg"), QDir::Files, QDir::Name).filter(m_snapshotRegex);
+    QStringList list = snapshotList(QDir(path).dirName());
     int number = 0;
 
     if(!list.isEmpty())
@@ -423,7 +433,7 @@ void OpenMVDatasetEditor::updateLabels()
     {
         bool write_ok = true;
 
-        foreach(const QString &string, m_model->rootDirectory().entryList(QStringList() << QStringLiteral("*.class"), QDir::Dirs, QDir::Name))
+        foreach(const QString &string, classFolderList())
         {
             QRegularExpressionMatch match = m_classFolderRegex.match(string);
 

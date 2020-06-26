@@ -1151,41 +1151,39 @@ void OpenMVPlugin::extensionsInitialized()
 
         if(!path.isEmpty())
         {
-            QZipWriter writer(path);
-            QDir rootPath(m_datasetEditor->rootPath());
-            QDirIterator it(m_datasetEditor->rootPath(), QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot, QDirIterator::Subdirectories);
-            QDirIterator it_counter(m_datasetEditor->rootPath(), QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot, QDirIterator::Subdirectories);
-            int count = 0; while(it_counter.hasNext()) { it_counter.next(); count += 1; }
+            QList< QPair<QString, QString> > list;
 
-            QProgressDialog progress(tr("Exporting..."), tr("Cancel"), 0, count, Core::ICore::dialogParent(),
+            foreach(const QString &className, m_datasetEditor->classFolderList())
+            {
+                foreach(const QString &snapshotName, m_datasetEditor->snapshotList(className))
+                {
+                    list.append(QPair<QString, QString>(m_datasetEditor->rootPath() + QDir::separator() + className + QDir::separator() + snapshotName, QString(className).remove(QStringLiteral(".class")) + QLatin1Char('.') + snapshotName));
+                }
+            }
+
+            QProgressDialog progress(tr("Exporting..."), tr("Cancel"), 0, list.size(), Core::ICore::dialogParent(),
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+
             progress.setWindowModality(Qt::ApplicationModal);
 
-            while(it.hasNext())
-            {
-                QString relativePath = rootPath.relativeFilePath(it.next());
+            QZipWriter writer(path);
 
-                if(it.fileInfo().isDir())
+            QPair<QString, QString> pair; foreach(pair, list)
+            {
+                QFile file(pair.first);
+
+                if(file.open(QIODevice::ReadOnly))
                 {
-                    writer.addDirectory(relativePath);
+                    writer.addFile(pair.second, file.readAll());
                 }
                 else
                 {
-                    QFile file(it.filePath());
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        tr("Export Dataset"),
+                        tr("Error: %L1!").arg(file.errorString()));
 
-                    if(file.open(QIODevice::ReadOnly))
-                    {
-                        writer.addFile(relativePath, file.readAll());
-                    }
-                    else
-                    {
-                        QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("Export Dataset"),
-                            tr("Error: %L1!").arg(file.errorString()));
-
-                        break;
-                    }
+                    progress.cancel();
                 }
 
                 if(progress.wasCanceled())

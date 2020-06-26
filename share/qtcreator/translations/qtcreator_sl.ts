@@ -7683,14 +7683,14 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+44"/>
         <location line="+15"/>
-        <location line="+2749"/>
+        <location line="+2747"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-2356"/>
+        <location line="-2354"/>
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7741,32 +7741,32 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
     </message>
     <message>
         <location line="+9"/>
-        <location line="+5129"/>
+        <location line="+5127"/>
         <location line="+47"/>
         <source>Open Terminal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-5171"/>
+        <location line="-5169"/>
         <source>Machine Vision</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+5198"/>
+        <location line="+5196"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-5269"/>
-        <location line="+5347"/>
+        <location line="-5267"/>
+        <location line="+5345"/>
         <source>Keypoints Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-5340"/>
-        <location line="+5490"/>
+        <location line="-5338"/>
+        <location line="+5488"/>
         <location line="+96"/>
         <location line="+23"/>
         <location line="+10"/>
@@ -7775,7 +7775,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-5636"/>
+        <location line="-5634"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7813,7 +7813,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <location line="+10"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location line="+319"/>
+        <location line="+317"/>
         <location line="+14"/>
         <location line="+16"/>
         <location line="+690"/>
@@ -7821,7 +7821,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1063"/>
+        <location line="-1061"/>
         <source>DataMatrix Generator</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7851,7 +7851,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+243"/>
         <source>OpenMV Docs</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8238,8 +8238,8 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-4813"/>
-        <location line="+1064"/>
+        <location line="-4807"/>
+        <location line="+1058"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
@@ -8263,13 +8263,13 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-5407"/>
-        <location line="+674"/>
+        <location line="-5405"/>
+        <location line="+672"/>
         <source>Dataset Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-670"/>
+        <location line="-668"/>
         <location line="+18"/>
         <location line="+15"/>
         <location line="+6"/>
@@ -8291,8 +8291,8 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
     <message>
         <location line="+67"/>
         <location line="+19"/>
-        <location line="+93"/>
-        <location line="+1062"/>
+        <location line="+92"/>
+        <location line="+1061"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
@@ -8320,7 +8320,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-4898"/>
+        <location line="-4896"/>
         <location line="+30"/>
         <source>Open Dataset</source>
         <translation type="unfinished"></translation>
@@ -8338,23 +8338,23 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
     <message>
         <location line="+9"/>
         <location line="+8"/>
-        <location line="+36"/>
-        <location line="+24"/>
+        <location line="+35"/>
+        <location line="+23"/>
         <source>Export Dataset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-58"/>
+        <location line="-56"/>
         <source>Zip Files (*.zip)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Exporting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+52"/>
         <source>Close Dataset</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8894,7 +8894,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-3923"/>
+        <location line="-3921"/>
         <source>Run Bootloader (Load Firmware)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8915,7 +8915,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2581"/>
+        <location line="+2579"/>
         <location line="+2057"/>
         <source>Try doing:
 
@@ -9422,8 +9422,8 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-5811"/>
-        <location line="+188"/>
+        <location line="-5809"/>
+        <location line="+186"/>
         <location line="+5640"/>
         <location line="+34"/>
         <location line="+50"/>
@@ -9432,8 +9432,8 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-5931"/>
-        <location line="+5831"/>
+        <location line="-5929"/>
+        <location line="+5829"/>
         <location line="+34"/>
         <location line="+51"/>
         <location line="+25"/>
@@ -9459,7 +9459,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
 <context>
     <name>QObject</name>
     <message>
-        <location line="-6258"/>
+        <location line="-6256"/>
         <source>New File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9485,7 +9485,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5817"/>
+        <location line="+5815"/>
         <source>Copy Failed!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9705,7 +9705,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5799"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5797"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-67"/>
         <location line="+89"/>
@@ -10084,7 +10084,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
 <context>
     <name>OpenMVDatasetEditor</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+82"/>
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+92"/>
         <location line="+43"/>
         <location line="+7"/>
         <location line="+7"/>
