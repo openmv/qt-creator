@@ -22,7 +22,7 @@ OpenMVDatasetEditor::OpenMVDatasetEditor(QWidget *parent) : QTreeView(parent), m
                                  "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/openmv/images/branch-open.png);}"));
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
 
-    m_classFolderRegex = QRegularExpression(QStringLiteral("^(\\d+)\\.(\\w+)\\.class$"));
+    m_classFolderRegex = QRegularExpression(QStringLiteral("^(\\w+)\\.class$"));
     m_classFolderRegex.optimize();
 
     m_snapshotRegex = QRegularExpression(QStringLiteral("^(\\d+)\\.(jpg|jpeg)$"));
@@ -97,19 +97,19 @@ void OpenMVDatasetEditor::newClassFolder()
     if(ok)
     {
         QStringList list = classFolderList();
-        int number = 0;
+//      int number = 0;
 
-        if(!list.isEmpty())
-        {
-            QRegularExpressionMatch match = m_classFolderRegex.match(list.last());
+//      if(!list.isEmpty())
+//      {
+//          QRegularExpressionMatch match = m_classFolderRegex.match(list.last());
 
-            if(match.hasMatch())
-            {
-                number = match.captured(1).toInt() + 1;
-            }
-        }
+//          if(match.hasMatch())
+//          {
+//              number = match.captured(1).toInt() + 1;
+//          }
+//      }
 
-        QString dir_name = QString(QStringLiteral("%1.%2.class")).arg(number, 5, 10, QLatin1Char('0')).arg(name);
+        QString dir_name = QString(QStringLiteral("%1.class")).arg(name);
 
         if(m_model->rootDirectory().mkdir(dir_name))
         {
@@ -125,7 +125,7 @@ void OpenMVDatasetEditor::newClassFolder()
 
                     if(match.hasMatch())
                     {
-                        if(!file.write(QString(match.captured(2) + QLatin1Char('\n')).toUtf8())) write_ok = false;
+                        if(!file.write(QString(match.captured(1) + QLatin1Char('\n')).toUtf8())) write_ok = false;
                     }
                 }
 
@@ -230,13 +230,13 @@ void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)
                         bool ok;
                         QString name = QInputDialog::getText(Core::ICore::dialogParent(),
                                                              tr("Dataset Editor"), tr("Please enter a new name"),
-                                                             QLineEdit::Normal, match.captured(2), &ok,
+                                                             QLineEdit::Normal, match.captured(1), &ok,
                                                              Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                                              (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
                         if(ok)
                         {
-                            if(!QDir().rename(m_model->fileInfo(index).filePath(), QString(QStringLiteral("%1/%2.%3.class")).arg(m_model->fileInfo(index).path()).arg(match.captured(1)).arg(name)))
+                            if(!QDir().rename(m_model->fileInfo(index).filePath(), QString(QStringLiteral("%1/%2.class")).arg(m_model->fileInfo(index).path()).arg(name)))
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
                                     tr("Dataset Editor"),
@@ -439,7 +439,7 @@ void OpenMVDatasetEditor::updateLabels()
 
             if(match.hasMatch())
             {
-                if(!file.write(QString(match.captured(2) + QLatin1Char('\n')).toUtf8())) write_ok = false;
+                if(!file.write(QString(match.captured(1) + QLatin1Char('\n')).toUtf8())) write_ok = false;
             }
         }
 
