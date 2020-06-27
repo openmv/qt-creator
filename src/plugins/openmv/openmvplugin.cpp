@@ -997,7 +997,7 @@ void OpenMVPlugin::extensionsInitialized()
 
         if(!path.isEmpty())
         {
-            bool ok = QDir(path).isEmpty();
+            bool ok = !QDir(path).count();
 
             if(!ok)
             {
@@ -2994,9 +2994,9 @@ void OpenMVPlugin::packageUpdate()
 
                         if(reply2)
                         {
-                            connect(dialog, QProgressDialog::canceled, reply2, QNetworkReply::abort);
+                            connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
                             connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-                            connect(reply2, QNetworkReply::downloadProgress, this, [this, dialog, reply2] (qint64 bytesReceived, qint64 bytesTotal) {
+                            connect(reply2, &QNetworkReply::downloadProgress, this, [this, dialog, reply2] (qint64 bytesReceived, qint64 bytesTotal) {
                                 dialog->setMaximum(bytesTotal);
                                 dialog->setValue(bytesReceived);
                             });
