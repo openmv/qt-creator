@@ -2,7 +2,7 @@
 
 OpenMVDatasetEditorModel::OpenMVDatasetEditorModel(QObject *parent) : QFileSystemModel(parent)
 {
-
+    setRootPath(QString()); // Force empty...
 }
 
 int OpenMVDatasetEditorModel::columnCount(const QModelIndex &parent) const
