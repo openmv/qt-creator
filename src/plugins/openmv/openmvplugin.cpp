@@ -997,7 +997,7 @@ void OpenMVPlugin::extensionsInitialized()
 
         if(!path.isEmpty())
         {
-            bool ok = !QDir(path).count();
+            bool ok = !QDir(path).entryList(QDir::AllEntries | QDir::NoDotAndDotDot).count();
 
             if(!ok)
             {
