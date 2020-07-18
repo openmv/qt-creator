@@ -8436,7 +8436,7 @@ msgstr ""
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Res (w:%1, h:%2) - Point (x:%3, y:%4)"
-msgstr "解析度 (w:%1, h:%2) - 点 (x:%3, y:%4)"
+msgstr "分辨率 (w:%1, h:%2) - 点 (x:%3, y:%4)"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1669
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8451,7 +8451,7 @@ msgstr "图片预览"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1687
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "New Class Folder"
-msgstr "新类文件夹"
+msgstr "新建类别文件夹"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1695
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9039,7 +9039,7 @@ msgstr "获取传感器类型时发生超时错误！"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4365
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Board: %L1"
-msgstr "董事会：%L1"
+msgstr "电路板：%L1"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4367
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -11028,7 +11028,7 @@ msgstr "关闭前复制上面的阈值。"
 
 #~ msgctxt "Firmware::RunTime"
 #~ msgid "unindent does not match any outer indentation level"
-#~ msgstr "缩进不匹配任何外部的级别"
+#~ msgstr "缩进不匹配任何外在的缩进级别"
 
 #, qt-format
 #~ msgctxt "Firmware::RunTime"
@@ -11115,7 +11115,7 @@ msgstr "数据集编辑器"
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:92
 msgctxt "OpenMVDatasetEditor|"
 msgid "Please enter a class name"
-msgstr "请输入班级名称"
+msgstr "请输入类别名称"
 
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:136
 #: ../../../src/plugins/openmv/openmvdataseteditor.cpp:143
