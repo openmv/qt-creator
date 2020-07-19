@@ -8,3 +8,6 @@
 [submodule "share/qtcreator/ros"]
 	path = share/qtcreator/ros
 	url = https://github.com/fabianschilling/openmv_cam
+[submodule "src/plugins/openmv/qtrest"]
+	path = src/plugins/openmv/qtrest
+	url = https://github.com/qtrest/qtrest.git
