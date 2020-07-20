@@ -55,6 +55,7 @@
 #include "openmvdataseteditor.h"
 #include "histogram/openmvpluginhistogram.h"
 #include "tools/dfu-util.h"
+#include "tools/edgeimpulse.h"
 #include "tools/thresholdeditor.h"
 #include "tools/keypointseditor.h"
 #include "tools/tag16h5.h"

@@ -1137,10 +1137,22 @@ void OpenMVPlugin::extensionsInitialized()
 
     datasetEditorMenu->addSeparator();
 
-    QAction *exportDatasetAction = new QAction(tr("Export Dataset"), this);
+    Core::ActionContainer *datasetEditorExportMenu = Core::ActionManager::createMenu(Core::Id("OpenMV.DatasetEditorExport"));
+    datasetEditorExportMenu->menu()->setTitle(tr("Export"));
+    datasetEditorExportMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
+    datasetEditorMenu->addMenu(datasetEditorExportMenu);
+
+    QAction *exportDatasetAction = new QAction(tr("Export Dataset to Zip File"), this);
     Core::Command *exportDatasetCommand = Core::ActionManager::registerAction(exportDatasetAction, Core::Id("OpenMV.ExportDataset"));
-    datasetEditorMenu->addAction(exportDatasetCommand);
+    datasetEditorExportMenu->addAction(exportDatasetCommand);
     connect(exportDatasetAction, &QAction::triggered, this, [this] {
+
+    });
+
+    QAction *exportDataseFlatAction = new QAction(tr("Export Dataset to Flattened Zip File"), this);
+    Core::Command *exportDatasetFlatCommand = Core::ActionManager::registerAction(exportDataseFlatAction, Core::Id("OpenMV.ExportDatasetFlat"));
+    datasetEditorExportMenu->addAction(exportDatasetFlatCommand);
+    connect(exportDataseFlatAction, &QAction::triggered, this, [this] {
         QSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
@@ -1210,6 +1222,39 @@ void OpenMVPlugin::extensionsInitialized()
 
         settings->endGroup();
     });
+
+    datasetEditorExportMenu->addSeparator();
+
+    QAction *logInToEdgeImpulseAccountAction = new QAction(tr("Login to Edge Impulse Account"), this);
+    Core::Command *loginToEdgeImpulseAccountCommand = Core::ActionManager::registerAction(logInToEdgeImpulseAccountAction, Core::Id("OpenMV.LogInToEdgeImpulseAccount"));
+    datasetEditorExportMenu->addAction(loginToEdgeImpulseAccountCommand);
+    connect(logInToEdgeImpulseAccountAction, &QAction::triggered, this, [this] { loginToEdgeImpulse(); });
+
+    QAction *logOutFromEdgeImpulseAccountAction = new QAction(tr("Logout from Account: %L1").arg(loggedIntoEdgeImpulse()), this);
+    Core::Command *logOutFromEdgeImpulseAccountCommand = Core::ActionManager::registerAction(logOutFromEdgeImpulseAccountAction, Core::Id("OpenMV.LogOutFromEdgeImpulseAccount"));
+    datasetEditorExportMenu->addAction(logOutFromEdgeImpulseAccountCommand);
+    connect(logOutFromEdgeImpulseAccountAction, &QAction::triggered, this, [this] { logoutFromEdgeImpulse(); });
+
+    QAction *uploadToEdgeImpulseProjectAction = new QAction(tr("Upload to Edge Impulse Project"), this);
+    Core::Command *uploadToEdgeImpulseProjectCommand = Core::ActionManager::registerAction(uploadToEdgeImpulseProjectAction, Core::Id("OpenMV.UploadToEdgeImpulseProjectAction"));
+    datasetEditorExportMenu->addAction(uploadToEdgeImpulseProjectCommand);
+    connect(uploadToEdgeImpulseProjectAction, &QAction::triggered, this, [this] { uploadToSelectedProject(m_datasetEditor->rootPath()); });
+
+    connect(datasetEditorExportMenu->menu(), &QMenu::aboutToShow, this, [this, logInToEdgeImpulseAccountAction, logOutFromEdgeImpulseAccountAction, uploadToEdgeImpulseProjectAction, uploadToEdgeImpulseProjectCommand] {
+        QString accountName = loggedIntoEdgeImpulse();
+        logInToEdgeImpulseAccountAction->setVisible(accountName.isEmpty());
+        logOutFromEdgeImpulseAccountAction->setVisible(!accountName.isEmpty());
+        logOutFromEdgeImpulseAccountAction->setText(tr("Logout from Account: %L1").arg(accountName));
+        uploadToEdgeImpulseProjectAction->setVisible(!accountName.isEmpty());
+        uploadToEdgeImpulseProjectCommand->action()->setEnabled(m_datasetEditor->isVisible() && (!accountName.isEmpty()));
+    });
+
+    datasetEditorExportMenu->addSeparator();
+
+    QAction *uploadToEdgeImpulseByAPIKeyAction = new QAction(tr("Upload to Edge Impulse By API Key"), this);
+    Core::Command *uploadToEdgeImpulseByAPIKeyCommand = Core::ActionManager::registerAction(uploadToEdgeImpulseByAPIKeyAction, Core::Id("OpenMV.UploadEdgeImpulseAPIKey"));
+    datasetEditorExportMenu->addAction(uploadToEdgeImpulseByAPIKeyCommand);
+    connect(uploadToEdgeImpulseByAPIKeyAction, &QAction::triggered, this, [this] { uploadProjectByAPIKey(m_datasetEditor->rootPath()); });
 
     datasetEditorMenu->addSeparator();
 
@@ -1722,9 +1767,12 @@ void OpenMVPlugin::extensionsInitialized()
     connect(datasetEditorCloseButton, &QToolButton::clicked, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathClosed, this, [this] (const QString &path) { Core::EditorManager::closeEditors(Core::DocumentModel::editorsForFilePath(path + QStringLiteral("/dataset_capture_script.py"))); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, datasetEditorWidget, &QWidget::show);
-    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, actionBar1, exportDatasetCommand, closeDatasetCommand, datasetEditorNewFolder, datasetEditorSnapshot, datasetEditorActionBar] (bool visible) {
+    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, actionBar1, exportDatasetCommand, exportDatasetFlatCommand, uploadToEdgeImpulseProjectCommand, uploadToEdgeImpulseByAPIKeyCommand, closeDatasetCommand, datasetEditorNewFolder, datasetEditorSnapshot, datasetEditorActionBar] (bool visible) {
         actionBar1->setSizePolicy(QSizePolicy::Preferred, visible ? QSizePolicy::Maximum : QSizePolicy::Minimum);
         exportDatasetCommand->action()->setEnabled(visible);
+        exportDatasetFlatCommand->action()->setEnabled(visible);
+        uploadToEdgeImpulseProjectCommand->action()->setEnabled(visible && (!loggedIntoEdgeImpulse().isEmpty()));
+        uploadToEdgeImpulseByAPIKeyCommand->action()->setEnabled(visible);
         closeDatasetCommand->action()->setEnabled(visible);
         datasetEditorNewFolder->action()->setVisible(visible);
         datasetEditorSnapshot->action()->setVisible(visible);
@@ -1732,6 +1780,9 @@ void OpenMVPlugin::extensionsInitialized()
     });
 
     exportDatasetCommand->action()->setDisabled(true);
+    exportDatasetFlatCommand->action()->setDisabled(true);
+    uploadToEdgeImpulseProjectCommand->action()->setDisabled(true);
+    uploadToEdgeImpulseByAPIKeyCommand->action()->setDisabled(true);
     closeDatasetCommand->action()->setDisabled(true);
     datasetEditorActionBar->hide();
     datasetEditorWidget->hide();
