@@ -1,25 +1,25 @@
 #ifndef EDGEIMPULSE_H
 #define EDGEIMPULSE_H
 
-#include <QtCore>
-#include <QtGui>
-#include <QtWidgets>
+#include <QtNetwork>
 
-#include <coreplugin/icore.h>
 #include <extensionsystem/pluginmanager.h>
+#include <utils/environment.h>
 
-#include "../openmvpluginio.h"
+#include "../openmvdataseteditor.h"
 
 #define EDGE_IMPULSE_SETTINGS_GROUP "OpenMVEdgeImpulse"
+#define LAST_TRAIN_TEST_SPLIT "LastTrainTestSplit"
 #define LAST_JWT_TOKEN "LastJWTToken"
 #define LAST_JWT_TOKEN_EMAIL "LastJWTTokenEmail"
+#define LAST_PROJECT_ID "LastProjectId"
 #define LAST_API_KEY "LastAPIKey"
 
 QString loggedIntoEdgeImpulse();
-void loginToEdgeImpulse();
+void loginToEdgeImpulse(OpenMVDatasetEditor *editor);
 void logoutFromEdgeImpulse();
 
-void uploadToSelectedProject(const QString &path);
-void uploadProjectByAPIKey(const QString &path);
+void uploadToSelectedProject(OpenMVDatasetEditor *editor);
+void uploadProjectByAPIKey(OpenMVDatasetEditor *editor);
 
 #endif // EDGEIMPULSE_H

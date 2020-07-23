@@ -162,7 +162,6 @@
 #define FPS_TIMER_EXPIRATION_TIME   2000 // in milliseconds
 
 #define FILE_FLUSH_BYTES 1024 // Extra disk activity to flush changes...
-
 #define FOLDER_SCAN_TIME 10000 // in ms
 
 namespace OpenMV {

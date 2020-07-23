@@ -1142,15 +1142,8 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorExportMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     datasetEditorMenu->addMenu(datasetEditorExportMenu);
 
-    QAction *exportDatasetAction = new QAction(tr("Export Dataset to Zip File"), this);
-    Core::Command *exportDatasetCommand = Core::ActionManager::registerAction(exportDatasetAction, Core::Id("OpenMV.ExportDataset"));
-    datasetEditorExportMenu->addAction(exportDatasetCommand);
-    connect(exportDatasetAction, &QAction::triggered, this, [this] {
-
-    });
-
-    QAction *exportDataseFlatAction = new QAction(tr("Export Dataset to Flattened Zip File"), this);
-    Core::Command *exportDatasetFlatCommand = Core::ActionManager::registerAction(exportDataseFlatAction, Core::Id("OpenMV.ExportDatasetFlat"));
+    QAction *exportDataseFlatAction = new QAction(tr("Export Dataset to Zip File"), this);
+    Core::Command *exportDatasetFlatCommand = Core::ActionManager::registerAction(exportDataseFlatAction, Core::Id("OpenMV.ExportDataset"));
     datasetEditorExportMenu->addAction(exportDatasetFlatCommand);
     connect(exportDataseFlatAction, &QAction::triggered, this, [this] {
         QSettings *settings = ExtensionSystem::PluginManager::settings();
@@ -1191,11 +1184,11 @@ void OpenMVPlugin::extensionsInitialized()
                 }
                 else
                 {
+                    progress.cancel();
+
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         tr("Export Dataset"),
                         tr("Error: %L1!").arg(file.errorString()));
-
-                    progress.cancel();
                 }
 
                 if(progress.wasCanceled())
@@ -1225,36 +1218,38 @@ void OpenMVPlugin::extensionsInitialized()
 
     datasetEditorExportMenu->addSeparator();
 
+    QAction *uploadToEdgeImpulseProjectAction = new QAction(tr("Upload to Edge Impulse Project"), this);
+    Core::Command *uploadToEdgeImpulseProjectCommand = Core::ActionManager::registerAction(uploadToEdgeImpulseProjectAction, Core::Id("OpenMV.UploadToEdgeImpulseProjectAction"));
+    datasetEditorExportMenu->addAction(uploadToEdgeImpulseProjectCommand);
+    connect(uploadToEdgeImpulseProjectAction, &QAction::triggered, this, [this] { uploadToSelectedProject(m_datasetEditor); });
+
     QAction *logInToEdgeImpulseAccountAction = new QAction(tr("Login to Edge Impulse Account"), this);
     Core::Command *loginToEdgeImpulseAccountCommand = Core::ActionManager::registerAction(logInToEdgeImpulseAccountAction, Core::Id("OpenMV.LogInToEdgeImpulseAccount"));
     datasetEditorExportMenu->addAction(loginToEdgeImpulseAccountCommand);
-    connect(logInToEdgeImpulseAccountAction, &QAction::triggered, this, [this] { loginToEdgeImpulse(); });
+    connect(logInToEdgeImpulseAccountAction, &QAction::triggered, this, [this] { loginToEdgeImpulse(m_datasetEditor); });
 
     QAction *logOutFromEdgeImpulseAccountAction = new QAction(tr("Logout from Account: %L1").arg(loggedIntoEdgeImpulse()), this);
     Core::Command *logOutFromEdgeImpulseAccountCommand = Core::ActionManager::registerAction(logOutFromEdgeImpulseAccountAction, Core::Id("OpenMV.LogOutFromEdgeImpulseAccount"));
     datasetEditorExportMenu->addAction(logOutFromEdgeImpulseAccountCommand);
     connect(logOutFromEdgeImpulseAccountAction, &QAction::triggered, this, [this] { logoutFromEdgeImpulse(); });
 
-    QAction *uploadToEdgeImpulseProjectAction = new QAction(tr("Upload to Edge Impulse Project"), this);
-    Core::Command *uploadToEdgeImpulseProjectCommand = Core::ActionManager::registerAction(uploadToEdgeImpulseProjectAction, Core::Id("OpenMV.UploadToEdgeImpulseProjectAction"));
-    datasetEditorExportMenu->addAction(uploadToEdgeImpulseProjectCommand);
-    connect(uploadToEdgeImpulseProjectAction, &QAction::triggered, this, [this] { uploadToSelectedProject(m_datasetEditor->rootPath()); });
-
-    connect(datasetEditorExportMenu->menu(), &QMenu::aboutToShow, this, [this, logInToEdgeImpulseAccountAction, logOutFromEdgeImpulseAccountAction, uploadToEdgeImpulseProjectAction, uploadToEdgeImpulseProjectCommand] {
+    connect(datasetEditorMenu->menu(), &QMenu::aboutToShow, this,
+        [this, uploadToEdgeImpulseProjectCommand, loginToEdgeImpulseAccountCommand, logOutFromEdgeImpulseAccountCommand] {
         QString accountName = loggedIntoEdgeImpulse();
-        logInToEdgeImpulseAccountAction->setVisible(accountName.isEmpty());
-        logOutFromEdgeImpulseAccountAction->setVisible(!accountName.isEmpty());
-        logOutFromEdgeImpulseAccountAction->setText(tr("Logout from Account: %L1").arg(accountName));
-        uploadToEdgeImpulseProjectAction->setVisible(!accountName.isEmpty());
+        uploadToEdgeImpulseProjectCommand->action()->setVisible(!accountName.isEmpty());
         uploadToEdgeImpulseProjectCommand->action()->setEnabled(m_datasetEditor->isVisible() && (!accountName.isEmpty()));
+        loginToEdgeImpulseAccountCommand->action()->setVisible(accountName.isEmpty());
+        loginToEdgeImpulseAccountCommand->action()->setText(m_datasetEditor->isVisible() ? tr("Login to Edge Impulse Account and Upload to Project") : tr("Login to Edge Impulse Account"));
+        logOutFromEdgeImpulseAccountCommand->action()->setVisible(!accountName.isEmpty());
+        logOutFromEdgeImpulseAccountCommand->action()->setText(tr("Logout from Account: %L1").arg(accountName));
     });
 
     datasetEditorExportMenu->addSeparator();
 
-    QAction *uploadToEdgeImpulseByAPIKeyAction = new QAction(tr("Upload to Edge Impulse By API Key"), this);
+    QAction *uploadToEdgeImpulseByAPIKeyAction = new QAction(tr("Upload to Edge Impulse by API Key"), this);
     Core::Command *uploadToEdgeImpulseByAPIKeyCommand = Core::ActionManager::registerAction(uploadToEdgeImpulseByAPIKeyAction, Core::Id("OpenMV.UploadEdgeImpulseAPIKey"));
     datasetEditorExportMenu->addAction(uploadToEdgeImpulseByAPIKeyCommand);
-    connect(uploadToEdgeImpulseByAPIKeyAction, &QAction::triggered, this, [this] { uploadProjectByAPIKey(m_datasetEditor->rootPath()); });
+    connect(uploadToEdgeImpulseByAPIKeyAction, &QAction::triggered, this, [this] { uploadProjectByAPIKey(m_datasetEditor); });
 
     datasetEditorMenu->addSeparator();
 
@@ -1767,9 +1762,8 @@ void OpenMVPlugin::extensionsInitialized()
     connect(datasetEditorCloseButton, &QToolButton::clicked, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathClosed, this, [this] (const QString &path) { Core::EditorManager::closeEditors(Core::DocumentModel::editorsForFilePath(path + QStringLiteral("/dataset_capture_script.py"))); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, datasetEditorWidget, &QWidget::show);
-    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, actionBar1, exportDatasetCommand, exportDatasetFlatCommand, uploadToEdgeImpulseProjectCommand, uploadToEdgeImpulseByAPIKeyCommand, closeDatasetCommand, datasetEditorNewFolder, datasetEditorSnapshot, datasetEditorActionBar] (bool visible) {
+    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, actionBar1, exportDatasetFlatCommand, uploadToEdgeImpulseProjectCommand, uploadToEdgeImpulseByAPIKeyCommand, closeDatasetCommand, datasetEditorNewFolder, datasetEditorSnapshot, datasetEditorActionBar] (bool visible) {
         actionBar1->setSizePolicy(QSizePolicy::Preferred, visible ? QSizePolicy::Maximum : QSizePolicy::Minimum);
-        exportDatasetCommand->action()->setEnabled(visible);
         exportDatasetFlatCommand->action()->setEnabled(visible);
         uploadToEdgeImpulseProjectCommand->action()->setEnabled(visible && (!loggedIntoEdgeImpulse().isEmpty()));
         uploadToEdgeImpulseByAPIKeyCommand->action()->setEnabled(visible);
@@ -1779,7 +1773,6 @@ void OpenMVPlugin::extensionsInitialized()
         datasetEditorActionBar->setVisible(visible);
     });
 
-    exportDatasetCommand->action()->setDisabled(true);
     exportDatasetFlatCommand->action()->setDisabled(true);
     uploadToEdgeImpulseProjectCommand->action()->setDisabled(true);
     uploadToEdgeImpulseByAPIKeyCommand->action()->setDisabled(true);
@@ -1966,7 +1959,7 @@ void OpenMVPlugin::extensionsInitialized()
 
         QNetworkAccessManager *manager = new QNetworkAccessManager(this);
 
-        connect(manager, &QNetworkAccessManager::finished, this, [this] (QNetworkReply *reply) {
+        connect(manager, &QNetworkAccessManager::finished, this, [this, manager] (QNetworkReply *reply) {
 
             QByteArray data = reply->readAll();
 
@@ -2016,7 +2009,7 @@ void OpenMVPlugin::extensionsInitialized()
                 QTimer::singleShot(0, this, &OpenMVPlugin::packageUpdate);
             }
 
-            reply->deleteLater();
+            connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
         });
 
         QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("http://upload.openmv.io/openmv-ide-version.txt")));
@@ -2914,7 +2907,7 @@ void OpenMVPlugin::packageUpdate()
 {
     QNetworkAccessManager *manager = new QNetworkAccessManager(this);
 
-    connect(manager, &QNetworkAccessManager::finished, this, [this] (QNetworkReply *reply) {
+    connect(manager, &QNetworkAccessManager::finished, this, [this, manager] (QNetworkReply *reply) {
 
         QByteArray data = reply->readAll();
 
@@ -2960,7 +2953,7 @@ void OpenMVPlugin::packageUpdate()
 
                         QNetworkAccessManager *manager2 = new QNetworkAccessManager(this);
 
-                        connect(manager2, &QNetworkAccessManager::finished, this, [this, new_major, new_minor, new_patch, dialog] (QNetworkReply *reply2) {
+                        connect(manager2, &QNetworkAccessManager::finished, this, [this, manager2, new_major, new_minor, new_patch, dialog] (QNetworkReply *reply2) {
                             QByteArray data2 = reply2->error() == QNetworkReply::NoError ? reply2->readAll() : QByteArray();
 
                             if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
@@ -3032,7 +3025,7 @@ void OpenMVPlugin::packageUpdate()
                                     tr("Cannot open the resources file \"%L1\"!").arg(reply2->request().url().toString()));
                             }
 
-                            reply2->deleteLater();
+                            connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
 
                             delete dialog;
                         });
@@ -3065,7 +3058,7 @@ void OpenMVPlugin::packageUpdate()
             }
         }
 
-        reply->deleteLater();
+        connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
     });
 
     QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("http://upload.openmv.io/openmv-ide-resources-version-v2.txt")));
@@ -4215,7 +4208,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         QNetworkAccessManager *manager = new QNetworkAccessManager(this);
 
-                        connect(manager, &QNetworkAccessManager::finished, this, [this, board, id] (QNetworkReply *reply) {
+                        connect(manager, &QNetworkAccessManager::finished, this, [this, manager, board, id] (QNetworkReply *reply) {
 
                             QByteArray data = reply->readAll();
 
@@ -4227,7 +4220,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 }
                             }
 
-                            reply->deleteLater();
+                            connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
                         });
 
                         QNetworkRequest request = QNetworkRequest(QUrl(QString(QStringLiteral("http://upload.openmv.io/openmv-swd-ids-check.php?board=%L1&id=%L2")).arg(board).arg(id)));
@@ -6473,11 +6466,12 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
 
                 if(!painter.begin(&pixmap))
                 {
+                    progress.cancel();
+
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         tr("AprilTag Generator"),
                         tr("Painting - begin failed!"));
 
-                    progress.cancel();
                     break;
                 }
 
@@ -6496,21 +6490,22 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
 
                 if(!painter.end())
                 {
+                    progress.cancel();
+
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         tr("AprilTag Generator"),
                         tr("Painting - end failed!"));
 
-                    progress.cancel();
                     break;
                 }
 
                 if(!pixmap.save(path + QDir::separator() + QString::fromUtf8(family->name).toLower() + QString(QStringLiteral("_%1.png")).arg(min + i)))
                 {
+                    progress.cancel();
+
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         tr("AprilTag Generator"),
                         tr("Failed to save the image file for an unknown reason!"));
-
-                    progress.cancel();
                 }
 
                 if(progress.wasCanceled())
