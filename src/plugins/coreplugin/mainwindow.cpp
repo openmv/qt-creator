@@ -387,7 +387,7 @@ void MainWindow::extensionsInitialized()
 
     emit m_coreImpl->coreAboutToOpen();
     // Delay restoreWindowState, since it is overridden by LayoutRequest event
-    QTimer::singleShot(0, this, &MainWindow::restoreWindowState);
+    QTimer::singleShot(100, this, &MainWindow::restoreWindowState);
     QTimer::singleShot(0, m_coreImpl, &ICore::coreOpened);
 }
 

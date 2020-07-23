@@ -8,6 +8,7 @@ OpenMVDatasetEditorModel::OpenMVDatasetEditorModel(QObject *parent) : QFileSyste
 int OpenMVDatasetEditorModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
+
     return 1;
 }
 
@@ -62,6 +63,13 @@ void OpenMVDatasetEditor::setRootPath(const QString &path)
     if(m_model->rootPath() != path)
     {
         emit rootPathClosed(m_model->rootPath());
+    }
+
+    if(path.isEmpty()) // Prevents locking of closed folder.
+    {
+        delete m_model;
+        m_model = new OpenMVDatasetEditorModel(this);
+        setModel(m_model);
     }
 
     setRootIndex(m_model->setRootPath(path));
