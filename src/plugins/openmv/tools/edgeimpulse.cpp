@@ -416,7 +416,7 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
 
     QLineEdit *passwordBox = new QLineEdit();
     passwordBox->setEchoMode(QLineEdit::PasswordEchoOnEdit);
-    passwordBox->setPlaceholderText(QObject::tr("********************"));
+    passwordBox->setPlaceholderText(QStringLiteral("********************"));
     layout->addRow(QObject::tr("Password"), passwordBox);
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
