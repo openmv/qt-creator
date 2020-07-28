@@ -153,7 +153,11 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
                 QJsonObject protectedObj;
                 protectedObj.insert(QStringLiteral("ver"), QStringLiteral("v1"));
                 protectedObj.insert(QStringLiteral("alg"), QStringLiteral("HS256"));
+#ifdef Q_OS_WIN
                 protectedObj.insert(QStringLiteral("iat"), QFileInfo(pair.first).lastModified().toSecsSinceEpoch());
+#else
+                protectedObj.insert(QStringLiteral("iat"), QFileInfo(pair.first).lastModified().toMSecsSinceEpoch() / 1000);
+#endif
 
                 QJsonObject sensorsObject;
                 sensorsObject.insert(QStringLiteral("name"), QStringLiteral("image"));
@@ -474,7 +478,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
             {
                 QMap<int, QString> map;
 
-                foreach(const QJsonValue project, body.value(QStringLiteral("projects")).toArray())
+                QJsonArray temp = body.value(QStringLiteral("projects")).toArray(); foreach(const QJsonValue project, temp)
                 {
                     map.insert(project.toObject().value(QStringLiteral("id")).toInt(),
                                QString(QStringLiteral("\"%1\" - #%2")).arg(project.toObject().value(QStringLiteral("name")).toString()).arg(project.toObject().value(QStringLiteral("id")).toInt()));
