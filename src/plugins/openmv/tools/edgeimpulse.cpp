@@ -90,155 +90,165 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
             }
         }
 
-        QProgressDialog *progress = new QProgressDialog(QObject::tr("Uploading..."), QObject::tr("Cancel"), 0, list.size() - 1, Core::ICore::dialogParent(),
-            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+        if(!list.isEmpty())
+        {
+            QProgressDialog *progress = new QProgressDialog(QObject::tr("Uploading..."), QObject::tr("Cancel"), 0, list.size() - 1, Core::ICore::dialogParent(),
+                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
 
-        progress->setWindowModality(Qt::ApplicationModal);
-        progress->show();
+            progress->setWindowModality(Qt::ApplicationModal);
+            progress->show();
 
-        QNetworkAccessManager *manager = new QNetworkAccessManager();
+            QNetworkAccessManager *manager = new QNetworkAccessManager();
 
-        QObject::connect(manager, &QNetworkAccessManager::finished, [progress] (QNetworkReply *reply) {
+            QObject::connect(manager, &QNetworkAccessManager::finished, [progress] (QNetworkReply *reply) {
 
-            if(!progress->wasCanceled())
-            {
-                if(reply->error() != QNetworkReply::NoError)
+                if(!progress->wasCanceled())
                 {
-                    QByteArray data = reply->readAll();
-
-                    if(!data.startsWith(QByteArrayLiteral("An item with this hash already exists")))
+                    if(reply->error() != QNetworkReply::NoError)
                     {
-                        progress->cancel();
+                        QByteArray data = reply->readAll();
 
-                        QMessageBox::critical(Core::ICore::dialogParent(),
-                            QObject::tr("Uploading Dataset"),
-                            reply->errorString());
+                        if(!data.startsWith(QByteArrayLiteral("An item with this hash already exists")))
+                        {
+                            progress->cancel();
+
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                QObject::tr("Uploading Dataset"),
+                                reply->errorString());
+                        }
+                        else
+                        {
+                            progress->setValue(progress->value() + 1);
+                        }
                     }
                     else
                     {
                         progress->setValue(progress->value() + 1);
                     }
                 }
-                else
-                {
-                    progress->setValue(progress->value() + 1);
-                }
-            }
 
-            reply->deleteLater();
-        });
+                reply->deleteLater();
+            });
 
-        QPair<QString, QString> pair; foreach(pair, list)
-        {
-            QFile file(pair.first);
-
-            if(file.open(QIODevice::ReadOnly))
+            QPair<QString, QString> pair; foreach(pair, list)
             {
-                QByteArray fileData = file.readAll();
+                QFile file(pair.first);
 
-                QByteArray hash = QCryptographicHash::hash(fileData, QCryptographicHash::Md5);
-                int index = (hash[0] + (hash[1] << 8)) % 100;
-                QString endpoint = (index >= splitSlider->value()) ? QStringLiteral("testing") : QStringLiteral("training");
-
-                QNetworkRequest request = QNetworkRequest(QUrl(QString(QStringLiteral("https://ingestion.edgeimpulse.com/api/%1/data")).arg(endpoint)));
-                request.setRawHeader(QByteArrayLiteral("x-api-key"), apiKey.toUtf8());
-                request.setRawHeader(QByteArrayLiteral("x-file-name"), pair.second.toUtf8());
-                request.setRawHeader(QByteArrayLiteral("x-label"), QFileInfo(pair.second).baseName().toUtf8());
-                request.setRawHeader(QByteArrayLiteral("x-disallow-duplicates"), QByteArrayLiteral("1"));
-#if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
-                request.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
-#endif
-
-                QJsonObject protectedObj;
-                protectedObj.insert(QStringLiteral("ver"), QStringLiteral("v1"));
-                protectedObj.insert(QStringLiteral("alg"), QStringLiteral("HS256"));
-#ifdef Q_OS_WIN
-                protectedObj.insert(QStringLiteral("iat"), QFileInfo(pair.first).lastModified().toSecsSinceEpoch());
-#else
-                protectedObj.insert(QStringLiteral("iat"), QFileInfo(pair.first).lastModified().toMSecsSinceEpoch() / 1000);
-#endif
-
-                QJsonObject sensorsObject;
-                sensorsObject.insert(QStringLiteral("name"), QStringLiteral("image"));
-                sensorsObject.insert(QStringLiteral("units"), QStringLiteral("rgba"));
-
-                QJsonObject metadataObj;
-                metadataObj.insert(QStringLiteral("hostname"), localHostName);
-                metadataObj.insert(QStringLiteral("ip"), localHostIP);
-                metadataObj.insert(QStringLiteral("username"), Utils::Environment::systemEnvironment().userName());
-
-                QJsonObject payloadObj;
-                payloadObj.insert(QStringLiteral("device_name"), localMacAddress);
-                payloadObj.insert(QStringLiteral("device_type"), QStringLiteral("OPENMV_IDE"));
-                payloadObj.insert(QStringLiteral("interval_ms"), 0);
-                payloadObj.insert(QStringLiteral("sensors"), QJsonArray() << sensorsObject);
-                payloadObj.insert(QStringLiteral("values"), QJsonArray() << QJsonValue(QString(QStringLiteral("Ref-BINARY-image/jpeg (%1 bytes) %2")).arg(fileData.size()).arg(QString::fromUtf8(QCryptographicHash::hash(fileData, QCryptographicHash::Sha256).toHex()))));
-                payloadObj.insert(QStringLiteral("metadata"), metadataObj);
-
-                QJsonObject temp;
-                temp.insert(QStringLiteral("protected"), protectedObj);
-                temp.insert(QStringLiteral("signature"), QStringLiteral("0000000000000000000000000000000000000000000000000000000000000000"));
-                temp.insert(QStringLiteral("payload"), payloadObj);
-
-                QJsonObject body;
-                body.insert(QStringLiteral("protected"), protectedObj);
-                body.insert(QStringLiteral("signature"), QString::fromUtf8(QMessageAuthenticationCode::hash(QJsonDocument(temp).toJson(QJsonDocument::Compact), hmacKey.toUtf8(), QCryptographicHash::Sha256).toHex()));
-                body.insert(QStringLiteral("payload"), payloadObj);
-
-                QHttpMultiPart *parts = new QHttpMultiPart(QHttpMultiPart::FormDataType);
-
-                QHttpPart jsonPart;
-                jsonPart.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/json"));
-                jsonPart.setHeader(QNetworkRequest::ContentDispositionHeader, QString(QStringLiteral("form-data; name=\"attachments[]\"; filename=\"metadata.json\"")));
-                jsonPart.setBody(QJsonDocument(body).toJson(QJsonDocument::Compact));
-                parts->append(jsonPart);
-
-                QHttpPart imagePart;
-                imagePart.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("image/jpeg"));
-                imagePart.setHeader(QNetworkRequest::ContentDispositionHeader, QString(QStringLiteral("form-data; name=\"attachments[]\"; filename=\"%1.jpg\"")).arg(QFileInfo(pair.second).completeBaseName()));
-                imagePart.setBody(fileData);
-                parts->append(imagePart);
-
-                QNetworkReply *reply = manager->post(request, parts);
-
-                if(reply)
+                if(file.open(QIODevice::ReadOnly))
                 {
-                    QObject::connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-                    parts->setParent(reply);
+                    QByteArray fileData = file.readAll();
+
+                    QByteArray hash = QCryptographicHash::hash(fileData, QCryptographicHash::Md5);
+                    int index = (hash[0] + (hash[1] << 8)) % 100;
+                    QString endpoint = (index >= splitSlider->value()) ? QStringLiteral("testing") : QStringLiteral("training");
+
+                    QNetworkRequest request = QNetworkRequest(QUrl(QString(QStringLiteral("https://ingestion.edgeimpulse.com/api/%1/data")).arg(endpoint)));
+                    request.setRawHeader(QByteArrayLiteral("x-api-key"), apiKey.toUtf8());
+                    request.setRawHeader(QByteArrayLiteral("x-file-name"), pair.second.toUtf8());
+                    request.setRawHeader(QByteArrayLiteral("x-label"), QFileInfo(pair.second).baseName().toUtf8());
+                    request.setRawHeader(QByteArrayLiteral("x-disallow-duplicates"), QByteArrayLiteral("1"));
+    #if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
+                    request.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+    #endif
+
+                    QJsonObject protectedObj;
+                    protectedObj.insert(QStringLiteral("ver"), QStringLiteral("v1"));
+                    protectedObj.insert(QStringLiteral("alg"), QStringLiteral("HS256"));
+    #ifdef Q_OS_WIN
+                    protectedObj.insert(QStringLiteral("iat"), QFileInfo(pair.first).lastModified().toSecsSinceEpoch());
+    #else
+                    protectedObj.insert(QStringLiteral("iat"), QFileInfo(pair.first).lastModified().toMSecsSinceEpoch() / 1000);
+    #endif
+
+                    QJsonObject sensorsObject;
+                    sensorsObject.insert(QStringLiteral("name"), QStringLiteral("image"));
+                    sensorsObject.insert(QStringLiteral("units"), QStringLiteral("rgba"));
+
+                    QJsonObject metadataObj;
+                    metadataObj.insert(QStringLiteral("hostname"), localHostName);
+                    metadataObj.insert(QStringLiteral("ip"), localHostIP);
+                    metadataObj.insert(QStringLiteral("username"), Utils::Environment::systemEnvironment().userName());
+
+                    QJsonObject payloadObj;
+                    payloadObj.insert(QStringLiteral("device_name"), localMacAddress);
+                    payloadObj.insert(QStringLiteral("device_type"), QStringLiteral("OPENMV_IDE"));
+                    payloadObj.insert(QStringLiteral("interval_ms"), 0);
+                    payloadObj.insert(QStringLiteral("sensors"), QJsonArray() << sensorsObject);
+                    payloadObj.insert(QStringLiteral("values"), QJsonArray() << QJsonValue(QString(QStringLiteral("Ref-BINARY-image/jpeg (%1 bytes) %2")).arg(fileData.size()).arg(QString::fromUtf8(QCryptographicHash::hash(fileData, QCryptographicHash::Sha256).toHex()))));
+                    payloadObj.insert(QStringLiteral("metadata"), metadataObj);
+
+                    QJsonObject temp;
+                    temp.insert(QStringLiteral("protected"), protectedObj);
+                    temp.insert(QStringLiteral("signature"), QStringLiteral("0000000000000000000000000000000000000000000000000000000000000000"));
+                    temp.insert(QStringLiteral("payload"), payloadObj);
+
+                    QJsonObject body;
+                    body.insert(QStringLiteral("protected"), protectedObj);
+                    body.insert(QStringLiteral("signature"), QString::fromUtf8(QMessageAuthenticationCode::hash(QJsonDocument(temp).toJson(QJsonDocument::Compact), hmacKey.toUtf8(), QCryptographicHash::Sha256).toHex()));
+                    body.insert(QStringLiteral("payload"), payloadObj);
+
+                    QHttpMultiPart *parts = new QHttpMultiPart(QHttpMultiPart::FormDataType);
+
+                    QHttpPart jsonPart;
+                    jsonPart.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/json"));
+                    jsonPart.setHeader(QNetworkRequest::ContentDispositionHeader, QString(QStringLiteral("form-data; name=\"attachments[]\"; filename=\"metadata.json\"")));
+                    jsonPart.setBody(QJsonDocument(body).toJson(QJsonDocument::Compact));
+                    parts->append(jsonPart);
+
+                    QHttpPart imagePart;
+                    imagePart.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("image/jpeg"));
+                    imagePart.setHeader(QNetworkRequest::ContentDispositionHeader, QString(QStringLiteral("form-data; name=\"attachments[]\"; filename=\"%1.jpg\"")).arg(QFileInfo(pair.second).completeBaseName()));
+                    imagePart.setBody(fileData);
+                    parts->append(imagePart);
+
+                    QNetworkReply *reply = manager->post(request, parts);
+
+                    if(reply)
+                    {
+                        QObject::connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
+                        parts->setParent(reply);
+                    }
+                    else
+                    {
+                        progress->cancel();
+                        delete parts;
+
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            QObject::tr("Uploading Dataset"),
+                            QObject::tr("Error posting!"));
+                    }
                 }
                 else
                 {
                     progress->cancel();
-                    delete parts;
 
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         QObject::tr("Uploading Dataset"),
-                        QObject::tr("Error posting!"));
+                        QObject::tr("Error: %L1!").arg(file.errorString()));
+                }
+
+                if(progress->wasCanceled())
+                {
+                    break;
                 }
             }
-            else
-            {
-                progress->cancel();
 
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    QObject::tr("Uploading Dataset"),
-                    QObject::tr("Error: %L1!").arg(file.errorString()));
+            while((!progress->wasCanceled()) && progress->isVisible())
+            {
+                QApplication::processEvents();
             }
 
-            if(progress->wasCanceled())
-            {
-                break;
-            }
+            delete manager;
+            delete progress;
         }
-
-        while((!progress->wasCanceled()) && progress->isVisible())
+        else
         {
-            QApplication::processEvents();
+            QMessageBox::information(Core::ICore::dialogParent(),
+                QObject::tr("Uploading Dataset"),
+                QObject::tr("Nothing to upload\n\n"
+                            "Only jpg images with a numeric name (e.g. \"00001.jpg\")\nin class folders (\"*.class\") can be uploaded."));
         }
-
-        delete manager;
-        delete progress;
     }
 }
 
@@ -488,11 +498,13 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                 {
                     QSettings *settings = ExtensionSystem::PluginManager::settings();
                     settings->beginGroup(QStringLiteral(EDGE_IMPULSE_SETTINGS_GROUP));
+                    int id = settings->value(QStringLiteral(LAST_PROJECT_ID)).toInt();
+                    int index = map.contains(id) ? map.values().indexOf(map.value(id)) : -1;
 
                     bool ok;
-                    int id = map.key(QInputDialog::getItem(Core::ICore::dialogParent(),
+                    id = map.key(QInputDialog::getItem(Core::ICore::dialogParent(),
                         QObject::tr("Edge Impulse Projects"), QObject::tr("Please select a project"),
-                        map.values(), settings->value(QStringLiteral(LAST_PROJECT_ID)).toInt(), false, &ok,
+                        map.values(), (index != -1) ? index : 0, false, &ok,
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint)));
 
