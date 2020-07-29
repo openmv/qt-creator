@@ -86,7 +86,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
         {
             foreach(const QString &snapshotName, editor->snapshotList(className))
             {
-                list.append(QPair<QString, QString>(editor->rootPath() + QDir::separator() + className + QDir::separator() + snapshotName, QString(className).remove(QStringLiteral(".class")) + QLatin1Char('.') + snapshotName));
+                list.append(QPair<QString, QString>(QDir::cleanPath(QDir::fromNativeSeparators(editor->rootPath() + QDir::separator() + className + QDir::separator() + snapshotName)), QString(className).remove(QStringLiteral(".class")) + QLatin1Char('.') + snapshotName));
             }
         }
 
@@ -101,7 +101,15 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
 
             QNetworkAccessManager *manager = new QNetworkAccessManager();
 
-            QObject::connect(manager, &QNetworkAccessManager::finished, [progress] (QNetworkReply *reply) {
+            int reply_count = 0;
+            int new_count = 0;
+            int dup_count = 0;
+            int *reply_count_ptr = &reply_count;
+            int *new_count_ptr = &new_count;
+            int *dup_count_ptr = &dup_count;
+
+            QObject::connect(manager, &QNetworkAccessManager::finished, [progress, reply_count_ptr, new_count_ptr, dup_count_ptr] (QNetworkReply *reply) {
+                *reply_count_ptr += 1;
 
                 if(!progress->wasCanceled())
                 {
@@ -120,11 +128,13 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
                         else
                         {
                             progress->setValue(progress->value() + 1);
+                            *dup_count_ptr += 1;
                         }
                     }
                     else
                     {
                         progress->setValue(progress->value() + 1);
+                        *new_count_ptr += 1;
                     }
                 }
 
@@ -137,7 +147,12 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
 
                 if(file.open(QIODevice::ReadOnly))
                 {
-                    QByteArray fileData = file.readAll();
+                    QByteArray fileData;
+                    QBuffer buffer(&fileData);
+
+                    buffer.open(QIODevice::WriteOnly);
+                    QImage::fromData(file.readAll()).save(&buffer, "JPG");
+                    buffer.close();
 
                     QByteArray hash = QCryptographicHash::hash(fileData, QCryptographicHash::Md5);
                     int index = (hash[0] + (hash[1] << 8)) % 100;
@@ -241,13 +256,21 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
 
             delete manager;
             delete progress;
+
+            QMessageBox::information(Core::ICore::dialogParent(),
+                QObject::tr("Uploading Dataset"),
+                QObject::tr("Upload Statistics:\n\n"
+                            "%L1 Files Uploaded\n"
+                            "%L2 Responses from Edge Impulse\n\n"
+                            "%L3 New Images Added\n"
+                            "%L4 Marked as Duplicates").arg(list.size()).arg(reply_count).arg(new_count).arg(dup_count));
         }
         else
         {
             QMessageBox::information(Core::ICore::dialogParent(),
                 QObject::tr("Uploading Dataset"),
                 QObject::tr("Nothing to upload\n\n"
-                            "Only jpg images with a numeric name (e.g. \"00001.jpg\")\nin class folders (\"*.class\") can be uploaded."));
+                            "Only jpg/png/bmp images with a numeric name (e.g. \"00001.jpg\")\nin class folders (\"*.class\") can be uploaded."));
         }
     }
 }
@@ -498,6 +521,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                 {
                     QSettings *settings = ExtensionSystem::PluginManager::settings();
                     settings->beginGroup(QStringLiteral(EDGE_IMPULSE_SETTINGS_GROUP));
+
                     int id = settings->value(QStringLiteral(LAST_PROJECT_ID)).toInt();
                     int index = map.contains(id) ? map.values().indexOf(map.value(id)) : -1;
 

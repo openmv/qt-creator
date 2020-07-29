@@ -23,10 +23,10 @@ OpenMVDatasetEditor::OpenMVDatasetEditor(QWidget *parent) : QTreeView(parent), m
                                  "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/openmv/images/branch-open.png);}"));
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
 
-    m_classFolderRegex = QRegularExpression(QStringLiteral("^(\\w+)\\.class$"));
+    m_classFolderRegex = QRegularExpression(QStringLiteral("^(.+?)\\.class$"));
     m_classFolderRegex.optimize();
 
-    m_snapshotRegex = QRegularExpression(QStringLiteral("^(\\d+)\\.(jpg|jpeg)$"));
+    m_snapshotRegex = QRegularExpression(QStringLiteral("^.*?(\\d+).*?\\.(jpg|jpeg|png|bmp)$"));
     m_snapshotRegex.optimize();
 
     connect(this, &OpenMVDatasetEditor::doubleClicked, this, [this] (const QModelIndex &index) {
@@ -50,7 +50,7 @@ QStringList OpenMVDatasetEditor::classFolderList()
 
 QStringList OpenMVDatasetEditor::snapshotList(const QString &classFolder)
 {
-    return QDir(m_model->rootPath() + QDir::separator() + classFolder).entryList(QStringList() << QStringLiteral("*.jpg") << QStringLiteral("*.jpeg"), QDir::Files, QDir::Name).filter(m_snapshotRegex);
+    return QDir(m_model->rootPath() + QDir::separator() + classFolder).entryList(QStringList() << QStringLiteral("*.jpg") << QStringLiteral("*.jpeg") << QStringLiteral("*.png") << QStringLiteral("*.bmp"), QDir::Files, QDir::Name).filter(m_snapshotRegex);
 }
 
 QString OpenMVDatasetEditor::rootPath()
