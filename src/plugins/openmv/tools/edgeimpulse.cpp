@@ -223,6 +223,8 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
                     {
                         QObject::connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
                         parts->setParent(reply);
+
+                        QApplication::processEvents();
                     }
                     else
                     {
