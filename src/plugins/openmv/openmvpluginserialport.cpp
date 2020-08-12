@@ -578,9 +578,22 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
 {
     if(m_port)
     {
+        int command = __USBDBG_SYS_RESET;
+
+        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+        {
+            if(port.hasVendorIdentifier() && (port.vendorIdentifier() == ARDUINOCAM_VID)
+            && port.hasProductIdentifier() && ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID)
+            && (port.portName() == m_port->portName()))
+            {
+                command = __USBDBG_SYS_RESET_TO_BL;
+                break;
+            }
+        }
+
         QByteArray buffer;
         serializeByte(buffer, __USBDBG_CMD);
-        serializeByte(buffer, __USBDBG_SYS_RESET);
+        serializeByte(buffer, command);
         serializeLong(buffer, int());
         write(buffer, SYS_RESET_START_DELAY, SYS_RESET_END_DELAY, WRITE_TIMEOUT);
 

@@ -36,8 +36,9 @@
 #define __USBDBG_ATTR_READ_2                0xCA // new
 #define __USBDBG_ATTR_WRITE                 0x0B
 #define __USBDBG_SYS_RESET                  0x0C
+#define __USBDBG_SYS_RESET_TO_BL            0x0E
 #define __USBDBG_FB_ENABLE                  0x0D
-#define __USBDBG_JPEG_ENABLE                0x0E
+#define __USBDBG_JPEG_ENABLE                0x0E // not used anymore...
 #define __USBDBG_TX_BUF_LEN                 0x8E
 #define __USBDBG_TX_BUF                     0x8F
 #define __USBDBG_SENSOR_ID                  0x90
@@ -115,6 +116,8 @@
 #define ATTR_WRITE_1_END_DELAY              50
 #define SYS_RESET_START_DELAY               50
 #define SYS_RESET_END_DELAY                 50
+#define SYS_RESET_TO_BL_START_DELAY         50
+#define SYS_RESET_TO_BL_END_DELAY           50
 #define FB_ENABLE_START_DELAY               50
 #define FB_ENABLE_END_DELAY                 50
 #define FB_ENABLE_0_START_DELAY             50
