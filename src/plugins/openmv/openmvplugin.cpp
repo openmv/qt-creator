@@ -3368,6 +3368,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             CONNECT_END();
         }
 
+        bool isArduino = QSerialPortInfo(selectedPort).hasVendorIdentifier() && (QSerialPortInfo(selectedPort).vendorIdentifier() == ARDUINOCAM_VID) && QSerialPortInfo(selectedPort).hasProductIdentifier() && ((QSerialPortInfo(selectedPort).productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID);
+
         // Open Port //////////////////////////////////////////////////////////
 
         if(!forceBootloaderBricked)

@@ -16,9 +16,11 @@
 #define LAST_CONVERT_VIDEO_SRC_PATH "LastConvertSrcPath"
 #define LAST_CONVERT_VIDEO_DST_PATH "LastConvertDstPath"
 #define LAST_CONVERT_VIDEO_HRES "LastConvertVideoHRes"
+#define LAST_CONVERT_VIDEO_SKIP "LastConvertVideoSkip"
 #define LAST_PLAY_VIDEO_PATH "LastPlayVideoPath"
 #define LAST_SAVE_VIDEO_PATH "LastSaveVideoPath"
 #define LAST_SAVE_VIDEO_HRES "LastSaveVideoHRes"
+#define LAST_SAVE_VIDEO_SKIP "LastSaveVideoSkip"
 
 #define VIDEO_RECORDER_FRAME_RATE 30
 
