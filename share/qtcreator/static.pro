@@ -32,8 +32,6 @@ DATA_DIRS = \
     firmware \
     html \
     models \
-    labview \
-    ros \
     styles \
     themes
 win32: DATA_DIRS += drivers dfuse ffmpeg/windows dfu-util/windows

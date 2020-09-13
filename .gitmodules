@@ -2,12 +2,3 @@
 	path = src/shared/qbs
 	url = ../../qt-labs/qbs.git
 	ignore = dirty
-[submodule "share/qtcreator/labview"]
-	path = share/qtcreator/labview
-	url = https://github.com/chrisbuerginrogers/LabVIEWOpenMV.git
-[submodule "share/qtcreator/ros"]
-	path = share/qtcreator/ros
-	url = https://github.com/fabianschilling/openmv_cam
-[submodule "src/plugins/openmv/qtrest"]
-	path = src/plugins/openmv/qtrest
-	url = https://github.com/qtrest/qtrest.git
