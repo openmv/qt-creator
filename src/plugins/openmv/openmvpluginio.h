@@ -59,7 +59,7 @@ public slots:
     void descriptorSave(int x, int y, int w, int h, const QByteArray &path);
     void getAttribute(int attribute);
     void setAttribute(int attribute, int value);
-    void sysReset();
+    void sysReset(bool enterBootloader = false);
     void fbEnable(bool enable);
     void jpegEnable(bool enabled);
     void getTxBuffer();

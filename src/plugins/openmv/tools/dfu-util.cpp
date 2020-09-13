@@ -1,6 +1,6 @@
 #include "dfu-util.h"
 
-void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Utils::SynchronousProcessResponse &response, const QString &path)
+void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Utils::SynchronousProcessResponse &response, const QString &path, const QString &device, const QString &moreArgs)
 {
     response.clear();
 
@@ -11,7 +11,7 @@ void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Util
         if(file.open(QIODevice::WriteOnly))
         {
             command = QString(QStringLiteral("start /wait \"dfu-util.exe\" \"") +
-                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/windows/dfu-util.exe"))) + QStringLiteral("\" -d 2341:035b,0483:df11 -a 0 -R -D \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/windows/dfu-util.exe"))) + QString(QStringLiteral("\" -w -d ,%1 %2 -D \"")).arg(device).arg(moreArgs) +
                 QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n"));
             QByteArray command2 = command.toUtf8();
 
@@ -32,7 +32,7 @@ void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Util
         if(file.open(QIODevice::WriteOnly))
         {
             command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/osx/dfu-util"))) + QStringLiteral("\" -d 2341:035b,0483:df11 -a 0 -R -D \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/osx/dfu-util"))) + QString(QStringLiteral("\" -w -d ,%1 %2 -D \"")).arg(device).arg(moreArgs) +
                 QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n"));
             QByteArray command2 = command.toUtf8();
 
@@ -56,7 +56,7 @@ void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Util
             if(file.open(QIODevice::WriteOnly))
             {
                 command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/linux32/dfu-util"))) + QStringLiteral("\" -d 2341:035b,0483:df11 -a 0 -R -D \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/linux32/dfu-util"))) + QString(QStringLiteral("\" -w d ,%1 %2 -D \"")).arg(device).arg(moreArgs) +
                     QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n"));
                 QByteArray command2 = command.toUtf8();
 
@@ -77,7 +77,7 @@ void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Util
             if(file.open(QIODevice::WriteOnly))
             {
                 command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/linux64/dfu-util"))) + QStringLiteral("\" -d 2341:035b,0483:df11 -a 0 -R -D \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/linux64/dfu-util"))) + QString(QStringLiteral("\" -w -d ,%1 %2 -D \"")).arg(device).arg(moreArgs) +
                     QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n"));
                 QByteArray command2 = command.toUtf8();
 
@@ -98,7 +98,7 @@ void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Util
             if(file.open(QIODevice::WriteOnly))
             {
                 command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/arm/dfu-util"))) + QStringLiteral("\" -d 2341:035b,0483:df11 -a 0 -R -D \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/arm/dfu-util"))) + QString(QStringLiteral("\" -w -d ,%1 %2 -D \"")).arg(device).arg(moreArgs) +
                     QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n"));
                 QByteArray command2 = command.toUtf8();
 

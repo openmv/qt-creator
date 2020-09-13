@@ -891,13 +891,13 @@ void OpenMVPluginIO::setAttribute(int attribute, int value)
     }
 }
 
-void OpenMVPluginIO::sysReset()
+void OpenMVPluginIO::sysReset(bool enterBootloader)
 {
     QByteArray buffer;
     serializeByte(buffer, __USBDBG_CMD);
-    serializeByte(buffer, __USBDBG_SYS_RESET);
+    serializeByte(buffer, enterBootloader ? __USBDBG_SYS_RESET_TO_BL : __USBDBG_SYS_RESET);
     serializeLong(buffer, int());
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), SYS_RESET_START_DELAY, SYS_RESET_END_DELAY));
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), enterBootloader ? SYS_RESET_TO_BL_START_DELAY : SYS_RESET_START_DELAY, enterBootloader ? SYS_RESET_TO_BL_END_DELAY : SYS_RESET_END_DELAY));
     m_completionQueue.enqueue(USBDBG_SYS_RESET_CPL);
     command();
 }

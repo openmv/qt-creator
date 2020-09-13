@@ -3622,7 +3622,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             // BIN Bootloader /////////////////////////////////////////////////
 
-            while(justEraseFlashFs || firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
+            while((!isArduino) && (justEraseFlashFs || firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)))
             {
                 QFile file(firmwarePath);
 
@@ -4034,6 +4034,192 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 }
             }
 
+            while(isArduino && (justEraseFlashFs || firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)))
+            {
+                // Stopping ///////////////////////////////////////////////////////
+                {
+                    QEventLoop loop;
+
+                    connect(m_iodevice, &OpenMVPluginIO::closeResponse,
+                            &loop, &QEventLoop::quit);
+
+                    if(!m_portPath.isEmpty())
+                    {
+                        // DISALBED // Extra disk activity to flush changes...
+                        // DISALBED QFile temp(QDir::cleanPath(QDir::fromNativeSeparators(m_portPath)) + QStringLiteral("/openmv.null"));
+                        // DISALBED if(temp.open(QIODevice::WriteOnly)) temp.write(QByteArray(FILE_FLUSH_BYTES, 0));
+                        // DISALBED temp.remove();
+
+#if defined(Q_OS_WIN)
+                        wchar_t driveLetter[m_portPath.size()];
+                        m_portPath.toWCharArray(driveLetter);
+
+                        if(!ejectVolume(driveLetter[0]))
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                tr("Disconnect"),
+                                tr("Failed to eject \"%L1\"!").arg(m_portPath));
+                        }
+#elif defined(Q_OS_LINUX)
+                        Utils::SynchronousProcess process;
+                        Utils::SynchronousProcessResponse response;
+
+                        response = process.run(QStringLiteral("umount"), QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath)));
+
+                        if(response.result != Utils::SynchronousProcessResponse::Finished)
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                tr("Disconnect"),
+                                tr("Failed to eject \"%L1\"!").arg(m_portPath));
+                        }
+#elif defined(Q_OS_MAC)
+                        if(sync_volume_np(m_portPath.toUtf8().constData(), SYNC_VOLUME_FULLSYNC | SYNC_VOLUME_WAIT) < 0)
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                tr("Disconnect"),
+                                tr("Failed to eject \"%L1\"!").arg(m_portPath));
+                        }
+#endif
+                    }
+
+                    m_iodevice->sysReset(true);
+                    m_iodevice->close();
+
+                    loop.exec();
+                }
+
+                // Erase Flash ////////////////////////////////////////
+
+                if(forceFlashFSErase)
+                {
+                    QTemporaryFile file;
+
+                    if(file.open())
+                    {
+                        if(file.write(QByteArray(4096, 0)) == 4096)
+                        {
+                            file.close();
+
+                            QProgressDialog dialog(tr("Erasing..."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+                                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
+                            dialog.setWindowModality(Qt::ApplicationModal);
+                            dialog.setAttribute(Qt::WA_ShowWithoutActivating);
+                            dialog.setCancelButton(Q_NULLPTR);
+                            dialog.show();
+
+                            QString command;
+                            Utils::SynchronousProcess process;
+                            Utils::SynchronousProcessResponse response;
+
+                            process.setTimeoutS(300); // 5 minutes...
+                            process.setProcessChannelMode(QProcess::MergedChannels);
+                            downloadFirmware(command, process, response, QFileInfo(file).canonicalFilePath(), QStringLiteral("2341:035b"), QStringLiteral("-a 0 --dfuse-address=0x08020000"));
+
+                            if(response.result != Utils::SynchronousProcessResponse::Finished)
+                            {
+                                QMessageBox box(QMessageBox::Critical, tr("Connect"), tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                                box.setDetailedText(response.stdOut);
+                                box.setInformativeText(response.exitMessage(command, process.timeoutS()));
+                                box.setDefaultButton(QMessageBox::Ok);
+                                box.setEscapeButton(QMessageBox::Cancel);
+                                box.exec();
+
+                                CONNECT_END();
+                            }
+
+                            process.setTimeoutS(300); // 5 minutes...
+                            process.setProcessChannelMode(QProcess::MergedChannels);
+                            downloadFirmware(command, process, response, QFileInfo(file).canonicalFilePath(), QStringLiteral("2341:035b"), QStringLiteral("-a 1 --dfuse-address=0x90000000") + (justEraseFlashFs ? QStringLiteral(":leave") : QStringLiteral("")));
+
+                            if(response.result != Utils::SynchronousProcessResponse::Finished)
+                            {
+                                QMessageBox box(QMessageBox::Critical, tr("Connect"), tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                                box.setDetailedText(response.stdOut);
+                                box.setInformativeText(response.exitMessage(command, process.timeoutS()));
+                                box.setDefaultButton(QMessageBox::Ok);
+                                box.setEscapeButton(QMessageBox::Cancel);
+                                box.exec();
+
+                                CONNECT_END();
+                            }
+
+                            if(justEraseFlashFs)
+                            {
+                                QMessageBox::information(Core::ICore::dialogParent(),
+                                    tr("Connect"),
+                                    QString(QStringLiteral("%1%2%3")).arg(tr("Onboard Data Flash Erased!\n\n"))
+                                    .arg(tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
+                                    .arg(tr("Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.")));
+
+                                RECONNECT_END();
+                            }
+                        }
+                        else
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                tr("Connect"),
+                                tr("Error: %L1!").arg(file.errorString()));
+
+                            CONNECT_END();
+                        }
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            tr("Connect"),
+                            tr("Error: %L1!").arg(file.errorString()));
+
+                        CONNECT_END();
+                    }
+                }
+
+                // Program Flash //////////////////////////////////////
+                {
+                    QProgressDialog dialog(tr("Reprogramming...\n\n(may take up to 5 minutes)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+                        (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
+                    dialog.setWindowModality(Qt::ApplicationModal);
+                    dialog.setAttribute(Qt::WA_ShowWithoutActivating);
+                    dialog.setCancelButton(Q_NULLPTR);
+                    dialog.show();
+
+                    QString command;
+                    Utils::SynchronousProcess process;
+                    Utils::SynchronousProcessResponse response;
+                    process.setTimeoutS(300); // 5 minutes...
+                    process.setProcessChannelMode(QProcess::MergedChannels);
+                    downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), QStringLiteral("2341:035b"), QStringLiteral("-a 0 --dfuse-address=0x08040000:leave"));
+
+                    if(response.result == Utils::SynchronousProcessResponse::Finished)
+                    {
+                        QMessageBox::information(Core::ICore::dialogParent(),
+                            tr("Connect"),
+                            tr("DFU firmware update complete!\n\n") +
+                            tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while)."));
+
+                        RECONNECT_END();
+                    }
+                    else
+                    {
+                        QMessageBox box(QMessageBox::Critical, tr("Connect"), tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                        box.setDetailedText(response.stdOut);
+                        box.setInformativeText(response.exitMessage(command, process.timeoutS()));
+                        box.setDefaultButton(QMessageBox::Ok);
+                        box.setEscapeButton(QMessageBox::Cancel);
+                        box.exec();
+                    }
+                }
+
+                CONNECT_END();
+            }
+
             // DFU Bootloader /////////////////////////////////////////////////
 
             if(firmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive))
@@ -4065,7 +4251,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         Utils::SynchronousProcessResponse response;
                         process.setTimeoutS(300); // 5 minutes...
                         process.setProcessChannelMode(QProcess::MergedChannels);
-                        downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)));
+                        downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), isArduino ? QStringLiteral("2341:035b") : QStringLiteral("0483:df11"), QStringLiteral("-a 0 -R"));
 
                         // OLD
                         //
@@ -4363,7 +4549,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         tr("Connect"),
                         tr("Timeout error while getting sensor type!"));
 
-                    CLOSE_CONNECT_END();
+                    m_sensorType = tr("Unknown");
                 }
             }
         }
