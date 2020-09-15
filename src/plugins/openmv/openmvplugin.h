@@ -95,6 +95,7 @@
 #define LAST_FLASH_FS_ERASE_STATE "LastFlashFSEraseState"
 #define LAST_BOARD_TYPE_STATE "LastBoardTypeState"
 #define LAST_SERIAL_PORT_STATE "LastSerialPortState"
+#define LAST_DFU_PORT_STATE "LastDFUPortState"
 #define LAST_SAVE_IMAGE_PATH "LastSaveImagePath"
 #define LAST_SAVE_TEMPLATE_PATH "LastSaveTemplatePath"
 #define LAST_SAVE_DESCRIPTOR_PATH "LastSaveDescriptorPath"

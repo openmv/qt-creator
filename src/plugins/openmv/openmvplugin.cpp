@@ -3245,6 +3245,28 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             stringList.append(QString(QStringLiteral("%1:%2")).arg(port.name).arg(port.addressAndPort));
         }
 
+        QStringList dfuDevices;
+
+        foreach(const QString &device, getDevices())
+        {
+            QStringList vidpid = device.split(QLatin1Literal(",")).first().split(QLatin1Literal(":"));
+            QMutableListIterator<QString> i(stringList);
+
+            while (i.hasNext())
+            {
+                QSerialPortInfo info(i.next());
+
+                if(info.hasVendorIdentifier()
+                && info.vendorIdentifier() == vidpid.at(0).toInt(nullptr, 16)
+                && info.hasProductIdentifier()
+                && info.productIdentifier() == vidpid.at(1).toInt(nullptr, 16))
+                {
+                    dfuDevices.append(device);
+                    i.remove();
+                }
+            }
+        }
+
         QSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
@@ -3368,7 +3390,62 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             CONNECT_END();
         }
 
-        bool isArduino = QSerialPortInfo(selectedPort).hasVendorIdentifier() && (QSerialPortInfo(selectedPort).vendorIdentifier() == ARDUINOCAM_VID) && QSerialPortInfo(selectedPort).hasProductIdentifier() && ((QSerialPortInfo(selectedPort).productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID);
+        QString selectedDfuDevice;
+
+        if(forceBootloaderBricked && (!dfuDevices.isEmpty()))
+        {
+            settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+
+            if(dfuDevices.size() == 1)
+            {
+                selectedDfuDevice = dfuDevices.first();
+                settings->setValue(QStringLiteral(LAST_DFU_PORT_STATE), selectedDfuDevice);
+            }
+            else
+            {
+                int index = dfuDevices.indexOf(settings->value(QStringLiteral(LAST_DFU_PORT_STATE)).toString());
+
+                bool ok;
+                QString temp = QInputDialog::getItem(Core::ICore::dialogParent(),
+                    tr("Connect"), tr("Please select a DFU Device"),
+                    dfuDevices, (index != -1) ? index : 0, false, &ok,
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+
+                if(ok)
+                {
+                    selectedDfuDevice = temp;
+                    settings->setValue(QStringLiteral(LAST_DFU_PORT_STATE), selectedDfuDevice);
+                }
+            }
+
+            if(selectedDfuDevice.isEmpty())
+            {
+                CONNECT_END();
+            }
+
+            settings->endGroup();
+        }
+
+        bool isArduino = false;
+
+        if(!selectedPort.isEmpty())
+        {
+            QSerialPortInfo arduinoPort(selectedPort);
+
+            isArduino = arduinoPort.hasVendorIdentifier() &&
+                       (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) &&
+                        arduinoPort.hasProductIdentifier() &&
+                      ((arduinoPort.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID);
+        }
+
+        if(!selectedDfuDevice.isEmpty())
+        {
+            QStringList vidpid = selectedDfuDevice.split(QLatin1Literal(",")).first().split(QLatin1Literal(":"));
+
+            isArduino = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) &&
+                       ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID);
+        }
 
         // Open Port //////////////////////////////////////////////////////////
 
@@ -4037,6 +4114,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             while(isArduino && (justEraseFlashFs || firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)))
             {
                 // Stopping ///////////////////////////////////////////////////////
+
+                if(selectedDfuDevice.isEmpty())
                 {
                     QEventLoop loop;
 
@@ -4090,6 +4169,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                 // Erase Flash ////////////////////////////////////////
 
+                QString dfuDeviceVidPid = selectedDfuDevice.isEmpty() ? QStringLiteral("2341:035b") : selectedDfuDevice.split(QLatin1Literal(",")).first();
+                QString dfuDeviceSerial = selectedDfuDevice.isEmpty() ? QString() : QString(QStringLiteral(" -S %1")).arg(selectedDfuDevice.split(QLatin1Literal(",")).at(1));
+
                 if(forceFlashFSErase)
                 {
                     QTemporaryFile file;
@@ -4114,7 +4196,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             process.setTimeoutS(300); // 5 minutes...
                             process.setProcessChannelMode(QProcess::MergedChannels);
-                            downloadFirmware(command, process, response, QFileInfo(file).canonicalFilePath(), QStringLiteral("2341:035b"), QStringLiteral("-a 0 --dfuse-address=0x08020000"));
+                            downloadFirmware(command, process, response, QFileInfo(file).canonicalFilePath(), dfuDeviceVidPid,
+                                             QStringLiteral("-a 0 --dfuse-address=0x08020000") + dfuDeviceSerial);
 
                             if(response.result != Utils::SynchronousProcessResponse::Finished)
                             {
@@ -4132,7 +4215,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             process.setTimeoutS(300); // 5 minutes...
                             process.setProcessChannelMode(QProcess::MergedChannels);
-                            downloadFirmware(command, process, response, QFileInfo(file).canonicalFilePath(), QStringLiteral("2341:035b"), QStringLiteral("-a 1 --dfuse-address=0x90000000") + (justEraseFlashFs ? QStringLiteral(":leave") : QStringLiteral("")));
+                            downloadFirmware(command, process, response, QFileInfo(file).canonicalFilePath(), dfuDeviceVidPid,
+                                             QStringLiteral("-a 1 --dfuse-address=0x90000000") + (justEraseFlashFs ? QStringLiteral(":leave") : QStringLiteral("")) + dfuDeviceSerial);
 
                             if(response.result != Utils::SynchronousProcessResponse::Finished)
                             {
@@ -4193,7 +4277,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     Utils::SynchronousProcessResponse response;
                     process.setTimeoutS(300); // 5 minutes...
                     process.setProcessChannelMode(QProcess::MergedChannels);
-                    downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), QStringLiteral("2341:035b"), QStringLiteral("-a 0 --dfuse-address=0x08040000:leave"));
+                    downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), dfuDeviceVidPid,
+                                     QStringLiteral("-a 0 --dfuse-address=0x08040000:leave") + dfuDeviceSerial);
 
                     if(response.result == Utils::SynchronousProcessResponse::Finished)
                     {

@@ -1,5 +1,74 @@
 #include "dfu-util.h"
 
+QList<QString> getDevices()
+{
+    QString command;
+    Utils::SynchronousProcess process;
+    Utils::SynchronousProcessResponse response;
+    process.setTimeoutS(10);
+    process.setProcessChannelMode(QProcess::MergedChannels);
+    response.result = Utils::SynchronousProcessResponse::FinishedError;
+
+    if(Utils::HostOsInfo::isWindowsHost())
+    {
+        command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/windows/dfu-util.exe")));
+        response = process.run(command, QStringList() << QStringLiteral("-l"));
+    }
+    else if(Utils::HostOsInfo::isMacHost())
+    {
+        command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/osx/dfu-util")));
+        response = process.run(command, QStringList() << QStringLiteral("-l"));
+    }
+    else if(Utils::HostOsInfo::isLinuxHost())
+    {
+        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
+        {
+            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/linux32/dfu-util")));
+            response = process.run(command, QStringList() << QStringLiteral("-l"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
+        {
+            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/linux64/dfu-util")));
+            response = process.run(command, QStringList() << QStringLiteral("-l"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
+        {
+            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/arm/dfu-util")));
+            response = process.run(command, QStringList() << QStringLiteral("-l"));
+        }
+    }
+
+    if(response.result == Utils::SynchronousProcessResponse::Finished)
+    {
+        QStringList list, in = response.stdOut.split(QRegularExpression(QStringLiteral("\n|\r\n|\r")), QString::SkipEmptyParts);
+
+        foreach(const QString &string, in)
+        {
+            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("Found DFU: \\[([A-Fa-f0-9:]+)\\].+?alt=0.+?serial=(\".+?\")")).match(string);
+
+            if(match.hasMatch())
+            {
+                list.append(match.captured(1) + QLatin1Literal(",") + match.captured(2));
+            }
+        }
+
+        return list;
+    }
+    else
+    {
+        QMessageBox box(QMessageBox::Warning, QObject::tr("Get Devices"), QObject::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+        box.setDetailedText(response.stdOut);
+        box.setInformativeText(response.exitMessage(command, process.timeoutS()));
+        box.setDefaultButton(QMessageBox::Ok);
+        box.setEscapeButton(QMessageBox::Cancel);
+        box.exec();
+
+        return QList<QString>();
+    }
+}
+
 void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Utils::SynchronousProcessResponse &response, const QString &path, const QString &device, const QString &moreArgs)
 {
     response.clear();
