@@ -290,6 +290,7 @@ private:
     int m_minor;
     int m_patch;
     QString m_boardType;
+    QString m_boardId;
     QString m_sensorType;
     int m_reconnects;
     QString m_portName;
@@ -298,6 +299,8 @@ private:
     QRegularExpression m_errorFilterRegex;
     QString m_errorFilterString;
 
+    QAction *m_bootloaderAction;
+    QAction *m_eraseAction;
     Core::Command *m_openDriveFolderCommand;
     Core::Command *m_configureSettingsCommand;
     Core::Command *m_saveCommand;
