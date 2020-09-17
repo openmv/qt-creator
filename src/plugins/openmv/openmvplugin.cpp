@@ -4219,7 +4219,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             {
                                 boardTypeToDfuDeviceVidPid = obj.value(QStringLiteral("vidpid")).toString();
 
-                                foreach(const QJsonValue &command, obj.value(QStringLiteral("eraseCommands")).toArray())
+                                QJsonArray eraseCommandsArray = obj.value(QStringLiteral("eraseCommands")).toArray(); foreach(const QJsonValue &command, eraseCommandsArray)
                                 {
                                     eraseCommands.append(command.toString());
                                 }
@@ -4250,7 +4250,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             if(selectedDfuDeviceVidPid == obj.value(QStringLiteral("vidpid")).toString())
                             {
-                                foreach(const QJsonValue &command, obj.value(QStringLiteral("eraseCommands")).toArray())
+                                QJsonArray eraseCommandsArray = obj.value(QStringLiteral("eraseCommands")).toArray(); foreach(const QJsonValue &command, eraseCommandsArray)
                                 {
                                     eraseCommands.append(command.toString());
                                 }
