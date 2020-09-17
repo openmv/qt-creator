@@ -3291,7 +3291,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 {
                     settings->endGroup();
 
-                    QMessageBox box(QMessageBox::Question, tr("Connect"), tr("What would you like to do?"), QMessageBox::Cancel, Core::ICore::dialogParent(),
+                    QMessageBox box(QMessageBox::Question, tr("Connect"), tr("Connected to DFU bootloader. What would you like to do?"), QMessageBox::Cancel, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
                     QPushButton *button0 = box.addButton(tr("   Run Bootloader (Load Firmware)   "), QMessageBox::AcceptRole);
@@ -3710,7 +3710,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     }
                 }
 
-                if(firmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive))
+                if((!isArduino) && firmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive))
                 {
                     QEventLoop loop;
 
@@ -4137,7 +4137,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 }
             }
 
-            while(isArduino && (justEraseFlashFs || firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)))
+            if(isArduino)
             {
                 // Stopping ///////////////////////////////////////////////////////
 
@@ -4201,7 +4201,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 QFile dfuSettings(Core::ICore::userResourcePath() + QStringLiteral("/firmware/dfu.txt"));
                 QString boardTypeToDfuDeviceVidPid;
                 QStringList eraseCommands;
-                QString programCommand;
+                QString binProgramCommand, dfuProgramCommand;
 
                 if(dfuSettings.open(QIODevice::ReadOnly))
                 {
@@ -4209,6 +4209,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                     if(selectedDfuDevice.isEmpty())
                     {
+                        bool foundMatch = false;
+
                         foreach(const QJsonValue &val, doc.array())
                         {
                             QJsonObject obj = val.toObject();
@@ -4222,13 +4224,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     eraseCommands.append(command.toString());
                                 }
 
-                                programCommand = obj.value(QStringLiteral("programCommand")).toString();
-
+                                binProgramCommand = obj.value(QStringLiteral("binProgramCommand")).toString();
+                                dfuProgramCommand = obj.value(QStringLiteral("dfuProgramCommand")).toString();
+                                foundMatch = true;
                                 break;
                             }
                         }
 
-                        if(programCommand.isEmpty())
+                        if(!foundMatch)
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
                                 tr("Connect"),
@@ -4239,6 +4242,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     }
                     else
                     {
+                        bool foundMatch = false;
+
                         foreach(const QJsonValue &val, doc.array())
                         {
                             QJsonObject obj = val.toObject();
@@ -4250,13 +4255,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     eraseCommands.append(command.toString());
                                 }
 
-                                programCommand = obj.value(QStringLiteral("programCommand")).toString();
-
+                                binProgramCommand = obj.value(QStringLiteral("binProgramCommand")).toString();
+                                dfuProgramCommand = obj.value(QStringLiteral("dfuProgramCommand")).toString();
+                                foundMatch = true;
                                 break;
                             }
                         }
 
-                        if(programCommand.isEmpty())
+                        if(!foundMatch)
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
                                 tr("Connect"),
@@ -4368,7 +4374,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     Utils::SynchronousProcessResponse response;
                     process.setTimeoutS(300); // 5 minutes...
                     process.setProcessChannelMode(QProcess::MergedChannels);
-                    downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), dfuDeviceVidPid, programCommand + dfuDeviceSerial);
+                    downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), dfuDeviceVidPid, (firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? binProgramCommand : dfuProgramCommand) + dfuDeviceSerial);
 
                     if(response.result == Utils::SynchronousProcessResponse::Finished)
                     {
@@ -4426,7 +4432,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         Utils::SynchronousProcessResponse response;
                         process.setTimeoutS(300); // 5 minutes...
                         process.setProcessChannelMode(QProcess::MergedChannels);
-                        downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), isArduino ? QStringLiteral("2341:035b") : QStringLiteral("0483:df11"), QStringLiteral("-a 0 -R"));
+                        downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), QStringLiteral("0483:df11"), QStringLiteral("-a 0 -s :leave"));
 
                         // OLD
                         //

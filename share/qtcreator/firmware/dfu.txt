@@ -2,7 +2,8 @@
     {
         "boardType" : "H7",
         "vidpid" : "2341:035b",
-        "eraseCommands" : ["-a 0 --dfuse-address=0x08020000", "-a 1 --dfuse-address=0x90000000"],
-        "programCommand" : "-a 1 --dfuse-address=0x90000000:leave"
+        "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
+        "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+        "dfuProgramCommand" : "-a 0 -s :leave"
     }
 ]
