@@ -1318,7 +1318,9 @@ void OpenMVPlugin::extensionsInitialized()
         "<p>Contact us at <a href=\"mailto:openmv@openmv.io\">openmv@openmv.io</a>.</p>"
         ).arg(QLatin1String(Core::Constants::OMV_IDE_VERSION_LONG)).arg(QLatin1String(Core::Constants::OMV_IDE_YEAR)).arg(QLatin1String(Core::Constants::OMV_IDE_AUTHOR)) + tr(
         "<p><b>Credits</b></p>") + tr(
-        "<p>OpenMV IDE English translation by Kwabena W. Agyeman.</p>"));
+        "<p>OpenMV IDE English translation by Kwabena W. Agyeman.</p>") + tr(
+        "<p><b>Partners</b></p>") + QStringLiteral("<p><a href=\"https://www.arduino.cc/\"><img source=\":/openmv/images/arduino-partnership.png\"></a></p>"
+        "<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership.png\"></a></p>"));
     });
 
     ///////////////////////////////////////////////////////////////////////////
@@ -4602,12 +4604,105 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         // Check ID ///////////////////////////////////////////////////////////
 
+        bool disableLicenseCheck = false;
+        m_sensorType = QString();
+
+        if((major2 < OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR)
+        || ((major2 == OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR) && (minor2 < OPENMV_DBG_PROTOCOL_CHNAGE_MINOR))
+        || ((major2 == OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR) && (minor2 == OPENMV_DBG_PROTOCOL_CHNAGE_MINOR) && (patch2 < OPENMV_DBG_PROTOCOL_CHNAGE_PATCH)))
+        {
+            m_iodevice->breakUpGetAttributeCommand(false);
+            m_iodevice->breakUpSetAttributeCommand(false);
+            m_iodevice->breakUpFBEnable(false);
+            m_iodevice->breakUpJPEGEnable(false);
+        }
+        else
+        {
+            m_iodevice->breakUpGetAttributeCommand(true);
+            m_iodevice->breakUpSetAttributeCommand(true);
+            m_iodevice->breakUpFBEnable(true);
+            m_iodevice->breakUpJPEGEnable(true);
+
+            // Get Sensor Type
+            {
+                int id2 = int();
+                int *id2Ptr = &id2;
+
+                QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::sensorIdDone,
+                    this, [this, id2Ptr] (int id) {
+                    *id2Ptr = id;
+                });
+
+                QEventLoop loop;
+
+                connect(m_iodevice, &OpenMVPluginIO::sensorIdDone,
+                        &loop, &QEventLoop::quit);
+
+                m_iodevice->sensorId();
+
+                loop.exec();
+
+                disconnect(conn);
+
+                if(id2 == 0xFF)
+                {
+                    disableLicenseCheck = true;
+                    m_sensorType = tr("None");
+                }
+                else if(id2)
+                {
+                    QFile sensors(Core::ICore::userResourcePath() + QStringLiteral("/firmware/sensors.txt"));
+
+                    if(sensors.open(QIODevice::ReadOnly))
+                    {
+                        QMap<int, QString> mappings;
+
+                        forever
+                        {
+                            QByteArray data = sensors.readLine();
+
+                            if((sensors.error() == QFile::NoError) && (!data.isEmpty()))
+                            {
+                                QRegularExpressionMatch mapping = QRegularExpression(QStringLiteral("(\\S+)\\s+(\\S+)")).match(QString::fromUtf8(data));
+                                mappings.insert(mapping.captured(2).toInt(nullptr, 0), mapping.captured(1));
+                            }
+                            else
+                            {
+                                sensors.close();
+                                break;
+                            }
+                        }
+
+                        m_sensorType = mappings.value(id2, tr("Unknown"));
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            tr("Connect"),
+                            tr("Error: %L1!").arg(sensors.errorString()));
+
+                        CLOSE_CONNECT_END();
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        tr("Connect"),
+                        tr("Timeout error while getting sensor type!"));
+
+                    disableLicenseCheck = true;
+                    m_sensorType = tr("Unknown");
+                }
+            }
+        }
+
         m_boardType = QString();
         m_boardId = QString();
 
-        if((major2 > OLD_API_MAJOR)
+        if((!disableLicenseCheck)
+        && ((major2 > OLD_API_MAJOR)
         || ((major2 == OLD_API_MAJOR) && (minor2 > OLD_API_MINOR))
-        || ((major2 == OLD_API_MAJOR) && (minor2 == OLD_API_MINOR) && (patch2 >= OLD_API_PATCH)))
+        || ((major2 == OLD_API_MAJOR) && (minor2 == OLD_API_MINOR) && (patch2 >= OLD_API_PATCH))))
         {
             QString arch2 = QString();
             QString *arch2Ptr = &arch2;
@@ -4717,91 +4812,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         }
 
         // Stopping ///////////////////////////////////////////////////////////
-
-        m_sensorType = QString();
-
-        if((major2 < OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR)
-        || ((major2 == OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR) && (minor2 < OPENMV_DBG_PROTOCOL_CHNAGE_MINOR))
-        || ((major2 == OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR) && (minor2 == OPENMV_DBG_PROTOCOL_CHNAGE_MINOR) && (patch2 < OPENMV_DBG_PROTOCOL_CHNAGE_PATCH)))
-        {
-            m_iodevice->breakUpGetAttributeCommand(false);
-            m_iodevice->breakUpSetAttributeCommand(false);
-            m_iodevice->breakUpFBEnable(false);
-            m_iodevice->breakUpJPEGEnable(false);
-        }
-        else
-        {
-            m_iodevice->breakUpGetAttributeCommand(true);
-            m_iodevice->breakUpSetAttributeCommand(true);
-            m_iodevice->breakUpFBEnable(true);
-            m_iodevice->breakUpJPEGEnable(true);
-
-            // Get Sensor Type
-            {
-                int id2 = int();
-                int *id2Ptr = &id2;
-
-                QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::sensorIdDone,
-                    this, [this, id2Ptr] (int id) {
-                    *id2Ptr = id;
-                });
-
-                QEventLoop loop;
-
-                connect(m_iodevice, &OpenMVPluginIO::sensorIdDone,
-                        &loop, &QEventLoop::quit);
-
-                m_iodevice->sensorId();
-
-                loop.exec();
-
-                disconnect(conn);
-
-                if(id2)
-                {
-                    QFile sensors(Core::ICore::userResourcePath() + QStringLiteral("/firmware/sensors.txt"));
-
-                    if(sensors.open(QIODevice::ReadOnly))
-                    {
-                        QMap<int, QString> mappings;
-
-                        forever
-                        {
-                            QByteArray data = sensors.readLine();
-
-                            if((sensors.error() == QFile::NoError) && (!data.isEmpty()))
-                            {
-                                QRegularExpressionMatch mapping = QRegularExpression(QStringLiteral("(\\S+)\\s+(\\S+)")).match(QString::fromUtf8(data));
-                                mappings.insert(mapping.captured(2).toInt(nullptr, 0), mapping.captured(1));
-                            }
-                            else
-                            {
-                                sensors.close();
-                                break;
-                            }
-                        }
-
-                        m_sensorType = mappings.value(id2, tr("Unknown"));
-                    }
-                    else
-                    {
-                        QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("Connect"),
-                            tr("Error: %L1!").arg(sensors.errorString()));
-
-                        CLOSE_CONNECT_END();
-                    }
-                }
-                else
-                {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("Connect"),
-                        tr("Timeout error while getting sensor type!"));
-
-                    m_sensorType = tr("Unknown");
-                }
-            }
-        }
 
         m_iodevice->scriptStop();
         m_iodevice->jpegEnable(m_jpgCompress->isChecked());

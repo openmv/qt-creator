@@ -15,5 +15,7 @@
         <file>images/branch-open.png</file>
         <file>images/new-folder.png</file>
         <file>images/snapshot.png</file>
+        <file>images/arduino-partnership.png</file>
+        <file>images/edge-impulse-partnership.png</file>
     </qresource>
 </RCC>
