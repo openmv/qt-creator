@@ -1319,8 +1319,8 @@ void OpenMVPlugin::extensionsInitialized()
         ).arg(QLatin1String(Core::Constants::OMV_IDE_VERSION_LONG)).arg(QLatin1String(Core::Constants::OMV_IDE_YEAR)).arg(QLatin1String(Core::Constants::OMV_IDE_AUTHOR)) + tr(
         "<p><b>Credits</b></p>") + tr(
         "<p>OpenMV IDE English translation by Kwabena W. Agyeman.</p>") + tr(
-        "<p><b>Partners</b></p>") + QStringLiteral("<p><a href=\"https://www.arduino.cc/\"><img source=\":/openmv/images/arduino-partnership.png\"></a></p>"
-        "<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership.png\"></a></p>"));
+        "<p><b>Partners</b></p>") + QStringLiteral("<p><a href=\"https://www.arduino.cc/\"><img source=\":/openmv/images/arduino-partnership.png\"></a></p>"));
+        // "<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership.png\"></a></p>"));
     });
 
     ///////////////////////////////////////////////////////////////////////////
@@ -3507,6 +3507,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         }
 
         bool isArduino = false;
+        bool isPortena = false;
 
         if(!selectedPort.isEmpty())
         {
@@ -3516,6 +3517,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                        (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) &&
                         arduinoPort.hasProductIdentifier() &&
                       ((arduinoPort.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID);
+            isPortena = arduinoPort.hasVendorIdentifier() &&
+                       (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) &&
+                        arduinoPort.hasProductIdentifier() &&
+                       (arduinoPort.productIdentifier() == PORTENTA_APP_PID);
         }
 
         if(!selectedDfuDevice.isEmpty())
@@ -3524,6 +3529,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             isArduino = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) &&
                        ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID);
+            isPortena = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) &&
+                        (vidpid.at(1).toInt(nullptr, 16) == PORTENTA_LDR_PID);
         }
 
         if((!originalDfuVidPid.isEmpty()) && selectedPort.isEmpty() && dfuDevices.isEmpty())
@@ -3532,6 +3539,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             isArduino = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) &&
                        ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID);
+            isPortena = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) &&
+                        (vidpid.at(1).toInt(nullptr, 16) == PORTENTA_LDR_PID);
 
             if(isArduino) selectedDfuDevice = originalDfuVidPid + QStringLiteral(",NULL");
         }
@@ -4605,6 +4614,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         // Check ID ///////////////////////////////////////////////////////////
 
         bool disableLicenseCheck = false;
+        if(isPortena) disableLicenseCheck = true;
         m_sensorType = QString();
 
         if((major2 < OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR)
