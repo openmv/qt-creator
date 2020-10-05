@@ -8412,12 +8412,12 @@ msgstr "所选文件夹似乎不是有效的OpenMV Cam图像数据集！"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1142
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Export"
-msgstr ""
+msgstr "出口"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1146
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Export Dataset to Zip File"
-msgstr ""
+msgstr "将数据集导出到Zip文件"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1154
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1191
@@ -8439,29 +8439,29 @@ msgstr "出口..."
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1222
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Upload to Edge Impulse Project"
-msgstr ""
+msgstr "上传到Edge Impulse项目"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1227
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1243
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Login to Edge Impulse Account"
-msgstr ""
+msgstr "登录到Edge Impulse帐户"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1232
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1245
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Logout from Account: %L1"
-msgstr ""
+msgstr "从帐户注销：%L1"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1243
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Login to Edge Impulse Account and Upload to Project"
-msgstr ""
+msgstr "登录到Edge Impulse帐户并上传到项目"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1250
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Upload to Edge Impulse by API Key"
-msgstr ""
+msgstr "通过API密钥上传到Edge Impulse"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1257
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8491,7 +8491,7 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1321
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "<p><b>Partners</b></p>"
-msgstr ""
+msgstr "<p><b>伙伴</b></p>"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1610
 #, qt-format
@@ -8836,22 +8836,22 @@ msgstr "\"%L1\"不是一个文件！"
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "DFU bootloader(s) found. What would you like to do?"
 msgid_plural "DFU bootloader(s) found. What would you like to do?"
-msgstr[0] ""
+msgstr[0] "找到DFU引导程序。你想干什么？"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3300
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "   Reset Firmware to Release Version   "
-msgstr ""
+msgstr "   将固件重置为发行版本   "
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3301
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "   Load Specific Firmware File   "
-msgstr ""
+msgstr "   加载特定的固件文件   "
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3302
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "   Erase Onboard Data Flash   "
-msgstr ""
+msgstr "   擦除板载数据闪存   "
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3329
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8878,7 +8878,7 @@ msgstr "擦除内部文件系统？"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3435
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No released firmware available for the attached board!"
-msgstr ""
+msgstr "没有可用于所连接板的已发布固件！"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3453
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5853
@@ -8889,7 +8889,7 @@ msgstr "请选择一个串口"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3489
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Please select a DFU Device"
-msgstr ""
+msgstr "请选择一个DFU设备"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3560
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3846
@@ -9133,18 +9133,17 @@ msgstr "未知"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4310
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No DFU settings for the selected board type!"
-msgstr ""
+msgstr "所选板类型没有DFU设置！"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4341
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No DFU settings for the selected device!"
-msgstr ""
+msgstr "所选设备没有DFU设置！"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4660
-#, fuzzy
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "None"
-msgstr "无"
+msgstr "没有"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4701
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9904,7 +9903,7 @@ msgstr "正在读取文件..."
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:8
 msgctxt "QObject|"
 msgid "Dataset Split"
-msgstr ""
+msgstr "数据集拆分"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:11
 msgctxt "QObject|"
@@ -9912,6 +9911,8 @@ msgid ""
 "Please choose how to split the data to upload.\n"
 "OpenMV recommends leaving this at the default 80/20% split."
 msgstr ""
+"请选择如何拆分数据以上传。\n"
+"OpenMV建议将其保留为默认的80/20％分割。"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:20
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:36
@@ -9922,6 +9923,9 @@ msgid ""
 "Percentage\n"
 "%1%"
 msgstr ""
+"训练数据\n"
+"百分比\n"
+"%1%"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:28
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:37
@@ -9932,6 +9936,9 @@ msgid ""
 "Percentage\n"
 "%1%"
 msgstr ""
+"测试数据\n"
+"百分比\n"
+"%1%"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:95
 #: ../../../src/plugins/openmv/tools/videotools.cpp:140
@@ -9944,7 +9951,7 @@ msgstr "取消"
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:95
 msgctxt "QObject|"
 msgid "Uploading..."
-msgstr ""
+msgstr "上载中..."
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:125
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:235
@@ -9953,12 +9960,12 @@ msgstr ""
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:273
 msgctxt "QObject|"
 msgid "Uploading Dataset"
-msgstr ""
+msgstr "上载资料集"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:236
 msgctxt "QObject|"
 msgid "Error posting!"
-msgstr ""
+msgstr "发布错误！"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:264
 msgctxt "QObject|"
@@ -9971,6 +9978,13 @@ msgid ""
 "%L3 New Images Added\n"
 "%L4 Marked as Duplicates"
 msgstr ""
+"上传统计信息：\n"
+"\n"
+"已上传%L1个文件\n"
+"边缘脉冲的%L2响应\n"
+"\n"
+"%L3添加了新图像\n"
+"%L4被标记为重复项"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:274
 msgctxt "QObject|"
@@ -9980,6 +9994,10 @@ msgid ""
 "Only jpg/png/bmp images with a numeric name (e.g. \"00001.jpg\")\n"
 "in class folders (\"*.class\") can be uploaded."
 msgstr ""
+"没有上载内容\n"
+"\n"
+"仅具有数字名称的jpg/png/bmp图像（例如“00001.jpg”）\n"
+"可以上传课程文件夹中的(\"*.class\")。"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:317
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:324
@@ -9994,7 +10012,7 @@ msgstr ""
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:613
 msgctxt "QObject|"
 msgid "Edge Impulse Projects"
-msgstr ""
+msgstr "边缘冲动项目"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:325
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:363
@@ -10003,12 +10021,12 @@ msgstr ""
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:614
 msgctxt "QObject|"
 msgid "No request data received"
-msgstr ""
+msgstr "未收到请求数据"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:349
 msgctxt "QObject|"
 msgid "An unkown error occured"
-msgstr ""
+msgstr "发生未知错误"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:418
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:429
@@ -10016,7 +10034,7 @@ msgstr ""
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:446
 msgctxt "QObject|"
 msgid "Edge Impulse Login"
-msgstr ""
+msgstr "边缘冲动登录"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:419
 msgctxt "QObject|"
@@ -10025,20 +10043,21 @@ msgid ""
 "\n"
 "Open a data set to upload it."
 msgstr ""
+"成功登录到您的Edge Impulse帐户。\n"
+"\n"
+"打开一个数据集以上传它。"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:453
 msgctxt "QObject|"
 msgid "Email Address"
-msgstr ""
+msgstr "电子邮件地址"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:454
-#, fuzzy
 msgctxt "QObject|"
 msgid "Username"
 msgstr "用户名"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:459
-#, fuzzy
 msgctxt "QObject|"
 msgid "Password"
 msgstr "密码"
@@ -10046,22 +10065,22 @@ msgstr "密码"
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:532
 msgctxt "QObject|"
 msgid "Please select a project"
-msgstr ""
+msgstr "请选择一个项目"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:596
 msgctxt "QObject|"
 msgid "No projects found"
-msgstr ""
+msgstr "找不到项目"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:647
 msgctxt "QObject|"
 msgid "Upload Project"
-msgstr ""
+msgstr "上传专案"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:647
 msgctxt "QObject|"
 msgid "Please enter an Edge Impluse Project API Key"
-msgstr ""
+msgstr "请输入Edge Impluse项目API密钥"
 
 #: ../../../src/plugins/openmv/tools/videotools.cpp:151
 #: ../../../src/plugins/openmv/tools/videotools.cpp:171
@@ -10170,7 +10189,7 @@ msgstr "查询失败！"
 #: ../../../src/plugins/openmv/tools/dfu-util.cpp:59
 msgctxt "QObject|"
 msgid "Get Devices"
-msgstr ""
+msgstr "获取设备"
 
 #: ../../../src/plugins/openmv/tools/videotools.cpp:754
 #: ../../../src/plugins/openmv/tools/videotools.cpp:761
@@ -10273,13 +10292,13 @@ msgstr "输入新宽度（纵横比将保持不变）"
 #: ../../../src/plugins/openmv/tools/videotools.cpp:1149
 msgctxt "QObject|"
 msgid "Skip frames?"
-msgstr ""
+msgstr "跳帧？"
 
 #: ../../../src/plugins/openmv/tools/videotools.cpp:1046
 #: ../../../src/plugins/openmv/tools/videotools.cpp:1161
 msgctxt "QObject|"
 msgid "Enter how many frames to skip at a time"
-msgstr ""
+msgstr "输入一次跳过多少帧"
 
 #~ msgctxt "QObject|"
 #~ msgid "Video Files (*.mp4 *.*);;"

@@ -8613,12 +8613,12 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1142
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Export"
-msgstr ""
+msgstr "Esportare"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1146
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Export Dataset to Zip File"
-msgstr ""
+msgstr "Esporta set di dati in file zip"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1154
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1191
@@ -8640,29 +8640,29 @@ msgstr "Esportazione..."
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1222
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Upload to Edge Impulse Project"
-msgstr ""
+msgstr "Carica nel progetto Edge Impulse"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1227
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1243
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Login to Edge Impulse Account"
-msgstr ""
+msgstr "Accedi all'account Edge Impulse"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1232
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1245
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Logout from Account: %L1"
-msgstr ""
+msgstr "Esci dall'account: %L1"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1243
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Login to Edge Impulse Account and Upload to Project"
-msgstr ""
+msgstr "Accedi all'account Edge Impulse e carica nel progetto"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1250
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Upload to Edge Impulse by API Key"
-msgstr ""
+msgstr "Carica su Edge Impulse tramite chiave API"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1257
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -8695,7 +8695,7 @@ msgstr ""
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1321
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "<p><b>Partners</b></p>"
-msgstr ""
+msgstr "<p><b>Partner</b></p>"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:1610
 #, qt-format
@@ -9050,23 +9050,23 @@ msgstr "\"%L1\" non è un file!"
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "DFU bootloader(s) found. What would you like to do?"
 msgid_plural "DFU bootloader(s) found. What would you like to do?"
-msgstr[0] ""
+msgstr[0] "Bootloader DFU trovati. Cosa ti piacerebbe fare?"
 msgstr[1] ""
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3300
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "   Reset Firmware to Release Version   "
-msgstr ""
+msgstr "   Ripristina il firmware alla versione di rilascio   "
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3301
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "   Load Specific Firmware File   "
-msgstr ""
+msgstr "   Carica file firmware specifico   "
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3302
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "   Erase Onboard Data Flash   "
-msgstr ""
+msgstr "   Cancella dati flash integrati   "
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3329
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9093,7 +9093,7 @@ msgstr "Cancellare il file system interno?"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3435
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No released firmware available for the attached board!"
-msgstr ""
+msgstr "Nessun firmware rilasciato disponibile per la scheda allegata!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3453
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5853
@@ -9104,7 +9104,7 @@ msgstr "Si prega di selezionare una porta seriale"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3489
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Please select a DFU Device"
-msgstr ""
+msgstr "Seleziona un dispositivo DFU"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3560
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3846
@@ -9366,18 +9366,17 @@ msgstr "Sconosciuto"
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4310
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No DFU settings for the selected board type!"
-msgstr ""
+msgstr "Nessuna impostazione DFU per il tipo di scheda selezionato!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4341
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No DFU settings for the selected device!"
-msgstr ""
+msgstr "Nessuna impostazione DFU per il dispositivo selezionato!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4660
-#, fuzzy
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "None"
-msgstr "Nessuno"
+msgstr "Nessuna"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4701
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -10158,7 +10157,7 @@ msgstr "Lettura del file..."
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:8
 msgctxt "QObject|"
 msgid "Dataset Split"
-msgstr ""
+msgstr "Dataset Split"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:11
 msgctxt "QObject|"
@@ -10166,6 +10165,8 @@ msgid ""
 "Please choose how to split the data to upload.\n"
 "OpenMV recommends leaving this at the default 80/20% split."
 msgstr ""
+"Scegli come dividere i dati da caricare.\n"
+"OpenMV consiglia di lasciare questo valore predefinito all'80/20%."
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:20
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:36
@@ -10176,6 +10177,9 @@ msgid ""
 "Percentage\n"
 "%1%"
 msgstr ""
+"Dati di allenamento\n"
+"Percentuale\n"
+"%1%"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:28
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:37
@@ -10186,6 +10190,9 @@ msgid ""
 "Percentage\n"
 "%1%"
 msgstr ""
+"Dati di test\n"
+"Percentuale\n"
+"%1%"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:95
 #: ../../../src/plugins/openmv/tools/videotools.cpp:140
@@ -10198,7 +10205,7 @@ msgstr "Annulla"
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:95
 msgctxt "QObject|"
 msgid "Uploading..."
-msgstr ""
+msgstr "Caricamento in corso..."
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:125
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:235
@@ -10207,12 +10214,12 @@ msgstr ""
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:273
 msgctxt "QObject|"
 msgid "Uploading Dataset"
-msgstr ""
+msgstr "Caricamento del set di dati"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:236
 msgctxt "QObject|"
 msgid "Error posting!"
-msgstr ""
+msgstr "Errore durante la pubblicazione!"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:264
 msgctxt "QObject|"
@@ -10225,6 +10232,13 @@ msgid ""
 "%L3 New Images Added\n"
 "%L4 Marked as Duplicates"
 msgstr ""
+"Statistiche di caricamento:\n"
+"\n"
+"%L1 file caricati\n"
+"%L2 risposte da Edge Impulse\n"
+"\n"
+"%L3 Nuove immagini aggiunte\n"
+"%L4 contrassegnato come duplicato"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:274
 msgctxt "QObject|"
@@ -10234,6 +10248,10 @@ msgid ""
 "Only jpg/png/bmp images with a numeric name (e.g. \"00001.jpg\")\n"
 "in class folders (\"*.class\") can be uploaded."
 msgstr ""
+"Niente da caricare\n"
+"\n"
+"Solo immagini jpg / png / bmp con un nome numerico (ad es. \"00001.jpg\")\n"
+"nelle cartelle di classe (\"*.class\") possono essere caricate."
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:317
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:324
@@ -10248,7 +10266,7 @@ msgstr ""
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:613
 msgctxt "QObject|"
 msgid "Edge Impulse Projects"
-msgstr ""
+msgstr "Progetti Edge Impulse"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:325
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:363
@@ -10257,12 +10275,12 @@ msgstr ""
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:614
 msgctxt "QObject|"
 msgid "No request data received"
-msgstr ""
+msgstr "Nessun dato di richiesta ricevuto"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:349
 msgctxt "QObject|"
 msgid "An unkown error occured"
-msgstr ""
+msgstr "Si è verificato un errore sconosciuto"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:418
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:429
@@ -10270,7 +10288,7 @@ msgstr ""
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:446
 msgctxt "QObject|"
 msgid "Edge Impulse Login"
-msgstr ""
+msgstr "Accesso Edge Impulse"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:419
 msgctxt "QObject|"
@@ -10279,43 +10297,44 @@ msgid ""
 "\n"
 "Open a data set to upload it."
 msgstr ""
+"Accedi con successo al tuo account Edge Impulse.\n"
+"\n"
+"Apri un set di dati per caricarlo."
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:453
 msgctxt "QObject|"
 msgid "Email Address"
-msgstr ""
+msgstr "Indirizzo email"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:454
-#, fuzzy
 msgctxt "QObject|"
 msgid "Username"
 msgstr "Nome utente"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:459
-#, fuzzy
 msgctxt "QObject|"
 msgid "Password"
-msgstr "Password"
+msgstr "Parola d'ordine"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:532
 msgctxt "QObject|"
 msgid "Please select a project"
-msgstr ""
+msgstr "Seleziona un progetto"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:596
 msgctxt "QObject|"
 msgid "No projects found"
-msgstr ""
+msgstr "Nessun progetto trovato"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:647
 msgctxt "QObject|"
 msgid "Upload Project"
-msgstr ""
+msgstr "Carica progetto"
 
 #: ../../../src/plugins/openmv/tools/edgeimpulse.cpp:647
 msgctxt "QObject|"
 msgid "Please enter an Edge Impluse Project API Key"
-msgstr ""
+msgstr "Immettere una chiave API del progetto Edge Impluse"
 
 #: ../../../src/plugins/openmv/tools/videotools.cpp:151
 #: ../../../src/plugins/openmv/tools/videotools.cpp:171
@@ -10424,7 +10443,7 @@ msgstr "Query non riuscita!"
 #: ../../../src/plugins/openmv/tools/dfu-util.cpp:59
 msgctxt "QObject|"
 msgid "Get Devices"
-msgstr ""
+msgstr "Ottieni dispositivi"
 
 #: ../../../src/plugins/openmv/tools/videotools.cpp:754
 #: ../../../src/plugins/openmv/tools/videotools.cpp:761
@@ -10531,13 +10550,13 @@ msgstr ""
 #: ../../../src/plugins/openmv/tools/videotools.cpp:1149
 msgctxt "QObject|"
 msgid "Skip frames?"
-msgstr ""
+msgstr "Saltare fotogrammi?"
 
 #: ../../../src/plugins/openmv/tools/videotools.cpp:1046
 #: ../../../src/plugins/openmv/tools/videotools.cpp:1161
 msgctxt "QObject|"
 msgid "Enter how many frames to skip at a time"
-msgstr ""
+msgstr "Inserisci il numero di fotogrammi da saltare alla volta"
 
 #~ msgctxt "QObject|"
 #~ msgid "Video Files (*.mp4 *.*);;"
