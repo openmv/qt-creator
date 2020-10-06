@@ -102,7 +102,7 @@ void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Util
         {
             command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
                 QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/dfu-util/osx/dfu-util"))) + QString(QStringLiteral("\" -w -d ,%1 %2 -D \"")).arg(device).arg(moreArgs) +
-                QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n"));
+                QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"")); // no extra new line
             QByteArray command2 = command.toUtf8();
 
             if(file.write(command2) == command2.size())

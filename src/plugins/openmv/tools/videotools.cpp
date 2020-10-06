@@ -641,7 +641,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
         {
             QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
                 QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffmpeg"))) + QStringLiteral("\" -hide_banner -y -i \"") +
-                QDir::toNativeSeparators(QDir::cleanPath(newSrc)) + QStringLiteral("\" -q:v 1") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::toNativeSeparators(QDir::cleanPath(newDst)) + QStringLiteral("\"\n")).toUtf8();
+                QDir::toNativeSeparators(QDir::cleanPath(newSrc)) + QStringLiteral("\" -q:v 1") + ((scale != -1) ? QString(QStringLiteral(" -vf scale=%1:-1 ")).arg(scale) : QStringLiteral(" ")) + QStringLiteral("\"") + QDir::toNativeSeparators(QDir::cleanPath(newDst)) + QStringLiteral("\"")).toUtf8(); // no extra new line
 
             if(file.write(command) == command.size())
             {
@@ -869,7 +869,7 @@ static bool playVideoFile(const QString &path)
         {
             QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
                 QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
-                QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n")).toUtf8();
+                QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"")).toUtf8(); // no extra new line
 
             if(file.write(command) == command.size())
             {
