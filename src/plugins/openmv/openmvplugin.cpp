@@ -4709,8 +4709,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_boardType = QString();
         m_boardId = QString();
 
-        if((!disableLicenseCheck)
-        && ((major2 > OLD_API_MAJOR)
+        if(((major2 > OLD_API_MAJOR)
         || ((major2 == OLD_API_MAJOR) && (minor2 > OLD_API_MINOR))
         || ((major2 == OLD_API_MAJOR) && (minor2 == OLD_API_MINOR) && (patch2 >= OLD_API_PATCH))))
         {
@@ -4745,8 +4744,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     m_boardType = board;
                     m_boardId = id;
 
+                    if((!disableLicenseCheck)
                     // Skip OpenMV Cam M4's...
-                    if(board != QStringLiteral("M4"))
+                    && (board != QStringLiteral("M4")))
                     {
                         QNetworkAccessManager *manager = new QNetworkAccessManager(this);
 
