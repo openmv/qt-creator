@@ -4371,6 +4371,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         if(file.write(QByteArray(4096, 0)) == 4096)
                         {
+                            file.setAutoRemove(false);
+
                             file.close();
 
                             QProgressDialog dialog(tr("Erasing..."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
@@ -4403,6 +4405,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     box.exec();
 
                                     CONNECT_END();
+                                }
+                                else
+                                {
+                                    QThread::sleep(1);
                                 }
                             }
 
