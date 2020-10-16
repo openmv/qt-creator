@@ -295,6 +295,7 @@ private:
     int m_reconnects;
     QString m_portName;
     QString m_portPath;
+    QString m_formKey;
 
     QRegularExpression m_errorFilterRegex;
     QString m_errorFilterString;

@@ -54,6 +54,11 @@
             \"Name\" : \"-override_read_stall_timeout\",
             \"Parameter\" : \"time_in_ms\",
             \"Description\" : \"Ms to wait before pinging (default 1000)\"
+        },
+        {
+            \"Name\" : \"-form_key\",
+            \"Parameter\" : \"key\",
+            \"Description\" : \"OpenMV Cam Registration Key\"
         }
     ],
     $$dependencyList

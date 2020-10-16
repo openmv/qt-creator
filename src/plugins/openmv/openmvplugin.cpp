@@ -32,6 +32,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_reconnects = int();
     m_portName = QString();
     m_portPath = QString();
+    m_formKey = QString();
 
     m_errorFilterRegex = QRegularExpression(QStringLiteral(
         "  File \"(.+?)\", line (\\d+).*?\n"
@@ -691,6 +692,23 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         thread->start();
         timer->start(FOLDER_SCAN_TIME);
         QTimer::singleShot(0, loadFolderThread, &LoadFolderThread::loadFolderSlot);
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+
+    int index_form_key = arguments.indexOf(QRegularExpression(QStringLiteral("-form_key")));
+
+    if(index_form_key != -1)
+    {
+        if(arguments.size() > (index_form_key + 1))
+        {
+            m_formKey = arguments.at(index_form_key + 1);
+        }
+        else
+        {
+            displayError(tr("Missing argument for -form_key"));
+            exit(-1);
+        }
     }
 
     return true;
@@ -2691,6 +2709,75 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
 void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
 {
+    if(!m_formKey.isEmpty())
+    {
+        QNetworkAccessManager manager(this);
+        QEventLoop loop;
+
+        connect(&manager, &QNetworkAccessManager::finished, &loop, &QEventLoop::quit);
+
+        QNetworkRequest request = QNetworkRequest(QUrl(QString(QStringLiteral("http://upload.openmv.io/openmv-swd-ids-insert.php?board=%L1&id=%L2&form_key=%L3")).arg(board).arg(id).arg(m_formKey)));
+#if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
+        request.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#endif
+        QNetworkReply *reply = manager.get(request);
+
+        if(reply)
+        {
+            connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
+
+            loop.exec();
+
+            QByteArray data = reply->readAll();
+
+            QTimer::singleShot(0, reply, &QNetworkReply::deleteLater);
+
+            if((reply->error() == QNetworkReply::NoError) && (!data.isEmpty()))
+            {
+                if(QString::fromUtf8(data).contains(QStringLiteral("Done")))
+                {
+                    QMessageBox::information(Core::ICore::dialogParent(),
+                        tr("Register OpenMV Cam"),
+                        tr("OpenMV Cam automatically registered!\n\nBoard: %1\nID: %2\n\nPlease run Examples->Basics->helloworld.py to test the vision quality and focus the camera (if applicable).").arg(board).arg(id));
+
+                    return;
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        tr("Register OpenMV Cam"),
+                        tr("Database Error!"));
+
+                    return;
+                }
+            }
+            else if(reply->error() != QNetworkReply::NoError)
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    tr("Register OpenMV Cam"),
+                    tr("Error: %L1!").arg(reply->error()));
+
+                return;
+            }
+            else
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    tr("Register OpenMV Cam"),
+                    tr("GET Network error!"));
+
+                return;
+            }
+        }
+        else
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                tr("Register OpenMV Cam"),
+                tr("GET network error!"));
+
+            return;
+        }
+    }
+
     if(QMessageBox::warning(Core::ICore::dialogParent(),
         tr("Unregistered OpenMV Cam Detected"),
         tr("Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.\n\n"
