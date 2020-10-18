@@ -743,10 +743,10 @@ void OpenMVPlugin::extensionsInitialized()
                        "    img = sensor.snapshot()\n"
                        "    print(clock.fps())\n").arg(Utils::Environment::systemEnvironment().userName()).arg(QDate::currentDate().toString()).toUtf8();
 
-        if(m_sensorType == QStringLiteral("HM01B0")) // Fix scripts for the Arduino Portenta Vision Shield
+        if((m_sensorType == QStringLiteral("HM01B0")) || (m_sensorType == QStringLiteral("MT9V034")))
         {
             data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
-            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+            if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
         }
 
         TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditorWithContents(Core::Constants::K_DEFAULT_TEXT_EDITOR_ID, &titlePattern, data));
@@ -1089,10 +1089,10 @@ void OpenMVPlugin::extensionsInitialized()
                                                      "    print(clock.fps())\n").
                                       arg(Utils::Environment::systemEnvironment().userName()).arg(QDate::currentDate().toString()).toUtf8();
 
-                if(m_sensorType == QStringLiteral("HM01B0")) // Fix scripts for the Arduino Portenta Vision Shield
+                if((m_sensorType == QStringLiteral("HM01B0")) || (m_sensorType == QStringLiteral("MT9V034")))
                 {
                     contents = contents.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
-                    contents = contents.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+                    if(m_sensorType == QStringLiteral("HM01B0")) contents = contents.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
                 }
 
                 Utils::FileSaver file(path + QStringLiteral("/dataset_capture_script.py"));
@@ -1970,10 +1970,10 @@ void OpenMVPlugin::extensionsInitialized()
 
             if((file.error() == QFile::NoError) && (!data.isEmpty()))
             {
-                if(m_sensorType == QStringLiteral("HM01B0")) // Fix scripts for the Arduino Portenta Vision Shield
+                if((m_sensorType == QStringLiteral("HM01B0")) || (m_sensorType == QStringLiteral("MT9V034")))
                 {
                     data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
-                    data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+                    if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
                 }
 
                 Core::EditorManager::cutForwardNavigationHistory();
@@ -5675,10 +5675,10 @@ QMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const QStrin
 
                     if((file.error() == QFile::NoError) && (!data.isEmpty()))
                     {
-                        if(m_sensorType == QStringLiteral("HM01B0")) // Fix scripts for the Arduino Portenta Vision Shield
+                        if((m_sensorType == QStringLiteral("HM01B0")) || (m_sensorType == QStringLiteral("MT9V034")))
                         {
                             data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
-                            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+                            if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
                         }
 
                         Core::EditorManager::cutForwardNavigationHistory();
