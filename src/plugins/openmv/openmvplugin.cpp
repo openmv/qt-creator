@@ -957,12 +957,28 @@ void OpenMVPlugin::extensionsInitialized()
 
         if(!src.isEmpty())
         {
-            QString dst =
+            QString dst;
+
+            forever
+            {
+                dst =
                 QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Where to save the network on the OpenMV Cam"),
                     m_portPath.isEmpty()
                     ? settings->value(QStringLiteral(LAST_MODEL_NO_CAM_PATH), QDir::homePath()).toString()
                     : settings->value(QStringLiteral(LAST_MODEL_WITH_CAM_PATH), QString(m_portPath + QFileInfo(src).fileName())).toString(),
                     QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)"));
+
+                if((!dst.isEmpty()) && QFileInfo(dst).completeSuffix().isEmpty())
+                {
+                    QMessageBox::warning(Core::ICore::dialogParent(),
+                        QObject::tr("Where to save the network on the OpenMV Cam"),
+                        QObject::tr("Please add a file extension!"));
+
+                    continue;
+                }
+
+                break;
+            }
 
             if(!dst.isEmpty())
             {
@@ -1182,10 +1198,26 @@ void OpenMVPlugin::extensionsInitialized()
         QSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
-        QString path =
+        QString path;
+
+        forever
+        {
+            path =
             QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Export Dataset"),
                 settings->value(QStringLiteral(LAST_DATASET_EDITOR_EXPORT_PATH), QDir::homePath()).toString(),
                 tr("Zip Files (*.zip)"));
+
+            if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
+            {
+                QMessageBox::warning(Core::ICore::dialogParent(),
+                    tr("Export Dataset"),
+                    QObject::tr("Please add a file extension!"));
+
+                continue;
+            }
+
+            break;
+        }
 
         if(!path.isEmpty())
         {
@@ -5602,10 +5634,26 @@ void OpenMVPlugin::saveImage(const QPixmap &data)
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
-    QString path =
+    QString path;
+
+    forever
+    {
+        path =
         QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Image"),
             settings->value(QStringLiteral(LAST_SAVE_IMAGE_PATH), QDir::homePath()).toString(),
             tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
+
+        if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
+        {
+            QMessageBox::warning(Core::ICore::dialogParent(),
+                tr("Save Image"),
+                QObject::tr("Please add a file extension!"));
+
+            continue;
+        }
+
+        break;
+    }
 
     if(!path.isEmpty())
     {
@@ -5633,10 +5681,26 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
         QSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
-        QString path =
+        QString path;
+
+        forever
+        {
+            path =
             QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Template"),
                 settings->value(QStringLiteral(LAST_SAVE_TEMPLATE_PATH), drivePath).toString(),
                 tr("Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)"));
+
+            if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
+            {
+                QMessageBox::warning(Core::ICore::dialogParent(),
+                    tr("Save Template"),
+                    QObject::tr("Please add a file extension!"));
+
+                continue;
+            }
+
+            break;
+        }
 
         if(!path.isEmpty())
         {
@@ -5686,10 +5750,26 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
         QSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
-        QString path =
+        QString path;
+
+        forever
+        {
+            path =
             QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Descriptor"),
                 settings->value(QStringLiteral(LAST_SAVE_DESCRIPTOR_PATH), drivePath).toString(),
                 tr("Keypoints Files (*.lbp *.orb)"));
+
+            if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
+            {
+                QMessageBox::warning(Core::ICore::dialogParent(),
+                    tr("Save Descriptor"),
+                    QObject::tr("Please add a file extension!"));
+
+                continue;
+            }
+
+            break;
+        }
 
         if(!path.isEmpty())
         {
@@ -6997,10 +7077,26 @@ void OpenMVPlugin::openKeypointsEditor()
                     ks->mergeKeypoints(path);
                 }
 
-                QString path =
+                QString path;
+
+                forever
+                {
+                    path =
                     QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Merged Keypoints"),
                         settings->value(QStringLiteral(LAST_MERGE_KEYPOINTS_SAVE_PATH), drivePath).toString(),
                         tr("Keypoints Files (*.lbp *.orb)"));
+
+                    if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
+                    {
+                        QMessageBox::warning(Core::ICore::dialogParent(),
+                            tr("Save Merged Keypoints"),
+                            QObject::tr("Please add a file extension!"));
+
+                        continue;
+                    }
+
+                    break;
+                }
 
                 if(!path.isEmpty())
                 {

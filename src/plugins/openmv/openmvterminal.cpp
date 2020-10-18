@@ -441,10 +441,26 @@ void MyPlainTextEdit::save()
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(TERMINAL_SETTINGS_GROUP));
 
-    QString path =
+    QString path;
+
+    forever
+    {
+        path =
         QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Log"),
             settings->value(QStringLiteral(LAST_SAVE_LOG_PATH), QDir::homePath()).toString(),
             tr("Text Files (*.txt);;All files (*)"));
+
+        if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
+        {
+            QMessageBox::warning(Core::ICore::dialogParent(),
+                tr("Save Log"),
+                QObject::tr("Please add a file extension!"));
+
+            continue;
+        }
+
+        break;
+    }
 
     if(!path.isEmpty())
     {
@@ -800,10 +816,26 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
     m_zoomButton->setChecked(m_settings->value(QStringLiteral(ZOOM_STATE), false).toBool());
 
     connect(frameBuffer, &OpenMVPluginFB::saveImage, this, [this] (const QPixmap &data) {
-        QString path =
+        QString path;
+
+        forever
+        {
+            path =
             QFileDialog::getSaveFileName(this, tr("Save Image"),
                 m_settings->value(QStringLiteral(LAST_SAVE_IMAGE_PATH), QDir::homePath()).toString(),
                 tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
+
+            if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
+            {
+                QMessageBox::warning(Core::ICore::dialogParent(),
+                    tr("Save Image"),
+                    QObject::tr("Please add a file extension!"));
+
+                continue;
+            }
+
+            break;
+        }
 
         if(!path.isEmpty())
         {

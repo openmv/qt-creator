@@ -996,7 +996,11 @@ void convertVideoFileAction(const QString &drivePath)
 
     if(!src.isEmpty())
     {
-        QString dst =
+        QString dst;
+
+        forever
+        {
+            dst =
             QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Convert Video Output"),
                 settings->value(QStringLiteral(LAST_CONVERT_VIDEO_DST_PATH), QDir::homePath()).toString(),
 #if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
@@ -1004,6 +1008,18 @@ void convertVideoFileAction(const QString &drivePath)
 #else
                 QObject::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin)"));
 #endif
+
+            if((!dst.isEmpty()) && QFileInfo(dst).completeSuffix().isEmpty())
+            {
+                QMessageBox::warning(Core::ICore::dialogParent(),
+                    QObject::tr("Convert Video Output"),
+                    QObject::tr("Please add a file extension!"));
+
+                continue;
+            }
+
+            break;
+        }
 
         if(!dst.isEmpty())
         {
@@ -1066,7 +1082,7 @@ void convertVideoFileAction(const QString &drivePath)
                             else
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    QString(),
+                                    QObject::tr("Convert Video"),
                                     QObject::tr("Unable to overwrite output file!"));
                             }
                         }
@@ -1111,7 +1127,11 @@ void saveVideoFile(const QString &srcPath)
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(VIDEO_SETTINGS_GROUP));
 
-    QString dst =
+    QString dst;
+
+    forever
+    {
+        dst =
         QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Save Video"),
             settings->value(QStringLiteral(LAST_SAVE_VIDEO_PATH), QDir::homePath()).toString(),
 #if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
@@ -1119,6 +1139,18 @@ void saveVideoFile(const QString &srcPath)
 #else
             QObject::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin)"));
 #endif
+
+        if((!dst.isEmpty()) && QFileInfo(dst).completeSuffix().isEmpty())
+        {
+            QMessageBox::warning(Core::ICore::dialogParent(),
+                QObject::tr("Save Video"),
+                QObject::tr("Please add a file extension!"));
+
+            continue;
+        }
+
+        break;
+    }
 
     if(!dst.isEmpty())
     {
@@ -1180,7 +1212,7 @@ void saveVideoFile(const QString &srcPath)
                         else
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
-                                QString(),
+                                QObject::tr("Convert Video"),
                                 QObject::tr("Unable to overwrite output file!"));
                         }
                     }
