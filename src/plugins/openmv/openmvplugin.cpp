@@ -4261,9 +4261,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             QMessageBox::information(Core::ICore::dialogParent(),
                                 tr("Connect"),
-                                QString(QStringLiteral("%1%2%3")).arg((justEraseFlashFs ? tr("Onboard Data Flash Erased!\n\n") : tr("Firmware Upgrade complete!\n\n")))
+                                QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? tr("Onboard Data Flash Erased!\n\n") : tr("Firmware Upgrade complete!\n\n")))
                                 .arg(tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
-                                .arg(tr("Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.")));
+                                .arg(tr("Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete."))
+                                .arg(tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
+                                        "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
 
                             RECONNECT_END();
                         }
@@ -4379,76 +4381,102 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                 QFile dfuSettings(Core::ICore::userResourcePath() + QStringLiteral("/firmware/dfu.txt"));
                 QString boardTypeToDfuDeviceVidPid;
-                QStringList eraseCommands;
+                QStringList eraseCommands, extraProgramAddrCommands, extraProgramPathCommands;
                 QString binProgramCommand, dfuProgramCommand;
 
                 if(dfuSettings.open(QIODevice::ReadOnly))
                 {
-                    QJsonDocument doc = QJsonDocument::fromJson(dfuSettings.readAll());
+                    QJsonParseError error;
+                    QJsonDocument doc = QJsonDocument::fromJson(dfuSettings.readAll(), &error);
 
-                    if(selectedDfuDevice.isEmpty())
+                    if(error.error == QJsonParseError::NoError)
                     {
-                        bool foundMatch = false;
-
-                        foreach(const QJsonValue &val, doc.array())
+                        if(selectedDfuDevice.isEmpty())
                         {
-                            QJsonObject obj = val.toObject();
+                            bool foundMatch = false;
 
-                            if(m_boardType == obj.value(QStringLiteral("boardType")).toString())
+                            foreach(const QJsonValue &val, doc.array())
                             {
-                                boardTypeToDfuDeviceVidPid = obj.value(QStringLiteral("vidpid")).toString();
+                                QJsonObject obj = val.toObject();
 
-                                QJsonArray eraseCommandsArray = obj.value(QStringLiteral("eraseCommands")).toArray(); foreach(const QJsonValue &command, eraseCommandsArray)
+                                if(m_boardType == obj.value(QStringLiteral("boardType")).toString())
                                 {
-                                    eraseCommands.append(command.toString());
-                                }
+                                    boardTypeToDfuDeviceVidPid = obj.value(QStringLiteral("vidpid")).toString();
 
-                                binProgramCommand = obj.value(QStringLiteral("binProgramCommand")).toString();
-                                dfuProgramCommand = obj.value(QStringLiteral("dfuProgramCommand")).toString();
-                                foundMatch = true;
-                                break;
+                                    QJsonArray eraseCommandsArray = obj.value(QStringLiteral("eraseCommands")).toArray(); foreach(const QJsonValue &command, eraseCommandsArray)
+                                    {
+                                        eraseCommands.append(command.toString());
+                                    }
+
+                                    QJsonArray extraProgramCommandsArray = obj.value(QStringLiteral("extraProgramCommands")).toArray(); foreach(const QJsonValue &command, extraProgramCommandsArray)
+                                    {
+                                        QJsonObject obj = command.toObject();
+                                        extraProgramAddrCommands.append(obj.value(QStringLiteral("addr")).toString());
+                                        extraProgramPathCommands.append(obj.value(QStringLiteral("path")).toString());
+                                    }
+
+                                    binProgramCommand = obj.value(QStringLiteral("binProgramCommand")).toString();
+                                    dfuProgramCommand = obj.value(QStringLiteral("dfuProgramCommand")).toString();
+                                    foundMatch = true;
+                                    break;
+                                }
+                            }
+
+                            if(!foundMatch)
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                    tr("Connect"),
+                                    tr("No DFU settings for the selected board type!"));
+
+                                CONNECT_END();
                             }
                         }
-
-                        if(!foundMatch)
+                        else
                         {
-                            QMessageBox::critical(Core::ICore::dialogParent(),
-                                tr("Connect"),
-                                tr("No DFU settings for the selected board type!"));
+                            bool foundMatch = false;
 
-                            CONNECT_END();
+                            foreach(const QJsonValue &val, doc.array())
+                            {
+                                QJsonObject obj = val.toObject();
+
+                                if(selectedDfuDeviceVidPid == obj.value(QStringLiteral("vidpid")).toString())
+                                {
+                                    QJsonArray eraseCommandsArray = obj.value(QStringLiteral("eraseCommands")).toArray(); foreach(const QJsonValue &command, eraseCommandsArray)
+                                    {
+                                        eraseCommands.append(command.toString());
+                                    }
+
+                                    QJsonArray extraProgramCommandsArray = obj.value(QStringLiteral("extraProgramCommands")).toArray(); foreach(const QJsonValue &command, extraProgramCommandsArray)
+                                    {
+                                        QJsonObject obj = command.toObject();
+                                        extraProgramAddrCommands.append(obj.value(QStringLiteral("addr")).toString());
+                                        extraProgramPathCommands.append(obj.value(QStringLiteral("path")).toString());
+                                    }
+
+                                    binProgramCommand = obj.value(QStringLiteral("binProgramCommand")).toString();
+                                    dfuProgramCommand = obj.value(QStringLiteral("dfuProgramCommand")).toString();
+                                    foundMatch = true;
+                                    break;
+                                }
+                            }
+
+                            if(!foundMatch)
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                    tr("Connect"),
+                                    tr("No DFU settings for the selected device!"));
+
+                                CONNECT_END();
+                            }
                         }
                     }
                     else
                     {
-                        bool foundMatch = false;
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            tr("Connect"),
+                            tr("Error: %L1!").arg(error.errorString()));
 
-                        foreach(const QJsonValue &val, doc.array())
-                        {
-                            QJsonObject obj = val.toObject();
-
-                            if(selectedDfuDeviceVidPid == obj.value(QStringLiteral("vidpid")).toString())
-                            {
-                                QJsonArray eraseCommandsArray = obj.value(QStringLiteral("eraseCommands")).toArray(); foreach(const QJsonValue &command, eraseCommandsArray)
-                                {
-                                    eraseCommands.append(command.toString());
-                                }
-
-                                binProgramCommand = obj.value(QStringLiteral("binProgramCommand")).toString();
-                                dfuProgramCommand = obj.value(QStringLiteral("dfuProgramCommand")).toString();
-                                foundMatch = true;
-                                break;
-                            }
-                        }
-
-                        if(!foundMatch)
-                        {
-                            QMessageBox::critical(Core::ICore::dialogParent(),
-                                tr("Connect"),
-                                tr("No DFU settings for the selected device!"));
-
-                            CONNECT_END();
-                        }
+                        CONNECT_END();
                     }
                 }
                 else
@@ -4523,9 +4551,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             {
                                 QMessageBox::information(Core::ICore::dialogParent(),
                                     tr("Connect"),
-                                    QString(QStringLiteral("%1%2%3")).arg(tr("Onboard Data Flash Erased!\n\n"))
+                                    QString(QStringLiteral("%1%2%3%4")).arg(tr("Onboard Data Flash Erased!\n\n"))
                                     .arg(tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
-                                    .arg(tr("Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.")));
+                                    .arg(tr("Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete."))
+                                    .arg(tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
+                                            "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
 
                                 RECONNECT_END();
                             }
@@ -4559,6 +4589,38 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     dialog.setCancelButton(Q_NULLPTR);
                     dialog.show();
 
+                    // Extra Program Flash ////////////////////////////////
+                    {
+                        QString command;
+                        Utils::SynchronousProcess process;
+                        Utils::SynchronousProcessResponse response;
+
+                        for(int i = 0, j = extraProgramAddrCommands.size(); i < j; i++)
+                        {
+                            process.setTimeoutS(300); // 5 minutes...
+                            process.setProcessChannelMode(QProcess::MergedChannels);
+                            downloadFirmware(command, process, response, QFileInfo(Core::ICore::userResourcePath() + QStringLiteral("/firmware/") + extraProgramPathCommands.at(i)).canonicalFilePath(), dfuDeviceVidPid, extraProgramAddrCommands.at(i) + dfuDeviceSerial);
+
+                            if(response.result != Utils::SynchronousProcessResponse::Finished)
+                            {
+                                QMessageBox box(QMessageBox::Critical, tr("Connect"), tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                                box.setDetailedText(response.stdOut);
+                                box.setInformativeText(response.exitMessage(command, process.timeoutS()));
+                                box.setDefaultButton(QMessageBox::Ok);
+                                box.setEscapeButton(QMessageBox::Cancel);
+                                box.exec();
+
+                                CONNECT_END();
+                            }
+                            else
+                            {
+                                QThread::sleep(1);
+                            }
+                        }
+                    }
+
                     QString command;
                     Utils::SynchronousProcess process;
                     Utils::SynchronousProcessResponse response;
@@ -4571,7 +4633,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         QMessageBox::information(Core::ICore::dialogParent(),
                             tr("Connect"),
                             tr("DFU firmware update complete!\n\n") +
-                            tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while)."));
+                            tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
+                            tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
+                               "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open)."));
 
                         RECONNECT_END();
                     }

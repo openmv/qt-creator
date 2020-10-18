@@ -5,11 +5,11 @@
         "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
         "extraProgramCommands" : [
                 {
-                    "addr" : "-a 1 -s 0x90F00000"
+                    "addr" : "-a 1 -s 0x90F00000",
                     "path" : "CYW4343/cyw4343.bin"
                 }
-            ]
+            ],
         "binProgramCommand" : "-a 0 -s 0x08040000:leave",
-        "dfuProgramCommand" : "-a 0 -s :leave",
+        "dfuProgramCommand" : "-a 0 -s :leave"
     }
 ]
