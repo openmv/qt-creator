@@ -5055,6 +5055,28 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_frameBuffer->enableSaveTemplate(false);
         m_frameBuffer->enableSaveDescriptor(false);
 
+        // Fix Hello World ////////////////////////////////////////////////////
+
+        TextEditor::BaseTextEditor *textEditor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::currentEditor());
+
+        if(textEditor)
+        {
+            TextEditor::TextDocument *document = textEditor->textDocument();
+
+            if(document && document->displayName() == QStringLiteral("helloworld_1.py"))
+            {
+                QByteArray data = document->contents();
+
+                if((m_sensorType == QStringLiteral("HM01B0")) || (m_sensorType == QStringLiteral("MT9V034")))
+                {
+                    data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
+                    if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+                }
+
+                document->setPlainText(QString::fromUtf8(data));
+            }
+        }
+
         // Check Version //////////////////////////////////////////////////////
 
         QFile file(Core::ICore::userResourcePath() + QStringLiteral("/firmware/firmware.txt"));
