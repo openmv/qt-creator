@@ -725,23 +725,31 @@ void OpenMVPlugin::extensionsInitialized()
         Core::EditorManager::cutForwardNavigationHistory();
         Core::EditorManager::addCurrentPositionToNavigationHistory();
         QString titlePattern = tr("untitled_$.py");
-        TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditorWithContents(Core::Constants::K_DEFAULT_TEXT_EDITOR_ID, &titlePattern,
-            QStringLiteral("# Untitled - By: %L1 - %L2\n"
-                           "\n"
-                           "import sensor, image, time\n"
-                           "\n"
-                           "sensor.reset()\n"
-                           "sensor.set_pixformat(sensor.RGB565)\n"
-                           "sensor.set_framesize(sensor.QVGA)\n"
-                           "sensor.skip_frames(time = 2000)\n"
-                           "\n"
-                           "clock = time.clock()\n"
-                           "\n"
-                           "while(True):\n"
-                           "    clock.tick()\n"
-                           "    img = sensor.snapshot()\n"
-                           "    print(clock.fps())\n").
-            arg(Utils::Environment::systemEnvironment().userName()).arg(QDate::currentDate().toString()).toUtf8()));
+
+        QByteArray data =
+        QStringLiteral("# Untitled - By: %L1 - %L2\n"
+                       "\n"
+                       "import sensor, image, time\n"
+                       "\n"
+                       "sensor.reset()\n"
+                       "sensor.set_pixformat(sensor.RGB565)\n"
+                       "sensor.set_framesize(sensor.QVGA)\n"
+                       "sensor.skip_frames(time = 2000)\n"
+                       "\n"
+                       "clock = time.clock()\n"
+                       "\n"
+                       "while(True):\n"
+                       "    clock.tick()\n"
+                       "    img = sensor.snapshot()\n"
+                       "    print(clock.fps())\n").arg(Utils::Environment::systemEnvironment().userName()).arg(QDate::currentDate().toString()).toUtf8();
+
+        if(m_sensorType == QStringLiteral("HM01B0")) // Fix scripts for the Arduino Portenta Vision Shield
+        {
+            data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
+            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+        }
+
+        TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditorWithContents(Core::Constants::K_DEFAULT_TEXT_EDITOR_ID, &titlePattern, data));
 
         if(editor)
         {
@@ -1080,6 +1088,12 @@ void OpenMVPlugin::extensionsInitialized()
                                                      "    # E.g. mean/median/mode/midpoint/etc.\n"
                                                      "    print(clock.fps())\n").
                                       arg(Utils::Environment::systemEnvironment().userName()).arg(QDate::currentDate().toString()).toUtf8();
+
+                if(m_sensorType == QStringLiteral("HM01B0")) // Fix scripts for the Arduino Portenta Vision Shield
+                {
+                    contents = contents.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
+                    contents = contents.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+                }
 
                 Utils::FileSaver file(path + QStringLiteral("/dataset_capture_script.py"));
 
@@ -1956,6 +1970,12 @@ void OpenMVPlugin::extensionsInitialized()
 
             if((file.error() == QFile::NoError) && (!data.isEmpty()))
             {
+                if(m_sensorType == QStringLiteral("HM01B0")) // Fix scripts for the Arduino Portenta Vision Shield
+                {
+                    data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
+                    data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+                }
+
                 Core::EditorManager::cutForwardNavigationHistory();
                 Core::EditorManager::addCurrentPositionToNavigationHistory();
 
@@ -5655,6 +5675,12 @@ QMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const QStrin
 
                     if((file.error() == QFile::NoError) && (!data.isEmpty()))
                     {
+                        if(m_sensorType == QStringLiteral("HM01B0")) // Fix scripts for the Arduino Portenta Vision Shield
+                        {
+                            data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
+                            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+                        }
+
                         Core::EditorManager::cutForwardNavigationHistory();
                         Core::EditorManager::addCurrentPositionToNavigationHistory();
 
