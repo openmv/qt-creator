@@ -53,6 +53,7 @@
 #include <QMenu>
 #include <QPainter>
 #include <QStringListModel>
+#include <QAbstractItemView>
 
 Q_DECLARE_METATYPE(QStringList)
 Q_DECLARE_METATYPE(Core::IFindFilter*)
