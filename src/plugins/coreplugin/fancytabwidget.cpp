@@ -582,6 +582,7 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     connect(m_tabBar, &FancyTabBar::currentChanged, this, &FancyTabWidget::showWidget);
     //OPENMV-DIFF//
     setStyleSheet(QStringLiteral("QAbstractScrollArea::corner{background-color:#404244;}"
+#ifndef Q_OS_MAC
     "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;background-color:#404244;}"
     "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:#404244;border-top:1px solid #2E2E2E;}"
     "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:#404244;}"
@@ -600,6 +601,7 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:#2E2E2E;}"
     "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:#595b5d;}"
     "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:#262829;}"
+#endif
     "QPlainTextEdit{background-color:#1E1E27;}"));
 
     QPalette pal = palette();
