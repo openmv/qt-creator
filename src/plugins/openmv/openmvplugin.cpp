@@ -3244,9 +3244,13 @@ void OpenMVPlugin::bootloaderClicked()
     checkBox->setChecked(settings->value(QStringLiteral(LAST_FLASH_FS_ERASE_STATE), false).toBool());
     layout2->addWidget(checkBox);
     checkBox->setVisible(!pathChooser->path().endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive));
+    checkBox->setToolTip(tr("If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. "
+                            "This does not erase files on any removable SD card (if inserted)."));
     QCheckBox *checkBox2 = new QCheckBox(tr("Erase internal file system"));
     checkBox2->setChecked(true);
     checkBox2->setEnabled(false);
+    checkBox2->setToolTip(tr("Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. "
+                             "This does not erase files on any removable SD card (if inserted)."));
     layout2->addWidget(checkBox2);
     checkBox2->setVisible(pathChooser->path().endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive));
 
@@ -3274,7 +3278,7 @@ void OpenMVPlugin::bootloaderClicked()
             checkBox2->setVisible(false);
         }
 
-        dialog->adjustSize();
+        QTimer::singleShot(0, this, [this, dialog] { dialog->adjustSize(); });
     });
 
     if(dialog->exec() == QDialog::Accepted)
@@ -3430,30 +3434,86 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             else
             {
                 bool dfuDeviceResetToRelease = false;
+                bool dfuDeviceEraseFlash = false;
 
                 if(!dfuDevices.isEmpty())
                 {
-                    QMessageBox box(QMessageBox::Question, tr("Connect"), tr("DFU bootloader(s) found. What would you like to do?", nullptr, dfuDevices.size()), QMessageBox::Cancel, Core::ICore::dialogParent(),
-                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                    QPushButton *button0 = box.addButton(tr("   Reset Firmware to Release Version   "), QMessageBox::AcceptRole);
-                    QPushButton *button1 = box.addButton(tr("   Load Specific Firmware File   "), QMessageBox::AcceptRole);
-                    QPushButton *button2 = box.addButton(tr("   Erase Onboard Data Flash   "), QMessageBox::AcceptRole);
-                    box.setDefaultButton(button0);
-                    box.setEscapeButton(QMessageBox::Cancel);
-                    box.exec();
+                    QFile file(Core::ICore::userResourcePath() + QStringLiteral("/firmware/firmware.txt"));
 
-                    if(box.clickedButton() == button0)
+                    if(file.open(QIODevice::ReadOnly))
                     {
-                        dfuDeviceResetToRelease = true;
-                    }
-                    else if(box.clickedButton() == button1)
-                    {
-                        QTimer::singleShot(0, m_bootloaderAction, &QAction::trigger);
-                    }
-                    else if(box.clickedButton() == button2)
-                    {
-                        QTimer::singleShot(0, m_eraseAction, &QAction::trigger);
+                        QByteArray data = file.readAll();
+
+                        if((file.error() == QFile::NoError) && (!data.isEmpty()))
+                        {
+                            file.close();
+
+                            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(\\d+)\\.(\\d+)\\.(\\d+)")).match(QString::fromUtf8(data));
+
+                            QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
+                                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                            dialog->setWindowTitle(tr("Connect"));
+                            QFormLayout *layout = new QFormLayout(dialog);
+                            layout->setVerticalSpacing(0);
+
+                            layout->addWidget(new QLabel(tr("A board in DFU mode was detected. What would you like to do?")));
+                            layout->addItem(new QSpacerItem(0, 6));
+
+                            QComboBox *combo = new QComboBox();
+                            combo->addItem(tr("Install the lastest release firmware (v%L1.%L2.%L3)").arg(match.captured(1).toInt()).arg(match.captured(2).toInt()).arg(match.captured(3).toInt()));
+                            combo->addItem(tr("Load a specific firmware"));
+                            combo->addItem(tr("Just erase the interal file system"));
+                            combo->setCurrentIndex(settings->value(QStringLiteral(LAST_DFU_ACTION), 0).toInt());
+                            layout->addWidget(combo);
+                            layout->addItem(new QSpacerItem(0, 6));
+
+                            QHBoxLayout *layout2 = new QHBoxLayout;
+                            layout2->setMargin(0);
+                            QWidget *widget = new QWidget;
+                            widget->setLayout(layout2);
+
+                            QCheckBox *checkBox = new QCheckBox(tr("Erase internal file system"));
+                            checkBox->setChecked(settings->value(QStringLiteral(LAST_DFU_FLASH_FS_ERASE_STATE), false).toBool());
+                            layout2->addWidget(checkBox);
+                            checkBox->setVisible(combo->currentIndex() == 0);
+                            checkBox->setToolTip(tr("If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. "
+                                                    "This does not erase files on any removable SD card (if inserted)."));
+
+                            QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+                            layout2->addSpacing(160);
+                            layout2->addWidget(box);
+                            layout->addRow(widget);
+
+                            connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+                            connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+                            connect(combo, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [this, dialog, checkBox] (int index) {
+                                checkBox->setVisible(index == 0);
+                                QTimer::singleShot(0, this, [this, dialog] { dialog->adjustSize(); });
+                            });
+
+                            if(dialog->exec() == QDialog::Accepted)
+                            {
+                                settings->setValue(QStringLiteral(LAST_DFU_ACTION), combo->currentIndex());
+                                settings->setValue(QStringLiteral(LAST_DFU_FLASH_FS_ERASE_STATE), checkBox->isChecked());
+
+                                if(combo->currentIndex() == 0)
+                                {
+                                    dfuDeviceResetToRelease = true;
+                                    dfuDeviceEraseFlash = checkBox->isChecked();
+                                }
+                                else if(combo->currentIndex() == 1)
+                                {
+                                    QTimer::singleShot(0, m_bootloaderAction, &QAction::trigger);
+                                }
+                                else if(combo->currentIndex() == 2)
+                                {
+                                    QTimer::singleShot(0, m_eraseAction, &QAction::trigger);
+                                }
+                            }
+
+                            delete dialog;
+                        }
                     }
 
                     if(!dfuDeviceResetToRelease)
@@ -3548,7 +3608,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 {
                                     settings->setValue(QStringLiteral(LAST_BOARD_TYPE_STATE), temp);
 
-                                    int answer = QMessageBox::question(Core::ICore::dialogParent(),
+                                    int answer = dfuDeviceResetToRelease ? (dfuDeviceEraseFlash ? QMessageBox::Yes : QMessageBox::No) : QMessageBox::question(Core::ICore::dialogParent(),
                                         tr("Connect"),
                                         tr("Erase the internal file system?"),
                                         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);

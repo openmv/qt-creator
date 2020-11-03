@@ -93,6 +93,8 @@
 #define DONT_SHOW_LED_STATES_AGAIN "DontShowLEDStatesAgain"
 #define LAST_FIRMWARE_PATH "LastFirmwarePath"
 #define LAST_FLASH_FS_ERASE_STATE "LastFlashFSEraseState"
+#define LAST_DFU_ACTION "LastDFUAction"
+#define LAST_DFU_FLASH_FS_ERASE_STATE "LastDFUFlashFSEraseState"
 #define LAST_BOARD_TYPE_STATE "LastBoardTypeState"
 #define LAST_SERIAL_PORT_STATE "LastSerialPortState"
 #define LAST_DFU_PORT_STATE "LastDFUPortState"
