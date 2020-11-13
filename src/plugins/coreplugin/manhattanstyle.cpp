@@ -652,13 +652,17 @@ void ManhattanStyle::drawControl(ControlElement element, const QStyleOption *opt
                                                        : Theme::MenuItemTextColorDisabled);
             if (color.isValid()) {
                 QPalette pal = mbi->palette;
+#ifndef Q_OS_MAC
                 //OPENMV-DIFF//
                 if(pal.brush(QPalette::Background).color().value() < 128) color = QColor::fromRgbF(1.0 - color.redF(), 1.0 - color.greenF(), 1.0 - color.blueF(), color.alphaF());
                 //OPENMV-DIFF//
+#endif
                 pal.setBrush(QPalette::Text, color);
+#ifndef Q_OS_MAC
                 //OPENMV-DIFF//
                 pal.setBrush(QPalette::ButtonText, color);
                 //OPENMV-DIFF//
+#endif
                 item.palette = pal;
             }
             QProxyStyle::drawControl(element, &item, painter, widget);
