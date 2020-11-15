@@ -4602,13 +4602,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             file.close();
 
-                            QProgressDialog dialog(tr("Erasing..."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
-                                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
-                            dialog.setWindowModality(Qt::ApplicationModal);
-                            dialog.setAttribute(Qt::WA_ShowWithoutActivating);
-                            dialog.setCancelButton(Q_NULLPTR);
-                            dialog.show();
+                            // OLD
+                            //
+                            // QProgressDialog dialog(tr("Erasing..."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                            //     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+                            //     (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
+                            // dialog.setWindowModality(Qt::ApplicationModal);
+                            // dialog.setAttribute(Qt::WA_ShowWithoutActivating);
+                            // dialog.setCancelButton(Q_NULLPTR);
+                            // dialog.show();
 
                             QString command;
                             Utils::SynchronousProcess process;
@@ -4616,26 +4618,24 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             for(int i = 0, j = eraseCommands.size(); i < j; i++)
                             {
-                                process.setTimeoutS(300); // 5 minutes...
-                                process.setProcessChannelMode(QProcess::MergedChannels);
                                 downloadFirmware(command, process, response, QFileInfo(file).canonicalFilePath(), dfuDeviceVidPid, eraseCommands.at(i) + ((justEraseFlashFs && ((i + 1) == j)) ? QStringLiteral(":leave") : QStringLiteral("")) + dfuDeviceSerial);
 
-                                if(response.result != Utils::SynchronousProcessResponse::Finished)
+                                if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
                                 {
                                     QMessageBox box(QMessageBox::Critical, tr("Connect"), tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
                                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                                    box.setDetailedText(response.stdOut);
-                                    box.setInformativeText(response.exitMessage(command, process.timeoutS()));
+                                    box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
+                                    box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("dfu-util"), process.timeoutS()));
                                     box.setDefaultButton(QMessageBox::Ok);
                                     box.setEscapeButton(QMessageBox::Cancel);
                                     box.exec();
 
                                     CONNECT_END();
                                 }
-                                else
+                                else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
                                 {
-                                    QThread::sleep(1);
+                                    CONNECT_END();
                                 }
                             }
 
@@ -4673,13 +4673,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                 // Program Flash //////////////////////////////////////
                 {
-                    QProgressDialog dialog(tr("Reprogramming...\n\n(may take up to 5 minutes)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
-                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                        (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
-                    dialog.setWindowModality(Qt::ApplicationModal);
-                    dialog.setAttribute(Qt::WA_ShowWithoutActivating);
-                    dialog.setCancelButton(Q_NULLPTR);
-                    dialog.show();
+                    // OLD
+                    //
+                    // QProgressDialog dialog(tr("Reprogramming...\n\n(may take up to 5 minutes)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                    //     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+                    //     (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
+                    // dialog.setWindowModality(Qt::ApplicationModal);
+                    // dialog.setAttribute(Qt::WA_ShowWithoutActivating);
+                    // dialog.setCancelButton(Q_NULLPTR);
+                    // dialog.show();
 
                     // Extra Program Flash ////////////////////////////////
                     {
@@ -4689,26 +4691,24 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                         for(int i = 0, j = extraProgramAddrCommands.size(); i < j; i++)
                         {
-                            process.setTimeoutS(300); // 5 minutes...
-                            process.setProcessChannelMode(QProcess::MergedChannels);
                             downloadFirmware(command, process, response, QFileInfo(Core::ICore::userResourcePath() + QStringLiteral("/firmware/") + extraProgramPathCommands.at(i)).canonicalFilePath(), dfuDeviceVidPid, extraProgramAddrCommands.at(i) + dfuDeviceSerial);
 
-                            if(response.result != Utils::SynchronousProcessResponse::Finished)
+                            if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
                             {
                                 QMessageBox box(QMessageBox::Critical, tr("Connect"), tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                     (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                                box.setDetailedText(response.stdOut);
-                                box.setInformativeText(response.exitMessage(command, process.timeoutS()));
+                                box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
+                                box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("dfu-util"), process.timeoutS()));
                                 box.setDefaultButton(QMessageBox::Ok);
                                 box.setEscapeButton(QMessageBox::Cancel);
                                 box.exec();
 
                                 CONNECT_END();
                             }
-                            else
+                            else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
                             {
-                                QThread::sleep(1);
+                                CONNECT_END();
                             }
                         }
                     }
@@ -4716,8 +4716,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     QString command;
                     Utils::SynchronousProcess process;
                     Utils::SynchronousProcessResponse response;
-                    process.setTimeoutS(300); // 5 minutes...
-                    process.setProcessChannelMode(QProcess::MergedChannels);
                     downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), dfuDeviceVidPid, (firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? binProgramCommand : dfuProgramCommand) + dfuDeviceSerial);
 
                     if(response.result == Utils::SynchronousProcessResponse::Finished)
@@ -4731,13 +4729,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                         RECONNECT_END();
                     }
+                    else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
+                    {
+                        CONNECT_END();
+                    }
                     else
                     {
                         QMessageBox box(QMessageBox::Critical, tr("Connect"), tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                        box.setDetailedText(response.stdOut);
-                        box.setInformativeText(response.exitMessage(command, process.timeoutS()));
+                        box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
+                        box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("dfu-util"), process.timeoutS()));
                         box.setDefaultButton(QMessageBox::Ok);
                         box.setEscapeButton(QMessageBox::Cancel);
                         box.exec();
@@ -4765,19 +4767,19 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
                     == QMessageBox::Ok)
                     {
-                        QProgressDialog dialog(tr("Reprogramming...\n\n(may take up to 5 minutes)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
-                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                            (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
-                        dialog.setWindowModality(Qt::ApplicationModal);
-                        dialog.setAttribute(Qt::WA_ShowWithoutActivating);
-                        dialog.setCancelButton(Q_NULLPTR);
-                        dialog.show();
+                        // OLD
+                        //
+                        // QProgressDialog dialog(tr("Reprogramming...\n\n(may take up to 5 minutes)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                        //     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+                        //     (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
+                        // dialog.setWindowModality(Qt::ApplicationModal);
+                        // dialog.setAttribute(Qt::WA_ShowWithoutActivating);
+                        // dialog.setCancelButton(Q_NULLPTR);
+                        // dialog.show();
 
                         QString command;
                         Utils::SynchronousProcess process;
                         Utils::SynchronousProcessResponse response;
-                        process.setTimeoutS(300); // 5 minutes...
-                        process.setProcessChannelMode(QProcess::MergedChannels);
                         downloadFirmware(command, process, response, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), originalDfuVidPid, QStringLiteral("-a 0 -s :leave"));
 
                         // OLD
@@ -4836,13 +4838,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             RECONNECT_END();
                         }
+                        else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
+                        {
+                            CONNECT_END();
+                        }
                         else
                         {
                             QMessageBox box(QMessageBox::Critical, tr("Connect"), tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                            box.setDetailedText(response.stdOut);
-                            box.setInformativeText(response.exitMessage(command, process.timeoutS()));
+                            box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
+                            box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("dfu-util"), process.timeoutS()));
                             box.setDefaultButton(QMessageBox::Ok);
                             box.setEscapeButton(QMessageBox::Cancel);
                             box.exec();

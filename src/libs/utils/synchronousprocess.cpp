@@ -382,8 +382,14 @@ static bool isGuiThread()
     return QThread::currentThread() == QCoreApplication::instance()->thread();
 }
 
+// OPENMV-DIFF //
+// SynchronousProcessResponse SynchronousProcess::run(const QString &binary,
+//                                                    const QStringList &args)
+// OPENMV-DIFF //
 SynchronousProcessResponse SynchronousProcess::run(const QString &binary,
-                                                   const QStringList &args)
+                                                   const QStringList &args,
+                                                   bool enableUserInputs)
+// OPENMV-DIFF //
 {
     if (debug)
         qDebug() << '>' << Q_FUNC_INFO << binary << args;
@@ -398,9 +404,15 @@ SynchronousProcessResponse SynchronousProcess::run(const QString &binary,
     d->m_process.closeWriteChannel();
     if (!d->m_startFailure) {
         d->m_timer.start();
-        if (isGuiThread())
+        // OPENMV-DIFF //
+        // if (isGuiThread())
+        //     QApplication::setOverrideCursor(Qt::WaitCursor);
+        // d->m_eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
+        // OPENMV-DIFF //
+        if (isGuiThread() && (!enableUserInputs))
             QApplication::setOverrideCursor(Qt::WaitCursor);
-        d->m_eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
+        d->m_eventLoop.exec(enableUserInputs ? QEventLoop::AllEvents : QEventLoop::ExcludeUserInputEvents);
+        // OPENMV-DIFF //
         if (d->m_result.result == SynchronousProcessResponse::Finished || d->m_result.result == SynchronousProcessResponse::FinishedError) {
             processStdOut(false);
             processStdErr(false);
@@ -410,8 +422,13 @@ SynchronousProcessResponse SynchronousProcess::run(const QString &binary,
         d->m_result.stdErr = d->m_stdErr.data;
 
         d->m_timer.stop();
-        if (isGuiThread())
+        // OPENMV-DIFF //
+        // if (isGuiThread())
+        //     QApplication::restoreOverrideCursor();
+        // OPENMV-DIFF //
+        if (isGuiThread() && (!enableUserInputs))
             QApplication::restoreOverrideCursor();
+        // OPENMV-DIFF //
     }
 
     if (debug)

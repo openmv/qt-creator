@@ -122,7 +122,11 @@ public:
     void setExitCodeInterpreter(ExitCodeInterpreter *interpreter);
     ExitCodeInterpreter *exitCodeInterpreter() const;
 
-    SynchronousProcessResponse run(const QString &binary, const QStringList &args);
+    // OPENMV-DIFF //
+    // SynchronousProcessResponse run(const QString &binary, const QStringList &args);
+    // OPENMV-DIFF //
+    SynchronousProcessResponse run(const QString &binary, const QStringList &args, bool enableUserInputs = false);
+    // OPENMV-DIFF //
 
     // Create a (derived) processes with flags applied.
     static QSharedPointer<QProcess> createProcess(unsigned flags);
