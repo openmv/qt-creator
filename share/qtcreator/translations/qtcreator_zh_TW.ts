@@ -1107,7 +1107,8 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location/>
         <source>min</source>
-        <extracomment>unit for minutes</extracomment>
+        <extracomment>unit for minutes
+</extracomment>
         <translation>分</translation>
     </message>
     <message>
@@ -2960,13 +2961,15 @@ will also disable the following plugins:
     <message>
         <location line="+71"/>
         <source>&lt;VARIABLE&gt;</source>
-        <extracomment>Name when inserting a new variable</extracomment>
+        <extracomment>Name when inserting a new variable
+</extracomment>
         <translation>&lt;變數&gt;</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&lt;VALUE&gt;</source>
-        <extracomment>Value when inserting a new variable</extracomment>
+        <extracomment>Value when inserting a new variable
+</extracomment>
         <translation>&lt;值&gt;</translation>
     </message>
 </context>
@@ -3538,7 +3541,7 @@ will also disable the following plugins:
         <translation>命令&quot;%1&quot;在逾時限制(%2秒)內沒有回應。</translation>
     </message>
     <message>
-        <location line="+297"/>
+        <location line="+314"/>
         <source>Process not Responding</source>
         <translation>處理序沒有回應</translation>
     </message>
@@ -3813,7 +3816,8 @@ will also disable the following plugins:
     <message>
         <location line="+2"/>
         <source>Useful text</source>
-        <extracomment>Sample external tool text</extracomment>
+        <extracomment>Sample external tool text
+</extracomment>
         <translation>有用的文字</translation>
     </message>
 </context>
@@ -3860,7 +3864,7 @@ Would you like to overwrite them?</source>
 <context>
     <name>Core::ReadOnlyFilesDialog</name>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+114"/>
+        <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+115"/>
         <source>Mixed</source>
         <translation>已混合</translation>
     </message>
@@ -4696,7 +4700,7 @@ Continue?</source>
 <context>
     <name>Core::Internal::FindToolBar</name>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+123"/>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+124"/>
         <location line="+13"/>
         <source>Shift+Enter</source>
         <translation>Shift+Enter</translation>
@@ -5918,7 +5922,8 @@ to version control (%2)
     <message>
         <location line="+8"/>
         <source>&lt;br/&gt;From revision %1&lt;br/&gt;</source>
-        <extracomment>This gets conditionally inserted as argument %8 into the description string.</extracomment>
+        <extracomment>This gets conditionally inserted as argument %8 into the description string.
+</extracomment>
         <translation>&lt;br/&gt;自版本%1&lt;br/&gt;</translation>
     </message>
     <message>
@@ -6187,7 +6192,8 @@ to version control (%2)
         <source>Path: %1
 Filter: %2
 %3</source>
-        <extracomment>%3 is filled by BaseFileFind::runNewSearch</extracomment>
+        <extracomment>%3 is filled by BaseFileFind::runNewSearch
+</extracomment>
         <translation>路徑：%1
 篩選器：%2
 %3</translation>
@@ -6525,7 +6531,7 @@ Filter: %2
 <context>
     <name>TextEditor::BaseTextEditor</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+582"/>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+583"/>
         <source>A highlight definition was not found for this file. Would you like to try to find one?</source>
         <translation>沒有找到這個檔案的醒目提示定義。您想嘗試尋找一個嗎？</translation>
     </message>
@@ -7734,7 +7740,7 @@ Will not be applied to whitespace in comments and strings.</source>
 <context>
     <name>OpenMV::Internal::OpenMVPlugin</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100"/>
         <source>Invalid argument (%1) for -override_read_timeout</source>
         <translation>-override_read_timeout參數無效(%1)</translation>
     </message>
@@ -7756,7 +7762,7 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+44"/>
         <location line="+15"/>
-        <location line="+2793"/>
+        <location line="+2931"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -7765,7 +7771,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
 請關閉任何正在檢視/編輯OpenMV IDE應用程式資料的程式，然後重新啟動OpenMV IDE！</translation>
     </message>
     <message>
-        <location line="-2400"/>
+        <location line="-2538"/>
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>使用閾值編輯器編輯灰階閾值</translation>
     </message>
@@ -7775,7 +7781,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>使用閾值編輯器編輯LAB閾值</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+111"/>
         <source>OpenMV IDE</source>
         <translation>OpenMV IDE</translation>
     </message>
@@ -7819,7 +7825,7 @@ while(True):
 </translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+45"/>
         <source>Documents Folder</source>
         <translation>文档文件夹</translation>
     </message>
@@ -7853,32 +7859,32 @@ while(True):
     </message>
     <message>
         <location line="+9"/>
-        <location line="+5628"/>
+        <location line="+5953"/>
         <location line="+47"/>
         <source>Open Terminal</source>
         <translation>開啟終端</translation>
     </message>
     <message>
-        <location line="-5670"/>
+        <location line="-5995"/>
         <source>Machine Vision</source>
         <translation>機器視覺</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+5697"/>
+        <location line="+6022"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>閾值編輯器</translation>
     </message>
     <message>
-        <location line="-5768"/>
-        <location line="+5846"/>
+        <location line="-6093"/>
+        <location line="+6171"/>
         <source>Keypoints Editor</source>
         <translation>關鍵點編輯器</translation>
     </message>
     <message>
-        <location line="-5839"/>
-        <location line="+5989"/>
+        <location line="-6164"/>
+        <location line="+6330"/>
         <location line="+98"/>
         <location line="+24"/>
         <location line="+11"/>
@@ -7887,7 +7893,7 @@ while(True):
         <translation>AprilTag產生器</translation>
     </message>
     <message>
-        <location line="-6137"/>
+        <location line="-6478"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5家族(30標籤)</translation>
     </message>
@@ -7925,15 +7931,15 @@ while(True):
         <location line="+10"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location line="+357"/>
+        <location line="+395"/>
         <location line="+14"/>
         <location line="+16"/>
-        <location line="+696"/>
+        <location line="+702"/>
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>無法開啟：&quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1107"/>
+        <location line="-1151"/>
         <source>DataMatrix Generator</source>
         <translation>DataMatrix碼產生器</translation>
     </message>
@@ -7948,7 +7954,7 @@ while(True):
         <translation>CNN网络图书馆</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+65"/>
         <source>Video Tools</source>
         <translation>視頻工具</translation>
     </message>
@@ -7963,7 +7969,7 @@ while(True):
         <translation>播放視頻檔案</translation>
     </message>
     <message>
-        <location line="+283"/>
+        <location line="+305"/>
         <source>OpenMV Docs</source>
         <translation>OpenMV文件</translation>
     </message>
@@ -8003,8 +8009,8 @@ while(True):
     </message>
     <message>
         <location line="+24"/>
-        <location line="+1967"/>
-        <location line="+31"/>
+        <location line="+2062"/>
+        <location line="+71"/>
         <location line="+35"/>
         <location line="+40"/>
         <location line="+10"/>
@@ -8025,27 +8031,29 @@ while(True):
         <location line="+45"/>
         <location line="+57"/>
         <location line="+30"/>
-        <location line="+11"/>
+        <location line="+13"/>
         <location line="+15"/>
         <location line="+16"/>
-        <location line="+111"/>
-        <location line="+31"/>
+        <location line="+121"/>
+        <location line="+38"/>
         <location line="+10"/>
-        <location line="+46"/>
-        <location line="+16"/>
-        <location line="+11"/>
         <location line="+9"/>
-        <location line="+27"/>
-        <location line="+8"/>
+        <location line="+48"/>
+        <location line="+20"/>
+        <location line="+13"/>
+        <location line="+9"/>
+        <location line="+31"/>
+        <location line="+26"/>
+        <location line="+14"/>
         <location line="+19"/>
         <location line="+7"/>
         <location line="+70"/>
-        <location line="+9"/>
+        <location line="+13"/>
         <location line="+119"/>
         <location line="+9"/>
         <location line="+84"/>
         <location line="+33"/>
-        <location line="+86"/>
+        <location line="+108"/>
         <location line="+25"/>
         <source>Connect</source>
         <translation>連線</translation>
@@ -8055,11 +8063,11 @@ while(True):
         <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="-3590"/>
-        <location line="+2899"/>
+        <location line="-3823"/>
+        <location line="+3036"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+708"/>
+        <location line="+804"/>
         <location line="+12"/>
         <location line="+7"/>
         <location line="+76"/>
@@ -8067,7 +8075,7 @@ while(True):
         <translation>斷開連線</translation>
     </message>
     <message>
-        <location line="-3713"/>
+        <location line="-3946"/>
         <source>Start (run script)</source>
         <translation>開始(運行指令碼)</translation>
     </message>
@@ -8107,12 +8115,12 @@ while(True):
     </message>
     <message>
         <location line="+5"/>
-        <location line="+3784"/>
+        <location line="+4017"/>
         <source>Stop</source>
         <translation>停止</translation>
     </message>
     <message>
-        <location line="-3783"/>
+        <location line="-4016"/>
         <source>Stop recording</source>
         <translation>停止錄製</translation>
     </message>
@@ -8140,21 +8148,21 @@ while(True):
     <message>
         <location line="+17"/>
         <location line="+22"/>
-        <location line="+3432"/>
+        <location line="+3665"/>
         <location line="+131"/>
         <location line="+66"/>
         <location line="+103"/>
         <location line="+113"/>
         <location line="+55"/>
-        <location line="+80"/>
-        <location line="+53"/>
-        <location line="+178"/>
+        <location line="+112"/>
+        <location line="+69"/>
+        <location line="+184"/>
         <location line="+92"/>
         <source>Busy... please wait...</source>
         <translation>忙碌中...請稍候...</translation>
     </message>
     <message>
-        <location line="-4319"/>
+        <location line="-4606"/>
         <location line="+15"/>
         <source>Disable</source>
         <translation>禁用</translation>
@@ -8227,80 +8235,80 @@ while(True):
     </message>
     <message>
         <location line="+102"/>
-        <location line="+3245"/>
+        <location line="+3478"/>
         <source>Board:</source>
         <translation>板:</translation>
     </message>
     <message>
-        <location line="-3244"/>
+        <location line="-3477"/>
         <source>Camera board type</source>
         <translation>相機板類型</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+3241"/>
+        <location line="+3474"/>
         <source>Sensor:</source>
         <translation>相機板類型:</translation>
     </message>
     <message>
-        <location line="-3240"/>
+        <location line="-3473"/>
         <source>Camera sensor module</source>
         <translation>相機傳感器模塊</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+3236"/>
+        <location line="+3469"/>
         <source>Firmware Version:</source>
         <translation>韌體版本：</translation>
     </message>
     <message>
-        <location line="-3235"/>
+        <location line="-3468"/>
         <source>Camera firmware version</source>
         <translation>相機韌體版本</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+3231"/>
+        <location line="+3464"/>
         <source>Serial Port:</source>
         <translation>序列埠：</translation>
     </message>
     <message>
-        <location line="-3230"/>
+        <location line="-3463"/>
         <source>Camera serial port</source>
         <translation>相機序列埠</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+3055"/>
-        <location line="+171"/>
-        <location line="+741"/>
+        <location line="+3266"/>
+        <location line="+193"/>
+        <location line="+795"/>
         <source>Drive:</source>
         <translation>驅動：</translation>
     </message>
     <message>
-        <location line="-3966"/>
+        <location line="-4253"/>
         <source>Drive associated with port</source>
         <translation>與埠相關的驅動</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+3221"/>
+        <location line="+3454"/>
         <source>FPS:</source>
         <translation>FPS：</translation>
     </message>
     <message>
-        <location line="-3220"/>
+        <location line="-3453"/>
         <source>May be different from camera FPS</source>
         <translation>可能與相機FPS不同</translation>
     </message>
     <message>
-        <location line="+154"/>
-        <location line="+959"/>
+        <location line="+160"/>
+        <location line="+1028"/>
         <source>Update Available</source>
         <translation>更新可用</translation>
     </message>
     <message>
-        <location line="-959"/>
+        <location line="-1028"/>
         <source>A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.</source>
         <translation>新版本的OpenMV IDE(%L1.%L2.%L3)可供下載。</translation>
     </message>
@@ -8379,17 +8387,17 @@ OpenMV Cam的板載LED閃爍著不同的顏色，以指示其狀態：
     </message>
     <message>
         <location line="+98"/>
-        <location line="+3630"/>
+        <location line="+3911"/>
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>序列埠 - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-3610"/>
+        <location line="-3891"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
-        <location line="+3293"/>
+        <location line="+3574"/>
         <location line="+133"/>
         <location line="+102"/>
         <location line="+117"/>
@@ -8399,50 +8407,52 @@ OpenMV Cam的板載LED閃爍著不同的顏色，以指示其狀態：
         <translation>正在連線...(30秒逾時)</translation>
     </message>
     <message>
-        <location line="-5303"/>
-        <location line="+1099"/>
+        <location line="-5590"/>
+        <location line="+1105"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
-        <location line="+162"/>
+        <location line="+231"/>
         <location line="+168"/>
-        <location line="+610"/>
+        <location line="+670"/>
         <location line="+286"/>
         <location line="+137"/>
         <location line="+105"/>
         <location line="+47"/>
-        <location line="+241"/>
-        <location line="+65"/>
-        <location line="+58"/>
-        <location line="+1414"/>
+        <location line="+1930"/>
         <location line="+133"/>
         <location line="+102"/>
         <location line="+117"/>
         <location line="+102"/>
         <location line="+106"/>
-        <location line="+417"/>
+        <location line="+433"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location line="-5906"/>
-        <location line="+714"/>
+        <location line="-6548"/>
+        <source>Missing argument for -form_key</source>
+        <translation>-form_key缺少參數</translation>
+    </message>
+    <message>
+        <location line="+317"/>
+        <location line="+736"/>
         <source>Dataset Editor</source>
         <translation>數據集編輯器</translation>
     </message>
     <message>
-        <location line="-710"/>
+        <location line="-732"/>
         <location line="+18"/>
         <location line="+15"/>
         <location line="+6"/>
-        <location line="+46"/>
+        <location line="+52"/>
         <location line="+19"/>
         <source>New Dataset</source>
         <translation>新數據集</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location line="-102"/>
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>數據集編輯器-選擇要在其中構建數據集的文件夾</translation>
     </message>
@@ -8452,27 +8462,29 @@ OpenMV Cam的板載LED閃爍著不同的顏色，以指示其狀態：
         <translation>所選文件夾不為空，內容將被刪除。繼續？</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+73"/>
         <location line="+19"/>
-        <location line="+99"/>
-        <location line="+1100"/>
+        <location line="+115"/>
+        <location line="+1106"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
-        <location line="+203"/>
+        <location line="+97"/>
+        <location line="+175"/>
         <location line="+176"/>
-        <location line="+578"/>
+        <location line="+638"/>
         <location line="+169"/>
-        <location line="+399"/>
+        <location line="+401"/>
         <location line="+31"/>
-        <location line="+152"/>
-        <location line="+73"/>
+        <location line="+169"/>
         <location line="+9"/>
-        <location line="+259"/>
-        <location line="+682"/>
+        <location line="+81"/>
+        <location line="+9"/>
+        <location line="+299"/>
+        <location line="+704"/>
         <location line="+14"/>
-        <location line="+200"/>
+        <location line="+254"/>
         <location line="+13"/>
         <location line="+87"/>
         <location line="+13"/>
@@ -8486,7 +8498,7 @@ OpenMV Cam的板載LED閃爍著不同的顏色，以指示其狀態：
         <translation>錯誤：%L1!</translation>
     </message>
     <message>
-        <location line="-5397"/>
+        <location line="-5700"/>
         <location line="+30"/>
         <source>Open Dataset</source>
         <translation>打開數據集</translation>
@@ -8512,19 +8524,20 @@ OpenMV Cam的板載LED閃爍著不同的顏色，以指示其狀態：
         <translation>將數據集導出到Zip文件</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <location line="+37"/>
+        <location line="+12"/>
+        <location line="+7"/>
+        <location line="+42"/>
         <location line="+21"/>
         <source>Export Dataset</source>
         <translation>導出數據集</translation>
     </message>
     <message>
-        <location line="-56"/>
+        <location line="-68"/>
         <source>Zip Files (*.zip)</source>
         <translation>壓縮文件 (*.zip)</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+26"/>
         <source>Exporting...</source>
         <translation>出口...</translation>
     </message>
@@ -8596,7 +8609,7 @@ OpenMV Cam的板載LED閃爍著不同的顏色，以指示其狀態：
         <translation>採集數據</translation>
     </message>
     <message>
-        <location line="+558"/>
+        <location line="+564"/>
         <source>
 
 Try doing:
@@ -8649,12 +8662,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+3687"/>
+        <location line="+3968"/>
         <source>UDP Server Connection - %1</source>
         <translation>UDP伺服器連線 - %1</translation>
     </message>
     <message>
-        <location line="-3625"/>
+        <location line="-3906"/>
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>無效的-open_udp_server_terminal埠參數(%1)</translation>
     </message>
@@ -8685,12 +8698,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+3733"/>
+        <location line="+4014"/>
         <source>TCP Server Connection - %1</source>
         <translation>TCP伺服器連線 - %1</translation>
     </message>
     <message>
-        <location line="-3671"/>
+        <location line="-3952"/>
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>無效的-open_tcp_server_terminal埠參數(%1)</translation>
     </message>
@@ -8700,7 +8713,22 @@ sudo adduser %L1 dialout
         <translation>缺少-open_tcp_server_terminal的參數</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+56"/>
+        <source>OpenMV Cam automatically registered!
+
+Board: %1
+ID: %2
+
+Please run Examples-&gt;Basics-&gt;helloworld.py to test the vision quality and focus the camera (if applicable).</source>
+        <translation>OpenMV Cam自動註冊！
+
+董事會：%1
+ID：%2
+
+請運行“示例”-&gt;“基礎”-&gt;“ helloworld.py”以測試視覺質量並對焦相機（如果適用）。</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <location line="+10"/>
         <location line="+10"/>
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8734,7 +8762,12 @@ Would you like to register your OpenMV Cam now?</source>
 您想現在註冊OpenMV Cam嗎？</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="-63"/>
+        <location line="+8"/>
+        <location line="+9"/>
+        <location line="+8"/>
+        <location line="+9"/>
+        <location line="+45"/>
         <location line="+80"/>
         <location line="+8"/>
         <location line="+6"/>
@@ -8778,17 +8811,20 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>主機板和ID已經註冊！</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-171"/>
+        <location line="+177"/>
         <source>Database Error!</source>
         <translation>資料庫錯誤！</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-160"/>
+        <location line="+173"/>
         <source>GET Network error!</source>
         <translation>GET網路錯誤！</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="-164"/>
+        <location line="+172"/>
         <source>GET network error!</source>
         <translation>GET網路錯誤！</translation>
     </message>
@@ -8846,12 +8882,12 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+27"/>
-        <location line="+74"/>
+        <location line="+78"/>
         <source>Bootloader</source>
         <translation>引導程式</translation>
     </message>
     <message>
-        <location line="-65"/>
+        <location line="-69"/>
         <location line="+3"/>
         <source>Firmware Path</source>
         <translation>韌體路徑</translation>
@@ -8863,12 +8899,24 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+4"/>
+        <location line="+6"/>
+        <location line="+227"/>
         <source>Erase internal file system</source>
         <translation>擦除內部檔案系統</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-229"/>
+        <location line="+233"/>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <translation>如果啟用此選項，則將刪除OpenMV Cam的內部閃存驅動器上的所有文件。這不會刪除任何可移動SD卡（如果已插入）上的文件。</translation>
+    </message>
+    <message>
+        <location line="-228"/>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <translation>通過DFU加載固件始終會擦除OpenMV Cam的內部閃存驅動器。這不會刪除任何可移動SD卡（如果已插入）上的文件。</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Run</source>
         <translation>運行</translation>
     </message>
@@ -8878,29 +8926,25 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>&quot;%L1&quot;不是一個檔案！</translation>
     </message>
     <message numerus="yes">
-        <location line="+138"/>
         <source>DFU bootloader(s) found. What would you like to do?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>找到DFU引導程序。你想幹什麼？</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>   Reset Firmware to Release Version   </source>
-        <translation>   將固件重置為發行版本   </translation>
+        <translation type="vanished">   將固件重置為發行版本   </translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>   Load Specific Firmware File   </source>
-        <translation>   加載特定的固件文件   </translation>
+        <translation type="vanished">   加載特定的固件文件   </translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>   Erase Onboard Data Flash   </source>
-        <translation>   擦除板載數據閃存   </translation>
+        <translation type="vanished">   擦除板載數據閃存   </translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+226"/>
         <source>No OpenMV Cams found!</source>
         <translation>沒有找到OpenMV Cams！</translation>
     </message>
@@ -8916,30 +8960,29 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+11"/>
-        <location line="+2227"/>
+        <location line="+2379"/>
         <location line="+28"/>
         <source>Erase the internal file system?</source>
         <translation>擦除內部檔案系統？</translation>
     </message>
     <message>
-        <location line="-2234"/>
+        <location line="-2386"/>
         <source>No released firmware available for the attached board!</source>
         <translation>沒有可用於所連接板的已發布固件！</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+2400"/>
+        <location line="+2552"/>
         <source>Please select a serial port</source>
         <translation>請選擇一個序列埠</translation>
     </message>
     <message>
-        <location line="-2364"/>
+        <location line="-2516"/>
         <source>Please select a DFU Device</source>
         <translation>請選擇一個DFU設備</translation>
     </message>
     <message>
-        <location line="+71"/>
-        <location line="+286"/>
+        <location line="+357"/>
         <source>Connecting... (Hit cancel if this takes more than 5 seconds).</source>
         <translation>正在連線...(如果超過5秒，則按一下取消)。</translation>
     </message>
@@ -8977,7 +9020,7 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+18"/>
-        <location line="+1007"/>
+        <location line="+1083"/>
         <source>Timeout error while getting board architecture!</source>
         <translation>獲取主機板架構時出現逾時錯誤！</translation>
     </message>
@@ -8996,7 +9039,7 @@ Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indica
         <translation type="vanished">固件升级完成！\n\n您的OpenMV Cam正在运行其内置的自检......这可能需要一段时间。\n\nClick OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</translation>
     </message>
     <message>
-        <location line="-939"/>
+        <location line="-1015"/>
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>斷開您的OpenMV Cam，然後重新連線...</translation>
     </message>
@@ -9016,20 +9059,19 @@ Continue?</source>
     </message>
     <message>
         <location line="+82"/>
-        <location line="+393"/>
         <source>Erasing...</source>
         <translation>正在擦除...</translation>
     </message>
     <message>
-        <location line="-351"/>
+        <location line="+42"/>
         <location line="+45"/>
         <location line="+57"/>
-        <location line="+269"/>
+        <location line="+299"/>
         <source>Timeout Error!</source>
         <translation>逾時錯誤！</translation>
     </message>
     <message>
-        <location line="-308"/>
+        <location line="-338"/>
         <location line="+47"/>
         <source>Programming...</source>
         <translation>正在程式設計...</translation>
@@ -9043,12 +9085,12 @@ Click the Ok button after your OpenMV Cam has enumerated and finished running it
 在OpenMV Cam完成枚舉和內置自檢(藍色led閃爍 - 這需要一段時間)後按一下確定按鈕。</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+50"/>
         <source>The firmware file is empty!</source>
         <translation>韌體檔案為空！</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+374"/>
         <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
@@ -9066,18 +9108,16 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
 在您的OpenMV Cam的DFU引導載入程式完成列舉後，按一下確定按鈕。</translation>
     </message>
     <message>
-        <location line="-53"/>
-        <location line="+58"/>
         <source>Reprogramming...
 
 (may take up to 5 minutes)</source>
-        <translation>正在重新程式設計...
+        <translation type="vanished">正在重新程式設計...
 
 (最長可能需要5分鐘)</translation>
     </message>
     <message>
-        <location line="-39"/>
-        <location line="+104"/>
+        <location line="-40"/>
+        <location line="+110"/>
         <source>DFU firmware update complete!
 
 </source>
@@ -9095,14 +9135,15 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
 </translation>
     </message>
     <message>
-        <location line="-104"/>
-        <location line="+105"/>
+        <location line="-110"/>
+        <location line="+111"/>
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>在您的OpenMV Cam完成列舉和運行其內置的自檢(藍色指示燈閃爍 - 這需要一段時間)後按一下確定按鈕。</translation>
     </message>
     <message>
-        <location line="-99"/>
-        <location line="+105"/>
+        <location line="-139"/>
+        <location line="+40"/>
+        <location line="+109"/>
         <source>DFU firmware update failed!</source>
         <translation>DFU韌體更新失敗！</translation>
     </message>
@@ -9148,17 +9189,61 @@ HomeBrew：
         <translation>未知</translation>
     </message>
     <message>
-        <location line="-394"/>
+        <location line="-1519"/>
+        <source>A board in DFU mode was detected. What would you like to do?</source>
+        <translation>檢測到DFU模式單板。你想幹什麼？</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
+        <translation>安裝最新版本的固件（v%L1.%L2.%L3）</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Load a specific firmware</source>
+        <translation>加載特定固件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Just erase the interal file system</source>
+        <translation>只需擦除內部文件系統</translation>
+    </message>
+    <message>
+        <location line="+293"/>
+        <source>Connecting...
+
+(Hit cancel if this takes more than 5 seconds).</source>
+        <translation>正在連線...
+
+（如果這需要5秒鐘以上，請取消）。</translation>
+    </message>
+    <message>
+        <location line="+600"/>
+        <location line="+290"/>
+        <location line="+78"/>
+        <source>
+
+If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
+
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
+        <translation>
+
+如果您在OpenMV Cam上覆蓋了main.py並且沒有擦除磁盤，則您的OpenMV Cam將只運行該main.py。
+
+在這種情況下，當您看到OpenMV Cam的內部閃存驅動器安裝時，請單擊“確定”（一個窗口可能會彈出，也可能不會彈出）。</translation>
+    </message>
+    <message>
+        <location line="-206"/>
         <source>No DFU settings for the selected board type!</source>
         <translation>所選板類型沒有DFU設置！</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+38"/>
         <source>No DFU settings for the selected device!</source>
         <translation>所選設備沒有DFU設置！</translation>
     </message>
     <message>
-        <location line="+319"/>
+        <location line="+376"/>
         <source>None</source>
         <translation>沒有</translation>
     </message>
@@ -9189,7 +9274,7 @@ HomeBrew：
     </message>
     <message>
         <location line="+4"/>
-        <location line="+237"/>
+        <location line="+259"/>
         <location line="+52"/>
         <location line="+103"/>
         <source>FPS: 0</source>
@@ -9211,10 +9296,10 @@ HomeBrew：
         <translation> - [最新]</translation>
     </message>
     <message>
-        <location line="-676"/>
+        <location line="-772"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+708"/>
+        <location line="+804"/>
         <location line="+12"/>
         <location line="+7"/>
         <source>Failed to eject &quot;%L1&quot;!</source>
@@ -9249,13 +9334,13 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>OpenMV新手？\n\n您可以在文件 - &gt;示例菜单下找到更多示例。\n\n特别是，请查看颜色跟踪示例。</translation>
     </message>
     <message>
-        <location line="-3023"/>
-        <location line="+3032"/>
+        <location line="-3250"/>
+        <location line="+3259"/>
         <source>Don&apos;t show this message again.</source>
         <translation>不要再显示此消息。</translation>
     </message>
     <message>
-        <location line="-4422"/>
+        <location line="-4693"/>
         <source>Run Bootloader (Load Firmware)</source>
         <translation>運行引導加載程序（加載固件）</translation>
     </message>
@@ -9281,8 +9366,8 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>將打開的腳本保存到OpenMV Cam（作為main.py）</translation>
     </message>
     <message>
-        <location line="+2799"/>
-        <location line="+2338"/>
+        <location line="+2972"/>
+        <location line="+2490"/>
         <source>Try doing:
 
 </source>
@@ -9291,13 +9376,13 @@ In particular, checkout the Color-Tracking examples.</source>
 </translation>
     </message>
     <message>
-        <location line="-2338"/>
-        <location line="+2338"/>
+        <location line="-2490"/>
+        <location line="+2490"/>
         <source>...in a terminal and then restart your computer.</source>
         <translation>...在終端中，然後重新啟動計算機。</translation>
     </message>
     <message>
-        <location line="-2098"/>
+        <location line="-2250"/>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
@@ -9307,7 +9392,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     </message>
     <message>
         <location line="+311"/>
-        <location line="+256"/>
+        <location line="+290"/>
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -9316,7 +9401,7 @@ Hit cancel to skip to DFU reprogramming.</source>
 </translation>
     </message>
     <message>
-        <location line="-256"/>
+        <location line="-290"/>
         <source>Firmware Upgrade complete!
 
 </source>
@@ -9326,7 +9411,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+256"/>
+        <location line="+290"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
@@ -9335,8 +9420,8 @@ Hit cancel to skip to DFU reprogramming.</source>
 </translation>
     </message>
     <message>
-        <location line="-255"/>
-        <location line="+256"/>
+        <location line="-289"/>
+        <location line="+290"/>
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>當您的OpenMV Cam的RGB LED開始閃爍藍色時，單擊“確定”，這表明自檢完成。</translation>
     </message>
@@ -9353,7 +9438,7 @@ Hit cancel to skip to DFU reprogramming.</source>
         <translation type="vanished">同步中...</translation>
     </message>
     <message>
-        <location line="+926"/>
+        <location line="+990"/>
         <source>Configure Settings</source>
         <translation>組態設定</translation>
     </message>
@@ -9371,66 +9456,69 @@ Hit cancel to skip to DFU reprogramming.</source>
         <translation>去除注解並將空格轉換為定位字元？</translation>
     </message>
     <message>
-        <location line="+55"/>
-        <location line="+13"/>
+        <location line="+59"/>
+        <location line="+7"/>
+        <location line="+18"/>
         <source>Save Image</source>
         <translation>儲存圖像</translation>
     </message>
     <message>
-        <location line="-11"/>
-        <location line="+1204"/>
+        <location line="-23"/>
+        <location line="+1254"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>影像檔(*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1192"/>
-        <location line="+1545"/>
+        <location line="-1230"/>
+        <location line="+1599"/>
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>因為未知的原因，無法儲存影像檔！</translation>
     </message>
     <message>
-        <location line="-1528"/>
-        <location line="+12"/>
+        <location line="-1578"/>
+        <location line="+7"/>
+        <location line="+17"/>
         <location line="+15"/>
         <location line="+11"/>
         <source>Save Template</source>
         <translation>儲存範本</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-48"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)</source>
         <translation>影像檔(*.bmp *.jpg *.jpeg *.pgm *.ppm)</translation>
     </message>
     <message>
-        <location line="+11"/>
-        <location line="+53"/>
+        <location line="+23"/>
+        <location line="+69"/>
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>請在OpenMV Cam上選擇一個有效的路徑！</translation>
     </message>
     <message>
-        <location line="-38"/>
-        <location line="+53"/>
+        <location line="-54"/>
+        <location line="+69"/>
         <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
         <translation>&quot;%L1&quot;長於%L2的最大字元長度！</translation>
     </message>
     <message>
-        <location line="-28"/>
-        <location line="+12"/>
+        <location line="-40"/>
+        <location line="+7"/>
+        <location line="+17"/>
         <location line="+15"/>
         <location line="+11"/>
         <source>Save Descriptor</source>
         <translation>儲存描述元</translation>
     </message>
     <message>
-        <location line="-36"/>
-        <location line="+1208"/>
+        <location line="-48"/>
+        <location line="+1226"/>
         <location line="+80"/>
-        <location line="+17"/>
+        <location line="+21"/>
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>關鍵點檔(*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1218"/>
+        <location line="-1222"/>
         <location line="+7"/>
         <location line="+6"/>
         <location line="+7"/>
@@ -9712,13 +9800,14 @@ Hit cancel to skip to DFU reprogramming.</source>
     </message>
     <message>
         <location line="+7"/>
-        <location line="+39"/>
+        <location line="+55"/>
         <source>Merge Keypoints</source>
         <translation>合併關鍵點</translation>
     </message>
     <message>
-        <location line="-22"/>
-        <location line="+14"/>
+        <location line="-34"/>
+        <location line="+7"/>
+        <location line="+19"/>
         <source>Save Merged Keypoints</source>
         <translation>儲存合併的關鍵點</translation>
     </message>
@@ -9807,9 +9896,9 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
 您是否希望OpenMV IDE更新OpenMV Cam上的模块？</translation>
     </message>
     <message>
-        <location line="-6312"/>
-        <location line="+191"/>
-        <location line="+6138"/>
+        <location line="-6637"/>
+        <location line="+213"/>
+        <location line="+6441"/>
         <location line="+34"/>
         <location line="+50"/>
         <location line="+25"/>
@@ -9817,8 +9906,8 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
         <translation>无法移除&quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-6432"/>
-        <location line="+6332"/>
+        <location line="-6757"/>
+        <location line="+6657"/>
         <location line="+34"/>
         <location line="+51"/>
         <location line="+25"/>
@@ -9846,7 +9935,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
 <context>
     <name>QObject</name>
     <message>
-        <location line="-6759"/>
+        <location line="-7100"/>
         <source>New File</source>
         <translation>新建檔案</translation>
     </message>
@@ -9862,7 +9951,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     </message>
     <message>
         <location line="+2"/>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)</source>
         <translation>TensorFlow模型(*.tflite);;神經網絡模型(*.network);;標籤文件(*.txt);;全部文件(*.*)</translation>
     </message>
@@ -9876,11 +9965,26 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     </message>
     <message>
         <location line="-4"/>
+        <location line="+9"/>
         <source>Where to save the network on the OpenMV Cam</source>
         <translation>在OpenMV Cam上保存网络的位置</translation>
     </message>
     <message>
-        <location line="+6318"/>
+        <location line="+1"/>
+        <location line="+239"/>
+        <location line="+4502"/>
+        <location line="+47"/>
+        <location line="+69"/>
+        <location line="+1327"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+457"/>
+        <location line="+375"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1096"/>
+        <location line="+135"/>
+        <source>Please add a file extension!</source>
+        <translation>請添加文件擴展名！</translation>
+    </message>
+    <message>
+        <location line="+461"/>
         <source>Copy Failed!</source>
         <translation>复制失败！</translation>
     </message>
@@ -9895,7 +9999,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>無法寫入畫面！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+140"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1091"/>
         <source>Reading File...</source>
         <translation>正在讀取檔案...</translation>
     </message>
@@ -9935,7 +10039,7 @@ Percentage
         <location line="+58"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+0"/>
         <location line="+63"/>
-        <location line="+569"/>
+        <location line="+654"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
@@ -10068,7 +10172,7 @@ Open a data set to upload it.</source>
         <translation>請輸入Edge Impluse項目API密鑰</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-621"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-706"/>
         <location line="+20"/>
         <location line="+11"/>
         <source>Reading File</source>
@@ -10091,12 +10195,12 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="-56"/>
-        <location line="+569"/>
+        <location line="+654"/>
         <source>Transcoding File...</source>
         <translation>正在轉碼檔案...</translation>
     </message>
     <message>
-        <location line="-558"/>
+        <location line="-643"/>
         <location line="+20"/>
         <location line="+11"/>
         <location line="+13"/>
@@ -10177,35 +10281,43 @@ Open a data set to upload it.</source>
         <translation>獲取設備</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+182"/>
-        <location line="+7"/>
-        <location line="+43"/>
+        <location line="+23"/>
+        <source>DFU Util</source>
+        <translation>DFU實用程序</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+34"/>
+        <location line="+86"/>
+        <location line="+197"/>
         <location line="+15"/>
-        <location line="+192"/>
+        <location line="+203"/>
         <location line="+12"/>
         <location line="+10"/>
         <location line="+12"/>
-        <location line="+81"/>
+        <location line="+21"/>
+        <location line="+7"/>
+        <location line="+73"/>
         <location line="+12"/>
         <location line="+10"/>
         <location line="+12"/>
+        <location line="+20"/>
+        <location line="+7"/>
         <source>Convert Video</source>
         <translation>轉換視頻</translation>
     </message>
     <message>
-        <location line="-405"/>
+        <location line="-611"/>
         <source>Failed to launch ffmpeg!</source>
         <translation>無法啟動ffmpeg！</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Please click the &quot;Ok&quot; button to continue once FFMPEG finishes.
 
 OpenMV IDE is unable to automatically determine when FFMPEG finishes without hiding FFMPEG output.</source>
-        <translation>FFMPEG完成后，请单击“确定”按钮继续。\n\nOpenMV IDE无法自动确定FFMPEG何时完成而不隐藏FFMPEG输出。</translation>
+        <translation type="vanished">FFMPEG完成后，请单击“确定”按钮继续。\n\nOpenMV IDE无法自动确定FFMPEG何时完成而不隐藏FFMPEG输出。</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+198"/>
         <source>Unable to write to output video file!</source>
         <translation>无法写入输出视频文件！</translation>
     </message>
@@ -10215,13 +10327,13 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation>无法打开输出视频文件！</translation>
     </message>
     <message>
-        <location line="+156"/>
-        <location line="+112"/>
+        <location line="+151"/>
+        <location line="+132"/>
         <source>Play Video</source>
         <translation>播放視頻</translation>
     </message>
     <message>
-        <location line="-111"/>
+        <location line="-131"/>
         <source>Failed to launch ffplay!</source>
         <translation>無法啟動ffplay！</translation>
     </message>
@@ -10232,56 +10344,63 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     </message>
     <message>
         <location line="+3"/>
-        <location line="+99"/>
+        <location line="+119"/>
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
         <translation>視頻檔(*.mp4 *.*);; OpenMV ImageWriter檔案(*.bin);;</translation>
     </message>
     <message>
-        <location line="-97"/>
-        <location line="+99"/>
+        <location line="-117"/>
+        <location line="+119"/>
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin)</source>
         <translation>視頻檔(*.mp4 *.*);; OpenMV ImageWriter檔案(*.bin)</translation>
     </message>
     <message>
-        <location line="-93"/>
+        <location line="-109"/>
+        <location line="+11"/>
         <source>Convert Video Output</source>
         <translation>轉換視頻輸出</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+115"/>
+        <location line="-8"/>
+        <location line="+135"/>
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
         <translation>视频文件 (*.mp4 *.*);;OpenMV ImageReader文件 (*.bin);;</translation>
     </message>
     <message>
-        <location line="-113"/>
-        <location line="+115"/>
+        <location line="-133"/>
+        <location line="+135"/>
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin)</source>
         <translation>视频文件 (*.mp4 *.*);;OpenMV ImageReader文件 (*.bin)</translation>
     </message>
     <message>
-        <location line="-108"/>
-        <location line="+115"/>
+        <location line="-116"/>
+        <location line="+135"/>
         <source>Rescale the video?</source>
         <translation>重新缩放视频？</translation>
     </message>
     <message>
-        <location line="-103"/>
-        <location line="+115"/>
+        <location line="-123"/>
+        <location line="+135"/>
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
         <translation>输入新宽度（纵横比将保持不变）</translation>
     </message>
     <message>
-        <location line="-105"/>
-        <location line="+115"/>
+        <location line="-125"/>
+        <location line="+135"/>
         <source>Skip frames?</source>
         <translation>跳幀？</translation>
     </message>
     <message>
-        <location line="-103"/>
-        <location line="+115"/>
+        <location line="-123"/>
+        <location line="+135"/>
         <source>Enter how many frames to skip at a time</source>
         <translation>輸入一次跳過多少幀</translation>
+    </message>
+    <message>
+        <location line="-114"/>
+        <location line="+134"/>
+        <source>Video conversion finished!</source>
+        <translation>視頻轉換完成！</translation>
     </message>
     <message>
         <source>Video Files (*.mp4 *.*);;</source>
@@ -10292,15 +10411,16 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation type="vanished">視頻檔(*.mp4 *.*)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6300"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6625"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-91"/>
-        <location line="+114"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-127"/>
+        <location line="+134"/>
         <source>Unable to overwrite output file!</source>
         <translation>無法覆蓋輸出檔！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-69"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-85"/>
+        <location line="+11"/>
         <source>Save Video</source>
         <translation>儲存視頻</translation>
     </message>
@@ -10359,19 +10479,20 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
 <context>
     <name>MyPlainTextEdit</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+445"/>
-        <location line="+13"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-383"/>
+        <location line="+7"/>
+        <location line="+18"/>
         <location line="+11"/>
         <source>Save Log</source>
         <translation>保存日志</translation>
     </message>
     <message>
-        <location line="-22"/>
+        <location line="-34"/>
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>文本文件 (*.txt);;所有的文件 (*)</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+24"/>
         <location line="+11"/>
         <source>Error: %L1!</source>
         <translation>錯誤：%L1!</translation>
@@ -10445,18 +10566,19 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation>經過時間：0h:00m:00s:000ms - 大小：0 B - FPS：0</translation>
     </message>
     <message>
-        <location line="+22"/>
-        <location line="+13"/>
+        <location line="+26"/>
+        <location line="+7"/>
+        <location line="+18"/>
         <source>Save Image</source>
         <translation>儲存圖像</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-23"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>影像檔(*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+24"/>
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>因為未知的原因，無法儲存影像檔！</translation>
     </message>
