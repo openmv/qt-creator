@@ -21,6 +21,8 @@
 #define LAST_SAVE_VIDEO_PATH "LastSaveVideoPath"
 #define LAST_SAVE_VIDEO_HRES "LastSaveVideoHRes"
 #define LAST_SAVE_VIDEO_SKIP "LastSaveVideoSkip"
+#define LAST_CONVERT_TERMINAL_WINDOW_GEOMETRY "LastConvertTerminalWindowGeometry"
+#define LAST_PLAY_TERMINAL_WINDOW_GEOMETRY "LastPlayTerminalWindowGeometry"
 
 #define VIDEO_RECORDER_FRAME_RATE 30
 
