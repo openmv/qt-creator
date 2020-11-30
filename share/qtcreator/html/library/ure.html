@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ure – simple regular expressions &mdash; MicroPython 1.12 documentation</title>
+  <title>ure – simple regular expressions &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,17 +91,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uasyncio.html"><code class="docutils literal notranslate"><span class="pre">uasyncio</span></code> — asynchronous I/O scheduler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
@@ -120,6 +117,7 @@
 <li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
@@ -130,9 +128,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -201,7 +200,7 @@
             
   <div class="section" id="module-ure">
 <span id="ure-simple-regular-expressions"></span><h1><a class="reference internal" href="#module-ure" title="ure: regular expressions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ure</span></code></a> – simple regular expressions<a class="headerlink" href="#module-ure" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><span class="xref std std-term">CPython</span></a> <em>module,
 as described below. For more information, refer to the original
 CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/re.html#module-re" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">re</span></code></a>.</p>
 <p>This module implements regular expression operations. Regular expression
@@ -310,7 +309,7 @@ string for first position which matches regex (which still may be
 
 <dl class="function">
 <dt id="ure.sub">
-<code class="descclassname">ure.</code><code class="descname">sub</code><span class="sig-paren">(</span><em>regex_str</em>, <em>replace</em>, <em>string</em>, <em>count=0</em>, <em>flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.sub" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ure.</code><code class="descname">sub</code><span class="sig-paren">(</span><em>regex_str</em>, <em>replace</em>, <em>string</em>, <em>count=0</em>, <em>flags=0</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.sub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compile <em>regex_str</em> and search for it in <em>string</em>, replacing all matches
 with <em>replace</em>, and returning the new string.</p>
 <p><em>replace</em> can be a string or a function.  If it is a string then escape
@@ -320,14 +319,14 @@ If <em>replace</em> is a function then it must take a single argument (the match
 and should return a replacement string.</p>
 <p>If <em>count</em> is specified and non-zero then substitution will stop after
 this many substitutions are made.  The <em>flags</em> argument is ignored.</p>
-<p>Note: availability of this function depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+<p>Note: availability of this function depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="ure.DEBUG">
 <code class="descclassname">ure.</code><code class="descname">DEBUG</code><a class="headerlink" href="#ure.DEBUG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag value, display debug information about compiled expression.
-(Availability depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.)</p>
+(Availability depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>.)</p>
 </dd></dl>
 
 </div>
@@ -341,7 +340,7 @@ this many substitutions are made.  The <em>flags</em> argument is ignored.</p>
 <dt id="ure.regex.search">
 <code class="descclassname">regex.</code><code class="descname">search</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.regex.search" title="Permalink to this definition">¶</a></dt>
 <dt id="ure.regex.sub">
-<code class="descclassname">regex.</code><code class="descname">sub</code><span class="sig-paren">(</span><em>replace</em>, <em>string</em>, <em>count=0</em>, <em>flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.regex.sub" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">regex.</code><code class="descname">sub</code><span class="sig-paren">(</span><em>replace</em>, <em>string</em>, <em>count=0</em>, <em>flags=0</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.regex.sub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Similar to the module-level functions <a class="reference internal" href="#ure.match" title="ure.match"><code class="xref py py-meth docutils literal notranslate"><span class="pre">match()</span></code></a>, <a class="reference internal" href="#ure.search" title="ure.search"><code class="xref py py-meth docutils literal notranslate"><span class="pre">search()</span></code></a>
 and <a class="reference internal" href="#ure.sub" title="ure.sub"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sub()</span></code></a>.
 Using methods is (much) more efficient if the same regex is applied to
@@ -350,7 +349,7 @@ multiple strings.</p>
 
 <dl class="method">
 <dt id="ure.regex.split">
-<code class="descclassname">regex.</code><code class="descname">split</code><span class="sig-paren">(</span><em>string</em>, <em>max_split=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.regex.split" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">regex.</code><code class="descname">split</code><span class="sig-paren">(</span><em>string</em>, <em>max_split=-1</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#ure.regex.split" title="Permalink to this definition">¶</a></dt>
 <dd><p>Split a <em>string</em> using regex. If <em>max_split</em> is given, it specifies
 maximum number of splits to perform. Returns list of strings (there
 may be up to <em>max_split+1</em> elements if it’s specified).</p>
@@ -372,7 +371,7 @@ to the replacement function in <a class="reference internal" href="#ure.sub" tit
 <dt id="ure.match.groups">
 <code class="descclassname">match.</code><code class="descname">groups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ure.match.groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a tuple containing all the substrings of the groups of the match.</p>
-<p>Note: availability of this method depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+<p>Note: availability of this method depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -383,14 +382,14 @@ to the replacement function in <a class="reference internal" href="#ure.sub" tit
 <dd><p>Return the index in the original string of the start or end of the
 substring group that was matched.  <em>index</em> defaults to the entire
 group, otherwise it will select a group.</p>
-<p>Note: availability of these methods depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+<p>Note: availability of these methods depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="ure.match.span">
 <code class="descclassname">match.</code><code class="descname">span</code><span class="sig-paren">(</span><span class="optional">[</span><em>index</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#ure.match.span" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the 2-tuple <code class="docutils literal notranslate"><span class="pre">(match.start(index),</span> <span class="pre">match.end(index))</span></code>.</p>
-<p>Note: availability of this method depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+<p>Note: availability of this method depends on <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>.</p>
 </dd></dl>
 
 </div>
@@ -418,7 +417,7 @@ group, otherwise it will select a group.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

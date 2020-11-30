@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ubinascii – binary/ASCII conversions &mdash; MicroPython 1.12 documentation</title>
+  <title>ubinascii – binary/ASCII conversions &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ucollections – collection and container types" href="ucollections.html" />
-    <link rel="prev" title="uarray – arrays of numeric data" href="uarray.html" /> 
+    <link rel="prev" title="uasyncio — asynchronous I/O scheduler" href="uasyncio.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,17 +91,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uasyncio.html"><code class="docutils literal notranslate"><span class="pre">uasyncio</span></code> — asynchronous I/O scheduler</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
@@ -118,6 +115,7 @@
 <li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
@@ -128,9 +126,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -199,7 +198,7 @@
             
   <div class="section" id="module-ubinascii">
 <span id="ubinascii-binary-ascii-conversions"></span><h1><a class="reference internal" href="#module-ubinascii" title="ubinascii: binary/ASCII conversions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ubinascii</span></code></a> – binary/ASCII conversions<a class="headerlink" href="#module-ubinascii" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><span class="xref std std-term">CPython</span></a> <em>module,
 as described below. For more information, refer to the original
 CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/binascii.html#module-binascii" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">binascii</span></code></a>.</p>
 <p>This module implements conversions between binary data and various
@@ -253,7 +252,7 @@ followed by a newline character, as a bytes object.</p>
         <a href="ucollections.html" class="btn btn-neutral float-right" title="ucollections – collection and container types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="uarray.html" class="btn btn-neutral float-left" title="uarray – arrays of numeric data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="uasyncio.html" class="btn btn-neutral float-left" title="uasyncio — asynchronous I/O scheduler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -264,7 +263,7 @@ followed by a newline character, as a bytes object.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

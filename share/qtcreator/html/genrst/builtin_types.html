@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Builtin Types &mdash; MicroPython 1.12 documentation</title>
+  <title>Builtin types &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Modules" href="modules.html" />
-    <link rel="prev" title="Core Language" href="core_language.html" /> 
+    <link rel="prev" title="Core language" href="core_language.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,15 +91,12 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">MicroPython libraries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython differences from CPython</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="core_language.html">Core Language</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Builtin Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="core_language.html">Core language</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Builtin types</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#exception">Exception</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#exception-chaining-not-implemented">Exception chaining not implemented</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#user-defined-attributes-for-builtin-exceptions-are-not-supported">User-defined attributes for builtin exceptions are not supported</a></li>
@@ -115,6 +112,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#bytes-objects-support-format-method">bytes objects support .format() method</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bytes-with-keywords-not-implemented">bytes() with keywords not implemented</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bytes-subscription-with-step-1-not-implemented">Bytes subscription with step != 1 not implemented</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dict">dict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dictionary-keys-view-does-not-behave-as-a-set">Dictionary keys view does not behave as a set.</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#float">float</a><ul>
@@ -137,7 +138,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#str-with-keywords-not-implemented">str(…) with keywords not implemented</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#str-ljust-and-str-rjust-not-implemented">str.ljust() and str.rjust() not implemented</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#none-as-first-argument-for-rsplit-such-as-str-rsplit-none-n-not-implemented">None as first argument for rsplit such as str.rsplit(None, n) not implemented</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#instance-of-a-subclass-of-str-cannot-be-compared-for-equality-with-an-instance-of-a-str">Instance of a subclass of str cannot be compared for equality with an instance of a str</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#subscript-with-step-1-is-not-yet-implemented">Subscript with step != 1 is not yet implemented</a></li>
 </ul>
 </li>
@@ -151,6 +151,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -198,7 +199,7 @@
         
           <li><a href="index.html">MicroPython differences from CPython</a> &raquo;</li>
         
-      <li>Builtin Types</li>
+      <li>Builtin types</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -218,8 +219,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="builtin-types">
-<h1>Builtin Types<a class="headerlink" href="#builtin-types" title="Permalink to this headline">¶</a></h1>
-<p>Generated Mon 11 May 2020 17:55:38 UTC</p>
+<h1>Builtin types<a class="headerlink" href="#builtin-types" title="Permalink to this headline">¶</a></h1>
+<p>Generated Sat 28 Nov 2020 22:23:20 UTC</p>
 <div class="section" id="exception">
 <h2>Exception<a class="headerlink" href="#exception" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="exception-chaining-not-implemented">
@@ -350,6 +351,7 @@
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="ne">Exception</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
+
 <span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -364,8 +366,8 @@
 </tr>
 <tr class="row-even"><td>&#160;</td>
 <td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">15</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">13</span><span class="p">,</span> <span class="ow">in</span> <span class="fm">__init__</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">18</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">15</span><span class="p">,</span> <span class="ow">in</span> <span class="fm">__init__</span>
 <span class="ne">AttributeError</span><span class="p">:</span> <span class="nb">type</span> <span class="nb">object</span> <span class="s1">&#39;Exception&#39;</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;__init__&#39;</span>
 </pre></div>
 </div>
@@ -416,7 +418,7 @@
 <p><strong>Cause:</strong> MicroPython strives to be a more regular implementation, so if both <a class="reference internal" href="../library/builtins.html#str" title="str"><code class="xref any py py-class docutils literal notranslate"><span class="pre">str</span></code></a> and <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> support <code class="docutils literal notranslate"><span class="pre">__mod__()</span></code> (the % operator), it makes sense to support <code class="docutils literal notranslate"><span class="pre">format()</span></code> for both too. Support for <code class="docutils literal notranslate"><span class="pre">__mod__</span></code> can also be compiled out, which leaves only <code class="docutils literal notranslate"><span class="pre">format()</span></code> for bytes formatting.</p>
 <p><strong>Workaround:</strong> If you are interested in CPython compatibility, don’t use <code class="docutils literal notranslate"><span class="pre">.format()</span></code> on bytes objects.</p>
 <p>Sample code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -446,7 +448,7 @@
 <span id="cpydiff-types-bytes-keywords"></span><h3>bytes() with keywords not implemented<a class="headerlink" href="#bytes-with-keywords-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p><strong>Workaround:</strong> Pass the encoding as a positional parameter, e.g. <code class="docutils literal notranslate"><span class="pre">print(bytes('abc',</span> <span class="pre">'utf-8'))</span></code></p>
 <p>Sample code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -477,7 +479,7 @@
 <p><strong>Cause:</strong> MicroPython is highly optimized for memory usage.</p>
 <p><strong>Workaround:</strong> Use explicit loop for this very rare operation.</p>
 <p>Sample code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;123&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;123&quot;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -504,12 +506,46 @@
 </table>
 </div>
 </div>
+<div class="section" id="dict">
+<h2>dict<a class="headerlink" href="#dict" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dictionary-keys-view-does-not-behave-as-a-set">
+<span id="cpydiff-types-dict-keys-set"></span><h3>Dictionary keys view does not behave as a set.<a class="headerlink" href="#dictionary-keys-view-does-not-behave-as-a-set" title="Permalink to this headline">¶</a></h3>
+<p><strong>Cause:</strong> Not implemented.</p>
+<p><strong>Workaround:</strong> Explicitly convert keys to a set before using set operations.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="o">&amp;</span> <span class="p">{</span><span class="mi">1</span><span class="p">})</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>CPy output:</td>
+<td>uPy output:</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</td>
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">types</span> <span class="k">for</span> <span class="fm">__and__</span><span class="p">:</span> <span class="s1">&#39;dict_view&#39;</span><span class="p">,</span> <span class="s1">&#39;set&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="section" id="float">
 <h2>float<a class="headerlink" href="#float" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="upy-and-cpython-outputs-formats-may-differ">
 <span id="cpydiff-types-float-rounding"></span><h3>uPy and CPython outputs formats may differ<a class="headerlink" href="#upy-and-cpython-outputs-formats-may-differ" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%.1g</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="o">-</span><span class="mf">9.9</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.1g</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="o">-</span><span class="mf">9.9</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -543,8 +579,9 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="nb">int</span><span class="p">):</span>
     <span class="fm">__add__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">A</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="n">other</span><span class="p">)</span>
 
+
 <span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -561,8 +598,8 @@
 </div>
 </td>
 <td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">11</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="k">lambda</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">14</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">10</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="k">lambda</span><span class="o">&gt;</span>
 <span class="ne">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">types</span> <span class="k">for</span> <span class="fm">__radd__</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span> <span class="s1">&#39;int&#39;</span>
 </pre></div>
 </div>
@@ -677,7 +714,7 @@
 <div class="section" id="start-end-indices-such-as-str-endswith-s-start-not-implemented">
 <span id="cpydiff-types-str-endswith"></span><h3>Start/end indices such as str.endswith(s, start) not implemented<a class="headerlink" href="#start-end-indices-such-as-str-endswith-s-start-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -706,7 +743,7 @@
 <div class="section" id="attributes-subscr-not-implemented">
 <span id="cpydiff-types-str-formatsubscr"></span><h3>Attributes/subscr not implemented<a class="headerlink" href="#attributes-subscr-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{a[0]}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{a[0]}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -736,7 +773,7 @@
 <span id="cpydiff-types-str-keywords"></span><h3>str(…) with keywords not implemented<a class="headerlink" href="#str-with-keywords-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p><strong>Workaround:</strong> Input the encoding format directly. eg <code class="docutils literal notranslate"><span class="pre">print(bytes('abc',</span> <span class="pre">'utf-8'))</span></code></p>
 <p>Sample code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -767,7 +804,7 @@
 <p><strong>Cause:</strong> MicroPython is highly optimized for memory usage. Easy workarounds available.</p>
 <p><strong>Workaround:</strong> Instead of <code class="docutils literal notranslate"><span class="pre">s.ljust(10)</span></code> use <code class="docutils literal notranslate"><span class="pre">&quot;%-10s&quot;</span> <span class="pre">%</span> <span class="pre">s</span></code>, instead of <code class="docutils literal notranslate"><span class="pre">s.rjust(10)</span></code> use <code class="docutils literal notranslate"><span class="pre">&quot;%</span> <span class="pre">10s&quot;</span> <span class="pre">%</span> <span class="pre">s</span></code>. Alternatively, <code class="docutils literal notranslate"><span class="pre">&quot;{:&lt;10}&quot;.format(s)</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;{:&gt;10}&quot;.format(s)</span></code>.</p>
 <p>Sample code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -796,7 +833,7 @@
 <div class="section" id="none-as-first-argument-for-rsplit-such-as-str-rsplit-none-n-not-implemented">
 <span id="cpydiff-types-str-rsplitnone"></span><h3>None as first argument for rsplit such as str.rsplit(None, n) not implemented<a class="headerlink" href="#none-as-first-argument-for-rsplit-such-as-str-rsplit-none-n-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a a a&#39;</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a a a&quot;</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -822,41 +859,10 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="instance-of-a-subclass-of-str-cannot-be-compared-for-equality-with-an-instance-of-a-str">
-<span id="cpydiff-types-str-subclassequality"></span><h3>Instance of a subclass of str cannot be compared for equality with an instance of a str<a class="headerlink" href="#instance-of-a-subclass-of-str-cannot-be-compared-for-equality-with-an-instance-of-a-str" title="Permalink to this headline">¶</a></h3>
-<p>Sample code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">S</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
-    <span class="k">pass</span>
-
-<span class="n">s</span> <span class="o">=</span> <span class="n">S</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="s1">&#39;hello&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<table border="1" class="docutils">
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>CPy output:</td>
-<td>uPy output:</td>
-</tr>
-<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span>
-</pre></div>
-</div>
-</td>
-<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span>
-</pre></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="section" id="subscript-with-step-1-is-not-yet-implemented">
 <span id="cpydiff-types-str-subscrstep"></span><h3>Subscript with step != 1 is not yet implemented<a class="headerlink" href="#subscript-with-step-1-is-not-yet-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;abcdefghi&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;abcdefghi&quot;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -928,7 +934,7 @@
         <a href="modules.html" class="btn btn-neutral float-right" title="Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="core_language.html" class="btn btn-neutral float-left" title="Core Language" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="core_language.html" class="btn btn-neutral float-left" title="Core language" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -939,7 +945,7 @@
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

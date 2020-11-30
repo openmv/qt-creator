@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>math – mathematical functions &mdash; MicroPython 1.12 documentation</title>
+  <title>math – mathematical functions &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sys – system specific functions" href="sys.html" />
+    <link rel="next" title="uarray – arrays of numeric data" href="uarray.html" />
     <link rel="prev" title="gc – control the garbage collector" href="gc.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,9 +91,6 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
@@ -104,8 +101,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#constants">Constants</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uasyncio.html"><code class="docutils literal notranslate"><span class="pre">uasyncio</span></code> — asynchronous I/O scheduler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
@@ -119,6 +116,7 @@
 <li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
@@ -129,9 +127,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -200,7 +199,7 @@
             
   <div class="section" id="module-math">
 <span id="math-mathematical-functions"></span><h1><a class="reference internal" href="#module-math" title="math: mathematical functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">math</span></code></a> – mathematical functions<a class="headerlink" href="#module-math" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><span class="xref std std-term">CPython</span></a> <em>module,
 as described below. For more information, refer to the original
 CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/math.html#module-math" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">math</span></code></a>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">math</span></code> module provides some basic mathematical functions for
@@ -466,7 +465,7 @@ the relation <code class="docutils literal notranslate"><span class="pre">0.5</s
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="sys.html" class="btn btn-neutral float-right" title="sys – system specific functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="uarray.html" class="btn btn-neutral float-right" title="uarray – arrays of numeric data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="gc.html" class="btn btn-neutral float-left" title="gc – control the garbage collector" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -480,7 +479,7 @@ the relation <code class="docutils literal notranslate"><span class="pre">0.5</s
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

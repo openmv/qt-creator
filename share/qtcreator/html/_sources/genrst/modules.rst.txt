@@ -2,7 +2,7 @@
 
 Modules
 =======
-Generated Mon 11 May 2020 17:55:38 UTC
+Generated Sat 28 Nov 2020 22:23:20 UTC
 
 array
 -----
@@ -15,7 +15,8 @@ Looking for integer not implemented
 Sample code::
 
     import array
-    print(1 in array.array('B', b'12'))
+    
+    print(1 in array.array("B", b"12"))
 
 +-------------+-------------------------------------------+
 | CPy output: | uPy output:                               |
@@ -23,7 +24,7 @@ Sample code::
 | ::          | ::                                        |
 |             |                                           |
 |     False   |     Traceback (most recent call last):    |
-|             |       File "<stdin>", line 8, in <module> |
+|             |       File "<stdin>", line 9, in <module> |
 |             |     NotImplementedError:                  |
 +-------------+-------------------------------------------+
 
@@ -35,7 +36,8 @@ Array deletion not implemented
 Sample code::
 
     import array
-    a = array.array('b', (1, 2, 3))
+    
+    a = array.array("b", (1, 2, 3))
     del a[1]
     print(a)
 
@@ -45,7 +47,7 @@ Sample code::
 | ::                     | ::                                                          |
 |                        |                                                             |
 |     array('b', [1, 3]) |     Traceback (most recent call last):                      |
-|                        |       File "<stdin>", line 9, in <module>                   |
+|                        |       File "<stdin>", line 10, in <module>                  |
 |                        |     TypeError: 'array' object doesn't support item deletion |
 +------------------------+-------------------------------------------------------------+
 
@@ -57,7 +59,8 @@ Subscript with step != 1 is not yet implemented
 Sample code::
 
     import array
-    a = array.array('b', (1, 2, 3))
+    
+    a = array.array("b", (1, 2, 3))
     print(a[3:2:2])
 
 +----------------+---------------------------------------------------------------------------+
@@ -66,7 +69,7 @@ Sample code::
 | ::             | ::                                                                        |
 |                |                                                                           |
 |     array('b') |     Traceback (most recent call last):                                    |
-|                |       File "<stdin>", line 9, in <module>                                 |
+|                |       File "<stdin>", line 10, in <module>                                |
 |                |     NotImplementedError: only slices with step=1 (aka None) are supported |
 +----------------+---------------------------------------------------------------------------+
 
@@ -114,6 +117,7 @@ Deque not implemented
 Sample code::
 
     import collections
+    
     D = collections.deque()
     print(D)
 
@@ -123,7 +127,7 @@ Sample code::
 | ::            | ::                                                              |
 |               |                                                                 |
 |     deque([]) |     Traceback (most recent call last):                          |
-|               |       File "<stdin>", line 8, in <module>                       |
+|               |       File "<stdin>", line 9, in <module>                       |
 |               |     TypeError: function missing 2 required positional arguments |
 +---------------+-----------------------------------------------------------------+
 
@@ -138,13 +142,14 @@ JSON module does not throw exception when object is not serialisable
 Sample code::
 
     import json
+    
     a = bytes(x for x in range(256))
     try:
         z = json.dumps(a)
         x = json.loads(z)
-        print('Should not get here')
+        print("Should not get here")
     except TypeError:
-        print('TypeError')
+        print("TypeError")
 
 +---------------+-------------------------+
 | CPy output:   | uPy output:             |
@@ -153,6 +158,93 @@ Sample code::
 |               |                         |
 |     TypeError |     Should not get here |
 +---------------+-------------------------+
+
+os
+--
+
+.. _cpydiff_modules_os_environ:
+
+``environ`` attribute is not implemented
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Workaround:** Use ``getenv``, ``putenv`` and ``unsetenv``
+
+Sample code::
+
+    import os
+    
+    try:
+        print(os.environ.get("NEW_VARIABLE"))
+        os.environ["NEW_VARIABLE"] = "VALUE"
+        print(os.environ["NEW_VARIABLE"])
+    except AttributeError:
+        print("should not get here")
+        print(os.getenv("NEW_VARIABLE"))
+        os.putenv("NEW_VARIABLE", "VALUE")
+        print(os.getenv("NEW_VARIABLE"))
+
++-------------+-------------------------------------------+
+| CPy output: | uPy output:                               |
++-------------+-------------------------------------------+
+| ::          | ::                                        |
+|             |                                           |
+|     None    |     Traceback (most recent call last):    |
+|     VALUE   |       File "<stdin>", line 7, in <module> |
+|             |     ImportError: no module named 'os'     |
++-------------+-------------------------------------------+
+
+.. _cpydiff_modules_os_getenv:
+
+``getenv`` returns actual value instead of cached value
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Cause:** The ``environ`` attribute is not implemented
+
+Sample code::
+
+    import os
+    
+    print(os.getenv("NEW_VARIABLE"))
+    os.putenv("NEW_VARIABLE", "VALUE")
+    print(os.getenv("NEW_VARIABLE"))
+
++-------------+-------------------------------------------+
+| CPy output: | uPy output:                               |
++-------------+-------------------------------------------+
+| ::          | ::                                        |
+|             |                                           |
+|     None    |     Traceback (most recent call last):    |
+|     None    |       File "<stdin>", line 7, in <module> |
+|             |     ImportError: no module named 'os'     |
++-------------+-------------------------------------------+
+
+.. _cpydiff_modules_os_getenv_argcount:
+
+``getenv`` only allows one argument
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Workaround:** Test that the return value is ``None``
+
+Sample code::
+
+    import os
+    
+    try:
+        print(os.getenv("NEW_VARIABLE", "DEFAULT"))
+    except TypeError:
+        print("should not get here")
+        # this assumes NEW_VARIABLE is never an empty variable
+        print(os.getenv("NEW_VARIABLE") or "DEFAULT")
+
++-------------+-------------------------------------------+
+| CPy output: | uPy output:                               |
++-------------+-------------------------------------------+
+| ::          | ::                                        |
+|             |                                           |
+|     DEFAULT |     Traceback (most recent call last):    |
+|             |       File "<stdin>", line 7, in <module> |
+|             |     ImportError: no module named 'os'     |
++-------------+-------------------------------------------+
 
 struct
 ------
@@ -165,11 +257,12 @@ Struct pack with too few args, not checked by uPy
 Sample code::
 
     import struct
+    
     try:
-        print(struct.pack('bb', 1))
-        print('Should not get here')
+        print(struct.pack("bb", 1))
+        print("Should not get here")
     except:
-        print('struct.error')
+        print("struct.error")
 
 +------------------+-------------------------+
 | CPy output:      | uPy output:             |
@@ -188,11 +281,12 @@ Struct pack with too many args, not checked by uPy
 Sample code::
 
     import struct
+    
     try:
-        print(struct.pack('bb', 1, 2, 3))
-        print('Should not get here')
+        print(struct.pack("bb", 1, 2, 3))
+        print("Should not get here")
     except:
-        print('struct.error')
+        print("struct.error")
 
 +------------------+-------------------------+
 | CPy output:      | uPy output:             |
@@ -216,6 +310,7 @@ Overriding sys.stdin, sys.stdout and sys.stderr not possible
 Sample code::
 
     import sys
+    
     sys.stdin = None
     print(sys.stdin)
 
@@ -225,7 +320,7 @@ Sample code::
 | ::          | ::                                                           |
 |             |                                                              |
 |     None    |     Traceback (most recent call last):                       |
-|             |       File "<stdin>", line 8, in <module>                    |
+|             |       File "<stdin>", line 9, in <module>                    |
 |             |     AttributeError: 'module' object has no attribute 'stdin' |
 +-------------+--------------------------------------------------------------+
 

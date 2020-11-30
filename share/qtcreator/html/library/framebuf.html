@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>framebuf — Frame buffer manipulation &mdash; MicroPython 1.12 documentation</title>
+  <title>framebuf — frame buffer manipulation &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,14 +91,11 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#class-framebuffer">class FrameBuffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#constructors">Constructors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#drawing-primitive-shapes">Drawing primitive shapes</a></li>
@@ -119,9 +116,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -169,7 +167,7 @@
         
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
         
-      <li><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</li>
+      <li><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,7 +187,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="module-framebuf">
-<span id="framebuf-frame-buffer-manipulation"></span><h1><a class="reference internal" href="#module-framebuf" title="framebuf: Frame buffer manipulation"><code class="xref py py-mod docutils literal notranslate"><span class="pre">framebuf</span></code></a> — Frame buffer manipulation<a class="headerlink" href="#module-framebuf" title="Permalink to this headline">¶</a></h1>
+<span id="framebuf-frame-buffer-manipulation"></span><h1><a class="reference internal" href="#module-framebuf" title="framebuf: Frame buffer manipulation"><code class="xref py py-mod docutils literal notranslate"><span class="pre">framebuf</span></code></a> — frame buffer manipulation<a class="headerlink" href="#module-framebuf" title="Permalink to this headline">¶</a></h1>
 <p>This module provides a general frame buffer which can be used to create
 bitmap images, which can then be sent to a display.</p>
 <div class="section" id="class-framebuffer">
@@ -213,7 +211,7 @@ when generating output for displays.</p>
 <h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="framebuf.FrameBuffer">
-<em class="property">class </em><code class="descclassname">framebuf.</code><code class="descname">FrameBuffer</code><span class="sig-paren">(</span><em>buffer</em>, <em>width</em>, <em>height</em>, <em>format</em>, <em>stride=width</em><span class="sig-paren">)</span><a class="headerlink" href="#framebuf.FrameBuffer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">framebuf.</code><code class="descname">FrameBuffer</code><span class="sig-paren">(</span><em>buffer</em>, <em>width</em>, <em>height</em>, <em>format</em>, <em>stride=width</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#framebuf.FrameBuffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct a FrameBuffer object.  The parameters are:</p>
 <blockquote>
 <div><ul class="simple">
@@ -343,7 +341,7 @@ at locations starting at the leftmost edge, 8 pixels lower.</p>
 <code class="descclassname">framebuf.</code><code class="descname">MONO_HLSB</code><a class="headerlink" href="#framebuf.framebuf.MONO_HLSB" title="Permalink to this definition">¶</a></dt>
 <dd><p>Monochrome (1-bit) color format
 This defines a mapping where the bits in a byte are horizontally mapped.
-Each byte occupies 8 horizontal pixels with bit 0 being the leftmost.
+Each byte occupies 8 horizontal pixels with bit 7 being the leftmost.
 Subsequent bytes appear at successive horizontal locations until the
 rightmost edge is reached. Further bytes are rendered on the next row, one
 pixel lower.</p>
@@ -354,7 +352,7 @@ pixel lower.</p>
 <code class="descclassname">framebuf.</code><code class="descname">MONO_HMSB</code><a class="headerlink" href="#framebuf.framebuf.MONO_HMSB" title="Permalink to this definition">¶</a></dt>
 <dd><p>Monochrome (1-bit) color format
 This defines a mapping where the bits in a byte are horizontally mapped.
-Each byte occupies 8 horizontal pixels with bit 7 being the leftmost.
+Each byte occupies 8 horizontal pixels with bit 0 being the leftmost.
 Subsequent bytes appear at successive horizontal locations until the
 rightmost edge is reached. Further bytes are rendered on the next row, one
 pixel lower.</p>
@@ -409,7 +407,7 @@ pixel lower.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tf — Tensor Flow &mdash; MicroPython 1.12 documentation</title>
+  <title>tf — Tensor Flow &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="gif — gif recording" href="omv.gif.html" />
-    <link rel="prev" title="nn — neural networks" href="omv.nn.html" /> 
+    <link rel="prev" title="image — machine vision" href="omv.image.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,18 +91,13 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="pyb.html"><code class="docutils literal notranslate"><span class="pre">pyb</span></code> — functions related to the board</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.time.html"><code class="docutils literal notranslate"><span class="pre">time</span></code> — tracking elapsed time</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.sensor.html"><code class="docutils literal notranslate"><span class="pre">sensor</span></code> — camera sensor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.image.html"><code class="docutils literal notranslate"><span class="pre">image</span></code> — machine vision</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.nn.html"><code class="docutils literal notranslate"><span class="pre">nn</span></code> — neural networks</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">tf</span></code> — Tensor Flow</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#class-tf-classification-tf-classification-dection-result">class tf_classification – tf classification dection result</a></li>
@@ -111,7 +106,9 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html"><code class="docutils literal notranslate"><span class="pre">gif</span></code> — gif recording</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html"><code class="docutils literal notranslate"><span class="pre">mjpeg</span></code> — mjpeg recording</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd shield driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.audio.html"><code class="docutils literal notranslate"><span class="pre">audio</span></code> — Audio Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.micro_speech.html"><code class="docutils literal notranslate"><span class="pre">micro_speech</span></code> — Micro Speech Audio Module Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermopile shield driver (fir == far infrared)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.tv.html"><code class="docutils literal notranslate"><span class="pre">tv</span></code> — tv shield driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.cpufreq.html"><code class="docutils literal notranslate"><span class="pre">cpufreq</span></code> — CPU Frequency Control</a></li>
@@ -124,9 +121,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -202,7 +200,7 @@ OpenMV Cam <a class="reference external" href="https://www.tensorflow.org/lite/m
 particular:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Supported operations are listed <a class="reference external" href="https://github.com/openmv/tensorflow/blob/master/tensorflow/lite/micro/kernels/all_ops_resolver.cc">here</a>.<ul>
+<li>Supported operations are listed <a class="reference external" href="https://github.com/openmv/tensorflow/blob/master/tensorflow/lite/micro/all_ops_resolver.cc">here</a>.<ul>
 <li>Note that tensorflow lite operations are versioned. If no version numbers
 are listed after the operation then the min and max version supported are
 1. If there are numbers after an operation those numbers represent the
@@ -324,7 +322,7 @@ space used will not be available anymore for other algorithms.</p>
 <dt id="tf.tf_classification.rect">
 <code class="descclassname">tf_classification.</code><code class="descname">rect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tf.tf_classification.rect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a rectangle tuple (x, y, w, h) for use with <a class="reference internal" href="omv.image.html#module-image" title="image: machine vision"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">image</span></code></a> methods
-like <a class="reference internal" href="omv.image.html#image.image.draw_rectangle" title="image.image.draw_rectangle"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.draw_rectangle()</span></code></a> of the tf_classification’s bounding box.</p>
+like <a class="reference internal" href="omv.image.html#image.image.Image.image.draw_rectangle" title="image.image.Image.image.draw_rectangle"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.draw_rectangle()</span></code></a> of the tf_classification’s bounding box.</p>
 </dd></dl>
 
 <dl class="method">
@@ -477,7 +475,7 @@ specified, it is equal to the image rectangle. Only pixels within the
         <a href="omv.gif.html" class="btn btn-neutral float-right" title="gif — gif recording" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="omv.nn.html" class="btn btn-neutral float-left" title="nn — neural networks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="omv.image.html" class="btn btn-neutral float-left" title="image — machine vision" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -488,7 +486,7 @@ specified, it is equal to the image rectangle. Only pixels within the
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

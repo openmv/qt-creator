@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>class I2C – a two-wire serial protocol &mdash; MicroPython 1.12 documentation</title>
+  <title>class I2C – a two-wire serial protocol &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,14 +91,11 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="machine.html#reset-related-functions">Reset related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#interrupt-related-functions">Interrupt related functions</a></li>
@@ -119,9 +116,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -197,6 +195,13 @@ level it consists of 2 wires: SCL and SDA, the clock and data lines respectively
 <p>I2C objects are created attached to a specific bus.  They can be initialised
 when created, or initialised later on.</p>
 <p>Printing the I2C object gives you information about its configuration.</p>
+<p>Both hardware and software I2C implementations exist via the
+<a class="reference internal" href="#machine-i2c"><span class="std std-ref">machine.I2C</span></a> and <a class="reference internal" href="#machine.SoftI2C" title="machine.SoftI2C"><code class="xref any py py-class docutils literal notranslate"><span class="pre">machine.SoftI2C</span></code></a> classes.  Hardware I2C uses
+underlying hardware support of the system to perform the reads/writes and is
+usually efficient and fast but may have restrictions on which pins can be used.
+Software I2C is implemented by bit-banging and can be used on any pin but is not
+as efficient.  These classes have the same methods available and differ primarily
+in the way they are constructed.</p>
 <p>Example usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="k">import</span> <span class="n">I2C</span>
 
@@ -219,21 +224,36 @@ when created, or initialised later on.</p>
 <h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="machine.I2C">
-<em class="property">class </em><code class="descclassname">machine.</code><code class="descname">I2C</code><span class="sig-paren">(</span><em>id=-1</em>, <em>*</em>, <em>scl</em>, <em>sda</em>, <em>freq=400000</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">machine.</code><code class="descname">I2C</code><span class="sig-paren">(</span><em>id</em>, <em>*</em>, <em>scl</em>, <em>sda</em>, <em>freq=400000</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct and return a new I2C object using the following parameters:</p>
 <blockquote>
 <div><ul class="simple">
-<li><em>id</em> identifies a particular I2C peripheral.  The default
-value of -1 selects a software implementation of I2C which can
-work (in most cases) with arbitrary pins for SCL and SDA.
-If <em>id</em> is -1 then <em>scl</em> and <em>sda</em> must be specified.  Other
-allowed values for <em>id</em> depend on the particular port/board,
-and specifying <em>scl</em> and <em>sda</em> may or may not be required or
-allowed in this case.</li>
+<li><em>id</em> identifies a particular I2C peripheral.  Allowed values for
+depend on the particular port/board</li>
 <li><em>scl</em> should be a pin object specifying the pin to use for SCL.</li>
 <li><em>sda</em> should be a pin object specifying the pin to use for SDA.</li>
 <li><em>freq</em> should be an integer which sets the maximum frequency
 for SCL.</li>
+</ul>
+</div></blockquote>
+<p>Note that some ports/boards will have default values of <em>scl</em> and <em>sda</em>
+that can be changed in this constructor.  Others will have fixed values
+of <em>scl</em> and <em>sda</em> that cannot be changed.</p>
+</dd></dl>
+
+<span class="target" id="machine-softi2c"></span><dl class="class">
+<dt id="machine.SoftI2C">
+<em class="property">class </em><code class="descclassname">machine.</code><code class="descname">SoftI2C</code><span class="sig-paren">(</span><em>scl</em>, <em>sda</em>, <em>*</em>, <em>freq=400000</em>, <em>timeout=255</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.SoftI2C" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a new software I2C object.  The parameters are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>scl</em> should be a pin object specifying the pin to use for SCL.</li>
+<li><em>sda</em> should be a pin object specifying the pin to use for SDA.</li>
+<li><em>freq</em> should be an integer which sets the maximum frequency
+for SCL.</li>
+<li><em>timeout</em> is the maximum time in microseconds to wait for clock
+stretching (SCL held low by another device on the bus), after
+which an <code class="docutils literal notranslate"><span class="pre">OSError(ETIMEDOUT)</span></code> exception is raised.</li>
 </ul>
 </div></blockquote>
 </dd></dl>
@@ -255,12 +275,6 @@ for SCL.</li>
 </dd></dl>
 
 <dl class="method">
-<dt id="machine.I2C.deinit">
-<code class="descclassname">I2C.</code><code class="descname">deinit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.deinit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Turn off the I2C bus.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="machine.I2C.scan">
 <code class="descclassname">I2C.</code><code class="descname">scan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.scan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scan all I2C addresses between 0x08 and 0x77 inclusive and return a list of
@@ -274,7 +288,7 @@ its address (including a write bit) is sent on the bus.</p>
 <p>The following methods implement the primitive I2C master bus operations and can
 be combined to make any I2C transaction.  They are provided if you need more
 control over the bus, otherwise the standard methods (see below) can be used.</p>
-<p>These methods are available on software I2C only.</p>
+<p>These methods are only available on the <a class="reference internal" href="#machine.SoftI2C" title="machine.SoftI2C"><code class="xref any py py-class docutils literal notranslate"><span class="pre">machine.SoftI2C</span></code></a> class.</p>
 <dl class="method">
 <dt id="machine.I2C.start">
 <code class="descclassname">I2C.</code><code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.start" title="Permalink to this definition">¶</a></dt>
@@ -289,7 +303,7 @@ control over the bus, otherwise the standard methods (see below) can be used.</p
 
 <dl class="method">
 <dt id="machine.I2C.readinto">
-<code class="descclassname">I2C.</code><code class="descname">readinto</code><span class="sig-paren">(</span><em>buf</em>, <em>nack=True</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.readinto" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">I2C.</code><code class="descname">readinto</code><span class="sig-paren">(</span><em>buf</em>, <em>nack=True</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.readinto" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads bytes from the bus and stores them into <em>buf</em>.  The number of bytes
 read is the length of <em>buf</em>.  An ACK will be sent on the bus after
 receiving all but the last byte.  After the last byte is received, if <em>nack</em>
@@ -312,7 +326,7 @@ received.  The function returns the number of ACKs that were received.</p>
 operations that target a given slave device.</p>
 <dl class="method">
 <dt id="machine.I2C.readfrom">
-<code class="descclassname">I2C.</code><code class="descname">readfrom</code><span class="sig-paren">(</span><em>addr</em>, <em>nbytes</em>, <em>stop=True</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.readfrom" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">I2C.</code><code class="descname">readfrom</code><span class="sig-paren">(</span><em>addr</em>, <em>nbytes</em>, <em>stop=True</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.readfrom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read <em>nbytes</em> from the slave specified by <em>addr</em>.
 If <em>stop</em> is true then a STOP condition is generated at the end of the transfer.
 Returns a <a class="reference internal" href="builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object with the data read.</p>
@@ -320,7 +334,7 @@ Returns a <a class="reference internal" href="builtins.html#bytes" title="bytes"
 
 <dl class="method">
 <dt id="machine.I2C.readfrom_into">
-<code class="descclassname">I2C.</code><code class="descname">readfrom_into</code><span class="sig-paren">(</span><em>addr</em>, <em>buf</em>, <em>stop=True</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.readfrom_into" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">I2C.</code><code class="descname">readfrom_into</code><span class="sig-paren">(</span><em>addr</em>, <em>buf</em>, <em>stop=True</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.readfrom_into" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read into <em>buf</em> from the slave specified by <em>addr</em>.
 The number of bytes read will be the length of <em>buf</em>.
 If <em>stop</em> is true then a STOP condition is generated at the end of the transfer.</p>
@@ -329,7 +343,7 @@ If <em>stop</em> is true then a STOP condition is generated at the end of the tr
 
 <dl class="method">
 <dt id="machine.I2C.writeto">
-<code class="descclassname">I2C.</code><code class="descname">writeto</code><span class="sig-paren">(</span><em>addr</em>, <em>buf</em>, <em>stop=True</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.writeto" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">I2C.</code><code class="descname">writeto</code><span class="sig-paren">(</span><em>addr</em>, <em>buf</em>, <em>stop=True</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.writeto" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write the bytes from <em>buf</em> to the slave specified by <em>addr</em>.  If a
 NACK is received following the write of a byte from <em>buf</em> then the
 remaining bytes are not sent.  If <em>stop</em> is true then a STOP condition is
@@ -339,7 +353,7 @@ The function returns the number of ACKs that were received.</p>
 
 <dl class="method">
 <dt id="machine.I2C.writevto">
-<code class="descclassname">I2C.</code><code class="descname">writevto</code><span class="sig-paren">(</span><em>addr</em>, <em>vector</em>, <em>stop=True</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.writevto" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">I2C.</code><code class="descname">writevto</code><span class="sig-paren">(</span><em>addr</em>, <em>vector</em>, <em>stop=True</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.I2C.writevto" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write the bytes contained in <em>vector</em> to the slave specified by <em>addr</em>.
 <em>vector</em> should be a tuple or list of objects with the buffer protocol.
 The <em>addr</em> is sent once and then the bytes from each object in <em>vector</em>
@@ -412,7 +426,7 @@ The argument <em>addrsize</em> specifies the address size in bits.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

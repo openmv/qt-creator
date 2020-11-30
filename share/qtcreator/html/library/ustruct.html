@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ustruct – pack and unpack primitive data types &mdash; MicroPython 1.12 documentation</title>
+  <title>ustruct – pack and unpack primitive data types &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="utime – time related functions" href="utime.html" />
+    <link rel="next" title="sys – system specific functions" href="usys.html" />
     <link rel="prev" title="ussl – SSL/TLS module" href="ussl.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,17 +91,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uasyncio.html"><code class="docutils literal notranslate"><span class="pre">uasyncio</span></code> — asynchronous I/O scheduler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
@@ -118,6 +115,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
@@ -128,9 +126,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -199,7 +198,7 @@
             
   <div class="section" id="module-ustruct">
 <span id="ustruct-pack-and-unpack-primitive-data-types"></span><h1><a class="reference internal" href="#module-ustruct" title="ustruct: pack and unpack primitive data types"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ustruct</span></code></a> – pack and unpack primitive data types<a class="headerlink" href="#module-ustruct" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><span class="xref std std-term">CPython</span></a> <em>module,
 as described below. For more information, refer to the original
 CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/struct.html#module-struct" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">struct</span></code></a>.</p>
 <p>Supported size/byte order prefixes: <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">!</span></code>.</p>
@@ -238,7 +237,7 @@ The return value is a tuple of the unpacked values.</p>
 
 <dl class="function">
 <dt id="ustruct.unpack_from">
-<code class="descclassname">ustruct.</code><code class="descname">unpack_from</code><span class="sig-paren">(</span><em>fmt</em>, <em>data</em>, <em>offset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ustruct.unpack_from" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">ustruct.</code><code class="descname">unpack_from</code><span class="sig-paren">(</span><em>fmt</em>, <em>data</em>, <em>offset=0</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#ustruct.unpack_from" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unpack from the <em>data</em> starting at <em>offset</em> according to the format string
 <em>fmt</em>. <em>offset</em> may be negative to count from the end of <em>buffer</em>. The return
 value is a tuple of the unpacked values.</p>
@@ -255,7 +254,7 @@ value is a tuple of the unpacked values.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="utime.html" class="btn btn-neutral float-right" title="utime – time related functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="usys.html" class="btn btn-neutral float-right" title="sys – system specific functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="ussl.html" class="btn btn-neutral float-left" title="ussl – SSL/TLS module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -269,7 +268,7 @@ value is a tuple of the unpacked values.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

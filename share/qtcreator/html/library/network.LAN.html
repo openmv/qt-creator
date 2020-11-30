@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class LAN – control built-in Ethernet interfaces &mdash; MicroPython 1.13 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/openmv.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ucryptolib – cryptographic ciphers" href="ucryptolib.html" />
+    <link rel="prev" title="class WLAN – control built-in WiFi interfaces" href="network.WLAN.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MicroPython
+          
+
+          
+            
+            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.13
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="network.html#common-network-adapter-interface">Common network adapter interface</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="network.html#specific-network-class-implementations">Specific network class implementations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ucryptolib.html"><code class="docutils literal notranslate"><span class="pre">ucryptolib</span></code> – cryptographic ciphers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mutex.html"><code class="docutils literal notranslate"><span class="pre">mutex</span></code> — mutex module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MicroPython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
+        
+          <li><a href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a> &raquo;</li>
+        
+      <li>class LAN – control built-in Ethernet interfaces</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/library/network.LAN.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-lan-control-built-in-ethernet-interfaces">
+<span id="network-lan"></span><h1>class LAN – control built-in Ethernet interfaces<a class="headerlink" href="#class-lan-control-built-in-ethernet-interfaces" title="Permalink to this headline">¶</a></h1>
+<p>This class provides a driver for Ethernet.  Example usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">network</span>
+
+<span class="n">lan</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">LAN</span><span class="p">()</span>
+<span class="n">lan</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">lan</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">(</span><span class="s1">&#39;dhcp&#39;</span><span class="p">)</span>
+
+<span class="c1"># We should have a valid IP now via DHCP</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lan</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="network.LAN">
+<em class="property">class </em><code class="descclassname">network.</code><code class="descname">LAN</code><a class="headerlink" href="#network.LAN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Create a LAN network interface object.</p>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="network.LAN.active">
+<code class="descclassname">LAN.</code><code class="descname">active</code><span class="sig-paren">(</span><span class="optional">[</span><em>is_active</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.LAN.active" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activate (“up”) or deactivate (“down”) network interface, if boolean
+argument is passed. Otherwise, query current state if no argument is
+provided. Most other methods require active interface.</p>
+<p>Statuses:</p>
+<blockquote>
+<div><ul class="simple">
+<li>0: Link Down</li>
+<li>1: Link Join</li>
+<li>2: Link No-IP</li>
+<li>3: Link Up</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.LAN.status">
+<code class="descclassname">LAN.</code><code class="descname">status</code><span class="sig-paren">(</span><span class="optional">[</span><em>param</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.LAN.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current status of the connection:</p>
+<blockquote>
+<div><ul class="simple">
+<li>0: Link Down</li>
+<li>1: Link Join</li>
+<li>2: Link No-IP</li>
+<li>3: Link Up</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.LAN.isconnected">
+<code class="descclassname">LAN.</code><code class="descname">isconnected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.LAN.isconnected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the link is up and false if not.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.LAN.ifconfig">
+<code class="descclassname">LAN.</code><code class="descname">ifconfig</code><span class="sig-paren">(</span><span class="optional">[</span><em>(ip</em>, <em>subnet</em>, <em>gateway</em>, <em>dns)</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.LAN.ifconfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/set IP-level network interface parameters: IP address, subnet mask,
+gateway and DNS server. When called with no arguments, this method returns
+a 4-tuple with the above information. To set the above values, pass a
+4-tuple with the required information.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nic</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">((</span><span class="s1">&#39;192.168.0.4&#39;</span><span class="p">,</span> <span class="s1">&#39;255.255.255.0&#39;</span><span class="p">,</span> <span class="s1">&#39;192.168.0.1&#39;</span><span class="p">,</span> <span class="s1">&#39;8.8.8.8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>For DHCP configuration do <code class="docutils literal notranslate"><span class="pre">lan.ifconfig('dhcp')</span></code> to get a DHCP IP.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="network.LAN.config">
+<code class="descclassname">LAN.</code><code class="descname">config</code><span class="sig-paren">(</span><em>'param'</em><span class="sig-paren">)</span><a class="headerlink" href="#network.LAN.config" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="descclassname">LAN.</code><code class="descname">config</code><span class="sig-paren">(</span><em>param=value</em>, <em>...</em><span class="sig-paren">)</span></dt>
+<dd><p>Get or set general network interface parameters. These methods allow to work
+with additional parameters beyond standard IP configuration (as dealt with by
+<a class="reference internal" href="#network.LAN.ifconfig" title="network.LAN.ifconfig"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">LAN.ifconfig()</span></code></a>). These include network-specific and hardware-specific
+parameters. For setting parameters, keyword argument syntax should be used,
+multiple parameters can be set at once. For querying, parameters name should
+be quoted as a string, and only one parameter can be queries at time:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set params</span>
+<span class="n">lan</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">trace</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="c1"># Query params</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lan</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s1">&#39;mac&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Following are commonly supported parameters:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameter</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>mac</td>
+<td>MAC address (bytes)</td>
+</tr>
+<tr class="row-odd"><td>trace</td>
+<td>Trace flags (int)</td>
+</tr>
+</tbody>
+</table>
+<p>When trace flags are set the system will print debug information about packets on the ethernet
+link as they are transmitted or recieved. This may generate a lot of debug text…</p>
+<ul class="simple">
+<li>1 = TRACE_ASYNC_EV</li>
+<li>2 = TRACE_ETH_TX</li>
+<li>4 = TRACE_ETH_RX</li>
+<li>8 = TRACE_ETH_FULL</li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ucryptolib.html" class="btn btn-neutral float-right" title="ucryptolib – cryptographic ciphers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="network.WLAN.html" class="btn btn-neutral float-left" title="class WLAN – control built-in WiFi interfaces" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+      <span class="lastupdated">
+        Last updated on 29 Nov 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Language and External Links</span>
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Language</dt>
+      <dd>
+        <a href="https://openmv.io">English</a>
+      </dd>
+      <dd>
+        <a href="http://doc.singtown.cc">中文</a>
+      </dd>
+    </dl>
+    <hr/>
+    <dl>
+      <dt>External links</dt>
+      <dd>
+        <a href="https://openmv.io">openmv.io</a>
+      </dd>
+      <dd>
+        <a href="http://forums.openmv.io">forums.openmv.io</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/openmv/openmv">github.com/openmv/openmv</a>
+      </dd>
+      <dd>
+        <a href="http://micropython.org">micropython.org</a>
+      </dd>
+      <dd>
+        <a href="http://forum.micropython.org">forum.micropython.org</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/micropython/micropython">github.com/micropython/micropython</a>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

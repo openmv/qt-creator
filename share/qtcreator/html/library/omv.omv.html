@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>omv — OpenMV Cam Information &mdash; MicroPython 1.12 documentation</title>
+  <title>omv — OpenMV Cam Information &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The MicroPython language" href="../reference/index.html" />
+    <link rel="next" title="MicroPython language and implementation" href="../reference/index.html" />
     <link rel="prev" title="rtsp — rtsp library" href="omv.rtsp.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,22 +91,19 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="pyb.html"><code class="docutils literal notranslate"><span class="pre">pyb</span></code> — functions related to the board</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.time.html"><code class="docutils literal notranslate"><span class="pre">time</span></code> — tracking elapsed time</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.sensor.html"><code class="docutils literal notranslate"><span class="pre">sensor</span></code> — camera sensor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.image.html"><code class="docutils literal notranslate"><span class="pre">image</span></code> — machine vision</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.nn.html"><code class="docutils literal notranslate"><span class="pre">nn</span></code> — neural networks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code> — Tensor Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html"><code class="docutils literal notranslate"><span class="pre">gif</span></code> — gif recording</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html"><code class="docutils literal notranslate"><span class="pre">mjpeg</span></code> — mjpeg recording</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd shield driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.audio.html"><code class="docutils literal notranslate"><span class="pre">audio</span></code> — Audio Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.micro_speech.html"><code class="docutils literal notranslate"><span class="pre">micro_speech</span></code> — Micro Speech Audio Module Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermopile shield driver (fir == far infrared)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.tv.html"><code class="docutils literal notranslate"><span class="pre">tv</span></code> — tv shield driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.cpufreq.html"><code class="docutils literal notranslate"><span class="pre">cpufreq</span></code> — CPU Frequency Control</a></li>
@@ -122,9 +119,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -266,7 +264,7 @@ debugging you script with OpenMV IDE. If no arguments are passed this function w
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../reference/index.html" class="btn btn-neutral float-right" title="The MicroPython language" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../reference/index.html" class="btn btn-neutral float-right" title="MicroPython language and implementation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="omv.rtsp.html" class="btn btn-neutral float-left" title="rtsp — rtsp library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -280,7 +278,7 @@ debugging you script with OpenMV IDE. If no arguments are passed this function w
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

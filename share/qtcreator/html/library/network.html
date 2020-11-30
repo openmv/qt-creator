@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>network — network configuration &mdash; MicroPython 1.12 documentation</title>
+  <title>network — network configuration &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,14 +91,11 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a><ul>
@@ -115,9 +112,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -218,7 +216,7 @@ module.</p>
 <div class="section" id="common-network-adapter-interface">
 <h2>Common network adapter interface<a class="headerlink" href="#common-network-adapter-interface" title="Permalink to this headline">¶</a></h2>
 <p>This section describes an (implied) abstract base class for all network
-interface classes implemented by <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">ports</span></code></a>
+interface classes implemented by <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython ports</span></a>
 for different hardware. This means that MicroPython does not actually
 provide <code class="docutils literal notranslate"><span class="pre">AbstractNIC</span></code> class, but any actual NIC class, as described
 in the following sections, implements methods as described here.</p>
@@ -347,6 +345,8 @@ provide a way to control networking interfaces of various kinds.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="network.WINC.html">class WINC – wifi shield driver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network.WLAN.html">class WLAN – control built-in WiFi interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network.LAN.html">class LAN – control built-in Ethernet interfaces</a></li>
 </ul>
 </div>
 </div>
@@ -374,7 +374,7 @@ provide a way to control networking interfaces of various kinds.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>uzlib – zlib decompression &mdash; MicroPython 1.12 documentation</title>
+  <title>uzlib – zlib decompression &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,17 +91,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uasyncio.html"><code class="docutils literal notranslate"><span class="pre">uasyncio</span></code> — asynchronous I/O scheduler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
@@ -115,6 +112,7 @@
 <li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
@@ -128,9 +126,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -199,7 +198,7 @@
             
   <div class="section" id="module-uzlib">
 <span id="uzlib-zlib-decompression"></span><h1><a class="reference internal" href="#module-uzlib" title="uzlib: zlib decompression"><code class="xref py py-mod docutils literal notranslate"><span class="pre">uzlib</span></code></a> – zlib decompression<a class="headerlink" href="#module-uzlib" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><span class="xref std std-term">CPython</span></a> <em>module,
 as described below. For more information, refer to the original
 CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/zlib.html#module-zlib" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">zlib</span></code></a>.</p>
 <p>This module allows to decompress binary data compressed with
@@ -210,7 +209,7 @@ is not yet implemented.</p>
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="uzlib.decompress">
-<code class="descclassname">uzlib.</code><code class="descname">decompress</code><span class="sig-paren">(</span><em>data</em>, <em>wbits=0</em>, <em>bufsize=0</em><span class="sig-paren">)</span><a class="headerlink" href="#uzlib.decompress" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">uzlib.</code><code class="descname">decompress</code><span class="sig-paren">(</span><em>data</em>, <em>wbits=0</em>, <em>bufsize=0</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#uzlib.decompress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return decompressed <em>data</em> as bytes. <em>wbits</em> is DEFLATE dictionary window
 size used during compression (8-15, the dictionary size is power of 2 of
 that value). Additionally, if value is positive, <em>data</em> is assumed to be
@@ -221,7 +220,7 @@ CPython and is ignored.</p>
 
 <dl class="class">
 <dt id="uzlib.DecompIO">
-<em class="property">class </em><code class="descclassname">uzlib.</code><code class="descname">DecompIO</code><span class="sig-paren">(</span><em>stream</em>, <em>wbits=0</em><span class="sig-paren">)</span><a class="headerlink" href="#uzlib.DecompIO" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">uzlib.</code><code class="descname">DecompIO</code><span class="sig-paren">(</span><em>stream</em>, <em>wbits=0</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#uzlib.DecompIO" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a <a class="reference internal" href="../reference/glossary.html#term-stream"><span class="xref std std-term">stream</span></a> wrapper which allows transparent decompression of
 compressed data in another <em>stream</em>. This allows to process compressed
 streams with data larger than available heap size. In addition to
@@ -259,7 +258,7 @@ basis and may be changed considerably or removed in later versions.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

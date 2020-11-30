@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>uos – basic “operating system” services &mdash; MicroPython 1.12 documentation</title>
+  <title>uos – basic “operating system” services &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,17 +91,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uasyncio.html"><code class="docutils literal notranslate"><span class="pre">uasyncio</span></code> — asynchronous I/O scheduler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
@@ -122,6 +119,7 @@
 <li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
@@ -132,9 +130,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -203,7 +202,7 @@
             
   <div class="section" id="module-uos">
 <span id="uos-basic-operating-system-services"></span><h1><a class="reference internal" href="#module-uos" title="uos: basic &quot;operating system&quot; services"><code class="xref py py-mod docutils literal notranslate"><span class="pre">uos</span></code></a> – basic “operating system” services<a class="headerlink" href="#module-uos" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><span class="xref std std-term">CPython</span></a> <em>module,
 as described below. For more information, refer to the original
 CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/os.html#module-os" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">os</span></code></a>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">uos</span></code> module contains functions for filesystem access and mounting,
@@ -344,7 +343,7 @@ in a port-specific implementation.</p>
 <h2>Terminal redirection and duplication<a class="headerlink" href="#terminal-redirection-and-duplication" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="uos.dupterm">
-<code class="descclassname">uos.</code><code class="descname">dupterm</code><span class="sig-paren">(</span><em>stream_object</em>, <em>index=0</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.dupterm" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">uos.</code><code class="descname">dupterm</code><span class="sig-paren">(</span><em>stream_object</em>, <em>index=0</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.dupterm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Duplicate or switch the MicroPython terminal (the REPL) on the given <a class="reference internal" href="../reference/glossary.html#term-stream"><span class="xref std std-term">stream</span></a>-like
 object. The <em>stream_object</em> argument must be a native stream object, or derive
 from <code class="docutils literal notranslate"><span class="pre">uio.IOBase</span></code> and implement the <code class="docutils literal notranslate"><span class="pre">readinto()</span></code> and
@@ -411,7 +410,7 @@ Objects created by this constructor can be mounted using <a class="reference int
 
 <dl class="class">
 <dt id="uos.VfsLfs1">
-<em class="property">class </em><code class="descclassname">uos.</code><code class="descname">VfsLfs1</code><span class="sig-paren">(</span><em>block_dev</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs1" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">uos.</code><code class="descname">VfsLfs1</code><span class="sig-paren">(</span><em>block_dev</em>, <em>readsize=32</em>, <em>progsize=32</em>, <em>lookahead=32</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a filesystem object that uses the <a class="reference external" href="https://github.com/ARMmbed/littlefs/tree/v1">littlefs v1 filesystem format</a>.
 Storage of the littlefs filesystem is provided by <em>block_dev</em>, which must
 support the <a class="reference internal" href="#block-device-interface"><span class="std std-ref">extended interface</span></a>.
@@ -419,7 +418,7 @@ Objects created by this constructor can be mounted using <a class="reference int
 <p>See <a class="reference internal" href="../reference/filesystem.html#filesystem"><span class="std std-ref">Working with filesystems</span></a> for more information.</p>
 <dl class="staticmethod">
 <dt id="uos.VfsLfs1.mkfs">
-<em class="property">static </em><code class="descname">mkfs</code><span class="sig-paren">(</span><em>block_dev</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs1.mkfs" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">mkfs</code><span class="sig-paren">(</span><em>block_dev</em>, <em>readsize=32</em>, <em>progsize=32</em>, <em>lookahead=32</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs1.mkfs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a Lfs1 filesystem on <em>block_dev</em>.</p>
 </dd></dl>
 
@@ -432,15 +431,22 @@ for details see <a class="reference external" href="https://github.com/ARMmbed/l
 
 <dl class="class">
 <dt id="uos.VfsLfs2">
-<em class="property">class </em><code class="descclassname">uos.</code><code class="descname">VfsLfs2</code><span class="sig-paren">(</span><em>block_dev</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs2" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">uos.</code><code class="descname">VfsLfs2</code><span class="sig-paren">(</span><em>block_dev</em>, <em>readsize=32</em>, <em>progsize=32</em>, <em>lookahead=32</em>, <em>mtime=True</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a filesystem object that uses the <a class="reference external" href="https://github.com/ARMmbed/littlefs">littlefs v2 filesystem format</a>.
 Storage of the littlefs filesystem is provided by <em>block_dev</em>, which must
 support the <a class="reference internal" href="#block-device-interface"><span class="std std-ref">extended interface</span></a>.
 Objects created by this constructor can be mounted using <a class="reference internal" href="#uos.mount" title="uos.mount"><code class="xref py py-func docutils literal notranslate"><span class="pre">mount()</span></code></a>.</p>
+<p>The <em>mtime</em> argument enables modification timestamps for files, stored using
+littlefs attributes.  This option can be disabled or enabled differently each
+mount time and timestamps will only be added or updated if <em>mtime</em> is enabled,
+otherwise the timestamps will remain untouched.  Littlefs v2 filesystems without
+timestamps will work without reformatting and timestamps will be added
+transparently to existing files once they are opened for writing.  When <em>mtime</em>
+is enabled <a class="reference internal" href="#uos.stat" title="uos.stat"><code class="xref any py py-func docutils literal notranslate"><span class="pre">uos.stat</span></code></a> on files without timestamps will return 0 for the timestamp.</p>
 <p>See <a class="reference internal" href="../reference/filesystem.html#filesystem"><span class="std std-ref">Working with filesystems</span></a> for more information.</p>
 <dl class="staticmethod">
 <dt id="uos.VfsLfs2.mkfs">
-<em class="property">static </em><code class="descname">mkfs</code><span class="sig-paren">(</span><em>block_dev</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs2.mkfs" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">mkfs</code><span class="sig-paren">(</span><em>block_dev</em>, <em>readsize=32</em>, <em>progsize=32</em>, <em>lookahead=32</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.VfsLfs2.mkfs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a Lfs2 filesystem on <em>block_dev</em>.</p>
 </dd></dl>
 
@@ -454,11 +460,17 @@ for details see <a class="reference external" href="https://github.com/ARMmbed/l
 </div>
 <div class="section" id="block-devices">
 <h2>Block devices<a class="headerlink" href="#block-devices" title="Permalink to this headline">¶</a></h2>
-<p>A block device is an object which implements the block protocol, which is a set
-of methods described below by the <a class="reference internal" href="#uos.AbstractBlockDev" title="uos.AbstractBlockDev"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractBlockDev</span></code></a> class.  A concrete
-implementation of this class will usually allow access to the memory-like
-functionality a piece of hardware (like flash memory).  A block device can be
-used by a particular filesystem driver to store the data for its filesystem.</p>
+<p>A block device is an object which implements the block protocol. This enables a
+device to support MicroPython filesystems. The physical hardware is represented
+by a user defined class. The <a class="reference internal" href="#uos.AbstractBlockDev" title="uos.AbstractBlockDev"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractBlockDev</span></code></a> class is a template for
+the design of such a class: MicroPython does not actually provide that class,
+but an actual block device class must implement the methods described below.</p>
+<p>A concrete implementation of this class will usually allow access to the
+memory-like functionality of a piece of hardware (like flash memory). A block
+device can be formatted to any supported filesystem and mounted using <code class="docutils literal notranslate"><span class="pre">uos</span></code>
+methods.</p>
+<p>See <a class="reference internal" href="../reference/filesystem.html#filesystem"><span class="std std-ref">Working with filesystems</span></a> for example implementations of block devices using the
+two variants of the block protocol described below.</p>
 <div class="section" id="simple-and-extended-interface">
 <span id="block-device-interface"></span><h3>Simple and extended interface<a class="headerlink" href="#simple-and-extended-interface" title="Permalink to this headline">¶</a></h3>
 <p>There are two compatible signatures for the <code class="docutils literal notranslate"><span class="pre">readblocks</span></code> and <code class="docutils literal notranslate"><span class="pre">writeblocks</span></code>
@@ -476,9 +488,6 @@ dependent on the specific block device.</p>
 <dl class="method">
 <dt id="uos.AbstractBlockDev.readblocks">
 <code class="descname">readblocks</code><span class="sig-paren">(</span><em>block_num</em>, <em>buf</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.AbstractBlockDev.readblocks" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
 <dt>
 <code class="descname">readblocks</code><span class="sig-paren">(</span><em>block_num</em>, <em>buf</em>, <em>offset</em><span class="sig-paren">)</span></dt>
 <dd><p>The first form reads aligned, multiples of blocks.
@@ -496,9 +505,6 @@ The number of bytes to read is given by the length of <em>buf</em>.</p>
 <dl class="method">
 <dt id="uos.AbstractBlockDev.writeblocks">
 <code class="descname">writeblocks</code><span class="sig-paren">(</span><em>block_num</em>, <em>buf</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.AbstractBlockDev.writeblocks" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
 <dt>
 <code class="descname">writeblocks</code><span class="sig-paren">(</span><em>block_num</em>, <em>buf</em>, <em>offset</em><span class="sig-paren">)</span></dt>
 <dd><p>The first form writes aligned, multiples of blocks, and requires that the
@@ -521,7 +527,8 @@ argument is specified, even if it is zero.</p>
 <dl class="method">
 <dt id="uos.AbstractBlockDev.ioctl">
 <code class="descname">ioctl</code><span class="sig-paren">(</span><em>op</em>, <em>arg</em><span class="sig-paren">)</span><a class="headerlink" href="#uos.AbstractBlockDev.ioctl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Control the block device and query its parameters.  The operation to
+<dd><blockquote>
+<div><p>Control the block device and query its parameters.  The operation to
 perform is given by <em>op</em> which is one of the following integers:</p>
 <blockquote>
 <div><ul class="simple">
@@ -536,12 +543,19 @@ or <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <li>6 – erase a block, <em>arg</em> is the block number to erase</li>
 </ul>
 </div></blockquote>
+</div></blockquote>
+<p>As a minimum <code class="docutils literal notranslate"><span class="pre">ioctl(4,</span> <span class="pre">...)</span></code> must be intercepted; for littlefs
+<code class="docutils literal notranslate"><span class="pre">ioctl(6,</span> <span class="pre">...)</span></code> must also be intercepted. The need for others is
+hardware dependent.</p>
+<p>Unless otherwise stated <code class="docutils literal notranslate"><span class="pre">ioctl(op,</span> <span class="pre">arg)</span></code> can return <code class="docutils literal notranslate"><span class="pre">None</span></code>.
+Consequently an implementation can ignore unused values of <code class="docutils literal notranslate"><span class="pre">op</span></code>. Where
+<code class="docutils literal notranslate"><span class="pre">op</span></code> is intercepted, the return value for operations 4 and 5 are as
+detailed above. Other operations should return 0 on success and non-zero
+for failure, with the value returned being an <code class="docutils literal notranslate"><span class="pre">OSError</span></code> errno code.</p>
 </dd></dl>
 
 </dd></dl>
 
-<p>See <a class="reference internal" href="../reference/filesystem.html#filesystem"><span class="std std-ref">Working with filesystems</span></a> for example implementations of block devices using both
-protocols.</p>
 </div>
 </div>
 </div>
@@ -568,7 +582,7 @@ protocols.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

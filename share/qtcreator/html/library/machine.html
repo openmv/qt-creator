@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>machine — functions related to the hardware &mdash; MicroPython 1.12 documentation</title>
+  <title>machine — functions related to the hardware &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="class Pin – control I/O pins" href="machine.Pin.html" />
-    <link rel="prev" title="framebuf — Frame buffer manipulation" href="framebuf.html" /> 
+    <link rel="prev" title="framebuf — frame buffer manipulation" href="framebuf.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,14 +91,11 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#reset-related-functions">Reset related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#interrupt-related-functions">Interrupt related functions</a></li>
@@ -119,9 +116,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -208,6 +206,14 @@ top of real hardware and real hardware interrupts). See <a class="reference inte
 <code class="descclassname">machine.</code><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets the device in a manner similar to pushing the external RESET
 button.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="machine.soft_reset">
+<code class="descclassname">machine.</code><code class="descname">soft_reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.soft_reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a soft reset of the interpreter, deleting all Python objects and
+resetting the Python heap.  It tries to retain the method by which the user
+is connected to the MicroPython REPL (eg serial, USB, Wifi).</p>
 </dd></dl>
 
 <dl class="function">
@@ -301,7 +307,7 @@ ID). In some MicroPython ports, ID corresponds to the network MAC address.</p>
 
 <dl class="function">
 <dt id="machine.time_pulse_us">
-<code class="descclassname">machine.</code><code class="descname">time_pulse_us</code><span class="sig-paren">(</span><em>pin</em>, <em>pulse_level</em>, <em>timeout_us=1000000</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.time_pulse_us" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">machine.</code><code class="descname">time_pulse_us</code><span class="sig-paren">(</span><em>pin</em>, <em>pulse_level</em>, <em>timeout_us=1000000</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.time_pulse_us" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time a pulse on the given <em>pin</em>, and return the duration of the pulse in
 microseconds.  The <em>pulse_level</em> argument should be 0 to time a low pulse
 or 1 to time a high pulse.</p>
@@ -381,7 +387,7 @@ is in microseconds).</p>
         <a href="machine.Pin.html" class="btn btn-neutral float-right" title="class Pin – control I/O pins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="framebuf.html" class="btn btn-neutral float-left" title="framebuf — Frame buffer manipulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="framebuf.html" class="btn btn-neutral float-left" title="framebuf — frame buffer manipulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -392,7 +398,7 @@ is in microseconds).</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

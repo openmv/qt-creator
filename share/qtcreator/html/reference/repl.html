@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The MicroPython Interactive Interpreter Mode (aka REPL) &mdash; MicroPython 1.12 documentation</title>
+  <title>The MicroPython Interactive Interpreter Mode (aka REPL) &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,33 +91,31 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">MicroPython libraries</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">The MicroPython language</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython language and implementation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">The MicroPython Interactive Interpreter Mode (aka REPL)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#auto-indent">Auto-indent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#auto-completion">Auto-completion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#interrupting-a-running-program">Interrupting a running program</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#paste-mode">Paste Mode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#soft-reset">Soft Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paste-mode">Paste mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#soft-reset">Soft reset</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#the-special-variable-underscore">The special variable _ (underscore)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#raw-mode">Raw Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raw-mode">Raw mode</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="mpyfiles.html">MicroPython .mpy files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="isr_rules.html">Writing interrupt handlers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="speed_python.html">Maximising MicroPython Speed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="constrained.html">MicroPython on Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="asm_thumb2_index.html">Inline Assembler for Thumb2 architectures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speed_python.html">Maximising MicroPython speed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constrained.html">MicroPython on microcontrollers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asm_thumb2_index.html">Inline assembler for Thumb2 architectures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filesystem.html">Working with filesystems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pyboard.py.html">The pyboard.py tool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -163,7 +161,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">The MicroPython language</a> &raquo;</li>
+          <li><a href="index.html">MicroPython language and implementation</a> &raquo;</li>
         
       <li>The MicroPython Interactive Interpreter Mode (aka REPL)</li>
     
@@ -285,7 +283,7 @@ KeyboardInterrupt exception.</p>
 </div>
 </div>
 <div class="section" id="paste-mode">
-<h2>Paste Mode<a class="headerlink" href="#paste-mode" title="Permalink to this headline">¶</a></h2>
+<h2>Paste mode<a class="headerlink" href="#paste-mode" title="Permalink to this headline">¶</a></h2>
 <p>If you want to paste some code into your terminal window, the auto-indent feature
 will mess things up. For example, if you had the following python code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
@@ -323,7 +321,7 @@ the auto-indent feature, and changes the prompt from <code class="docutils liter
 it were a file. Pressing Ctrl-D exits paste mode and initiates the compilation.</p>
 </div>
 <div class="section" id="soft-reset">
-<h2>Soft Reset<a class="headerlink" href="#soft-reset" title="Permalink to this headline">¶</a></h2>
+<h2>Soft reset<a class="headerlink" href="#soft-reset" title="Permalink to this headline">¶</a></h2>
 <p>A soft reset will reset the python interpreter, but tries not to reset the
 method by which you’re connected to the MicroPython board (USB-serial, or Wifi).</p>
 <p>You can perform a soft reset from the REPL by pressing Ctrl-D, or from your python
@@ -373,7 +371,7 @@ So you can use the underscore to save the result in a variable. For example:</p>
 </div>
 </div>
 <div class="section" id="raw-mode">
-<h2>Raw Mode<a class="headerlink" href="#raw-mode" title="Permalink to this headline">¶</a></h2>
+<h2>Raw mode<a class="headerlink" href="#raw-mode" title="Permalink to this headline">¶</a></h2>
 <p>Raw mode is not something that a person would normally use. It is intended for
 programmatic use. It essentially behaves like paste mode with echo turned off.</p>
 <p>Raw mode is entered using Ctrl-A. You then send your python code, followed by
@@ -407,7 +405,7 @@ MicroPython board.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

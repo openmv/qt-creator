@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Syntax &mdash; MicroPython 1.12 documentation</title>
+  <title>Syntax &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Core Language" href="core_language.html" />
+    <link rel="next" title="Core language" href="core_language.html" />
     <link rel="prev" title="MicroPython differences from CPython" href="index.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,13 +91,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">MicroPython libraries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython differences from CPython</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Syntax</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#operators">Operators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#micropython-allows-using-to-assign-to-the-variable-of-a-comprehension-cpython-raises-a-syntaxerror">MicroPython allows using := to assign to the variable of a comprehension, CPython raises a SyntaxError.</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#spaces">Spaces</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#upy-requires-spaces-between-literal-numbers-and-keywords-cpy-doesn-t">uPy requires spaces between literal numbers and keywords, CPy doesn’t</a></li>
 </ul>
@@ -108,12 +109,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="core_language.html">Core Language</a></li>
-<li class="toctree-l2"><a class="reference internal" href="builtin_types.html">Builtin Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core_language.html">Core language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="builtin_types.html">Builtin types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="modules.html">Modules</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -182,24 +184,61 @@
             
   <div class="section" id="syntax">
 <h1>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h1>
-<p>Generated Mon 11 May 2020 17:55:38 UTC</p>
+<p>Generated Sat 28 Nov 2020 22:23:20 UTC</p>
+<div class="section" id="operators">
+<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="micropython-allows-using-to-assign-to-the-variable-of-a-comprehension-cpython-raises-a-syntaxerror">
+<span id="cpydiff-syntax-assign-expr"></span><h3>MicroPython allows using := to assign to the variable of a comprehension, CPython raises a SyntaxError.<a class="headerlink" href="#micropython-allows-using-to-assign-to-the-variable-of-a-comprehension-cpython-raises-a-syntaxerror" title="Permalink to this headline">¶</a></h3>
+<p><strong>Cause:</strong> MicroPython is optimised for code size and doesn’t check this case.</p>
+<p><strong>Workaround:</strong> Do not rely on this behaviour if writing CPython compatible code.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">([</span><span class="n">i</span> <span class="p">:</span><span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)])</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="48%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>CPy output:</td>
+<td>uPy output:</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span>
+    <span class="nb">print</span><span class="p">([</span><span class="n">i</span> <span class="p">:</span><span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)])</span>
+             <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</pre></div>
+</div>
+</td>
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="section" id="spaces">
 <h2>Spaces<a class="headerlink" href="#spaces" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="upy-requires-spaces-between-literal-numbers-and-keywords-cpy-doesn-t">
 <span id="cpydiff-syntax-spaces"></span><h3>uPy requires spaces between literal numbers and keywords, CPy doesn’t<a class="headerlink" href="#upy-requires-spaces-between-literal-numbers-and-keywords-cpy-doesn-t" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;1and 0&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;1and 0&quot;</span><span class="p">))</span>
 <span class="k">except</span> <span class="ne">SyntaxError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should have worked&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Should have worked&quot;</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;1or 0&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;1or 0&quot;</span><span class="p">))</span>
 <span class="k">except</span> <span class="ne">SyntaxError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should have worked&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Should have worked&quot;</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;1if 1else 0&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;1if 1else 0&quot;</span><span class="p">))</span>
 <span class="k">except</span> <span class="ne">SyntaxError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should have worked&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Should have worked&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -268,7 +307,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="core_language.html" class="btn btn-neutral float-right" title="Core Language" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="core_language.html" class="btn btn-neutral float-right" title="Core language" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="MicroPython differences from CPython" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -282,7 +321,7 @@
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

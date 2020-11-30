@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. OpenMV IDE Overview &mdash; MicroPython 1.12 documentation</title>
+  <title>4. OpenMV IDE Overview &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,38 +91,53 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">OpenMV Cam Tutorial</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="overview.html">1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software_setup.html">2. Software Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hardware_setup.html">3. Hardware Setup</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">4. OpenMV IDE Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#file-menu-and-examples">4.1. File Menu and Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#text-editing">4.2. Text Editing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#connecting-to-your-openmv-cam">4.3. Connecting to your OpenMV Cam</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#running-scripts">4.4. Running scripts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#frame-buffer-viewer">4.5. Frame Buffer Viewer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#histogram-display">4.6. Histogram Display</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#serial-terminal">4.7. Serial Terminal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#status-bar">4.8. Status Bar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tools">4.9. Tools</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#open-terminal">4.10. Open Terminal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#machine-vision">4.11. Machine Vision</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#video-tools">4.12. Video Tools</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#options">4.13. Options</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="script_structure.html">5. Script Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="io_tutorial.html">6. I/O Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="system_architecture.html">7. System Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="more_information.html">8. More Information</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../../library/index.html">MicroPython libraries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license.html">MicroPython license information</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../quickref.html">Quick reference for the openmvcam</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../general.html">General information about the openmvcam</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">OpenMV Cam Tutorial</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="overview.html">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software_setup.html">2. Software Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware_setup.html">3. Hardware Setup</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4. OpenMV IDE Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#file-menu-and-examples">4.1. File Menu and Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#text-editing">4.2. Text Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connecting-to-your-openmv-cam">4.3. Connecting to your OpenMV Cam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-scripts">4.4. Running scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frame-buffer-viewer">4.5. Frame Buffer Viewer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#histogram-display">4.6. Histogram Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#serial-terminal">4.7. Serial Terminal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#status-bar">4.8. Status Bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tools">4.9. Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-terminal">4.10. Open Terminal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#machine-vision">4.11. Machine Vision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#video-tools">4.12. Video Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">4.13. Options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="script_structure.html">5. Script Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="io_tutorial.html">6. I/O Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system_architecture.html">7. System Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="more_information.html">8. More Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#general-board-control">General board control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#delay-and-timing">Delay and timing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#leds">LEDs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#pins-and-gpio">Pins and GPIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#servo-control">Servo control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#external-interrupts">External interrupts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#timers">Timers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#pwm-pulse-width-modulation">PWM (pulse width modulation)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#adc-analog-to-digital-conversion">ADC (analog to digital conversion)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#dac-digital-to-analog-conversion">DAC (digital to analog conversion)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#uart-serial-bus">UART (serial bus)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#spi-bus">SPI bus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickref.html#i2c-bus">I2C bus</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -167,6 +182,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../quickref.html">Quick reference for the openmvcam</a> &raquo;</li>
         
           <li><a href="index.html">OpenMV Cam Tutorial</a> &raquo;</li>
         
@@ -389,7 +406,7 @@ if you select an area of the frame buffer by clicking and dragging on it then
 the histogram will only show the distribution of colors in that area. This
 features makes the histogram display super useful for determining the correct
 Grayscale and LAB color channel settings you need to use in your scripts for
-<a class="reference internal" href="../../library/omv.image.html#image.image.find_blobs" title="image.image.find_blobs"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_blobs()</span></code></a> and <a class="reference internal" href="../../library/omv.image.html#image.image.binary" title="image.image.binary"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.binary()</span></code></a>.</p>
+<a class="reference internal" href="../../library/omv.image.html#image.image.Image.image.find_blobs" title="image.image.Image.image.find_blobs"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_blobs()</span></code></a> and <a class="reference internal" href="../../library/omv.image.html#image.image.Image.image.binary" title="image.image.Image.image.binary"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.binary()</span></code></a>.</p>
 <p>Finally, the image resolution and ROI (x, y, w, h) of the bounding box you
 select on the image are displayed above the histogram graphs.</p>
 </div>
@@ -549,7 +566,7 @@ characters, and more.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

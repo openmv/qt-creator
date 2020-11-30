@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>time — tracking elapsed time &mdash; MicroPython 1.12 documentation</title>
+  <title>audio — Audio Module &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sensor — camera sensor" href="omv.sensor.html" />
-    <link rel="prev" title="class USB_VCP – USB virtual comm port" href="pyb.USB_VCP.html" /> 
+    <link rel="next" title="micro_speech — Micro Speech Audio Module Example" href="omv.micro_speech.html" />
+    <link rel="prev" title="mjpeg — mjpeg recording" href="omv.mjpeg.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,27 +91,22 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="pyb.html"><code class="docutils literal notranslate"><span class="pre">pyb</span></code> — functions related to the board</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">time</span></code> — tracking elapsed time</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#constructors">Constructors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="omv.sensor.html"><code class="docutils literal notranslate"><span class="pre">sensor</span></code> — camera sensor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.image.html"><code class="docutils literal notranslate"><span class="pre">image</span></code> — machine vision</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.nn.html"><code class="docutils literal notranslate"><span class="pre">nn</span></code> — neural networks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code> — Tensor Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html"><code class="docutils literal notranslate"><span class="pre">gif</span></code> — gif recording</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html"><code class="docutils literal notranslate"><span class="pre">mjpeg</span></code> — mjpeg recording</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd shield driver</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">audio</span></code> — Audio Module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="omv.micro_speech.html"><code class="docutils literal notranslate"><span class="pre">micro_speech</span></code> — Micro Speech Audio Module Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermopile shield driver (fir == far infrared)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.tv.html"><code class="docutils literal notranslate"><span class="pre">tv</span></code> — tv shield driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.cpufreq.html"><code class="docutils literal notranslate"><span class="pre">cpufreq</span></code> — CPU Frequency Control</a></li>
@@ -124,9 +119,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -174,13 +170,13 @@
         
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
         
-      <li><code class="docutils literal notranslate"><span class="pre">time</span></code> — tracking elapsed time</li>
+      <li><code class="docutils literal notranslate"><span class="pre">audio</span></code> — Audio Module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/library/omv.time.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/library/omv.audio.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -193,70 +189,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-time">
-<span id="time-tracking-elapsed-time"></span><h1><a class="reference internal" href="#module-time" title="time: tracking elapsed time"><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> — tracking elapsed time<a class="headerlink" href="#module-time" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">time</span></code> module is used for tracking elapsed time. <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">utime</span></code> for the
-standard python time module.</p>
+  <div class="section" id="module-audio">
+<span id="audio-audio-module"></span><h1><a class="reference internal" href="#module-audio" title="audio: Get audio samples."><code class="xref py py-mod docutils literal notranslate"><span class="pre">audio</span></code></a> — Audio Module<a class="headerlink" href="#module-audio" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">audio</span></code> module is used to record audio samples from a microphone on the Arduino Portenta.</p>
+<p>Please read about <a class="reference external" href="https://www.st.com/resource/en/application_note/dm00380469-interfacing-pdm-digital-microphones-using-stm32-mcus-and-mpus-stmicroelectronics.pdf">PDM Microphones</a>.</p>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="time.time.ticks">
-<code class="descclassname">time.</code><code class="descname">ticks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#time.time.ticks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the elapsed milliseconds since power on.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Use the <a class="reference internal" href="pyb.html#pyb.millis" title="pyb.millis"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyb.millis()</span></code></a> instead of this function.</p>
-</div>
+<dt id="audio.audio.init">
+<code class="descclassname">audio.</code><code class="descname">init</code><span class="sig-paren">(</span><span class="optional">[</span><em>channels=2</em><span class="optional">[</span>, <em>frequency=16000</em><span class="optional">[</span>, <em>gain_db=24</em><span class="optional">[</span>, <em>highpass=0.9883</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#audio.audio.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the audio module. Must be called first before using the audio module.</p>
+<p><code class="docutils literal notranslate"><span class="pre">channels</span></code> specifies the number of audio channels. May be 1 or 2. Audio samples are
+interleaved for two audio channels.</p>
+<p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> is the sample frequency to run at. Running at a higher sample frequency results
+in a higher noise flow which means less effective bits per sample. By default audio samples are
+8-bits with 7-bits of effective dynamic range for voice recording.</p>
+<p><code class="docutils literal notranslate"><span class="pre">gain_db</span></code> is the microphone gain to apply.</p>
+<p><code class="docutils literal notranslate"><span class="pre">highpass</span></code> is the high pass filter cut off given the target sample frequency.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="time.time.sleep">
-<code class="descclassname">time.</code><code class="descname">sleep</code><span class="sig-paren">(</span><em>ms</em><span class="sig-paren">)</span><a class="headerlink" href="#time.time.sleep" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sleeps for <code class="docutils literal notranslate"><span class="pre">ms</span></code> number of milliseconds.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Use the <a class="reference internal" href="pyb.html#pyb.delay" title="pyb.delay"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyb.delay()</span></code></a> instead of this function.</p>
-</div>
+<dt id="audio.audio.deint">
+<code class="descclassname">audio.</code><code class="descname">deint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#audio.audio.deint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deinitializes the audio module.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="constructors">
-<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="time.time.clock">
-<em class="property">class </em><code class="descclassname">time.</code><code class="descname">clock</code><a class="headerlink" href="#time.time.clock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a clock object.</p>
+<dl class="function">
+<dt id="audio.audio.start_streaming">
+<code class="descclassname">audio.</code><code class="descname">start_streaming</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#audio.audio.start_streaming" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls the <code class="docutils literal notranslate"><span class="pre">callback</span></code> that takes one argument <code class="docutils literal notranslate"><span class="pre">pcmbuf</span></code> automatically forever when enough
+PCM samples have accumulated based on the audio module settings.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pcmbuf</span></code> is a 16-bit array of audio samples sized based on the decimation factor and number
+of channels.</p>
+<p>In single channel mode audio samples will be 8-bits each filling up the 16-bit array.</p>
+<p>In dual channel mode audio samples will be 8-bits each in pairs filling up the 16-bit array.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="methods">
-<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="time.clock.tick">
-<code class="descclassname">clock.</code><code class="descname">tick</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#time.clock.tick" title="Permalink to this definition">¶</a></dt>
-<dd><p>Starts tracking elapsed time.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="time.clock.fps">
-<code class="descclassname">clock.</code><code class="descname">fps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#time.clock.fps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stops tracking the elapsed time and returns the current FPS
-(frames per second).</p>
-<p>Always call <code class="docutils literal notranslate"><span class="pre">tick</span></code> first before calling this function.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="time.clock.avg">
-<code class="descclassname">clock.</code><code class="descname">avg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#time.clock.avg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stops tracking the elapsed time and returns the current average elapsed time
-in milliseconds.</p>
-<p>Always call <code class="docutils literal notranslate"><span class="pre">tick</span></code> first before calling this function.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="time.clock.reset">
-<code class="descclassname">clock.</code><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#time.clock.reset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resets the clock object.</p>
+<dl class="function">
+<dt id="audio.audio.stop_streaming">
+<code class="descclassname">audio.</code><code class="descname">stop_streaming</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#audio.audio.stop_streaming" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops audio streaming and the callback from being called.</p>
 </dd></dl>
 
 </div>
@@ -270,10 +242,10 @@ in milliseconds.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="omv.sensor.html" class="btn btn-neutral float-right" title="sensor — camera sensor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="omv.micro_speech.html" class="btn btn-neutral float-right" title="micro_speech — Micro Speech Audio Module Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pyb.USB_VCP.html" class="btn btn-neutral float-left" title="class USB_VCP – USB virtual comm port" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="omv.mjpeg.html" class="btn btn-neutral float-left" title="mjpeg — mjpeg recording" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -284,7 +256,7 @@ in milliseconds.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

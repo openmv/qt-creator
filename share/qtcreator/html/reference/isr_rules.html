@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Writing interrupt handlers &mdash; MicroPython 1.12 documentation</title>
+  <title>Writing interrupt handlers &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Maximising MicroPython Speed" href="speed_python.html" />
+    <link rel="next" title="Maximising MicroPython speed" href="speed_python.html" />
     <link rel="prev" title="MicroPython .mpy files" href="mpyfiles.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,17 +91,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">MicroPython libraries</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">The MicroPython language</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython language and implementation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="repl.html">The MicroPython Interactive Interpreter Mode (aka REPL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mpyfiles.html">MicroPython .mpy files</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Writing interrupt handlers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#tips-and-recommended-practices">Tips and recommended practices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#micropython-issues">MicroPython Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#micropython-issues">MicroPython issues</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#the-emergency-exception-buffer">The emergency exception buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#simplicity">Simplicity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#communication-between-an-isr-and-the-main-program">Communication between an ISR and the main program</a></li>
@@ -113,24 +110,25 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#exceptions">Exceptions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#general-issues">General Issues</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#interrupt-handler-design">Interrupt Handler Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-issues">General issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#interrupt-handler-design">Interrupt handler design</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#reentrancy">Reentrancy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#critical-sections">Critical Sections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#critical-sections">Critical sections</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#interrupts-and-the-repl">Interrupts and the REPL</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="speed_python.html">Maximising MicroPython Speed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="constrained.html">MicroPython on Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="asm_thumb2_index.html">Inline Assembler for Thumb2 architectures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speed_python.html">Maximising MicroPython speed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constrained.html">MicroPython on microcontrollers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asm_thumb2_index.html">Inline assembler for Thumb2 architectures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filesystem.html">Working with filesystems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pyboard.py.html">The pyboard.py tool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -176,7 +174,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">The MicroPython language</a> &raquo;</li>
+          <li><a href="index.html">MicroPython language and implementation</a> &raquo;</li>
         
       <li>Writing interrupt handlers</li>
     
@@ -223,7 +221,7 @@ the data in the main program and re-enabling them immediately afterwards (see Cr
 </ul>
 </div>
 <div class="section" id="micropython-issues">
-<h2>MicroPython Issues<a class="headerlink" href="#micropython-issues" title="Permalink to this headline">¶</a></h2>
+<h2>MicroPython issues<a class="headerlink" href="#micropython-issues" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="the-emergency-exception-buffer">
 <h3>The emergency exception buffer<a class="headerlink" href="#the-emergency-exception-buffer" title="Permalink to this headline">¶</a></h3>
 <p>If an error occurs in an ISR, MicroPython is unable to produce an error report unless a special buffer is created
@@ -232,6 +230,10 @@ for the purpose. Debugging is simplified if the following code is included in an
 <span class="n">micropython</span><span class="o">.</span><span class="n">alloc_emergency_exception_buf</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>The emergency exception buffer can only hold one exception stack trace. This means that if a second exception is
+thrown during the handling of an exception while the heap is locked, that second exception’s stack trace will
+replace the original one - even if the second exception is cleanly handled. This can lead to confusing exception
+messages if the buffer is later printed.</p>
 </div>
 <div class="section" id="simplicity">
 <h3>Simplicity<a class="headerlink" href="#simplicity" title="Permalink to this headline">¶</a></h3>
@@ -380,14 +382,14 @@ note in “Creation of Python objects”.</p>
 exception is handled by the ISR code.</p>
 </div>
 <div class="section" id="general-issues">
-<h2>General Issues<a class="headerlink" href="#general-issues" title="Permalink to this headline">¶</a></h2>
+<h2>General issues<a class="headerlink" href="#general-issues" title="Permalink to this headline">¶</a></h2>
 <p>This is merely a brief introduction to the subject of real time programming. Beginners should note
 that design errors in real time programs can lead to faults which are particularly hard to diagnose. This is because
 they can occur rarely and at intervals which are essentially random. It is crucial to get the initial design right and
 to anticipate issues before they arise. Both interrupt handlers and the main program need to be designed
 with an appreciation of the following issues.</p>
 <div class="section" id="interrupt-handler-design">
-<span id="isr"></span><h3>Interrupt Handler Design<a class="headerlink" href="#interrupt-handler-design" title="Permalink to this headline">¶</a></h3>
+<span id="isr"></span><h3>Interrupt handler design<a class="headerlink" href="#interrupt-handler-design" title="Permalink to this headline">¶</a></h3>
 <p>As mentioned above, ISR’s should be designed to be as simple as possible. They should always return in a short,
 predictable period of time. This is important because when the ISR is running, the main loop is not: inevitably
 the main loop experiences pauses in its execution at random points in the code. Such pauses can be a source of hard
@@ -429,7 +431,7 @@ that function run. If this is to occur, the function must be designed to be reen
 advanced topic beyond the scope of this tutorial.</p>
 </div>
 <div class="section" id="critical-sections">
-<span id="critical"></span><h3>Critical Sections<a class="headerlink" href="#critical-sections" title="Permalink to this headline">¶</a></h3>
+<span id="critical"></span><h3>Critical sections<a class="headerlink" href="#critical-sections" title="Permalink to this headline">¶</a></h3>
 <p>An example of a critical section of code is one which accesses more than one variable which can be affected by an ISR. If
 the interrupt happens to occur between accesses to the individual variables, their values will be inconsistent. This is
 an instance of a hazard known as a race condition: the ISR and the main program loop race to alter the variables. To
@@ -532,7 +534,7 @@ reset with <code class="docutils literal notranslate"><span class="pre">ctrl</sp
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="speed_python.html" class="btn btn-neutral float-right" title="Maximising MicroPython Speed" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="speed_python.html" class="btn btn-neutral float-right" title="Maximising MicroPython speed" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="mpyfiles.html" class="btn btn-neutral float-left" title="MicroPython .mpy files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -546,7 +548,7 @@ reset with <code class="docutils literal notranslate"><span class="pre">ctrl</sp
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

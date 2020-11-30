@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>MicroPython on Microcontrollers &mdash; MicroPython 1.12 documentation</title>
+  <title>MicroPython on microcontrollers &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Inline Assembler for Thumb2 architectures" href="asm_thumb2_index.html" />
-    <link rel="prev" title="Maximising MicroPython Speed" href="speed_python.html" /> 
+    <link rel="next" title="Inline assembler for Thumb2 architectures" href="asm_thumb2_index.html" />
+    <link rel="prev" title="Maximising MicroPython speed" href="speed_python.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,43 +91,41 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">MicroPython libraries</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">The MicroPython language</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython language and implementation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="repl.html">The MicroPython Interactive Interpreter Mode (aka REPL)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mpyfiles.html">MicroPython .mpy files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="isr_rules.html">Writing interrupt handlers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="speed_python.html">Maximising MicroPython Speed</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">MicroPython on Microcontrollers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#flash-memory">Flash Memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speed_python.html">Maximising MicroPython speed</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MicroPython on microcontrollers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flash-memory">Flash memory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ram">RAM</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#compilation-phase">Compilation Phase</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#execution-phase">Execution Phase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compilation-phase">Compilation phase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#execution-phase">Execution phase</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#the-heap">The Heap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-heap">The heap</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#fragmentation">Fragmentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#reporting">Reporting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#control-of-garbage-collection">Control of Garbage Collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control-of-garbage-collection">Control of garbage collection</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#string-operations">String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#string-operations">String operations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#postscript">Postscript</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#footnote-gc-collect-return-value">Footnote: gc.collect() return value</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="asm_thumb2_index.html">Inline Assembler for Thumb2 architectures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asm_thumb2_index.html">Inline assembler for Thumb2 architectures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filesystem.html">Working with filesystems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pyboard.py.html">The pyboard.py tool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -173,9 +171,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">The MicroPython language</a> &raquo;</li>
+          <li><a href="index.html">MicroPython language and implementation</a> &raquo;</li>
         
-      <li>MicroPython on Microcontrollers</li>
+      <li>MicroPython on microcontrollers</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -195,7 +193,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="micropython-on-microcontrollers">
-<span id="constrained"></span><h1>MicroPython on Microcontrollers<a class="headerlink" href="#micropython-on-microcontrollers" title="Permalink to this headline">¶</a></h1>
+<span id="constrained"></span><h1>MicroPython on microcontrollers<a class="headerlink" href="#micropython-on-microcontrollers" title="Permalink to this headline">¶</a></h1>
 <p>MicroPython is designed to be capable of running on microcontrollers. These
 have hardware limitations which may be unfamiliar to programmers more familiar
 with conventional computers. In particular the amount of RAM and nonvolatile
@@ -205,7 +203,7 @@ based on a variety of architectures, the methods presented are generic: in some
 cases it will be necessary to obtain detailed information from platform specific
 documentation.</p>
 <div class="section" id="flash-memory">
-<h2>Flash Memory<a class="headerlink" href="#flash-memory" title="Permalink to this headline">¶</a></h2>
+<h2>Flash memory<a class="headerlink" href="#flash-memory" title="Permalink to this headline">¶</a></h2>
 <p>On the Pyboard the simple way to address the limited capacity is to fit a micro
 SD card. In some cases this is impractical, either because the device does not
 have an SD card slot or for reasons of cost or power consumption; hence the
@@ -245,7 +243,7 @@ heap fragmentation. In general terms it is best to minimise the repeated
 creation and destruction of objects. The reason for this is covered in the
 section covering the <a class="reference internal" href="#heap">heap</a>.</p>
 <div class="section" id="compilation-phase">
-<h3>Compilation Phase<a class="headerlink" href="#compilation-phase" title="Permalink to this headline">¶</a></h3>
+<h3>Compilation phase<a class="headerlink" href="#compilation-phase" title="Permalink to this headline">¶</a></h3>
 <p>When a module is imported, MicroPython compiles the code to bytecode which is
 then executed by the MicroPython virtual machine (VM). The bytecode is stored
 in RAM. The compiler itself requires RAM, but this becomes available for use
@@ -268,7 +266,7 @@ as frozen bytecode: on most platforms this saves even more RAM as the bytecode
 is run directly from flash rather than being stored in RAM.</p>
 </div>
 <div class="section" id="execution-phase">
-<h3>Execution Phase<a class="headerlink" href="#execution-phase" title="Permalink to this headline">¶</a></h3>
+<h3>Execution phase<a class="headerlink" href="#execution-phase" title="Permalink to this headline">¶</a></h3>
 <p>There are a number of coding techniques for reducing RAM usage.</p>
 <p><strong>Constants</strong></p>
 <p>MicroPython provides a <code class="docutils literal notranslate"><span class="pre">const</span></code> keyword which may be used as follows:</p>
@@ -427,7 +425,7 @@ modules and again issuing:</p>
 </div>
 </div>
 <div class="section" id="the-heap">
-<span id="heap"></span><h2>The Heap<a class="headerlink" href="#the-heap" title="Permalink to this headline">¶</a></h2>
+<span id="heap"></span><h2>The heap<a class="headerlink" href="#the-heap" title="Permalink to this headline">¶</a></h2>
 <p>When a running program instantiates an object the necessary RAM is allocated
 from a fixed size pool known as the heap. When the object goes out of scope (in
 other words becomes inaccessible to code) the redundant object is known as
@@ -543,7 +541,7 @@ may be interpreted as follows:</p>
 line of the heap dump represents 0x400 bytes or 1KiB of RAM.</p>
 </div>
 <div class="section" id="control-of-garbage-collection">
-<h3>Control of Garbage Collection<a class="headerlink" href="#control-of-garbage-collection" title="Permalink to this headline">¶</a></h3>
+<h3>Control of garbage collection<a class="headerlink" href="#control-of-garbage-collection" title="Permalink to this headline">¶</a></h3>
 <p>A GC can be demanded at any time by issuing <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref any py py-func docutils literal notranslate"><span class="pre">gc.collect()</span></code></a>. It is advantageous
 to do this at intervals, firstly to pre-empt fragmentation and secondly for
 performance. A GC can take several milliseconds but is quicker when there is
@@ -568,7 +566,7 @@ after the import will ameliorate the problem.</p>
 </div>
 </div>
 <div class="section" id="string-operations">
-<h2>String Operations<a class="headerlink" href="#string-operations" title="Permalink to this headline">¶</a></h2>
+<h2>String operations<a class="headerlink" href="#string-operations" title="Permalink to this headline">¶</a></h2>
 <p>MicroPython handles strings in an efficient manner and understanding this can
 help in designing applications to run on microcontrollers. When a module
 is compiled, strings which occur multiple times are stored once only, a process
@@ -607,10 +605,10 @@ efficiency reasons bare metal ports do not return this value.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="asm_thumb2_index.html" class="btn btn-neutral float-right" title="Inline Assembler for Thumb2 architectures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="asm_thumb2_index.html" class="btn btn-neutral float-right" title="Inline assembler for Thumb2 architectures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="speed_python.html" class="btn btn-neutral float-left" title="Maximising MicroPython Speed" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="speed_python.html" class="btn btn-neutral float-left" title="Maximising MicroPython speed" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -621,7 +619,7 @@ efficiency reasons bare metal ports do not return this value.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

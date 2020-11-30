@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>micropython – access and control MicroPython internals &mdash; MicroPython 1.12 documentation</title>
+  <title>micropython – access and control MicroPython internals &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,14 +91,11 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
@@ -114,9 +111,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -275,13 +273,24 @@ should be used to compute differences in stack usage at different points.</p>
 <dl class="function">
 <dt id="micropython.heap_unlock">
 <code class="descclassname">micropython.</code><code class="descname">heap_unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#micropython.heap_unlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="micropython.heap_locked">
+<code class="descclassname">micropython.</code><code class="descname">heap_locked</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#micropython.heap_locked" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lock or unlock the heap.  When locked no memory allocation can occur and a
-<a class="reference internal" href="builtins.html#MemoryError" title="MemoryError"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">MemoryError</span></code></a> will be raised if any heap allocation is attempted.</p>
+<a class="reference internal" href="builtins.html#MemoryError" title="MemoryError"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">MemoryError</span></code></a> will be raised if any heap allocation is attempted.
+<a class="reference internal" href="#micropython.heap_locked" title="micropython.heap_locked"><code class="xref any py py-func docutils literal notranslate"><span class="pre">heap_locked()</span></code></a> returns a true value if the heap is currently locked.</p>
 <p>These functions can be nested, ie <a class="reference internal" href="#micropython.heap_lock" title="micropython.heap_lock"><code class="xref any py py-func docutils literal notranslate"><span class="pre">heap_lock()</span></code></a> can be called multiple times
 in a row and the lock-depth will increase, and then <a class="reference internal" href="#micropython.heap_unlock" title="micropython.heap_unlock"><code class="xref any py py-func docutils literal notranslate"><span class="pre">heap_unlock()</span></code></a> must be
 called the same number of times to make the heap available again.</p>
+<p>Both <a class="reference internal" href="#micropython.heap_unlock" title="micropython.heap_unlock"><code class="xref any py py-func docutils literal notranslate"><span class="pre">heap_unlock()</span></code></a> and <a class="reference internal" href="#micropython.heap_locked" title="micropython.heap_locked"><code class="xref any py py-func docutils literal notranslate"><span class="pre">heap_locked()</span></code></a> return the current lock depth
+(after unlocking for the former) as a non-negative integer, with 0 meaning
+the heap is not locked.</p>
 <p>If the REPL becomes active with the heap locked then it will be forcefully
 unlocked.</p>
+<p>Note: <a class="reference internal" href="#micropython.heap_locked" title="micropython.heap_locked"><code class="xref any py py-func docutils literal notranslate"><span class="pre">heap_locked()</span></code></a> is not enabled on most ports by default,
+requires <code class="docutils literal notranslate"><span class="pre">MICROPY_PY_MICROPYTHON_HEAP_LOCKED</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
@@ -356,7 +365,7 @@ will raise a <a class="reference internal" href="builtins.html#RuntimeError" tit
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

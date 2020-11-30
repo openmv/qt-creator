@@ -48,6 +48,16 @@ Methods
      - *parity* is the parity, ``None``, 0 (even) or 1 (odd).
      - *stop* is the number of stop bits, 1 or 2.
 
+   Additional keyword-only parameters that may be supported by a port are:
+
+     - *tx* specifies the TX pin to use.
+     - *rx* specifies the RX pin to use.
+     - *txbuf* specifies the length in characters of the TX buffer.
+     - *rxbuf* specifies the length in characters of the RX buffer.
+     - *timeout* specifies the time to wait for the first character (in ms).
+     - *timeout_char* specifies the time to wait between characters (in ms).
+     - *invert* specifies which lines to invert.
+
 .. method:: UART.deinit()
 
    Turn off the UART bus.

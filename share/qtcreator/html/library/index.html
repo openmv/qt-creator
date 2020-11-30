@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>MicroPython libraries &mdash; MicroPython 1.12 documentation</title>
+  <title>MicroPython libraries &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Builtin functions and exceptions" href="builtins.html" />
-    <link rel="prev" title="8. More Information" href="../openmvcam/tutorial/more_information.html" /> 
+    <link rel="prev" title="MicroPython documentation and references" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,17 +91,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">MicroPython libraries</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uasyncio.html"><code class="docutils literal notranslate"><span class="pre">uasyncio</span></code> — asynchronous I/O scheduler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
@@ -115,6 +112,7 @@
 <li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
@@ -122,7 +120,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#micropython-specific-libraries">MicroPython-specific libraries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
@@ -133,14 +131,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pyb.html"><code class="docutils literal notranslate"><span class="pre">pyb</span></code> — functions related to the board</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.time.html"><code class="docutils literal notranslate"><span class="pre">time</span></code> — tracking elapsed time</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.sensor.html"><code class="docutils literal notranslate"><span class="pre">sensor</span></code> — camera sensor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.image.html"><code class="docutils literal notranslate"><span class="pre">image</span></code> — machine vision</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.nn.html"><code class="docutils literal notranslate"><span class="pre">nn</span></code> — neural networks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code> — Tensor Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.gif.html"><code class="docutils literal notranslate"><span class="pre">gif</span></code> — gif recording</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.mjpeg.html"><code class="docutils literal notranslate"><span class="pre">mjpeg</span></code> — mjpeg recording</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd shield driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.audio.html"><code class="docutils literal notranslate"><span class="pre">audio</span></code> — Audio Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.micro_speech.html"><code class="docutils literal notranslate"><span class="pre">micro_speech</span></code> — Micro Speech Audio Module Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermopile shield driver (fir == far infrared)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.tv.html"><code class="docutils literal notranslate"><span class="pre">tv</span></code> — tv shield driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.cpufreq.html"><code class="docutils literal notranslate"><span class="pre">cpufreq</span></code> — CPU Frequency Control</a></li>
@@ -150,12 +148,23 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.omv.html"><code class="docutils literal notranslate"><span class="pre">omv</span></code> — OpenMV Cam Information</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ulab-numpy-like-array-manipulation-library"><code class="docutils literal notranslate"><span class="pre">ulab</span></code> — numpy-like array manipulation library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pid-proportional-integral-derivative-control"><code class="docutils literal notranslate"><span class="pre">pid</span></code> — Proportional/Integral/Derivative Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bno055-imu-driver"><code class="docutils literal notranslate"><span class="pre">bno055</span></code> — IMU Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ssd1306-oled-driver"><code class="docutils literal notranslate"><span class="pre">ssd1306</span></code> — OLED Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tb6612-stepper-motor-driver"><code class="docutils literal notranslate"><span class="pre">tb6612</span></code> — Stepper Motor Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vl53l1x-tof-distance-sensor-driver"><code class="docutils literal notranslate"><span class="pre">vl53l1x</span></code> — ToF Distance Sensor Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modbus-modbus-protocol-library"><code class="docutils literal notranslate"><span class="pre">modbus</span></code> — modbus protocol library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mqtt-mqtt-protocol-library"><code class="docutils literal notranslate"><span class="pre">mqtt</span></code> — mqtt protocol library</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -242,7 +251,7 @@ intended to be extended by the user.</li>
 <li>Modules which implement a subset of Python functionality, with a provision
 for extension by the user (via Python code).</li>
 <li>Modules which implement MicroPython extensions to the Python standard libraries.</li>
-<li>Modules specific to a particular <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a> and thus not portable.</li>
+<li>Modules specific to a particular <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a> and thus not portable.</li>
 </ul>
 <p>Note about the availability of the modules and their contents: This documentation
 in general aspires to describe all modules and functions/classes which are
@@ -256,7 +265,7 @@ in a module (or even the entire module) described in this documentation <strong>
 unavailable</strong> in a particular build of MicroPython on a particular system. The
 best place to find general information of the availability/non-availability
 of a particular feature is the “General Information” section which contains
-information pertaining to a specific <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+information pertaining to a specific <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>.</p>
 <p>On some ports you are able to discover the available, built-in libraries that
 can be imported by entering the following at the REPL:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s1">&#39;modules&#39;</span><span class="p">)</span>
@@ -285,27 +294,129 @@ directory <code class="docutils literal notranslate"><span class="pre">json</spa
 it will fallback to loading the built-in <code class="docutils literal notranslate"><span class="pre">ujson</span></code> module.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uhashlib.html"><code class="docutils literal notranslate"><span class="pre">uhashlib</span></code> – hashing algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uheapq.html"><code class="docutils literal notranslate"><span class="pre">uheapq</span></code> – heap queue algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uio.html"><code class="docutils literal notranslate"><span class="pre">uio</span></code> – input/output streams</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ujson.html"><code class="docutils literal notranslate"><span class="pre">ujson</span></code> – JSON encoding and decoding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uos.html"><code class="docutils literal notranslate"><span class="pre">uos</span></code> – basic “operating system” services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ure.html"><code class="docutils literal notranslate"><span class="pre">ure</span></code> – simple regular expressions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uselect.html"><code class="docutils literal notranslate"><span class="pre">uselect</span></code> – wait for events on a set of streams</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="builtins.html#functions-and-types">Functions and types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="builtins.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cmath.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmath.html#constants">Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gc.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="math.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math.html#constants">Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uarray.html#classes">Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uasyncio.html"><code class="docutils literal notranslate"><span class="pre">uasyncio</span></code> — asynchronous I/O scheduler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uasyncio.html#core-functions">Core functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uasyncio.html#additional-functions">Additional functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uasyncio.html#class-task">class Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uasyncio.html#class-event">class Event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uasyncio.html#class-lock">class Lock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uasyncio.html#tcp-stream-connections">TCP stream connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uasyncio.html#event-loop">Event Loop</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ubinascii.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ucollections.html#classes">Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uerrno.html#constants">Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uhashlib.html"><code class="docutils literal notranslate"><span class="pre">uhashlib</span></code> – hashing algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uhashlib.html#constructors">Constructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uhashlib.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uheapq.html"><code class="docutils literal notranslate"><span class="pre">uheapq</span></code> – heap queue algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uheapq.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uio.html"><code class="docutils literal notranslate"><span class="pre">uio</span></code> – input/output streams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uio.html#conceptual-hierarchy">Conceptual hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uio.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uio.html#classes">Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ujson.html"><code class="docutils literal notranslate"><span class="pre">ujson</span></code> – JSON encoding and decoding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ujson.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uos.html"><code class="docutils literal notranslate"><span class="pre">uos</span></code> – basic “operating system” services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uos.html#general-functions">General functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uos.html#filesystem-access">Filesystem access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uos.html#terminal-redirection-and-duplication">Terminal redirection and duplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uos.html#filesystem-mounting">Filesystem mounting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uos.html#block-devices">Block devices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="uos.html#simple-and-extended-interface">Simple and extended interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ure.html"><code class="docutils literal notranslate"><span class="pre">ure</span></code> – simple regular expressions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ure.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ure.html#regex-objects">Regex objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ure.html#match-objects">Match objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uselect.html"><code class="docutils literal notranslate"><span class="pre">uselect</span></code> – wait for events on a set of streams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uselect.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uselect.html#class-poll">class <code class="docutils literal notranslate"><span class="pre">Poll</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="uselect.html#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usocket.html#socket-address-format-s">Socket address format(s)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usocket.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usocket.html#constants">Constants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usocket.html#class-socket">class socket</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usocket.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ussl.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ussl.html#exceptions">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ussl.html#constants">Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ustruct.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usys.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usys.html#constants">Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="utime.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utime.html#constructors">Constructors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uzlib.html#functions">Functions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
 </ul>
 </div>
@@ -322,7 +433,7 @@ the following libraries.</p>
 <li class="toctree-l2"><a class="reference internal" href="btree.html#constants">Constants</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="framebuf.html#class-framebuffer">class FrameBuffer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framebuf.html#constructors">Constructors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framebuf.html#drawing-primitive-shapes">Drawing primitive shapes</a></li>
@@ -358,6 +469,8 @@ the following libraries.</p>
 <li class="toctree-l2"><a class="reference internal" href="network.html#common-network-adapter-interface">Common network adapter interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="network.html#specific-network-class-implementations">Specific network class implementations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="network.WINC.html">class WINC – wifi shield driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.WLAN.html">class WLAN – control built-in WiFi interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.LAN.html">class LAN – control built-in Ethernet interfaces</a></li>
 </ul>
 </li>
 </ul>
@@ -418,12 +531,6 @@ the following libraries.</p>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="omv.time.html"><code class="docutils literal notranslate"><span class="pre">time</span></code> — tracking elapsed time</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="omv.time.html#functions">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="omv.time.html#constructors">Constructors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="omv.time.html#methods">Methods</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="omv.sensor.html"><code class="docutils literal notranslate"><span class="pre">sensor</span></code> — camera sensor</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="omv.sensor.html#functions">Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="omv.sensor.html#constants">Constants</a></li>
@@ -431,114 +538,25 @@ the following libraries.</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="omv.image.html"><code class="docutils literal notranslate"><span class="pre">image</span></code> — machine vision</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="omv.image.html#functions">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-haarcascade-feature-descriptor">class HaarCascade – Feature Descriptor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#constructors">Constructors</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-similarity-similarity-object">class Similarity – Similarity Object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id1">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#methods">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-histogram-histogram-object">class Histogram – Histogram Object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id2">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id3">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-percentile-percentile-object">class Percentile – Percentile Object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id4">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id5">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-threshold-threshold-object">class Threshold – Threshold Object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id6">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id7">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-statistics-statistics-object">class Statistics – Statistics Object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id8">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id9">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-blob-blob-object">class Blob – Blob object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id10">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id11">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-line-line-object">class Line – Line object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id12">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id13">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-circle-circle-object">class Circle – Circle object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id14">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id15">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-rect-rectangle-object">class Rect – Rectangle Object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id16">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id17">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-qrcode-qrcode-object">class QRCode – QRCode object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id18">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id19">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-apriltag-apriltag-object">class AprilTag – AprilTag object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id20">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id21">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-datamatrix-datamatrix-object">class DataMatrix – DataMatrix object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id22">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id23">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-barcode-barcode-object">class BarCode – BarCode object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id24">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id25">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-displacement-displacement-object">class Displacement – Displacement object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id26">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id27">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-kptmatch-keypoint-object">class kptmatch – Keypoint Object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id28">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id29">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-imagewriter-imagewriter-object">class ImageWriter – ImageWriter object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id30">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id31">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-imagereader-imagereader-object">class ImageReader – ImageReader object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id32">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id33">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-image-image-object">class Image – Image object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id34">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.image.html#id35">Methods</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-haarcascade-feature-descriptor">class HaarCascade – Feature Descriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-histogram-histogram-object">class Histogram – Histogram Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-percentile-percentile-object">class Percentile – Percentile Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-threshold-threshold-object">class Threshold – Threshold Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-statistics-statistics-object">class Statistics – Statistics Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-blob-blob-object">class Blob – Blob object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-line-line-object">class Line – Line object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-circle-circle-object">class Circle – Circle object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-rect-rectangle-object">class Rect – Rectangle Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-qrcode-qrcode-object">class QRCode – QRCode object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-apriltag-apriltag-object">class AprilTag – AprilTag object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-datamatrix-datamatrix-object">class DataMatrix – DataMatrix object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-barcode-barcode-object">class BarCode – BarCode object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-displacement-displacement-object">class Displacement – Displacement object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-kptmatch-keypoint-object">class kptmatch – Keypoint Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-imagewriter-imagewriter-object">class ImageWriter – ImageWriter object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-imagereader-imagereader-object">class ImageReader – ImageReader object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.image.html#class-image-image-object">class Image – Image object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="omv.image.html#constants">Constants</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="omv.nn.html"><code class="docutils literal notranslate"><span class="pre">nn</span></code> — neural networks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="omv.nn.html#class-nn-class-nn-dection-result">class nn_class – nn dection result</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.nn.html#constructors">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.nn.html#methods">Methods</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="omv.nn.html#class-net-neural-network">class Net – Neural Network</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="omv.nn.html#id1">Constructors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.nn.html#id2">Methods</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="omv.tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code> — Tensor Flow</a><ul>
@@ -571,8 +589,17 @@ the following libraries.</p>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd shield driver</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="omv.audio.html"><code class="docutils literal notranslate"><span class="pre">audio</span></code> — Audio Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="omv.audio.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="omv.micro_speech.html"><code class="docutils literal notranslate"><span class="pre">micro_speech</span></code> — Micro Speech Audio Module Example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="omv.micro_speech.html#constructors">Constructors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd driver</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="omv.lcd.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omv.lcd.html#constants">Constants</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="omv.fir.html"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermopile shield driver (fir == far infrared)</a><ul>
@@ -656,75 +683,36 @@ the following libraries.</p>
 </div>
 <div class="section" id="third-party-libraries-on-the-openmv-cam">
 <h2>Third-party libraries on the OpenMV Cam<a class="headerlink" href="#third-party-libraries-on-the-openmv-cam" title="Permalink to this headline">¶</a></h2>
-<p>The following third-party math libraries are built-in to your OpenMV Cam’s firmware:</p>
-<blockquote>
-<div><ul class="simple">
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://github.com/nickoala/openrv">OpenRV</a> (Hu moments, Planar homography, and Quickshift++)</dt>
-<dd><ul class="first last">
-<li><a class="reference external" href="https://gitlab.com/nickoala/micropython-vec">vec</a> (Vector Operations)</li>
-<li><a class="reference external" href="https://gitlab.com/nickoala/micropython-mtx">mtx</a> (Fast Matrix Multiplication and Linear Solver)</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><a class="reference external" href="https://micropython-ulab.readthedocs.io/en/latest/">ulab</a> (numpy-like array manipulation library)</li>
-<li><a class="reference external" href="https://github.com/iyassou/umatrix">umatrix</a> (a matrix library)</li>
-<li><a class="reference external" href="https://github.com/jalawson/ulinalg">ulinalg</a> (linear algebra routines)</li>
-<li><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/pid.py">pid</a> (Proportional/Integral/Derivative Control)</li>
-</ul>
-</div></blockquote>
-<p>The following third-party driver libraries are built-in to your OpenMV Cam’s firmware:</p>
-<blockquote>
-<div><ul class="simple">
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/bno055.py">BNO055</a> IMU Driver</dt>
-<dd><ul class="first last">
-<li>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">IMU</span> <span class="pre">Shield</span></code> examples folder.</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/ssd1306.py">SSD1306</a> OLED Driver</li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/tb6612.py">TB6612</a> Stepper Motor Driver</dt>
-<dd><ul class="first last">
-<li>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">Motor</span> <span class="pre">Shield</span></code> examples folder.</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/vl53l1x.py">VL51L1X</a> ToF Distance Sensor Driver</dt>
-<dd><ul class="first last">
-<li>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">Distance</span> <span class="pre">Shield</span></code> examples folder.</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div></blockquote>
-<p>The following third-party protocol libraries are built-in to your OpenMV Cam’s firmware:</p>
-<blockquote>
-<div><ul class="simple">
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/modbus.py">modbus</a> protocol library</dt>
-<dd><ul class="first last">
-<li>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">Modbus</span></code> examples folder.</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/mqtt.py">mqtt</a> protocol library</dt>
-<dd><ul class="first last">
-<li>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">WiFi</span> <span class="pre">Shield</span></code> examples folder.</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div></blockquote>
+<p>The following third-party libraries are built-in to your OpenMV Cam’s firmware:</p>
+<div class="section" id="ulab-numpy-like-array-manipulation-library">
+<h3><code class="xref py py-mod docutils literal notranslate"><span class="pre">ulab</span></code> — <a class="reference external" href="https://micropython-ulab.readthedocs.io/en/latest/">numpy-like array manipulation library</a><a class="headerlink" href="#ulab-numpy-like-array-manipulation-library" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="pid-proportional-integral-derivative-control">
+<h3><code class="xref py py-mod docutils literal notranslate"><span class="pre">pid</span></code> — <a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/pid.py">Proportional/Integral/Derivative Control</a><a class="headerlink" href="#pid-proportional-integral-derivative-control" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="bno055-imu-driver">
+<h3><code class="xref py py-mod docutils literal notranslate"><span class="pre">bno055</span></code> — <a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/bno055.py">IMU Driver</a><a class="headerlink" href="#bno055-imu-driver" title="Permalink to this headline">¶</a></h3>
+<p>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">IMU</span> <span class="pre">Shield</span></code> examples folder.</p>
+</div>
+<div class="section" id="ssd1306-oled-driver">
+<h3><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssd1306</span></code> — <a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/ssd1306.py">OLED Driver</a><a class="headerlink" href="#ssd1306-oled-driver" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="tb6612-stepper-motor-driver">
+<h3><code class="xref py py-mod docutils literal notranslate"><span class="pre">tb6612</span></code> — <a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/tb6612.py">Stepper Motor Driver</a><a class="headerlink" href="#tb6612-stepper-motor-driver" title="Permalink to this headline">¶</a></h3>
+<p>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">Motor</span> <span class="pre">Shield</span></code> examples folder.</p>
+</div>
+<div class="section" id="vl53l1x-tof-distance-sensor-driver">
+<h3><code class="xref py py-mod docutils literal notranslate"><span class="pre">vl53l1x</span></code> — <a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/vl53l1x.py">ToF Distance Sensor Driver</a><a class="headerlink" href="#vl53l1x-tof-distance-sensor-driver" title="Permalink to this headline">¶</a></h3>
+<p>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">Distance</span> <span class="pre">Shield</span></code> examples folder.</p>
+</div>
+<div class="section" id="modbus-modbus-protocol-library">
+<h3><code class="xref py py-mod docutils literal notranslate"><span class="pre">modbus</span></code> — <a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/modbus.py">modbus protocol library</a><a class="headerlink" href="#modbus-modbus-protocol-library" title="Permalink to this headline">¶</a></h3>
+<p>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">Modbus</span></code> examples folder.</p>
+</div>
+<div class="section" id="mqtt-mqtt-protocol-library">
+<h3><code class="xref py py-mod docutils literal notranslate"><span class="pre">mqtt</span></code> — <a class="reference external" href="https://github.com/openmv/openmv/blob/master/scripts/libraries/mqtt.py">mqtt protocol library</a><a class="headerlink" href="#mqtt-mqtt-protocol-library" title="Permalink to this headline">¶</a></h3>
+<p>Examples scripts are located in OpenMV IDE under the <code class="docutils literal notranslate"><span class="pre">WiFi</span> <span class="pre">Shield</span></code> examples folder.</p>
+</div>
 </div>
 </div>
 
@@ -739,7 +727,7 @@ the following libraries.</p>
         <a href="builtins.html" class="btn btn-neutral float-right" title="Builtin functions and exceptions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../openmvcam/tutorial/more_information.html" class="btn btn-neutral float-left" title="8. More Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="MicroPython documentation and references" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -750,7 +738,7 @@ the following libraries.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

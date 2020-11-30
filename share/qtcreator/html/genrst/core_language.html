@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Core Language &mdash; MicroPython 1.12 documentation</title>
+  <title>Core language &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Builtin Types" href="builtin_types.html" />
+    <link rel="next" title="Builtin types" href="builtin_types.html" />
     <link rel="prev" title="Syntax" href="syntax.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,14 +91,11 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">MicroPython libraries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython differences from CPython</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Core Language</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Core language</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#special-method-del-not-implemented-for-user-defined-classes">Special method __del__ not implemented for user-defined classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#method-resolution-order-mro-is-not-compliant-with-cpython">Method Resolution Order (MRO) is not compliant with CPython</a></li>
@@ -121,6 +118,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#import">import</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#all-is-unsupported-in-init-py-in-micropython">__all__ is unsupported in __init__.py in MicroPython.</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#path-attribute-of-a-package-has-a-different-type-single-string-instead-of-list-of-strings-in-micropython">__path__ attribute of a package has a different type (single string instead of list of strings) in MicroPython</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#failed-to-load-modules-are-still-registered-as-loaded">Failed to load modules are still registered as loaded</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#micropython-does-t-support-namespace-packages-split-across-filesystem">MicroPython does’t support namespace packages split across filesystem.</a></li>
@@ -128,11 +126,12 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="builtin_types.html">Builtin Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="builtin_types.html">Builtin types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="modules.html">Modules</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -180,7 +179,7 @@
         
           <li><a href="index.html">MicroPython differences from CPython</a> &raquo;</li>
         
-      <li>Core Language</li>
+      <li>Core language</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -200,8 +199,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="core-language">
-<h1>Core Language<a class="headerlink" href="#core-language" title="Permalink to this headline">¶</a></h1>
-<p>Generated Mon 11 May 2020 17:55:38 UTC</p>
+<h1>Core language<a class="headerlink" href="#core-language" title="Permalink to this headline">¶</a></h1>
+<p>Generated Sat 28 Nov 2020 22:23:20 UTC</p>
 <div class="section" id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="special-method-del-not-implemented-for-user-defined-classes">
@@ -209,9 +208,11 @@
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gc</span>
 
-<span class="k">class</span> <span class="nc">Foo</span><span class="p">():</span>
+
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__del__&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;__del__&quot;</span><span class="p">)</span>
+
 
 <span class="n">f</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
 <span class="k">del</span> <span class="n">f</span>
@@ -246,8 +247,10 @@
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s2">&quot;Foo&quot;</span>
 
+
 <span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="n">Foo</span><span class="p">):</span>
     <span class="k">pass</span>
+
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">C</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
@@ -283,10 +286,12 @@
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A.__init__&quot;</span><span class="p">)</span>
 
+
 <span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B.__init__&quot;</span><span class="p">)</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
 
 <span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -294,10 +299,11 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
 
-<span class="k">class</span> <span class="nc">D</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">D</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;D.__init__&quot;</span><span class="p">)</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
 
 <span class="n">D</span><span class="p">()</span>
 </pre></div>
@@ -334,12 +340,14 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">p</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
+
 
 <span class="k">class</span> <span class="nc">AA</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">p</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">p</span>
+
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">AA</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">p</span><span class="p">)</span>
@@ -409,6 +417,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
     <span class="k">pass</span>
 
+
 <span class="n">f</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
@@ -427,7 +436,7 @@
 </div>
 </td>
 <td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">10</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">13</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;function&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;x&#39;</span>
 </pre></div>
 </div>
@@ -444,9 +453,11 @@
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Enter&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter&quot;</span><span class="p">)</span>
+
     <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exit&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exit&quot;</span><span class="p">)</span>
+
 
 <span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">foo</span><span class="p">():</span>
@@ -454,10 +465,12 @@
             <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">yield</span> <span class="n">x</span>
 
+
 <span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
     <span class="n">g</span> <span class="o">=</span> <span class="n">bar</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">g</span><span class="p">))</span>
+
 
 <span class="n">func</span><span class="p">()</span>
 </pre></div>
@@ -501,6 +514,7 @@
     <span class="n">val</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>
 
+
 <span class="n">test</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -517,7 +531,7 @@
 </pre></div>
 </div>
 </td>
-<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;test&#39;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">test</span> <span class="n">at</span> <span class="mh">0x7fcd76e2d100</span><span class="o">&gt;</span><span class="p">,</span> <span class="s1">&#39;__name__&#39;</span><span class="p">:</span> <span class="s1">&#39;__main__&#39;</span><span class="p">,</span> <span class="s1">&#39;__file__&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;stdin&gt;&#39;</span><span class="p">}</span>
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;test&#39;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">test</span> <span class="n">at</span> <span class="mh">0x7f992db1e100</span><span class="o">&gt;</span><span class="p">,</span> <span class="s1">&#39;__name__&#39;</span><span class="p">:</span> <span class="s1">&#39;__main__&#39;</span><span class="p">,</span> <span class="s1">&#39;__file__&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;stdin&gt;&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
 </td>
@@ -531,10 +545,12 @@
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">val</span> <span class="o">=</span> <span class="mi">1</span>
 
+
 <span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
     <span class="n">val</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
     <span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;print(val)&quot;</span><span class="p">)</span>
+
 
 <span class="n">test</span><span class="p">()</span>
 </pre></div>
@@ -565,6 +581,39 @@
 </div>
 <div class="section" id="import">
 <h2>import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="all-is-unsupported-in-init-py-in-micropython">
+<span id="cpydiff-core-import-all"></span><h3>__all__ is unsupported in __init__.py in MicroPython.<a class="headerlink" href="#all-is-unsupported-in-init-py-in-micropython" title="Permalink to this headline">¶</a></h3>
+<p><strong>Cause:</strong> Not implemented.</p>
+<p><strong>Workaround:</strong> Manually import the sub-modules directly in __init__.py using <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">.</span> <span class="pre">import</span> <span class="pre">foo,</span> <span class="pre">bar</span></code>.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">modules3</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="n">foo</span><span class="o">.</span><span class="n">hello</span><span class="p">()</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>CPy output:</td>
+<td>uPy output:</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span>
+</pre></div>
+</div>
+</td>
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">9</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;foo&#39;</span> <span class="n">isn</span><span class="s1">&#39;t defined</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="path-attribute-of-a-package-has-a-different-type-single-string-instead-of-list-of-strings-in-micropython">
 <span id="cpydiff-core-import-path"></span><h3>__path__ attribute of a package has a different type (single string instead of list of strings) in MicroPython<a class="headerlink" href="#path-attribute-of-a-package-has-a-different-type-single-string-instead-of-list-of-strings-in-micropython" title="Permalink to this headline">¶</a></h3>
 <p><strong>Cause:</strong> MicroPython does’t support namespace packages split across filesystem. Beyond that, MicroPython’s import system is highly optimized for minimal memory usage.</p>
@@ -609,7 +658,8 @@
     <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span> <span class="nn">modules</span> <span class="k">import</span> <span class="n">foo</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should not get here&#39;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Should not get here&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">NameError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </pre></div>
@@ -646,6 +696,7 @@
 <p><strong>Workaround:</strong> Don’t install modules belonging to the same namespace package in different directories. For MicroPython, it’s recommended to have at most 3-component module search paths: for your current application, per-user (writable), system-wide (non-writable).</p>
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/modules&quot;</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;/modules2&quot;</span><span class="p">)</span>
 
@@ -669,7 +720,7 @@
 </div>
 </td>
 <td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">12</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">13</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">ImportError</span><span class="p">:</span> <span class="n">no</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">&#39;subpkg.bar&#39;</span>
 </pre></div>
 </div>
@@ -689,7 +740,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="builtin_types.html" class="btn btn-neutral float-right" title="Builtin Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="builtin_types.html" class="btn btn-neutral float-right" title="Builtin types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="syntax.html" class="btn btn-neutral float-left" title="Syntax" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -703,7 +754,7 @@
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

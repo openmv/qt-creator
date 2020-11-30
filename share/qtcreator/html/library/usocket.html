@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>usocket – socket module &mdash; MicroPython 1.12 documentation</title>
+  <title>usocket – socket module &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,17 +91,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uasyncio.html"><code class="docutils literal notranslate"><span class="pre">uasyncio</span></code> — asynchronous I/O scheduler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
@@ -121,6 +118,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
@@ -131,9 +129,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -202,7 +201,7 @@
             
   <div class="section" id="module-usocket">
 <span id="usocket-socket-module"></span><h1><a class="reference internal" href="#module-usocket" title="usocket: socket module"><code class="xref py py-mod docutils literal notranslate"><span class="pre">usocket</span></code></a> – socket module<a class="headerlink" href="#module-usocket" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><span class="xref std std-term">CPython</span></a> <em>module,
 as described below. For more information, refer to the original
 CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/socket.html#module-socket" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">socket</span></code></a>.</p>
 <p>This module provides access to the BSD socket interface.</p>
@@ -231,8 +230,8 @@ power) and portable way to work with addresses.</p>
 <p>However, <code class="docutils literal notranslate"><span class="pre">socket</span></code> module (note the difference with native MicroPython
 <code class="docutils literal notranslate"><span class="pre">usocket</span></code> module described here) provides CPython-compatible way to specify
 addresses using tuples, as described below. Note that depending on a
-<a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>, <code class="docutils literal notranslate"><span class="pre">socket</span></code> module can be builtin or need to be
-installed from <a class="reference internal" href="../reference/glossary.html#term-micropython-lib"><code class="xref any std std-term docutils literal notranslate"><span class="pre">micropython-lib</span></code></a> (as in the case of <a class="reference internal" href="../reference/glossary.html#term-micropython-unix-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">Unix</span> <span class="pre">port</span></code></a>),
+<a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>, <code class="docutils literal notranslate"><span class="pre">socket</span></code> module can be builtin or need to be
+installed from <a class="reference internal" href="../reference/glossary.html#term-micropython-lib"><code class="xref any std std-term docutils literal notranslate"><span class="pre">micropython-lib</span></code></a> (as in the case of <a class="reference internal" href="../reference/glossary.html#term-micropython-unix-port"><span class="xref std std-term">MicroPython Unix port</span></a>),
 and some ports still accept only numeric addresses in the tuple format,
 and require to use <a class="reference internal" href="#usocket.getaddrinfo" title="usocket.getaddrinfo"><code class="xref any py py-func docutils literal notranslate"><span class="pre">getaddrinfo</span></code></a> function to resolve domain names.</p>
 <p>Summing up:</p>
@@ -254,14 +253,14 @@ and <em>port</em> is an integer port number in the range 1-65535. <em>flowinfo</
 must be 0. <em>scopeid</em> is the interface scope identifier for link-local
 addresses. Note the domain names are not accepted as <em>ipv6_address</em>,
 they should be resolved first using <a class="reference internal" href="#usocket.getaddrinfo" title="usocket.getaddrinfo"><code class="xref any py py-func docutils literal notranslate"><span class="pre">usocket.getaddrinfo()</span></code></a>. Availability
-of IPv6 support depends on a <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</li>
+of IPv6 support depends on a <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>.</li>
 </ul>
 </div>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="usocket.socket">
-<code class="descclassname">usocket.</code><code class="descname">socket</code><span class="sig-paren">(</span><em>af=AF_INET</em>, <em>type=SOCK_STREAM</em>, <em>proto=IPPROTO_TCP</em><span class="sig-paren">)</span><a class="headerlink" href="#usocket.socket" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">usocket.</code><code class="descname">socket</code><span class="sig-paren">(</span><em>af=AF_INET</em>, <em>type=SOCK_STREAM</em>, <em>proto=IPPROTO_TCP</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#usocket.socket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new socket using the given address family, socket type and
 protocol number. Note that specifying <em>proto</em> in most cases is not
 required (and not recommended, as some MicroPython ports may omit
@@ -277,7 +276,7 @@ protocol automatically:</p>
 
 <dl class="function">
 <dt id="usocket.getaddrinfo">
-<code class="descclassname">usocket.</code><code class="descname">getaddrinfo</code><span class="sig-paren">(</span><em>host</em>, <em>port</em>, <em>af=0</em>, <em>type=0</em>, <em>proto=0</em>, <em>flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#usocket.getaddrinfo" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">usocket.</code><code class="descname">getaddrinfo</code><span class="sig-paren">(</span><em>host</em>, <em>port</em>, <em>af=0</em>, <em>type=0</em>, <em>proto=0</em>, <em>flags=0</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#usocket.getaddrinfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Translate the host/port argument into a sequence of 5-tuples that contain all the
 necessary arguments for creating a socket connected to that service. Arguments
 <em>af</em>, <em>type</em>, and <em>proto</em> (which have the same meaning as for the <a class="reference internal" href="#usocket.socket" title="usocket.socket"><code class="xref any py py-func docutils literal notranslate"><span class="pre">socket()</span></code></a> function)
@@ -346,7 +345,7 @@ to a binary representation:</p>
 <code class="descclassname">usocket.</code><code class="descname">AF_INET</code><a class="headerlink" href="#usocket.AF_INET" title="Permalink to this definition">¶</a></dt>
 <dt id="usocket.AF_INET6">
 <code class="descclassname">usocket.</code><code class="descname">AF_INET6</code><a class="headerlink" href="#usocket.AF_INET6" title="Permalink to this definition">¶</a></dt>
-<dd><p>Address family types. Availability depends on a particular <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+<dd><p>Address family types. Availability depends on a particular <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>.</p>
 </dd></dl>
 
 <dl class="data">
@@ -362,7 +361,7 @@ to a binary representation:</p>
 <code class="descclassname">usocket.</code><code class="descname">IPPROTO_UDP</code><a class="headerlink" href="#usocket.IPPROTO_UDP" title="Permalink to this definition">¶</a></dt>
 <dt id="usocket.IPPROTO_TCP">
 <code class="descclassname">usocket.</code><code class="descname">IPPROTO_TCP</code><a class="headerlink" href="#usocket.IPPROTO_TCP" title="Permalink to this definition">¶</a></dt>
-<dd><p>IP protocol numbers. Availability depends on a particular <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.
+<dd><p>IP protocol numbers. Availability depends on a particular <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>.
 Note that you don’t need to specify these in a call to <a class="reference internal" href="#usocket.socket" title="usocket.socket"><code class="xref any py py-func docutils literal notranslate"><span class="pre">usocket.socket()</span></code></a>,
 because <a class="reference internal" href="#usocket.SOCK_STREAM" title="usocket.SOCK_STREAM"><code class="xref any py py-data docutils literal notranslate"><span class="pre">SOCK_STREAM</span></code></a> socket type automatically selects <a class="reference internal" href="#usocket.IPPROTO_TCP" title="usocket.IPPROTO_TCP"><code class="xref any py py-data docutils literal notranslate"><span class="pre">IPPROTO_TCP</span></code></a>, and
 <a class="reference internal" href="#usocket.SOCK_DGRAM" title="usocket.SOCK_DGRAM"><code class="xref any py py-data docutils literal notranslate"><span class="pre">SOCK_DGRAM</span></code></a> - <a class="reference internal" href="#usocket.IPPROTO_UDP" title="usocket.IPPROTO_UDP"><code class="xref any py py-data docutils literal notranslate"><span class="pre">IPPROTO_UDP</span></code></a>. Thus, the only real use of these constants
@@ -373,14 +372,14 @@ is as an argument to <a class="reference internal" href="#usocket.socket.setsock
 <dt>
 <code class="descname">usocket.SOL_*</code></dt>
 <dd><p>Socket option levels (an argument to <a class="reference internal" href="#usocket.socket.setsockopt" title="usocket.socket.setsockopt"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">setsockopt()</span></code></a>). The exact
-inventory depends on a <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+inventory depends on a <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>.</p>
 </dd></dl>
 
 <dl class="data">
 <dt>
 <code class="descname">usocket.SO_*</code></dt>
 <dd><p>Socket options (an argument to <a class="reference internal" href="#usocket.socket.setsockopt" title="usocket.socket.setsockopt"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">setsockopt()</span></code></a>). The exact
-inventory depends on a <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a>.</p>
+inventory depends on a <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a>.</p>
 </dd></dl>
 
 <div class="section" id="class-socket">
@@ -488,7 +487,7 @@ point number expressing seconds, or None. If a non-zero value is given, subseque
 will raise an <a class="reference internal" href="builtins.html#OSError" title="OSError"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> exception if the timeout period value has elapsed before the operation has
 completed. If zero is given, the socket is put in non-blocking mode. If None is given, the socket
 is put in blocking mode.</p>
-<p>Not every <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><code class="xref any std std-term docutils literal notranslate"><span class="pre">MicroPython</span> <span class="pre">port</span></code></a> supports this method. A more portable and
+<p>Not every <a class="reference internal" href="../reference/glossary.html#term-micropython-port"><span class="xref std std-term">MicroPython port</span></a> supports this method. A more portable and
 generic solution is to use <a class="reference internal" href="uselect.html#uselect.poll" title="uselect.poll"><code class="xref any py py-func docutils literal notranslate"><span class="pre">uselect.poll</span></code></a> object. This allows to wait on
 multiple objects at the same time (and not just on sockets, but on generic
 <a class="reference internal" href="../reference/glossary.html#term-stream"><span class="xref std std-term">stream</span></a> objects which support polling). Example:</p>
@@ -527,7 +526,7 @@ else to blocking mode.</p>
 
 <dl class="method">
 <dt id="usocket.socket.makefile">
-<code class="descclassname">socket.</code><code class="descname">makefile</code><span class="sig-paren">(</span><em>mode='rb'</em>, <em>buffering=0</em><span class="sig-paren">)</span><a class="headerlink" href="#usocket.socket.makefile" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">socket.</code><code class="descname">makefile</code><span class="sig-paren">(</span><em>mode='rb'</em>, <em>buffering=0</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#usocket.socket.makefile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a file object associated with the socket. The exact returned type depends on the arguments
 given to makefile(). The support is limited to binary modes only (‘rb’, ‘wb’, and ‘rwb’).
 CPython’s arguments: <em>encoding</em>, <em>errors</em> and <em>newline</em> are not supported.</p>
@@ -615,7 +614,7 @@ and is an alias of <a class="reference internal" href="builtins.html#OSError" ti
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

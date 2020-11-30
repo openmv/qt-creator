@@ -3,6 +3,15 @@
 Quick reference for the openmvcam
 =================================
 
+Below is a quick reference for the OpenMV Cam. If it is your first time working with
+the OpenMV Cam please consider reading the following sections first:
+
+.. toctree::
+   :maxdepth: 1
+
+   general.rst
+   tutorial/index.rst
+
 .. image:: pinout.png
     :alt: OpenMV Cam pinout
     :width: 700px

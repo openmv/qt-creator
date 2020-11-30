@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>utime – time related functions &mdash; MicroPython 1.12 documentation</title>
+  <title>utime – time related functions &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="uzlib – zlib decompression" href="uzlib.html" />
-    <link rel="prev" title="ustruct – pack and unpack primitive data types" href="ustruct.html" /> 
+    <link rel="prev" title="sys – system specific functions" href="usys.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,17 +91,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="builtins.html">Builtin functions and exceptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cmath.html"><code class="docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gc.html"><code class="docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="math.html"><code class="docutils literal notranslate"><span class="pre">math</span></code> – mathematical functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uarray.html"><code class="docutils literal notranslate"><span class="pre">uarray</span></code> – arrays of numeric data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uasyncio.html"><code class="docutils literal notranslate"><span class="pre">uasyncio</span></code> — asynchronous I/O scheduler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubinascii.html"><code class="docutils literal notranslate"><span class="pre">ubinascii</span></code> – binary/ASCII conversions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucollections.html"><code class="docutils literal notranslate"><span class="pre">ucollections</span></code> – collection and container types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uerrno.html"><code class="docutils literal notranslate"><span class="pre">uerrno</span></code> – system error codes</a></li>
@@ -115,8 +112,10 @@
 <li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#constructors">Constructors</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
@@ -128,9 +127,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -199,7 +199,7 @@
             
   <div class="section" id="module-utime">
 <span id="utime-time-related-functions"></span><h1><a class="reference internal" href="#module-utime" title="utime: time related functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">utime</span></code></a> – time related functions<a class="headerlink" href="#module-utime" title="Permalink to this headline">¶</a></h1>
-<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><code class="xref any std std-term docutils literal notranslate"><span class="pre">CPython</span></code></a> <em>module,
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-cpython"><span class="xref std std-term">CPython</span></a> <em>module,
 as described below. For more information, refer to the original
 CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/time.html#module-time" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">time</span></code></a>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">utime</span></code> module provides functions for getting the current time and date,
@@ -229,11 +229,16 @@ behave not as expected.</p>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
+<dt id="utime.gmtime">
+<code class="descclassname">utime.</code><code class="descname">gmtime</code><span class="sig-paren">(</span><span class="optional">[</span><em>secs</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#utime.gmtime" title="Permalink to this definition">¶</a></dt>
 <dt id="utime.localtime">
 <code class="descclassname">utime.</code><code class="descname">localtime</code><span class="sig-paren">(</span><span class="optional">[</span><em>secs</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#utime.localtime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert a time expressed in seconds since the Epoch (see above) into an 8-tuple which
-contains: (year, month, mday, hour, minute, second, weekday, yearday)
-If secs is not provided or None, then the current time from the RTC is used.</p>
+<dd><p>Convert the time <em>secs</em> expressed in seconds since the Epoch (see above) into an
+8-tuple which contains: <code class="docutils literal notranslate"><span class="pre">(year,</span> <span class="pre">month,</span> <span class="pre">mday,</span> <span class="pre">hour,</span> <span class="pre">minute,</span> <span class="pre">second,</span> <span class="pre">weekday,</span> <span class="pre">yearday)</span></code>
+If <em>secs</em> is not provided or None, then the current time from the RTC is used.</p>
+<p>The <a class="reference internal" href="#utime.gmtime" title="utime.gmtime"><code class="xref any py py-func docutils literal notranslate"><span class="pre">gmtime()</span></code></a> function returns a date-time tuple in UTC, and <a class="reference internal" href="#utime.localtime" title="utime.localtime"><code class="xref any py py-func docutils literal notranslate"><span class="pre">localtime()</span></code></a> returns a
+date-time tuple in local time.</p>
+<p>The format of the entries in the 8-tuple are:</p>
 <ul class="simple">
 <li>year includes the century (for example 2014).</li>
 <li>month   is 1-12</li>
@@ -418,8 +423,9 @@ underlying RTC is set and maintained as described above. If an RTC is not set, t
 function returns number of seconds since a port-specific reference point in time (for
 embedded boards without a battery-backed RTC, usually since power up or reset). If you
 want to develop portable MicroPython application, you should not rely on this function
-to provide higher than second precision. If you need higher precision, use
-<a class="reference internal" href="#utime.ticks_ms" title="utime.ticks_ms"><code class="xref any py py-func docutils literal notranslate"><span class="pre">ticks_ms()</span></code></a> and <a class="reference internal" href="#utime.ticks_us" title="utime.ticks_us"><code class="xref any py py-func docutils literal notranslate"><span class="pre">ticks_us()</span></code></a> functions, if you need calendar time,
+to provide higher than second precision.  If you need higher precision, absolute
+timestamps, use <a class="reference internal" href="#utime.time_ns" title="utime.time_ns"><code class="xref any py py-func docutils literal notranslate"><span class="pre">time_ns()</span></code></a>.  If relative times are acceptable then use the
+<a class="reference internal" href="#utime.ticks_ms" title="utime.ticks_ms"><code class="xref any py py-func docutils literal notranslate"><span class="pre">ticks_ms()</span></code></a> and <a class="reference internal" href="#utime.ticks_us" title="utime.ticks_us"><code class="xref any py py-func docutils literal notranslate"><span class="pre">ticks_us()</span></code></a> functions.  If you need calendar time, <a class="reference internal" href="#utime.gmtime" title="utime.gmtime"><code class="xref any py py-func docutils literal notranslate"><span class="pre">gmtime()</span></code></a> or
 <a class="reference internal" href="#utime.localtime" title="utime.localtime"><code class="xref any py py-func docutils literal notranslate"><span class="pre">localtime()</span></code></a> without an argument is a better choice.</p>
 <div class="attention admonition">
 <p class="first admonition-title">Difference to CPython</p>
@@ -436,6 +442,52 @@ since last power-up or from other relative, hardware-specific point
 </div>
 </dd></dl>
 
+<dl class="function">
+<dt id="utime.time_ns">
+<code class="descclassname">utime.</code><code class="descname">time_ns</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utime.time_ns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#utime.time" title="utime.time"><code class="xref any py py-func docutils literal notranslate"><span class="pre">time()</span></code></a> but returns nanoseconds since the Epoch, as an integer (usually
+a big integer, so will allocate on the heap).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="utime.time.clock">
+<em class="property">class </em><code class="descclassname">time.</code><code class="descname">clock</code><a class="headerlink" href="#utime.time.clock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a clock object.</p>
+<blockquote>
+<div><dl class="method">
+<dt id="utime.time.clock.clock.tick">
+<code class="descclassname">clock.</code><code class="descname">tick</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utime.time.clock.clock.tick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts tracking elapsed time.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="utime.time.clock.clock.fps">
+<code class="descclassname">clock.</code><code class="descname">fps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utime.time.clock.clock.fps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops tracking the elapsed time and returns the current FPS
+(frames per second).</p>
+<p>Always call <code class="docutils literal notranslate"><span class="pre">tick</span></code> first before calling this function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="utime.time.clock.clock.avg">
+<code class="descclassname">clock.</code><code class="descname">avg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utime.time.clock.clock.avg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops tracking the elapsed time and returns the current average elapsed time
+in milliseconds.</p>
+<p>Always call <code class="docutils literal notranslate"><span class="pre">tick</span></code> first before calling this function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="utime.time.clock.clock.reset">
+<code class="descclassname">clock.</code><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utime.time.clock.clock.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the clock object.</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
 </div>
 </div>
 
@@ -450,7 +502,7 @@ since last power-up or from other relative, hardware-specific point
         <a href="uzlib.html" class="btn btn-neutral float-right" title="uzlib – zlib decompression" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ustruct.html" class="btn btn-neutral float-left" title="ustruct – pack and unpack primitive data types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="usys.html" class="btn btn-neutral float-left" title="sys – system specific functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -461,7 +513,7 @@ since last power-up or from other relative, hardware-specific point
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

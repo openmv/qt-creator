@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>btree – simple BTree database &mdash; MicroPython 1.12 documentation</title>
+  <title>btree – simple BTree database &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="framebuf — Frame buffer manipulation" href="framebuf.html" />
+    <link rel="next" title="framebuf — frame buffer manipulation" href="framebuf.html" />
     <link rel="prev" title="_thread – multithreading support" href="_thread.html" /> 
 </head>
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,9 +91,6 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
@@ -103,7 +100,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#constants">Constants</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
@@ -116,9 +113,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -258,7 +256,7 @@ need to serialize them to <a class="reference internal" href="builtins.html#byte
 <dl class="function">
 <dt id="btree.open">
 <code class="descclassname">btree.</code><code class="descname">open</code><span class="sig-paren">(</span><em>stream</em>, <em>*</em>, <em>flags=0</em>, <em>pagesize=0</em>, <em>cachesize=0</em>, <em>minkeypage=0</em><span class="sig-paren">)</span><a class="headerlink" href="#btree.open" title="Permalink to this definition">¶</a></dt>
-<dd><p>Open a database from a random-access <code class="docutils literal notranslate"><span class="pre">stream</span></code> (like an open file). All
+<dd><p>Open a database from a random-access <a class="reference internal" href="../reference/glossary.html#term-stream"><span class="xref std std-term">stream</span></a> (like an open file). All
 other parameters are optional and keyword-only, and allow to tweak advanced
 parameters of the database operation (most users will not need them):</p>
 <ul class="simple">
@@ -304,7 +302,7 @@ data flushed from buffer to the underlying storage).</p>
 <dt id="btree.btree.__getitem__">
 <code class="descclassname">btree.</code><code class="descname">__getitem__</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#btree.btree.__getitem__" title="Permalink to this definition">¶</a></dt>
 <dt id="btree.btree.get">
-<code class="descclassname">btree.</code><code class="descname">get</code><span class="sig-paren">(</span><em>key</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#btree.btree.get" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">btree.</code><code class="descname">get</code><span class="sig-paren">(</span><em>key</em>, <em>default=None</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#btree.btree.get" title="Permalink to this definition">¶</a></dt>
 <dt id="btree.btree.__setitem__">
 <code class="descclassname">btree.</code><code class="descname">__setitem__</code><span class="sig-paren">(</span><em>key</em>, <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#btree.btree.__setitem__" title="Permalink to this definition">¶</a></dt>
 <dt id="btree.btree.__detitem__">
@@ -370,7 +368,7 @@ scanning should be in descending direction of keys.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="framebuf.html" class="btn btn-neutral float-right" title="framebuf — Frame buffer manipulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="framebuf.html" class="btn btn-neutral float-right" title="framebuf — frame buffer manipulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="_thread.html" class="btn btn-neutral float-left" title="_thread – multithreading support" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -384,7 +382,7 @@ scanning should be in descending direction of keys.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

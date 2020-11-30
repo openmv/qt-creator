@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Modules &mdash; MicroPython 1.12 documentation</title>
+  <title>Modules &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="MicroPython license information" href="../license.html" />
-    <link rel="prev" title="Builtin Types" href="builtin_types.html" /> 
+    <link rel="prev" title="Builtin types" href="builtin_types.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,15 +91,12 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">MicroPython libraries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython differences from CPython</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="core_language.html">Core Language</a></li>
-<li class="toctree-l2"><a class="reference internal" href="builtin_types.html">Builtin Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core_language.html">Core language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="builtin_types.html">Builtin types</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Modules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#array">array</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#looking-for-integer-not-implemented">Looking for integer not implemented</a></li>
@@ -119,6 +116,12 @@
 <li class="toctree-l4"><a class="reference internal" href="#json-module-does-not-throw-exception-when-object-is-not-serialisable">JSON module does not throw exception when object is not serialisable</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#os">os</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#environ-attribute-is-not-implemented"><code class="docutils literal notranslate"><span class="pre">environ</span></code> attribute is not implemented</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getenv-returns-actual-value-instead-of-cached-value"><code class="docutils literal notranslate"><span class="pre">getenv</span></code> returns actual value instead of cached value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getenv-only-allows-one-argument"><code class="docutils literal notranslate"><span class="pre">getenv</span></code> only allows one argument</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#struct">struct</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#struct-pack-with-too-few-args-not-checked-by-upy">Struct pack with too few args, not checked by uPy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#struct-pack-with-too-many-args-not-checked-by-upy">Struct pack with too many args, not checked by uPy</a></li>
@@ -133,6 +136,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -201,14 +205,15 @@
             
   <div class="section" id="modules">
 <h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
-<p>Generated Mon 11 May 2020 17:55:38 UTC</p>
+<p>Generated Sat 28 Nov 2020 22:23:20 UTC</p>
 <div class="section" id="array">
 <h2>array<a class="headerlink" href="#array" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="looking-for-integer-not-implemented">
 <span id="cpydiff-modules-array-containment"></span><h3>Looking for integer not implemented<a class="headerlink" href="#looking-for-integer-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">array</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;12&#39;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;12&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -225,7 +230,7 @@
 </div>
 </td>
 <td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">9</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">NotImplementedError</span><span class="p">:</span>
 </pre></div>
 </div>
@@ -238,7 +243,8 @@
 <span id="cpydiff-modules-array-deletion"></span><h3>Array deletion not implemented<a class="headerlink" href="#array-deletion-not-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">array</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="k">del</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
@@ -257,7 +263,7 @@
 </div>
 </td>
 <td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">9</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">10</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;array&#39;</span> <span class="nb">object</span> <span class="n">doesn</span><span class="s1">&#39;t support item deletion</span>
 </pre></div>
 </div>
@@ -270,7 +276,8 @@
 <span id="cpydiff-modules-array-subscrstep"></span><h3>Subscript with step != 1 is not yet implemented<a class="headerlink" href="#subscript-with-step-1-is-not-yet-implemented" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">array</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -288,7 +295,7 @@
 </div>
 </td>
 <td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">9</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">10</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">NotImplementedError</span><span class="p">:</span> <span class="n">only</span> <span class="n">slices</span> <span class="k">with</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span> <span class="p">(</span><span class="n">aka</span> <span class="kc">None</span><span class="p">)</span> <span class="n">are</span> <span class="n">supported</span>
 </pre></div>
 </div>
@@ -345,6 +352,7 @@
 <p><strong>Workaround:</strong> Use regular lists. micropython-lib has implementation of collections.deque.</p>
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">collections</span>
+
 <span class="n">D</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
 </pre></div>
@@ -363,7 +371,7 @@
 </div>
 </td>
 <td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">9</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">TypeError</span><span class="p">:</span> <span class="n">function</span> <span class="n">missing</span> <span class="mi">2</span> <span class="n">required</span> <span class="n">positional</span> <span class="n">arguments</span>
 </pre></div>
 </div>
@@ -379,13 +387,14 @@
 <span id="cpydiff-modules-json-nonserializable"></span><h3>JSON module does not throw exception when object is not serialisable<a class="headerlink" href="#json-module-does-not-throw-exception-when-object-is-not-serialisable" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
 <span class="n">a</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">))</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">z</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should not get here&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Should not get here&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;TypeError&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TypeError&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -410,17 +419,134 @@
 </table>
 </div>
 </div>
+<div class="section" id="os">
+<h2>os<a class="headerlink" href="#os" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="environ-attribute-is-not-implemented">
+<span id="cpydiff-modules-os-environ"></span><h3><code class="docutils literal notranslate"><span class="pre">environ</span></code> attribute is not implemented<a class="headerlink" href="#environ-attribute-is-not-implemented" title="Permalink to this headline">¶</a></h3>
+<p><strong>Workaround:</strong> Use <code class="docutils literal notranslate"><span class="pre">getenv</span></code>, <code class="docutils literal notranslate"><span class="pre">putenv</span></code> and <code class="docutils literal notranslate"><span class="pre">unsetenv</span></code></p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;NEW_VARIABLE&quot;</span><span class="p">))</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;NEW_VARIABLE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;VALUE&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;NEW_VARIABLE&quot;</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;should not get here&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;NEW_VARIABLE&quot;</span><span class="p">))</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">putenv</span><span class="p">(</span><span class="s2">&quot;NEW_VARIABLE&quot;</span><span class="p">,</span> <span class="s2">&quot;VALUE&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;NEW_VARIABLE&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>CPy output:</td>
+<td>uPy output:</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
+<span class="n">VALUE</span>
+</pre></div>
+</div>
+</td>
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ImportError</span><span class="p">:</span> <span class="n">no</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">&#39;os&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="getenv-returns-actual-value-instead-of-cached-value">
+<span id="cpydiff-modules-os-getenv"></span><h3><code class="docutils literal notranslate"><span class="pre">getenv</span></code> returns actual value instead of cached value<a class="headerlink" href="#getenv-returns-actual-value-instead-of-cached-value" title="Permalink to this headline">¶</a></h3>
+<p><strong>Cause:</strong> The <code class="docutils literal notranslate"><span class="pre">environ</span></code> attribute is not implemented</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;NEW_VARIABLE&quot;</span><span class="p">))</span>
+<span class="n">os</span><span class="o">.</span><span class="n">putenv</span><span class="p">(</span><span class="s2">&quot;NEW_VARIABLE&quot;</span><span class="p">,</span> <span class="s2">&quot;VALUE&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;NEW_VARIABLE&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>CPy output:</td>
+<td>uPy output:</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
+<span class="kc">None</span>
+</pre></div>
+</div>
+</td>
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ImportError</span><span class="p">:</span> <span class="n">no</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">&#39;os&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="getenv-only-allows-one-argument">
+<span id="cpydiff-modules-os-getenv-argcount"></span><h3><code class="docutils literal notranslate"><span class="pre">getenv</span></code> only allows one argument<a class="headerlink" href="#getenv-only-allows-one-argument" title="Permalink to this headline">¶</a></h3>
+<p><strong>Workaround:</strong> Test that the return value is <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;NEW_VARIABLE&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;should not get here&quot;</span><span class="p">)</span>
+    <span class="c1"># this assumes NEW_VARIABLE is never an empty variable</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;NEW_VARIABLE&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>CPy output:</td>
+<td>uPy output:</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DEFAULT</span>
+</pre></div>
+</div>
+</td>
+<td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ImportError</span><span class="p">:</span> <span class="n">no</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">&#39;os&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="section" id="struct">
 <h2>struct<a class="headerlink" href="#struct" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="struct-pack-with-too-few-args-not-checked-by-upy">
 <span id="cpydiff-modules-struct-fewargs"></span><h3>Struct pack with too few args, not checked by uPy<a class="headerlink" href="#struct-pack-with-too-few-args-not-checked-by-upy" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">struct</span>
+
 <span class="k">try</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should not get here&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s2">&quot;bb&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Should not get here&quot;</span><span class="p">)</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;struct.error&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;struct.error&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -449,11 +575,12 @@
 <span id="cpydiff-modules-struct-manyargs"></span><h3>Struct pack with too many args, not checked by uPy<a class="headerlink" href="#struct-pack-with-too-many-args-not-checked-by-upy" title="Permalink to this headline">¶</a></h3>
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">struct</span>
+
 <span class="k">try</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Should not get here&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s2">&quot;bb&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Should not get here&quot;</span><span class="p">)</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;struct.error&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;struct.error&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -486,6 +613,7 @@
 <p><strong>Cause:</strong> They are stored in read-only memory.</p>
 <p>Sample code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
 <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="p">)</span>
 </pre></div>
@@ -504,7 +632,7 @@
 </div>
 </td>
 <td><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">9</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;module&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;stdin&#39;</span>
 </pre></div>
 </div>
@@ -527,7 +655,7 @@
         <a href="../license.html" class="btn btn-neutral float-right" title="MicroPython license information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="builtin_types.html" class="btn btn-neutral float-left" title="Builtin Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="builtin_types.html" class="btn btn-neutral float-left" title="Builtin types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -538,7 +666,7 @@
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>

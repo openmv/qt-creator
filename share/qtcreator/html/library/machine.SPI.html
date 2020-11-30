@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>class SPI – a Serial Peripheral Interface bus protocol (master side) &mdash; MicroPython 1.12 documentation</title>
+  <title>class SPI – a Serial Peripheral Interface bus protocol (master side) &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.12
+                1.13
               </div>
             
           
@@ -91,14 +91,11 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/general.html">General information about the openmvcam</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../openmvcam/tutorial/index.html">OpenMV Cam Tutorial</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — Frame buffer manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="machine.html#reset-related-functions">Reset related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#interrupt-related-functions">Interrupt related functions</a></li>
@@ -119,9 +116,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">The MicroPython language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../genrst/index.html">MicroPython differences from CPython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">MicroPython license information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
             
@@ -198,19 +196,33 @@ can share the same bus. Each device should have a separate, 4th signal,
 SS (Slave Select), to select a particular device on a bus with which
 communication takes place. Management of an SS signal should happen in
 user code (via machine.Pin class).</p>
+<p>Both hardware and software SPI implementations exist via the
+<a class="reference internal" href="#machine-spi"><span class="std std-ref">machine.SPI</span></a> and <a class="reference internal" href="#machine.SoftSPI" title="machine.SoftSPI"><code class="xref any py py-class docutils literal notranslate"><span class="pre">machine.SoftSPI</span></code></a> classes.  Hardware SPI uses underlying
+hardware support of the system to perform the reads/writes and is usually
+efficient and fast but may have restrictions on which pins can be used.
+Software SPI is implemented by bit-banging and can be used on any pin but
+is not as efficient.  These classes have the same methods available and
+differ primarily in the way they are constructed.</p>
 <div class="section" id="constructors">
 <h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="machine.SPI">
 <em class="property">class </em><code class="descclassname">machine.</code><code class="descname">SPI</code><span class="sig-paren">(</span><em>id</em>, <em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.SPI" title="Permalink to this definition">¶</a></dt>
-<dd><p>Construct an SPI object on the given bus, <code class="docutils literal notranslate"><span class="pre">id</span></code>. Values of <code class="docutils literal notranslate"><span class="pre">id</span></code> depend
+<dd><p>Construct an SPI object on the given bus, <em>id</em>. Values of <em>id</em> depend
 on a particular port and its hardware. Values 0, 1, etc. are commonly used
-to select hardware SPI block #0, #1, etc. Value -1 can be used for
-bitbanging (software) implementation of SPI (if supported by a port).</p>
+to select hardware SPI block #0, #1, etc.</p>
 <p>With no additional parameters, the SPI object is created but not
 initialised (it has the settings from the last initialisation of
 the bus, if any).  If extra arguments are given, the bus is initialised.
 See <code class="docutils literal notranslate"><span class="pre">init</span></code> for parameters of initialisation.</p>
+</dd></dl>
+
+<span class="target" id="machine-softspi"></span><dl class="class">
+<dt id="machine.SoftSPI">
+<em class="property">class </em><code class="descclassname">machine.</code><code class="descname">SoftSPI</code><span class="sig-paren">(</span><em>baudrate=500000</em>, <em>*</em>, <em>polarity=0</em>, <em>phase=0</em>, <em>bits=8</em>, <em>firstbit=MSB</em>, <em>sck=None</em>, <em>mosi=None</em>, <em>miso=None</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.SoftSPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a new software SPI object.  Additional parameters must be
+given, usually at least <em>sck</em>, <em>mosi</em> and <em>miso</em>, and these are used
+to initialise the bus.  See <a class="reference internal" href="#machine.SPI.init" title="machine.SPI.init"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">SPI.init</span></code></a> for a description of the parameters.</p>
 </dd></dl>
 
 </div>
@@ -326,7 +338,7 @@ Returns <code class="docutils literal notranslate"><span class="pre">None</span>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 07 Jun 2020.
+        Last updated on 29 Nov 2020.
       </span>
 
     </p>
