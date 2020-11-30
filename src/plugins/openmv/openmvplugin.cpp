@@ -220,6 +220,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     QMap<QString, QStringList> providerFunctionArgs;
 
     QRegularExpression moduleRegEx(QStringLiteral("<div class=\"section\" id=\"module-(.+?)\">(.*?)<div class=\"section\""), QRegularExpression::DotMatchesEverythingOption);
+    QRegularExpression moduleRegEx2(QStringLiteral("<div class=\"section\" id=\"module-(.+?)\">(.*?)</div>"), QRegularExpression::DotMatchesEverythingOption);
     QRegularExpression spanRegEx(QStringLiteral("<span.*?>"), QRegularExpression::DotMatchesEverythingOption);
     QRegularExpression linkRegEx(QStringLiteral("<a.*?>"), QRegularExpression::DotMatchesEverythingOption);
     QRegularExpression classRegEx(QStringLiteral(" class=\".*?\""), QRegularExpression::DotMatchesEverythingOption);
@@ -243,12 +244,14 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             {
                 file.close();
 
-                QRegularExpressionMatch moduleMatch = moduleRegEx.match(data);
+                QRegularExpressionMatchIterator moduleMatch = moduleRegEx2.globalMatch(data);
+                if (!moduleMatch.hasNext()) moduleMatch = moduleRegEx.globalMatch(data);
 
-                if(moduleMatch.hasMatch())
+                while(moduleMatch.hasNext())
                 {
-                    QString name = moduleMatch.captured(1);
-                    QString text = moduleMatch.captured(2).
+                    QRegularExpressionMatch match = moduleMatch.next();
+                    QString name = match.captured(1);
+                    QString text = match.captured(2).
                                    remove(QStringLiteral("\u00B6")).
                                    remove(spanRegEx).
                                    remove(QStringLiteral("</span>")).
@@ -283,12 +286,13 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                     QString body = match.captured(4);
                     QStringList idList = id.split(QLatin1Char('.'), QString::SkipEmptyParts);
 
-                    if((1 <= idList.size()) && (idList.size() <= 3))
+                    if((1 <= idList.size()) && (idList.size() <= 5))
                     {
                         documentation_t d;
                         d.moduleName = (idList.size() > 1) ? idList.at(0) : QString();
-                        d.className = (idList.size() > 2) ? idList.at(1) : QString();
-                        d.name = idList.last();
+                        if (idList.size() > 1) idList.removeAll(d.moduleName);
+                        d.className = (idList.size() > 1) ? idList.at(0) : QString();
+                        d.name = (idList.size() > 0) ? idList.last() : d.moduleName;
                         d.text = QString(QStringLiteral("<h3>%1</h3>%2")).arg(it.fileInfo().completeBaseName() + QStringLiteral(" - ") + head).arg(body).
                                  remove(QStringLiteral("\u00B6")).
                                  remove(spanRegEx).
