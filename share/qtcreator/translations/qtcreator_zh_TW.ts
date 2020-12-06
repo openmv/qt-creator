@@ -7762,7 +7762,7 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+44"/>
         <location line="+15"/>
-        <location line="+2931"/>
+        <location line="+2935"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -8713,14 +8713,13 @@ sudo adduser %L1 dialout
         <translation>缺少-open_tcp_server_terminal的參數</translation>
     </message>
     <message>
-        <location line="+56"/>
         <source>OpenMV Cam automatically registered!
 
 Board: %1
 ID: %2
 
 Please run Examples-&gt;Basics-&gt;helloworld.py to test the vision quality and focus the camera (if applicable).</source>
-        <translation>OpenMV Cam自動註冊！
+        <translation type="vanished">OpenMV Cam自動註冊！
 
 董事會：%1
 ID：%2
@@ -8728,7 +8727,7 @@ ID：%2
 請運行“示例”-&gt;“基礎”-&gt;“ helloworld.py”以測試視覺質量並對焦相機（如果適用）。</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+97"/>
         <location line="+10"/>
         <location line="+10"/>
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8817,7 +8816,22 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>資料庫錯誤！</translation>
     </message>
     <message>
-        <location line="-160"/>
+        <location line="-185"/>
+        <source>OpenMV Cam automatically registered!
+
+Board: %1
+ID: %2
+
+Please run Examples-&gt;OpenMV-&gt;Basics-&gt;helloworld.py to test the vision quality and focus the camera (if applicable).</source>
+        <translation>OpenMV Cam自動註冊！
+
+董事會：%1
+ID：%2
+
+請運行“示例-&gt;“OpenMV”-&gt;“基礎”-&gt;“helloworld.py”以測試視覺質量並對焦相機（如果適用）。</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <location line="+173"/>
         <source>GET Network error!</source>
         <translation>GET網路錯誤！</translation>
@@ -9978,7 +9992,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <location line="+1327"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+457"/>
         <location line="+375"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1096"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1098"/>
         <location line="+135"/>
         <source>Please add a file extension!</source>
         <translation>請添加文件擴展名！</translation>
@@ -9999,7 +10013,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>無法寫入畫面！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1091"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1093"/>
         <source>Reading File...</source>
         <translation>正在讀取檔案...</translation>
     </message>
@@ -10039,7 +10053,7 @@ Percentage
         <location line="+58"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+0"/>
         <location line="+63"/>
-        <location line="+654"/>
+        <location line="+656"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
@@ -10172,7 +10186,7 @@ Open a data set to upload it.</source>
         <translation>請輸入Edge Impluse項目API密鑰</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-706"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-708"/>
         <location line="+20"/>
         <location line="+11"/>
         <source>Reading File</source>
@@ -10195,12 +10209,12 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="-56"/>
-        <location line="+654"/>
+        <location line="+656"/>
         <source>Transcoding File...</source>
         <translation>正在轉碼檔案...</translation>
     </message>
     <message>
-        <location line="-643"/>
+        <location line="-645"/>
         <location line="+20"/>
         <location line="+11"/>
         <location line="+13"/>
@@ -10287,7 +10301,7 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+34"/>
-        <location line="+86"/>
+        <location line="+88"/>
         <location line="+197"/>
         <location line="+15"/>
         <location line="+203"/>

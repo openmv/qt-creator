@@ -7769,7 +7769,7 @@ No se aplicará a espacios en blanco en comentarios y cadenas.</translation>
     <message>
         <location line="+44"/>
         <location line="+15"/>
-        <location line="+2931"/>
+        <location line="+2935"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -8722,14 +8722,13 @@ sudo adduser%L1 dialout
         <translation>Faltan argumentos para -open_tcp_server_terminal</translation>
     </message>
     <message>
-        <location line="+56"/>
         <source>OpenMV Cam automatically registered!
 
 Board: %1
 ID: %2
 
 Please run Examples-&gt;Basics-&gt;helloworld.py to test the vision quality and focus the camera (if applicable).</source>
-        <translation>¡OpenMV Cam se registró automáticamente!
+        <translation type="vanished">¡OpenMV Cam se registró automáticamente!
 
 Tablero:%1
 ID:%2
@@ -8737,7 +8736,7 @@ ID:%2
 Ejecute Ejemplos-&gt; Conceptos básicos-&gt; helloworld.py para probar la calidad de la visión y enfocar la cámara (si corresponde).</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+97"/>
         <location line="+10"/>
         <location line="+10"/>
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8826,7 +8825,22 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>¡Error de base de datos!</translation>
     </message>
     <message>
-        <location line="-160"/>
+        <location line="-185"/>
+        <source>OpenMV Cam automatically registered!
+
+Board: %1
+ID: %2
+
+Please run Examples-&gt;OpenMV-&gt;Basics-&gt;helloworld.py to test the vision quality and focus the camera (if applicable).</source>
+        <translation>¡OpenMV Cam se registró automáticamente!
+
+Tablero:%1
+ID:%2
+
+Ejecute Ejemplos-&gt;OpenMV-&gt;Basics-&gt;helloworld.py para probar la calidad de la visión y enfocar la cámara (si corresponde).</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <location line="+173"/>
         <source>GET Network error!</source>
         <translation>¡OBTENER error de red!</translation>
@@ -9997,7 +10011,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <location line="+1327"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+457"/>
         <location line="+375"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1096"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1098"/>
         <location line="+135"/>
         <source>Please add a file extension!</source>
         <translation>¡Agregue una extensión de archivo!</translation>
@@ -10018,7 +10032,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>¡No se ha podido escribir la trama!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1091"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1093"/>
         <source>Reading File...</source>
         <translation>Leyendo archivo...</translation>
     </message>
@@ -10058,7 +10072,7 @@ Porcentaje
         <location line="+58"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+0"/>
         <location line="+63"/>
-        <location line="+654"/>
+        <location line="+656"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
@@ -10191,7 +10205,7 @@ Abra un conjunto de datos para cargarlo.</translation>
         <translation>Ingrese una clave de API del proyecto Edge Impluse</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-706"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-708"/>
         <location line="+20"/>
         <location line="+11"/>
         <source>Reading File</source>
@@ -10214,12 +10228,12 @@ Abra un conjunto de datos para cargarlo.</translation>
     </message>
     <message>
         <location line="-56"/>
-        <location line="+654"/>
+        <location line="+656"/>
         <source>Transcoding File...</source>
         <translation>Transcodificando archivo...</translation>
     </message>
     <message>
-        <location line="-643"/>
+        <location line="-645"/>
         <location line="+20"/>
         <location line="+11"/>
         <location line="+13"/>
@@ -10306,7 +10320,7 @@ Abra un conjunto de datos para cargarlo.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+34"/>
-        <location line="+86"/>
+        <location line="+88"/>
         <location line="+197"/>
         <location line="+15"/>
         <location line="+203"/>

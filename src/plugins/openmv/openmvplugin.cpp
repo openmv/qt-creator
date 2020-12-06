@@ -1996,7 +1996,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     if(editor ? (editor->document() ? editor->document()->contents().isEmpty() : true) : true)
     {
-        QString filePath = Core::ICore::userResourcePath() + QStringLiteral("/examples/01-Basics/helloworld.py");
+        QString filePath = Core::ICore::userResourcePath() + QStringLiteral("/examples/OpenMV/01-Basics/helloworld.py");
 
         QFile file(filePath);
 
@@ -2794,7 +2794,7 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
                 {
                     QMessageBox::information(Core::ICore::dialogParent(),
                         tr("Register OpenMV Cam"),
-                        tr("OpenMV Cam automatically registered!\n\nBoard: %1\nID: %2\n\nPlease run Examples->Basics->helloworld.py to test the vision quality and focus the camera (if applicable).").arg(board).arg(id));
+                        tr("OpenMV Cam automatically registered!\n\nBoard: %1\nID: %2\n\nPlease run Examples->OpenMV->Basics->helloworld.py to test the vision quality and focus the camera (if applicable).").arg(board).arg(id));
 
                     return;
                 }
