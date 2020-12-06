@@ -7,6 +7,8 @@
 
 #include <coreplugin/icore.h>
 #include <extensionsystem/pluginmanager.h>
+#include <texteditor/fontsettings.h>
+#include <texteditor/texteditorsettings.h>
 #include <utils/hostosinfo.h>
 #include <utils/synchronousprocess.h>
 

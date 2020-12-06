@@ -95,6 +95,8 @@ void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Util
 
     QPlainTextEdit *plainTextEdit = new QPlainTextEdit();
     plainTextEdit->setReadOnly(true);
+    QFont font = TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily();
+    plainTextEdit->setFont(font);
 
     layout->addWidget(plainTextEdit);
 

@@ -619,6 +619,8 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
 
     QPlainTextEdit *plainTextEdit = new QPlainTextEdit();
     plainTextEdit->setReadOnly(true);
+    QFont font = TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily();
+    plainTextEdit->setFont(font);
 
     layout->addWidget(plainTextEdit);
 
