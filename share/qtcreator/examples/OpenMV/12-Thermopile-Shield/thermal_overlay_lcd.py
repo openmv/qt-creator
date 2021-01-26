@@ -1,19 +1,24 @@
-# MLX90640 Overlay Demo
+# Thermal Overlay Demo
 #
 # This example shows off how to overlay a heatmap onto your OpenMV Cam's
 # live video output from the main camera.
 
-import sensor, image, time, fir
+import sensor, image, time, fir, lcd
+
+drawing_hint = image.BICUBIC # or image.BILINEAR or 0 (nearest neighbor)
 
 ALT_OVERLAY = False # Set to True to allocate a second ir image.
 
 sensor.reset()
 sensor.set_pixformat(sensor.RGB565)
-sensor.set_framesize(sensor.QQVGA)
+sensor.set_framesize(sensor.QQVGA2)
 sensor.skip_frames(time = 2000)
 
 # Initialize the thermal sensor
-fir.init(type=fir.FIR_MLX90640, refresh=32) # 16Hz, 32Hz or 64Hz.
+fir.init()
+
+# Init the lcd.
+lcd.init()
 
 # Allocate another frame buffer for smoother video.
 extra_fb = sensor.alloc_extra_fb(sensor.width(), sensor.height(), sensor.RGB565)
@@ -32,15 +37,18 @@ while (True):
     #   ir: Object temperatures (IR array)
     #   to_min: Minimum object temperature
     #   to_max: Maximum object temperature
-    ta, ir, to_min, to_max = fir.read_ir()
+    try:
+        ta, ir, to_min, to_max = fir.read_ir()
+    except OSError:
+        continue
 
     if not ALT_OVERLAY:
         # Scale the image and belnd it with the framebuffer
-        fir.draw_ir(img, ir)
+        fir.draw_ir(img, ir, hint=drawing_hint)
     else:
         # Create a secondary image and then blend into the frame buffer.
         extra_fb.clear()
-        fir.draw_ir(extra_fb, ir, alpha=256)
+        fir.draw_ir(extra_fb, ir, alpha=256, hint=drawing_hint)
         img.blend(extra_fb, alpha=128)
 
     # Draw ambient, min and max temperatures.
@@ -48,6 +56,7 @@ while (True):
     img.draw_string(8, 8, "To min: %0.2f C" % to_min, color = (255, 0, 0), mono_space = False)
     img.draw_string(8, 16, "To max: %0.2f C"% to_max, color = (255, 0, 0), mono_space = False)
 
+    lcd.display(img)
     # Force high quality streaming...
     img.compress(quality=90)
 
