@@ -328,7 +328,7 @@ Video Tools
 -----------
 
 If you need to compress a ``.gif`` file produced by your OpenMV Cam or convert
-a ``.mjpeg`` or ImageWriter ``.bin`` video file to ``.mp4`` you can use the
+a ``.mjpeg`` or ImageIO ``.bin`` video file to ``.mp4`` you can use the
 convert video file action to do this. Alternatively, if you'd just like to play
 these videos instead you can do that too using the play video file action.
 
@@ -355,15 +355,15 @@ a large number of file formats.
         to mean it should join those images files together into a video.
 
     *
-        To convert an `ImageWriter` file into any other video format select
+        To convert an `ImageIO` file into any other video format select
         the file as the source and target to be whatever file format you want.
 
     *
-        To convert a video file of any format into an `ImageWriter` file select
+        To convert a video file of any format into an `ImageIO` file select
         the video file you want to convert as the source and set the target to
         be a ``.bin`` file. FFMPEG will then break the video into JPGs and
         OpenMV IDE will turn these JPGs into RAW Grayscale or RGB565 frames
-        saves to the ``.bin`` file using the `ImageWriter` file format.
+        saves to the ``.bin`` file using the `ImageIO` file format.
 
     *
         To optimize a ``.gif`` file saved by your OpenMV Cam for the web set the

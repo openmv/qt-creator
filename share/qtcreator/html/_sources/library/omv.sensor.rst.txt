@@ -186,8 +186,8 @@ Functions
       * `sensor.QQVGA`: 160x120
       * `sensor.QVGA`: 320x240
       * `sensor.VGA`: 640x480
-      * `sensor.HQQQVGA`: 80x40
-      * `sensor.HQQVGA`: 160x80
+      * `sensor.HQQQVGA`: 60x40
+      * `sensor.HQQVGA`: 120x80
       * `sensor.HQVGA`: 240x160
       * `sensor.B64X32`: 64x32 (for use with `image.find_displacement()`)
       * `sensor.B64X64`: 64x64 (for use with `image.find_displacement()`)
@@ -211,6 +211,14 @@ Functions
 .. function:: sensor.get_framesize()
 
    Returns the frame size for the camera module.
+
+.. function:: sensor.set_framerate(rate)
+
+   Sets the frame rate in hz on the HM01B0. May be 15, 30, 60, or 120 Hz.
+
+.. function:: sensor.get_framerate()
+
+   Returns the frame rate in hz on the HM01B0.
 
 .. function:: sensor.set_windowing(roi)
 
@@ -375,14 +383,18 @@ Functions
 
    Executes a sensor specific method:
 
-   * `sensor.IOCTL_SET_TRIGGERED_MODE` - Pass this enum followed by True or False set triggered mode for the MT9V034 sensor.
-   * `sensor.IOCTL_GET_TRIGGERED_MODE` - Pass this enum for `sensor.ioctl` to return the current triggered mode state.
    * `sensor.IOCTL_SET_READOUT_WINDOW` - Pass this enum followed by a rect tuple (x, y, w, h) or a size tuple (w, h).
       * This IOCTL allows you to control the readout window of the camera sensor which dramatically improves the frame rate at the cost of field-of-view.
       * If you pass a rect tuple (x, y, w, h) the readout window will be positoned on that rect tuple. The rect tuple's x/y position will be adjusted so the size w/h fits. Additionally, the size w/h will be adjusted to not be smaller than the ``framesize``.
       * If you pass a size tuple (w, h) the readout window will be centered given the w/h. Additionally, the size w/h will be adjusted to not be smaller than the ``framesize``.
       * This IOCTL is extremely helpful for increasing the frame rate on higher resolution cameras like the OV2640/OV5640.
    * `sensor.IOCTL_GET_READOUT_WINDOW` - Pass this enum for `sensor.ioctl` to return the current readout window rect tuple (x, y, w, h). By default this is (0, 0, maximum_camera_sensor_pixel_width, maximum_camera_sensor_pixel_height).
+   * `sensor.IOCTL_SET_TRIGGERED_MODE` - Pass this enum followed by True or False set triggered mode for the MT9V034 sensor.
+   * `sensor.IOCTL_GET_TRIGGERED_MODE` - Pass this enum for `sensor.ioctl` to return the current triggered mode state.
+   * `sensor.IOCTL_TRIGGER_AUTO_FOCUS` - Pass this enum for `sensor.ioctl` to trigger auto focus on the OV5640 FPC camera module.
+   * `sensor.IOCTL_PAUSE_AUTO_FOCUS` - Pass this enum for `sensor.ioctl` to pause auto focus (after triggering) on the OV5640 FPC camera module.
+   * `sensor.IOCTL_RESET_AUTO_FOCUS` - Pass this enum for `sensor.ioctl` to reset auto focus (after triggering) on the OV5640 FPC camera module.
+   * `sensor.IOCTL_WAIT_ON_AUTO_FOCUS` - Pass this enum for `sensor.ioctl` to wait for auto focus (after triggering) to finish on the OV5640 FPC camera module. You may pass a second argument of the timeout in milliseconds. The default is 5000 ms.
    * `sensor.IOCTL_LEPTON_GET_WIDTH` - Pass this enum to get the FLIR Lepton image width in pixels.
    * `sensor.IOCTL_LEPTON_GET_HEIGHT` - Pass this enum to get the FLIR Lepton image height in pixels.
    * `sensor.IOCTL_LEPTON_GET_RADIOMETRY` - Pass this enum to get the FLIR Lepton type (radiometric or not).
@@ -638,6 +650,14 @@ Constants
 
    Makes images look like the FLIR Lepton thermal images using a very non-linear color palette.
 
+.. data:: sensor.IOCTL_SET_READOUT_WINDOW
+
+   Lets you set the readout window for the OV5640.
+
+.. data:: sensor.IOCTL_GET_READOUT_WINDOW
+
+   Lets you get the readout window for the OV5640.
+
 .. data:: sensor.IOCTL_SET_TRIGGERED_MODE
 
    Lets you set the triggered mode for the MT9V034.
@@ -646,13 +666,21 @@ Constants
 
    Lets you get the triggered mode for the MT9V034.
 
-.. data:: sensor.IOCTL_SET_READOUT_WINDOW
+.. data:: sensor.IOCTL_TRIGGER_AUTO_FOCUS
 
-   Lets you set the readout window for the OV5640.
+   Used to trigger auto focus for the OV5640 FPC camera module.
 
-.. data:: sensor.IOCTL_GET_READOUT_WINDOW
+.. data:: sensor.IOCTL_PAUSE_AUTO_FOCUS
 
-   Lets you get the readout window for the OV5640.
+   Used to pause auto focus (while running) for the OV5640 FPC camera module.
+
+.. data:: sensor.IOCTL_RESET_AUTO_FOCUS
+
+   Used to reset auto focus back to the default for the OV5640 FPC camera module.
+
+.. data:: sensor.IOCTL_WAIT_ON_AUTO_FOCUS
+
+   Used to wait on auto focus to finish after being triggered for the OV5640 FPC camera module.
 
 .. data:: sensor.IOCTL_LEPTON_GET_WIDTH
 

@@ -224,7 +224,7 @@ Functions
    When a callback is enabled for the touch screen this method should not be called anymore except
    inside of the callback.
 
-.. function:: lcd.display(image, [x=0, [y=0, [x_scale=1.0, [y_scale=1.0, [roi=None, [rgb_channel=-1, [alpha=256, [color_palette=-1, [alpha_palette=-1, [hint=0, [x_size=None, [y_size=None]]]]]]]]]]]])
+.. function:: lcd.display(image, [x=0, [y=0, [x_scale=1.0, [y_scale=1.0, [roi=None, [rgb_channel=-1, [alpha=256, [color_palette=None, [alpha_palette=None, [hint=0, [x_size=None, [y_size=None]]]]]]]]]]]])
 
    Displays an ``image`` whose top-left corner starts at location x, y. You may either pass x, y
    separately, as a tuple (x, y), or neither.

@@ -498,7 +498,7 @@ new machine vision tools available regularly to make life easier for you.</p>
 <div class="section" id="video-tools">
 <h2>4.12. Video Tools<a class="headerlink" href="#video-tools" title="Permalink to this headline">¶</a></h2>
 <p>If you need to compress a <code class="docutils literal notranslate"><span class="pre">.gif</span></code> file produced by your OpenMV Cam or convert
-a <code class="docutils literal notranslate"><span class="pre">.mjpeg</span></code> or ImageWriter <code class="docutils literal notranslate"><span class="pre">.bin</span></code> video file to <code class="docutils literal notranslate"><span class="pre">.mp4</span></code> you can use the
+a <code class="docutils literal notranslate"><span class="pre">.mjpeg</span></code> or ImageIO <code class="docutils literal notranslate"><span class="pre">.bin</span></code> video file to <code class="docutils literal notranslate"><span class="pre">.mp4</span></code> you can use the
 convert video file action to do this. Alternatively, if you’d just like to play
 these videos instead you can do that too using the play video file action.</p>
 <p>Note that you should copy video files from your OpenMV Cam’s flash drive to
@@ -519,13 +519,13 @@ name to “%7d.bmp”/”%7d.jpg”/etc. where all the images in a directory
 have a name like <code class="docutils literal notranslate"><span class="pre">1.bmp</span></code>, <code class="docutils literal notranslate"><span class="pre">2.bmp</span></code>, etc.  FFMPEG understands
 <code class="docutils literal notranslate"><span class="pre">printf()</span></code> like format statements with an image file format extension
 to mean it should join those images files together into a video.</li>
-<li>To convert an <a class="reference internal" href="../../library/omv.image.html#image.image.ImageWriter" title="image.image.ImageWriter"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageWriter</span></code></a> file into any other video format select
+<li>To convert an <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file into any other video format select
 the file as the source and target to be whatever file format you want.</li>
-<li>To convert a video file of any format into an <a class="reference internal" href="../../library/omv.image.html#image.image.ImageWriter" title="image.image.ImageWriter"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageWriter</span></code></a> file select
+<li>To convert a video file of any format into an <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file select
 the video file you want to convert as the source and set the target to
 be a <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file. FFMPEG will then break the video into JPGs and
 OpenMV IDE will turn these JPGs into RAW Grayscale or RGB565 frames
-saves to the <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file using the <a class="reference internal" href="../../library/omv.image.html#image.image.ImageWriter" title="image.image.ImageWriter"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageWriter</span></code></a> file format.</li>
+saves to the <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file using the <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file format.</li>
 <li>To optimize a <code class="docutils literal notranslate"><span class="pre">.gif</span></code> file saved by your OpenMV Cam for the web set the
 source file to be that <code class="docutils literal notranslate"><span class="pre">.gif</span></code> and the target file to be another <code class="docutils literal notranslate"><span class="pre">.gif</span></code>.</li>
 <li>To convert an MJPEG file saved by your OpenMV Cam to another format
@@ -566,7 +566,7 @@ characters, and more.</p>
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 29 Nov 2020.
+        Last updated on 28 Jan 2021.
       </span>
 
     </p>

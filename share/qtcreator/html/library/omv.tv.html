@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="cpufreq — CPU Frequency Control" href="omv.cpufreq.html" />
-    <link rel="prev" title="fir — thermopile shield driver (fir == far infrared)" href="omv.fir.html" /> 
+    <link rel="prev" title="fir — thermal sensor driver (fir == far infrared)" href="omv.fir.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,9 +104,10 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.audio.html"><code class="docutils literal notranslate"><span class="pre">audio</span></code> — Audio Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.micro_speech.html"><code class="docutils literal notranslate"><span class="pre">micro_speech</span></code> — Micro Speech Audio Module Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd driver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermopile shield driver (fir == far infrared)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermal sensor driver (fir == far infrared)</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">tv</span></code> — tv shield driver</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#constants">Constants</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="omv.cpufreq.html"><code class="docutils literal notranslate"><span class="pre">cpufreq</span></code> — CPU Frequency Control</a></li>
@@ -198,7 +199,7 @@
 <span class="c1"># Setup camera.</span>
 <span class="n">sensor</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">sensor</span><span class="o">.</span><span class="n">set_pixformat</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">RGB565</span><span class="p">)</span>
-<span class="n">sensor</span><span class="o">.</span><span class="n">set_framesize</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">QQVGA</span><span class="p">)</span>
+<span class="n">sensor</span><span class="o">.</span><span class="n">set_framesize</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">SIF</span><span class="p">)</span>
 <span class="n">sensor</span><span class="o">.</span><span class="n">skip_frames</span><span class="p">()</span>
 <span class="n">tv</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 
@@ -211,51 +212,123 @@
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="tv.tv.init">
-<code class="descclassname">tv.</code><code class="descname">init</code><span class="sig-paren">(</span><span class="optional">[</span><em>type=1</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.init" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initializes an attached lcd shield using I/O pins P0, P2, and P3.</p>
-<p><code class="docutils literal notranslate"><span class="pre">type</span></code> indicates the type of tv shield (for future use possibly):</p>
+<code class="descclassname">tv.</code><code class="descname">init</code><span class="sig-paren">(</span><span class="optional">[</span><em>type=tv.TV_SHIELD</em><span class="optional">[</span>, <em>triple_buffer=False</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes an attached tv output module.</p>
+<p><code class="docutils literal notranslate"><span class="pre">type</span></code> indicates how the lcd module should be initialized:</p>
 <blockquote>
+<div><blockquote>
 <div><ul class="simple">
-<li>0: None</li>
-<li>1: tv shield</li>
+<li><a class="reference internal" href="#tv.tv.TV_NONE" title="tv.tv.TV_NONE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">tv.TV_NONE</span></code></a>: Do nothing.</li>
+<li><a class="reference internal" href="#tv.tv.TV_SHIELD" title="tv.tv.TV_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">tv.TV_SHIELD</span></code></a>: Initialize a TV output module. Uses pins P0, P1, P2, and P3.</li>
 </ul>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">triple_buffer</span></code> If True then makes updates to the screen non-blocking in <a class="reference internal" href="#tv.tv.TV_SHIELD" title="tv.tv.TV_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">tv.TV_SHIELD</span></code></a>
+mode at the cost of 3X the display RAM (495 KB).</p>
 </div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="tv.tv.deinit">
 <code class="descclassname">tv.</code><code class="descname">deinit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.deinit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deinitializes the tv shield freeing up I/O pins.</p>
+<dd><p>Deinitializes the tv module, internal/external hardware, and I/O pins.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tv.lcd.width">
+<code class="descclassname">lcd.</code><code class="descname">width</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.lcd.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns 352 pixels. This is the <a class="reference internal" href="omv.sensor.html#sensor.sensor.SIF" title="sensor.sensor.SIF"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.SIF</span></code></a> resolution.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tv.lcd.height">
+<code class="descclassname">lcd.</code><code class="descname">height</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.lcd.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns 240 pixels. This is the <a class="reference internal" href="omv.sensor.html#sensor.sensor.SIF" title="sensor.sensor.SIF"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.SIF</span></code></a> resolution.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="tv.tv.type">
 <code class="descclassname">tv.</code><code class="descname">type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the type of the tv shield (for future use possibly):</p>
-<blockquote>
-<div><ul class="simple">
-<li>0: None</li>
-<li>1: tv Shield</li>
-</ul>
-</div></blockquote>
+<dd><p>Returns the type of the screen that was set during <a class="reference internal" href="#tv.tv.init" title="tv.tv.init"><code class="xref any py py-func docutils literal notranslate"><span class="pre">tv.init()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tv.tv.triple_buffer">
+<code class="descclassname">tv.</code><code class="descname">triple_buffer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.triple_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if triple buffering is enabled that was set during <a class="reference internal" href="#tv.tv.init" title="tv.tv.init"><code class="xref any py py-func docutils literal notranslate"><span class="pre">tv.init()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tv.tv.refresh">
+<code class="descclassname">tv.</code><code class="descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns 60 Hz.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="tv.tv.channel">
-<code class="descclassname">tv.</code><code class="descname">channel</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.channel" title="Permalink to this definition">¶</a></dt>
-<dd><p>If using the wireless TV shield FPV sets the broadcast channel to channel 1-8.</p>
+<code class="descclassname">tv.</code><code class="descname">channel</code><span class="sig-paren">(</span><span class="optional">[</span><em>channel</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>For the wireless TV shield this sets the broadcast channel between 1-8. If passed without a channel
+argument then this method returns the previously set channel (1-8). Default is channel 8.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="tv.tv.display">
-<code class="descclassname">tv.</code><code class="descname">display</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.display" title="Permalink to this definition">¶</a></dt>
-<dd><p>Displays a QQVGA <a class="reference internal" href="omv.image.html#module-image" title="image: machine vision"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">image</span></code></a> on the tv screen.</p>
+<code class="descclassname">tv.</code><code class="descname">display</code><span class="sig-paren">(</span><em>image</em><span class="optional">[</span>, <em>x=0</em><span class="optional">[</span>, <em>y=0</em><span class="optional">[</span>, <em>x_scale=1.0</em><span class="optional">[</span>, <em>y_scale=1.0</em><span class="optional">[</span>, <em>roi=None</em><span class="optional">[</span>, <em>rgb_channel=-1</em><span class="optional">[</span>, <em>alpha=256</em><span class="optional">[</span>, <em>color_palette=None</em><span class="optional">[</span>, <em>alpha_palette=None</em><span class="optional">[</span>, <em>hint=0</em><span class="optional">[</span>, <em>x_size=None</em><span class="optional">[</span>, <em>y_size=None</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays an <code class="docutils literal notranslate"><span class="pre">image</span></code> whose top-left corner starts at location x, y. You may either pass x, y
+separately, as a tuple (x, y), or neither.</p>
+<p><code class="docutils literal notranslate"><span class="pre">x_scale</span></code> controls how much the displayed image is scaled by in the x direction (float). If this
+value is negative the image will be flipped horizontally.</p>
+<p><code class="docutils literal notranslate"><span class="pre">y_scale</span></code> controls how much the displayed image is scaled by in the y direction (float). If this
+value is negative the image will be flipped vertically.</p>
+<p><code class="docutils literal notranslate"><span class="pre">roi</span></code> is the region-of-interest rectangle tuple (x, y, w, h) of the image to display. This
+allows you to extract just the pixels in the ROI to scale.</p>
+<p><code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> is the RGB channel (0=R, G=1, B=2) to extract from an RGB565 image (if passed)
+and to render on the display. For example, if you pass <code class="docutils literal notranslate"><span class="pre">rgb_channel=1</span></code> this will
+extract the green channel of the RGB565 image and display that in grayscale.</p>
+<p><code class="docutils literal notranslate"><span class="pre">alpha</span></code> controls how opaque the image is. A value of 256 displays an opaque image while a
+value lower than 256 produces a black transparent image. 0 results in a perfectly black image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">color_palette</span></code> if not <code class="docutils literal notranslate"><span class="pre">-1</span></code> can be <a class="reference internal" href="omv.sensor.html#sensor.sensor.PALETTE_RAINBOW" title="sensor.sensor.PALETTE_RAINBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_RAINBOW</span></code></a>, <a class="reference internal" href="omv.sensor.html#sensor.sensor.PALETTE_IRONBOW" title="sensor.sensor.PALETTE_IRONBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_IRONBOW</span></code></a>, or
+a 256 pixel in total RGB565 image to use as a color lookup table on the grayscale value of
+whatever the input image is. This is applied after <code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> extraction if used.</p>
+<p><code class="docutils literal notranslate"><span class="pre">alpha_palette</span></code> if not <code class="docutils literal notranslate"><span class="pre">-1</span></code> can be a 256 pixel in total GRAYSCALE image to use as a alpha
+palette which modulates the <code class="docutils literal notranslate"><span class="pre">alpha</span></code> value of the input image being displayed at a pixel pixel
+level allowing you to precisely control the alpha value of pixels based on their grayscale value.
+A pixel value of 255 in the alpha lookup table is opaque which anything less than 255 becomes
+more transparent until 0. This is applied after <code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> extraction if used.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hint</span></code> can be a logical OR of the flags:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="omv.image.html#image.image.AREA" title="image.image.AREA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.AREA</span></code></a>: Use area scaling when downscaling versus the default of nearest neighbor.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.BILINEAR" title="image.image.BILINEAR"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BILINEAR</span></code></a>: Use bilinear scaling versus the default of nearest neighbor scaling.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.BICUBIC" title="image.image.BICUBIC"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BICUBIC</span></code></a>: Use bicubic scaling versus the default of nearest neighbor scaling.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.CENTER" title="image.image.CENTER"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.CENTER</span></code></a>: Center the image image being displayed on (x, y).</li>
+<li><a class="reference internal" href="omv.image.html#image.image.EXTRACT_RGB_CHANNEL_FIRST" title="image.image.EXTRACT_RGB_CHANNEL_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.EXTRACT_RGB_CHANNEL_FIRST</span></code></a>: Do rgb_channel extraction before scaling.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.APPLY_COLOR_PALETTE_FIRST" title="image.image.APPLY_COLOR_PALETTE_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.APPLY_COLOR_PALETTE_FIRST</span></code></a>: Apply color palette before scaling.</li>
+</ul>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">x_size</span></code> may be passed if <code class="docutils literal notranslate"><span class="pre">x_scale</span></code> is not passed to specify the size of the image to display
+and <code class="docutils literal notranslate"><span class="pre">x_scale</span></code> will automatically be determined passed on the input image size. If neither
+<code class="docutils literal notranslate"><span class="pre">y_scale</span></code> or <code class="docutils literal notranslate"><span class="pre">y_size</span></code> are specified then <code class="docutils literal notranslate"><span class="pre">y_scale</span></code> internally will be set to be equal to
+<code class="docutils literal notranslate"><span class="pre">x_size</span></code> to maintain the aspect-ratio.</p>
+<p><code class="docutils literal notranslate"><span class="pre">y_size</span></code> may be passed if <code class="docutils literal notranslate"><span class="pre">y_scale</span></code> is not passed to specify the size of the image to display
+and <code class="docutils literal notranslate"><span class="pre">y_scale</span></code> will automatically be determined passed on the input image size. If neither
+<code class="docutils literal notranslate"><span class="pre">x_scale</span></code> or <code class="docutils literal notranslate"><span class="pre">x_size</span></code> are specified then <code class="docutils literal notranslate"><span class="pre">x_scale</span></code> internally will be set to be equal to
+<code class="docutils literal notranslate"><span class="pre">y_size</span></code> to maintain the aspect-ratio.</p>
+<p>Not supported for compressed images or bayer images.</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="tv.tv.palettes">
-<code class="descclassname">tv.</code><code class="descname">palettes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.palettes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Draws color palettes on the tv screen.</p>
+</div>
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="tv.tv.TV_NONE">
+<code class="descclassname">tv.</code><code class="descname">TV_NONE</code><a class="headerlink" href="#tv.tv.TV_NONE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returned by <a class="reference internal" href="#tv.tv.type" title="tv.tv.type"><code class="xref any py py-func docutils literal notranslate"><span class="pre">tv.type()</span></code></a> when the this module is not initialized.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="tv.tv.TV_SHIELD">
+<code class="descclassname">tv.</code><code class="descname">TV_SHIELD</code><a class="headerlink" href="#tv.tv.TV_SHIELD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to initialize the TV module.</p>
 </dd></dl>
 
 </div>
@@ -272,7 +345,7 @@
         <a href="omv.cpufreq.html" class="btn btn-neutral float-right" title="cpufreq — CPU Frequency Control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="omv.fir.html" class="btn btn-neutral float-left" title="fir — thermopile shield driver (fir == far infrared)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="omv.fir.html" class="btn btn-neutral float-left" title="fir — thermal sensor driver (fir == far infrared)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -283,7 +356,7 @@
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 29 Nov 2020.
+        Last updated on 28 Jan 2021.
       </span>
 
     </p>

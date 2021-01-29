@@ -150,33 +150,57 @@ The following third-party libraries are built-in to your OpenMV Cam's firmware:
 :mod:`ulab` --- `numpy-like array manipulation library <https://micropython-ulab.readthedocs.io/en/latest/>`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. module:: ulab
+   :synopsis: numpy-like array manipulation library
+
 :mod:`pid` --- `Proportional/Integral/Derivative Control <https://github.com/openmv/openmv/blob/master/scripts/libraries/pid.py>`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. module:: pid
+   :synopsis: Proportional/Integral/Derivative Control
+
 :mod:`bno055` --- `IMU Driver <https://github.com/openmv/openmv/blob/master/scripts/libraries/bno055.py>`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. module:: bno055
+   :synopsis: IMU Driver
 
 Examples scripts are located in OpenMV IDE under the ``IMU Shield`` examples folder.
 
 :mod:`ssd1306` --- `OLED Driver <https://github.com/openmv/openmv/blob/master/scripts/libraries/ssd1306.py>`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. module:: ssd1306
+   :synopsis: OLED Driver
+
 :mod:`tb6612` --- `Stepper Motor Driver <https://github.com/openmv/openmv/blob/master/scripts/libraries/tb6612.py>`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. module:: tb6612
+   :synopsis: Stepper Motor Driver
 
 Examples scripts are located in OpenMV IDE under the ``Motor Shield`` examples folder.
 
 :mod:`vl53l1x` --- `ToF Distance Sensor Driver <https://github.com/openmv/openmv/blob/master/scripts/libraries/vl53l1x.py>`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. module:: vl53l1x
+   :synopsis: ToF Distance Sensor Driver
+
 Examples scripts are located in OpenMV IDE under the ``Distance Shield`` examples folder.
 
 :mod:`modbus` --- `modbus protocol library <https://github.com/openmv/openmv/blob/master/scripts/libraries/modbus.py>`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. module:: modbus
+   :synopsis: modbus protocol library
+
 Examples scripts are located in OpenMV IDE under the ``Modbus`` examples folder.
 
 :mod:`mqtt` --- `mqtt protocol library <https://github.com/openmv/openmv/blob/master/scripts/libraries/mqtt.py>`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. module:: mqtt
+   :synopsis: mqtt protocol library
 
 Examples scripts are located in OpenMV IDE under the ``WiFi Shield`` examples folder.

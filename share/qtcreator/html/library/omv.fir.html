@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>fir — thermopile shield driver (fir == far infrared) &mdash; MicroPython 1.13 documentation</title>
+  <title>fir — thermal sensor driver (fir == far infrared) &mdash; MicroPython 1.13 documentation</title>
   
 
   
@@ -104,7 +104,7 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.audio.html"><code class="docutils literal notranslate"><span class="pre">audio</span></code> — Audio Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.micro_speech.html"><code class="docutils literal notranslate"><span class="pre">micro_speech</span></code> — Micro Speech Audio Module Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.lcd.html"><code class="docutils literal notranslate"><span class="pre">lcd</span></code> — lcd driver</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermopile shield driver (fir == far infrared)</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermal sensor driver (fir == far infrared)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#constants">Constants</a></li>
 </ul>
@@ -171,7 +171,7 @@
         
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
         
-      <li><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermopile shield driver (fir == far infrared)</li>
+      <li><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermal sensor driver (fir == far infrared)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -191,8 +191,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="module-fir">
-<span id="fir-thermopile-shield-driver-fir-far-infrared"></span><h1><a class="reference internal" href="#module-fir" title="fir: thermopile shield driver (fir == far infrared)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fir</span></code></a> — thermopile shield driver (fir == far infrared)<a class="headerlink" href="#module-fir" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">fir</span></code> module is used for controlling the thermopile shield.</p>
+<span id="fir-thermal-sensor-driver-fir-far-infrared"></span><h1><a class="reference internal" href="#module-fir" title="fir: thermal sensor driver (fir == far infrared)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fir</span></code></a> — thermal sensor driver (fir == far infrared)<a class="headerlink" href="#module-fir" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">fir</span></code> module is used for controlling the thermal sensors.</p>
 <p>Example usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sensor</span><span class="o">,</span> <span class="nn">fir</span>
 
@@ -218,28 +218,35 @@
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="fir.fir.init">
-<code class="descclassname">fir.</code><code class="descname">init</code><span class="sig-paren">(</span><span class="optional">[</span><em>type=fir.FIR_SHIELD</em><span class="optional">[</span>, <em>refresh</em><span class="optional">[</span>, <em>resolution</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.init" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initializes an attached thermopile shield using I/O pins P4 and P5.</p>
+<code class="descclassname">fir.</code><code class="descname">init</code><span class="sig-paren">(</span><span class="optional">[</span><em>type=-1</em><span class="optional">[</span>, <em>refresh</em><span class="optional">[</span>, <em>resolution</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes an attached thermopile shield using I/O pins P4 and P5 (and P0, P1, P2, P3 for <a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a>)</p>
 <p><code class="docutils literal notranslate"><span class="pre">type</span></code> indicates the type of thermopile shield:</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference internal" href="#fir.fir.FIR_NONE" title="fir.fir.FIR_NONE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_NONE</span></code></a>: 0 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_SHIELD" title="fir.fir.FIR_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_SHIELD</span></code></a>: 16x4 pixels.</li>
-<li><a class="reference internal" href="#fir.fir.FIR_MLX90620" title="fir.fir.FIR_MLX90620"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90620</span></code></a>: 16x4 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90621" title="fir.fir.FIR_MLX90621"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90621</span></code></a>: 16x4 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90640" title="fir.fir.FIR_MLX90640"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90640</span></code></a>: 32x24 pixels.</li>
+<li><a class="reference internal" href="#fir.fir.FIR_MLX90641" title="fir.fir.FIR_MLX90641"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90641</span></code></a>: 16x12 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_AMG8833" title="fir.fir.FIR_AMG8833"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_AMG8833</span></code></a>: 8x8 pixels.</li>
+<li><a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a>: 80x60 pixels (FLIR Lepton 1.x/2.x) or 160x120 pixels (FLIR Lepton 3.x)</li>
 </ul>
 </div></blockquote>
+<p>By default type is <code class="docutils literal notranslate"><span class="pre">-1</span></code> which will cause <a class="reference internal" href="#fir.fir.init" title="fir.fir.init"><code class="xref any py py-func docutils literal notranslate"><span class="pre">fir.init()</span></code></a> to automatically scan and initialize an
+attached thermal sensor based on the I2C address. Note that <a class="reference internal" href="#fir.fir.FIR_MLX90640" title="fir.fir.FIR_MLX90640"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90640</span></code></a> and
+<a class="reference internal" href="#fir.fir.FIR_MLX90641" title="fir.fir.FIR_MLX90641"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90641</span></code></a> have the same I2C address so you must pass <a class="reference internal" href="#fir.fir.FIR_MLX90641" title="fir.fir.FIR_MLX90641"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90641</span></code></a> to type
+to initialize it specifically.</p>
+<p><a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a> on the OpenMV Cam Pure Thermal this uses internal I/O pins and does not use P0-P5.</p>
 <p><code class="docutils literal notranslate"><span class="pre">refresh</span></code> is the thermopile sensor power-of-2 refresh rate in Hz:</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference internal" href="#fir.fir.FIR_NONE" title="fir.fir.FIR_NONE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_NONE</span></code></a>: N/A</li>
 <li><a class="reference internal" href="#fir.fir.FIR_SHIELD" title="fir.fir.FIR_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_SHIELD</span></code></a>: Defaults to 64 Hz. Can be 1 Hz, 2 Hz, 4 Hz, 8 Hz, 16 Hz, 32 Hz, 64 Hz, 128 Hz, 256 Hz, or 512 Hz. Note that a higher refresh rate lowers the accuracy and vice-versa.</li>
-<li><a class="reference internal" href="#fir.fir.FIR_MLX90620" title="fir.fir.FIR_MLX90620"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90620</span></code></a>: Defaults to 64 Hz. Can be 1 Hz, 2 Hz, 4 Hz, 8 Hz, 16 Hz, 32 Hz, 64 Hz, 128 Hz, 256 Hz, or 512 Hz. Note that a higher refresh rate lowers the accuracy and vice-versa.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90621" title="fir.fir.FIR_MLX90621"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90621</span></code></a>: Defaults to 64 Hz. Can be 1 Hz, 2 Hz, 4 Hz, 8 Hz, 16 Hz, 32 Hz, 64 Hz, 128 Hz, 256 Hz, or 512 Hz. Note that a higher refresh rate lowers the accuracy and vice-versa.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90640" title="fir.fir.FIR_MLX90640"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90640</span></code></a>: Defaults to 32 Hz. Can be 1 Hz, 2 Hz, 4 Hz, 8 Hz, 16 Hz, 32 Hz, or 64 Hz. Note that a higher refresh rate lowers the accuracy and vice-versa.</li>
+<li><a class="reference internal" href="#fir.fir.FIR_MLX90641" title="fir.fir.FIR_MLX90641"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90641</span></code></a>: Defaults to 32 Hz. Can be 1 Hz, 2 Hz, 4 Hz, 8 Hz, 16 Hz, 32 Hz, or 64 Hz. Note that a higher refresh rate lowers the accuracy and vice-versa.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_AMG8833" title="fir.fir.FIR_AMG8833"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_AMG8833</span></code></a>: 10 Hz</li>
+<li><a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a>: 9 Hz (really 8.7 Hz).</li>
 </ul>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">resolution</span></code> is the thermopile sensor measurement resolution:</p>
@@ -247,13 +254,14 @@
 <div><ul class="simple">
 <li><a class="reference internal" href="#fir.fir.FIR_NONE" title="fir.fir.FIR_NONE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_NONE</span></code></a>: N/A</li>
 <li><a class="reference internal" href="#fir.fir.FIR_SHIELD" title="fir.fir.FIR_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_SHIELD</span></code></a>: Defaults to 18-bits. Can be 15-bits, 16-bits, 17-bits, or 18-bits. Note that a higher resolution lowers the maximum temperature range and vice-versa.</li>
-<li><a class="reference internal" href="#fir.fir.FIR_MLX90620" title="fir.fir.FIR_MLX90620"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90620</span></code></a>: Defaults to 18-bits. Can be 15-bits, 16-bits, 17-bits, or 18-bits. Note that a higher resolution lowers the maximum temperature range and vice-versa.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90621" title="fir.fir.FIR_MLX90621"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90621</span></code></a>: Defaults to 18-bits. Can be 15-bits, 16-bits, 17-bits, or 18-bits. Note that a higher resolution lowers the maximum temperature range and vice-versa.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90640" title="fir.fir.FIR_MLX90640"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90640</span></code></a>: Defaults to 19-bits. Can be 16-bits, 17-bits, 18-bits, or 19-bits. Note that a higher resolution lowers the maximum temperature range and vice-versa.</li>
+<li><a class="reference internal" href="#fir.fir.FIR_MLX90641" title="fir.fir.FIR_MLX90641"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90641</span></code></a>: Defaults to 19-bits. Can be 16-bits, 17-bits, 18-bits, or 19-bits. Note that a higher resolution lowers the maximum temperature range and vice-versa.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_AMG8833" title="fir.fir.FIR_AMG8833"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_AMG8833</span></code></a>: 12-bits.</li>
+<li><a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a>: 14-bits.</li>
 </ul>
 </div></blockquote>
-<p>For the <a class="reference internal" href="#fir.fir.FIR_SHIELD" title="fir.fir.FIR_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_SHIELD</span></code></a>, <a class="reference internal" href="#fir.fir.FIR_MLX90620" title="fir.fir.FIR_MLX90620"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90620</span></code></a>, and <a class="reference internal" href="#fir.fir.FIR_MLX90621" title="fir.fir.FIR_MLX90621"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90621</span></code></a>:</p>
+<p>For the <a class="reference internal" href="#fir.fir.FIR_SHIELD" title="fir.fir.FIR_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_SHIELD</span></code></a> and <a class="reference internal" href="#fir.fir.FIR_MLX90621" title="fir.fir.FIR_MLX90621"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90621</span></code></a>:</p>
 <blockquote>
 <div><ul class="simple">
 <li>15-bits -&gt; Max of ~950C.</li>
@@ -262,7 +270,7 @@
 <li>18-bits -&gt; Max of ~450C.</li>
 </ul>
 </div></blockquote>
-<p>For the <a class="reference internal" href="#fir.fir.FIR_MLX90640" title="fir.fir.FIR_MLX90640"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90640</span></code></a>:</p>
+<p>For the <a class="reference internal" href="#fir.fir.FIR_MLX90640" title="fir.fir.FIR_MLX90640"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90640</span></code></a> and <a class="reference internal" href="#fir.fir.FIR_MLX90641" title="fir.fir.FIR_MLX90641"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90641</span></code></a>:</p>
 <blockquote>
 <div><ul class="simple">
 <li>16-bits -&gt; Max of ~750C.</li>
@@ -277,26 +285,40 @@
 <li>Max of ~80C.</li>
 </ul>
 </div></blockquote>
+<p>For the <a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Max of ~140C (can be up to 400C-450C in low-gain mode).</li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For <a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a> mode this driver implements triple buffering to receive the FLIR Lepton
+image. This uses 28.125 KB of RAM for the FLIR Lepton 1.x/2.x and 112.5 KB of RAM for the
+FLIR Lepton 3.x. Triple buffering ensures that reading an image with <a class="reference internal" href="#fir.fir.read_ir" title="fir.fir.read_ir"><code class="xref any py py-func docutils literal notranslate"><span class="pre">fir.read_ir()</span></code></a> and
+<a class="reference internal" href="#fir.fir.snapshot" title="fir.fir.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">fir.snapshot()</span></code></a> never block. For all other sensors the I2C bus is accessed to read the image.</p>
+</div>
 </dd></dl>
 
 <dl class="function">
 <dt id="fir.fir.deinit">
 <code class="descclassname">fir.</code><code class="descname">deinit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.deinit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deinitializes the thermopile shield freeing up I/O pins.</p>
+<dd><p>Deinitializes the thermal sensor freeing up resources.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="fir.fir.width">
 <code class="descclassname">fir.</code><code class="descname">width</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.width" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the width (horizontal resolution) of the thermopile shield.</p>
+<dd><p>Returns the width (horizontal resolution) of the thermal sensor in-use:</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference internal" href="#fir.fir.FIR_NONE" title="fir.fir.FIR_NONE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_NONE</span></code></a>: 0 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_SHIELD" title="fir.fir.FIR_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_SHIELD</span></code></a>: 16 pixels.</li>
-<li><a class="reference internal" href="#fir.fir.FIR_MLX90620" title="fir.fir.FIR_MLX90620"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90620</span></code></a>: 16 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90621" title="fir.fir.FIR_MLX90621"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90621</span></code></a>: 16 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90640" title="fir.fir.FIR_MLX90640"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90640</span></code></a>: 32 pixels.</li>
+<li><a class="reference internal" href="#fir.fir.FIR_MLX90641" title="fir.fir.FIR_MLX90641"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90641</span></code></a>: 16 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_AMG8833" title="fir.fir.FIR_AMG8833"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_AMG8833</span></code></a>: 8 pixels.</li>
+<li><a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a>: 80 pixels (FLIR Lepton 1.x/2.x) or 160 pixels (FLIR Lepton 3.x).</li>
 </ul>
 </div></blockquote>
 </dd></dl>
@@ -304,15 +326,16 @@
 <dl class="function">
 <dt id="fir.fir.height">
 <code class="descclassname">fir.</code><code class="descname">height</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.height" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the height (vertical resolution) of the thermopile shield.</p>
+<dd><p>Returns the height (vertical resolution) of the thermal sensor in-use:</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference internal" href="#fir.fir.FIR_NONE" title="fir.fir.FIR_NONE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_NONE</span></code></a>: 0 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_SHIELD" title="fir.fir.FIR_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_SHIELD</span></code></a>: 4 pixels.</li>
-<li><a class="reference internal" href="#fir.fir.FIR_MLX90620" title="fir.fir.FIR_MLX90620"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90620</span></code></a>: 4 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90621" title="fir.fir.FIR_MLX90621"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90621</span></code></a>: 4 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90640" title="fir.fir.FIR_MLX90640"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90640</span></code></a>: 24 pixels.</li>
+<li><a class="reference internal" href="#fir.fir.FIR_MLX90641" title="fir.fir.FIR_MLX90641"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90641</span></code></a>: 12 pixels.</li>
 <li><a class="reference internal" href="#fir.fir.FIR_AMG8833" title="fir.fir.FIR_AMG8833"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_AMG8833</span></code></a>: 8 pixels.</li>
+<li><a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a>: 60 pixels (FLIR Lepton 1.x/2.x) or 120 pixels (FLIR Lepton 3.x).</li>
 </ul>
 </div></blockquote>
 </dd></dl>
@@ -320,15 +343,16 @@
 <dl class="function">
 <dt id="fir.fir.type">
 <code class="descclassname">fir.</code><code class="descname">type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the type of the thermopile shield:</p>
+<dd><p>Returns the type of the thermal sensor in-use:</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference internal" href="#fir.fir.FIR_NONE" title="fir.fir.FIR_NONE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_NONE</span></code></a></li>
 <li><a class="reference internal" href="#fir.fir.FIR_SHIELD" title="fir.fir.FIR_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_SHIELD</span></code></a></li>
-<li><a class="reference internal" href="#fir.fir.FIR_MLX90620" title="fir.fir.FIR_MLX90620"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90620</span></code></a></li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90621" title="fir.fir.FIR_MLX90621"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90621</span></code></a></li>
 <li><a class="reference internal" href="#fir.fir.FIR_MLX90640" title="fir.fir.FIR_MLX90640"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90640</span></code></a></li>
+<li><a class="reference internal" href="#fir.fir.FIR_MLX90641" title="fir.fir.FIR_MLX90641"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_MLX90641</span></code></a></li>
 <li><a class="reference internal" href="#fir.fir.FIR_AMG8833" title="fir.fir.FIR_AMG8833"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_AMG8833</span></code></a></li>
+<li><a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a></li>
 </ul>
 </div></blockquote>
 </dd></dl>
@@ -346,6 +370,32 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="fir.fir.radiometric">
+<code class="descclassname">fir.</code><code class="descname">radiometric</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.radiometric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if the thermal sensor reports accurate temperature readings (True or False). If False
+this means that the thermal sensor reports relative temperature readings based on its ambient
+temperature which may not be very accurate.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="fir.fir.register_vsync_cb">
+<code class="descclassname">fir.</code><code class="descname">register_vsync_cb</code><span class="sig-paren">(</span><em>cb</em><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.register_vsync_cb" title="Permalink to this definition">¶</a></dt>
+<dd><p>For the <a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a> mode only on the OpenMV Cam Pure Thermal.</p>
+<p>Registers callback <code class="docutils literal notranslate"><span class="pre">cb</span></code> to be executed (in interrupt context) whenever the FLIR Lepton
+generates a new frame. This nomially triggers at 9 Hz.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="fir.fir.trigger_ffc">
+<code class="descclassname">fir.</code><code class="descname">trigger_ffc</code><span class="sig-paren">(</span><em>timeout</em><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.trigger_ffc" title="Permalink to this definition">¶</a></dt>
+<dd><p>For the <a class="reference internal" href="#fir.fir.FIR_LEPTON" title="fir.fir.FIR_LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.FIR_LEPTON</span></code></a> mode only.</p>
+<p>Triggers the Flat-Field-Correction process on your FLIR Lepton which calibrates the thermal
+image. This process happens automatically with the sensor. However, you may call this function
+to force the process to happen. This function will block for up to 5000 ms by default but you may
+pass a different timeout value.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="fir.fir.read_ta">
 <code class="descclassname">fir.</code><code class="descname">read_ta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.read_ta" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the ambient temperature (i.e. sensor temperature).</p>
@@ -358,10 +408,20 @@
 
 <dl class="function">
 <dt id="fir.fir.read_ir">
-<code class="descclassname">fir.</code><code class="descname">read_ir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.read_ir" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">fir.</code><code class="descname">read_ir</code><span class="sig-paren">(</span><span class="optional">[</span><em>hmirror=False</em><span class="optional">[</span>, <em>vflip=False</em><span class="optional">[</span>, <em>transpose=False</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.read_ir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a tuple containing the ambient temperature (i.e. sensor temperature),
 the temperature list (width * height), the minimum temperature seen, and
 the maximum temperature seen.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hmirror</span></code> if set to True horizontally mirrors the <code class="docutils literal notranslate"><span class="pre">ir</span></code> array.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vflip</span></code> if set to True vertically flips the <code class="docutils literal notranslate"><span class="pre">ir</span></code> array.</p>
+<p><code class="docutils literal notranslate"><span class="pre">transpose</span></code> if set to True transposes the <code class="docutils literal notranslate"><span class="pre">ir</span></code> array.</p>
+<p>If you want to rotate an image by multiples of 90 degrees pass the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">vflip</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hmirror</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">False</span> <span class="o">-&gt;</span> <span class="mi">0</span> <span class="n">degree</span> <span class="n">rotation</span>
+<span class="o">*</span> <span class="n">vflip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">hmirror</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">True</span>  <span class="o">-&gt;</span> <span class="mi">90</span> <span class="n">degree</span> <span class="n">rotation</span>
+<span class="o">*</span> <span class="n">vflip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">hmirror</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">transpose</span><span class="o">=</span><span class="kc">False</span> <span class="o">-&gt;</span> <span class="mi">180</span> <span class="n">degree</span> <span class="n">rotation</span>
+<span class="o">*</span> <span class="n">vflip</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hmirror</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">transpose</span><span class="o">=</span><span class="kc">True</span>  <span class="o">-&gt;</span> <span class="mi">270</span> <span class="n">degree</span> <span class="n">rotation</span>
+</pre></div>
+</div>
 <p>Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ta</span><span class="p">,</span> <span class="n">ir</span><span class="p">,</span> <span class="n">to_min</span><span class="p">,</span> <span class="n">to_max</span> <span class="o">=</span> <span class="n">fir</span><span class="o">.</span><span class="n">read_ir</span><span class="p">()</span>
 </pre></div>
@@ -369,53 +429,132 @@ the maximum temperature seen.</p>
 <p>The values returned are floats that represent the temperature in celsius.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal notranslate"><span class="pre">ir</span></code> is a (width * height) list of floats.</p>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="fir.fir.draw_ta">
-<code class="descclassname">fir.</code><code class="descname">draw_ta</code><span class="sig-paren">(</span><em>image</em>, <em>ta</em><span class="optional">[</span>, <em>alpha=128</em><span class="optional">[</span>, <em>scale</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.draw_ta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Draws the ambient temperature <code class="docutils literal notranslate"><span class="pre">ta</span></code> on the <a class="reference internal" href="omv.image.html#module-image" title="image: machine vision"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">image</span></code></a> using a rainbow
-table color conversion. This method colors the whole image by a blue to red
-overlay depending on the ambient temperature.</p>
-<p><code class="docutils literal notranslate"><span class="pre">alpha</span></code> controls the transparency. 256 for an opaque overlay. 0 for none.</p>
-<p><code class="docutils literal notranslate"><span class="pre">scale</span></code> is a two value tuple which controls the rainbow table color conversion. The first number is
-the minimum temperature in celsius cutoff and the second number is the max. Values
-closer to the min are blue and values closer to the max are red.</p>
-<p>The default <code class="docutils literal notranslate"><span class="pre">scale</span></code> is (-17.7778C, 37.7778C) which corresponds to (0F, 100F).</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">For best results look at really cold or hot objects.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">ir</span></code> is a (width * height) list of floats (4-bytes each).</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="fir.fir.draw_ir">
-<code class="descclassname">fir.</code><code class="descname">draw_ir</code><span class="sig-paren">(</span><em>image</em>, <em>ir</em><span class="optional">[</span>, <em>alpha=128</em><span class="optional">[</span>, <em>scale</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.draw_ir" title="Permalink to this definition">¶</a></dt>
-<dd><p>Draws the temperature list <code class="docutils literal notranslate"><span class="pre">ir</span></code> on the <a class="reference internal" href="omv.image.html#module-image" title="image: machine vision"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">image</span></code></a> using a rainbow
-table color conversion. This method auotmatically handles scaling the IR data
-to the right resolution and applies a centering offset to overlay on the image.</p>
-<p><code class="docutils literal notranslate"><span class="pre">alpha</span></code> controls the transparency. 256 for an opaque overlay. 0 for none.</p>
-<p><code class="docutils literal notranslate"><span class="pre">scale</span></code> is a two value tuple which controls the rainbow table color conversion. The first number is
-the minimum temperature in celsius cutoff and the second number is the max. Values
-closer to the min are blue and values closer to the max are red.</p>
-<p>The minimum and maximum values in the temperature list are used to scale
-the output <a class="reference internal" href="omv.image.html#module-image" title="image: machine vision"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">image</span></code></a> automatically unless explicitly overridden using scale.</p>
+<code class="descclassname">fir.</code><code class="descname">draw_ir</code><span class="sig-paren">(</span><em>image</em>, <em>ir</em><span class="optional">[</span>, <em>x</em><span class="optional">[</span>, <em>y</em><span class="optional">[</span>, <em>x_scale=1.0</em><span class="optional">[</span>, <em>y_scale=1.0</em><span class="optional">[</span>, <em>roi=None</em><span class="optional">[</span>, <em>rgb_channel=-1</em><span class="optional">[</span>, <em>alpha=128</em><span class="optional">[</span>, <em>color_palette=fir.PALETTE_RAINBOW</em><span class="optional">[</span>, <em>alpha_palette=-1</em><span class="optional">[</span>, <em>hint=0</em><span class="optional">[</span>, <em>x_size=None</em><span class="optional">[</span>, <em>y_size=None</em><span class="optional">[</span>, <em>scale=(ir_min</em>, <em>ir_max)</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.draw_ir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws an <code class="docutils literal notranslate"><span class="pre">ir</span></code> array on <code class="docutils literal notranslate"><span class="pre">image</span></code> whose top-left corner starts at location x, y. You may either pass x, y
+separately, as a tuple (x, y), or not at all. This method automatically handles rendering the image passed
+into the correct pixel format for the destination image while also handling clipping seamlessly.</p>
+<p><code class="docutils literal notranslate"><span class="pre">x_scale</span></code> controls how much the drawn image is scaled by in the x direction (float). If this
+value is negative the image will be flipped horizontally.</p>
+<p><code class="docutils literal notranslate"><span class="pre">y_scale</span></code> controls how much the drawn image is scaled by in the y direction (float). If this
+value is negative the image will be flipped vertically.</p>
+<p><code class="docutils literal notranslate"><span class="pre">roi</span></code> is the region-of-interest rectangle tuple (x, y, w, h) of the source image to draw. This
+allows you to extract just the pixels in the ROI to scale and draw on the destination image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> is the RGB channel (0=R, G=1, B=2) to extract from an RGB565 image (if passed)
+and to render onto the destination image. For example, if you pass <code class="docutils literal notranslate"><span class="pre">rgb_channel=1</span></code> this will
+extract the green channel of the source RGB565 image and draw that in grayscale on the
+destination image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">alpha</span></code> controls how much of the source image to blend into the destination image. A value of
+256 draws an opaque source image while a value lower than 256 produces a blend between the source
+and destination image. 0 results in no modification to the destination image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">color_palette</span></code> if not <code class="docutils literal notranslate"><span class="pre">-1</span></code> can be <a class="reference internal" href="omv.sensor.html#sensor.sensor.PALETTE_RAINBOW" title="sensor.sensor.PALETTE_RAINBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_RAINBOW</span></code></a>, <a class="reference internal" href="omv.sensor.html#sensor.sensor.PALETTE_IRONBOW" title="sensor.sensor.PALETTE_IRONBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_IRONBOW</span></code></a>, or
+a 256 pixel in total RGB565 image to use as a color lookup table on the grayscale value of
+whatever the source image is. This is applied after <code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> extraction if used.</p>
+<p><code class="docutils literal notranslate"><span class="pre">alpha_palette</span></code> if not <code class="docutils literal notranslate"><span class="pre">-1</span></code> can be a 256 pixel in total GRAYSCALE image to use as a alpha
+palette which modulates the <code class="docutils literal notranslate"><span class="pre">alpha</span></code> value of the source image being drawn at a pixel pixel
+level allowing you to precisely control the alpha value of pixels based on their grayscale value.
+A pixel value of 255 in the alpha lookup table is opaque which anything less than 255 becomes
+more transparent until 0. This is applied after <code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> extraction if used.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hint</span></code> can be a logical OR of the flags:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="omv.image.html#image.image.AREA" title="image.image.AREA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.AREA</span></code></a>: Use area scaling when downscaling versus the default of nearest neighbor.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.BILINEAR" title="image.image.BILINEAR"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BILINEAR</span></code></a>: Use bilinear scaling versus the default of nearest neighbor scaling.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.BICUBIC" title="image.image.BICUBIC"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BICUBIC</span></code></a>: Use bicubic scaling versus the default of nearest neighbor scaling.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.CENTER" title="image.image.CENTER"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.CENTER</span></code></a>: Center the image image being draw on (x, y).</li>
+<li><a class="reference internal" href="omv.image.html#image.image.EXTRACT_RGB_CHANNEL_FIRST" title="image.image.EXTRACT_RGB_CHANNEL_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.EXTRACT_RGB_CHANNEL_FIRST</span></code></a>: Do rgb_channel extraction before scaling.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.APPLY_COLOR_PALETTE_FIRST" title="image.image.APPLY_COLOR_PALETTE_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.APPLY_COLOR_PALETTE_FIRST</span></code></a>: Apply color palette before scaling.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.BLACK_BACKGROUND" title="image.image.BLACK_BACKGROUND"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BLACK_BACKGROUND</span></code></a>: Assume the destination image is black. This speeds up drawing.</li>
+</ul>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">x_size</span></code> may be passed if <code class="docutils literal notranslate"><span class="pre">x_scale</span></code> is not passed to specify the size of the image to draw
+and <code class="docutils literal notranslate"><span class="pre">x_scale</span></code> will automatically be determined passed on the input image size. If neither
+<code class="docutils literal notranslate"><span class="pre">y_scale</span></code> or <code class="docutils literal notranslate"><span class="pre">y_size</span></code> are specified then <code class="docutils literal notranslate"><span class="pre">y_scale</span></code> internally will be set to be equal to
+<code class="docutils literal notranslate"><span class="pre">x_size</span></code> to maintain the aspect-ratio.</p>
+<p><code class="docutils literal notranslate"><span class="pre">y_size</span></code> may be passed if <code class="docutils literal notranslate"><span class="pre">y_scale</span></code> is not passed to specify the size of the image to draw
+and <code class="docutils literal notranslate"><span class="pre">y_scale</span></code> will automatically be determined passed on the input image size. If neither
+<code class="docutils literal notranslate"><span class="pre">x_scale</span></code> or <code class="docutils literal notranslate"><span class="pre">x_size</span></code> are specified then <code class="docutils literal notranslate"><span class="pre">x_scale</span></code> internally will be set to be equal to
+<code class="docutils literal notranslate"><span class="pre">y_size</span></code> to maintain the aspect-ratio.</p>
+<p><code class="docutils literal notranslate"><span class="pre">scale</span></code> is a two value tuple which controls the min and max temperature (in celsius) to scale
+the <code class="docutils literal notranslate"><span class="pre">ir</span></code> image. By default it’s equal to the image <code class="docutils literal notranslate"><span class="pre">ir</span></code> min and <code class="docutils literal notranslate"><span class="pre">ir</span></code> max.</p>
+<p>If x/y are not specified the image will be centered in the field of view. If x_scale/y_scale or
+x_size/y_size are not specified the <code class="docutils literal notranslate"><span class="pre">ir</span></code> array will be scaled to fit on the <code class="docutils literal notranslate"><span class="pre">image</span></code>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">For best results look at really cold or hot objects.</p>
+<p class="last">To handle a transposed <code class="docutils literal notranslate"><span class="pre">ir</span></code> array <a class="reference internal" href="#fir.fir.read_ir" title="fir.fir.read_ir"><code class="xref any py py-func docutils literal notranslate"><span class="pre">read_ir</span></code></a> remembers if it was called with <code class="docutils literal notranslate"><span class="pre">transposed</span></code>
+<code class="docutils literal notranslate"><span class="pre">True</span></code>. This is then passed to <code class="docutils literal notranslate"><span class="pre">draw_ir</span></code> internally. However, you may pass a 3-value tuple
+(w, h, ir) as the <code class="docutils literal notranslate"><span class="pre">ir</span></code> array instead to use <a class="reference internal" href="#fir.fir.draw_ir" title="fir.fir.draw_ir"><code class="xref any py py-func docutils literal notranslate"><span class="pre">draw_ir</span></code></a> to draw any floating point array with
+width <code class="docutils literal notranslate"><span class="pre">w</span></code> and height <code class="docutils literal notranslate"><span class="pre">h</span></code>.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="fir.fir.snapshot">
-<code class="descclassname">fir.</code><code class="descname">snapshot</code><span class="sig-paren">(</span><span class="optional">[</span><em>alpha=128</em><span class="optional">[</span>, <em>scale</em><span class="optional">[</span>, <em>pixformat=sensor.RGB565</em><span class="optional">[</span>, <em>copy_to_fb=False</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.snapshot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Works like <a class="reference internal" href="omv.sensor.html#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> and returns an <a class="reference internal" href="omv.image.html#module-image" title="image: machine vision"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">image</span></code></a> object that’s either
-<a class="reference internal" href="omv.sensor.html#sensor.sensor.GRAYSCALE" title="sensor.sensor.GRAYSCALE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.GRAYSCALE</span></code></a> (grayscale) or <a class="reference internal" href="omv.sensor.html#sensor.sensor.RGB565" title="sensor.sensor.RGB565"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.RGB565</span></code></a> (color). If <code class="docutils literal notranslate"><span class="pre">copy_to_fb</span></code> is False then
+<code class="descclassname">fir.</code><code class="descname">snapshot</code><span class="sig-paren">(</span><span class="optional">[</span><em>hmirror=False</em><span class="optional">[</span>, <em>vflip=False</em><span class="optional">[</span>, <em>transpose=False</em><span class="optional">[</span>, <em>x_scale=1.0</em><span class="optional">[</span>, <em>y_scale=1.0</em><span class="optional">[</span>, <em>roi=None</em><span class="optional">[</span>, <em>rgb_channel=-1</em><span class="optional">[</span>, <em>alpha=128</em><span class="optional">[</span>, <em>color_palette=fir.PALETTE_RAINBOW</em><span class="optional">[</span>, <em>alpha_palette=None</em><span class="optional">[</span>, <em>hint=0</em><span class="optional">[</span>, <em>x_size=None</em><span class="optional">[</span>, <em>y_size=None</em><span class="optional">[</span>, <em>scale=(ir_min</em>, <em>ir_max)</em><span class="optional">[</span>, <em>pixformat=fir.PIXFORMAT_RGB565</em><span class="optional">[</span>, <em>copy_to_fb=False</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#fir.fir.snapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Works like <a class="reference internal" href="omv.sensor.html#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> and returns an <a class="reference internal" href="omv.image.html#module-image" title="image: machine vision"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">image</span></code></a> object that is either
+<a class="reference internal" href="#fir.fir.PIXFORMAT_GRAYSCALE" title="fir.fir.PIXFORMAT_GRAYSCALE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.PIXFORMAT_GRAYSCALE</span></code></a> (grayscale) or <a class="reference internal" href="#fir.fir.PIXFORMAT_RGB565" title="fir.fir.PIXFORMAT_RGB565"><code class="xref any py py-data docutils literal notranslate"><span class="pre">fir.PIXFORMAT_RGB565</span></code></a> (color). If <code class="docutils literal notranslate"><span class="pre">copy_to_fb</span></code> is False then
 the new image is allocated on the MicroPython heap. However, the MicroPython heap is limited
 and may not have space to store the new image if exhausted. Instead, set <code class="docutils literal notranslate"><span class="pre">copy_to_fb</span></code> to
 True to set the frame buffer to the new image making this function work just like <a class="reference internal" href="omv.sensor.html#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hmirror</span></code> if set to True horizontally mirrors the new image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vflip</span></code> if set to True vertically flips the new image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">transpose</span></code> if set to True transposes the new image.</p>
+<p>If you want to rotate an image by multiples of 90 degrees pass the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">vflip</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hmirror</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">False</span> <span class="o">-&gt;</span> <span class="mi">0</span> <span class="n">degree</span> <span class="n">rotation</span>
+<span class="o">*</span> <span class="n">vflip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">hmirror</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">True</span>  <span class="o">-&gt;</span> <span class="mi">90</span> <span class="n">degree</span> <span class="n">rotation</span>
+<span class="o">*</span> <span class="n">vflip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">hmirror</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">transpose</span><span class="o">=</span><span class="kc">False</span> <span class="o">-&gt;</span> <span class="mi">180</span> <span class="n">degree</span> <span class="n">rotation</span>
+<span class="o">*</span> <span class="n">vflip</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hmirror</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">transpose</span><span class="o">=</span><span class="kc">True</span>  <span class="o">-&gt;</span> <span class="mi">270</span> <span class="n">degree</span> <span class="n">rotation</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">x_scale</span></code> controls how much the drawn image is scaled by in the x direction (float). If this
+value is negative the image will be flipped horizontally.</p>
+<p><code class="docutils literal notranslate"><span class="pre">y_scale</span></code> controls how much the drawn image is scaled by in the y direction (float). If this
+value is negative the image will be flipped vertically.</p>
+<p><code class="docutils literal notranslate"><span class="pre">roi</span></code> is the region-of-interest rectangle tuple (x, y, w, h) of the source image to draw. This
+allows you to extract just the pixels in the ROI to scale and draw on the destination image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> is the RGB channel (0=R, G=1, B=2) to extract from an RGB565 image (if passed)
+and to render onto the destination image. For example, if you pass <code class="docutils literal notranslate"><span class="pre">rgb_channel=1</span></code> this will
+extract the green channel of the source RGB565 image and draw that in grayscale on the
+destination image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">alpha</span></code> controls how much of the source image to blend into the destination image. A value of
+256 draws an opaque source image while a value lower than 256 produces a blend between the source
+and destination image. 0 results in no modification to the destination image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">color_palette</span></code> if not <code class="docutils literal notranslate"><span class="pre">-1</span></code> can be <a class="reference internal" href="omv.sensor.html#sensor.sensor.PALETTE_RAINBOW" title="sensor.sensor.PALETTE_RAINBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_RAINBOW</span></code></a>, <a class="reference internal" href="omv.sensor.html#sensor.sensor.PALETTE_IRONBOW" title="sensor.sensor.PALETTE_IRONBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_IRONBOW</span></code></a>, or
+a 256 pixel in total RGB565 image to use as a color lookup table on the grayscale value of
+whatever the source image is. This is applied after <code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> extraction if used.</p>
+<p><code class="docutils literal notranslate"><span class="pre">alpha_palette</span></code> if not <code class="docutils literal notranslate"><span class="pre">-1</span></code> can be a 256 pixel in total GRAYSCALE image to use as a alpha
+palette which modulates the <code class="docutils literal notranslate"><span class="pre">alpha</span></code> value of the source image being drawn at a pixel pixel
+level allowing you to precisely control the alpha value of pixels based on their grayscale value.
+A pixel value of 255 in the alpha lookup table is opaque which anything less than 255 becomes
+more transparent until 0. This is applied after <code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> extraction if used.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hint</span></code> can be a logical OR of the flags:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="omv.image.html#image.image.AREA" title="image.image.AREA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.AREA</span></code></a>: Use area scaling when downscaling versus the default of nearest neighbor.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.BILINEAR" title="image.image.BILINEAR"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BILINEAR</span></code></a>: Use bilinear scaling versus the default of nearest neighbor scaling.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.BICUBIC" title="image.image.BICUBIC"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BICUBIC</span></code></a>: Use bicubic scaling versus the default of nearest neighbor scaling.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.CENTER" title="image.image.CENTER"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.CENTER</span></code></a>: Center the image image being draw on (x, y).</li>
+<li><a class="reference internal" href="omv.image.html#image.image.EXTRACT_RGB_CHANNEL_FIRST" title="image.image.EXTRACT_RGB_CHANNEL_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.EXTRACT_RGB_CHANNEL_FIRST</span></code></a>: Do rgb_channel extraction before scaling.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.APPLY_COLOR_PALETTE_FIRST" title="image.image.APPLY_COLOR_PALETTE_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.APPLY_COLOR_PALETTE_FIRST</span></code></a>: Apply color palette before scaling.</li>
+<li><a class="reference internal" href="omv.image.html#image.image.BLACK_BACKGROUND" title="image.image.BLACK_BACKGROUND"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BLACK_BACKGROUND</span></code></a>: Assume the destination image is black. This speeds up drawing.</li>
+</ul>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">x_size</span></code> may be passed if <code class="docutils literal notranslate"><span class="pre">x_scale</span></code> is not passed to specify the size of the image to draw
+and <code class="docutils literal notranslate"><span class="pre">x_scale</span></code> will automatically be determined passed on the input image size. If neither
+<code class="docutils literal notranslate"><span class="pre">y_scale</span></code> or <code class="docutils literal notranslate"><span class="pre">y_size</span></code> are specified then <code class="docutils literal notranslate"><span class="pre">y_scale</span></code> internally will be set to be equal to
+<code class="docutils literal notranslate"><span class="pre">x_size</span></code> to maintain the aspect-ratio.</p>
+<p><code class="docutils literal notranslate"><span class="pre">y_size</span></code> may be passed if <code class="docutils literal notranslate"><span class="pre">y_scale</span></code> is not passed to specify the size of the image to draw
+and <code class="docutils literal notranslate"><span class="pre">y_scale</span></code> will automatically be determined passed on the input image size. If neither
+<code class="docutils literal notranslate"><span class="pre">x_scale</span></code> or <code class="docutils literal notranslate"><span class="pre">x_size</span></code> are specified then <code class="docutils literal notranslate"><span class="pre">x_scale</span></code> internally will be set to be equal to
+<code class="docutils literal notranslate"><span class="pre">y_size</span></code> to maintain the aspect-ratio.</p>
+<p><code class="docutils literal notranslate"><span class="pre">scale</span></code> is a two value tuple which controls the min and max temperature (in celsius) to scale
+the <code class="docutils literal notranslate"><span class="pre">ir</span></code> image. By default it’s equal to the image <code class="docutils literal notranslate"><span class="pre">ir</span></code> min and <code class="docutils literal notranslate"><span class="pre">ir</span></code> max.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pixformat</span></code> if specified controls the final image pixel format.</p>
 <p><code class="docutils literal notranslate"><span class="pre">copy_to_fb</span></code> may also be another image object if you want to replace that image object’s memory
 buffer, type, width, and height with new image data.</p>
 <div class="admonition note">
@@ -424,17 +563,7 @@ buffer, type, width, and height with new image data.</p>
 any references to previous image objects anymore it overwrites. Either for an image object
 referencing the frame buffer, frame buffer stack, or an image on the MicroPython heap.</p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">alpha</span></code> controls the transparency. 256 for an opaque overlay. 0 for none.</p>
-<p><code class="docutils literal notranslate"><span class="pre">scale</span></code> is a two value tuple which controls the rainbow table color conversion. The first number is
-the minimum temperature in celsius cutoff and the second number is the max. Values
-closer to the min are blue and values closer to the max are red.</p>
-<p>The minimum and maximum values in the temperature list are used to scale
-the output <a class="reference internal" href="omv.image.html#module-image" title="image: machine vision"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">image</span></code></a> automatically unless explicitly overridden using scale.</p>
-<p>Returns a tuple containing the new image and the raw floating point IR temperature array in celsius.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">For best results look at really cold or hot objects.</p>
-</div>
+<p>Returns an image object.</p>
 </dd></dl>
 
 </div>
@@ -453,12 +582,6 @@ the output <a class="reference internal" href="omv.image.html#module-image" titl
 </dd></dl>
 
 <dl class="data">
-<dt id="fir.fir.FIR_MLX90620">
-<code class="descclassname">fir.</code><code class="descname">FIR_MLX90620</code><a class="headerlink" href="#fir.fir.FIR_MLX90620" title="Permalink to this definition">¶</a></dt>
-<dd><p>MLX90620 FIR sensor.</p>
-</dd></dl>
-
-<dl class="data">
 <dt id="fir.fir.FIR_MLX90621">
 <code class="descclassname">fir.</code><code class="descname">FIR_MLX90621</code><a class="headerlink" href="#fir.fir.FIR_MLX90621" title="Permalink to this definition">¶</a></dt>
 <dd><p>FIR_MLX90621 FIR sensor.</p>
@@ -471,9 +594,45 @@ the output <a class="reference internal" href="omv.image.html#module-image" titl
 </dd></dl>
 
 <dl class="data">
+<dt id="fir.fir.FIR_MLX90641">
+<code class="descclassname">fir.</code><code class="descname">FIR_MLX90641</code><a class="headerlink" href="#fir.fir.FIR_MLX90641" title="Permalink to this definition">¶</a></dt>
+<dd><p>FIR_MLX90640 FIR sensor.</p>
+</dd></dl>
+
+<dl class="data">
 <dt id="fir.fir.FIR_AMG8833">
 <code class="descclassname">fir.</code><code class="descname">FIR_AMG8833</code><a class="headerlink" href="#fir.fir.FIR_AMG8833" title="Permalink to this definition">¶</a></dt>
 <dd><p>FIR_AMG8833 FIR sensor.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="fir.fir.FIR_LEPTON">
+<code class="descclassname">fir.</code><code class="descname">FIR_LEPTON</code><a class="headerlink" href="#fir.fir.FIR_LEPTON" title="Permalink to this definition">¶</a></dt>
+<dd><p>FIR_LEPTON FIR sensor.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="fir.fir.PALETTE_RAINBOW">
+<code class="descclassname">fir.</code><code class="descname">PALETTE_RAINBOW</code><a class="headerlink" href="#fir.fir.PALETTE_RAINBOW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rainbow color palette for <a class="reference internal" href="#fir.fir.draw_ir" title="fir.fir.draw_ir"><code class="xref any py py-func docutils literal notranslate"><span class="pre">fir.draw_ir()</span></code></a> and <a class="reference internal" href="#fir.fir.snapshot" title="fir.fir.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">fir.snapshot()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="fir.fir.PALETTE_IRONBOW">
+<code class="descclassname">fir.</code><code class="descname">PALETTE_IRONBOW</code><a class="headerlink" href="#fir.fir.PALETTE_IRONBOW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ironbow color palette for <a class="reference internal" href="#fir.fir.draw_ir" title="fir.fir.draw_ir"><code class="xref any py py-func docutils literal notranslate"><span class="pre">fir.draw_ir()</span></code></a> and <a class="reference internal" href="#fir.fir.snapshot" title="fir.fir.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">fir.snapshot()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="fir.fir.PIXFORMAT_GRAYSCALE">
+<code class="descclassname">fir.</code><code class="descname">PIXFORMAT_GRAYSCALE</code><a class="headerlink" href="#fir.fir.PIXFORMAT_GRAYSCALE" title="Permalink to this definition">¶</a></dt>
+<dd><p>GRAYSCALE pixformat for <a class="reference internal" href="#fir.fir.snapshot" title="fir.fir.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">fir.snapshot()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="fir.fir.PIXFORMAT_RGB565">
+<code class="descclassname">fir.</code><code class="descname">PIXFORMAT_RGB565</code><a class="headerlink" href="#fir.fir.PIXFORMAT_RGB565" title="Permalink to this definition">¶</a></dt>
+<dd><p>RGB565 pixformat for <a class="reference internal" href="#fir.fir.snapshot" title="fir.fir.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">fir.snapshot()</span></code></a>.</p>
 </dd></dl>
 
 </div>
@@ -501,7 +660,7 @@ the output <a class="reference internal" href="omv.image.html#module-image" titl
     <p>
         &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 29 Nov 2020.
+        Last updated on 28 Jan 2021.
       </span>
 
     </p>
