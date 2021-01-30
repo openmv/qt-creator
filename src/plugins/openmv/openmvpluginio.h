@@ -30,7 +30,7 @@
 #define IS_BINARY(bpp)                  ((bpp) == 0)
 
 int getImageSize(int w, int h, int bpp);
-QPixmap getImageFromData(QByteArray data, int w, int h, int bpp);
+QPixmap getImageFromData(QByteArray data, int w, int h, int bpp, bool rgb565ByteReversed);
 
 class OpenMVPluginIO : public QObject
 {
@@ -83,6 +83,7 @@ public slots: // private
     void breakUpSetAttributeCommand(bool on) { m_breakUpSetAttributeCommand = on; }
     void breakUpFBEnable(bool on) { m_breakUpFBEnable = on; }
     void breakUpJPEGEnable(bool on) { m_breakUpJPEGEnable = on; }
+    void rgb565ByteReservedEnable(bool on) { m_rgb565ByteReversed = on; }
 
 signals:
 
@@ -128,6 +129,7 @@ private:
     bool m_breakUpSetAttributeCommand;
     bool m_breakUpFBEnable;
     bool m_breakUpJPEGEnable;
+    bool m_rgb565ByteReversed;
 };
 
 #endif // OPENMVPLUGINIO_H

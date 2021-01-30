@@ -66,12 +66,12 @@ int getImageSize(int w, int h, int bpp)
     return IS_JPG(bpp) ? bpp : ((IS_RGB(bpp) || IS_GS(bpp)) ? (w * h * bpp) : (IS_BINARY(bpp) ? (((w + 31) / 32) * h) : int()));
 }
 
-QPixmap getImageFromData(QByteArray data, int w, int h, int bpp)
+QPixmap getImageFromData(QByteArray data, int w, int h, int bpp, bool rgb565ByteReversed)
 {
     QPixmap pixmap = getImageSize(w, h, bpp) ? (QPixmap::fromImage(IS_JPG(bpp)
         ? QImage::fromData(data, "JPG")
         : QImage(reinterpret_cast<const uchar *>(byteSwap(data,
-            IS_RGB(bpp)).constData()), w, h, IS_BINARY(bpp) ? ((w + 31) / 32) : (w * bpp),
+            rgb565ByteReversed && IS_RGB(bpp)).constData()), w, h, IS_BINARY(bpp) ? ((w + 31) / 32) : (w * bpp),
             IS_RGB(bpp) ? QImage::Format_RGB16 : (IS_GS(bpp) ? QImage::Format_Grayscale8 : (IS_BINARY(bpp) ? QImage::Format_MonoLSB : QImage::Format_Invalid)))))
     : QPixmap();
 
@@ -138,6 +138,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
     m_breakUpSetAttributeCommand = bool();
     m_breakUpFBEnable = bool();
     m_breakUpJPEGEnable = bool();
+    m_rgb565ByteReversed = bool();
 }
 
 void OpenMVPluginIO::command()
@@ -206,7 +207,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
 
                     if(m_pixelBuffer.size() == getImageSize(m_frameSizeW, m_frameSizeH, m_frameSizeBPP))
                     {
-                        QPixmap pixmap = getImageFromData(m_pixelBuffer, m_frameSizeW, m_frameSizeH, m_frameSizeBPP);
+                        QPixmap pixmap = getImageFromData(m_pixelBuffer, m_frameSizeW, m_frameSizeH, m_frameSizeBPP, m_rgb565ByteReversed);
 
                         if(!pixmap.isNull())
                         {
@@ -1086,6 +1087,7 @@ QByteArray OpenMVPluginIO::pasrsePrintData(const QByteArray &data)
         EXIT_1
     }
     int_stateMachine = ASCII;
+
     QByteArray int_shiftReg = QByteArray();
     QByteArray int_frameBufferData = QByteArray();
 

@@ -29,8 +29,8 @@ static QByteArray jpgToBytes(const QImage &image)
                 int green = int(((qGreen(pixel)*63)+127.5)/255)&0x3F;
                 int blue = int(((qBlue(pixel)*31)+127.5)/255)&0x1F;
                 int rgb565 = (red << 11) | (green << 5) | (blue << 0);
-                buf.putChar((rgb565 >> 8) & 0xFF); // always return true - byte reverse
-                buf.putChar((rgb565 >> 0) & 0xFF); // always return true - byte reverse
+                buf.putChar((rgb565 >> 0) & 0xFF); // always return true
+                buf.putChar((rgb565 >> 8) & 0xFF); // always return true
             }
         }
     }
@@ -198,7 +198,7 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
     return true;
 }
 
-static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32_t *frames, uint32_t *bytes, QFile *imageWriterFile, int maxW, int maxH)
+static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32_t *frames, uint32_t *bytes, QFile *imageWriterFile, int maxW, int maxH, bool rgb565ByteReversed)
 {
     QProgressDialog progress(QObject::tr("Transcoding File..."), QObject::tr("Cancel"), imageWriterFile->pos() / 1024, imageWriterFile->size() / 1024, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint | // Dividing by 1024 above makes sure that a 4GB max file size fits in an int.
@@ -248,7 +248,7 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
             return false;
         }
 
-        QPixmap pixmap = getImageFromData(data, W, H, BPP).scaled(maxW, maxH, Qt::KeepAspectRatio);
+        QPixmap pixmap = getImageFromData(data, W, H, BPP, rgb565ByteReversed).scaled(maxW, maxH, Qt::KeepAspectRatio);
 
         int size = 16 - (data.size() % 16);
 
@@ -323,7 +323,7 @@ static QString handleImageWriterFiles(const QString &path)
             {
                 int version = ((major - '0') * 10) + (minor - '0');
 
-                if(version == 10)
+                if((version == 10) || (version == 11))
                 {
                     QFile tempFile(QDir::tempPath() + QDir::separator() + QFileInfo(file).completeBaseName() + QStringLiteral(".mjpeg"));
 
@@ -341,7 +341,7 @@ static QString handleImageWriterFiles(const QString &path)
                                 {
                                     uint32_t frames = 0, bytes = 0;
 
-                                    if(convertImageWriterFileToMjpegVideoFile(&tempFile, &frames, &bytes, &file, maxW, maxH))
+                                    if(convertImageWriterFileToMjpegVideoFile(&tempFile, &frames, &bytes, &file, maxW, maxH, version == 10))
                                     {
                                         if(tempFile.seek(0))
                                         {
@@ -602,7 +602,9 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
 
     QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
         Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+        (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    dialog->setAttribute(Qt::WA_ShowWithoutActivating);
     dialog->setWindowTitle(QObject::tr("Convert Video"));
     dialog->setSizeGripEnabled(true);
 
@@ -865,7 +867,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
             serializeData(data, "OMV ", 4);
             serializeData(data, "IMG ", 4);
             serializeData(data, "STR ", 4);
-            serializeData(data, "V1.0", 4);
+            serializeData(data, "V1.1", 4);
 
             for(int i = 0, j = list.size(); i < j; i++)
             {

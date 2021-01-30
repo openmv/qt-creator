@@ -4985,6 +4985,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             }
         }
 
+        if((major2 < OPENMV_RGB565_BYTE_REVERSAL_FIXED_MAJOR)
+        || ((major2 == OPENMV_RGB565_BYTE_REVERSAL_FIXED_MAJOR) && (minor2 < OPENMV_RGB565_BYTE_REVERSAL_FIXED_MINOR))
+        || ((major2 == OPENMV_RGB565_BYTE_REVERSAL_FIXED_MAJOR) && (minor2 == OPENMV_RGB565_BYTE_REVERSAL_FIXED_MINOR) && (patch2 < OPENMV_RGB565_BYTE_REVERSAL_FIXED_PATCH)))
+        {
+            m_iodevice->rgb565ByteReservedEnable(true);
+        }
+        else
+        {
+            m_iodevice->rgb565ByteReservedEnable(false);
+        }
+
         m_boardType = QString();
         m_boardId = QString();
 
@@ -5200,11 +5211,53 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     m_versionButton->setText(m_versionButton->text().append(tr(" - [ out of date - click here to updgrade ]")));
 
                     QTimer::singleShot(1, this, [this] {
-                        if(QMessageBox::warning(Core::ICore::dialogParent(),
-                            tr("Connect"),
-                            tr("Your OpenMV Cam's firmware is out of date. Would you like to upgrade?"),
-                            QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
-                        == QMessageBox::Ok)
+                        QSettings *settings = ExtensionSystem::PluginManager::settings();
+                        settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+                        bool update = false;
+
+                        if(!settings->value(QStringLiteral(DONT_SHOW_UPGRADE_FW_AGAIN), false).toBool())
+                        {
+                            QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
+                                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                            dialog->setWindowTitle(tr("Connect"));
+                            QVBoxLayout *v_layout = new QVBoxLayout(dialog);
+
+                            QLabel *label = new QLabel(tr("Your OpenMV Cam's firmware is out of date. Would you like to upgrade?"));
+                            v_layout->addWidget(label);
+
+                            QWidget *widget = new QWidget();
+                            QHBoxLayout *h_layout = new QHBoxLayout(widget);
+                            h_layout->setMargin(0);
+
+                            QCheckBox *checkBox = new QCheckBox(tr("Don't show this message again."));
+                            h_layout->addWidget(checkBox);
+
+                            QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+                            connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+                            connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+                            h_layout->addWidget(box);
+
+                            QPushButton *ok = box->button(QDialogButtonBox::Ok);
+                            ok->setAutoDefault(true);
+                            ok->setDefault(true);
+
+                            QPushButton *cancel = box->button(QDialogButtonBox::Cancel);
+                            cancel->setAutoDefault(false);
+                            cancel->setDefault(false);
+
+                            v_layout->addSpacing(10);
+                            v_layout->addWidget(widget);
+
+                            update = dialog->exec() == QMessageBox::Ok;
+                            settings->setValue(QStringLiteral(DONT_SHOW_UPGRADE_FW_AGAIN), checkBox->isChecked());
+
+                            delete dialog;
+                        }
+
+                        settings->endGroup();
+
+                        if(update)
                         {
                             OpenMVPlugin::updateCam(true);
                         }
@@ -5585,18 +5638,33 @@ void OpenMVPlugin::errorFilter(const QByteArray &data)
         int lineNumber = match.captured(2).toInt();
         QString errorMessage = tr(match.captured(3).toUtf8().data());
 
-        Core::EditorManager::cutForwardNavigationHistory();
-        Core::EditorManager::addCurrentPositionToNavigationHistory();
+        bool builtinModule = false;
+        QString builtinModuleName = QFileInfo(fileName).baseName();
+
+        foreach(const documentation_t &d, m_modules)
+        {
+            if(d.name == builtinModuleName)
+            {
+                builtinModule = true;
+                break;
+            }
+        }
 
         TextEditor::BaseTextEditor *editor = Q_NULLPTR;
 
-        if(fileName == QStringLiteral("<stdin>"))
+        if(!builtinModule)
         {
-            editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::currentEditor());
-        }
-        else if(!m_portPath.isEmpty())
-        {
-            editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditor(QDir::cleanPath(QDir::fromNativeSeparators(QString(QDir::separator() + fileName).prepend(m_portPath)))));
+            Core::EditorManager::cutForwardNavigationHistory();
+            Core::EditorManager::addCurrentPositionToNavigationHistory();
+
+            if(fileName == QStringLiteral("<stdin>"))
+            {
+                editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::currentEditor());
+            }
+            else if(!m_portPath.isEmpty())
+            {
+                editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditor(QDir::cleanPath(QDir::fromNativeSeparators(QString(QDir::separator() + fileName).prepend(m_portPath)))));
+            }
         }
 
         if(editor)

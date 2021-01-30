@@ -78,7 +78,9 @@ void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Util
 
     QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
         Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+        (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    dialog->setAttribute(Qt::WA_ShowWithoutActivating);
     dialog->setWindowTitle(QObject::tr("DFU Util"));
     dialog->setSizeGripEnabled(true);
 
