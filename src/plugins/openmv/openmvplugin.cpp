@@ -492,6 +492,29 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                         cursor.select(QTextCursor::WordUnderCursor);
                         text = cursor.selectedText();
 
+                        QTextCursor newCursor(cursor);
+                        QString maybeModuleName;
+                        bool moduleFilter = false;
+
+                        // 1. Move the cursor to break selection, 2. Move the cursor to '.', 3. Move the cursor onto the word behind '.'.
+                        if(newCursor.movePosition(QTextCursor::PreviousWord, QTextCursor::MoveAnchor, 3))
+                        {
+                            newCursor.select(QTextCursor::WordUnderCursor);
+                            maybeModuleName = newCursor.selectedText();
+
+                            if(!maybeModuleName.isEmpty())
+                            {
+                                foreach(const documentation_t &d, m_modules)
+                                {
+                                    if(d.name == maybeModuleName)
+                                    {
+                                        moduleFilter = true;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+
                         if(!text.isEmpty())
                         {
                             QStringList list;
@@ -508,7 +531,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                             {
                                 foreach(const documentation_t &d, m_datas)
                                 {
-                                    if(d.name == text)
+                                    if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
                                     {
                                         list.append(d.text);
                                     }
@@ -519,7 +542,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                             {
                                 foreach(const documentation_t &d, m_classes)
                                 {
-                                    if(d.name == text)
+                                    if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
                                     {
                                         list.append(d.text);
                                     }
@@ -527,7 +550,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
                                 foreach(const documentation_t &d, m_functions)
                                 {
-                                    if(d.name == text)
+                                    if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
                                     {
                                         list.append(d.text);
                                     }
@@ -535,7 +558,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
                                 foreach(const documentation_t &d, m_methods)
                                 {
-                                    if(d.name == text)
+                                    if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
                                     {
                                         list.append(d.text);
                                     }
@@ -5959,7 +5982,7 @@ QMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const QStrin
 
         if(it.fileInfo().isDir())
         {
-            QMenu *menu = new QMenu(notExamples ? it.fileName() : it.fileName().remove(QRegularExpression(QStringLiteral("^\\d+-"))), parent);
+            QMenu *menu = new QMenu(notExamples ? it.fileName() : it.fileName().remove(QRegularExpression(QStringLiteral("^\\d+-"))).replace(QLatin1Char('-'), QLatin1Char(' ')), parent);
             QMap<QString, QAction *> menuActions = aboutToShowExamplesRecursive(filePath, menu, notExamples);
             menu->addActions(menuActions.values());
             menu->setDisabled(menuActions.values().isEmpty());
