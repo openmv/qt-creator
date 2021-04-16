@@ -1,7 +1,7 @@
 #include "openmvplugin.h"
 
 #include "app/app_version.h"
-
+QString camera_serial;
 namespace OpenMV {
 namespace Internal {
 
@@ -59,7 +59,7 @@ static void displayError(const QString &string)
     if(Utils::HostOsInfo::isWindowsHost())
     {
         QMessageBox::critical(Q_NULLPTR, QString(), string);
-    }
+     }
     else
     {
         qCritical("%s", qPrintable(string));
@@ -80,7 +80,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     }
 
     ///////////////////////////////////////////////////////////////////////////
-
+/*
     int override_read_timeout = -1;
     int index_override_read_timeout = arguments.indexOf(QRegularExpression(QStringLiteral("-override_read_timeout")));
 
@@ -99,6 +99,37 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             {
                 displayError(tr("Invalid argument (%1) for -override_read_timeout").arg(arguments.at(index_override_read_timeout + 1)));
                 exit(-1);
+            
+        }
+        else
+        {
+            displayError(tr("Missing argument for -override_read_timeout"));
+            exit(-1);
+        }
+    }
+*/
+//Alberto Garlassi 13/4/21
+    int override_read_timeout = -1;
+    int index_override_read_timeout = arguments.indexOf(QRegularExpression(QStringLiteral("-override_read_timeout")));
+    static QString tmp_camera_serial;
+
+    camera_serial = QStringLiteral("NO_USB_SERIAL_FILTER");
+
+    if(index_override_read_timeout != -1)
+    {
+        if(arguments.size() > (index_override_read_timeout + 1))
+        {
+            bool ok;
+             tmp_camera_serial = arguments.at(index_override_read_timeout + 1);
+
+            if(1)
+            {
+                camera_serial = tmp_camera_serial;
+            }
+            else
+            {
+                displayError(tr("Invalid argument (%1) for -override_read_timeout").arg(arguments.at(index_override_read_timeout + 1)));
+                exit(-1);
             }
         }
         else
@@ -107,6 +138,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             exit(-1);
         }
     }
+
 
     int override_read_stall_timeout = -1;
     int index_override_read_stall_timeout = arguments.indexOf(QRegularExpression(QStringLiteral("-override_read_stall_timeout")));
@@ -2190,6 +2222,8 @@ bool OpenMVPlugin::delayedInitialize()
             }
         }
 
+
+
         if(!ok) {
             if(!m_availableWifiPorts.isEmpty()) {
                 m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_WIFI_PATH)));
@@ -3399,7 +3433,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         QStringList stringList;
 
-        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+/*        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
         {
             if(port.hasVendorIdentifier() && ((port.vendorIdentifier() == OPENMVCAM_VID) || (port.vendorIdentifier() == ARDUINOCAM_VID))
             && port.hasProductIdentifier() && ((port.productIdentifier() == OPENMVCAM_PID) || ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID)))
@@ -3407,6 +3441,35 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 stringList.append(port.portName());
             }
         }
+*/
+
+/* Alberto Garlassi 14-04-21
+ *
+ * Added USB camera filtering based on serial number identifier.
+ * It is passed as a command line argument and allows to deploy several launchers
+ * each one controlling a predefined camera.
+ * This is because QTSerial can't use symlinks to devices
+ * see https://forum.qt.io/topic/30632/qserialport-and-port-naming-on-linux-centos
+ * and relies on the native device names, wich can change after USB disconnect.
+ * Udev rules can't rename the devices, can only create stable symlinks to them.
+ * 
+ * USB serial identifier:
+  /bin/udevadm info --name=/dev/ttyACM0 | grep SERIAL_SHORT
+ *
+ * Tested on Ubuntu 2004.
+*/ 
+
+   foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+        {
+            if((port.hasVendorIdentifier() && ((port.vendorIdentifier() == OPENMVCAM_VID) || (port.vendorIdentifier() == ARDUINOCAM_VID))
+            && port.hasProductIdentifier() && ((port.productIdentifier() == OPENMVCAM_PID) || ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID))) 
+            && (port.serialNumber() == camera_serial  || camera_serial == QStringLiteral("NO_USB_SERIAL_FILTER")))
+            {
+                stringList.append(port.portName());
+            }
+        }
+     
+
 
         if(Utils::HostOsInfo::isMacHost())
         {
