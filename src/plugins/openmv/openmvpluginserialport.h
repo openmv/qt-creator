@@ -196,6 +196,8 @@ public:
 
     explicit OpenMVPluginSerialPort_thing(const QString &name, QObject *parent = Q_NULLPTR);
     QString portName();
+    bool isSerialPort() { return m_serialPort != Q_NULLPTR; }
+    bool isTCPPort() { return m_tcpSocket != Q_NULLPTR; }
 
     void setReadBufferSize(qint64 size);
     bool setBaudRate(qint32 baudRate);

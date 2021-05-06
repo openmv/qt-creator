@@ -5272,7 +5272,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             v_layout->addSpacing(10);
                             v_layout->addWidget(widget);
 
-                            update = dialog->exec() == QMessageBox::Ok;
+                            update = dialog->exec() == QDialog::Accepted;
                             settings->setValue(QStringLiteral(DONT_SHOW_UPGRADE_FW_AGAIN), checkBox->isChecked());
 
                             delete dialog;

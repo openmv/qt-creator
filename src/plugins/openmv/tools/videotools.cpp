@@ -772,7 +772,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     //                {
     //                    file.close();
     //                    file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
-    //                    result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+    //                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
     //                        << QStringLiteral("-e")
     //                        << QFileInfo(file).filePath());
     //                }
@@ -780,7 +780,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     //
     //            // NOT ROBUST
     //            //
-    //            //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+    //            //result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
     //            //    << QStringLiteral("-e")
     //            //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffmpeg")))
     //            //    << QStringLiteral("-hide_banner")
@@ -802,7 +802,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     //                {
     //                    file.close();
     //                    file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
-    //                    result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+    //                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
     //                        << QStringLiteral("-e")
     //                        << QFileInfo(file).filePath());
     //                }
@@ -810,7 +810,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     //
     //            // NOT ROBUST
     //            //
-    //            //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+    //            //result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
     //            //    << QStringLiteral("-e")
     //            //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffmpeg")))
     //            //    << QStringLiteral("-hide_banner")
@@ -832,7 +832,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     //                {
     //                    file.close();
     //                    file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
-    //                    result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+    //                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
     //                        << QStringLiteral("-e")
     //                        << QFileInfo(file).filePath());
     //                }
@@ -840,7 +840,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     //
     //            // NOT ROBUST
     //            //
-    //            //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+    //            //result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
     //            //    << QStringLiteral("-e")
     //            //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffmpeg")))
     //            //    << QStringLiteral("-hide_banner")
@@ -982,7 +982,7 @@ static bool playVideoFile(const QString &path)
                 {
                     file.close();
                     file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
-                    result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
                         << QStringLiteral("-e")
                         << QFileInfo(file).filePath());
                 }
@@ -990,7 +990,7 @@ static bool playVideoFile(const QString &path)
 
             // NOT ROBUST
             //
-            //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+            //result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
             //    << QStringLiteral("-e")
             //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffplay")))
             //    << QStringLiteral("-hide_banner")
@@ -1010,7 +1010,7 @@ static bool playVideoFile(const QString &path)
                 {
                     file.close();
                     file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
-                    result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
                         << QStringLiteral("-e")
                         << QFileInfo(file).filePath());
                 }
@@ -1018,7 +1018,7 @@ static bool playVideoFile(const QString &path)
 
             // NOT ROBUST
             //
-            //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+            //result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
             //    << QStringLiteral("-e")
             //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffplay")))
             //    << QStringLiteral("-hide_banner")
@@ -1038,7 +1038,7 @@ static bool playVideoFile(const QString &path)
                 {
                     file.close();
                     file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
-                    result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
                         << QStringLiteral("-e")
                         << QFileInfo(file).filePath());
                 }
@@ -1046,7 +1046,7 @@ static bool playVideoFile(const QString &path)
 
             // NOT ROBUST
             //
-            //result = QProcess::startDetached(QStringLiteral("x-terminal-emulator"), QStringList()
+            //result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
             //    << QStringLiteral("-e")
             //    << QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffplay")))
             //    << QStringLiteral("-hide_banner")

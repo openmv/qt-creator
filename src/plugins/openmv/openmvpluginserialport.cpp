@@ -525,9 +525,17 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
             do
             {
                 m_port->waitForReadyRead(1);
-                response.append(m_port->readAll());
 
-                if((response.size() < responseLen) && elaspedTimer2.hasExpired(read_stall_timeout))
+                QByteArray data = m_port->readAll();
+                response.append(data);
+
+                if((responseLen == command.m_responseLen) && (!data.isEmpty()))
+                {
+                    elaspedTimer.restart();
+                    elaspedTimer2.start();
+                }
+
+                if(m_port->isSerialPort() && (response.size() < responseLen) && elaspedTimer2.hasExpired(read_stall_timeout))
                 {
                     QByteArray data;
                     serializeByte(data, __USBDBG_CMD);
@@ -545,6 +553,16 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                         break;
                     }
                 }
+
+//                if(m_port->isTCPPort() && (response.size() < responseLen) && elaspedTimer2.hasExpired(read_timeout / 2))
+//                {
+//                    write(command.m_data, 0, 0, WRITE_TIMEOUT);
+
+//                    if(!m_port)
+//                    {
+//                        break;
+//                    }
+//                }
             }
             while((response.size() < responseLen) && (!elaspedTimer.hasExpired(read_timeout)));
 
