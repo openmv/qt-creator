@@ -6,8 +6,10 @@
 #define WRITE_LOOPS 1 // disabled
 #define WRITE_DELAY 0 // disabled
 #define WRITE_TIMEOUT 6000
-#define READ_TIMEOUT 10000
-#define READ_STALL_TIMEOUT 1000
+#define SERIAL_READ_TIMEOUT 10000
+#define WIFI_READ_TIMEOUT 10000
+#define SERIAL_READ_STALL_TIMEOUT 1000
+#define WIFI_READ_STALL_TIMEOUT 3000
 #define BOOTLOADER_WRITE_TIMEOUT 6
 #define BOOTLOADER_READ_TIMEOUT 10
 #define BOOTLOADER_READ_STALL_TIMEOUT 2
@@ -310,8 +312,8 @@ OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(int override_read
 {
     m_port = Q_NULLPTR;
     m_bootloaderStop = false;
-    read_timeout = (override_read_timeout > 0) ? override_read_timeout : READ_TIMEOUT;
-    read_stall_timeout = (override_read_stall_timeout > 0) ? override_read_stall_timeout : READ_STALL_TIMEOUT;
+    m_override_read_timeout = override_read_timeout;
+    m_override_read_stall_timeout = override_read_stall_timeout;
 }
 
 void OpenMVPluginSerialPort_private::open(const QString &portName)
@@ -515,6 +517,20 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
         }
         else
         {
+            int read_timeout = m_port->isSerialPort() ? SERIAL_READ_TIMEOUT : WIFI_READ_TIMEOUT;
+
+            if(m_override_read_timeout > 0)
+            {
+                read_timeout = m_override_read_timeout;
+            }
+
+            int read_stall_timeout = m_port->isSerialPort() ? SERIAL_READ_STALL_TIMEOUT : WIFI_READ_STALL_TIMEOUT;
+
+            if(m_override_read_stall_timeout > 0)
+            {
+                read_stall_timeout = m_override_read_stall_timeout;
+            }
+
             QByteArray response;
             int responseLen = command.m_responseLen;
             QElapsedTimer elaspedTimer;
@@ -554,15 +570,15 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                     }
                 }
 
-//                if(m_port->isTCPPort() && (response.size() < responseLen) && elaspedTimer2.hasExpired(read_timeout / 2))
-//                {
-//                    write(command.m_data, 0, 0, WRITE_TIMEOUT);
+                if(m_port->isTCPPort() && (response.size() < responseLen) && elaspedTimer2.hasExpired(read_stall_timeout))
+                {
+                    write(command.m_data, 0, 0, WRITE_TIMEOUT);
 
-//                    if(!m_port)
-//                    {
-//                        break;
-//                    }
-//                }
+                    if(!m_port)
+                    {
+                        break;
+                    }
+                }
             }
             while((response.size() < responseLen) && (!elaspedTimer.hasExpired(read_timeout)));
 

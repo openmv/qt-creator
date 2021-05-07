@@ -257,8 +257,8 @@ private:
 
     OpenMVPluginSerialPort_thing *m_port;
     bool m_bootloaderStop;
-    int read_timeout;
-    int read_stall_timeout;
+    int m_override_read_timeout;
+    int m_override_read_stall_timeout;
 };
 
 class OpenMVPluginSerialPort : public QObject
