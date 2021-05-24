@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. OpenMV IDE Overview &mdash; MicroPython 1.13 documentation</title>
+  <title>4. OpenMV IDE Overview &mdash; MicroPython 1.15 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.13
+                1.15
               </div>
             
           
@@ -111,10 +111,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#serial-terminal">4.7. Serial Terminal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#status-bar">4.8. Status Bar</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tools">4.9. Tools</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#open-terminal">4.10. Open Terminal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#machine-vision">4.11. Machine Vision</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#video-tools">4.12. Video Tools</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#options">4.13. Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wifi-debug">4.10. WiFi Debug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-terminal">4.11. Open Terminal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#machine-vision">4.12. Machine Vision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#video-tools">4.13. Video Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">4.14. Options</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="script_structure.html">5. Script Structure</a></li>
@@ -478,8 +479,21 @@ to re-program your OpenMV Cam with or a <code class="docutils literal notranslat
 feature is only for advanced users who plan on changing the default OpenMV Cam
 firmware.</p>
 </div>
+<div class="section" id="wifi-debug">
+<h2>4.10. WiFi Debug<a class="headerlink" href="#wifi-debug" title="Permalink to this headline">¶</a></h2>
+<p>If you’d like to debug you camera over WiFi and have a WINC1500 shield you can use the
+<code class="docutils literal notranslate"><span class="pre">Tools-&gt;Configure</span> <span class="pre">OpenMV</span> <span class="pre">Cam</span> <span class="pre">Settings</span> <span class="pre">file</span></code> dialog to setup your OpenMV Cam to connect
+to the IDE over WiFi (please ensure that your OpenMV Cam can run WiFi examples first and
+that your firmware and WiFi module firmware is up to date before enabling WiFi debug).</p>
+<p>Once WiFi Debug is enabled your OpenMV Cam will connect to your WiFi network (or create one)
+on turn on. During this time the status LED onboard will be solid white. After connecting OpenMV IDE
+will display a WiFi icon on the connect button. When you click connect OpenMV IDE will give you the
+option to connect to your OpenMV Cam over WiFi.</p>
+<p>When connected over WiFi you can do everything but work with the file system on your OpenMV Cam
+(unless your OpenMV Cam is still connected to your computer over USB).</p>
+</div>
 <div class="section" id="open-terminal">
-<h2>4.10. Open Terminal<a class="headerlink" href="#open-terminal" title="Permalink to this headline">¶</a></h2>
+<h2>4.11. Open Terminal<a class="headerlink" href="#open-terminal" title="Permalink to this headline">¶</a></h2>
 <p>The Open Terminal feature allows you to create new serial terminals using
 OpenMV IDE to remotely debug your OpenMV Cam while it is not connected to your
 computer. The Open Terminal feature can also be used to program any MicroPython
@@ -489,14 +503,14 @@ ports, tcp ports, or udp ports. Note that serial ports can be bluetooth ports
 for wireless connectivity.</p>
 </div>
 <div class="section" id="machine-vision">
-<h2>4.11. Machine Vision<a class="headerlink" href="#machine-vision" title="Permalink to this headline">¶</a></h2>
+<h2>4.12. Machine Vision<a class="headerlink" href="#machine-vision" title="Permalink to this headline">¶</a></h2>
 <p>The Machine Vision submenu includes a lot of Machine Vision tools for your
 OpenMV Cam. For example, the you can use the color threshold editor to get
 the best color tracking thresholds for <code class="docutils literal notranslate"><span class="pre">image.find_blobs()</span></code>. We’ll make
 new machine vision tools available regularly to make life easier for you.</p>
 </div>
 <div class="section" id="video-tools">
-<h2>4.12. Video Tools<a class="headerlink" href="#video-tools" title="Permalink to this headline">¶</a></h2>
+<h2>4.13. Video Tools<a class="headerlink" href="#video-tools" title="Permalink to this headline">¶</a></h2>
 <p>If you need to compress a <code class="docutils literal notranslate"><span class="pre">.gif</span></code> file produced by your OpenMV Cam or convert
 a <code class="docutils literal notranslate"><span class="pre">.mjpeg</span></code> or ImageIO <code class="docutils literal notranslate"><span class="pre">.bin</span></code> video file to <code class="docutils literal notranslate"><span class="pre">.mp4</span></code> you can use the
 convert video file action to do this. Alternatively, if you’d just like to play
@@ -535,7 +549,7 @@ set the MJPEG file as the source and another file using another format
 </div></blockquote>
 </div>
 <div class="section" id="options">
-<h2>4.13. Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<h2>4.14. Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <p>Under the Tools Menu (or About Menu for Mac) you can access OpenMV IDE’s
 option dialog.</p>
 <p>You can configure the editor font, size, zoom, tab behavior, automatic cleaning
@@ -564,9 +578,9 @@ characters, and more.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 28 Jan 2021.
+        Last updated on 23 May 2021.
       </span>
 
     </p>

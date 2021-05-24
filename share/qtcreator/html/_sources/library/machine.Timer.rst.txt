@@ -27,8 +27,8 @@ Constructors
 .. class:: Timer(id, ...)
 
    Construct a new timer object of the given id. Id of -1 constructs a
-   virtual timer (if supported).
-
+   virtual timer (if supported by a board).
+   
    See ``init`` for parameters of initialisation.
 
 Methods

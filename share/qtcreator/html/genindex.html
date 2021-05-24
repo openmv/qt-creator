@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; MicroPython 1.13 documentation</title>
+  <title>Index &mdash; MicroPython 1.15 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.13
+                1.15
               </div>
             
           
@@ -209,7 +209,7 @@
 </li>
       <li><a href="library/btree.html#btree.btree.__contains__">__contains__() (btree.btree method)</a>
 </li>
-      <li><a href="library/btree.html#btree.btree.__detitem__">__detitem__() (btree.btree method)</a>
+      <li><a href="library/btree.html#btree.btree.__delitem__">__delitem__() (btree.btree method)</a>
 </li>
       <li><a href="library/btree.html#btree.btree.__getitem__">__getitem__() (btree.btree method)</a>
 </li>
@@ -286,6 +286,8 @@
 </li>
         <li><a href="library/network.WLAN.html#network.WLAN.active">(network.WLAN method)</a>
 </li>
+        <li><a href="library/ubluetooth.html#ubluetooth.BLE.active">(ubluetooth.BLE method)</a>
+</li>
       </ul></li>
       <li><a href="library/omv.image.html#image.image.Image.image.add">add() (image.image.Image.image method)</a>
 </li>
@@ -305,10 +307,10 @@
 </li>
       <li><a href="library/usocket.html#usocket.AF_INET6">AF_INET6 (in module usocket)</a>
 </li>
-      <li><a href="library/pyb.Pin.html#pyb.Pin.af_list">af_list() (pyb.Pin method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="library/pyb.Pin.html#pyb.Pin.af_list">af_list() (pyb.Pin method)</a>
+</li>
       <li><a href="library/machine.RTC.html#machine.RTC.alarm">alarm() (machine.RTC method)</a>
 </li>
       <li><a href="library/machine.RTC.html#machine.RTC.alarm_left">alarm_left() (machine.RTC method)</a>
@@ -339,7 +341,7 @@
       </ul></li>
       <li><a href="library/omv.image.html#image.image.blob.blob.area">area() (image.image.blob.blob method)</a>
 </li>
-      <li><a href="library/usys.html#sys.argv">argv (in module sys)</a>
+      <li><a href="library/usys.html#usys.argv">argv (in module usys)</a>
 </li>
       <li><a href="library/uarray.html#uarray.array">array (class in uarray)</a>
 </li>
@@ -359,7 +361,7 @@
 </li>
       <li><a href="library/math.html#math.atanh">atanh() (in module math)</a>
 </li>
-      <li><a href="library/usys.html#sys.atexit">atexit() (in module sys)</a>
+      <li><a href="library/usys.html#usys.atexit">atexit() (in module usys)</a>
 </li>
       <li><a href="library/builtins.html#AttributeError">AttributeError</a>
 </li>
@@ -374,8 +376,6 @@
       <li><a href="library/omv.audio.html#audio.audio.stop_streaming">audio.stop_streaming() (in module audio)</a>
 </li>
       <li><a href="library/omv.micro_speech.html#micro_speech.MicroSpeech.audio_callback">audio_callback() (micro_speech.MicroSpeech method)</a>
-</li>
-      <li><a href="library/utime.html#utime.time.clock.clock.avg">avg() (utime.time.clock.clock method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -427,17 +427,19 @@
 </li>
       <li><a href="library/omv.image.html#image.image.Image.image.bilateral">bilateral() (image.image.Image.image method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/builtins.html#bin">bin() (built-in function)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.Image.image.binary">binary() (image.image.Image.image method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/usocket.html#usocket.socket.bind">bind() (usocket.socket method)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.histogram.histogram.bins">bins() (image.image.histogram.histogram method)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.Image.image.black_hat">black_hat() (image.image.Image.image method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE">BLE (class in ubluetooth)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.Image.image.blend">blend() (image.image.Image.image method)</a>
 </li>
@@ -455,6 +457,14 @@
 </li>
       <li><a href="reference/glossary.html#term-buffer-protocol"><strong>buffer protocol</strong></a>
 </li>
+      <li><a href="library/omv.buzzer.html#module-buzzer">buzzer (module)</a>
+</li>
+      <li><a href="library/omv.buzzer.html#buzzer.buzzer.duty">buzzer.duty() (in module buzzer)</a>
+</li>
+      <li><a href="library/omv.buzzer.html#buzzer.buzzer.freq">buzzer.freq() (in module buzzer)</a>
+</li>
+      <li><a href="library/omv.buzzer.html#buzzer.buzzer.RESONANT_FREQ">buzzer.RESONANT_FREQ (in module buzzer)</a>
+</li>
       <li><a href="library/builtins.html#bytearray">bytearray (built-in class)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.Image.image.bytearray">bytearray() (image.image.Image.image method)</a>
@@ -463,7 +473,7 @@
 </li>
       <li><a href="reference/glossary.html#term-bytecode"><strong>bytecode</strong></a>
 </li>
-      <li><a href="library/usys.html#sys.byteorder">byteorder (in module sys)</a>
+      <li><a href="library/usys.html#usys.byteorder">byteorder (in module usys)</a>
 </li>
       <li><a href="library/builtins.html#bytes">bytes (built-in class)</a>
 </li>
@@ -587,10 +597,10 @@
 </li>
       <li><a href="library/gc.html#gc.collect">collect() (in module gc)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/omv.image.html#image.image.datamatrix.datamatrix.columns">columns() (image.image.datamatrix.datamatrix method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/omv.image.html#image.image.blob.blob.compactness">compactness() (image.image.blob.blob method)</a>
 </li>
       <li><a href="library/pyb.Timer.html#pyb.timerchannel.compare">compare() (pyb.timerchannel method)</a>
@@ -617,6 +627,8 @@
         <li><a href="library/network.LAN.html#network.LAN.config">(network.LAN method)</a>
 </li>
         <li><a href="library/network.WLAN.html#network.WLAN.config">(network.WLAN method)</a>
+</li>
+        <li><a href="library/ubluetooth.html#ubluetooth.BLE.config">(ubluetooth.BLE method)</a>
 </li>
       </ul></li>
       <li><a href="library/network.html#network.AbstractNIC.connect">connect() (network.AbstractNIC method)</a>
@@ -688,6 +700,8 @@
       <li><a href="library/omv.image.html#image.image.Image.image.crop">crop() (image.image.Image.image method)</a>
 </li>
       <li><a href="reference/glossary.html#term-cross-compiler"><strong>cross-compiler</strong></a>
+</li>
+      <li><a href="library/uasyncio.html#uasyncio.current_task">current_task() (in module uasyncio)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.apriltag.apriltag.cx">cx() (image.image.apriltag.apriltag method)</a>
 
@@ -903,7 +917,7 @@
 </li>
       <li><a href="library/builtins.html#exec">exec() (built-in function)</a>
 </li>
-      <li><a href="library/usys.html#sys.exit">exit() (in module sys)</a>
+      <li><a href="library/usys.html#usys.exit">exit() (in module usys)</a>
 </li>
       <li><a href="library/cmath.html#cmath.exp">exp() (in module cmath)</a>
 
@@ -1003,16 +1017,18 @@
 </li>
       <li><a href="library/omv.fir.html#fir.fir.FIR_SHIELD">fir.FIR_SHIELD (in module fir)</a>
 </li>
+      <li><a href="library/omv.fir.html#fir.fir.get_frame_available">fir.get_frame_available() (in module fir)</a>
+</li>
       <li><a href="library/omv.fir.html#fir.fir.height">fir.height() (in module fir)</a>
 </li>
       <li><a href="library/omv.fir.html#fir.fir.init">fir.init() (in module fir)</a>
 </li>
       <li><a href="library/omv.fir.html#fir.fir.PALETTE_IRONBOW">fir.PALETTE_IRONBOW (in module fir)</a>
 </li>
-      <li><a href="library/omv.fir.html#fir.fir.PALETTE_RAINBOW">fir.PALETTE_RAINBOW (in module fir)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="library/omv.fir.html#fir.fir.PALETTE_RAINBOW">fir.PALETTE_RAINBOW (in module fir)</a>
+</li>
       <li><a href="library/omv.fir.html#fir.fir.PIXFORMAT_GRAYSCALE">fir.PIXFORMAT_GRAYSCALE (in module fir)</a>
 </li>
       <li><a href="library/omv.fir.html#fir.fir.PIXFORMAT_RGB565">fir.PIXFORMAT_RGB565 (in module fir)</a>
@@ -1024,6 +1040,8 @@
       <li><a href="library/omv.fir.html#fir.fir.read_ta">fir.read_ta() (in module fir)</a>
 </li>
       <li><a href="library/omv.fir.html#fir.fir.refresh">fir.refresh() (in module fir)</a>
+</li>
+      <li><a href="library/omv.fir.html#fir.fir.register_frame_cb">fir.register_frame_cb() (in module fir)</a>
 </li>
       <li><a href="library/omv.fir.html#fir.fir.register_vsync_cb">fir.register_vsync_cb() (in module fir)</a>
 </li>
@@ -1061,8 +1079,6 @@
         <li><a href="library/omv.image.html#image.image.Image.image.format">(image.image.Image.image method)</a>
 </li>
       </ul></li>
-      <li><a href="library/utime.html#utime.time.clock.clock.fps">fps() (utime.time.clock.clock method)</a>
-</li>
       <li><a href="library/framebuf.html#module-framebuf">framebuf (module)</a>
 </li>
       <li><a href="library/framebuf.html#framebuf.framebuf.GS2_HMSB">framebuf.GS2_HMSB (in module framebuf)</a>
@@ -1111,14 +1127,52 @@
 </li>
       <li><a href="library/omv.image.html#image.image.Image.image.gamma_corr">gamma_corr() (image.image.Image.image method)</a>
 </li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gap_advertise">gap_advertise() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gap_connect">gap_connect() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gap_disconnect">gap_disconnect() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gap_pair">gap_pair() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gap_passkey">gap_passkey() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gap_scan">gap_scan() (ubluetooth.BLE method)</a>
+</li>
       <li><a href="reference/glossary.html#term-garbage-collector"><strong>Garbage Collector</strong></a>
 </li>
       <li><a href="library/uasyncio.html#uasyncio.gather">gather() (in module uasyncio)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gattc_discover_characteristics">gattc_discover_characteristics() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gattc_discover_descriptors">gattc_discover_descriptors() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gattc_discover_services">gattc_discover_services() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gattc_exchange_mtu">gattc_exchange_mtu() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gattc_read">gattc_read() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gattc_write">gattc_write() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gatts_indicate">gatts_indicate() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gatts_notify">gatts_notify() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gatts_read">gatts_read() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gatts_register_services">gatts_register_services() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gatts_set_buffer">gatts_set_buffer() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.gatts_write">gatts_write() (ubluetooth.BLE method)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.Image.image.gaussian">gaussian() (image.image.Image.image method)</a>
 </li>
       <li><a href="library/gc.html#module-gc">gc (module)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/btree.html#btree.btree.get">get() (btree.btree method)</a>
 </li>
       <li><a href="library/uasyncio.html#uasyncio.get_event_loop">get_event_loop() (in module uasyncio)</a>
@@ -1141,8 +1195,6 @@
         <li><a href="library/omv.image.html#image.image.Image.image.get_statistics">(image.image.Image.image method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/omv.image.html#image.image.histogram.histogram.get_threshold">get_threshold() (image.image.histogram.histogram method)</a>
 </li>
       <li><a href="library/usocket.html#usocket.getaddrinfo">getaddrinfo() (in module usocket)</a>
@@ -1240,6 +1292,8 @@
       <li><a href="library/ubinascii.html#ubinascii.hexlify">hexlify() (in module ubinascii)</a>
 </li>
       <li><a href="library/pyb.html#pyb.hid">hid() (in module pyb)</a>
+</li>
+      <li><a href="library/machine.Pin.html#machine.Pin.high">high() (machine.Pin method)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.Image.image.histeq">histeq() (image.image.Image.image method)</a>
 </li>
@@ -1413,10 +1467,10 @@
 </li>
       <li><a href="library/omv.image.html#image.image.SEARCH_EX">image.SEARCH_EX (in module image)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/omv.image.html#image.image.statistics">image.statistics (class in image)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/omv.image.html#image.image.TAG16H5">image.TAG16H5 (in module image)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.TAG25H7">image.TAG25H7 (in module image)</a>
@@ -1441,7 +1495,7 @@
 </li>
       <li><a href="library/omv.image.html#image.image.yuv_to_rgb">image.yuv_to_rgb() (in module image)</a>
 </li>
-      <li><a href="library/usys.html#sys.implementation">implementation (in module sys)</a>
+      <li><a href="library/usys.html#usys.implementation">implementation (in module usys)</a>
 </li>
       <li><a href="library/builtins.html#ImportError">ImportError</a>
 </li>
@@ -1544,6 +1598,8 @@
       <ul>
         <li><a href="library/machine.RTC.html#machine.RTC.irq">(machine.RTC method)</a>
 </li>
+        <li><a href="library/ubluetooth.html#ubluetooth.BLE.irq">(ubluetooth.BLE method)</a>
+</li>
       </ul></li>
       <li><a href="library/omv.image.html#image.image.qrcode.qrcode.is_alphanumeric">is_alphanumeric() (image.image.qrcode.qrcode method)</a>
 </li>
@@ -1607,6 +1663,16 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.l2cap_connect">l2cap_connect() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.l2cap_disconnect">l2cap_disconnect() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.l2cap_listen">l2cap_listen() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.l2cap_recvinto">l2cap_recvinto() (ubluetooth.BLE method)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.BLE.l2cap_send">l2cap_send() (ubluetooth.BLE method)</a>
+</li>
       <li><a href="library/omv.image.html#image.image.histogram.histogram.l_bins">l_bins() (image.image.histogram.histogram method)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.statistics.statistics.l_lq">l_lq() (image.image.statistics.statistics method)</a>
@@ -1715,12 +1781,12 @@
 </li>
       <li><a href="library/omv.lcd.html#lcd.lcd.LCD_SHIELD">lcd.LCD_SHIELD (in module lcd)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/omv.lcd.html#lcd.lcd.QVGA">lcd.QVGA (in module lcd)</a>
 </li>
       <li><a href="library/omv.lcd.html#lcd.lcd.receive_frame">lcd.receive_frame() (in module lcd)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/omv.lcd.html#lcd.lcd.received_frame_bytes">lcd.received_frame_bytes() (in module lcd)</a>
 </li>
       <li><a href="library/omv.lcd.html#lcd.lcd.received_frame_src_addr">lcd.received_frame_src_addr() (in module lcd)</a>
@@ -1841,6 +1907,8 @@
 </li>
       <li><a href="library/omv.gif.html#gif.gif.loop">loop() (gif.gif method)</a>
 </li>
+      <li><a href="library/machine.Pin.html#machine.Pin.low">low() (machine.Pin method)</a>
+</li>
       <li><a href="library/omv.image.html#image.image.statistics.statistics.lq">lq() (image.image.statistics.statistics method)</a>
 </li>
   </ul></td>
@@ -1917,7 +1985,7 @@
         <li><a href="library/omv.image.html#image.image.statistics.statistics.max">(image.image.statistics.statistics method)</a>
 </li>
       </ul></li>
-      <li><a href="library/usys.html#sys.maxsize">maxsize (in module sys)</a>
+      <li><a href="library/usys.html#usys.maxsize">maxsize (in module usys)</a>
 </li>
       <li><a href="reference/glossary.html#term-mcu"><strong>MCU</strong></a>
 </li>
@@ -2019,7 +2087,7 @@
 </li>
       <li><a href="library/uselect.html#uselect.poll.modify">modify() (uselect.poll method)</a>
 </li>
-      <li><a href="library/usys.html#sys.modules">modules (in module sys)</a>
+      <li><a href="library/usys.html#usys.modules">modules (in module usys)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.Image.image.morph">morph() (image.image.Image.image method)</a>
 </li>
@@ -2153,7 +2221,7 @@
 </li>
       <li><a href="library/omv.image.html#image.image.datamatrix.datamatrix.padding">padding() (image.image.datamatrix.datamatrix method)</a>
 </li>
-      <li><a href="library/usys.html#sys.path">path (in module sys)</a>
+      <li><a href="library/usys.html#usys.path">path (in module usys)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.barcode.barcode.payload">payload() (image.image.barcode.barcode method)</a>
 
@@ -2241,7 +2309,7 @@
 </li>
       <li><a href="library/omv.image.html#image.image.blob.blob.pixels">pixels() (image.image.blob.blob method)</a>
 </li>
-      <li><a href="library/usys.html#sys.platform">platform (in module sys)</a>
+      <li><a href="library/usys.html#usys.platform">platform (in module usys)</a>
 </li>
       <li><a href="library/cmath.html#cmath.polar">polar() (in module cmath)</a>
 </li>
@@ -2267,7 +2335,7 @@
 </li>
       <li><a href="library/builtins.html#print">print() (built-in function)</a>
 </li>
-      <li><a href="library/usys.html#sys.print_exception">print_exception() (in module sys)</a>
+      <li><a href="library/usys.html#usys.print_exception">print_exception() (in module usys)</a>
 </li>
       <li><a href="library/builtins.html#property">property() (built-in function)</a>
 </li>
@@ -2461,7 +2529,7 @@
 </li>
       <li><a href="library/pyb.ExtInt.html#pyb.ExtInt.regs">regs() (pyb.ExtInt class method)</a>
 </li>
-      <li><a href="library/mutex.html#mutex.mjpeg.release">release() (mutex.mjpeg method)</a>
+      <li><a href="library/mutex.html#mutex.mutex.release">release() (mutex.mutex method)</a>
 
       <ul>
         <li><a href="library/uasyncio.html#uasyncio.Lock.release">(uasyncio.Lock method)</a>
@@ -2480,11 +2548,7 @@
       <li><a href="library/builtins.html#repr">repr() (built-in function)</a>
 </li>
       <li><a href="library/machine.html#machine.reset">reset() (in module machine)</a>
-
-      <ul>
-        <li><a href="library/utime.html#utime.time.clock.clock.reset">(utime.time.clock.clock method)</a>
 </li>
-      </ul></li>
       <li><a href="library/machine.html#machine.reset_cause">reset_cause() (in module machine)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.displacement.displacement.response">response() (image.image.displacement.displacement method)</a>
@@ -2651,6 +2715,8 @@
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.B128X64">sensor.B128X64 (in module sensor)</a>
 </li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.B320X320">sensor.B320X320 (in module sensor)</a>
+</li>
       <li><a href="library/omv.sensor.html#sensor.sensor.B64X32">sensor.B64X32 (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.B64X64">sensor.B64X64 (in module sensor)</a>
@@ -2663,9 +2729,13 @@
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.dealloc_extra_fb">sensor.dealloc_extra_fb() (in module sensor)</a>
 </li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.DOUBLE_BUFFER">sensor.DOUBLE_BUFFER (in module sensor)</a>
+</li>
       <li><a href="library/omv.sensor.html#sensor.sensor.FHD">sensor.FHD (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.flush">sensor.flush() (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.GC2145">sensor.GC2145 (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.get_auto_rotation">sensor.get_auto_rotation() (in module sensor)</a>
 </li>
@@ -2674,6 +2744,10 @@
       <li><a href="library/omv.sensor.html#sensor.sensor.get_exposure_us">sensor.get_exposure_us() (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.get_fb">sensor.get_fb() (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.get_frame_available">sensor.get_frame_available() (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.get_framebuffers">sensor.get_framebuffers() (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.get_framerate">sensor.get_framerate() (in module sensor)</a>
 </li>
@@ -2714,6 +2788,16 @@
       <li><a href="library/omv.sensor.html#sensor.sensor.IOCTL_GET_READOUT_WINDOW">sensor.IOCTL_GET_READOUT_WINDOW (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.IOCTL_GET_TRIGGERED_MODE">sensor.IOCTL_GET_TRIGGERED_MODE (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.IOCTL_HIMAX_MD_CLEAR">sensor.IOCTL_HIMAX_MD_CLEAR (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.IOCTL_HIMAX_MD_ENABLE">sensor.IOCTL_HIMAX_MD_ENABLE (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.IOCTL_HIMAX_MD_THRESHOLD">sensor.IOCTL_HIMAX_MD_THRESHOLD (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.IOCTL_HIMAX_MD_WINDOW">sensor.IOCTL_HIMAX_MD_WINDOW (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.IOCTL_HIMAX_OSC_ENABLE">sensor.IOCTL_HIMAX_OSC_ENABLE (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.IOCTL_LEPTON_GET_ATTRIBUTE">sensor.IOCTL_LEPTON_GET_ATTRIBUTE (in module sensor)</a>
 </li>
@@ -2760,6 +2844,8 @@
       <li><a href="library/omv.sensor.html#sensor.sensor.LCD">sensor.LCD (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.LEPTON">sensor.LEPTON (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.MT9M114">sensor.MT9M114 (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.MT9V034">sensor.MT9V034 (in module sensor)</a>
 </li>
@@ -2815,14 +2901,18 @@
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.set_color_palette">sensor.set_color_palette() (in module sensor)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/omv.sensor.html#sensor.sensor.set_colorbar">sensor.set_colorbar() (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.set_contrast">sensor.set_contrast() (in module sensor)</a>
 </li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.set_frame_callback">sensor.set_frame_callback() (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.set_framebuffers">sensor.set_framebuffers() (in module sensor)</a>
+</li>
       <li><a href="library/omv.sensor.html#sensor.sensor.set_framerate">sensor.set_framerate() (in module sensor)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/omv.sensor.html#sensor.sensor.set_framesize">sensor.set_framesize() (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.set_gainceiling">sensor.set_gainceiling() (in module sensor)</a>
@@ -2841,13 +2931,15 @@
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.set_vflip">sensor.set_vflip() (in module sensor)</a>
 </li>
-      <li><a href="library/omv.sensor.html#sensor.sensor.set_vsync_output">sensor.set_vsync_output() (in module sensor)</a>
+      <li><a href="library/omv.sensor.html#sensor.sensor.set_vsync_callback">sensor.set_vsync_callback() (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.set_windowing">sensor.set_windowing() (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.shutdown">sensor.shutdown() (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.SIF">sensor.SIF (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.SINGLE_BUFFER">sensor.SINGLE_BUFFER (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.skip_frames">sensor.skip_frames() (in module sensor)</a>
 </li>
@@ -2859,9 +2951,13 @@
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.SXGA">sensor.SXGA (in module sensor)</a>
 </li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.TRIPLE_BUFFER">sensor.TRIPLE_BUFFER (in module sensor)</a>
+</li>
       <li><a href="library/omv.sensor.html#sensor.sensor.UXGA">sensor.UXGA (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.VGA">sensor.VGA (in module sensor)</a>
+</li>
+      <li><a href="library/omv.sensor.html#sensor.sensor.VIDEO_FIFO">sensor.VIDEO_FIFO (in module sensor)</a>
 </li>
       <li><a href="library/omv.sensor.html#sensor.sensor.width">sensor.width() (in module sensor)</a>
 </li>
@@ -2883,6 +2979,8 @@
 
       <ul>
         <li><a href="library/uasyncio.html#uasyncio.Event.set">(uasyncio.Event method)</a>
+</li>
+        <li><a href="library/uasyncio.html#uasyncio.ThreadSafeFlag.set">(uasyncio.ThreadSafeFlag method)</a>
 </li>
       </ul></li>
       <li><a href="library/uasyncio.html#uasyncio.Loop.set_exception_handler">set_exception_handler() (uasyncio.Loop method)</a>
@@ -3031,13 +3129,13 @@
       </ul></li>
       <li><a href="library/uos.html#uos.statvfs">statvfs() (in module uos)</a>
 </li>
-      <li><a href="library/usys.html#sys.stderr">stderr (in module sys)</a>
+      <li><a href="library/usys.html#usys.stderr">stderr (in module usys)</a>
 </li>
       <li><a href="library/omv.image.html#image.image.statistics.statistics.stdev">stdev() (image.image.statistics.statistics method)</a>
 </li>
-      <li><a href="library/usys.html#sys.stdin">stdin (in module sys)</a>
+      <li><a href="library/usys.html#usys.stdin">stdin (in module usys)</a>
 </li>
-      <li><a href="library/usys.html#sys.stdout">stdout (in module sys)</a>
+      <li><a href="library/usys.html#usys.stdout">stdout (in module usys)</a>
 </li>
       <li><a href="library/pyb.html#pyb.stop">stop() (in module pyb)</a>
 
@@ -3083,8 +3181,6 @@
       </ul></li>
       <li><a href="library/builtins.html#SyntaxError">SyntaxError</a>
 </li>
-      <li><a href="library/usys.html#module-sys">sys (module)</a>
-</li>
       <li><a href="library/builtins.html#SystemExit">SystemExit</a>
 </li>
   </ul></td>
@@ -3101,7 +3197,7 @@
 </li>
       <li><a href="library/index.html#module-tb6612">tb6612 (module)</a>
 </li>
-      <li><a href="library/mutex.html#mutex.mjpeg.test">test() (mutex.mjpeg method)</a>
+      <li><a href="library/mutex.html#mutex.mutex.test">test() (mutex.mutex method)</a>
 </li>
       <li><a href="library/framebuf.html#framebuf.FrameBuffer.text">text() (framebuf.FrameBuffer method)</a>
 </li>
@@ -3127,9 +3223,9 @@
         <li><a href="library/omv.image.html#image.image.line.line.theta">(image.image.line.line method)</a>
 </li>
       </ul></li>
-      <li><a href="library/gc.html#gc.threshold">threshold() (in module gc)</a>
+      <li><a href="library/uasyncio.html#uasyncio.ThreadSafeFlag">ThreadSafeFlag (class in uasyncio)</a>
 </li>
-      <li><a href="library/utime.html#utime.time.clock.clock.tick">tick() (utime.time.clock.clock method)</a>
+      <li><a href="library/gc.html#gc.threshold">threshold() (in module gc)</a>
 </li>
       <li><a href="library/utime.html#utime.ticks_add">ticks_add() (in module utime)</a>
 </li>
@@ -3143,14 +3239,12 @@
 </li>
       <li><a href="library/utime.html#utime.time">time() (in module utime)</a>
 </li>
-      <li><a href="library/utime.html#utime.time.clock">time.clock (class in utime)</a>
-</li>
       <li><a href="library/utime.html#utime.time_ns">time_ns() (in module utime)</a>
+</li>
+      <li><a href="library/machine.html#machine.time_pulse_us">time_pulse_us() (in module machine)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="library/machine.html#machine.time_pulse_us">time_pulse_us() (in module machine)</a>
-</li>
       <li><a href="library/machine.Timer.html#machine.Timer">Timer (class in machine)</a>
 </li>
       <li><a href="library/machine.Timer.html#machine.Timer.ONE_SHOT">Timer.ONE_SHOT (in module machine)</a>
@@ -3226,6 +3320,8 @@
       <li><a href="library/uasyncio.html#module-uasyncio">uasyncio (module)</a>
 </li>
       <li><a href="library/ubinascii.html#module-ubinascii">ubinascii (module)</a>
+</li>
+      <li><a href="library/ubluetooth.html#module-ubluetooth">ubluetooth (module)</a>
 </li>
       <li><a href="library/ucollections.html#module-ucollections">ucollections (module)</a>
 </li>
@@ -3317,7 +3413,11 @@
 </li>
       <li><a href="library/ustruct.html#module-ustruct">ustruct (module)</a>
 </li>
+      <li><a href="library/usys.html#module-usys">usys (module)</a>
+</li>
       <li><a href="library/utime.html#module-utime">utime (module)</a>
+</li>
+      <li><a href="library/ubluetooth.html#ubluetooth.UUID">UUID (class in ubluetooth)</a>
 </li>
       <li><a href="library/uzlib.html#module-uzlib">uzlib (module)</a>
 </li>
@@ -3343,13 +3443,13 @@
 </li>
       <li><a href="library/btree.html#btree.btree.values">values() (btree.btree method)</a>
 </li>
-      <li><a href="library/usys.html#sys.version">version (in module sys)</a>
+      <li><a href="library/usys.html#usys.version">version (in module usys)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/omv.image.html#image.image.qrcode.qrcode.version">version() (image.image.qrcode.qrcode method)</a>
 </li>
-      <li><a href="library/usys.html#sys.version_info">version_info (in module sys)</a>
+      <li><a href="library/usys.html#usys.version_info">version_info (in module usys)</a>
 </li>
       <li><a href="library/uos.html#uos.VfsFat">VfsFat (class in uos)</a>
 </li>
@@ -3388,7 +3488,11 @@
 </li>
       </ul></li>
       <li><a href="library/uasyncio.html#uasyncio.Event.wait">wait() (uasyncio.Event method)</a>
+
+      <ul>
+        <li><a href="library/uasyncio.html#uasyncio.ThreadSafeFlag.wait">(uasyncio.ThreadSafeFlag method)</a>
 </li>
+      </ul></li>
       <li><a href="library/uasyncio.html#uasyncio.Server.wait_closed">wait_closed() (uasyncio.Server method)</a>
 
       <ul>
@@ -3419,10 +3523,10 @@
       </ul></li>
       <li><a href="library/network.WINC.html#network.WINC">WINC (class in network)</a>
 </li>
-      <li><a href="library/network.WINC.html#network.WINC.MODE_AP">WINC.MODE_AP (in module network)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="library/network.WINC.html#network.WINC.MODE_AP">WINC.MODE_AP (in module network)</a>
+</li>
       <li><a href="library/network.WINC.html#network.WINC.MODE_FIRMWARE">WINC.MODE_FIRMWARE (in module network)</a>
 </li>
       <li><a href="library/network.WINC.html#network.WINC.MODE_STA">WINC.MODE_STA (in module network)</a>
@@ -3588,9 +3692,9 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 28 Jan 2021.
+        Last updated on 23 May 2021.
       </span>
 
     </p>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>sensor — camera sensor &mdash; MicroPython 1.13 documentation</title>
+  <title>sensor — camera sensor &mdash; MicroPython 1.15 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.13
+                1.15
               </div>
             
           
@@ -111,6 +111,7 @@
 <li class="toctree-l3"><a class="reference internal" href="omv.fir.html"><code class="docutils literal notranslate"><span class="pre">fir</span></code> — thermal sensor driver (fir == far infrared)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.tv.html"><code class="docutils literal notranslate"><span class="pre">tv</span></code> — tv shield driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.cpufreq.html"><code class="docutils literal notranslate"><span class="pre">cpufreq</span></code> — CPU Frequency Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omv.buzzer.html"><code class="docutils literal notranslate"><span class="pre">buzzer</span></code> — buzzer driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.imu.html"><code class="docutils literal notranslate"><span class="pre">imu</span></code> — imu sensor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.rpc.html"><code class="docutils literal notranslate"><span class="pre">rpc</span></code> — rpc library</a></li>
 <li class="toctree-l3"><a class="reference internal" href="omv.rtsp.html"><code class="docutils literal notranslate"><span class="pre">rtsp</span></code> — rtsp library</a></li>
@@ -254,9 +255,12 @@ processing algorithms.</p>
 by calling <a class="reference internal" href="#sensor.sensor.alloc_extra_fb" title="sensor.sensor.alloc_extra_fb"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.alloc_extra_fb()</span></code></a>.</p>
 <p>If <a class="reference internal" href="#sensor.sensor.set_auto_rotation" title="sensor.sensor.set_auto_rotation"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_auto_rotation()</span></code></a> is enabled this method will return a new
 already rotated <a class="reference internal" href="omv.image.html#module-image" title="image: machine vision"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">image</span></code></a> object.</p>
-<p>Note: <a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> may apply cropping parameters to fit the snapshot in the available
-frame buffer space given the pixformat and framesize. The cropping parameters will be applied
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> may apply cropping parameters to fit the snapshot in the available
+RAM the pixformat, framesize, windowing, and framebuffers. The cropping parameters will be applied
 to maintain the aspect ratio and will stay until <a class="reference internal" href="#sensor.sensor.set_framesize" title="sensor.sensor.set_framesize"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_framesize()</span></code></a> or <a class="reference internal" href="#sensor.sensor.set_windowing" title="sensor.sensor.set_windowing"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_windowing()</span></code></a> are called.</p>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -273,9 +277,12 @@ frames for 2000 milliseconds.</p>
 300 milliseconds.</p>
 <p>If both are specified this method skips <code class="docutils literal notranslate"><span class="pre">n</span></code> number of frames but will
 timeout after <code class="docutils literal notranslate"><span class="pre">time</span></code> milliseconds.</p>
-<p>Note: <a class="reference internal" href="#sensor.sensor.skip_frames" title="sensor.sensor.skip_frames"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.skip_frames()</span></code></a> may apply cropping parameters to fit the snapshot in the available
-frame buffer space given the pixformat and framesize. The cropping parameters will be applied
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> may apply cropping parameters to fit the snapshot in the available
+RAM given the pixformat, framesize, windowing, and framebuffers. The cropping parameters will be applied
 to maintain the aspect ratio and will stay until <a class="reference internal" href="#sensor.sensor.set_framesize" title="sensor.sensor.set_framesize"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_framesize()</span></code></a> or <a class="reference internal" href="#sensor.sensor.set_windowing" title="sensor.sensor.set_windowing"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_windowing()</span></code></a> are called.</p>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -310,8 +317,10 @@ then <code class="docutils literal notranslate"><span class="pre">None</span></c
 <li><a class="reference internal" href="#sensor.sensor.OV7725" title="sensor.sensor.OV7725"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.OV7725</span></code></a>: Rolling shutter sensor module.</li>
 <li><a class="reference internal" href="#sensor.sensor.OV7690" title="sensor.sensor.OV7690"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.OV7690</span></code></a>: OpenMV Cam Micro sensor module.</li>
 <li><a class="reference internal" href="#sensor.sensor.MT9V034" title="sensor.sensor.MT9V034"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.MT9V034</span></code></a>: Global shutter sensor module.</li>
+<li><a class="reference internal" href="#sensor.sensor.MT9M114" title="sensor.sensor.MT9M114"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.MT9M114</span></code></a>: New Rolling shutter sensor module.</li>
 <li><a class="reference internal" href="#sensor.sensor.LEPTON" title="sensor.sensor.LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.LEPTON</span></code></a>: Lepton1/2/3 sensor module.</li>
 <li><a class="reference internal" href="#sensor.sensor.HM01B0" title="sensor.sensor.HM01B0"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.HM01B0</span></code></a>: Arduino Portenta H7 sensor module.</li>
+<li><a class="reference internal" href="#sensor.sensor.GC2145" title="sensor.sensor.GC2145"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.GC2145</span></code></a>: Arduino Bormio H7 sensor module.</li>
 </ul>
 </div></blockquote>
 </dd></dl>
@@ -404,6 +413,7 @@ quality then with <a class="reference internal" href="#sensor.sensor.set_quality
 <li><a class="reference internal" href="#sensor.sensor.B64X64" title="sensor.sensor.B64X64"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.B64X64</span></code></a>: 64x64 (for use with <a class="reference internal" href="omv.image.html#image.image.Image.image.find_displacement" title="image.image.Image.image.find_displacement"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_displacement()</span></code></a>)</li>
 <li><a class="reference internal" href="#sensor.sensor.B128X64" title="sensor.sensor.B128X64"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.B128X64</span></code></a>: 128x64 (for use with <a class="reference internal" href="omv.image.html#image.image.Image.image.find_displacement" title="image.image.Image.image.find_displacement"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_displacement()</span></code></a>)</li>
 <li><a class="reference internal" href="#sensor.sensor.B128X128" title="sensor.sensor.B128X128"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.B128X128</span></code></a>: 128x128 (for use with <a class="reference internal" href="omv.image.html#image.image.Image.image.find_displacement" title="image.image.Image.image.find_displacement"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_displacement()</span></code></a>)</li>
+<li><a class="reference internal" href="#sensor.sensor.B320X320" title="sensor.sensor.B320X320"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.B320X320</span></code></a>: 320x320 (for the HM01B0)</li>
 <li><a class="reference internal" href="#sensor.sensor.LCD" title="sensor.sensor.LCD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.LCD</span></code></a>: 128x160 (for use with the lcd shield)</li>
 <li><a class="reference internal" href="#sensor.sensor.QQVGA2" title="sensor.sensor.QQVGA2"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.QQVGA2</span></code></a>: 128x160 (for use with the lcd shield)</li>
 <li><a class="reference internal" href="#sensor.sensor.WVGA" title="sensor.sensor.WVGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.WVGA</span></code></a>: 720x480 (for the MT9V034)</li>
@@ -450,10 +460,8 @@ the 200x200 center pixels of the VGA resolution outputted by the camera
 sensor. You can use windowing to get custom resolutions. Also, when using
 windowing on a larger resolution you effectively are digital zooming.</p>
 <p><code class="docutils literal notranslate"><span class="pre">roi</span></code> is a rect tuple (x, y, w, h). However, you may just pass (w, h) and
-the <code class="docutils literal notranslate"><span class="pre">roi</span></code> will be centered on the frame.</p>
-<p>Note that <a class="reference internal" href="#sensor.sensor.set_windowing" title="sensor.sensor.set_windowing"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_windowing()</span></code></a> forces (x, y, w, h) to be even rounded down. This is done to
-ensure that RGB565/GRAYSCALE/BAYER images all have the same offsets and display correctly given
-windowing as BAYER images must have an even width/height.</p>
+the <code class="docutils literal notranslate"><span class="pre">roi</span></code> will be centered on the frame. You may also pass roi not in parens.</p>
+<p>This function will automatically handle cropping the passed roi to the framesize.</p>
 </dd></dl>
 
 <dl class="function">
@@ -629,6 +637,68 @@ decibels ((float, float, float)).</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="sensor.sensor.set_framebuffers">
+<code class="descclassname">sensor.</code><code class="descname">set_framebuffers</code><span class="sig-paren">(</span><em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.set_framebuffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the number of frame buffers used to receive image data. By default your OpenMV Cam will
+automatically try to allocate the maximum number of frame buffers it can possibly allocate
+without using more than 1/2 of the available frame buffer RAM at the time of allocation to
+ensure the best performance. Automatic reallocation of frame buffers occurs whenever you
+call <a class="reference internal" href="#sensor.sensor.set_pixformat" title="sensor.sensor.set_pixformat"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_pixformat()</span></code></a>, <a class="reference internal" href="#sensor.sensor.set_framesize" title="sensor.sensor.set_framesize"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_framesize()</span></code></a>, and <a class="reference internal" href="#sensor.sensor.set_windowing" title="sensor.sensor.set_windowing"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_windowing()</span></code></a>.</p>
+<p><a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> will automatically handle switching active frame buffers in the background.
+From your code’s perspective there is only ever 1 active frame buffer even though there might
+be more than 1 frame buffer on the system and another frame buffer reciving data in the background.</p>
+<p>If count is:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>1 - Single Buffer Mode (you may also pass <a class="reference internal" href="#sensor.sensor.SINGLE_BUFFER" title="sensor.sensor.SINGLE_BUFFER"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.SINGLE_BUFFER</span></code></a>)</dt>
+<dd>In single buffer mode your OpenMV Cam will allocate one frame buffer for receiving images.
+When you call <a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> that framebuffer will be used to receive the image and
+the camera driver will continue to run. In the advent you call <a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> again
+before the first line of the next frame is received your code will execute at the frame rate
+of the camera. Otherwise, the image will be dropped.</dd>
+<dt>2 - Double Buffer Mode (you may also pass <a class="reference internal" href="#sensor.sensor.DOUBLE_BUFFER" title="sensor.sensor.DOUBLE_BUFFER"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.DOUBLE_BUFFER</span></code></a>)</dt>
+<dd>In double buffer mode your OpenMV Cam will allocate two frame buffers for receiving images.
+When you call <a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> one framebuffer will be used to receive the image and
+the camera driver will continue to run. When the next frame is received it will be stored
+in the other frame bufer. In the advent you call <a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> again
+before the first line of the next frame after is received your code will execute at the frame rate
+of the camera. Otherwise, the image will be dropped.</dd>
+<dt>3 - Triple Buffer Mode (you may also pass <a class="reference internal" href="#sensor.sensor.TRIPLE_BUFFER" title="sensor.sensor.TRIPLE_BUFFER"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.TRIPLE_BUFFER</span></code></a>)</dt>
+<dd>In triple buffer mode your OpenMV Cam will allocate three buffers for receiving images.
+In this mode there is always a frame buffer to store the received image to in the background
+resulting in the highest performance and lowest latency for reading the latest received frame.
+No frames are ever dropped in this mode. The next frame read by <a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> is the
+last captured frame by the sensor driver (e.g. if you are reading slower than the camera
+frame rate then the older frame in the possible frames available is skipped).</dd>
+</dl>
+</div></blockquote>
+<p>Regarding the reallocation above, triple buffering is tried first, then double buffering, and if
+these both fail to fit in 1/2 of the available frame buffer RAM then single buffer mode is used.</p>
+<p>You may pass a value of 4 or greater to put the sensor driver into video FIFO mode where received
+images are stored in a frame buffer FIFO with <code class="docutils literal notranslate"><span class="pre">count</span></code> buffers. This is useful for video recording
+to an SD card which may randomly block your code from writing data when the SD card is performing
+house-keeping tasks like pre-erasing blocks to write data to.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">On frame drop (no buffers available to receive the next frame) all frame buffers are automatically
+cleared except the active frame buffer. This is done to ensure <a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> returns current
+frames and not frames from long ago.</p>
+</div>
+<p>Fun fact, you can pass a value of 100 or so on OpenMV Cam’s with SDRAM for a huge video fifo. If
+you then call snapshot slower than the camera frame rate (by adding <a class="reference internal" href="pyb.html#pyb.delay" title="pyb.delay"><code class="xref any py py-func docutils literal notranslate"><span class="pre">pyb.delay()</span></code></a>) you’ll get
+slow-mo effects in OpenMV IDE. However, you will also see the above policy effect of resetting
+the frame buffer on a frame drop to ensure that frames do not get too old. If you want to record
+slow-mo video just record video normally to the SD card and then play the video back on a desktop
+machine slower than it was recorded.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sensor.sensor.get_framebuffers">
+<code class="descclassname">sensor.</code><code class="descname">get_framebuffers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.get_framebuffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current number of frame buffers allocated.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="sensor.sensor.set_lens_correction">
 <code class="descclassname">sensor.</code><code class="descname">set_lens_correction</code><span class="sig-paren">(</span><em>enable</em>, <em>radi</em>, <em>coef</em><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.set_lens_correction" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> True to enable and False to disable (bool).
@@ -637,11 +707,26 @@ decibels ((float, float, float)).</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="sensor.sensor.set_vsync_output">
-<code class="descclassname">sensor.</code><code class="descname">set_vsync_output</code><span class="sig-paren">(</span><em>pin_object</em><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.set_vsync_output" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">pin_object</span></code> created with <a class="reference internal" href="pyb.Pin.html#pyb.pyb.Pin" title="pyb.pyb.Pin"><code class="xref any py py-class docutils literal notranslate"><span class="pre">pyb.Pin()</span></code></a>. The VSYNC signal from the camera
-will be generated on this pin to power FSIN on another OpenMV Cam to sync
-both camera image streams for stereo vision applications…</p>
+<dt id="sensor.sensor.set_vsync_callback">
+<code class="descclassname">sensor.</code><code class="descname">set_vsync_callback</code><span class="sig-paren">(</span><em>cb</em><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.set_vsync_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers callback <code class="docutils literal notranslate"><span class="pre">cb</span></code> to be executed (in interrupt context) whenever the camera module
+generates a new frame (but, before the frame is received).</p>
+<p><code class="docutils literal notranslate"><span class="pre">cb</span></code> takes one argument and is passed the current state of the vsync pin after changing.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sensor.sensor.set_frame_callback">
+<code class="descclassname">sensor.</code><code class="descname">set_frame_callback</code><span class="sig-paren">(</span><em>cb</em><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.set_frame_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers callback <code class="docutils literal notranslate"><span class="pre">cb</span></code> to be executed (in interrupt context) whenever the camera module
+generates a new frame and the frame is ready to be read via <a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cb</span></code> takes no arguments.</p>
+<p>Use this to get an interrupt to schedule reading a frame later with <a class="reference internal" href="micropython.html#micropython.schedule" title="micropython.schedule"><code class="xref any py py-func docutils literal notranslate"><span class="pre">micropython.schedule()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sensor.sensor.get_frame_available">
+<code class="descclassname">sensor.</code><code class="descname">get_frame_available</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.get_frame_available" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if a frame is available to read by calling <a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="function">
@@ -705,6 +790,11 @@ both camera image streams for stereo vision applications…</p>
 </dl>
 </li>
 <li><a class="reference internal" href="#sensor.sensor.IOCTL_LEPTON_GET_MEASUREMENT_RANGE" title="sensor.sensor.IOCTL_LEPTON_GET_MEASUREMENT_RANGE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.IOCTL_LEPTON_GET_MEASUREMENT_RANGE</span></code></a> - Pass this to return the sorted (min, max) 2 value temperature range tuple. The default is -17.7778C to 37.7778C (0F to 100F) if not set yet.</li>
+<li><a class="reference internal" href="#sensor.sensor.IOCTL_HIMAX_MD_ENABLE" title="sensor.sensor.IOCTL_HIMAX_MD_ENABLE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.IOCTL_HIMAX_MD_ENABLE</span></code></a> - Pass this enum followed by <code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code> to enable/disable motion detection on the HM01B0. You should also enable the I/O pin (PC15 on the Arduino Portenta) attached the HM01B0 motion detection line to receive an interrupt.</li>
+<li><a class="reference internal" href="#sensor.sensor.IOCTL_HIMAX_MD_CLEAR" title="sensor.sensor.IOCTL_HIMAX_MD_CLEAR"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.IOCTL_HIMAX_MD_CLEAR</span></code></a> - Pass this enum to clear the motion detection interrupt on the HM01B0.</li>
+<li><a class="reference internal" href="#sensor.sensor.IOCTL_HIMAX_MD_WINDOW" title="sensor.sensor.IOCTL_HIMAX_MD_WINDOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.IOCTL_HIMAX_MD_WINDOW</span></code></a> - Pass this enum followed by (x1, y1, x2, y2) to set the motion detection window on the HM01B0.</li>
+<li><a class="reference internal" href="#sensor.sensor.IOCTL_HIMAX_MD_THRESHOLD" title="sensor.sensor.IOCTL_HIMAX_MD_THRESHOLD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.IOCTL_HIMAX_MD_THRESHOLD</span></code></a> - Pass this enum followed by a threshold value (0-255) to set the motion detection threshold on the HM01B0.</li>
+<li><a class="reference internal" href="#sensor.sensor.IOCTL_HIMAX_OSC_ENABLE" title="sensor.sensor.IOCTL_HIMAX_OSC_ENABLE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.IOCTL_HIMAX_OSC_ENABLE</span></code></a> - Pass this enum followed by <code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code> to enable/disable the oscillator HM01B0 to save power.</li>
 </ul>
 </dd></dl>
 
@@ -816,6 +906,12 @@ Only works for the OV2640/OV5640 cameras.</p>
 </dd></dl>
 
 <dl class="data">
+<dt id="sensor.sensor.MT9M114">
+<code class="descclassname">sensor.</code><code class="descname">MT9M114</code><a class="headerlink" href="#sensor.sensor.MT9M114" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#sensor.sensor.get_id" title="sensor.sensor.get_id"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.get_id()</span></code></a> returns this for the MT9M114 camera.</p>
+</dd></dl>
+
+<dl class="data">
 <dt id="sensor.sensor.MT9V034">
 <code class="descclassname">sensor.</code><code class="descname">MT9V034</code><a class="headerlink" href="#sensor.sensor.MT9V034" title="Permalink to this definition">¶</a></dt>
 <dd><p><a class="reference internal" href="#sensor.sensor.get_id" title="sensor.sensor.get_id"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.get_id()</span></code></a> returns this for the MT9V034 camera.</p>
@@ -831,6 +927,12 @@ Only works for the OV2640/OV5640 cameras.</p>
 <dt id="sensor.sensor.HM01B0">
 <code class="descclassname">sensor.</code><code class="descname">HM01B0</code><a class="headerlink" href="#sensor.sensor.HM01B0" title="Permalink to this definition">¶</a></dt>
 <dd><p><a class="reference internal" href="#sensor.sensor.get_id" title="sensor.sensor.get_id"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.get_id()</span></code></a> returns this for the HM01B0 camera.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.GC2145">
+<code class="descclassname">sensor.</code><code class="descname">GC2145</code><a class="headerlink" href="#sensor.sensor.GC2145" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#sensor.sensor.get_id" title="sensor.sensor.get_id"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.get_id()</span></code></a> returns this for the GC2145 camera.</p>
 </dd></dl>
 
 <dl class="data">
@@ -943,6 +1045,12 @@ Only works for the OV2640/OV5640 cameras.</p>
 <code class="descclassname">sensor.</code><code class="descname">B128X128</code><a class="headerlink" href="#sensor.sensor.B128X128" title="Permalink to this definition">¶</a></dt>
 <dd><p>128x128 resolution for the camera sensor.</p>
 <p>For use with <a class="reference internal" href="omv.image.html#image.image.Image.image.find_displacement" title="image.image.Image.image.find_displacement"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_displacement()</span></code></a> and any other FFT based algorithm.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.B320X320">
+<code class="descclassname">sensor.</code><code class="descname">B320X320</code><a class="headerlink" href="#sensor.sensor.B320X320" title="Permalink to this definition">¶</a></dt>
+<dd><p>320x320 resolution for the HM01B0 camera sensor.</p>
 </dd></dl>
 
 <dl class="data">
@@ -1173,6 +1281,60 @@ Only works for the OV2640/OV5640 cameras.</p>
 <dd><p>Lets you get the temperature range used for measurement mode. See <a class="reference internal" href="#sensor.sensor.ioctl" title="sensor.sensor.ioctl"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.ioctl()</span></code></a> for more information.</p>
 </dd></dl>
 
+<dl class="data">
+<dt id="sensor.sensor.IOCTL_HIMAX_MD_ENABLE">
+<code class="descclassname">sensor.</code><code class="descname">IOCTL_HIMAX_MD_ENABLE</code><a class="headerlink" href="#sensor.sensor.IOCTL_HIMAX_MD_ENABLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lets you control the motion detection interrupt on the HM01B0. See <a class="reference internal" href="#sensor.sensor.ioctl" title="sensor.sensor.ioctl"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.ioctl()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.IOCTL_HIMAX_MD_CLEAR">
+<code class="descclassname">sensor.</code><code class="descname">IOCTL_HIMAX_MD_CLEAR</code><a class="headerlink" href="#sensor.sensor.IOCTL_HIMAX_MD_CLEAR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lets you control the motion detection interrupt on the HM01B0. See <a class="reference internal" href="#sensor.sensor.ioctl" title="sensor.sensor.ioctl"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.ioctl()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.IOCTL_HIMAX_MD_WINDOW">
+<code class="descclassname">sensor.</code><code class="descname">IOCTL_HIMAX_MD_WINDOW</code><a class="headerlink" href="#sensor.sensor.IOCTL_HIMAX_MD_WINDOW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lets you control the motion detection interrupt on the HM01B0. See <a class="reference internal" href="#sensor.sensor.ioctl" title="sensor.sensor.ioctl"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.ioctl()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.IOCTL_HIMAX_MD_THRESHOLD">
+<code class="descclassname">sensor.</code><code class="descname">IOCTL_HIMAX_MD_THRESHOLD</code><a class="headerlink" href="#sensor.sensor.IOCTL_HIMAX_MD_THRESHOLD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lets you control the motion detection interrupt on the HM01B0. See <a class="reference internal" href="#sensor.sensor.ioctl" title="sensor.sensor.ioctl"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.ioctl()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.IOCTL_HIMAX_OSC_ENABLE">
+<code class="descclassname">sensor.</code><code class="descname">IOCTL_HIMAX_OSC_ENABLE</code><a class="headerlink" href="#sensor.sensor.IOCTL_HIMAX_OSC_ENABLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lets you control the internal oscillator on the HM01B0. See <a class="reference internal" href="#sensor.sensor.ioctl" title="sensor.sensor.ioctl"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.ioctl()</span></code></a> for more information.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.SINGLE_BUFFER">
+<code class="descclassname">sensor.</code><code class="descname">SINGLE_BUFFER</code><a class="headerlink" href="#sensor.sensor.SINGLE_BUFFER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass to <a class="reference internal" href="#sensor.sensor.set_framebuffers" title="sensor.sensor.set_framebuffers"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_framebuffers()</span></code></a> to set single buffer mode (1 buffer).</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.DOUBLE_BUFFER">
+<code class="descclassname">sensor.</code><code class="descname">DOUBLE_BUFFER</code><a class="headerlink" href="#sensor.sensor.DOUBLE_BUFFER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass to <a class="reference internal" href="#sensor.sensor.set_framebuffers" title="sensor.sensor.set_framebuffers"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_framebuffers()</span></code></a> to set double buffer mode (2 buffers).</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.TRIPLE_BUFFER">
+<code class="descclassname">sensor.</code><code class="descname">TRIPLE_BUFFER</code><a class="headerlink" href="#sensor.sensor.TRIPLE_BUFFER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass to <a class="reference internal" href="#sensor.sensor.set_framebuffers" title="sensor.sensor.set_framebuffers"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_framebuffers()</span></code></a> to set triple buffer mode (3 buffers).</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.VIDEO_FIFO">
+<code class="descclassname">sensor.</code><code class="descname">VIDEO_FIFO</code><a class="headerlink" href="#sensor.sensor.VIDEO_FIFO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass to <a class="reference internal" href="#sensor.sensor.set_framebuffers" title="sensor.sensor.set_framebuffers"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.set_framebuffers()</span></code></a> to set video FIFO mode (4 buffers).</p>
+</dd></dl>
+
 </div>
 </div>
 
@@ -1196,9 +1358,9 @@ Only works for the OV2640/OV5640 cameras.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 28 Jan 2021.
+        Last updated on 23 May 2021.
       </span>
 
     </p>

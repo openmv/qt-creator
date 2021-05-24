@@ -63,9 +63,11 @@ Functions
    If `sensor.set_auto_rotation()` is enabled this method will return a new
    already rotated `image` object.
 
-   Note: `sensor.snapshot()` may apply cropping parameters to fit the snapshot in the available
-   frame buffer space given the pixformat and framesize. The cropping parameters will be applied
-   to maintain the aspect ratio and will stay until `sensor.set_framesize()` or `sensor.set_windowing()` are called.
+   .. note::
+
+      `sensor.snapshot()` may apply cropping parameters to fit the snapshot in the available
+      RAM the pixformat, framesize, windowing, and framebuffers. The cropping parameters will be applied
+      to maintain the aspect ratio and will stay until `sensor.set_framesize()` or `sensor.set_windowing()` are called.
 
 .. function:: sensor.skip_frames([n, time])
 
@@ -84,9 +86,11 @@ Functions
    If both are specified this method skips ``n`` number of frames but will
    timeout after ``time`` milliseconds.
 
-   Note: `sensor.skip_frames()` may apply cropping parameters to fit the snapshot in the available
-   frame buffer space given the pixformat and framesize. The cropping parameters will be applied
-   to maintain the aspect ratio and will stay until `sensor.set_framesize()` or `sensor.set_windowing()` are called.
+   .. note::
+
+      `sensor.snapshot()` may apply cropping parameters to fit the snapshot in the available
+      RAM given the pixformat, framesize, windowing, and framebuffers. The cropping parameters will be applied
+      to maintain the aspect ratio and will stay until `sensor.set_framesize()` or `sensor.set_windowing()` are called.
 
 .. function:: sensor.width()
 
@@ -112,8 +116,10 @@ Functions
       * `sensor.OV7725`: Rolling shutter sensor module.
       * `sensor.OV7690`: OpenMV Cam Micro sensor module.
       * `sensor.MT9V034`: Global shutter sensor module.
+      * `sensor.MT9M114`: New Rolling shutter sensor module.
       * `sensor.LEPTON`: Lepton1/2/3 sensor module.
       * `sensor.HM01B0`: Arduino Portenta H7 sensor module.
+      * `sensor.GC2145`: Arduino Bormio H7 sensor module.
 
 .. function:: sensor.alloc_extra_fb(width, height, pixformat)
 
@@ -193,6 +199,7 @@ Functions
       * `sensor.B64X64`: 64x64 (for use with `image.find_displacement()`)
       * `sensor.B128X64`: 128x64 (for use with `image.find_displacement()`)
       * `sensor.B128X128`: 128x128 (for use with `image.find_displacement()`)
+      * `sensor.B320X320`: 320x320 (for the HM01B0)
       * `sensor.LCD`: 128x160 (for use with the lcd shield)
       * `sensor.QQVGA2`: 128x160 (for use with the lcd shield)
       * `sensor.WVGA`: 720x480 (for the MT9V034)
@@ -230,11 +237,9 @@ Functions
    windowing on a larger resolution you effectively are digital zooming.
 
    ``roi`` is a rect tuple (x, y, w, h). However, you may just pass (w, h) and
-   the ``roi`` will be centered on the frame.
+   the ``roi`` will be centered on the frame. You may also pass roi not in parens.
 
-   Note that `sensor.set_windowing()` forces (x, y, w, h) to be even rounded down. This is done to
-   ensure that RGB565/GRAYSCALE/BAYER images all have the same offsets and display correctly given
-   windowing as BAYER images must have an even width/height.
+   This function will automatically handle cropping the passed roi to the framesize.
 
 .. function:: sensor.get_windowing()
 
@@ -367,17 +372,93 @@ Functions
 
       This function only works when the OpenMV Cam has an `imu` installed and is enabled automatically.
 
+.. function:: sensor.set_framebuffers(count)
+
+   Sets the number of frame buffers used to receive image data. By default your OpenMV Cam will
+   automatically try to allocate the maximum number of frame buffers it can possibly allocate
+   without using more than 1/2 of the available frame buffer RAM at the time of allocation to
+   ensure the best performance. Automatic reallocation of frame buffers occurs whenever you
+   call `sensor.set_pixformat()`, `sensor.set_framesize()`, and `sensor.set_windowing()`.
+
+   `sensor.snapshot()` will automatically handle switching active frame buffers in the background.
+   From your code's perspective there is only ever 1 active frame buffer even though there might
+   be more than 1 frame buffer on the system and another frame buffer reciving data in the background.
+
+   If count is:
+
+      1 - Single Buffer Mode (you may also pass `sensor.SINGLE_BUFFER`)
+          In single buffer mode your OpenMV Cam will allocate one frame buffer for receiving images.
+          When you call `sensor.snapshot()` that framebuffer will be used to receive the image and
+          the camera driver will continue to run. In the advent you call `sensor.snapshot()` again
+          before the first line of the next frame is received your code will execute at the frame rate
+          of the camera. Otherwise, the image will be dropped.
+
+      2 - Double Buffer Mode (you may also pass `sensor.DOUBLE_BUFFER`)
+          In double buffer mode your OpenMV Cam will allocate two frame buffers for receiving images.
+          When you call `sensor.snapshot()` one framebuffer will be used to receive the image and
+          the camera driver will continue to run. When the next frame is received it will be stored
+          in the other frame bufer. In the advent you call `sensor.snapshot()` again
+          before the first line of the next frame after is received your code will execute at the frame rate
+          of the camera. Otherwise, the image will be dropped.
+
+      3 - Triple Buffer Mode (you may also pass `sensor.TRIPLE_BUFFER`)
+          In triple buffer mode your OpenMV Cam will allocate three buffers for receiving images.
+          In this mode there is always a frame buffer to store the received image to in the background
+          resulting in the highest performance and lowest latency for reading the latest received frame.
+          No frames are ever dropped in this mode. The next frame read by `sensor.snapshot()` is the
+          last captured frame by the sensor driver (e.g. if you are reading slower than the camera
+          frame rate then the older frame in the possible frames available is skipped).
+
+   Regarding the reallocation above, triple buffering is tried first, then double buffering, and if
+   these both fail to fit in 1/2 of the available frame buffer RAM then single buffer mode is used.
+
+   You may pass a value of 4 or greater to put the sensor driver into video FIFO mode where received
+   images are stored in a frame buffer FIFO with ``count`` buffers. This is useful for video recording
+   to an SD card which may randomly block your code from writing data when the SD card is performing
+   house-keeping tasks like pre-erasing blocks to write data to.
+
+   .. note::
+
+      On frame drop (no buffers available to receive the next frame) all frame buffers are automatically
+      cleared except the active frame buffer. This is done to ensure `sensor.snapshot()` returns current
+      frames and not frames from long ago.
+
+   Fun fact, you can pass a value of 100 or so on OpenMV Cam's with SDRAM for a huge video fifo. If
+   you then call snapshot slower than the camera frame rate (by adding `pyb.delay()`) you'll get
+   slow-mo effects in OpenMV IDE. However, you will also see the above policy effect of resetting
+   the frame buffer on a frame drop to ensure that frames do not get too old. If you want to record
+   slow-mo video just record video normally to the SD card and then play the video back on a desktop
+   machine slower than it was recorded.
+
+.. function:: sensor.get_framebuffers()
+
+   Returns the current number of frame buffers allocated.
+
 .. function:: sensor.set_lens_correction(enable, radi, coef)
 
    ``enable`` True to enable and False to disable (bool).
    ``radi`` integer radius of pixels to correct (int).
    ``coef`` power of correction (int).
 
-.. function:: sensor.set_vsync_output(pin_object)
+.. function:: sensor.set_vsync_callback(cb)
 
-   ``pin_object`` created with `pyb.Pin()`. The VSYNC signal from the camera
-   will be generated on this pin to power FSIN on another OpenMV Cam to sync
-   both camera image streams for stereo vision applications...
+   Registers callback ``cb`` to be executed (in interrupt context) whenever the camera module
+   generates a new frame (but, before the frame is received).
+
+   ``cb`` takes one argument and is passed the current state of the vsync pin after changing.
+
+.. function:: sensor.set_frame_callback(cb)
+
+   Registers callback ``cb`` to be executed (in interrupt context) whenever the camera module
+   generates a new frame and the frame is ready to be read via `sensor.snapshot()`.
+
+   ``cb`` takes no arguments.
+
+   Use this to get an interrupt to schedule reading a frame later with `micropython.schedule()`.
+
+.. function:: sensor.get_frame_available()
+
+   Returns True if a frame is available to read by calling `sensor.snapshot()`.
 
 .. function:: sensor.ioctl(...)
 
@@ -415,6 +496,11 @@ Functions
       * The first arugment should be the min temperature in celsius.
       * The second argument should be the max temperature in celsius. If the arguments are reversed the library will automatically swap them for you.
    * `sensor.IOCTL_LEPTON_GET_MEASUREMENT_RANGE` - Pass this to return the sorted (min, max) 2 value temperature range tuple. The default is -17.7778C to 37.7778C (0F to 100F) if not set yet.
+   * `sensor.IOCTL_HIMAX_MD_ENABLE` - Pass this enum followed by ``True``/``False`` to enable/disable motion detection on the HM01B0. You should also enable the I/O pin (PC15 on the Arduino Portenta) attached the HM01B0 motion detection line to receive an interrupt.
+   * `sensor.IOCTL_HIMAX_MD_CLEAR` - Pass this enum to clear the motion detection interrupt on the HM01B0.
+   * `sensor.IOCTL_HIMAX_MD_WINDOW` - Pass this enum followed by (x1, y1, x2, y2) to set the motion detection window on the HM01B0.
+   * `sensor.IOCTL_HIMAX_MD_THRESHOLD` - Pass this enum followed by a threshold value (0-255) to set the motion detection threshold on the HM01B0.
+   * `sensor.IOCTL_HIMAX_OSC_ENABLE` - Pass this enum followed by ``True``/``False`` to enable/disable the oscillator HM01B0 to save power.
 
 .. function:: sensor.set_color_palette(palette)
 
@@ -494,6 +580,10 @@ Constants
 
    `sensor.get_id()` returns this for the OV9650 camera.
 
+.. data:: sensor.MT9M114
+
+   `sensor.get_id()` returns this for the MT9M114 camera.
+
 .. data:: sensor.MT9V034
 
    `sensor.get_id()` returns this for the MT9V034 camera.
@@ -505,6 +595,10 @@ Constants
 .. data:: sensor.HM01B0
 
    `sensor.get_id()` returns this for the HM01B0 camera.
+
+.. data:: sensor.GC2145
+
+   `sensor.get_id()` returns this for the GC2145 camera.
 
 .. data:: sensor.QQCIF
 
@@ -585,6 +679,10 @@ Constants
    128x128 resolution for the camera sensor.
 
    For use with `image.find_displacement()` and any other FFT based algorithm.
+
+.. data:: sensor.B320X320
+
+   320x320 resolution for the HM01B0 camera sensor.
 
 .. data:: sensor.LCD
 
@@ -737,3 +835,39 @@ Constants
 .. data:: sensor.IOCTL_LEPTON_GET_MEASUREMENT_RANGE
 
    Lets you get the temperature range used for measurement mode. See `sensor.ioctl()` for more information.
+
+.. data:: sensor.IOCTL_HIMAX_MD_ENABLE
+
+   Lets you control the motion detection interrupt on the HM01B0. See `sensor.ioctl()` for more information.
+
+.. data:: sensor.IOCTL_HIMAX_MD_CLEAR
+
+   Lets you control the motion detection interrupt on the HM01B0. See `sensor.ioctl()` for more information.
+
+.. data:: sensor.IOCTL_HIMAX_MD_WINDOW
+
+   Lets you control the motion detection interrupt on the HM01B0. See `sensor.ioctl()` for more information.
+
+.. data:: sensor.IOCTL_HIMAX_MD_THRESHOLD
+
+   Lets you control the motion detection interrupt on the HM01B0. See `sensor.ioctl()` for more information.
+
+.. data:: sensor.IOCTL_HIMAX_OSC_ENABLE
+
+   Lets you control the internal oscillator on the HM01B0. See `sensor.ioctl()` for more information.
+
+.. data:: sensor.SINGLE_BUFFER
+
+   Pass to `sensor.set_framebuffers()` to set single buffer mode (1 buffer).
+
+.. data:: sensor.DOUBLE_BUFFER
+
+   Pass to `sensor.set_framebuffers()` to set double buffer mode (2 buffers).
+
+.. data:: sensor.TRIPLE_BUFFER
+
+   Pass to `sensor.set_framebuffers()` to set triple buffer mode (3 buffers).
+
+.. data:: sensor.VIDEO_FIFO
+
+   Pass to `sensor.set_framebuffers()` to set video FIFO mode (4 buffers).

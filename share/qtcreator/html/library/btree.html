@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>btree – simple BTree database &mdash; MicroPython 1.13 documentation</title>
+  <title>btree – simple BTree database &mdash; MicroPython 1.15 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.13
+                1.15
               </div>
             
           
@@ -104,6 +104,7 @@
 <li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ubluetooth.html"><code class="docutils literal notranslate"><span class="pre">ubluetooth</span></code> — low-level Bluetooth</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucryptolib.html"><code class="docutils literal notranslate"><span class="pre">ucryptolib</span></code> – cryptographic ciphers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mutex.html"><code class="docutils literal notranslate"><span class="pre">mutex</span></code> — mutex module</a></li>
@@ -305,8 +306,8 @@ data flushed from buffer to the underlying storage).</p>
 <code class="descclassname">btree.</code><code class="descname">get</code><span class="sig-paren">(</span><em>key</em>, <em>default=None</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#btree.btree.get" title="Permalink to this definition">¶</a></dt>
 <dt id="btree.btree.__setitem__">
 <code class="descclassname">btree.</code><code class="descname">__setitem__</code><span class="sig-paren">(</span><em>key</em>, <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#btree.btree.__setitem__" title="Permalink to this definition">¶</a></dt>
-<dt id="btree.btree.__detitem__">
-<code class="descclassname">btree.</code><code class="descname">__detitem__</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#btree.btree.__detitem__" title="Permalink to this definition">¶</a></dt>
+<dt id="btree.btree.__delitem__">
+<code class="descclassname">btree.</code><code class="descname">__delitem__</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#btree.btree.__delitem__" title="Permalink to this definition">¶</a></dt>
 <dt id="btree.btree.__contains__">
 <code class="descclassname">btree.</code><code class="descname">__contains__</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#btree.btree.__contains__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Standard dictionary methods.</p>
@@ -380,9 +381,9 @@ scanning should be in descending direction of keys.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 28 Jan 2021.
+        Last updated on 23 May 2021.
       </span>
 
     </p>

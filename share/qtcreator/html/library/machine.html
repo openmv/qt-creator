@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>machine — functions related to the hardware &mdash; MicroPython 1.13 documentation</title>
+  <title>machine — functions related to the hardware &mdash; MicroPython 1.15 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.13
+                1.15
               </div>
             
           
@@ -107,6 +107,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ubluetooth.html"><code class="docutils literal notranslate"><span class="pre">ubluetooth</span></code> — low-level Bluetooth</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucryptolib.html"><code class="docutils literal notranslate"><span class="pre">ucryptolib</span></code> – cryptographic ciphers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mutex.html"><code class="docutils literal notranslate"><span class="pre">mutex</span></code> — mutex module</a></li>
@@ -277,7 +278,7 @@ interrupt occurring at regular intervals on the order of millisecond).</p>
 <dd><p>Stops execution in an attempt to enter a low power state.</p>
 <p>If <em>time_ms</em> is specified then this will be the maximum time in milliseconds that
 the sleep will last for.  Otherwise the sleep can last indefinitely.</p>
-<p>With or without a timout, execution may resume at any time if there are events
+<p>With or without a timeout, execution may resume at any time if there are events
 that require processing.  Such events, or wake sources, should be configured before
 sleeping, like <a class="reference internal" href="machine.Pin.html#machine.Pin" title="machine.Pin"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Pin</span></code></a> change or <a class="reference internal" href="machine.RTC.html#machine.RTC" title="machine.RTC"><code class="xref any py py-class docutils literal notranslate"><span class="pre">RTC</span></code></a> timeout.</p>
 <p>The precise behaviour and power-saving capabilities of lightsleep and deepsleep is
@@ -396,9 +397,9 @@ is in microseconds).</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 28 Jan 2021.
+        Last updated on 23 May 2021.
       </span>
 
     </p>

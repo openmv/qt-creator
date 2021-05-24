@@ -12,8 +12,24 @@ the OpenMV Cam please consider reading the following sections first:
    general.rst
    tutorial/index.rst
 
-.. image:: pinout.png
-    :alt: OpenMV Cam pinout
+.. image:: pinout-openmv-cam-h7-plus-ov5640.png
+    :alt: OpenMV Cam H7 Plus OV5640 Pinout
+    :width: 700px
+
+.. image:: pinout-openmv-cam-h7-ov7725.png
+    :alt: OpenMV Cam H7 OV7725 Pinout
+    :width: 700px
+
+.. image:: pinout-openmv-cam-m7-ov7725.png
+    :alt: OpenMV Cam M7 OV7725 Pinout
+    :width: 700px
+
+.. image:: pinout-openmv-cam-m4-ov7725.png
+    :alt: OpenMV Cam M4 OV7725 Pinout
+    :width: 700px
+
+.. image:: pinout-openmv-cam-m4-ov2640.png
+    :alt: OpenMV Cam M4 OV2640 Pinout
     :width: 700px
 
 General board control

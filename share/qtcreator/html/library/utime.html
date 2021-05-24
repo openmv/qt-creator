@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>utime – time related functions &mdash; MicroPython 1.13 documentation</title>
+  <title>utime – time related functions &mdash; MicroPython 1.15 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="uzlib – zlib decompression" href="uzlib.html" />
-    <link rel="prev" title="sys – system specific functions" href="usys.html" /> 
+    <link rel="prev" title="usys – system specific functions" href="usys.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.13
+                1.15
               </div>
             
           
@@ -112,10 +112,9 @@
 <li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">usys</span></code> – system specific functions</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#constructors">Constructors</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
@@ -450,45 +449,6 @@ a big integer, so will allocate on the heap).</p>
 </dd></dl>
 
 </div>
-<div class="section" id="constructors">
-<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="utime.time.clock">
-<em class="property">class </em><code class="descclassname">time.</code><code class="descname">clock</code><a class="headerlink" href="#utime.time.clock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a clock object.</p>
-<blockquote>
-<div><dl class="method">
-<dt id="utime.time.clock.clock.tick">
-<code class="descclassname">clock.</code><code class="descname">tick</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utime.time.clock.clock.tick" title="Permalink to this definition">¶</a></dt>
-<dd><p>Starts tracking elapsed time.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="utime.time.clock.clock.fps">
-<code class="descclassname">clock.</code><code class="descname">fps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utime.time.clock.clock.fps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stops tracking the elapsed time and returns the current FPS
-(frames per second).</p>
-<p>Always call <code class="docutils literal notranslate"><span class="pre">tick</span></code> first before calling this function.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="utime.time.clock.clock.avg">
-<code class="descclassname">clock.</code><code class="descname">avg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utime.time.clock.clock.avg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stops tracking the elapsed time and returns the current average elapsed time
-in milliseconds.</p>
-<p>Always call <code class="docutils literal notranslate"><span class="pre">tick</span></code> first before calling this function.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="utime.time.clock.clock.reset">
-<code class="descclassname">clock.</code><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utime.time.clock.clock.reset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resets the clock object.</p>
-</dd></dl>
-
-</div></blockquote>
-</dd></dl>
-
-</div>
 </div>
 
 
@@ -502,7 +462,7 @@ in milliseconds.</p>
         <a href="uzlib.html" class="btn btn-neutral float-right" title="uzlib – zlib decompression" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="usys.html" class="btn btn-neutral float-left" title="sys – system specific functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="usys.html" class="btn btn-neutral float-left" title="usys – system specific functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -511,9 +471,9 @@ in milliseconds.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 28 Jan 2021.
+        Last updated on 23 May 2021.
       </span>
 
     </p>

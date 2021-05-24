@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The MicroPython Interactive Interpreter Mode (aka REPL) &mdash; MicroPython 1.13 documentation</title>
+  <title>The MicroPython Interactive Interpreter Mode (aka REPL) &mdash; MicroPython 1.15 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.13
+                1.15
               </div>
             
           
@@ -101,7 +101,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#paste-mode">Paste mode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#soft-reset">Soft reset</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#the-special-variable-underscore">The special variable _ (underscore)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#raw-mode">Raw mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raw-mode-and-raw-paste-mode">Raw mode and raw-paste mode</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="mpyfiles.html">MicroPython .mpy files</a></li>
@@ -370,16 +370,94 @@ So you can use the underscore to save the result in a variable. For example:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="raw-mode">
-<h2>Raw mode<a class="headerlink" href="#raw-mode" title="Permalink to this headline">¶</a></h2>
-<p>Raw mode is not something that a person would normally use. It is intended for
-programmatic use. It essentially behaves like paste mode with echo turned off.</p>
+<div class="section" id="raw-mode-and-raw-paste-mode">
+<h2>Raw mode and raw-paste mode<a class="headerlink" href="#raw-mode-and-raw-paste-mode" title="Permalink to this headline">¶</a></h2>
+<p>Raw mode (also called raw REPL) is not something that a person would normally use.
+It is intended for programmatic use and essentially behaves like paste mode with
+echo turned off, and with optional flow control.</p>
 <p>Raw mode is entered using Ctrl-A. You then send your python code, followed by
 a Ctrl-D. The Ctrl-D will be acknowledged by ‘OK’ and then the python code will
 be compiled and executed. Any output (or errors) will be sent back. Entering
 Ctrl-B will leave raw mode and return the the regular (aka friendly) REPL.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">tools/pyboard.py</span></code> program uses the raw REPL to execute python files on the
-MicroPython board.</p>
+<p>Raw-paste mode is an additional mode within the raw REPL that includes flow control,
+and which compiles code as it receives it. This makes it more robust for high-speed
+transfer of code into the device, and it also uses less RAM when receiving because
+it does not need to store a verbatim copy of the code before compiling (unlike
+standard raw mode).</p>
+<p>Raw-paste mode uses the following protocol:</p>
+<ol class="arabic simple">
+<li>Enter raw REPL as usual via ctrl-A.</li>
+<li>Write 3 bytes: <code class="docutils literal notranslate"><span class="pre">b&quot;\x05A\x01&quot;</span></code> (ie ctrl-E then “A” then ctrl-A).</li>
+<li>Read 2 bytes to determine if the device entered raw-paste mode:<ul>
+<li>If the result is <code class="docutils literal notranslate"><span class="pre">b&quot;R\x00&quot;</span></code> then the device understands the command but
+doesn’t support raw paste.</li>
+<li>If the result is <code class="docutils literal notranslate"><span class="pre">b&quot;R\x01&quot;</span></code> then the device does support raw paste and
+has entered this mode.</li>
+<li>Otherwise the result should be <code class="docutils literal notranslate"><span class="pre">b&quot;ra&quot;</span></code> and the device doesn’t support raw
+paste and the string <code class="docutils literal notranslate"><span class="pre">b&quot;w</span> <span class="pre">REPL;</span> <span class="pre">CTRL-B</span> <span class="pre">to</span> <span class="pre">exit\r\n&gt;&quot;</span></code> should be read and
+discarded.</li>
+</ul>
+</li>
+<li>If the device is in raw-paste mode then continue, otherwise fallback to
+standard raw mode.</li>
+<li>Read 2 bytes, this is the flow control window-size-increment (in bytes)
+stored as a 16-bit unsigned little endian integer.  The initial value for the
+remaining-window-size variable should be set to this number.</li>
+<li>Write out the code to the device:<ul>
+<li>While there are bytes to send, write up to the remaining-window-size worth
+of bytes, and decrease the remaining-window-size by the number of bytes
+written.</li>
+<li>If the remaining-window-size is 0, or there is a byte waiting to read, read
+1 byte.  If this byte is <code class="docutils literal notranslate"><span class="pre">b&quot;\x01&quot;</span></code> then increase the remaining-window-size
+by the window-size-increment from step 5.  If this byte is <code class="docutils literal notranslate"><span class="pre">b&quot;\x04&quot;</span></code> then
+the device wants to end the data reception, and <code class="docutils literal notranslate"><span class="pre">b&quot;\x04&quot;</span></code> should be
+written to the device and no more code sent after that.  (Note: if there is
+a byte waiting to be read from the device then it does not need to be read
+and acted upon immediately, the device will continue to consume incoming
+bytes as long as reamining-window-size is greater than 0.)</li>
+</ul>
+</li>
+<li>When all code has been written to the device, write <code class="docutils literal notranslate"><span class="pre">b&quot;\x04&quot;</span></code> to indicate
+end-of-data.</li>
+<li>Read from the device until <code class="docutils literal notranslate"><span class="pre">b&quot;\x04&quot;</span></code> is received.  At this point the device
+has received and compiled all of the code that was sent and is executing it.</li>
+<li>The device outputs any characters produced by the executing code.  When (if)
+the code finishes <code class="docutils literal notranslate"><span class="pre">b&quot;\x04&quot;</span></code> will be output, followed by any exception that
+was uncaught, followed again by <code class="docutils literal notranslate"><span class="pre">b&quot;\x04&quot;</span></code>.  It then goes back to the
+standard raw REPL and outputs <code class="docutils literal notranslate"><span class="pre">b&quot;&gt;&quot;</span></code>.</li>
+</ol>
+<p>For example, starting at a new line at the normal (friendly) REPL, if you write:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x01\x05</span><span class="s2">A</span><span class="se">\x01</span><span class="s2">print(123)</span><span class="se">\x04</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Then the device will respond with something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sa">b</span><span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">raw REPL; CTRL-B to exit</span><span class="se">\r\n</span><span class="s2">&gt;R</span><span class="se">\x01\x80\x00\x01\x04</span><span class="s2">123</span><span class="se">\r\n\x04\x04</span><span class="s2">&gt;&quot;</span>
+</pre></div>
+</div>
+<p>Broken down over time this looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1: enter raw REPL</span>
+<span class="n">write</span><span class="p">:</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x01</span><span class="s2">&quot;</span>
+<span class="n">read</span><span class="p">:</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">raw REPL; CTRL-B to exit</span><span class="se">\r\n</span><span class="s2">&gt;&quot;</span>
+
+<span class="c1"># Step 2-5: enter raw-paste mode</span>
+<span class="n">write</span><span class="p">:</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x05</span><span class="s2">A</span><span class="se">\x01</span><span class="s2">&quot;</span>
+<span class="n">read</span><span class="p">:</span> <span class="sa">b</span><span class="s2">&quot;R</span><span class="se">\x01\x80\x00\x01</span><span class="s2">&quot;</span>
+
+<span class="c1"># Step 6-8: write out code</span>
+<span class="n">write</span><span class="p">:</span> <span class="sa">b</span><span class="s2">&quot;print(123)</span><span class="se">\x04</span><span class="s2">&quot;</span>
+<span class="n">read</span><span class="p">:</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\x04</span><span class="s2">&quot;</span>
+
+<span class="c1"># Step 9: code executes and result is read</span>
+<span class="n">read</span><span class="p">:</span> <span class="sa">b</span><span class="s2">&quot;123</span><span class="se">\r\n\x04\x04</span><span class="s2">&gt;&quot;</span>
+</pre></div>
+</div>
+<p>In this case the flow control window-size-increment is 128 and there are two
+windows worth of data immediately available at the start, one from the initial
+window-size-increment value and one from the explicit <code class="docutils literal notranslate"><span class="pre">b&quot;\x01&quot;</span></code> value that
+is sent.  So this means up to 256 bytes can be written to begin with before
+waiting or checking for more incoming flow-control characters.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">tools/pyboard.py</span></code> program uses the raw REPL, including raw-paste mode, to
+execute Python code on a MicroPython-enabled board.</p>
 </div>
 </div>
 
@@ -403,9 +481,9 @@ MicroPython board.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 28 Jan 2021.
+        Last updated on 23 May 2021.
       </span>
 
     </p>

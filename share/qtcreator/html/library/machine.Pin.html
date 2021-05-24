@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>class Pin – control I/O pins &mdash; MicroPython 1.13 documentation</title>
+  <title>class Pin – control I/O pins &mdash; MicroPython 1.15 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.13
+                1.15
               </div>
             
           
@@ -107,6 +107,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ubluetooth.html"><code class="docutils literal notranslate"><span class="pre">ubluetooth</span></code> — low-level Bluetooth</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucryptolib.html"><code class="docutils literal notranslate"><span class="pre">ucryptolib</span></code> – cryptographic ciphers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mutex.html"><code class="docutils literal notranslate"><span class="pre">mutex</span></code> — mutex module</a></li>
@@ -216,8 +217,8 @@ number.</p>
 <span class="c1"># read and print the pin value</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">value</span><span class="p">())</span>
 
-<span class="c1"># reconfigure pin #0 in input mode</span>
-<span class="n">p0</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">p0</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>
+<span class="c1"># reconfigure pin #0 in input mode with a pull down resistor</span>
+<span class="n">p0</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">p0</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">p0</span><span class="o">.</span><span class="n">PULL_DOWN</span><span class="p">)</span>
 
 <span class="c1"># configure an irq callback</span>
 <span class="n">p0</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
@@ -352,29 +353,6 @@ See <a class="reference internal" href="#machine.Pin.value" title="machine.Pin.v
 </dd></dl>
 
 <dl class="method">
-<dt id="machine.Pin.mode">
-<code class="descclassname">Pin.</code><code class="descname">mode</code><span class="sig-paren">(</span><span class="optional">[</span><em>mode</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get or set the pin mode.
-See the constructor documentation for details of the <code class="docutils literal notranslate"><span class="pre">mode</span></code> argument.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="machine.Pin.pull">
-<code class="descclassname">Pin.</code><code class="descname">pull</code><span class="sig-paren">(</span><span class="optional">[</span><em>pull</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.pull" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get or set the pin pull state.
-See the constructor documentation for details of the <code class="docutils literal notranslate"><span class="pre">pull</span></code> argument.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="machine.Pin.drive">
-<code class="descclassname">Pin.</code><code class="descname">drive</code><span class="sig-paren">(</span><span class="optional">[</span><em>drive</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.drive" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get or set the pin drive strength.
-See the constructor documentation for details of the <code class="docutils literal notranslate"><span class="pre">drive</span></code> argument.</p>
-<p>Not all ports implement this method.</p>
-<p>Availability: WiPy.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="machine.Pin.irq">
 <code class="descclassname">Pin.</code><code class="descname">irq</code><span class="sig-paren">(</span><em>handler=None</em>, <em>trigger=(Pin.IRQ_FALLING | Pin.IRQ_RISING)</em>, <em>*</em>, <em>priority=1</em>, <em>wake=None</em>, <em>hard=False</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.irq" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure an interrupt handler to be called when the trigger source of the
@@ -417,6 +395,45 @@ Not all ports support this argument.</p>
 </ul>
 </div></blockquote>
 <p>This method returns a callback object.</p>
+</dd></dl>
+
+<p>The following methods are not part of the core Pin API and only implemented on certain ports.</p>
+<dl class="method">
+<dt id="machine.Pin.low">
+<code class="descclassname">Pin.</code><code class="descname">low</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.low" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set pin to “0” output level.</p>
+<p>Availability: nrf, rp2, stm32 ports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="machine.Pin.high">
+<code class="descclassname">Pin.</code><code class="descname">high</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.high" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set pin to “1” output level.</p>
+<p>Availability: nrf, rp2, stm32 ports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="machine.Pin.mode">
+<code class="descclassname">Pin.</code><code class="descname">mode</code><span class="sig-paren">(</span><span class="optional">[</span><em>mode</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the pin mode.
+See the constructor documentation for details of the <code class="docutils literal notranslate"><span class="pre">mode</span></code> argument.</p>
+<p>Availability: cc3200, stm32 ports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="machine.Pin.pull">
+<code class="descclassname">Pin.</code><code class="descname">pull</code><span class="sig-paren">(</span><span class="optional">[</span><em>pull</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.pull" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the pin pull state.
+See the constructor documentation for details of the <code class="docutils literal notranslate"><span class="pre">pull</span></code> argument.</p>
+<p>Availability: cc3200, stm32 ports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="machine.Pin.drive">
+<code class="descclassname">Pin.</code><code class="descname">drive</code><span class="sig-paren">(</span><span class="optional">[</span><em>drive</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Pin.drive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the pin drive strength.
+See the constructor documentation for details of the <code class="docutils literal notranslate"><span class="pre">drive</span></code> argument.</p>
+<p>Availability: cc3200 port.</p>
 </dd></dl>
 
 </div>
@@ -494,9 +511,9 @@ not all constants are available on all ports.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 28 Jan 2021.
+        Last updated on 23 May 2021.
       </span>
 
     </p>

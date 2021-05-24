@@ -159,16 +159,38 @@ Functions
    For the `fir.FIR_LEPTON` mode only on the OpenMV Cam Pure Thermal.
 
    Registers callback ``cb`` to be executed (in interrupt context) whenever the FLIR Lepton
-   generates a new frame. This nomially triggers at 9 Hz.
+   generates a new frame (but, before the frame is received).
 
-.. function:: fir.trigger_ffc(timeout)
+   This nomially triggers at 9 Hz.
+
+   ``cb`` takes no arguments.
+
+.. function:: fir.register_frame_cb(cb)
+
+   For the `fir.FIR_LEPTON` mode only on the OpenMV Cam Pure Thermal.
+
+   Registers callback ``cb`` to be executed (in interrupt context) whenever the FLIR Lepton
+   generates a new frame and the frame is ready to be read via `fir.read_ir()` or `fir.snapshot()`.
+
+   This nomially triggers at 9 Hz.
+
+   ``cb`` takes no arguments.
+
+   Use this to get an interrupt to schedule reading a frame later with `micropython.schedule()`.
+
+.. function:: fir.get_frame_available()
+
+   Returns True if a frame is available to read by calling `fir.read_ir()` or `fir.snapshot()`.
+
+.. function:: fir.trigger_ffc([timeout=-1])
 
    For the `fir.FIR_LEPTON` mode only.
 
    Triggers the Flat-Field-Correction process on your FLIR Lepton which calibrates the thermal
    image. This process happens automatically with the sensor. However, you may call this function
-   to force the process to happen. This function will block for up to 5000 ms by default but you may
-   pass a different timeout value.
+   to force the process to happen.
+
+   ``timeout`` if not -1 then how many milliseconds to wait for FFC to complete.
 
 .. function:: fir.read_ta()
 
@@ -180,7 +202,7 @@ Functions
 
    The value returned is a float that represents the temperature in celsius.
 
-.. function:: fir.read_ir([hmirror=False, [vflip=False, [transpose=False]]])
+.. function:: fir.read_ir([hmirror=False, [vflip=False, [transpose=False, [timeout=-1]]]])
 
    Returns a tuple containing the ambient temperature (i.e. sensor temperature),
    the temperature list (width * height), the minimum temperature seen, and
@@ -191,6 +213,8 @@ Functions
    ``vflip`` if set to True vertically flips the ``ir`` array.
 
    ``transpose`` if set to True transposes the ``ir`` array.
+
+   ``timeout`` if not -1 then how many milliseconds to wait for the new frame.
 
    If you want to rotate an image by multiples of 90 degrees pass the following::
 
@@ -276,7 +300,7 @@ Functions
       (w, h, ir) as the ``ir`` array instead to use `draw_ir` to draw any floating point array with
       width ``w`` and height ``h``.
 
-.. function:: fir.snapshot([hmirror=False, [vflip=False, [transpose=False, [x_scale=1.0, [y_scale=1.0, [roi=None, [rgb_channel=-1, [alpha=128, [color_palette=fir.PALETTE_RAINBOW, [alpha_palette=None, [hint=0, [x_size=None, [y_size=None, [scale=(ir_min, ir_max), [pixformat=fir.PIXFORMAT_RGB565, [copy_to_fb=False]]]]]]]]]]]]]]]])
+.. function:: fir.snapshot([hmirror=False, [vflip=False, [transpose=False, [x_scale=1.0, [y_scale=1.0, [roi=None, [rgb_channel=-1, [alpha=128, [color_palette=fir.PALETTE_RAINBOW, [alpha_palette=None, [hint=0, [x_size=None, [y_size=None, [scale=(ir_min, ir_max), [pixformat=fir.PIXFORMAT_RGB565, [copy_to_fb=False, [timeout=-1]]]]]]]]]]]]]]]])
 
    Works like `sensor.snapshot()` and returns an `image` object that is either
    `fir.PIXFORMAT_GRAYSCALE` (grayscale) or `fir.PIXFORMAT_RGB565` (color). If ``copy_to_fb`` is False then
@@ -352,6 +376,8 @@ Functions
 
    ``copy_to_fb`` may also be another image object if you want to replace that image object's memory
    buffer, type, width, and height with new image data.
+
+   ``timeout`` if not -1 then how many milliseconds to wait for the new frame.
 
    .. note::
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>class Timer – control hardware timers &mdash; MicroPython 1.13 documentation</title>
+  <title>class Timer – control hardware timers &mdash; MicroPython 1.15 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.13
+                1.15
               </div>
             
           
@@ -107,6 +107,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ubluetooth.html"><code class="docutils literal notranslate"><span class="pre">ubluetooth</span></code> — low-level Bluetooth</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucryptolib.html"><code class="docutils literal notranslate"><span class="pre">ucryptolib</span></code> – cryptographic ciphers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mutex.html"><code class="docutils literal notranslate"><span class="pre">mutex</span></code> — mutex module</a></li>
@@ -211,7 +212,7 @@ limitation.</p>
 <dt id="machine.Timer">
 <em class="property">class </em><code class="descclassname">machine.</code><code class="descname">Timer</code><span class="sig-paren">(</span><em>id</em>, <em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.Timer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct a new timer object of the given id. Id of -1 constructs a
-virtual timer (if supported).</p>
+virtual timer (if supported by a board).</p>
 <p>See <code class="docutils literal notranslate"><span class="pre">init</span></code> for parameters of initialisation.</p>
 </dd></dl>
 
@@ -280,9 +281,9 @@ frequency of the channel.</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 28 Jan 2021.
+        Last updated on 23 May 2021.
       </span>
 
     </p>

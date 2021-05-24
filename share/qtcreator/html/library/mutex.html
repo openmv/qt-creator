@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>mutex — mutex module &mdash; MicroPython 1.13 documentation</title>
+  <title>mutex — mutex module &mdash; MicroPython 1.15 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.13
+                1.15
               </div>
             
           
@@ -99,6 +99,7 @@
 <li class="toctree-l3"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ubluetooth.html"><code class="docutils literal notranslate"><span class="pre">ubluetooth</span></code> — low-level Bluetooth</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ucryptolib.html"><code class="docutils literal notranslate"><span class="pre">ucryptolib</span></code> – cryptographic ciphers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">mutex</span></code> — mutex module</a><ul>
@@ -242,14 +243,14 @@ the same mutex instance.</p>
 <div class="section" id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
-<dt id="mutex.mjpeg.release">
-<code class="descclassname">mjpeg.</code><code class="descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mutex.mjpeg.release" title="Permalink to this definition">¶</a></dt>
+<dt id="mutex.mutex.release">
+<code class="descclassname">mutex.</code><code class="descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mutex.mutex.release" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unlock the mutex.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="mutex.mjpeg.test">
-<code class="descclassname">mjpeg.</code><code class="descname">test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mutex.mjpeg.test" title="Permalink to this definition">¶</a></dt>
+<dt id="mutex.mutex.test">
+<code class="descclassname">mutex.</code><code class="descname">test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mutex.mutex.test" title="Permalink to this definition">¶</a></dt>
 <dd><p>Try to acquire the mutex in a non-blocking way. Return <code class="docutils literal notranslate"><span class="pre">True</span></code> on success and <code class="docutils literal notranslate"><span class="pre">False</span></code> on failure.</p>
 <p>You may also acquire the mutex in a blocking way by using <code class="docutils literal notranslate"><span class="pre">with</span></code>.</p>
 </dd></dl>
@@ -278,9 +279,9 @@ the same mutex instance.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 28 Jan 2021.
+        Last updated on 23 May 2021.
       </span>
 
     </p>

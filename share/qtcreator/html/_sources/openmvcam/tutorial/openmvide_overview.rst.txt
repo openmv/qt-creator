@@ -304,6 +304,22 @@ to re-program your OpenMV Cam with or a ``.dfu`` file. The boot-loader
 feature is only for advanced users who plan on changing the default OpenMV Cam
 firmware.
 
+WiFi Debug
+----------
+
+If you'd like to debug you camera over WiFi and have a WINC1500 shield you can use the
+``Tools->Configure OpenMV Cam Settings file`` dialog to setup your OpenMV Cam to connect
+to the IDE over WiFi (please ensure that your OpenMV Cam can run WiFi examples first and
+that your firmware and WiFi module firmware is up to date before enabling WiFi debug).
+
+Once WiFi Debug is enabled your OpenMV Cam will connect to your WiFi network (or create one)
+on turn on. During this time the status LED onboard will be solid white. After connecting OpenMV IDE
+will display a WiFi icon on the connect button. When you click connect OpenMV IDE will give you the
+option to connect to your OpenMV Cam over WiFi.
+
+When connected over WiFi you can do everything but work with the file system on your OpenMV Cam
+(unless your OpenMV Cam is still connected to your computer over USB).
+
 Open Terminal
 -------------
 

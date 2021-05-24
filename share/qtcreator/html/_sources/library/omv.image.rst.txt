@@ -1807,7 +1807,7 @@ The image object is the basic object for machine vision operations.
 
       Returns the image object so you can call another method using ``.`` notation.
 
-      Not supported on compressed images or bayer images.
+      Not supported on compressed images.
 
    .. method:: image.to_grayscale([x_scale=1.0, [y_scale=1.0, [roi=None, [rgb_channel=-1, [alpha=256, [color_palette=None, [alpha_palette=None, [hint=0, [x_size=None, [y_size=None, [copy=False]]]]]]]]]]])
 
@@ -1870,7 +1870,7 @@ The image object is the basic object for machine vision operations.
 
       Returns the image object so you can call another method using ``.`` notation.
 
-      Not supported on compressed images or bayer images.
+      Not supported on compressed images.
 
    .. method:: image.to_rgb565([x_scale=1.0, [y_scale=1.0, [roi=None, [rgb_channel=-1, [alpha=256, [color_palette=None, [alpha_palette=None, [hint=0, [x_size=None, [y_size=None, [copy=False]]]]]]]]]]])
 
@@ -1933,7 +1933,7 @@ The image object is the basic object for machine vision operations.
 
       Returns the image object so you can call another method using ``.`` notation.
 
-      Not supported on compressed images or bayer images.
+      Not supported on compressed images.
 
    .. method:: image.to_rainbow([x_scale=1.0, [y_scale=1.0, [roi=None, [rgb_channel=-1, [alpha=256, [color_palette=sensor.PALETTE_RAINBOW, [alpha_palette=None, [hint=0, [x_size=None, [y_size=None, [copy=False]]]]]]]]]]])
 
@@ -1996,7 +1996,7 @@ The image object is the basic object for machine vision operations.
 
       Returns the image object so you can call another method using ``.`` notation.
 
-      Not supported on compressed images or bayer images.
+      Not supported on compressed images.
 
    .. method:: image.compress([quality=50])
 
@@ -2158,7 +2158,7 @@ The image object is the basic object for machine vision operations.
 
       Returns the new image object.
 
-      Not supported on compressed images or bayer images.
+      Not supported on compressed images.
 
    .. method:: image.crop([x_scale=1.0, [y_scale=1.0, [roi=None, [rgb_channel=-1, [alpha=256, [color_palette=None, [alpha_palette=None, [hint=0, [x_size=None, [y_size=None, [copy=False]]]]]]]]]]])
 
@@ -2221,7 +2221,7 @@ The image object is the basic object for machine vision operations.
 
       Returns the image object so you can call another method using ``.`` notation.
 
-      Not supported on compressed images or bayer images.
+      Not supported on compressed images.
 
    .. method:: image.scale([x_scale=1.0, [y_scale=1.0, [roi=None, [rgb_channel=-1, [alpha=256, [color_palette=None, [alpha_palette=None, [hint=0, [x_size=None, [y_size=None, [copy=False]]]]]]]]]]])
 
@@ -2284,7 +2284,7 @@ The image object is the basic object for machine vision operations.
 
       Returns the image object so you can call another method using ``.`` notation.
 
-      Not supported on compressed images or bayer images.
+      Not supported on compressed images.
 
    .. method:: image.save(path, [roi, [quality=50]])
 
@@ -2535,7 +2535,7 @@ The image object is the basic object for machine vision operations.
 
       Returns the image object so you can call another method using ``.`` notation.
 
-      Not supported on compressed images or bayer images.
+      Not supported on compressed images.
 
    .. method:: image.draw_keypoints(keypoints, [color, [size=10, [thickness=1, [fill=False]]]])
 
@@ -3987,7 +3987,7 @@ The image object is the basic object for machine vision operations.
       ``cy`` is the image center which is just ``image.height()/2``. This is not
       ``roi.h()/2``.
 
-      Not supported on compressed images or bayer images.
+      Not supported on compressed images.
 
       This method is not available on the OpenMV Cam M4.
 

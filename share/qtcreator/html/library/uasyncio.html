@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>uasyncio — asynchronous I/O scheduler &mdash; MicroPython 1.13 documentation</title>
+  <title>uasyncio — asynchronous I/O scheduler &mdash; MicroPython 1.15 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.13
+                1.15
               </div>
             
           
@@ -103,6 +103,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#additional-functions">Additional functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#class-task">class Task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#class-event">class Event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-threadsafeflag">class ThreadSafeFlag</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#class-lock">class Lock</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tcp-stream-connections">TCP stream connections</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#event-loop">Event Loop</a></li>
@@ -121,7 +122,7 @@
 <li class="toctree-l3"><a class="reference internal" href="usocket.html"><code class="docutils literal notranslate"><span class="pre">usocket</span></code> – socket module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ussl.html"><code class="docutils literal notranslate"><span class="pre">ussl</span></code> – SSL/TLS module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ustruct.html"><code class="docutils literal notranslate"><span class="pre">ustruct</span></code> – pack and unpack primitive data types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">sys</span></code> – system specific functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usys.html"><code class="docutils literal notranslate"><span class="pre">usys</span></code> – system specific functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utime.html"><code class="docutils literal notranslate"><span class="pre">utime</span></code> – time related functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uzlib.html"><code class="docutils literal notranslate"><span class="pre">uzlib</span></code> – zlib decompression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_thread.html"><code class="docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></li>
@@ -242,6 +243,12 @@ CPython documentation:</em>
 </dd></dl>
 
 <dl class="function">
+<dt id="uasyncio.current_task">
+<code class="descclassname">uasyncio.</code><code class="descname">current_task</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uasyncio.current_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the <a class="reference internal" href="#uasyncio.Task" title="uasyncio.Task"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> object associated with the currently running task.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="uasyncio.run">
 <code class="descclassname">uasyncio.</code><code class="descname">run</code><span class="sig-paren">(</span><em>coro</em><span class="sig-paren">)</span><a class="headerlink" href="#uasyncio.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new task from the given coroutine and run it until it completes.</p>
@@ -332,6 +339,8 @@ in the cleared state.</p>
 <dt id="uasyncio.Event.set">
 <code class="descclassname">Event.</code><code class="descname">set</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uasyncio.Event.set" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the event.  Any tasks waiting on the event will be scheduled to run.</p>
+<p>Note: This must be called from within a task. It is not safe to call this
+from an IRQ, scheduler callback, or other thread. See <a class="reference internal" href="#uasyncio.ThreadSafeFlag" title="uasyncio.ThreadSafeFlag"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ThreadSafeFlag</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -345,6 +354,33 @@ in the cleared state.</p>
 <code class="descclassname">Event.</code><code class="descname">wait</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uasyncio.Event.wait" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for the event to be set.  If the event is already set then it returns
 immediately.</p>
+<p>This is a coroutine.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="class-threadsafeflag">
+<h2>class ThreadSafeFlag<a class="headerlink" href="#class-threadsafeflag" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="uasyncio.ThreadSafeFlag">
+<em class="property">class </em><code class="descclassname">uasyncio.</code><code class="descname">ThreadSafeFlag</code><a class="headerlink" href="#uasyncio.ThreadSafeFlag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new flag which can be used to synchronise a task with code running
+outside the asyncio loop, such as other threads, IRQs, or scheduler
+callbacks.  Flags start in the cleared state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="uasyncio.ThreadSafeFlag.set">
+<code class="descclassname">ThreadSafeFlag.</code><code class="descname">set</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uasyncio.ThreadSafeFlag.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the flag.  If there is a task waiting on the event, it will be scheduled
+to run.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="uasyncio.ThreadSafeFlag.wait">
+<code class="descclassname">ThreadSafeFlag.</code><code class="descname">wait</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uasyncio.ThreadSafeFlag.wait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait for the flag to be set.  If the flag is already set then it returns
+immediately.</p>
+<p>A flag may only be waited on by a single task at a time.</p>
 <p>This is a coroutine.</p>
 </dd></dl>
 
@@ -587,9 +623,9 @@ is a dictionary containing keys: <code class="docutils literal notranslate"><spa
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014-2020, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
+        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 28 Jan 2021.
+        Last updated on 23 May 2021.
       </span>
 
     </p>
