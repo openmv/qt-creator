@@ -1479,7 +1479,9 @@ void OpenMVPlugin::extensionsInitialized()
     ///////////////////////////////////////////////////////////////////////////
 
     QMainWindow *mainWindow = q_check_ptr(qobject_cast<QMainWindow *>(Core::ICore::mainWindow()));
-    Core::Internal::FancyTabWidget *widget = q_check_ptr(qobject_cast<Core::Internal::FancyTabWidget *>(mainWindow->centralWidget()));
+    Core::Internal::FancyTabWidget *widget = qobject_cast<Core::Internal::FancyTabWidget *>(mainWindow->centralWidget());
+    if (!widget) widget = qobject_cast<Core::Internal::FancyTabWidget *>(mainWindow->centralWidget()->layout()->itemAt(1)->widget()); // for tabbededitor
+    widget = q_check_ptr(widget);
 
     Core::Internal::FancyActionBar *actionBar0 = new Core::Internal::FancyActionBar(widget);
     widget->insertCornerWidget(0, actionBar0);
