@@ -321,6 +321,7 @@ then <code class="docutils literal notranslate"><span class="pre">None</span></c
 <li><a class="reference internal" href="#sensor.sensor.LEPTON" title="sensor.sensor.LEPTON"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.LEPTON</span></code></a>: Lepton1/2/3 sensor module.</li>
 <li><a class="reference internal" href="#sensor.sensor.HM01B0" title="sensor.sensor.HM01B0"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.HM01B0</span></code></a>: Arduino Portenta H7 sensor module.</li>
 <li><a class="reference internal" href="#sensor.sensor.GC2145" title="sensor.sensor.GC2145"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.GC2145</span></code></a>: Arduino Bormio H7 sensor module.</li>
+<li><a class="reference internal" href="#sensor.sensor.PAJ6100" title="sensor.sensor.PAJ6100"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PAJ6100</span></code></a>: PixArt Imaging sensor Module.</li>
 </ul>
 </div></blockquote>
 </dd></dl>
@@ -406,13 +407,16 @@ quality then with <a class="reference internal" href="#sensor.sensor.set_quality
 <li><a class="reference internal" href="#sensor.sensor.QQVGA" title="sensor.sensor.QQVGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.QQVGA</span></code></a>: 160x120</li>
 <li><a class="reference internal" href="#sensor.sensor.QVGA" title="sensor.sensor.QVGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.QVGA</span></code></a>: 320x240</li>
 <li><a class="reference internal" href="#sensor.sensor.VGA" title="sensor.sensor.VGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.VGA</span></code></a>: 640x480</li>
+<li><a class="reference internal" href="#sensor.sensor.HQQQQVGA" title="sensor.sensor.HQQQQVGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.HQQQQVGA</span></code></a>: 30x20</li>
 <li><a class="reference internal" href="#sensor.sensor.HQQQVGA" title="sensor.sensor.HQQQVGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.HQQQVGA</span></code></a>: 60x40</li>
 <li><a class="reference internal" href="#sensor.sensor.HQQVGA" title="sensor.sensor.HQQVGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.HQQVGA</span></code></a>: 120x80</li>
 <li><a class="reference internal" href="#sensor.sensor.HQVGA" title="sensor.sensor.HQVGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.HQVGA</span></code></a>: 240x160</li>
+<li><a class="reference internal" href="#sensor.sensor.HVGA" title="sensor.sensor.HVGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.HVGA</span></code></a>: 480x320</li>
 <li><a class="reference internal" href="#sensor.sensor.B64X32" title="sensor.sensor.B64X32"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.B64X32</span></code></a>: 64x32 (for use with <a class="reference internal" href="omv.image.html#image.image.Image.image.find_displacement" title="image.image.Image.image.find_displacement"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_displacement()</span></code></a>)</li>
 <li><a class="reference internal" href="#sensor.sensor.B64X64" title="sensor.sensor.B64X64"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.B64X64</span></code></a>: 64x64 (for use with <a class="reference internal" href="omv.image.html#image.image.Image.image.find_displacement" title="image.image.Image.image.find_displacement"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_displacement()</span></code></a>)</li>
 <li><a class="reference internal" href="#sensor.sensor.B128X64" title="sensor.sensor.B128X64"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.B128X64</span></code></a>: 128x64 (for use with <a class="reference internal" href="omv.image.html#image.image.Image.image.find_displacement" title="image.image.Image.image.find_displacement"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_displacement()</span></code></a>)</li>
 <li><a class="reference internal" href="#sensor.sensor.B128X128" title="sensor.sensor.B128X128"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.B128X128</span></code></a>: 128x128 (for use with <a class="reference internal" href="omv.image.html#image.image.Image.image.find_displacement" title="image.image.Image.image.find_displacement"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_displacement()</span></code></a>)</li>
+<li><a class="reference internal" href="#sensor.sensor.B160X160" title="sensor.sensor.B160X160"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.B160X160</span></code></a>: 160x160 (for the HM01B0)</li>
 <li><a class="reference internal" href="#sensor.sensor.B320X320" title="sensor.sensor.B320X320"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.B320X320</span></code></a>: 320x320 (for the HM01B0)</li>
 <li><a class="reference internal" href="#sensor.sensor.LCD" title="sensor.sensor.LCD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.LCD</span></code></a>: 128x160 (for use with the lcd shield)</li>
 <li><a class="reference internal" href="#sensor.sensor.QQVGA2" title="sensor.sensor.QQVGA2"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.QQVGA2</span></code></a>: 128x160 (for use with the lcd shield)</li>
@@ -420,7 +424,9 @@ quality then with <a class="reference internal" href="#sensor.sensor.set_quality
 <li><a class="reference internal" href="#sensor.sensor.WVGA2" title="sensor.sensor.WVGA2"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.WVGA2</span></code></a>:752x480 (for the MT9V034)</li>
 <li><a class="reference internal" href="#sensor.sensor.SVGA" title="sensor.sensor.SVGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.SVGA</span></code></a>: 800x600 (only for the OV2640/OV5640 sensor)</li>
 <li><a class="reference internal" href="#sensor.sensor.XGA" title="sensor.sensor.XGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.XGA</span></code></a>: 1024x768 (only for the OV2640/OV5640 sensor)</li>
+<li><a class="reference internal" href="#sensor.sensor.WXGA" title="sensor.sensor.WXGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.WXGA</span></code></a>: 1280x768 (for the MT9M114)</li>
 <li><a class="reference internal" href="#sensor.sensor.SXGA" title="sensor.sensor.SXGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.SXGA</span></code></a>: 1280x1024 (only for the OV2640/OV5640 sensor)</li>
+<li><a class="reference internal" href="#sensor.sensor.SXGAM" title="sensor.sensor.SXGAM"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.SXGAM</span></code></a>: 1280x960 (for the MT9M114)</li>
 <li><a class="reference internal" href="#sensor.sensor.UXGA" title="sensor.sensor.UXGA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.UXGA</span></code></a>: 1600x1200 (only for the OV2640/OV5640 sensor)</li>
 <li><a class="reference internal" href="#sensor.sensor.HD" title="sensor.sensor.HD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.HD</span></code></a>: 1280x720 (only for the OV2640/OV5640 sensor)</li>
 <li><a class="reference internal" href="#sensor.sensor.FHD" title="sensor.sensor.FHD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.FHD</span></code></a>: 1920x1080 (only for the OV5640 sensor)</li>
@@ -441,13 +447,21 @@ quality then with <a class="reference internal" href="#sensor.sensor.set_quality
 <dl class="function">
 <dt id="sensor.sensor.set_framerate">
 <code class="descclassname">sensor.</code><code class="descname">set_framerate</code><span class="sig-paren">(</span><em>rate</em><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.set_framerate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the frame rate in hz on the HM01B0. May be 15, 30, 60, or 120 Hz.</p>
+<dd><p>Sets the frame rate in hz for the camera module.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference internal" href="#sensor.sensor.set_framerate" title="sensor.sensor.set_framerate"><code class="xref any py py-func docutils literal notranslate"><span class="pre">set_framerate</span></code></a> works by dropping frames received by the camera module to keep the frame rate
+equal to (or below) the rate you specify. By default the camera will run at the maximum frame
+rate. If implemented for the particular camera sensor then <a class="reference internal" href="#sensor.sensor.set_framerate" title="sensor.sensor.set_framerate"><code class="xref any py py-func docutils literal notranslate"><span class="pre">set_framerate</span></code></a> will also reduce
+the camera sensor frame rate internally to save power and improve image quality by increasing
+the sensor exposure. <a class="reference internal" href="#sensor.sensor.set_framerate" title="sensor.sensor.set_framerate"><code class="xref any py py-func docutils literal notranslate"><span class="pre">set_framerate</span></code></a> may conflict with <a class="reference internal" href="#sensor.sensor.set_auto_exposure" title="sensor.sensor.set_auto_exposure"><code class="xref any py py-func docutils literal notranslate"><span class="pre">set_auto_exposure</span></code></a> on some cameras.</p>
+</div>
 </dd></dl>
 
 <dl class="function">
 <dt id="sensor.sensor.get_framerate">
 <code class="descclassname">sensor.</code><code class="descname">get_framerate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.get_framerate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the frame rate in hz on the HM01B0.</p>
+<dd><p>Returns the frame rate in hz for the camera module.</p>
 </dd></dl>
 
 <dl class="function">
@@ -699,6 +713,23 @@ machine slower than it was recorded.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="sensor.sensor.disable_full_flush">
+<code class="descclassname">sensor.</code><code class="descname">disable_full_flush</code><span class="sig-paren">(</span><span class="optional">[</span><em>disable</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.disable_full_flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">disable</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> then automatic framebuffer flushing mentioned in <a class="reference internal" href="#sensor.sensor.set_framebuffers" title="sensor.sensor.set_framebuffers"><code class="xref any py py-func docutils literal notranslate"><span class="pre">set_framebuffers</span></code></a>
+is disabled. This removes any time limit on frames in the frame buffer fifo. For example, if
+you set the number of frame buffers to 30 and set the frame rate to 30 you can now precisely
+record 1 second of video from the camera without risk of frame loss.</p>
+<p>If this function is called with no arguments it returns if automatic flushing is disabled. By
+default automatic flushing on frame drop is enabled to clear out stale frames.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference internal" href="#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">snapshot</span></code></a> starts the frame capture process which will continue to capture frames until
+there is no space to hold a frame at which point the frame capture process stops. The
+process always stops when there is no space to hold the next frame.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="sensor.sensor.set_lens_correction">
 <code class="descclassname">sensor.</code><code class="descname">set_lens_correction</code><span class="sig-paren">(</span><em>enable</em>, <em>radi</em>, <em>coef</em><span class="sig-paren">)</span><a class="headerlink" href="#sensor.sensor.set_lens_correction" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> True to enable and False to disable (bool).
@@ -936,6 +967,12 @@ Only works for the OV2640/OV5640 cameras.</p>
 </dd></dl>
 
 <dl class="data">
+<dt id="sensor.sensor.PAJ6100">
+<code class="descclassname">sensor.</code><code class="descname">PAJ6100</code><a class="headerlink" href="#sensor.sensor.PAJ6100" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#sensor.sensor.get_id" title="sensor.sensor.get_id"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.get_id()</span></code></a> returns this for the PAJ6100 camera.</p>
+</dd></dl>
+
+<dl class="data">
 <dt id="sensor.sensor.QQCIF">
 <code class="descclassname">sensor.</code><code class="descname">QQCIF</code><a class="headerlink" href="#sensor.sensor.QQCIF" title="Permalink to this definition">¶</a></dt>
 <dd><p>88x72 resolution for the camera sensor.</p>
@@ -1002,6 +1039,12 @@ Only works for the OV2640/OV5640 cameras.</p>
 </dd></dl>
 
 <dl class="data">
+<dt id="sensor.sensor.HQQQQVGA">
+<code class="descclassname">sensor.</code><code class="descname">HQQQQVGA</code><a class="headerlink" href="#sensor.sensor.HQQQQVGA" title="Permalink to this definition">¶</a></dt>
+<dd><p>30x20 resolution for the camera sensor.</p>
+</dd></dl>
+
+<dl class="data">
 <dt id="sensor.sensor.HQQQVGA">
 <code class="descclassname">sensor.</code><code class="descname">HQQQVGA</code><a class="headerlink" href="#sensor.sensor.HQQQVGA" title="Permalink to this definition">¶</a></dt>
 <dd><p>60x40 resolution for the camera sensor.</p>
@@ -1017,6 +1060,12 @@ Only works for the OV2640/OV5640 cameras.</p>
 <dt id="sensor.sensor.HQVGA">
 <code class="descclassname">sensor.</code><code class="descname">HQVGA</code><a class="headerlink" href="#sensor.sensor.HQVGA" title="Permalink to this definition">¶</a></dt>
 <dd><p>240x160 resolution for the camera sensor.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.HVGA">
+<code class="descclassname">sensor.</code><code class="descname">HVGA</code><a class="headerlink" href="#sensor.sensor.HVGA" title="Permalink to this definition">¶</a></dt>
+<dd><p>480x320 resolution for the camera sensor.</p>
 </dd></dl>
 
 <dl class="data">
@@ -1045,6 +1094,12 @@ Only works for the OV2640/OV5640 cameras.</p>
 <code class="descclassname">sensor.</code><code class="descname">B128X128</code><a class="headerlink" href="#sensor.sensor.B128X128" title="Permalink to this definition">¶</a></dt>
 <dd><p>128x128 resolution for the camera sensor.</p>
 <p>For use with <a class="reference internal" href="omv.image.html#image.image.Image.image.find_displacement" title="image.image.Image.image.find_displacement"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_displacement()</span></code></a> and any other FFT based algorithm.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.B160X160">
+<code class="descclassname">sensor.</code><code class="descname">B160X160</code><a class="headerlink" href="#sensor.sensor.B160X160" title="Permalink to this definition">¶</a></dt>
+<dd><p>160x160 resolution for the HM01B0 camera sensor.</p>
 </dd></dl>
 
 <dl class="data">
@@ -1080,19 +1135,31 @@ Only works for the OV2640/OV5640 cameras.</p>
 <dl class="data">
 <dt id="sensor.sensor.SVGA">
 <code class="descclassname">sensor.</code><code class="descname">SVGA</code><a class="headerlink" href="#sensor.sensor.SVGA" title="Permalink to this definition">¶</a></dt>
-<dd><p>800x600 resolution for the camera sensor. Only works for the OV2640/OV5640 cameras.</p>
+<dd><p>800x600 resolution for the camera sensor.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="sensor.sensor.XGA">
 <code class="descclassname">sensor.</code><code class="descname">XGA</code><a class="headerlink" href="#sensor.sensor.XGA" title="Permalink to this definition">¶</a></dt>
-<dd><p>1024x768 resolution for the camera sensor. Only works for the OV2640/OV5640 cameras.</p>
+<dd><p>1024x768 resolution for the camera sensor.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.WXGA">
+<code class="descclassname">sensor.</code><code class="descname">WXGA</code><a class="headerlink" href="#sensor.sensor.WXGA" title="Permalink to this definition">¶</a></dt>
+<dd><p>1280x768 resolution for the MT9M114 camera sensor.</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="sensor.sensor.SXGA">
 <code class="descclassname">sensor.</code><code class="descname">SXGA</code><a class="headerlink" href="#sensor.sensor.SXGA" title="Permalink to this definition">¶</a></dt>
 <dd><p>1280x1024 resolution for the camera sensor. Only works for the OV2640/OV5640 cameras.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sensor.sensor.SXGAM">
+<code class="descclassname">sensor.</code><code class="descname">SXGAM</code><a class="headerlink" href="#sensor.sensor.SXGAM" title="Permalink to this definition">¶</a></dt>
+<dd><p>1280x960 resolution for the MT9M114 camera sensor.</p>
 </dd></dl>
 
 <dl class="data">
@@ -1104,7 +1171,7 @@ Only works for the OV2640/OV5640 cameras.</p>
 <dl class="data">
 <dt id="sensor.sensor.HD">
 <code class="descclassname">sensor.</code><code class="descname">HD</code><a class="headerlink" href="#sensor.sensor.HD" title="Permalink to this definition">¶</a></dt>
-<dd><p>1280x720 resolution for the camera sensor. Only works for the OV2640/OV5640 cameras.</p>
+<dd><p>1280x720 resolution for the camera sensor.</p>
 </dd></dl>
 
 <dl class="data">
@@ -1360,7 +1427,7 @@ Only works for the OV2640/OV5640 cameras.</p>
     <p>
         &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
       <span class="lastupdated">
-        Last updated on 23 May 2021.
+        Last updated on 27 Jun 2021.
       </span>
 
     </p>
