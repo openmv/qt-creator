@@ -9,6 +9,7 @@ HEADERS += openmvplugin.h \
            openmvcamerasettings.h \
            openmvdataseteditor.h \
            histogram/openmvpluginhistogram.h \
+           tools/bossac.h \
            tools/dfu-util.h \
            tools/edgeimpulse.h \
            tools/thresholdeditor.h \
@@ -32,7 +33,8 @@ SOURCES += openmvplugin.cpp \
            histogram/openmvpluginhistogram.cpp \
            histogram/rgb2rgb_tab.c \
            histogram/lab_tab.c \
-           histogram/yuv_tab.c  \
+           histogram/yuv_tab.c \
+           tools/bossac.cpp \
            tools/dfu-util.cpp \
            tools/edgeimpulse.cpp \
            tools/thresholdeditor.cpp \

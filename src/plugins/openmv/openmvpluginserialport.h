@@ -12,9 +12,17 @@
 
 #define ARDUINOCAM_VID      0x2341
 #define ARDUINOCAM_PID      0x005B
+#define ARDUINOCAM_NRF_PID  0x005A
+#define ARDUINOCAM_RPI_PID  0x005E
 #define ARDUINOCAM_PID_MASK 0x00FF
 #define PORTENTA_APP_PID    0x005B
 #define PORTENTA_LDR_PID    0x035B
+#define NRF_OLD_PID         0x805A
+#define NRF_APP_PID         0x015A
+#define NRF_LDR_PID         0x005A
+#define RPI_OLD_PID         0x805E
+#define RPI_APP_PID         0x015E
+#define RPI_LDR_PID         0x005E
 
 #define OPENMVCAM_BROADCAST_PORT 0xABD1
 

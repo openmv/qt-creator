@@ -46,11 +46,13 @@ bool Minimap::initialize(const QStringList& arguments, QString* errorMessage)
    Q_UNUSED(arguments)
    Q_UNUSED(errorMessage)
 
-   #ifdef Q_OS_MAC
-   new MinimapSettings(this);
+   //OPENMV-DIFF//
+   //new MinimapSettings(this);
+   //OPENMV-DIFF//
 
-   qApp->setStyle(new MinimapStyle(qApp->style()));
-   #endif
+   //OPENMV-DIFF//
+   //qApp->setStyle(new MinimapStyle(qApp->style()));
+   //OPENMV-DIFF//
 
    Core::EditorManager* em = Core::EditorManager::instance();
    connect(em, &Core::EditorManager::editorCreated, this,
@@ -68,9 +70,9 @@ ExtensionSystem::IPlugin::ShutdownFlag Minimap::aboutToShutdown()
    MinimapStyle* style = qobject_cast<MinimapStyle*>(qApp->style());
    if (style)
    {
-      #ifdef Q_OS_MAC
-      qApp->setStyle(style->baseStyle());
-      #endif
+      //OPENMV-DIFF//
+      //qApp->setStyle(style->baseStyle());
+      //OPENMV-DIFF//
    }
    return SynchronousShutdown;
 }
@@ -82,9 +84,9 @@ void Minimap::editorCreated(Core::IEditor* editor, const QString& fileName)
       qobject_cast<TextEditor::BaseTextEditor*>(editor);
    if (baseEditor)
    {
-      #ifdef Q_OS_MAC
-      MinimapStyle::createMinimapStyleObject(baseEditor);
-      #endif
+      //OPENMV-DIFF//
+      //MinimapStyle::createMinimapStyleObject(baseEditor);
+      //OPENMV-DIFF//
    }
 }
 }

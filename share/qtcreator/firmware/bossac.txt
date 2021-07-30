@@ -1,7 +1,7 @@
 [
     {
         "boardType" : "NANO33",
-        "vidpid" : "015A:2341",
-        "hexProgramCommand" : "-d --offset=0x16000 -U -i -e -w -R",
+        "vidpid" : "2341:005a",
+        "binProgramCommand" : "--offset=0x16000"
     }
 ]

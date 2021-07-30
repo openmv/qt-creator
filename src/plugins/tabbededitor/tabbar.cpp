@@ -64,7 +64,11 @@ TabBar::TabBar(QWidget *parent) :
     //});
     //OPENMV-DIFF//
 
-    const QString shortCutSequence = QStringLiteral("Ctrl+Alt+%1");
+    //OPENMV-DIFF//
+    //const QString shortCutSequence = QStringLiteral("Ctrl+Alt+%1");
+    //OPENMV-DIFF//
+    const QString shortCutSequence = QStringLiteral("Alt+%1");
+    //OPENMV-DIFF//
     for (int i = 1; i <= 10; ++i) {
         QShortcut *shortcut = new QShortcut(shortCutSequence.arg(i % 10), this);
         connect(shortcut, &QShortcut::activated, [this, shortcut]() {
@@ -78,7 +82,11 @@ TabBar::TabBar(QWidget *parent) :
             = Core::ActionManager::registerAction(prevTabAction,
                                                   TabbedEditor::Constants::PREV_TAB_ID,
                                                   Core::Context(Core::Constants::C_GLOBAL));
-    prevTabCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+J")));
+    //OPENMV-DIFF//
+    //prevTabCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+J")));
+    //OPENMV-DIFF//
+    prevTabCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+Page Up")));
+    //OPENMV-DIFF//
     connect(prevTabAction, SIGNAL(triggered()), this, SLOT(prevTabAction()));
 
     QAction *nextTabAction = new QAction(tr("Switch to next tab"), this);
@@ -86,7 +94,11 @@ TabBar::TabBar(QWidget *parent) :
             = Core::ActionManager::registerAction(nextTabAction,
                                                   TabbedEditor::Constants::NEXT_TAB_ID,
                                                   Core::Context(Core::Constants::C_GLOBAL));
-    nextTabCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+K")));
+    //OPENMV-DIFF//
+    //nextTabCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+K")));
+    //OPENMV-DIFF//
+    nextTabCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+Page Down")));
+    //OPENMV-DIFF//
     connect(nextTabAction, SIGNAL(triggered()), this, SLOT(nextTabAction()));
 }
 

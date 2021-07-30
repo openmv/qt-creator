@@ -34,12 +34,12 @@ DATA_DIRS = \
     models \
     styles \
     themes
-win32: DATA_DIRS += drivers dfuse ffmpeg/windows dfu-util/windows bossac/windows
+win32: DATA_DIRS += drivers dfuse ffmpeg/windows dfu-util/windows bossac/windows picotool/windows
 else: DATA_DIRS += pydfu
-macx: DATA_DIRS += ffmpeg/mac dfu-util/osx bossac/osx
-linux-*:contains(QT_ARCH, i386): DATA_DIRS += ffmpeg/linux-x86 dfu-util/linux32 bossac/linux32
-linux-*:contains(QT_ARCH, x86_64): DATA_DIRS += ffmpeg/linux-x86_64 dfu-util/linux64 bossac/linux64
-linux-*:contains(QT_ARCH, arm): DATA_DIRS += ffmpeg/linux-arm dfu-util/arm bossac/arm
+macx: DATA_DIRS += ffmpeg/mac dfu-util/osx bossac/osx picotool/osx
+linux-*:contains(QT_ARCH, i386): DATA_DIRS += ffmpeg/linux-x86 dfu-util/linux32 bossac/linux32 picotool/linux32
+linux-*:contains(QT_ARCH, x86_64): DATA_DIRS += ffmpeg/linux-x86_64 dfu-util/linux64 bossac/linux64 picotool/linux64
+linux-*:contains(QT_ARCH, arm): DATA_DIRS += ffmpeg/linux-arm dfu-util/arm bossac/arm picotool/arm
 #OPENMV-DIFF#
 
 for(data_dir, DATA_DIRS) {

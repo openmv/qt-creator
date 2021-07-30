@@ -54,6 +54,7 @@
 #include "openmvcamerasettings.h"
 #include "openmvdataseteditor.h"
 #include "histogram/openmvpluginhistogram.h"
+#include "tools/bossac.h"
 #include "tools/dfu-util.h"
 #include "tools/edgeimpulse.h"
 #include "tools/thresholdeditor.h"

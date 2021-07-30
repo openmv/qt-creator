@@ -99,8 +99,13 @@ EditorToolBarPrivate::EditorToolBarPrivate(QWidget *parent, EditorToolBar *q) :
     m_backButton(new QToolButton(q)),
     m_forwardButton(new QToolButton(q)),
     m_splitButton(new QToolButton(q)),
-    m_horizontalSplitAction(new QAction(Icons::SPLIT_HORIZONTAL_TOOLBAR.icon(), EditorManager::tr("Split"), parent)),
-    m_verticalSplitAction(new QAction(Icons::SPLIT_VERTICAL_TOOLBAR.icon(), EditorManager::tr("Split Side by Side"), parent)),
+    //OPENMV-DIFF//
+    //m_horizontalSplitAction(new QAction(Icons::SPLIT_HORIZONTAL_TOOLBAR.icon(), EditorManager::tr("Split"), parent)),
+    //m_verticalSplitAction(new QAction(Icons::SPLIT_VERTICAL_TOOLBAR.icon(), EditorManager::tr("Split Side by Side"), parent)),
+    //OPENMV-DIFF//
+    m_horizontalSplitAction(new QAction(Icons::SPLIT_HORIZONTAL.icon(), EditorManager::tr("Split"), parent)),
+    m_verticalSplitAction(new QAction(Icons::SPLIT_VERTICAL.icon(), EditorManager::tr("Split Side by Side"), parent)),
+    //OPENMV-DIFF//
     m_splitNewWindowAction(new QAction(EditorManager::tr("Open in New Window"), parent)),
     m_closeSplitButton(new QToolButton(q)),
     m_activeToolBar(0),
@@ -193,8 +198,6 @@ EditorToolBar::EditorToolBar(QWidget *parent) :
     d->m_forwardButton->hide();
     d->m_lockButton->hide();
     d->m_dragHandle->hide();
-    d->m_splitButton->hide();
-    d->m_closeSplitButton->hide();
     //OPENMV-DIFF//
 
     setLayout(toplayout);
