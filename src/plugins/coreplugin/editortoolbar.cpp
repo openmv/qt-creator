@@ -198,6 +198,8 @@ EditorToolBar::EditorToolBar(QWidget *parent) :
     d->m_forwardButton->hide();
     d->m_lockButton->hide();
     d->m_dragHandle->hide();
+    d->m_splitButton->hide();
+    d->m_closeSplitButton->hide();
     //OPENMV-DIFF//
 
     setLayout(toplayout);

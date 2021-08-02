@@ -23,6 +23,8 @@
 #define RPI_OLD_PID         0x805E
 #define RPI_APP_PID         0x015E
 #define RPI_LDR_PID         0x005E
+#define RPI2040_VID         0x28EA
+#define RPI2040_PID         0x0003
 
 #define OPENMVCAM_BROADCAST_PORT 0xABD1
 

@@ -115,6 +115,9 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
     connect(d->m_ui.smartSelectionChanging, &QAbstractButton::clicked,
             this, &BehaviorSettingsWidget::slotBehaviorSettingsChanged);
     //OPENMV-DIFF//
+    d->m_ui.autoIndent->hide();
+    d->m_ui.tabKeyBehaviorLabel->hide();
+    d->m_ui.tabKeyBehavior->hide();
     d->m_ui.groupBoxEncodings->hide();
     d->m_ui.mouseHiding->hide();
     d->m_ui.mouseNavigation->hide();

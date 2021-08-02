@@ -11,6 +11,7 @@ HEADERS += openmvplugin.h \
            histogram/openmvpluginhistogram.h \
            tools/bossac.h \
            tools/dfu-util.h \
+           tools/picotool.h \
            tools/edgeimpulse.h \
            tools/thresholdeditor.h \
            tools/keypointseditor.h \
@@ -36,6 +37,7 @@ SOURCES += openmvplugin.cpp \
            histogram/yuv_tab.c \
            tools/bossac.cpp \
            tools/dfu-util.cpp \
+           tools/picotool.cpp \
            tools/edgeimpulse.cpp \
            tools/thresholdeditor.cpp \
            tools/keypointseditor.cpp \

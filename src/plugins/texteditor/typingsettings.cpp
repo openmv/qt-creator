@@ -38,7 +38,11 @@ static const char groupPostfix[] = "TypingSettings";
 namespace TextEditor {
 
 TypingSettings::TypingSettings():
-    m_autoIndent(true),
+    //OPENMV-DIFF//
+    //m_autoIndent(true),
+    //OPENMV-DIFF//
+    m_autoIndent(false),
+    //OPENMV-DIFF//
     m_tabKeyBehavior(TabNeverIndents),
     m_smartBackspaceBehavior(BackspaceNeverIndents)
 {
@@ -65,8 +69,14 @@ void TypingSettings::toMap(const QString &prefix, QVariantMap *map) const
 void TypingSettings::fromMap(const QString &prefix, const QVariantMap &map)
 {
     m_autoIndent = map.value(prefix + QLatin1String(autoIndentKey), m_autoIndent).toBool();
+    //OPENMV-DIFF//
+    m_autoIndent = false;
+    //OPENMV-DIFF//
     m_tabKeyBehavior = (TabKeyBehavior)
         map.value(prefix + QLatin1String(tabKeyBehaviorKey), m_tabKeyBehavior).toInt();
+    //OPENMV-DIFF//
+    m_tabKeyBehavior = TabNeverIndents;
+    //OPENMV-DIFF//
     m_smartBackspaceBehavior = (SmartBackspaceBehavior)
         map.value(prefix + QLatin1String(smartBackspaceBehaviorKey),
                   m_smartBackspaceBehavior).toInt();

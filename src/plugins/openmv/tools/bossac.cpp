@@ -95,6 +95,7 @@ void bossacDownloadFirmware(QString &command, Utils::SynchronousProcess &process
     QStringList args = QStringList() <<
                        QStringLiteral("-e") <<
                        QStringLiteral("-w") <<
+//                     QStringLiteral("-v") <<
                        moreArgs.split(QLatin1Char(' ')) <<
                        QString(QStringLiteral("--port=%1")).arg(device) <<
                        QStringLiteral("-i") <<

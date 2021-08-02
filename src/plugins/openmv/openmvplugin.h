@@ -56,6 +56,7 @@
 #include "histogram/openmvpluginhistogram.h"
 #include "tools/bossac.h"
 #include "tools/dfu-util.h"
+#include "tools/picotool.h"
 #include "tools/edgeimpulse.h"
 #include "tools/thresholdeditor.h"
 #include "tools/keypointseditor.h"
@@ -169,8 +170,10 @@
 #define WIFI_PORT_RETIRE            20 // in seconds
 #define ERROR_FILTER_MAX_SIZE       1000 // in chars
 #define FPS_TIMER_EXPIRATION_TIME   2000 // in milliseconds
+#define RESET_TO_DFU_SEARCH_TIME    2000 // in milliseconds
 
 #define FILE_FLUSH_BYTES 1024 // Extra disk activity to flush changes...
+#define FLASH_SECTOR_ERASE 4096 // Flash sector size in bytes.
 #define FOLDER_SCAN_TIME 10000 // in ms
 
 namespace OpenMV {

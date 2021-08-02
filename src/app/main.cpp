@@ -189,7 +189,11 @@ static const char *setHighDpiEnvironmentVariable()
         qputenv(envVarName, "auto");
     }
 #else
-    if (Utils::HostOsInfo().isWindowsHost()
+    //OPENMV-DIFF//
+    //if (Utils::HostOsInfo().isWindowsHost()
+    //OPENMV-DIFF//
+    if ((Utils::HostOsInfo().isWindowsHost() || Utils::HostOsInfo().isLinuxHost())
+    //OPENMV-DIFF//
             && !qEnvironmentVariableIsSet(ENV_VAR_QT_DEVICE_PIXEL_RATIO) // legacy in 5.6, but still functional
             && !qEnvironmentVariableIsSet("QT_AUTO_SCREEN_SCALE_FACTOR")
             && !qEnvironmentVariableIsSet("QT_SCALE_FACTOR")

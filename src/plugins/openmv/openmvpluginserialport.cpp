@@ -613,18 +613,6 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
     if(m_port)
     {
         int command = __USBDBG_SYS_RESET;
-
-        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
-        {
-            if(port.hasVendorIdentifier() && (port.vendorIdentifier() == ARDUINOCAM_VID)
-            && port.hasProductIdentifier() && ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID)
-            && (port.portName() == m_port->portName()))
-            {
-                command = __USBDBG_SYS_RESET_TO_BL;
-                break;
-            }
-        }
-
         QByteArray buffer;
         serializeByte(buffer, __USBDBG_CMD);
         serializeByte(buffer, command);
@@ -644,8 +632,8 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
 
         foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
         {
-            if(port.hasVendorIdentifier() && ((port.vendorIdentifier() == OPENMVCAM_VID) || (port.vendorIdentifier() == ARDUINOCAM_VID))
-            && port.hasProductIdentifier() && ((port.productIdentifier() == OPENMVCAM_PID) || ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID)))
+            if(port.hasVendorIdentifier() && (port.vendorIdentifier() == OPENMVCAM_VID)
+            && port.hasProductIdentifier() && (port.productIdentifier() == OPENMVCAM_PID))
             {
                 stringList.append(port.portName());
             }
