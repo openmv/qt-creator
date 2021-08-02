@@ -466,6 +466,7 @@ bool MinimapStyle::drawMinimap(const QStyleOptionComplex* option,
                                const QWidget* widget,
                                MinimapStyleObject* o) const
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
    if (TextEditor::TextEditorSettings::displaySettings().m_textWrapping)
    {
       return false;
@@ -626,6 +627,7 @@ bool MinimapStyle::drawMinimap(const QStyleOptionComplex* option,
                    .intersected(option->rect);
    painter->drawRect(rect);
    painter->restore();
+#endif
    return true;
 }
 
