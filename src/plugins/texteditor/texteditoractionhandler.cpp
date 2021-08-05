@@ -359,18 +359,20 @@ void TextEditorActionHandlerPrivate::createActions()
             [this] (TextEditorWidget *w) { w->openLinkUnderCursorInNextSplit(); }, true, tr("Jump to File Under Cursor in Next Split"),
             QKeySequence(Utils::HostOsInfo::isMacHost() ? tr("Meta+E, F2") : tr("Ctrl+E, F2")).toString());
 
-    m_viewPageUpAction = registerAction(VIEW_PAGE_UP,
-            [this] (TextEditorWidget *w) { w->viewPageUp(); }, true, tr("Move the View a Page Up and Keep the Cursor Position"),
-            QKeySequence(tr("Ctrl+PgUp")));
-    m_viewPageDownAction = registerAction(VIEW_PAGE_DOWN,
-            [this] (TextEditorWidget *w) { w->viewPageDown(); }, true, tr("Move the View a Page Down and Keep the Cursor Position"),
-            QKeySequence(tr("Ctrl+PgDown")));
-    m_viewLineUpAction = registerAction(VIEW_LINE_UP,
-            [this] (TextEditorWidget *w) { w->viewLineUp(); }, true, tr("Move the View a Line Up and Keep the Cursor Position"),
-            QKeySequence(tr("Ctrl+Up")));
-    m_viewLineDownAction = registerAction(VIEW_LINE_DOWN,
-            [this] (TextEditorWidget *w) { w->viewLineDown(); }, true, tr("Move the View a Line Down and Keep the Cursor Position"),
-            QKeySequence(tr("Ctrl+Down")));
+    //OPENMV-DIFF//
+    //m_viewPageUpAction = registerAction(VIEW_PAGE_UP,
+    //        [this] (TextEditorWidget *w) { w->viewPageUp(); }, true, tr("Move the View a Page Up and Keep the Cursor Position"),
+    //        QKeySequence(tr("Ctrl+PgUp")));
+    //m_viewPageDownAction = registerAction(VIEW_PAGE_DOWN,
+    //        [this] (TextEditorWidget *w) { w->viewPageDown(); }, true, tr("Move the View a Page Down and Keep the Cursor Position"),
+    //        QKeySequence(tr("Ctrl+PgDown")));
+    //m_viewLineUpAction = registerAction(VIEW_LINE_UP,
+    //        [this] (TextEditorWidget *w) { w->viewLineUp(); }, true, tr("Move the View a Line Up and Keep the Cursor Position"),
+    //        QKeySequence(tr("Ctrl+Up")));
+    //m_viewLineDownAction = registerAction(VIEW_LINE_DOWN,
+    //        [this] (TextEditorWidget *w) { w->viewLineDown(); }, true, tr("Move the View a Line Down and Keep the Cursor Position"),
+    //        QKeySequence(tr("Ctrl+Down")));
+    //OPENMV-DIFF//
 
     // register "Edit" Menu Actions
     Core::ActionContainer *editMenu = Core::ActionManager::actionContainer(M_EDIT);

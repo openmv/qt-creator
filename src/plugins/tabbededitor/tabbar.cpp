@@ -64,11 +64,7 @@ TabBar::TabBar(QWidget *parent) :
     //});
     //OPENMV-DIFF//
 
-    //OPENMV-DIFF//
-    //const QString shortCutSequence = QStringLiteral("Ctrl+Alt+%1");
-    //OPENMV-DIFF//
-    const QString shortCutSequence = QStringLiteral("Alt+%1");
-    //OPENMV-DIFF//
+    const QString shortCutSequence = QStringLiteral("Ctrl+Alt+%1");
     for (int i = 1; i <= 10; ++i) {
         QShortcut *shortcut = new QShortcut(shortCutSequence.arg(i % 10), this);
         connect(shortcut, &QShortcut::activated, [this, shortcut]() {
@@ -77,17 +73,26 @@ TabBar::TabBar(QWidget *parent) :
         m_shortcuts.append(shortcut);
     }
 
-    QAction *prevTabAction = new QAction(tr("Switch to previous tab"), this);
+    QAction *prevTabAction = new QAction(QStringLiteral("Switch to previous tab"), this);
     Core::Command *prevTabCommand
             = Core::ActionManager::registerAction(prevTabAction,
                                                   TabbedEditor::Constants::PREV_TAB_ID,
                                                   Core::Context(Core::Constants::C_GLOBAL));
     //OPENMV-DIFF//
-    //prevTabCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+J")));
+    //prevTabCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Shift+J")));
     //OPENMV-DIFF//
-    prevTabCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+Page Up")));
+    prevTabCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Page Down")));
     //OPENMV-DIFF//
     connect(prevTabAction, SIGNAL(triggered()), this, SLOT(prevTabAction()));
+    //OPENMV-DIFF//
+    QAction *moveTabLeftAction = new QAction(tr("Move tab left"), this);
+    Core::Command *moveTabLeftCommand
+            = Core::ActionManager::registerAction(moveTabLeftAction,
+                                                  TabbedEditor::Constants::MOVE_TAB_LEFT_ID,
+                                                  Core::Context(Core::Constants::C_GLOBAL));
+    moveTabLeftCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Shift+Page Down")));
+    connect(moveTabLeftAction, SIGNAL(triggered()), this, SLOT(moveTabLeftAction()));
+    //OPENMV-DIFF//
 
     QAction *nextTabAction = new QAction(tr("Switch to next tab"), this);
     Core::Command *nextTabCommand
@@ -95,11 +100,20 @@ TabBar::TabBar(QWidget *parent) :
                                                   TabbedEditor::Constants::NEXT_TAB_ID,
                                                   Core::Context(Core::Constants::C_GLOBAL));
     //OPENMV-DIFF//
-    //nextTabCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+K")));
+    //nextTabCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Shift+K")));
     //OPENMV-DIFF//
-    nextTabCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+Page Down")));
+    nextTabCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Page Up")));
     //OPENMV-DIFF//
     connect(nextTabAction, SIGNAL(triggered()), this, SLOT(nextTabAction()));
+    //OPENMV-DIFF//
+    QAction *moveTabRightAction = new QAction(tr("Move tab right"), this);
+    Core::Command *moveTabRightCommand
+            = Core::ActionManager::registerAction(moveTabRightAction,
+                                                  TabbedEditor::Constants::MOVE_TAB_RIGHT_ID,
+                                                  Core::Context(Core::Constants::C_GLOBAL));
+    moveTabRightCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Shift+Page Up")));
+    connect(moveTabRightAction, SIGNAL(triggered()), this, SLOT(moveTabRightAction()));
+    //OPENMV-DIFF//
 }
 
 void TabBar::activateEditor(int index)
@@ -185,6 +199,17 @@ void TabBar::prevTabAction()
         setCurrentIndex(count() - 1);
 }
 
+//OPENMV-DIFF//
+void TabBar::moveTabLeftAction()
+{
+    int index = currentIndex();
+    if (index >= 1)
+        moveTab(index, index - 1);
+    else
+        moveTab(index, count() - 1);
+}
+//OPENMV-DIFF//
+
 void TabBar::nextTabAction()
 {
     int index = currentIndex();
@@ -193,6 +218,17 @@ void TabBar::nextTabAction()
     else
         setCurrentIndex(0);
 }
+
+//OPENMV-DIFF//
+void TabBar::moveTabRightAction()
+{
+    int index = currentIndex();
+    if (index < count() - 1)
+        moveTab(index, index + 1);
+    else
+        moveTab(index, 0);
+}
+//OPENMV-DIFF//
 
 void TabBar::contextMenuEvent(QContextMenuEvent *event)
 {

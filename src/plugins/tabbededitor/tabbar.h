@@ -30,7 +30,13 @@ private slots:
     void closeTab(int index);
 
     void prevTabAction();
+    //OPENMV-DIFF//
+    void moveTabLeftAction();
+    //OPENMV-DIFF//
     void nextTabAction();
+    //OPENMV-DIFF//
+    void moveTabRightAction();
+    //OPENMV-DIFF//
 
 protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
