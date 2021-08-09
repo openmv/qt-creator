@@ -6773,47 +6773,39 @@ Filter: %2
         <translation>次の分割でカーソル下のファイルにジャンプ</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Move the View a Page Up and Keep the Cursor Position</source>
-        <translation>ビューをページ上に移動してカーソル位置を維持する</translation>
+        <translation type="vanished">ビューをページ上に移動してカーソル位置を維持する</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Ctrl+PgUp</source>
-        <translation>Ctrl+PgUp</translation>
+        <translation type="vanished">Ctrl+PgUp</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Move the View a Page Down and Keep the Cursor Position</source>
-        <translation>ビューをページ下に移動し、カーソル位置を維持する</translation>
+        <translation type="vanished">ビューをページ下に移動し、カーソル位置を維持する</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Ctrl+PgDown</source>
-        <translation>Ctrl+PgDown</translation>
+        <translation type="vanished">Ctrl+PgDown</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Move the View a Line Up and Keep the Cursor Position</source>
-        <translation>行の表示を上に移動し、カーソル位置を維持する</translation>
+        <translation type="vanished">行の表示を上に移動し、カーソル位置を維持する</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Ctrl+Up</source>
-        <translation>Ctrl+Up</translation>
+        <translation type="vanished">Ctrl+Up</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Move the View a Line Down and Keep the Cursor Position</source>
-        <translation>ビューをライン・ダウンに移動し、カーソル位置を維持する</translation>
+        <translation type="vanished">ビューをライン・ダウンに移動し、カーソル位置を維持する</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Ctrl+Down</source>
-        <translation>Ctrl+Down</translation>
+        <translation type="vanished">Ctrl+Down</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+24"/>
         <source>Paste from Clipboard History</source>
         <translation>クリップボードの履歴から貼り付け</translation>
     </message>
@@ -7845,32 +7837,32 @@ while(True):
     </message>
     <message>
         <location line="+9"/>
-        <location line="+6539"/>
+        <location line="+6579"/>
         <location line="+47"/>
         <source>Open Terminal</source>
         <translation>ターミナルを開く</translation>
     </message>
     <message>
-        <location line="-6581"/>
+        <location line="-6621"/>
         <source>Machine Vision</source>
         <translation>マシンビジョン</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+6608"/>
+        <location line="+6648"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>しきい値エディタ</translation>
     </message>
     <message>
-        <location line="-6679"/>
-        <location line="+6757"/>
+        <location line="-6719"/>
+        <location line="+6797"/>
         <source>Keypoints Editor</source>
         <translation>キーポイントエディタ</translation>
     </message>
     <message>
-        <location line="-6750"/>
-        <location line="+6916"/>
+        <location line="-6790"/>
+        <location line="+6956"/>
         <location line="+98"/>
         <location line="+24"/>
         <location line="+11"/>
@@ -7879,7 +7871,7 @@ while(True):
         <translation>AprilTagジェネレータ</translation>
     </message>
     <message>
-        <location line="-7064"/>
+        <location line="-7104"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5ファミリー（30タグ）</translation>
     </message>
@@ -8004,19 +7996,21 @@ while(True):
         <location line="+2089"/>
         <location line="+71"/>
         <location line="+35"/>
-        <location line="+42"/>
+        <location line="+46"/>
         <location line="+10"/>
         <location line="+21"/>
         <location line="+19"/>
         <location line="+36"/>
         <location line="+63"/>
+        <location line="+9"/>
         <location line="+25"/>
+        <location line="+9"/>
         <location line="+58"/>
         <location line="+6"/>
         <location line="+51"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location line="+108"/>
+        <location line="+116"/>
         <location line="+9"/>
         <location line="+9"/>
         <location line="+118"/>
@@ -8045,7 +8039,8 @@ while(True):
         <location line="+25"/>
         <location line="+10"/>
         <location line="+9"/>
-        <location line="+31"/>
+        <location line="+9"/>
+        <location line="+32"/>
         <location line="+14"/>
         <location line="+14"/>
         <location line="+51"/>
@@ -8077,11 +8072,11 @@ while(True):
         <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="-4394"/>
-        <location line="+3113"/>
+        <location line="-4434"/>
+        <location line="+3143"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1298"/>
+        <location line="+1308"/>
         <location line="+12"/>
         <location line="+7"/>
         <location line="+76"/>
@@ -8089,7 +8084,7 @@ while(True):
         <translation>切断する</translation>
     </message>
     <message>
-        <location line="-4517"/>
+        <location line="-4557"/>
         <source>Start (run script)</source>
         <translation>開始（スクリプトの実行）</translation>
     </message>
@@ -8133,12 +8128,12 @@ while(True):
     </message>
     <message>
         <location line="+5"/>
-        <location line="+4586"/>
+        <location line="+4626"/>
         <source>Stop</source>
         <translation>停止</translation>
     </message>
     <message>
-        <location line="-4585"/>
+        <location line="-4625"/>
         <source>Stop recording</source>
         <translation>記録を停止</translation>
     </message>
@@ -8166,7 +8161,7 @@ while(True):
     <message>
         <location line="+17"/>
         <location line="+22"/>
-        <location line="+4234"/>
+        <location line="+4274"/>
         <location line="+131"/>
         <location line="+66"/>
         <location line="+103"/>
@@ -8180,7 +8175,7 @@ while(True):
         <translation>ビジー状態...お待ちください...</translation>
     </message>
     <message>
-        <location line="-5190"/>
+        <location line="-5230"/>
         <location line="+15"/>
         <source>Disable</source>
         <translation>不可能</translation>
@@ -8253,69 +8248,69 @@ while(True):
     </message>
     <message>
         <location line="+102"/>
-        <location line="+4047"/>
+        <location line="+4087"/>
         <source>Board:</source>
         <translation>ボード:</translation>
     </message>
     <message>
-        <location line="-4046"/>
+        <location line="-4086"/>
         <source>Camera board type</source>
         <translation>カメラボードタイプ</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+4043"/>
+        <location line="+4083"/>
         <source>Sensor:</source>
         <translation>センサー:</translation>
     </message>
     <message>
-        <location line="-4042"/>
+        <location line="-4082"/>
         <source>Camera sensor module</source>
         <translation>カメラセンサーモジュール</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+4038"/>
+        <location line="+4078"/>
         <source>Firmware Version:</source>
         <translation>ファームウェアのバージョン：</translation>
     </message>
     <message>
-        <location line="-4037"/>
+        <location line="-4077"/>
         <source>Camera firmware version</source>
         <translation>カメラのファームウェアのバージョン</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+4033"/>
+        <location line="+4073"/>
         <source>Serial Port:</source>
         <translation>シリアル・ポート：</translation>
     </message>
     <message>
-        <location line="-4032"/>
+        <location line="-4072"/>
         <source>Camera serial port</source>
         <translation>カメラのシリアルポート</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+3793"/>
+        <location line="+3833"/>
         <location line="+235"/>
         <location line="+810"/>
         <source>Drive:</source>
         <translation>ドライブ：</translation>
     </message>
     <message>
-        <location line="-4837"/>
+        <location line="-4877"/>
         <source>Drive associated with port</source>
         <translation>ドライブはポートに関連付けられています</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+4023"/>
+        <location line="+4063"/>
         <source>FPS:</source>
         <translation>FPS：</translation>
     </message>
     <message>
-        <location line="-4022"/>
+        <location line="-4062"/>
         <source>May be different from camera FPS</source>
         <translation>カメラのFPSと異なる場合があります</translation>
     </message>
@@ -8401,17 +8396,17 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
     </message>
     <message>
         <location line="+98"/>
-        <location line="+4492"/>
+        <location line="+4532"/>
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>シリアルポート - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-4472"/>
+        <location line="-4512"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
-        <location line="+4155"/>
+        <location line="+4195"/>
         <location line="+133"/>
         <location line="+102"/>
         <location line="+117"/>
@@ -8421,7 +8416,7 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
         <translation>接続中...（30秒のタイムアウト）</translation>
     </message>
     <message>
-        <location line="-6176"/>
+        <location line="-6216"/>
         <location line="+1110"/>
         <location line="+94"/>
         <location line="+84"/>
@@ -8429,12 +8424,12 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
         <location line="+84"/>
         <location line="+231"/>
         <location line="+168"/>
-        <location line="+730"/>
-        <location line="+298"/>
+        <location line="+752"/>
+        <location line="+306"/>
         <location line="+137"/>
         <location line="+105"/>
         <location line="+47"/>
-        <location line="+2439"/>
+        <location line="+2449"/>
         <location line="+133"/>
         <location line="+102"/>
         <location line="+117"/>
@@ -8445,7 +8440,7 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="-7134"/>
+        <location line="-7174"/>
         <source>Missing argument for -form_key</source>
         <translation>-form_keyの引数がありません</translation>
     </message>
@@ -8487,8 +8482,8 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
         <location line="+97"/>
         <location line="+175"/>
         <location line="+176"/>
-        <location line="+698"/>
-        <location line="+182"/>
+        <location line="+720"/>
+        <location line="+190"/>
         <location line="+400"/>
         <location line="+31"/>
         <location line="+179"/>
@@ -8497,7 +8492,7 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
         <location line="+9"/>
         <location line="+212"/>
         <location line="+9"/>
-        <location line="+150"/>
+        <location line="+160"/>
         <location line="+9"/>
         <location line="+81"/>
         <location line="+9"/>
@@ -8518,7 +8513,7 @@ LEDが青色に点滅しているのにOpenMV IDEがOpenMV Camに接続できな
         <translation>エラー：%L1！</translation>
     </message>
     <message>
-        <location line="-6286"/>
+        <location line="-6326"/>
         <location line="+30"/>
         <source>Open Dataset</source>
         <translation>データセットを開く</translation>
@@ -8682,12 +8677,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+4549"/>
+        <location line="+4589"/>
         <source>UDP Server Connection - %1</source>
         <translation>UDPサーバー接続 - %1</translation>
     </message>
     <message>
-        <location line="-4487"/>
+        <location line="-4527"/>
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>-open_udp_server_terminalの無効なポートアーギュメント（%1）</translation>
     </message>
@@ -8718,12 +8713,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+4595"/>
+        <location line="+4635"/>
         <source>TCP Server Connection - %1</source>
         <translation>TCPサーバー接続 - %1</translation>
     </message>
     <message>
-        <location line="-4533"/>
+        <location line="-4573"/>
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>-open_tcp_server_terminalの無効なポートアーギュメント（%1）</translation>
     </message>
@@ -8988,35 +8983,35 @@ ID：%2
         <translation>OpenMV Camを接続しましたか、それはブリックされていますか？</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+45"/>
         <source>Please select the board type</source>
         <translation>ボードの種類を選択してください</translation>
     </message>
     <message>
         <location line="+11"/>
-        <location line="+2936"/>
+        <location line="+2972"/>
         <location line="+28"/>
         <source>Erase the internal file system?</source>
         <translation>内部ファイルシステムを消去しますか？</translation>
     </message>
     <message>
-        <location line="-2943"/>
+        <location line="-2979"/>
         <source>No released firmware available for the attached board!</source>
         <translation>付属のボードにリリースされたファームウェアはありません！</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+3109"/>
+        <location line="+3145"/>
         <source>Please select a serial port</source>
         <translation>シリアルポートを選択してください</translation>
     </message>
     <message>
-        <location line="-3073"/>
+        <location line="-3109"/>
         <source>Please select a DFU Device</source>
         <translation>DFUデバイスを選択してください</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+431"/>
         <source>Connecting... (Hit cancel if this takes more than 5 seconds).</source>
         <translation>接続しています…（5秒以上かかるとヒットキャンセル）。</translation>
     </message>
@@ -9033,7 +9028,7 @@ sudo adduser %L1 dialout
  ...端末で再起動してから、コンピュータを再起動してください。</translation>
     </message>
     <message>
-        <location line="-201"/>
+        <location line="-209"/>
         <source>Timeout error while getting firmware version!</source>
         <translation>ファームウェアバージョンを取得中にタイムアウトエラーが発生しました！</translation>
     </message>
@@ -9048,13 +9043,13 @@ sudo adduser %L1 dialout
         <translation>もう一度接続してみますか？</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+116"/>
         <source>Unsupported board architecture!</source>
         <translation>サポートされていないボードアーキテクチャ！</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+1534"/>
+        <location line="+1544"/>
         <source>Timeout error while getting board architecture!</source>
         <translation>ボードアーキテクチャを取得中にタイムアウトエラーが発生しました！</translation>
     </message>
@@ -9077,7 +9072,7 @@ Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indica
 OpenMV CamのRGB​​ LEDが青く点滅し始めたらOKをクリックしてください - セルフテストが完了したことを示します。</translation>
     </message>
     <message>
-        <location line="-1467"/>
+        <location line="-1477"/>
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>OpenMV Camを外してから再接続してください...</translation>
     </message>
@@ -9105,13 +9100,13 @@ Continue?</source>
         <location line="+45"/>
         <location line="+57"/>
         <location line="+309"/>
-        <location line="+450"/>
+        <location line="+460"/>
         <location line="+23"/>
         <source>Timeout Error!</source>
         <translation>タイムアウトエラー！</translation>
     </message>
     <message>
-        <location line="-821"/>
+        <location line="-831"/>
         <location line="+47"/>
         <source>Programming...</source>
         <translation>プログラミング…</translation>
@@ -9130,7 +9125,7 @@ OpenMV Camが列挙され、ビルトインのセルフテストの実行が完�
         <translation>ファームウェアファイルが空です！</translation>
     </message>
     <message>
-        <location line="+815"/>
+        <location line="+825"/>
         <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
@@ -9156,8 +9151,8 @@ OpenMV CamのDFUブートローダが列挙されたら、Okボタンをクリ�
 （最大5分かかる場合があります）</translation>
     </message>
     <message>
-        <location line="-471"/>
-        <location line="+541"/>
+        <location line="-481"/>
+        <location line="+551"/>
         <source>DFU firmware update complete!
 
 </source>
@@ -9175,17 +9170,17 @@ OpenMV CamのDFUブートローダが列挙されたら、Okボタンをクリ�
 </translation>
     </message>
     <message>
-        <location line="-541"/>
-        <location line="+209"/>
+        <location line="-551"/>
+        <location line="+219"/>
         <location line="+221"/>
         <location line="+112"/>
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>OpenMV Camが列挙され、ビルトインのセルフテストの実行が終了したら、[OK]ボタンをクリックします（青色の点滅 - これはしばらく時間がかかります）。</translation>
     </message>
     <message>
-        <location line="-570"/>
+        <location line="-580"/>
         <location line="+40"/>
-        <location line="+540"/>
+        <location line="+550"/>
         <source>DFU firmware update failed!</source>
         <translation>DFUファームウェアの更新に失敗しました！</translation>
     </message>
@@ -9231,7 +9226,7 @@ HomeBrew:
         <translation>不明</translation>
     </message>
     <message>
-        <location line="-2010"/>
+        <location line="-2050"/>
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>DFUモードのボードが検出されました。何をしたいですか？</translation>
     </message>
@@ -9251,10 +9246,16 @@ HomeBrew:
         <translation>内部ファイルシステムを消去するだけです</translation>
     </message>
     <message>
-        <location line="+288"/>
-        <location line="+25"/>
+        <location line="+292"/>
+        <location line="+34"/>
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>ブートローダーを最新バージョンに更新し、SoftDeviceをインストールしてOpenMVファームウェアをフラッシュしてください。 詳細については、&lt;a href=&quot;https://docs.arduino.cc&quot;&gt; https://docs.arduino.cc &lt;/a&gt;をご覧ください。</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <location line="+34"/>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>RECをGNDに短絡し、ボードをリセットしてください。 詳細については、&lt;a href=&quot;https://docs.arduino.cc&quot;&gt; https://docs.arduino.cc &lt;/a&gt;をご覧ください。</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -9266,10 +9267,10 @@ HomeBrew:
 （これに5秒以上かかる場合は、キャンセルを押してください）。</translation>
     </message>
     <message>
-        <location line="+612"/>
+        <location line="+620"/>
         <location line="+300"/>
         <location line="+78"/>
-        <location line="+209"/>
+        <location line="+219"/>
         <location line="+183"/>
         <location line="+38"/>
         <source>
@@ -9284,7 +9285,7 @@ OpenMV Camでmain.pyを上書きし、ディスクを消去しなかった場合
 この場合、OpenMV Camの内部フラッシュドライブマウントが表示されたら[OK]をクリックします（ウィンドウが開く場合と開かない場合があります）。</translation>
     </message>
     <message>
-        <location line="-636"/>
+        <location line="-646"/>
         <source>No DFU settings for the selected board type!</source>
         <translation>選択したボードタイプのDFU設定はありません！</translation>
     </message>
@@ -9296,53 +9297,62 @@ OpenMV Camでmain.pyを上書きし、ディスクを消去しなかった場合
     <message>
         <location line="+213"/>
         <location line="+34"/>
-        <location line="+114"/>
+        <location line="+124"/>
         <source>BOSSAC device %1 missing!</source>
-        <translation type="unfinished"></translation>
+        <translation>BOSSACデバイス%1がありません！</translation>
     </message>
     <message>
-        <location line="-75"/>
+        <location line="-85"/>
         <source>No BOSSAC settings for the selected board type!</source>
-        <translation type="unfinished"></translation>
+        <translation>選択したボードタイプのBOSSAC設定はありません！</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>No BOSSAC settings for the selected device!</source>
-        <translation type="unfinished"></translation>
+        <translation>選択したデバイスのBOSSAC設定はありません！</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+29"/>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
+        <translation>Nano 33 BLEには、オンボードのデータフラッシュディスクがありません。</translation>
+    </message>
+    <message>
+        <location line="+45"/>
         <source>BOSSAC firmware update complete!
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>BOSSACファームウェアのアップデートが完了しました！
+
+</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>BOSSAC firmware update failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>BOSSACファームウェアの更新に失敗しました！</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>No PicoTool settings for the selected board type!</source>
-        <translation type="unfinished"></translation>
+        <translation>選択したボードタイプのPicoTool設定はありません！</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>No PicoTool settings for the selected device!</source>
-        <translation type="unfinished"></translation>
+        <translation>選択したデバイスのPicoTool設定はありません！</translation>
     </message>
     <message>
         <location line="+126"/>
         <source>PicoTool firmware update complete!
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>PicoToolファームウェアのアップデートが完了しました！
+
+</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>PicoTool firmware update failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>PicoToolファームウェアの更新に失敗しました！</translation>
     </message>
     <message>
         <location line="+198"/>
@@ -9398,10 +9408,10 @@ OpenMV Camでmain.pyを上書きし、ディスクを消去しなかった場合
         <translation> - [最新]</translation>
     </message>
     <message>
-        <location line="-1266"/>
+        <location line="-1276"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1298"/>
+        <location line="+1308"/>
         <location line="+12"/>
         <location line="+7"/>
         <source>Failed to eject &quot;%L1&quot;!</source>
@@ -9440,14 +9450,14 @@ In particular, checkout the Color-Tracking examples.</source>
 特に、カラートラッキングの例をご覧ください。</translation>
     </message>
     <message>
-        <location line="-3816"/>
-        <location line="+3504"/>
+        <location line="-3856"/>
+        <location line="+3544"/>
         <location line="+321"/>
         <source>Don&apos;t show this message again.</source>
         <translation>このメッセージをもう一度表示しないでください。</translation>
     </message>
     <message>
-        <location line="-5264"/>
+        <location line="-5304"/>
         <source>Run Bootloader (Load Firmware)</source>
         <translation>ブートローダーの実行（ファームウェアのロード）</translation>
     </message>
@@ -9473,8 +9483,8 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>OpenMV Camに開いているスクリプトを保存します（main.pyとして）</translation>
     </message>
     <message>
-        <location line="+3037"/>
-        <location line="+3011"/>
+        <location line="+3059"/>
+        <location line="+3029"/>
         <source>Try doing:
 
 </source>
@@ -9483,13 +9493,13 @@ In particular, checkout the Color-Tracking examples.</source>
 </translation>
     </message>
     <message>
-        <location line="-3011"/>
-        <location line="+3011"/>
+        <location line="-3029"/>
+        <location line="+3029"/>
         <source>...in a terminal and then restart your computer.</source>
         <translation>...端末で、コンピューターを再起動します。</translation>
     </message>
     <message>
-        <location line="-2759"/>
+        <location line="-2769"/>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
@@ -9500,7 +9510,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+311"/>
         <location line="+300"/>
-        <location line="+470"/>
+        <location line="+480"/>
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -9509,7 +9519,7 @@ Hit cancel to skip to DFU reprogramming.</source>
 </translation>
     </message>
     <message>
-        <location line="-770"/>
+        <location line="-780"/>
         <source>Firmware Upgrade complete!
 
 </source>
@@ -9520,7 +9530,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     <message>
         <location line="+1"/>
         <location line="+300"/>
-        <location line="+470"/>
+        <location line="+480"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
@@ -9529,9 +9539,9 @@ Hit cancel to skip to DFU reprogramming.</source>
 </translation>
     </message>
     <message>
-        <location line="-769"/>
+        <location line="-779"/>
         <location line="+300"/>
-        <location line="+470"/>
+        <location line="+480"/>
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>OpenMV CamのRGB​​ LEDが青色に点滅し始めたら、[OK]をクリックします。これは、セルフテストが完了したことを示します。</translation>
     </message>
@@ -10006,9 +10016,9 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
 OpenMV IDEでOpenMV Camのモジュールを更新しますか？</translation>
     </message>
     <message>
-        <location line="-7223"/>
+        <location line="-7263"/>
         <location line="+213"/>
-        <location line="+7027"/>
+        <location line="+7067"/>
         <location line="+34"/>
         <location line="+50"/>
         <location line="+25"/>
@@ -10016,8 +10026,8 @@ OpenMV IDEでOpenMV Camのモジュールを更新しますか？</translation>
         <translation>&quot;%L1&quot;を削除できませんでした！</translation>
     </message>
     <message>
-        <location line="-7343"/>
-        <location line="+7243"/>
+        <location line="-7383"/>
+        <location line="+7283"/>
         <location line="+34"/>
         <location line="+51"/>
         <location line="+25"/>
@@ -10045,7 +10055,7 @@ OpenMV IDEをOpenMV Camにコピーしますか？</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location line="-7686"/>
+        <location line="-7726"/>
         <source>New File</source>
         <translation>新しいファイル</translation>
     </message>
@@ -10082,7 +10092,7 @@ OpenMV IDEをOpenMV Camにコピーしますか？</translation>
     <message>
         <location line="+1"/>
         <location line="+239"/>
-        <location line="+5088"/>
+        <location line="+5128"/>
         <location line="+47"/>
         <location line="+69"/>
         <location line="+1327"/>
@@ -10523,7 +10533,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation type="vanished">ビデオファイル(*.mp4 *.*)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-7211"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-7251"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-127"/>
         <location line="+134"/>
@@ -10539,12 +10549,12 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+56"/>
         <source>BOSSAC</source>
-        <translation type="unfinished"></translation>
+        <translation>BOSSAC</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67"/>
         <source>PicoTool</source>
-        <translation type="unfinished"></translation>
+        <translation>PicoTool</translation>
     </message>
 </context>
 <context>

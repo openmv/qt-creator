@@ -3622,6 +3622,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             {
                                 mappings.insert(QStringLiteral("NANO33_M4_OLD"), QStringLiteral("NANO33"));
                                 vidpidMappings.insert(QStringLiteral("NANO33_M4_OLD"), QStringLiteral("2341:805a"));
+
+                                mappings.insert(QStringLiteral("PICO_M0_OLD"), QStringLiteral("PICO"));
+                                vidpidMappings.insert(QStringLiteral("PICO_M0_OLD"), QStringLiteral("2341:805e"));
+
                                 QMutableMapIterator<QString, QString> i(mappings);
 
                                 while(i.hasNext())
@@ -3809,6 +3813,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                 CONNECT_END();
             }
+
+            if((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID))
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    tr("Connect"),
+                    tr("Please short REC to GND and reset your board. More information can be found on <a href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"));
+
+                CONNECT_END();
+            }
         }
 
         if((!originalDfuVidPid.isEmpty()) && selectedPort.isEmpty() && dfuDevices.isEmpty())
@@ -3831,6 +3844,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 QMessageBox::critical(Core::ICore::dialogParent(),
                     tr("Connect"),
                     tr("Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on <a href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"));
+
+                CONNECT_END();
+            }
+
+            if((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID))
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    tr("Connect"),
+                    tr("Please short REC to GND and reset your board. More information can be found on <a href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"));
 
                 CONNECT_END();
             }
@@ -4034,7 +4056,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 }
                             }
 
-                            QString temp = arch2.remove(QRegularExpression(QStringLiteral("\\[(.+?):(.+?)\\]"))).simplified().replace(QStringLiteral("_"), QStringLiteral(" "));
+                            QString temp = QString(arch2).remove(QRegularExpression(QStringLiteral("\\[(.+?):(.+?)\\]"))).simplified().replace(QStringLiteral("_"), QStringLiteral(" "));
 
                             if(mappings.contains(temp))
                             {
@@ -4056,6 +4078,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 isNRF = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == NRF_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == NRF_LDR_PID));
                                 isRPIPico = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == RPI_LDR_PID))) ||
                                             ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
+
+                                QRegularExpressionMatch match = QRegularExpression(QStringLiteral("\\[(.+?):(.+?)\\]")).match(arch2);
+
+                                if(match.hasMatch())
+                                {
+                                    m_boardType = match.captured(1);
+                                    m_boardId = match.captured(2);
+                                }
                             }
                             else
                             {
@@ -4564,7 +4594,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 #endif
                     }
 
-                    m_iodevice->sysReset(true);
+                    m_iodevice->sysReset((!isNRF) || (!justEraseFlashFs));
                     m_iodevice->close();
 
                     loop.exec();
@@ -5003,6 +5033,16 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             tr("Error: %L1!").arg(bossacSettings.errorString()));
 
                         CONNECT_END();
+                    }
+
+                    if(forceFlashFSErase && justEraseFlashFs)
+                    {
+                        QMessageBox::information(Core::ICore::dialogParent(),
+                            tr("Connect"),
+                            QString(QStringLiteral("%1"))
+                            .arg(tr("Your Nano 33 BLE doesn't have an onboard data flash disk.")));
+
+                        RECONNECT_END();
                     }
 
                     QString dfuDeviceVidPid = selectedDfuDevice.isEmpty() ? boardTypeToDfuDeviceVidPid : selectedDfuDeviceVidPid;

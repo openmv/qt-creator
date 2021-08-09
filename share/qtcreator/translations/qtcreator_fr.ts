@@ -6778,47 +6778,39 @@ Filtre : %2
         <translation>Aller au fichier sous le curseur dans la séparation suivante</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Move the View a Page Up and Keep the Cursor Position</source>
-        <translation>Déplacer l&apos;affichage une page au-dessus et conserver la position du curseur</translation>
+        <translation type="vanished">Déplacer l&apos;affichage une page au-dessus et conserver la position du curseur</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Ctrl+PgUp</source>
-        <translation>Ctrl+PgUp</translation>
+        <translation type="vanished">Ctrl+PgUp</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Move the View a Page Down and Keep the Cursor Position</source>
-        <translation>Déplacer l&apos;affichage une page en dessous et conserver la position du curseur</translation>
+        <translation type="vanished">Déplacer l&apos;affichage une page en dessous et conserver la position du curseur</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Ctrl+PgDown</source>
-        <translation>Ctrl+PgDown</translation>
+        <translation type="vanished">Ctrl+PgDown</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Move the View a Line Up and Keep the Cursor Position</source>
-        <translation>Déplacer l&apos;affichage une ligne au-dessus et conserver la position du curseur</translation>
+        <translation type="vanished">Déplacer l&apos;affichage une ligne au-dessus et conserver la position du curseur</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Ctrl+Up</source>
-        <translation>Ctrl+Up</translation>
+        <translation type="vanished">Ctrl+Up</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Move the View a Line Down and Keep the Cursor Position</source>
-        <translation>Déplacer l&apos;affichage une ligne en dessous et conserver la position du curseur</translation>
+        <translation type="vanished">Déplacer l&apos;affichage une ligne en dessous et conserver la position du curseur</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Ctrl+Down</source>
-        <translation>Ctrl+Bas</translation>
+        <translation type="vanished">Ctrl+Bas</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+24"/>
         <source>Paste from Clipboard History</source>
         <translation>Coller depuis l&apos;historique du presse-papiers</translation>
     </message>
@@ -7850,32 +7842,32 @@ while(True):
     </message>
     <message>
         <location line="+9"/>
-        <location line="+6539"/>
+        <location line="+6579"/>
         <location line="+47"/>
         <source>Open Terminal</source>
         <translation>Ouvrir un terminal</translation>
     </message>
     <message>
-        <location line="-6581"/>
+        <location line="-6621"/>
         <source>Machine Vision</source>
         <translation>Vision de la machine</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+6608"/>
+        <location line="+6648"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>Éditeur de seuil</translation>
     </message>
     <message>
-        <location line="-6679"/>
-        <location line="+6757"/>
+        <location line="-6719"/>
+        <location line="+6797"/>
         <source>Keypoints Editor</source>
         <translation>Éditeur de points-clés</translation>
     </message>
     <message>
-        <location line="-6750"/>
-        <location line="+6916"/>
+        <location line="-6790"/>
+        <location line="+6956"/>
         <location line="+98"/>
         <location line="+24"/>
         <location line="+11"/>
@@ -7884,7 +7876,7 @@ while(True):
         <translation>Générateur AprilTag</translation>
     </message>
     <message>
-        <location line="-7064"/>
+        <location line="-7104"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Famille TAG16H5 (30 balises)</translation>
     </message>
@@ -8009,19 +8001,21 @@ while(True):
         <location line="+2089"/>
         <location line="+71"/>
         <location line="+35"/>
-        <location line="+42"/>
+        <location line="+46"/>
         <location line="+10"/>
         <location line="+21"/>
         <location line="+19"/>
         <location line="+36"/>
         <location line="+63"/>
+        <location line="+9"/>
         <location line="+25"/>
+        <location line="+9"/>
         <location line="+58"/>
         <location line="+6"/>
         <location line="+51"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location line="+108"/>
+        <location line="+116"/>
         <location line="+9"/>
         <location line="+9"/>
         <location line="+118"/>
@@ -8050,7 +8044,8 @@ while(True):
         <location line="+25"/>
         <location line="+10"/>
         <location line="+9"/>
-        <location line="+31"/>
+        <location line="+9"/>
+        <location line="+32"/>
         <location line="+14"/>
         <location line="+14"/>
         <location line="+51"/>
@@ -8082,11 +8077,11 @@ while(True):
         <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="-4394"/>
-        <location line="+3113"/>
+        <location line="-4434"/>
+        <location line="+3143"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1298"/>
+        <location line="+1308"/>
         <location line="+12"/>
         <location line="+7"/>
         <location line="+76"/>
@@ -8094,7 +8089,7 @@ while(True):
         <translation>Déconnecter</translation>
     </message>
     <message>
-        <location line="-4517"/>
+        <location line="-4557"/>
         <source>Start (run script)</source>
         <translation>Démarrer (exécuter le script)</translation>
     </message>
@@ -8138,12 +8133,12 @@ while(True):
     </message>
     <message>
         <location line="+5"/>
-        <location line="+4586"/>
+        <location line="+4626"/>
         <source>Stop</source>
         <translation>Arrêter</translation>
     </message>
     <message>
-        <location line="-4585"/>
+        <location line="-4625"/>
         <source>Stop recording</source>
         <translation>Arrêter l&apos;enregistrement</translation>
     </message>
@@ -8171,7 +8166,7 @@ while(True):
     <message>
         <location line="+17"/>
         <location line="+22"/>
-        <location line="+4234"/>
+        <location line="+4274"/>
         <location line="+131"/>
         <location line="+66"/>
         <location line="+103"/>
@@ -8185,7 +8180,7 @@ while(True):
         <translation>Occupé... Veuillez patienter...</translation>
     </message>
     <message>
-        <location line="-5190"/>
+        <location line="-5230"/>
         <location line="+15"/>
         <source>Disable</source>
         <translation>Désactiver</translation>
@@ -8258,69 +8253,69 @@ while(True):
     </message>
     <message>
         <location line="+102"/>
-        <location line="+4047"/>
+        <location line="+4087"/>
         <source>Board:</source>
         <translation>Planche:</translation>
     </message>
     <message>
-        <location line="-4046"/>
+        <location line="-4086"/>
         <source>Camera board type</source>
         <translation>Type de carte de caméra</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+4043"/>
+        <location line="+4083"/>
         <source>Sensor:</source>
         <translation>Capteur:</translation>
     </message>
     <message>
-        <location line="-4042"/>
+        <location line="-4082"/>
         <source>Camera sensor module</source>
         <translation>Module capteur de caméra</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+4038"/>
+        <location line="+4078"/>
         <source>Firmware Version:</source>
         <translation>Version du micrologiciel:</translation>
     </message>
     <message>
-        <location line="-4037"/>
+        <location line="-4077"/>
         <source>Camera firmware version</source>
         <translation>Version du micrologiciel de la caméra</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+4033"/>
+        <location line="+4073"/>
         <source>Serial Port:</source>
         <translation>Port série :</translation>
     </message>
     <message>
-        <location line="-4032"/>
+        <location line="-4072"/>
         <source>Camera serial port</source>
         <translation>Port série de la caméra</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+3793"/>
+        <location line="+3833"/>
         <location line="+235"/>
         <location line="+810"/>
         <source>Drive:</source>
         <translation>Lecteur :</translation>
     </message>
     <message>
-        <location line="-4837"/>
+        <location line="-4877"/>
         <source>Drive associated with port</source>
         <translation>Lecteur associé au port</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+4023"/>
+        <location line="+4063"/>
         <source>FPS:</source>
         <translation>FPS :</translation>
     </message>
     <message>
-        <location line="-4022"/>
+        <location line="-4062"/>
         <source>May be different from camera FPS</source>
         <translation>Peut être différent du FPS de l&apos;appareil photo</translation>
     </message>
@@ -8412,17 +8407,17 @@ Le firmware de votre OpenMV Cam panique à cause d&apos;une panne matérielle. V
     </message>
     <message>
         <location line="+98"/>
-        <location line="+4492"/>
+        <location line="+4532"/>
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Port série - %L1 -%L2 BPS</translation>
     </message>
     <message>
-        <location line="-4472"/>
+        <location line="-4512"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
-        <location line="+4155"/>
+        <location line="+4195"/>
         <location line="+133"/>
         <location line="+102"/>
         <location line="+117"/>
@@ -8432,7 +8427,7 @@ Le firmware de votre OpenMV Cam panique à cause d&apos;une panne matérielle. V
         <translation>Connexion... (délai d&apos;expiration de 30 secondes)</translation>
     </message>
     <message>
-        <location line="-6176"/>
+        <location line="-6216"/>
         <location line="+1110"/>
         <location line="+94"/>
         <location line="+84"/>
@@ -8440,12 +8435,12 @@ Le firmware de votre OpenMV Cam panique à cause d&apos;une panne matérielle. V
         <location line="+84"/>
         <location line="+231"/>
         <location line="+168"/>
-        <location line="+730"/>
-        <location line="+298"/>
+        <location line="+752"/>
+        <location line="+306"/>
         <location line="+137"/>
         <location line="+105"/>
         <location line="+47"/>
-        <location line="+2439"/>
+        <location line="+2449"/>
         <location line="+133"/>
         <location line="+102"/>
         <location line="+117"/>
@@ -8456,7 +8451,7 @@ Le firmware de votre OpenMV Cam panique à cause d&apos;une panne matérielle. V
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-7134"/>
+        <location line="-7174"/>
         <source>Missing argument for -form_key</source>
         <translation>Argument manquant pour -form_key</translation>
     </message>
@@ -8498,8 +8493,8 @@ Le firmware de votre OpenMV Cam panique à cause d&apos;une panne matérielle. V
         <location line="+97"/>
         <location line="+175"/>
         <location line="+176"/>
-        <location line="+698"/>
-        <location line="+182"/>
+        <location line="+720"/>
+        <location line="+190"/>
         <location line="+400"/>
         <location line="+31"/>
         <location line="+179"/>
@@ -8508,7 +8503,7 @@ Le firmware de votre OpenMV Cam panique à cause d&apos;une panne matérielle. V
         <location line="+9"/>
         <location line="+212"/>
         <location line="+9"/>
-        <location line="+150"/>
+        <location line="+160"/>
         <location line="+9"/>
         <location line="+81"/>
         <location line="+9"/>
@@ -8529,7 +8524,7 @@ Le firmware de votre OpenMV Cam panique à cause d&apos;une panne matérielle. V
         <translation>Erreur : %L1 !</translation>
     </message>
     <message>
-        <location line="-6286"/>
+        <location line="-6326"/>
         <location line="+30"/>
         <source>Open Dataset</source>
         <translation>Ouvrir un ensemble de données</translation>
@@ -8693,12 +8688,12 @@ sudo adduser %L1 en accès distant
     </message>
     <message>
         <location line="+17"/>
-        <location line="+4549"/>
+        <location line="+4589"/>
         <source>UDP Server Connection - %1</source>
         <translation>Connexion au serveur UDP - %1</translation>
     </message>
     <message>
-        <location line="-4487"/>
+        <location line="-4527"/>
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Argument de port non valide (%1) pour -open_udp_server_terminal</translation>
     </message>
@@ -8729,12 +8724,12 @@ sudo adduser %L1 en accès distant
     </message>
     <message>
         <location line="+17"/>
-        <location line="+4595"/>
+        <location line="+4635"/>
         <source>TCP Server Connection - %1</source>
         <translation>Connexion au serveur TCP - %1</translation>
     </message>
     <message>
-        <location line="-4533"/>
+        <location line="-4573"/>
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Argument de port non valide (%1) pour -open_tcp_server_terminal</translation>
     </message>
@@ -9000,35 +8995,35 @@ Veuillez exécuter Exemples-&gt;OpenMV-&gt;Basics-&gt;helloworld.py pour tester 
         <translation>Avez-vous une OpenMV Cam connectée et est-ce qu&apos;elle est en bloc ?</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+45"/>
         <source>Please select the board type</source>
         <translation>Veuillez sélectionner le type de carte</translation>
     </message>
     <message>
         <location line="+11"/>
-        <location line="+2936"/>
+        <location line="+2972"/>
         <location line="+28"/>
         <source>Erase the internal file system?</source>
         <translation>Effacer le système de fichiers interne ?</translation>
     </message>
     <message>
-        <location line="-2943"/>
+        <location line="-2979"/>
         <source>No released firmware available for the attached board!</source>
         <translation>Aucun firmware disponible pour la carte ci-jointe!</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+3109"/>
+        <location line="+3145"/>
         <source>Please select a serial port</source>
         <translation>Veuillez sélectionner un port série</translation>
     </message>
     <message>
-        <location line="-3073"/>
+        <location line="-3109"/>
         <source>Please select a DFU Device</source>
         <translation>Veuillez sélectionner un appareil DFU</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+431"/>
         <source>Connecting... (Hit cancel if this takes more than 5 seconds).</source>
         <translation>Connexion... (Appuyez sur annuler si cela prend plus de 5 secondes).</translation>
     </message>
@@ -9045,7 +9040,7 @@ sudo adduse r%L1 en accès distant
 ... dans un terminal, puis redémarrez votre ordinateur.</translation>
     </message>
     <message>
-        <location line="-201"/>
+        <location line="-209"/>
         <source>Timeout error while getting firmware version!</source>
         <translation>Erreur de délai d&apos;expiration lors de l&apos;obtention de la version du micrologiciel !</translation>
     </message>
@@ -9060,13 +9055,13 @@ sudo adduse r%L1 en accès distant
         <translation>Essayer de se connecter à nouveau ?</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+116"/>
         <source>Unsupported board architecture!</source>
         <translation>Architecture de carte non prise en charge !</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+1534"/>
+        <location line="+1544"/>
         <source>Timeout error while getting board architecture!</source>
         <translation>Erreur de délai d&apos;expiration lors de l&apos;obtention de l&apos;architecture de la carte !</translation>
     </message>
@@ -9089,7 +9084,7 @@ Votre OpenMV Cam exécute son auto-test intégré ... cela peut prendre un certa
 Cliquez sur OK lorsque le voyant RVB de votre OpenMV Cam commence à clignoter en bleu - ce qui indique que l&apos;autotest est terminé.</translation>
     </message>
     <message>
-        <location line="-1467"/>
+        <location line="-1477"/>
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Déconnectez votre OpenMV Cam, puis reconnectez-la...</translation>
     </message>
@@ -9117,13 +9112,13 @@ Continuer ?</translation>
         <location line="+45"/>
         <location line="+57"/>
         <location line="+309"/>
-        <location line="+450"/>
+        <location line="+460"/>
         <location line="+23"/>
         <source>Timeout Error!</source>
         <translation>Erreur de délai d&apos;expiration !</translation>
     </message>
     <message>
-        <location line="-821"/>
+        <location line="-831"/>
         <location line="+47"/>
         <source>Programming...</source>
         <translation>Programmation...</translation>
@@ -9142,7 +9137,7 @@ Cliquez sur le bouton Ok après que votre Cam OpenMV a énuméré et terminé l&
         <translation>Le fichier du micrologiciel est vide !</translation>
     </message>
     <message>
-        <location line="+815"/>
+        <location line="+825"/>
         <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
@@ -9168,8 +9163,8 @@ Cliquez sur le bouton Ok après que le chargeur de démarrage DFU de votre OpenM
 (cela peut prendre jusqu&apos;à 5 minutes)</translation>
     </message>
     <message>
-        <location line="-471"/>
-        <location line="+541"/>
+        <location line="-481"/>
+        <location line="+551"/>
         <source>DFU firmware update complete!
 
 </source>
@@ -9187,17 +9182,17 @@ Cliquez sur le bouton Ok après que le chargeur de démarrage DFU de votre OpenM
 </translation>
     </message>
     <message>
-        <location line="-541"/>
-        <location line="+209"/>
+        <location line="-551"/>
+        <location line="+219"/>
         <location line="+221"/>
         <location line="+112"/>
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>Cliquez sur le bouton Ok après que votre Cam OpenMV a énuméré et terminé l&apos;auto-test intégré (voyant bleu clignotant - cela prend du temps).</translation>
     </message>
     <message>
-        <location line="-570"/>
+        <location line="-580"/>
         <location line="+40"/>
-        <location line="+540"/>
+        <location line="+550"/>
         <source>DFU firmware update failed!</source>
         <translation>La mise à jour du micrologiciel DFU a échoué !</translation>
     </message>
@@ -9243,7 +9238,7 @@ HomeBrew :
         <translation>Inconnu</translation>
     </message>
     <message>
-        <location line="-2010"/>
+        <location line="-2050"/>
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Une carte en mode DFU a été détectée. Qu&apos;est-ce que tu aimerais faire?</translation>
     </message>
@@ -9263,10 +9258,16 @@ HomeBrew :
         <translation>Effacez simplement le système de fichiers interne</translation>
     </message>
     <message>
-        <location line="+288"/>
-        <location line="+25"/>
+        <location line="+292"/>
+        <location line="+34"/>
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez mettre à jour le chargeur de démarrage vers la dernière version et installer le SoftDevice pour flasher le micrologiciel OpenMV. Plus d&apos;informations peuvent être trouvées sur &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <location line="+34"/>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Veuillez raccourcir REC à GND et réinitialiser votre carte. Plus d&apos;informations peuvent être trouvées sur &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -9278,10 +9279,10 @@ HomeBrew :
 (Appuyez sur Annuler si cela prend plus de 5 secondes).</translation>
     </message>
     <message>
-        <location line="+612"/>
+        <location line="+620"/>
         <location line="+300"/>
         <location line="+78"/>
-        <location line="+209"/>
+        <location line="+219"/>
         <location line="+183"/>
         <location line="+38"/>
         <source>
@@ -9296,7 +9297,7 @@ Si vous avez écrasé main.py sur votre OpenMV Cam et que vous n&apos;avez pas e
 Dans ce cas, cliquez sur OK lorsque vous voyez le support de lecteur flash interne de votre OpenMV Cam (une fenêtre peut ou non s&apos;ouvrir).</translation>
     </message>
     <message>
-        <location line="-636"/>
+        <location line="-646"/>
         <source>No DFU settings for the selected board type!</source>
         <translation>Aucun paramètre DFU pour le type de carte sélectionné!</translation>
     </message>
@@ -9308,53 +9309,62 @@ Dans ce cas, cliquez sur OK lorsque vous voyez le support de lecteur flash inter
     <message>
         <location line="+213"/>
         <location line="+34"/>
-        <location line="+114"/>
+        <location line="+124"/>
         <source>BOSSAC device %1 missing!</source>
-        <translation type="unfinished"></translation>
+        <translation>Périphérique BOSSAC %1 manquant!</translation>
     </message>
     <message>
-        <location line="-75"/>
+        <location line="-85"/>
         <source>No BOSSAC settings for the selected board type!</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun paramètre BOSSAC pour le type de carte sélectionné!</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>No BOSSAC settings for the selected device!</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun paramètre BOSSAC pour l&apos;appareil sélectionné!</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+29"/>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
+        <translation>Votre Nano 33 BLE n&apos;a pas de disque flash de données intégré.</translation>
+    </message>
+    <message>
+        <location line="+45"/>
         <source>BOSSAC firmware update complete!
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Mise à jour du firmware BOSSAC terminée!
+
+</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>BOSSAC firmware update failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>Échec de la mise à jour du micrologiciel BOSSAC!</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>No PicoTool settings for the selected board type!</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun paramètre PicoTool pour le type de carte sélectionné!</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>No PicoTool settings for the selected device!</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun paramètre PicoTool pour l&apos;appareil sélectionné!</translation>
     </message>
     <message>
         <location line="+126"/>
         <source>PicoTool firmware update complete!
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Mise à jour du micrologiciel PicoTool terminée!
+
+</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>PicoTool firmware update failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>Échec de la mise à jour du micrologiciel de PicoTool!</translation>
     </message>
     <message>
         <location line="+198"/>
@@ -9410,10 +9420,10 @@ Dans ce cas, cliquez sur OK lorsque vous voyez le support de lecteur flash inter
         <translation> - [ la plus récente ]</translation>
     </message>
     <message>
-        <location line="-1266"/>
+        <location line="-1276"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1298"/>
+        <location line="+1308"/>
         <location line="+12"/>
         <location line="+7"/>
         <source>Failed to eject &quot;%L1&quot;!</source>
@@ -9452,14 +9462,14 @@ Vous pouvez trouver plus d&apos;exemples dans le menu Fichier -&gt; Exemples.
 En particulier, consultez les exemples de suivi des couleurs.</translation>
     </message>
     <message>
-        <location line="-3816"/>
-        <location line="+3504"/>
+        <location line="-3856"/>
+        <location line="+3544"/>
         <location line="+321"/>
         <source>Don&apos;t show this message again.</source>
         <translation>Ne plus afficher ce message.</translation>
     </message>
     <message>
-        <location line="-5264"/>
+        <location line="-5304"/>
         <source>Run Bootloader (Load Firmware)</source>
         <translation>Exécutez Bootloader (Load Firmware)</translation>
     </message>
@@ -9485,8 +9495,8 @@ En particulier, consultez les exemples de suivi des couleurs.</translation>
         <translation>Enregistrer le script ouvert sur OpenMV Cam (en tant que main.py)</translation>
     </message>
     <message>
-        <location line="+3037"/>
-        <location line="+3011"/>
+        <location line="+3059"/>
+        <location line="+3029"/>
         <source>Try doing:
 
 </source>
@@ -9495,13 +9505,13 @@ En particulier, consultez les exemples de suivi des couleurs.</translation>
 </translation>
     </message>
     <message>
-        <location line="-3011"/>
-        <location line="+3011"/>
+        <location line="-3029"/>
+        <location line="+3029"/>
         <source>...in a terminal and then restart your computer.</source>
         <translation>... dans un terminal, puis redémarrez votre ordinateur.</translation>
     </message>
     <message>
-        <location line="-2759"/>
+        <location line="-2769"/>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
@@ -9512,7 +9522,7 @@ Appuyez sur Annuler pour passer à la reprogrammation DFU.</translation>
     <message>
         <location line="+311"/>
         <location line="+300"/>
-        <location line="+470"/>
+        <location line="+480"/>
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -9521,7 +9531,7 @@ Appuyez sur Annuler pour passer à la reprogrammation DFU.</translation>
 </translation>
     </message>
     <message>
-        <location line="-770"/>
+        <location line="-780"/>
         <source>Firmware Upgrade complete!
 
 </source>
@@ -9532,7 +9542,7 @@ Appuyez sur Annuler pour passer à la reprogrammation DFU.</translation>
     <message>
         <location line="+1"/>
         <location line="+300"/>
-        <location line="+470"/>
+        <location line="+480"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
@@ -9541,9 +9551,9 @@ Appuyez sur Annuler pour passer à la reprogrammation DFU.</translation>
 </translation>
     </message>
     <message>
-        <location line="-769"/>
+        <location line="-779"/>
         <location line="+300"/>
-        <location line="+470"/>
+        <location line="+480"/>
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Cliquez sur OK lorsque la LED RGB de votre OpenMV Cam commence à clignoter en bleu - ce qui indique que l&apos;autotest est terminé.</translation>
     </message>
@@ -10019,9 +10029,9 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
 Voulez-vous OpenMV IDE pour mettre à jour le module sur votre OpenMV Cam?</translation>
     </message>
     <message>
-        <location line="-7223"/>
+        <location line="-7263"/>
         <location line="+213"/>
-        <location line="+7027"/>
+        <location line="+7067"/>
         <location line="+34"/>
         <location line="+50"/>
         <location line="+25"/>
@@ -10029,8 +10039,8 @@ Voulez-vous OpenMV IDE pour mettre à jour le module sur votre OpenMV Cam?</tran
         <translation>Impossible de supprimer &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-7343"/>
-        <location line="+7243"/>
+        <location line="-7383"/>
+        <location line="+7283"/>
         <location line="+34"/>
         <location line="+51"/>
         <location line="+25"/>
@@ -10058,7 +10068,7 @@ Voulez-vous OpenMV IDE pour le copier sur votre OpenMV Cam?</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location line="-7686"/>
+        <location line="-7726"/>
         <source>New File</source>
         <translation>Nouveau fichier</translation>
     </message>
@@ -10095,7 +10105,7 @@ Voulez-vous OpenMV IDE pour le copier sur votre OpenMV Cam?</translation>
     <message>
         <location line="+1"/>
         <location line="+239"/>
-        <location line="+5088"/>
+        <location line="+5128"/>
         <location line="+47"/>
         <location line="+69"/>
         <location line="+1327"/>
@@ -10536,7 +10546,7 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation type="vanished">Fichiers vidéo (*.mp4 *.*)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-7211"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-7251"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-127"/>
         <location line="+134"/>
@@ -10552,12 +10562,12 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+56"/>
         <source>BOSSAC</source>
-        <translation type="unfinished"></translation>
+        <translation>BOSSAC</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67"/>
         <source>PicoTool</source>
-        <translation type="unfinished"></translation>
+        <translation>PicoTool</translation>
     </message>
 </context>
 <context>
