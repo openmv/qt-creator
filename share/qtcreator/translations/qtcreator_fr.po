@@ -9524,6 +9524,10 @@ msgid ""
 "SoftDevice to flash the OpenMV firmware. More information can be found on <a "
 "href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"
 msgstr ""
+"Veuillez mettre à jour le chargeur de démarrage vers la dernière version et "
+"installer le SoftDevice pour flasher le micrologiciel OpenMV. Plus "
+"d'informations peuvent être trouvées sur <a "
+"href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3821
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3855
@@ -9532,6 +9536,9 @@ msgid ""
 "Please short REC to GND and reset your board. More information can be found "
 "on <a href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"
 msgstr ""
+"Veuillez raccourcir REC à GND et réinitialiser votre carte. Plus "
+"d'informations peuvent être trouvées sur <a "
+"href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:3873
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9584,22 +9591,22 @@ msgstr "Aucun paramètre DFU pour l'appareil sélectionné!"
 #, qt-format
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "BOSSAC device %1 missing!"
-msgstr ""
+msgstr "Périphérique BOSSAC %1 manquant!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:4989
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No BOSSAC settings for the selected board type!"
-msgstr ""
+msgstr "Aucun paramètre BOSSAC pour le type de carte sélectionné!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5014
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No BOSSAC settings for the selected device!"
-msgstr ""
+msgstr "Aucun paramètre BOSSAC pour l'appareil sélectionné!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5043
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "Your Nano 33 BLE doesn't have an onboard data flash disk."
-msgstr ""
+msgstr "Votre Nano 33 BLE n'a pas de disque flash de données intégré."
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5088
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9607,21 +9614,23 @@ msgid ""
 "BOSSAC firmware update complete!\n"
 "\n"
 msgstr ""
+"Mise à jour du firmware BOSSAC terminée!\n"
+"\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5101
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "BOSSAC firmware update failed!"
-msgstr ""
+msgstr "Échec de la mise à jour du micrologiciel BOSSAC!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5153
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No PicoTool settings for the selected board type!"
-msgstr ""
+msgstr "Aucun paramètre PicoTool pour le type de carte sélectionné!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5183
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "No PicoTool settings for the selected device!"
-msgstr ""
+msgstr "Aucun paramètre PicoTool pour l'appareil sélectionné!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5309
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -9629,11 +9638,13 @@ msgid ""
 "PicoTool firmware update complete!\n"
 "\n"
 msgstr ""
+"Mise à jour du micrologiciel PicoTool terminée!\n"
+"\n"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5322
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
 msgid "PicoTool firmware update failed!"
-msgstr ""
+msgstr "Échec de la mise à jour du micrologiciel de PicoTool!"
 
 #: ../../../src/plugins/openmv/openmvplugin.cpp:5520
 msgctxt "OpenMV::Internal::OpenMVPlugin|"
@@ -10903,12 +10914,12 @@ msgstr "Enregistrer la vidéo"
 #: ../../../src/plugins/openmv/tools/bossac.cpp:56
 msgctxt "QObject|"
 msgid "BOSSAC"
-msgstr ""
+msgstr "BOSSAC"
 
 #: ../../../src/plugins/openmv/tools/picotool.cpp:128
 msgctxt "QObject|"
 msgid "PicoTool"
-msgstr ""
+msgstr "PicoTool"
 
 #: ../../../src/plugins/openmv/openmvpluginfb.cpp:14
 #: ../../../src/plugins/openmv/openmvpluginfb.cpp:128
