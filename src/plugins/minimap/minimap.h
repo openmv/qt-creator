@@ -31,7 +31,7 @@ namespace Core
 class IEditor;
 }
 
-namespace Minimap
+namespace MinimapNS
 {
 namespace Internal
 {

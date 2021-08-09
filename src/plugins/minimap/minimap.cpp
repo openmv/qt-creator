@@ -29,7 +29,7 @@
 
 #include <QApplication>
 
-namespace Minimap
+namespace MinimapNS
 {
 namespace Internal
 {

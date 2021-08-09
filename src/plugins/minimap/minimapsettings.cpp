@@ -39,7 +39,7 @@
 
 #include <limits>
 
-namespace Minimap
+namespace MinimapNS
 {
 namespace Internal
 {

@@ -24,7 +24,7 @@
 
 #pragma once
 
-namespace Minimap
+namespace MinimapNS
 {
 namespace Constants
 {

@@ -22,7 +22,7 @@
 
 #include <QObject>
 
-namespace Minimap
+namespace MinimapNS
 {
 namespace Internal
 {

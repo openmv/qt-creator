@@ -27,7 +27,7 @@ namespace TextEditor
 class BaseTextEditor;
 }
 
-namespace Minimap
+namespace MinimapNS
 {
 namespace Internal
 {

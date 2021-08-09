@@ -41,7 +41,7 @@
 
 #include <algorithm>
 
-namespace Minimap
+namespace MinimapNS
 {
 namespace Internal
 {
