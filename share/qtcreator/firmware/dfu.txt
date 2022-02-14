@@ -1,6 +1,6 @@
 [
     {
-        "boardType" : "H7",
+        "boardType" : "Portenta H7",
         "vidpid" : "2341:035b",
         "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
         "extraProgramCommands" : [
@@ -13,15 +13,9 @@
         "dfuProgramCommand" : "-a 0 -s :leave"
     },
     {
-        "boardType" : "H7",
+        "boardType" : "Niclav",
         "vidpid" : "2341:035f",
-        "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
-        "extraProgramCommands" : [
-                {
-                    "addr" : "-a 1 -s 0x90F00000",
-                    "path" : "CYW4343/cyw4343.bin"
-                }
-            ],
+        "eraseCommands" : ["-a 0 -s 0x08020000"],
         "binProgramCommand" : "-a 0 -s 0x08040000:leave",
         "dfuProgramCommand" : "-a 0 -s :leave"
     }
