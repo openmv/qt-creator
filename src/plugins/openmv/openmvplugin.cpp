@@ -28,6 +28,8 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_patch = int();
     m_boardType = QString();
     m_boardId = QString();
+    m_boardVID = 0;
+    m_boardPID = 0;
     m_sensorType = QString();
     m_reconnects = int();
     m_portName = QString();
@@ -2185,9 +2187,10 @@ bool OpenMVPlugin::delayedInitialize()
         foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
         {
             if(port.hasVendorIdentifier() && port.hasProductIdentifier() && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID))
-            || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID) ||
+            || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID)))
+                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
+                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID)))
             || ((port.vendorIdentifier() == RPI2040_VID) && (port.productIdentifier() == RPI2040_PID))))
             {
                 ok = true;
@@ -3407,9 +3410,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
         {
             if(port.hasVendorIdentifier() && port.hasProductIdentifier() && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID))
-            || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID) ||
+            || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID)))
+                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
+                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID)))
             || ((port.vendorIdentifier() == RPI2040_VID) && (port.productIdentifier() == RPI2040_PID))))
             {
                 stringList.append(port.portName());
@@ -3767,6 +3771,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         bool isArduino = false;
         bool isPortenta = false;
+        bool isNiclav = false;
         bool isNRF = false;
         bool isRPIPico = false;
 
@@ -3776,13 +3781,18 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             isArduino = arduinoPort.hasVendorIdentifier() &&
                         arduinoPort.hasProductIdentifier() &&
-                     (((arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && (((arduinoPort.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID) ||
+                     (((arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && (((arduinoPort.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                               ((arduinoPort.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                              ((arduinoPort.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID))) ||
+                                                                              ((arduinoPort.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
+                                                                              ((arduinoPort.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID))) ||
                       ((arduinoPort.vendorIdentifier() == RPI2040_VID) && (arduinoPort.productIdentifier() == RPI2040_PID)));
             isPortenta = arduinoPort.hasVendorIdentifier() &&
                          arduinoPort.hasProductIdentifier() &&
-                        (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && (arduinoPort.productIdentifier() == PORTENTA_APP_PID);
+                        (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && ((arduinoPort.productIdentifier() == PORTENTA_APP_O_PID) ||
+                                                                               (arduinoPort.productIdentifier() == PORTENTA_APP_N_PID));
+            isNiclav = arduinoPort.hasVendorIdentifier() &&
+                       arduinoPort.hasProductIdentifier() &&
+                      (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && (arduinoPort.productIdentifier() == NICLA_APP_PID);
             isNRF = arduinoPort.hasVendorIdentifier() &&
                     arduinoPort.hasProductIdentifier() &&
                    (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && (arduinoPort.productIdentifier() == NRF_APP_PID);
@@ -3796,11 +3806,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         {
             QStringList vidpid = selectedDfuDevice.split(QLatin1Literal(",")).first().split(QLatin1Literal(":"));
 
-            isArduino = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID) ||
+            isArduino = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                                  ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                                 ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID))) ||
+                                                                                 ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
+                                                                                 ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID))) ||
                         ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
             isPortenta = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == PORTENTA_LDR_PID);
+            isNiclav = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == NICLA_LDR_PID);
             isNRF = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == NRF_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == NRF_LDR_PID));
             isRPIPico = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == RPI_LDR_PID))) ||
                         ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
@@ -3828,11 +3840,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         {
             QStringList vidpid = originalDfuVidPid.split(QLatin1Literal(":"));
 
-            isArduino = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID) ||
+            isArduino = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                                  ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                                 ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID))) ||
+                                                                                 ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
+                                                                                 ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID))) ||
                         ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
             isPortenta = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == PORTENTA_LDR_PID);
+            isNiclav = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == NICLA_LDR_PID);
             isNRF = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == NRF_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == NRF_LDR_PID));
             isRPIPico = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == RPI_LDR_PID))) ||
                         ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
@@ -4070,11 +4084,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 }
 
                                 QStringList vidpid = vidpidMappings.value(temp).split(QLatin1Literal(":"));
-                                isArduino = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PID) ||
+                                isArduino = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                                                      ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                                                     ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID))) ||
+                                                                                                     ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
+                                                                                                     ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID))) ||
                                            ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
                                 isPortenta = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == PORTENTA_LDR_PID);
+                                isNiclav = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == NICLA_LDR_PID);
                                 isNRF = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == NRF_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == NRF_LDR_PID));
                                 isRPIPico = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == RPI_LDR_PID))) ||
                                             ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
@@ -4085,6 +4101,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 {
                                     m_boardType = match.captured(1);
                                     m_boardId = match.captured(2);
+                                    m_boardVID = vidpid.at(0).toInt(nullptr, 16);
+                                    m_boardPID = vidpid.at(1).toInt(nullptr, 16);
                                 }
                             }
                             else
@@ -4608,7 +4626,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     }
                 }
 
-                if(isPortenta)
+                if(isPortenta || isNiclav)
                 {
                     // Erase Flash ////////////////////////////////////////
 
@@ -4635,7 +4653,24 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 {
                                     QJsonObject obj = val.toObject();
 
-                                    if(m_boardType == obj.value(QStringLiteral("boardType")).toString())
+                                    QJsonArray appvidpidArray = obj.value(QStringLiteral("appvidpid")).toArray();
+                                    bool isApp = appvidpidArray.isEmpty();
+
+                                    if(!isApp)
+                                    {
+                                        foreach(const QJsonValue &appvidpid, appvidpidArray)
+                                        {
+                                            QStringList vidpid = appvidpid.toString().split(QLatin1Literal(":"));
+
+                                            if((vidpid.at(0).toInt(nullptr, 16) == m_boardVID) && (vidpid.at(1).toInt(nullptr, 16) == m_boardPID))
+                                            {
+                                                isApp = true;
+                                                break;
+                                            }
+                                        }
+                                    }
+
+                                    if(isApp && (m_boardType == obj.value(QStringLiteral("boardType")).toString()))
                                     {
                                         boardTypeToDfuDeviceVidPid = obj.value(QStringLiteral("vidpid")).toString();
 
@@ -5474,7 +5509,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         // Check ID ///////////////////////////////////////////////////////////
 
         bool disableLicenseCheck = false;
-        if(isPortenta || isNRF || isRPIPico) disableLicenseCheck = true;
+        if(isPortenta || isNiclav || isNRF || isRPIPico) disableLicenseCheck = true;
         m_sensorType = QString();
 
         if((major2 < OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR)
@@ -5579,6 +5614,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         m_boardType = QString();
         m_boardId = QString();
+        m_boardVID = 0;
+        m_boardPID = 0;
 
         if(((major2 > OLD_API_MAJOR)
         || ((major2 == OLD_API_MAJOR) && (minor2 > OLD_API_MINOR))
@@ -5614,6 +5651,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                     m_boardType = board;
                     m_boardId = id;
+                    m_boardVID = QSerialPortInfo(selectedPort).vendorIdentifier();
+                    m_boardPID = QSerialPortInfo(selectedPort).productIdentifier();
 
                     if((!disableLicenseCheck)
                     // Skip OpenMV Cam M4's...
@@ -5950,6 +5989,8 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_patch = int();
             // LEAVE CACHED m_boardType = QString();
             // LEAVE CACHED m_boardId = QString();
+            // LEAVE CACHED m_boardVID = 0;
+            // LEAVE CACHED m_boardPID = 0;
             m_sensorType = QString();
             m_portName = QString();
             m_portPath = QString();

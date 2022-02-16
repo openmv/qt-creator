@@ -302,6 +302,8 @@ private:
     int m_patch;
     QString m_boardType;
     QString m_boardId;
+    int m_boardVID;
+    int m_boardPID;
     QString m_sensorType;
     int m_reconnects;
     QString m_portName;
