@@ -69,7 +69,7 @@ int getImageSize(int w, int h, int bpp)
 QPixmap getImageFromData(QByteArray data, int w, int h, int bpp, bool rgb565ByteReversed)
 {
     QPixmap pixmap = getImageSize(w, h, bpp) ? (QPixmap::fromImage(IS_JPG(bpp)
-        ? QImage::fromData(data, "JPG")
+        ? QImage::fromData(data)
         : QImage(reinterpret_cast<const uchar *>(byteSwap(data,
             rgb565ByteReversed && IS_RGB(bpp)).constData()), w, h, IS_BINARY(bpp) ? ((w + 31) / 32) : (w * bpp),
             IS_RGB(bpp) ? QImage::Format_RGB16 : (IS_GS(bpp) ? QImage::Format_Grayscale8 : (IS_BINARY(bpp) ? QImage::Format_MonoLSB : QImage::Format_Invalid)))))
@@ -112,7 +112,7 @@ QPixmap getImageFromData(QByteArray data, int w, int h, int bpp, bool rgb565Byte
             temp.append((x >> 0) & 0xFF);
         }
 
-        pixmap = QPixmap::fromImage(QImage::fromData(temp, "JPG"));
+        pixmap = QPixmap::fromImage(QImage::fromData(temp));
     }
 
     return pixmap;
@@ -1162,7 +1162,7 @@ QByteArray OpenMVPluginIO::pasrsePrintData(const QByteArray &data)
                         temp.append((x >> 0) & 0xFF);
                     }
 
-                    QPixmap pixmap = QPixmap::fromImage(QImage::fromData(temp, "JPG"));
+                    QPixmap pixmap = QPixmap::fromImage(QImage::fromData(temp));
 
                     if(!pixmap.isNull())
                     {

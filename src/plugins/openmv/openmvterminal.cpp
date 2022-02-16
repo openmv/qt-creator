@@ -120,7 +120,7 @@ void MyPlainTextEdit::readBytes(const QByteArray &data)
                         temp.append((x >> 0) & 0xFF);
                     }
 
-                    QPixmap pixmap = QPixmap::fromImage(QImage::fromData(temp, "JPG"));
+                    QPixmap pixmap = QPixmap::fromImage(QImage::fromData(temp));
 
                     if(!pixmap.isNull())
                     {

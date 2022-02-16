@@ -877,7 +877,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
 
                 if((!(i % (skip + 1))) && in.open(QIODevice::ReadOnly))
                 {
-                    QImage image = QImage::fromData(in.readAll(), "JPG");
+                    QImage image = QImage::fromData(in.readAll());
                     QByteArray out = jpgToBytes(image);
 
                     serializeLong(data, 0);
