@@ -81,7 +81,7 @@ TabBar::TabBar(QWidget *parent) :
     //OPENMV-DIFF//
     //prevTabCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Shift+J")));
     //OPENMV-DIFF//
-    prevTabCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Page Down")));
+    prevTabCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Page Up")));
     //OPENMV-DIFF//
     connect(prevTabAction, SIGNAL(triggered()), this, SLOT(prevTabAction()));
     //OPENMV-DIFF//
@@ -90,7 +90,7 @@ TabBar::TabBar(QWidget *parent) :
             = Core::ActionManager::registerAction(moveTabLeftAction,
                                                   TabbedEditor::Constants::MOVE_TAB_LEFT_ID,
                                                   Core::Context(Core::Constants::C_GLOBAL));
-    moveTabLeftCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Shift+Page Down")));
+    moveTabLeftCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Shift+Page Up")));
     connect(moveTabLeftAction, SIGNAL(triggered()), this, SLOT(moveTabLeftAction()));
     //OPENMV-DIFF//
 
@@ -102,7 +102,7 @@ TabBar::TabBar(QWidget *parent) :
     //OPENMV-DIFF//
     //nextTabCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Shift+K")));
     //OPENMV-DIFF//
-    nextTabCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Page Up")));
+    nextTabCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Page Down")));
     //OPENMV-DIFF//
     connect(nextTabAction, SIGNAL(triggered()), this, SLOT(nextTabAction()));
     //OPENMV-DIFF//
@@ -111,7 +111,7 @@ TabBar::TabBar(QWidget *parent) :
             = Core::ActionManager::registerAction(moveTabRightAction,
                                                   TabbedEditor::Constants::MOVE_TAB_RIGHT_ID,
                                                   Core::Context(Core::Constants::C_GLOBAL));
-    moveTabRightCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Shift+Page Up")));
+    moveTabRightCommand->setDefaultKeySequence(QKeySequence(QStringLiteral("Ctrl+Shift+Page Down")));
     connect(moveTabRightAction, SIGNAL(triggered()), this, SLOT(moveTabRightAction()));
     //OPENMV-DIFF//
 }

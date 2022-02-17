@@ -1379,21 +1379,37 @@ void OpenMVPlugin::extensionsInitialized()
         }
     });
 
-    QAction *pinoutAction = new QAction(
-         Utils::HostOsInfo::isMacHost() ? tr("About OpenMV Cam") : tr("About OpenMV Cam..."), this);
-    pinoutAction->setMenuRole(QAction::ApplicationSpecificRole);
-    Core::Command *pinoutCommand = Core::ActionManager::registerAction(pinoutAction, Core::Id("OpenMV.Pinout"));
-    helpMenu->addAction(pinoutCommand, Core::Constants::G_HELP_ABOUT);
-    connect(pinoutAction, &QAction::triggered, this, [this] {
-        QUrl url = QUrl::fromLocalFile(Core::ICore::userResourcePath() + QStringLiteral("/html/_images/pinout.png"));
+    Core::ActionContainer *pinoutMenu = Core::ActionManager::createMenu(Core::Id("OpenMV.PinoutMenu"));
+    pinoutMenu->menu()->setTitle(Utils::HostOsInfo::isMacHost() ? tr("About OpenMV Cam") : tr("About OpenMV Cam..."));
+    pinoutMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
+    helpMenu->addMenu(pinoutMenu);
 
-        if(!QDesktopServices::openUrl(url))
-        {
-            QMessageBox::critical(Core::ICore::dialogParent(),
-                                  QString(),
-                                  tr("Failed to open: \"%L1\"").arg(url.toString()));
-        }
-    });
+    typedef QPair<QString, QString> QStringPair;
+    QList<QStringPair> cameras;
+
+    cameras.append(QStringPair(QStringLiteral("H7 Plus"), QStringLiteral("cam-h7-plus-ov5640")));
+    cameras.append(QStringPair(QStringLiteral("H7"), QStringLiteral("cam-h7-ov7725")));
+    cameras.append(QStringPair(QStringLiteral("M7"), QStringLiteral("cam-m7-ov7725")));
+    cameras.append(QStringPair(QStringLiteral("M4"), QStringLiteral("cam-m4-ov7725")));
+    cameras.append(QStringPair(QStringLiteral("M4 Original"), QStringLiteral("cam-m4-ov2640")));
+
+    foreach(const QStringPair &cam, cameras)
+    {
+        QAction *pinout = new QAction(
+             Utils::HostOsInfo::isMacHost() ? tr("About OpenMV Cam %1").arg(cam.first) : tr("About OpenMV Cam %1...").arg(cam.first), this);
+        Core::Command *pinoutCommand = Core::ActionManager::registerAction(pinout, Core::Id(QString(QStringLiteral("OpenMV.Pinout.%1")).arg(cam.second).toUtf8().constData()));
+        pinoutMenu->addAction(pinoutCommand);
+        connect(pinout, &QAction::triggered, this, [this, cam] {
+            QUrl url = QUrl::fromLocalFile(Core::ICore::userResourcePath() + QString(QStringLiteral("/html/_images/pinout-openmv-%1.png")).arg(cam.second));
+
+            if(!QDesktopServices::openUrl(url))
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                                      QString(),
+                                      tr("Failed to open: \"%L1\"").arg(url.toString()));
+            }
+        });
+    }
 
     QAction *aboutAction = new QAction(QIcon::fromTheme(QStringLiteral("help-about")),
         Utils::HostOsInfo::isMacHost() ? tr("About OpenMV IDE") : tr("About OpenMV IDE..."), this);
