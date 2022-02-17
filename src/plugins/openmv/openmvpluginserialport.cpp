@@ -3,6 +3,8 @@
 #define OPENMVCAM_BAUD_RATE 12000000
 #define OPENMVCAM_BAUD_RATE_2 921600
 
+#define ARDUINO_TTR_BAUD_RATE 1200
+
 #define WRITE_LOOPS 1 // disabled
 #define WRITE_DELAY 0 // disabled
 #define WRITE_TIMEOUT 6000
@@ -327,7 +329,25 @@ void OpenMVPluginSerialPort_private::open(const QString &portName)
     // QSerialPort is buggy unless this is set.
     m_port->setReadBufferSize(1000000);
 
-    if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE))
+    QSerialPortInfo arduinoPort(m_port->portName());
+
+    bool isTouchToReset = arduinoPort.hasVendorIdentifier() &&
+                          arduinoPort.hasProductIdentifier() &&
+                         (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && ((arduinoPort.productIdentifier() == PORTENTA_TTR_1_PID) ||
+                                                                                (arduinoPort.productIdentifier() == PORTENTA_TTR_2_PID) ||
+                                                                                (arduinoPort.productIdentifier() == NICLA_TTR_1_PID) ||
+                                                                                (arduinoPort.productIdentifier() == NICLA_TTR_2_PID));
+
+    int baudRate = OPENMVCAM_BAUD_RATE;
+    int baudRate2 = OPENMVCAM_BAUD_RATE_2;
+
+    if(isTouchToReset)
+    {
+        baudRate = ARDUINO_TTR_BAUD_RATE;
+        baudRate2 = ARDUINO_TTR_BAUD_RATE;
+    }
+
+    if((!m_port->setBaudRate(baudRate))
     || (!m_port->open(QIODevice::ReadWrite))
     || (!m_port->setDataTerminalReady(true)))
     {
@@ -336,7 +356,7 @@ void OpenMVPluginSerialPort_private::open(const QString &portName)
         // QSerialPort is buggy unless this is set.
         m_port->setReadBufferSize(1000000);
 
-        if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE_2))
+        if((!m_port->setBaudRate(baudRate2))
         || (!m_port->open(QIODevice::ReadWrite))
         || (!m_port->setDataTerminalReady(true)))
         {

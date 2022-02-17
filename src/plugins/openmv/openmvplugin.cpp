@@ -3770,6 +3770,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         }
 
         bool isArduino = false;
+        bool isTouchToReset = false;
         bool isPortenta = false;
         bool isNiclav = false;
         bool isNRF = false;
@@ -3786,6 +3787,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                                                               ((arduinoPort.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
                                                                               ((arduinoPort.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID))) ||
                       ((arduinoPort.vendorIdentifier() == RPI2040_VID) && (arduinoPort.productIdentifier() == RPI2040_PID)));
+            isTouchToReset = arduinoPort.hasVendorIdentifier() &&
+                             arduinoPort.hasProductIdentifier() &&
+                            (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && ((arduinoPort.productIdentifier() == PORTENTA_TTR_1_PID) ||
+                                                                                   (arduinoPort.productIdentifier() == PORTENTA_TTR_2_PID) ||
+                                                                                   (arduinoPort.productIdentifier() == NICLA_TTR_1_PID) ||
+                                                                                   (arduinoPort.productIdentifier() == NICLA_TTR_2_PID));
             isPortenta = arduinoPort.hasVendorIdentifier() &&
                          arduinoPort.hasProductIdentifier() &&
                         (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && ((arduinoPort.productIdentifier() == PORTENTA_APP_O_PID) ||
@@ -3935,6 +3942,28 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                 CONNECT_END();
             }
+        }
+
+        if(isTouchToReset)
+        {
+            QEventLoop loop;
+
+            connect(m_iodevice, &OpenMVPluginIO::closeResponse,
+                    &loop, &QEventLoop::quit);
+
+            m_iodevice->close();
+
+            loop.exec();
+
+            QElapsedTimer elaspedTimer;
+            elaspedTimer.start();
+
+            while(!elaspedTimer.hasExpired(RESET_TO_DFU_SEARCH_TIME))
+            {
+                QApplication::processEvents();
+            }
+
+            RECONNECT_END();
         }
 
         // Get Version ////////////////////////////////////////////////////////
