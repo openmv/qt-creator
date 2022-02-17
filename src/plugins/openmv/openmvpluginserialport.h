@@ -104,12 +104,12 @@
 #define ARCH_STR_END_DELAY                  0
 #define LEARN_MTU_START_DELAY               0
 #define LEARN_MTU_END_DELAY                 0
-#define SCRIPT_EXEC_START_DELAY             50
+#define SCRIPT_EXEC_START_DELAY             150
 #define SCRIPT_EXEC_END_DELAY               25
 #define SCRIPT_EXEC_2_START_DELAY           25
-#define SCRIPT_EXEC_2_END_DELAY             50
-#define SCRIPT_STOP_START_DELAY             50
-#define SCRIPT_STOP_END_DELAY               50
+#define SCRIPT_EXEC_2_END_DELAY             150
+#define SCRIPT_STOP_START_DELAY             150
+#define SCRIPT_STOP_END_DELAY               150
 #define SCRIPT_SAVE_START_DELAY             50
 #define SCRIPT_SAVE_END_DELAY               50
 #define SCRIPT_RUNNING_START_DELAY          0
