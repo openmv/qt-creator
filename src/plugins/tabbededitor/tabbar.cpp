@@ -64,14 +64,16 @@ TabBar::TabBar(QWidget *parent) :
     //});
     //OPENMV-DIFF//
 
-    const QString shortCutSequence = QStringLiteral("Ctrl+Alt+%1");
-    for (int i = 1; i <= 10; ++i) {
-        QShortcut *shortcut = new QShortcut(shortCutSequence.arg(i % 10), this);
-        connect(shortcut, &QShortcut::activated, [this, shortcut]() {
-            setCurrentIndex(m_shortcuts.indexOf(shortcut));
-        });
-        m_shortcuts.append(shortcut);
-    }
+    //OPENMV-DIFF//
+    //const QString shortCutSequence = QStringLiteral("Ctrl+Alt+%1");
+    //for (int i = 1; i <= 10; ++i) {
+    //    QShortcut *shortcut = new QShortcut(shortCutSequence.arg(i % 10), this);
+    //    connect(shortcut, &QShortcut::activated, [this, shortcut]() {
+    //        setCurrentIndex(m_shortcuts.indexOf(shortcut));
+    //    });
+    //    m_shortcuts.append(shortcut);
+    //}
+    //OPENMV-DIFF//
 
     QAction *prevTabAction = new QAction(QStringLiteral("Switch to previous tab"), this);
     Core::Command *prevTabCommand
