@@ -3641,9 +3641,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             if(dfuDeviceResetToRelease)
                             {
                                 mappings.insert(QStringLiteral("NANO33_M4_OLD"), QStringLiteral("NANO33"));
+                                eraseMappings.insert(QStringLiteral("NANO33_M4_OLD"), QPair<int, int>(0, 0));
+                                eraseAllMappings.insert(QStringLiteral("NANO33_M4_OLD"), QPair<int, int>(0, 0));
                                 vidpidMappings.insert(QStringLiteral("NANO33_M4_OLD"), QStringLiteral("2341:805a"));
 
                                 mappings.insert(QStringLiteral("PICO_M0_OLD"), QStringLiteral("PICO"));
+                                eraseMappings.insert(QStringLiteral("PICO_M0_OLD"), QPair<int, int>(0, 0));
+                                eraseAllMappings.insert(QStringLiteral("PICO_M0_OLD"), QPair<int, int>(0, 0));
                                 vidpidMappings.insert(QStringLiteral("PICO_M0_OLD"), QStringLiteral("2341:805e"));
 
                                 QMutableMapIterator<QString, QString> i(mappings);
