@@ -36,6 +36,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_portPath = QString();
     m_formKey = QString();
 
+    m_serialNumberFilter = QString();
     m_errorFilterRegex = QRegularExpression(QStringLiteral(
         "  File \"(.+?)\", line (\\d+).*?\n"
         "(?!Exception: IDE interrupt)(.+?:.+?)\n"));
@@ -133,6 +134,62 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         else
         {
             displayError(tr("Missing argument for -override_read_stall_timeout"));
+            exit(-1);
+        }
+    }
+
+    if(arguments.contains(QStringLiteral("-list_ports")))
+    {
+        QStringList stringList;
+
+        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+        {
+            if(port.hasVendorIdentifier() && port.hasProductIdentifier() && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID))
+            || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
+                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
+                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
+                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID)))
+            || ((port.vendorIdentifier() == RPI2040_VID) && (port.productIdentifier() == RPI2040_PID))))
+            {
+                stringList.append(port.portName());
+            }
+        }
+
+        if(Utils::HostOsInfo::isMacHost())
+        {
+            stringList = stringList.filter(QStringLiteral("cu"), Qt::CaseInsensitive);
+        }
+
+        QTextStream out(stdout);
+
+        foreach(const QString &port, stringList)
+        {
+            QSerialPortInfo info(port);
+            out << QString(QStringLiteral("\"name\":\"%1\", \"description\":\"%2\", \"manufacturer\":\"%3\", \"vid\":0x%4, \"pid\":0x%5, \"serial\":\"%6\", \"location\":\"%7\""))
+                   .arg(info.portName())
+                   .arg(info.description())
+                   .arg(info.manufacturer())
+                   .arg(QString(QStringLiteral("%1").arg(info.vendorIdentifier(), 4, 16, QLatin1Char('0'))).toUpper())
+                   .arg(QString(QStringLiteral("%1").arg(info.productIdentifier(), 4, 16, QLatin1Char('0'))).toUpper())
+                   .arg(info.serialNumber().toUpper())
+                   .arg(info.systemLocation()) << endl;
+        }
+
+        exit(0);
+    }
+
+    m_serialNumberFilter = QString();
+    int index_serial_number_filter = arguments.indexOf(QRegularExpression(QStringLiteral("-serial_number_filter")));
+
+    if(index_serial_number_filter != -1)
+    {
+        if(arguments.size() > (index_serial_number_filter + 1))
+        {
+            m_serialNumberFilter = arguments.at(index_serial_number_filter + 1);
+        }
+        else
+        {
+            displayError(tr("Missing argument for -serial_number_filter"));
             exit(-1);
         }
     }
@@ -2202,7 +2259,9 @@ bool OpenMVPlugin::delayedInitialize()
 
         foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
         {
-            if(port.hasVendorIdentifier() && port.hasProductIdentifier() && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID))
+            if(port.hasVendorIdentifier() && port.hasProductIdentifier()
+            && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
+            && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID))
             || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
@@ -3425,7 +3484,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
         {
-            if(port.hasVendorIdentifier() && port.hasProductIdentifier() && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID))
+            if(port.hasVendorIdentifier() && port.hasProductIdentifier()
+            && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
+            && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID))
             || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
@@ -5849,7 +5910,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             {
                 QByteArray data = document->contents();
 
-                if((m_sensorType == QStringLiteral("HM01B0")) || (m_sensorType == QStringLiteral("MT9V034")))
+                if((m_sensorType == QStringLiteral("HM01B0")) ||
+                   (m_sensorType == QStringLiteral("HM0360")) ||
+                   (m_sensorType == QStringLiteral("MT9V0X2")) ||
+                   (m_sensorType == QStringLiteral("MT9V0X4")))
                 {
                     data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
                     if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
@@ -6650,7 +6714,10 @@ QMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const QStrin
 
                     if((file.error() == QFile::NoError) && (!data.isEmpty()))
                     {
-                        if((m_sensorType == QStringLiteral("HM01B0")) || (m_sensorType == QStringLiteral("MT9V034")))
+                        if((m_sensorType == QStringLiteral("HM01B0")) ||
+                           (m_sensorType == QStringLiteral("HM0360")) ||
+                           (m_sensorType == QStringLiteral("MT9V0X2")) ||
+                           (m_sensorType == QStringLiteral("MT9V0X4")))
                         {
                             data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
                             if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));

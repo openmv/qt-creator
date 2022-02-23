@@ -59,6 +59,15 @@
             \"Name\" : \"-form_key\",
             \"Parameter\" : \"key\",
             \"Description\" : \"OpenMV Cam Registration Key\"
+        },
+        {
+            \"Name\" : \"-list_ports\",
+            \"Description\" : \"Prints detected ports\"
+        },
+        {
+            \"Name\" : \"-serial_number_filter\",
+            \"Parameter\" : \"serial_number\",
+            \"Description\" : \"Filter detected ports by this Serial Number\"
         }
     ],
     $$dependencyList

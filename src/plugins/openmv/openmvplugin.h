@@ -310,6 +310,7 @@ private:
     QString m_portPath;
     QString m_formKey;
 
+    QString m_serialNumberFilter;
     QRegularExpression m_errorFilterRegex;
     QString m_errorFilterString;
 
