@@ -165,6 +165,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         foreach(const QString &port, stringList)
         {
             QSerialPortInfo info(port);
+
             out << QString(QStringLiteral("\"name\":\"%1\", \"description\":\"%2\", \"manufacturer\":\"%3\", \"vid\":0x%4, \"pid\":0x%5, \"serial\":\"%6\", \"location\":\"%7\""))
                    .arg(info.portName())
                    .arg(info.description())
@@ -2033,6 +2034,19 @@ void OpenMVPlugin::extensionsInitialized()
         widget->m_rightDrawer->parentWidget()->setVisible(settings->contains(QStringLiteral(HSPLITTER_STATE)) ? (!hsplitter->sizes().at(1)) : false);
         widget->m_topDrawer->parentWidget()->setVisible(settings->contains(QStringLiteral(VSPLITTER_STATE)) ? (!vsplitter->sizes().at(0)) : false);
         widget->m_bottomDrawer->parentWidget()->setVisible(settings->contains(QStringLiteral(VSPLITTER_STATE)) ? (!vsplitter->sizes().at(1)) : false);
+        settings->endGroup();
+    });
+
+    connect(q_check_ptr(qobject_cast<Core::Internal::MainWindow *>(Core::ICore::mainWindow())), &Core::Internal::MainWindow::hideEventSignal, this, [this, widget, settings, msplitter, hsplitter, vsplitter] {
+        settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+        if(!isNoShow()) settings->setValue(QStringLiteral(LAST_DATASET_EDITOR_LOADED),
+            !m_datasetEditor->rootPath().isEmpty());
+        if(!isNoShow()) settings->setValue(QStringLiteral(MSPLITTER_STATE),
+            msplitter->saveState());
+        if(!isNoShow()) settings->setValue(QStringLiteral(HSPLITTER_STATE),
+            hsplitter->saveState());
+        if(!isNoShow()) settings->setValue(QStringLiteral(VSPLITTER_STATE),
+            vsplitter->saveState());
         settings->endGroup();
     });
 

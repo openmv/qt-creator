@@ -123,6 +123,7 @@ public:
 signals:
     //OPENMV-DIFF//
     void showEventSignal();
+    void hideEventSignal();
     //OPENMV-DIFF//
     void newItemDialogRunningChanged();
 
@@ -140,6 +141,7 @@ public slots:
 protected:
     //OPENMV-DIFF//
     virtual void showEvent(QShowEvent *event) { emit showEventSignal(); Utils::AppMainWindow::showEvent(event); }
+    virtual void hideEvent(QHideEvent *event) { emit hideEventSignal(); Utils::AppMainWindow::hideEvent(event); }
     //OPENMV-DIFF//
     virtual void closeEvent(QCloseEvent *event);
 
