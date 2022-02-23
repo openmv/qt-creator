@@ -890,11 +890,13 @@ void OpenMVPlugin::extensionsInitialized()
 
     m_bootloaderAction = new QAction(tr("Run Bootloader (Load Firmware)"), this);
     Core::Command *bootloaderCommand = Core::ActionManager::registerAction(m_bootloaderAction, Core::Id("OpenMV.Bootloader"));
+    bootloaderCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+L")));
     toolsMenu->addAction(bootloaderCommand);
     connect(m_bootloaderAction, &QAction::triggered, this, &OpenMVPlugin::bootloaderClicked);
 
     m_eraseAction = new QAction(tr("Erase Onboard Data Flash"), this);
     Core::Command *eraseCommand = Core::ActionManager::registerAction(m_eraseAction, Core::Id("OpenMV.Erase"));
+    eraseCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+E")));
     toolsMenu->addAction(eraseCommand);
     connect(m_eraseAction, &QAction::triggered, this, [this] {
         if(QMessageBox::warning(Core::ICore::dialogParent(),
