@@ -68,6 +68,18 @@
             \"Name\" : \"-serial_number_filter\",
             \"Parameter\" : \"serial_number\",
             \"Description\" : \"Filter detected ports by this Serial Number\"
+        },
+        {
+            \"Name\" : \"-auto_connect\",
+            \"Description\" : \"Automatically connect to the first detected port\"
+        },
+        {
+            \"Name\" : \"-auto_run\",
+            \"Description\" : \"Automatically run the openned script\"
+        },
+        {
+            \"Name\" : \"-full_screen\",
+            \"Description\" : \"Launch in full-screen mode\"
         }
     ],
     $$dependencyList

@@ -283,6 +283,7 @@ signals:
 
 private:
 
+    bool m_autoConnect;
     OpenMVPluginSerialPort *m_ioport;
     OpenMVPluginIO *m_iodevice;
 

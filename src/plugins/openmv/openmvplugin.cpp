@@ -10,6 +10,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     qRegisterMetaType<OpenMVPluginSerialPortCommand>("OpenMVPluginSerialPortCommand");
     qRegisterMetaType<OpenMVPluginSerialPortCommandResult>("OpenMVPluginSerialPortCommandResult");
 
+    m_autoConnect = false;
     m_ioport = Q_NULLPTR;
     m_iodevice = Q_NULLPTR;
 
@@ -165,7 +166,6 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         foreach(const QString &port, stringList)
         {
             QSerialPortInfo info(port);
-
             out << QString(QStringLiteral("\"name\":\"%1\", \"description\":\"%2\", \"manufacturer\":\"%3\", \"vid\":0x%4, \"pid\":0x%5, \"serial\":\"%6\", \"location\":\"%7\""))
                    .arg(info.portName())
                    .arg(info.description())
@@ -193,6 +193,37 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             displayError(tr("Missing argument for -serial_number_filter"));
             exit(-1);
         }
+    }
+
+    bool autoRun = arguments.contains(QStringLiteral("-auto_run"));
+    m_autoConnect = autoRun || arguments.contains(QStringLiteral("-auto_connect"));
+
+    if(m_autoConnect)
+    {
+        connect(ExtensionSystem::PluginManager::instance(), &ExtensionSystem::PluginManager::initializationDone, this, [this, autoRun] {
+            QTimer::singleShot(0, this, [this, autoRun] {
+                connectClicked();
+
+                if(autoRun)
+                {
+                    QTimer::singleShot(0, this, [this] {
+                        startClicked();
+                    });
+                }
+            });
+        });
+    }
+
+    if(arguments.contains(QStringLiteral("-full_screen")))
+    {
+        connect(ExtensionSystem::PluginManager::instance(), &ExtensionSystem::PluginManager::initializationDone, this, [this] {
+            QAction *action = Core::ActionManager::command(Core::Constants::TOGGLE_FULLSCREEN)->action();
+
+            if(!Core::ICore::mainWindow()->isFullScreen())
+            {
+                QTimer::singleShot(0, action, &QAction::trigger);
+            }
+        });
     }
 
     m_ioport = new OpenMVPluginSerialPort(override_read_timeout, override_read_stall_timeout, this);
@@ -5964,7 +5995,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
                         bool update = false;
 
-                        if(!settings->value(QStringLiteral(DONT_SHOW_UPGRADE_FW_AGAIN), false).toBool())
+                        if((!m_autoConnect) && (!settings->value(QStringLiteral(DONT_SHOW_UPGRADE_FW_AGAIN), false).toBool()))
                         {
                             QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
