@@ -61,21 +61,90 @@ static QByteArray byteSwap(QByteArray buffer, bool ok)
     return buffer;
 }
 
-int getImageSize(int w, int h, int bpp)
+int getImageSize(int w, int h, int bpp, bool newPixformat, int pixformat)
 {
-    return IS_JPG(bpp) ? bpp : ((IS_RGB(bpp) || IS_GS(bpp)) ? (w * h * bpp) : (IS_BINARY(bpp) ? (((w + 31) / 32) * h) : int()));
+    if(newPixformat)
+    {
+        switch(pixformat)
+        {
+            case PIXFORMAT_BINARY:
+            {
+                return ((w + 31) / 32) * h;
+            }
+            case PIXFORMAT_GRAYSCALE:
+            case PIXFORMAT_BAYER_ANY: // re-use
+            {
+                return w * h * 1;
+            }
+            case PIXFORMAT_RGB565:
+            case PIXFORMAT_YUV_ANY: // re-use
+            {
+                return w * h * 2;
+            }
+            case PIXFORMAT_COMPRESSED_ANY:
+            {
+                return bpp;
+            }
+            default:
+            {
+                return int();
+            }
+        }
+    }
+    else
+    {
+        return OLD_IS_JPG(bpp) ? bpp :
+            (OLD_IS_BAYER(bpp) ? (w * h) :
+                ((OLD_IS_RGB(bpp) || OLD_IS_GS(bpp)) ? (w * h * bpp) :
+                    (OLD_IS_BINARY(bpp) ? (((w + 31) / 32) * h) : int())));
+    }
 }
 
-QPixmap getImageFromData(QByteArray data, int w, int h, int bpp, bool rgb565ByteReversed)
+QPixmap getImageFromData(QByteArray data, int w, int h, int bpp, bool rgb565ByteReversed, bool newPixformat, int pixformat)
 {
-    QPixmap pixmap = getImageSize(w, h, bpp) ? (QPixmap::fromImage(IS_JPG(bpp)
-        ? QImage::fromData(data)
-        : QImage(reinterpret_cast<const uchar *>(byteSwap(data,
-            rgb565ByteReversed && IS_RGB(bpp)).constData()), w, h, IS_BINARY(bpp) ? ((w + 31) / 32) : (w * bpp),
-            IS_RGB(bpp) ? QImage::Format_RGB16 : (IS_GS(bpp) ? QImage::Format_Grayscale8 : (IS_BINARY(bpp) ? QImage::Format_MonoLSB : QImage::Format_Invalid)))))
-    : QPixmap();
+    QPixmap pixmap;
 
-    if(pixmap.isNull() && IS_JPG(bpp))
+    if(newPixformat)
+    {
+        switch(pixformat)
+        {
+            case PIXFORMAT_BINARY:
+            {
+                pixmap = QPixmap::fromImage(QImage(reinterpret_cast<const uchar *>(data.constData()), w, h, (w + 31) / 32, QImage::Format_MonoLSB));
+                break;
+            }
+            case PIXFORMAT_GRAYSCALE:
+            {
+                pixmap = QPixmap::fromImage(QImage(reinterpret_cast<const uchar *>(data.constData()), w, h, w * 1, QImage::Format_Grayscale8));
+                break;
+            }
+            case PIXFORMAT_RGB565:
+            {
+                pixmap = QPixmap::fromImage(QImage(reinterpret_cast<const uchar *>(byteSwap(data, rgb565ByteReversed).constData()), w, h, w * 2, QImage::Format_RGB16));
+                break;
+            }
+            case PIXFORMAT_COMPRESSED_ANY:
+            {
+                pixmap = QPixmap::fromImage(QImage::fromData(data));
+                break;
+            }
+            default:
+            {
+                break;
+            }
+        }
+    }
+    else if (!OLD_IS_BAYER(bpp))
+    {
+        pixmap = getImageSize(w, h, bpp, false, 0) ? (QPixmap::fromImage(OLD_IS_JPG(bpp)
+            ? QImage::fromData(data)
+            : QImage(reinterpret_cast<const uchar *>(byteSwap(data,
+                rgb565ByteReversed && OLD_IS_RGB(bpp)).constData()), w, h, OLD_IS_BINARY(bpp) ? ((w + 31) / 32) : (w * bpp),
+                OLD_IS_RGB(bpp) ? QImage::Format_RGB16 : (OLD_IS_GS(bpp) ? QImage::Format_Grayscale8 : (OLD_IS_BINARY(bpp) ? QImage::Format_MonoLSB : QImage::Format_Invalid)))))
+        : QPixmap();
+    }
+
+    if(pixmap.isNull() && (newPixformat ? (pixformat & PIXFORMAT_FLAGS_J) : OLD_IS_JPG(bpp)))
     {
         data = data.mid(1, data.size() - 2);
 
@@ -178,7 +247,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
 
                     if((0 < w) && (w < 32768) && (0 < h) && (h < 32768) && (0 <= bpp) && (bpp <= (1024 * 1024 * 1024)))
                     {
-                        int size = getImageSize(w, h, bpp);
+                        int size = getImageSize(w, h, bpp, m_newPixformat, PIXFORMAT_JPEG); // Works for PNG too.
 
                         if(size)
                         {
@@ -205,9 +274,9 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 {
                     m_pixelBuffer.append(data);
 
-                    if(m_pixelBuffer.size() == getImageSize(m_frameSizeW, m_frameSizeH, m_frameSizeBPP))
+                    if(m_pixelBuffer.size() == getImageSize(m_frameSizeW, m_frameSizeH, m_frameSizeBPP, m_newPixformat, PIXFORMAT_JPEG)) // Works for PNG too.
                     {
-                        QPixmap pixmap = getImageFromData(m_pixelBuffer, m_frameSizeW, m_frameSizeH, m_frameSizeBPP, m_rgb565ByteReversed);
+                        QPixmap pixmap = getImageFromData(m_pixelBuffer, m_frameSizeW, m_frameSizeH, m_frameSizeBPP, m_rgb565ByteReversed, m_newPixformat, PIXFORMAT_JPEG); // Works for PNG too.
 
                         if(!pixmap.isNull())
                         {

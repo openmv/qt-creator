@@ -135,7 +135,7 @@ static QByteArray addMJPEG(uint32_t *frames, uint32_t *bytes, const QPixmap &pix
     return fp;
 }
 
-static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW, int *maxH)
+static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW, int *maxH, bool newPixformat)
 {
     QProgressDialog progress(QObject::tr("Reading File..."), QObject::tr("Cancel"), imageWriterFile->pos() / 1024, imageWriterFile->size() / 1024, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint | // Dividing by 1024 above makes sure that a 4GB max file size fits in an int.
@@ -158,12 +158,26 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
     {
         progress.setValue(imageWriterFile->pos() / 1024); // Dividing by 1024 makes sure that a 4GB max file size fits in an int.
 
-        int M, W, H, BPP;
+        int M, W, H, BPP, S = 0;
 
         stream >> M;
         stream >> W;
         stream >> H;
         stream >> BPP;
+
+        if(newPixformat)
+        {
+            stream >> S;
+
+            if(stream.skipRawData(12) != 12)
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    QObject::tr("Reading File"),
+                    QObject::tr("File is corrupt!"));
+
+                return false;
+            }
+        }
 
         if((M <= 0) || (M > (1000 * 60 * 60 * 24)) || (W <= 0) || (W > 32767) || (H <= 0) || (H > 32767) || (BPP < 0) || (BPP > (1024 * 1204 * 1024))) // Sane limits.
         {
@@ -174,7 +188,7 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
             return false;
         }
 
-        int size = ((getImageSize(W, H, BPP) + 15) / 16) * 16;
+        int size = ((getImageSize(W, H, newPixformat ? S : BPP, newPixformat, BPP) + 15) / 16) * 16;
 
         if(stream.skipRawData(size) != size)
         {
@@ -198,7 +212,7 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
     return true;
 }
 
-static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32_t *frames, uint32_t *bytes, QFile *imageWriterFile, int maxW, int maxH, bool rgb565ByteReversed)
+static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32_t *frames, uint32_t *bytes, QFile *imageWriterFile, int maxW, int maxH, bool rgb565ByteReversed, bool newPixformat)
 {
     QProgressDialog progress(QObject::tr("Transcoding File..."), QObject::tr("Cancel"), imageWriterFile->pos() / 1024, imageWriterFile->size() / 1024, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint | // Dividing by 1024 above makes sure that a 4GB max file size fits in an int.
@@ -221,12 +235,26 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
     {
         progress.setValue(imageWriterFile->pos() / 1024); // Dividing by 1024 makes sure that a 4GB max file size fits in an int.
 
-        int M, W, H, BPP;
+        int M, W, H, BPP, S = 0;
 
         stream >> M;
         stream >> W;
         stream >> H;
         stream >> BPP;
+
+        if(newPixformat)
+        {
+            stream >> S;
+
+            if(stream.skipRawData(12) != 12)
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    QObject::tr("Reading File"),
+                    QObject::tr("File is corrupt!"));
+
+                return false;
+            }
+        }
 
         if((M <= 0) || (M > (1000 * 60 * 60 * 24)) || (W <= 0) || (W > 32767) || (H <= 0) || (H > 32767) || (BPP < 0) || (BPP > (1024 * 1204 * 1024))) // Sane limits.
         {
@@ -237,7 +265,7 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
             return false;
         }
 
-        QByteArray data(getImageSize(W, H, BPP), 0);
+        QByteArray data(getImageSize(W, H, newPixformat ? S : BPP, newPixformat, BPP), 0);
 
         if(stream.readRawData(data.data(), data.size()) != data.size())
         {
@@ -248,7 +276,7 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
             return false;
         }
 
-        QPixmap pixmap = getImageFromData(data, W, H, BPP, rgb565ByteReversed).scaled(maxW, maxH, Qt::KeepAspectRatio);
+        QPixmap pixmap = getImageFromData(data, W, H, newPixformat ? S : BPP, rgb565ByteReversed, newPixformat, BPP).scaled(maxW, maxH, Qt::KeepAspectRatio);
 
         int size = 16 - (data.size() % 16);
 
@@ -323,7 +351,7 @@ static QString handleImageWriterFiles(const QString &path)
             {
                 int version = ((major - '0') * 10) + (minor - '0');
 
-                if((version == 10) || (version == 11))
+                if((version == 10) || (version == 11) || (version == 20))
                 {
                     QFile tempFile(QDir::tempPath() + QDir::separator() + QFileInfo(file).completeBaseName() + QStringLiteral(".mjpeg"));
 
@@ -331,7 +359,7 @@ static QString handleImageWriterFiles(const QString &path)
                     {
                         int avgM = -1, maxW = 0, maxH = 0;
 
-                        if(getMaxSizeAndAvgMsDelta(&file, &avgM, &maxW, &maxH))
+                        if(getMaxSizeAndAvgMsDelta(&file, &avgM, &maxW, &maxH, version == 20))
                         {
                             if(file.seek(16))
                             {
@@ -341,7 +369,7 @@ static QString handleImageWriterFiles(const QString &path)
                                 {
                                     uint32_t frames = 0, bytes = 0;
 
-                                    if(convertImageWriterFileToMjpegVideoFile(&tempFile, &frames, &bytes, &file, maxW, maxH, version == 10))
+                                    if(convertImageWriterFileToMjpegVideoFile(&tempFile, &frames, &bytes, &file, maxW, maxH, version == 10, version == 20))
                                     {
                                         if(tempFile.seek(0))
                                         {

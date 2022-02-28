@@ -5769,6 +5769,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             m_iodevice->rgb565ByteReservedEnable(false);
         }
 
+        if((major2 < OPENMV_NEW_PIXFORMAT_MAJOR)
+        || ((major2 == OPENMV_NEW_PIXFORMAT_MAJOR) && (minor2 < OPENMV_NEW_PIXFORMAT_MINOR))
+        || ((major2 == OPENMV_NEW_PIXFORMAT_MAJOR) && (minor2 == OPENMV_NEW_PIXFORMAT_MINOR) && (patch2 < OPENMV_NEW_PIXFORMAT_PATCH)))
+        {
+            m_iodevice->newPixformatEnable(false);
+        }
+        else
+        {
+            m_iodevice->newPixformatEnable(true);
+        }
+
         m_boardType = QString();
         m_boardId = QString();
         m_boardVID = 0;
