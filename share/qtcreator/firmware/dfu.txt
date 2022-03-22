@@ -17,7 +17,13 @@
         "boardType" : "H7",
         "vidpid" : "2341:035f",
         "appvidpid" : ["2341:045f"],
-        "eraseCommands" : ["-a 0 -s 0x08020000"],
+        "eraseCommands" : ["-a 1 -s 0x90000000"],
+        "extraProgramCommands" : [
+                {
+                    "addr" : "-a 1 -s 0x90F00000",
+                    "path" : "CYW4343/cyw4343.bin"
+                }
+            ],
         "binProgramCommand" : "-a 0 -s 0x08040000:leave",
         "dfuProgramCommand" : "-a 0 -s :leave"
     }
