@@ -653,7 +653,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
         foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
         {
             if(port.hasVendorIdentifier() && (port.vendorIdentifier() == OPENMVCAM_VID)
-            && port.hasProductIdentifier() && (port.productIdentifier() == OPENMVCAM_PID))
+            && port.hasProductIdentifier() && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() == QStringLiteral("000000000011")))
             {
                 stringList.append(port.portName());
             }
