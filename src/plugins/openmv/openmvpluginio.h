@@ -136,6 +136,7 @@ public:
     explicit OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent = Q_NULLPTR);
 
     bool getTimeout();
+    bool queueisEmpty() const;
     bool frameSizeDumpQueued() const;
     bool getScriptRunningQueued() const;
     bool getAttributeQueued() const;
@@ -185,6 +186,7 @@ signals:
 
     void firmwareVersion(int major, int minor, int patch);
     void frameBufferData(const QPixmap &data);
+    void frameBufferEmpty(bool ok);
     void archString(const QString &arch);
     void learnedMTU(bool ok);
     void scriptExecDone();
@@ -198,6 +200,7 @@ signals:
     void fbEnableDone();
     void jpegEnableDone();
     void printData(const QByteArray &data);
+    void printEmpty(bool ok);
     void sensorIdDone(int id);
     void gotBootloaderStart(bool ok, int version);
     void bootloaderResetDone(bool ok);
@@ -208,6 +211,7 @@ signals:
     void bootloaderQSPIFWriteDone(bool ok);
     void bootloaderQSPIFLayoutDone(int start_block, int max_block, int block_size_in_bytes);
     void bootloaderQSPIFMemtestDone(bool ok);
+    void queueEmpty();
     void closeResponse();
 
 private:

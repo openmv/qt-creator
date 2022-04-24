@@ -266,6 +266,14 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                             m_frameSizeH = h;
                             m_frameSizeBPP = bpp;
                         }
+                        else
+                        {
+                            emit frameBufferEmpty(true);
+                        }
+                    }
+                    else
+                    {
+                        emit frameBufferEmpty(true);
                     }
 
                     break;
@@ -278,7 +286,9 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     {
                         QPixmap pixmap = getImageFromData(m_pixelBuffer, m_frameSizeW, m_frameSizeH, m_frameSizeBPP, m_rgb565ByteReversed, m_newPixformat, PIXFORMAT_JPEG); // Works for PNG too.
 
-                        if(!pixmap.isNull())
+                        bool null = pixmap.isNull();
+
+                        if(!null)
                         {
                             emit frameBufferData(pixmap);
                         }
@@ -287,6 +297,12 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                         m_frameSizeH = int();
                         m_frameSizeBPP = int();
                         m_pixelBuffer.clear();
+
+                        emit frameBufferEmpty(null);
+                    }
+                    else
+                    {
+                        emit frameBufferEmpty(true);
                     }
 
                     break;
@@ -421,6 +437,11 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     {
                         emit printData(pasrsePrintData(m_lineBuffer));
                         m_lineBuffer.clear();
+                        emit printEmpty(true);
+                    }
+                    else
+                    {
+                        emit printEmpty(true);
                     }
 
                     break;
@@ -442,6 +463,8 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     {
                         emit printData(out);
                     }
+
+                    emit printEmpty(m_lineBuffer.isEmpty());
 
                     break;
                 }
@@ -520,6 +543,11 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
 
             m_completionQueue.dequeue();
 
+            if (m_postedQueue.isEmpty() && m_completionQueue.isEmpty())
+            {
+                emit queueEmpty();
+            }
+
             command();
         }
         else
@@ -535,6 +563,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     }
                     case USBDBG_FRAME_SIZE_CPL:
                     {
+                        emit frameBufferEmpty(true);
                         break;
                     }
                     case USBDBG_FRAME_DUMP_CPL:
@@ -543,6 +572,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                         m_frameSizeH = int();
                         m_frameSizeBPP = int();
                         m_pixelBuffer.clear();
+                        emit frameBufferEmpty(true);
                         break;
                     }
                     case USBDBG_ARCH_STR_CPL:
@@ -662,6 +692,8 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                             m_lineBuffer.clear();
                         }
 
+                        emit printEmpty(true);
+
                         break;
                     }
                     case USBDBG_TX_BUF_CPL:
@@ -671,6 +703,8 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                             emit printData(pasrsePrintData(m_lineBuffer));
                             m_lineBuffer.clear();
                         }
+
+                        emit printEmpty(true);
 
                         break;
                     }
@@ -739,6 +773,11 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
 
                 m_completionQueue.dequeue();
 
+                if (m_postedQueue.isEmpty() && m_completionQueue.isEmpty())
+                {
+                    emit queueEmpty();
+                }
+
                 if((!m_postedQueue.isEmpty())
                 && (!m_completionQueue.isEmpty())
                 && (m_postedQueue.size() == m_completionQueue.size()))
@@ -761,6 +800,11 @@ bool OpenMVPluginIO::getTimeout()
     bool timeout = m_timeout;
     m_timeout = false;
     return timeout;
+}
+
+bool OpenMVPluginIO::queueisEmpty() const
+{
+    return m_postedQueue.isEmpty() && m_completionQueue.isEmpty();
 }
 
 bool OpenMVPluginIO::frameSizeDumpQueued() const
