@@ -27,6 +27,9 @@
 function Component()
 {
     //OPENMV-DIFF//
+    component.loaded.connect(this, Component.prototype.installerLoaded);
+    installer.setDefaultPageVisible(QInstaller.TargetDirectory, false);
+    //OPENMV-DIFF//
     //component.loaded.connect(this, Component.prototype.loaded);
     //OPENMV-DIFF//
     installer.installationFinished.connect(this, Component.prototype.installationFinishedPageIsShown);
@@ -193,7 +196,7 @@ Component.prototype.createOperations = function()
                                 "workingDirectory=@homeDir@" );
         component.addElevatedOperation("Execute", "{2,512}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\ftdi\\ftdi.cmd");
         component.addElevatedOperation("Execute", "{1,256}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\openmv\\openmv.cmd");
-        component.addElevatedOperation("Execute", "{2,512}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\arduino\\arduino.cmd");
+        component.addElevatedOperation("Execute", "{2,768}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\arduino\\arduino.cmd");
         //component.addElevatedOperation("Execute", "{1,256}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\pybcdc\\pybcdc.cmd");
         component.addElevatedOperation("Execute", "{1,256}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\dfuse.cmd");
         component.addElevatedOperation("Execute", "{0,3010}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\vcr.cmd");
@@ -279,3 +282,96 @@ Component.prototype.installationFinished = function()
         print(e);
     }
 }
+
+//OPENMV-DIFF//
+Component.prototype.installerLoaded = function()
+{
+    if (installer.addWizardPage(component, "TargetWidget", QInstaller.TargetDirectory)) {
+        var widget = gui.pageWidgetByObjectName("DynamicTargetWidget");
+        if (widget != null) {
+            widget.targetChooser.clicked.connect(this, this.chooseTarget);
+            widget.targetDirectory.textChanged.connect(this, Component.prototype.targetChanged);
+            widget.windowTitle = "Installation Folder";
+            widget.targetDirectory.setText(installer.value("TargetDir"));
+        }
+    }
+
+    gui.pageById(QInstaller.LicenseCheck).entered.connect(this, Component.prototype.licenseCheckPageEntered);
+}
+
+Component.prototype.targetChanged = function(text)
+{
+    var widget = gui.pageWidgetByObjectName("DynamicTargetWidget");
+    if (widget != null) {
+        if (text != "") {
+            widget.complete = true;
+
+            if (installer.value("os") == "win") {
+                if (installer.fileExists(text) && installer.fileExists(text + "/OpenMVIDEUninst.exe")) {
+                    widget.warning.setText("<p style=\"color: red\">Existing installation detected and will be overwritten.</p>");
+                }
+                else if (installer.fileExists(text)) {
+                    widget.warning.setText("<p style=\"color: red\">Installing in existing directory. It will be wiped on uninstallation.</p>");
+                }
+                else {
+                    widget.warning.setText("");
+                }
+            }
+            else if (installer.value("os") == "x11") {
+                if (installer.fileExists(text) && installer.fileExists(text + "/OpenMVIDEUninstaller")) {
+                    widget.warning.setText("<p style=\"color: red\">Existing installation detected and will be overwritten.</p>");
+                }
+                else if (installer.fileExists(text)) {
+                    widget.warning.setText("<p style=\"color: red\">Installing in existing directory. It will be wiped on uninstallation.</p>");
+                }
+                else {
+                    widget.warning.setText("");
+                }
+            }
+            else if (installer.value("os") == "mac") {
+                if (installer.fileExists(text)) {
+                    widget.warning.setText("<p style=\"color: red\">Installing in existing directory. It will be wiped on uninstallation.</p>");
+                }
+                else {
+                    widget.warning.setText("");
+                }
+            }
+
+            installer.setValue("TargetDir", text);
+            return;
+        }
+
+        widget.complete = false;
+    }
+}
+
+Component.prototype.chooseTarget = function()
+{
+    var widget = gui.pageWidgetByObjectName("DynamicTargetWidget");
+    if (widget != null) {
+        var newTarget = QFileDialog.getExistingDirectory("Select Installation Folder", widget.targetDirectory.text);
+        if (newTarget != "") {
+            widget.targetDirectory.setText(newTarget);
+        }
+    }
+}
+
+Component.prototype.licenseCheckPageEntered = function()
+{
+    var temp = QDesktopServices.storageLocation(QDesktopServices.TempLocation);
+    var dir = installer.value("TargetDir");
+
+    if (installer.value("os") == "win") {
+        if (installer.fileExists(dir) && installer.fileExists(dir + "/OpenMVIDEUninst.exe")) {
+            installer.execute("cmd.exe", ["/c", "echo function Controller(){gui.clickButton(buttons.NextButton);gui.clickButton(buttons.NextButton);installer.uninstallationFinished.connect(this,this.uninstallationFinished);}Controller.prototype.uninstallationFinished=function(){gui.clickButton(buttons.NextButton);}Controller.prototype.FinishedPageCallback=function(){gui.clickButton(buttons.FinishButton);}> %Temp%\\auto_uninstall.qs"])
+            installer.execute(dir + "/OpenMVIDEUninst.exe", "--script=" + temp + "/auto_uninstall.qs");
+        }
+    }
+    else if (installer.value("os") == "x11") {
+        if (installer.fileExists(dir) && installer.fileExists(dir + "/OpenMVIDEUninstaller")) {
+            installer.execute("echo", ["\"function Controller(){gui.clickButton(buttons.NextButton);gui.clickButton(buttons.NextButton);installer.uninstallationFinished.connect(this,this.uninstallationFinished);}Controller.prototype.uninstallationFinished=function(){gui.clickButton(buttons.NextButton);}Controller.prototype.FinishedPageCallback=function(){gui.clickButton(buttons.FinishButton);}\" > $TMPDIR/auto_uninstall.qs"])
+            installer.execute(dir + "/OpenMVIDEUninstaller", "--script=" + temp + "/auto_uninstall.qs");
+        }
+    }
+}
+//OPENMV-DIFF//

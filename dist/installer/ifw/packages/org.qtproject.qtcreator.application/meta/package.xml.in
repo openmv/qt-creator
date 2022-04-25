@@ -23,5 +23,6 @@
     <UserInterfaces>
         <UserInterface>associatecommonfiletypesform.ui</UserInterface>
         <UserInterface>launchqtcreatorcheckboxform.ui</UserInterface>
+        <UserInterface>targetwidget.ui</UserInterface>
     </UserInterfaces>
 </Package>
