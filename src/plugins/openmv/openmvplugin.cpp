@@ -962,6 +962,12 @@ void OpenMVPlugin::extensionsInitialized()
     resetCommand->setEnabled(false);
     connect(resetCommand, &QAction::triggered, this, [this] {disconnectClicked(true);});
 
+    QAction *developmentReleaseCommand = new QAction(tr("Install the Latest Development Release"), this);
+    m_developmentReleaseCommand = Core::ActionManager::registerAction(developmentReleaseCommand, Core::Id("OpenMV.InstallTheLatestDevelopmentRelease"));
+    toolsMenu->addAction(m_developmentReleaseCommand);
+    developmentReleaseCommand->setEnabled(false);
+    connect(developmentReleaseCommand, &QAction::triggered, this, &OpenMVPlugin::installTheLatestDevelopmentRelease);
+
     toolsMenu->addSeparator();
     m_openTerminalMenu = Core::ActionManager::createMenu(Core::Id("OpenMV.OpenTermnial"));
     m_openTerminalMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
@@ -3469,6 +3475,56 @@ void OpenMVPlugin::bootloaderClicked()
     }
 }
 
+void OpenMVPlugin::installTheLatestDevelopmentRelease()
+{
+    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
+        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    dialog->setWindowTitle(tr("Bootloader"));
+    QFormLayout *layout = new QFormLayout(dialog);
+    layout->setVerticalSpacing(0);
+
+    QSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+
+    QHBoxLayout *layout2 = new QHBoxLayout;
+    layout2->setMargin(0);
+    QWidget *widget = new QWidget;
+    widget->setLayout(layout2);
+
+    QCheckBox *checkBox = new QCheckBox(tr("Erase internal file system"));
+    checkBox->setChecked(settings->value(QStringLiteral(LAST_FLASH_FS_ERASE_STATE), false).toBool());
+    layout2->addWidget(checkBox);
+    checkBox->setToolTip(tr("If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. "
+                            "This does not erase files on any removable SD card (if inserted)."));
+
+    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
+    QPushButton *run = new QPushButton(tr("Run"));
+    box->addButton(run, QDialogButtonBox::AcceptRole);
+    layout2->addSpacing(160);
+    layout2->addWidget(box);
+    layout->addRow(widget);
+
+    connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+    connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+
+    if(dialog->exec() == QDialog::Accepted)
+    {
+        bool flashFSErase = checkBox->isChecked();
+
+        settings->setValue(QStringLiteral(LAST_FLASH_FS_ERASE_STATE), flashFSErase);
+        settings->endGroup();
+        delete dialog;
+
+        connectClicked(true, QString(), flashFSErase, false, true);
+    }
+    else
+    {
+        settings->endGroup();
+        delete dialog;
+    }
+}
+
 #define CONNECT_END() \
 do { \
     m_working = false; \
@@ -3505,7 +3561,97 @@ do { \
     return; \
 } while(0)
 
-void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePath, bool forceFlashFSErase, bool justEraseFlashFs)
+bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString *path)
+{
+    QProgressDialog *dialog = new QProgressDialog(tr("Downloading..."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+    dialog->setWindowModality(Qt::ApplicationModal);
+    dialog->setAttribute(Qt::WA_ShowWithoutActivating);
+    dialog->setAutoClose(false);
+
+    QNetworkAccessManager *manager2 = new QNetworkAccessManager(this);
+
+    bool ok = true;
+    bool *okPtr = &ok;
+
+    connect(manager2, &QNetworkAccessManager::finished, this, [this, manager2, dialog, okPtr, path] (QNetworkReply *reply2) {
+        QByteArray data2 = reply2->error() == QNetworkReply::NoError ? reply2->readAll() : QByteArray();
+
+        if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
+        {
+            dialog->setLabelText(tr("Extracting..."));
+            dialog->setRange(0, 0);
+            dialog->setCancelButton(Q_NULLPTR);
+
+            if(!extractAllWrapper(&data2, QDir::tempPath()))
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    QString(),
+                    tr("Unable to extract firmware!"));
+
+                *okPtr = false;
+            }
+            else
+            {
+                *path = QDir::cleanPath(QDir::fromNativeSeparators(QDir::tempPath() + QStringLiteral("/firmware.bin")));
+            }
+        }
+        else if((reply2->error() != QNetworkReply::NoError) && (reply2->error() != QNetworkReply::OperationCanceledError))
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                tr("Connect"),
+                tr("Error: %L1!").arg(reply2->errorString()));
+
+            *okPtr = false;
+        }
+        else if(reply2->error() != QNetworkReply::OperationCanceledError)
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                tr("Connect"),
+                tr("Cannot open the resources file \"%L1\"!").arg(reply2->request().url().toString()));
+
+            *okPtr = false;
+        }
+
+        connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
+
+        delete dialog;
+    });
+
+    QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv/releases/download/development/firmware_%1.zip").arg(arch)));
+#if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
+    request2.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#endif
+    QNetworkReply *reply2 = manager2->get(request2);
+
+    if(reply2)
+    {
+        connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
+        connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
+        connect(reply2, &QNetworkReply::downloadProgress, this, [this, dialog, reply2] (qint64 bytesReceived, qint64 bytesTotal) {
+            dialog->setMaximum(bytesTotal);
+            dialog->setValue(bytesReceived);
+        });
+
+        dialog->exec();
+
+        if(ok)
+        {
+            return true;
+        }
+    }
+    else
+    {
+        QMessageBox::critical(Core::ICore::dialogParent(),
+            tr("Connect"),
+            tr("Network request failed \"%L1\"!").arg(request2.url().toString()));
+    }
+
+    return false;
+}
+
+void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePath, bool forceFlashFSErase, bool justEraseFlashFs, bool installTheLatestDevelopmentFirmware)
 {
     if(!m_working)
     {
@@ -3516,8 +3662,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         if(m_connected)
         {
-            m_connect_disconnect = connect(this, &OpenMVPlugin::disconnectDone, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs] {
-                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs] {connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs);});
+            m_connect_disconnect = connect(this, &OpenMVPlugin::disconnectDone, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware] {
+                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware] {connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware);});
             });
 
             QTimer::singleShot(0, this, [this] {disconnectClicked();});
@@ -4174,6 +4320,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 || ((major2 == OLD_API_MAJOR) && (minor2 == OLD_API_MINOR) && (patch2 < OLD_API_PATCH)))
                 {
                     if(firmwarePath.isEmpty()) firmwarePath = Core::ICore::userResourcePath() + QStringLiteral("/firmware/") + QStringLiteral(OLD_API_BOARD) + QStringLiteral("/firmware.bin");
+
+                    if(installTheLatestDevelopmentFirmware)
+                    {
+                        if(!getTheLatestDevelopmentFirmware(QStringLiteral(OLD_API_BOARD), &firmwarePath))
+                        {
+                            CLOSE_CONNECT_END();
+                        }
+                    }
                 }
                 else
                 {
@@ -4238,6 +4392,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                                     originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
                                     originalEraseFlashSectorAllEnd = eraseAllMappings.value(temp).second;
+
+                                    if(installTheLatestDevelopmentFirmware)
+                                    {
+                                        if(!getTheLatestDevelopmentFirmware(mappings.value(temp), &firmwarePath))
+                                        {
+                                            CLOSE_CONNECT_END();
+                                        }
+                                    }
                                 }
 
                                 QStringList vidpid = vidpidMappings.value(temp).split(QLatin1Literal(":"));
@@ -5979,6 +6141,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_configureSettingsCommand->action()->setEnabled(false);
         m_saveCommand->action()->setEnabled(false);
         m_resetCommand->action()->setEnabled(true);
+        m_developmentReleaseCommand->action()->setEnabled(true);
         m_connectCommand->action()->setEnabled(false);
         m_connectCommand->action()->setVisible(false);
         m_disconnectCommand->action()->setEnabled(true);
@@ -6268,6 +6431,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_configureSettingsCommand->action()->setEnabled(false);
             m_saveCommand->action()->setEnabled(false);
             m_resetCommand->action()->setEnabled(false);
+            m_developmentReleaseCommand->action()->setEnabled(false);
             m_connectCommand->action()->setEnabled(true);
             m_connectCommand->action()->setVisible(true);
             m_disconnectCommand->action()->setVisible(false);

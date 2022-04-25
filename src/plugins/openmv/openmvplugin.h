@@ -261,7 +261,12 @@ public slots: // private
     bool registerOpenMVCamDialog(const QString board, const QString id);
     void packageUpdate();
     void bootloaderClicked();
-    void connectClicked(bool forceBootloader = false, QString forceFirmwarePath = QString(), bool forceFlashFSErase = false, bool justEraseFlashFs = false);
+    void installTheLatestDevelopmentRelease();
+    void connectClicked(bool forceBootloader = false,
+                        QString forceFirmwarePath = QString(),
+                        bool forceFlashFSErase = false,
+                        bool justEraseFlashFs = false,
+                        bool installTheLatestDevelopmentFirmware = false);
     void disconnectClicked(bool reset = false);
     void startClicked();
     void stopClicked();
@@ -286,6 +291,8 @@ signals:
     void disconnectDone(); // private
 
 private:
+
+    bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path);
 
     bool m_autoConnect;
     OpenMVPluginSerialPort *m_ioport;
@@ -325,6 +332,7 @@ private:
     Core::Command *m_configureSettingsCommand;
     Core::Command *m_saveCommand;
     Core::Command *m_resetCommand;
+    Core::Command *m_developmentReleaseCommand;
     Core::ActionContainer *m_openTerminalMenu;
     Core::Command *m_connectCommand;
     Core::Command *m_disconnectCommand;
