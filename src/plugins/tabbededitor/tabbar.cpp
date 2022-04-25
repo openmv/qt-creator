@@ -188,8 +188,11 @@ void TabBar::closeTab(int index)
     if (index < 0 || index >= m_editors.size())
         return;
 
-    Core::EditorManager::instance()->closeEditor(m_editors.takeAt(index));
-    removeTab(index);
+    if(Core::EditorManager::instance()->closeEditors(QList<Core::IEditor *>() << m_editors.at(index)))
+    {
+        m_editors.removeAt(index);
+        removeTab(index);
+    }
 }
 
 void TabBar::prevTabAction()
