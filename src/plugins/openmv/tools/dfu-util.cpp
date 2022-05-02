@@ -102,14 +102,80 @@ void downloadFirmware(QString &command, Utils::SynchronousProcess &process, Util
 
     layout->addWidget(plainTextEdit);
 
-    QObject::connect(&process, &Utils::SynchronousProcess::stdOut, plainTextEdit, [plainTextEdit] (const QString &text, bool firstTime) {
+    QString stdOutBuffer = QString();
+    QString *stdOutBufferPtr = &stdOutBuffer;
+    bool stdOutFirstTime = true;
+    bool *stdOutFirstTimePtr = &stdOutFirstTime;
+
+    QObject::connect(&process, &Utils::SynchronousProcess::stdOut, plainTextEdit, [plainTextEdit, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text, bool firstTime) {
         Q_UNUSED(firstTime)
-        plainTextEdit->appendPlainText(text.trimmed());
+
+        stdOutBufferPtr->append(text);
+        QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), QString::KeepEmptyParts);
+
+        if(list.size())
+        {
+            *stdOutBufferPtr = list.takeLast();
+        }
+
+        while(list.size())
+        {
+            QString out = list.takeFirst();
+
+            if(out.startsWith(QStringLiteral("Erase")) || out.startsWith(QStringLiteral("Download")))
+            {
+                if(!*stdOutFirstTimePtr)
+                {
+                    QTextCursor cursor = plainTextEdit->textCursor();
+                    cursor.movePosition(QTextCursor::End);
+                    cursor.select(QTextCursor::BlockUnderCursor);
+                    cursor.removeSelectedText();
+                    plainTextEdit->setTextCursor(cursor);
+                }
+
+                *stdOutFirstTimePtr = false;
+            }
+
+            plainTextEdit->appendPlainText(out);
+        }
     });
 
-    QObject::connect(&process, &Utils::SynchronousProcess::stdErr, plainTextEdit, [plainTextEdit] (const QString &text, bool firstTime) {
+    QString stdErrBuffer = QString();
+    QString *stdErrBufferPtr = &stdErrBuffer;
+    bool stdErrFirstTime = true;
+    bool *stdErrFirstTimePtr = &stdErrFirstTime;
+
+    QObject::connect(&process, &Utils::SynchronousProcess::stdErr, plainTextEdit, [plainTextEdit, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text, bool firstTime) {
         Q_UNUSED(firstTime)
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:red\">%1</p>")).arg(text.trimmed()));
+
+        stdErrBufferPtr->append(text);
+        QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), QString::KeepEmptyParts);
+
+        if(list.size())
+        {
+            *stdErrBufferPtr = list.takeLast();
+        }
+
+        while(list.size())
+        {
+            QString out = list.takeFirst();
+
+            if(out.startsWith(QStringLiteral("Erase")) || out.startsWith(QStringLiteral("Download")))
+            {
+                if(!*stdErrFirstTimePtr)
+                {
+                    QTextCursor cursor = plainTextEdit->textCursor();
+                    cursor.movePosition(QTextCursor::End);
+                    cursor.select(QTextCursor::BlockUnderCursor);
+                    cursor.removeSelectedText();
+                    plainTextEdit->setTextCursor(cursor);
+                }
+
+                *stdErrFirstTimePtr = false;
+            }
+
+            plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:red\">%1</p>").arg(out));
+        }
     });
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
