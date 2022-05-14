@@ -206,7 +206,153 @@ void OutputWindow::resizeEvent(QResizeEvent *e)
 
 void OutputWindow::keyPressEvent(QKeyEvent *ev)
 {
-    QPlainTextEdit::keyPressEvent(ev);
+    switch(ev->key())
+    {
+        case Qt::Key_Delete:
+        {
+            emit writeBytes("\x04"); // CTRL+D (4)
+            break;
+        }
+        case Qt::Key_Home:
+        {
+            if(!(ev->modifiers() & Qt::ControlModifier))
+            {
+                emit writeBytes("\x01"); // CTRL+A (1)
+            }
+
+            break;
+        }
+        case Qt::Key_End:
+        {
+            if(!(ev->modifiers() & Qt::ControlModifier))
+            {
+                emit writeBytes("\x05"); // CTRL+E (5)
+            }
+
+            break;
+        }
+        case Qt::Key_Left:
+        {
+            emit writeBytes("\x02"); // CTRL+B (2)
+            break;
+        }
+        case Qt::Key_Up:
+        {
+            emit writeBytes("\x10"); // CTRL+P (16)
+            break;
+        }
+        case Qt::Key_Right:
+        {
+            emit writeBytes("\x06"); // CTRL+F (6)
+            break;
+        }
+        case Qt::Key_Down:
+        {
+            emit writeBytes("\x0E"); // CTRL+N (14)
+            break;
+        }
+        case Qt::Key_PageUp:
+        {
+            QPlainTextEdit::keyPressEvent(ev);
+            break;
+        }
+        case Qt::Key_PageDown:
+        {
+            QPlainTextEdit::keyPressEvent(ev);
+            break;
+        }
+        case Qt::Key_Tab:
+        case Qt::Key_Backspace:
+        case Qt::Key_Return:
+        case Qt::Key_Enter:
+        case Qt::Key_Shift:
+        case Qt::Key_Control:
+        case Qt::Key_Space:
+        case Qt::Key_Exclam:
+        case Qt::Key_QuoteDbl:
+        case Qt::Key_NumberSign:
+        case Qt::Key_Dollar:
+        case Qt::Key_Percent:
+        case Qt::Key_Ampersand:
+        case Qt::Key_Apostrophe:
+        case Qt::Key_ParenLeft:
+        case Qt::Key_ParenRight:
+        case Qt::Key_Asterisk:
+        case Qt::Key_Plus:
+        case Qt::Key_Comma:
+        case Qt::Key_Minus:
+        case Qt::Key_Period:
+        case Qt::Key_Slash:
+        case Qt::Key_0:
+        case Qt::Key_1:
+        case Qt::Key_2:
+        case Qt::Key_3:
+        case Qt::Key_4:
+        case Qt::Key_5:
+        case Qt::Key_6:
+        case Qt::Key_7:
+        case Qt::Key_8:
+        case Qt::Key_9:
+        case Qt::Key_Colon:
+        case Qt::Key_Semicolon:
+        case Qt::Key_Less:
+        case Qt::Key_Equal:
+        case Qt::Key_Greater:
+        case Qt::Key_Question:
+        case Qt::Key_At:
+        case Qt::Key_A:
+        case Qt::Key_B:
+        case Qt::Key_C:
+        case Qt::Key_D:
+        case Qt::Key_E:
+        case Qt::Key_F:
+        case Qt::Key_G:
+        case Qt::Key_H:
+        case Qt::Key_I:
+        case Qt::Key_J:
+        case Qt::Key_K:
+        case Qt::Key_L:
+        case Qt::Key_M:
+        case Qt::Key_N:
+        case Qt::Key_O:
+        case Qt::Key_P:
+        case Qt::Key_Q:
+        case Qt::Key_R:
+        case Qt::Key_S:
+        case Qt::Key_T:
+        case Qt::Key_U:
+        case Qt::Key_V:
+        case Qt::Key_W:
+        case Qt::Key_X:
+        case Qt::Key_Y:
+        case Qt::Key_Z:
+        case Qt::Key_BracketLeft:
+        case Qt::Key_Backslash:
+        case Qt::Key_BracketRight:
+        case Qt::Key_AsciiCircum:
+        case Qt::Key_Underscore:
+        case Qt::Key_QuoteLeft:
+        case Qt::Key_BraceLeft:
+        case Qt::Key_Bar:
+        case Qt::Key_BraceRight:
+        case Qt::Key_AsciiTilde:
+        {
+            QByteArray data = ev->text().toUtf8();
+
+            if((data == "\r") || (data == "\r\n") || (data == "\n"))
+            {
+                // emit writeBytes("\r\n");
+                emit writeBytes("\r");
+                emit writeBytes("\n");
+            }
+            else
+            {
+                emit writeBytes(data);
+            }
+
+            break;
+        }
+    }
 
     //Ensure we scroll also on Ctrl+Home or Ctrl+End
     if (ev->matches(QKeySequence::MoveToStartOfDocument))

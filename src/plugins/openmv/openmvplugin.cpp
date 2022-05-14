@@ -2063,6 +2063,8 @@ void OpenMVPlugin::extensionsInitialized()
     });
     settings->endGroup();
 
+    connect(Core::MessageManager::outputWindow(), &Core::OutputWindow::writeBytes, m_iodevice, &OpenMVPluginIO::mainTerminalInput);
+
     connect(q_check_ptr(qobject_cast<Core::Internal::MainWindow *>(Core::ICore::mainWindow())), &Core::Internal::MainWindow::showEventSignal, this, [this, widget, settings, msplitter, hsplitter, vsplitter] {
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
         if(settings->contains(QStringLiteral(LAST_DATASET_EDITOR_PATH)) && settings->value(QStringLiteral(LAST_DATASET_EDITOR_LOADED)).toBool()) m_datasetEditor->setRootPath(settings->value(QStringLiteral(LAST_DATASET_EDITOR_PATH)).toString());
@@ -5940,6 +5942,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         else
         {
             m_iodevice->newPixformatEnable(true);
+        }
+
+        if((major2 < OPENMV_ADD_MAIN_TERMINAL_INPUT_MAJOR)
+        || ((major2 == OPENMV_ADD_MAIN_TERMINAL_INPUT_MAJOR) && (minor2 < OPENMV_ADD_MAIN_TERMINAL_INPUT_MINOR))
+        || ((major2 == OPENMV_ADD_MAIN_TERMINAL_INPUT_MAJOR) && (minor2 == OPENMV_ADD_MAIN_TERMINAL_INPUT_MINOR) && (patch2 < OPENMV_ADD_MAIN_TERMINAL_INPUT_PATCH)))
+        {
+            m_iodevice->mainTerminalInputEnable(false);
+        }
+        else
+        {
+            m_iodevice->mainTerminalInputEnable(true);
         }
 
         m_boardType = QString();

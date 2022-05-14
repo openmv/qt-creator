@@ -160,6 +160,7 @@ public slots:
     void jpegEnable(bool enabled);
     void getTxBuffer();
     void sensorId();
+    void mainTerminalInput(const QByteArray &data);
     void bootloaderStart();
     void bootloaderReset();
     void flashErase(int sector);
@@ -181,6 +182,7 @@ public slots: // private
     void breakUpJPEGEnable(bool on) { m_breakUpJPEGEnable = on; }
     void rgb565ByteReservedEnable(bool on) { m_rgb565ByteReversed = on; }
     void newPixformatEnable(bool on) { m_newPixformat = on; }
+    void mainTerminalInputEnable(bool on) { m_mainTerminalInput = on; }
 
 signals:
 
@@ -231,6 +233,7 @@ private:
     bool m_breakUpJPEGEnable;
     bool m_rgb565ByteReversed;
     bool m_newPixformat;
+    bool m_mainTerminalInput;
 };
 
 #endif // OPENMVPLUGINIO_H

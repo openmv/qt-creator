@@ -34,6 +34,8 @@ enum
     USBDBG_TX_BUF_LEN_CPL,
     USBDBG_TX_BUF_CPL,
     USBDBG_SENSOR_ID_CPL,
+    USBDBG_TX_INPUT_CPL_0,
+    USBDBG_TX_INPUT_CPL_1,
     BOOTLDR_START_CPL,
     BOOTLDR_RESET_CPL,
     BOOTLDR_ERASE_CPL,
@@ -208,6 +210,8 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
     m_breakUpFBEnable = bool();
     m_breakUpJPEGEnable = bool();
     m_rgb565ByteReversed = bool();
+    m_newPixformat = bool();
+    m_mainTerminalInput = bool();
 }
 
 void OpenMVPluginIO::command()
@@ -473,6 +477,14 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     emit sensorIdDone(deserializeLong(data));
                     break;
                 }
+                case USBDBG_TX_INPUT_CPL_0:
+                {
+                    break;
+                }
+                case USBDBG_TX_INPUT_CPL_1:
+                {
+                    break;
+                }
                 case BOOTLDR_START_CPL:
                 {
                     int result = deserializeLong(data);
@@ -711,6 +723,14 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     case USBDBG_SENSOR_ID_CPL:
                     {
                         emit sensorIdDone(int());
+                        break;
+                    }
+                    case USBDBG_TX_INPUT_CPL_0:
+                    {
+                        break;
+                    }
+                    case USBDBG_TX_INPUT_CPL_1:
+                    {
                         break;
                     }
                     case BOOTLDR_START_CPL:
@@ -1098,6 +1118,23 @@ void OpenMVPluginIO::sensorId()
     m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, SENSOR_ID_RESPONSE_LEN, SENSOR_ID_START_DELAY, SENSOR_ID_END_DELAY));
     m_completionQueue.enqueue(USBDBG_SENSOR_ID_CPL);
     command();
+}
+
+void OpenMVPluginIO::mainTerminalInput(const QByteArray &data)
+{
+    if(m_mainTerminalInput)
+    {
+        QByteArray buffer, text = (data.size() % TABOO_PACKET_SIZE) ? data : (data + '\0');
+        serializeByte(buffer, __USBDBG_CMD);
+        serializeByte(buffer, __USBDBG_TX_INPUT);
+        serializeLong(buffer, text.size());
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), TX_INPUT_0_START_DELAY, TX_INPUT_0_END_DELAY));
+        m_completionQueue.enqueue(USBDBG_TX_INPUT_CPL_0);
+        command();
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(text, int(), TX_INPUT_1_START_DELAY, TX_INPUT_1_END_DELAY));
+        m_completionQueue.enqueue(USBDBG_TX_INPUT_CPL_1);
+        command();
+    }
 }
 
 void OpenMVPluginIO::bootloaderStart()

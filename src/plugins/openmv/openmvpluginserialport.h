@@ -62,6 +62,7 @@
 #define __USBDBG_TX_BUF_LEN                 0x8E
 #define __USBDBG_TX_BUF                     0x8F
 #define __USBDBG_SENSOR_ID                  0x90
+#define __USBDBG_TX_INPUT                   0x11
 
 #define __BOOTLDR_START                     static_cast<int>(0xABCD0001)
 #define __BOOTLDR_RESET                     static_cast<int>(0xABCD0002)
@@ -85,6 +86,7 @@
 #define JPEG_ENABLE_PAYLOAD_LEN             4
 #define TX_BUF_LEN_RESPONSE_LEN             4
 #define SENSOR_ID_RESPONSE_LEN              4
+#define TX_INPUT_PAYLOAD_LEN                4
 
 #define BOOTLDR_START_RESPONSE_LEN          4
 #define BOOTLDR_QUERY_RESPONSE_LEN          12
@@ -156,6 +158,10 @@
 #define TX_BUF_END_DELAY                    0
 #define SENSOR_ID_START_DELAY               0
 #define SENSOR_ID_END_DELAY                 0
+#define TX_INPUT_0_START_DELAY              2
+#define TX_INPUT_0_END_DELAY                2
+#define TX_INPUT_1_START_DELAY              2
+#define TX_INPUT_1_END_DELAY                2
 
 #define BOOTLDR_START_START_DELAY           0
 #define BOOTLDR_START_END_DELAY             0
