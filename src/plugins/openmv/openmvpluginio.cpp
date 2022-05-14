@@ -36,6 +36,8 @@ enum
     USBDBG_SENSOR_ID_CPL,
     USBDBG_TX_INPUT_CPL_0,
     USBDBG_TX_INPUT_CPL_1,
+    USBDBG_TIME_INPUT_CPL_0,
+    USBDBG_TIME_INPUT_CPL_1,
     BOOTLDR_START_CPL,
     BOOTLDR_RESET_CPL,
     BOOTLDR_ERASE_CPL,
@@ -485,6 +487,14 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 {
                     break;
                 }
+                case USBDBG_TIME_INPUT_CPL_0:
+                {
+                    break;
+                }
+                case USBDBG_TIME_INPUT_CPL_1:
+                {
+                    break;
+                }
                 case BOOTLDR_START_CPL:
                 {
                     int result = deserializeLong(data);
@@ -730,6 +740,14 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                         break;
                     }
                     case USBDBG_TX_INPUT_CPL_1:
+                    {
+                        break;
+                    }
+                    case USBDBG_TIME_INPUT_CPL_0:
+                    {
+                        break;
+                    }
+                    case USBDBG_TIME_INPUT_CPL_1:
                     {
                         break;
                     }
@@ -1135,6 +1153,30 @@ void OpenMVPluginIO::mainTerminalInput(const QByteArray &data)
         m_completionQueue.enqueue(USBDBG_TX_INPUT_CPL_1);
         command();
     }
+}
+
+void OpenMVPluginIO::timeInput()
+{
+    QDateTime dt = QDateTime::currentDateTime();
+    QByteArray rtcTuple;
+    serializeLong(rtcTuple, dt.date().year());
+    serializeLong(rtcTuple, dt.date().month());
+    serializeLong(rtcTuple, dt.date().day());
+    serializeLong(rtcTuple, dt.date().dayOfWeek());
+    serializeLong(rtcTuple, dt.time().hour());
+    serializeLong(rtcTuple, dt.time().minute());
+    serializeLong(rtcTuple, dt.time().second());
+    serializeLong(rtcTuple, dt.time().msec());
+    QByteArray buffer;
+    serializeByte(buffer, __USBDBG_CMD);
+    serializeByte(buffer, __USBDBG_TIME_INPUT);
+    serializeLong(buffer, rtcTuple.size());
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), TIME_INPUT_0_START_DELAY, TIME_INPUT_0_END_DELAY));
+    m_completionQueue.enqueue(USBDBG_TIME_INPUT_CPL_0);
+    command();
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(rtcTuple, int(), TIME_INPUT_1_START_DELAY, TIME_INPUT_1_END_DELAY));
+    m_completionQueue.enqueue(USBDBG_TIME_INPUT_CPL_1);
+    command();
 }
 
 void OpenMVPluginIO::bootloaderStart()

@@ -161,6 +161,7 @@ public slots:
     void getTxBuffer();
     void sensorId();
     void mainTerminalInput(const QByteArray &data);
+    void timeInput();
     void bootloaderStart();
     void bootloaderReset();
     void flashErase(int sector);
