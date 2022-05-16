@@ -942,7 +942,7 @@ void OpenMVPlugin::extensionsInitialized()
     m_openDriveFolderCommand = Core::ActionManager::registerAction(openDriveFolderCommand, Core::Id("OpenMV.OpenDriveFolder"));
     toolsMenu->addAction(m_openDriveFolderCommand);
     openDriveFolderCommand->setEnabled(false);
-    connect(openDriveFolderCommand, &QAction::triggered, this, [this] {Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(), m_portPath);});
+    connect(openDriveFolderCommand, &QAction::triggered, this, [this] {Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(), Utils::HostOsInfo::isWindowsHost() ? m_portPath : (m_portPath + QStringLiteral("/.openmv_disk")));});
 
     QAction *configureSettingsCommand = new QAction(tr("Configure OpenMV Cam settings file"), this);
     m_configureSettingsCommand = Core::ActionManager::registerAction(configureSettingsCommand, Core::Id("OpenMV.Settings"));
