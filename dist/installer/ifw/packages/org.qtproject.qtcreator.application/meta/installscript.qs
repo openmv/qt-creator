@@ -369,7 +369,7 @@ Component.prototype.licenseCheckPageEntered = function()
     }
     else if (installer.value("os") == "x11") {
         if (installer.fileExists(dir) && installer.fileExists(dir + "/OpenMVIDEUninstaller")) {
-            installer.execute("echo", ["\"function Controller(){gui.clickButton(buttons.NextButton);gui.clickButton(buttons.NextButton);installer.uninstallationFinished.connect(this,this.uninstallationFinished);}Controller.prototype.uninstallationFinished=function(){gui.clickButton(buttons.NextButton);}Controller.prototype.FinishedPageCallback=function(){gui.clickButton(buttons.FinishButton);}\" > $TMPDIR/auto_uninstall.qs"])
+            installer.execute("bash", ["-c", "echo 'function Controller(){gui.clickButton(buttons.NextButton);gui.clickButton(buttons.NextButton);installer.uninstallationFinished.connect(this,this.uninstallationFinished);}Controller.prototype.uninstallationFinished=function(){gui.clickButton(buttons.NextButton);}Controller.prototype.FinishedPageCallback=function(){gui.clickButton(buttons.FinishButton);}' > /tmp/auto_uninstall.qs"])
             installer.execute(dir + "/OpenMVIDEUninstaller", "--script=" + temp + "/auto_uninstall.qs");
         }
     }
