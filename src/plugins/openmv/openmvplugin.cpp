@@ -5018,7 +5018,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 {
                                     QMessageBox::critical(Core::ICore::dialogParent(),
                                         tr("Connect"),
-                                        tr("No DFU settings for the selected board type!"));
+                                        tr("No DFU settings for the selected board type!") + QString(QStringLiteral("\n\nVID: %1, PID: %2")).arg(m_boardVID, m_boardPID));
 
                                     CONNECT_END();
                                 }
@@ -5054,9 +5054,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                                 if(!foundMatch)
                                 {
+                                    QStringList dfuDeviceVidPidList = selectedDfuDeviceVidPid.split(QLatin1Char(':'));
+
                                     QMessageBox::critical(Core::ICore::dialogParent(),
                                         tr("Connect"),
-                                        tr("No DFU settings for the selected device!"));
+                                        tr("No DFU settings for the selected device!") + QString(QStringLiteral("\n\nVID: %1, PID: %2")).arg(dfuDeviceVidPidList.first().toInt(nullptr, 16), dfuDeviceVidPidList.last().toInt(nullptr, 16)));
 
                                     CONNECT_END();
                                 }
