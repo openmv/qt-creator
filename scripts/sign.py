@@ -37,12 +37,6 @@ def getPFXPass():
     with open(file, 'r') as file: return file.readline().strip()
 PFXPass = getPFXPass()
 
-def getIdentity():
-    file = os.path.join(os.path.expanduser('~'), "identity.txt")
-    if not os.path.isfile(file): return None
-    with open(file, 'r') as file: return file.readline().strip()
-identity = getIdentity()
-
 def signFile(file):
     if sys.platform.startswith("win"):
         if kSignCMDAvailable and PFXFile and PFXPass:
@@ -70,9 +64,9 @@ def signFile(file):
         else: print "Skipping"
         return
     elif sys.platform == "darwin":
-        if codsignAvailable and identity:
+        if codsignAvailable:
             if not os.system("codesign" + \
-            " -s " + identity + " " + file):
+            " -s Application --force --options=runtime --timestamp " + file.replace(" ", "\\ ")):
                 print "Success"
             else:
                 print "Failure"
@@ -107,17 +101,23 @@ def main():
     if os.path.isfile(target): try_signFile(target)
     else:
 
-        extensions = ["*.[rR][uU][nN]", "*.[sS][oO]"]
         if sys.platform.startswith("win"):
             extensions = ["*.[eE][xX][eE]", "*.[dD][lL][lL]"]
-        elif sys.platform == "darwin":
-            extensions = ["*.[aA][pP][pP]", "*.[dD][yY][lL][iI][bB]"]
 
-        for dirpath, dirnames, filenames in os.walk(target):
-            paths = dirnames + filenames
-            for extension in extensions:
-                for path in fnmatch.filter(paths, extension):
-                    try_signFile(os.path.join(dirpath, path))
+            for dirpath, dirnames, filenames in os.walk(target):
+                paths = dirnames + filenames
+                for extension in extensions:
+                    for path in fnmatch.filter(paths, extension):
+                        try_signFile(os.path.join(dirpath, path))
+
+        elif sys.platform == "darwin":
+            files = ["ffmpeg", "ffserver", "ffprobe", "ffplay", "bossac",
+                     "dfu-util", "dfu-prefix", "dfu-suffix",
+                     "elf2uf2", "picotool", "rp2040load"]
+            for dirpath, dirnames, filenames in os.walk(target):
+                for file in files:
+                    for filename in fnmatch.filter(filenames, file):
+                        try_signFile(os.path.join(dirpath, filename))
 
 if __name__ == "__main__":
     main()

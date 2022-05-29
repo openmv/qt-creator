@@ -115,7 +115,11 @@ macx {
     #OPENMV-DIFF#
     BINDIST_INSTALLER_SOURCE = $$BINDIST_SOURCE
     deployqt.commands = $$PWD/scripts/deployqtHelper_mac.sh \"$${APPBUNDLE}\" \"$$[QT_INSTALL_TRANSLATIONS]\" \"$$[QT_INSTALL_PLUGINS]\" \"$$[QT_INSTALL_IMPORTS]\" \"$$[QT_INSTALL_QML]\"
-    codesign.commands = codesign --deep -s \"$(SIGNING_IDENTITY)\" $(SIGNING_FLAGS) \"$${APPBUNDLE}\"
+    #OPENMV-DIFF#
+    #codesign.commands = codesign --deep -s \"$(SIGNING_IDENTITY)\" $(SIGNING_FLAGS) \"$${APPBUNDLE}\"
+    #OPENMV-DIFF#
+    codesign.commands = python -u $$PWD/scripts/sign.py \"$$BINDIST_INSTALLER_SOURCE\" && codesign --deep -s \"$(SIGNING_IDENTITY)\" $(SIGNING_FLAGS) \"$${APPBUNDLE}\"
+    #OPENMV-DIFF#
     dmg.commands = $$PWD/scripts/makedmg.sh $$OUT_PWD/bin $${BASENAME}.dmg
     #dmg.depends = deployqt
     QMAKE_EXTRA_TARGETS += codesign dmg
