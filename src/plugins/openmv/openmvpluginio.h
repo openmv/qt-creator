@@ -31,9 +31,7 @@
 #define FLASH_SECTOR_END                11
 #define FLASH_SECTOR_ALL_START          1
 #define FLASH_SECTOR_ALL_END            11
-
 #define FLASH_ERASE_DELAY               1500
-#define FLASH_WRITE_DELAY               10
 
 #define OLD_IS_JPG(bpp)                 ((bpp) > 3)
 #define OLD_IS_BAYER(bpp)               ((bpp) == 3)

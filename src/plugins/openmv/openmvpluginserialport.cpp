@@ -414,13 +414,15 @@ void OpenMVPluginSerialPort_private::write(const QByteArray &data, int startWait
 
                 m_port->clearError();
 
-                if((m_port->write(data) != data.size()) || (!m_port->flush()))
+                if(m_port->write(data) != data.size())
                 {
                     delete m_port;
                     m_port = Q_NULLPTR;
                 }
                 else
                 {
+                    m_port->flush(); // ignore return
+
                     QElapsedTimer elaspedTimer;
                     elaspedTimer.start();
 

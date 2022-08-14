@@ -4757,12 +4757,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                         if(!justEraseFlashFs)
                         {
-                            bool ok2 = bool();
+                            bool ok2 = true;
                             bool *ok2Ptr = &ok2;
 
                             QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::flashWriteDone,
                                 this, [this, ok2Ptr] (bool ok) {
-                                *ok2Ptr = ok;
+                                *ok2Ptr = *ok2Ptr && ok;
                             });
 
                             QProgressDialog dialog(tr("Programming..."), tr("Cancel"), 0, dataChunks.size() - 1, Core::ICore::dialogParent(),
@@ -4775,25 +4775,21 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             for(int i = 0; i < dataChunks.size(); i += FLASH_PACKET_BATCH_COUNT)
                             {
-                                QEventLoop loop0, loop1;
+                                QEventLoop loop;
 
-                                connect(m_iodevice, &OpenMVPluginIO::flashWriteDone,
-                                        &loop0, &QEventLoop::quit);
+                                connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
+                                        &loop, &QEventLoop::quit);
 
                                 for (int j = 0, jj = qMin(FLASH_PACKET_BATCH_COUNT, dataChunks.size() - i); j < jj; j++) {
                                     m_iodevice->flashWrite(dataChunks.at(i + j), packet_chunksize);
                                 }
 
-                                loop0.exec();
+                                loop.exec();
 
                                 if(!ok2)
                                 {
                                     break;
                                 }
-
-                                QTimer::singleShot(FLASH_WRITE_DELAY, &loop1, &QEventLoop::quit);
-
-                                loop1.exec();
 
                                 dialog.setValue(i);
                             }
