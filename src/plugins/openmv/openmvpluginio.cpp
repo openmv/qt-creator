@@ -1207,11 +1207,17 @@ void OpenMVPluginIO::flashErase(int sector)
     command();
 }
 
-void OpenMVPluginIO::flashWrite(const QByteArray &data)
+void OpenMVPluginIO::flashWrite(const QByteArray &data, int chunksize)
 {
     QByteArray buffer;
-    serializeLong(buffer, __BOOTLDR_WRITE);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer + data, int(), BOOTLDR_WRITE_START_DELAY, BOOTLDR_WRITE_END_DELAY));
+
+    for(int i = 0; i < data.size(); i += chunksize)
+    {
+        serializeLong(buffer, __BOOTLDR_WRITE);
+        buffer.append(data.mid(i, qMin(chunksize, data.size() - i)));
+    }
+
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_WRITE_START_DELAY, BOOTLDR_WRITE_END_DELAY));
     m_completionQueue.enqueue(BOOTLDR_WRITE_CPL);
     command();
 }

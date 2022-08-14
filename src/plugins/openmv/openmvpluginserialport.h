@@ -277,7 +277,7 @@ signals:
     void openResult(const QString &errorMessage);
     void commandResult(const OpenMVPluginSerialPortCommandResult &commandResult);
 
-    void bootloaderStartResponse(bool ok, int version);
+    void bootloaderStartResponse(bool ok, int version, int highspeed);
     void bootloaderStopResponse();
     void bootloaderResetResponse();
 
@@ -311,7 +311,7 @@ signals:
     void bootloaderStop();
     void bootloaderReset();
 
-    void bootloaderStartResponse(bool ok, int version);
+    void bootloaderStartResponse(bool ok, int version, int highspeed);
     void bootloaderStopResponse();
     void bootloaderResetResponse();
 };

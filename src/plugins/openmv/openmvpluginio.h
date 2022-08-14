@@ -14,14 +14,21 @@
 #define TEMPLATE_SAVE_PATH_MAX_LEN      55
 #define DESCRIPTOR_SAVE_PATH_MAX_LEN    55
 
+#define FS_EP_SIZE                      64
+#define HS_EP_SIZE                      512
+#define FS_CHUNK_SIZE                   ((FS_EP_SIZE) - 4) // space for header
+#define HS_CHUNK_SIZE                   ((HS_EP_SIZE) - 4) // space for header
+#define FS_PACKETS_PER_SOF              6
+#define HS_PACKETS_PER_SOF              32
+#define FS_BYTES_PER_SOF                (((FS_CHUNK_SIZE) * (FS_PACKETS_PER_SOF)) - 0) // ensure last packet is not a multiple of the ep size
+#define HS_BYTES_PER_SOF                (((HS_CHUNK_SIZE) * (HS_PACKETS_PER_SOF)) - 0) // ensure last packet is not a multiple of the ep size
+
 #define FLASH_SECTOR_START              4
 #define FLASH_SECTOR_END                11
 #define FLASH_SECTOR_ALL_START          1
 #define FLASH_SECTOR_ALL_END            11
 
-#define FLASH_WRITE_CHUNK_SIZE          56
-
-#define FLASH_ERASE_DELAY               2000
+#define FLASH_ERASE_DELAY               1500
 #define FLASH_WRITE_DELAY               1
 
 #define OLD_IS_JPG(bpp)                 ((bpp) > 3)
@@ -165,7 +172,7 @@ public slots:
     void bootloaderStart();
     void bootloaderReset();
     void flashErase(int sector);
-    void flashWrite(const QByteArray &data);
+    void flashWrite(const QByteArray &data, int chunksize);
     void bootloaderQuery();
     void bootloaderQSPIFErase(int sector);
     void bootloaderQSPIFWrite(const QByteArray &data);

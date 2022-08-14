@@ -145,7 +145,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
         foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
         {
-            if(port.hasVendorIdentifier() && port.hasProductIdentifier() && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000011")))
+            if(port.hasVendorIdentifier() && port.hasProductIdentifier() && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
             || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
@@ -2316,7 +2316,7 @@ bool OpenMVPlugin::delayedInitialize()
         {
             if(port.hasVendorIdentifier() && port.hasProductIdentifier()
             && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
-            && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000011")))
+            && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
             || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
@@ -3681,7 +3681,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         {
             if(port.hasVendorIdentifier() && port.hasProductIdentifier()
             && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
-            && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000011")))
+            && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
             || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
@@ -4481,33 +4481,26 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         if(!justEraseFlashFs) file.close();
 
-                        QList<QByteArray> dataChunks;
-
-                        for(int i = 0; i < data.size(); i += FLASH_WRITE_CHUNK_SIZE)
-                        {
-                            dataChunks.append(data.mid(i, qMin(FLASH_WRITE_CHUNK_SIZE, data.size() - i)));
-                        }
-
-                        if(dataChunks.size() && (dataChunks.last().size() % FLASH_WRITE_CHUNK_SIZE))
-                        {
-                            dataChunks.last().append(QByteArray(FLASH_WRITE_CHUNK_SIZE - dataChunks.last().size(), 255));
-                        }
-
                         int qspif_start_block = int();
                         int qspif_max_block = int();
                         int qspif_block_size_in_bytes = int();
+
+                        int packet_chunksize = int();
+                        int frame_chunksize = int();
 
                         // Start Bootloader ///////////////////////////////////
                         {
                             bool done2 = bool(), loopExit = false, done22 = false;
                             bool *done2Ptr = &done2, *loopExitPtr = &loopExit, *done2Ptr2 = &done22;
                             int version2 = int(), *version2Ptr = &version2;
+                            bool highspeed2 = bool(), *highspeed2Ptr = &highspeed2;
 
                             QMetaObject::Connection conn = connect(m_ioport, &OpenMVPluginSerialPort::bootloaderStartResponse,
-                                this, [this, done2Ptr, loopExitPtr, version2Ptr] (bool done, int version) {
+                                this, [this, done2Ptr, loopExitPtr, version2Ptr, highspeed2Ptr] (bool done, int version, bool highspeed) {
                                 *done2Ptr = done;
                                 *loopExitPtr = true;
                                 *version2Ptr = version;
+                                *highspeed2Ptr = highspeed;
                             });
 
                             QMetaObject::Connection conn2 = connect(m_ioport, &OpenMVPluginSerialPort::bootloaderStopResponse,
@@ -4582,6 +4575,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 CONNECT_END();
                             }
 
+                            packet_chunksize = highspeed2 ? HS_CHUNK_SIZE : FS_CHUNK_SIZE;
+                            frame_chunksize = highspeed2 ? HS_BYTES_PER_SOF : FS_BYTES_PER_SOF;
+
                             if((version2 == V2_BOOTLDR) || (version2 == V3_BOOTLDR))
                             {
                                 int all_start2 = int(), *all_start2Ptr = &all_start2;
@@ -4640,6 +4636,18 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                                 disconnect(conn);
                             }
+                        }
+
+                        QList<QByteArray> dataChunks;
+
+                        for(int i = 0; i < data.size(); i += frame_chunksize)
+                        {
+                            dataChunks.append(data.mid(i, qMin(frame_chunksize, data.size() - i)));
+                        }
+
+                        if(dataChunks.size() && (dataChunks.last().size() % 4))
+                        {
+                            dataChunks.last().append(QByteArray(4 - (dataChunks.last().size() % 4), 255));
                         }
 
                         // Erase Flash ////////////////////////////////////////
@@ -4772,7 +4780,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 connect(m_iodevice, &OpenMVPluginIO::flashWriteDone,
                                         &loop0, &QEventLoop::quit);
 
-                                m_iodevice->flashWrite(dataChunks.at(i));
+                                m_iodevice->flashWrite(dataChunks.at(i), packet_chunksize);
 
                                 loop0.exec();
 

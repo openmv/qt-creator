@@ -653,7 +653,9 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
         foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
         {
             if(port.hasVendorIdentifier() && (port.vendorIdentifier() == OPENMVCAM_VID)
-            && port.hasProductIdentifier() && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() == QStringLiteral("000000000011")))
+            && port.hasProductIdentifier() && (port.productIdentifier() == OPENMVCAM_PID)
+            && ((port.serialNumber() == QStringLiteral("000000000010")) ||
+                (port.serialNumber() == QStringLiteral("000000000011"))))
             {
                 stringList.append(port.portName());
             }
@@ -742,7 +744,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
                         || (result == V2_BOOTLDR)
                         || (result == V3_BOOTLDR))
                         {
-                            emit bootloaderStartResponse(true, result);
+                            emit bootloaderStartResponse(true, result, QSerialPortInfo(m_port->portName()).serialNumber() == QStringLiteral("000000000010"));
                             return;
                         }
                     }
@@ -760,7 +762,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
 
         if(m_bootloaderStop)
         {
-            emit bootloaderStartResponse(false, int());
+            emit bootloaderStartResponse(false, int(), false);
             return;
         }
     }
