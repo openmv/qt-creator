@@ -18,10 +18,14 @@
 #define HS_EP_SIZE                      512
 #define FS_CHUNK_SIZE                   ((FS_EP_SIZE) - 4) // space for header
 #define HS_CHUNK_SIZE                   ((HS_EP_SIZE) - 4) // space for header
-#define FS_PACKETS_PER_SOF              6
-#define HS_PACKETS_PER_SOF              32
+#define FS_PACKETS_PER_SOF              1
+#define HS_PACKETS_PER_SOF              1
 #define FS_BYTES_PER_SOF                (((FS_CHUNK_SIZE) * (FS_PACKETS_PER_SOF)) - 0) // ensure last packet is not a multiple of the ep size
 #define HS_BYTES_PER_SOF                (((HS_CHUNK_SIZE) * (HS_PACKETS_PER_SOF)) - 0) // ensure last packet is not a multiple of the ep size
+
+#define FLASH_PACKET_BATCH_COUNT        32
+
+#define FLASH_PER_COMMAND_WAIT          false
 
 #define FLASH_SECTOR_START              4
 #define FLASH_SECTOR_END                11
@@ -29,7 +33,7 @@
 #define FLASH_SECTOR_ALL_END            11
 
 #define FLASH_ERASE_DELAY               1500
-#define FLASH_WRITE_DELAY               1
+#define FLASH_WRITE_DELAY               10
 
 #define OLD_IS_JPG(bpp)                 ((bpp) > 3)
 #define OLD_IS_BAYER(bpp)               ((bpp) == 3)

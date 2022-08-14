@@ -623,9 +623,10 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
         emit commandResult(OpenMVPluginSerialPortCommandResult(false, QByteArray()));
     }
 
-    // Execute commands slowly so as to not overload the OpenMV Cam board.
-
-    QThread::msleep(Utils::HostOsInfo::isMacHost() ? 2 : 1);
+    if (command.m_perCommandWait) {
+        // Execute commands slowly so as to not overload the OpenMV Cam board.
+        QThread::msleep(Utils::HostOsInfo::isMacHost() ? 2 : 1);
+    }
 }
 
 void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort)

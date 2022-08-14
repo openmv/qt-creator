@@ -1217,7 +1217,7 @@ void OpenMVPluginIO::flashWrite(const QByteArray &data, int chunksize)
         buffer.append(data.mid(i, qMin(chunksize, data.size() - i)));
     }
 
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_WRITE_START_DELAY, BOOTLDR_WRITE_END_DELAY));
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_WRITE_START_DELAY, BOOTLDR_WRITE_END_DELAY, FLASH_PER_COMMAND_WAIT));
     m_completionQueue.enqueue(BOOTLDR_WRITE_CPL);
     command();
 }

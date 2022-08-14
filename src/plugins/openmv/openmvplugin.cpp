@@ -4773,14 +4773,16 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             dialog.setCancelButton(Q_NULLPTR);
                             dialog.show();
 
-                            for(int i = 0; i < dataChunks.size(); i++)
+                            for(int i = 0; i < dataChunks.size(); i += FLASH_PACKET_BATCH_COUNT)
                             {
                                 QEventLoop loop0, loop1;
 
                                 connect(m_iodevice, &OpenMVPluginIO::flashWriteDone,
                                         &loop0, &QEventLoop::quit);
 
-                                m_iodevice->flashWrite(dataChunks.at(i), packet_chunksize);
+                                for (int j = 0, jj = qMin(FLASH_PACKET_BATCH_COUNT, dataChunks.size() - i); j < jj; j++) {
+                                    m_iodevice->flashWrite(dataChunks.at(i + j), packet_chunksize);
+                                }
 
                                 loop0.exec();
 
