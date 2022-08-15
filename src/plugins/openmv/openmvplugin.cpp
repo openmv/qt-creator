@@ -4484,7 +4484,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         int qspif_start_block = int();
                         int qspif_max_block = int();
                         int qspif_block_size_in_bytes = int();
-
                         int packet_chunksize = int();
                         int frame_chunksize = int();
 
@@ -4678,21 +4677,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     *ok2Ptr = ok;
                                 });
 
-                                QEventLoop loop0, loop1;
+                                QEventLoop loop;
 
-                                connect(m_iodevice, &OpenMVPluginIO::bootloaderQSPIFEraseDone,
-                                        &loop0, &QEventLoop::quit);
+                                connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
+                                        &loop, &QEventLoop::quit);
 
-                                m_iodevice->bootloaderQSPIFErase(qspif_start_block);
+                                m_iodevice->bootloaderQSPIFErase(qspif_start_block, packet_chunksize); // posted
+                                m_iodevice->bootloaderQuery(); // non-posted blocker
 
-                                loop0.exec();
-
-                                if(ok2)
-                                {
-                                    QTimer::singleShot(FLASH_ERASE_DELAY, &loop1, &QEventLoop::quit);
-
-                                    loop1.exec();
-                                }
+                                loop.exec();
 
                                 disconnect(conn2);
 
@@ -4708,33 +4701,30 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 }
                             }
 
-                            bool ok2 = bool();
+                            bool ok2 = true;
                             bool *ok2Ptr = &ok2;
 
                             QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::flashEraseDone,
                                 this, [this, ok2Ptr] (bool ok) {
-                                *ok2Ptr = ok;
+                                *ok2Ptr = *ok2Ptr && ok;
                             });
 
                             for(int i = flash_start; i <= flash_end; i++)
                             {
-                                QEventLoop loop0, loop1;
+                                QEventLoop loop;
 
-                                connect(m_iodevice, &OpenMVPluginIO::flashEraseDone,
-                                        &loop0, &QEventLoop::quit);
+                                connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
+                                        &loop, &QEventLoop::quit);
 
-                                m_iodevice->flashErase(i);
+                                m_iodevice->flashErase(i, packet_chunksize); // posted
+                                m_iodevice->bootloaderQuery(); // non-posted blocker
 
-                                loop0.exec();
+                                loop.exec();
 
                                 if(!ok2)
                                 {
                                     break;
                                 }
-
-                                QTimer::singleShot(FLASH_ERASE_DELAY, &loop1, &QEventLoop::quit);
-
-                                loop1.exec();
 
                                 dialog.setValue(i);
                             }

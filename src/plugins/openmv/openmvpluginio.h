@@ -24,14 +24,12 @@
 #define HS_BYTES_PER_SOF                (((HS_CHUNK_SIZE) * (HS_PACKETS_PER_SOF)) - 0) // ensure last packet is not a multiple of the ep size
 
 #define FLASH_PACKET_BATCH_COUNT        32
-
 #define FLASH_PER_COMMAND_WAIT          false
 
 #define FLASH_SECTOR_START              4
 #define FLASH_SECTOR_END                11
 #define FLASH_SECTOR_ALL_START          1
 #define FLASH_SECTOR_ALL_END            11
-#define FLASH_ERASE_DELAY               1500
 
 #define OLD_IS_JPG(bpp)                 ((bpp) > 3)
 #define OLD_IS_BAYER(bpp)               ((bpp) == 3)
@@ -173,10 +171,10 @@ public slots:
     void timeInput();
     void bootloaderStart();
     void bootloaderReset();
-    void flashErase(int sector);
+    void flashErase(int sector, int padding=4);
     void flashWrite(const QByteArray &data, int chunksize);
     void bootloaderQuery();
-    void bootloaderQSPIFErase(int sector);
+    void bootloaderQSPIFErase(int sector, int padding=4);
     void bootloaderQSPIFWrite(const QByteArray &data);
     void bootloaderQSPIFLayout();
     void bootloaderQSPIFMemtest();

@@ -1197,11 +1197,12 @@ void OpenMVPluginIO::bootloaderReset()
     command();
 }
 
-void OpenMVPluginIO::flashErase(int sector)
+void OpenMVPluginIO::flashErase(int sector, int padding)
 {
     QByteArray buffer;
     serializeLong(buffer, __BOOTLDR_ERASE);
     serializeLong(buffer, sector);
+    buffer.append(QByteArray(padding - 4, 0));
     m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_ERASE_START_DELAY, BOOTLDR_ERASE_END_DELAY));
     m_completionQueue.enqueue(BOOTLDR_ERASE_CPL);
     command();
@@ -1231,11 +1232,12 @@ void OpenMVPluginIO::bootloaderQuery()
     command();
 }
 
-void OpenMVPluginIO::bootloaderQSPIFErase(int sector)
+void OpenMVPluginIO::bootloaderQSPIFErase(int sector, int padding)
 {
     QByteArray buffer;
     serializeLong(buffer, __BOOTLDR_QSPIF_ERASE);
     serializeLong(buffer, sector);
+    buffer.append(QByteArray(padding - 4, 0));
     m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_QSPIF_ERASE_START_DELAY, BOOTLDR_QSPIF_ERASE_END_DELAY));
     m_completionQueue.enqueue(BOOTLDR_QSPIF_ERASE_CPL);
     command();
