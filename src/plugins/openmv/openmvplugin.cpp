@@ -4562,7 +4562,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                                 if((!justEraseFlashFs) && forceFirmwarePath.isEmpty() && QMessageBox::question(Core::ICore::dialogParent(),
                                     tr("Connect"),
-                                    tr("OpenMV IDE can still try to upgrade your OpenMV Cam using your OpenMV Cam's DFU Bootloader.\n\n"
+                                    tr("OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.\n\n"
                                        "Continue?"),
                                     QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
                                 == QMessageBox::Ok)
@@ -5773,9 +5773,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         {
                             QMessageBox::information(Core::ICore::dialogParent(),
                                 tr("Connect"),
-                                tr("DFU firmware update complete!\n\n") +
-                                (Utils::HostOsInfo::isWindowsHost() ? tr("Disconnect your OpenMV Cam from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.\n\n") : QString()) +
-                                tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while)."));
+                                tr("DFU bootloader reset complete!\n\n") +
+                                tr("Disconnect your OpenMV Cam from your computer and remove the jumper wire between the BOOT and RST pins.\n\n") +
+                                tr("Click the connect button again and follow the prompts unbrick your OpenMV Cam now that the regular bootloader is fixed."));
 
                             RECONNECT_END();
                         }
@@ -5785,7 +5785,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         }
                         else
                         {
-                            QMessageBox box(QMessageBox::Critical, tr("Connect"), tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                            QMessageBox box(QMessageBox::Critical, tr("Connect"), tr("DFU bootloader reset failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
                             box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
