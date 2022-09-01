@@ -14,15 +14,6 @@
 #define TEMPLATE_SAVE_PATH_MAX_LEN      55
 #define DESCRIPTOR_SAVE_PATH_MAX_LEN    55
 
-#define FS_EP_SIZE                      64
-#define HS_EP_SIZE                      512
-#define FS_CHUNK_SIZE                   ((FS_EP_SIZE) - 4) // space for header
-#define HS_CHUNK_SIZE                   ((HS_EP_SIZE) - 4) // space for header
-#define FS_PACKETS_PER_SOF              1
-#define HS_PACKETS_PER_SOF              1
-#define FS_BYTES_PER_SOF                (((FS_CHUNK_SIZE) * (FS_PACKETS_PER_SOF)) - 0) // ensure last packet is not a multiple of the ep size
-#define HS_BYTES_PER_SOF                (((HS_CHUNK_SIZE) * (HS_PACKETS_PER_SOF)) - 0) // ensure last packet is not a multiple of the ep size
-
 #define FLASH_PACKET_BATCH_COUNT        32
 #define FLASH_PER_COMMAND_WAIT          false
 
@@ -171,11 +162,11 @@ public slots:
     void timeInput();
     void bootloaderStart();
     void bootloaderReset();
-    void flashErase(int sector, int padding=4);
+    void flashErase(int sector);
     void flashWrite(const QByteArray &data, int chunksize);
     void bootloaderQuery();
-    void bootloaderQSPIFErase(int sector, int padding=4);
-    void bootloaderQSPIFWrite(const QByteArray &data);
+    void bootloaderQSPIFErase(int sector);
+    void bootloaderQSPIFWrite(const QByteArray &data, int chunksize);
     void bootloaderQSPIFLayout();
     void bootloaderQSPIFMemtest();
     void close();
@@ -191,6 +182,7 @@ public slots: // private
     void rgb565ByteReservedEnable(bool on) { m_rgb565ByteReversed = on; }
     void newPixformatEnable(bool on) { m_newPixformat = on; }
     void mainTerminalInputEnable(bool on) { m_mainTerminalInput = on; }
+    void bootloaderHS(bool on) { m_bootloaderHS = on; }
 
 signals:
 
@@ -242,6 +234,7 @@ private:
     bool m_rgb565ByteReversed;
     bool m_newPixformat;
     bool m_mainTerminalInput;
+    bool m_bootloaderHS;
 };
 
 #endif // OPENMVPLUGINIO_H

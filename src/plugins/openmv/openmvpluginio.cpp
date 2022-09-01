@@ -214,6 +214,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
     m_rgb565ByteReversed = bool();
     m_newPixformat = bool();
     m_mainTerminalInput = bool();
+    m_bootloaderHS = bool();
 }
 
 void OpenMVPluginIO::command()
@@ -1183,7 +1184,8 @@ void OpenMVPluginIO::bootloaderStart()
 {
     QByteArray buffer;
     serializeLong(buffer, __BOOTLDR_START);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_START_RESPONSE_LEN, BOOTLDR_START_START_DELAY, BOOTLDR_START_END_DELAY));
+    buffer.append(QByteArray(m_bootloaderHS ? HS_CHUNK_SIZE : FS_CHUNK_SIZE, 0)); // padding
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_START_RESPONSE_LEN, BOOTLDR_START_START_DELAY, BOOTLDR_START_END_DELAY, FLASH_PER_COMMAND_WAIT));
     m_completionQueue.enqueue(BOOTLDR_START_CPL);
     command();
 }
@@ -1192,18 +1194,19 @@ void OpenMVPluginIO::bootloaderReset()
 {
     QByteArray buffer;
     serializeLong(buffer, __BOOTLDR_RESET);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_RESET_START_DELAY, BOOTLDR_RESET_END_DELAY));
+    buffer.append(QByteArray(m_bootloaderHS ? HS_CHUNK_SIZE : FS_CHUNK_SIZE, 0)); // padding
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_RESET_START_DELAY, BOOTLDR_RESET_END_DELAY, FLASH_PER_COMMAND_WAIT));
     m_completionQueue.enqueue(BOOTLDR_RESET_CPL);
     command();
 }
 
-void OpenMVPluginIO::flashErase(int sector, int padding)
+void OpenMVPluginIO::flashErase(int sector)
 {
     QByteArray buffer;
     serializeLong(buffer, __BOOTLDR_ERASE);
     serializeLong(buffer, sector);
-    buffer.append(QByteArray(padding - 4, 0));
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_ERASE_START_DELAY, BOOTLDR_ERASE_END_DELAY));
+    buffer.append(QByteArray((m_bootloaderHS ? HS_CHUNK_SIZE : FS_CHUNK_SIZE) - 4, 0)); // padding
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_ERASE_START_DELAY, BOOTLDR_ERASE_END_DELAY, FLASH_PER_COMMAND_WAIT));
     m_completionQueue.enqueue(BOOTLDR_ERASE_CPL);
     command();
 }
@@ -1227,27 +1230,34 @@ void OpenMVPluginIO::bootloaderQuery()
 {
     QByteArray buffer;
     serializeLong(buffer, __BOOTLDR_QUERY);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QUERY_RESPONSE_LEN, BOOTLDR_QUERY_START_DELAY, BOOTLDR_QUERY_END_DELAY));
+    buffer.append(QByteArray(m_bootloaderHS ? HS_CHUNK_SIZE : FS_CHUNK_SIZE, 0)); // padding
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QUERY_RESPONSE_LEN, BOOTLDR_QUERY_START_DELAY, BOOTLDR_QUERY_END_DELAY, FLASH_PER_COMMAND_WAIT));
     m_completionQueue.enqueue(BOOTLDR_QUERY_CPL);
     command();
 }
 
-void OpenMVPluginIO::bootloaderQSPIFErase(int sector, int padding)
+void OpenMVPluginIO::bootloaderQSPIFErase(int sector)
 {
     QByteArray buffer;
     serializeLong(buffer, __BOOTLDR_QSPIF_ERASE);
     serializeLong(buffer, sector);
-    buffer.append(QByteArray(padding - 4, 0));
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_QSPIF_ERASE_START_DELAY, BOOTLDR_QSPIF_ERASE_END_DELAY));
+    buffer.append(QByteArray((m_bootloaderHS ? HS_CHUNK_SIZE : FS_CHUNK_SIZE) - 4, 0)); // padding
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_QSPIF_ERASE_START_DELAY, BOOTLDR_QSPIF_ERASE_END_DELAY, FLASH_PER_COMMAND_WAIT));
     m_completionQueue.enqueue(BOOTLDR_QSPIF_ERASE_CPL);
     command();
 }
 
-void OpenMVPluginIO::bootloaderQSPIFWrite(const QByteArray &data)
+void OpenMVPluginIO::bootloaderQSPIFWrite(const QByteArray &data, int chunksize)
 {
     QByteArray buffer;
-    serializeLong(buffer, __BOOTLDR_QSPIF_WRITE);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer + data, int(), BOOTLDR_QSPIF_WRITE_START_DELAY, BOOTLDR_QSPIF_WRITE_END_DELAY));
+
+    for(int i = 0; i < data.size(); i += chunksize)
+    {
+        serializeLong(buffer, __BOOTLDR_QSPIF_WRITE);
+        buffer.append(data.mid(i, qMin(chunksize, data.size() - i)));
+    }
+
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_QSPIF_WRITE_START_DELAY, BOOTLDR_QSPIF_WRITE_END_DELAY, FLASH_PER_COMMAND_WAIT));
     m_completionQueue.enqueue(BOOTLDR_QSPIF_WRITE_CPL);
     command();
 }
@@ -1256,7 +1266,8 @@ void OpenMVPluginIO::bootloaderQSPIFLayout()
 {
     QByteArray buffer;
     serializeLong(buffer, __BOOTLDR_QSPIF_LAYOUT);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QSPIF_LAYOUT_RESPONSE_LEN, BOOTLDR_QSPIF_LAYOUT_START_DELAY, BOOTLDR_QSPIF_LAYOUT_END_DELAY));
+    buffer.append(QByteArray(m_bootloaderHS ? HS_CHUNK_SIZE : FS_CHUNK_SIZE, 0)); // padding
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QSPIF_LAYOUT_RESPONSE_LEN, BOOTLDR_QSPIF_LAYOUT_START_DELAY, BOOTLDR_QSPIF_LAYOUT_END_DELAY, FLASH_PER_COMMAND_WAIT));
     m_completionQueue.enqueue(BOOTLDR_QSPIF_LAYOUT_CPL);
     command();
 }
@@ -1265,7 +1276,8 @@ void OpenMVPluginIO::bootloaderQSPIFMemtest()
 {
     QByteArray buffer;
     serializeLong(buffer, __BOOTLDR_QSPIF_MEMTEST);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QSPIF_MEMTEST_RESPONSE_LEN, BOOTLDR_QSPIF_MEMTEST_START_DELAY, BOOTLDR_QSPIF_MEMTEST_END_DELAY));
+    buffer.append(QByteArray(m_bootloaderHS ? HS_CHUNK_SIZE : FS_CHUNK_SIZE, 0)); // padding
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QSPIF_MEMTEST_RESPONSE_LEN, BOOTLDR_QSPIF_MEMTEST_START_DELAY, BOOTLDR_QSPIF_MEMTEST_END_DELAY, FLASH_PER_COMMAND_WAIT));
     m_completionQueue.enqueue(BOOTLDR_QSPIF_MEMTEST_CPL);
     command();
 }

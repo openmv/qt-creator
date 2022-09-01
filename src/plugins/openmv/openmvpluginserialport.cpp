@@ -702,8 +702,11 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
 
             if(m_port)
             {
+                bool hs = QSerialPortInfo(m_port->portName()).serialNumber() == QStringLiteral("000000000010");
+
                 QByteArray buffer;
                 serializeLong(buffer, __BOOTLDR_START);
+                buffer.append(QByteArray(hs ? HS_CHUNK_SIZE : FS_CHUNK_SIZE, 0)); // padding
                 write(buffer, BOOTLDR_START_START_DELAY, BOOTLDR_START_END_DELAY, BOOTLOADER_WRITE_TIMEOUT);
 
                 if(m_port)
@@ -724,6 +727,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
                         {
                             QByteArray data;
                             serializeLong(data, __BOOTLDR_START);
+                            buffer.append(QByteArray(hs ? HS_CHUNK_SIZE : FS_CHUNK_SIZE, 0)); // padding
                             write(data, BOOTLDR_START_START_DELAY, BOOTLDR_START_END_DELAY, BOOTLOADER_WRITE_TIMEOUT);
 
                             if(m_port)
@@ -747,7 +751,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
                         || (result == V2_BOOTLDR)
                         || (result == V3_BOOTLDR))
                         {
-                            emit bootloaderStartResponse(true, result, QSerialPortInfo(m_port->portName()).serialNumber() == QStringLiteral("000000000010"));
+                            emit bootloaderStartResponse(true, result, hs);
                             return;
                         }
                     }

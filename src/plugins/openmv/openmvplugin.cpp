@@ -3621,7 +3621,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
         delete dialog;
     });
 
-    QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv/releases/download/development/firmware_%1.zip").arg(arch)));
+    QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("http://github.com/openmv/openmv/releases/download/development/firmware_%1.zip").arg(arch)));
 #if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
     request2.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
 #endif
@@ -4567,12 +4567,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
                                 == QMessageBox::Ok)
                                 {
-                                    firmwarePath = QFileInfo(firmwarePath).path() + QStringLiteral("/openmv.dfu");
+                                    firmwarePath = QFileInfo(firmwarePath).path() + QStringLiteral("/bootloader.dfu");
                                     break;
                                 }
 
                                 CONNECT_END();
                             }
+
+                            m_iodevice->bootloaderHS(highspeed2);
 
                             packet_chunksize = highspeed2 ? HS_CHUNK_SIZE : FS_CHUNK_SIZE;
                             frame_chunksize = highspeed2 ? HS_BYTES_PER_SOF : FS_BYTES_PER_SOF;
@@ -4682,7 +4684,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
                                         &loop, &QEventLoop::quit);
 
-                                m_iodevice->bootloaderQSPIFErase(qspif_start_block, packet_chunksize); // posted
+                                m_iodevice->bootloaderQSPIFErase(qspif_start_block); // posted
                                 m_iodevice->bootloaderQuery(); // non-posted blocker
 
                                 loop.exec();
@@ -4716,7 +4718,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
                                         &loop, &QEventLoop::quit);
 
-                                m_iodevice->flashErase(i, packet_chunksize); // posted
+                                m_iodevice->flashErase(i); // posted
                                 m_iodevice->bootloaderQuery(); // non-posted blocker
 
                                 loop.exec();

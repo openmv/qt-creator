@@ -38,6 +38,15 @@
 
 #define TABOO_PACKET_SIZE 64
 
+#define FS_EP_SIZE                      64
+#define HS_EP_SIZE                      512
+#define FS_CHUNK_SIZE                   ((FS_EP_SIZE) - 4) // space for header
+#define HS_CHUNK_SIZE                   ((HS_EP_SIZE) - 4) // space for header
+#define FS_PACKETS_PER_SOF              1
+#define HS_PACKETS_PER_SOF              1
+#define FS_BYTES_PER_SOF                (((FS_CHUNK_SIZE) * (FS_PACKETS_PER_SOF)) - 0) // ensure last packet is not a multiple of the ep size
+#define HS_BYTES_PER_SOF                (((HS_CHUNK_SIZE) * (HS_PACKETS_PER_SOF)) - 0) // ensure last packet is not a multiple of the ep size
+
 ///////////////////////////////////////////////////////////////////////////////
 
 #define __USBDBG_CMD                        0x30
