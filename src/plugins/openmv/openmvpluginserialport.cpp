@@ -575,20 +575,40 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
                 if(m_port->isSerialPort() && (response.size() < responseLen) && elaspedTimer2.hasExpired(read_stall_timeout))
                 {
-                    QByteArray data;
-                    serializeByte(data, __USBDBG_CMD);
-                    serializeByte(data, __USBDBG_SCRIPT_RUNNING);
-                    serializeLong(data, SCRIPT_RUNNING_RESPONSE_LEN);
-                    write(data, SCRIPT_RUNNING_START_DELAY, SCRIPT_RUNNING_END_DELAY, WRITE_TIMEOUT);
+                    if(command.m_perCommandWait) // normal mode
+                    {
+                        QByteArray data;
+                        serializeByte(data, __USBDBG_CMD);
+                        serializeByte(data, __USBDBG_SCRIPT_RUNNING);
+                        serializeLong(data, SCRIPT_RUNNING_RESPONSE_LEN);
+                        write(data, SCRIPT_RUNNING_START_DELAY, SCRIPT_RUNNING_END_DELAY, WRITE_TIMEOUT);
 
-                    if(m_port)
-                    {
-                        responseLen += SCRIPT_RUNNING_RESPONSE_LEN;
-                        elaspedTimer2.restart();
+                        if(m_port)
+                        {
+                            responseLen += SCRIPT_RUNNING_RESPONSE_LEN;
+                            elaspedTimer2.restart();
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
-                    else
+                    else // bootloader mode
                     {
-                        break;
+                        QByteArray data;
+                        serializeLong(data, __BOOTLDR_QUERY);
+                        data.append(QByteArray(QSerialPortInfo(m_port->portName()).serialNumber() == QStringLiteral("000000000010") ? HS_CHUNK_SIZE : FS_CHUNK_SIZE, 0)); // padding
+                        write(data, BOOTLDR_QUERY_START_DELAY, BOOTLDR_QUERY_END_DELAY, WRITE_TIMEOUT);
+
+                        if(m_port)
+                        {
+                            responseLen += BOOTLDR_QUERY_RESPONSE_LEN;
+                            elaspedTimer2.restart();
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
                 }
 
