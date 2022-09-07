@@ -3479,51 +3479,125 @@ void OpenMVPlugin::bootloaderClicked()
 
 void OpenMVPlugin::installTheLatestDevelopmentRelease()
 {
-    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
-        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    dialog->setWindowTitle(tr("Bootloader"));
-    QFormLayout *layout = new QFormLayout(dialog);
-    layout->setVerticalSpacing(0);
+    QProgressDialog *dialog = new QProgressDialog(tr("Downloading..."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
+    dialog->setWindowModality(Qt::ApplicationModal);
+    dialog->setAttribute(Qt::WA_ShowWithoutActivating);
+    dialog->setAutoClose(false);
 
-    QSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+    QNetworkAccessManager *manager2 = new QNetworkAccessManager(this);
 
-    QHBoxLayout *layout2 = new QHBoxLayout;
-    layout2->setMargin(0);
-    QWidget *widget = new QWidget;
-    widget->setLayout(layout2);
+    connect(manager2, &QNetworkAccessManager::finished, this, [this, manager2, dialog] (QNetworkReply *reply2) {
+        QByteArray data2 = reply2->error() == QNetworkReply::NoError ? reply2->readAll() : QByteArray();
 
-    QCheckBox *checkBox = new QCheckBox(tr("Erase internal file system"));
-    checkBox->setChecked(settings->value(QStringLiteral(LAST_FLASH_FS_ERASE_STATE), false).toBool());
-    layout2->addWidget(checkBox);
-    checkBox->setToolTip(tr("If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. "
-                            "This does not erase files on any removable SD card (if inserted)."));
+        if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
+        {
+            int s = data2.indexOf("<div data-pjax=\"true\" data-test-selector=\"body-content\" data-view-component=\"true\" class=\"markdown-body my-3\">");
+            int e = data2.indexOf("<div data-view-component=\"true\" class=\"Box-footer\">");
 
-    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
-    QPushButton *run = new QPushButton(tr("Run"));
-    box->addButton(run, QDialogButtonBox::AcceptRole);
-    layout2->addSpacing(160);
-    layout2->addWidget(box);
-    layout->addRow(widget);
+            QByteArray d;
 
-    connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-    connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+            if((s != -1) and (e != -1))
+            {
+                d = data2.mid(s, e - s);
+                int i = d.lastIndexOf("</div>");
+                d = d.mid(0, i - 1);
+            }
 
-    if(dialog->exec() == QDialog::Accepted)
-    {
-        bool flashFSErase = checkBox->isChecked();
+            QDialog *newDialog = new QDialog(Core::ICore::dialogParent(),
+                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+            newDialog->setWindowTitle(tr("Bootloader"));
+            QFormLayout *layout = new QFormLayout(newDialog);
 
-        settings->setValue(QStringLiteral(LAST_FLASH_FS_ERASE_STATE), flashFSErase);
-        settings->endGroup();
+            if(!d.isEmpty())
+            {
+                QTextEdit *edit = new QTextEdit(QString::fromUtf8(d));
+                edit->setReadOnly(true);
+                layout->addWidget(edit);
+            }
+
+            QSettings *settings = ExtensionSystem::PluginManager::settings();
+            settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+
+            QHBoxLayout *layout2 = new QHBoxLayout;
+            layout2->setMargin(0);
+            QWidget *widget = new QWidget;
+            widget->setLayout(layout2);
+
+            QCheckBox *checkBox = new QCheckBox(tr("Erase internal file system"));
+            checkBox->setChecked(settings->value(QStringLiteral(LAST_FLASH_FS_ERASE_STATE), false).toBool());
+            layout2->addWidget(checkBox);
+            checkBox->setToolTip(tr("If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. "
+                                    "This does not erase files on any removable SD card (if inserted)."));
+
+            QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
+            QPushButton *run = new QPushButton(tr("Run"));
+            box->addButton(run, QDialogButtonBox::AcceptRole);
+            layout2->addSpacing(160);
+            layout2->addWidget(box);
+            layout->addRow(widget);
+
+            connect(box, &QDialogButtonBox::accepted, newDialog, &QDialog::accept);
+            connect(box, &QDialogButtonBox::rejected, newDialog, &QDialog::reject);
+
+            if(newDialog->exec() == QDialog::Accepted)
+            {
+                bool flashFSErase = checkBox->isChecked();
+
+                settings->setValue(QStringLiteral(LAST_FLASH_FS_ERASE_STATE), flashFSErase);
+                settings->endGroup();
+                delete newDialog;
+
+                connectClicked(true, QString(), flashFSErase, false, true);
+            }
+            else
+            {
+                settings->endGroup();
+                delete newDialog;
+            }
+        }
+        else if((reply2->error() != QNetworkReply::NoError) && (reply2->error() != QNetworkReply::OperationCanceledError))
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                tr("Connect"),
+                tr("Error: %L1!").arg(reply2->errorString()));
+        }
+        else if(reply2->error() != QNetworkReply::OperationCanceledError)
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                tr("Connect"),
+                tr("Cannot open the resources file \"%L1\"!").arg(reply2->request().url().toString()));
+        }
+
+        connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
+
         delete dialog;
+    });
 
-        connectClicked(true, QString(), flashFSErase, false, true);
+    QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("http://github.com/openmv/openmv/releases/tag/development")));
+#if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
+    request2.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#endif
+    QNetworkReply *reply2 = manager2->get(request2);
+
+    if(reply2)
+    {
+        connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
+        connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
+        connect(reply2, &QNetworkReply::downloadProgress, this, [this, dialog, reply2] (qint64 bytesReceived, qint64 bytesTotal) {
+            dialog->setMaximum(bytesTotal);
+            dialog->setValue(bytesReceived);
+        });
+
+        dialog->exec();
     }
     else
     {
-        settings->endGroup();
-        delete dialog;
+        QMessageBox::critical(Core::ICore::dialogParent(),
+            tr("Connect"),
+            tr("Network request failed \"%L1\"!").arg(request2.url().toString()));
     }
 }
 
