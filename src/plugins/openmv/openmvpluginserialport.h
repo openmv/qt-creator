@@ -36,6 +36,10 @@
 
 #define OPENMVCAM_BROADCAST_PORT 0xABD1
 
+// OSX will for sure send a zero length USB packet if you send a packet that's
+// a multiple of the end-point size. By not ever doing that you ensure that
+// the OpenMV Cam will not see a zero-length packet. Other operating systems
+// like windows/linux do not do this.
 #define TABOO_PACKET_SIZE 64
 
 #define FS_EP_SIZE                      64

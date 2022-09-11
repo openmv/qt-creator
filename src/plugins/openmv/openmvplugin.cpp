@@ -4758,8 +4758,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
                                         &loop, &QEventLoop::quit);
 
-                                m_iodevice->bootloaderQSPIFErase(qspif_start_block); // posted
-                                m_iodevice->bootloaderQuery(); // non-posted blocker
+                                m_iodevice->bootloaderQSPIFErase(qspif_start_block);
 
                                 loop.exec();
 
@@ -4792,8 +4791,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
                                         &loop, &QEventLoop::quit);
 
-                                m_iodevice->flashErase(i); // posted
-                                m_iodevice->bootloaderQuery(); // non-posted blocker
+                                m_iodevice->flashErase(i);
 
                                 loop.exec();
 
