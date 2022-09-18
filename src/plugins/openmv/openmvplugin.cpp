@@ -3999,10 +3999,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                                     if(!found)
                                     {
-                                        i.remove();
                                         eraseMappings.remove(i.key());
                                         eraseAllMappings.remove(i.key());
                                         vidpidMappings.remove(i.key());
+                                        i.remove();
                                     }
                                 }
                             }
