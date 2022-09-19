@@ -1,5 +1,9 @@
 #include "openmvpluginserialport.h"
 
+#ifdef Q_OS_WIN
+#include <windows.h>
+#endif
+
 #define OPENMVCAM_BAUD_RATE 12000000
 #define OPENMVCAM_BAUD_RATE_2 921600
 
@@ -20,6 +24,9 @@
 
 #define LEARN_MTU_MAX 4096
 #define LEARN_MTU_MIN 64
+
+#define READ_BUFFER_SIZE (64 * 1024 * 1024)
+#define WRITE_BUFFER_SIZE (64 * 1024 * 1024)
 
 void serializeByte(QByteArray &buffer, int value) // LittleEndian
 {
@@ -122,7 +129,22 @@ bool OpenMVPluginSerialPort_thing::open(QIODevice::OpenMode mode)
 {
     if(m_serialPort)
     {
-        return m_serialPort->open(mode);
+        bool ok = m_serialPort->open(mode);
+
+#ifdef Q_OS_WIN
+        void *handle = m_serialPort->handle();
+
+        if(handle)
+        {
+            ok = ok && SetupComm(handle, READ_BUFFER_SIZE, WRITE_BUFFER_SIZE);
+        }
+        else
+        {
+            ok = false;
+        }
+#endif
+
+        return ok;
     }
 
     if(m_tcpSocket)
@@ -327,7 +349,7 @@ void OpenMVPluginSerialPort_private::open(const QString &portName)
 
     m_port = new OpenMVPluginSerialPort_thing(portName, this);
     // QSerialPort is buggy unless this is set.
-    m_port->setReadBufferSize(1000000);
+    m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
     QSerialPortInfo arduinoPort(m_port->portName());
 
@@ -354,7 +376,7 @@ void OpenMVPluginSerialPort_private::open(const QString &portName)
         delete m_port;
         m_port = new OpenMVPluginSerialPort_thing(portName, this);
         // QSerialPort is buggy unless this is set.
-        m_port->setReadBufferSize(1000000);
+        m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
         if((!m_port->setBaudRate(baudRate2))
         || (!m_port->open(QIODevice::ReadWrite))
@@ -384,7 +406,7 @@ void OpenMVPluginSerialPort_private::write(const QByteArray &data, int startWait
             {
                 m_port = new OpenMVPluginSerialPort_thing(portName, this);
                 // QSerialPort is buggy unless this is set.
-                m_port->setReadBufferSize(1000000);
+                m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
                 if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE))
                 || (!m_port->open(QIODevice::ReadWrite))
@@ -393,7 +415,7 @@ void OpenMVPluginSerialPort_private::write(const QByteArray &data, int startWait
                     delete m_port;
                     m_port = new OpenMVPluginSerialPort_thing(portName, this);
                     // QSerialPort is buggy unless this is set.
-                    m_port->setReadBufferSize(1000000);
+                    m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
                     if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE_2))
                     || (!m_port->open(QIODevice::ReadWrite))
@@ -554,7 +576,10 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
             }
 
             QByteArray response;
-            int responseLen = command.m_responseLen;
+            int responseLen = command.m_responseLen, responseDelta = responseLen;
+            // If USB data comes in too fast some operating systems will just cuck it even though they accepted it on the USB bus
+            // instead of returning that data to the application... Nothing can be done except to handle the insanity.
+            bool firstReadStall = false;
             QElapsedTimer elaspedTimer;
             QElapsedTimer elaspedTimer2;
             elaspedTimer.start();
@@ -562,7 +587,7 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
             do
             {
-                m_port->waitForReadyRead(1);
+                m_port->waitForReadyRead(0);
 
                 QByteArray data = m_port->readAll();
                 response.append(data);
@@ -575,6 +600,10 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
                 if(m_port->isSerialPort() && (response.size() < responseLen) && elaspedTimer2.hasExpired(read_stall_timeout))
                 {
+                    // This code helps clear out read stalls where the OS received the data but then doesn't return it to the application.
+                    //
+                    // YES - THIS HAPPENS...
+
                     if(command.m_perCommandWait) // normal mode
                     {
                         QByteArray data;
@@ -585,8 +614,10 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
                         if(m_port)
                         {
+                            responseDelta = responseLen - response.size();
                             responseLen += SCRIPT_RUNNING_RESPONSE_LEN;
                             elaspedTimer2.restart();
+                            firstReadStall = true;
                         }
                         else
                         {
@@ -601,8 +632,10 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
                         if(m_port)
                         {
+                            responseDelta = responseLen - response.size();
                             responseLen += BOOTLDR_QUERY_RESPONSE_LEN;
                             elaspedTimer2.restart();
+                            firstReadStall = true;
                         }
                         else
                         {
@@ -619,6 +652,15 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                     {
                         break;
                     }
+                }
+
+                int remaining = responseLen - response.size();
+
+                if(firstReadStall && remaining && (remaining <= responseDelta))
+                {
+                    qWarning() << "Serial Port Driver Buffers Overflowed! Missing" << remaining << "bytes!";
+                    // All the data we likely are going to receive has been cleared out. So, gracefully handle this.
+                    response.append(QByteArray(remaining, 0));
                 }
             }
             while((response.size() < responseLen) && (!elaspedTimer.hasExpired(read_timeout)));
@@ -699,7 +741,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
 
             m_port = new OpenMVPluginSerialPort_thing(portName, this);
             // QSerialPort is buggy unless this is set.
-            m_port->setReadBufferSize(1000000);
+            m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
             if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE))
             || (!m_port->open(QIODevice::ReadWrite))
@@ -708,7 +750,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
                 delete m_port;
                 m_port = new OpenMVPluginSerialPort_thing(portName, this);
                 // QSerialPort is buggy unless this is set.
-                m_port->setReadBufferSize(1000000);
+                m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
                 if((!m_port->setBaudRate(OPENMVCAM_BAUD_RATE_2))
                 || (!m_port->open(QIODevice::ReadWrite))
