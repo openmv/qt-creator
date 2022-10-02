@@ -41,6 +41,17 @@ MyPlainTextEdit::MyPlainTextEdit(qreal fontPointSizeF, QWidget *parent) : QPlain
     p.setColor(QPalette::Base, QColor(QStringLiteral("#1E1E27")));
     p.setColor(QPalette::Text, QColor(QStringLiteral("#EEEEF7")));
     setPalette(p);
+
+    m_isCursorVisible = true;
+    QTimer *timer = new QTimer(this);
+    timer->setInterval(500);
+
+    connect(timer, &QTimer::timeout, this, [this] {
+        m_isCursorVisible = !m_isCursorVisible;
+        viewport()->update();
+    });
+
+    timer->start();
 }
 
 void MyPlainTextEdit::readBytes(const QByteArray &data)
@@ -755,6 +766,19 @@ bool MyPlainTextEdit::focusNextPrevChild(bool next)
     Q_UNUSED(next)
 
     return false;
+}
+
+void MyPlainTextEdit::paintEvent(QPaintEvent *event)
+{
+    if(m_isCursorVisible)
+    {
+        QPainter painter(viewport());
+        QRect r = cursorRect();
+        r.setWidth(font().pointSize());
+        painter.fillRect(r, Qt::white);
+    }
+
+    QPlainTextEdit::paintEvent(event);
 }
 
 OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, const Core::Context &context, bool stand_alone, QWidget *parent) : QWidget(parent)

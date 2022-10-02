@@ -60,6 +60,7 @@ protected:
     void resizeEvent(QResizeEvent *event);
     void contextMenuEvent(QContextMenuEvent *event);
     bool focusNextPrevChild(bool next);
+    void paintEvent(QPaintEvent *event);
 
 private:
 
@@ -79,6 +80,7 @@ private:
     QByteArray m_frameBufferData;
     Utils::AnsiEscapeCodeHandler m_handler;
     QChar m_lastChar;
+    bool m_isCursorVisible;
 };
 
 class OpenMVTerminal : public QWidget
