@@ -9,7 +9,7 @@ This module provides network drivers and routing configuration. To use this
 module, a MicroPython variant/build with network capabilities must be installed.
 Network drivers for specific hardware are available within this module and are
 used to configure hardware network interface(s). Network services provided
-by configured interfaces are then available for use via the :mod:`usocket`
+by configured interfaces are then available for use via the :mod:`socket`
 module.
 
 For example::
@@ -17,17 +17,17 @@ For example::
     # connect/ show IP config a specific network interface
     # see below for examples of specific drivers
     import network
-    import utime
+    import time
     nic = network.Driver(...)
     if not nic.isconnected():
         nic.connect()
         print("Waiting for connection...")
         while not nic.isconnected():
-            utime.sleep(1)
+            time.sleep(1)
     print(nic.ifconfig())
 
-    # now use usocket as usual
-    import usocket as socket
+    # now use socket as usual
+    import socket
     addr = socket.getaddrinfo('micropython.org', 80)[0][-1]
     s = socket.socket()
     s.connect(addr)
@@ -55,7 +55,7 @@ parameter should be `id`.
         Activate ("up") or deactivate ("down") the network interface, if
         a boolean argument is passed. Otherwise, query current state if
         no argument is provided. Most other methods require an active
-        interface (behavior of calling them on inactive interface is
+        interface (behaviour of calling them on inactive interface is
         undefined).
 
 .. method:: AbstractNIC.connect([service_id, key=None, *, ...])

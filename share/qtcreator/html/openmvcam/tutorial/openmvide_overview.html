@@ -1,77 +1,41 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>4. OpenMV IDE Overview &mdash; MicroPython 1.15 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. OpenMV IDE Overview &mdash; MicroPython 1.19 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/openmv.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="5. Script Structure" href="script_structure.html" />
     <link rel="prev" title="3. Hardware Setup" href="hardware_setup.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> MicroPython
-          
-
-          
-            
             <img src="../../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                1.15
+                1.19
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -79,17 +43,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../library/index.html">MicroPython libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">MicroPython language and implementation</a></li>
@@ -141,74 +95,34 @@
 </li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">MicroPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
-        
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../quickref.html">Quick reference for the openmvcam</a> &raquo;</li>
-        
           <li><a href="index.html">OpenMV Cam Tutorial</a> &raquo;</li>
-        
-      <li>4. OpenMV IDE Overview</li>
-    
-    
+      <li><span class="section-number">4. </span>OpenMV IDE Overview</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../../_sources/openmvcam/tutorial/openmvide_overview.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="openmv-ide-overview">
-<h1>4. OpenMV IDE Overview<a class="headerlink" href="#openmv-ide-overview" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="openmv-ide-overview">
+<h1><span class="section-number">4. </span>OpenMV IDE Overview<a class="headerlink" href="#openmv-ide-overview" title="Permalink to this heading">¶</a></h1>
 <p>Let’s talk about OpenMV IDE now. OpenMV IDE is the tool you’ll be using to
 program your OpenMV Cam with. It features a powerful text editor powered by
 QtCreator, a frame buffer viewer, histogram display, and an integrated serial
@@ -216,8 +130,8 @@ terminal for debug output from your OpenMV Cam.</p>
 <p>Anyway, the IDE is more or less straight forward to use. A lot of effort was
 put in to stream-line things in the IDE. However, there are a few things you
 should know about in the IDE.</p>
-<div class="section" id="file-menu-and-examples">
-<h2>4.1. File Menu and Examples<a class="headerlink" href="#file-menu-and-examples" title="Permalink to this headline">¶</a></h2>
+<section id="file-menu-and-examples">
+<h2><span class="section-number">4.1. </span>File Menu and Examples<a class="headerlink" href="#file-menu-and-examples" title="Permalink to this heading">¶</a></h2>
 <p>Under the file menu in OpenMV IDE you have all your standard text editor
 options. New, Open, Save, Save As, Print, etc. Anyway, when you create a new
 file or open one it will appear in the text editor pane. Please note that you
@@ -232,8 +146,8 @@ the files in the editor of your choice and work on them. OpenMV IDE will
 automatically detect the files have changed and ask you if you want to load
 the changes when you click on the OpenMV IDE window again.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Only one instance of OpenMV IDE is allowed on your computer at a time.
+<p class="admonition-title">Note</p>
+<p>Only one instance of OpenMV IDE is allowed on your computer at a time.
 This is done so that if you try to open a file via your file explorer the
 one instance of OpenMV IDE will open the file. This also allows you to
 open files using drag-and-drop.</p>
@@ -249,9 +163,9 @@ at File -&gt; Documents Folder.</p>
 OpenMV IDE creates a memory only copy of the file that is not stored on disk
 like in the Arduino IDE. This let’s you quickly test out ideas without having
 to create a file.</p>
-</div>
-<div class="section" id="text-editing">
-<h2>4.2. Text Editing<a class="headerlink" href="#text-editing" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="text-editing">
+<h2><span class="section-number">4.2. </span>Text Editing<a class="headerlink" href="#text-editing" title="Permalink to this heading">¶</a></h2>
 <p>OpenMV IDE has a professional text editor powered by the QtCreator backend.
 You’ve got infinite undo and redo across all open files, white-space
 visualization (important for MicroPython), font-size controls, and best-of-all
@@ -268,9 +182,9 @@ written the function/method name it will also walk you through the arguments.
 Finally, if you hover your mouse cursor over any keyword OpenMV IDE will
 display the documentation for that keyword in a tooltip. These two features
 make editing scripts a joy!</p>
-</div>
-<div class="section" id="connecting-to-your-openmv-cam">
-<h2>4.3. Connecting to your OpenMV Cam<a class="headerlink" href="#connecting-to-your-openmv-cam" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="connecting-to-your-openmv-cam">
+<h2><span class="section-number">4.3. </span>Connecting to your OpenMV Cam<a class="headerlink" href="#connecting-to-your-openmv-cam" title="Permalink to this heading">¶</a></h2>
 <p>Connecting to your OpenMV Cam was covered in detail in the previous
 <code class="docutils literal notranslate"><span class="pre">Hardware</span> <span class="pre">Setup</span></code> tutorial page. Once you’ve gotten past all the startup
 issues that involve programming firmware and etc. you just have to click
@@ -290,8 +204,8 @@ the correct one automatically and will ask you to help it if it can’t. Like
 with serial ports above OpenMV IDE will remember your selection so the next
 time you connect it will automatically highlight your previous choice.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">OpenMV IDE needs to associate the USB flash drive on your OpenMV Cam with
+<p class="admonition-title">Note</p>
+<p>OpenMV IDE needs to associate the USB flash drive on your OpenMV Cam with
 your OpenMV Cam’s virtual serial port so that it can parse compile error
 messages and open the file with the error easily. It also needs the drive
 information for the <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">open</span> <span class="pre">script</span> <span class="pre">to</span> <span class="pre">OpenMV</span> <span class="pre">Cam</span></code> command. That all
@@ -306,8 +220,8 @@ Cam from your computer without disconnecting and OpenMV IDE will detect that
 and automatically disconnect from your OpenMV Cam. If your OpenMV Cam crashes
 OpenMV IDE will detect this too and disconnect from your OpenMV Cam.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">It is possible on Windows/Mac/Linux for the serial port driver to crash in
+<p class="admonition-title">Note</p>
+<p>It is possible on Windows/Mac/Linux for the serial port driver to crash in
 a terrible way if your OpenMV Cam becomes unresponsive. On Windows you’ll
 notice this as an unkillable OpenMV IDE process without any window in
 the Task Manager. If this happens the only recourse is to restart your
@@ -321,9 +235,9 @@ thread return from a Kernel function call which makes OpenMV IDE’s serial
 thread unkillable. Anyway, we’ve done a lot of work to make sure this
 doesn’t happen but please note that it still can.</p>
 </div>
-</div>
-<div class="section" id="running-scripts">
-<h2>4.4. Running scripts<a class="headerlink" href="#running-scripts" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="running-scripts">
+<h2><span class="section-number">4.4. </span>Running scripts<a class="headerlink" href="#running-scripts" title="Permalink to this heading">¶</a></h2>
 <p>Once you’ve finished editing your code and are ready to run a script just click
 the green run button in the bottom left-hand corner of OpenMV IDE. The script
 will then be sent to your OpenMV Cam to be compiled into Python byte-code and
@@ -338,8 +252,8 @@ replace the run button while a script is running. Note that scripts can
 automatically stop by themselves either due to finishing or a compile error. In
 either case the run button will re-appear again.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">OpenMV IDE automatically scans imports in your script when you click the run
+<p class="admonition-title">Note</p>
+<p>OpenMV IDE automatically scans imports in your script when you click the run
 button and copies any externally required scripts that are missing to your
 OpenMV Cam. OpenMV IDE will also automatically update any out-of-date external
 modules on your OpenMV Cam when you click the run button too. OpenMV IDE looks
@@ -347,9 +261,9 @@ for external modules in your personal “OpenMV” Documents Folder first and th
 the example folder. OpenMV IDE is able to parse both single file modules and
 directory modules.</p>
 </div>
-</div>
-<div class="section" id="frame-buffer-viewer">
-<h2>4.5. Frame Buffer Viewer<a class="headerlink" href="#frame-buffer-viewer" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="frame-buffer-viewer">
+<h2><span class="section-number">4.5. </span>Frame Buffer Viewer<a class="headerlink" href="#frame-buffer-viewer" title="Permalink to this heading">¶</a></h2>
 <p>What makes OpenMV IDE special is the integrated frame buffer viewer. This let’s
 you easily see what your OpenMV Cam is looking at while working on your code.</p>
 <p>The frame buffer viewer displays whatever was in your OpenMV Cam’s frame buffer
@@ -358,18 +272,18 @@ that later. For now, here’s what you need to know about the frame buffer
 viewer:</p>
 <blockquote>
 <div><ul class="simple">
-<li>The <code class="docutils literal notranslate"><span class="pre">Reocord</span></code> button on the top right-hand corner of OpenMV IDE
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Reocord</span></code> button on the top right-hand corner of OpenMV IDE
 records whatever is in the frame buffer. Use it to quickly make videos
 of what your OpenMV Cam sees. Note that recording works by recording
 whatever is in OpenMV IDE’s frame buffer at 30 FPS. However, the frame
 buffer may be updating faster or slower than this depending on the
 application. Anyway, after the recording is complete OpenMV IDE will
 use FFMPEG to transcode the recording to whatever file format you want
-for sharing.</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">Zoom</span></code> button on the top right-hand corner of OpenMV IDE controls
+for sharing.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Zoom</span></code> button on the top right-hand corner of OpenMV IDE controls
 the zoom-to-fit feature for the frame buffer viewer. Enable or disable
-the feature as your please.</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">Disable</span></code> button on the top right-hand corner of OpenMV IDE
+the feature as your please.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Disable</span></code> button on the top right-hand corner of OpenMV IDE
 controls whether or not your OpenMV Cam will send images to OpenMV IDE.
 Basically, your OpenMV Cam has to JPEG compress images constantly to
 stream them to OpenMV IDE. This reduces performance. So, if you want to
@@ -377,7 +291,7 @@ see how fast your script will run after in the wild without your OpenMV
 Cam being connected to your computer just click the <code class="docutils literal notranslate"><span class="pre">Disable</span></code> button.
 While the frame buffer is disabled you won’t be able to see what your
 OpenMV Cam is looking at anymore but you’ll still see debug output from
-your OpenMV Cam in the Serial Terminal.</li>
+your OpenMV Cam in the Serial Terminal.</p></li>
 </ul>
 </div></blockquote>
 <p>Finally, you can right click on whatever image you see in the frame buffer
@@ -388,9 +302,9 @@ buffer to disk. Otherwise, you may not get the exact frame you want.</p>
 <p>To de-select an area in the frame buffer just click anywhere without dragging
 to remove the selection. However, it’s possible to create one pixel selections
 when de-selecting so try to click on the blank area in the frame buffer.</p>
-</div>
-<div class="section" id="histogram-display">
-<h2>4.6. Histogram Display<a class="headerlink" href="#histogram-display" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="histogram-display">
+<h2><span class="section-number">4.6. </span>Histogram Display<a class="headerlink" href="#histogram-display" title="Permalink to this heading">¶</a></h2>
 <p>The integrated histogram display in OpenMV IDE exists primarily to fill the
 empty space under the frame buffer viewer and provide some eye candy for you.
 However, it also actually useful for getting feedback about the lighting
@@ -410,9 +324,9 @@ Grayscale and LAB color channel settings you need to use in your scripts for
 <a class="reference internal" href="../../library/omv.image.html#image.image.Image.image.find_blobs" title="image.image.Image.image.find_blobs"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_blobs()</span></code></a> and <a class="reference internal" href="../../library/omv.image.html#image.image.Image.image.binary" title="image.image.Image.image.binary"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.binary()</span></code></a>.</p>
 <p>Finally, the image resolution and ROI (x, y, w, h) of the bounding box you
 select on the image are displayed above the histogram graphs.</p>
-</div>
-<div class="section" id="serial-terminal">
-<h2>4.7. Serial Terminal<a class="headerlink" href="#serial-terminal" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="serial-terminal">
+<h2><span class="section-number">4.7. </span>Serial Terminal<a class="headerlink" href="#serial-terminal" title="Permalink to this heading">¶</a></h2>
 <p>To show the Serial Terminal click on the Serial Terminal button located on the
 bottom of OpenMV IDE. The Serial Terminal is built-into the main window to be
 easier to use. It just splits with your text editing window.</p>
@@ -426,9 +340,9 @@ through the debug output. Finally, the Serial Terminal is smart enough not
 to auto-scroll on you if you want to look at previous debug output making it
 really nice to use. Auto-scrolling will turn on again if you scroll to the
 bottom of the text output.</p>
-</div>
-<div class="section" id="status-bar">
-<h2>4.8. Status Bar<a class="headerlink" href="#status-bar" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="status-bar">
+<h2><span class="section-number">4.8. </span>Status Bar<a class="headerlink" href="#status-bar" title="Permalink to this heading">¶</a></h2>
 <p>On the status bar OpenMV IDE will display your OpenMV Cam’s Firmware Version,
 Serial Port, Drive, and FPS. The Firmware Version label is actually a button
 you can click to update your OpenMV Cam if your OpenMV Cam’s firmware is out
@@ -437,39 +351,39 @@ nothing else. The Drive label is another button which you can click on to
 change the drive linked to your OpenMV Cam. Finally, the FPS label displays the
 FPS OpenMV IDE is getting from your OpenMV Cam.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The FPS displayed by OpenMV IDE may not match the FPS from your OpenMV Cam.
+<p class="admonition-title">Note</p>
+<p>The FPS displayed by OpenMV IDE may not match the FPS from your OpenMV Cam.
 The FPS label on OpenMV IDE is the FPS OpenMV IDE is getting from your
 OpenMV Cam. But, your OpenMV Cam can actually run faster than OpenMV IDE
 sometimes and OpenMV IDE is only sampling some of the frames from your
 OpenMV Cam and not all. Anyway, OpenMV IDE’s FPS will never be faster than
 your OpenMV Cam’s FPS, but, it may be slower.</p>
 </div>
-</div>
-<div class="section" id="tools">
-<h2>4.9. Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="tools">
+<h2><span class="section-number">4.9. </span>Tools<a class="headerlink" href="#tools" title="Permalink to this heading">¶</a></h2>
 <p>You’ll find useful tools for your OpenMV Cam under the Tools Menu in OpenMV
 IDE. In particular, the <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">open</span> <span class="pre">script</span> <span class="pre">to</span> <span class="pre">your</span> <span class="pre">OpenMV</span> <span class="pre">Cam</span></code> and <code class="docutils literal notranslate"><span class="pre">Reset</span>
 <span class="pre">OpenMV</span> <span class="pre">Cam</span></code> tools are useful for using your OpenMV Cam when developing an
 application.</p>
 <blockquote>
 <div><ul class="simple">
-<li>The <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">OpenMV</span> <span class="pre">Cam</span> <span class="pre">Settings</span> <span class="pre">file</span></code> allows you to modify an
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">OpenMV</span> <span class="pre">Cam</span> <span class="pre">Settings</span> <span class="pre">file</span></code> allows you to modify an
 <code class="docutils literal notranslate"><span class="pre">.ini</span></code> file stored on your OpenMV Cam using OpenMV IDE which your
-OpenMV Cam will read on bootup for particular hardware configurations.</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">open</span> <span class="pre">script</span> <span class="pre">to</span> <span class="pre">your</span> <span class="pre">OpenMV</span> <span class="pre">Cam</span></code> command saves whatever
+OpenMV Cam will read on bootup for particular hardware configurations.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">open</span> <span class="pre">script</span> <span class="pre">to</span> <span class="pre">your</span> <span class="pre">OpenMV</span> <span class="pre">Cam</span></code> command saves whatever
 script you’re currently looking at to your OpenMV Cam. Additionally,
 it can also automatically strip white-space and comments from your
 script so it takes up less space. Use this command once you think
 your program is ready to deploy without OpenMV IDE. Note that this
 command will save your script as <code class="docutils literal notranslate"><span class="pre">main.py</span></code> on your OpenMV Cam’s
 USB flash drive. <code class="docutils literal notranslate"><span class="pre">main.py</span></code> is the script your OpenMV Cam will run
-once it finishes booting up.</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">Reset</span> <span class="pre">OpenMV</span> <span class="pre">Cam</span></code> command resets and then disconnects from your
+once it finishes booting up.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Reset</span> <span class="pre">OpenMV</span> <span class="pre">Cam</span></code> command resets and then disconnects from your
 OpenMV Cam. You’ll want to use this option if you run a script that
 creates files on your OpenMV Cam as Windows/Mac/Linux won’t show you
 any files on your OpenMV Cam created programmatically in a Python
-Script after your OpenMV Cam’s USB flash drive is mounted.</li>
+Script after your OpenMV Cam’s USB flash drive is mounted.</p></li>
 </ul>
 </div></blockquote>
 <p>Next, under the Tools Menu you can invoke the boot-loader to re-program your
@@ -478,9 +392,9 @@ disconnected for your OpenMV Cam. You can either give it a binary <code class="d
 to re-program your OpenMV Cam with or a <code class="docutils literal notranslate"><span class="pre">.dfu</span></code> file. The boot-loader
 feature is only for advanced users who plan on changing the default OpenMV Cam
 firmware.</p>
-</div>
-<div class="section" id="wifi-debug">
-<h2>4.10. WiFi Debug<a class="headerlink" href="#wifi-debug" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="wifi-debug">
+<h2><span class="section-number">4.10. </span>WiFi Debug<a class="headerlink" href="#wifi-debug" title="Permalink to this heading">¶</a></h2>
 <p>If you’d like to debug you camera over WiFi and have a WINC1500 shield you can use the
 <code class="docutils literal notranslate"><span class="pre">Tools-&gt;Configure</span> <span class="pre">OpenMV</span> <span class="pre">Cam</span> <span class="pre">Settings</span> <span class="pre">file</span></code> dialog to setup your OpenMV Cam to connect
 to the IDE over WiFi (please ensure that your OpenMV Cam can run WiFi examples first and
@@ -491,9 +405,9 @@ will display a WiFi icon on the connect button. When you click connect OpenMV ID
 option to connect to your OpenMV Cam over WiFi.</p>
 <p>When connected over WiFi you can do everything but work with the file system on your OpenMV Cam
 (unless your OpenMV Cam is still connected to your computer over USB).</p>
-</div>
-<div class="section" id="open-terminal">
-<h2>4.11. Open Terminal<a class="headerlink" href="#open-terminal" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="open-terminal">
+<h2><span class="section-number">4.11. </span>Open Terminal<a class="headerlink" href="#open-terminal" title="Permalink to this heading">¶</a></h2>
 <p>The Open Terminal feature allows you to create new serial terminals using
 OpenMV IDE to remotely debug your OpenMV Cam while it is not connected to your
 computer. The Open Terminal feature can also be used to program any MicroPython
@@ -501,16 +415,16 @@ development board.</p>
 <p>You can use the Open Terminal feature to open terminals connected to serial
 ports, tcp ports, or udp ports. Note that serial ports can be bluetooth ports
 for wireless connectivity.</p>
-</div>
-<div class="section" id="machine-vision">
-<h2>4.12. Machine Vision<a class="headerlink" href="#machine-vision" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="machine-vision">
+<h2><span class="section-number">4.12. </span>Machine Vision<a class="headerlink" href="#machine-vision" title="Permalink to this heading">¶</a></h2>
 <p>The Machine Vision submenu includes a lot of Machine Vision tools for your
 OpenMV Cam. For example, the you can use the color threshold editor to get
 the best color tracking thresholds for <code class="docutils literal notranslate"><span class="pre">image.find_blobs()</span></code>. We’ll make
 new machine vision tools available regularly to make life easier for you.</p>
-</div>
-<div class="section" id="video-tools">
-<h2>4.13. Video Tools<a class="headerlink" href="#video-tools" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="video-tools">
+<h2><span class="section-number">4.13. </span>Video Tools<a class="headerlink" href="#video-tools" title="Permalink to this heading">¶</a></h2>
 <p>If you need to compress a <code class="docutils literal notranslate"><span class="pre">.gif</span></code> file produced by your OpenMV Cam or convert
 a <code class="docutils literal notranslate"><span class="pre">.mjpeg</span></code> or ImageIO <code class="docutils literal notranslate"><span class="pre">.bin</span></code> video file to <code class="docutils literal notranslate"><span class="pre">.mp4</span></code> you can use the
 convert video file action to do this. Alternatively, if you’d just like to play
@@ -523,77 +437,66 @@ be used for any non-OpenMV Cam activites you like. FFMPEG can convert/play
 a large number of file formats.</p>
 <blockquote>
 <div><ul class="simple">
-<li>To convert a video file into a set of pictures select the video file
+<li><p>To convert a video file into a set of pictures select the video file
 as the source and make the target a “%07d.bmp”/”%07d.jpg”/etc. file
 name. FFMPEG understands <code class="docutils literal notranslate"><span class="pre">printf()</span></code> like format statements with an
 image file format extension to mean it should break the video file
-up into still images of the target format.</li>
-<li>To convert a series of still images into a video set the source file
+up into still images of the target format.</p></li>
+<li><p>To convert a series of still images into a video set the source file
 name to “%7d.bmp”/”%7d.jpg”/etc. where all the images in a directory
 have a name like <code class="docutils literal notranslate"><span class="pre">1.bmp</span></code>, <code class="docutils literal notranslate"><span class="pre">2.bmp</span></code>, etc.  FFMPEG understands
 <code class="docutils literal notranslate"><span class="pre">printf()</span></code> like format statements with an image file format extension
-to mean it should join those images files together into a video.</li>
-<li>To convert an <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file into any other video format select
-the file as the source and target to be whatever file format you want.</li>
-<li>To convert a video file of any format into an <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file select
+to mean it should join those images files together into a video.</p></li>
+<li><p>To convert an <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file into any other video format select
+the file as the source and target to be whatever file format you want.</p></li>
+<li><p>To convert a video file of any format into an <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file select
 the video file you want to convert as the source and set the target to
 be a <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file. FFMPEG will then break the video into JPGs and
 OpenMV IDE will turn these JPGs into RAW Grayscale or RGB565 frames
-saves to the <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file using the <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file format.</li>
-<li>To optimize a <code class="docutils literal notranslate"><span class="pre">.gif</span></code> file saved by your OpenMV Cam for the web set the
-source file to be that <code class="docutils literal notranslate"><span class="pre">.gif</span></code> and the target file to be another <code class="docutils literal notranslate"><span class="pre">.gif</span></code>.</li>
-<li>To convert an MJPEG file saved by your OpenMV Cam to another format
+saves to the <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file using the <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file format.</p></li>
+<li><p>To optimize a <code class="docutils literal notranslate"><span class="pre">.gif</span></code> file saved by your OpenMV Cam for the web set the
+source file to be that <code class="docutils literal notranslate"><span class="pre">.gif</span></code> and the target file to be another <code class="docutils literal notranslate"><span class="pre">.gif</span></code>.</p></li>
+<li><p>To convert an MJPEG file saved by your OpenMV Cam to another format
 set the MJPEG file as the source and another file using another format
-(like <code class="docutils literal notranslate"><span class="pre">.mp4</span></code>) as the target.</li>
+(like <code class="docutils literal notranslate"><span class="pre">.mp4</span></code>) as the target.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="options">
-<h2>4.14. Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="options">
+<h2><span class="section-number">4.14. </span>Options<a class="headerlink" href="#options" title="Permalink to this heading">¶</a></h2>
 <p>Under the Tools Menu (or About Menu for Mac) you can access OpenMV IDE’s
 option dialog.</p>
 <p>You can configure the editor font, size, zoom, tab behavior, automatic cleaning
 of white space, column margins for folks who like keeping lines to 80
 characters, and more.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="script_structure.html" class="btn btn-neutral float-right" title="5. Script Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="hardware_setup.html" class="btn btn-neutral float-left" title="3. Hardware Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="hardware_setup.html" class="btn btn-neutral float-left" title="3. Hardware Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="script_structure.html" class="btn btn-neutral float-right" title="5. Script Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
-      <span class="lastupdated">
-        Last updated on 27 Jun 2021.
-      </span>
-
-    </p>
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 13 Nov 2022.
+      </span></p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
@@ -633,18 +536,11 @@ characters, and more.</p>
       </dd>
     </dl>
   </div>
-</div>
-
-  <script type="text/javascript">
+</div><script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

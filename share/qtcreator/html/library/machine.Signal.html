@@ -1,77 +1,41 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>class Signal – control and sense external I/O devices &mdash; MicroPython 1.15 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class Signal – control and sense external I/O devices &mdash; MicroPython 1.19 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/openmv.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="class UART – duplex serial communication bus" href="machine.UART.html" />
+    <link rel="next" title="class ADC – analog to digital conversion" href="machine.ADC.html" />
     <link rel="prev" title="class Pin – control I/O pins" href="machine.Pin.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> MicroPython
-          
-
-          
-            
             <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                1.15
+                1.19
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -79,24 +43,17 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MicroPython libraries</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#python-standard-libraries-and-micro-libraries">Python standard libraries and micro-libraries</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#micropython-specific-libraries">MicroPython-specific libraries</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bluetooth.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bluetooth</span></code> — low-level Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="btree.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">btree</span></code> – simple BTree database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cryptolib.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cryptolib</span></code> – cryptographic ciphers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="framebuf.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="machine.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="machine.html#memory-access">Memory access</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#reset-related-functions">Reset related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#interrupt-related-functions">Interrupt related functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="machine.html#power-related-functions">Power related functions</a></li>
@@ -105,16 +62,18 @@
 <li class="toctree-l4 current"><a class="reference internal" href="machine.html#classes">Classes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ubluetooth.html"><code class="docutils literal notranslate"><span class="pre">ubluetooth</span></code> — low-level Bluetooth</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ucryptolib.html"><code class="docutils literal notranslate"><span class="pre">ucryptolib</span></code> – cryptographic ciphers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mutex.html"><code class="docutils literal notranslate"><span class="pre">mutex</span></code> — mutex module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="micropython.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neopixel.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">neopixel</span></code> — control of WS2812 / NeoPixel LEDs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uctypes.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mutex.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mutex</span></code> — mutex module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uping.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">uping</span></code> — Ping another computer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="urequests.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">urequests</span></code> — Related functions of HTTP client</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#libraries-specific-to-the-openmv-cam">Libraries specific to the OpenMV Cam</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#third-party-libraries-on-the-openmv-cam">Third-party libraries on the OpenMV Cam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#extending-built-in-libraries-from-python">Extending built-in libraries from Python</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">MicroPython language and implementation</a></li>
@@ -123,74 +82,34 @@
 <li class="toctree-l1"><a class="reference internal" href="../openmvcam/quickref.html">Quick reference for the openmvcam</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">MicroPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">MicroPython libraries</a> &raquo;</li>
-        
-          <li><a href="machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &raquo;</li>
-        
+          <li><a href="machine.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &raquo;</li>
       <li>class Signal – control and sense external I/O devices</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/library/machine.Signal.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="class-signal-control-and-sense-external-i-o-devices">
-<span id="machine-signal"></span><h1>class Signal – control and sense external I/O devices<a class="headerlink" href="#class-signal-control-and-sense-external-i-o-devices" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="class-signal-control-and-sense-external-i-o-devices">
+<span id="machine-signal"></span><h1>class Signal – control and sense external I/O devices<a class="headerlink" href="#class-signal-control-and-sense-external-i-o-devices" title="Permalink to this heading">¶</a></h1>
 <p>The Signal class is a simple extension of the <a class="reference internal" href="machine.Pin.html#machine.Pin" title="machine.Pin"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Pin</span></code></a> class. Unlike Pin, which
 can be only in “absolute” 0 and 1 states, a Signal can be in “asserted”
 (on) or “deasserted” (off) states, while being inverted (active-low) or
@@ -203,7 +122,7 @@ open or normally closed relay - you can develop a single, nicely looking
 application which works with each of them, and capture hardware
 configuration differences in few lines in the config file of your app.</p>
 <p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="k">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">Signal</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">Signal</span>
 
 <span class="c1"># Suppose you have an active-high LED on pin 0</span>
 <span class="n">led1_pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
@@ -231,14 +150,14 @@ configuration differences in few lines in the config file of your app.</p>
 </div>
 <p>Following is the guide when Signal vs Pin should be used:</p>
 <ul class="simple">
-<li>Use Signal: If you want to control a simple on/off (including software
+<li><p>Use Signal: If you want to control a simple on/off (including software
 PWM!) devices like LEDs, multi-segment indicators, relays, buzzers, or
 read simple binary sensors, like normally open or normally closed buttons,
 pulled high or low, Reed switches, moisture/flame detectors, etc. etc.
 Summing up, if you have a real physical device/sensor requiring GPIO
-access, you likely should use a Signal.</li>
-<li>Use Pin: If you implement a higher-level protocol or bus to communicate
-with more complex devices.</li>
+access, you likely should use a Signal.</p></li>
+<li><p>Use Pin: If you implement a higher-level protocol or bus to communicate
+with more complex devices.</p></li>
 </ul>
 <p>The split between Pin and Signal come from the use cases above and the
 architecture of MicroPython: Pin offers the lowest overhead, which may
@@ -254,37 +173,37 @@ vs active-high signals, and allow other users to share and enjoy your
 application, instead of being frustrated by the fact that it doesn’t
 work for them simply because their LEDs or relays are wired in a slightly
 different way.</p>
-<div class="section" id="constructors">
-<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="machine.Signal">
-<em class="property">class </em><code class="descclassname">machine.</code><code class="descname">Signal</code><span class="sig-paren">(</span><em>pin_obj</em>, <em>invert=False</em><span class="sig-paren">)</span><a class="headerlink" href="#machine.Signal" title="Permalink to this definition">¶</a></dt>
-<dt>
-<em class="property">class </em><code class="descclassname">machine.</code><code class="descname">Signal</code><span class="sig-paren">(</span><em>pin_arguments...</em>, <em>*</em>, <em>invert=False</em><span class="sig-paren">)</span></dt>
+<section id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="machine.Signal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">machine.</span></span><span class="sig-name descname"><span class="pre">Signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pin_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.Signal" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">machine.</span></span><span class="sig-name descname"><span class="pre">Signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pin_arguments...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert=False</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Create a Signal object. There’re two ways to create it:</p>
 <ul class="simple">
-<li>By wrapping existing Pin object - universal method which works for
-any board.</li>
-<li>By passing required Pin parameters directly to Signal constructor,
+<li><p>By wrapping existing Pin object - universal method which works for
+any board.</p></li>
+<li><p>By passing required Pin parameters directly to Signal constructor,
 skipping the need to create intermediate Pin object. Available on
-many, but not all boards.</li>
+many, but not all boards.</p></li>
 </ul>
 <p>The arguments are:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">pin_obj</span></code> is existing Pin object.</li>
-<li><code class="docutils literal notranslate"><span class="pre">pin_arguments</span></code> are the same arguments as can be passed to Pin constructor.</li>
-<li><code class="docutils literal notranslate"><span class="pre">invert</span></code> - if True, the signal will be inverted (active low).</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pin_obj</span></code> is existing Pin object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pin_arguments</span></code> are the same arguments as can be passed to Pin constructor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invert</span></code> - if True, the signal will be inverted (active low).</p></li>
 </ul>
 </div></blockquote>
 </dd></dl>
 
-</div>
-<div class="section" id="methods">
-<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="machine.Signal.value">
-<code class="descclassname">Signal.</code><code class="descname">value</code><span class="sig-paren">(</span><span class="optional">[</span><em>x</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Signal.value" title="Permalink to this definition">¶</a></dt>
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.Signal.value">
+<span class="sig-prename descclassname"><span class="pre">Signal.</span></span><span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Signal.value" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method allows to set and get the value of the signal, depending on whether
 the argument <code class="docutils literal notranslate"><span class="pre">x</span></code> is supplied or not.</p>
 <p>If the argument is omitted then this method gets the signal level, 1 meaning
@@ -299,57 +218,46 @@ to logical 0. For inverted/active-low signal, active status corresponds
 to logical 0, while inactive - to logical 1.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="machine.Signal.on">
-<code class="descclassname">Signal.</code><code class="descname">on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Signal.on" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.Signal.on">
+<span class="sig-prename descclassname"><span class="pre">Signal.</span></span><span class="sig-name descname"><span class="pre">on</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Signal.on" title="Permalink to this definition">¶</a></dt>
 <dd><p>Activate signal.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="machine.Signal.off">
-<code class="descclassname">Signal.</code><code class="descname">off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Signal.off" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.Signal.off">
+<span class="sig-prename descclassname"><span class="pre">Signal.</span></span><span class="sig-name descname"><span class="pre">off</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.Signal.off" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deactivate signal.</p>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="machine.UART.html" class="btn btn-neutral float-right" title="class UART – duplex serial communication bus" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="machine.Pin.html" class="btn btn-neutral float-left" title="class Pin – control I/O pins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="machine.Pin.html" class="btn btn-neutral float-left" title="class Pin – control I/O pins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="machine.ADC.html" class="btn btn-neutral float-right" title="class ADC – analog to digital conversion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2014-2021, Damien P. George, Paul Sokolovsky, OpenMV LLC, and contributors
-      <span class="lastupdated">
-        Last updated on 27 Jun 2021.
-      </span>
-
-    </p>
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 13 Nov 2022.
+      </span></p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
@@ -389,18 +297,11 @@ to logical 0, while inactive - to logical 1.</p>
       </dd>
     </dl>
   </div>
-</div>
-
-  <script type="text/javascript">
+</div><script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
