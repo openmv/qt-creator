@@ -11,16 +11,17 @@ HEADERS += openmvplugin.h \
            histogram/openmvpluginhistogram.h \
            tools/bossac.h \
            tools/dfu-util.h \
-           tools/picotool.h \
            tools/edgeimpulse.h \
-           tools/thresholdeditor.h \
+           tools/imx.h \
            tools/keypointseditor.h \
+           tools/picotool.h \
            tools/tag16h5.h \
            tools/tag25h7.h \
            tools/tag25h9.h \
            tools/tag36h10.h \
            tools/tag36h11.h \
            tools/tag36artoolkit.h \
+           tools/thresholdeditor.h \
            tools/videotools.h \
            qcustomplot/qcustomplot.h
 SOURCES += openmvplugin.cpp \
@@ -37,16 +38,17 @@ SOURCES += openmvplugin.cpp \
            histogram/yuv_tab.c \
            tools/bossac.cpp \
            tools/dfu-util.cpp \
-           tools/picotool.cpp \
            tools/edgeimpulse.cpp \
-           tools/thresholdeditor.cpp \
+           tools/imx.cpp \
            tools/keypointseditor.cpp \
+           tools/picotool.cpp \
            tools/tag16h5.c \
            tools/tag25h7.c \
            tools/tag25h9.c \
            tools/tag36h10.c \
            tools/tag36h11.c \
            tools/tag36artoolkit.c \
+           tools/thresholdeditor.cpp \
            tools/videotools.cpp \
            qcustomplot/qcustomplot.cpp
 FORMS += openmvcamerasettings.ui histogram/openmvpluginhistogram.ui

@@ -3822,12 +3822,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         QString selectedPort;
         bool forceBootloaderBricked = false;
+        QString originalFirmwareFolder = QString();
         QString firmwarePath = forceFirmwarePath;
         int originalEraseFlashSectorStart = FLASH_SECTOR_START;
         int originalEraseFlashSectorEnd = FLASH_SECTOR_END;
         int originalEraseFlashSectorAllStart = FLASH_SECTOR_ALL_START;
         int originalEraseFlashSectorAllEnd = FLASH_SECTOR_ALL_END;
         QString originalDfuVidPid = QString();
+        bool isIMX = false;
 
         if(stringList.isEmpty())
         {
@@ -4032,12 +4034,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                         forceBootloader = true;
                                         forceFlashFSErase = answer == QMessageBox::Yes;
                                         forceBootloaderBricked = true;
-                                        firmwarePath = Core::ICore::userResourcePath() + QStringLiteral("/firmware/") + mappings.value(temp) + QStringLiteral("/firmware.bin");
+                                        originalFirmwareFolder = mappings.value(temp);
+                                        firmwarePath = Core::ICore::userResourcePath() + QStringLiteral("/firmware/") + originalFirmwareFolder + QStringLiteral("/firmware.bin");
                                         originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                                         originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                                         originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
                                         originalEraseFlashSectorAllEnd = eraseAllMappings.value(temp).second;
                                         originalDfuVidPid = vidpidMappings.value(temp);
+                                        isIMX = originalFirmwareFolder.contains(QStringLiteral("IMX"), Qt::CaseInsensitive);
                                     }
                                 }
                             }
@@ -4463,11 +4467,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             {
                                 if(firmwarePath.isEmpty())
                                 {
-                                    firmwarePath = Core::ICore::userResourcePath() + QStringLiteral("/firmware/") + mappings.value(temp) + QStringLiteral("/firmware.bin");
+                                    originalFirmwareFolder = mappings.value(temp);
+                                    firmwarePath = Core::ICore::userResourcePath() + QStringLiteral("/firmware/") + originalFirmwareFolder + QStringLiteral("/firmware.bin");
                                     originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                                     originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                                     originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
                                     originalEraseFlashSectorAllEnd = eraseAllMappings.value(temp).second;
+                                    isIMX = originalFirmwareFolder.contains(QStringLiteral("IMX"), Qt::CaseInsensitive);
 
                                     if(installTheLatestDevelopmentFirmware)
                                     {
@@ -4543,7 +4549,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             // BIN Bootloader /////////////////////////////////////////////////
 
-            while((!isArduino) && (justEraseFlashFs || firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)))
+            while((!isIMX) && (!isArduino) && (justEraseFlashFs || firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)))
             {
                 QFile file(firmwarePath);
 
@@ -4950,6 +4956,119 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         CLOSE_CONNECT_END();
                     }
+                }
+            }
+
+            if(isIMX)
+            {
+                QFile imxSettings(Core::ICore::userResourcePath() + QStringLiteral("/firmware/imx.txt"));
+                QJsonObject outObj;
+
+                if(imxSettings.open(QIODevice::ReadOnly))
+                {
+                    QJsonParseError error;
+                    QJsonDocument doc = QJsonDocument::fromJson(imxSettings.readAll(), &error);
+
+                    if(error.error == QJsonParseError::NoError)
+                    {
+                        bool foundMatch = false;
+
+                        foreach(const QJsonValue &val, doc.array())
+                        {
+                            QJsonObject obj = val.toObject();
+
+                            if(originalFirmwareFolder == obj.value(QStringLiteral("firmware_folder")).toString())
+                            {
+                                QString secureBootloaderPath = Core::ICore::userResourcePath() + QDir::separator() + originalFirmwareFolder +
+                                        QDir::separator() + outObj.value(QStringLiteral("sdphost_flash_loader_path")).toString();
+                                QString bootloaderPath = Core::ICore::userResourcePath() + QDir::separator() + originalFirmwareFolder +
+                                        QDir::separator() + outObj.value(QStringLiteral("blhost_secure_bootloader_path")).toString();
+                                outObj = obj;
+                                outObj.value(QStringLiteral("sdphost_flash_loader_path")) = secureBootloaderPath;
+                                outObj.value(QStringLiteral("blhost_secure_bootloader_path")) = bootloaderPath;
+                                outObj.value(QStringLiteral("blhost_secure_bootloader_length")) =
+                                        QString::number(QFileInfo(bootloaderPath).size(), 16).prepend(QStringLiteral("0x"));
+                                outObj.value(QStringLiteral("blhost_firmware_path")) = firmwarePath;
+                                outObj.value(QStringLiteral("blhost_firmware_length")) =
+                                        QString::number(QFileInfo(firmwarePath).size(), 16).prepend(QStringLiteral("0x"));
+                                foundMatch = true;
+                                break;
+                            }
+                        }
+
+                        if(!foundMatch)
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                tr("Connect"),
+                                tr("No IMX settings for the selected board type %L1!").arg(originalFirmwareFolder));
+
+                            CONNECT_END();
+                        }
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            tr("Connect"),
+                            tr("Error: %L1!").arg(error.errorString()));
+
+                        CONNECT_END();
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        tr("Connect"),
+                        tr("Error: %L1!").arg(imxSettings.errorString()));
+
+                    CONNECT_END();
+                }
+
+                if(QMessageBox::warning(Core::ICore::dialogParent(),
+                    tr("Connect"),
+                    tr("Click the Ok button after your OpenMV Cam has been connected to your PC."),
+                    QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
+                == QMessageBox::Ok)
+                {
+                    if(imxGetDevice(outObj))
+                    {
+                        if(imxDownloadFirmware(outObj))
+                        {
+                            QMessageBox::information(Core::ICore::dialogParent(),
+                                tr("Connect"),
+                                tr("Firmware update complete!\n\n") +
+                                tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
+                                tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
+                                   "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open)."));
+
+                            RECONNECT_END();
+                        }
+                        else
+                        {
+                            CONNECT_END();
+                        }
+                    }
+                    else
+                    {
+                        if(imxDownloadBootloaderAndFirmware(outObj))
+                        {
+                            QMessageBox::information(Core::ICore::dialogParent(),
+                                tr("Connect"),
+                                tr("Firmware update complete!\n\n") +
+                                tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
+                                tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
+                                   "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open)."));
+
+                            RECONNECT_END();
+                        }
+                        else
+                        {
+                            CONNECT_END();
+                        }
+                    }
+                }
+                else
+                {
+                    CONNECT_END();
                 }
             }
 
