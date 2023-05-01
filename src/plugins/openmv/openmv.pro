@@ -25,6 +25,7 @@ HEADERS += openmvplugin.h \
            tools/videotools.h \
            qcustomplot/qcustomplot.h
 SOURCES += openmvplugin.cpp \
+           openmvpluginconnect.cpp \
            openmveject.cpp \
            openmvpluginserialport.cpp \
            openmvpluginio.cpp \
