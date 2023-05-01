@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Syntax &mdash; MicroPython 1.19 documentation</title>
@@ -14,10 +14,8 @@
   <![endif]-->
   
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -30,15 +28,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> MicroPython
-            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MicroPython
+              <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 1.19
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -91,9 +93,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">MicroPython differences from CPython</a> &raquo;</li>
-      <li>Syntax</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">MicroPython differences from CPython</a></li>
+      <li class="breadcrumb-item active">Syntax</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/genrst/syntax.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -105,7 +107,7 @@
              
   <section id="syntax">
 <h1>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">¶</a></h1>
-<p>Generated Mon 14 Nov 2022 04:13:22 UTC</p>
+<p>Generated Mon 14 Nov 2022 04:08:40 UTC</p>
 <section id="argument-unpacking-does-not-work-if-the-argument-being-unpacked-is-the-nth-or-greater-argument-where-n-is-the-number-of-bits-in-an-mp-small-int">
 <span id="cpydiff-syntax-arg-unpacking"></span><h2>Argument unpacking does not work if the argument being unpacked is the nth or greater argument where n is the number of bits in an MP_SMALL_INT.<a class="headerlink" href="#argument-unpacking-does-not-work-if-the-argument-being-unpacked-is-the-nth-or-greater-argument-where-n-is-the-number-of-bits-in-an-mp-small-int" title="Permalink to this heading">¶</a></h2>
 <p><strong>Cause:</strong> The implementation uses an MP_SMALL_INT to flag args that need to be unpacked.</p>
@@ -127,10 +129,6 @@
 </pre></div>
 </div>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 19%" />
-<col style="width: 81%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>CPy output:</p></td>
 <td><p>uPy output:</p></td>
@@ -159,10 +157,6 @@
 </pre></div>
 </div>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 63%" />
-<col style="width: 37%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>CPy output:</p></td>
 <td><p>uPy output:</p></td>
@@ -201,10 +195,6 @@
 </pre></div>
 </div>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 19%" />
-<col style="width: 81%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>CPy output:</p></td>
 <td><p>uPy output:</p></td>
@@ -233,10 +223,6 @@
 </pre></div>
 </div>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 19%" />
-<col style="width: 81%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>CPy output:</p></td>
 <td><p>uPy output:</p></td>
@@ -267,7 +253,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 13 Nov 2022.
+      <span class="lastupdated">Last updated on 01 May 2023.
       </span></p>
   </div>
 

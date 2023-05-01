@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The MicroPython Interactive Interpreter Mode (aka REPL) &mdash; MicroPython 1.19 documentation</title>
@@ -14,10 +14,8 @@
   <![endif]-->
   
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -30,15 +28,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> MicroPython
-            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MicroPython
+              <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 1.19
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -88,9 +90,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">MicroPython language and implementation</a> &raquo;</li>
-      <li>The MicroPython Interactive Interpreter Mode (aka REPL)</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">MicroPython language and implementation</a></li>
+      <li class="breadcrumb-item active">The MicroPython Interactive Interpreter Mode (aka REPL)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/reference/repl.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -144,7 +146,7 @@ provided:</p>
 <span class="go">1</span>
 <span class="go">2</span>
 <span class="go">3</span>
-<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
 <p>Auto-indent won’t be applied if the previous two lines were all spaces.  This
@@ -189,14 +191,14 @@ KeyboardInterrupt exception.</p>
 <span class="go">1</span>
 <span class="go">2</span>
 <span class="go">3</span>
-<span class="gp">...</span>
+<span class="go">...</span>
 <span class="go">6466</span>
 <span class="go">6467</span>
 <span class="go">6468</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">2</span>, in <span class="n">&lt;module&gt;</span>
-<span class="gr">KeyboardInterrupt</span>:
-<span class="go">&gt;&gt;&gt;</span>
+<span class="gr">KeyboardInterrupt</span><span class="w">:</span>
+<span class="gp">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
 </section>
@@ -217,13 +219,14 @@ this:</p>
 <span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Here is a second line&#39;</span><span class="p">)</span>
 <span class="gp">... </span>            <span class="n">foo</span><span class="p">()</span>
 <span class="gp">...</span>
+<span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">3</span>
 <span class="gr">IndentationError</span>: <span class="n">unexpected indent</span>
 </pre></div>
 </div>
 <p>If you press Ctrl-E, then you will enter paste mode, which essentially turns off
 the auto-indent feature, and changes the prompt from <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">===</span></code>. For example:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt;</span>
 <span class="go">paste mode; Ctrl-C to cancel, Ctrl-D to finish</span>
 <span class="go">=== def foo():</span>
 <span class="go">===     print(&#39;This is a test to show paste mode&#39;)</span>
@@ -232,7 +235,7 @@ the auto-indent feature, and changes the prompt from <code class="docutils liter
 <span class="go">===</span>
 <span class="go">This is a test to show paste mode</span>
 <span class="go">Here is a second line</span>
-<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
 <p>Paste Mode allows blank lines to be pasted. The pasted text is compiled as if
@@ -259,7 +262,7 @@ command, you’d see something like this:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">()</span>
 <span class="go">[&#39;j&#39;, &#39;x&#39;, &#39;__name__&#39;, &#39;pyb&#39;, &#39;i&#39;]</span>
-<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
 <p>Now if you enter Ctrl-D, and repeat the dir() command, you’ll see that your
@@ -284,7 +287,7 @@ So you can use the underscore to save the result in a variable. For example:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">_</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
 <span class="go">15</span>
-<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
 </section>
@@ -393,7 +396,7 @@ execute Python code on a MicroPython-enabled board.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 13 Nov 2022.
+      <span class="lastupdated">Last updated on 01 May 2023.
       </span></p>
   </div>
 

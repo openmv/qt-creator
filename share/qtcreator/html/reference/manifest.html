@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MicroPython manifest files &mdash; MicroPython 1.19 documentation</title>
@@ -14,10 +14,8 @@
   <![endif]-->
   
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -30,15 +28,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> MicroPython
-            <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MicroPython
+              <img src="../_static/web-logo-sticky.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 1.19
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -90,9 +92,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">MicroPython language and implementation</a> &raquo;</li>
-      <li>MicroPython manifest files</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">MicroPython language and implementation</a></li>
+      <li class="breadcrumb-item active">MicroPython manifest files</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/reference/manifest.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -155,7 +157,7 @@ include the board manifest (which will in turn include the port manifest).</p>
 <section id="building-with-a-custom-manifest">
 <h3>Building with a custom manifest<a class="headerlink" href="#building-with-a-custom-manifest" title="Permalink to this heading">¶</a></h3>
 <p>Your manifest can be specified on the <code class="docutils literal notranslate"><span class="pre">make</span></code> command line with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ make <span class="nv">BOARD</span><span class="o">=</span>MYBOARD <span class="nv">FROZEN_MANIFEST</span><span class="o">=</span>/path/to/my/project/manifest.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>make<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>MYBOARD<span class="w"> </span><span class="nv">FROZEN_MANIFEST</span><span class="o">=</span>/path/to/my/project/manifest.py
 </pre></div>
 </div>
 <p>This applies to all ports, including CMake-based ones (e.g. esp32, rp2), as the
@@ -166,7 +168,7 @@ Makefile wrapper that will pass this into the CMake build.</p>
 <p>If you have a custom board definition, you can make it include your custom
 manifest automatically. On make-based ports (most ports), in your
 <code class="docutils literal notranslate"><span class="pre">mpconfigboard.mk</span></code> set the <code class="docutils literal notranslate"><span class="pre">FROZEN_MANIFEST</span></code> variable.</p>
-<div class="highlight-makefile notranslate"><div class="highlight"><pre><span></span><span class="nv">FROZEN_MANIFEST</span> <span class="o">?=</span> <span class="k">$(</span>BOARD_DIR<span class="k">)</span>/manifest.py
+<div class="highlight-makefile notranslate"><div class="highlight"><pre><span></span><span class="nv">FROZEN_MANIFEST</span><span class="w"> </span><span class="o">?=</span><span class="w"> </span><span class="k">$(</span>BOARD_DIR<span class="k">)</span>/manifest.py
 </pre></div>
 </div>
 <p>On CMake-based ports (e.g. esp32, rp2), instead use <code class="docutils literal notranslate"><span class="pre">mpconfigboard.cmake</span></code></p>
@@ -321,8 +323,8 @@ board is:</p>
 </pre></div>
 </div>
 <p>Then the board can be compiled with</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ports/stm32
-$ make <span class="nv">BOARD</span><span class="o">=</span>PYBD_SF2 <span class="nv">FROZEN_MANIFEST</span><span class="o">=</span>~/src/myproject/manifest.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>ports/stm32
+$<span class="w"> </span>make<span class="w"> </span><span class="nv">BOARD</span><span class="o">=</span>PYBD_SF2<span class="w"> </span><span class="nv">FROZEN_MANIFEST</span><span class="o">=</span>~/src/myproject/manifest.py
 </pre></div>
 </div>
 <p>Note that most boards do not have their own <code class="docutils literal notranslate"><span class="pre">manifest.py</span></code>, rather they use the
@@ -343,7 +345,7 @@ port one directly, in which case your manifest should just
 
   <div role="contentinfo">
     <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 13 Nov 2022.
+      <span class="lastupdated">Last updated on 01 May 2023.
       </span></p>
   </div>
 
