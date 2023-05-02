@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>imu — imu sensor &mdash; MicroPython 1.19 documentation</title>
@@ -13,6 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -120,8 +122,8 @@ IMU sensor under the camera sensor.</p>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="imu.imu.acceleration_mg">
-<span class="sig-prename descclassname"><span class="pre">imu.</span></span><span class="sig-name descname"><span class="pre">acceleration_mg</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imu.imu.acceleration_mg" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="imu.acceleration_mg">
+<span class="sig-prename descclassname"><span class="pre">imu.</span></span><span class="sig-name descname"><span class="pre">acceleration_mg</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imu.acceleration_mg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the acceleration for (x, y, z) in a float tuple in milli-g’s.</p>
 <p>For when the camera board is lying on a table face up:</p>
 <p>X points to the right of the camera sensor
@@ -130,8 +132,8 @@ Z points in the reverse direction of the camera sensor (into the table)</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="imu.imu.angular_rate_mdps">
-<span class="sig-prename descclassname"><span class="pre">imu.</span></span><span class="sig-name descname"><span class="pre">angular_rate_mdps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imu.imu.angular_rate_mdps" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="imu.angular_rate_mdps">
+<span class="sig-prename descclassname"><span class="pre">imu.</span></span><span class="sig-name descname"><span class="pre">angular_rate_mdps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imu.angular_rate_mdps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the angular rate for (x, y, z) in a float tuple in milli-degrees-per-second.</p>
 <p>For when the camera board is lying on a table face up:</p>
 <p>X points to the right of the camera sensor
@@ -140,14 +142,14 @@ Z points in the reverse direction of the camera sensor (into the table)</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="imu.imu.temperature_c">
-<span class="sig-prename descclassname"><span class="pre">imu.</span></span><span class="sig-name descname"><span class="pre">temperature_c</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imu.imu.temperature_c" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="imu.temperature_c">
+<span class="sig-prename descclassname"><span class="pre">imu.</span></span><span class="sig-name descname"><span class="pre">temperature_c</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imu.temperature_c" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the temperature in celsius (float).</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="imu.imu.roll">
-<span class="sig-prename descclassname"><span class="pre">imu.</span></span><span class="sig-name descname"><span class="pre">roll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imu.imu.roll" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="imu.roll">
+<span class="sig-prename descclassname"><span class="pre">imu.</span></span><span class="sig-name descname"><span class="pre">roll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imu.roll" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the rotation angle in degrees (float) of the camera module.</p>
 <blockquote>
 <div><ul class="simple">
@@ -160,8 +162,8 @@ Z points in the reverse direction of the camera sensor (into the table)</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="imu.imu.pitch">
-<span class="sig-prename descclassname"><span class="pre">imu.</span></span><span class="sig-name descname"><span class="pre">pitch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imu.imu.pitch" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="imu.pitch">
+<span class="sig-prename descclassname"><span class="pre">imu.</span></span><span class="sig-name descname"><span class="pre">pitch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imu.pitch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the rotation angle in degrees (float) of the camera module.</p>
 <blockquote>
 <div><ul class="simple">
@@ -205,8 +207,8 @@ Z points in the reverse direction of the camera sensor (into the table)</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 01 May 2023.
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 02 May 2023.
       </span></p>
   </div>
 

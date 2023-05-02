@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>audio — Audio Module &mdash; MicroPython 1.19 documentation</title>
@@ -13,6 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -116,8 +118,8 @@
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="audio.audio.init">
-<span class="sig-prename descclassname"><span class="pre">audio.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">channels=2</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">frequency=16000</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">gain_db=24</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">highpass=0.9883</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#audio.audio.init" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="audio.init">
+<span class="sig-prename descclassname"><span class="pre">audio.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">channels=2</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">frequency=16000</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">gain_db=24</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">highpass=0.9883</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#audio.init" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initializes the audio module. Must be called first before using the audio module.</p>
 <p><code class="docutils literal notranslate"><span class="pre">channels</span></code> specifies the number of audio channels. May be 1 or 2. Audio samples are
 interleaved for two audio channels.</p>
@@ -129,14 +131,14 @@ in a higher noise flow which means less effective bits per sample. By default au
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="audio.audio.deint">
-<span class="sig-prename descclassname"><span class="pre">audio.</span></span><span class="sig-name descname"><span class="pre">deint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#audio.audio.deint" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="audio.deint">
+<span class="sig-prename descclassname"><span class="pre">audio.</span></span><span class="sig-name descname"><span class="pre">deint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#audio.deint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deinitializes the audio module.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="audio.audio.start_streaming">
-<span class="sig-prename descclassname"><span class="pre">audio.</span></span><span class="sig-name descname"><span class="pre">start_streaming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio.audio.start_streaming" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="audio.start_streaming">
+<span class="sig-prename descclassname"><span class="pre">audio.</span></span><span class="sig-name descname"><span class="pre">start_streaming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#audio.start_streaming" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calls the <code class="docutils literal notranslate"><span class="pre">callback</span></code> that takes one argument <code class="docutils literal notranslate"><span class="pre">pcmbuf</span></code> automatically forever when enough
 PCM samples have accumulated based on the audio module settings.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pcmbuf</span></code> is a 16-bit array of audio samples sized based on the decimation factor and number
@@ -146,8 +148,8 @@ of channels.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="audio.audio.stop_streaming">
-<span class="sig-prename descclassname"><span class="pre">audio.</span></span><span class="sig-name descname"><span class="pre">stop_streaming</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#audio.audio.stop_streaming" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="audio.stop_streaming">
+<span class="sig-prename descclassname"><span class="pre">audio.</span></span><span class="sig-name descname"><span class="pre">stop_streaming</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#audio.stop_streaming" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops audio streaming and the callback from being called.</p>
 </dd></dl>
 
@@ -165,8 +167,8 @@ of channels.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 01 May 2023.
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 02 May 2023.
       </span></p>
   </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>cpufreq — CPU Frequency Control &mdash; MicroPython 1.19 documentation</title>
@@ -13,6 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -120,21 +122,21 @@ for various reasons, cannot be set independently of peripherals.</p>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="cpufreq.cpufreq.set_frequency">
-<span class="sig-prename descclassname"><span class="pre">cpufreq.</span></span><span class="sig-name descname"><span class="pre">set_frequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">supported_frequency</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cpufreq.cpufreq.set_frequency" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="cpufreq.set_frequency">
+<span class="sig-prename descclassname"><span class="pre">cpufreq.</span></span><span class="sig-name descname"><span class="pre">set_frequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">supported_frequency</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cpufreq.set_frequency" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the CPU frequency to a supported frequency in MHz. Peripherals
 frequencies are not changed. Only the CPU performance.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="cpufreq.cpufreq.get_current_frequencies">
-<span class="sig-prename descclassname"><span class="pre">cpufreq.</span></span><span class="sig-name descname"><span class="pre">get_current_frequencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cpufreq.cpufreq.get_current_frequencies" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="cpufreq.get_current_frequencies">
+<span class="sig-prename descclassname"><span class="pre">cpufreq.</span></span><span class="sig-name descname"><span class="pre">get_current_frequencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cpufreq.get_current_frequencies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns (cpu_clk_in_mhz, hclk_in_mhz, pclk1_in_mhz, pclk2_in_mhz).</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="cpufreq.cpufreq.get_supported_frequencies">
-<span class="sig-prename descclassname"><span class="pre">cpufreq.</span></span><span class="sig-name descname"><span class="pre">get_supported_frequencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cpufreq.cpufreq.get_supported_frequencies" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="cpufreq.get_supported_frequencies">
+<span class="sig-prename descclassname"><span class="pre">cpufreq.</span></span><span class="sig-name descname"><span class="pre">get_supported_frequencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cpufreq.get_supported_frequencies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the supported CPU frequencies [120, 144, 168, 192, 216] on the
 OpenMV Cam M7 and [60/50, 120/100, 240/200, 480/400] on the OpenMV Cam H7 Rev V/XY silicon in MHz.</p>
 </dd></dl>
@@ -153,8 +155,8 @@ OpenMV Cam M7 and [60/50, 120/100, 240/200, 480/400] on the OpenMV Cam H7 Rev V/
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 01 May 2023.
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 02 May 2023.
       </span></p>
   </div>
 

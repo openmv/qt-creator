@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mjpeg — mjpeg recording &mdash; MicroPython 1.19 documentation</title>
@@ -13,6 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -142,53 +144,109 @@ you want to share. Use <a class="reference internal" href="omv.gif.html#module-g
 <section id="constructors">
 <h3>Constructors<a class="headerlink" href="#constructors" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
-<dt class="sig sig-object py" id="mjpeg.mjpeg.Mjpeg">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mjpeg.</span></span><span class="sig-name descname"><span class="pre">Mjpeg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.mjpeg.Mjpeg" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="mjpeg.Mjpeg">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mjpeg.</span></span><span class="sig-name descname"><span class="pre">Mjpeg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.Mjpeg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Mjpeg object which you can add frames to. <code class="docutils literal notranslate"><span class="pre">filename</span></code> is the path to
 save the mjpeg recording to.</p>
 <p><code class="docutils literal notranslate"><span class="pre">width</span></code> is automatically set equal to the image sensor horizontal resolution
 unless explicitly overridden.</p>
 <p><code class="docutils literal notranslate"><span class="pre">height</span></code> is automatically set equal to the image sensor vertical resolution
 unless explicitly overridden.</p>
-</dd></dl>
-
-</section>
 <section id="methods">
-<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h3>
+<h4>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h4>
 <dl class="py method">
-<dt class="sig sig-object py" id="mjpeg.mjpeg.width">
-<span class="sig-prename descclassname"><span class="pre">mjpeg.</span></span><span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.mjpeg.width" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the width (horizontal resolution) for the mjpeg object.</p>
+<dt class="sig sig-object py" id="mjpeg.Mjpeg.is_closed">
+<span class="sig-name descname"><span class="pre">is_closed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.Mjpeg.is_closed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if the file was closed. You cannot write more data to a closed file.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mjpeg.mjpeg.height">
-<span class="sig-prename descclassname"><span class="pre">mjpeg.</span></span><span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.mjpeg.height" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the height (vertical resolution) for the mjpeg object.</p>
+<dt class="sig sig-object py" id="mjpeg.Mjpeg.width">
+<span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.Mjpeg.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the width (horizontal resolution) for the mjpeg file.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mjpeg.mjpeg.size">
-<span class="sig-prename descclassname"><span class="pre">mjpeg.</span></span><span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.mjpeg.size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the file size of the mjpeg so far. This value is updated after adding frames.</p>
+<dt class="sig sig-object py" id="mjpeg.Mjpeg.height">
+<span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.Mjpeg.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the height (vertical resolution) for the mjpeg file.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mjpeg.mjpeg.add_frame">
-<span class="sig-prename descclassname"><span class="pre">mjpeg.</span></span><span class="sig-name descname"><span class="pre">add_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">quality=50</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.mjpeg.add_frame" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add an image to the mjpeg recording. The image width, height, and color mode,
-must be equal to the same width, height, and color modes used in the constructor
-for the mjpeg.</p>
-<p><code class="docutils literal notranslate"><span class="pre">quality</span></code> is the jpeg compression quality to use to compress the image if
-it’s not in JPEG format (either <a class="reference internal" href="omv.sensor.html#sensor.sensor.RGB565" title="sensor.sensor.RGB565"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.RGB565</span></code></a> or <a class="reference internal" href="omv.sensor.html#sensor.sensor.GRAYSCALE" title="sensor.sensor.GRAYSCALE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.GRAYSCALE</span></code></a> format).</p>
+<dt class="sig sig-object py" id="mjpeg.Mjpeg.count">
+<span class="sig-name descname"><span class="pre">count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.Mjpeg.count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of frames in the mjpeg file.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mjpeg.mjpeg.close">
-<span class="sig-prename descclassname"><span class="pre">mjpeg.</span></span><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.mjpeg.close" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="mjpeg.Mjpeg.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.Mjpeg.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the file size in bytes of the mjpeg so far. This value is updated after adding frames.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mjpeg.Mjpeg.add_frame">
+<span class="sig-name descname"><span class="pre">add_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">roi=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">rgb_channel=-1</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">alpha=256</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">color_palette=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">alpha_palette=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">hint=0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">quality=90</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.Mjpeg.add_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an image to the mjpeg recording. The added image is automatically scaled up/down while
+preserving the aspect-ratio to the resolution specified when the mjpeg file was created.</p>
+<p><code class="docutils literal notranslate"><span class="pre">image</span></code> can be any image format. Even PNG images or JPEG images at the wrong resolution.
+This method will automatically decompress, scale/convert, and re-compress images for the file.</p>
+<p><code class="docutils literal notranslate"><span class="pre">roi</span></code> is the region-of-interest rectangle tuple (x, y, w, h) of the image. This
+allows you to extract just the pixels in the ROI. By default this is the whole image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> is the RGB channel (0=R, G=1, B=2) to extract from an RGB565 image (if passed)
+and to render onto the destination. For example, if you pass <code class="docutils literal notranslate"><span class="pre">rgb_channel=1</span></code> this will
+extract the green channel of the source RGB565 image and draw that in grayscale on the
+destination.</p>
+<p><code class="docutils literal notranslate"><span class="pre">alpha</span></code> controls how much of the source image to blend into the destination. A value of
+256 draws an opaque source image while a value lower than 256 produces a blend between the source
+and destination (which is a black background in this case). 0 results in a black image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">color_palette</span></code> if not <code class="docutils literal notranslate"><span class="pre">-1</span></code> can be <a class="reference internal" href="omv.sensor.html#sensor.PALETTE_RAINBOW" title="sensor.PALETTE_RAINBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_RAINBOW</span></code></a>, <a class="reference internal" href="omv.sensor.html#sensor.PALETTE_IRONBOW" title="sensor.PALETTE_IRONBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_IRONBOW</span></code></a>, or
+a 256 pixel in total RGB565 image to use as a color lookup table on the grayscale value of
+whatever the source image is. This is applied after <code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> extraction if used.</p>
+<p><code class="docutils literal notranslate"><span class="pre">alpha_palette</span></code> if not <code class="docutils literal notranslate"><span class="pre">-1</span></code> can be a 256 pixel in total GRAYSCALE image to use as a alpha
+palette which modulates the <code class="docutils literal notranslate"><span class="pre">alpha</span></code> value of the source image being drawn at a pixel pixel
+level allowing you to precisely control the alpha value of pixels based on their grayscale value.
+A pixel value of 255 in the alpha lookup table is opaque which anything less than 255 becomes
+more transparent until 0. This is applied after <code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> extraction if used.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hint</span></code> can be a logical OR of the flags:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="omv.image.html#image.AREA" title="image.AREA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.AREA</span></code></a>: Use area scaling when downscaling versus the default of nearest neighbor.</p></li>
+<li><p><a class="reference internal" href="omv.image.html#image.BILINEAR" title="image.BILINEAR"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BILINEAR</span></code></a>: Use bilinear scaling versus the default of nearest neighbor scaling.</p></li>
+<li><p><a class="reference internal" href="omv.image.html#image.BICUBIC" title="image.BICUBIC"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BICUBIC</span></code></a>: Use bicubic scaling versus the default of nearest neighbor scaling.</p></li>
+<li><p><a class="reference internal" href="omv.image.html#image.EXTRACT_RGB_CHANNEL_FIRST" title="image.EXTRACT_RGB_CHANNEL_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.EXTRACT_RGB_CHANNEL_FIRST</span></code></a>: Do rgb_channel extraction before scaling.</p></li>
+<li><p><a class="reference internal" href="omv.image.html#image.APPLY_COLOR_PALETTE_FIRST" title="image.APPLY_COLOR_PALETTE_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.APPLY_COLOR_PALETTE_FIRST</span></code></a>: Apply color palette before scaling.</p></li>
+</ul>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">quality</span></code> is the compression quality (0-100) (int) to be used for non-JPEG images.</p>
+<p>Returns the object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mjpeg.Mjpeg.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">quality=90</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">roi=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">rgb_channel=-1</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">alpha=256</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">color_palette=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">alpha_palette=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">hint=0</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.Mjpeg.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#mjpeg.Mjpeg.add_frame" title="mjpeg.Mjpeg.add_frame"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Mjpeg.add_frame()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mjpeg.Mjpeg.sync">
+<span class="sig-name descname"><span class="pre">sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.Mjpeg.sync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flushes the mjpeg file to disk but keeps the file open for writing more data. You should call
+flush periodically ensure that the file is saved to disk.</p>
+<p><code class="docutils literal notranslate"><span class="pre">fps</span></code> is the frame rate the mjpeg was recorded at.</p>
+<p>Returns the object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mjpeg.Mjpeg.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mjpeg.Mjpeg.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finalizes the mjpeg recording. This method must be called once the recording
 is complete to make the file viewable.</p>
 <p><code class="docutils literal notranslate"><span class="pre">fps</span></code> is the frame rate the mjpeg was recorded at.</p>
+<p>Returns the object.</p>
+</dd></dl>
+
+</section>
 </dd></dl>
 
 </section>
@@ -206,8 +264,8 @@ is complete to make the file viewable.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 01 May 2023.
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 02 May 2023.
       </span></p>
   </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4. OpenMV IDE Overview &mdash; MicroPython 1.19 documentation</title>
@@ -13,6 +13,8 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
@@ -269,7 +271,7 @@ directory modules.</p>
 <p>What makes OpenMV IDE special is the integrated frame buffer viewer. This let’s
 you easily see what your OpenMV Cam is looking at while working on your code.</p>
 <p>The frame buffer viewer displays whatever was in your OpenMV Cam’s frame buffer
-previously when <a class="reference internal" href="../../library/omv.sensor.html#sensor.sensor.snapshot" title="sensor.sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> is called. Anyway, we’ll talk more about
+previously when <a class="reference internal" href="../../library/omv.sensor.html#sensor.snapshot" title="sensor.snapshot"><code class="xref any py py-func docutils literal notranslate"><span class="pre">sensor.snapshot()</span></code></a> is called. Anyway, we’ll talk more about
 that later. For now, here’s what you need to know about the frame buffer
 viewer:</p>
 <blockquote>
@@ -323,7 +325,7 @@ if you select an area of the frame buffer by clicking and dragging on it then
 the histogram will only show the distribution of colors in that area. This
 features makes the histogram display super useful for determining the correct
 Grayscale and LAB color channel settings you need to use in your scripts for
-<a class="reference internal" href="../../library/omv.image.html#image.image.Image.image.find_blobs" title="image.image.Image.image.find_blobs"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.find_blobs()</span></code></a> and <a class="reference internal" href="../../library/omv.image.html#image.image.Image.image.binary" title="image.image.Image.image.binary"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">image.binary()</span></code></a>.</p>
+<a class="reference internal" href="../../library/omv.image.html#image.Image.find_blobs" title="image.Image.find_blobs"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Image.find_blobs()</span></code></a> and <a class="reference internal" href="../../library/omv.image.html#image.Image.binary" title="image.Image.binary"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Image.binary()</span></code></a>.</p>
 <p>Finally, the image resolution and ROI (x, y, w, h) of the bounding box you
 select on the image are displayed above the histogram graphs.</p>
 </section>
@@ -449,13 +451,13 @@ name to “%7d.bmp”/”%7d.jpg”/etc. where all the images in a directory
 have a name like <code class="docutils literal notranslate"><span class="pre">1.bmp</span></code>, <code class="docutils literal notranslate"><span class="pre">2.bmp</span></code>, etc.  FFMPEG understands
 <code class="docutils literal notranslate"><span class="pre">printf()</span></code> like format statements with an image file format extension
 to mean it should join those images files together into a video.</p></li>
-<li><p>To convert an <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file into any other video format select
+<li><p>To convert an <a class="reference internal" href="../../library/omv.image.html#image.ImageIO" title="image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file into any other video format select
 the file as the source and target to be whatever file format you want.</p></li>
-<li><p>To convert a video file of any format into an <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file select
+<li><p>To convert a video file of any format into an <a class="reference internal" href="../../library/omv.image.html#image.ImageIO" title="image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file select
 the video file you want to convert as the source and set the target to
 be a <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file. FFMPEG will then break the video into JPGs and
 OpenMV IDE will turn these JPGs into RAW Grayscale or RGB565 frames
-saves to the <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file using the <a class="reference internal" href="../../library/omv.image.html#image.image.ImageIO" title="image.image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file format.</p></li>
+saves to the <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file using the <a class="reference internal" href="../../library/omv.image.html#image.ImageIO" title="image.ImageIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">ImageIO</span></code></a> file format.</p></li>
 <li><p>To optimize a <code class="docutils literal notranslate"><span class="pre">.gif</span></code> file saved by your OpenMV Cam for the web set the
 source file to be that <code class="docutils literal notranslate"><span class="pre">.gif</span></code> and the target file to be another <code class="docutils literal notranslate"><span class="pre">.gif</span></code>.</p></li>
 <li><p>To convert an MJPEG file saved by your OpenMV Cam to another format
@@ -485,8 +487,8 @@ characters, and more.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 01 May 2023.
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 02 May 2023.
       </span></p>
   </div>
 

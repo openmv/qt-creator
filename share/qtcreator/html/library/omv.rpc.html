@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>rpc — rpc library &mdash; MicroPython 1.19 documentation</title>
@@ -13,6 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -81,8 +83,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#class-rpc-uart-slave-uart-slave-interface">class rpc_uart_slave - UART Slave Interface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#class-rpc-usb-vcp-master-usb-vcp-master-interface">class rpc_usb_vcp_master - USB VCP Master Interface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#class-rpc-usb-vcp-slave-usb-vcp-slave-interface">class rpc_usb_vcp_slave - USB VCP Slave Interface</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#class-rpc-wifi-master-wifi-master-interface">class rpc_wifi_master - WiFi Master Interface</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id10">class rpc_wifi_master - WiFi Master Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-rpc-network-master-network-master-interface">class rpc_network_master - Network Master Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-rpc-network-slave-network-slave-interface">class rpc_network_slave - Network Slave Interface</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="omv.rtsp.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rtsp</span></code> — rtsp library</a></li>
@@ -189,41 +191,38 @@ structures around (like jpeg images) can potentially exhaust the heap on the Ope
 </section>
 <section id="class-rpc-rpc-virtual-class">
 <h2>class rpc - rpc virtual class<a class="headerlink" href="#class-rpc-rpc-virtual-class" title="Permalink to this heading">¶</a></h2>
-<p>The rpc base class is reimplemented by the <a class="reference internal" href="#rpc.rpc.rpc_master" title="rpc.rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc.rpc_slave" title="rpc.rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a> classes to create the master
+<p>The rpc base class is reimplemented by the <a class="reference internal" href="#rpc.rpc_master" title="rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc_slave" title="rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a> classes to create the master
 and slave interfaces. It is a pure virtual class and not meant to be used directly.</p>
 <section id="constructors">
 <h3>Constructors<a class="headerlink" href="#constructors" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc</span></span><a class="headerlink" href="#rpc.rpc.rpc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="rpc.rpc">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc</span></span><a class="headerlink" href="#rpc.rpc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an rpc object. This constructor is not meant to be used directly.</p>
-</dd></dl>
-
-</section>
 <section id="methods">
-<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h3>
+<h4>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h4>
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">rpc.get_bytes(buff,</span> <span class="pre">timeout_ms):</span></span></dt>
-<dd><p>This method is meant to be reimplemented by specific interface classes of <a class="reference internal" href="#rpc.rpc.rpc_master" title="rpc.rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc.rpc_slave" title="rpc.rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a>.
+<span class="sig-name descname"><span class="pre">get_bytes(buff,</span> <span class="pre">timeout_ms):</span></span></dt>
+<dd><p>This method is meant to be reimplemented by specific interface classes of <a class="reference internal" href="#rpc.rpc_master" title="rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc_slave" title="rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a>.
 It should fill the <code class="docutils literal notranslate"><span class="pre">buff</span></code> argument which is either a <a class="reference internal" href="builtins.html#bytearray" title="bytearray"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> or <a class="reference internal" href="builtins.html#memoryview" title="memoryview"><code class="xref any py py-class docutils literal notranslate"><span class="pre">memoryview</span></code></a> object of bytes from the
 interface equal to the length of the <code class="docutils literal notranslate"><span class="pre">buff</span></code> object in <code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code> milliseconds. On timeout this method
 should return <code class="docutils literal notranslate"><span class="pre">None</span></code>. Note that for master and slave synchronization this method should try to always
-complete in at least <code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code> milliseconds and not faster as the <a class="reference internal" href="#rpc.rpc.rpc_master" title="rpc.rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc.rpc_slave" title="rpc.rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a> objects
+complete in at least <code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code> milliseconds and not faster as the <a class="reference internal" href="#rpc.rpc_master" title="rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc_slave" title="rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a> objects
 will automatically increase the <code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code> to synchronize.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">rpc.put_bytes(data,</span> <span class="pre">timeout_ms):</span></span></dt>
-<dd><p>This method is meant to be reimplemented by specific interface classes of <a class="reference internal" href="#rpc.rpc.rpc_master" title="rpc.rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc.rpc_slave" title="rpc.rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a>.
+<span class="sig-name descname"><span class="pre">put_bytes(data,</span> <span class="pre">timeout_ms):</span></span></dt>
+<dd><p>This method is meant to be reimplemented by specific interface classes of <a class="reference internal" href="#rpc.rpc_master" title="rpc.rpc_master"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_master</span></code></a> and <a class="reference internal" href="#rpc.rpc_slave" title="rpc.rpc_slave"><code class="xref any py py-class docutils literal notranslate"><span class="pre">rpc_slave</span></code></a>.
 It should send <code class="docutils literal notranslate"><span class="pre">data</span></code> bytes on the interface within <code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code> milliseconds. If it completes faster
 than the timeout that is okay. No return value is expected.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">rpc.stream_reader(call_back,</span> <span class="pre">queue_depth=1,</span> <span class="pre">read_timeout_ms=5000):</span></span></dt>
+<span class="sig-name descname"><span class="pre">stream_reader(call_back,</span> <span class="pre">queue_depth=1,</span> <span class="pre">read_timeout_ms=5000):</span></span></dt>
 <dd><p>This method is meant to be called directly. After synchronization of the master and slave on return
 of a callback <code class="docutils literal notranslate"><span class="pre">stream_reader</span></code> may be called to receive data as fast as possible from the master or
 slave device. <code class="docutils literal notranslate"><span class="pre">call_back</span></code> will be called repeatedly with a <code class="docutils literal notranslate"><span class="pre">bytes_or_memory_view</span> <span class="pre">argument</span></code> that was
@@ -241,7 +240,7 @@ remote side will automatically timeout.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">rpc.stream_writer(call_back,</span> <span class="pre">write_timeout_ms=5000):</span></span></dt>
+<span class="sig-name descname"><span class="pre">stream_writer(call_back,</span> <span class="pre">write_timeout_ms=5000):</span></span></dt>
 <dd><p>This method is meant to be called directly. After synchronization of the master and slave on return
 of a <code class="docutils literal notranslate"><span class="pre">callback</span></code> <code class="docutils literal notranslate"><span class="pre">stream_writer</span></code> may be called to send data as fast as possible from the master or slave
 device. <code class="docutils literal notranslate"><span class="pre">call_back</span></code> will be called repeatedly and should return a <code class="docutils literal notranslate"><span class="pre">bytes_or_memory_view</span></code> object that
@@ -255,6 +254,9 @@ remote side will automatically timeout.</p>
 </dd></dl>
 
 </section>
+</dd></dl>
+
+</section>
 </section>
 <section id="class-rpc-master-rpc-master-virtual-class">
 <h2>class rpc_master - rpc_master virtual class<a class="headerlink" href="#class-rpc-master-rpc-master-virtual-class" title="Permalink to this heading">¶</a></h2>
@@ -263,17 +265,14 @@ classes should reimplement rpc_master.</p>
 <section id="id1">
 <h3>Constructors<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_master">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_master</span></span><a class="headerlink" href="#rpc.rpc.rpc_master" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="rpc.rpc_master">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_master</span></span><a class="headerlink" href="#rpc.rpc_master" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an rpc_master object. This constructor is not meant to be used directly.</p>
-</dd></dl>
-
-</section>
 <section id="id2">
-<h3>Methods<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<h4>Methods<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h4>
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">rpc_master.call(name,</span> <span class="pre">data=bytes(),</span> <span class="pre">send_timeout=1000,</span> <span class="pre">recv_timeout=1000):</span></span></dt>
+<span class="sig-name descname"><span class="pre">call(name,</span> <span class="pre">data=bytes(),</span> <span class="pre">send_timeout=1000,</span> <span class="pre">recv_timeout=1000):</span></span></dt>
 <dd><p>Executes a remote call on the slave device. <code class="docutils literal notranslate"><span class="pre">name</span></code> is a string name of the remote function or method
 to execute. <code class="docutils literal notranslate"><span class="pre">data</span></code> is the <code class="docutils literal notranslate"><span class="pre">bytes</span></code> like object that will be sent as the argument of the remote function
 or method to exeucte. <code class="docutils literal notranslate"><span class="pre">send_timeout</span></code> defines how many milliseconds to wait while trying to connect to
@@ -289,6 +288,9 @@ arguments.</p>
 </dd></dl>
 
 </section>
+</dd></dl>
+
+</section>
 </section>
 <section id="class-rpc-slave-rpc-slave-virtual-class">
 <h2>class rpc_slave - rpc_slave virtual class<a class="headerlink" href="#class-rpc-slave-rpc-slave-virtual-class" title="Permalink to this heading">¶</a></h2>
@@ -297,17 +299,14 @@ classes should reimplement rpc_slave.</p>
 <section id="id3">
 <h3>Constructors<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_slave">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_slave</span></span><a class="headerlink" href="#rpc.rpc.rpc_slave" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="rpc.rpc_slave">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_slave</span></span><a class="headerlink" href="#rpc.rpc_slave" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an rpc_slave object. This constructor is not meant to be used directly.</p>
-</dd></dl>
-
-</section>
 <section id="id4">
-<h3>Methods<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<h4>Methods<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h4>
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">rpc_slave.register_callback(cb):</span></span></dt>
+<span class="sig-name descname"><span class="pre">register_callback(cb):</span></span></dt>
 <dd><p>Registers a call back that can be executed by the master device. The call back should take one
 argument which will be a <code class="docutils literal notranslate"><span class="pre">memoryview</span></code> object and it should return a <code class="docutils literal notranslate"><span class="pre">bytes()</span></code> like object as the
 result. The call back should return in less than 1 second if possible.</p>
@@ -315,7 +314,7 @@ result. The call back should return in less than 1 second if possible.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">rpc_slave.schedule_callback(cb):</span></span></dt>
+<span class="sig-name descname"><span class="pre">schedule_callback(cb):</span></span></dt>
 <dd><p>After you execute <code class="docutils literal notranslate"><span class="pre">rpc_slave.loop()</span></code> it is not possible to execute long running operations outside of the <code class="docutils literal notranslate"><span class="pre">rpc</span></code>
 library. <code class="docutils literal notranslate"><span class="pre">schedule_callback</span></code> allows you to break out of the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library temporarily after completion
 of an call back. You should execute <code class="docutils literal notranslate"><span class="pre">schedule_callback</span></code> during the execution of an <code class="docutils literal notranslate"><span class="pre">rpc</span></code> call back
@@ -325,12 +324,12 @@ take any arguments. After the the call back that was registered returns it must 
 in the next parent call back. On any error of the parent call back the registered call back will
 not be called and must be registered again. Here’s how to use this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function_or_method_that_takes_a_long_time_to_execute</span><span class="p">():</span>
-    <span class="o">&lt;</span><span class="n">do</span> <span class="n">stuff</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">do</span> <span class="n">stuff</span><span class="o">&gt;</span>
 
 <span class="k">def</span> <span class="nf">normal_rpc_call_back</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="o">&lt;</span><span class="n">process</span> <span class="n">data</span><span class="o">&gt;</span>
-    <span class="n">interface</span><span class="o">.</span><span class="n">schedule_callback</span><span class="p">(</span><span class="n">some_function_or_method_that_takes_a_long_time_to_execute</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+   <span class="o">&lt;</span><span class="n">process</span> <span class="n">data</span><span class="o">&gt;</span>
+   <span class="n">interface</span><span class="o">.</span><span class="n">schedule_callback</span><span class="p">(</span><span class="n">some_function_or_method_that_takes_a_long_time_to_execute</span><span class="p">)</span>
+   <span class="k">return</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 
 <span class="n">interface</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="n">normal_rpc_call_back</span><span class="p">)</span>
 
@@ -345,7 +344,7 @@ OpenMV Cam.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">rpc_slave.setup_loop_callback(cb):</span></span></dt>
+<span class="sig-name descname"><span class="pre">setup_loop_callback(cb):</span></span></dt>
 <dd><p>The loop call back is called every loop iteration of <code class="docutils literal notranslate"><span class="pre">rpc_slave.loop()</span></code>. Unlike the <code class="docutils literal notranslate"><span class="pre">rpc.schedule_callback()</span></code> call
 back this call back stays registered after being registered once. You can use the loop call back to
 blink an activity LED or something like that. You should not use the loop call back to execute any
@@ -361,7 +360,7 @@ at a fixed frequency. Please see how to Write Interrupt Handlers for more inform
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">rpc_slave.loop(recv_timeout=1000,</span> <span class="pre">send_timeout=1000):</span></span></dt>
+<span class="sig-name descname"><span class="pre">loop(recv_timeout=1000,</span> <span class="pre">send_timeout=1000):</span></span></dt>
 <dd><p>Starts execution of the <code class="docutils literal notranslate"><span class="pre">rpc</span></code> library on the slave to receive data. This method does not return
 (except via an exception from a call back). You should register all call backs first before
 executing this method. However, it is possible to register new call backs inside of a call back
@@ -373,6 +372,9 @@ to receive again.</p>
 </dd></dl>
 
 </section>
+</dd></dl>
+
+</section>
 </section>
 <section id="class-rpc-can-master-can-master-interface">
 <h2>class rpc_can_master - CAN Master Interface<a class="headerlink" href="#class-rpc-can-master-can-master-interface" title="Permalink to this heading">¶</a></h2>
@@ -381,7 +383,7 @@ to receive again.</p>
 <h3>Constructors<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">rpc.rpc_can_master(message_if=0x7FF,</span> <span class="pre">bit_rate=250000,</span> <span class="pre">sample_point=75,</span> <span class="pre">can_bus=2):</span></span></dt>
+<span class="sig-name descname"><span class="pre">rpc_can_master(message_if=0x7FF,</span> <span class="pre">bit_rate=250000,</span> <span class="pre">sample_point=75,</span> <span class="pre">can_bus=2):</span></span></dt>
 <dd><p>Creates a CAN <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move up to 1 Mb/s.</p>
 <ul class="simple">
 <li><p>message_id - CAN message to use for data transport on the can bus (11-bit).</p></li>
@@ -402,7 +404,7 @@ can high and master can low to slave can lo. The can bus must be terminated with
 <h3>Constructors<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">rpc.rpc_can_slave(message_id=0x7FF,</span> <span class="pre">bit_rate=250000,</span> <span class="pre">sample_point=75,</span> <span class="pre">can_bus=2):</span></span></dt>
+<span class="sig-name descname"><span class="pre">rpc_can_slave(message_id=0x7FF,</span> <span class="pre">bit_rate=250000,</span> <span class="pre">sample_point=75,</span> <span class="pre">can_bus=2):</span></span></dt>
 <dd><p>Creates a CAN <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move up to 1 Mb/s.</p>
 <ul class="simple">
 <li><p>message_id - CAN message to use for data transport on the can bus (11-bit).</p></li>
@@ -422,8 +424,8 @@ can high and master can low to slave can lo. The can bus must be terminated with
 <section id="id7">
 <h3>Constructors<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_i2c_master">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_i2c_master</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slave_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0x12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i2c_bus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_i2c_master" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="rpc.rpc_i2c_master">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_i2c_master</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slave_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0x12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i2c_bus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc_i2c_master" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a I2C <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move up to 1 Mb/s.</p>
 <ul class="simple">
 <li><p>slave_addr - I2C address.</p></li>
@@ -442,8 +444,8 @@ to slave sda. You must use external pull ups. Finally, both devices must share a
 <section id="id8">
 <h3>Constructors<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_i2c_slave">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_i2c_slave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slave_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0x12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i2c_bus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_i2c_slave" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="rpc.rpc_i2c_slave">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_i2c_slave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slave_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0x12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i2c_bus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc_i2c_slave" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a I2C <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move up to 1 Mb/s.</p>
 <ul class="simple">
 <li><p>slave_addr - I2C address.</p></li>
@@ -461,8 +463,8 @@ to slave sda. You must use external pull ups. Finally, both devices must share a
 <section id="id9">
 <h3>Constructors<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_spi_master">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_spi_master</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cs_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'P3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clk_polarity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clk_phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spi_bus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_spi_master" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="rpc.rpc_spi_master">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_spi_master</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cs_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'P3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clk_polarity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clk_phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spi_bus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc_spi_master" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a SPI <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move up to 80 Mb/s.</p>
 <ul class="simple">
 <li><p>cs_pin - Slave Select Pin.</p></li>
@@ -481,8 +483,8 @@ Finally, both devices must share a common ground.</p>
 <h2>class rpc_spi_slave - SPI Slave Interface<a class="headerlink" href="#class-rpc-spi-slave-spi-slave-interface" title="Permalink to this heading">¶</a></h2>
 <p>Be controlled by another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over SPI.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_spi_slave">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_spi_slave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cs_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'P3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clk_polarity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clk_phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spi_bus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_spi_slave" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="rpc.rpc_spi_slave">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_spi_slave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cs_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'P3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clk_polarity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clk_phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spi_bus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc_spi_slave" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a SPI <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move up to 80 Mb/s.</p>
 <ul class="simple">
 <li><p>cs_pin - Slave Select Pin.</p></li>
@@ -499,8 +501,8 @@ Finally, both devices must share a common ground.</p>
 <h2>class rpc_uart_master - UART Master Interface<a class="headerlink" href="#class-rpc-uart-master-uart-master-interface" title="Permalink to this heading">¶</a></h2>
 <p>Control another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over Async Serial (UART).</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_uart_master">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_uart_master</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baudrate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">115200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uart_port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_uart_master" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="rpc.rpc_uart_master">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_uart_master</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baudrate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">115200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uart_port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc_uart_master" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a UART <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move up to 7.5 Mb/s.</p>
 <ul class="simple">
 <li><p>baudrate - Serial Baudrate.</p></li>
@@ -515,8 +517,8 @@ slave tx. Finally, both devices must share a common ground.</p>
 <h2>class rpc_uart_slave - UART Slave Interface<a class="headerlink" href="#class-rpc-uart-slave-uart-slave-interface" title="Permalink to this heading">¶</a></h2>
 <p>Be controlled by another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over Async Serial (UART).</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_uart_slave">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_uart_slave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baudrate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">115200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uart_port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_uart_slave" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="rpc.rpc_uart_slave">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_uart_slave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baudrate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">115200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uart_port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc_uart_slave" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a UART <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move up to 7.5 Mb/s.</p>
 <ul class="simple">
 <li><p>baudrate - Serial Baudrate.</p></li>
@@ -531,9 +533,9 @@ slave tx. Finally, both devices must share a common ground.</p>
 <h2>class rpc_usb_vcp_master - USB VCP Master Interface<a class="headerlink" href="#class-rpc-usb-vcp-master-usb-vcp-master-interface" title="Permalink to this heading">¶</a></h2>
 <p>Control another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over a USB Virtual COM Port.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_usb_vcp_master">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_usb_vcp_master</span></span><a class="headerlink" href="#rpc.rpc.rpc_usb_vcp_master" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a USB VCP <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move up to 12 Mb/s.</p>
+<dt class="sig sig-object py" id="rpc.rpc_usb_vcp_master">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_usb_vcp_master</span></span><a class="headerlink" href="#rpc.rpc_usb_vcp_master" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a USB VCP <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move data at the USB speed.</p>
 </dd></dl>
 
 </section>
@@ -541,45 +543,36 @@ slave tx. Finally, both devices must share a common ground.</p>
 <h2>class rpc_usb_vcp_slave - USB VCP Slave Interface<a class="headerlink" href="#class-rpc-usb-vcp-slave-usb-vcp-slave-interface" title="Permalink to this heading">¶</a></h2>
 <p>Be controlled by another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over a USB Virtual COM Port.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_usb_vcp_slave">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_usb_vcp_slave</span></span><a class="headerlink" href="#rpc.rpc.rpc_usb_vcp_slave" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a USB VCP <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move up to 12 Mb/s.</p>
+<dt class="sig sig-object py" id="rpc.rpc_usb_vcp_slave">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_usb_vcp_slave</span></span><a class="headerlink" href="#rpc.rpc_usb_vcp_slave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a USB VCP <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move data at the USB speed.</p>
 </dd></dl>
 
 </section>
-<section id="class-rpc-wifi-master-wifi-master-interface">
-<h2>class rpc_wifi_master - WiFi Master Interface<a class="headerlink" href="#class-rpc-wifi-master-wifi-master-interface" title="Permalink to this heading">¶</a></h2>
-<p>Control another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over a WiFi.</p>
+<section id="class-rpc-network-master-network-master-interface">
+<h2>class rpc_network_master - Network Master Interface<a class="headerlink" href="#class-rpc-network-master-network-master-interface" title="Permalink to this heading">¶</a></h2>
+<p>Control another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over a network.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_wifi_master">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_wifi_master</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssid_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssid_security</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0x1DBA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">network.WINC.MODE_STA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_wifi_master" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a WiFi <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master. This interface can move over 12 Mb/s.</p>
+<dt class="sig sig-object py" id="rpc.rpc_network_master">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_network_master</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">network_if</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0x1DBA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc_network_master" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Network <code class="docutils literal notranslate"><span class="pre">rpc</span></code> master.</p>
 <ul class="simple">
-<li><p>ssid - WiFi network to connect to.</p></li>
-<li><p>ssid_key - WiFi network password.</p></li>
-<li><p>ssid_security - WiFi security.</p></li>
-<li><p>ip - Slave IP Address.</p></li>
+<li><p>network_if - Network interface created from <code class="docutils literal notranslate"><span class="pre">network.LAN()</span></code>, <code class="docutils literal notranslate"><span class="pre">network.WLAN()</span></code>, or etc.</p></li>
 <li><p>port - Port to route traffic to.</p></li>
-<li><p>mode - Regular or access-point mode.</p></li>
-<li><p>static_ip - If not None then a tuple of the (IP Address, Subnet Mask, Gateway, DNS Address)</p></li>
 </ul>
 </dd></dl>
 
 </section>
-<section id="id10">
-<h2>class rpc_wifi_master - WiFi Master Interface<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h2>
-<p>Be controlled by another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device over WiFi.</p>
+<section id="class-rpc-network-slave-network-slave-interface">
+<h2>class rpc_network_slave - Network Slave Interface<a class="headerlink" href="#class-rpc-network-slave-network-slave-interface" title="Permalink to this heading">¶</a></h2>
+<p>Be controlled by another <code class="docutils literal notranslate"><span class="pre">rpc</span></code> device a network.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="rpc.rpc.rpc_wifi_slave">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_wifi_slave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssid_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssid_security</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0x1DBA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">network.WINC.MODE_STA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc.rpc_wifi_slave" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a WiFi <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave. This interface can move over 12 Mb/s.</p>
+<dt class="sig sig-object py" id="rpc.rpc_network_slave">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rpc.</span></span><span class="sig-name descname"><span class="pre">rpc_network_slave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">network_if</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0x1DBA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpc.rpc_network_slave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Network <code class="docutils literal notranslate"><span class="pre">rpc</span></code> slave.</p>
 <ul class="simple">
-<li><p>ssid - WiFi network to connect to.</p></li>
-<li><p>ssid_key - WiFi network password.</p></li>
-<li><p>ssid_security - WiFi security.</p></li>
+<li><p>network_if - Network interface created from <code class="docutils literal notranslate"><span class="pre">network.LAN()</span></code>, <code class="docutils literal notranslate"><span class="pre">network.WLAN()</span></code>, or etc.</p></li>
 <li><p>port - Port to route traffic to.</p></li>
-<li><p>mode - Regular or access-point mode.</p></li>
-<li><p>static_ip - If not None then a tuple of the (IP Address, Subnet Mask, Gateway, DNS Address)</p></li>
 </ul>
 </dd></dl>
 
@@ -597,8 +590,8 @@ slave tx. Finally, both devices must share a common ground.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 01 May 2023.
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 02 May 2023.
       </span></p>
   </div>
 

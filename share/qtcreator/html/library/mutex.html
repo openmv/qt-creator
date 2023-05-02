@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mutex — mutex module &mdash; MicroPython 1.19 documentation</title>
@@ -13,6 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -158,22 +160,22 @@ the same mutex instance.</p>
 <dt class="sig sig-object py" id="mutex.Mutex">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mutex.</span></span><span class="sig-name descname"><span class="pre">Mutex</span></span><a class="headerlink" href="#mutex.Mutex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an unlocked mutex object.</p>
-</dd></dl>
-
-</section>
 <section id="methods">
-<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h3>
+<h4>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h4>
 <dl class="py method">
-<dt class="sig sig-object py" id="mutex.mutex.release">
-<span class="sig-prename descclassname"><span class="pre">mutex.</span></span><span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mutex.mutex.release" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unlock the mutex.</p>
-</dd></dl>
+<dt class="sig sig-object py" id="mutex.Mutex.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mutex.Mutex.release" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
+<p>Unlock the mutex.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="mutex.mutex.test">
-<span class="sig-prename descclassname"><span class="pre">mutex.</span></span><span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mutex.mutex.test" title="Permalink to this definition">¶</a></dt>
-<dd><p>Try to acquire the mutex in a non-blocking way. Return <code class="docutils literal notranslate"><span class="pre">True</span></code> on success and <code class="docutils literal notranslate"><span class="pre">False</span></code> on failure.</p>
+<dt class="sig sig-object py" id="mutex.Mutex.test">
+<span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mutex.Mutex.test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Try to acquire the mutex in a non-blocking way. Return <code class="docutils literal notranslate"><span class="pre">True</span></code> on success and <code class="docutils literal notranslate"><span class="pre">False</span></code> on failure.</p>
 <p>You may also acquire the mutex in a blocking way by using <code class="docutils literal notranslate"><span class="pre">with</span></code>.</p>
+</section>
 </dd></dl>
 
 </section>
@@ -191,8 +193,8 @@ the same mutex instance.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 01 May 2023.
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 02 May 2023.
       </span></p>
   </div>
 

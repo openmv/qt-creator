@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>gif — gif recording &mdash; MicroPython 1.19 documentation</title>
@@ -13,6 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -140,8 +142,8 @@ you want to share. Use <a class="reference internal" href="omv.mjpeg.html#module
 <section id="constructors">
 <h3>Constructors<a class="headerlink" href="#constructors" title="Permalink to this heading">¶</a></h3>
 <dl class="py class">
-<dt class="sig sig-object py" id="gif.gif.Gif">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gif.</span></span><span class="sig-name descname"><span class="pre">Gif</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">loop=True</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.gif.Gif" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gif.Gif">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gif.</span></span><span class="sig-name descname"><span class="pre">Gif</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">loop=True</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.Gif" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Gif object which you can add frames to. <code class="docutils literal notranslate"><span class="pre">filename</span></code> is the path to
 save the gif recording to.</p>
 <p><code class="docutils literal notranslate"><span class="pre">width</span></code> is automatically set equal to the image sensor horizontal resolution
@@ -152,49 +154,46 @@ unless explicitly overridden.</p>
 unless explicitly overridden:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>False for color results in a <a class="reference internal" href="omv.sensor.html#sensor.sensor.GRAYSCALE" title="sensor.sensor.GRAYSCALE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.GRAYSCALE</span></code></a> 7-bit per pixel gif.</p></li>
-<li><p>True for color results in a <a class="reference internal" href="omv.sensor.html#sensor.sensor.RGB565" title="sensor.sensor.RGB565"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.RGB565</span></code></a> 7-bit per pixel gif.</p></li>
+<li><p>False for color results in a <a class="reference internal" href="omv.sensor.html#sensor.GRAYSCALE" title="sensor.GRAYSCALE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.GRAYSCALE</span></code></a> 7-bit per pixel gif.</p></li>
+<li><p>True for color results in a <a class="reference internal" href="omv.sensor.html#sensor.RGB565" title="sensor.RGB565"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.RGB565</span></code></a> 7-bit per pixel gif.</p></li>
 </ul>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">loop</span></code> when True results in the gif automatically looping on playback.</p>
-</dd></dl>
-
-</section>
 <section id="methods">
-<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h3>
+<h4>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h4>
 <dl class="py method">
-<dt class="sig sig-object py" id="gif.gif.width">
-<span class="sig-prename descclassname"><span class="pre">gif.</span></span><span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.gif.width" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gif.Gif.width">
+<span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.Gif.width" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the width (horizontal resolution) for the gif object.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="gif.gif.height">
-<span class="sig-prename descclassname"><span class="pre">gif.</span></span><span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.gif.height" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gif.Gif.height">
+<span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.Gif.height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the height (vertical resolution) for the gif object.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="gif.gif.format">
-<span class="sig-prename descclassname"><span class="pre">gif.</span></span><span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.gif.format" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <a class="reference internal" href="omv.sensor.html#sensor.sensor.RGB565" title="sensor.sensor.RGB565"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.RGB565</span></code></a> if color is True or <a class="reference internal" href="omv.sensor.html#sensor.sensor.GRAYSCALE" title="sensor.sensor.GRAYSCALE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.GRAYSCALE</span></code></a> if not.</p>
+<dt class="sig sig-object py" id="gif.Gif.format">
+<span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.Gif.format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="omv.sensor.html#sensor.RGB565" title="sensor.RGB565"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.RGB565</span></code></a> if color is True or <a class="reference internal" href="omv.sensor.html#sensor.GRAYSCALE" title="sensor.GRAYSCALE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.GRAYSCALE</span></code></a> if not.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="gif.gif.size">
-<span class="sig-prename descclassname"><span class="pre">gif.</span></span><span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.gif.size" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gif.Gif.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.Gif.size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the file size of the gif so far. This value is updated after adding frames.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="gif.gif.loop">
-<span class="sig-prename descclassname"><span class="pre">gif.</span></span><span class="sig-name descname"><span class="pre">loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.gif.loop" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gif.Gif.loop">
+<span class="sig-name descname"><span class="pre">loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.Gif.loop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns if the gif object had loop set in its constructor.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="gif.gif.add_frame">
-<span class="sig-prename descclassname"><span class="pre">gif.</span></span><span class="sig-name descname"><span class="pre">add_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">delay=10</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.gif.add_frame" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gif.Gif.add_frame">
+<span class="sig-name descname"><span class="pre">add_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">delay=10</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.Gif.add_frame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add an image to the gif recording. The image width, height, and color mode,
 must be equal to the same width, height, and color modes used in the constructor
 for the gif.</p>
@@ -203,10 +202,13 @@ after the previous frame (if not the first frame).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="gif.gif.close">
-<span class="sig-prename descclassname"><span class="pre">gif.</span></span><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.gif.close" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gif.Gif.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gif.Gif.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finalizes the gif recording. This method must be called once the recording
 is complete to make the file viewable.</p>
+</dd></dl>
+
+</section>
 </dd></dl>
 
 </section>
@@ -224,8 +226,8 @@ is complete to make the file viewable.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 01 May 2023.
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 02 May 2023.
       </span></p>
   </div>
 

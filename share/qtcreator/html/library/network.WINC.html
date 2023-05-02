@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>class WINC – wifi shield driver &mdash; MicroPython 1.19 documentation</title>
@@ -13,6 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -157,14 +159,11 @@ points) and and <code class="docutils literal notranslate"><span class="pre">net
 connect). Availability of the methods below depends on interface type.
 For example, only STA interface may <a class="reference internal" href="network.WLAN.html#network.WLAN.connect" title="network.WLAN.connect"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">WLAN.connect()</span></code></a> to an access point.</p>
 </div>
-</dd></dl>
-
-</section>
 <section id="methods">
-<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h3>
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.active">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">active</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">is_active</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.active" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">active</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">is_active</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.active" title="Permalink to this definition">¶</a></dt>
 <dd><p>Activate (“up”) or deactivate (“down”) network interface, if boolean
 argument is passed. Otherwise, query current state if no argument is
 provided. Most other methods require active interface.</p>
@@ -172,7 +171,7 @@ provided. Most other methods require active interface.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.connect">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssid</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">key=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">security=WPA_PSK</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.connect" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssid</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">key=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">security=WPA_PSK</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.connect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Connect to a wifi network with ssid <code class="docutils literal notranslate"><span class="pre">ssid</span></code> using key <code class="docutils literal notranslate"><span class="pre">key</span></code> with
 security <code class="docutils literal notranslate"><span class="pre">security</span></code>.</p>
 <p>After connecting to the network use the <code class="xref py py-mod docutils literal notranslate"><span class="pre">usocket</span></code> module to open TCP/UDP
@@ -185,41 +184,39 @@ ports to send and receive data.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.start_ap">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">start_ap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssid</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">key=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">security=OPEN</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">channel=1</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.start_ap" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">start_ap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssid</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">key=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">security=OPEN</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">channel=1</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.start_ap" title="Permalink to this definition">¶</a></dt>
 <dd><p>When running in AP mode this method must be called after creating
 a WINC object to configure and start the AP .</p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>ssid: The AP SSID (must be set).</p></li>
 <li><p>key: The AP encryption key. A Key is required only if security is WEP.</p></li>
 <li><p>security: AP security mode (only OPEN or WEP are supported).</p></li>
 <li><p>channel: WiFi channel, change this if you have another AP running at the same channel.</p></li>
 </ul>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.disconnect">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.disconnect" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.disconnect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disconnect from the wifi network.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.isconnected">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">isconnected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.isconnected" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">isconnected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.isconnected" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True if connected to an access point and an IP address has been
 obtained.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.connected_sta">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">connected_sta</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.connected_sta" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">connected_sta</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.connected_sta" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method returns a list containing the connected client’s IP adress.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.wait_for_sta">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">wait_for_sta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.wait_for_sta" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">wait_for_sta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.wait_for_sta" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method blocks and waits for a client to connect. If timeout is 0
 this will block forever. This method returns a list containing the
 connected client’s IP adress.</p>
@@ -227,7 +224,7 @@ connected client’s IP adress.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.ifconfig">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">ifconfig</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">ip_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subnet_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gateway_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dns_addr</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.ifconfig" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ifconfig</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">ip_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subnet_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gateway_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dns_addr</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.ifconfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a tuple containing:</p>
 <blockquote>
 <div><ul class="simple">
@@ -251,7 +248,7 @@ to set a static IP address versus an address obtained through DHCP (which happen
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.netinfo">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">netinfo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.netinfo" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">netinfo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.netinfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a tuple containing:</p>
 <blockquote>
 <div><ul class="simple">
@@ -267,7 +264,7 @@ to set a static IP address versus an address obtained through DHCP (which happen
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.scan">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">scan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.scan" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">scan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.scan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a list containing:</p>
 <blockquote>
 <div><ul class="simple">
@@ -283,14 +280,14 @@ to set a static IP address versus an address obtained through DHCP (which happen
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.rssi">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">rssi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.rssi" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">rssi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.rssi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the received signal strength indicator (int) of the currently
 connected network.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.fw_version">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">fw_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.fw_version" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fw_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.fw_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a tuple containing the wifi shield firmware version number.</p>
 <blockquote>
 <div><ul class="simple">
@@ -307,55 +304,58 @@ connected network.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.fw_dump">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">fw_dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.fw_dump" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fw_dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.fw_dump" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dumps the wifi shield firmware to a binary file at <code class="docutils literal notranslate"><span class="pre">path</span></code>. You must
 have put the module into firmware mode to use this.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="network.WINC.fw_update">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">fw_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.fw_update" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fw_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.WINC.fw_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Programs the wifi shield with binary image found at <code class="docutils literal notranslate"><span class="pre">path</span></code>. You must
 have put the module into firmware mode to use this.</p>
 </dd></dl>
 
 </section>
 <section id="constants">
-<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this heading">¶</a></h2>
+<h3>Constants<a class="headerlink" href="#constants" title="Permalink to this heading">¶</a></h3>
 <dl class="py data">
 <dt class="sig sig-object py" id="network.WINC.OPEN">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">OPEN</span></span><a class="headerlink" href="#network.WINC.OPEN" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">OPEN</span></span><a class="headerlink" href="#network.WINC.OPEN" title="Permalink to this definition">¶</a></dt>
 <dd><p>For connecting to an open wifi network.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="network.WINC.WEP">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">WEP</span></span><a class="headerlink" href="#network.WINC.WEP" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">WEP</span></span><a class="headerlink" href="#network.WINC.WEP" title="Permalink to this definition">¶</a></dt>
 <dd><p>For connecting to a WEP based password protected network.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="network.WINC.WPA_PSK">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">WPA_PSK</span></span><a class="headerlink" href="#network.WINC.WPA_PSK" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">WPA_PSK</span></span><a class="headerlink" href="#network.WINC.WPA_PSK" title="Permalink to this definition">¶</a></dt>
 <dd><p>For connecting to a WPA/PSK based password protected network.</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="network.WINC.MODE_STA">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">MODE_STA</span></span><a class="headerlink" href="#network.WINC.MODE_STA" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">MODE_STA</span></span><a class="headerlink" href="#network.WINC.MODE_STA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start in station mode (i.e. connect to a network).</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="network.WINC.MODE_AP">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">MODE_AP</span></span><a class="headerlink" href="#network.WINC.MODE_AP" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">MODE_AP</span></span><a class="headerlink" href="#network.WINC.MODE_AP" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start in access point mode (i.e. become the network).</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="network.WINC.MODE_FIRMWARE">
-<span class="sig-prename descclassname"><span class="pre">WINC.</span></span><span class="sig-name descname"><span class="pre">MODE_FIRMWARE</span></span><a class="headerlink" href="#network.WINC.MODE_FIRMWARE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">MODE_FIRMWARE</span></span><a class="headerlink" href="#network.WINC.MODE_FIRMWARE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setup in firmware update mode.</p>
+</dd></dl>
+
+</section>
 </dd></dl>
 
 </section>
@@ -372,8 +372,8 @@ have put the module into firmware mode to use this.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 01 May 2023.
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 02 May 2023.
       </span></p>
   </div>
 

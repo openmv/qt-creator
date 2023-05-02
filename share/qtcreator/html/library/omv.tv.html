@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tv — tv shield driver &mdash; MicroPython 1.19 documentation</title>
@@ -13,6 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -131,68 +133,68 @@
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="tv.tv.init">
-<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">type=tv.TV_SHIELD</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">triple_buffer=False</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.init" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="tv.init">
+<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">type=tv.TV_SHIELD</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">triple_buffer=False</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.init" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initializes an attached tv output module.</p>
 <p><code class="docutils literal notranslate"><span class="pre">type</span></code> indicates how the lcd module should be initialized:</p>
 <blockquote>
 <div><blockquote>
 <div><ul class="simple">
-<li><p><a class="reference internal" href="#tv.tv.TV_NONE" title="tv.tv.TV_NONE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">tv.TV_NONE</span></code></a>: Do nothing.</p></li>
-<li><p><a class="reference internal" href="#tv.tv.TV_SHIELD" title="tv.tv.TV_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">tv.TV_SHIELD</span></code></a>: Initialize a TV output module. Uses pins P0, P1, P2, and P3.</p></li>
+<li><p><a class="reference internal" href="#tv.TV_NONE" title="tv.TV_NONE"><code class="xref any py py-data docutils literal notranslate"><span class="pre">tv.TV_NONE</span></code></a>: Do nothing.</p></li>
+<li><p><a class="reference internal" href="#tv.TV_SHIELD" title="tv.TV_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">tv.TV_SHIELD</span></code></a>: Initialize a TV output module. Uses pins P0, P1, P2, and P3.</p></li>
 </ul>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">triple_buffer</span></code> If True then makes updates to the screen non-blocking in <a class="reference internal" href="#tv.tv.TV_SHIELD" title="tv.tv.TV_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">tv.TV_SHIELD</span></code></a>
+<p><code class="docutils literal notranslate"><span class="pre">triple_buffer</span></code> If True then makes updates to the screen non-blocking in <a class="reference internal" href="#tv.TV_SHIELD" title="tv.TV_SHIELD"><code class="xref any py py-data docutils literal notranslate"><span class="pre">tv.TV_SHIELD</span></code></a>
 mode at the cost of 3X the display RAM (495 KB).</p>
 </div></blockquote>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="tv.tv.deinit">
-<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">deinit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.deinit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="tv.deinit">
+<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">deinit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.deinit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deinitializes the tv module, internal/external hardware, and I/O pins.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="tv.lcd.width">
-<span class="sig-prename descclassname"><span class="pre">lcd.</span></span><span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.lcd.width" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns 352 pixels. This is the <a class="reference internal" href="omv.sensor.html#sensor.sensor.SIF" title="sensor.sensor.SIF"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.SIF</span></code></a> resolution.</p>
+<dt class="sig sig-object py" id="tv.width">
+<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns 352 pixels. This is the <a class="reference internal" href="omv.sensor.html#sensor.SIF" title="sensor.SIF"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.SIF</span></code></a> resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="tv.lcd.height">
-<span class="sig-prename descclassname"><span class="pre">lcd.</span></span><span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.lcd.height" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns 240 pixels. This is the <a class="reference internal" href="omv.sensor.html#sensor.sensor.SIF" title="sensor.sensor.SIF"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.SIF</span></code></a> resolution.</p>
+<dt class="sig sig-object py" id="tv.height">
+<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns 240 pixels. This is the <a class="reference internal" href="omv.sensor.html#sensor.SIF" title="sensor.SIF"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.SIF</span></code></a> resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="tv.tv.type">
-<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the type of the screen that was set during <a class="reference internal" href="#tv.tv.init" title="tv.tv.init"><code class="xref any py py-func docutils literal notranslate"><span class="pre">tv.init()</span></code></a>.</p>
+<dt class="sig sig-object py" id="tv.type">
+<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the type of the screen that was set during <a class="reference internal" href="#tv.init" title="tv.init"><code class="xref any py py-func docutils literal notranslate"><span class="pre">tv.init()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="tv.tv.triple_buffer">
-<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">triple_buffer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.triple_buffer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns if triple buffering is enabled that was set during <a class="reference internal" href="#tv.tv.init" title="tv.tv.init"><code class="xref any py py-func docutils literal notranslate"><span class="pre">tv.init()</span></code></a>.</p>
+<dt class="sig sig-object py" id="tv.triple_buffer">
+<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">triple_buffer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.triple_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if triple buffering is enabled that was set during <a class="reference internal" href="#tv.init" title="tv.init"><code class="xref any py py-func docutils literal notranslate"><span class="pre">tv.init()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="tv.tv.refresh">
-<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">refresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.refresh" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="tv.refresh">
+<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">refresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.refresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns 60 Hz.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="tv.tv.channel">
-<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">channel</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.channel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="tv.channel">
+<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">channel</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>For the wireless TV shield this sets the broadcast channel between 1-8. If passed without a channel
 argument then this method returns the previously set channel (1-8). Default is channel 8.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="tv.tv.display">
-<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">x=0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">y=0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">x_scale=1.0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">y_scale=1.0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">roi=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">rgb_channel=-1</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">alpha=256</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">color_palette=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">alpha_palette=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">hint=0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">x_size=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">y_size=None</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.tv.display" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="tv.display">
+<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">x=0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">y=0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">x_scale=1.0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">y_scale=1.0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">roi=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">rgb_channel=-1</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">alpha=256</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">color_palette=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">alpha_palette=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">hint=0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">x_size=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">y_size=None</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#tv.display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Displays an <code class="docutils literal notranslate"><span class="pre">image</span></code> whose top-left corner starts at location x, y. You may either pass x, y
 separately, as a tuple (x, y), or neither.</p>
 <p><code class="docutils literal notranslate"><span class="pre">x_scale</span></code> controls how much the displayed image is scaled by in the x direction (float). If this
@@ -206,7 +208,7 @@ and to render on the display. For example, if you pass <code class="docutils lit
 extract the green channel of the RGB565 image and display that in grayscale.</p>
 <p><code class="docutils literal notranslate"><span class="pre">alpha</span></code> controls how opaque the image is. A value of 256 displays an opaque image while a
 value lower than 256 produces a black transparent image. 0 results in a perfectly black image.</p>
-<p><code class="docutils literal notranslate"><span class="pre">color_palette</span></code> if not <code class="docutils literal notranslate"><span class="pre">-1</span></code> can be <a class="reference internal" href="omv.sensor.html#sensor.sensor.PALETTE_RAINBOW" title="sensor.sensor.PALETTE_RAINBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_RAINBOW</span></code></a>, <a class="reference internal" href="omv.sensor.html#sensor.sensor.PALETTE_IRONBOW" title="sensor.sensor.PALETTE_IRONBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_IRONBOW</span></code></a>, or
+<p><code class="docutils literal notranslate"><span class="pre">color_palette</span></code> if not <code class="docutils literal notranslate"><span class="pre">-1</span></code> can be <a class="reference internal" href="omv.sensor.html#sensor.PALETTE_RAINBOW" title="sensor.PALETTE_RAINBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_RAINBOW</span></code></a>, <a class="reference internal" href="omv.sensor.html#sensor.PALETTE_IRONBOW" title="sensor.PALETTE_IRONBOW"><code class="xref any py py-data docutils literal notranslate"><span class="pre">sensor.PALETTE_IRONBOW</span></code></a>, or
 a 256 pixel in total RGB565 image to use as a color lookup table on the grayscale value of
 whatever the input image is. This is applied after <code class="docutils literal notranslate"><span class="pre">rgb_channel</span></code> extraction if used.</p>
 <p><code class="docutils literal notranslate"><span class="pre">alpha_palette</span></code> if not <code class="docutils literal notranslate"><span class="pre">-1</span></code> can be a 256 pixel in total GRAYSCALE image to use as a alpha
@@ -217,12 +219,12 @@ more transparent until 0. This is applied after <code class="docutils literal no
 <p><code class="docutils literal notranslate"><span class="pre">hint</span></code> can be a logical OR of the flags:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference internal" href="omv.image.html#image.image.AREA" title="image.image.AREA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.AREA</span></code></a>: Use area scaling when downscaling versus the default of nearest neighbor.</p></li>
-<li><p><a class="reference internal" href="omv.image.html#image.image.BILINEAR" title="image.image.BILINEAR"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BILINEAR</span></code></a>: Use bilinear scaling versus the default of nearest neighbor scaling.</p></li>
-<li><p><a class="reference internal" href="omv.image.html#image.image.BICUBIC" title="image.image.BICUBIC"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BICUBIC</span></code></a>: Use bicubic scaling versus the default of nearest neighbor scaling.</p></li>
-<li><p><a class="reference internal" href="omv.image.html#image.image.CENTER" title="image.image.CENTER"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.CENTER</span></code></a>: Center the image image being displayed on (x, y).</p></li>
-<li><p><a class="reference internal" href="omv.image.html#image.image.EXTRACT_RGB_CHANNEL_FIRST" title="image.image.EXTRACT_RGB_CHANNEL_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.EXTRACT_RGB_CHANNEL_FIRST</span></code></a>: Do rgb_channel extraction before scaling.</p></li>
-<li><p><a class="reference internal" href="omv.image.html#image.image.APPLY_COLOR_PALETTE_FIRST" title="image.image.APPLY_COLOR_PALETTE_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.APPLY_COLOR_PALETTE_FIRST</span></code></a>: Apply color palette before scaling.</p></li>
+<li><p><a class="reference internal" href="omv.image.html#image.AREA" title="image.AREA"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.AREA</span></code></a>: Use area scaling when downscaling versus the default of nearest neighbor.</p></li>
+<li><p><a class="reference internal" href="omv.image.html#image.BILINEAR" title="image.BILINEAR"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BILINEAR</span></code></a>: Use bilinear scaling versus the default of nearest neighbor scaling.</p></li>
+<li><p><a class="reference internal" href="omv.image.html#image.BICUBIC" title="image.BICUBIC"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.BICUBIC</span></code></a>: Use bicubic scaling versus the default of nearest neighbor scaling.</p></li>
+<li><p><a class="reference internal" href="omv.image.html#image.CENTER" title="image.CENTER"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.CENTER</span></code></a>: Center the image image being displayed on (x, y).</p></li>
+<li><p><a class="reference internal" href="omv.image.html#image.EXTRACT_RGB_CHANNEL_FIRST" title="image.EXTRACT_RGB_CHANNEL_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.EXTRACT_RGB_CHANNEL_FIRST</span></code></a>: Do rgb_channel extraction before scaling.</p></li>
+<li><p><a class="reference internal" href="omv.image.html#image.APPLY_COLOR_PALETTE_FIRST" title="image.APPLY_COLOR_PALETTE_FIRST"><code class="xref any py py-data docutils literal notranslate"><span class="pre">image.APPLY_COLOR_PALETTE_FIRST</span></code></a>: Apply color palette before scaling.</p></li>
 </ul>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">x_size</span></code> may be passed if <code class="docutils literal notranslate"><span class="pre">x_scale</span></code> is not passed to specify the size of the image to display
@@ -239,14 +241,14 @@ and <code class="docutils literal notranslate"><span class="pre">y_scale</span><
 <section id="constants">
 <h2>Constants<a class="headerlink" href="#constants" title="Permalink to this heading">¶</a></h2>
 <dl class="py data">
-<dt class="sig sig-object py" id="tv.tv.TV_NONE">
-<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">TV_NONE</span></span><a class="headerlink" href="#tv.tv.TV_NONE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returned by <a class="reference internal" href="#tv.tv.type" title="tv.tv.type"><code class="xref any py py-func docutils literal notranslate"><span class="pre">tv.type()</span></code></a> when the this module is not initialized.</p>
+<dt class="sig sig-object py" id="tv.TV_NONE">
+<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">TV_NONE</span></span><a class="headerlink" href="#tv.TV_NONE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returned by <a class="reference internal" href="#tv.type" title="tv.type"><code class="xref any py py-func docutils literal notranslate"><span class="pre">tv.type()</span></code></a> when the this module is not initialized.</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="tv.tv.TV_SHIELD">
-<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">TV_SHIELD</span></span><a class="headerlink" href="#tv.tv.TV_SHIELD" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="tv.TV_SHIELD">
+<span class="sig-prename descclassname"><span class="pre">tv.</span></span><span class="sig-name descname"><span class="pre">TV_SHIELD</span></span><a class="headerlink" href="#tv.TV_SHIELD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Used to initialize the TV module.</p>
 </dd></dl>
 
@@ -264,8 +266,8 @@ and <code class="docutils literal notranslate"><span class="pre">y_scale</span><
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 01 May 2023.
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 02 May 2023.
       </span></p>
   </div>
 

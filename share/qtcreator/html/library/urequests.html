@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>urequests — Related functions of HTTP client &mdash; MicroPython 1.19 documentation</title>
@@ -13,6 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -112,30 +114,30 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="urequests.Response">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">urequests.</span></span><span class="sig-name descname"><span class="pre">Response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#urequests.Response" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>The Response class object contains the server’s response to the HTTP request.</p>
+<dd><p>The Response class object contains the server’s response to the HTTP request.</p>
 <section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
-<dt class="sig sig-object py" id="urequests.headers">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">urequests.</span></span><span class="sig-name descname"><span class="pre">headers</span></span><a class="headerlink" href="#urequests.headers" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="urequests.Response.headers">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">headers</span></span><a class="headerlink" href="#urequests.Response.headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the headers.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="urequests.content">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">urequests.</span></span><span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#urequests.content" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="urequests.Response.content">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#urequests.Response.content" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the content of the response, in bytes.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="urequests.json">
-<span class="sig-prename descclassname"><span class="pre">urequests.</span></span><span class="sig-name descname"><span class="pre">json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urequests.json" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="urequests.Response.json">
+<span class="sig-name descname"><span class="pre">json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#urequests.Response.json" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return response json encoded content and convert to dict type.</p>
 </dd></dl>
 
 </section>
+</dd></dl>
+
 </section>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
@@ -242,8 +244,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2022, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 01 May 2023.
+    <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
+      <span class="lastupdated">Last updated on 02 May 2023.
       </span></p>
   </div>
 
