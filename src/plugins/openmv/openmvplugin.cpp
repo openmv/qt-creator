@@ -159,10 +159,14 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
             QStringList list;
 
             foreach(const QString &arg, QString(args.captured(1)).
+                                        remove(QLatin1String("<span class=\"optional\">[</span>")).
+                                        remove(QLatin1String("<span class=\"optional\">]</span>")).
                                         remove(m_emRegEx).
                                         remove(m_spanRegEx).
                                         remove(QLatin1String("</em>")).
                                         remove(QLatin1String("</span>")).
+                                        remove(QLatin1Char('[')).
+                                        remove(QLatin1Char(']')).
                                         remove(m_tupleRegEx).
                                         remove(m_listRegEx).
                                         remove(m_dictionaryRegEx).
