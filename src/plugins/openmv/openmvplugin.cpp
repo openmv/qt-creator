@@ -1195,7 +1195,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     QAction *playVideoFile = new QAction(tr("Play Video File"), this);
     Core::Command *playVideoFileCommand = Core::ActionManager::registerAction(playVideoFile, Core::Id("OpenMV.PlayVideoFile"));
-    if(!Utils::HostOsInfo::isLinuxHost()) videoToolsMenu->addAction(playVideoFileCommand);
+    videoToolsMenu->addAction(playVideoFileCommand);
     connect(playVideoFile, &QAction::triggered, this, [this] {playVideoFileAction(m_portPath);});
 
     Core::ActionContainer *datasetEditorMenu = Core::ActionManager::createMenu(Core::Id("OpenMV.DatasetEditor"));
