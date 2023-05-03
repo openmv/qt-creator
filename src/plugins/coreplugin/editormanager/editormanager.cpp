@@ -2734,6 +2734,9 @@ IEditor *EditorManager::openEditorWithContents(Id editorId,
                 if (!title.isEmpty())
                     edt->document()->setPreferredDisplayName(title);
 
+                //OPENMV-DIFF//
+                edt->gotoLine(1);
+                //OPENMV-DIFF//
                 activateEditor(edt, flags);
                 return edt;
             }
@@ -2759,6 +2762,9 @@ IEditor *EditorManager::openEditorWithContents(Id editorId,
         edt->document()->setPreferredDisplayName(title);
 
     EditorManagerPrivate::addEditor(edt);
+    //OPENMV-DIFF//
+    edt->gotoLine(1);
+    //OPENMV-DIFF//
     activateEditor(edt, flags);
     return edt;
 }

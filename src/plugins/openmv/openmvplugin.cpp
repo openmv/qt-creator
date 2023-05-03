@@ -70,6 +70,117 @@ static void displayError(const QString &string)
     }
 }
 
+void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &match, QStringList &providerVariables, QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs)
+{
+    QString type = match.captured(1);
+    QString id = match.captured(2);
+    QString head = match.captured(3);
+    QString body = match.captured(4);
+    QStringList idList = id.split(QLatin1Char('.'), QString::SkipEmptyParts);
+
+    if((1 <= idList.size()) && (idList.size() <= 5))
+    {
+        QRegularExpressionMatch args = m_argumentRegEx.match(head);
+        QString argumentString;
+
+        if(args.hasMatch())
+        {
+            argumentString = QLatin1Char('(') + QString(args.captured(1)).
+            remove(m_emRegEx).
+            remove(m_spanRegEx).
+            remove(QLatin1String("</em>")).
+            remove(QLatin1String("</span>")).
+            replace(QStringLiteral("[,"), QStringLiteral(" [ ,")) + QLatin1Char(')');
+        }
+
+        if(idList.size() == 1)
+        {
+            idList.prepend(QStringLiteral("builtin"));
+        }
+
+        if(idList.size() == 2 && (type == QStringLiteral("method")))
+        {
+            idList.prepend(QStringLiteral("builtin"));
+        }
+
+        QRegularExpressionMatch cdfmRegExInsideMatch = m_cdfmRegExInside.match(body);
+
+        if(cdfmRegExInsideMatch.hasMatch())
+        {
+            processDocumentationMatch(cdfmRegExInsideMatch, providerVariables, providerFunctions, providerFunctionArgs);
+            body.remove(m_cdfmRegExInside);
+        }
+
+        documentation_t d;
+        d.moduleName = (idList.size() > 1) ? idList.at(0) : QString();
+        if(idList.size() > 1) idList.removeAll(d.moduleName);
+        d.className = (idList.size() > 1) ? idList.at(0) : QString();
+        d.name = (idList.size() > 0) ? idList.last() : d.moduleName;
+        d.text = QString(QStringLiteral("<h3>%1%2</h3>%3")).arg(d.moduleName.isEmpty() ? d.name : (d.moduleName + QStringLiteral(" - ") + (d.className.isEmpty() ? d.name : (d.className + QLatin1Char('.') + d.name)))).arg(argumentString).arg(body).
+                 remove(QStringLiteral("\u00B6")).
+                 remove(m_spanRegEx).
+                 remove(QStringLiteral("</span>")).
+                 remove(m_linkRegEx).
+                 remove(QStringLiteral("</a>")).
+                 remove(m_classRegEx).
+                 replace(QStringLiteral("<li><p>"), QStringLiteral("<li>")).
+                 replace(QStringLiteral("</p></li>"), QStringLiteral("</li>")).
+                 remove(QStringLiteral("<blockquote>")).
+                 remove(QStringLiteral("</blockquote>"));
+
+        if(QString(d.text).remove(QRegularExpression(QStringLiteral("<h3>.+?</h3>"))).isEmpty())
+        {
+            return;
+        }
+
+        if(type == QStringLiteral("class"))
+        {
+            m_classes.append(d);
+            providerFunctions.append(d.name);
+        }
+        else if((type == QStringLiteral("data")) || (type == QStringLiteral("exception")))
+        {
+            m_datas.append(d);
+            providerVariables.append(d.name);
+        }
+        else if(type == QStringLiteral("function"))
+        {
+            m_functions.append(d);
+            providerFunctions.append(d.name);
+        }
+        else if(type == QStringLiteral("method"))
+        {
+            m_methods.append(d);
+            providerFunctions.append(d.name);
+        }
+
+        if(args.hasMatch())
+        {
+            QStringList list;
+
+            foreach(const QString &arg, QString(args.captured(1)).
+                                        remove(m_emRegEx).
+                                        remove(m_spanRegEx).
+                                        remove(QLatin1String("</em>")).
+                                        remove(QLatin1String("</span>")).
+                                        remove(m_tupleRegEx).
+                                        remove(m_listRegEx).
+                                        remove(m_dictionaryRegEx).
+                                        remove(QLatin1Char(' ')).
+                                        split(QLatin1Char(','), QString::SkipEmptyParts))
+            {
+                int equals = arg.indexOf(QLatin1Char('='));
+                QString temp = (equals != -1) ? arg.left(equals) : arg;
+
+                m_arguments.insert(temp);
+                list.append(temp);
+            }
+
+            providerFunctionArgs.insert(d.name, list);
+        }
+    }
+}
+
 bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessage)
 {
     Q_UNUSED(errorMessage)
@@ -312,15 +423,17 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     QRegularExpression moduleRegEx(QStringLiteral("<section id=\"module-(.+?)\">(.*?)<section"), QRegularExpression::DotMatchesEverythingOption);
     QRegularExpression moduleRegEx2(QStringLiteral("<section id=\"module-(.+?)\">(.*?)</section>"), QRegularExpression::DotMatchesEverythingOption);
-    QRegularExpression spanRegEx(QStringLiteral("<span.*?>"), QRegularExpression::DotMatchesEverythingOption);
-    QRegularExpression linkRegEx(QStringLiteral("<a.*?>"), QRegularExpression::DotMatchesEverythingOption);
-    QRegularExpression classRegEx(QStringLiteral(" class=\".*?\""), QRegularExpression::DotMatchesEverythingOption);
-    QRegularExpression cdfmRegEx(QStringLiteral("<dl class=\"py (class|data|exception|function|method)\">\\s*<dt class=\".+?\" id=\"(.+?)\">(.*?)</dt>\\s*<dd>(.*?)</dd>\\s*</dl>"), QRegularExpression::DotMatchesEverythingOption);
-    QRegularExpression argumentRegEx(QStringLiteral("<span class=\"sig-paren\">\\(</span>(.*?)<span class=\"sig-paren\">\\)</span>"), QRegularExpression::DotMatchesEverythingOption);
-    QRegularExpression tupleRegEx(QStringLiteral("\\(.*?\\)"), QRegularExpression::DotMatchesEverythingOption);
-    QRegularExpression listRegEx(QStringLiteral("\\[.*?\\]"), QRegularExpression::DotMatchesEverythingOption);
-    QRegularExpression dictionaryRegEx(QStringLiteral("\\{.*?\\}"), QRegularExpression::DotMatchesEverythingOption);
-    QRegularExpression sectionEx(QStringLiteral("<section.*"), QRegularExpression::DotMatchesEverythingOption);
+    m_emRegEx = QRegularExpression(QLatin1String("<em.*?>"), QRegularExpression::DotMatchesEverythingOption);
+    m_spanRegEx = QRegularExpression(QStringLiteral("<span.*?>"), QRegularExpression::DotMatchesEverythingOption);
+    m_linkRegEx = QRegularExpression(QStringLiteral("<a.*?>"), QRegularExpression::DotMatchesEverythingOption);
+    m_classRegEx = QRegularExpression(QStringLiteral(" class=\".*?\""), QRegularExpression::DotMatchesEverythingOption);
+    QRegularExpression cdfmRegEx(QStringLiteral("<dl class=\"py (class|data|exception|function|method)\">\\s*<dt class=\".+?\" id=\"(.+?)\">(.*?)</dt>\\s*<dd>(.*?)(?:<section|</dd>\\s*</dl>)"), QRegularExpression::DotMatchesEverythingOption);
+    m_cdfmRegExInside = QRegularExpression(QStringLiteral("<dl class=\"py (class|data|exception|function|method)\">\\s*<dt class=\".+?\" id=\"(.+?)\">(.*?)</dt>\\s*<dd>(.*)"), QRegularExpression::DotMatchesEverythingOption);
+    m_argumentRegEx = QRegularExpression(QStringLiteral("<span class=\"sig-paren\">\\(</span>(.*?)<span class=\"sig-paren\">\\)</span>"), QRegularExpression::DotMatchesEverythingOption);
+    m_tupleRegEx = QRegularExpression(QStringLiteral("\\(.*?\\)"), QRegularExpression::DotMatchesEverythingOption);
+    m_listRegEx = QRegularExpression(QStringLiteral("\\[.*?\\]"), QRegularExpression::DotMatchesEverythingOption);
+    m_dictionaryRegEx = QRegularExpression(QStringLiteral("\\{.*?\\}"), QRegularExpression::DotMatchesEverythingOption);
+    QRegularExpression sectionRegEx(QStringLiteral("<section.*"), QRegularExpression::DotMatchesEverythingOption);
 
     QDirIterator it(Core::ICore::userResourcePath() + QStringLiteral("/html/library"), QDir::Files);
 
@@ -345,14 +458,14 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                     QString name = match.captured(1);
                     QString text = match.captured(2).
                                    remove(QStringLiteral("\u00B6")).
-                                   remove(spanRegEx).
+                                   remove(m_spanRegEx).
                                    remove(QStringLiteral("</span>")).
-                                   remove(linkRegEx).
+                                   remove(m_linkRegEx).
                                    remove(QStringLiteral("</a>")).
-                                   remove(classRegEx).
+                                   remove(m_classRegEx).
                                    replace(QStringLiteral("<h1>"), QStringLiteral("<h3>")).
                                    replace(QStringLiteral("</h1>"), QStringLiteral("</h3>")).
-                                   remove(sectionEx);
+                                   remove(sectionRegEx);
 
                     documentation_t d;
                     d.moduleName = QString();
@@ -372,85 +485,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
                 while(matches.hasNext())
                 {
-                    QRegularExpressionMatch match = matches.next();
-                    QString type = match.captured(1);
-                    QString id = match.captured(2);
-                    QString head = match.captured(3);
-                    QString body = match.captured(4);
-                    QStringList idList = id.split(QLatin1Char('.'), QString::SkipEmptyParts);
-
-                    if((1 <= idList.size()) && (idList.size() <= 5))
-                    {
-                        documentation_t d;
-                        d.moduleName = (idList.size() > 1) ? idList.at(0) : QString();
-                        if(idList.size() > 1) idList.removeAll(d.moduleName);
-                        d.className = (idList.size() > 1) ? idList.at(0) : QString();
-                        d.name = (idList.size() > 0) ? idList.last() : d.moduleName;
-                        d.text = QString(QStringLiteral("<h3>%1</h3>%2")).arg(d.moduleName.isEmpty() ? d.name : (d.moduleName + QStringLiteral(" - ") + (d.className.isEmpty() ? d.name : (d.className + QLatin1Char('.') + d.name)))).arg(body).
-                                 remove(QStringLiteral("\u00B6")).
-                                 remove(spanRegEx).
-                                 remove(QStringLiteral("</span>")).
-                                 remove(linkRegEx).
-                                 remove(QStringLiteral("</a>")).
-                                 remove(classRegEx).
-                                 replace(QStringLiteral("<li><p>"), QStringLiteral("<li>")).
-                                 replace(QStringLiteral("</p></li>"), QStringLiteral("</li>")).
-                                 remove(QStringLiteral("<blockquote>")).
-                                 remove(QStringLiteral("</blockquote>"));
-
-                        if(QString(d.text).remove(QRegularExpression(QStringLiteral("<h3>.+?</h3>"))).isEmpty())
-                        {
-                            continue;
-                        }
-
-                        if(type == QStringLiteral("class"))
-                        {
-                            m_classes.append(d);
-                            providerFunctions.append(d.name);
-                        }
-                        else if((type == QStringLiteral("data")) || (type == QStringLiteral("exception")))
-                        {
-                            m_datas.append(d);
-                            providerVariables.append(d.name);
-                        }
-                        else if(type == QStringLiteral("function"))
-                        {
-                            m_functions.append(d);
-                            providerFunctions.append(d.name);
-                        }
-                        else if(type == QStringLiteral("method"))
-                        {
-                            m_methods.append(d);
-                            providerFunctions.append(d.name);
-                        }
-
-                        QRegularExpressionMatch args = argumentRegEx.match(head);
-
-                        if(args.hasMatch())
-                        {
-                            QStringList list;
-
-                            foreach(const QString &arg, args.captured(1).
-                                                        remove(QLatin1String("<span class=\"optional\">[</span>")).
-                                                        remove(QLatin1String("<span class=\"optional\">]</span>")).
-                                                        remove(QLatin1String("<em>")).
-                                                        remove(QLatin1String("</em>")).
-                                                        remove(tupleRegEx).
-                                                        remove(listRegEx).
-                                                        remove(dictionaryRegEx).
-                                                        remove(QLatin1Char(' ')).
-                                                        split(QLatin1Char(','), QString::SkipEmptyParts))
-                            {
-                                int equals = arg.indexOf(QLatin1Char('='));
-                                QString temp = (equals != -1) ? arg.left(equals) : arg;
-
-                                m_arguments.insert(temp);
-                                list.append(temp);
-                            }
-
-                            providerFunctionArgs.insert(d.name, list);
-                        }
-                    }
+                    processDocumentationMatch(matches.next(), providerVariables, providerFunctions, providerFunctionArgs);
                 }
             }
         }
@@ -629,14 +664,11 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                                 }
                             }
 
-                            if(qMin(cursor.position(), cursor.anchor()) && (widget->textDocument()->document()->characterAt(qMin(cursor.position(), cursor.anchor()) - 1) == QLatin1Char('.')))
+                            foreach(const documentation_t &d, m_datas)
                             {
-                                foreach(const documentation_t &d, m_datas)
+                                if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
                                 {
-                                    if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
-                                    {
-                                        list.append(d.text);
-                                    }
+                                    list.append(d.text);
                                 }
                             }
 
@@ -658,11 +690,14 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                                     }
                                 }
 
-                                foreach(const documentation_t &d, m_methods)
+                                if(qMin(cursor.position(), cursor.anchor()) && (widget->textDocument()->document()->characterAt(qMin(cursor.position(), cursor.anchor()) - 1) == QLatin1Char('.')))
                                 {
-                                    if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
+                                    foreach(const documentation_t &d, m_methods)
                                     {
-                                        list.append(d.text);
+                                        if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
+                                        {
+                                            list.append(d.text);
+                                        }
                                     }
                                 }
                             }

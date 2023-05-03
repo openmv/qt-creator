@@ -428,6 +428,16 @@ private:
     importDataList_t m_exampleModules;
     importDataList_t m_documentsModules;
 
+    QRegularExpression m_emRegEx;
+    QRegularExpression m_spanRegEx;
+    QRegularExpression m_linkRegEx;
+    QRegularExpression m_classRegEx;
+    QRegularExpression m_cdfmRegExInside;
+    QRegularExpression m_argumentRegEx;
+    QRegularExpression m_tupleRegEx;
+    QRegularExpression m_listRegEx;
+    QRegularExpression m_dictionaryRegEx;
+    void processDocumentationMatch(const QRegularExpressionMatch &match, QStringList &providerVariables, QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs);
     void parseImports(const QString &fileText, const QString &moduleFolder, const QStringList &builtInModules, importDataList_t &targetModules, QStringList &errorModules);
     bool importHelper(const QByteArray &text);
 };
