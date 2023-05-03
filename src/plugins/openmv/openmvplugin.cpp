@@ -1198,6 +1198,15 @@ void OpenMVPlugin::extensionsInitialized()
     if(!Utils::HostOsInfo::isLinuxHost()) videoToolsMenu->addAction(playVideoFileCommand);
     connect(playVideoFile, &QAction::triggered, this, [this] {playVideoFileAction(m_portPath);});
 
+    QAction *playRTSPStream = new QAction(tr("Play RTSP Stream"), this);
+    Core::Command *playRTSPStreamCommand = Core::ActionManager::registerAction(playRTSPStream, Core::Id("OpenMV.PlayRTSPStream"));
+    if(!Utils::HostOsInfo::isLinuxHost())
+    {
+        videoToolsMenu->addSeparator();
+        videoToolsMenu->addAction(playRTSPStreamCommand);
+    }
+    connect(playRTSPStream, &QAction::triggered, this, [this] {playRTSPStreamAction();});
+
     Core::ActionContainer *datasetEditorMenu = Core::ActionManager::createMenu(Core::Id("OpenMV.DatasetEditor"));
     datasetEditorMenu->menu()->setTitle(tr("Dataset Editor"));
     datasetEditorMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);

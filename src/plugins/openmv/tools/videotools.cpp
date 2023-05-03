@@ -1092,6 +1092,125 @@ static bool playVideoFile(const QString &path)
     return result;
 }
 
+static bool playRTSPStream(const QUrl &url, bool tcp)
+{
+    bool result = false;
+
+    if(Utils::HostOsInfo::isWindowsHost())
+    {
+        QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.cmd"));
+
+        if(file.open(QIODevice::WriteOnly))
+        {
+            QByteArray command = QString(QStringLiteral("start /wait \"ffplay.exe\" \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/windows/bin/ffplay.exe"))) + QStringLiteral("\" -hide_banner \"") +
+                url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer\n") : QStringLiteral("\" -fflags nobuffer\n"))).toUtf8();
+
+            if(file.write(command) == command.size())
+            {
+                file.close();
+                file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
+                result = QProcess::startDetached(QStringLiteral("cmd.exe"), QStringList()
+                    << QStringLiteral("/c")
+                    << QFileInfo(file).filePath());
+            }
+        }
+    }
+    else if(Utils::HostOsInfo::isMacHost())
+    {
+        QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+
+        if(file.open(QIODevice::WriteOnly))
+        {
+            QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
+                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/mac/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
+                url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer") : QStringLiteral("\" -fflags nobuffer"))).toUtf8(); // no extra new line
+
+            if(file.write(command) == command.size())
+            {
+                file.close();
+                file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
+                result = QProcess::startDetached(QStringLiteral("open"), QStringList()
+                    << QStringLiteral("-a")
+                    << QStringLiteral("Terminal")
+                    << QFileInfo(file).filePath());
+            }
+        }
+    }
+    else if(Utils::HostOsInfo::isLinuxHost())
+    {
+        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
+        {
+            QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+
+            if(file.open(QIODevice::WriteOnly))
+            {
+                QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
+                    url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer\n") : QStringLiteral("\" -fflags nobuffer\n"))).toUtf8();
+
+                if(file.write(command) == command.size())
+                {
+                    file.close();
+                    file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
+                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
+                        << QStringLiteral("-e")
+                        << QFileInfo(file).filePath());
+                }
+            }
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
+        {
+            QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+
+            if(file.open(QIODevice::WriteOnly))
+            {
+                QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-x86_64/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
+                    url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer\n") : QStringLiteral("\" -fflags nobuffer\n"))).toUtf8();
+
+                if(file.write(command) == command.size())
+                {
+                    file.close();
+                    file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
+                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
+                        << QStringLiteral("-e")
+                        << QFileInfo(file).filePath());
+                }
+            }
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
+        {
+            QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+
+            if(file.open(QIODevice::WriteOnly))
+            {
+                QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/ffmpeg/linux-arm/ffplay"))) + QStringLiteral("\" -hide_banner \"") +
+                    url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer\n") : QStringLiteral("\" -fflags nobuffer\n"))).toUtf8();
+
+                if(file.write(command) == command.size())
+                {
+                    file.close();
+                    file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
+                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
+                        << QStringLiteral("-e")
+                        << QFileInfo(file).filePath());
+                }
+            }
+        }
+    }
+
+    if(!result)
+    {
+        QMessageBox::critical(Core::ICore::dialogParent(),
+            QObject::tr("Play RTSP Stream"),
+            QObject::tr("Failed to launch ffplay!"));
+    }
+
+    return result;
+}
+
 void convertVideoFileAction(const QString &drivePath)
 {
     QSettings *settings = ExtensionSystem::PluginManager::settings();
@@ -1364,6 +1483,87 @@ void playVideoFileAction(const QString &drivePath)
     }
 
     settings->endGroup();
+}
+
+void playRTSPStreamAction()
+{
+    QSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->beginGroup(QStringLiteral(VIDEO_SETTINGS_GROUP));
+
+    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
+        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    dialog->setWindowTitle(QObject::tr("Play RTSP Stream"));
+    QFormLayout *layout = new QFormLayout(dialog);
+    layout->setVerticalSpacing(0);
+
+    QLabel *urlChooserTitle = new QLabel(QObject::tr("Please enter a IP address (or domain name)"));
+    layout->addRow(urlChooserTitle);
+    layout->addItem(new QSpacerItem(0, 6));
+
+    QLineEdit *urlChooser = new QLineEdit(settings->value(QStringLiteral(LAST_PLAY_RTSP_URL), QStringLiteral("xxx.xxx.xxx.xxx")).toString());
+    layout->addRow(urlChooser);
+    layout->addItem(new QSpacerItem(0, 6));
+
+    QLabel *portChooserTitle = new QLabel(QObject::tr("Please enter a Port (the RTSP default port is 554)"));
+    layout->addRow(portChooserTitle);
+    layout->addItem(new QSpacerItem(0, 6));
+
+    QLineEdit *portChooser = new QLineEdit(settings->value(QStringLiteral(LAST_PLAY_RTSP_PORT), QStringLiteral("554")).toString());
+    layout->addRow(portChooser);
+    layout->addItem(new QSpacerItem(0, 6));
+
+    QHBoxLayout *layout2 = new QHBoxLayout;
+    layout2->setMargin(0);
+    QWidget *widget = new QWidget;
+    widget->setLayout(layout2);
+
+    QCheckBox *checkBox = new QCheckBox(QObject::tr("Stream video over TCP (versus UDP)?"));
+    checkBox->setChecked(settings->value(QStringLiteral(LAST_PLAY_RTSP_TCP), false).toBool());
+    layout2->addWidget(checkBox);
+    checkBox->setToolTip(QObject::tr("Keeps the RTP video stream inside of the same TCP socket used for setting up the initial connection "
+                                     "verus creating a new UDP video stream. This may help the connection on networks with firewalls."));
+
+    QUrl u(QStringLiteral("rtsp://") + urlChooser->text() + QLatin1Char(':') + QString::number(portChooser->text().toInt()));
+
+    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
+    QPushButton *run = new QPushButton(QObject::tr("Play"));
+    run->setEnabled(u.isValid());
+    box->addButton(run, QDialogButtonBox::AcceptRole);
+    layout2->addSpacing(160);
+    layout2->addWidget(box);
+    layout->addRow(widget);
+
+    QObject::connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+    QObject::connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+
+    QObject::connect(urlChooser, &QLineEdit::textChanged, [portChooser, run] (const QString &text) {
+        QUrl u(QStringLiteral("rtsp://") + text + QLatin1Char(':') + QString::number(portChooser->text().toInt()));
+        run->setEnabled(u.isValid());
+    });
+
+    QObject::connect(portChooser, &QLineEdit::textChanged, [urlChooser, run] (const QString &text) {
+        QUrl u(QStringLiteral("rtsp://") + urlChooser->text() + QLatin1Char(':') + QString::number(text.toInt()));
+        run->setEnabled(u.isValid());
+    });
+
+    if(dialog->exec() == QDialog::Accepted)
+    {
+        QString url = urlChooser->text();
+        QString port = portChooser->text();
+
+        QUrl u(QStringLiteral("rtsp://") + url + QLatin1Char(':') + QString::number(port.toInt()));
+
+        if(playRTSPStream(u, checkBox->isChecked()))
+        {
+            settings->setValue(QStringLiteral(LAST_PLAY_RTSP_URL), url);
+            settings->setValue(QStringLiteral(LAST_PLAY_RTSP_PORT), port);
+            settings->setValue(QStringLiteral(LAST_PLAY_RTSP_TCP), checkBox->isChecked());
+        }
+    }
+
+    settings->endGroup();
+    delete dialog;
 }
 
 void saveVideoFile(const QString &srcPath)
