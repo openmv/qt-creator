@@ -50,11 +50,11 @@ namespace Constants {
 
 const char * const IDE_VERSION_LONG      = IDE_VERSION_STR;
 const char * const IDE_AUTHOR            = \"The Qt Company Ltd\";
-const char * const IDE_YEAR              = \"2021\";
+const char * const IDE_YEAR              = \"2023\";
 //OPENMV-DIFF//
 const char * const OMV_IDE_VERSION_LONG  = OMV_IDE_VERSION_STR;
 const char * const OMV_IDE_AUTHOR        = \"OpenMV, LLC\";
-const char * const OMV_IDE_YEAR          = \"2021\";
+const char * const OMV_IDE_YEAR          = \"2023\";
 //OPENMV-DIFF//
 
 #ifdef IDE_VERSION_DESCRIPTION
