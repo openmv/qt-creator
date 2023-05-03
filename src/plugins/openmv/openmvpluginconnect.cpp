@@ -66,7 +66,7 @@ void OpenMVPlugin::packageUpdate()
                 || ((old_major == new_major) && (old_minor < new_minor))
                 || ((old_major == new_major) && (old_minor == new_minor) && (old_patch < new_patch)))
                 {
-                    QMessageBox box(QMessageBox::Information, tr("Update Available"), tr("New OpenMV IDE reources are available (e.g. examples, firmware, documentation, etc.)."), QMessageBox::Cancel, Core::ICore::dialogParent(),
+                    QMessageBox box(QMessageBox::Information, tr("Update Available"), tr("New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.)."), QMessageBox::Cancel, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
                     QPushButton *button = box.addButton(tr("Install"), QMessageBox::AcceptRole);
