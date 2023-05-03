@@ -7,47 +7,47 @@
                                 /_/           /____/
 
 
-                build: ffmpeg-4.1.3-i686-static.tar.xz
-              version: 4.1.3
+                build: ffmpeg-6.0-i686-static.tar.xz
+              version: 6.0
 
-                  gcc: 6.3.0
+                  gcc: 8.3.0
                  yasm: 1.3.0.36.ge2569
-                 nasm: 2.14
+                 nasm: 2.15.05
 
                libaom: N/A
-               libass: 0.14.0
-               libvpx: 1.8.0-329-g39ea3d72f
+               libass: 0.17.1
+               libgme: 0.6.3
+               libsrt: 1.4.4
+               libvpx: 1.11.0-30-g888bafc78
               libvmaf: N/A
-              libx264: 0.157.2969 d4099dd
-              libx265: 3.0+1-ed72af837053
-              libxvid: 1.3.4-1+b2
-              libwebp: 0.5.2 
-              libzimg: 2.7.5
+              libx264: 0.164.3106 
+              libx265: 3.5+1-f0c1022b6
+              libxvid: 1.3.7 
+              libwebp: 0.6.1 
+              libzimg: 3.0.3
               libzvbi: N/A
              libdav1d: N/A
-            libgnutls: 3.6.5
+            libgnutls: 3.7.2
             libtheora: 1.2.0alpha1+git
-            libfrei0r: 1.5.0-1
-           libvidstab: 1.10
-          libfreetype: 2.6.3-3.2
-          libharfbuzz: 2.2.0
-          libopenjpeg: 2.3.0 
+            libfrei0r: 1.6.1-2
+           libvidstab: 1.20
+          libfreetype: 2.9.1-3+deb10u1
+          libharfbuzz: 3.1.1
+          libopenjpeg: 2.4.0 
 
-              libalsa: 1.1.7
+              libalsa: 1.2.4
               libsoxr: 0.1.3
-              libopus: 1.3
+              libopus: 1.3.1
              libspeex: 1.2
-            libvorbis: 1.3.6
+            libvorbis: 1.3.7
            libmp3lame: 3.100 
-        librubberband: 1.8.1 
-       libvo-amrwbenc: 0.1.3-1
+        librubberband: 1.8.2
+       libvo-amrwbenc: 0.1.3-1+b1
     libopencore-amrnb: 0.1.3-2.1+b2
     libopencore-amrwb: 0.1.3-2.1+b2
 
 
-      Notes: ffmpeg-10bit is no more, it's all included in ffmpeg now. 
-
-             A limitation of statically linking glibc is the loss of DNS resolution. Installing
+     Notes:  A limitation of statically linking glibc is the loss of DNS resolution. Installing
              nscd through your package manager will fix this.
 
              The vmaf filter needs external files to work- see model/000-README.TXT
@@ -56,9 +56,11 @@
       This static build is licensed under the GNU General Public License version 3.
 
       
-      Patreon: https://www.patreon.com/johnvansickle
-      Paypal:  https://www.paypal.me/johnvansickle 
-      Bitcoin: 13pZjChR1gR6wqzGMuwLAzqeVR5o9XGoCP 
+      Patreon:  https://www.patreon.com/johnvansickle
+      Paypal:   https://www.paypal.me/johnvansickle 
+      Ethereum: 0x491f0b4bAd15FF178257D9Fa81ce87baa8b6E242 
+      Bitcoin:  3ErDdF5JeG9RMx2DXwXEeunrsc5dVHjmeq 
+      Dogecoin: DH4WZPTjwKh2TarQhkpQrKjHZ9kNTkiMNL
 
       email: john.vansickle@gmail.com
       irc:   relaxed @ irc://chat.freenode.net #ffmpeg
