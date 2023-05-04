@@ -5072,6 +5072,7 @@ importDataList_t loadFolder(const QString &path)
                 data.moduleHash = QByteArray();
 
                 QDirIterator it2(pathName, QDir::Files, QDirIterator::Subdirectories);
+                QByteArrayList hashList;
 
                 while(it2.hasNext())
                 {
@@ -5079,10 +5080,12 @@ importDataList_t loadFolder(const QString &path)
 
                     if(file.open(QIODevice::ReadOnly))
                     {
-                        data.moduleHash.append(loadFilter(file.readAll()));
+                        hashList.append(loadFilter(file.readAll()));
                     }
                 }
 
+                qSort(hashList);
+                foreach(const QByteArray &b, hashList) data.moduleHash.append(b);
                 data.moduleHash = QCryptographicHash::hash(data.moduleHash, QCryptographicHash::Sha1);
                 list.append(data);
             }
@@ -5133,7 +5136,9 @@ void OpenMVPlugin::parseImports(const QString &fileText, const QString &moduleFo
 
                 foreach(const QString &importLine, importLineList)
                 {
-                    QString importLinePath = importLine.simplified().split(QLatin1Char('.'), QString::SkipEmptyParts).takeFirst();
+                    QString newImportLine = importLine;
+                    if (newImportLine.isEmpty() || newImportLine.startsWith(QLatin1Char('.'))) newImportLine.prepend(QFileInfo(lineListPath).dir().path());
+                    QString importLinePath = newImportLine.simplified().split(QLatin1Char('.'), QString::SkipEmptyParts).takeFirst();
 
                     if(!builtInModules.contains(importLinePath))
                     {
@@ -5166,6 +5171,7 @@ void OpenMVPlugin::parseImports(const QString &fileText, const QString &moduleFo
                                         data.moduleHash = QByteArray();
 
                                         QDirIterator it2(QDir::cleanPath(QDir::fromNativeSeparators(m_portPath + QDir::separator() + importLinePath)), QDir::Files, QDirIterator::Subdirectories);
+                                        QByteArrayList hashList;
 
                                         while(it2.hasNext())
                                         {
@@ -5182,16 +5188,20 @@ void OpenMVPlugin::parseImports(const QString &fileText, const QString &moduleFo
                                                     fileTextPathList.append(QDir(m_portPath).relativeFilePath(filePath));
                                                 }
 
-                                                data.moduleHash.append(bytes);
+                                                hashList.append(bytes);
                                             }
                                         }
 
+                                        qSort(hashList);
+                                        foreach(const QByteArray &b, hashList) data.moduleHash.append(b);
                                         data.moduleHash = QCryptographicHash::hash(data.moduleHash, QCryptographicHash::Sha1);
                                         targetModules.append(data);
+
                                     }
                                     else
                                     {
                                         errorModules.append(importLinePath);
+
                                     }
                                 }
                                 else
@@ -5342,11 +5352,12 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                     if(!Utils::FileUtils::removeRecursively(Utils::FileName::fromString(targetPath), &error))
                     {
-                        QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("Import Helper"),
-                            tr("Failed to remove \"%L1\"!").arg(targetPath));
+// Keep going
+//                        QMessageBox::critical(Core::ICore::dialogParent(),
+//                            tr("Import Helper"),
+//                            tr("Failed to remove \"%L1\"!").arg(targetPath));
 
-                        continue;
+//                        continue;
                     }
 
                     if(!Utils::FileUtils::copyRecursively(Utils::FileName::fromString(sourcePath), Utils::FileName::fromString(targetPath), &error, myCopyHelper))
@@ -5376,11 +5387,12 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                     if(!QFile::remove(targetPath))
                     {
-                        QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("Import Helper"),
-                            tr("Failed to remove \"%L1\"!").arg(targetPath));
+// Keep going
+//                        QMessageBox::critical(Core::ICore::dialogParent(),
+//                            tr("Import Helper"),
+//                            tr("Failed to remove \"%L1\"!").arg(targetPath));
 
-                        continue;
+//                        continue;
                     }
 
                     if(!myCopy(sourcePath, targetPath))
@@ -5426,11 +5438,12 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                         {
                             if(!Utils::FileUtils::removeRecursively(Utils::FileName::fromString(targetPath), &error))
                             {
-                                QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("Import Helper"),
-                                    tr("Failed to remove \"%L1\"!").arg(targetPath));
+// Keep going
+//                                QMessageBox::critical(Core::ICore::dialogParent(),
+//                                    tr("Import Helper"),
+//                                    tr("Failed to remove \"%L1\"!").arg(targetPath));
 
-                                continue;
+//                                continue;
                             }
                         }
 
@@ -5451,11 +5464,12 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                         {
                             if(!QFile::remove(targetPath))
                             {
-                                QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("Import Helper"),
-                                    tr("Failed to remove \"%L1\"!").arg(targetPath));
+// Keep going
+//                                QMessageBox::critical(Core::ICore::dialogParent(),
+//                                    tr("Import Helper"),
+//                                    tr("Failed to remove \"%L1\"!").arg(targetPath));
 
-                                continue;
+//                                continue;
                             }
                         }
 
