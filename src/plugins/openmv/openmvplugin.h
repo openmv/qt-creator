@@ -237,16 +237,16 @@ importData_t;
 typedef QList<importData_t> importDataList_t;
 
 QByteArray loadFilter(const QByteArray &data);
-importDataList_t loadFolder(const QString &path);
+importDataList_t loadFolder(const QString &rootPath, const QString &path, bool flat);
 
 class LoadFolderThread: public QObject
 {
     Q_OBJECT
 
-    public: explicit LoadFolderThread(const QString &path) { m_path = path; }
-    public slots: void loadFolderSlot() { emit folderLoaded(loadFolder(m_path)); }
+    public: explicit LoadFolderThread(const QString &path, bool flat) { m_path = path; m_flat = flat; }
+    public slots: void loadFolderSlot() { emit folderLoaded(loadFolder(m_path, m_path, m_flat)); }
     signals: void folderLoaded(const importDataList_t &output);
-    private: QString m_path;
+    private: QString m_path; bool m_flat;
 };
 
 class OpenMVPlugin : public ExtensionSystem::IPlugin
@@ -438,6 +438,7 @@ private:
     QRegularExpression m_listRegEx;
     QRegularExpression m_dictionaryRegEx;
     void processDocumentationMatch(const QRegularExpressionMatch &match, QStringList &providerVariables, QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs);
+
     void parseImports(const QString &fileText, const QString &moduleFolder, const QStringList &builtInModules, importDataList_t &targetModules, QStringList &errorModules);
     bool importHelper(const QByteArray &text);
 };
