@@ -59,6 +59,9 @@ public:
     bool hasAttribute(Attribute attribute);
 
     static QString stringWithAppendedShortcut(const QString &str, const QKeySequence &shortcut);
+    // OPENMV-DIFF //
+    void setOverrideToolTip(const QString &str) { m_overrideToolTip = str; setToolTip(m_overrideToolTip); }
+    // OPENMV-DIFF //
 
 private slots:
     void actionChanged();
@@ -75,6 +78,9 @@ private:
     bool m_showShortcut;
     QString m_toolTip;
     bool m_block;
+    // OPENMV-DIFF //
+    QString m_overrideToolTip;
+    // OPENMV-DIFF //
 };
 
 } // namespace Utils

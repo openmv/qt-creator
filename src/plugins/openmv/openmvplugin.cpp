@@ -988,6 +988,15 @@ void OpenMVPlugin::extensionsInitialized()
     });
     toolsMenu->addSeparator();
 
+    m_autoReconnectAction = new QAction(tr("Auto Reconnect to OpenMV Cam"), this);
+    m_autoReconnectAction->setToolTip(tr("When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected.\n"
+                                         "Note that while Auto Reconnect is enabled connect and disconnect will not stop your OpenMV Cam's running script."));
+    Core::Command *autoReconnectCommand = Core::ActionManager::registerAction(m_autoReconnectAction, Core::Id("OpenMV.AutoReconnect"));
+    toolsMenu->addAction(autoReconnectCommand);
+    m_autoReconnectAction->setCheckable(true);
+
+    toolsMenu->addSeparator();
+
     QAction *openDriveFolderCommand = new QAction(tr("Open OpenMV Cam Drive folder"), this);
     m_openDriveFolderCommand = Core::ActionManager::registerAction(openDriveFolderCommand, Core::Id("OpenMV.OpenDriveFolder"));
     toolsMenu->addAction(m_openDriveFolderCommand);
@@ -1605,6 +1614,17 @@ void OpenMVPlugin::extensionsInitialized()
     m_disconnectCommand->action()->setEnabled(false);
     m_disconnectCommand->action()->setVisible(false);
     connect(m_disconnectCommand->action(), &QAction::triggered, this, [this] {disconnectClicked();});
+    connect(m_autoReconnectAction, &QAction::toggled, this, [this] (bool state) {
+        m_connectCommand->action()->setEnabled(!state);
+        m_disconnectCommand->action()->setEnabled(!state);
+        if(state) {
+            static_cast<Utils::ProxyAction *>(m_connectCommand->action())->setOverrideToolTip(m_autoReconnectAction->toolTip());
+            static_cast<Utils::ProxyAction *>(m_disconnectCommand->action())->setOverrideToolTip(m_autoReconnectAction->toolTip());
+        } else {
+            static_cast<Utils::ProxyAction *>(m_connectCommand->action())->setOverrideToolTip(QString());
+            static_cast<Utils::ProxyAction *>(m_disconnectCommand->action())->setOverrideToolTip(QString());
+        }
+    });
 
     m_startCommand =
         Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(START_PATH)),
@@ -2102,6 +2122,17 @@ void OpenMVPlugin::extensionsInitialized()
     settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
     Core::EditorManager::restoreState(
         settings->value(QStringLiteral(EDITOR_MANAGER_STATE)).toByteArray());
+    m_autoReconnectAction->setChecked(
+        settings->value(QStringLiteral(AUTO_RECONNECT_STATE), m_autoReconnectAction->isChecked()).toBool());
+    m_connectCommand->action()->setEnabled(!m_autoReconnectAction->isChecked());
+    m_disconnectCommand->action()->setEnabled(!m_autoReconnectAction->isChecked());
+    if(m_autoReconnectAction->isChecked()) {
+        static_cast<Utils::ProxyAction *>(m_connectCommand->action())->setOverrideToolTip(m_autoReconnectAction->toolTip());
+        static_cast<Utils::ProxyAction *>(m_disconnectCommand->action())->setOverrideToolTip(m_autoReconnectAction->toolTip());
+    } else {
+        static_cast<Utils::ProxyAction *>(m_connectCommand->action())->setOverrideToolTip(QString());
+        static_cast<Utils::ProxyAction *>(m_disconnectCommand->action())->setOverrideToolTip(QString());
+    }
     zoomButton->setChecked(
         settings->value(QStringLiteral(ZOOM_STATE), zoomButton->isChecked()).toBool());
     m_jpgCompress->setChecked(
@@ -2178,6 +2209,8 @@ void OpenMVPlugin::extensionsInitialized()
             hsplitter->saveState());
         if(!isNoShow()) settings->setValue(QStringLiteral(VSPLITTER_STATE),
             vsplitter->saveState());
+        settings->setValue(QStringLiteral(AUTO_RECONNECT_STATE),
+            m_autoReconnectAction->isChecked());
         settings->setValue(QStringLiteral(ZOOM_STATE),
             zoomButton->isChecked());
         settings->setValue(QStringLiteral(JPG_COMPRESS_STATE),
@@ -2399,6 +2432,11 @@ bool OpenMVPlugin::delayedInitialize()
             } else {
                 m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_USB_PATH)));
             }
+        }
+
+        if(ok && m_autoReconnectAction->isChecked() && (!m_connected))
+        {
+            QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_connected)) connectClicked(); });
         }
     });
 

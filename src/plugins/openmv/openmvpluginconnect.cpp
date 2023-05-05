@@ -3092,54 +3092,57 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         // Stopping ///////////////////////////////////////////////////////////
 
-        m_iodevice->scriptStop();
-
-        // Drain text buffer
+        if(!m_autoReconnectAction->isChecked())
         {
-            bool empty = bool();
-            bool *emptyPtr = &empty;
+            m_iodevice->scriptStop();
 
-            QEventLoop loop2;
-
-            QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                this, [this, emptyPtr] (bool ok) {
-                *emptyPtr = ok;
-            });
-
-            connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                    &loop2, &QEventLoop::quit);
-
-            while(!empty)
+            // Drain text buffer
             {
-                m_iodevice->getTxBuffer();
-                loop2.exec();
+                bool empty = bool();
+                bool *emptyPtr = &empty;
+
+                QEventLoop loop2;
+
+                QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                    this, [this, emptyPtr] (bool ok) {
+                    *emptyPtr = ok;
+                });
+
+                connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                        &loop2, &QEventLoop::quit);
+
+                while(!empty)
+                {
+                    m_iodevice->getTxBuffer();
+                    loop2.exec();
+                }
+
+                disconnect(conn2);
             }
 
-            disconnect(conn2);
-        }
-
-        // Drain image buffer
-        {
-            bool empty = bool();
-            bool *emptyPtr = &empty;
-
-            QEventLoop loop2;
-
-            QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                this, [this, emptyPtr] (bool ok) {
-                *emptyPtr = ok;
-            });
-
-            connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                    &loop2, &QEventLoop::quit);
-
-            while(!empty)
+            // Drain image buffer
             {
-                m_iodevice->frameSizeDump();
-                loop2.exec();
-            }
+                bool empty = bool();
+                bool *emptyPtr = &empty;
 
-            disconnect(conn2);
+                QEventLoop loop2;
+
+                QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                    this, [this, emptyPtr] (bool ok) {
+                    *emptyPtr = ok;
+                });
+
+                connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                        &loop2, &QEventLoop::quit);
+
+                while(!empty)
+                {
+                    m_iodevice->frameSizeDump();
+                    loop2.exec();
+                }
+
+                disconnect(conn2);
+            }
         }
 
         m_iodevice->jpegEnable(m_jpgCompress->isChecked());
@@ -3171,9 +3174,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_saveCommand->action()->setEnabled(false);
         m_resetCommand->action()->setEnabled(true);
         m_developmentReleaseCommand->action()->setEnabled(true);
-        m_connectCommand->action()->setEnabled(false);
+        if(!m_autoReconnectAction->isChecked()) m_connectCommand->action()->setEnabled(false);
         m_connectCommand->action()->setVisible(false);
-        m_disconnectCommand->action()->setEnabled(true);
+        if(!m_autoReconnectAction->isChecked()) m_disconnectCommand->action()->setEnabled(true);
         m_disconnectCommand->action()->setVisible(true);
         Core::IEditor *editor = Core::EditorManager::currentEditor();
         m_startCommand->action()->setEnabled(editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false);
@@ -3383,54 +3386,57 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                 }
                 else
                 {
-                    m_iodevice->scriptStop();
-
-                    // Drain text buffer
+                    if(!m_autoReconnectAction->isChecked())
                     {
-                        bool empty = bool();
-                        bool *emptyPtr = &empty;
+                        m_iodevice->scriptStop();
 
-                        QEventLoop loop2;
-
-                        QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                            this, [this, emptyPtr] (bool ok) {
-                            *emptyPtr = ok;
-                        });
-
-                        connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                                &loop2, &QEventLoop::quit);
-
-                        while(!empty)
+                        // Drain text buffer
                         {
-                            m_iodevice->getTxBuffer();
-                            loop2.exec();
+                            bool empty = bool();
+                            bool *emptyPtr = &empty;
+
+                            QEventLoop loop2;
+
+                            QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                                this, [this, emptyPtr] (bool ok) {
+                                *emptyPtr = ok;
+                            });
+
+                            connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                                    &loop2, &QEventLoop::quit);
+
+                            while(!empty)
+                            {
+                                m_iodevice->getTxBuffer();
+                                loop2.exec();
+                            }
+
+                            disconnect(conn2);
                         }
 
-                        disconnect(conn2);
-                    }
-
-                    // Drain image buffer
-                    {
-                        bool empty = bool();
-                        bool *emptyPtr = &empty;
-
-                        QEventLoop loop2;
-
-                        QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                            this, [this, emptyPtr] (bool ok) {
-                            *emptyPtr = ok;
-                        });
-
-                        connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                                &loop2, &QEventLoop::quit);
-
-                        while(!empty)
+                        // Drain image buffer
                         {
-                            m_iodevice->frameSizeDump();
-                            loop2.exec();
-                        }
+                            bool empty = bool();
+                            bool *emptyPtr = &empty;
 
-                        disconnect(conn2);
+                            QEventLoop loop2;
+
+                            QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                                this, [this, emptyPtr] (bool ok) {
+                                *emptyPtr = ok;
+                            });
+
+                            connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                                    &loop2, &QEventLoop::quit);
+
+                            while(!empty)
+                            {
+                                m_iodevice->frameSizeDump();
+                                loop2.exec();
+                            }
+
+                            disconnect(conn2);
+                        }
                     }
                 }
 
@@ -3468,10 +3474,10 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_saveCommand->action()->setEnabled(false);
             m_resetCommand->action()->setEnabled(false);
             m_developmentReleaseCommand->action()->setEnabled(false);
-            m_connectCommand->action()->setEnabled(true);
             m_connectCommand->action()->setVisible(true);
+            if(!m_autoReconnectAction->isChecked()) m_connectCommand->action()->setEnabled(true);
             m_disconnectCommand->action()->setVisible(false);
-            m_disconnectCommand->action()->setEnabled(false);
+            if(!m_autoReconnectAction->isChecked()) m_disconnectCommand->action()->setEnabled(false);
             m_startCommand->action()->setEnabled(false);
             m_startCommand->action()->setVisible(true);
             m_stopCommand->action()->setEnabled(false);

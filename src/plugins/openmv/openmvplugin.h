@@ -34,6 +34,7 @@
 #include <utils/elidinglabel.h>
 #include <utils/environment.h>
 #include <utils/pathchooser.h>
+#include <utils/proxyaction.h>
 #include <utils/styledbar.h>
 #include <utils/synchronousprocess.h>
 #include <utils/tooltip/tooltip.h>
@@ -87,6 +88,7 @@
 #define MSPLITTER_STATE "MSplitterState"
 #define HSPLITTER_STATE "HSplitterState"
 #define VSPLITTER_STATE "VSplitterState"
+#define AUTO_RECONNECT_STATE "AutoReconnectState"
 #define ZOOM_STATE "ZoomState"
 #define OUTPUT_WINDOW_FONT_ZOOM_STATE "OutputWindowFontZoomState"
 #define JPG_COMPRESS_STATE "JPGCompressState"
@@ -337,6 +339,8 @@ private:
 
     QAction *m_bootloaderAction;
     QAction *m_eraseAction;
+    QAction *m_autoReconnectAction;
+
     Core::Command *m_openDriveFolderCommand;
     Core::Command *m_configureSettingsCommand;
     Core::Command *m_saveCommand;
