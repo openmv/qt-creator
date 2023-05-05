@@ -276,49 +276,6 @@ void OpenMVPlugin::parseImports(const QString &fileText, const QString &moduleFo
     }
 }
 
-static bool myCopyHelper(const QFileInfo &src, const QFileInfo &dst, QString *error)
-{
-    QFile file(src.filePath());
-
-    if(file.open(QIODevice::ReadOnly))
-    {
-        QTemporaryFile temp;
-
-        if(temp.open())
-        {
-            QByteArray data = loadFilter(file.readAll());
-
-            if(temp.write(data) == data.size())
-            {
-                temp.close();
-
-                if(QFile::copy(QFileInfo(temp).filePath(), dst.filePath()))
-                {
-                    return true;
-                }
-                else
-                {
-                    if(error) *error = QObject::tr("Copy Failed!");
-                }
-            }
-            else
-            {
-                if(error) *error = temp.errorString();
-            }
-        }
-        else
-        {
-            if(error) *error = temp.errorString();
-        }
-    }
-    else
-    {
-        if(error) *error = file.errorString();
-    }
-
-    return false;
-}
-
 static bool myCopy(const QString &src, const QString &dst)
 {
     QFile file(src);
@@ -344,6 +301,66 @@ static bool myCopy(const QString &src, const QString &dst)
     }
 
     return false;
+}
+
+static bool myCopyFolder(const QString &src, const QString &dst)
+{
+    QDirIterator it(src, QDir::Files | QDir::NoDotAndDotDot);
+
+    while(it.hasNext())
+    {
+        QString path = it.next();
+
+        if(path.endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
+        {
+            if(!myCopy(path, dst + QDir::separator() + QFileInfo(path).fileName()))
+            {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+static bool myCopyFolderBasic(const QString &src, const QString &dst)
+{
+    QDirIterator it(src, QDir::Files | QDir::NoDotAndDotDot);
+
+    while(it.hasNext())
+    {
+        QString path = it.next();
+
+        if(path.endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
+        {
+            if(!QFile::copy(path, dst + QDir::separator() + QFileInfo(path).fileName()))
+            {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+static bool myClearFolder(const QString &folder)
+{
+    QDirIterator it(folder, QDir::Files | QDir::NoDotAndDotDot);
+
+    while(it.hasNext())
+    {
+        QString path = it.next();
+
+        if(path.endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
+        {
+            if(!QFile::remove(path))
+            {
+                return false;
+            }
+        }
+    }
+
+    return true;
 }
 
 bool OpenMVPlugin::importHelper(const QByteArray &text)
@@ -392,9 +409,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                 {
                     QString targetPath = QDir::cleanPath(QDir::fromNativeSeparators(m_portPath + QDir::separator() + map.value(targetModule.moduleName).second));
 
-                    QString error;
-
-                    if(!Utils::FileUtils::removeRecursively(Utils::FileName::fromString(targetPath), &error))
+                    if(!myClearFolder(targetPath))
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
                             tr("Import Helper"),
@@ -403,7 +418,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                         continue;
                     }
 
-                    if(!Utils::FileUtils::copyRecursively(Utils::FileName::fromString(sourcePath), Utils::FileName::fromString(targetPath), &error, myCopyHelper))
+                    if(!myCopyFolder(sourcePath, targetPath))
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
                             tr("Import Helper"),
@@ -474,11 +489,9 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                     {
                         QString sourcePath = QDir::cleanPath(QDir::fromNativeSeparators(m_portPath + QDir::separator() + map.value(targetModule.moduleName).second));
 
-                        QString error;
-
                         if(QDir(targetPath).exists()) // May not exist if copying from examples to documents folder.
                         {
-                            if(!Utils::FileUtils::removeRecursively(Utils::FileName::fromString(targetPath), &error))
+                            if(!myClearFolder(targetPath))
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
                                     tr("Import Helper"),
@@ -487,8 +500,16 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                                 continue;
                             }
                         }
+                        else if(!QDir().mkpath(QFileInfo(targetPath).path()))
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                tr("Import Helper"),
+                                tr("Failed to create \"%L1\"!").arg(QFileInfo(targetPath).path()));
 
-                        if(!Utils::FileUtils::copyRecursively(Utils::FileName::fromString(sourcePath), Utils::FileName::fromString(targetPath), &error)) // Don't use myCopyHelper() here...
+                            continue;
+                        }
+
+                        if(!myCopyFolderBasic(sourcePath, targetPath)) // Don't use myCopyFolder() here...
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
                                 tr("Import Helper"),
@@ -554,9 +575,16 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                 {
                     QString targetPath = QDir::cleanPath(QDir::fromNativeSeparators(m_portPath + QDir::separator() + map.value(errorModule).second));
 
-                    QString error;
+                    if(!QDir().mkpath(QDir::toNativeSeparators(QDir::cleanPath(targetPath))))
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            tr("Import Helper"),
+                            tr("Failed to create \"%L1\"!").arg(targetPath));
 
-                    if(!Utils::FileUtils::copyRecursively(Utils::FileName::fromString(sourcePath), Utils::FileName::fromString(targetPath), &error, myCopyHelper))
+                        continue;
+                    }
+
+                    if(!myCopyFolder(sourcePath, targetPath))
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
                             tr("Import Helper"),
@@ -581,7 +609,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                 {
                     QString targetPath = QDir::cleanPath(QDir::fromNativeSeparators(m_portPath + QDir::separator() + map.value(errorModule).second));
 
-                    if(!QDir().mkpath(QFileInfo(targetPath).path()))
+                    if(!QDir().mkpath(QDir::toNativeSeparators(QDir::cleanPath(QFileInfo(targetPath).path()))))
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
                             tr("Import Helper"),
