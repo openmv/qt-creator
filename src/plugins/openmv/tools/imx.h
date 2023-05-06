@@ -15,7 +15,7 @@
 #define LAST_IMX_TERMINAL_WINDOW_GEOMETRY "LastIMXTerminalWindowGeometry"
 
 bool imxGetDevice(QJsonObject &obj);
-bool imxDownloadBootloaderAndFirmware(QJsonObject &obj);
-bool imxDownloadFirmware(QJsonObject &obj);
+bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs);
+bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs);
 
 #endif // IMX_H

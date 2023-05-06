@@ -42,7 +42,7 @@ bool imxGetDevice(QJsonObject &obj)
     {
         QStringList in = response.stdOut.split(QRegularExpression(QStringLiteral("\n|\r\n|\r")), QString::SkipEmptyParts);
 
-        if((in.size() == 1) && (in.contains(QStringLiteral("cannot open USB HID device"))))
+        if((in.size() == 1) && (in.at(0).contains(QStringLiteral("cannot open USB HID device"))))
         {
             return false;
         }
@@ -66,7 +66,7 @@ bool imxGetDevice(QJsonObject &obj)
     }
 }
 
-bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
+bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs)
 {
     bool result = true;
     Utils::SynchronousProcess process;
@@ -100,6 +100,18 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
 
     layout->addWidget(plainTextEdit);
 
+    int ok = true;
+    int *okPtr = &ok;
+
+    QEventLoop loop;
+
+    QMetaObject::Connection conn = QObject::connect(dialog, &QDialog::finished,
+        &loop, [&loop, okPtr] () {
+        *okPtr = false;
+    });
+
+    QObject::connect(dialog, &QDialog::finished, &loop, &QEventLoop::quit);
+
     QString stdOutBuffer = QString();
     QString *stdOutBufferPtr = &stdOutBuffer;
     bool stdOutFirstTime = true;
@@ -125,7 +137,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                 continue;
             }
 
-            if(out.startsWith(QStringLiteral("Loading into Flash:")))
+            if(out.startsWith(QStringLiteral("(1/1)")))
             {
                 if(!*stdOutFirstTimePtr)
                 {
@@ -168,7 +180,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                 continue;
             }
 
-            if(out.startsWith(QStringLiteral("Loading into Flash:")))
+            if(out.startsWith(QStringLiteral("(1/1)")))
             {
                 if(!*stdErrFirstTimePtr)
                 {
@@ -261,10 +273,10 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                            QStringLiteral("--") <<
                            QStringLiteral("write-file") <<
                            obj.value(QStringLiteral("sdphost_flash_loader_address")).toString() <<
-                           QDir::toNativeSeparators(QDir::cleanPath(QStringLiteral("sdphost_flash_loader_path")));
+                           QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("sdphost_flash_loader_path")).toString()));
 
         QString command = QString(QStringLiteral("%1 %2")).arg(sdphost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
         Utils::SynchronousProcessResponse response = process.run(sdphost_binary, args, true);
@@ -296,11 +308,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                            QStringLiteral("-u") <<
                            obj.value(QStringLiteral("sdphost_pidvid")).toString() <<
                            QStringLiteral("--") <<
-                           QStringLiteral("jump-adress") <<
+                           QStringLiteral("jump-address") <<
                            obj.value(QStringLiteral("sdphost_flash_loader_address")).toString();
 
         QString command = QString(QStringLiteral("%1 %2")).arg(sdphost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
         Utils::SynchronousProcessResponse response = process.run(sdphost_binary, args, true);
@@ -326,6 +338,16 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
         }
     }
 
+    QTimer::singleShot(2000, &loop, &QEventLoop::quit);
+    loop.exec();
+    QObject::disconnect(conn);
+
+    if(!ok)
+    {
+        result = false;
+        goto cleanup;
+    }
+
     // Wait for Flash Loader
     {
         QStringList args = QStringList() <<
@@ -336,7 +358,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                            QStringLiteral("1");
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
         Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
@@ -375,7 +397,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                            QStringLiteral("word");
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
         Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
@@ -412,7 +434,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                            obj.value(QStringLiteral("blhost_memory_configuration_address")).toString();
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
         Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
@@ -452,7 +474,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                            obj.value(QStringLiteral("blhost_memory_configuration_type")).toString();
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
         Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
@@ -491,7 +513,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                            QStringLiteral("word");
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
         Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
@@ -528,7 +550,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                            obj.value(QStringLiteral("blhost_memory_configuration_address")).toString();
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
         Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
@@ -562,10 +584,10 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                            QStringLiteral("--") <<
                            QStringLiteral("write-memory") <<
                            obj.value(QStringLiteral("blhost_secure_bootloader_write_address")).toString() <<
-                           QDir::toNativeSeparators(QDir::cleanPath(QStringLiteral("blhost_secure_bootloader_path")));
+                           QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_secure_bootloader_path")).toString()));
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
         Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
@@ -591,80 +613,130 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
         }
     }
 
-    // Erase Memory
+    if(forceFlashFSErase
+    && (obj.value(QStringLiteral("blhost_disk_address")).toString().toInt(nullptr, 16) != 0)
+    && (obj.value(QStringLiteral("blhost_disk_size")).toString().toInt(nullptr, 16) > 0))
     {
-        QStringList args = QStringList() <<
-                           QStringLiteral("-u") <<
-                           obj.value(QStringLiteral("blhost_pidvid")).toString() <<
-                           QStringLiteral("-t") <<
-                           QStringLiteral("60000") <<
-                           QStringLiteral("--") <<
-                           QStringLiteral("flash-erase-region") <<
-                           obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
-                           obj.value(QStringLiteral("blhost_firmware_length")).toString() <<
-                           obj.value(QStringLiteral("blhost_memory_configuration_type")).toString();
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:purple\">%1</p>")).arg(QObject::tr("This command takes a while to execute. Please be patient.")));
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
-
-        process.setTimeoutS(300); // 5 minutes...
-        Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
-
-        if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
+        // Erase Memory
         {
-            QMessageBox box(QMessageBox::Critical, QObject::tr("NXP IMX"), QObject::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
-            box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("blhost"), process.timeoutS()));
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("-t") <<
+                               QStringLiteral("60000") <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("flash-erase-region") <<
+                               obj.value(QStringLiteral("blhost_disk_address")).toString() <<
+                               obj.value(QStringLiteral("blhost_disk_size")).toString();
 
-            result = false;
-            goto cleanup;
-        }
-        else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
-        {
-            result = false;
-            goto cleanup;
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+
+            process.setTimeoutS(300); // 5 minutes...
+            Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
+
+            if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, QObject::tr("NXP IMX"), QObject::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
+                box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("blhost"), process.timeoutS()));
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
         }
     }
 
-    // Write Image
+    if(!justEraseFlashFs)
     {
-        QStringList args = QStringList() <<
-                           QStringLiteral("-u") <<
-                           obj.value(QStringLiteral("blhost_pidvid")).toString() <<
-                           QStringLiteral("--") <<
-                           QStringLiteral("write-memory") <<
-                           obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
-                           QDir::toNativeSeparators(QDir::cleanPath(QStringLiteral("blhost_firmware_path")));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:purple\">%1</p>")).arg(QObject::tr("This command takes a while to execute. Please be patient.")));
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
-
-        process.setTimeoutS(300); // 5 minutes...
-        Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
-
-        if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
+        // Erase Memory
         {
-            QMessageBox box(QMessageBox::Critical, QObject::tr("NXP IMX"), QObject::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
-            box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("blhost"), process.timeoutS()));
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("-t") <<
+                               QStringLiteral("60000") <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("flash-erase-region") <<
+                               obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
+                               obj.value(QStringLiteral("blhost_firmware_length")).toString();
 
-            result = false;
-            goto cleanup;
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+
+            process.setTimeoutS(300); // 5 minutes...
+            Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
+
+            if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, QObject::tr("NXP IMX"), QObject::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
+                box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("blhost"), process.timeoutS()));
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
         }
-        else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
+
+        // Write Image
         {
-            result = false;
-            goto cleanup;
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("write-memory") <<
+                               obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
+                               QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_firmware_path")).toString()));
+
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+
+            process.setTimeoutS(300); // 5 minutes...
+            Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
+
+            if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, QObject::tr("NXP IMX"), QObject::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
+                box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("blhost"), process.timeoutS()));
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
         }
     }
 
@@ -677,7 +749,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj)
                            QStringLiteral("reset");
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
         Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
@@ -712,7 +784,7 @@ cleanup:
     return result;
 }
 
-bool imxDownloadFirmware(QJsonObject &obj)
+bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs)
 {
     bool result = true;
     Utils::SynchronousProcess process;
@@ -771,7 +843,7 @@ bool imxDownloadFirmware(QJsonObject &obj)
                 continue;
             }
 
-            if(out.startsWith(QStringLiteral("Loading into Flash:")))
+            if(out.startsWith(QStringLiteral("(1/1)")))
             {
                 if(!*stdOutFirstTimePtr)
                 {
@@ -814,7 +886,7 @@ bool imxDownloadFirmware(QJsonObject &obj)
                 continue;
             }
 
-            if(out.startsWith(QStringLiteral("Loading into Flash:")))
+            if(out.startsWith(QStringLiteral("(1/1)")))
             {
                 if(!*stdErrFirstTimePtr)
                 {
@@ -869,80 +941,130 @@ bool imxDownloadFirmware(QJsonObject &obj)
 
     dialog->show();
 
-    // Erase Memory
+    if(forceFlashFSErase
+    && (obj.value(QStringLiteral("blhost_disk_address")).toString().toInt(nullptr, 16) != 0)
+    && (obj.value(QStringLiteral("blhost_disk_size")).toString().toInt(nullptr, 16) > 0))
     {
-        QStringList args = QStringList() <<
-                           QStringLiteral("-u") <<
-                           obj.value(QStringLiteral("blhost_pidvid")).toString() <<
-                           QStringLiteral("-t") <<
-                           QStringLiteral("60000") <<
-                           QStringLiteral("--") <<
-                           QStringLiteral("flash-erase-region") <<
-                           obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
-                           obj.value(QStringLiteral("blhost_firmware_length")).toString() <<
-                           obj.value(QStringLiteral("blhost_memory_configuration_type")).toString();
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:purple\">%1</p>")).arg(QObject::tr("This command takes a while to execute. Please be patient.")));
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
-
-        process.setTimeoutS(300); // 5 minutes...
-        Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
-
-        if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
+        // Erase Memory
         {
-            QMessageBox box(QMessageBox::Critical, QObject::tr("NXP IMX"), QObject::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
-            box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("blhost"), process.timeoutS()));
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("-t") <<
+                               QStringLiteral("60000") <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("flash-erase-region") <<
+                               obj.value(QStringLiteral("blhost_disk_address")).toString() <<
+                               obj.value(QStringLiteral("blhost_disk_size")).toString();
 
-            result = false;
-            goto cleanup;
-        }
-        else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
-        {
-            result = false;
-            goto cleanup;
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+
+            process.setTimeoutS(300); // 5 minutes...
+            Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
+
+            if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, QObject::tr("NXP IMX"), QObject::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
+                box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("blhost"), process.timeoutS()));
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
         }
     }
 
-    // Write Image
+    if(!justEraseFlashFs)
     {
-        QStringList args = QStringList() <<
-                           QStringLiteral("-u") <<
-                           obj.value(QStringLiteral("blhost_pidvid")).toString() <<
-                           QStringLiteral("--") <<
-                           QStringLiteral("write-memory") <<
-                           obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
-                           QDir::toNativeSeparators(QDir::cleanPath(QStringLiteral("blhost_firmware_path")));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:purple\">%1</p>")).arg(QObject::tr("This command takes a while to execute. Please be patient.")));
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
-
-        process.setTimeoutS(300); // 5 minutes...
-        Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
-
-        if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
+        // Erase Memory
         {
-            QMessageBox box(QMessageBox::Critical, QObject::tr("NXP IMX"), QObject::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
-            box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("blhost"), process.timeoutS()));
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("-t") <<
+                               QStringLiteral("60000") <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("flash-erase-region") <<
+                               obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
+                               obj.value(QStringLiteral("blhost_firmware_length")).toString();
 
-            result = false;
-            goto cleanup;
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+
+            process.setTimeoutS(300); // 5 minutes...
+            Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
+
+            if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, QObject::tr("NXP IMX"), QObject::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
+                box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("blhost"), process.timeoutS()));
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
         }
-        else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
+
+        // Write Image
         {
-            result = false;
-            goto cleanup;
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("write-memory") <<
+                               obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
+                               QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_firmware_path")).toString()));
+
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+
+            process.setTimeoutS(300); // 5 minutes...
+            Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
+
+            if((response.result != Utils::SynchronousProcessResponse::Finished) && (response.result != Utils::SynchronousProcessResponse::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, QObject::tr("NXP IMX"), QObject::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + response.stdOut + QStringLiteral("\n") + response.stdErr);
+                box.setText(box.text() + QStringLiteral("\n\n") + response.exitMessage(QStringLiteral("blhost"), process.timeoutS()));
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(response.result == Utils::SynchronousProcessResponse::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
         }
     }
 
@@ -955,7 +1077,7 @@ bool imxDownloadFirmware(QJsonObject &obj)
                            QStringLiteral("reset");
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
         Utils::SynchronousProcessResponse response = process.run(blhost_binary, args, true);
