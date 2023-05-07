@@ -1219,19 +1219,21 @@ void OpenMVPluginIO::flashWrite(const QByteArray &data, int chunksize)
     {
         serializeLong(buffer, __BOOTLDR_WRITE);
         buffer.append(data.mid(i, qMin(chunksize, data.size() - i)));
-#ifdef Q_OS_MAC
         int diff = (m_bootloaderHS ? HS_EP_SIZE : FS_EP_SIZE) - buffer.size();
         if (diff > 0) buffer.append(QByteArray(diff, 0xFF));
-#endif
     }
 
-#ifdef Q_OS_MAC
-    // Add non-posted command to ensure sync (also ensures that the packet is not a multiple of 64 bytes)
-    serializeLong(buffer, __BOOTLDR_QUERY);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QUERY_RESPONSE_LEN, BOOTLDR_WRITE_START_DELAY, BOOTLDR_WRITE_END_DELAY, FLASH_PER_COMMAND_WAIT));
-#else
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_WRITE_START_DELAY, BOOTLDR_WRITE_END_DELAY, FLASH_PER_COMMAND_WAIT));
-#endif
+    if(!Utils::HostOsInfo::isLinuxHost())
+    {
+        // Add non-posted command to ensure sync (also ensures that the packet is not a multiple of 64 bytes)
+        serializeLong(buffer, __BOOTLDR_QUERY);
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QUERY_RESPONSE_LEN, BOOTLDR_WRITE_START_DELAY, BOOTLDR_WRITE_END_DELAY, FLASH_PER_COMMAND_WAIT));
+    }
+    else
+    {
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_WRITE_START_DELAY, BOOTLDR_WRITE_END_DELAY, FLASH_PER_COMMAND_WAIT));
+    }
+
     m_completionQueue.enqueue(BOOTLDR_WRITE_CPL);
     command();
 }
@@ -1266,19 +1268,21 @@ void OpenMVPluginIO::bootloaderQSPIFWrite(const QByteArray &data, int chunksize)
     {
         serializeLong(buffer, __BOOTLDR_QSPIF_WRITE);
         buffer.append(data.mid(i, qMin(chunksize, data.size() - i)));
-#ifdef Q_OS_MAC
         int diff = (m_bootloaderHS ? HS_EP_SIZE : FS_EP_SIZE) - buffer.size();
         if (diff > 0) buffer.append(QByteArray(diff, 0xFF));
-#endif
     }
 
-#ifdef Q_OS_MAC
-    // Add non-posted command to ensure sync (also ensures that the packet is not a multiple of 64 bytes)
-    serializeLong(buffer, __BOOTLDR_QUERY);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QUERY_RESPONSE_LEN, BOOTLDR_QSPIF_WRITE_START_DELAY, BOOTLDR_QSPIF_WRITE_END_DELAY, FLASH_PER_COMMAND_WAIT));
-#else
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_QSPIF_WRITE_START_DELAY, BOOTLDR_QSPIF_WRITE_END_DELAY, FLASH_PER_COMMAND_WAIT));
-#endif
+    if(!Utils::HostOsInfo::isLinuxHost())
+    {
+        // Add non-posted command to ensure sync (also ensures that the packet is not a multiple of 64 bytes)
+        serializeLong(buffer, __BOOTLDR_QUERY);
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, BOOTLDR_QUERY_RESPONSE_LEN, BOOTLDR_QSPIF_WRITE_START_DELAY, BOOTLDR_QSPIF_WRITE_END_DELAY, FLASH_PER_COMMAND_WAIT));
+    }
+    else
+    {
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_QSPIF_WRITE_START_DELAY, BOOTLDR_QSPIF_WRITE_END_DELAY, FLASH_PER_COMMAND_WAIT));
+    }
+
     m_completionQueue.enqueue(BOOTLDR_QSPIF_WRITE_CPL);
     command();
 }
