@@ -20,7 +20,7 @@ bool imxGetDevice(QJsonObject &obj)
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/blhost/amd64/blhost")));
+            blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/blhost/linux/amd64/blhost")));
         }
     }
 
@@ -219,11 +219,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            sdphost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/sdphost/i386/sdphost")));
+            sdphost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/sdphost/linux/i386/sdphost")));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            sdphost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/sdphost/amd64/sdphost")));
+            sdphost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/sdphost/linux/amd64/sdphost")));
         }
     }
 
@@ -249,7 +249,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/blhost/amd64/blhost")));
+            blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/blhost/linux/amd64/blhost")));
         }
     }
 
@@ -925,7 +925,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/blhost/amd64/blhost")));
+            blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath() + QStringLiteral("/blhost/linux/amd64/blhost")));
         }
     }
 
