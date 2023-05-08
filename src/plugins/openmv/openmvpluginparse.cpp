@@ -88,7 +88,7 @@ importDataList_t loadFolder(const QString &rootPath, const QString &path, bool f
                 {
                     QFileInfo info(workingPathName);
                     QString relativePath = QDir::cleanPath(QDir::fromNativeSeparators(QDir(rootPath).relativeFilePath(info.path()))).replace(QLatin1Char('/'), QLatin1Char('.'));
-                    if (relativePath == QLatin1Char('.')) relativePath = QString();
+                    if (relativePath == QStringLiteral(".")) relativePath = QString();
                     else relativePath += QLatin1Char('.');
                     importData_t data;
                     data.moduleName = (flat ? QString() : relativePath) + QDir(workingPathName).dirName();
@@ -136,7 +136,7 @@ importDataList_t loadFolder(const QString &rootPath, const QString &path, bool f
             {
                 QFileInfo info(pathName);
                 QString relativePath = QDir::cleanPath(QDir::fromNativeSeparators(QDir(rootPath).relativeFilePath(info.path()))).replace(QLatin1Char('/'), QLatin1Char('.'));
-                if (relativePath == QLatin1Char('.')) relativePath = QString();
+                if (relativePath == QStringLiteral(".")) relativePath = QString();
                 else relativePath += QLatin1Char('.');
                 importData_t data;
                 data.moduleName = (flat ? QString() : relativePath) + QFileInfo(pathName).baseName();
