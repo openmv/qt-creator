@@ -53,14 +53,14 @@ bool imxGetDevice(QJsonObject &obj)
     }
     else
     {
-        QMessageBox box(QMessageBox::Warning, QObject::tr("Get Devices"), QObject::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-        box.setDetailedText(response.stdOut);
-        box.setInformativeText(response.exitMessage(blhost_binary, process.timeoutS()));
-        box.setDefaultButton(QMessageBox::Ok);
-        box.setEscapeButton(QMessageBox::Cancel);
-        box.exec();
+//        QMessageBox box(QMessageBox::Warning, QObject::tr("Get Devices"), QObject::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+//            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+//            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+//        box.setDetailedText(response.stdOut);
+//        box.setInformativeText(response.exitMessage(blhost_binary, process.timeoutS()));
+//        box.setDefaultButton(QMessageBox::Ok);
+//        box.setEscapeButton(QMessageBox::Cancel);
+//        box.exec();
 
         return false;
     }
