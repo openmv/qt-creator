@@ -113,7 +113,7 @@ def main():
         elif sys.platform == "darwin":
             files = ["ffmpeg", "ffserver", "ffprobe", "ffplay", "bossac",
                      "dfu-util", "dfu-prefix", "dfu-suffix",
-                     "elf2uf2", "picotool", "rp2040load"]
+                     "elf2uf2", "picotool", "rp2040load", "blhost", "sdphost"]
             for dirpath, dirnames, filenames in os.walk(target):
                 for file in files:
                     for filename in fnmatch.filter(filenames, file):
