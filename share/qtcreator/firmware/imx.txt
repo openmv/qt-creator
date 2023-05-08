@@ -11,7 +11,9 @@
         "blhost_memory_configuration_type" : "9",
         "blhost_secure_bootloader_erase_address" : "0x60000000",
         "blhost_secure_bootloader_write_address" : "0x60001000",
-        "blhost_secure_bootloader_path" : "evkbmimrt1060_flashloader_nopadding.bin",
-        "blhost_firmware_address" : "0x60040000"
+        "blhost_secure_bootloader_path" : "evkbmimxrt1060_flashloader_nopadding.bin",
+        "blhost_firmware_address" : "0x60040000",
+        "blhost_disk_address" : "0x00000000",
+        "blhost_disk_size" : "0x00000000"
     }
 ]

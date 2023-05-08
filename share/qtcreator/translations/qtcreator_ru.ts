@@ -7741,7 +7741,7 @@ Will not be applied to whitespace in comments and strings.</source>
 <context>
     <name>OpenMV::Internal::OpenMVPlugin</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+104"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+219"/>
         <source>Invalid argument (%1) for -override_read_timeout</source>
         <translation>Недопустимый аргумент (%1) для -override_read_timeout</translation>
     </message>
@@ -7763,7 +7763,7 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+131"/>
         <location line="+15"/>
-        <location line="+3005"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+113"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -7772,7 +7772,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
 Закройте все программы, которые просматривают/редактируют данные приложения OpenMV IDE, а затем перезапустите OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="-2585"/>
+        <location line="+355"/>
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Изменить порог шкалы оттенков серого с помощью Threshold Editor</translation>
     </message>
@@ -7835,7 +7835,7 @@ while(True):
         <translation type="vanished">Запустить начальный загрузчик</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+46"/>
         <source>Configure OpenMV Cam settings file</source>
         <translation>Настроить файл настроек OpenMV Cam</translation>
     </message>
@@ -7850,32 +7850,32 @@ while(True):
     </message>
     <message>
         <location line="+15"/>
-        <location line="+7164"/>
+        <location line="+3435"/>
         <location line="+47"/>
         <source>Open Terminal</source>
         <translation>Открыть терминал</translation>
     </message>
     <message>
-        <location line="-7206"/>
+        <location line="-3477"/>
         <source>Machine Vision</source>
         <translation>Машинное зрение</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+7233"/>
+        <location line="+3504"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>Threshold Editor</translation>
     </message>
     <message>
-        <location line="-7304"/>
-        <location line="+7382"/>
+        <location line="-3575"/>
+        <location line="+3653"/>
         <source>Keypoints Editor</source>
         <translation>Редактор ключевых точек</translation>
     </message>
     <message>
-        <location line="-7375"/>
-        <location line="+7541"/>
+        <location line="-3646"/>
+        <location line="+3812"/>
         <location line="+98"/>
         <location line="+24"/>
         <location line="+11"/>
@@ -7884,7 +7884,7 @@ while(True):
         <translation>Генератор AprilTag</translation>
     </message>
     <message>
-        <location line="-7689"/>
+        <location line="-3960"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Семейство TAG16H5 (30 тегов)</translation>
     </message>
@@ -7922,15 +7922,15 @@ while(True):
         <location line="+10"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location line="+395"/>
+        <location line="+404"/>
         <location line="+14"/>
         <location line="+31"/>
-        <location line="+720"/>
+        <location line="+744"/>
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Не удалось открыть: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1184"/>
+        <location line="-1217"/>
         <source>DataMatrix Generator</source>
         <translation>Генератор DataMatrix</translation>
     </message>
@@ -7960,7 +7960,7 @@ while(True):
         <translation>Воспроизвести видеофайл</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+314"/>
         <source>OpenMV Docs</source>
         <translation>Документы OpenMV</translation>
     </message>
@@ -8006,18 +8006,18 @@ while(True):
     </message>
     <message>
         <location line="+10"/>
-        <location line="+2028"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+276"/>
         <location line="+6"/>
         <location line="+29"/>
         <location line="+80"/>
         <location line="+8"/>
         <location line="+36"/>
-        <location line="+137"/>
+        <location line="+139"/>
         <location line="+71"/>
         <location line="+35"/>
         <location line="+50"/>
         <location line="+10"/>
-        <location line="+21"/>
+        <location line="+23"/>
         <location line="+19"/>
         <location line="+36"/>
         <location line="+78"/>
@@ -8029,7 +8029,7 @@ while(True):
         <location line="+73"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location line="+136"/>
+        <location line="+138"/>
         <location line="+9"/>
         <location line="+9"/>
         <location line="+110"/>
@@ -8041,7 +8041,17 @@ while(True):
         <location line="+13"/>
         <location line="+15"/>
         <location line="+16"/>
-        <location line="+148"/>
+        <location line="+56"/>
+        <location line="+48"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+84"/>
+        <location line="+4"/>
+        <location line="+7"/>
+        <location line="+9"/>
+        <location line="+18"/>
+        <location line="+150"/>
         <location line="+40"/>
         <location line="+10"/>
         <location line="+9"/>
@@ -8091,8 +8101,11 @@ while(True):
         <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="-4833"/>
-        <location line="+3437"/>
+        <location line="+8"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1539"/>
+        <location line="+12"/>
+        <location line="+7"/>
+        <location line="+124"/>
         <location line="+12"/>
         <location line="+7"/>
         <location line="+1413"/>
@@ -8103,7 +8116,7 @@ while(True):
         <translation>Отключить</translation>
     </message>
     <message>
-        <location line="-5007"/>
+        <location line="+19"/>
         <source>Start (run script)</source>
         <translation>Запустить (запустить скрипт)</translation>
     </message>
@@ -8112,7 +8125,7 @@ while(True):
         <translation type="vanished">Ctrl+R</translation>
     </message>
     <message>
-        <location line="-662"/>
+        <location line="-691"/>
         <source>Documents Folder</source>
         <translation>Папка документов</translation>
     </message>
@@ -8126,7 +8139,7 @@ while(True):
         <translation type="vanished">&lt;br/&gt;&lt;p&gt;OpenMV IDE Русский перевод Сергея Сваздина.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+675"/>
+        <location line="+704"/>
         <source>Stop (halt script)</source>
         <translation>Стоп (сценарий остановки)</translation>
     </message>
@@ -8147,12 +8160,12 @@ while(True):
     </message>
     <message>
         <location line="+5"/>
-        <location line="+5192"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+285"/>
         <source>Stop</source>
         <translation>Стоп</translation>
     </message>
     <message>
-        <location line="-5191"/>
+        <location line="+1"/>
         <source>Stop recording</source>
         <translation>Остановить запись</translation>
     </message>
@@ -8180,21 +8193,21 @@ while(True):
     <message>
         <location line="+17"/>
         <location line="+22"/>
-        <location line="+4673"/>
-        <location line="+182"/>
-        <location line="+124"/>
-        <location line="+161"/>
-        <location line="+128"/>
+        <location line="+1618"/>
         <location line="+55"/>
         <location line="+112"/>
         <location line="+69"/>
-        <location line="+187"/>
-        <location line="+92"/>
+        <location line="+180"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-466"/>
+        <location line="+182"/>
+        <location line="+124"/>
+        <location line="+161"/>
+        <location line="+99"/>
         <source>Busy... please wait...</source>
         <translation>Занято... подождите ...</translation>
     </message>
     <message>
-        <location line="-5799"/>
+        <location line="-2050"/>
         <location line="+15"/>
         <source>Disable</source>
         <translation>Блокировать</translation>
@@ -8267,80 +8280,80 @@ while(True):
     </message>
     <message>
         <location line="+102"/>
-        <location line="+4537"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-407"/>
         <source>Board:</source>
         <translation>Совет:</translation>
     </message>
     <message>
-        <location line="-4536"/>
+        <location line="+1"/>
         <source>Camera board type</source>
         <translation>Тип платы камеры</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+4533"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
         <source>Sensor:</source>
         <translation>датчик:</translation>
     </message>
     <message>
-        <location line="-4532"/>
+        <location line="+1"/>
         <source>Camera sensor module</source>
         <translation>Модуль датчика камеры</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+4528"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
         <source>Firmware Version:</source>
         <translation>Версия прошивки:</translation>
     </message>
     <message>
-        <location line="-4527"/>
+        <location line="+1"/>
         <source>Camera firmware version</source>
         <translation>Версия прошивки камеры</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+4523"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
         <source>Serial Port:</source>
         <translation>Последовательный порт:</translation>
     </message>
     <message>
-        <location line="-4522"/>
+        <location line="+1"/>
         <source>Camera serial port</source>
         <translation>Последовательный порт камеры</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+4222"/>
+        <location line="+1698"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-294"/>
         <location line="+296"/>
-        <location line="+929"/>
         <source>Drive:</source>
         <translation>Привод:</translation>
     </message>
     <message>
-        <location line="-5446"/>
+        <location line="-1697"/>
         <source>Drive associated with port</source>
         <translation>Привод, связанный с портом</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+4513"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
         <source>FPS:</source>
         <translation>FPS:</translation>
     </message>
     <message>
-        <location line="-4512"/>
+        <location line="+1"/>
         <source>May be different from camera FPS</source>
         <translation>Может отличаться от FPS камеры</translation>
     </message>
     <message>
-        <location line="+175"/>
-        <location line="+1034"/>
+        <location line="+188"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3564"/>
         <source>Update Available</source>
         <translation>Доступно обновление</translation>
     </message>
     <message>
-        <location line="-1034"/>
+        <location line="+0"/>
         <source>A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.</source>
         <translation>Для загрузки доступна новая версия OpenMV IDE (%L1.%L2.%L3).</translation>
     </message>
@@ -8350,7 +8363,7 @@ while(True):
         <translation>Скачать</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+148"/>
         <source>WiFi Programming Disabled!</source>
         <translation>Программирование WiFi отключено!</translation>
     </message>
@@ -8421,17 +8434,17 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
     </message>
     <message>
         <location line="+98"/>
-        <location line="+5083"/>
+        <location line="+1316"/>
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Серийный порт - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-5063"/>
+        <location line="-1296"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
-        <location line="+4746"/>
+        <location line="+979"/>
         <location line="+133"/>
         <location line="+102"/>
         <location line="+117"/>
@@ -8441,38 +8454,39 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>Подключение... (30 секундный тайм-аут)</translation>
     </message>
     <message>
-        <location line="-6801"/>
-        <location line="+1144"/>
+        <location line="-3063"/>
+        <location line="+1173"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
         <location line="+231"/>
-        <location line="+168"/>
-        <location line="+228"/>
-        <location line="+160"/>
-        <location line="+602"/>
-        <location line="+340"/>
-        <location line="+154"/>
-        <location line="+94"/>
-        <location line="+45"/>
-        <location line="+2724"/>
+        <location line="+748"/>
         <location line="+133"/>
         <location line="+102"/>
         <location line="+117"/>
         <location line="+102"/>
         <location line="+106"/>
         <location line="+433"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+10"/>
+        <location line="+228"/>
+        <location line="+160"/>
+        <location line="+606"/>
+        <location line="+342"/>
+        <location line="+154"/>
+        <location line="+94"/>
+        <location line="+45"/>
+        <location line="+241"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-8401"/>
+        <location line="-4616"/>
         <source>Missing argument for -serial_number_filter</source>
         <translation>Отсутствует аргумент для -serial_number_filter</translation>
     </message>
     <message>
-        <location line="+634"/>
+        <location line="+569"/>
         <source>Missing argument for -form_key</source>
         <translation>Отсутствует аргумент для -form_key</translation>
     </message>
@@ -8487,18 +8501,35 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+11"/>
+        <source>Auto Reconnect to OpenMV Cam</source>
+        <translation>Автоматическое переподключение к OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected.
+Note that while Auto Reconnect is enabled connect and disconnect will not stop your OpenMV Cam&apos;s running script.</source>
+        <translation>Когда автоматическое переподключение включено, OpenMV IDE будет автоматически переподключаться к вашему OpenMV при обнаружении.
+Обратите внимание, что пока включено автоматическое повторное подключение, подключение и отключение не остановит работающий скрипт OpenMV Cam.</translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>Install the Latest Development Release</source>
         <translation>Установите последнюю версию разработки</translation>
     </message>
     <message>
-        <location line="+187"/>
-        <location line="+754"/>
+        <location line="+186"/>
+        <source>Play RTSP Stream</source>
+        <translation>Воспроизвести RTSP-поток</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+765"/>
         <source>Dataset Editor</source>
         <translation>Редактор набора данных</translation>
     </message>
     <message>
-        <location line="-750"/>
+        <location line="-761"/>
         <location line="+18"/>
         <location line="+15"/>
         <location line="+6"/>
@@ -8521,21 +8552,33 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <location line="+73"/>
         <location line="+19"/>
         <location line="+115"/>
-        <location line="+1145"/>
+        <location line="+1174"/>
         <location line="+94"/>
         <location line="+84"/>
         <location line="+89"/>
         <location line="+84"/>
         <location line="+97"/>
         <location line="+175"/>
-        <location line="+176"/>
+        <location line="+187"/>
+        <location line="+14"/>
+        <location line="+257"/>
+        <location line="+13"/>
+        <location line="+238"/>
+        <location line="+133"/>
+        <location line="+102"/>
+        <location line="+117"/>
+        <location line="+102"/>
+        <location line="+106"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1798"/>
         <location line="+239"/>
         <location line="+115"/>
-        <location line="+604"/>
-        <location line="+232"/>
+        <location line="+608"/>
+        <location line="+234"/>
         <location line="+396"/>
         <location line="+31"/>
-        <location line="+198"/>
+        <location line="+122"/>
+        <location line="+9"/>
+        <location line="+322"/>
         <location line="+9"/>
         <location line="+81"/>
         <location line="+9"/>
@@ -8546,23 +8589,13 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <location line="+81"/>
         <location line="+9"/>
         <location line="+260"/>
-        <location line="+1025"/>
-        <location line="+14"/>
-        <location line="+257"/>
+        <location line="+944"/>
         <location line="+13"/>
-        <location line="+87"/>
-        <location line="+13"/>
-        <location line="+237"/>
-        <location line="+133"/>
-        <location line="+102"/>
-        <location line="+117"/>
-        <location line="+102"/>
-        <location line="+106"/>
         <source>Error: %L1!</source>
         <translation>Ошибка: %L1!</translation>
     </message>
     <message>
-        <location line="-6911"/>
+        <location line="-3173"/>
         <location line="+30"/>
         <source>Open Dataset</source>
         <translation>Открытый набор данных</translation>
@@ -8658,7 +8691,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>&lt;p&gt;&lt;b&gt;Партнеры&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+302"/>
         <source>Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
         <translation>разрешение (w:%1, h:%2) - точка (x:%3, y:%4)</translation>
     </message>
@@ -8683,7 +8716,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>Захват данных</translation>
     </message>
     <message>
-        <location line="+585"/>
+        <location line="+603"/>
         <source>
 
 Try doing:
@@ -8736,12 +8769,12 @@ sudo adduser%L1dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+5140"/>
+        <location line="+1373"/>
         <source>UDP Server Connection - %1</source>
         <translation>Соединение с UDP-сервером - %1</translation>
     </message>
     <message>
-        <location line="-5078"/>
+        <location line="-1311"/>
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Недопустимый аргумент порта (%1) для -open_udp_server_terminal</translation>
     </message>
@@ -8772,12 +8805,12 @@ sudo adduser%L1dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+5186"/>
+        <location line="+1419"/>
         <source>TCP Server Connection - %1</source>
         <translation>Соединение TCP-сервера - %1</translation>
     </message>
     <message>
-        <location line="-5124"/>
+        <location line="-1357"/>
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Недопустимый аргумент порта (%1) для -open_tcp_server_terminal</translation>
     </message>
@@ -8921,12 +8954,11 @@ ID:%2
         <translation>Неверно отформатированный ключ платы!</translation>
     </message>
     <message>
-        <location line="+73"/>
         <source>New OpenMV IDE reources are available (e.g. examples, firmware, documentation, etc.).</source>
-        <translation>Доступны новые ресурсы OpenMV IDE (например, прошивка, документация и т.д.).</translation>
+        <translation type="vanished">Доступны новые ресурсы OpenMV IDE (например, прошивка, документация и т.д.).</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3951"/>
         <source>Install</source>
         <translation>Установить</translation>
     </message>
@@ -8995,19 +9027,19 @@ ID:%2
         <location line="+10"/>
         <location line="+6"/>
         <location line="+115"/>
-        <location line="+351"/>
+        <location line="+353"/>
         <source>Erase internal file system</source>
         <translation>Стереть внутреннюю файловую систему</translation>
     </message>
     <message>
-        <location line="-468"/>
+        <location line="-470"/>
         <location line="+120"/>
-        <location line="+352"/>
+        <location line="+354"/>
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Если вы включите эту опцию, все файлы на внутренней флешке OpenMV Cam будут удалены. Это не стирает файлы на съемной SD-карте (если она вставлена).</translation>
     </message>
     <message>
-        <location line="-467"/>
+        <location line="-469"/>
         <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Загрузка прошивки через DFU всегда стирает внутреннюю флешку OpenMV Cam. Это не стирает файлы на съемной SD-карте (если она вставлена).</translation>
     </message>
@@ -9043,7 +9075,7 @@ ID:%2
         <translation type="vanished">   Стереть встроенные данные Flash   </translation>
     </message>
     <message>
-        <location line="+465"/>
+        <location line="+467"/>
         <source>No OpenMV Cams found!</source>
         <translation>Не найдено ни одной камеры OpenMV Cam!</translation>
     </message>
@@ -9054,34 +9086,36 @@ ID:%2
     </message>
     <message>
         <location line="+49"/>
+        <location line="+986"/>
         <source>Please select the board type</source>
         <translation>Выберите тип платы</translation>
     </message>
     <message>
-        <location line="+11"/>
-        <location line="+3302"/>
+        <location line="-975"/>
+        <location line="+3109"/>
         <location line="+28"/>
         <source>Erase the internal file system?</source>
         <translation>Удалить внутреннюю файловую систему?</translation>
     </message>
     <message>
-        <location line="-3309"/>
+        <location line="-3114"/>
         <source>No released firmware available for the attached board!</source>
         <translation>Для прилагаемой платы нет выпущенной прошивки!</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <location line="+3475"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+603"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18"/>
         <source>Please select a serial port</source>
         <translation>Выберите последовательный порт</translation>
     </message>
     <message>
-        <location line="-3439"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+36"/>
         <source>Please select a DFU Device</source>
         <translation>Пожалуйста, выберите устройство DFU</translation>
     </message>
     <message>
-        <location line="+482"/>
+        <location line="+484"/>
+        <location line="+534"/>
         <source>Connecting... (Hit cancel if this takes more than 5 seconds).</source>
         <translation>Подключение ... (Нажмите на кнопку Отменить, если это занимает более 5 секунд).</translation>
     </message>
@@ -9098,7 +9132,7 @@ sudo adduser%L1 dialout
  ... в терминале, а затем перезагрузите компьютер.</translation>
     </message>
     <message>
-        <location line="-221"/>
+        <location line="-757"/>
         <source>Timeout error while getting firmware version!</source>
         <translation>Ошибка таймаута при получении версии прошивки!</translation>
     </message>
@@ -9113,13 +9147,13 @@ sudo adduser%L1 dialout
         <translation>Будете пробовать подключаться снова?</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+138"/>
         <source>Unsupported board architecture!</source>
         <translation>Неподдерживаемая архитектура платы!</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+1585"/>
+        <location line="+1840"/>
         <source>Timeout error while getting board architecture!</source>
         <translation>Ошибка таймаута при получении архитектуры платы!</translation>
     </message>
@@ -9138,12 +9172,14 @@ Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indica
         <translation type="vanished">Обновление прошивки завершено!\n\nВаша OpenMV Cam выполняет встроенную самопроверку ... это может занять некоторое время.\n\nНажмите OK, когда светодиод RGB вашей камеры OpenMV начнет мигать синим - это означает, что самопроверка завершена</translation>
     </message>
     <message>
-        <location line="-1526"/>
+        <location line="-1781"/>
+        <location line="+534"/>
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Отключите камеру OpenMV, а затем снова подключите ее...</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="-483"/>
+        <location line="+523"/>
         <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>Невозможно подключиться к вашему обычному начальному загрузчику OpenMV Cam!</translation>
     </message>
@@ -9156,7 +9192,7 @@ Continue?</source>
 Продолжить?</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="-420"/>
         <source>Erasing...</source>
         <translation>Выполняется стирание...</translation>
     </message>
@@ -9164,14 +9200,14 @@ Continue?</source>
         <location line="+35"/>
         <location line="+41"/>
         <location line="+55"/>
-        <location line="+328"/>
+        <location line="+583"/>
         <location line="+460"/>
         <location line="+23"/>
         <source>Timeout Error!</source>
         <translation>Ошибка таймаута!</translation>
     </message>
     <message>
-        <location line="-848"/>
+        <location line="-1103"/>
         <location line="+45"/>
         <source>Programming...</source>
         <translation>Выполняется программирование...</translation>
@@ -9190,7 +9226,7 @@ Click the Ok button after your OpenMV Cam has enumerated and finished running it
         <translation>Файл прошивки пуст!</translation>
     </message>
     <message>
-        <location line="+844"/>
+        <location line="+1099"/>
         <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
@@ -9233,7 +9269,8 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
 </translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-373"/>
+        <location line="+374"/>
         <location line="+219"/>
         <location line="+221"/>
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
@@ -9287,17 +9324,27 @@ HomeBrew:
         <translation>Неизвестно</translation>
     </message>
     <message>
-        <location line="-3034"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-816"/>
         <source>OpenMV Cam automatically registered!
 
 Board: %1
 ID: %2
 
 Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality and focus the camera (if applicable).</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenMV Cam регистрируется автоматически!
+
+Доска: %1
+Идентификатор: %2
+
+Запустите Examples-&gt;HelloWorld-&gt;helloworld.py, чтобы проверить качество изображения и сфокусировать камеру (если применимо).</translation>
     </message>
     <message>
-        <location line="+701"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3009"/>
+        <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
+        <translation>Доступны новые ресурсы OpenMV IDE (например, примеры, прошивки, документация и т. д.).</translation>
+    </message>
+    <message>
+        <location line="+415"/>
         <source>Extracting...</source>
         <translation>Извлечение...</translation>
     </message>
@@ -9307,7 +9354,7 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
         <translation>Невозможно извлечь прошивку!</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+199"/>
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Обнаружена плата в режиме DFU. Чем бы Вы хотели заняться?</translation>
     </message>
@@ -9327,7 +9374,7 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
         <translation>Просто сотрите внутреннюю файловую систему</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+313"/>
         <location line="+36"/>
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Обновите загрузчик до последней версии и установите SoftDevice для прошивки прошивки OpenMV. Дополнительную информацию можно найти на &lt;a href=&quot;https://docs.arduino.cc&quot;&gt; https://docs.arduino.cc &lt;/a&gt;</translation>
@@ -9348,15 +9395,19 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
 (Нажмите «Отмена», если это займет более 5 секунд).</translation>
     </message>
     <message>
-        <location line="+395"/>
+        <location line="+397"/>
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenMV IDE по-прежнему может попытаться восстановить OpenMV Cam с помощью загрузчика DFU OpenMV Cam.
+
+Продолжать?</translation>
     </message>
     <message>
         <location line="+263"/>
-        <location line="+319"/>
+        <location line="+278"/>
+        <location line="+19"/>
+        <location line="+277"/>
         <location line="+78"/>
         <location line="+219"/>
         <location line="+183"/>
@@ -9373,7 +9424,53 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
 В этом случае нажмите OK, когда вы увидите крепление внутренней флеш-накопителя OpenMV Cam (окно может открываться, а может и не открываться).</translation>
     </message>
     <message>
-        <location line="-648"/>
+        <location line="-947"/>
+        <source>No IMX settings for the selected board type %L1!</source>
+        <translation>Нет настроек IMX для выбранного типа платы %L1!</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>No IMX settings found!</source>
+        <translation>Настройки IMX не найдены!</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>
+
+Hit cancel to skip to SBL reprogramming.</source>
+        <translation>
+
+Нажмите «Отмена», чтобы перейти к перепрограммированию SBL.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
+
+Continue?</source>
+        <translation>OpenMV IDE по-прежнему может попытаться восстановить OpenMV Cam с помощью загрузчика SBL вашего OpenMV Cam.
+
+Продолжать?</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Disconnect your OpenMV Cam from your computer and then reconnect your OpenMV Cam to your computer while pressing the SBL button on your OpenMV Cam.
+
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
+        <translation>Отключите камеру OpenMV от компьютера, а затем снова подключите камеру OpenMV к компьютеру, нажимая кнопку SBL на вашей камере OpenMV.
+
+Нажмите кнопку «ОК» после перечисления загрузчика SBL вашей OpenMV Cam.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Firmware update complete!
+
+</source>
+        <translation>Обновление прошивки завершено!
+
+</translation>
+    </message>
+    <message>
+        <location line="+168"/>
         <source>No DFU settings for the selected board type!</source>
         <translation>Нет настроек DFU для выбранного типа платы!</translation>
     </message>
@@ -9447,24 +9544,28 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <source>DFU bootloader reset complete!
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Сброс загрузчика DFU завершен!
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Disconnect your OpenMV Cam from your computer and remove the jumper wire between the BOOT and RST pins.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Отключите OpenMV Cam от компьютера и удалите перемычку между контактами BOOT и RST.
+
+</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Click the connect button again and follow the prompts unbrick your OpenMV Cam now that the regular bootloader is fixed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нажмите кнопку подключения еще раз и следуйте инструкциям, чтобы разблокировать камеру OpenMV теперь, когда обычный загрузчик исправлен.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>DFU bootloader reset failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>Не удалось сбросить загрузчик DFU!</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -9497,15 +9598,15 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <translation>Последовательный порт: %L1</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+258"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+4"/>
         <location line="+420"/>
         <location line="+110"/>
-        <location line="+103"/>
         <source>FPS: 0</source>
         <translation>FPS</translation>
     </message>
     <message>
-        <location line="-578"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-475"/>
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [устарело - нажмите здесь, чтобы обновить]</translation>
     </message>
@@ -9520,7 +9621,10 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <translation> - [ последний ]</translation>
     </message>
     <message>
-        <location line="-1381"/>
+        <location line="-1524"/>
+        <location line="+12"/>
+        <location line="+7"/>
+        <location line="+124"/>
         <location line="+12"/>
         <location line="+7"/>
         <location line="+1413"/>
@@ -9562,14 +9666,14 @@ In particular, checkout the Color-Tracking examples.</source>
 В частности, ознакомьтесь с примерами отслеживания цвета.</translation>
     </message>
     <message>
-        <location line="-4404"/>
-        <location line="+3925"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-813"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-479"/>
         <location line="+488"/>
         <source>Don&apos;t show this message again.</source>
         <translation>Не показывать это сообщение снова.</translation>
     </message>
     <message>
-        <location line="-5894"/>
+        <location line="-1528"/>
         <source>Run Bootloader (Load Firmware)</source>
         <translation>Запустить загрузчик (загрузить прошивку)</translation>
     </message>
@@ -9585,7 +9689,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>Вы уверены, что хотите стереть встроенную флешку OpenMV Cam?</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+15"/>
         <source>Open OpenMV Cam Drive folder</source>
         <translation>Откройте папку OpenMV Cam Drive</translation>
     </message>
@@ -9595,8 +9699,8 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>Сохранить открытый скрипт в OpenMV Cam (как main.py)</translation>
     </message>
     <message>
-        <location line="+3337"/>
-        <location line="+3342"/>
+        <location line="+2950"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2783"/>
         <source>Try doing:
 
 </source>
@@ -9605,13 +9709,13 @@ In particular, checkout the Color-Tracking examples.</source>
 </translation>
     </message>
     <message>
-        <location line="-3342"/>
-        <location line="+3342"/>
+        <location line="+0"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+0"/>
         <source>...in a terminal and then restart your computer.</source>
         <translation>... в терминале, а затем перезагрузите компьютер.</translation>
     </message>
     <message>
-        <location line="-3048"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+296"/>
         <source>
 
 Hit cancel to skip to DFU reprogramming.</source>
@@ -9621,7 +9725,8 @@ Hit cancel to skip to DFU reprogramming.</source>
     </message>
     <message>
         <location line="+315"/>
-        <location line="+319"/>
+        <location line="+297"/>
+        <location line="+277"/>
         <location line="+480"/>
         <source>Onboard Data Flash Erased!
 
@@ -9631,7 +9736,8 @@ Hit cancel to skip to DFU reprogramming.</source>
 </translation>
     </message>
     <message>
-        <location line="-799"/>
+        <location line="-1054"/>
+        <location line="+297"/>
         <source>Firmware Upgrade complete!
 
 </source>
@@ -9640,8 +9746,9 @@ Hit cancel to skip to DFU reprogramming.</source>
 </translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+319"/>
+        <location line="-296"/>
+        <location line="+297"/>
+        <location line="+277"/>
         <location line="+480"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
@@ -9651,8 +9758,9 @@ Hit cancel to skip to DFU reprogramming.</source>
 </translation>
     </message>
     <message>
-        <location line="-798"/>
-        <location line="+319"/>
+        <location line="-1053"/>
+        <location line="+297"/>
+        <location line="+277"/>
         <location line="+480"/>
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Нажмите OK, когда светодиод RGB вашей камеры OpenMV начнет мигать синим - это означает, что самопроверка завершена.</translation>
@@ -9670,7 +9778,7 @@ Hit cancel to skip to DFU reprogramming.</source>
         <translation type="vanished">Синхронизации...</translation>
     </message>
     <message>
-        <location line="+1272"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-561"/>
         <source>Configure Settings</source>
         <translation>Настройка параметров</translation>
     </message>
@@ -9696,18 +9804,18 @@ Hit cancel to skip to DFU reprogramming.</source>
     </message>
     <message>
         <location line="-23"/>
-        <location line="+1257"/>
+        <location line="+1158"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Файлы изображений (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1233"/>
-        <location line="+1602"/>
+        <location line="-1134"/>
+        <location line="+1503"/>
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Не удалось сохранить файл изображения по неизвестной причине!</translation>
     </message>
     <message>
-        <location line="-1581"/>
+        <location line="-1482"/>
         <location line="+7"/>
         <location line="+17"/>
         <location line="+15"/>
@@ -9743,14 +9851,14 @@ Hit cancel to skip to DFU reprogramming.</source>
     </message>
     <message>
         <location line="-48"/>
-        <location line="+1229"/>
+        <location line="+1130"/>
         <location line="+80"/>
         <location line="+21"/>
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>Файлы ключевых точек (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1222"/>
+        <location line="-1123"/>
         <location line="+7"/>
         <location line="+6"/>
         <location line="+7"/>
@@ -9778,7 +9886,7 @@ Hit cancel to skip to DFU reprogramming.</source>
         <translation>Не удается открыть файл &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1170"/>
         <location line="+6"/>
         <location line="+18"/>
         <location line="+4"/>
@@ -9811,7 +9919,7 @@ Hit cancel to skip to DFU reprogramming.</source>
         <translation>Не удается открыть firmware.txt!</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+53"/>
         <location line="+11"/>
         <location line="+15"/>
         <location line="+27"/>
@@ -10103,25 +10211,27 @@ Hit cancel to skip to DFU reprogramming.</source>
         <translation>Генерация завершена!</translation>
     </message>
     <message>
-        <location line="+349"/>
-        <location line="+17"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+400"/>
+        <location line="+15"/>
         <location line="+9"/>
         <location line="+25"/>
         <location line="+9"/>
         <location line="+17"/>
-        <location line="+24"/>
-        <location line="+10"/>
+        <location line="+22"/>
+        <location line="+9"/>
+        <location line="+9"/>
         <location line="+15"/>
         <location line="+10"/>
         <location line="+26"/>
-        <location line="+17"/>
+        <location line="+15"/>
+        <location line="+9"/>
         <location line="+25"/>
         <location line="+9"/>
         <source>Import Helper</source>
         <translation>Импорт Помощник</translation>
     </message>
     <message>
-        <location line="-212"/>
+        <location line="-223"/>
         <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
@@ -10130,34 +10240,36 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
 Вы хотите, чтобы OpenMV IDE обновил модуль на вашем OpenMV Cam?</translation>
     </message>
     <message>
-        <location line="-7848"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3760"/>
         <location line="+213"/>
-        <location line="+7652"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+15"/>
         <location line="+34"/>
-        <location line="+50"/>
-        <location line="+25"/>
+        <location line="+48"/>
+        <location line="+33"/>
         <source>Failed to remove &quot;%L1&quot;!</source>
         <translation>Не удалось удалить &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-7968"/>
-        <location line="+7868"/>
+        <location line="-207"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-106"/>
         <location line="+34"/>
-        <location line="+51"/>
+        <location line="+48"/>
+        <location line="+9"/>
         <location line="+25"/>
-        <location line="+43"/>
+        <location line="+41"/>
+        <location line="+9"/>
         <location line="+25"/>
         <location line="+9"/>
         <source>Failed to create &quot;%L1&quot;!</source>
         <translation>Не удалось создать &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-136"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-149"/>
         <source>Would you like OpenMV IDE to update the module on your computer?</source>
         <translation>Вы хотите, чтобы OpenMV IDE обновил модуль на вашем компьютере?</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+91"/>
         <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
@@ -10169,7 +10281,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
 <context>
     <name>QObject</name>
     <message>
-        <location line="-8319"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-333"/>
         <source>New File</source>
         <translation>Новый файл</translation>
     </message>
@@ -10179,7 +10291,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>Не удается открыть новый файл!</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+207"/>
         <source>Network to copy to OpenMV Cam</source>
         <translation>Сеть для копирования в OpenMV Cam</translation>
     </message>
@@ -10205,22 +10317,21 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+239"/>
-        <location line="+5710"/>
+        <location line="+248"/>
+        <location line="+2071"/>
         <location line="+47"/>
         <location line="+69"/>
-        <location line="+1330"/>
+        <location line="+1231"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+468"/>
         <location line="+388"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1256"/>
-        <location line="+135"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1375"/>
+        <location line="+216"/>
         <source>Please add a file extension!</source>
         <translation>Пожалуйста, добавьте расширение файла!</translation>
     </message>
     <message>
-        <location line="+461"/>
         <source>Copy Failed!</source>
-        <translation>Ошибка копирования!</translation>
+        <translation type="vanished">Ошибка копирования!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+239"/>
@@ -10233,7 +10344,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>Не удалось записать кадр!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1251"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1451"/>
         <source>Reading File...</source>
         <translation>Чтение файла...</translation>
     </message>
@@ -10508,6 +10619,7 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+59"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+56"/>
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+61"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-81"/>
         <location line="+81"/>
@@ -10516,6 +10628,7 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="+0"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+0"/>
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0"/>
         <source>Get Devices</source>
         <translation>Получить устройства</translation>
@@ -10530,7 +10643,7 @@ Open a data set to upload it.</source>
         <location line="+88"/>
         <location line="+197"/>
         <location line="+15"/>
-        <location line="+205"/>
+        <location line="+324"/>
         <location line="+12"/>
         <location line="+10"/>
         <location line="+12"/>
@@ -10544,7 +10657,7 @@ Open a data set to upload it.</source>
         <location line="+12"/>
         <location line="+21"/>
         <location line="+7"/>
-        <location line="+73"/>
+        <location line="+154"/>
         <location line="+12"/>
         <location line="+10"/>
         <location line="+12"/>
@@ -10554,7 +10667,7 @@ Open a data set to upload it.</source>
         <translation>Конвертировать видео</translation>
     </message>
     <message>
-        <location line="-739"/>
+        <location line="-939"/>
         <source>Failed to launch ffmpeg!</source>
         <translation>Не удалось запустить ffmpeg!</translation>
     </message>
@@ -10576,17 +10689,24 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     </message>
     <message>
         <location line="+151"/>
-        <location line="+260"/>
+        <location line="+379"/>
         <source>Play Video</source>
         <translation>Воспроизвести видео</translation>
     </message>
     <message>
-        <location line="-259"/>
+        <location line="-378"/>
+        <location line="+119"/>
         <source>Failed to launch ffplay!</source>
         <translation>Не удалось запустить ffplay!</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="-1"/>
+        <location line="+289"/>
+        <source>Play RTSP Stream</source>
+        <translation>Воспроизвести RTSP-поток</translation>
+    </message>
+    <message>
+        <location line="-276"/>
         <source>Convert Video Source</source>
         <translation>Преобразовать исходное видео</translation>
     </message>
@@ -10613,56 +10733,81 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
     <message>
         <location line="-137"/>
         <location line="+129"/>
-        <location line="+135"/>
+        <location line="+216"/>
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
         <translation>Видео файлы (*.mp4 *.*);;Файлы OpenMV ImageReader (*.bin);;</translation>
     </message>
     <message>
-        <location line="-262"/>
+        <location line="-343"/>
         <location line="+129"/>
-        <location line="+135"/>
+        <location line="+216"/>
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin)</source>
         <translation>Видео файлы (*.mp4 *.*);;Файлы OpenMV ImageReader (*.bin)</translation>
     </message>
     <message>
-        <location line="-257"/>
+        <location line="-338"/>
         <source>Please select output format</source>
-        <translation type="unfinished"></translation>
+        <translation>Пожалуйста, выберите выходной формат</translation>
     </message>
     <message>
         <location line="+15"/>
         <location line="+126"/>
-        <location line="+135"/>
+        <location line="+216"/>
         <source>Rescale the video?</source>
         <translation>Масштабировать видео?</translation>
     </message>
     <message>
-        <location line="-249"/>
+        <location line="-330"/>
         <location line="+126"/>
-        <location line="+135"/>
+        <location line="+216"/>
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
         <translation>Введите новую ширину (соотношение сторон останется прежним)</translation>
     </message>
     <message>
-        <location line="-251"/>
+        <location line="-332"/>
         <location line="+126"/>
-        <location line="+135"/>
+        <location line="+216"/>
         <source>Skip frames?</source>
         <translation>Пропустить кадры?</translation>
     </message>
     <message>
-        <location line="-249"/>
+        <location line="-330"/>
         <location line="+126"/>
-        <location line="+135"/>
+        <location line="+216"/>
         <source>Enter how many frames to skip at a time</source>
         <translation>Введите, сколько кадров пропускать за раз</translation>
     </message>
     <message>
-        <location line="-209"/>
+        <location line="-290"/>
         <location line="+95"/>
-        <location line="+134"/>
+        <location line="+215"/>
         <source>Video conversion finished!</source>
         <translation>Конвертация видео завершена!</translation>
+    </message>
+    <message>
+        <location line="-157"/>
+        <source>Please enter a IP address (or domain name)</source>
+        <translation>Пожалуйста, введите IP-адрес (или доменное имя)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Please enter a Port (the RTSP default port is 554)</source>
+        <translation>Пожалуйста, введите порт (порт RTSP по умолчанию — 554)</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Stream video over TCP (versus UDP)?</source>
+        <translation>Потоковое видео через TCP (по сравнению с UDP)?</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Keeps the RTP video stream inside of the same TCP socket used for setting up the initial connection verus creating a new UDP video stream. This may help the connection on networks with firewalls.</source>
+        <translation>Сохраняет видеопоток RTP внутри того же TCP-сокета, который используется для настройки исходного соединения, вместо создания нового видеопотока UDP. Это может помочь при подключении к сетям с брандмауэрами.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Play</source>
+        <translation>Играть</translation>
     </message>
     <message>
         <source>Video Files (*.mp4 *.*);;</source>
@@ -10673,13 +10818,13 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <translation type="vanished">Видеофайлы (*.mp4 *.*)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-7836"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3646"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-265"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-219"/>
         <location line="+13"/>
         <location line="+9"/>
         <location line="+116"/>
-        <location line="+134"/>
+        <location line="+215"/>
         <source>Unable to overwrite output file!</source>
         <translation>Не удалось перезаписать выходной файл!</translation>
     </message>
@@ -10698,6 +10843,68 @@ OpenMV IDE is unable to automatically determine when FFMPEG finishes without hid
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67"/>
         <source>PicoTool</source>
         <translation>PicoTool</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+26"/>
+        <location line="+151"/>
+        <location line="+26"/>
+        <location line="+27"/>
+        <location line="+36"/>
+        <location line="+46"/>
+        <location line="+39"/>
+        <location line="+37"/>
+        <location line="+40"/>
+        <location line="+39"/>
+        <location line="+37"/>
+        <location line="+37"/>
+        <location line="+45"/>
+        <location line="+44"/>
+        <location line="+37"/>
+        <location line="+36"/>
+        <location line="+41"/>
+        <location line="+135"/>
+        <location line="+35"/>
+        <location line="+44"/>
+        <location line="+37"/>
+        <location line="+36"/>
+        <source>NXP IMX</source>
+        <translation>NXP IMX</translation>
+    </message>
+    <message>
+        <location line="-853"/>
+        <location line="+26"/>
+        <location line="+676"/>
+        <source>This feature is not supported on this machine!</source>
+        <translation>Эта функция не поддерживается на этом компьютере!</translation>
+    </message>
+    <message>
+        <location line="-650"/>
+        <location line="+36"/>
+        <location line="+46"/>
+        <location line="+39"/>
+        <location line="+37"/>
+        <location line="+40"/>
+        <location line="+39"/>
+        <location line="+37"/>
+        <location line="+37"/>
+        <location line="+45"/>
+        <location line="+44"/>
+        <location line="+37"/>
+        <location line="+36"/>
+        <location line="+211"/>
+        <location line="+44"/>
+        <location line="+37"/>
+        <location line="+36"/>
+        <source>Timeout Error!</source>
+        <translation>Ошибка тайм-аута!</translation>
+    </message>
+    <message>
+        <location line="-467"/>
+        <location line="+44"/>
+        <location line="+284"/>
+        <location line="+44"/>
+        <source>This command takes a while to execute. Please be patient.</source>
+        <translation>Эта команда требует времени для выполнения. Пожалуйста, будьте терпеливы.</translation>
     </message>
 </context>
 <context>

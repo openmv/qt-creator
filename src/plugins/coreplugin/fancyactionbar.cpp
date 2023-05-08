@@ -345,6 +345,7 @@ void FancyToolButton::actionChanged()
 {
     // the default action changed in some way, e.g. it might got hidden
     // since we inherit a tool button we won't get invisible, so do this here
+
     if (QAction* action = defaultAction())
         setVisible(action->isVisible());
 }

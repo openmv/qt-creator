@@ -22,6 +22,9 @@
 #define LAST_CONVERT_VIDEO_HRES "LastConvertVideoHRes"
 #define LAST_CONVERT_VIDEO_SKIP "LastConvertVideoSkip"
 #define LAST_PLAY_VIDEO_PATH "LastPlayVideoPath"
+#define LAST_PLAY_RTSP_URL "LastPlayVideoUrl"
+#define LAST_PLAY_RTSP_PORT "LastPlayVideoPort"
+#define LAST_PLAY_RTSP_TCP "LastPlayVideoTCP"
 #define LAST_SAVE_VIDEO_PATH "LastSaveVideoPath"
 #define LAST_SAVE_VIDEO_HRES "LastSaveVideoHRes"
 #define LAST_SAVE_VIDEO_SKIP "LastSaveVideoSkip"
@@ -32,6 +35,7 @@
 
 void convertVideoFileAction(const QString &drivePath);
 void playVideoFileAction(const QString &drivePath);
+void playRTSPStreamAction();
 void saveVideoFile(const QString &srcPath);
 
 #endif // VIDEOTOOLS_H

@@ -34,6 +34,7 @@
 #include <utils/elidinglabel.h>
 #include <utils/environment.h>
 #include <utils/pathchooser.h>
+#include <utils/proxyaction.h>
 #include <utils/styledbar.h>
 #include <utils/synchronousprocess.h>
 #include <utils/tooltip/tooltip.h>
@@ -87,6 +88,7 @@
 #define MSPLITTER_STATE "MSplitterState"
 #define HSPLITTER_STATE "HSplitterState"
 #define VSPLITTER_STATE "VSplitterState"
+#define AUTO_RECONNECT_STATE "AutoReconnectState"
 #define ZOOM_STATE "ZoomState"
 #define OUTPUT_WINDOW_FONT_ZOOM_STATE "OutputWindowFontZoomState"
 #define JPG_COMPRESS_STATE "JPGCompressState"
@@ -237,16 +239,16 @@ importData_t;
 typedef QList<importData_t> importDataList_t;
 
 QByteArray loadFilter(const QByteArray &data);
-importDataList_t loadFolder(const QString &path);
+importDataList_t loadFolder(const QString &rootPath, const QString &path, bool flat);
 
 class LoadFolderThread: public QObject
 {
     Q_OBJECT
 
-    public: explicit LoadFolderThread(const QString &path) { m_path = path; }
-    public slots: void loadFolderSlot() { emit folderLoaded(loadFolder(m_path)); }
+    public: explicit LoadFolderThread(const QString &path, bool flat) { m_path = path; m_flat = flat; }
+    public slots: void loadFolderSlot() { emit folderLoaded(loadFolder(m_path, m_path, m_flat)); }
     signals: void folderLoaded(const importDataList_t &output);
-    private: QString m_path;
+    private: QString m_path; bool m_flat;
 };
 
 class OpenMVPlugin : public ExtensionSystem::IPlugin
@@ -337,6 +339,8 @@ private:
 
     QAction *m_bootloaderAction;
     QAction *m_eraseAction;
+    QAction *m_autoReconnectAction;
+
     Core::Command *m_openDriveFolderCommand;
     Core::Command *m_configureSettingsCommand;
     Core::Command *m_saveCommand;
@@ -438,6 +442,7 @@ private:
     QRegularExpression m_listRegEx;
     QRegularExpression m_dictionaryRegEx;
     void processDocumentationMatch(const QRegularExpressionMatch &match, QStringList &providerVariables, QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs);
+
     void parseImports(const QString &fileText, const QString &moduleFolder, const QStringList &builtInModules, importDataList_t &targetModules, QStringList &errorModules);
     bool importHelper(const QByteArray &text);
 };
