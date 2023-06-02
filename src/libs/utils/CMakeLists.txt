@@ -269,20 +269,20 @@ extend_qtc_library(Utils
           fsengine/filepathinfocache.h
 )
 
-if (WIN32)
-  add_qtc_executable(qtcreator_process_stub
-    SOURCES process_stub_win.c
-    DEPENDS shell32
-    DEFINES _UNICODE UNICODE _CRT_SECURE_NO_WARNINGS
-  )
+#if (WIN32)
+#  add_qtc_executable(qtcreator_process_stub
+#    SOURCES process_stub_win.c
+#    DEPENDS shell32
+#    DEFINES _UNICODE UNICODE _CRT_SECURE_NO_WARNINGS
+#  )
 
-  add_qtc_executable(qtcreator_ctrlc_stub
-    DEPENDS user32 shell32
-    DEFINES _UNICODE UNICODE _CRT_SECURE_NO_WARNINGS
-    SOURCES
-      process_ctrlc_stub.cpp
-  )
-else()
-  add_qtc_executable(qtcreator_process_stub SOURCES process_stub_unix.c)
-endif()
+#  add_qtc_executable(qtcreator_ctrlc_stub
+#    DEPENDS user32 shell32
+#    DEFINES _UNICODE UNICODE _CRT_SECURE_NO_WARNINGS
+#    SOURCES
+#      process_ctrlc_stub.cpp
+#  )
+#else()
+#  add_qtc_executable(qtcreator_process_stub SOURCES process_stub_unix.c)
+#endif()
 
