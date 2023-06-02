@@ -1,6 +1,6 @@
 set(resource_directories
   fonts
-  package-manager
+  #package-manager
 )
 
 # create install rule for resource directories

@@ -1,5 +1,5 @@
-add_subdirectory(designerintegrationv2)
-add_subdirectory(proparser)
+#add_subdirectory(designerintegrationv2)
+#add_subdirectory(proparser)
 add_subdirectory(qtsingleapplication)
 add_subdirectory(help)
 add_subdirectory(registryaccess)

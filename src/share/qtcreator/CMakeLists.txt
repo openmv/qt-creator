@@ -1,1 +1,1 @@
-add_subdirectory(externaltools)
+#add_subdirectory(externaltools)

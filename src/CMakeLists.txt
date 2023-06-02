@@ -9,7 +9,7 @@ add_subdirectory(share)
 add_subdirectory(shared)
 add_subdirectory(plugins)
 add_subdirectory(app)
-add_subdirectory(tools)
+#add_subdirectory(tools)
 
 install(
   FILES

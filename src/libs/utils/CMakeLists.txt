@@ -278,16 +278,16 @@ extend_qtc_library(Utils
           fsengine/filepathinfocache.h
 )
 
-extend_qtc_library(Utils
-  CONDITION TARGET Nanotrace
-  DEPENDS Nanotrace
-)
+#extend_qtc_library(Utils
+#  CONDITION TARGET Nanotrace
+#  DEPENDS Nanotrace
+#)
 
-if (WIN32)
-  add_qtc_executable(qtcreator_ctrlc_stub
-    DEPENDS user32 shell32
-    DEFINES _UNICODE UNICODE _CRT_SECURE_NO_WARNINGS
-    SOURCES
-      process_ctrlc_stub.cpp
-  )
-endif()
+#if (WIN32)
+#  add_qtc_executable(qtcreator_ctrlc_stub
+#    DEPENDS user32 shell32
+#    DEFINES _UNICODE UNICODE _CRT_SECURE_NO_WARNINGS
+#    SOURCES
+#      process_ctrlc_stub.cpp
+#  )
+#endif()

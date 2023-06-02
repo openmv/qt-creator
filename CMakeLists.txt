@@ -170,15 +170,15 @@ endif()
 
 add_subdirectory(src)
 add_subdirectory(share)
-if (NOT BUILD_DESIGNSTUDIO)
-    add_subdirectory(dist)
-endif()
+# if (NOT BUILD_DESIGNSTUDIO)
+#     add_subdirectory(dist)
+# endif()
 
 if (WITH_TESTS)
   add_subdirectory(tests)
 endif()
 
-add_subdirectory(doc)
+#add_subdirectory(doc)
 
 setup_dependencies_component()
 

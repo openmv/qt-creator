@@ -1,44 +1,45 @@
 set(resource_directories
-  android
-  cplusplus
-  glsl
-  indexer_preincludes
-  jsonschemas
-  lua-plugins
-  modeleditor
-  qmldesigner
-  qmlicons
-  qml-type-descriptions
-  schemes
-  snippets
+  #android
+  #cplusplus
+  #glsl
+  #indexer_preincludes
+  #jsonschemas
+  #lua-plugins
+  #modeleditor
+  #qmldesigner
+  #qmlicons
+  #qml-type-descriptions
+  #schemes
+  #snippets
   styles
-  templates
+  #templates
   themes
 )
 
 set(resource_files
-  debugger/.pylintrc
-  debugger/boosttypes.py
-  debugger/cdbbridge.py
-  debugger/cdbext.pyi
-  debugger/creatortypes.py
-  debugger/dumper.py
-  debugger/gdbbridge.py
-  debugger/gdbtracepoint.py
-  debugger/LICENSE.GPL3-EXCEPT
-  debugger/lldbbridge.py
-  debugger/misctypes.py
-  debugger/opencvtypes.py
-  debugger/pdbbridge.py
-  debugger/personaltypes.py
-  debugger/qttypes.py
-  debugger/README.txt
-  debugger/setup.cfg
-  debugger/android_stdtypes.py
-  debugger/libcpp_stdtypes.py
-  debugger/stdtypes.py
-  debugger/utils.py
-  debugger/loadorder.txt
+  #debugger/.pylintrc
+  #debugger/boosttypes.py
+  #debugger/cdbbridge.py
+  #debugger/cdbext.pyi
+  #debugger/creatortypes.py
+  #debugger/dumper.py
+  #debugger/gdbbridge.py
+  #debugger/gdbtracepoint.py
+  #debugger/LICENSE.GPL3-EXCEPT
+  #debugger/lldbbridge.py
+  #debugger/misctypes.py
+  #debugger/opencvtypes.py
+  #debugger/pdbbridge.py
+  #debugger/personaltypes.py
+  #debugger/qttypes.py
+  #debugger/README.txt
+  #debugger/setup.cfg
+  #debugger/android_stdtypes.py
+  #debugger/libcpp_stdtypes.py
+  #debugger/stdtypes.py
+  #debugger/utils.py
+  #debugger/loadorder.txt
+)
 
   debugger-with-python2/qttypes.py
   debugger-with-python2/personaltypes.py

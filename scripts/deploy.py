@@ -91,7 +91,7 @@ def is_debug(fpath):
     return coredebug.search(output.decode(encoding)) != None
 
 def is_ignored_windows_file(use_debug, basepath, filename):
-    ignore_patterns = ['.lib', '.pdb', '.exp', '.ilk']
+    ignore_patterns = ['.lib', '.pdb', '.exp', '.ilk', '.debug']
     if use_debug:
         ignore_patterns.extend(['libEGL.dll', 'libGLESv2.dll'])
     else:
@@ -204,23 +204,23 @@ Prefix={0}
 Binaries=bin
 Libraries=lib
 Plugins=plugins
-Qml2Imports=qml
 '''
+# Qml2Imports=qml
     if common.is_windows_platform():
         return '''[Paths]
 Prefix={0}
 Binaries=.
 Libraries=.
 Plugins=plugins
-Qml2Imports=qml
 '''
+# Qml2Imports=qml
     return '''[Paths]
 Prefix={0}
 Binaries=MacOS
 Libraries=Frameworks
 Plugins=PlugIns
-Qml2Imports=Imports/qtquick2
 '''
+# Qml2Imports=Imports/qtquick2
 
 
 def add_qt_conf(target_path, qt_prefix_path):
@@ -449,7 +449,7 @@ def get_qt_install_info(qmake_binary):
             QtInstallInfo(bin=qt_install_info['QT_INSTALL_BINS'],
                           lib=qt_install_info['QT_INSTALL_LIBS'],
                           plugins=qt_install_info['QT_INSTALL_PLUGINS'],
-                          qml=qt_install_info['QT_INSTALL_QML'],
+                          qml="",#qt_install_info['QT_INSTALL_QML'],
                           translations=qt_install_info['QT_INSTALL_TRANSLATIONS']))
 
 def main():
