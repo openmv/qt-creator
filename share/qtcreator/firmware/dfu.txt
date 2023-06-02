@@ -1,0 +1,30 @@
+[
+    {
+        "boardType" : "H7",
+        "vidpid" : "2341:035b",
+        "appvidpid" : ["2341:005b", "2341:045b", "2341:035b"],
+        "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
+        "extraProgramCommands" : [
+                {
+                    "addr" : "-a 1 -s 0x90F00000",
+                    "path" : "CYW4343/cyw4343.bin"
+                }
+            ],
+        "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+        "dfuProgramCommand" : "-a 0 -s :leave"
+    },
+    {
+        "boardType" : "NICLAV",
+        "vidpid" : "2341:035f",
+        "appvidpid" : ["2341:045f", "2341:035f"],
+        "eraseCommands" : ["-a 1 -s 0x90000000"],
+        "extraProgramCommands" : [
+                {
+                    "addr" : "-a 1 -s 0x90F00000",
+                    "path" : "CYW4343/cyw4343.bin"
+                }
+            ],
+        "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+        "dfuProgramCommand" : "-a 0 -s :leave"
+    }
+]
