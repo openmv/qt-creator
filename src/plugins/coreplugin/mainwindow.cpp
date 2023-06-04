@@ -135,6 +135,9 @@ MainWindow::MainWindow()
     , m_systemEditor(new SystemEditor)
     , m_toggleLeftSideBarButton(new QToolButton)
     , m_toggleRightSideBarButton(new QToolButton)
+    //OPENMV-DIFF//
+    , m_disableShow(0)
+    //OPENMV-DIFF//
 {
     (void) new DocumentManager(this);
 
@@ -1580,7 +1583,11 @@ void MainWindow::restoreWindowState()
         resize(1260, 700); // size without window decoration
     restoreState(settings->value(QLatin1String(windowStateKey)).toByteArray());
     settings->endGroup();
-    show();
+    //OPENMV-DIFF//
+    //show();
+    //OPENMV-DIFF//
+    if(!m_disableShow) show();
+    //OPENMV-DIFF//
     StatusBarManager::restoreSettings();
 }
 

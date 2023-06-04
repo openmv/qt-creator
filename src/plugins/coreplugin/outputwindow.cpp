@@ -28,6 +28,17 @@
 #include <QTextBlock>
 #include <QTimer>
 
+//OPENMV-DIFF//
+#include <utils/fadingindicator.h>
+#include <utils/fileutils.h>
+#include <extensionsystem/pluginmanager.h>
+#include <QApplication>
+#include <QRegularExpression>
+#include <QSettings>
+#include <QFileDialog>
+#include <QMessageBox>
+//OPENMV-DIFF//
+
 #ifdef WITH_TESTS
 #include <QtTest>
 #endif
@@ -71,6 +82,9 @@ public:
     QTimer scrollTimer;
     QElapsedTimer lastMessage;
     QHash<unsigned int, QPair<int, int>> taskPositions;
+    //OPENMV-DIFF//
+    int tabWidth = 4;
+    //OPENMV-DIFF//
 };
 
 } // namespace Internal
@@ -270,6 +284,9 @@ void OutputWindow::wheelEvent(QWheelEvent *e)
 
             zoomInF(delta);
             emit wheelZoom();
+            //OPENMV-DIFF//
+            Utils::FadingIndicator::showText(this, Tr::tr("Zoom: %1%").arg(int(100 * (font().pointSizeF() / d->originalFontSize))), Utils::FadingIndicator::SmallText);
+            //OPENMV-DIFF//
             return;
         }
     }
@@ -618,6 +635,54 @@ void OutputWindow::setWordWrapEnabled(bool wrap)
     else
         setWordWrapMode(QTextOption::NoWrap);
 }
+
+//OPENMV-DIFF//
+static const char settingsGroup[] = "OutputWindow";
+static const char saveLogFilePath[] = "SaveLogFilePath";
+
+void OutputWindow::save()
+{
+    QSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->beginGroup(QLatin1String(settingsGroup));
+
+    QString path =
+        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Log"),
+            settings->value(QLatin1String(saveLogFilePath), QDir::homePath()).toString(),
+            tr("Text Files (*.txt);;All files (*)"));
+
+    if(!path.isEmpty())
+    {
+        Utils::FileSaver file(Utils::FilePath::fromString(path));
+
+        if(!file.hasError())
+        {
+            if((!file.write(toPlainText().toUtf8())) || (!file.finalize()))
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    tr("Save Log"),
+                    tr("Error: %L1!").arg(file.errorString()));
+            }
+            else
+            {
+                settings->setValue(QLatin1String(saveLogFilePath), path);
+            }
+        }
+        else
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                tr("Save Log"),
+                tr("Error: %L1!").arg(file.errorString()));
+        }
+    }
+
+    settings->endGroup();
+}
+
+void OutputWindow::setTabSettings(int tabWidth)
+{
+    d->tabWidth = tabWidth;
+}
+//OPENMV-DIFF//
 
 #ifdef WITH_TESTS
 

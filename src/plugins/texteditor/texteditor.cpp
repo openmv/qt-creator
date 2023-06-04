@@ -5831,6 +5831,9 @@ void TextEditorWidget::showDefaultContextMenu(QContextMenuEvent *e, Id menuConte
     if (menuContextId.isValid())
         appendMenuActionsFromContext(&menu, menuContextId);
     appendStandardContextMenuActions(&menu);
+    // OPENMV-DIFF //
+    emit contextMenuEventCB(&menu, selectedText());
+    // OPENMV-DIFF //
     menu.exec(e->globalPos());
 }
 

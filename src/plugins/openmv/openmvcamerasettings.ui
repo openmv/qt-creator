@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OpenMVCameraSettings</class>
+ <widget class="QDialog" name="OpenMVCameraSettings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>343</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OpenMV Cam Settings</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="layout">
+   <item>
+    <widget class="QGroupBox" name="wifiSettingsBox">
+     <property name="title">
+      <string>Turn on WiFi Shield on startup</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <layout class="QVBoxLayout" name="wifiSettingsLayout">
+      <item>
+       <widget class="QRadioButton" name="clientModeButton">
+        <property name="text">
+         <string>Client Mode (Normal)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="clientModeWidget" native="true">
+        <layout class="QGridLayout" name="clientModeWidgetLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="1" column="0">
+          <widget class="QLabel" name="clientModePasswordLabel">
+           <property name="text">
+            <string>Password</string>
+           </property>
+           <property name="buddy">
+            <cstring>clientModePasswordEntry</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="clientModePasswordEntry">
+           <property name="maxLength">
+            <number>64</number>
+           </property>
+           <property name="placeholderText">
+            <string>Please enter your WiFi network password here</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="clientModeTypeLabel">
+           <property name="text">
+            <string>Type</string>
+           </property>
+           <property name="buddy">
+            <cstring>clientModeTypeEntry</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="clientModeTypeEntry">
+           <item>
+            <property name="text">
+             <string>Open (No password)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>WPA (Modern WiFi Security)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>WEP (Hexadecimal password)</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="clientModeSSIDLabel">
+           <property name="text">
+            <string>SSID</string>
+           </property>
+           <property name="buddy">
+            <cstring>clientModeSSIDEntry</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="clientModeSSIDEntry">
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+           <property name="currentText">
+            <string>Please enter or select your WiFi network here</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="accessPointModeButton">
+        <property name="text">
+         <string>Acess Point Mode</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="accessPointModeWidget" native="true">
+        <layout class="QGridLayout" name="accessPointModeWidgetLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="accessPointModeSSIDLabel">
+           <property name="text">
+            <string>SSID</string>
+           </property>
+           <property name="buddy">
+            <cstring>accessPointModeSSIDEntry</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="accessPointModePasswordEntry">
+           <property name="maxLength">
+            <number>64</number>
+           </property>
+           <property name="placeholderText">
+            <string>Please enter the name of the WiFi network to create password here</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="accessPointModePasswordLabel">
+           <property name="text">
+            <string>Password</string>
+           </property>
+           <property name="buddy">
+            <cstring>accessPointModePasswordEntry</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="accessPointModeSSIDEntry">
+           <property name="maxLength">
+            <number>32</number>
+           </property>
+           <property name="placeholderText">
+            <string>Please enter the name of the WiFI network to create here</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="accessPointModeTypeLabel">
+           <property name="text">
+            <string>Type</string>
+           </property>
+           <property name="buddy">
+            <cstring>accessPointModeTypeEntry</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="accessPointModeTypeEntry">
+           <item>
+            <property name="text">
+             <string>Open (No password)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>WEP (Hexadecimal password)</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="boardWidget" native="true">
+        <layout class="QHBoxLayout" name="boardWidgetLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="boardNameLabel">
+           <property name="text">
+            <string>Board Name</string>
+           </property>
+           <property name="buddy">
+            <cstring>boardNameEntry</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="boardNameEntry">
+           <property name="maxLength">
+            <number>32</number>
+           </property>
+           <property name="placeholderText">
+            <string>Please enter a name for your OpenMV Cam here</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="replBox">
+     <property name="text">
+      <string>Duplicate REPL on the UART on startup</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="closeBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>wifiSettingsBox</tabstop>
+  <tabstop>clientModeButton</tabstop>
+  <tabstop>clientModeSSIDEntry</tabstop>
+  <tabstop>clientModePasswordEntry</tabstop>
+  <tabstop>clientModeTypeEntry</tabstop>
+  <tabstop>accessPointModeButton</tabstop>
+  <tabstop>accessPointModeSSIDEntry</tabstop>
+  <tabstop>accessPointModePasswordEntry</tabstop>
+  <tabstop>accessPointModeTypeEntry</tabstop>
+  <tabstop>boardNameEntry</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>closeBox</sender>
+   <signal>accepted()</signal>
+   <receiver>OpenMVCameraSettings</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>275</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closeBox</sender>
+   <signal>rejected()</signal>
+   <receiver>OpenMVCameraSettings</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>343</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

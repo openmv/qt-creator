@@ -14,6 +14,10 @@
 
 #include <vector>
 
+// OPENMV-DIFF //
+#include "ksyntaxhighlighting_export.h"
+// OPENMV-DIFF //
+
 QT_BEGIN_NAMESPACE
 class QXmlStreamReader;
 QT_END_NAMESPACE
@@ -23,7 +27,11 @@ namespace KSyntaxHighlighting
 class Repository;
 class DefinitionData;
 
-class KeywordList
+// OPENMV-DIFF //
+// class KeywordList
+// OPENMV-DIFF //
+class KSYNTAXHIGHLIGHTING_EXPORT KeywordList
+// OPENMV-DIFF //
 {
 public:
     KeywordList() = default;
@@ -70,6 +78,13 @@ public:
     void setCaseSensitivity(Qt::CaseSensitivity caseSensitive);
     void initLookupForCaseSensitivity(Qt::CaseSensitivity caseSensitive);
     void resolveIncludeKeywords(DefinitionData &def);
+
+    // OPENMV-DIFF //
+    void addKeyword(const QString &keyword)
+    {
+        m_keywords.append(keyword);
+    }
+    // OPENMV-DIFF //
 
 private:
     /**

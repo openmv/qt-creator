@@ -18,6 +18,10 @@
 
 #include <vector>
 
+// OPENMV-DIFF //
+#include "ksyntaxhighlighting_export.h"
+// OPENMV-DIFF //
+
 QT_BEGIN_NAMESPACE
 class QCborMap;
 class QXmlStreamReader;
@@ -27,7 +31,11 @@ namespace KSyntaxHighlighting
 {
 class Repository;
 
-class DefinitionData
+// OPENMV-DIFF //
+// class DefinitionData
+// OPENMV-DIFF //
+class KSYNTAXHIGHLIGHTING_EXPORT DefinitionData
+// OPENMV-DIFF //
 {
 public:
     DefinitionData();

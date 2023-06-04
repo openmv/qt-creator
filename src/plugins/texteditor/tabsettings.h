@@ -71,6 +71,7 @@ public:
 
     TabPolicy m_tabPolicy = SpacesOnlyTabPolicy;
     int m_tabSize = 8;
+    int m_serialTerminalTabSize = 4;
     int m_indentSize = 4;
     ContinuationAlignBehavior m_continuationAlignBehavior = ContinuationAlignWithSpaces;
 

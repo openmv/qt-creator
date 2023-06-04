@@ -12,6 +12,10 @@
 #include <QThread>
 #include <QTime>
 
+//OPENMV-DIFF//
+#include "outputwindow.h"
+//OPENMV-DIFF//
+
 /*!
     \class Core::MessageManager
     \inheaderfile coreplugin/messagemanager.h
@@ -192,5 +196,38 @@ void MessageManager::writeDisrupting(const QStringList &messages)
 {
     writeDisrupting(messages.join('\n'));
 }
+
+//OPENMV-DIFF//
+OutputWindow *MessageManager::outputWindow()
+{
+    if (!m_messageOutputWindow)
+        return nullptr;
+    return m_messageOutputWindow->m_widget;
+}
+void MessageManager::printData(const QByteArray &data)
+{
+    if (!m_messageOutputWindow)
+        return;
+    m_messageOutputWindow->append(QString::fromUtf8(data));
+}
+void MessageManager::grayOutOldContent()
+{
+    if (!m_messageOutputWindow)
+        return;
+    m_messageOutputWindow->m_widget->grayOutOldContent();
+}
+void MessageManager::popup()
+{
+    if (!m_messageOutputWindow)
+        return;
+    m_messageOutputWindow->popup(IOutputPane::NoModeSwitch);
+}
+void MessageManager::flash()
+{
+    if (!m_messageOutputWindow)
+        return;
+    m_messageOutputWindow->flash();
+}
+//OPENMV-DIFF//
 
 } // namespace Core

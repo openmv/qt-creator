@@ -485,7 +485,9 @@ signals:
     void requestRename(const QTextCursor &cursor);
     void optionalActionMaskChanged();
     void toolbarOutlineChanged(QWidget *newOutline);
-
+    // OPENMV-DIFF //
+    void contextMenuEventCB(QMenu *menu, QString text);
+    // OPENMV-DIFF //
 protected:
     QTextBlock blockForVisibleRow(int row) const;
     QTextBlock blockForVerticalOffset(int offset) const;

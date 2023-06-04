@@ -66,8 +66,16 @@ public:
             bool regexp,
             bool isInverted);
 
+    //OPENMV-DIFF//
+    void save();
+    void setTabSettings(int tabWidth);
+    //OPENMV-DIFF//
+
 signals:
     void wheelZoom();
+    //OPENMV-DIFF//
+    void writeBytes(const QByteArray &data);
+    //OPENMV-DIFF//
 
 public slots:
     void setWordWrapEnabled(bool wrap);
