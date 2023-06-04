@@ -5,6 +5,10 @@
 
 #include <QToolButton>
 
+// OPENMV-DIFF //
+#include "core_global.h"
+// OPENMV-DIFF //
+
 QT_BEGIN_NAMESPACE
 class QVBoxLayout;
 QT_END_NAMESPACE
@@ -12,7 +16,11 @@ QT_END_NAMESPACE
 namespace Core {
 namespace Internal {
 
-class FancyToolButton : public QToolButton
+// OPENMV-DIFF //
+// class FancyToolButton : public QToolButton
+// OPENMV-DIFF //
+class CORE_EXPORT FancyToolButton : public QToolButton
+// OPENMV-DIFF //
 {
     Q_OBJECT
 
@@ -44,7 +52,11 @@ private:
     bool m_iconsOnly = false;
 };
 
-class FancyActionBar : public QWidget
+// OPENMV-DIFF //
+// class FancyActionBar : public QWidget
+// OPENMV-DIFF //
+class CORE_EXPORT FancyActionBar : public QWidget
+// OPENMV-DIFF //
 {
     Q_OBJECT
 

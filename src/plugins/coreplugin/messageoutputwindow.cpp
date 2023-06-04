@@ -13,6 +13,12 @@
 #include <QFont>
 #include <QToolButton>
 
+//OPENMV-DIFF//
+#include <coreplugin/coreicons.h>
+#include <coreplugin/actionmanager/actionmanager.h>
+#include <coreplugin/actionmanager/command.h>
+//OPENMV-DIFF//
+
 namespace Core {
 namespace Internal {
 
@@ -36,6 +42,18 @@ MessageOutputWindow::MessageOutputWindow()
     setupFilterUi("MessageOutputPane.Filter");
     setFilteringEnabled(true);
     setupContext(Constants::C_GENERAL_OUTPUT_PANE, m_widget);
+
+    //OPENMV-DIFF//
+    m_widget->setWordWrapEnabled(false);
+    m_saveButton = new QToolButton(m_widget);
+    m_saveButton->setAutoRaise(true);
+    m_saveAction = new QAction(Tr::tr("Save"), this);
+    m_saveAction->setIcon(Utils::Icons::SAVEFILE_TOOLBAR.icon());
+    Command *cmd = ActionManager::registerAction(m_saveAction, "Core.MessageOutputWindow.Save");
+    cmd->setAttribute(Command::CA_UpdateText);
+    m_saveButton->setDefaultAction(cmd->action());
+    connect(m_saveAction, &QAction::triggered, m_widget, &OutputWindow::save);
+    //OPENMV-DIFF//
 }
 
 MessageOutputWindow::~MessageOutputWindow()
@@ -69,9 +87,26 @@ QWidget *MessageOutputWindow::outputWidget(QWidget *parent)
     return m_widget;
 }
 
+QString MessageOutputWindow::displayName() const
+{
+    //OPENMV-DIFF//
+    //return Tr::tr("General Messages");
+    //OPENMV-DIFF//
+    return Tr::tr("Serial Terminal");
+    //OPENMV-DIFF//
+}
+
 void MessageOutputWindow::append(const QString &text)
 {
     m_widget->appendMessage(text, Utils::GeneralMessageFormat);
+}
+
+int MessageOutputWindow::priorityInStatusBar() const
+{
+    //OPENMV-DIFF//
+    //return -1;
+    //OPENMV-DIFF//
+    return 1;
 }
 
 bool MessageOutputWindow::canNext() const
@@ -104,6 +139,13 @@ void MessageOutputWindow::updateFilter()
     m_widget->updateFilterProperties(filterText(), filterCaseSensitivity(), filterUsesRegexp(),
                                      filterIsInverted());
 }
+
+//OPENMV-DIFF//
+QList<QWidget*> MessageOutputWindow::toolBarWidgets() const
+{
+    return QList<QWidget*>() << m_saveButton;
+}
+//OPENMV-DIFF//
 
 } // namespace Internal
 } // namespace Core

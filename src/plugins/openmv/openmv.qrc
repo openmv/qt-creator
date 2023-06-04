@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/openmv">
+        <file>../../../../openmv-media/icons/openmv-icon/openmv.png</file>
+        <file>../../../../openmv-media/splash/openmv-splash-slate/splash-small.png</file>
+        <file>images/connect.png</file>
+        <file>images/connect-usb.png</file>
+        <file>images/connect-wifi.png</file>
+        <file>images/connect-usb-wifi.png</file>
+        <file>images/connect-usb-wifi.xcf</file>
+        <file>images/disconnect.png</file>
+        <file>../projectexplorer/images/run.png</file>
+        <file>images/application-exit.png</file>
+        <file>images/filesave.png</file>
+        <file>images/branch-closed.png</file>
+        <file>images/branch-open.png</file>
+        <file>images/new-folder.png</file>
+        <file>images/snapshot.png</file>
+        <file>images/arduino-partnership.png</file>
+        <file>images/edge-impulse-partnership.png</file>
+    </qresource>
+</RCC>

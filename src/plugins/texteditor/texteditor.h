@@ -543,6 +543,9 @@ signals:
     void addSavedStateToNavigationHistory();
     void addCurrentStateToNavigationHistory();
 
+    // OPENMV-DIFF //
+    void contextMenuEventCB(QMenu *menu, QString text);
+    // OPENMV-DIFF //
 protected:
     QTextBlock blockForVisibleRow(int row) const;
     QTextBlock blockForVerticalOffset(int offset) const;

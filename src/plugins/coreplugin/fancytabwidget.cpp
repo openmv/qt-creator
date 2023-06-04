@@ -448,45 +448,180 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     : QWidget(parent)
 {
     m_tabBar = new FancyTabBar(this);
+    // OPENMV-DIFF //
+    m_tabBar->hide();
+    // OPENMV-DIFF //
     m_tabBar->setObjectName("ModeSelector"); // used for UI introduction
 
     auto bar = new StyledBar;
-    auto fancyButton = new FancyColorButton;
-    connect(fancyButton, &FancyColorButton::clicked, this, &FancyTabWidget::topAreaClicked);
+    auto layout = new QHBoxLayout(bar);
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setSpacing(0);
+    auto fancyButton = new FancyColorButton(this);
+    // OPENMV-DIFF //
+    // connect(fancyButton, &FancyColorButton::clicked, this, &FancyTabWidget::topAreaClicked);
+    // OPENMV-DIFF //
+    layout->addWidget(fancyButton);
+    selectionLayout->addWidget(bar);
+
+    selectionLayout->addWidget(m_tabBar);
+    selectionLayout->addStretch(1);
+    m_selectionWidget->setLayout(selectionLayout);
+    m_selectionWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
+
+    m_cornerWidgetContainer = new QWidget(this);
+    m_cornerWidgetContainer->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
+    m_cornerWidgetContainer->setAutoFillBackground(false);
+
+    auto cornerWidgetLayout = new QVBoxLayout;
+    cornerWidgetLayout->setSpacing(0);
+    cornerWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    // OPENMV-DIFF //
+    // cornerWidgetLayout->addStretch();
+    // OPENMV-DIFF //
+    m_cornerWidgetContainer->setLayout(cornerWidgetLayout);
+
+    selectionLayout->addWidget(m_cornerWidgetContainer, 0);
 
     m_modesStack = new QStackedLayout;
     m_statusBar = new QStatusBar;
     m_statusBar->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Fixed);
 
-    QVBoxLayout *vlayout;
+    // QVBoxLayout *vlayout;
 
-    using namespace Layouting;
-    Row { fancyButton, noMargin }.attachTo(bar);
-    Row {
-        Widget {
-            bindTo(&m_selectionWidget),
-            Column {
-                bar,
-                m_tabBar,
-                st,
-                Widget {
-                    bindTo(&m_cornerWidgetContainer),
-                    Column { st, spacing(0), noMargin },
-                },
-                spacing(0), noMargin,
-            },
-        },
-        Column { bindTo(&vlayout), m_modesStack, m_statusBar, spacing(0) },
-        spacing(1), noMargin,
-    }.attachTo(this);
+    // using namespace Layouting;
+    // Row { fancyButton, noMargin }.attachTo(bar);
+    // Row {
+    //     Widget {
+    //         bindTo(&m_selectionWidget),
+    //         Column {
+    //             bar,
+    //             m_tabBar,
+    //             st,
+    //             Widget {
+    //                 bindTo(&m_cornerWidgetContainer),
+    //                 Column { st, spacing(0), noMargin },
+    //             },
+    //             spacing(0), noMargin,
+    //         },
+    //     },
+    //     Column { bindTo(&vlayout), m_modesStack, m_statusBar, spacing(0) },
+    //     spacing(1), noMargin,
+    // }.attachTo(this);
 
-    m_selectionWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
+    // m_selectionWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
 
-    m_cornerWidgetContainer->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
-    m_cornerWidgetContainer->setAutoFillBackground(false);
+    // m_cornerWidgetContainer->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
+    // m_cornerWidgetContainer->setAutoFillBackground(false);
+
+    auto vlayout = new QVBoxLayout;
+    vlayout->setContentsMargins(0, 0, 0, 0);
+    vlayout->setSpacing(0);
+    // OPENMV-DIFF //
+    // vlayout->addLayout(m_modesStack);
+    // OPENMV-DIFF //
+    vlayout->addWidget(m_statusBar);
 
     m_infoBarDisplay.setTarget(vlayout, 1);
     m_infoBarDisplay.setEdge(Qt::BottomEdge);
+
+    auto mainLayout = new QHBoxLayout;
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setSpacing(1);
+    mainLayout->addWidget(m_selectionWidget);
+    // OPENMV-DIFF //
+    {
+        m_msplitter = new MiniSplitter;
+        m_hsplitter = new MiniSplitter;
+        m_vsplitter = new MiniSplitter(Qt::Vertical);
+
+        QWidget *tempWidget = new QWidget;
+        tempWidget->setLayout(m_modesStack);
+        m_hsplitter->insertWidget(0, tempWidget);
+
+        QWidget *tempWidget2 = new QWidget;
+        QVBoxLayout *tempLayout2 = new QVBoxLayout;
+        tempLayout2->setContentsMargins(0, 0, 0, 0);
+        tempLayout2->setSpacing(0);
+
+        Utils::StyledBar *topBar = new Utils::StyledBar;
+        topBar->setSingleRow(true);
+        QHBoxLayout *topBarLayout = new QHBoxLayout;
+        topBarLayout->setContentsMargins(0, 0, 0, 0);
+        topBarLayout->setSpacing(0);
+        m_topDrawer = new QToolButton;
+        m_topDrawer->setArrowType(Qt::DownArrow);
+        m_topDrawer->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
+        topBarLayout->addWidget(m_topDrawer);
+        topBar->setLayout(topBarLayout);
+        tempLayout2->addWidget(topBar);
+
+        tempLayout2->addWidget(m_vsplitter);
+
+        Utils::StyledBar *bottomBar = new Utils::StyledBar;
+        bottomBar->setSingleRow(true);
+        QHBoxLayout *bottomBarLayout = new QHBoxLayout;
+        bottomBarLayout->setContentsMargins(0, 0, 0, 0);
+        bottomBarLayout->setSpacing(0);
+        m_bottomDrawer = new QToolButton;
+        m_bottomDrawer->setArrowType(Qt::UpArrow);
+        m_bottomDrawer->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
+        bottomBarLayout->addWidget(m_bottomDrawer);
+        bottomBar->setLayout(bottomBarLayout);
+        tempLayout2->addWidget(bottomBar);
+
+        tempWidget2->setLayout(tempLayout2);
+        m_hsplitter->insertWidget(1, tempWidget2);
+
+        m_hsplitter->setStretchFactor(0, 1);
+        m_hsplitter->setStretchFactor(1, 0);
+        m_hsplitter->setCollapsible(0, true);
+        m_hsplitter->setCollapsible(1, true);
+
+        QWidget *tempWidget3 = new QWidget;
+        QHBoxLayout *tempLayout3 = new QHBoxLayout;
+        tempLayout3->setContentsMargins(0, 0, 0, 0);
+        tempLayout3->setSpacing(0);
+
+        Utils::StyledBar *leftBar = new Utils::StyledBar;
+        leftBar->setSingleRow(false);
+        QVBoxLayout *leftBarLayout = new QVBoxLayout;
+        leftBarLayout->setContentsMargins(0, 0, 0, 0);
+        leftBarLayout->setSpacing(0);
+        m_leftDrawer = new QToolButton;
+        m_leftDrawer->setArrowType(Qt::RightArrow);
+        m_leftDrawer->setMinimumHeight(160);
+        leftBarLayout->addSpacing(22);
+        leftBarLayout->addWidget(m_leftDrawer);
+        leftBarLayout->addSpacing(160);
+        leftBar->setLayout(leftBarLayout);
+        tempLayout3->addWidget(leftBar);
+
+        tempLayout3->addWidget(m_hsplitter);
+
+        Utils::StyledBar *rightBar = new Utils::StyledBar;
+        rightBar->setSingleRow(false);
+        QVBoxLayout *rightBarLayout = new QVBoxLayout;
+        rightBarLayout->setContentsMargins(0, 0, 0, 0);
+        rightBarLayout->setSpacing(0);
+        m_rightDrawer = new QToolButton;
+        m_rightDrawer->setArrowType(Qt::LeftArrow);
+        m_rightDrawer->setMinimumHeight(160);
+        rightBarLayout->addSpacing(22);
+        rightBarLayout->addWidget(m_rightDrawer);
+        rightBarLayout->addSpacing(160);
+        rightBar->setLayout(rightBarLayout);
+        tempLayout3->addWidget(rightBar);
+
+        tempWidget3->setLayout(tempLayout3);
+        m_msplitter->insertWidget(0, tempWidget3);
+        m_msplitter->setStretchFactor(0, 1);
+        m_msplitter->setCollapsible(0, false);
+        vlayout->insertWidget(0, m_msplitter);
+    }
+    // OPENMV-DIFF //
+    mainLayout->addLayout(vlayout);
+    setLayout(mainLayout);
 
     connect(m_tabBar, &FancyTabBar::currentAboutToChange, this, &FancyTabWidget::currentAboutToShow);
     connect(m_tabBar, &FancyTabBar::currentChanged, this, &FancyTabWidget::showWidget);

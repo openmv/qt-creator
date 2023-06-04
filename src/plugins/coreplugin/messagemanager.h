@@ -7,6 +7,10 @@
 
 #include <QStringList>
 
+//OPENMV-DIFF//
+#include "messageoutputwindow.h"
+//OPENMV-DIFF//
+
 QT_BEGIN_NAMESPACE
 class QFont;
 QT_END_NAMESPACE
@@ -26,5 +30,30 @@ CORE_EXPORT void writeDisrupting(const QStringList &messages);
 
 void init();
 void destroy();
+
+    static void writeSilently(const QString &message);
+    static void writeFlashing(const QString &message);
+    static void writeDisrupting(const QString &message);
+
+    static void writeSilently(const QStringList &messages);
+    static void writeFlashing(const QStringList &messages);
+    static void writeDisrupting(const QStringList &messages);
+
+    //OPENMV-DIFF//
+    static OutputWindow *outputWindow();
+public slots:
+    static void printData(const QByteArray &data);
+    static void grayOutOldContent();
+    static void popup();
+    static void flash();
+    //OPENMV-DIFF//
+
+private:
+    MessageManager();
+    ~MessageManager() override;
+
+    static void init();
+    friend class Core::Internal::MainWindow;
+};
 
 } // namespace Core::MessageManager
