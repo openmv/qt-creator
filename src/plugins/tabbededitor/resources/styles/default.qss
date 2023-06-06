@@ -70,3 +70,7 @@ QTabBar QToolButton:hover {
     border-top: none;
     border-right: none;
 }
+
+/* OPENMV-DIFF */
+QTabBar::scroller {width: 30px;}
+/* OPENMV-DIFF */
