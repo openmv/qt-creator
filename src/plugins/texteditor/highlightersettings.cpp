@@ -71,7 +71,11 @@ void HighlighterSettings::assignDefaultIgnoredPatterns()
 
 void HighlighterSettings::assignDefaultDefinitionsPath()
 {
-    const FilePath path = Core::ICore::userResourcePath("generic-highlighter");
+    // OPENMV-DIFF //
+    // const FilePath path = Core::ICore::userResourcePath("generic-highlighter");
+    // OPENMV-DIFF //
+    const FilePath path = Core::ICore::resourcePath("generic-highlighter");
+    // OPENMV-DIFF //
     if (path.exists() || path.ensureWritableDir())
         m_definitionFilesPath = path;
 }

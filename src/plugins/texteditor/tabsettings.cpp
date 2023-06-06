@@ -15,6 +15,9 @@ static const char autoSpacesForTabsKey[] = "AutoSpacesForTabs";
 static const char tabSizeKey[] = "TabSize";
 static const char indentSizeKey[] = "IndentSize";
 static const char paddingModeKey[] = "PaddingMode";
+// OPENMV-DIFF //
+static const char serialTerminalTabSizeKey[] = "SerialTerminalTabSize";
+// OPENMV-DIFF //
 
 using namespace Utils;
 
@@ -28,6 +31,9 @@ TabSettings::TabSettings(TabSettings::TabPolicy tabPolicy,
     , m_tabSize(tabSize)
     , m_indentSize(indentSize)
     , m_continuationAlignBehavior(continuationAlignBehavior)
+    // OPENMV-DIFF //
+    , m_serialTerminalTabSize(8)
+    // OPENMV-DIFF //
 {
 }
 
@@ -39,6 +45,9 @@ Store TabSettings::toMap() const
         {tabSizeKey, m_tabSize},
         {indentSizeKey, m_indentSize},
         {paddingModeKey, m_continuationAlignBehavior}
+        // OPENMV-DIFF //
+        , {serialTerminalTabSizeKey, m_serialTerminalTabSize}
+        // OPENMV-DIFF //
     };
 }
 
@@ -51,6 +60,9 @@ void TabSettings::fromMap(const Store &map)
     m_indentSize = map.value(indentSizeKey, m_indentSize).toInt();
     m_continuationAlignBehavior = (ContinuationAlignBehavior)
         map.value(paddingModeKey, m_continuationAlignBehavior).toInt();
+    // OPENMV-DIFF //
+    m_serialTerminalTabSize = map.value(serialTerminalTabSizeKey, m_serialTerminalTabSize).toInt();
+    // OPENMV-DIFF //
 }
 
 bool TabSettings::cursorIsAtBeginningOfLine(const QTextCursor &cursor)
@@ -347,6 +359,9 @@ bool TabSettings::equals(const TabSettings &ts) const
     return m_tabPolicy == ts.m_tabPolicy
         && m_tabSize == ts.m_tabSize
         && m_indentSize == ts.m_indentSize
+        // OPENMV-DIFF //
+        && m_serialTerminalTabSize == ts.m_serialTerminalTabSize
+        // OPENMV-DIFF //
         && m_continuationAlignBehavior == ts.m_continuationAlignBehavior;
 }
 

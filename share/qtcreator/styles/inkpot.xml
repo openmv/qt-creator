@@ -19,7 +19,11 @@
   <style name="Doxygen.Comment" foreground="#737dd5"/>
   <style name="Doxygen.Tag" foreground="#4e5ab3"/>
   <style name="Field" bold="true"/>
-  <style name="Function"/>
+  <!--OPENMV-DIFF-->
+  <!--<style name="Function"/>-->
+  <!--OPENMV-DIFF-->
+  <style name="Function" foreground="#ff8bff"/>
+  <!--OPENMV-DIFF-->
   <style name="Macro"/>
   <style name="Global"/>
   <style name="Keyword" foreground="#808bed"/>
@@ -45,7 +49,11 @@
   <style name="SearchResultAlt1" foreground="#000000" background="#6464ff"/>
   <style name="SearchResultAlt2" foreground="#000000" background="#ff6464"/>
   <style name="SearchResultContainingFunction" foreground="#cfbfad" background="#1e1e27"/>
-  <style name="SearchScope" foreground="#000000" background="#f8fafc"/>
+  <!--OPENMV-DIFF-->
+  <!--<style name="SearchScope" foreground="#000000" background="#f8fafc"/>-->
+  <!--OPENMV-DIFF-->
+  <style name="SearchScope" foreground="#f8fafc" background="#1e1e27"/>
+  <!--OPENMV-DIFF-->
   <style name="Selection" foreground="#ffffff" background="#4e4e8f"/>
   <style name="Static" foreground="#cb6ecb"/>
   <style name="String" foreground="#ffcd8b" background="#404040"/>

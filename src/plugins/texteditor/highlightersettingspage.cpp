@@ -149,7 +149,11 @@ public:
 // HighlighterSettingsPage
 
 HighlighterSettingsPage::HighlighterSettingsPage()
-    : d(new HighlighterSettingsPagePrivate)
+    // OPENMV-DIFF //
+    // : d(new HighlighterSettingsPagePrivate)
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(nullptr, false), d(new HighlighterSettingsPagePrivate)
+    // OPENMV-DIFF //
 {
     setId(Constants::TEXT_EDITOR_HIGHLIGHTER_SETTINGS);
     setDisplayName(Tr::tr("Generic Highlighter"));

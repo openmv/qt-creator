@@ -313,8 +313,10 @@ MimeTypeSettingsPrivate::MimeTypeSettingsPrivate()
     m_filterModel->setSourceModel(m_model);
     m_filterModel->setFilterKeyColumn(-1);
     m_filterModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
-    connect(ICore::instance(), &ICore::saveSettingsRequested,
-            this, &MimeTypeSettingsPrivate::writeUserModifiedMimeTypes);
+    // OPENMV-DIFF //
+    // connect(ICore::instance(), &ICore::saveSettingsRequested,
+    //         this, &MimeTypeSettingsPrivate::writeUserModifiedMimeTypes);
+    // OPENMV-DIFF //
 }
 
 MimeTypeSettingsPrivate::~MimeTypeSettingsPrivate() = default;
@@ -768,7 +770,12 @@ void MimeTypeSettingsPrivate::applyUserModifiedMimeTypes(const UserMimeTypeHash 
 // MimeTypeSettingsPage
 
 MimeTypeSettings::MimeTypeSettings()
-    : d(new MimeTypeSettingsPrivate)
+    // OPENMV-DIFF //
+    // : d(new MimeTypeSettingsPrivate)
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(nullptr, false)
+    , d(new MimeTypeSettingsPrivate)
+    // OPENMV-DIFF //
 {
     setId(Constants::SETTINGS_ID_MIMETYPES);
     setDisplayName(Tr::tr("MIME Types"));

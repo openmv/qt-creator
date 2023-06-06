@@ -305,6 +305,9 @@ const CompletionSettings &CompletionSettingsPage::completionSettings() const
 
 
 CompletionSettingsPage::CompletionSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(nullptr, false)
+    // OPENMV-DIFF //
 {
     setId("P.Completion");
     setDisplayName(Tr::tr("Completion"));

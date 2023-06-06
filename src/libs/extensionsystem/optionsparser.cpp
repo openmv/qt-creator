@@ -54,17 +54,19 @@ bool OptionsParser::parse()
             break;
         if (checkForEndOfOptions())
             break;
-        if (checkForLoadOption())
-            continue;
-        if (checkForNoLoadOption())
-            continue;
-        if (checkForProfilingOption())
-            continue;
-        if (checkForTraceOption())
-            continue;
-        if (checkForNoCrashcheckOption())
-            continue;
-#ifdef EXTENSIONSYSTEM_WITH_TESTOPTION
+        // OPENMV-DIFF //
+        // if (checkForLoadOption())
+        //     continue;
+        // if (checkForNoLoadOption())
+        //     continue;
+        // if (checkForTraceOption())
+        //     continue;
+        // if (checkForProfilingOption())
+        //     continue;
+        // if (checkForNoCrashcheckOption())
+        //     continue;
+        // OPENMV-DIFF //
+#ifdef WITH_TESTS
         if (checkForTestOptions())
             continue;
         if (checkForScenarioOption())

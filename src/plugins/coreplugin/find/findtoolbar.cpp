@@ -449,6 +449,10 @@ FindToolBar::FindToolBar(CurrentDocumentFind *currentDocumentFind)
     QWidget::setTabOrder(m_replaceNextButton, m_replaceAllButton);
     QWidget::setTabOrder(m_replaceAllButton, m_advancedButton);
     QWidget::setTabOrder(m_advancedButton, m_close);
+    // OPENMV-DIFF //
+    setStyleSheet(QStringLiteral("QToolButton,QLabel{color:white;}"));
+    m_close->setToolTip(tr("Close"));
+    // OPENMV-DIFF //
 }
 
 FindToolBar::~FindToolBar() = default;

@@ -483,6 +483,9 @@ void SystemSettingsWidget::showHelpForFileBrowser()
 // SystemSettingsPage
 
 class SystemSettingsPage final : public IOptionsPage
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(nullptr, false)
+    // OPENMV-DIFF //
 {
 public:
     SystemSettingsPage()

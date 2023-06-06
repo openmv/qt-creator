@@ -724,6 +724,10 @@ bool TextDocument::saveImpl(QString *errorString, const FilePath &filePath, bool
 
     // inform about the new filename
     d->m_document.setModified(false); // also triggers update of the block revisions
+    // OPENMV-DIFF //
+    setUniqueDisplayName(QString());
+    setPreferredDisplayName(QString());
+    // OPENMV-DIFF //
     setFilePath(filePath.absoluteFilePath());
     emit changed();
     return true;

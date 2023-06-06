@@ -535,6 +535,7 @@ void SnippetsSettingsWidget::decorateEditors(const TextEditor::FontSettings &fon
 // SnippetsSettingsPage
 
 SnippetsSettingsPage::SnippetsSettingsPage()
+    : Core::IOptionsPage(nullptr, false), d(new SnippetsSettingsPagePrivate)
 {
     setId(Constants::TEXT_EDITOR_SNIPPETS_SETTINGS);
     setDisplayName(Tr::tr("Snippets"));

@@ -188,8 +188,13 @@ QWidget *FindInFiles::createConfigWidget()
     return m_configWidget;
 }
 
-const char kDefaultInclusion[] = "*.cpp,*.h";
-const char kDefaultExclusion[] = "*/.git/*,*/.cvs/*,*/.svn/*,*.autosave,*/build/*";
+// OPENMV-DIFF //
+// const char kDefaultInclusion[] = "*.cpp,*.h";
+// const char kDefaultExclusion[] = "*/.git/*,*/.cvs/*,*/.svn/*,*.autosave,*/build/*";
+// OPENMV-DIFF //
+const char kDefaultInclusion[] = "*.py";
+const char kDefaultExclusion[] = "*/.git/*,*.autosave";
+// OPENMV-DIFF //
 
 Store FindInFiles::save() const
 {

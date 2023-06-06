@@ -76,7 +76,11 @@ static bool copyOperator(const Utils::FilePath &src, const Utils::FilePath &dest
 
     if (!src.copyFile(dest))
     {
-        if (error) *error = QObject::tr("Could not copy file \"%1\" to \"%2\".").arg(src.toUserOutput(), dest.toUserOutput());
+        if (error)
+        {
+            *error = QObject::tr("Could not copy file \"%1\" to \"%2\".").arg(src.toUserOutput(), dest.toUserOutput());
+        }
+
         return false;
     }
 

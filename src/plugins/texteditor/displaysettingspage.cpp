@@ -168,6 +168,14 @@ public:
         }.attachTo(this);
 
         settingsToUI();
+        // OPENMV-DIFF //
+        useIndenter->hide();
+        autoFoldFirstComment->hide();
+        openLinksInNextSplit->hide();
+        displayFileEncoding->hide();
+        displayFileLineEnding->hide();
+        displayAnnotations->hide();
+        // OPENMV-DIFF //
     }
 
     void apply() final;

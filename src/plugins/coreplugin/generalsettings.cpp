@@ -141,9 +141,11 @@ GeneralSettingsWidget::GeneralSettingsWidget()
     resetColorButton->setToolTip(Tr::tr("Reset to default.", "Color"));
 
     Form form;
-    form.addRow({Tr::tr("Color:"), m_colorButton, resetColorButton, st});
-    form.addRow({Tr::tr("Theme:"), m_themeChooser});
-    form.addRow({Tr::tr("Toolbar style:"), m_toolbarStyleBox, st});
+    // OPENMV-DIFF //
+    // form.addRow({Tr::tr("Color:"), m_colorButton, resetColorButton, st});
+    // form.addRow({Tr::tr("Theme:"), m_themeChooser});
+    // form.addRow({Tr::tr("Toolbar style:"), m_toolbarStyleBox, st});
+    // OPENMV-DIFF //
     form.addRow({Tr::tr("Language:"), m_languageBox, st});
 
     if (StyleHelper::defaultHighDpiScaleFactorRoundingPolicy()
@@ -186,10 +188,18 @@ GeneralSettingsWidget::GeneralSettingsWidget()
         }
     }
 
+<<<<<<< HEAD
     form.addRow({empty, generalSettings().showShortcutsInContextMenus});
     form.addRow({empty, generalSettings().provideSplitterCursors});
     form.addRow({Row{m_resetWarningsButton, st}});
     form.addRow({Tr::tr("Text codec for tools:"), m_codecBox, st});
+=======
+    // OPENMV-DIFF //
+    // form.addRow({empty, m_showShortcutsInContextMenus});
+    // form.addRow(Row{m_resetWarningsButton, st});
+    // form.addRow({Tr::tr("Text codec for tools:"), m_codecBox, st});
+    // OPENMV-DIFF //
+>>>>>>> 4875b7406e9 (Reapplied all diffs from previous IDE version)
     Column{Group{title(Tr::tr("User Interface")), form}}.attachTo(this);
 
     fillLanguageBox();
@@ -207,6 +217,21 @@ GeneralSettingsWidget::GeneralSettingsWidget()
             &QAbstractButton::clicked,
             this,
             &GeneralSettingsWidget::resetWarnings);
+
+    // OPENMV-DIFF //
+    m_colorButton->setParent(this);
+    m_colorButton->hide();
+    resetColorButton->setParent(this);
+    resetColorButton->hide();
+    m_themeChooser->setParent(this);
+    m_themeChooser->hide();
+    m_showShortcutsInContextMenus->setParent(this);
+    m_showShortcutsInContextMenus->hide();
+    m_resetWarningsButton->setParent(this);
+    m_resetWarningsButton->hide();
+    m_codecBox->setParent(this);
+    m_codecBox->hide();
+    // OPENMV-DIFF //
 }
 
 static bool hasQmFilesForLocale(const QString &locale, const QString &creatorTrPath)

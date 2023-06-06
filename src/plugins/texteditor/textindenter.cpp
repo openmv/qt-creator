@@ -45,8 +45,13 @@ int TextIndenter::indentFor(const QTextBlock &block,
 
     const QString previousText = previous.text();
     // Empty line indicates a start of a new paragraph. Leave as is.
-    if (previousText.isEmpty() || previousText.trimmed().isEmpty())
-        return 0;
+    // OPENMV-DIFF //
+    // if (previousText.isEmpty() || previousText.trimmed().isEmpty())
+    //     return 0;
+    // OPENMV-DIFF //
+    if (previousText.isEmpty() || (block.text().isEmpty()) || (block.text().trimmed().isEmpty()))
+            return 0;
+    // OPENMV-DIFF //
 
     return tabSettings.indentationColumn(previousText);
 }
