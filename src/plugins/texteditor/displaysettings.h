@@ -53,7 +53,11 @@ public:
     bool m_openLinksInNextSplit = false;
     bool m_forceOpenLinksInNextSplit = false;
     bool m_displayFileEncoding = false;
-    bool m_displayFileLineEnding = true;
+    // OPENMV-DIFF //
+    // bool m_displayFileLineEnding = true;
+    // OPENMV-DIFF //
+    bool m_displayFileLineEnding = false;
+    // OPENMV-DIFF //
     bool m_scrollBarHighlights = true;
     bool m_animateNavigationWithinFile = false;
     bool m_highlightSelection = true;
