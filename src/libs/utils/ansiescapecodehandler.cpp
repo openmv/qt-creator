@@ -159,6 +159,14 @@ QList<FormattedText> AnsiEscapeCodeHandler::parseText(const FormattedText &input
             if (strippedText.isEmpty())
                 break;
 
+            // OPENMV-DIFF //
+            if (strippedText.startsWith(QLatin1Char('D'))) {
+                m_pendingText.clear();
+                outputData << FormattedText(QString(QLatin1Char('\b')).repeated(strNumber.toInt()), charFormat);
+                strippedText.remove(0, 1);
+                break;
+            }
+            // OPENMV-DIFF //
             // remove terminating char
             if (!strippedText.startsWith(colorTerminator)) {
                 m_pendingText.clear();

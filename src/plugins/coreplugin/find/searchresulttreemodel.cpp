@@ -286,7 +286,11 @@ QVariant SearchResultTreeModel::data(const SearchResultTreeItem *row, int role) 
             result = QVariant();
         break;
     case Qt::ForegroundRole:
-        result = m_colors.value(row->item.style()).textForeground;
+        // OPENMV-DIFF //
+        // result = m_colors.value(row->item.style()).textForeground;
+        // OPENMV-DIFF //
+        result = QColor(QStringLiteral("#CFBFAD"));
+        // OPENMV-DIFF //
         break;
     case Qt::BackgroundRole:
         result = m_colors.value(row->item.style()).textBackground;

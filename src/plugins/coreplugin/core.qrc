@@ -6,5 +6,11 @@
         <file>images/settingscategory_design@2x.png</file>
         <file>images/qtlogo.png</file>
         <file>images/qtlogo@2x.png</file>
+        <!-- OPENMV-DIFF -->
+        <file>images/scroll-arrowup.png</file>
+        <file>images/scroll-arrowright.png</file>
+        <file>images/scroll-arrowdown.png</file>
+        <file>images/scroll-arrowleft.png</file>
+        <!-- OPENMV-DIFF -->
     </qresource>
 </RCC>

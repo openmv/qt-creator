@@ -3378,7 +3378,9 @@ void TextEditorWidgetPrivate::updateSyntaxInfoBar(const Highlighter::Definitions
         });
 
         infoBar->removeInfo(multiple);
-        infoBar->addInfo(info);
+        // OPENMV-DIFF //
+        // infoBar->addInfo(info);
+        // OPENMV-DIFF //
     } else if (definitions.size() > 1) {
         InfoBarEntry info(multiple,
                           Tr::tr("More than one highlight definition was found for this file. "
@@ -3394,7 +3396,9 @@ void TextEditorWidgetPrivate::updateSyntaxInfoBar(const Highlighter::Definitions
         });
 
         infoBar->removeInfo(missing);
-        infoBar->addInfo(info);
+        // OPENMV-DIFF //
+        // infoBar->addInfo(info);
+        // OPENMV-DIFF //
     } else {
         infoBar->removeInfo(multiple);
         infoBar->removeInfo(missing);

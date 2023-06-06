@@ -696,6 +696,10 @@ void ManhattanStyle::drawPrimitive(PrimitiveElement element, const QStyleOption 
             painter->save();
             if (creatorTheme()->flag(Theme::FlatToolBars)) {
                 painter->fillRect(rect, StyleHelper::baseColor());
+                // OPENMV-DIFF //
+                painter->setPen(QColor(32, 33, 34));
+                painter->drawLine(rect.x(), rect.y(), rect.x() + rect.width() - 1, rect.y());
+                // OPENMV-DIFF //
             } else {
                 QLinearGradient grad = StyleHelper::statusBarGradient(rect);
                 painter->fillRect(rect, grad);
@@ -794,12 +798,26 @@ void ManhattanStyle::drawControl(ControlElement element, const QStyleOption *opt
             const bool enabled = mbi->state & State_Enabled;
             QStyleOptionMenuItem item = *mbi;
             item.rect = mbi->rect;
-            const QColor color = creatorTheme()->color(enabled
+            // OPENMV-DIFF //
+            // const QColor color = creatorTheme()->color(enabled
+            // OPENMV-DIFF //
+            QColor color = creatorTheme()->color(enabled
+            // OPENMV-DIFF //
                                                        ? Theme::MenuItemTextColorNormal
                                                        : Theme::MenuItemTextColorDisabled);
             if (color.isValid()) {
                 QPalette pal = mbi->palette;
+                // OPENMV-DIFF //
+                #ifndef Q_OS_MAC
+                if(pal.brush(QPalette::Base).color().value() < 128) color = QColor::fromRgbF(1.0 - color.redF(), 1.0 - color.greenF(), 1.0 - color.blueF(), color.alphaF());
+                #endif
+                // OPENMV-DIFF //
                 pal.setBrush(QPalette::Text, color);
+                // OPENMV-DIFF //
+                #ifndef Q_OS_MAC
+                pal.setBrush(QPalette::ButtonText, color);
+                #endif
+                // OPENMV-DIFF //
                 item.palette = pal;
             }
             QProxyStyle::drawControl(element, &item, painter, widget);

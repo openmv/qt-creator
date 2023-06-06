@@ -24,7 +24,11 @@ static const char defaultTrailingWhitespaceBlacklist[] = "*.md, *.MD, Makefile";
 StorageSettings::StorageSettings()
     : m_ignoreFileTypes(defaultTrailingWhitespaceBlacklist),
       m_cleanWhitespace(true),
-      m_inEntireDocument(false),
+      // OPENMV-DIFF //
+      // m_inEntireDocument(false),
+      // OPENMV-DIFF //
+      m_inEntireDocument(true),
+      // OPENMV-DIFF //
       m_addFinalNewLine(true),
       m_cleanIndentation(true),
       m_skipTrailingWhitespace(true)

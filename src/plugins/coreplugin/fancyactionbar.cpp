@@ -270,8 +270,16 @@ void FancyActionBar::paintEvent(QPaintEvent *event)
         // left tab bar
         painter.fillRect(event->rect(), StyleHelper::baseColor());
         painter.setPen(creatorTheme()->color(Theme::FancyToolBarSeparatorColor));
-        painter.drawLine(borderRect.topLeft(), borderRect.topRight());
-    } else {
+        // OPENMV-DIFF //
+        // painter.drawLine(borderRect.topLeft(), borderRect.topRight());
+        // OPENMV-DIFF //
+        if (!property("no_separator").toBool()) painter.drawLine(borderRect.topLeft(), borderRect.topRight());
+        // OPENMV-DIFF //
+    // OPENMV-DIFF //
+    // } else {
+    // OPENMV-DIFF //
+    } else if (!property("no_separator").toBool()) {
+    // OPENMV-DIFF //
         painter.setPen(StyleHelper::sidebarShadow());
         painter.drawLine(borderRect.topLeft(), borderRect.topRight());
         painter.setPen(StyleHelper::sidebarHighlight());
@@ -363,6 +371,9 @@ FancyActionBar::FancyActionBar(QWidget *parent)
     m_actionsLayout = new QVBoxLayout;
     m_actionsLayout->setContentsMargins(0, 0, 0, 0);
     m_actionsLayout->setSpacing(0);
+    // OPENMV-DIFF //
+    m_actionsLayout->addStretch();
+    // OPENMV-DIFF //
     setLayout(m_actionsLayout);
     setContentsMargins(0, 2, 0, 8);
 }

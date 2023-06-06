@@ -38,6 +38,10 @@ EditMode::EditMode() :
     QWidget *rightSplitWidget = new QWidget;
     rightSplitWidget->setLayout(m_rightSplitWidgetLayout);
     auto editorPlaceHolder = new EditorManagerPlaceHolder;
+    // OPENMV-DIFF //
+    editorPlaceHolder->setMinimumWidth(160);
+    editorPlaceHolder->setMinimumHeight(120);
+    // OPENMV-DIFF //
     m_rightSplitWidgetLayout->insertWidget(0, editorPlaceHolder);
 
     auto rightPaneSplitter = new MiniSplitter;

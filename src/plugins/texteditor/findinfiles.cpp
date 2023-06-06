@@ -202,7 +202,11 @@ void FindInFiles::writeSettings(QSettings *settings)
 void FindInFiles::readSettings(QSettings *settings)
 {
     settings->beginGroup(QLatin1String("FindInFiles"));
-    readCommonSettings(settings, "*.cpp,*.h", "*/.git/*,*/.cvs/*,*/.svn/*,*.autosave");
+    // OPENMV-DIFF //
+    // readCommonSettings(settings, "*.cpp,*.h", "*/.git/*,*/.cvs/*,*/.svn/*,*.autosave");
+    // OPENMV-DIFF //
+    readCommonSettings(settings, "*.py", "*/.git/*,*.autosave");
+    // OPENMV-DIFF //
     settings->endGroup();
 }
 

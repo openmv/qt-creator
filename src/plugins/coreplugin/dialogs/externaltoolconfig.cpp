@@ -944,6 +944,9 @@ void ExternalToolConfig::updateEnvironmentLabel()
 // ToolSettingsPage
 
 ToolSettings::ToolSettings()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(nullptr, false)
+    // OPENMV-DIFF //
 {
     setId(Constants::SETTINGS_ID_TOOLS);
     setDisplayName(Tr::tr("External Tools"));

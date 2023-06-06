@@ -354,17 +354,19 @@ void Internal::CommandPrivate::updateActiveState()
     setActive(m_action->isEnabled() && m_action->isVisible() && !m_action->isSeparator());
 }
 
-static QString msgActionWarning(QAction *newAction, Id id, QAction *oldAction)
-{
-    QString msg;
-    QTextStream str(&msg);
-    str << "addOverrideAction " << newAction->objectName() << '/' << newAction->text()
-         << ": Action ";
-    if (oldAction)
-        str << oldAction->objectName() << '/' << oldAction->text();
-    str << " is already registered for context " << id.toString() << '.';
-    return msg;
-}
+// OPENMV-DIFF //
+// static QString msgActionWarning(QAction *newAction, Id id, QAction *oldAction)
+// {
+//     QString msg;
+//     QTextStream str(&msg);
+//     str << "addOverrideAction " << newAction->objectName() << '/' << newAction->text()
+//          << ": Action ";
+//     if (oldAction)
+//         str << oldAction->objectName() << '/' << oldAction->text();
+//     str << " is already registered for context " << id.toString() << '.';
+//     return msg;
+// }
+// OPENMV-DIFF //
 
 void Internal::CommandPrivate::addOverrideAction(QAction *action,
                                                  const Context &context,
@@ -380,8 +382,10 @@ void Internal::CommandPrivate::addOverrideAction(QAction *action,
         m_contextActionMap.insert(Constants::C_GLOBAL, action);
     } else {
         for (const Id &id : context) {
-            if (m_contextActionMap.contains(id))
-                qWarning("%s", qPrintable(msgActionWarning(action, id, m_contextActionMap.value(id, nullptr))));
+            // OPENMV-DIFF //
+            // if (m_contextActionMap.contains(id))
+            //     qWarning("%s", qPrintable(msgActionWarning(action, id, m_contextActionMap.value(id, nullptr))));
+            // OPENMV-DIFF //
             m_contextActionMap.insert(id, action);
         }
     }

@@ -16,10 +16,18 @@ static const char tintMarginAreaColumnKey[] = "tintMarginArea";
 using namespace TextEditor;
 
 MarginSettings::MarginSettings()
-    : m_showMargin(false)
+    // OPENMV-DIFF //
+    // : m_showMargin(false)
+    // OPENMV-DIFF //
+    : m_showMargin(true)
+    // OPENMV-DIFF //
     , m_tintMarginArea(true)
     , m_useIndenter(false)
-    , m_marginColumn(80)
+    // OPENMV-DIFF //
+    // , m_marginColumn(80)
+    // OPENMV-DIFF //
+    , m_marginColumn(100)
+    // OPENMV-DIFF //
 {
 }
 

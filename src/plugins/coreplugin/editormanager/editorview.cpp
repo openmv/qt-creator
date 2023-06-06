@@ -103,6 +103,9 @@ EditorView::EditorView(SplitterOrView *parentSplitterOrView, QWidget *parent) :
 
     // for the case of no document selected
     auto empty = new QWidget;
+    // OPENMV-DIFF //
+    empty->setAutoFillBackground(true);
+    // OPENMV-DIFF //
     empty->hide();
     auto emptyLayout = new QGridLayout(empty);
     empty->setLayout(emptyLayout);

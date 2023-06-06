@@ -288,6 +288,9 @@ ShortcutSettingsWidget::~ShortcutSettingsWidget()
 }
 
 ShortcutSettings::ShortcutSettings()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(nullptr, false)
+    // OPENMV-DIFF //
 {
     setId(Constants::SETTINGS_ID_SHORTCUTS);
     setDisplayName(Tr::tr("Keyboard"));

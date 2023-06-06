@@ -110,14 +110,20 @@ CoreArguments parseArguments(const QStringList &arguments)
     CoreArguments args;
     for (int i = 0; i < arguments.size(); ++i) {
         if (arguments.at(i) == QLatin1String("-color")) {
-            const QString colorcode(arguments.at(i + 1));
-            args.overrideColor = QColor(colorcode);
+            // OPENMV-DIFF //
+            // const QString colorcode(arguments.at(i + 1));
+            // args.overrideColor = QColor(colorcode);
+            // OPENMV-DIFF //
             i++; // skip the argument
         }
         if (arguments.at(i) == QLatin1String("-presentationMode"))
-            args.presentationMode = true;
+            // OPENMV-DIFF //
+            // args.presentationMode = true;
+            // OPENMV-DIFF //
         if (arguments.at(i) == QLatin1String("-theme")) {
-            args.themeId = Id::fromString(arguments.at(i + 1));
+            // OPENMV-DIFF //
+            // args.themeId = Id::fromString(arguments.at(i + 1));
+            // OPENMV-DIFF //
             i++; // skip the argument
         }
     }

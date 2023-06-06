@@ -291,6 +291,9 @@ void ProgressManagerPrivate::init()
     layout->addWidget(toggleButton);
     m_statusBarWidget->installEventFilter(this);
     StatusBarManager::addStatusBarWidget(m_statusBarWidget, StatusBarManager::RightCorner);
+    // OPENMV-DIFF //
+    m_statusBarWidget->hide();
+    // OPENMV-DIFF //
 
     QAction *toggleProgressView = new QAction(::Core::Tr::tr("Toggle Progress Details"), this);
     toggleProgressView->setCheckable(true);

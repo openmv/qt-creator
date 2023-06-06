@@ -173,7 +173,9 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
         d->autoIndent,
         Tr::tr("Backspace indentation:"),
             indent(d->smartBackspaceBehavior),
-        Tr::tr("Tab key performs auto-indent:"),
+        // OPENMV-DIFF //
+        // Tr::tr("Tab key performs auto-indent:"),
+        // OPENMV-DIFF //
             indent(d->tabKeyBehavior),
         d->preferSingleLineComments
     }.attachTo(d->groupBoxTyping);
@@ -252,6 +254,16 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
             this, &BehaviorSettingsWidget::slotBehaviorSettingsChanged);
     connect(d->smartSelectionChanging, &QAbstractButton::clicked,
             this, &BehaviorSettingsWidget::slotBehaviorSettingsChanged);
+    // OPENMV-DIFF //
+    d->autoIndent->hide();
+    d->tabKeyBehavior->hide();
+    d->groupBoxEncodings->hide();
+    d->mouseHiding->hide();
+    d->mouseNavigation->hide();
+    d->scrollWheelZooming->hide();
+    d->camelCaseNavigation->hide();
+    d->smartSelectionChanging->hide();
+    // OPENMV-DIFF //
 
     d->mouseHiding->setVisible(!Utils::HostOsInfo::isMacHost());
 }

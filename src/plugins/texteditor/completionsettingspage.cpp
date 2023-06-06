@@ -353,6 +353,9 @@ const CommentsSettings &CompletionSettingsPage::commentsSettings() const
 }
 
 CompletionSettingsPage::CompletionSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(nullptr, false)
+    // OPENMV-DIFF //
 {
     setId("P.Completion");
     setDisplayName(Tr::tr("Completion"));

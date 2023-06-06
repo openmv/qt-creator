@@ -5,10 +5,10 @@
 
 #include "ioutputpane.h"
 
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 #include <QToolButton>
 #include <QAction>
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 
 namespace Core {
 class OutputWindow;
@@ -40,18 +40,18 @@ public:
     void goToPrev() override;
     bool canNavigate() const override;
 
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
     QList<QWidget*> toolBarWidgets() const;
     OutputWindow *m_widget;
     QToolButton *m_saveButton;
     QAction *m_saveAction;
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
 
 private:
     void updateFilter() override;
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
     //OutputWindow *m_widget;
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
 };
 
 } // namespace Internal

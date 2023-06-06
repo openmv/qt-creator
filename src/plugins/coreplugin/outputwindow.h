@@ -66,10 +66,11 @@ public:
             bool regexp,
             bool isInverted);
 
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
+    void appendText(const QString &text, const QTextCharFormat &format = QTextCharFormat());
     void save();
     void setTabSettings(int tabWidth);
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
 
 signals:
     void wheelZoom();
@@ -82,6 +83,10 @@ public slots:
 
 protected:
     virtual void handleLink(const QPoint &pos);
+
+    // OPENMV-DIFF //
+    bool isScrollbarAtBottom() const;
+    // OPENMV-DIFF //
 
 private:
     QMimeData *createMimeDataFromSelection() const override;
@@ -99,6 +104,10 @@ private:
     void handleNextOutputChunk();
     void handleOutputChunk(const QString &output, Utils::OutputFormat format);
     void updateAutoScroll();
+
+    // OPENMV-DIFF //
+    QString doNewlineEnforcement(const QString &out);
+    // OPENMV-DIFF //
 
     Internal::OutputWindowPrivate *d = nullptr;
 };

@@ -96,8 +96,10 @@ GeneralSettingsWidget::GeneralSettingsWidget(GeneralSettings *q)
     resetColorButton->setToolTip(Tr::tr("Reset to default.", "Color"));
 
     Form form;
-    form.addRow({Tr::tr("Color:"), m_colorButton, resetColorButton, st});
-    form.addRow({Tr::tr("Theme:"), m_themeChooser});
+    // OPENMV-DIFF //
+    // form.addRow({Tr::tr("Color:"), m_colorButton, resetColorButton, st});
+    // form.addRow({Tr::tr("Theme:"), m_themeChooser});
+    // OPENMV-DIFF //
     form.addRow({Tr::tr("Language:"), m_languageBox, st});
 
     if (!Utils::HostOsInfo::isMacHost()) {
@@ -113,9 +115,11 @@ GeneralSettingsWidget::GeneralSettingsWidget(GeneralSettings *q)
         });
     }
 
-    form.addRow({empty, m_showShortcutsInContextMenus});
-    form.addRow(Row{m_resetWarningsButton, st});
-    form.addRow({Tr::tr("Text codec for tools:"), m_codecBox, st});
+    // OPENMV-DIFF //
+    // form.addRow({empty, m_showShortcutsInContextMenus});
+    // form.addRow(Row{m_resetWarningsButton, st});
+    // form.addRow({Tr::tr("Text codec for tools:"), m_codecBox, st});
+    // OPENMV-DIFF //
     Column{Group{title(Tr::tr("User Interface")), form}}.attachTo(this);
 
     fillLanguageBox();
@@ -137,6 +141,21 @@ GeneralSettingsWidget::GeneralSettingsWidget(GeneralSettings *q)
             &QAbstractButton::clicked,
             this,
             &GeneralSettingsWidget::resetWarnings);
+
+    // OPENMV-DIFF //
+    m_colorButton->setParent(this);
+    m_colorButton->hide();
+    resetColorButton->setParent(this);
+    resetColorButton->hide();
+    m_themeChooser->setParent(this);
+    m_themeChooser->hide();
+    m_showShortcutsInContextMenus->setParent(this);
+    m_showShortcutsInContextMenus->hide();
+    m_resetWarningsButton->setParent(this);
+    m_resetWarningsButton->hide();
+    m_codecBox->setParent(this);
+    m_codecBox->hide();
+    // OPENMV-DIFF //
 }
 
 static bool hasQmFilesForLocale(const QString &locale, const QString &creatorTrPath)

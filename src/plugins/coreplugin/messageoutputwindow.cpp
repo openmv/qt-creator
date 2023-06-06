@@ -13,11 +13,11 @@
 #include <QFont>
 #include <QToolButton>
 
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 #include <coreplugin/coreicons.h>
 #include <coreplugin/actionmanager/actionmanager.h>
 #include <coreplugin/actionmanager/command.h>
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 
 namespace Core {
 namespace Internal {
@@ -39,7 +39,12 @@ MessageOutputWindow::MessageOutputWindow()
     setFilteringEnabled(true);
     setupContext(Constants::C_GENERAL_OUTPUT_PANE, m_widget);
 
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
+    QPalette p = m_widget->palette();
+    p.setColor(QPalette::Base, QColor(QStringLiteral("#1E1E27")));
+    p.setColor(QPalette::Text, QColor(QStringLiteral("#EEEEF7")));
+    m_widget->setPalette(p);
+    m_widget->setMaximumBlockCount(100000);
     m_widget->setWordWrapEnabled(false);
     m_saveButton = new QToolButton(m_widget);
     m_saveButton->setAutoRaise(true);
@@ -49,7 +54,7 @@ MessageOutputWindow::MessageOutputWindow()
     cmd->setAttribute(Command::CA_UpdateText);
     m_saveButton->setDefaultAction(cmd->action());
     connect(m_saveAction, &QAction::triggered, m_widget, &OutputWindow::save);
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
 }
 
 MessageOutputWindow::~MessageOutputWindow()
@@ -85,23 +90,23 @@ QWidget *MessageOutputWindow::outputWidget(QWidget *parent)
 
 QString MessageOutputWindow::displayName() const
 {
-    //OPENMV-DIFF//
-    //return Tr::tr("General Messages");
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
+    // return Tr::tr("General Messages");
+    // OPENMV-DIFF //
     return Tr::tr("Serial Terminal");
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
 }
 
 void MessageOutputWindow::append(const QString &text)
 {
-    m_widget->appendMessage(text, Utils::GeneralMessageFormat);
+    m_widget->appendText(text);
 }
 
 int MessageOutputWindow::priorityInStatusBar() const
 {
-    //OPENMV-DIFF//
-    //return -1;
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
+    // return -1;
+    // OPENMV-DIFF //
     return 1;
 }
 
@@ -136,12 +141,12 @@ void MessageOutputWindow::updateFilter()
                                      filterIsInverted());
 }
 
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 QList<QWidget*> MessageOutputWindow::toolBarWidgets() const
 {
     return QList<QWidget*>() << m_saveButton;
 }
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 
 } // namespace Internal
 } // namespace Core

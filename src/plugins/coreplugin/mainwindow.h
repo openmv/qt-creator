@@ -52,11 +52,11 @@ class WindowSupport;
 class SystemEditor;
 class SystemSettings;
 
-//OPENMV-DIFF//
+// OPENMV-DIFF //
+// class MainWindow : public Utils::AppMainWindow
+// OPENMV-DIFF //
 class CORE_EXPORT MainWindow : public Utils::AppMainWindow
-//OPENMV-DIFF//
-//class MainWindow : public Utils::AppMainWindow
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 {
     Q_OBJECT
 
@@ -103,30 +103,27 @@ public:
 
     void restartTrimmer();
 
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
     void disableShow(bool disable) { m_disableShow = disable; }
     bool isShowDisabled() const { return m_disableShow; }
-    //OPENMV-DIFF//
+signals:
+    void showEventSignal();
+    void hideEventSignal();
+    // OPENMV-DIFF //
 
 public slots:
     static void openFileWith();
     void exit();
-
-    //OPENMV-DIFF//
-signals:
-    void showEventSignal();
-    void hideEventSignal();
-    //OPENMV-DIFF//
 
 protected:
     void closeEvent(QCloseEvent *event) override;
     void keyPressEvent(QKeyEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
 
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
     virtual void showEvent(QShowEvent *event) { emit showEventSignal(); Utils::AppMainWindow::showEvent(event); }
     virtual void hideEvent(QHideEvent *event) { emit hideEventSignal(); Utils::AppMainWindow::hideEvent(event); }
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
 
 private:
     static void openFile();
@@ -211,9 +208,9 @@ private:
     QColor m_overrideColor;
     QList<std::function<bool()>> m_preCloseListeners;
 
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
     bool m_disableShow;
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
 };
 
 } // namespace Internal

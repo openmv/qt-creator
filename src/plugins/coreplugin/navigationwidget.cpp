@@ -162,7 +162,11 @@ struct NavigationWidgetPrivate
 
 NavigationWidgetPrivate::NavigationWidgetPrivate(QAction *toggleSideBarAction, Side side) :
     m_factoryModel(new QStandardItemModel),
-    m_shown(true),
+    // OPENMV-DIFF //
+    // m_shown(true),
+    // OPENMV-DIFF //
+    m_shown(false),
+    // OPENMV-DIFF //
     m_width(0),
     m_toggleSideBarAction(toggleSideBarAction),
     m_side(side)

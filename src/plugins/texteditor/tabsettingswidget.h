@@ -48,6 +48,9 @@ private:
     QSpinBox *m_tabSize;
     QSpinBox *m_indentSize;
     QComboBox *m_continuationAlignBehavior;
+    // OPENMV-DIFF //
+    QSpinBox *m_serialTerminalTabSize;
+    // OPENMV-DIFF //
 };
 
 } // namespace TextEditor

@@ -43,7 +43,11 @@ public:
     bool m_animateMatchingParentheses = true;
     bool m_highlightMatchingParentheses = true;
     bool m_markTextChanges = true ;
-    bool m_autoFoldFirstComment = true;
+    // OPENMV-DIFF //
+    // bool m_autoFoldFirstComment = true;
+    // OPENMV-DIFF //
+    bool m_autoFoldFirstComment = false;
+    // OPENMV-DIFF //
     bool m_centerCursorOnScroll = false;
     bool m_openLinksInNextSplit = false;
     bool m_forceOpenLinksInNextSplit = false;

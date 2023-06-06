@@ -523,7 +523,11 @@ FilePath FontSettings::defaultSchemeFileName(const QString &fileName)
         if (!themeScheme.isEmpty() && (defaultScheme / themeScheme).exists())
             defaultScheme = defaultScheme / themeScheme;
         else
-            defaultScheme = defaultScheme / "default.xml";
+            // OPENMV-DIFF //
+            // defaultScheme = defaultScheme / "default.xml";
+            // OPENMV-DIFF //
+            defaultScheme = defaultScheme / "inkpot.xml";
+            // OPENMV-DIFF //
     }
 
     return defaultScheme;

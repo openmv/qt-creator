@@ -68,10 +68,14 @@ void ElidingLabel::paintEvent(QPaintEvent *)
     QFontMetrics fm = fontMetrics();
     QString txt = text();
     if (txt.length() > 4 && fm.horizontalAdvance(txt) > contents.width()) {
-        updateToolTip(txt);
+        // OPENMV-DIFF //
+        // updateToolTip(txt);
+        // OPENMV-DIFF //
         txt = fm.elidedText(txt, m_elideMode, contents.width());
     } else {
-        updateToolTip(QString());
+        // OPENMV-DIFF //
+        // updateToolTip(QString());
+        // OPENMV-DIFF //
     }
     int flags = QStyle::visualAlignment(layoutDirection(), alignment()) | Qt::TextSingleLine;
 

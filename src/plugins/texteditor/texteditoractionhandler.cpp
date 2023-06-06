@@ -29,6 +29,10 @@
 
 #include <functional>
 
+// OPENMV-DIFF //
+#include <QInputDialog>
+// OPENMV-DIFF //
+
 namespace TextEditor {
 namespace Internal {
 
@@ -157,9 +161,33 @@ void TextEditorActionHandlerPrivate::createActions()
             [] (TextEditorWidget *w) { w->paste(); }, true);
     registerAction(SELECTALL,
             [] (TextEditorWidget *w) { w->selectAll(); }, true);
+    // OPENMV-DIFF //
+    // registerAction(GOTO, [] (TextEditorWidget *) {
+    //         Core::LocatorManager::showFilter(TextEditorPlugin::lineNumberFilter());
+    //     });
+    // OPENMV-DIFF //
     registerAction(GOTO, [] (TextEditorWidget *) {
-            Core::LocatorManager::showFilter(TextEditorPlugin::lineNumberFilter());
+            Core::IEditor *editor = Core::EditorManager::currentEditor();
+            if (editor) {
+                bool ok;
+                QString line = QInputDialog::getText(Core::ICore::dialogParent(), QString(), Tr::tr("Go to line number..."), QLineEdit::Normal, QString::number(editor->currentLine()), &ok
+#ifdef Q_OS_MAC
+                , Qt::WindowTitleHint | Qt::WindowSystemMenuHint,
+#else
+                , Qt::WindowTitleHint | Qt::WindowSystemMenuHint | Qt::WindowCloseButtonHint,
+#endif
+                Qt::ImhDigitsOnly);
+                if (ok) {
+                    int lineNumber = line.toInt(&ok);
+                    if (ok) {
+                        Core::EditorManager::addCurrentPositionToNavigationHistory();
+                        editor->gotoLine(lineNumber);
+                        Core::EditorManager::activateEditor(editor);
+                    }
+                }
+            }
         });
+    // OPENMV-DIFF //
     m_modifyingActions << registerAction(PRINT,
             [] (TextEditorWidget *widget) { widget->print(Core::ICore::printer()); });
     m_modifyingActions << registerAction(DELETE_LINE,
@@ -229,24 +257,28 @@ void TextEditorActionHandlerPrivate::createActions()
             [] (TextEditorWidget *w) { w->openLinkUnderCursorInNextSplit(); }, true, Tr::tr("Jump to File Under Cursor in Next Split"),
             QKeySequence(Utils::HostOsInfo::isMacHost() ? Tr::tr("Meta+E, F2") : Tr::tr("Ctrl+E, F2")).toString());
 
-    registerAction(VIEW_PAGE_UP,
-            [] (TextEditorWidget *w) { w->viewPageUp(); }, true, Tr::tr("Move the View a Page Up and Keep the Cursor Position"),
-            QKeySequence(Tr::tr("Ctrl+PgUp")));
-    registerAction(VIEW_PAGE_DOWN,
-            [] (TextEditorWidget *w) { w->viewPageDown(); }, true, Tr::tr("Move the View a Page Down and Keep the Cursor Position"),
-            QKeySequence(Tr::tr("Ctrl+PgDown")));
-    registerAction(VIEW_LINE_UP,
-            [] (TextEditorWidget *w) { w->viewLineUp(); }, true, Tr::tr("Move the View a Line Up and Keep the Cursor Position"),
-            QKeySequence(Tr::tr("Ctrl+Up")));
-    registerAction(VIEW_LINE_DOWN,
-            [] (TextEditorWidget *w) { w->viewLineDown(); }, true, Tr::tr("Move the View a Line Down and Keep the Cursor Position"),
-            QKeySequence(Tr::tr("Ctrl+Down")));
+    // OPENMV-DIFF //
+    // registerAction(VIEW_PAGE_UP,
+    //         [] (TextEditorWidget *w) { w->viewPageUp(); }, true, Tr::tr("Move the View a Page Up and Keep the Cursor Position"),
+    //         QKeySequence(Tr::tr("Ctrl+PgUp")));
+    // registerAction(VIEW_PAGE_DOWN,
+    //         [] (TextEditorWidget *w) { w->viewPageDown(); }, true, Tr::tr("Move the View a Page Down and Keep the Cursor Position"),
+    //         QKeySequence(Tr::tr("Ctrl+PgDown")));
+    // registerAction(VIEW_LINE_UP,
+    //         [] (TextEditorWidget *w) { w->viewLineUp(); }, true, Tr::tr("Move the View a Line Up and Keep the Cursor Position"),
+    //         QKeySequence(Tr::tr("Ctrl+Up")));
+    // registerAction(VIEW_LINE_DOWN,
+    //         [] (TextEditorWidget *w) { w->viewLineDown(); }, true, Tr::tr("Move the View a Line Down and Keep the Cursor Position"),
+    //         QKeySequence(Tr::tr("Ctrl+Down")));
+    // OPENMV-DIFF //
 
     // register "Edit" Menu Actions
     Core::ActionContainer *editMenu = Core::ActionManager::actionContainer(M_EDIT);
-    registerAction(SELECT_ENCODING,
-            [] (TextEditorWidget *w) { w->selectEncoding(); }, false, Tr::tr("Select Encoding..."),
-            QKeySequence(), G_EDIT_OTHER, editMenu);
+    // OPENMV-DIFF //
+    // registerAction(SELECT_ENCODING,
+    //         [] (TextEditorWidget *w) { w->selectEncoding(); }, false, Tr::tr("Select Encoding..."),
+    //         QKeySequence(), G_EDIT_OTHER, editMenu);
+    // OPENMV-DIFF //
     m_modifyingActions << registerAction(CIRCULAR_PASTE,
         [] (TextEditorWidget *w) { w->circularPaste(); }, false, Tr::tr("Paste from Clipboard History"),
         QKeySequence(Tr::tr("Ctrl+Shift+V")), G_EDIT_COPYPASTE, editMenu);
@@ -256,14 +288,16 @@ void TextEditorActionHandlerPrivate::createActions()
 
     // register "Edit -> Advanced" Menu Actions
     Core::ActionContainer *advancedEditMenu = Core::ActionManager::actionContainer(M_EDIT_ADVANCED);
-    m_autoIndentAction = registerAction(AUTO_INDENT_SELECTION,
-            [] (TextEditorWidget *w) { w->autoIndent(); }, true, Tr::tr("Auto-&indent Selection"),
-            QKeySequence(Tr::tr("Ctrl+I")),
-            G_EDIT_FORMAT, advancedEditMenu);
-    m_autoFormatAction = registerAction(AUTO_FORMAT_SELECTION,
-            [] (TextEditorWidget *w) { w->autoFormat(); }, true, Tr::tr("Auto-&format Selection"),
-            QKeySequence(Tr::tr("Ctrl+;")),
-            G_EDIT_FORMAT, advancedEditMenu);
+    // OPENMV-DIFF //
+    // m_autoIndentAction = registerAction(AUTO_INDENT_SELECTION,
+    //         [] (TextEditorWidget *w) { w->autoIndent(); }, true, Tr::tr("Auto-&indent Selection"),
+    //         QKeySequence(Tr::tr("Ctrl+I")),
+    //         G_EDIT_FORMAT, advancedEditMenu);
+    // m_autoFormatAction = registerAction(AUTO_FORMAT_SELECTION,
+    //         [] (TextEditorWidget *w) { w->autoFormat(); }, true, Tr::tr("Auto-&format Selection"),
+    //         QKeySequence(Tr::tr("Ctrl+;")),
+    //         G_EDIT_FORMAT, advancedEditMenu);
+    // OPENMV-DIFF //
     m_modifyingActions << registerAction(REWRAP_PARAGRAPH,
             [] (TextEditorWidget *w) { w->rewrapParagraph(); }, true, Tr::tr("&Rewrap Paragraph"),
             QKeySequence(Core::useMacShortcuts ? Tr::tr("Meta+E, R") : Tr::tr("Ctrl+E, R")),
@@ -320,14 +354,16 @@ void TextEditorActionHandlerPrivate::createActions()
             [] (TextEditorWidget *w) { w->addSelectionNextFindMatch(); }, false, Tr::tr("Add Next Occurrence to Selection"),
             QKeySequence(Tr::tr("Ctrl+D")),
             G_EDIT_TEXT, advancedEditMenu);
-    m_modifyingActions << registerAction(DUPLICATE_SELECTION,
-            [] (TextEditorWidget *w) { w->duplicateSelection(); }, false, Tr::tr("&Duplicate Selection"),
-            QKeySequence(),
-            G_EDIT_TEXT, advancedEditMenu);
-    m_modifyingActions << registerAction(DUPLICATE_SELECTION_AND_COMMENT,
-            [] (TextEditorWidget *w) { w->duplicateSelectionAndComment(); }, false, Tr::tr("&Duplicate Selection and Comment"),
-            QKeySequence(),
-            G_EDIT_TEXT, advancedEditMenu);
+    // OPENMV-DIFF //
+    // m_modifyingActions << registerAction(DUPLICATE_SELECTION,
+    //         [] (TextEditorWidget *w) { w->duplicateSelection(); }, false, Tr::tr("&Duplicate Selection"),
+    //         QKeySequence(),
+    //         G_EDIT_TEXT, advancedEditMenu);
+    // m_modifyingActions << registerAction(DUPLICATE_SELECTION_AND_COMMENT,
+    //         [] (TextEditorWidget *w) { w->duplicateSelectionAndComment(); }, false, Tr::tr("&Duplicate Selection and Comment"),
+    //         QKeySequence(),
+    //         G_EDIT_TEXT, advancedEditMenu);
+    // OPENMV-DIFF //
     m_modifyingActions << registerAction(UPPERCASE_SELECTION,
             [] (TextEditorWidget *w) { w->uppercaseSelection(); }, true, Tr::tr("Uppercase Selection"),
             QKeySequence(Core::useMacShortcuts ? Tr::tr("Meta+Shift+U") : Tr::tr("Alt+Shift+U")),
@@ -364,25 +400,27 @@ void TextEditorActionHandlerPrivate::createActions()
             [] (TextEditorWidget *w) { w->zoomReset(); }, false, Tr::tr("Reset Font Size"),
             QKeySequence(Core::useMacShortcuts ? Tr::tr("Meta+0") : Tr::tr("Ctrl+0")),
             G_EDIT_FONT, advancedEditMenu);
-    registerAction(GOTO_BLOCK_START,
-            [] (TextEditorWidget *w) { w->gotoBlockStart(); }, true, Tr::tr("Go to Block Start"),
-            QKeySequence(Tr::tr("Ctrl+[")),
-            G_EDIT_BLOCKS, advancedEditMenu);
-    registerAction(GOTO_BLOCK_END,
-            [] (TextEditorWidget *w) { w->gotoBlockEnd(); }, true, Tr::tr("Go to Block End"),
-            QKeySequence(Tr::tr("Ctrl+]")),
-            G_EDIT_BLOCKS, advancedEditMenu);
-    registerAction(SELECT_BLOCK_UP,
-            [] (TextEditorWidget *w) { w->selectBlockUp(); }, true, Tr::tr("Select Block Up"),
-            QKeySequence(Tr::tr("Ctrl+U")),
-            G_EDIT_BLOCKS, advancedEditMenu);
-    registerAction(SELECT_BLOCK_DOWN,
-            [] (TextEditorWidget *w) { w->selectBlockDown(); }, true, Tr::tr("Select Block Down"),
-            QKeySequence(Tr::tr("Ctrl+Shift+Alt+U")),
-            G_EDIT_BLOCKS, advancedEditMenu);
-    registerAction(SELECT_WORD_UNDER_CURSOR,
-            [] (TextEditorWidget *w) { w->selectWordUnderCursor(); }, true,
-            Tr::tr("Select Word Under Cursor"));
+    // OPENMV-DIFF //
+    // registerAction(GOTO_BLOCK_START,
+    //         [] (TextEditorWidget *w) { w->gotoBlockStart(); }, true, Tr::tr("Go to Block Start"),
+    //         QKeySequence(Tr::tr("Ctrl+[")),
+    //         G_EDIT_BLOCKS, advancedEditMenu);
+    // registerAction(GOTO_BLOCK_END,
+    //         [] (TextEditorWidget *w) { w->gotoBlockEnd(); }, true, Tr::tr("Go to Block End"),
+    //         QKeySequence(Tr::tr("Ctrl+]")),
+    //         G_EDIT_BLOCKS, advancedEditMenu);
+    // registerAction(SELECT_BLOCK_UP,
+    //         [] (TextEditorWidget *w) { w->selectBlockUp(); }, true, Tr::tr("Select Block Up"),
+    //         QKeySequence(Tr::tr("Ctrl+U")),
+    //         G_EDIT_BLOCKS, advancedEditMenu);
+    // registerAction(SELECT_BLOCK_DOWN,
+    //         [] (TextEditorWidget *w) { w->selectBlockDown(); }, true, Tr::tr("Select Block Down"),
+    //         QKeySequence(Tr::tr("Ctrl+Shift+Alt+U")),
+    //         G_EDIT_BLOCKS, advancedEditMenu);
+    // registerAction(SELECT_WORD_UNDER_CURSOR,
+    //         [] (TextEditorWidget *w) { w->selectWordUnderCursor(); }, true,
+    //         Tr::tr("Select Word Under Cursor"));
+    // OPENMV-DIFF //
 
     // register GOTO Actions
     registerAction(GOTO_DOCUMENT_START,
@@ -434,8 +472,10 @@ void TextEditorActionHandlerPrivate::createActions()
 
     // Collect additional modifying actions so we can check for them inside a readonly file
     // and disable them
-    m_modifyingActions << m_autoIndentAction;
-    m_modifyingActions << m_autoFormatAction;
+    // OPENMV-DIFF //
+    // m_modifyingActions << m_autoIndentAction;
+    // m_modifyingActions << m_autoFormatAction;
+    // OPENMV-DIFF //
     m_modifyingActions << m_unCommentSelectionAction;
 
     updateOptionalActions();
@@ -485,10 +525,12 @@ void TextEditorActionHandlerPrivate::updateOptionalActions()
     m_renameSymbolAction->setEnabled(
         optionalActions & TextEditorActionHandler::RenameSymbol);
 
-    bool formatEnabled = (optionalActions & TextEditorActionHandler::Format)
-                         && m_currentEditorWidget && !m_currentEditorWidget->isReadOnly();
-    m_autoIndentAction->setEnabled(formatEnabled);
-    m_autoFormatAction->setEnabled(formatEnabled);
+    // OPENMV-DIFF //
+    // bool formatEnabled = (optionalActions & TextEditorActionHandler::Format)
+    //                      && m_currentEditorWidget && !m_currentEditorWidget->isReadOnly();
+    // m_autoIndentAction->setEnabled(formatEnabled);
+    // m_autoFormatAction->setEnabled(formatEnabled);
+    // OPENMV-DIFF //
 }
 
 void TextEditorActionHandlerPrivate::updateRedoAction(bool on)

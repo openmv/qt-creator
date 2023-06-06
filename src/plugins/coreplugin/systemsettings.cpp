@@ -491,6 +491,9 @@ void SystemSettingsWidget::showHelpForFileBrowser()
 }
 
 SystemSettings::SystemSettings()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(nullptr, false)
+    // OPENMV-DIFF //
 {
     setId(Constants::SETTINGS_ID_SYSTEM);
     setDisplayName(Tr::tr("System"));

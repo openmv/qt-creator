@@ -111,6 +111,9 @@ ModeManager::ModeManager(Internal::MainWindow *mainWindow,
     d->m_modeStack = modeStack;
     d->m_oldCurrent = -1;
     d->m_actionBar = new Internal::FancyActionBar(modeStack);
+    // OPENMV-DIFF //
+    d->m_actionBar->hide();
+    // OPENMV-DIFF //
     d->m_modeStack->addCornerWidget(d->m_actionBar);
     setModeStyle(d->m_modeStyle);
 

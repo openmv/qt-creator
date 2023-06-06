@@ -103,13 +103,19 @@ void Locator::initialize()
 
     QAction *action = new QAction(Utils::Icons::ZOOM.icon(), Tr::tr("Locate..."), this);
     Command *cmd = ActionManager::registerAction(action, Constants::LOCATE);
-    cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+K")));
+    // OPENMV-DIFF //
+    // cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+K")));
+    // OPENMV-DIFF //
+    Q_UNUSED(cmd)
+    // OPENMV-DIFF //
     connect(action, &QAction::triggered, this, [] {
         LocatorManager::show(QString());
     });
 
-    ActionContainer *mtools = ActionManager::actionContainer(Constants::M_TOOLS);
-    mtools->addAction(cmd);
+    // OPENMV-DIFF //
+    // ActionContainer *mtools = ActionManager::actionContainer(Constants::M_TOOLS);
+    // mtools->addAction(cmd);
+    // OPENMV-DIFF //
 
     auto locatorWidget = LocatorManager::createLocatorInputWidget(ICore::mainWindow());
     locatorWidget->setObjectName("LocatorInput"); // used for UI introduction
@@ -239,27 +245,39 @@ void Locator::updateFilterActions()
 void Locator::updateEditorManagerPlaceholderText()
 {
     Command *openCommand = ActionManager::command(Constants::OPEN);
-    Command *locateCommand = ActionManager::command(Constants::LOCATE);
+    // OPENMV-DIFF //
+    // Command *locateCommand = ActionManager::command(Constants::LOCATE);
+    // OPENMV-DIFF //
     const QString placeholderText = Tr::tr("<html><body style=\"color:#909090; font-size:14px\">"
           "<div align='center'>"
           "<div style=\"font-size:20px\">Open a document</div>"
           "<table><tr><td>"
           "<hr/>"
-          "<div style=\"margin-top: 5px\">&bull; File > Open File or Project (%1)</div>"
+          // OPENMV-DIFF //
+          // "<div style=\"margin-top: 5px\">&bull; File > Open File or Project (%1)</div>"
+          // "<div style=\"margin-top: 5px\">&bull; File > Recent Files</div>"
+          // "<div style=\"margin-top: 5px\">&bull; Tools > Locate (%2) and</div>"
+          // "<div style=\"margin-left: 1em\">- type to open file from any open project</div>"
+          // "%4"
+          // "%5"
+          // "<div style=\"margin-left: 1em\">- type <code>%3&lt;space&gt;&lt;filename&gt;</code> to open file from file system</div>"
+          // "<div style=\"margin-left: 1em\">- select one of the other filters for jumping to a location</div>"
+          // OPENMV-DIFF //
+          "<div style=\"margin-top: 5px\">&bull; File > Open File (%1)</div>"
+          "<div style=\"margin-top: 5px\">&bull; File > Examples </div>"
           "<div style=\"margin-top: 5px\">&bull; File > Recent Files</div>"
-          "<div style=\"margin-top: 5px\">&bull; Tools > Locate (%2) and</div>"
-          "<div style=\"margin-left: 1em\">- type to open file from any open project</div>"
-          "%4"
-          "%5"
-          "<div style=\"margin-left: 1em\">- type <code>%3&lt;space&gt;&lt;filename&gt;</code> to open file from file system</div>"
-          "<div style=\"margin-left: 1em\">- select one of the other filters for jumping to a location</div>"
+          // OPENMV-DIFF //
           "<div style=\"margin-top: 5px\">&bull; Drag and drop files here</div>"
           "</td></tr></table>"
           "</div>"
           "</body></html>")
          .arg(openCommand->keySequence().toString(QKeySequence::NativeText))
-         .arg(locateCommand->keySequence().toString(QKeySequence::NativeText))
-         .arg(m_locatorData->m_fileSystemFilter.shortcutString());
+         // OPENMV-DIFF //
+         // .arg(locateCommand->keySequence().toString(QKeySequence::NativeText))
+         // .arg(m_locatorData->m_fileSystemFilter.shortcutString());
+         // OPENMV-DIFF //
+         ;
+         // OPENMV-DIFF //
 
     QString classes;
     // not nice, but anyhow
@@ -278,7 +296,11 @@ void Locator::updateEditorManagerPlaceholderText()
         methods = Tr::tr("<div style=\"margin-left: 1em\">- type <code>%1&lt;space&gt;&lt;pattern&gt;</code>"
                      " to jump to a function definition</div>").arg(methodsFilter->shortcutString());
 
-    EditorManagerPrivate::setPlaceholderText(placeholderText.arg(classes, methods));
+    // OPENMV-DIFF //
+    // EditorManagerPrivate::setPlaceholderText(placeholderText.arg(classes, methods));
+    // OPENMV-DIFF //
+    EditorManagerPrivate::setPlaceholderText(placeholderText);
+    // OPENMV-DIFF //
 }
 
 void Locator::saveSettings() const
