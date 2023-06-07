@@ -253,59 +253,6 @@ class LoadFolderThread: public QObject
     private: QString m_path; bool m_flat;
 };
 
-class ElidingToolButton : public QToolButton
-{
-    Q_OBJECT
-    Q_PROPERTY(Qt::TextElideMode elideMode READ elideMode WRITE setElideMode DESIGNABLE true)
-
-public:
-
-    explicit ElidingToolButton(QWidget *parent = 0) : QToolButton(parent), m_elideMode(Qt::ElideRight) { }
-    Qt::TextElideMode elideMode() const { return m_elideMode; }
-    void setElideMode(const Qt::TextElideMode &elideMode) { m_elideMode = elideMode; update(); }
-
-protected:
-
-    void paintEvent(QPaintEvent *event)
-    {
-        Q_UNUSED(event)
-
-        const QFontMetrics fm = fontMetrics();
-        const int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
-
-        QPainter p(this);
-
-        QStyleOption styleOption;
-        styleOption.initFrom(this);
-        const bool hovered = !Utils::HostOsInfo::isMacHost() && (styleOption.state & QStyle::State_MouseOver);
-
-        if(isEnabled())
-        {
-            Utils::Theme::Color c = Utils::Theme::BackgroundColorDark;
-
-            if (hovered)
-                c = Utils::Theme::BackgroundColorHover;
-            else if (isDown() || isChecked())
-                c = Utils::Theme::BackgroundColorSelected;
-
-            if (c != Utils::Theme::BackgroundColorDark)
-                p.fillRect(rect(), Utils::creatorTheme()->color(c));
-
-            p.setFont(font());
-            p.setPen(Utils::creatorTheme()->color(Utils::Theme::OutputPaneToggleButtonTextColorChecked));
-
-            if (!isChecked())
-                p.setPen(Utils::creatorTheme()->color(Utils::Theme::OutputPaneToggleButtonTextColorUnchecked));
-        }
-
-        p.drawText(4, baseLine, fm.elidedText(text(), Qt::ElideRight, width() - 5));
-    }
-
-private:
-
-    Qt::TextElideMode m_elideMode;
-};
-
 class OpenMVPlugin : public ExtensionSystem::IPlugin
 {
     Q_OBJECT
@@ -415,9 +362,9 @@ private:
 
     Utils::ElidingLabel *m_boardLabel;
     Utils::ElidingLabel *m_sensorLabel;
-    ElidingToolButton *m_versionButton;
+    Utils::ElidingToolButton *m_versionButton;
     Utils::ElidingLabel *m_portLabel;
-    ElidingToolButton *m_pathButton;
+    Utils::ElidingToolButton *m_pathButton;
     Utils::ElidingLabel  *m_fpsLabel;
 
     ///////////////////////////////////////////////////////////////////////////

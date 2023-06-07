@@ -2102,7 +2102,7 @@ void OpenMVPlugin::extensionsInitialized()
     Core::ICore::statusBar()->addPermanentWidget(m_sensorLabel);
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
 
-    m_versionButton = new ElidingToolButton;
+    m_versionButton = new Utils::ElidingToolButton;
     m_versionButton->setText(tr("Firmware Version:"));
     m_versionButton->setToolTip(tr("Camera firmware version"));
     m_versionButton->setDisabled(true);
@@ -2116,7 +2116,7 @@ void OpenMVPlugin::extensionsInitialized()
     Core::ICore::statusBar()->addPermanentWidget(m_portLabel);
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
 
-    m_pathButton = new ElidingToolButton;
+    m_pathButton = new Utils::ElidingToolButton;
     m_pathButton->setText(tr("Drive:"));
     m_pathButton->setToolTip(tr("Drive associated with port"));
     m_pathButton->setDisabled(true);

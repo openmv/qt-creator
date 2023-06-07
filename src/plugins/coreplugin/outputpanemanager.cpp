@@ -584,7 +584,9 @@ void OutputPaneManager::initialize()
     const int currentIdx = m_instance->currentIndex();
     if (QTC_GUARD(currentIdx >= 0 && currentIdx < g_outputPanes.size()))
         m_instance->m_titleLabel->setText(g_outputPanes[currentIdx].pane->displayName());
-    m_instance->m_buttonsWidget->layout()->addWidget(m_instance->m_manageButton);
+    // OPENMV-DIFF //
+    // m_instance->m_buttonsWidget->layout()->addWidget(m_instance->m_manageButton);
+    // OPENMV-DIFF //
     connect(m_instance->m_manageButton,
             &OutputPaneManageButton::menuRequested,
             m_instance,
@@ -1047,7 +1049,11 @@ void OutputPaneToggleButton::paintEvent(QPaintEvent*)
         labelWidth = labelSize.width() + 3;
         m_badgeNumberLabel.paint(&p, width() - labelWidth, (height() - labelSize.height()) / 2, isChecked());
     }
-    p.drawText(leftPart, baseLine, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
+    // OPENMV-DIFF //
+    // p.drawText(leftPart, baseLine, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
+    // OPENMV-DIFF //
+    p.drawText(leftPart, baseLine - 1, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
+    // OPENMV-DIFF //
 }
 
 void OutputPaneToggleButton::checkStateSet()
