@@ -890,8 +890,12 @@ FilePath DocumentManager::getSaveAsFileName(const IDocument *document)
         else if (!defaultPath.isEmpty())
             fileDialogPath = defaultPath;
     }
-    if (selectedFilter.isEmpty())
-        selectedFilter = Utils::mimeTypeForName(document->mimeType()).filterString();
+    // OPENMV-DIFF //
+    // if (selectedFilter.isEmpty())
+    //     selectedFilter = Utils::mimeTypeForName(document->mimeType()).filterString();
+    // OPENMV-DIFF //
+    selectedFilter = QString();
+    // OPENMV-DIFF //
 
     if (!filter.contains(selectedFilter))
         filter.prepend(selectedFilter + QLatin1String(";;"));

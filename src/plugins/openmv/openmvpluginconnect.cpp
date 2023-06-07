@@ -3159,20 +3159,20 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_patch = patch2;
         m_errorFilterString = QString();
 
-        m_openDriveFolderCommand->action()->setEnabled(false);
-        m_configureSettingsCommand->action()->setEnabled(false);
-        m_saveCommand->action()->setEnabled(false);
-        m_resetCommand->action()->setEnabled(true);
-        m_developmentReleaseCommand->action()->setEnabled(true);
-        if(!m_autoReconnectAction->isChecked()) m_connectCommand->action()->setEnabled(false);
-        m_connectCommand->action()->setVisible(false);
-        if(!m_autoReconnectAction->isChecked()) m_disconnectCommand->action()->setEnabled(true);
-        m_disconnectCommand->action()->setVisible(true);
+        m_openDriveFolderAction->setEnabled(false);
+        m_configureSettingsAction->setEnabled(false);
+        m_saveAction->setEnabled(false);
+        m_resetAction->setEnabled(true);
+        m_developmentReleaseAction->setEnabled(true);
+        if(!m_autoReconnectAction->isChecked()) m_connectAction->setEnabled(false);
+        m_connectAction->setVisible(false);
+        if(!m_autoReconnectAction->isChecked()) m_disconnectAction->setEnabled(true);
+        m_disconnectAction->setVisible(true);
         Core::IEditor *editor = Core::EditorManager::currentEditor();
-        m_startCommand->action()->setEnabled(editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false);
-        m_startCommand->action()->setVisible(true);
-        m_stopCommand->action()->setEnabled(false);
-        m_stopCommand->action()->setVisible(false);
+        m_startAction->setEnabled(editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false);
+        m_startAction->setVisible(true);
+        m_stopAction->setEnabled(false);
+        m_stopAction->setVisible(false);
 
         m_boardLabel->setEnabled(true);
         m_boardLabel->setText(tr("Board: %L1").arg(m_boardType));
@@ -3451,19 +3451,19 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_portPath = QString();
             m_errorFilterString = QString();
 
-            m_openDriveFolderCommand->action()->setEnabled(false);
-            m_configureSettingsCommand->action()->setEnabled(false);
-            m_saveCommand->action()->setEnabled(false);
-            m_resetCommand->action()->setEnabled(false);
-            m_developmentReleaseCommand->action()->setEnabled(false);
-            m_connectCommand->action()->setVisible(true);
-            if(!m_autoReconnectAction->isChecked()) m_connectCommand->action()->setEnabled(true);
-            m_disconnectCommand->action()->setVisible(false);
-            if(!m_autoReconnectAction->isChecked()) m_disconnectCommand->action()->setEnabled(false);
-            m_startCommand->action()->setEnabled(false);
-            m_startCommand->action()->setVisible(true);
-            m_stopCommand->action()->setEnabled(false);
-            m_stopCommand->action()->setVisible(false);
+            m_openDriveFolderAction->setEnabled(false);
+            m_configureSettingsAction->setEnabled(false);
+            m_saveAction->setEnabled(false);
+            m_resetAction->setEnabled(false);
+            m_developmentReleaseAction->setEnabled(false);
+            m_connectAction->setVisible(true);
+            if(!m_autoReconnectAction->isChecked()) m_connectAction->setEnabled(true);
+            m_disconnectAction->setVisible(false);
+            if(!m_autoReconnectAction->isChecked()) m_disconnectAction->setEnabled(false);
+            m_startAction->setEnabled(false);
+            m_startAction->setVisible(true);
+            m_stopAction->setEnabled(false);
+            m_stopAction->setVisible(false);
 
             m_boardLabel->setDisabled(true);
             m_boardLabel->setText(tr("Board:"));

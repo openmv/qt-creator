@@ -27,7 +27,11 @@ class CORE_EXPORT FancyToolButton : public QToolButton
     Q_PROPERTY(qreal fader READ fader WRITE setFader)
 
 public:
-    FancyToolButton(QAction *action, QWidget *parent = nullptr);
+    // OPENMV-DIFF //
+    // FancyToolButton(QAction *action, QWidget *parent = nullptr);
+    // OPENMV-DIFF //
+    FancyToolButton(QAction *action, const QIcon &customIcon, QWidget *parent = nullptr);
+    // OPENMV-DIFF //
 
     void paintEvent(QPaintEvent *event) override;
     bool event(QEvent *e) override;
@@ -50,6 +54,9 @@ private:
 
     qreal m_fader = 0;
     bool m_iconsOnly = false;
+    // OPENMV-DIFF //
+    QIcon m_customIcon;
+    // OPENMV-DIFF //
 };
 
 // OPENMV-DIFF //
@@ -64,7 +71,11 @@ public:
     FancyActionBar(QWidget *parent = nullptr);
 
     void paintEvent(QPaintEvent *event) override;
-    void insertAction(int index, QAction *action);
+    // OPENMV-DIFF //
+    // void insertAction(int index, QAction *action);
+    // OPENMV-DIFF //
+    void insertAction(int index, QAction *action, const QIcon &customIcon = QIcon());
+    // OPENMV-DIFF //
     void addProjectSelector(QAction *action);
     QLayout *actionsLayout() const;
     QSize minimumSizeHint() const override;
