@@ -7,6 +7,12 @@
 #include <QPainter>
 #include <QStyle>
 
+// OPENMV-DIFF //
+#include <QStyleOption>
+#include <utils/hostosinfo.h>
+#include <utils/theme/theme.h>
+// OPENMV-DIFF //
+
 /*!
     \class Utils::ElidingLabel
 
@@ -38,10 +44,12 @@ void ElidingLabel::setElideMode(const Qt::TextElideMode &elideMode)
     if (elideMode == Qt::ElideNone)
         updateToolTip({});
 
-    setSizePolicy(QSizePolicy(
-                      m_elideMode == Qt::ElideNone ? QSizePolicy::Preferred : QSizePolicy::Ignored,
-                      QSizePolicy::Preferred,
-                      QSizePolicy::Label));
+    // OPENMV-DIFF //
+    // setSizePolicy(QSizePolicy(
+    //                   m_elideMode == Qt::ElideNone ? QSizePolicy::Preferred : QSizePolicy::Ignored,
+    //                   QSizePolicy::Preferred,
+    //                   QSizePolicy::Label));
+    // OPENMV-DIFF //
     update();
 }
 
@@ -108,5 +116,46 @@ void ElidingLabel::setAdditionalToolTipSeparator(const QString &newAdditionalToo
 {
     m_additionalToolTipSeparator = newAdditionalToolTipSeparator;
 }
+
+// OPENMV-DIFF //
+void ElidingToolButton::paintEvent(QPaintEvent *event)
+{
+    Q_UNUSED(event)
+
+    const QFontMetrics fm = fontMetrics();
+    const int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
+
+    QPainter p(this);
+
+    QStyleOption styleOption;
+    styleOption.initFrom(this);
+    const bool hovered = !Utils::HostOsInfo::isMacHost() && (styleOption.state & QStyle::State_MouseOver);
+
+    if(isEnabled())
+    {
+        Utils::Theme::Color c = Utils::Theme::BackgroundColorDark;
+
+        if (hovered)
+            c = Utils::Theme::BackgroundColorHover;
+        else if (isDown() || isChecked())
+            c = Utils::Theme::BackgroundColorSelected;
+
+        if (c != Utils::Theme::BackgroundColorDark)
+            p.fillRect(rect(), Utils::creatorTheme()->color(c));
+
+        p.setFont(font());
+        p.setPen(Utils::creatorTheme()->color(Utils::Theme::OutputPaneToggleButtonTextColorChecked));
+
+        if (!isChecked())
+            p.setPen(Utils::creatorTheme()->color(Utils::Theme::OutputPaneToggleButtonTextColorUnchecked));
+    }
+    else
+    {
+        p.setPen(QColor(98, 99, 100));
+    }
+
+    p.drawText(4, baseLine - 1, fm.elidedText(text(), Qt::ElideRight, width() - 5));
+}
+// OPENMV-DIFF //
 
 } // namespace Utils

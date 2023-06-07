@@ -522,7 +522,9 @@ void OutputPaneManager::initialize()
     m_instance->m_titleLabel->setMinimumWidth(
         minTitleWidth + m_instance->m_titleLabel->contentsMargins().left()
         + m_instance->m_titleLabel->contentsMargins().right());
-    m_instance->m_buttonsWidget->layout()->addWidget(m_instance->m_manageButton);
+    // OPENMV-DIFF //
+    // m_instance->m_buttonsWidget->layout()->addWidget(m_instance->m_manageButton);
+    // OPENMV-DIFF //
     connect(m_instance->m_manageButton,
             &QAbstractButton::clicked,
             m_instance,
@@ -926,7 +928,11 @@ void OutputPaneToggleButton::paintEvent(QPaintEvent*)
         labelWidth = labelSize.width() + 3;
         m_badgeNumberLabel.paint(&p, width() - labelWidth, (height() - labelSize.height()) / 2, isChecked());
     }
-    p.drawText(leftPart, baseLine, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
+    // OPENMV-DIFF //
+    // p.drawText(leftPart, baseLine, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
+    // OPENMV-DIFF //
+    p.drawText(leftPart, baseLine - 1, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
+    // OPENMV-DIFF //
 }
 
 void OutputPaneToggleButton::checkStateSet()
