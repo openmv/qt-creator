@@ -479,7 +479,9 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     selectionLayout->addWidget(bar);
 
     selectionLayout->addWidget(m_tabBar);
-    selectionLayout->addStretch(1);
+    // OPENMV-DIFF //
+    // selectionLayout->addStretch(1);
+    // OPENMV-DIFF //
     m_selectionWidget->setLayout(selectionLayout);
     m_selectionWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
 

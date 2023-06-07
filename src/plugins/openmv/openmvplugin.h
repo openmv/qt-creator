@@ -36,6 +36,7 @@
 #include <utils/elidinglabel.h>
 #include <utils/environment.h>
 #include <utils/hostosinfo.h>
+#include <utils/utilsicons.h>
 #include <utils/pathchooser.h>
 #include <utils/proxyaction.h>
 #include <utils/styledbar.h>
@@ -395,16 +396,16 @@ private:
     QAction *m_eraseAction;
     QAction *m_autoReconnectAction;
 
-    Core::Command *m_openDriveFolderCommand;
-    Core::Command *m_configureSettingsCommand;
-    Core::Command *m_saveCommand;
-    Core::Command *m_resetCommand;
-    Core::Command *m_developmentReleaseCommand;
+    Core::Command *m_openDriveFolderCommand; QAction *m_openDriveFolderAction;
+    Core::Command *m_configureSettingsCommand; QAction *m_configureSettingsAction;
+    Core::Command *m_saveCommand; QAction *m_saveAction;
+    Core::Command *m_resetCommand; QAction *m_resetAction;
+    Core::Command *m_developmentReleaseCommand; QAction *m_developmentReleaseAction;
     Core::ActionContainer *m_openTerminalMenu;
-    Core::Command *m_connectCommand;
-    Core::Command *m_disconnectCommand;
-    Core::Command *m_startCommand;
-    Core::Command *m_stopCommand;
+    Core::Command *m_connectCommand; QAction *m_connectAction;
+    Core::Command *m_disconnectCommand; QAction *m_disconnectAction;
+    Core::Command *m_startCommand; QAction *m_startAction;
+    Core::Command *m_stopCommand; QAction *m_stopAction;
 
     QToolButton *m_jpgCompress;
     QToolButton *m_disableFrameBuffer;

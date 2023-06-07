@@ -27,7 +27,7 @@ using namespace Utils;
 namespace Core {
 namespace Internal {
 
-FancyToolButton::FancyToolButton(QAction *action, QWidget *parent)
+FancyToolButton::FancyToolButton(QAction *action, const QIcon &customIcon, QWidget *parent)
     : QToolButton(parent)
 {
     setDefaultAction(action);
@@ -36,6 +36,9 @@ FancyToolButton::FancyToolButton(QAction *action, QWidget *parent)
 
     setAttribute(Qt::WA_Hover, true);
     setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+    // OPENMV-DIFF //
+    m_customIcon = customIcon;
+    // OPENMV-DIFF //
 }
 
 bool FancyToolButton::event(QEvent *e)
@@ -177,6 +180,9 @@ void FancyToolButton::paintEvent(QPaintEvent *event)
                                      ? ((isDown() || isChecked()) ? QIcon::Active : QIcon::Normal)
                                      : QIcon::Disabled;
     QRect iconRect(0, 0, Constants::MODEBAR_ICON_SIZE, Constants::MODEBAR_ICON_SIZE);
+    // OPENMV-DIFF //
+    QIcon drawIcon = (!m_customIcon.isNull()) ? m_customIcon : icon();
+    // OPENMV-DIFF //
 
     const bool isTitledAction = defaultAction() && defaultAction()->property("titledAction").toBool();
     // draw popup texts
@@ -198,7 +204,11 @@ void FancyToolButton::paintEvent(QPaintEvent *event)
         centerRect.adjust(0, 0, 0, -lineHeight * 2 - 4);
 
         iconRect.moveCenter(centerRect.center());
-        StyleHelper::drawIconWithShadow(icon(), iconRect, &painter, iconMode);
+        // OPENMV-DIFF //
+        // StyleHelper::drawIconWithShadow(to_draw_icon, iconRect, &painter, iconMode);
+        // OPENMV-DIFF //
+        StyleHelper::drawIconWithShadow(drawIcon, iconRect, &painter, iconMode);
+        // OPENMV-DIFF //
         painter.setFont(normalFont);
 
         QPoint textOffset = centerRect.center()
@@ -248,7 +258,11 @@ void FancyToolButton::paintEvent(QPaintEvent *event)
 
     } else {
         iconRect.moveCenter(rect().center());
-        StyleHelper::drawIconWithShadow(icon(), iconRect, &painter, iconMode);
+        // OPENMV-DIFF //
+        // StyleHelper::drawIconWithShadow(to_draw_icon, iconRect, &painter, iconMode);
+        // OPENMV-DIFF //
+        StyleHelper::drawIconWithShadow(drawIcon, iconRect, &painter, iconMode);
+        // OPENMV-DIFF //
     }
 
     // pop up arrow next to icon
@@ -383,9 +397,17 @@ void FancyActionBar::addProjectSelector(QAction *action)
     insertAction(0, action);
 }
 
-void FancyActionBar::insertAction(int index, QAction *action)
+// OPENMV-DIFF //
+// void FancyActionBar::insertAction(int index, QAction *action)
+// OPENMV-DIFF //
+void FancyActionBar::insertAction(int index, QAction *action, const QIcon &customIcon)
+// OPENMV-DIFF //
 {
-    auto *button = new FancyToolButton(action, this);
+    // OPENMV-DIFF //
+    // auto *button = new FancyToolButton(action, this);
+    // OPENMV-DIFF //
+    auto *button = new FancyToolButton(action, customIcon, this);
+    // OPENMV-DIFF //
     if (!action->objectName().isEmpty())
         button->setObjectName(action->objectName() + ".Button"); // used for UI introduction
     button->setIconsOnly(m_iconsOnly);

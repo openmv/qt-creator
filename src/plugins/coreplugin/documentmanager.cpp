@@ -910,8 +910,12 @@ FilePath DocumentManager::getSaveAsFileName(const IDocument *document)
         if (!defaultPath.isEmpty() && !suggestedName.isEmpty())
             fileDialogPath = defaultPath / suggestedName;
     }
-    if (selectedFilter.isEmpty())
-        selectedFilter = Utils::mimeTypeForName(document->mimeType()).filterString();
+    // OPENMV-DIFF //
+    // if (selectedFilter.isEmpty())
+    //     selectedFilter = Utils::mimeTypeForName(document->mimeType()).filterString();
+    // OPENMV-DIFF //
+    selectedFilter = QString();
+    // OPENMV-DIFF //
 
     return getSaveFileName(Tr::tr("Save File As"),
                            fileDialogPath,

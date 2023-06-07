@@ -903,7 +903,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     ///////////////////////////////////////////////////////////////////////////
 
-    connect(Core::ActionManager::command(Core::Constants::NEW)->action(), &QAction::triggered, this, [this] {
+    connect(Core::ActionManager::command(Core::Constants::NEW_FILE)->action(), &QAction::triggered, this, [this] {
         Core::EditorManager::cutForwardNavigationHistory();
         Core::EditorManager::addCurrentPositionToNavigationHistory();
         QString titlePattern = tr("untitled_$.py");
@@ -1011,35 +1011,35 @@ void OpenMVPlugin::extensionsInitialized()
 
     toolsMenu->addSeparator();
 
-    QAction *openDriveFolderCommand = new QAction(tr("Open OpenMV Cam Drive folder"), this);
-    m_openDriveFolderCommand = Core::ActionManager::registerAction(openDriveFolderCommand, Utils::Id("OpenMV.OpenDriveFolder"));
+    m_openDriveFolderAction = new QAction(tr("Open OpenMV Cam Drive folder"), this);
+    m_openDriveFolderCommand = Core::ActionManager::registerAction(m_openDriveFolderAction, Utils::Id("OpenMV.OpenDriveFolder"));
     toolsMenu->addAction(m_openDriveFolderCommand);
-    openDriveFolderCommand->setEnabled(false);
-    connect(openDriveFolderCommand, &QAction::triggered, this, [this] {Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(), Utils::FilePath::fromString(Utils::HostOsInfo::isWindowsHost() ? m_portPath : (m_portPath + QStringLiteral("/.openmv_disk")))); });
+    m_openDriveFolderAction->setEnabled(false);
+    connect(m_openDriveFolderAction, &QAction::triggered, this, [this] {Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(), Utils::FilePath::fromString(Utils::HostOsInfo::isWindowsHost() ? m_portPath : (m_portPath + QStringLiteral("/.openmv_disk")))); });
 
-    QAction *configureSettingsCommand = new QAction(tr("Configure OpenMV Cam settings file"), this);
-    m_configureSettingsCommand = Core::ActionManager::registerAction(configureSettingsCommand, Utils::Id("OpenMV.Settings"));
+    m_configureSettingsAction = new QAction(tr("Configure OpenMV Cam settings file"), this);
+    m_configureSettingsCommand = Core::ActionManager::registerAction(m_configureSettingsAction, Utils::Id("OpenMV.Settings"));
     toolsMenu->addAction(m_configureSettingsCommand);
-    configureSettingsCommand->setEnabled(false);
-    connect(configureSettingsCommand, &QAction::triggered, this, &OpenMVPlugin::configureSettings);
+    m_configureSettingsAction->setEnabled(false);
+    connect(m_configureSettingsAction, &QAction::triggered, this, &OpenMVPlugin::configureSettings);
 
-    QAction *saveCommand = new QAction(tr("Save open script to OpenMV Cam (as main.py)"), this);
-    m_saveCommand = Core::ActionManager::registerAction(saveCommand, Utils::Id("OpenMV.Save"));
+    m_saveAction = new QAction(tr("Save open script to OpenMV Cam (as main.py)"), this);
+    m_saveCommand = Core::ActionManager::registerAction(m_saveAction, Utils::Id("OpenMV.Save"));
     toolsMenu->addAction(m_saveCommand);
-    saveCommand->setEnabled(false);
-    connect(saveCommand, &QAction::triggered, this, &OpenMVPlugin::saveScript);
+    m_saveAction->setEnabled(false);
+    connect(m_saveAction, &QAction::triggered, this, &OpenMVPlugin::saveScript);
 
-    QAction *resetCommand = new QAction(tr("Reset OpenMV Cam"), this);
-    m_resetCommand = Core::ActionManager::registerAction(resetCommand, Utils::Id("OpenMV.Reset"));
+    m_resetAction = new QAction(tr("Reset OpenMV Cam"), this);
+    m_resetCommand = Core::ActionManager::registerAction(m_resetAction, Utils::Id("OpenMV.Reset"));
     toolsMenu->addAction(m_resetCommand);
-    resetCommand->setEnabled(false);
-    connect(resetCommand, &QAction::triggered, this, [this] {disconnectClicked(true);});
+    m_resetAction->setEnabled(false);
+    connect(m_resetAction, &QAction::triggered, this, [this] {disconnectClicked(true);});
 
-    QAction *developmentReleaseCommand = new QAction(tr("Install the Latest Development Release"), this);
-    m_developmentReleaseCommand = Core::ActionManager::registerAction(developmentReleaseCommand, Utils::Id("OpenMV.InstallTheLatestDevelopmentRelease"));
+    m_developmentReleaseAction = new QAction(tr("Install the Latest Development Release"), this);
+    m_developmentReleaseCommand = Core::ActionManager::registerAction(m_developmentReleaseAction, Utils::Id("OpenMV.InstallTheLatestDevelopmentRelease"));
     toolsMenu->addAction(m_developmentReleaseCommand);
-    developmentReleaseCommand->setEnabled(false);
-    connect(developmentReleaseCommand, &QAction::triggered, this, &OpenMVPlugin::installTheLatestDevelopmentRelease);
+    m_developmentReleaseAction->setEnabled(false);
+    connect(m_developmentReleaseAction, &QAction::triggered, this, &OpenMVPlugin::installTheLatestDevelopmentRelease);
 
     toolsMenu->addSeparator();
     m_openTerminalMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.OpenTermnial"));
@@ -1614,23 +1614,23 @@ void OpenMVPlugin::extensionsInitialized()
     ///////////////////////////////////////////////////////////////////////////
 
     m_connectCommand =
-        Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(CONNECT_PATH)),
+        Core::ActionManager::registerAction(m_connectAction = new QAction(QIcon(QStringLiteral(CONNECT_PATH)),
         tr("Connect"), this), Utils::Id("OpenMV.Connect"));
     m_connectCommand->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
-    m_connectCommand->action()->setEnabled(true);
-    m_connectCommand->action()->setVisible(true);
-    connect(m_connectCommand->action(), &QAction::triggered, this, [this] {connectClicked();});
+    m_connectAction->setEnabled(true);
+    m_connectAction->setVisible(true);
+    connect(m_connectAction, &QAction::triggered, this, [this] {connectClicked();});
 
     m_disconnectCommand =
-        Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(DISCONNECT_PATH)),
+        Core::ActionManager::registerAction(m_disconnectAction = new QAction(QIcon(QStringLiteral(DISCONNECT_PATH)),
         tr("Disconnect"), this), Utils::Id("OpenMV.Disconnect"));
     m_disconnectCommand->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
-    m_disconnectCommand->action()->setEnabled(false);
-    m_disconnectCommand->action()->setVisible(false);
-    connect(m_disconnectCommand->action(), &QAction::triggered, this, [this] {disconnectClicked();});
+    m_disconnectAction->setEnabled(false);
+    m_disconnectAction->setVisible(false);
+    connect(m_disconnectAction, &QAction::triggered, this, [this] {disconnectClicked();});
     connect(m_autoReconnectAction, &QAction::toggled, this, [this] (bool state) {
-        m_connectCommand->action()->setEnabled(!state);
-        m_disconnectCommand->action()->setEnabled(!state);
+        m_connectAction->setEnabled(!state);
+        m_disconnectAction->setEnabled(!state);
         if(state) {
             static_cast<Utils::ProxyAction *>(m_connectCommand->action())->setOverrideToolTip(m_autoReconnectAction->toolTip());
             static_cast<Utils::ProxyAction *>(m_disconnectCommand->action())->setOverrideToolTip(m_autoReconnectAction->toolTip());
@@ -1641,45 +1641,45 @@ void OpenMVPlugin::extensionsInitialized()
     });
 
     m_startCommand =
-        Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(START_PATH)),
+        Core::ActionManager::registerAction(m_startAction = new QAction(QIcon(QStringLiteral(START_PATH)),
         tr("Start (run script)"), this), Utils::Id("OpenMV.Start"));
     m_startCommand->setDefaultKeySequence(QStringLiteral("Ctrl+R"));
-    m_startCommand->action()->setEnabled(false);
-    m_startCommand->action()->setVisible(true);
-    connect(m_startCommand->action(), &QAction::triggered, this, &OpenMVPlugin::startClicked);
+    m_startAction->setEnabled(false);
+    m_startAction->setVisible(true);
+    connect(m_startAction, &QAction::triggered, this, &OpenMVPlugin::startClicked);
     connect(Core::EditorManager::instance(), &Core::EditorManager::currentEditorChanged, [this] (Core::IEditor *editor) {
 
         if(m_connected)
         {
-            m_openDriveFolderCommand->action()->setEnabled(!m_portPath.isEmpty());
-            m_configureSettingsCommand->action()->setEnabled(!m_portPath.isEmpty());
-            m_saveCommand->action()->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
-            m_startCommand->action()->setEnabled((!m_running) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
-            m_startCommand->action()->setVisible(!m_running);
-            m_stopCommand->action()->setEnabled(m_running);
-            m_stopCommand->action()->setVisible(m_running);
+            m_openDriveFolderAction->setEnabled(!m_portPath.isEmpty());
+            m_configureSettingsAction->setEnabled(!m_portPath.isEmpty());
+            m_saveAction->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
+            m_startAction->setEnabled((!m_running) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
+            m_startAction->setVisible(!m_running);
+            m_stopAction->setEnabled(m_running);
+            m_stopAction->setVisible(m_running);
         }
     });
 
     m_stopCommand =
-        Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(STOP_PATH)),
+        Core::ActionManager::registerAction(m_stopAction = new QAction(QIcon(QStringLiteral(STOP_PATH)),
         tr("Stop (halt script)"), this), Utils::Id("OpenMV.Stop"));
     m_stopCommand->setDefaultKeySequence(QStringLiteral("Ctrl+R"));
-    m_stopCommand->action()->setEnabled(false);
-    m_stopCommand->action()->setVisible(false);
-    connect(m_stopCommand->action(), &QAction::triggered, this, &OpenMVPlugin::stopClicked);
+    m_stopAction->setEnabled(false);
+    m_stopAction->setVisible(false);
+    connect(m_stopAction, &QAction::triggered, this, &OpenMVPlugin::stopClicked);
     connect(m_iodevice, &OpenMVPluginIO::scriptRunning, this, [this] (bool running) {
 
         if(m_connected)
         {
             Core::IEditor *editor = Core::EditorManager::currentEditor();
-            m_openDriveFolderCommand->action()->setEnabled(!m_portPath.isEmpty());
-            m_configureSettingsCommand->action()->setEnabled(!m_portPath.isEmpty());
-            m_saveCommand->action()->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
-            m_startCommand->action()->setEnabled((!running) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
-            m_startCommand->action()->setVisible(!running);
-            m_stopCommand->action()->setEnabled(running);
-            m_stopCommand->action()->setVisible(running);
+            m_openDriveFolderAction->setEnabled(!m_portPath.isEmpty());
+            m_configureSettingsAction->setEnabled(!m_portPath.isEmpty());
+            m_saveAction->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
+            m_startAction->setEnabled((!running) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
+            m_startAction->setVisible(!running);
+            m_stopAction->setEnabled(running);
+            m_stopAction->setVisible(running);
             m_running = running;
         }
     });
@@ -1694,9 +1694,9 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Internal::FancyActionBar *actionBar0 = new Core::Internal::FancyActionBar(widget);
     widget->insertCornerWidget(0, actionBar0);
 
-    actionBar0->insertAction(0, Core::ActionManager::command(Core::Constants::NEW)->action());
-    actionBar0->insertAction(1, Core::ActionManager::command(Core::Constants::OPEN)->action());
-    actionBar0->insertAction(2, Core::ActionManager::command(Core::Constants::SAVE)->action());
+    actionBar0->insertAction(0, Core::ActionManager::command(Core::Constants::NEW_FILE)->action(), QIcon(QStringLiteral(":/openmv/images/filenew.png")));
+    actionBar0->insertAction(1, Core::ActionManager::command(Core::Constants::OPEN)->action(), QIcon(QStringLiteral(":/openmv/images/fileopen.png")));
+    actionBar0->insertAction(2, Core::ActionManager::command(Core::Constants::SAVE)->action(), QIcon(QStringLiteral(":/openmv/images/filesave.png")));
 
     actionBar0->setProperty("no_separator", true);
     actionBar0->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Maximum);
@@ -1704,11 +1704,11 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Internal::FancyActionBar *actionBar1 = new Core::Internal::FancyActionBar(widget);
     widget->insertCornerWidget(1, actionBar1);
 
-    actionBar1->insertAction(0, Core::ActionManager::command(Core::Constants::UNDO)->action());
-    actionBar1->insertAction(1, Core::ActionManager::command(Core::Constants::REDO)->action());
-    actionBar1->insertAction(2, Core::ActionManager::command(Core::Constants::CUT)->action());
-    actionBar1->insertAction(3, Core::ActionManager::command(Core::Constants::COPY)->action());
-    actionBar1->insertAction(4, Core::ActionManager::command(Core::Constants::PASTE)->action());
+    actionBar1->insertAction(0, Core::ActionManager::command(Core::Constants::UNDO)->action(), QIcon(QStringLiteral(":/openmv/images/undo.png")));
+    actionBar1->insertAction(1, Core::ActionManager::command(Core::Constants::REDO)->action(), QIcon(QStringLiteral(":/openmv/images/redo.png")));
+    actionBar1->insertAction(2, Core::ActionManager::command(Core::Constants::CUT)->action(), QIcon(QStringLiteral(":/openmv/images/editcut.png")));
+    actionBar1->insertAction(3, Core::ActionManager::command(Core::Constants::COPY)->action(), QIcon(QStringLiteral(":/openmv/images/editcopy.png")));
+    actionBar1->insertAction(4, Core::ActionManager::command(Core::Constants::PASTE)->action(), QIcon(QStringLiteral(":/openmv/images/editpaste.png")));
 
     actionBar1->setProperty("no_separator", false);
     actionBar1->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
@@ -2009,7 +2009,7 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorStyledBar0->setLayout(datasetEditorStyledBarLayout0);
 
     QToolButton *datasetEditorCloseButton = new QToolButton;
-    datasetEditorCloseButton->setIcon(Utils::Icon({{Utils::FilePath::fromString(QStringLiteral(":/core/images/close.png")), Utils::Theme::IconsBaseColor}}).icon());
+    datasetEditorCloseButton->setIcon(Utils::Icons::CLOSE_TOOLBAR.icon());
     datasetEditorCloseButton->setToolTip(tr("Close"));
     datasetEditorStyledBarLayout0->addWidget(datasetEditorCloseButton);
 
@@ -2138,8 +2138,8 @@ void OpenMVPlugin::extensionsInitialized()
         settings->value(QStringLiteral(EDITOR_MANAGER_STATE)).toByteArray());
     m_autoReconnectAction->setChecked(
         settings->value(QStringLiteral(AUTO_RECONNECT_STATE), m_autoReconnectAction->isChecked()).toBool());
-    m_connectCommand->action()->setEnabled(!m_autoReconnectAction->isChecked());
-    m_disconnectCommand->action()->setEnabled(!m_autoReconnectAction->isChecked());
+    m_connectAction->setEnabled(!m_autoReconnectAction->isChecked());
+    m_disconnectAction->setEnabled(!m_autoReconnectAction->isChecked());
     if(m_autoReconnectAction->isChecked()) {
         static_cast<Utils::ProxyAction *>(m_connectCommand->action())->setOverrideToolTip(m_autoReconnectAction->toolTip());
         static_cast<Utils::ProxyAction *>(m_disconnectCommand->action())->setOverrideToolTip(m_autoReconnectAction->toolTip());
@@ -2257,7 +2257,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     if(editor ? (editor->document() ? editor->document()->contents().isEmpty() : true) : true)
     {
-        QString filePath = Core::ICore::userResourcePath().toString() + QStringLiteral("/examples/00-HelloWorld/helloworld.py");
+        QString filePath = Core::ICore::userResourcePath().pathAppended(QStringLiteral("/examples/00-HelloWorld/helloworld.py")).toString();
 
         QFile file(filePath);
 
@@ -3801,9 +3801,9 @@ void OpenMVPlugin::setPortPath(bool silent)
         m_pathButton->setText((!m_portPath.isEmpty()) ? tr("Drive: %L1").arg(m_portPath) : tr("Drive:"));
 
         Core::IEditor *editor = Core::EditorManager::currentEditor();
-        m_openDriveFolderCommand->action()->setEnabled(!m_portPath.isEmpty());
-        m_configureSettingsCommand->action()->setEnabled(!m_portPath.isEmpty());
-        m_saveCommand->action()->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
+        m_openDriveFolderAction->setEnabled(!m_portPath.isEmpty());
+        m_configureSettingsAction->setEnabled(!m_portPath.isEmpty());
+        m_saveAction->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
 
         m_frameBuffer->enableSaveTemplate(!m_portPath.isEmpty());
         m_frameBuffer->enableSaveDescriptor(!m_portPath.isEmpty());

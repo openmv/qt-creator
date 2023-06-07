@@ -200,9 +200,12 @@ MainWindow::MainWindow()
 
     // Add small Toolbuttons for toggling the navigation widgets
     StatusBarManager::addStatusBarWidget(m_toggleLeftSideBarButton, StatusBarManager::First);
-    int childsCount = statusBar()->findChildren<QWidget *>(QString(), Qt::FindDirectChildrenOnly).count();
-    statusBar()->insertPermanentWidget(childsCount - 1, m_toggleRightSideBarButton); // before QSizeGrip
     // OPENMV-DIFF //
+    // int childsCount = statusBar()->findChildren<QWidget *>(QString(), Qt::FindDirectChildrenOnly).count();
+    // statusBar()->insertPermanentWidget(childsCount - 1, m_toggleRightSideBarButton); // before QSizeGrip
+    // OPENMV-DIFF //
+    statusBar()->addPermanentWidget(m_toggleRightSideBarButton);
+    m_toggleLeftSideBarButton->hide();
     m_toggleRightSideBarButton->hide();
     // OPENMV-DIFF //
 
@@ -604,21 +607,27 @@ void MainWindow::registerDefaultActions()
         }
     });
 
-    auto action = new QAction(icon, Tr::tr("New File..."), this);
+    // OPENMV-DIFF //
+    // auto action = new QAction(icon, Tr::tr("New File..."), this);
+    // OPENMV-DIFF //
+    auto action = new QAction(icon, Tr::tr("&New File..."), this);
+    // OPENMV-DIFF //
     cmd = ActionManager::registerAction(action, Constants::NEW_FILE);
     cmd->setDefaultKeySequence(QKeySequence::New);
     mfile->addAction(cmd, Constants::G_FILE_NEW);
-    connect(action, &QAction::triggered, this, [] {
-        if (!ICore::isNewItemDialogRunning()) {
-            ICore::showNewItemDialog(Tr::tr("New File", "Title of dialog"),
-                                     Utils::filtered(Core::IWizardFactory::allWizardFactories(),
-                                                     Utils::equal(&Core::IWizardFactory::kind,
-                                                                  Core::IWizardFactory::FileWizard)),
-                                     FilePath());
-        } else {
-            ICore::raiseWindow(ICore::newItemDialog());
-        }
-    });
+    // OPENMV-DIFF //
+    // connect(action, &QAction::triggered, this, [] {
+    //     if (!ICore::isNewItemDialogRunning()) {
+    //         ICore::showNewItemDialog(Tr::tr("New File", "Title of dialog"),
+    //                                  Utils::filtered(Core::IWizardFactory::allWizardFactories(),
+    //                                                  Utils::equal(&Core::IWizardFactory::kind,
+    //                                                               Core::IWizardFactory::FileWizard)),
+    //                                  FilePath());
+    //     } else {
+    //         ICore::raiseWindow(ICore::newItemDialog());
+    //     }
+    // });
+    // OPENMV-DIFF //
 
     // Open Action
     icon = QIcon::fromTheme(QLatin1String("document-open"), Utils::Icons::OPENFILE.icon());
@@ -1658,6 +1667,9 @@ void MainWindow::restoreWindowState()
     if(!m_disableShow) show();
     // OPENMV-DIFF //
     StatusBarManager::restoreSettings();
+    // OPENMV-DIFF //
+    EditorManager::activateEditor(EditorManager::currentEditor());
+    // OPENMV-DIFF //
 }
 
 } // namespace Internal
