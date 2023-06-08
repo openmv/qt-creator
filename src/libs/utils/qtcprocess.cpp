@@ -650,6 +650,9 @@ private:
 
 static ProcessImpl defaultProcessImplHelper()
 {
+    // OPENMV-DIFF //
+    return ProcessImpl::QProcess;
+    // OPENMV-DIFF //
     const QString value = qtcEnvironmentVariable("QTC_USE_QPROCESS", "TRUE").toUpper();
     if (value != "FALSE" && value != "0")
         return ProcessImpl::QProcess;

@@ -2,47 +2,47 @@
 
 QList<QString> picotoolGetDevices()
 {
-    QString command;
+    Utils::FilePath command;
     Utils::QtcProcess process;
     process.setTimeoutS(10);
     process.setProcessChannelMode(QProcess::MergedChannels);
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/windows/picotool.exe")));
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(command), QStringList() << QStringLiteral("info")));
+        command = Core::ICore::resourcePath(QStringLiteral("picotool/windows/picotool.exe"));
+        process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("info")));
         process.runBlocking(Utils::EventLoopMode::On);
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/osx/picotool")));
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(command), QStringList() << QStringLiteral("info")));
+        command = Core::ICore::resourcePath(QStringLiteral("picotool/osx/picotool"));
+        process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("info")));
         process.runBlocking(Utils::EventLoopMode::On);
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/linux32/picotool")));
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(command), QStringList() << QStringLiteral("info")));
+            command = Core::ICore::resourcePath(QStringLiteral("picotool/linux32/picotool"));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("info")));
             process.runBlocking(Utils::EventLoopMode::On);
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/linux64/picotool")));
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(command), QStringList() << QStringLiteral("info")));
+            command = Core::ICore::resourcePath(QStringLiteral("picotool/linux64/picotool"));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("info")));
             process.runBlocking(Utils::EventLoopMode::On);
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
-            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/arm/picotool")));
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(command), QStringList() << QStringLiteral("info")));
+            command = Core::ICore::resourcePath(QStringLiteral("picotool/arm/picotool"));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("info")));
             process.runBlocking(Utils::EventLoopMode::On);
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("aarch64"))
         {
-            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/aarch64/picotool")));
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(command), QStringList() << QStringLiteral("info")));
+            command = Core::ICore::resourcePath(QStringLiteral("picotool/aarch64/picotool"));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("info")));
             process.runBlocking(Utils::EventLoopMode::On);
         }
     }
@@ -65,7 +65,7 @@ QList<QString> picotoolGetDevices()
         QMessageBox box(QMessageBox::Warning, QObject::tr("Get Devices"), QObject::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-        box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut());
+        box.setDetailedText(command.toString() + QStringLiteral("\n\n") + process.stdOut());
         box.setDefaultButton(QMessageBox::Ok);
         box.setEscapeButton(QMessageBox::Cancel);
         box.exec();
@@ -76,42 +76,42 @@ QList<QString> picotoolGetDevices()
 
 void picotoolReset(QString &command, Utils::QtcProcess &process)
 {
-    QString binary;
+    Utils::FilePath binary;
     QStringList args = QStringList() <<
                        QString(QStringLiteral("reboot"));
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/windows/picotool.exe")));
+        binary = Core::ICore::resourcePath(QStringLiteral("picotool/windows/picotool.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/osx/picotool")));
+        binary = Core::ICore::resourcePath(QStringLiteral("picotool/osx/picotool"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/linux32/picotool")));
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/linux32/picotool"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/linux64/picotool")));
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/linux64/picotool"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/arm/picotool")));
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/arm/picotool"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("aarch64"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/aarch64/picotool")));
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/aarch64/picotool"));
         }
     }
 
-    command = QString(QStringLiteral("%1 %2")).arg(binary).arg(args.join(QLatin1Char(' ')));
+    command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
 
     process.setTimeoutS(300); // 5 minutes...
-    process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(binary), args));
+    process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
 }
 
@@ -235,7 +235,7 @@ void picotoolDownloadFirmware(QString &command, Utils::QtcProcess &process, cons
 
     QObject::connect(dialog, &QDialog::rejected, [&process] { process.terminate(); });
 
-    QString binary;
+    Utils::FilePath binary;
     QStringList args = QStringList() <<
                        QStringLiteral("load") <<
                        moreArgs.split(QLatin1Char(' ')) <<
@@ -243,38 +243,38 @@ void picotoolDownloadFirmware(QString &command, Utils::QtcProcess &process, cons
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/windows/picotool.exe")));
+        binary = Core::ICore::resourcePath(QStringLiteral("picotool/windows/picotool.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/osx/picotool")));
+        binary = Core::ICore::resourcePath(QStringLiteral("picotool/osx/picotool"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/linux32/picotool")));
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/linux32/picotool"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/linux64/picotool")));
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/linux64/picotool"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/arm/picotool")));
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/arm/picotool"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("aarch64"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/picotool/aarch64/picotool")));
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/aarch64/picotool"));
         }
     }
 
-    command = QString(QStringLiteral("%1 %2")).arg(binary).arg(args.join(QLatin1Char(' ')));
+    command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
     plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
 
     dialog->show();
     process.setTimeoutS(300); // 5 minutes...
-    process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(binary), args));
+    process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
 
     settings->setValue(QStringLiteral(LAST_PICOTOOL_TERMINAL_WINDOW_GEOMETRY), dialog->saveGeometry());

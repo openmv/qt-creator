@@ -657,7 +657,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                 if(!dfuDevices.isEmpty())
                 {
-                    QFile file(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/firmware.txt"));
+                    QFile file(Core::ICore::userResourcePath(QStringLiteral("firmware/firmware.txt")).toString());
 
                     if(file.open(QIODevice::ReadOnly))
                     {
@@ -746,7 +746,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     tr("Connect"),
                     tr("No OpenMV Cams found!"));
 
-                QFile boards(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/boards.txt"));
+                QFile boards(Core::ICore::userResourcePath(QStringLiteral("firmware/boards.txt")).toString());
 
                 if(boards.open(QIODevice::ReadOnly))
                 {
@@ -844,7 +844,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                         forceFlashFSErase = answer == QMessageBox::Yes;
                                         forceBootloaderBricked = true;
                                         originalFirmwareFolder = mappings.value(temp);
-                                        firmwarePath = Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/") + originalFirmwareFolder + QStringLiteral("/firmware.bin");
+                                        firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware/") + originalFirmwareFolder + QStringLiteral("/firmware.bin")).toString();
                                         originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                                         originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                                         originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
@@ -1208,7 +1208,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 || ((major2 == OLD_API_MAJOR) && (minor2 < OLD_API_MINOR))
                 || ((major2 == OLD_API_MAJOR) && (minor2 == OLD_API_MINOR) && (patch2 < OLD_API_PATCH)))
                 {
-                    if(firmwarePath.isEmpty()) firmwarePath = Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/") + QStringLiteral(OLD_API_BOARD) + QStringLiteral("/firmware.bin");
+                    if(firmwarePath.isEmpty()) firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware/") + QStringLiteral(OLD_API_BOARD) + QStringLiteral("/firmware.bin")).toString();
 
                     if(installTheLatestDevelopmentFirmware)
                     {
@@ -1241,7 +1241,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                     if(!arch2.isEmpty())
                     {
-                        QFile boards(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/boards.txt"));
+                        QFile boards(Core::ICore::userResourcePath(QStringLiteral("firmware/boards.txt")).toString());
 
                         if(boards.open(QIODevice::ReadOnly))
                         {
@@ -1277,7 +1277,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 if(firmwarePath.isEmpty())
                                 {
                                     originalFirmwareFolder = mappings.value(temp);
-                                    firmwarePath = Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/") + originalFirmwareFolder + QStringLiteral("/firmware.bin");
+                                    firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware/") + originalFirmwareFolder + QStringLiteral("/firmware.bin")).toString();
                                     originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                                     originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                                     originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
@@ -1769,7 +1769,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             if(isIMX)
             {
-                QFile imxSettings(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/imx.txt"));
+                QFile imxSettings(Core::ICore::userResourcePath(QStringLiteral("firmware/imx.txt")).toString());
                 QJsonObject outObj;
 
                 if(imxSettings.open(QIODevice::ReadOnly))
@@ -1781,7 +1781,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         if(originalFirmwareFolder.isEmpty())
                         {
-                            QFile boards(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/boards.txt"));
+                            QFile boards(Core::ICore::userResourcePath(QStringLiteral("firmware/boards.txt")).toString());
 
                             if(boards.open(QIODevice::ReadOnly))
                             {
@@ -1837,10 +1837,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                                 if(originalFirmwareFolder == obj.value(QStringLiteral("firmware_folder")).toString())
                                 {
-                                    QString secureBootloaderPath = QDir::cleanPath(QDir::fromNativeSeparators(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/") + originalFirmwareFolder +
-                                            QDir::separator() + obj.value(QStringLiteral("sdphost_flash_loader_path")).toString()));
-                                    QString bootloaderPath = QDir::cleanPath(QDir::fromNativeSeparators(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/") + originalFirmwareFolder +
-                                            QDir::separator() + obj.value(QStringLiteral("blhost_secure_bootloader_path")).toString()));
+                                    QString secureBootloaderPath = QDir::cleanPath(QDir::fromNativeSeparators(Core::ICore::userResourcePath(QStringLiteral("firmware/") + originalFirmwareFolder +
+                                            QDir::separator() + obj.value(QStringLiteral("sdphost_flash_loader_path")).toString()).toString()));
+                                    QString bootloaderPath = QDir::cleanPath(QDir::fromNativeSeparators(Core::ICore::userResourcePath(QStringLiteral("firmware/") + originalFirmwareFolder +
+                                            QDir::separator() + obj.value(QStringLiteral("blhost_secure_bootloader_path")).toString()).toString()));
                                     outObj = obj;
                                     outObj.insert(QStringLiteral("sdphost_flash_loader_path"), secureBootloaderPath);
                                     outObj.insert(QStringLiteral("blhost_secure_bootloader_path"), bootloaderPath);
@@ -2083,7 +2083,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     QString selectedDfuDeviceVidPid = selectedDfuDevice.isEmpty() ? QString() : selectedDfuDevice.split(QStringLiteral(",")).first();
                     QString selectedDfuDeviceSerialNumber = selectedDfuDevice.isEmpty() ? QString() : selectedDfuDevice.split(QStringLiteral(",")).last();
 
-                    QFile dfuSettings(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/dfu.txt"));
+                    QFile dfuSettings(Core::ICore::userResourcePath(QStringLiteral("firmware/dfu.txt")).toString());
                     QString boardTypeToDfuDeviceVidPid;
                     QStringList eraseCommands, extraProgramAddrCommands, extraProgramPathCommands;
                     QString binProgramCommand, dfuProgramCommand;
@@ -2298,7 +2298,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             for(int i = 0, j = extraProgramAddrCommands.size(); i < j; i++)
                             {
-                                downloadFirmware(command, process, QFileInfo(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/") + extraProgramPathCommands.at(i)).canonicalFilePath(), dfuDeviceVidPid, extraProgramAddrCommands.at(i) + dfuDeviceSerial);
+                                downloadFirmware(command, process, Core::ICore::userResourcePath(QStringLiteral("firmware/") + extraProgramPathCommands.at(i)).canonicalPath().toString(), dfuDeviceVidPid, extraProgramAddrCommands.at(i) + dfuDeviceSerial);
 
                                 if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                                 {
@@ -2412,7 +2412,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         }
                     }
 
-                    QFile bossacSettings(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/bossac.txt"));
+                    QFile bossacSettings(Core::ICore::userResourcePath(QStringLiteral("firmware/bossac.txt")).toString());
                     QString boardTypeToDfuDeviceVidPid;
                     QString binProgramCommand;
 
@@ -2571,7 +2571,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                     QString selectedDfuDeviceVidPid = selectedDfuDevice.isEmpty() ? QString() : selectedDfuDevice.split(QStringLiteral(",")).first();
 
-                    QFile dfuSettings(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/picotool.txt"));
+                    QFile dfuSettings(Core::ICore::userResourcePath(QStringLiteral("firmware/picotool.txt")).toString());
                     QStringList eraseCommands;
                     QString binProgramCommand;
 
@@ -2889,7 +2889,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 }
                 else if(id2)
                 {
-                    QFile sensors(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/sensors.txt"));
+                    QFile sensors(Core::ICore::userResourcePath(QStringLiteral("firmware/sensors.txt")).toString());
 
                     if(sensors.open(QIODevice::ReadOnly))
                     {
@@ -3224,7 +3224,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         // Check Version //////////////////////////////////////////////////////
 
-        QFile file(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/firmware.txt"));
+        QFile file(Core::ICore::userResourcePath(QStringLiteral("firmware/firmware.txt")).toString());
 
         if(file.open(QIODevice::ReadOnly))
         {
@@ -3782,7 +3782,7 @@ void OpenMVPlugin::updateCam(bool forceYes)
 {
     if(!m_working)
     {
-        QFile file(Core::ICore::userResourcePath().toString() + QStringLiteral("/firmware/firmware.txt"));
+        QFile file(Core::ICore::userResourcePath(QStringLiteral("firmware/firmware.txt")).toString());
 
         if(file.open(QIODevice::ReadOnly))
         {

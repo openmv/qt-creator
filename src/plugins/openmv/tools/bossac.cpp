@@ -2,41 +2,41 @@
 
 void bossacRunBootloader(Utils::QtcProcess &process, const QString &device)
 {
-    QString binary;
+    Utils::FilePath binary;
     QStringList args = QStringList() <<
                        QString(QStringLiteral("--port=%1")).arg(device) <<
                        QStringLiteral("-a");
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/windows/bossac.exe")));
+        binary = Core::ICore::resourcePath(QStringLiteral("bossac/windows/bossac.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/osx/bossac")));
+        binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx/bossac"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/linux32/bossac")));
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/linux32/bossac"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/linux64/bossac")));
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/linux64/bossac"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/arm/bossac")));
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/arm/bossac"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("aarch64"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/aarch64/bossac")));
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/aarch64/bossac"));
         }
     }
 
     process.setTimeoutS(300); // 5 minutes...
-    process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(binary), args));
+    process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
 }
 
@@ -160,7 +160,7 @@ void bossacDownloadFirmware(QString &command, Utils::QtcProcess &process, const 
 
     QObject::connect(dialog, &QDialog::rejected, [&process] { process.terminate(); });
 
-    QString binary;
+    Utils::FilePath binary;
     QStringList args = QStringList() <<
                        QStringLiteral("-e") <<
                        QStringLiteral("-w") <<
@@ -174,38 +174,38 @@ void bossacDownloadFirmware(QString &command, Utils::QtcProcess &process, const 
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/windows/bossac.exe")));
+        binary = Core::ICore::resourcePath(QStringLiteral("bossac/windows/bossac.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/osx/bossac")));
+        binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx/bossac"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/linux32/bossac")));
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/linux32/bossac"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/linux64/bossac")));
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/linux64/bossac"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/arm/bossac")));
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/arm/bossac"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("aarch64"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/bossac/aarch64/bossac")));
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/aarch64/bossac"));
         }
     }
 
-    command = QString(QStringLiteral("%1 %2")).arg(binary).arg(args.join(QLatin1Char(' ')));
+    command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
     plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
 
     dialog->show();
     process.setTimeoutS(300); // 5 minutes...
-    process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(binary), args));
+    process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
 
     settings->setValue(QStringLiteral(LAST_BOSSAC_TERMINAL_WINDOW_GEOMETRY), dialog->saveGeometry());
