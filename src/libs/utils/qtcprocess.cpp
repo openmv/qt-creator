@@ -492,6 +492,9 @@ private:
 
 static ProcessImpl defaultProcessImpl()
 {
+    // OPENMV-DIFF //
+    return ProcessImpl::QProcess;
+    // OPENMV-DIFF //
     if (qtcEnvironmentVariableIsSet("QTC_USE_QPROCESS"))
         return ProcessImpl::QProcess;
     return ProcessImpl::ProcessLauncher;
@@ -1743,7 +1746,11 @@ void QtcProcess::runBlocking(EventLoopMode eventLoopMode)
         // Start failure is triggered immediately if the executable cannot be found in the path.
         // In this case the process is left in NotRunning state.
         // Do not start the event loop in that case.
-        if (state() == QProcess::Starting) {
+        // OPENMV-DIFF //
+        // if (state() == QProcess::Starting) {
+        // OPENMV-DIFF //
+        if (state() != QProcess::NotRunning) {
+        // OPENMV-DIFF //
             QTimer timer(this);
             connect(&timer, &QTimer::timeout, d, &QtcProcessPrivate::slotTimeout);
             timer.setInterval(1000);

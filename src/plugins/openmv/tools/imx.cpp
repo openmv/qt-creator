@@ -6,21 +6,21 @@ bool imxGetDevice(QJsonObject &obj)
     process.setTimeoutS(10);
     process.setProcessChannelMode(QProcess::MergedChannels);
 
-    QString blhost_binary;
+    Utils::FilePath blhost_binary;
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/blhost/win/blhost.exe")));
+        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/win/blhost.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/blhost/mac/blhost")));
+        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/mac/blhost"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/blhost/linux/amd64/blhost")));
+            blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/linux/amd64/blhost"));
         }
     }
 
@@ -36,7 +36,7 @@ bool imxGetDevice(QJsonObject &obj)
                        QStringLiteral("get-property") <<
                        QStringLiteral("1");
 
-    process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+    process.setCommand(Utils::CommandLine(blhost_binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
 
     if((process.result() == Utils::ProcessResult::FinishedWithSuccess) || (process.result() == Utils::ProcessResult::FinishedWithError))
@@ -193,25 +193,25 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
     QObject::connect(dialog, &QDialog::rejected, [&process] { process.terminate(); });
 
-    QString sdphost_binary, blhost_binary;
+    Utils::FilePath sdphost_binary, blhost_binary;
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        sdphost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/sdphost/win/sdphost.exe")));
+        sdphost_binary = Core::ICore::resourcePath(QStringLiteral("sdphost/win/sdphost.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        sdphost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/sdphost/mac/sdphost")));
+        sdphost_binary = Core::ICore::resourcePath(QStringLiteral("sdphost/mac/sdphost"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            sdphost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/sdphost/linux/i386/sdphost")));
+            sdphost_binary = Core::ICore::resourcePath(QStringLiteral("sdphost/linux/i386/sdphost"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            sdphost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/sdphost/linux/amd64/sdphost")));
+            sdphost_binary = Core::ICore::resourcePath(QStringLiteral("sdphost/linux/amd64/sdphost"));
         }
     }
 
@@ -227,17 +227,17 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/blhost/win/blhost.exe")));
+        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/win/blhost.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/blhost/mac/blhost")));
+        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/mac/blhost"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/blhost/linux/amd64/blhost")));
+            blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/linux/amd64/blhost"));
         }
     }
 
@@ -263,11 +263,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("sdphost_flash_loader_address")).toString() <<
                            QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("sdphost_flash_loader_path")).toString()));
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(sdphost_binary).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(sdphost_binary.toString()).arg(args.join(QLatin1Char(' ')));
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(sdphost_binary), args));
+        process.setCommand(Utils::CommandLine(sdphost_binary, args));
         process.runBlocking(Utils::EventLoopMode::On);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -299,11 +299,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QStringLiteral("jump-address") <<
                            obj.value(QStringLiteral("sdphost_flash_loader_address")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(sdphost_binary).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(sdphost_binary.toString()).arg(args.join(QLatin1Char(' ')));
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(sdphost_binary), args));
+        process.setCommand(Utils::CommandLine(sdphost_binary, args));
         process.runBlocking(Utils::EventLoopMode::On);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -345,11 +345,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QStringLiteral("get-property") <<
                            QStringLiteral("1");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+        process.setCommand(Utils::CommandLine(blhost_binary, args));
         process.runBlocking(Utils::EventLoopMode::On);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -384,11 +384,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_spi")).toString() <<
                            QStringLiteral("word");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+        process.setCommand(Utils::CommandLine(blhost_binary, args));
         process.runBlocking(Utils::EventLoopMode::On);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -421,11 +421,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_type")).toString() <<
                            obj.value(QStringLiteral("blhost_memory_configuration_address")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+        process.setCommand(Utils::CommandLine(blhost_binary, args));
         process.runBlocking(Utils::EventLoopMode::On);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -461,11 +461,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_secure_bootloader_length")).toString() <<
                            obj.value(QStringLiteral("blhost_memory_configuration_type")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+        process.setCommand(Utils::CommandLine(blhost_binary, args));
         process.runBlocking(Utils::EventLoopMode::On);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -500,11 +500,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_fcb")).toString() <<
                            QStringLiteral("word");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+        process.setCommand(Utils::CommandLine(blhost_binary, args));
         process.runBlocking(Utils::EventLoopMode::On);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -537,11 +537,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_type")).toString() <<
                            obj.value(QStringLiteral("blhost_memory_configuration_address")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+        process.setCommand(Utils::CommandLine(blhost_binary, args));
         process.runBlocking(Utils::EventLoopMode::On);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -574,11 +574,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_secure_bootloader_write_address")).toString() <<
                            QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_secure_bootloader_path")).toString()));
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+        process.setCommand(Utils::CommandLine(blhost_binary, args));
         process.runBlocking(Utils::EventLoopMode::On);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -619,11 +619,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                obj.value(QStringLiteral("blhost_disk_address")).toString() <<
                                obj.value(QStringLiteral("blhost_disk_size")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
             plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
             process.runBlocking(Utils::EventLoopMode::On);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -663,11 +663,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                obj.value(QStringLiteral("blhost_firmware_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
             plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
             process.runBlocking(Utils::EventLoopMode::On);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -700,11 +700,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_firmware_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
             plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
             process.runBlocking(Utils::EventLoopMode::On);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -736,11 +736,11 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QStringLiteral("--") <<
                            QStringLiteral("reset");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+        process.setCommand(Utils::CommandLine(blhost_binary, args));
         process.runBlocking(Utils::EventLoopMode::On);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -895,21 +895,21 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
     QObject::connect(dialog, &QDialog::rejected, [&process] { process.terminate(); });
 
-    QString blhost_binary;
+    Utils::FilePath blhost_binary;
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/blhost/win/blhost.exe")));
+        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/win/blhost.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/blhost/mac/blhost")));
+        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/mac/blhost"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            blhost_binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/blhost/linux/amd64/blhost")));
+            blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/linux/amd64/blhost"));
         }
     }
 
@@ -943,11 +943,11 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_disk_address")).toString() <<
                                obj.value(QStringLiteral("blhost_disk_size")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
             plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
             process.runBlocking(Utils::EventLoopMode::On);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -987,11 +987,11 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                obj.value(QStringLiteral("blhost_firmware_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
             plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
             process.runBlocking(Utils::EventLoopMode::On);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1024,11 +1024,11 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_firmware_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
             plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
             process.runBlocking(Utils::EventLoopMode::On);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1060,11 +1060,11 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                            QStringLiteral("--") <<
                            QStringLiteral("reset");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(blhost_binary), args));
+        process.setCommand(Utils::CommandLine(blhost_binary, args));
         process.runBlocking(Utils::EventLoopMode::On);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))

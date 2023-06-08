@@ -408,8 +408,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             {
                 QString error;
 
-                if(!Utils::FileUtils::copyRecursively(Core::ICore::resourcePath().pathAppended(dir),
-                                                      Core::ICore::userResourcePath().pathAppended(dir),
+                if(!Utils::FileUtils::copyRecursively(Core::ICore::resourcePath(dir),
+                                                      Core::ICore::userResourcePath(dir),
                                                       &error,
                                                       copyOperator))
 
@@ -458,7 +458,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     m_dictionaryRegEx = QRegularExpression(QStringLiteral("\\{.*?\\}"), QRegularExpression::DotMatchesEverythingOption);
     QRegularExpression sectionRegEx(QStringLiteral("<section.*"), QRegularExpression::DotMatchesEverythingOption);
 
-    QDirIterator it(Core::ICore::userResourcePath().toString() + QStringLiteral("/html/library"), QDir::Files);
+    QDirIterator it(Core::ICore::userResourcePath(QStringLiteral("html/library")).toString(), QDir::Files);
 
     while(it.hasNext())
     {
@@ -823,7 +823,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     // Scan examples.
     {
         QThread *thread = new QThread;
-        LoadFolderThread *loadFolderThread = new LoadFolderThread(Core::ICore::userResourcePath().toString() + QStringLiteral("/examples"), true);
+        LoadFolderThread *loadFolderThread = new LoadFolderThread(Core::ICore::userResourcePath(QStringLiteral("examples")).toString(), true);
         loadFolderThread->moveToThread(thread);
         QTimer *timer = new QTimer(this);
 
@@ -975,7 +975,7 @@ void OpenMVPlugin::extensionsInitialized()
     examplesMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     connect(filesMenu->menu(), &QMenu::aboutToShow, this, [this, examplesMenu] {
         examplesMenu->menu()->clear();
-        QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::userResourcePath().toString() + QStringLiteral("/examples"), examplesMenu->menu());
+        QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::userResourcePath(QStringLiteral("examples")).toString(), examplesMenu->menu());
         examplesMenu->menu()->addActions(actions.values());
         examplesMenu->menu()->setDisabled(actions.values().isEmpty());
     });
@@ -1151,7 +1151,7 @@ void OpenMVPlugin::extensionsInitialized()
 
         QString src =
             QFileDialog::getOpenFileName(Core::ICore::dialogParent(), QObject::tr("Network to copy to OpenMV Cam"),
-                Core::ICore::userResourcePath().toString() + QStringLiteral("/models"),
+                Core::ICore::userResourcePath(QStringLiteral("models")).toString(),
                 QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)"));
 
         if(!src.isEmpty())
@@ -1534,7 +1534,7 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Command *docsCommand = Core::ActionManager::registerAction(docsAction, Utils::Id("OpenMV.Docs"));
     helpMenu->addAction(docsCommand, Core::Constants::G_HELP_SUPPORT);
     connect(docsAction, &QAction::triggered, this, [this] {
-        QUrl url = QUrl::fromLocalFile(Core::ICore::userResourcePath().toString() + QStringLiteral("/html/index.html"));
+        QUrl url = QUrl::fromLocalFile(Core::ICore::userResourcePath(QStringLiteral("html/index.html")).toString());
 
         if(!QDesktopServices::openUrl(url))
         {
@@ -1579,7 +1579,7 @@ void OpenMVPlugin::extensionsInitialized()
         Core::Command *pinoutCommand = Core::ActionManager::registerAction(pinout, Utils::Id(QString(QStringLiteral("OpenMV.Pinout.%1")).arg(cam.second).toUtf8().constData()));
         pinoutMenu->addAction(pinoutCommand);
         connect(pinout, &QAction::triggered, this, [this, cam] {
-            QUrl url = QUrl::fromLocalFile(Core::ICore::userResourcePath().toString() + QString(QStringLiteral("/html/_images/pinout-openmv-%1.png")).arg(cam.second));
+            QUrl url = QUrl::fromLocalFile(Core::ICore::userResourcePath(QString(QStringLiteral("/html/_images/pinout-openmv-%1.png")).arg(cam.second)).toString());
 
             if(!QDesktopServices::openUrl(url))
             {
@@ -2257,7 +2257,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     if(editor ? (editor->document() ? editor->document()->contents().isEmpty() : true) : true)
     {
-        QString filePath = Core::ICore::userResourcePath().pathAppended(QStringLiteral("/examples/00-HelloWorld/helloworld.py")).toString();
+        QString filePath = Core::ICore::userResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toString();
 
         QFile file(filePath);
 

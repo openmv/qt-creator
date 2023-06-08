@@ -2,41 +2,41 @@
 
 QList<QString> getDevices()
 {
-    QString command;
+    Utils::FilePath command;
     Utils::QtcProcess process;
     process.setTimeoutS(10);
     process.setProcessChannelMode(QProcess::MergedChannels);
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/dfu-util/windows/dfu-util.exe")));
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(command), QStringList() << QStringLiteral("-l")));
+        command = Core::ICore::resourcePath(QStringLiteral("dfu-util/windows/dfu-util.exe"));
+        process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-l")));
         process.runBlocking(Utils::EventLoopMode::On);
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/dfu-util/osx/dfu-util")));
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(command), QStringList() << QStringLiteral("-l")));
+        command = Core::ICore::resourcePath(QStringLiteral("dfu-util/osx/dfu-util"));
+        process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-l")));
         process.runBlocking(Utils::EventLoopMode::On);
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/dfu-util/linux32/dfu-util")));
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(command), QStringList() << QStringLiteral("-l")));
+            command = Core::ICore::resourcePath(QStringLiteral("dfu-util/linux32/dfu-util"));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-l")));
             process.runBlocking(Utils::EventLoopMode::On);
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/dfu-util/linux64/dfu-util")));
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(command), QStringList() << QStringLiteral("-l")));
+            command = Core::ICore::resourcePath(QStringLiteral("dfu-util/linux64/dfu-util"));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-l")));
             process.runBlocking(Utils::EventLoopMode::On);
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
-            command = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/dfu-util/arm/dfu-util")));
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(command), QStringList() << QStringLiteral("-l")));
+            command = Core::ICore::resourcePath(QStringLiteral("dfu-util/arm/dfu-util"));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-l")));
             process.runBlocking(Utils::EventLoopMode::On);
         }
     }
@@ -62,7 +62,7 @@ QList<QString> getDevices()
         QMessageBox box(QMessageBox::Warning, QObject::tr("Get Devices"), QObject::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-        box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut());
+        box.setDetailedText(command.toString() + QStringLiteral("\n\n") + process.stdOut());
         box.setDefaultButton(QMessageBox::Ok);
         box.setEscapeButton(QMessageBox::Cancel);
         box.exec();
@@ -181,7 +181,7 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
     QObject::connect(dialog, &QDialog::rejected, [&process] { process.terminate(); });
 
-    QString binary;
+    Utils::FilePath binary;
     QStringList args = QStringList() <<
                        QStringLiteral("-w") <<
                        QStringLiteral("-d") <<
@@ -192,34 +192,34 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/dfu-util/windows/dfu-util.exe")));
+        binary = Core::ICore::resourcePath(QStringLiteral("dfu-util/windows/dfu-util.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/dfu-util/osx/dfu-util")));
+        binary = Core::ICore::resourcePath(QStringLiteral("dfu-util/osx/dfu-util"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/dfu-util/linux32/dfu-util")));
+            binary = Core::ICore::resourcePath(QStringLiteral("dfu-util/linux32/dfu-util"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/dfu-util/linux64/dfu-util")));
+            binary = Core::ICore::resourcePath(QStringLiteral("dfu-util/linux64/dfu-util"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
-            binary = QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath().toString() + QStringLiteral("/dfu-util/arm/dfu-util")));
+            binary = Core::ICore::resourcePath(QStringLiteral("dfu-util/arm/dfu-util"));
         }
     }
 
-    command = QString(QStringLiteral("%1 %2")).arg(binary).arg(args.join(QLatin1Char(' ')));
+    command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
     plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
 
     dialog->show();
     process.setTimeoutS(300); // 5 minutes...
-    process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(binary), args));
+    process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
 
     settings->setValue(QStringLiteral(LAST_DFU_UTIL_TERMINAL_WINDOW_GEOMETRY), dialog->saveGeometry());
