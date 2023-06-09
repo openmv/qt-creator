@@ -1367,9 +1367,16 @@ static void printPage(int index, QPainter *painter, const QTextDocument *doc,
     QAbstractTextDocumentLayout::PaintContext ctx;
 
     painter->setFont(QFont(doc->defaultFont()));
-    const QRectF box = titleBox.translated(0, view.top());
+    // OPENMV-DIFF //
+    // const QRectF box = titleBox.translated(0, view.top());
+    // OPENMV-DIFF //
     const int dpix = painter->device()->logicalDpiX();
     const int dpiy = painter->device()->logicalDpiY();
+    // OPENMV-DIFF //
+    QRectF box = titleBox.translated(0, view.top() + int(30 * dpiy / 72.0));
+    box.setLeft(box.left() + int(20 * dpiy / 72.0));
+    box.setRight(box.right() - int(20 * dpiy / 72.0));
+    // OPENMV-DIFF //
     const int mx = int(5 * dpix / 72.0);
     const int my = int(2 * dpiy / 72.0);
     painter->fillRect(box.adjusted(-mx, -my, mx, my), QColor(210, 210, 210));
