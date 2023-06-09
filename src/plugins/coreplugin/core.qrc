@@ -8,9 +8,13 @@
         <file>images/qtlogo@2x.png</file>
         <!-- OPENMV-DIFF -->
         <file>images/scroll-arrowup.png</file>
+        <file>images/scroll-arrowup_2x.png</file>
         <file>images/scroll-arrowright.png</file>
+        <file>images/scroll-arrowright_2x.png</file>
         <file>images/scroll-arrowdown.png</file>
+        <file>images/scroll-arrowdown_2x.png</file>
         <file>images/scroll-arrowleft.png</file>
+        <file>images/scroll-arrowleft_2x.png</file>
         <!-- OPENMV-DIFF -->
     </qresource>
 </RCC>
