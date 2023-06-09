@@ -400,27 +400,25 @@ void TextEditorActionHandlerPrivate::createActions()
             [] (TextEditorWidget *w) { w->zoomReset(); }, false, Tr::tr("Reset Font Size"),
             QKeySequence(Core::useMacShortcuts ? Tr::tr("Meta+0") : Tr::tr("Ctrl+0")),
             G_EDIT_FONT, advancedEditMenu);
-    // OPENMV-DIFF //
-    // registerAction(GOTO_BLOCK_START,
-    //         [] (TextEditorWidget *w) { w->gotoBlockStart(); }, true, Tr::tr("Go to Block Start"),
-    //         QKeySequence(Tr::tr("Ctrl+[")),
-    //         G_EDIT_BLOCKS, advancedEditMenu);
-    // registerAction(GOTO_BLOCK_END,
-    //         [] (TextEditorWidget *w) { w->gotoBlockEnd(); }, true, Tr::tr("Go to Block End"),
-    //         QKeySequence(Tr::tr("Ctrl+]")),
-    //         G_EDIT_BLOCKS, advancedEditMenu);
-    // registerAction(SELECT_BLOCK_UP,
-    //         [] (TextEditorWidget *w) { w->selectBlockUp(); }, true, Tr::tr("Select Block Up"),
-    //         QKeySequence(Tr::tr("Ctrl+U")),
-    //         G_EDIT_BLOCKS, advancedEditMenu);
-    // registerAction(SELECT_BLOCK_DOWN,
-    //         [] (TextEditorWidget *w) { w->selectBlockDown(); }, true, Tr::tr("Select Block Down"),
-    //         QKeySequence(Tr::tr("Ctrl+Shift+Alt+U")),
-    //         G_EDIT_BLOCKS, advancedEditMenu);
-    // registerAction(SELECT_WORD_UNDER_CURSOR,
-    //         [] (TextEditorWidget *w) { w->selectWordUnderCursor(); }, true,
-    //         Tr::tr("Select Word Under Cursor"));
-    // OPENMV-DIFF //
+    registerAction(GOTO_BLOCK_START,
+            [] (TextEditorWidget *w) { w->gotoBlockStart(); }, true, Tr::tr("Go to Block Start"),
+            QKeySequence(Tr::tr("Ctrl+[")),
+            G_EDIT_BLOCKS, advancedEditMenu);
+    registerAction(GOTO_BLOCK_END,
+            [] (TextEditorWidget *w) { w->gotoBlockEnd(); }, true, Tr::tr("Go to Block End"),
+            QKeySequence(Tr::tr("Ctrl+]")),
+            G_EDIT_BLOCKS, advancedEditMenu);
+    registerAction(SELECT_BLOCK_UP,
+            [] (TextEditorWidget *w) { w->selectBlockUp(); }, true, Tr::tr("Select Block Up"),
+            QKeySequence(Tr::tr("Ctrl+U")),
+            G_EDIT_BLOCKS, advancedEditMenu);
+    registerAction(SELECT_BLOCK_DOWN,
+            [] (TextEditorWidget *w) { w->selectBlockDown(); }, true, Tr::tr("Select Block Down"),
+            QKeySequence(Tr::tr("Ctrl+Shift+Alt+U")),
+            G_EDIT_BLOCKS, advancedEditMenu);
+    registerAction(SELECT_WORD_UNDER_CURSOR,
+            [] (TextEditorWidget *w) { w->selectWordUnderCursor(); }, true,
+            Tr::tr("Select Word Under Cursor"));
 
     // register GOTO Actions
     registerAction(GOTO_DOCUMENT_START,

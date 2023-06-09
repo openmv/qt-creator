@@ -822,6 +822,8 @@ void MainWindow::registerDefaultActions()
     // OPENMV-DIFF //
     // medit->addAction(cmd, Constants::G_EDIT_PREFERENCES);
     // OPENMV-DIFF //
+    mtools->appendGroup(Constants::G_TOOLS_DEBUG);
+    mtools->addSeparator(Constants::G_TOOLS_DEBUG);
     mtools->addAction(cmd, Constants::G_TOOLS_DEBUG);
     // OPENMV-DIFF //
     connect(m_optionsAction, &QAction::triggered, this, [] { ICore::showOptionsDialog(Id()); });
