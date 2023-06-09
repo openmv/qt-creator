@@ -316,7 +316,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 }
                 case USBDBG_ARCH_STR_CPL:
                 {
-                    emit archString(QString::fromUtf8(data));
+                    emit archString(QString::fromUtf8(data.split(0).takeFirst()));
                     break;
                 }
                 case USBDBG_LEARN_MTU_CPL:

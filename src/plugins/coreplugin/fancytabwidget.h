@@ -194,6 +194,8 @@ public:
     QToolButton *m_bottomDrawer;
     QToolButton *m_leftDrawer;
     QToolButton *m_rightDrawer;
+    QString m_styleSheet, m_highDPIStyleSheet;
+    qreal m_devicePixelRatio;
 // OPENMV-DIFF //
 };
 
