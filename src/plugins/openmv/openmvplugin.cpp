@@ -366,7 +366,14 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     QSplashScreen *splashScreen = new QSplashScreen(QPixmap(QStringLiteral(SPLASH_PATH)));
     Core::ICore::mainWindow()->restoreGeometry(settings->value(QStringLiteral("MainWindow/WindowGeometry")).toByteArray()); // Move to the correct screen for moving splash...
-    splashScreen->move(QApplication::screenAt(Core::ICore::mainWindow()->rect().center())->availableVirtualGeometry().center() - splashScreen->rect().center());
+    splashScreen->move(Core::ICore::mainWindow()->screen()->availableGeometry().center() - splashScreen->rect().center());
+
+    if(qFuzzyCompare(splashScreen->screen()->devicePixelRatio(), 2.d))
+    {
+        QPixmap hdpi = QPixmap(QStringLiteral(SPLASH_HIDPI_PATH));
+        hdpi.setDevicePixelRatio(2.d);
+        splashScreen->setPixmap(hdpi);
+    }
 
     connect(Core::ICore::instance(), &Core::ICore::coreOpened,
             splashScreen, &QSplashScreen::deleteLater);
