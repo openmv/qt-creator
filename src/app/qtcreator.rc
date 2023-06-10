@@ -5,14 +5,18 @@
 
 #define ICON_PATH STRINGIFY(RC_ICON_PATH/qtcreator.ico)
 
-IDI_ICON1               ICON    DISCARDABLE     ICON_PATH
-IDI_ICON2               ICON    DISCARDABLE     "winicons/c.ico"
-IDI_ICON3               ICON    DISCARDABLE     "winicons/cpp.ico"
-IDI_ICON4               ICON    DISCARDABLE     "winicons/h.ico"
-IDI_ICON5               ICON    DISCARDABLE     "winicons/ui.ico"
-IDI_ICON6               ICON    DISCARDABLE     "winicons/pro.ico"
-IDI_ICON7               ICON    DISCARDABLE     "winicons/pri.ico"
-IDI_ICON8               ICON    DISCARDABLE     "winicons/qml.ico"
+// OPENMV-DIFF //
+// IDI_ICON1               ICON    DISCARDABLE     ICON_PATH
+// IDI_ICON2               ICON    DISCARDABLE     "winicons/c.ico"
+// IDI_ICON3               ICON    DISCARDABLE     "winicons/cpp.ico"
+// IDI_ICON4               ICON    DISCARDABLE     "winicons/h.ico"
+// IDI_ICON5               ICON    DISCARDABLE     "winicons/ui.ico"
+// IDI_ICON6               ICON    DISCARDABLE     "winicons/pro.ico"
+// IDI_ICON7               ICON    DISCARDABLE     "winicons/pri.ico"
+// IDI_ICON8               ICON    DISCARDABLE     "winicons/qml.ico"
+// OPENMV-DIFF //
+IDI_ICON1               ICON    DISCARDABLE     "../../../openmv-media/icons/openmv-icon/openmv.ico"
+// OPENMV-DIFF //
 
 VS_VERSION_INFO VERSIONINFO
     FILEVERSION    RC_VERSION

@@ -1674,5 +1674,50 @@ void MainWindow::restoreWindowState()
     // OPENMV-DIFF //
 }
 
+// OPENMV-DIFF //
+void MainWindow::updateWindowIcon()
+{
+// This is all needed to work around a bug in QApplication::setWindowIcon() which will always create a 16x16 icon
+// for the window title bar and a 32x32 icon for the task bar... for regular and high-dpi screens...
+#ifdef Q_OS_WIN
+    HWND hwnd = (HWND) winId();
+
+    if (hwnd)
+    {
+        qreal ratio = devicePixelRatioF();
+        if (!qFuzzyCompare(ratio, m_devicePixelRatio)) {
+            m_devicePixelRatio = ratio;
+
+            if (m_iconBig) {
+                DestroyIcon(m_iconBig);
+                m_iconBig = nullptr;
+            }
+
+            if (m_iconSmall) {
+                DestroyIcon(m_iconSmall);
+                m_iconSmall = nullptr;
+            }
+
+            // QIcon small(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv16x16.png"));
+            // QPixmap smallP = small.pixmap(QSize(GetSystemMetrics(SM_CXSMICON), GetSystemMetrics(SM_CYSMICON)), ratio);
+            // m_iconSmall = smallP.toImage().toHICON();
+
+            // QIcon big(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv32x32.png"));
+            // QPixmap bigP = big.pixmap(QSize(GetSystemMetrics(SM_CXICON), GetSystemMetrics(SM_CYICON)), ratio);
+            // m_iconBig = bigP.toImage().toHICON();
+
+            // It turns out that if you have a desktop with multiple screens with different dpi levels that it will look bad
+            // to display anything but the highest dpi icon. So, just display the highest dpi instead of dynamically updating.
+            m_iconSmall = QPixmap(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv16x16@2x.png")).toImage().toHICON();
+            m_iconBig = QPixmap(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv32x32@2x.png")).toImage().toHICON();
+
+            SendMessage(hwnd, WM_SETICON, ICON_SMALL, LPARAM(m_iconSmall));
+            SendMessage(hwnd, WM_SETICON, ICON_BIG, LPARAM(m_iconBig));
+        }
+    }
+#endif
+}
+// OPENMV-DIFF //
+
 } // namespace Internal
 } // namespace Core

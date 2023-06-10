@@ -368,7 +368,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     Core::ICore::mainWindow()->restoreGeometry(settings->value(QStringLiteral("MainWindow/WindowGeometry")).toByteArray()); // Move to the correct screen for moving splash...
     splashScreen->move(Core::ICore::mainWindow()->screen()->availableGeometry().center() - splashScreen->rect().center());
 
-    if(qFuzzyCompare(splashScreen->screen()->devicePixelRatio(), 2.d))
+    if(!qFuzzyCompare(splashScreen->screen()->devicePixelRatio(), 1.0))
     {
         QPixmap hdpi = QPixmap(QStringLiteral(SPLASH_HIDPI_PATH));
         hdpi.setDevicePixelRatio(2.d);
