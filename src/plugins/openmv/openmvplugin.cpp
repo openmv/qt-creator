@@ -1614,8 +1614,10 @@ void OpenMVPlugin::extensionsInitialized()
         ).arg(QLatin1String(Core::Constants::IDE_VERSION_LONG)).arg(QLatin1String(Core::Constants::IDE_YEAR)).arg(QLatin1String(Core::Constants::IDE_AUTHOR)) + tr(
         "<p><b>Credits</b></p>") + tr(
         "<p>OpenMV IDE English translation by Kwabena W. Agyeman.</p>") + tr(
-        "<p><b>Partners</b></p>") + QStringLiteral("<p><a href=\"https://www.arduino.cc/\"><img source=\":/openmv/images/arduino-partnership.png\"></a></p>"));
-        // "<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership.png\"></a></p>"));
+        "<p><b>Partners</b></p>") +
+        QStringLiteral("<p><a href=\"https://www.arduino.cc/\"><img source=\":/openmv/images/arduino-partnership.png\"></a></p>") +
+        QStringLiteral("<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership.png\"></a></p>")
+        );
     });
 
     ///////////////////////////////////////////////////////////////////////////

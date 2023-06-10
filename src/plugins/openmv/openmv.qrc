@@ -1,8 +1,8 @@
 <RCC>
     <qresource prefix="/openmv">
         <file>../../../../openmv-media/icons/openmv-icon/openmv.png</file>
-        <file>../../../../openmv-media/splash/openmv-splash-slate/splash-small.png</file>
-        <file>../../../../openmv-media/splash/openmv-splash-slate/splash-large.png</file>
+        <file>../../../../openmv-media/splash/openmv-splash-slate/splash-small-2.png</file>
+        <file>../../../../openmv-media/splash/openmv-splash-slate/splash-large-2.png</file>
         <file>images/connect.png</file>
         <file>images/connect-usb.png</file>
         <file>images/connect-wifi.png</file>
@@ -33,6 +33,8 @@
         <file>images/new-folder.png</file>
         <file>images/snapshot.png</file>
         <file>images/arduino-partnership.png</file>
+        <file>images/arduino-partnership@2x.png</file>
         <file>images/edge-impulse-partnership.png</file>
+        <file>images/edge-impulse-partnership@2x.png</file>
     </qresource>
 </RCC>
