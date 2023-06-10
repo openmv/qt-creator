@@ -121,8 +121,10 @@ protected:
     void mousePressEvent(QMouseEvent *event) override;
 
     // OPENMV-DIFF //
-    virtual void showEvent(QShowEvent *event) { emit showEventSignal(); Utils::AppMainWindow::showEvent(event); }
-    virtual void hideEvent(QHideEvent *event) { emit hideEventSignal(); Utils::AppMainWindow::hideEvent(event); }
+    virtual void showEvent(QShowEvent *event) { emit showEventSignal(); Utils::AppMainWindow::showEvent(event); updateWindowIcon(); }
+    virtual void hideEvent(QHideEvent *event) { emit hideEventSignal(); Utils::AppMainWindow::hideEvent(event); updateWindowIcon(); }
+    virtual void moveEvent(QMoveEvent *event) { Utils::AppMainWindow::moveEvent(event); updateWindowIcon(); }
+    virtual void resizeEvent(QResizeEvent *event) { Utils::AppMainWindow::resizeEvent(event); updateWindowIcon(); }
     // OPENMV-DIFF //
 
 private:
@@ -210,6 +212,10 @@ private:
 
     // OPENMV-DIFF //
     bool m_disableShow;
+    qreal m_devicePixelRatio = 0;
+    HICON m_iconSmall = nullptr;
+    HICON m_iconBig = nullptr;
+    void updateWindowIcon();
     // OPENMV-DIFF //
 };
 

@@ -3,6 +3,7 @@ set(IDE_VERSION_COMPAT "10.0.0")                      # The IDE Compatibility ve
 set(IDE_VERSION_DISPLAY "10.0.1")                     # The IDE display version.
 # OPENMV-DIFF #
 set(IDE_AUTHOR "The Qt Company Ltd")
+set(IDE_COPYRIGHT_YEAR_FOUNDED "2008")
 # OPENMV-DIFF #
 set(IDE_COPYRIGHT_YEAR "2023")                        # The IDE current copyright year.
 
@@ -27,11 +28,12 @@ set(IDE_LOGO_PATH "")
 set(IDE_VERSION "4.0.0")
 set(IDE_VERSION_COMPAT "${IDE_VERSION}")
 set(IDE_VERSION_DISPLAY "${IDE_VERSION}")
-set(IDE_AUTHOR "OpenMV, LLC")
+set(IDE_AUTHOR "OpenMV LLC")
+set(IDE_COPYRIGHT_YEAR_FOUNDED "2013")
 set(IDE_COPYRIGHT_YEAR "2023")
 set(IDE_SETTINGSVARIANT "OpenMVDev")
 set(IDE_DISPLAY_NAME "OpenMV IDE Dev")
-set(IDE_ID "qtcreator")
+set(IDE_ID "openmvide")
 set(IDE_CASED_ID "OpenMVIDEDev")
 set(IDE_BUNDLE_IDENTIFIER "org.qt-project.${IDE_ID}")
 # OPENMV-DIFF #

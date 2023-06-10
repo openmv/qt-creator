@@ -709,7 +709,7 @@ void FancyTabWidget::paintEvent(QPaintEvent *event)
     if (!qFuzzyCompare(ratio, m_devicePixelRatio))
     {
         m_devicePixelRatio = ratio;
-        setStyleSheet(qFuzzyCompare(2.d, ratio) ? m_highDPIStyleSheet : m_styleSheet); // reload icons
+        setStyleSheet(qFuzzyCompare(1.0, ratio) ? m_styleSheet : m_highDPIStyleSheet); // reload icons
     }
     // OPENMV-DIFF //
 
