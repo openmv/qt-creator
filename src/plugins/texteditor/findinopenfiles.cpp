@@ -14,12 +14,19 @@
 
 using namespace Utils;
 
+// OPENMV-DIFF //
+#include <QLabel>
+// OPENMV-DIFF //
+
 namespace TextEditor::Internal {
 
 class FindInOpenFiles : public BaseFileFind
 {
 public:
     FindInOpenFiles();
+    // OPENMV-DIFF //
+    QWidget *createConfigWidget() override;
+    // OPENMV-DIFF //
 
 private:
     QString id() const final;
@@ -36,6 +43,10 @@ private:
 
     // deprecated
     QByteArray settingsKey() const final;
+
+    // OPENMV-DIFF //
+    QPointer<QWidget> m_configWidget = nullptr;
+    // OPENMV-DIFF //
 };
 
 FindInOpenFiles::FindInOpenFiles()
@@ -88,9 +99,32 @@ QString FindInOpenFiles::toolTip() const
     return Tr::tr("Open Documents\n%1");
 }
 
+// OPENMV-DIFF //
+QWidget *FindInOpenFiles::createConfigWidget()
+{
+    if (!m_configWidget) {
+        QLabel *label = new QLabel(Tr::tr("Please note that this only searches files that have been saved to disk."));
+        label->setAlignment(Qt::AlignRight);
+        m_configWidget = label;
+    }
+    return m_configWidget;
+}
+// OPENMV-DIFF //
+
 bool FindInOpenFiles::isEnabled() const
 {
-    return Core::DocumentModel::entryCount() > 0;
+    // OPENMV-DIFF //
+    // return Core::DocumentModel::entryCount() > 0;
+    // OPENMV-DIFF //
+    const QList<Core::DocumentModel::Entry *> entries = Core::DocumentModel::entries();
+    for (Core::DocumentModel::Entry *entry : entries) {
+        const Utils::FilePath fileName = entry->filePath();
+        if (!fileName.isEmpty()) {
+            return true;
+        }
+    }
+    return false;
+    // OPENMV-DIFF //
 }
 
 const char kDefaultInclusion[] = "*";
