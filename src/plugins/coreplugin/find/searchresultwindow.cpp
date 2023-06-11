@@ -147,6 +147,9 @@ namespace Internal {
         m_filterButton->setText(Tr::tr("Filter Results"));
         m_filterButton->setIcon(Utils::Icons::FILTER.icon());
         m_filterButton->setEnabled(false);
+        // OPENMV-DIFF //
+        m_filterButton->hide();
+        // OPENMV-DIFF //
 
         QAction *newSearchAction = new QAction(Tr::tr("New Search"), this);
         newSearchAction->setIcon(Utils::Icons::NEWSEARCH_TOOLBAR.icon());

@@ -47,6 +47,11 @@ protected:
     SearchResultFilterModel *m_model;
     SearchResultFilter *m_filter = nullptr;
     bool m_autoExpandResults;
+    // OPENMV-DIFF //
+    void paintEvent(QPaintEvent *event) override;
+    QString m_styleSheet, m_highDPIStyleSheet;
+    qreal m_devicePixelRatio;
+    // OPENMV-DIFF //
 };
 
 } // namespace Internal

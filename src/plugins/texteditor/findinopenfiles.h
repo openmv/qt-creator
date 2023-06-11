@@ -17,6 +17,9 @@ public:
 
     QString id() const override;
     QString displayName() const override;
+    // OPENMV-DIFF //
+    QWidget *createConfigWidget() override;
+    // OPENMV-DIFF //
     bool isEnabled() const override;
     void writeSettings(QSettings *settings) override;
     void readSettings(QSettings *settings) override;
@@ -31,6 +34,10 @@ protected:
 
 private:
     void updateEnabledState();
+
+    // OPENMV-DIFF //
+    QPointer<QWidget> m_configWidget = nullptr;
+    // OPENMV-DIFF //
 };
 
 } // namespace Internal

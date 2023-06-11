@@ -49,6 +49,24 @@ SearchResultTreeView::SearchResultTreeView(QWidget *parent)
 
     connect(this, &SearchResultTreeView::activated,
             this, &SearchResultTreeView::emitJumpToSearchResult);
+
+    // OPENMV-DIFF //
+    m_styleSheet = QStringLiteral("QAbstractScrollArea{background-color:#1E1E27;color:#FFFFFF;}" // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
+#ifndef Q_OS_MAC
+    "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-closed.png);}"
+    "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-open.png);}"
+#endif
+                                  );
+
+    m_highDPIStyleSheet = QStringLiteral("QAbstractScrollArea{background-color:#1E1E27;color:#FFFFFF;}" // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
+#ifndef Q_OS_MAC
+    "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-closed_2x.png);}"
+    "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-open_2x.png);}"
+#endif
+                                  );
+
+    m_devicePixelRatio = 0;
+    // OPENMV-DIFF //
 }
 
 void SearchResultTreeView::setAutoExpandResults(bool expand)
@@ -142,6 +160,22 @@ SearchResultFilterModel *SearchResultTreeView::model() const
 {
     return m_model;
 }
+
+// OPENMV-DIFF //
+// We have to do this because Qt does not update the icons when switching between
+// a non-high dpi screen and a high-dpi screen.
+void SearchResultTreeView::paintEvent(QPaintEvent *event)
+{
+    qreal ratio = devicePixelRatioF();
+    if (!qFuzzyCompare(ratio, m_devicePixelRatio))
+    {
+        m_devicePixelRatio = ratio;
+        setStyleSheet(qFuzzyCompare(1.0, ratio) ? m_styleSheet : m_highDPIStyleSheet); // reload icons
+    }
+
+    Utils::TreeView::paintEvent(event);
+}
+// OPENMV-DIFF //
 
 } // namespace Internal
 } // namespace Core

@@ -14,6 +14,10 @@
 
 #include <QSettings>
 
+// OPENMV-DIFF //
+#include <QLabel>
+// OPENMV-DIFF //
+
 namespace TextEditor::Internal {
 
 FindInOpenFiles::FindInOpenFiles()
@@ -76,9 +80,32 @@ QString FindInOpenFiles::toolTip() const
     return Tr::tr("Open Documents\n%1");
 }
 
+// OPENMV-DIFF //
+QWidget *FindInOpenFiles::createConfigWidget()
+{
+    if (!m_configWidget) {
+        QLabel *label = new QLabel(Tr::tr("Please note that this only searches files that have been saved to disk."));
+        label->setAlignment(Qt::AlignRight);
+        m_configWidget = label;
+    }
+    return m_configWidget;
+}
+// OPENMV-DIFF //
+
 bool FindInOpenFiles::isEnabled() const
 {
-    return Core::DocumentModel::entryCount() > 0;
+    // OPENMV-DIFF //
+    // return Core::DocumentModel::entryCount() > 0;
+    // OPENMV-DIFF //
+    const QList<Core::DocumentModel::Entry *> entries = Core::DocumentModel::entries();
+    for (Core::DocumentModel::Entry *entry : entries) {
+        const Utils::FilePath fileName = entry->filePath();
+        if (!fileName.isEmpty()) {
+            return true;
+        }
+    }
+    return false;
+    // OPENMV-DIFF //
 }
 
 void FindInOpenFiles::writeSettings(QSettings *settings)

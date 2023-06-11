@@ -705,6 +705,8 @@ void FancyTabWidget::setBackgroundBrush(const QBrush &brush)
 void FancyTabWidget::paintEvent(QPaintEvent *event)
 {
     // OPENMV-DIFF //
+    // We have to do this because Qt does not update the icons when switching between
+    // a non-high dpi screen and a high-dpi screen.
     qreal ratio = devicePixelRatioF();
     if (!qFuzzyCompare(ratio, m_devicePixelRatio))
     {

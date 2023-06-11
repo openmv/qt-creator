@@ -15,6 +15,10 @@
 
 #include <QSettings>
 
+// OPENMV-DIFF //
+#include <QLabel>
+// OPENMV-DIFF //
+
 namespace TextEditor::Internal {
 
 FindInCurrentFile::FindInCurrentFile()
@@ -64,6 +68,18 @@ QString FindInCurrentFile::toolTip() const
     // %2 is filled by BaseFileFind::runNewSearch
     return Tr::tr("File path: %1\n%2").arg(m_currentDocument->filePath().toUserOutput());
 }
+
+// OPENMV-DIFF //
+QWidget *FindInCurrentFile::createConfigWidget()
+{
+    if (!m_configWidget) {
+        QLabel *label = new QLabel(Tr::tr("Please note that this only searches files that have been saved to disk."));
+        label->setAlignment(Qt::AlignRight);
+        m_configWidget = label;
+    }
+    return m_configWidget;
+}
+// OPENMV-DIFF //
 
 bool FindInCurrentFile::isEnabled() const
 {

@@ -24,6 +24,9 @@ public:
 
     QString id() const override;
     QString displayName() const override;
+    // OPENMV-DIFF //
+    QWidget *createConfigWidget() override;
+    // OPENMV-DIFF //
     bool isEnabled() const override;
     void writeSettings(QSettings *settings) override;
     void readSettings(QSettings *settings) override;
@@ -40,6 +43,9 @@ private:
     void handleFileChange(Core::IEditor *editor);
 
     QPointer<Core::IDocument> m_currentDocument;
+    // OPENMV-DIFF //
+    QPointer<QWidget> m_configWidget = nullptr;
+    // OPENMV-DIFF //
 };
 
 } // namespace Internal

@@ -26,6 +26,10 @@
 #include <QSettings>
 #include <QStackedWidget>
 
+// OPENMV-DIFF //
+#include <QStandardPaths>
+// OPENMV-DIFF //
+
 using namespace Core;
 using namespace Utils;
 
@@ -75,13 +79,19 @@ QVariant FindInFiles::additionalParameters() const
 
 QString FindInFiles::label() const
 {
-    QString title = currentSearchEngine()->title();
+    // OPENMV-DIFF //
+    // QString title = currentSearchEngine()->title();
+    // OPENMV-DIFF //
 
     const QChar slash = QLatin1Char('/');
     const QStringList &nonEmptyComponents = path().toFileInfo().absoluteFilePath()
             .split(slash, Qt::SkipEmptyParts);
-    return Tr::tr("%1 \"%2\":")
-            .arg(title)
+    // OPENMV-DIFF //
+    // return Tr::tr("%1 \"%2\":")
+    //         .arg(title)
+    // OPENMV-DIFF //
+    return Tr::tr("Folder \"%2\":")
+    // OPENMV-DIFF //
             .arg(nonEmptyComponents.isEmpty() ? QString(slash) : nonEmptyComponents.last());
 }
 
@@ -138,6 +148,10 @@ QWidget *FindInFiles::createConfigWidget()
                 this, &FindInFiles::searchEnginesSelectionChanged);
         searchEngineLabel->setBuddy(m_searchEngineCombo);
         gridLayout->addWidget(m_searchEngineCombo, row, 1);
+        // OPENMV-DIFF //
+        searchEngineLabel->hide();
+        m_searchEngineCombo->hide();
+        // OPENMV-DIFF //
 
         m_searchEngineWidget = new QStackedWidget(m_configWidget);
         const QVector<SearchEngine *> searchEngineVector = searchEngines();
@@ -162,6 +176,11 @@ QWidget *FindInFiles::createConfigWidget()
                         QLatin1String("Find/FindInFiles/directories")).toStringList();
             for (const QString &dir: legacyHistory)
                 completer->addEntry(dir);
+            // OPENMV-DIFF //
+            if (legacyHistory.isEmpty()) {
+                completer->addEntry(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV"));
+            }
+            // OPENMV-DIFF //
         }
         dirLabel->setBuddy(m_directory);
         gridLayout->addWidget(m_directory, row++, 1, 1, 2);

@@ -15,6 +15,10 @@
         <file>images/scroll-arrowdown_2x.png</file>
         <file>images/scroll-arrowleft.png</file>
         <file>images/scroll-arrowleft_2x.png</file>
+        <file>images/branch-closed.png</file>
+        <file>images/branch-closed_2x.png</file>
+        <file>images/branch-open.png</file>
+        <file>images/branch-open_2x.png</file>
         <file>../../../../openmv-media/icons/openmv-icon/openmv16x16.png</file>
         <file>../../../../openmv-media/icons/openmv-icon/openmv16x16@2x.png</file>
         <file>../../../../openmv-media/icons/openmv-icon/openmv32x32.png</file>
