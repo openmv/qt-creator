@@ -982,17 +982,17 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
     styledBar2->setLayout(styledBar2Layout);
 
     QToolButton *clearButton = new QToolButton;
-    clearButton->setIcon(Utils::Icon({{Utils::FilePath::fromString(QStringLiteral(":/core/images/clean_pane_small.png")), Utils::Theme::IconsBaseColor}}).icon());
+    clearButton->setIcon(Utils::Icons::CLEAN_TOOLBAR.icon());
     clearButton->setToolTip(tr("Clear"));
     styledBar2Layout->addWidget(clearButton);
 
     QToolButton *saveButton = new QToolButton;
-    saveButton->setIcon(Utils::Icon({{Utils::FilePath::fromString(QStringLiteral(":/core/images/filesave.png")), Utils::Theme::IconsBaseColor}}).icon());
+    saveButton->setIcon(Utils::Icons::SAVEFILE_TOOLBAR.icon());
     saveButton->setToolTip(tr("Save"));
     styledBar2Layout->addWidget(saveButton);
 
     QToolButton *executeButton = new QToolButton;
-    executeButton->setIcon(Utils::Icon({{Utils::FilePath::fromString(QStringLiteral(":/core/images/run_small.png")), Utils::Theme::IconsBaseColor}}).icon());
+    executeButton->setIcon(Utils::Icons::RUN_SMALL_TOOLBAR.icon());
     executeButton->setToolTip(stand_alone ? tr("Run \"/main.py\"") : tr("Run current script in editor window"));
     styledBar2Layout->addWidget(executeButton);
     if(!stand_alone) connect(Core::EditorManager::instance(), &Core::EditorManager::currentEditorChanged, executeButton, [executeButton] (Core::IEditor *editor) {
@@ -1000,12 +1000,12 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
     });
 
     QToolButton *interruptButton = new QToolButton;
-    interruptButton->setIcon(Utils::Icon({{Utils::FilePath::fromString(QStringLiteral(":/core/images/stop_small.png")), Utils::Theme::IconsBaseColor}}).icon());
+    interruptButton->setIcon(Utils::Icons::STOP_SMALL_TOOLBAR.icon());
     interruptButton->setToolTip(tr("Stop running script"));
     styledBar2Layout->addWidget(interruptButton);
 
     QToolButton *reloadButton = new QToolButton;
-    reloadButton->setIcon(Utils::Icon({{Utils::FilePath::fromString(QStringLiteral(":/core/images/reload_gray.png")), Utils::Theme::IconsBaseColor}}).icon());
+    reloadButton->setIcon(Utils::Icons::RELOAD_TOOLBAR.icon());
     reloadButton->setToolTip(tr("Soft reset"));
     styledBar2Layout->addWidget(reloadButton);
     styledBar2Layout->addStretch(1);
@@ -1156,22 +1156,58 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     ///////////////////////////////////////////////////////////////////////////
 
-    QMainWindow *mainWindow = qobject_cast<QMainWindow *>(Core::ICore::mainWindow());
+    m_styleSheet = QStringLiteral("QAbstractScrollArea::corner{background-color:#404244;}"
+#ifndef Q_OS_MAC
+    "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:#404244;}"
+    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:#404244;border-top:1px solid #2E2E2E;}"
+    "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:#404244;}"
+    "QScrollBar::up-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowup.png);}"
+    "QScrollBar::down-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowdown.png);}"
+    "QScrollBar::sub-page:vertical{margin-left:1px;margin-right:1px;background-color:#404244;}"
+    "QScrollBar::add-page:vertical{margin-left:1px;margin-right:1px;background-color:#404244;}"
+    "QScrollBar::handle:vertical{margin-left:1px;margin-right:1px;min-height:20px;background-color:#2E2E2E;}"
+    "QScrollBar:horizontal{margin-top:0px;margin-right:17px;margin-bottom:0px;margin-left:17px;min-height:14px;background-color:#404244;}"
+    "QScrollBar::sub-line:horizontal{subcontrol-origin:margin;subcontrol-position:left;width:17px;background-color:#404244;}"
+    "QScrollBar::add-line:horizontal{subcontrol-origin:margin;subcontrol-position:right;width:17px;background-color:#404244;}"
+    "QScrollBar::left-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowleft.png);}"
+    "QScrollBar::right-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowright.png);}"
+    "QScrollBar::sub-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:#404244;}"
+    "QScrollBar::add-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:#404244;}"
+    "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:#2E2E2E;}"
+    "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:#595b5d;}"
+    "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:#262829;}"
+#endif
+    "QPlainTextEdit{background-color:#1E1E27;}");
 
-    if(mainWindow)
-    {
-        QWidget *widget = mainWindow->centralWidget();
+    m_highDPIStyleSheet = QStringLiteral("QAbstractScrollArea::corner{background-color:#404244;}"
+#ifndef Q_OS_MAC
+    "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:#404244;}"
+    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:#404244;border-top:1px solid #2E2E2E;}"
+    "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:#404244;}"
+    "QScrollBar::up-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowup_2x.png);}"
+    "QScrollBar::down-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowdown_2x.png);}"
+    "QScrollBar::sub-page:vertical{margin-left:1px;margin-right:1px;background-color:#404244;}"
+    "QScrollBar::add-page:vertical{margin-left:1px;margin-right:1px;background-color:#404244;}"
+    "QScrollBar::handle:vertical{margin-left:1px;margin-right:1px;min-height:20px;background-color:#2E2E2E;}"
+    "QScrollBar:horizontal{margin-top:0px;margin-right:17px;margin-bottom:0px;margin-left:17px;min-height:14px;background-color:#404244;}"
+    "QScrollBar::sub-line:horizontal{subcontrol-origin:margin;subcontrol-position:left;width:17px;background-color:#404244;}"
+    "QScrollBar::add-line:horizontal{subcontrol-origin:margin;subcontrol-position:right;width:17px;background-color:#404244;}"
+    "QScrollBar::left-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowleft_2x.png);}"
+    "QScrollBar::right-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowright_2x.png);}"
+    "QScrollBar::sub-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:#404244;}"
+    "QScrollBar::add-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:#404244;}"
+    "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:#2E2E2E;}"
+    "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:#595b5d;}"
+    "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:#262829;}"
+#endif
+    "QPlainTextEdit{background-color:#1E1E27;}");
 
-        if(widget)
-        {
-            setAutoFillBackground(widget->autoFillBackground());
-            setStyleSheet(widget->styleSheet());
+    QPalette pal = palette();
+    pal.setColor(QPalette::Base, QColor(QStringLiteral("#404244")));
+    setAutoFillBackground(true);
+    setPalette(pal);
 
-            QPalette pal = palette();
-            pal.setColor(QPalette::Base, widget->palette().color(QPalette::Base));
-            setPalette(pal);
-        }
-    }
+    m_devicePixelRatio = 0;
 
     m_context = new Core::IContext(this);
     m_context->setContext(context);
@@ -1226,6 +1262,20 @@ void OpenMVTerminal::closeEvent(QCloseEvent *event)
     m_settings->setValue(QStringLiteral(HISTOGRAM_COLOR_SPACE_STATE), m_colorSpace->currentIndex());
 
     QWidget::closeEvent(event);
+}
+
+void OpenMVTerminal::paintEvent(QPaintEvent *event)
+{
+    // We have to do this because Qt does not update the icons when switching between
+    // a non-high dpi screen and a high-dpi screen.
+    qreal ratio = devicePixelRatioF();
+    if (!qFuzzyCompare(ratio, m_devicePixelRatio))
+    {
+        m_devicePixelRatio = ratio;
+        setStyleSheet(qFuzzyCompare(1.0, ratio) ? m_styleSheet : m_highDPIStyleSheet); // reload icons
+    }
+
+    QWidget::paintEvent(event);
 }
 
 OpenMVTerminalSerialPort_private::OpenMVTerminalSerialPort_private(QObject *parent) : QObject(parent)

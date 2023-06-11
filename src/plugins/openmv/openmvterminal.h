@@ -13,8 +13,8 @@
 #include <utils/ansiescapecodehandler.h>
 #include <utils/elidinglabel.h>
 #include <utils/fadingindicator.h>
-#include <utils/icon.h>
 #include <utils/styledbar.h>
+#include <utils/utilsicons.h>
 #include <coreplugin/actionmanager/actionmanager.h>
 #include <coreplugin/editormanager/editormanager.h>
 #include <coreplugin/editormanager/ieditor.h>
@@ -104,6 +104,8 @@ protected:
     void showEvent(QShowEvent *event);
     void closeEvent(QCloseEvent *event);
 
+    void paintEvent(QPaintEvent *event) override;
+
 private:
 
     QSettings *m_settings;
@@ -117,6 +119,8 @@ private:
     QComboBox *m_colorSpace;
     MyPlainTextEdit *m_edit;
     Core::IContext *m_context;
+    QString m_styleSheet, m_highDPIStyleSheet;
+    qreal m_devicePixelRatio;
 };
 
 // Base ///////////////////////////////////////////////////////////////////////
