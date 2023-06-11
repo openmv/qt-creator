@@ -121,7 +121,7 @@ void OpenMVDatasetEditor::newClassFolder()
 
         if(m_model->rootDirectory().mkdir(dir_name))
         {
-            Utils::FileSaver file(Utils::FilePath::fromString(QDir::cleanPath(QDir::fromNativeSeparators(m_model->rootPath() + QStringLiteral("/labels.txt")))));
+            Utils::FileSaver file(Utils::FilePath::fromString(m_model->rootPath()).pathAppended(QStringLiteral("labels.txt")));
 
             if(!file.hasError())
             {
@@ -435,7 +435,7 @@ QString OpenMVDatasetEditor::getClassFolderPath()
 
 void OpenMVDatasetEditor::updateLabels()
 {
-    Utils::FileSaver file(Utils::FilePath::fromString(QDir::cleanPath(QDir::fromNativeSeparators(m_model->rootPath() + QStringLiteral("/labels.txt")))));
+    Utils::FileSaver file(Utils::FilePath::fromString(m_model->rootPath()).pathAppended(QStringLiteral("labels.txt")));
 
     if(!file.hasError())
     {

@@ -215,7 +215,7 @@ void OpenMVPlugin::bootloaderClicked()
     pathChooser->setExpectedKind(Utils::PathChooser::File);
     pathChooser->setPromptDialogTitle(tr("Firmware Path"));
     pathChooser->setPromptDialogFilter(tr("Firmware Binary (*.bin *.dfu)"));
-    pathChooser->setFilePath(Utils::FilePath::fromString(settings->value(QStringLiteral(LAST_FIRMWARE_PATH), QDir::homePath()).toString()));
+    pathChooser->setFilePath(Utils::FilePath::fromVariant(settings->value(QStringLiteral(LAST_FIRMWARE_PATH), QDir::homePath())));
     layout->addRow(tr("Firmware Path"), pathChooser);
     layout->addItem(new QSpacerItem(0, 6));
 

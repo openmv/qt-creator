@@ -1022,7 +1022,7 @@ void OpenMVPlugin::extensionsInitialized()
     m_openDriveFolderCommand = Core::ActionManager::registerAction(m_openDriveFolderAction, Utils::Id("OpenMV.OpenDriveFolder"));
     toolsMenu->addAction(m_openDriveFolderCommand);
     m_openDriveFolderAction->setEnabled(false);
-    connect(m_openDriveFolderAction, &QAction::triggered, this, [this] {Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(), Utils::FilePath::fromString(Utils::HostOsInfo::isWindowsHost() ? m_portPath : (m_portPath + QStringLiteral("/.openmv_disk")))); });
+    connect(m_openDriveFolderAction, &QAction::triggered, this, [this] {Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(), Utils::FilePath::fromString(m_portPath).pathAppended(Utils::HostOsInfo::isWindowsHost() ? QStringLiteral("") : QStringLiteral(".openmv_disk"))); });
 
     m_configureSettingsAction = new QAction(tr("Configure OpenMV Cam settings file"), this);
     m_configureSettingsCommand = Core::ActionManager::registerAction(m_configureSettingsAction, Utils::Id("OpenMV.Settings"));
@@ -1170,8 +1170,8 @@ void OpenMVPlugin::extensionsInitialized()
                 dst =
                 QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Where to save the network on the OpenMV Cam"),
                     m_portPath.isEmpty()
-                    ? settings->value(QStringLiteral(LAST_MODEL_NO_CAM_PATH), QDir::homePath()).toString()
-                    : settings->value(QStringLiteral(LAST_MODEL_WITH_CAM_PATH), QString(m_portPath + QFileInfo(src).fileName())).toString(),
+                    ? Utils::FilePath::fromVariant(settings->value(QStringLiteral(LAST_MODEL_NO_CAM_PATH), QDir::homePath())).pathAppended(QFileInfo(src).fileName()).toString()
+                    : Utils::FilePath::fromVariant(settings->value(QStringLiteral(LAST_MODEL_WITH_CAM_PATH), m_portPath)).pathAppended(QFileInfo(src).fileName()).toString(),
                     QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)"));
 
                 if((!dst.isEmpty()) && QFileInfo(dst).completeSuffix().isEmpty())
@@ -1192,7 +1192,7 @@ void OpenMVPlugin::extensionsInitialized()
                 {
                     if(QFile::copy(src, dst))
                     {
-                        settings->setValue(m_portPath.isEmpty() ? QStringLiteral(LAST_MODEL_NO_CAM_PATH) : QStringLiteral(LAST_MODEL_WITH_CAM_PATH), src);
+                        settings->setValue(m_portPath.isEmpty() ? QStringLiteral(LAST_MODEL_NO_CAM_PATH) : QStringLiteral(LAST_MODEL_WITH_CAM_PATH), QFileInfo(dst).path());
                     }
                     else
                     {
@@ -1326,7 +1326,7 @@ void OpenMVPlugin::extensionsInitialized()
                     if(m_sensorType == QStringLiteral("HM01B0")) contents = contents.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
                 }
 
-                Utils::FileSaver file(Utils::FilePath::fromString(path + QStringLiteral("/dataset_capture_script.py")));
+                Utils::FileSaver file(Utils::FilePath::fromString(path).pathAppended(QStringLiteral("dataset_capture_script.py")));
 
                 if(!file.hasError())
                 {
@@ -2073,7 +2073,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     connect(closeDatasetAction, &QAction::triggered, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
     connect(datasetEditorCloseButton, &QToolButton::clicked, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
-    connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathClosed, this, [this] (const QString &path) { Core::EditorManager::closeEditors(Core::DocumentModel::editorsForFilePath(Utils::FilePath::fromString(path + QStringLiteral("/dataset_capture_script.py")))); });
+    connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathClosed, this, [this] (const QString &path) { Core::EditorManager::closeEditors(Core::DocumentModel::editorsForFilePath(Utils::FilePath::fromString(path).pathAppended(QStringLiteral("/dataset_capture_script.py")))); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, datasetEditorWidget, &QWidget::show);
     connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, actionBar1, exportDatasetFlatCommand, uploadToEdgeImpulseProjectCommand, uploadToEdgeImpulseByAPIKeyCommand, closeDatasetCommand, datasetEditorNewFolder, datasetEditorSnapshot, datasetEditorActionBar] (bool visible) {
         actionBar1->setSizePolicy(QSizePolicy::Preferred, visible ? QSizePolicy::Maximum : QSizePolicy::Minimum);
@@ -3367,7 +3367,7 @@ void OpenMVPlugin::errorFilter(const QByteArray &data)
             }
             else if(!m_portPath.isEmpty())
             {
-                editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditor(Utils::FilePath::fromString(QDir::cleanPath(QDir::fromNativeSeparators(QString(QDir::separator() + fileName).prepend(m_portPath))))));
+                editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditor(Utils::FilePath::fromString(m_portPath).pathAppended(fileName)));
             }
         }
 
@@ -3424,7 +3424,7 @@ void OpenMVPlugin::saveScript()
 
             if(importHelper(contents))
             {
-                Utils::FileSaver file(Utils::FilePath::fromString(QDir::cleanPath(QDir::fromNativeSeparators(m_portPath)) + QStringLiteral("/main.py")));
+                Utils::FileSaver file(Utils::FilePath::fromString(m_portPath).pathAppended(QStringLiteral("main.py")));
 
                 if(!file.hasError())
                 {
