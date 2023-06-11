@@ -598,7 +598,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         {
             QStringList vidpid = device.split(QStringLiteral(",")).first().split(QStringLiteral(":"));
 
-            for (QList<QString>::iterator it=stringList.begin(); it!=stringList.end(); ++it)
+            for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
             {
                 QSerialPortInfo info(*it);
 
@@ -608,14 +608,18 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 && info.productIdentifier() == vidpid.at(1).toInt(nullptr, 16))
                 {
                     dfuDevices.append(device);
-                    stringList.erase(it);
+                    it = stringList.erase(it);
+                }
+                else
+                {
+                    it++;
                 }
             }
         }
 
         // Move known bootloader serial ports to dfuDevices.
         {
-            for (QList<QString>::iterator it=stringList.begin(); it!=stringList.end(); ++it)
+            for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
             {
                 QSerialPortInfo info(*it);
 
@@ -625,7 +629,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 && ((info.productIdentifier() == NRF_OLD_PID) || (info.productIdentifier() == NRF_LDR_PID) || (info.productIdentifier() == RPI_OLD_PID) || (info.productIdentifier() == RPI_LDR_PID)))
                 {
                     dfuDevices.append(QString(QStringLiteral("%1:%2").arg(info.vendorIdentifier(), 4, 16, QLatin1Char('0')).arg(info.productIdentifier(), 4, 16, QLatin1Char('0'))));
-                    stringList.erase(it);
+                    it = stringList.erase(it);
+                }
+                else
+                {
+                    it++;
                 }
             }
         }
@@ -795,7 +803,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 eraseAllMappings.insert(QStringLiteral("PICO_M0_OLD"), QPair<int, int>(0, 0));
                                 vidpidMappings.insert(QStringLiteral("PICO_M0_OLD"), QStringLiteral("2341:805e"));
 
-                                for (QMap<QString, QString>::iterator it=mappings.begin(); it!=mappings.end(); ++it)
+                                for(QMap<QString, QString>::iterator it = mappings.begin(); it != mappings.end(); )
                                 {
                                     bool found = false;
 
@@ -813,7 +821,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                         eraseMappings.remove(it.key());
                                         eraseAllMappings.remove(it.key());
                                         vidpidMappings.remove(it.key());
-                                        mappings.erase(it);
+                                        it = mappings.erase(it);
+                                    }
+                                    else
+                                    {
+                                        it++;
                                     }
                                 }
                             }

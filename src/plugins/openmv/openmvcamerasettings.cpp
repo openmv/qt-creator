@@ -43,7 +43,7 @@ OpenMVCameraSettings::OpenMVCameraSettings(const QString &fileName, QWidget *par
     m_ui->clientModeButton->setChecked(!wifiMode);
     m_ui->accessPointModeButton->setChecked(wifiMode);
 
-    m_ui->clientModeSSIDEntry->addItem(clientModeSSID.isEmpty() ? tr("Please enter or select your WiFi network here") : clientModeSSID);
+    m_ui->clientModeSSIDEntry->addItem(clientModeSSID.isEmpty() ? tr("Please enter your WiFi network here") : clientModeSSID);
     m_ui->clientModePasswordEntry->setText(clientModePass);
     m_ui->clientModeTypeEntry->setCurrentIndex(((1 <= clientModeType) && (clientModeType <= 3)) ? (clientModeType - 1) : 0);
 

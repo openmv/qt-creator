@@ -2401,7 +2401,15 @@ bool OpenMVPlugin::delayedInitialize()
                         wifiPort.addressAndPort = QString(QStringLiteral("%1:%2")).arg(hostAddress.toString()).arg(hostPort);
                         wifiPort.name = hostName;
                         wifiPort.time = QTime::currentTime();
-                        if(!m_availableWifiPorts.contains(wifiPort)) m_availableWifiPorts.append(wifiPort);
+
+                        if(!m_availableWifiPorts.contains(wifiPort))
+                        {
+                            m_availableWifiPorts.append(wifiPort);
+                        }
+                        else
+                        {
+                            m_availableWifiPorts[m_availableWifiPorts.indexOf(wifiPort)].time = QTime::currentTime();
+                        }
                     }
                 }
             }
@@ -2413,11 +2421,15 @@ bool OpenMVPlugin::delayedInitialize()
     connect(timer, &QTimer::timeout, this, [this] {
         QTime currentTime = QTime::currentTime();
 
-        for (QList<wifiPort_t>::iterator it=m_availableWifiPorts.begin(); it!=m_availableWifiPorts.end(); ++it)
+        for(QList<wifiPort_t>::iterator it = m_availableWifiPorts.begin(); it != m_availableWifiPorts.end(); )
         {
             if(qAbs(it->time.secsTo(currentTime)) >= WIFI_PORT_RETIRE)
             {
-                m_availableWifiPorts.erase(it);
+                it = m_availableWifiPorts.erase(it);
+            }
+            else
+            {
+                it++;
             }
         }
 
@@ -2453,9 +2465,9 @@ bool OpenMVPlugin::delayedInitialize()
             }
         }
 
-        if(ok && m_autoReconnectAction->isChecked() && (!m_connected))
+        if(ok && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected))
         {
-            QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_connected)) connectClicked(); });
+            QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected)) connectClicked(); });
         }
     });
 
