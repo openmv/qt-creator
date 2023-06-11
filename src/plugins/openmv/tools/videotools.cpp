@@ -171,6 +171,7 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
 
             if(stream.skipRawData(12) != 12)
             {
+                qDebug() << "here1";
                 QMessageBox::critical(Core::ICore::dialogParent(),
                     QObject::tr("Reading File"),
                     QObject::tr("File is corrupt!"));
@@ -615,6 +616,9 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
         reformat = true;
     }
 
+    float fps, *fpsPtr = &fps;
+    QRegularExpression fpsRegex(QStringLiteral("\\b(\\d+(?:\\.\\d+)?)\\s?fps\\b"));
+
     Utils::QtcProcess process;
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
@@ -646,11 +650,15 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
 
     layout->addWidget(plainTextEdit);
 
-    QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, plainTextEdit, [plainTextEdit] (const QString &text) { // stdErr correct
+    QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, plainTextEdit, [plainTextEdit, fpsPtr, fpsRegex] (const QString &text) { // stdErr correct
+        QRegularExpressionMatch match = fpsRegex.match(text);
+        if (match.hasMatch()) *fpsPtr = match.captured(1).toFloat();
         plainTextEdit->appendPlainText(text.trimmed());
     });
 
-    QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, plainTextEdit, [plainTextEdit] (const QString &text) { // stdOut correct
+    QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, plainTextEdit, [plainTextEdit, fpsPtr, fpsRegex] (const QString &text) { // stdOut correct
+        QRegularExpressionMatch match = fpsRegex.match(text);
+        if (match.hasMatch()) *fpsPtr = match.captured(1).toFloat();
         plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:red\">%1</p>")).arg(text.trimmed()));
     });
 
@@ -726,6 +734,16 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
         box.exec();
     }
 
+    {
+        QRegularExpressionMatch match = fpsRegex.match(process.readAllStandardOutput());
+        if (match.hasMatch()) fps = match.captured(1).toFloat();
+    }
+
+    {
+        QRegularExpressionMatch match = fpsRegex.match(process.readAllStandardError());
+        if (match.hasMatch()) fps = match.captured(1).toFloat();
+    }
+
     if(reformat && result)
     {
         QFile file(dst);
@@ -756,7 +774,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
                     QImage image = QImage::fromData(in.readAll());
                     QByteArray out = jpgToBytes(image);
 
-                    serializeLong(data, 0);
+                    serializeLong(data, qCeil(1000 / fps));
                     serializeLong(data, image.width());
                     serializeLong(data, image.height());
                     serializeLong(data, image.isGrayscale() ? 1 : 2);
