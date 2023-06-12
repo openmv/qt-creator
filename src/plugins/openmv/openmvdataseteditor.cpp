@@ -18,9 +18,6 @@ OpenMVDatasetEditor::OpenMVDatasetEditor(QWidget *parent) : QTreeView(parent), m
     setFrameStyle(QFrame::NoFrame);
     setHeaderHidden(true);
     setModel(m_model);
-    setStyleSheet(QStringLiteral("QAbstractScrollArea{background-color:#1E1E27;color:#FFFFFF;}" // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
-                                 "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings{border-image:none;image:url(:/openmv/images/branch-closed.png);}"
-                                 "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/openmv/images/branch-open.png);}"));
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
 
     m_classFolderRegex = QRegularExpression(QStringLiteral("^(.+?)\\.class$"));
@@ -28,6 +25,22 @@ OpenMVDatasetEditor::OpenMVDatasetEditor(QWidget *parent) : QTreeView(parent), m
 
     m_snapshotRegex = QRegularExpression(QStringLiteral("^.*?(\\d+).*?\\.(jpg|jpeg|png|bmp)$"));
     m_snapshotRegex.optimize();
+
+    m_styleSheet = QStringLiteral("QAbstractScrollArea{background-color:#1E1E27;color:#FFFFFF;}" // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
+#ifndef Q_OS_MAC
+    "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-closed.png);}"
+    "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-open.png);}"
+#endif
+                                  );
+
+    m_highDPIStyleSheet = QStringLiteral("QAbstractScrollArea{background-color:#1E1E27;color:#FFFFFF;}" // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
+#ifndef Q_OS_MAC
+    "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-closed_2x.png);}"
+    "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-open_2x.png);}"
+#endif
+                                  );
+
+    m_devicePixelRatio = 0;
 
     connect(this, &OpenMVDatasetEditor::doubleClicked, this, [this] (const QModelIndex &index) {
         QString file = m_model->fileInfo(index).filePath();
@@ -464,4 +477,18 @@ void OpenMVDatasetEditor::updateLabels()
             tr("Dataset Editor"),
             tr("Error: %L1!").arg(file.errorString()));
     }
+}
+
+// We have to do this because Qt does not update the icons when switching between
+// a non-high dpi screen and a high-dpi screen.
+void OpenMVDatasetEditor::paintEvent(QPaintEvent *event)
+{
+    qreal ratio = devicePixelRatioF();
+    if (!qFuzzyCompare(ratio, m_devicePixelRatio))
+    {
+        m_devicePixelRatio = ratio;
+        setStyleSheet(qFuzzyCompare(1.0, ratio) ? m_styleSheet : m_highDPIStyleSheet); // reload icons
+    }
+
+    QTreeView::paintEvent(event);
 }

@@ -1010,11 +1010,18 @@ void OpenMVPlugin::extensionsInitialized()
     toolsMenu->addSeparator();
 
     m_autoReconnectAction = new QAction(tr("Auto Reconnect to OpenMV Cam"), this);
-    m_autoReconnectAction->setToolTip(tr("When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected.\n"
-                                         "Note that while Auto Reconnect is enabled connect and disconnect will not stop your OpenMV Cam's running script."));
+    m_autoReconnectAction->setToolTip(tr("When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected."));
     Core::Command *autoReconnectCommand = Core::ActionManager::registerAction(m_autoReconnectAction, Utils::Id("OpenMV.AutoReconnect"));
     toolsMenu->addAction(autoReconnectCommand);
     m_autoReconnectAction->setCheckable(true);
+    m_autoReconnectAction->setChecked(false);
+
+    m_stopOnConnectDiconnectionAction = new QAction(tr("Stop Script on Connect/Disconnect"), this);
+    m_stopOnConnectDiconnectionAction->setToolTip(tr("Stop the script on Connect or Disconnect (note that the IDE disconnects on close if connected)."));
+    Core::Command *stopOnConnectDiconnectionCommand = Core::ActionManager::registerAction(m_stopOnConnectDiconnectionAction, Utils::Id("OpenMV.StopOnConnectDisconnect"));
+    toolsMenu->addAction(stopOnConnectDiconnectionCommand);
+    m_stopOnConnectDiconnectionAction->setCheckable(true);
+    m_stopOnConnectDiconnectionAction->setChecked(true);
 
     toolsMenu->addSeparator();
 
@@ -1514,13 +1521,15 @@ void OpenMVPlugin::extensionsInitialized()
     connect(logOutFromEdgeImpulseAccountAction, &QAction::triggered, this, [this] { logoutFromEdgeImpulse(); });
 
     connect(datasetEditorMenu->menu(), &QMenu::aboutToShow, this,
-        [this, uploadToEdgeImpulseProjectCommand, loginToEdgeImpulseAccountCommand, logOutFromEdgeImpulseAccountCommand] {
+        [this, uploadToEdgeImpulseProjectAction, logInToEdgeImpulseAccountAction, logOutFromEdgeImpulseAccountAction, loginToEdgeImpulseAccountCommand, logOutFromEdgeImpulseAccountCommand] {
         QString accountName = loggedIntoEdgeImpulse();
-        uploadToEdgeImpulseProjectCommand->action()->setVisible(!accountName.isEmpty());
-        uploadToEdgeImpulseProjectCommand->action()->setEnabled(m_datasetEditor->isVisible() && (!accountName.isEmpty()));
-        loginToEdgeImpulseAccountCommand->action()->setVisible(accountName.isEmpty());
+        uploadToEdgeImpulseProjectAction->setVisible(!accountName.isEmpty());
+        uploadToEdgeImpulseProjectAction->setEnabled(m_datasetEditor->isVisible() && (!accountName.isEmpty()));
+        logInToEdgeImpulseAccountAction->setVisible(accountName.isEmpty());
+        // Text/Image has to be set through the proxy action - enabled/visible through regular action.
         loginToEdgeImpulseAccountCommand->action()->setText(m_datasetEditor->isVisible() ? tr("Login to Edge Impulse Account and Upload to Project") : tr("Login to Edge Impulse Account"));
-        logOutFromEdgeImpulseAccountCommand->action()->setVisible(!accountName.isEmpty());
+        logOutFromEdgeImpulseAccountAction->setVisible(!accountName.isEmpty());
+        // Text/Image has to be set through the proxy action - enabled/visible through regular action.
         logOutFromEdgeImpulseAccountCommand->action()->setText(tr("Logout from Account: %L1").arg(accountName));
     });
 
@@ -2036,21 +2045,21 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorFB->enableFitInView(true);
     connect(m_datasetEditor, &OpenMVDatasetEditor::pixmapUpdate, datasetEditorFB, &OpenMVPluginFB::frameBufferData);
 
-    Core::Command *datasetEditorNewFolder = Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(NEW_FOLDER_PATH)),
-    tr("New Class Folder"), this), Utils::Id("OpenMV.NewClassFolder"));
+    QAction *datasetEditorNewFolderAction = new QAction(QIcon(QStringLiteral(NEW_FOLDER_PATH)), tr("New Class Folder"), this);
+    Core::Command *datasetEditorNewFolder = Core::ActionManager::registerAction(datasetEditorNewFolderAction, Utils::Id("OpenMV.NewClassFolder"));
     datasetEditorNewFolder->setDefaultKeySequence(QStringLiteral("Ctrl+Shift+N"));
-    datasetEditorNewFolder->action()->setEnabled(false);
-    datasetEditorNewFolder->action()->setVisible(false);
-    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, datasetEditorNewFolder->action(), &QAction::setEnabled);
-    connect(datasetEditorNewFolder->action(), &QAction::triggered, m_datasetEditor, &OpenMVDatasetEditor::newClassFolder);
+    datasetEditorNewFolderAction->setEnabled(false);
+    datasetEditorNewFolderAction->setVisible(false);
+    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, datasetEditorNewFolderAction, &QAction::setEnabled);
+    connect(datasetEditorNewFolderAction, &QAction::triggered, m_datasetEditor, &OpenMVDatasetEditor::newClassFolder);
 
-    Core::Command *datasetEditorSnapshot = Core::ActionManager::registerAction(new QAction(QIcon(QStringLiteral(SNAPSHOT_PATH)),
-    tr("Capture Data"), this), Utils::Id("OpenMV.CaptureData"));
+    QAction *datasetEditorSnapshotAction = new QAction(QIcon(QStringLiteral(SNAPSHOT_PATH)), tr("Capture Data"), this);
+    Core::Command *datasetEditorSnapshot = Core::ActionManager::registerAction(datasetEditorSnapshotAction, Utils::Id("OpenMV.CaptureData"));
     datasetEditorSnapshot->setDefaultKeySequence(QStringLiteral("Ctrl+Shift+S"));
-    datasetEditorSnapshot->action()->setEnabled(false);
-    datasetEditorSnapshot->action()->setVisible(false);
-    connect(m_datasetEditor, &OpenMVDatasetEditor::snapshotEnable, datasetEditorSnapshot->action(), &QAction::setEnabled);
-    connect(datasetEditorSnapshot->action(), &QAction::triggered, m_datasetEditor, &OpenMVDatasetEditor::snapshot);
+    datasetEditorSnapshotAction->setEnabled(false);
+    datasetEditorSnapshotAction->setVisible(false);
+    connect(m_datasetEditor, &OpenMVDatasetEditor::snapshotEnable, datasetEditorSnapshotAction, &QAction::setEnabled);
+    connect(datasetEditorSnapshotAction, &QAction::triggered, m_datasetEditor, &OpenMVDatasetEditor::snapshot);
 
     Core::Internal::FancyActionBar *datasetEditorActionBar = new Core::Internal::FancyActionBar(widget);
     widget->insertCornerWidget(2, datasetEditorActionBar);
@@ -2075,21 +2084,21 @@ void OpenMVPlugin::extensionsInitialized()
     connect(datasetEditorCloseButton, &QToolButton::clicked, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathClosed, this, [this] (const QString &path) { Core::EditorManager::closeEditors(Core::DocumentModel::editorsForFilePath(Utils::FilePath::fromString(path).pathAppended(QStringLiteral("/dataset_capture_script.py")))); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, datasetEditorWidget, &QWidget::show);
-    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, actionBar1, exportDatasetFlatCommand, uploadToEdgeImpulseProjectCommand, uploadToEdgeImpulseByAPIKeyCommand, closeDatasetCommand, datasetEditorNewFolder, datasetEditorSnapshot, datasetEditorActionBar] (bool visible) {
+    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, actionBar1, exportDataseFlatAction, uploadToEdgeImpulseProjectAction, uploadToEdgeImpulseByAPIKeyAction, closeDatasetAction, datasetEditorNewFolderAction, datasetEditorSnapshotAction, datasetEditorActionBar] (bool visible) {
         actionBar1->setSizePolicy(QSizePolicy::Preferred, visible ? QSizePolicy::Maximum : QSizePolicy::Minimum);
-        exportDatasetFlatCommand->action()->setEnabled(visible);
-        uploadToEdgeImpulseProjectCommand->action()->setEnabled(visible && (!loggedIntoEdgeImpulse().isEmpty()));
-        uploadToEdgeImpulseByAPIKeyCommand->action()->setEnabled(visible);
-        closeDatasetCommand->action()->setEnabled(visible);
-        datasetEditorNewFolder->action()->setVisible(visible);
-        datasetEditorSnapshot->action()->setVisible(visible);
+        exportDataseFlatAction->setEnabled(visible);
+        uploadToEdgeImpulseProjectAction->setEnabled(visible && (!loggedIntoEdgeImpulse().isEmpty()));
+        uploadToEdgeImpulseByAPIKeyAction->setEnabled(visible);
+        closeDatasetAction->setEnabled(visible);
+        datasetEditorNewFolderAction->setVisible(visible);
+        datasetEditorSnapshotAction->setVisible(visible);
         datasetEditorActionBar->setVisible(visible);
     });
 
-    exportDatasetFlatCommand->action()->setDisabled(true);
-    uploadToEdgeImpulseProjectCommand->action()->setDisabled(true);
-    uploadToEdgeImpulseByAPIKeyCommand->action()->setDisabled(true);
-    closeDatasetCommand->action()->setDisabled(true);
+    exportDataseFlatAction->setDisabled(true);
+    uploadToEdgeImpulseProjectAction->setDisabled(true);
+    uploadToEdgeImpulseByAPIKeyAction->setDisabled(true);
+    closeDatasetAction->setDisabled(true);
     datasetEditorActionBar->hide();
     datasetEditorWidget->hide();
 
@@ -2147,6 +2156,8 @@ void OpenMVPlugin::extensionsInitialized()
         settings->value(QStringLiteral(EDITOR_MANAGER_STATE)).toByteArray());
     m_autoReconnectAction->setChecked(
         settings->value(QStringLiteral(AUTO_RECONNECT_STATE), m_autoReconnectAction->isChecked()).toBool());
+    m_stopOnConnectDiconnectionAction->setChecked(
+        settings->value(QStringLiteral(STOP_SCRIPT_CONNECT_DISCONNECT_STATE), m_stopOnConnectDiconnectionAction->isChecked()).toBool());
     m_connectAction->setEnabled(!m_autoReconnectAction->isChecked());
     m_disconnectAction->setEnabled(!m_autoReconnectAction->isChecked());
     if(m_autoReconnectAction->isChecked()) {
@@ -2234,6 +2245,8 @@ void OpenMVPlugin::extensionsInitialized()
             vsplitter->saveState());
         settings->setValue(QStringLiteral(AUTO_RECONNECT_STATE),
             m_autoReconnectAction->isChecked());
+        settings->setValue(QStringLiteral(STOP_SCRIPT_CONNECT_DISCONNECT_STATE),
+            m_stopOnConnectDiconnectionAction->isChecked());
         settings->setValue(QStringLiteral(ZOOM_STATE),
             zoomButton->isChecked());
         settings->setValue(QStringLiteral(JPG_COMPRESS_STATE),
@@ -2471,20 +2484,17 @@ bool OpenMVPlugin::delayedInitialize()
         }
     });
 
-    if(socket->bind(OPENMVCAM_BROADCAST_PORT))
-    {
-        timer->start(1000);
-    }
-    else
+    if(!socket->bind(OPENMVCAM_BROADCAST_PORT))
     {
         delete socket;
-        delete timer;
 
         if(!isNoShow()) QMessageBox::warning(Core::ICore::dialogParent(),
             tr("WiFi Programming Disabled!"),
             tr("Another application is using the OpenMV Cam broadcast discovery port. "
                "Please close that application and restart OpenMV IDE to enable WiFi programming."));
     }
+
+    timer->start(1000);
 
     if(!QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV")))
     {
