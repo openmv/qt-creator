@@ -3097,7 +3097,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         // Stopping ///////////////////////////////////////////////////////////
 
-        if(!m_autoReconnectAction->isChecked()) m_iodevice->scriptStop();
+        if(m_stopOnConnectDiconnectionAction->isChecked()) m_iodevice->scriptStop();
 
         // Drain text buffer
         {
@@ -3383,7 +3383,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                 }
                 else
                 {
-                    if(!m_autoReconnectAction->isChecked()) m_iodevice->scriptStop();
+                    if(m_stopOnConnectDiconnectionAction->isChecked()) m_iodevice->scriptStop();
 
                     // Drain text buffer
                     {

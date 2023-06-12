@@ -57,6 +57,7 @@ protected:
     void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected) override;
     void hideEvent(QHideEvent *event) override;
     void showEvent(QShowEvent *event) override;
+    void paintEvent(QPaintEvent *event) override;
 
 private:
 
@@ -70,6 +71,8 @@ private:
     QRegularExpression m_snapshotRegex;
     QString datasetCaptureScriptPath;
     QString labelsPath;
+    QString m_styleSheet, m_highDPIStyleSheet;
+    qreal m_devicePixelRatio;
 };
 
 #endif // OPENMVDATASETEDITOR_H
