@@ -576,10 +576,7 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
             }
 
             QByteArray response;
-            int responseLen = command.m_responseLen, responseDelta = responseLen;
-            // If USB data comes in too fast some operating systems will just cuck it even though they accepted it on the USB bus
-            // instead of returning that data to the application... Nothing can be done except to handle the insanity.
-            bool firstReadStall = false;
+            int responseLen = command.m_responseLen;
             QElapsedTimer elaspedTimer;
             QElapsedTimer elaspedTimer2;
             elaspedTimer.start();
@@ -614,10 +611,8 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
                         if(m_port)
                         {
-                            responseDelta = responseLen - response.size();
                             responseLen += SCRIPT_RUNNING_RESPONSE_LEN;
                             elaspedTimer2.restart();
-                            firstReadStall = true;
                         }
                         else
                         {
@@ -632,10 +627,8 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
                         if(m_port)
                         {
-                            responseDelta = responseLen - response.size();
                             responseLen += BOOTLDR_QUERY_RESPONSE_LEN;
                             elaspedTimer2.restart();
-                            firstReadStall = true;
                         }
                         else
                         {
@@ -652,15 +645,6 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                     {
                         break;
                     }
-                }
-
-                int remaining = responseLen - response.size();
-
-                if(firstReadStall && remaining && (remaining <= responseDelta))
-                {
-                    qWarning() << "Serial Port Driver Buffers Overflowed! Missing" << remaining << "bytes!";
-                    // All the data we likely are going to receive has been cleared out. So, gracefully handle this.
-                    response.append(QByteArray(remaining, 0));
                 }
             }
             while((response.size() < responseLen) && (!elaspedTimer.hasExpired(read_timeout)));
