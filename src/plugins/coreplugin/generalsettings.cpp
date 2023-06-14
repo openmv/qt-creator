@@ -146,7 +146,6 @@ GeneralSettingsWidget::GeneralSettingsWidget()
     // form.addRow({Tr::tr("Theme:"), m_themeChooser});
     // form.addRow({Tr::tr("Toolbar style:"), m_toolbarStyleBox, st});
     // OPENMV-DIFF //
-    form.addRow({Tr::tr("Language:"), m_languageBox, st});
 
     if (StyleHelper::defaultHighDpiScaleFactorRoundingPolicy()
         != Qt::HighDpiScaleFactorRoundingPolicy::Unset) {
@@ -188,18 +187,12 @@ GeneralSettingsWidget::GeneralSettingsWidget()
         }
     }
 
-<<<<<<< HEAD
-    form.addRow({empty, generalSettings().showShortcutsInContextMenus});
-    form.addRow({empty, generalSettings().provideSplitterCursors});
-    form.addRow({Row{m_resetWarningsButton, st}});
-    form.addRow({Tr::tr("Text codec for tools:"), m_codecBox, st});
-=======
     // OPENMV-DIFF //
-    // form.addRow({empty, m_showShortcutsInContextMenus});
-    // form.addRow(Row{m_resetWarningsButton, st});
+    // form.addRow({empty, generalSettings().showShortcutsInContextMenus});
+    // form.addRow({empty, generalSettings().provideSplitterCursors});
+    // form.addRow({Row{m_resetWarningsButton, st}});
     // form.addRow({Tr::tr("Text codec for tools:"), m_codecBox, st});
     // OPENMV-DIFF //
->>>>>>> 4875b7406e9 (Reapplied all diffs from previous IDE version)
     Column{Group{title(Tr::tr("User Interface")), form}}.attachTo(this);
 
     fillLanguageBox();
@@ -223,8 +216,6 @@ GeneralSettingsWidget::GeneralSettingsWidget()
     m_colorButton->hide();
     resetColorButton->setParent(this);
     resetColorButton->hide();
-    m_themeChooser->setParent(this);
-    m_themeChooser->hide();
     m_showShortcutsInContextMenus->setParent(this);
     m_showShortcutsInContextMenus->hide();
     m_resetWarningsButton->setParent(this);

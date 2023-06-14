@@ -5,8 +5,6 @@
 #include <QtGui>
 #include <QtWidgets>
 
-#include "tools/videotools.h"
-
 class OpenMVPluginFB : public QGraphicsView
 {
     Q_OBJECT

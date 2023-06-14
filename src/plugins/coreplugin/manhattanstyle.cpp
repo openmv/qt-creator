@@ -872,24 +872,14 @@ void ManhattanStyle::drawControl(
             QStyleOptionMenuItem item = *mbi;
             item.rect = mbi->rect;
             // OPENMV-DIFF //
-            // const QColor color = creatorColor(enable ? Theme::MenuItemTextColorNormal
+            // const QColor color = creatorColor(enable ? Theme::MenuItemTextColorNormal : Theme::MenuItemTextColorDisabled);
             // OPENMV-DIFF //
-            QColor color = creatorTheme()->color(enabled ? Theme::MenuItemTextColorNormal
+            QColor color = creatorTheme()->color(enabled ? Theme::MenuItemTextColorNormal : Theme::MenuItemTextColorDisabled);
             // OPENMV-DIFF //
-                                                       : Theme::MenuItemTextColorDisabled);
+     
             if (color.isValid()) {
                 QPalette pal = mbi->palette;
-                // OPENMV-DIFF //
-                #ifndef Q_OS_MAC
-                if(pal.brush(QPalette::Base).color().value() < 128) color = QColor::fromRgbF(1.0 - color.redF(), 1.0 - color.greenF(), 1.0 - color.blueF(), color.alphaF());
-                #endif
-                // OPENMV-DIFF //
                 pal.setBrush(QPalette::Text, color);
-                // OPENMV-DIFF //
-                #ifndef Q_OS_MAC
-                pal.setBrush(QPalette::ButtonText, color);
-                #endif
-                // OPENMV-DIFF //
                 item.palette = pal;
             }
 
