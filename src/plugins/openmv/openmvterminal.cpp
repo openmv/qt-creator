@@ -1,5 +1,7 @@
 #include "openmvterminal.h"
 
+#include "openmvpluginio.h"
+
 #define TERMINAL_SETTINGS_GROUP "OpenMVTerminal"
 #define GEOMETRY "Geometry"
 #define HSPLITTER_STATE "HSplitterState"

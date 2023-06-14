@@ -1,18 +1,10 @@
 #ifndef PICOTOOL_H
 #define PICOTOOL_H
 
-#include <QtCore>
-#include <QtWidgets>
+#include <QList>
+#include <QString>
 
-#include <coreplugin/icore.h>
-#include <extensionsystem/pluginmanager.h>
-#include <texteditor/fontsettings.h>
-#include <texteditor/texteditorsettings.h>
-#include <utils/hostosinfo.h>
 #include <utils/qtcprocess.h>
-
-#define PICOTOOL_SETTINGS_GROUP "OpenMVPICOTOOL"
-#define LAST_PICOTOOL_TERMINAL_WINDOW_GEOMETRY "LastPICOTOOLTerminalWindowGeometry"
 
 QList<QString> picotoolGetDevices();
 void picotoolReset(QString &command, Utils::QtcProcess &process);

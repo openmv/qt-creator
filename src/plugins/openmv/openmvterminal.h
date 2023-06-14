@@ -10,6 +10,7 @@
 #include <QtSerialPort/QSerialPortInfo>
 
 #include <aggregation/aggregate.h>
+#include <extensionsystem/pluginmanager.h>
 #include <utils/ansiescapecodehandler.h>
 #include <utils/elidinglabel.h>
 #include <utils/fadingindicator.h>

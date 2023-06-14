@@ -142,8 +142,14 @@ public:
 
     // Starts the command and waits for finish.
     // User input processing is enabled when EventLoopMode::On was passed.
+    // OPENMV-DIFF //
+    // void runBlocking(std::chrono::seconds timeout = std::chrono::seconds(10),
+    //                  EventLoopMode eventLoopMode = EventLoopMode::Off);
+    // OPENMV-DIFF //
     void runBlocking(std::chrono::seconds timeout = std::chrono::seconds(10),
-                     EventLoopMode eventLoopMode = EventLoopMode::Off);
+                     EventLoopMode eventLoopMode = EventLoopMode::Off,
+                     QEventLoop::ProcessEventsFlag flag = QEventLoop::ExcludeUserInputEvents);
+    // OPENMV-DIFF //
 
     void setCodec(QTextCodec *c); // for stdOut and stdErr
     void setStdOutCodec(QTextCodec *c);

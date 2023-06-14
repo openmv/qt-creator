@@ -1903,7 +1903,15 @@ void Process::setWriteData(const QByteArray &writeData)
     d->m_setup.m_writeData = writeData;
 }
 
+<<<<<<< HEAD
 void Process::runBlocking(seconds timeout, EventLoopMode eventLoopMode)
+=======
+// OPENMV-DIFF //
+// void QtcProcess::runBlocking(EventLoopMode eventLoopMode)
+// OPENMV-DIFF //
+void QtcProcess::runBlocking(EventLoopMode eventLoopMode, QEventLoop::ProcessEventsFlag flag)
+// OPENMV-DIFF //
+>>>>>>> 8053bb57852 (Update command line process stuff to look great)
 {
     QDateTime startTime;
     static const int blockingThresholdMs = qtcEnvironmentVariableIntValue("QTC_PROCESS_THRESHOLD");
@@ -1929,8 +1937,19 @@ void Process::runBlocking(seconds timeout, EventLoopMode eventLoopMode)
 
     if (eventLoopMode == EventLoopMode::On) {
 #ifdef QT_GUI_LIB
+<<<<<<< HEAD
         if (isGuiEnabled())
             QGuiApplication::setOverrideCursor(Qt::WaitCursor);
+=======
+
+            // OPENMV-DIFF //
+            // eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
+            // OPENMV-DIFF //
+            eventLoop.exec(flag);
+            // OPENMV-DIFF //
+            d->m_eventLoop = nullptr;
+            timer.stop();
+>>>>>>> 8053bb57852 (Update command line process stuff to look great)
 #endif
         QEventLoop eventLoop(this);
 
@@ -1952,7 +1971,11 @@ void Process::runBlocking(seconds timeout, EventLoopMode eventLoopMode)
 
         connect(this, &Process::done, &eventLoop, [&eventLoop] { eventLoop.quit(); });
 
-        eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
+        // OPENMV-DIFF //
+        // eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
+        // OPENMV-DIFF //
+        eventLoop.exec(flag);
+        // OPENMV-DIFF //
 #ifdef QT_GUI_LIB
         if (isGuiEnabled())
             QGuiApplication::restoreOverrideCursor();
@@ -2009,6 +2032,9 @@ void Process::setTextChannelMode(Channel channel, TextChannelMode mode)
     };
     const TextChannelCallback callback = (channel == Channel::Output) ? outputCb : errorCb;
     ChannelBuffer *buffer = channel == Channel::Output ? &d->m_stdOut : &d->m_stdErr;
+    // OPENMV-DIFF //
+    if (buffer->m_textChannelMode == mode) return;
+    // OPENMV-DIFF //
     QTC_ASSERT(buffer->m_textChannelMode == TextChannelMode::Off, qWarning()
                << "Process::setTextChannelMode(): Changing text channel mode for"
                << (channel == Channel::Output ? "Output": "Error")

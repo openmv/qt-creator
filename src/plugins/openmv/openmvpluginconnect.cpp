@@ -856,7 +856,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                         forceFlashFSErase = answer == QMessageBox::Yes;
                                         forceBootloaderBricked = true;
                                         originalFirmwareFolder = mappings.value(temp);
-                                        firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware/") + originalFirmwareFolder + QStringLiteral("/firmware.bin")).toString();
+                                        firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(QStringLiteral("firmware.bin")).toString();
                                         originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                                         originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                                         originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
@@ -1220,7 +1220,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 || ((major2 == OLD_API_MAJOR) && (minor2 < OLD_API_MINOR))
                 || ((major2 == OLD_API_MAJOR) && (minor2 == OLD_API_MINOR) && (patch2 < OLD_API_PATCH)))
                 {
-                    if(firmwarePath.isEmpty()) firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware/") + QStringLiteral(OLD_API_BOARD) + QStringLiteral("/firmware.bin")).toString();
+                    if(firmwarePath.isEmpty()) firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(QStringLiteral(OLD_API_BOARD)).pathAppended(QStringLiteral("firmware.bin")).toString();
 
                     if(installTheLatestDevelopmentFirmware)
                     {
@@ -1289,7 +1289,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 if(firmwarePath.isEmpty())
                                 {
                                     originalFirmwareFolder = mappings.value(temp);
-                                    firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware/") + originalFirmwareFolder + QStringLiteral("/firmware.bin")).toString();
+                                    firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(QStringLiteral("firmware.bin")).toString();
                                     originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                                     originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                                     originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
@@ -1849,10 +1849,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                                 if(originalFirmwareFolder == obj.value(QStringLiteral("firmware_folder")).toString())
                                 {
-                                    QString secureBootloaderPath = QDir::cleanPath(QDir::fromNativeSeparators(Core::ICore::userResourcePath(QStringLiteral("firmware/") + originalFirmwareFolder +
-                                            QDir::separator() + obj.value(QStringLiteral("sdphost_flash_loader_path")).toString()).toString()));
-                                    QString bootloaderPath = QDir::cleanPath(QDir::fromNativeSeparators(Core::ICore::userResourcePath(QStringLiteral("firmware/") + originalFirmwareFolder +
-                                            QDir::separator() + obj.value(QStringLiteral("blhost_secure_bootloader_path")).toString()).toString()));
+                                    QString secureBootloaderPath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(obj.value(QStringLiteral("sdphost_flash_loader_path")).toString()).toString();
+                                    QString bootloaderPath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(obj.value(QStringLiteral("blhost_secure_bootloader_path")).toString()).toString();
                                     outObj = obj;
                                     outObj.insert(QStringLiteral("sdphost_flash_loader_path"), secureBootloaderPath);
                                     outObj.insert(QStringLiteral("blhost_secure_bootloader_path"), bootloaderPath);
@@ -2310,7 +2308,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             for(int i = 0, j = extraProgramAddrCommands.size(); i < j; i++)
                             {
-                                downloadFirmware(command, process, Core::ICore::userResourcePath(QStringLiteral("firmware/") + extraProgramPathCommands.at(i)).canonicalPath().toString(), dfuDeviceVidPid, extraProgramAddrCommands.at(i) + dfuDeviceSerial);
+                                downloadFirmware(command, process, Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(extraProgramPathCommands.at(i)).toString(), dfuDeviceVidPid, extraProgramAddrCommands.at(i) + dfuDeviceSerial);
 
                                 if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                                 {
@@ -2984,6 +2982,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_boardVID = 0;
         m_boardPID = 0;
 
+        QString boardTypeLabel = tr("Unknown");
+
         if(((major2 > OLD_API_MAJOR)
         || ((major2 == OLD_API_MAJOR) && (minor2 > OLD_API_MINOR))
         || ((major2 == OLD_API_MAJOR) && (minor2 == OLD_API_MINOR) && (patch2 >= OLD_API_PATCH))))
@@ -3020,6 +3020,42 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     m_boardId = id;
                     m_boardVID = QSerialPortInfo(selectedPort).vendorIdentifier();
                     m_boardPID = QSerialPortInfo(selectedPort).productIdentifier();
+
+                    boardTypeLabel = board;
+
+                    QFile boards(Core::ICore::userResourcePath(QStringLiteral("firmware/boards.txt")).toString());
+
+                    if(boards.open(QIODevice::ReadOnly))
+                    {
+                        QMap<QString, QString> mappings;
+
+                        forever
+                        {
+                            QByteArray data = boards.readLine();
+
+                            if((boards.error() == QFile::NoError) && (!data.isEmpty()))
+                            {
+                                QRegularExpressionMatch mapping = QRegularExpression(QStringLiteral("(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\d+)\\s+(\\d+)\\s+(\\d+)\\s+(\\S+)")).match(QString::fromUtf8(data));
+                                QString temp = mapping.captured(1).replace(QStringLiteral("_"), QStringLiteral(" "));
+                                mappings.insert(temp, mapping.captured(2));
+                            }
+                            else
+                            {
+                                boards.close();
+                                break;
+                            }
+                        }
+
+                        if(!mappings.isEmpty())
+                        {
+                            QString temp = QString(arch2).remove(QRegularExpression(QStringLiteral("\\[(.+?):(.+?)\\]"))).simplified().replace(QStringLiteral("_"), QStringLiteral(" "));
+
+                            if(mappings.contains(temp))
+                            {
+                                boardTypeLabel = mappings.value(temp).replace(QStringLiteral("_"), QStringLiteral(" "));
+                            }
+                        }
+                    }
 
                     if((!disableLicenseCheck)
                     // Skip OpenMV Cam M4's...
@@ -3187,7 +3223,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_stopAction->setVisible(false);
 
         m_boardLabel->setEnabled(true);
-        m_boardLabel->setText(tr("Board: %L1").arg(m_boardType));
+        m_boardLabel->setText(tr("Board: %L1").arg(boardTypeLabel));
         m_sensorLabel->setEnabled(true);
         m_sensorLabel->setText(tr("Sensor: %L1").arg(m_sensorType));
         m_versionButton->setEnabled(true);

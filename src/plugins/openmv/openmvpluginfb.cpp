@@ -1,5 +1,9 @@
 #include "openmvpluginfb.h"
 
+#include <coreplugin/icore.h>
+
+#include "openmvpluginio.h"
+
 OpenMVPluginFB::OpenMVPluginFB(QWidget *parent) : QGraphicsView(parent), m_enableSaveTemplate(false), m_enableSaveDescriptor(false), m_enableInteraction(true)
 {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
