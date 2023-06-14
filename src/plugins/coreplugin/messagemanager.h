@@ -9,9 +9,9 @@
 #include <QMetaType>
 #include <QObject>
 
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 #include "messageoutputwindow.h"
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 
 QT_BEGIN_NAMESPACE
 class QFont;
@@ -39,14 +39,14 @@ public:
     static void writeFlashing(const QStringList &messages);
     static void writeDisrupting(const QStringList &messages);
 
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
     static OutputWindow *outputWindow();
 public slots:
     static void printData(const QByteArray &data);
     static void grayOutOldContent();
     static void popup();
     static void flash();
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
 
 private:
     MessageManager();

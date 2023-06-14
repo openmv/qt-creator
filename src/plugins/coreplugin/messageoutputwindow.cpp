@@ -40,10 +40,6 @@ MessageOutputWindow::MessageOutputWindow()
     setupContext(Constants::C_GENERAL_OUTPUT_PANE, m_widget);
 
     // OPENMV-DIFF //
-    QPalette p = m_widget->palette();
-    p.setColor(QPalette::Base, QColor(QStringLiteral("#1E1E27")));
-    p.setColor(QPalette::Text, QColor(QStringLiteral("#EEEEF7")));
-    m_widget->setPalette(p);
     m_widget->setMaximumBlockCount(100000);
     m_widget->setWordWrapEnabled(false);
     m_saveButton = new QToolButton(m_widget);

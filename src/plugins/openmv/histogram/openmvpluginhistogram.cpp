@@ -1,6 +1,8 @@
 #include "openmvpluginhistogram.h"
 #include "ui_openmvpluginhistogram.h"
 
+#include <utils/theme/theme.h>
+
 #define RGB_COLOR_SPACE_R 0
 #define RGB_COLOR_SPACE_G 1
 #define RGB_COLOR_SPACE_B 2
@@ -380,21 +382,21 @@ OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent),
 
     m_ui->C0Plot->installEventFilter(this);
     m_ui->C0Plot->setAutoAddPlottableToLegend(false);
-    m_ui->C0Plot->setBackground(QColor(30, 30, 39));
+    m_ui->C0Plot->setBackground(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
     m_ui->C0Plot->axisRect()->setAutoMargins(QCP::msLeft | QCP::msBottom);
     m_ui->C0Plot->axisRect()->setMargins(QMargins());
     m_ui->C0Plot->xAxis->setTickLength(0);
     m_ui->C0Plot->xAxis->setSubTickLength(0);
-    m_ui->C0Plot->xAxis->setBasePen(QPen(Qt::white));
-    m_ui->C0Plot->xAxis->setTickPen(QPen(Qt::white));
-    m_ui->C0Plot->xAxis->setSubTickPen(QPen(Qt::white));
-    m_ui->C0Plot->xAxis->setTickLabelColor(Qt::white);
+    m_ui->C0Plot->xAxis->setBasePen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C0Plot->xAxis->setTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C0Plot->xAxis->setSubTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C0Plot->xAxis->setTickLabelColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
     m_ui->C0Plot->xAxis->grid()->setZeroLinePen(m_ui->C0Plot->xAxis->grid()->pen());
     m_ui->C0Plot->xAxis->setPadding(0);
     m_ui->C0Plot->yAxis->setTicks(false);
     m_ui->C0Plot->yAxis->setTickLabels(false);
-    m_ui->C0Plot->yAxis->setBasePen(QPen(Qt::white));
-    m_ui->C0Plot->yAxis->setLabelColor(Qt::white);
+    m_ui->C0Plot->yAxis->setBasePen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C0Plot->yAxis->setLabelColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
     m_ui->C0Plot->yAxis->setPadding(2);
     m_ui->C0Plot->yAxis->setLabelPadding(3);
     m_channel0 = m_ui->C0Plot->addGraph();
@@ -409,21 +411,21 @@ OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent),
 
     m_ui->C1Plot->installEventFilter(this);
     m_ui->C1Plot->setAutoAddPlottableToLegend(false);
-    m_ui->C1Plot->setBackground(QColor(30, 30, 39));
+    m_ui->C1Plot->setBackground(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
     m_ui->C1Plot->axisRect()->setAutoMargins(QCP::msLeft | QCP::msBottom);
     m_ui->C1Plot->axisRect()->setMargins(QMargins());
     m_ui->C1Plot->xAxis->setTickLength(0);
     m_ui->C1Plot->xAxis->setSubTickLength(0);
-    m_ui->C1Plot->xAxis->setBasePen(QPen(Qt::white));
-    m_ui->C1Plot->xAxis->setTickPen(QPen(Qt::white));
-    m_ui->C1Plot->xAxis->setSubTickPen(QPen(Qt::white));
-    m_ui->C1Plot->xAxis->setTickLabelColor(Qt::white);
+    m_ui->C1Plot->xAxis->setBasePen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C1Plot->xAxis->setTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C1Plot->xAxis->setSubTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C1Plot->xAxis->setTickLabelColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
     m_ui->C1Plot->xAxis->grid()->setZeroLinePen(m_ui->C1Plot->xAxis->grid()->pen());
     m_ui->C1Plot->xAxis->setPadding(0);
     m_ui->C1Plot->yAxis->setTicks(false);
     m_ui->C1Plot->yAxis->setTickLabels(false);
-    m_ui->C1Plot->yAxis->setBasePen(QPen(Qt::white));
-    m_ui->C1Plot->yAxis->setLabelColor(Qt::white);
+    m_ui->C1Plot->yAxis->setBasePen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C1Plot->yAxis->setLabelColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
     m_ui->C1Plot->yAxis->setPadding(2);
     m_ui->C1Plot->yAxis->setLabelPadding(3);
     m_channel1 = m_ui->C1Plot->addGraph();
@@ -438,21 +440,21 @@ OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent),
 
     m_ui->C2Plot->installEventFilter(this);
     m_ui->C2Plot->setAutoAddPlottableToLegend(false);
-    m_ui->C2Plot->setBackground(QColor(30, 30, 39));
+    m_ui->C2Plot->setBackground(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
     m_ui->C2Plot->axisRect()->setAutoMargins(QCP::msLeft | QCP::msBottom);
     m_ui->C2Plot->axisRect()->setMargins(QMargins());
     m_ui->C2Plot->xAxis->setTickLength(0);
     m_ui->C2Plot->xAxis->setSubTickLength(0);
-    m_ui->C2Plot->xAxis->setBasePen(QPen(Qt::white));
-    m_ui->C2Plot->xAxis->setTickPen(QPen(Qt::white));
-    m_ui->C2Plot->xAxis->setSubTickPen(QPen(Qt::white));
-    m_ui->C2Plot->xAxis->setTickLabelColor(Qt::white);
+    m_ui->C2Plot->xAxis->setBasePen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C2Plot->xAxis->setTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C2Plot->xAxis->setSubTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C2Plot->xAxis->setTickLabelColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
     m_ui->C2Plot->xAxis->grid()->setZeroLinePen(m_ui->C2Plot->xAxis->grid()->pen());
     m_ui->C2Plot->xAxis->setPadding(0);
     m_ui->C2Plot->yAxis->setTicks(false);
     m_ui->C2Plot->yAxis->setTickLabels(false);
-    m_ui->C2Plot->yAxis->setBasePen(QPen(Qt::white));
-    m_ui->C2Plot->yAxis->setLabelColor(Qt::white);
+    m_ui->C2Plot->yAxis->setBasePen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    m_ui->C2Plot->yAxis->setLabelColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
     m_ui->C2Plot->yAxis->setPadding(2);
     m_ui->C2Plot->yAxis->setLabelPadding(3);
     m_channel2 = m_ui->C2Plot->addGraph();
@@ -464,9 +466,6 @@ OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent),
     m_ui->C2MaxValue->setMinimumWidth(m_ui->C2MaxValue->fontMetrics().horizontalAdvance(QStringLiteral("-00000")));
     m_ui->C2LQValue->setMinimumWidth(m_ui->C2LQValue->fontMetrics().horizontalAdvance(QStringLiteral("-00000")));
     m_ui->C2UQValue->setMinimumWidth(m_ui->C2UQValue->fontMetrics().horizontalAdvance(QStringLiteral("-00000")));
-
-    setAttribute(Qt::WA_StyledBackground);
-    setStyleSheet(QStringLiteral("background-color:#1E1E27;color:#FFFFFF"));
 
     colorSpaceChanged(m_colorSpace);
 }

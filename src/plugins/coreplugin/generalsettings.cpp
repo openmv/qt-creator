@@ -98,8 +98,8 @@ GeneralSettingsWidget::GeneralSettingsWidget(GeneralSettings *q)
     Form form;
     // OPENMV-DIFF //
     // form.addRow({Tr::tr("Color:"), m_colorButton, resetColorButton, st});
-    // form.addRow({Tr::tr("Theme:"), m_themeChooser});
     // OPENMV-DIFF //
+    form.addRow({Tr::tr("Theme:"), m_themeChooser});
     form.addRow({Tr::tr("Language:"), m_languageBox, st});
 
     if (!Utils::HostOsInfo::isMacHost()) {
@@ -147,8 +147,6 @@ GeneralSettingsWidget::GeneralSettingsWidget(GeneralSettings *q)
     m_colorButton->hide();
     resetColorButton->setParent(this);
     resetColorButton->hide();
-    m_themeChooser->setParent(this);
-    m_themeChooser->hide();
     m_showShortcutsInContextMenus->setParent(this);
     m_showShortcutsInContextMenus->hide();
     m_resetWarningsButton->setParent(this);

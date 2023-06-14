@@ -1,8 +1,10 @@
 #include "openmvpluginfb.h"
 
 #include <coreplugin/icore.h>
+#include <utils/theme/theme.h>
 
 #include "openmvpluginio.h"
+#include "tools/videotools.h"
 
 OpenMVPluginFB::OpenMVPluginFB(QWidget *parent) : QGraphicsView(parent), m_enableSaveTemplate(false), m_enableSaveDescriptor(false), m_enableInteraction(true)
 {
@@ -11,15 +13,15 @@ OpenMVPluginFB::OpenMVPluginFB(QWidget *parent) : QGraphicsView(parent), m_enabl
     setFrameStyle(QFrame::NoFrame);
     setMinimumWidth(160);
     setMinimumHeight(120);
-    setBackgroundBrush(QColor(30, 30, 39));
+    setBackgroundBrush(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
     setScene(new QGraphicsScene(this));
 
     QGraphicsTextItem *item = new QGraphicsTextItem;
-    item->setHtml(tr("<html><body style=\"color:#909090;font-size:14px\">"
+    item->setHtml(QString(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
     "<div align=\"center\">"
-    "<div style=\"font-size:20px\">No Image</div>"
+    "<div style=\"font-size:20px\">%2</div>"
     "</div>"
-    "</body></html>"));
+    "</body></html>")).arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name()).arg(tr("No Image")));
     scene()->addItem(item);
 
     m_enableFitInView = false;
@@ -129,11 +131,11 @@ void OpenMVPluginFB::frameBufferData(const QPixmap &data)
     {
         m_pixmap = Q_NULLPTR;
         QGraphicsTextItem *item = new QGraphicsTextItem;
-        item->setHtml(tr("<html><body style=\"color:#909090;font-size:14px\">"
+        item->setHtml(QString(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
         "<div align=\"center\">"
-        "<div style=\"font-size:20px\">No Image</div>"
+        "<div style=\"font-size:20px\">%2</div>"
         "</div>"
-        "</body></html>"));
+        "</body></html>")).arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name()).arg(tr("No Image")));
         scene()->addItem(item);
     }
 
@@ -193,7 +195,7 @@ void OpenMVPluginFB::private_timerCallBack()
 
         if(m_tempFile->size() < kilobyte)
         {
-            emit imageWriterTick(QStringLiteral("Elapsed: ") +
+            emit imageWriterTick(tr("Elapsed: ") +
                                  QString(QStringLiteral("%1h:")).arg(hours) +
                                  QString(QStringLiteral("%1m:")).arg(minutes, 2, 10, QLatin1Char('0')) +
                                  QString(QStringLiteral("%1s:")).arg(seconds, 2, 10, QLatin1Char('0')) +
@@ -203,7 +205,7 @@ void OpenMVPluginFB::private_timerCallBack()
         }
         else if(m_tempFile->size() < megabyte)
         {
-            emit imageWriterTick(QStringLiteral("Elapsed: ") +
+            emit imageWriterTick(tr("Elapsed: ") +
                                  QString(QStringLiteral("%1h:")).arg(hours) +
                                  QString(QStringLiteral("%1m:")).arg(minutes, 2, 10, QLatin1Char('0')) +
                                  QString(QStringLiteral("%1s:")).arg(seconds, 2, 10, QLatin1Char('0')) +
@@ -213,7 +215,7 @@ void OpenMVPluginFB::private_timerCallBack()
         }
         else if(m_tempFile->size() < gigabyte)
         {
-            emit imageWriterTick(QStringLiteral("Elapsed: ") +
+            emit imageWriterTick(tr("Elapsed: ") +
                                  QString(QStringLiteral("%1h:")).arg(hours) +
                                  QString(QStringLiteral("%1m:")).arg(minutes, 2, 10, QLatin1Char('0')) +
                                  QString(QStringLiteral("%1s:")).arg(seconds, 2, 10, QLatin1Char('0')) +
@@ -223,7 +225,7 @@ void OpenMVPluginFB::private_timerCallBack()
         }
         else
         {
-            emit imageWriterTick(QStringLiteral("Elapsed: ") +
+            emit imageWriterTick(tr("Elapsed: ") +
                                  QString(QStringLiteral("%1h:")).arg(hours) +
                                  QString(QStringLiteral("%1m:")).arg(minutes, 2, 10, QLatin1Char('0')) +
                                  QString(QStringLiteral("%1s:")).arg(seconds, 2, 10, QLatin1Char('0')) +

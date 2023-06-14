@@ -74,9 +74,9 @@ public:
 
 signals:
     void wheelZoom();
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
     void writeBytes(const QByteArray &data);
-    //OPENMV-DIFF//
+    // OPENMV-DIFF //
 
 public slots:
     void setWordWrapEnabled(bool wrap);

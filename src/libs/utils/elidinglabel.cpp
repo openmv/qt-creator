@@ -151,7 +151,7 @@ void ElidingToolButton::paintEvent(QPaintEvent *event)
     }
     else
     {
-        p.setPen(QColor(98, 99, 100));
+        p.setPen(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled));
     }
 
     p.drawText(4, baseLine - 1, fm.elidedText(text(), Qt::ElideRight, width() - 5));

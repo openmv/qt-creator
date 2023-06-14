@@ -419,7 +419,6 @@ FindToolBar::FindToolBar(CurrentDocumentFind *currentDocumentFind)
 
     setLightColoredIcon(isLightColored());
     // OPENMV-DIFF //
-    setStyleSheet(QStringLiteral("QToolButton,QLabel{color:white;}"));
     m_close->setToolTip(tr("Close"));
     // OPENMV-DIFF //
 }

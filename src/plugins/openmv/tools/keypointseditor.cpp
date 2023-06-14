@@ -1,5 +1,7 @@
 #include "keypointseditor.h"
 
+#include <utils/theme/theme.h>
+
 Keypoints *Keypoints::newKeypoints(const QString &path, QObject *parent)
 {
     QFile file(path);
@@ -121,7 +123,7 @@ KeypointsView::KeypointsView(Keypoints *keypoints, const QPixmap &pixmap, QWidge
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setMinimumWidth(160);
     setMinimumHeight(120);
-    setBackgroundBrush(QColor(230, 230, 239));
+    setBackgroundBrush(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDisabled));
     setScene(new QGraphicsScene(this));
     scene()->addPixmap(pixmap);
 

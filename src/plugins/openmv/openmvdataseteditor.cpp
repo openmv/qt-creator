@@ -26,14 +26,14 @@ OpenMVDatasetEditor::OpenMVDatasetEditor(QWidget *parent) : QTreeView(parent), m
     m_snapshotRegex = QRegularExpression(QStringLiteral("^.*?(\\d+).*?\\.(jpg|jpeg|png|bmp)$"));
     m_snapshotRegex.optimize();
 
-    m_styleSheet = QStringLiteral("QAbstractScrollArea{background-color:#1E1E27;color:#FFFFFF;}" // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
+    m_styleSheet = QStringLiteral( // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
 #ifndef Q_OS_MAC
     "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-closed.png);}"
     "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-open.png);}"
 #endif
                                   );
 
-    m_highDPIStyleSheet = QStringLiteral("QAbstractScrollArea{background-color:#1E1E27;color:#FFFFFF;}" // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
+    m_highDPIStyleSheet = QStringLiteral( // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
 #ifndef Q_OS_MAC
     "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-closed_2x.png);}"
     "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-open_2x.png);}"

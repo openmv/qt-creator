@@ -617,54 +617,64 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     connect(m_tabBar, &FancyTabBar::menuTriggered, this, &FancyTabWidget::menuTriggered);
 
     // OPENMV-DIFF //
-    m_styleSheet = QStringLiteral("QAbstractScrollArea::corner{background-color:#404244;}"
+    m_styleSheet = QString(QStringLiteral("QAbstractScrollArea::corner{background-color:%2;}"
 #ifndef Q_OS_MAC
-    "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:#404244;}"
-    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:#404244;border-top:1px solid #2E2E2E;}"
-    "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:#404244;}"
+    "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:%2;}"
+    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:%2;border-top:1px solid %3;}"
+    "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:%2;}"
     "QScrollBar::up-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowup.png);}"
     "QScrollBar::down-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowdown.png);}"
-    "QScrollBar::sub-page:vertical{margin-left:1px;margin-right:1px;background-color:#404244;}"
-    "QScrollBar::add-page:vertical{margin-left:1px;margin-right:1px;background-color:#404244;}"
-    "QScrollBar::handle:vertical{margin-left:1px;margin-right:1px;min-height:20px;background-color:#2E2E2E;}"
-    "QScrollBar:horizontal{margin-top:0px;margin-right:17px;margin-bottom:0px;margin-left:17px;min-height:14px;background-color:#404244;}"
-    "QScrollBar::sub-line:horizontal{subcontrol-origin:margin;subcontrol-position:left;width:17px;background-color:#404244;}"
-    "QScrollBar::add-line:horizontal{subcontrol-origin:margin;subcontrol-position:right;width:17px;background-color:#404244;}"
+    "QScrollBar::sub-page:vertical{margin-left:1px;margin-right:1px;background-color:%2;}"
+    "QScrollBar::add-page:vertical{margin-left:1px;margin-right:1px;background-color:%2;}"
+    "QScrollBar::handle:vertical{margin-left:1px;margin-right:1px;min-height:20px;background-color:%3;}"
+    "QScrollBar:horizontal{margin-top:0px;margin-right:17px;margin-bottom:0px;margin-left:17px;min-height:14px;background-color:%2;}"
+    "QScrollBar::sub-line:horizontal{subcontrol-origin:margin;subcontrol-position:left;width:17px;background-color:%2;}"
+    "QScrollBar::add-line:horizontal{subcontrol-origin:margin;subcontrol-position:right;width:17px;background-color:%2;}"
     "QScrollBar::left-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowleft.png);}"
     "QScrollBar::right-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowright.png);}"
-    "QScrollBar::sub-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:#404244;}"
-    "QScrollBar::add-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:#404244;}"
-    "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:#2E2E2E;}"
-    "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:#595b5d;}"
-    "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:#262829;}"
+    "QScrollBar::sub-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%2;}"
+    "QScrollBar::add-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%2;}"
+    "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:%3;}"
+    "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:%4;}"
+    "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:%5;}"
 #endif
-    "QPlainTextEdit{background-color:#1E1E27;}");
+    "QPlainTextEdit{background-color:%1;}")).
+            arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
+            arg(Utils::creatorTheme()->color(Utils::Theme::DSscrollBarHandle).name()).
+            arg(Utils::creatorTheme()->color(Utils::Theme::DSscrollBarTrack).name()).
+            arg(Utils::creatorTheme()->color(Utils::Theme::DSsliderHandleHover).name()).
+            arg(Utils::creatorTheme()->color(Utils::Theme::DSsliderHandleFocus).name());
 
-    m_highDPIStyleSheet = QStringLiteral("QAbstractScrollArea::corner{background-color:#404244;}"
+    m_highDPIStyleSheet = QStringLiteral("QAbstractScrollArea::corner{background-color:%2;}"
 #ifndef Q_OS_MAC
-    "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:#404244;}"
-    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:#404244;border-top:1px solid #2E2E2E;}"
-    "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:#404244;}"
+    "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:%2;}"
+    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:%2;border-top:1px solid %3;}"
+    "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:%2;}"
     "QScrollBar::up-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowup_2x.png);}"
     "QScrollBar::down-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowdown_2x.png);}"
-    "QScrollBar::sub-page:vertical{margin-left:1px;margin-right:1px;background-color:#404244;}"
-    "QScrollBar::add-page:vertical{margin-left:1px;margin-right:1px;background-color:#404244;}"
-    "QScrollBar::handle:vertical{margin-left:1px;margin-right:1px;min-height:20px;background-color:#2E2E2E;}"
-    "QScrollBar:horizontal{margin-top:0px;margin-right:17px;margin-bottom:0px;margin-left:17px;min-height:14px;background-color:#404244;}"
-    "QScrollBar::sub-line:horizontal{subcontrol-origin:margin;subcontrol-position:left;width:17px;background-color:#404244;}"
-    "QScrollBar::add-line:horizontal{subcontrol-origin:margin;subcontrol-position:right;width:17px;background-color:#404244;}"
+    "QScrollBar::sub-page:vertical{margin-left:1px;margin-right:1px;background-color:%2;}"
+    "QScrollBar::add-page:vertical{margin-left:1px;margin-right:1px;background-color:%2;}"
+    "QScrollBar::handle:vertical{margin-left:1px;margin-right:1px;min-height:20px;background-color:%3;}"
+    "QScrollBar:horizontal{margin-top:0px;margin-right:17px;margin-bottom:0px;margin-left:17px;min-height:14px;background-color:%2;}"
+    "QScrollBar::sub-line:horizontal{subcontrol-origin:margin;subcontrol-position:left;width:17px;background-color:%2;}"
+    "QScrollBar::add-line:horizontal{subcontrol-origin:margin;subcontrol-position:right;width:17px;background-color:%2;}"
     "QScrollBar::left-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowleft_2x.png);}"
     "QScrollBar::right-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowright_2x.png);}"
-    "QScrollBar::sub-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:#404244;}"
-    "QScrollBar::add-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:#404244;}"
-    "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:#2E2E2E;}"
-    "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:#595b5d;}"
-    "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:#262829;}"
+    "QScrollBar::sub-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%2;}"
+    "QScrollBar::add-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%2;}"
+    "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:%3;}"
+    "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:%4;}"
+    "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:%5;}"
 #endif
-    "QPlainTextEdit{background-color:#1E1E27;}");
+    "QPlainTextEdit{background-color:%1;}").
+            arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
+            arg(Utils::creatorTheme()->color(Utils::Theme::DSscrollBarHandle).name()).
+            arg(Utils::creatorTheme()->color(Utils::Theme::DSscrollBarTrack).name()).
+            arg(Utils::creatorTheme()->color(Utils::Theme::DSsliderHandleHover).name()).
+            arg(Utils::creatorTheme()->color(Utils::Theme::DSsliderHandleFocus).name());
 
     QPalette pal = palette();
-    pal.setColor(QPalette::Base, QColor(QStringLiteral("#404244")));
+    pal.setColor(QPalette::Base, Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
     setAutoFillBackground(true);
     setPalette(pal);
 

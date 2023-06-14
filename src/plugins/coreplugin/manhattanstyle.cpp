@@ -798,26 +798,12 @@ void ManhattanStyle::drawControl(ControlElement element, const QStyleOption *opt
             const bool enabled = mbi->state & State_Enabled;
             QStyleOptionMenuItem item = *mbi;
             item.rect = mbi->rect;
-            // OPENMV-DIFF //
-            // const QColor color = creatorTheme()->color(enabled
-            // OPENMV-DIFF //
             QColor color = creatorTheme()->color(enabled
-            // OPENMV-DIFF //
                                                        ? Theme::MenuItemTextColorNormal
                                                        : Theme::MenuItemTextColorDisabled);
             if (color.isValid()) {
                 QPalette pal = mbi->palette;
-                // OPENMV-DIFF //
-                #ifndef Q_OS_MAC
-                if(pal.brush(QPalette::Base).color().value() < 128) color = QColor::fromRgbF(1.0 - color.redF(), 1.0 - color.greenF(), 1.0 - color.blueF(), color.alphaF());
-                #endif
-                // OPENMV-DIFF //
                 pal.setBrush(QPalette::Text, color);
-                // OPENMV-DIFF //
-                #ifndef Q_OS_MAC
-                pal.setBrush(QPalette::ButtonText, color);
-                #endif
-                // OPENMV-DIFF //
                 item.palette = pal;
             }
             QProxyStyle::drawControl(element, &item, painter, widget);

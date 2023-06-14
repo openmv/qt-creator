@@ -1820,14 +1820,14 @@ void OpenMVPlugin::extensionsInitialized()
 
     Utils::ElidingLabel *disableLabel = new Utils::ElidingLabel(tr("Frame Buffer Disabled - click the disable button again to enable (top right)"));
     disableLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
-    disableLabel->setStyleSheet(QStringLiteral("background-color:#1E1E27;color:#909090;padding:4px;"));
+    disableLabel->setStyleSheet(QStringLiteral("padding:4px;"));
     disableLabel->setAlignment(Qt::AlignCenter);
     disableLabel->setVisible(m_disableFrameBuffer->isChecked());
     connect(m_disableFrameBuffer, &QToolButton::toggled, disableLabel, &QLabel::setVisible);
 
     Utils::ElidingLabel *recordingLabel = new Utils::ElidingLabel(tr("Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0"));
     recordingLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
-    recordingLabel->setStyleSheet(QStringLiteral("background-color:#1E1E27;color:#909090;padding:4px;"));
+    recordingLabel->setStyleSheet(QStringLiteral("padding:4px;"));
     recordingLabel->setAlignment(Qt::AlignCenter);
     recordingLabel->setVisible(false);
     recordingLabel->setFont(TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily());
@@ -1898,7 +1898,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     Utils::ElidingLabel *resLabel = new Utils::ElidingLabel(tr("Res - No Image"));
     resLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
-    resLabel->setStyleSheet(QStringLiteral("background-color:#1E1E27;color:#FFFFFF;padding:4px;"));
+    resLabel->setStyleSheet(QStringLiteral("padding:4px;"));
     resLabel->setAlignment(Qt::AlignCenter);
 
     m_histogram = new OpenMVPluginHistogram;

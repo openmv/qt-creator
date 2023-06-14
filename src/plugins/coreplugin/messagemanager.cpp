@@ -12,9 +12,9 @@
 #include <QThread>
 #include <QTime>
 
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 #include "outputwindow.h"
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 
 /*!
     \class Core::MessageManager
@@ -197,7 +197,7 @@ void MessageManager::writeDisrupting(const QStringList &messages)
     writeDisrupting(messages.join('\n'));
 }
 
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 OutputWindow *MessageManager::outputWindow()
 {
     if (!m_messageOutputWindow)
@@ -228,6 +228,6 @@ void MessageManager::flash()
         return;
     m_messageOutputWindow->flash();
 }
-//OPENMV-DIFF//
+// OPENMV-DIFF //
 
 } // namespace Core
