@@ -135,7 +135,11 @@ public:
 
     // Starts the command and waits for finish.
     // User input processing is enabled when EventLoopMode::On was passed.
-    void runBlocking(EventLoopMode eventLoopMode = EventLoopMode::Off);
+    // OPENMV-DIFF //
+    // void runBlocking(EventLoopMode eventLoopMode = EventLoopMode::Off);
+    // OPENMV-DIFF //
+    void runBlocking(EventLoopMode eventLoopMode = EventLoopMode::Off, QEventLoop::ProcessEventsFlag flag = QEventLoop::ExcludeUserInputEvents);
+    // OPENMV-DIFF //
 
     /* Timeout for hanging processes (triggers after no more output
      * occurs on stderr/stdout). */

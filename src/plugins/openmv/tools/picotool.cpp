@@ -1,10 +1,24 @@
-#include "picotool.h"
+#include <QtCore>
+#include <QtWidgets>
+
+#include <coreplugin/icore.h>
+#include <extensionsystem/pluginmanager.h>
+#include <texteditor/fontsettings.h>
+#include <texteditor/texteditorsettings.h>
+#include <utils/hostosinfo.h>
+#include <utils/qtcprocess.h>
+#include <utils/theme/theme.h>
+
+#define PICOTOOL_SETTINGS_GROUP "OpenMVPICOTOOL"
+#define LAST_PICOTOOL_TERMINAL_WINDOW_GEOMETRY "LastPICOTOOLTerminalWindowGeometry"
 
 QList<QString> picotoolGetDevices()
 {
     Utils::FilePath command;
     Utils::QtcProcess process;
     process.setTimeoutS(10);
+    process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+    process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setProcessChannelMode(QProcess::MergedChannels);
 
     if(Utils::HostOsInfo::isWindowsHost())
@@ -111,6 +125,8 @@ void picotoolReset(QString &command, Utils::QtcProcess &process)
     command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
 
     process.setTimeoutS(300); // 5 minutes...
+    process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+    process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
 }
@@ -224,7 +240,9 @@ void picotoolDownloadFirmware(QString &command, Utils::QtcProcess &process, cons
                 *stdErrFirstTimePtr = false;
             }
 
-            plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:red\">%1</p>").arg(out));
+            plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:%1\">%2</p>").
+                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightcoral") : QStringLiteral("coral")).
+                                      arg(out));
         }
     });
 
@@ -270,12 +288,16 @@ void picotoolDownloadFirmware(QString &command, Utils::QtcProcess &process, cons
     }
 
     command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
-    plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+    plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                              arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                              arg(command));
 
     dialog->show();
     process.setTimeoutS(300); // 5 minutes...
+    process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+    process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
-    process.runBlocking(Utils::EventLoopMode::On);
+    process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
     settings->setValue(QStringLiteral(LAST_PICOTOOL_TERMINAL_WINDOW_GEOMETRY), dialog->saveGeometry());
     settings->endGroup();

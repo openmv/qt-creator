@@ -1,4 +1,16 @@
-#include "imx.h"
+#include <QtCore>
+#include <QtWidgets>
+
+#include <coreplugin/icore.h>
+#include <extensionsystem/pluginmanager.h>
+#include <texteditor/fontsettings.h>
+#include <texteditor/texteditorsettings.h>
+#include <utils/hostosinfo.h>
+#include <utils/qtcprocess.h>
+#include <utils/theme/theme.h>
+
+#define IMX_SETTINGS_GROUP "OpenMVIMX"
+#define LAST_IMX_TERMINAL_WINDOW_GEOMETRY "LastIMXTerminalWindowGeometry"
 
 bool imxGetDevice(QJsonObject &obj)
 {
@@ -182,7 +194,9 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                 *stdErrFirstTimePtr = false;
             }
 
-            plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:red\">%1</p>").arg(out));
+            plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:%1\">%2</p>").
+                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightcoral") : QStringLiteral("coral")).
+                                      arg(out));
         }
     });
 
@@ -264,11 +278,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("sdphost_flash_loader_path")).toString()));
 
         QString command = QString(QStringLiteral("%1 %2")).arg(sdphost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(sdphost_binary, args));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
@@ -300,11 +318,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("sdphost_flash_loader_address")).toString();
 
         QString command = QString(QStringLiteral("%1 %2")).arg(sdphost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(sdphost_binary, args));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
@@ -346,11 +368,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QStringLiteral("1");
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(blhost_binary, args));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
@@ -385,11 +411,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QStringLiteral("word");
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(blhost_binary, args));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
@@ -422,11 +452,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_address")).toString();
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(blhost_binary, args));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
@@ -462,11 +496,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_type")).toString();
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(blhost_binary, args));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
@@ -501,11 +539,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QStringLiteral("word");
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(blhost_binary, args));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
@@ -538,11 +580,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_address")).toString();
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(blhost_binary, args));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
@@ -575,11 +621,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_secure_bootloader_path")).toString()));
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(blhost_binary, args));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
@@ -605,7 +655,9 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     && (obj.value(QStringLiteral("blhost_disk_address")).toString().toInt(nullptr, 16) != 0)
     && (obj.value(QStringLiteral("blhost_disk_size")).toString().toInt(nullptr, 16) > 0))
     {
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:purple\">%1</p>")).arg(QObject::tr("This command takes a while to execute. Please be patient.")));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightseagreen") : QStringLiteral("seagreen")).
+                                  arg(QObject::tr("This command takes a while to execute. Please be patient.")));
 
         // Erase Memory
         {
@@ -620,11 +672,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                obj.value(QStringLiteral("blhost_disk_size")).toString();
 
             QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                      arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
             process.setCommand(Utils::CommandLine(blhost_binary, args));
-            process.runBlocking(Utils::EventLoopMode::On);
+            process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
@@ -649,7 +705,9 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
     if(!justEraseFlashFs)
     {
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:purple\">%1</p>")).arg(QObject::tr("This command takes a while to execute. Please be patient.")));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightseagreen") : QStringLiteral("seagreen")).
+                                  arg(QObject::tr("This command takes a while to execute. Please be patient.")));
 
         // Erase Memory
         {
@@ -664,11 +722,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                obj.value(QStringLiteral("blhost_firmware_length")).toString();
 
             QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                      arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
             process.setCommand(Utils::CommandLine(blhost_binary, args));
-            process.runBlocking(Utils::EventLoopMode::On);
+            process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
@@ -701,11 +763,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_firmware_path")).toString()));
 
             QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                      arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
             process.setCommand(Utils::CommandLine(blhost_binary, args));
-            process.runBlocking(Utils::EventLoopMode::On);
+            process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
@@ -728,6 +794,47 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
         }
     }
 
+    // Burn E-Fuse
+    {
+        QStringList args = QStringList() <<
+                           QStringLiteral("-u") <<
+                           obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                           QStringLiteral("--") <<
+                           QStringLiteral("efuse-program-once") <<
+                           obj.value(QStringLiteral("blhost_efuse_burn_address")).toString() <<
+                           obj.value(QStringLiteral("blhost_efuse_burn_data")).toString();
+
+        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
+
+        process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+        process.setCommand(Utils::CommandLine(blhost_binary, args));
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+        if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+        {
+            QMessageBox box(QMessageBox::Critical, QObject::tr("NXP IMX"), QObject::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            box.setDefaultButton(QMessageBox::Ok);
+            box.setEscapeButton(QMessageBox::Cancel);
+            box.exec();
+
+            result = false;
+            goto cleanup;
+        }
+        else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+        {
+            result = false;
+            goto cleanup;
+        }
+    }
+
     // Reset
     {
         QStringList args = QStringList() <<
@@ -737,11 +844,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QStringLiteral("reset");
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(blhost_binary, args));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
@@ -884,7 +995,9 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                 *stdErrFirstTimePtr = false;
             }
 
-            plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:red\">%1</p>").arg(out));
+            plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:%1\">%2</p>").
+                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightcoral") : QStringLiteral("coral")).
+                                      arg(out));
         }
     });
 
@@ -929,7 +1042,9 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
     && (obj.value(QStringLiteral("blhost_disk_address")).toString().toInt(nullptr, 16) != 0)
     && (obj.value(QStringLiteral("blhost_disk_size")).toString().toInt(nullptr, 16) > 0))
     {
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:purple\">%1</p>")).arg(QObject::tr("This command takes a while to execute. Please be patient.")));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightseagreen") : QStringLiteral("seagreen")).
+                                  arg(QObject::tr("This command takes a while to execute. Please be patient.")));
 
         // Erase Memory
         {
@@ -944,11 +1059,15 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_disk_size")).toString();
 
             QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                      arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
             process.setCommand(Utils::CommandLine(blhost_binary, args));
-            process.runBlocking(Utils::EventLoopMode::On);
+            process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
@@ -973,7 +1092,9 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
     if(!justEraseFlashFs)
     {
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:purple\">%1</p>")).arg(QObject::tr("This command takes a while to execute. Please be patient.")));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightseagreen") : QStringLiteral("seagreen")).
+                                  arg(QObject::tr("This command takes a while to execute. Please be patient.")));
 
         // Erase Memory
         {
@@ -988,11 +1109,15 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_firmware_length")).toString();
 
             QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                      arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
             process.setCommand(Utils::CommandLine(blhost_binary, args));
-            process.runBlocking(Utils::EventLoopMode::On);
+            process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
@@ -1025,11 +1150,15 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_firmware_path")).toString()));
 
             QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                      arg(command));
 
             process.setTimeoutS(300); // 5 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
             process.setCommand(Utils::CommandLine(blhost_binary, args));
-            process.runBlocking(Utils::EventLoopMode::On);
+            process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
@@ -1061,11 +1190,15 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                            QStringLiteral("reset");
 
         QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p>")).arg(command));
+        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                                  arg(command));
 
         process.setTimeoutS(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(blhost_binary, args));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {

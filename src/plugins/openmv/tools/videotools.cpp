@@ -1,4 +1,33 @@
-#include "videotools.h"
+#include <QtCore>
+#include <QtGui>
+#include <QtWidgets>
+
+#include <coreplugin/icore.h>
+#include <extensionsystem/pluginmanager.h>
+#include <texteditor/fontsettings.h>
+#include <texteditor/texteditorsettings.h>
+#include <utils/hostosinfo.h>
+#include <utils/qtcprocess.h>
+#include <utils/theme/theme.h>
+
+#include "../openmvpluginio.h"
+
+#define VIDEO_SETTINGS_GROUP "OpenMVFFMPEG"
+#define LAST_CONVERT_VIDEO_SRC_PATH "LastConvertSrcPath"
+#define LAST_CONVERT_VIDEO_DST_PATH "LastConvertDstPath"
+#define LAST_CONVERT_VIDEO_DST_FOLDER_PATH "LastConvertDstFolderPath"
+#define LAST_CONVERT_VIDEO_DST_EXTENSION "LastConvertDstExtensionPath"
+#define LAST_CONVERT_VIDEO_HRES "LastConvertVideoHRes"
+#define LAST_CONVERT_VIDEO_SKIP "LastConvertVideoSkip"
+#define LAST_PLAY_VIDEO_PATH "LastPlayVideoPath"
+#define LAST_PLAY_RTSP_URL "LastPlayVideoUrl"
+#define LAST_PLAY_RTSP_PORT "LastPlayVideoPort"
+#define LAST_PLAY_RTSP_TCP "LastPlayVideoTCP"
+#define LAST_SAVE_VIDEO_PATH "LastSaveVideoPath"
+#define LAST_SAVE_VIDEO_HRES "LastSaveVideoHRes"
+#define LAST_SAVE_VIDEO_SKIP "LastSaveVideoSkip"
+#define LAST_CONVERT_TERMINAL_WINDOW_GEOMETRY "LastConvertTerminalWindowGeometry"
+#define LAST_PLAY_TERMINAL_WINDOW_GEOMETRY "LastPlayTerminalWindowGeometry"
 
 #define serializeData(fp, data, size) fp.append(data, size)
 
@@ -455,6 +484,8 @@ static QString getInputFormats()
     Utils::FilePath command;
     Utils::QtcProcess process;
     process.setTimeoutS(10);
+    process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+    process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setProcessChannelMode(QProcess::MergedChannels);
 
     if(Utils::HostOsInfo::isWindowsHost())
@@ -532,6 +563,8 @@ static QString getOutputFormats()
     Utils::FilePath command;
     Utils::QtcProcess process;
     process.setTimeoutS(10);
+    process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+    process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setProcessChannelMode(QProcess::MergedChannels);
 
     if(Utils::HostOsInfo::isWindowsHost())
@@ -659,7 +692,9 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, plainTextEdit, [plainTextEdit, fpsPtr, fpsRegex] (const QString &text) { // stdOut correct
         QRegularExpressionMatch match = fpsRegex.match(text);
         if (match.hasMatch()) *fpsPtr = match.captured(1).toFloat();
-        plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:red\">%1</p>")).arg(text.trimmed()));
+        plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:%1\">%2</p>").
+                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightcoral") : QStringLiteral("coral")).
+                                  arg(text.trimmed()));
     });
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
@@ -709,13 +744,17 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     }
 
     QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
-    plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:blue\">%1</p><br/><br/>")).arg(command));
+    plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
+                              arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
+                              arg(command));
 
     dialog->show();
 
     process.setTimeoutS(3600); // 60 minutes...
+    process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+    process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
-    process.runBlocking(Utils::EventLoopMode::On);
+    process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
     settings->setValue(QStringLiteral(LAST_CONVERT_TERMINAL_WINDOW_GEOMETRY), dialog->saveGeometry());
     settings->endGroup();
