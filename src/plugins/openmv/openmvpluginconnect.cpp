@@ -139,7 +139,7 @@ void OpenMVPlugin::packageUpdate()
                                         QString(),
                                         tr("Installation Sucessful! Please restart OpenMV IDE."));
 
-                                    QApplication::quit();
+                                    Core::ICore::restart();
                                 }
 
                                 settings2->endGroup();
