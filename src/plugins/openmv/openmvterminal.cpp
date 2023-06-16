@@ -1168,7 +1168,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 #ifndef Q_OS_MAC
     "QAbstractScrollArea::corner{background-color:%1;}"
     "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:%1;}"
-    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:%1;border-top:1px solid %2;}"
+    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:%1;}"
     "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:%1;}"
     "QScrollBar::up-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowup-%5.png);}"
     "QScrollBar::down-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowdown-%5.png);}"

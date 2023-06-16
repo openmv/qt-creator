@@ -468,6 +468,9 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     selectionLayout->setContentsMargins(0, 0, 0, 0);
 
     auto bar = new StyledBar;
+    // OPENMV-DIFF //
+    bar->setProperty("NoDrawToolBarBorders", true);
+    // OPENMV-DIFF //
     auto layout = new QHBoxLayout(bar);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(0);
@@ -535,6 +538,7 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
 
         Utils::StyledBar *topBar = new Utils::StyledBar;
         topBar->setSingleRow(true);
+        topBar->setProperty("NoDrawToolBarBorders", false);
         QHBoxLayout *topBarLayout = new QHBoxLayout;
         topBarLayout->setContentsMargins(0, 0, 0, 0);
         topBarLayout->setSpacing(0);
@@ -549,6 +553,7 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
 
         Utils::StyledBar *bottomBar = new Utils::StyledBar;
         bottomBar->setSingleRow(true);
+        bottomBar->setProperty("NoDrawToolBarBorders", true);
         QHBoxLayout *bottomBarLayout = new QHBoxLayout;
         bottomBarLayout->setContentsMargins(0, 0, 0, 0);
         bottomBarLayout->setSpacing(0);
@@ -574,6 +579,7 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
 
         Utils::StyledBar *leftBar = new Utils::StyledBar;
         leftBar->setSingleRow(false);
+        leftBar->setProperty("NoDrawToolBarBorders", true);
         QVBoxLayout *leftBarLayout = new QVBoxLayout;
         leftBarLayout->setContentsMargins(0, 0, 0, 0);
         leftBarLayout->setSpacing(0);
@@ -590,6 +596,7 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
 
         Utils::StyledBar *rightBar = new Utils::StyledBar;
         rightBar->setSingleRow(false);
+        rightBar->setProperty("NoDrawToolBarBorders", true);
         QVBoxLayout *rightBarLayout = new QVBoxLayout;
         rightBarLayout->setContentsMargins(0, 0, 0, 0);
         rightBarLayout->setSpacing(0);
@@ -621,7 +628,7 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
 #ifndef Q_OS_MAC
     "QAbstractScrollArea::corner{background-color:%1;}"
     "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:%1;}"
-    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:%1;border-top:1px solid %2;}"
+    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:%1;}"
     "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:%1;}"
     "QScrollBar::up-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowup-%5.png);}"
     "QScrollBar::down-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowdown-%5.png);}"
