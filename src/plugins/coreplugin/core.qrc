@@ -7,18 +7,30 @@
         <file>images/qtlogo.png</file>
         <file>images/qtlogo@2x.png</file>
         <!-- OPENMV-DIFF -->
-        <file>images/scroll-arrowup.png</file>
-        <file>images/scroll-arrowup_2x.png</file>
-        <file>images/scroll-arrowright.png</file>
-        <file>images/scroll-arrowright_2x.png</file>
-        <file>images/scroll-arrowdown.png</file>
-        <file>images/scroll-arrowdown_2x.png</file>
-        <file>images/scroll-arrowleft.png</file>
-        <file>images/scroll-arrowleft_2x.png</file>
-        <file>images/branch-closed.png</file>
-        <file>images/branch-closed_2x.png</file>
-        <file>images/branch-open.png</file>
-        <file>images/branch-open_2x.png</file>
+        <file>images/scroll-arrowup-dark.png</file>
+        <file>images/scroll-arrowup-dark_2x.png</file>
+        <file>images/scroll-arrowright-dark.png</file>
+        <file>images/scroll-arrowright-dark_2x.png</file>
+        <file>images/scroll-arrowdown-dark.png</file>
+        <file>images/scroll-arrowdown-dark_2x.png</file>
+        <file>images/scroll-arrowleft-dark.png</file>
+        <file>images/scroll-arrowleft-dark_2x.png</file>
+        <file>images/branch-closed-dark.png</file>
+        <file>images/branch-closed-dark_2x.png</file>
+        <file>images/branch-open-dark.png</file>
+        <file>images/branch-open-dark_2x.png</file>
+        <file>images/scroll-arrowup-light.png</file>
+        <file>images/scroll-arrowup-light_2x.png</file>
+        <file>images/scroll-arrowright-light.png</file>
+        <file>images/scroll-arrowright-light_2x.png</file>
+        <file>images/scroll-arrowdown-light.png</file>
+        <file>images/scroll-arrowdown-light_2x.png</file>
+        <file>images/scroll-arrowleft-light.png</file>
+        <file>images/scroll-arrowleft-light_2x.png</file>
+        <file>images/branch-closed-light.png</file>
+        <file>images/branch-closed-light_2x.png</file>
+        <file>images/branch-open-light.png</file>
+        <file>images/branch-open-light_2x.png</file>
         <file>../../../../openmv-media/icons/openmv-icon/openmv16x16.png</file>
         <file>../../../../openmv-media/icons/openmv-icon/openmv16x16@2x.png</file>
         <file>../../../../openmv-media/icons/openmv-icon/openmv32x32.png</file>

@@ -19,7 +19,11 @@ normalBackground=ff2E2F30
 alternateBackground=ff353637
 error=ffdf4f4f
 warning=ffecbc1c
-splitter=ff06080A
+;OPENMV-DIFF;
+;splitter=ff06080A
+;OPENMV-DIFF;
+splitter=ff323334
+;OPENMV-DIFF;
 textColorLink=ff007af4
 textColorLinkVisited=ffa57aff
 backgroundColorDisabled=ff444444

@@ -37,7 +37,11 @@ QTabBar::tab {
     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 %TAB_BACKGROUND_COLOR_FROM%, stop: 1 %TAB_BACKGROUND_COLOR_TO%);
     /* qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #3c3c3c, stop: 1 #444444) */
 
-    color: #EEEEEE;
+    /* OPENMV-DIFF */
+    /* color: #EEEEEE; */
+    /* OPENMV-DIFF */
+    color: %TAB_TEXT_COLOR%;
+    /* OPENMV-DIFF */
 
     border: 0px solid %TAB_BORDER_COLOR%; /*#313131*/
     border-bottom: 1px solid %TAB_BORDER_COLOR%; /*#9a9a9a*/
@@ -57,7 +61,11 @@ QTabBar::tab {
 /* Style the tab using the tab sub-control. Note that it reads QTabBar _not_ QTabWidget */
 QTabBar::tab:selected {
     background-color: %TAB_SELECTED_BACKGROUND_COLOR%; /*#636363*/
-    color: white;
+    /* OPENMV-DIFF */
+    /* color: white; */
+    /* OPENMV-DIFF */
+    color: %TAB_TEXT_COLOR%;
+    /* OPENMV-DIFF */
 }
 
 QTabBar QToolButton {

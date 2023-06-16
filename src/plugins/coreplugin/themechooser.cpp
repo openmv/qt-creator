@@ -180,6 +180,9 @@ static void addThemesFromPath(const QString &path, QList<ThemeEntry> *themes)
     const QStringList themeList = themeDir.entryList();
     for (const QString &fileName : std::as_const(themeList)) {
         QString id = QFileInfo(fileName).completeBaseName();
+        // OPENMV-DIFF //
+        if ((id != QStringLiteral("flat-light")) && (id != QStringLiteral("flat-dark"))) continue;
+        // OPENMV-DIFF //
         themes->append(ThemeEntry(Id::fromString(id), themeDir.absoluteFilePath(fileName)));
     }
 }
@@ -189,7 +192,9 @@ QList<ThemeEntry> ThemeEntry::availableThemes()
     QList<ThemeEntry> themes;
 
     static const FilePath installThemeDir = ICore::resourcePath("themes");
-    static const FilePath userThemeDir = ICore::userResourcePath("themes");
+    // OPENMV-DIFF //
+    // static const FilePath userThemeDir = ICore::userResourcePath("themes");
+    // OPENMV-DIFF //
     addThemesFromPath(installThemeDir.toString(), &themes);
     if (themes.isEmpty())
         qWarning() << "Warning: No themes found in installation: "
@@ -200,7 +205,9 @@ QList<ThemeEntry> ThemeEntry::availableThemes()
         ThemeEntry defaultEntry = themes.takeAt(defaultIndex);
         themes.prepend(defaultEntry);
     }
-    addThemesFromPath(userThemeDir.toString(), &themes);
+    // OPENMV-DIFF //
+    // addThemesFromPath(userThemeDir.toString(), &themes);
+    // OPENMV-DIFF //
     return themes;
 }
 

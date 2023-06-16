@@ -10,7 +10,11 @@ toolBarItem=a0010508
 toolBarItemDisabled=38000000
 fancyBarsNormalTextColor=ff000000
 fancyBarsBoldTextColor=a0010508
-hoverBackground=1a000000
+;OPENMV-DIFF;
+;hoverBackground=1a000000
+;OPENMV-DIFF;
+hoverBackground=28000000
+;OPENMV-DIFF;
 selectedBackground=a8ffffff
 normalBackground=ffffffff
 alternateBackground=ff515151
@@ -369,7 +373,11 @@ DrawIndicatorBranch=true
 DrawSearchResultWidgetFrame=false
 DrawTargetSelectorBottom=false
 DrawToolBarHighlights=false
-DrawToolBarBorders=true
+;OPENMV-DIFF;
+;DrawToolBarBorders=true
+;OPENMV-DIFF;
+DrawToolBarBorders=false
+;OPENMV-DIFF;
 ApplyThemePaletteGlobally=false
 FlatToolBars=true
 FlatSideBarIcons=true

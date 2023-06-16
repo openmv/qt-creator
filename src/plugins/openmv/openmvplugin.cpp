@@ -1820,14 +1820,18 @@ void OpenMVPlugin::extensionsInitialized()
 
     Utils::ElidingLabel *disableLabel = new Utils::ElidingLabel(tr("Frame Buffer Disabled - click the disable button again to enable (top right)"));
     disableLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
-    disableLabel->setStyleSheet(QStringLiteral("padding:4px;"));
+    disableLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
+                                arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
+                                arg(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal).name()));
     disableLabel->setAlignment(Qt::AlignCenter);
     disableLabel->setVisible(m_disableFrameBuffer->isChecked());
     connect(m_disableFrameBuffer, &QToolButton::toggled, disableLabel, &QLabel::setVisible);
 
     Utils::ElidingLabel *recordingLabel = new Utils::ElidingLabel(tr("Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0"));
     recordingLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
-    recordingLabel->setStyleSheet(QStringLiteral("padding:4px;"));
+    recordingLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
+                                  arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
+                                  arg(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal).name()));
     recordingLabel->setAlignment(Qt::AlignCenter);
     recordingLabel->setVisible(false);
     recordingLabel->setFont(TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily());
@@ -1850,8 +1854,8 @@ void OpenMVPlugin::extensionsInitialized()
     connect(m_frameBuffer, &OpenMVPluginFB::saveDescriptor, this, &OpenMVPlugin::saveDescriptor);
     connect(m_frameBuffer, &OpenMVPluginFB::imageWriterTick, recordingLabel, &Utils::ElidingLabel::setText);
 
-    connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, this, [this, beginRecordingButton] {
-        beginRecordingButton->setEnabled(true);
+    connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, this, [this, beginRecordingButton] (const QPixmap &pixmap) {
+        beginRecordingButton->setEnabled(!pixmap.isNull());
     });
 
     connect(beginRecordingButton, &QToolButton::clicked, this, [this, beginRecordingButton, endRecordingButton, recordingLabel] {
@@ -1898,7 +1902,9 @@ void OpenMVPlugin::extensionsInitialized()
 
     Utils::ElidingLabel *resLabel = new Utils::ElidingLabel(tr("Res - No Image"));
     resLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
-    resLabel->setStyleSheet(QStringLiteral("padding:4px;"));
+    resLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
+                            arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
+                            arg(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal).name()));
     resLabel->setAlignment(Qt::AlignCenter);
 
     m_histogram = new OpenMVPluginHistogram;
@@ -2464,17 +2470,19 @@ bool OpenMVPlugin::delayedInitialize()
             }
         }
 
+        bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
+
         if(!ok) {
             if(!m_availableWifiPorts.isEmpty()) {
-                m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_WIFI_PATH)));
+                m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_WIFI_DARK_PATH) : QStringLiteral(CONNECT_WIFI_LIGHT_PATH)));
             } else {
                 m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_PATH)));
             }
         } else {
             if(!m_availableWifiPorts.isEmpty()) {
-                m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_USB_WIFI_PATH)));
+                m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_USB_WIFI_DARK_PATH) : QStringLiteral(CONNECT_USB_WIFI_LIGHT_PATH)));
             } else {
-                m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_USB_PATH)));
+                m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_USB_DARK_PATH) : QStringLiteral(CONNECT_USB_LIGHT_PATH)));
             }
         }
 
