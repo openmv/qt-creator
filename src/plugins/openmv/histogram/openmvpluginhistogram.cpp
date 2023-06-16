@@ -467,6 +467,11 @@ OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent),
     m_ui->C2LQValue->setMinimumWidth(m_ui->C2LQValue->fontMetrics().horizontalAdvance(QStringLiteral("-00000")));
     m_ui->C2UQValue->setMinimumWidth(m_ui->C2UQValue->fontMetrics().horizontalAdvance(QStringLiteral("-00000")));
 
+    setAttribute(Qt::WA_StyledBackground);
+    setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;")).
+                  arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
+                  arg(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal).name()));
+
     colorSpaceChanged(m_colorSpace);
 }
 

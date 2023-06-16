@@ -71,6 +71,7 @@ private:
     QRegularExpression m_snapshotRegex;
     QString datasetCaptureScriptPath;
     QString labelsPath;
+
     QString m_styleSheet, m_highDPIStyleSheet;
     qreal m_devicePixelRatio;
 };

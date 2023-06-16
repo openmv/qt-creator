@@ -825,7 +825,9 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     Utils::ElidingLabel *recordingLabel = new Utils::ElidingLabel(tr("Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0"));
     recordingLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
-    recordingLabel->setStyleSheet(QStringLiteral("padding:4px;"));
+    recordingLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
+                                  arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
+                                  arg(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal).name()));
     recordingLabel->setAlignment(Qt::AlignCenter);
     recordingLabel->setVisible(false);
     recordingLabel->setFont(TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily());
@@ -882,8 +884,8 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     connect(frameBuffer, &OpenMVPluginFB::imageWriterTick, recordingLabel, &Utils::ElidingLabel::setText);
 
-    connect(frameBuffer, &OpenMVPluginFB::pixmapUpdate, this, [this, beginRecordingButton] {
-        beginRecordingButton->setEnabled(true);
+    connect(frameBuffer, &OpenMVPluginFB::pixmapUpdate, this, [this, beginRecordingButton] (const QPixmap &pixmap) {
+        beginRecordingButton->setEnabled(!pixmap.isNull());
     });
 
     connect(beginRecordingButton, &QToolButton::clicked, this, [this, beginRecordingButton, endRecordingButton, recordingLabel, frameBuffer] {
@@ -929,7 +931,9 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     Utils::ElidingLabel *resLabel = new Utils::ElidingLabel(tr("Res - No Image"));
     resLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
-    resLabel->setStyleSheet(QStringLiteral("padding:4px;"));
+    resLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
+                            arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
+                            arg(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal).name()));
     resLabel->setAlignment(Qt::AlignCenter);
 
     OpenMVPluginHistogram *histogram = new OpenMVPluginHistogram;
@@ -1160,61 +1164,36 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     ///////////////////////////////////////////////////////////////////////////
 
-    m_styleSheet = QString(QStringLiteral("QAbstractScrollArea::corner{background-color:%2;}"
+    m_styleSheet = QString(QStringLiteral(
 #ifndef Q_OS_MAC
-    "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:%2;}"
-    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:%2;border-top:1px solid %3;}"
-    "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:%2;}"
-    "QScrollBar::up-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowup.png);}"
-    "QScrollBar::down-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowdown.png);}"
-    "QScrollBar::sub-page:vertical{margin-left:1px;margin-right:1px;background-color:%2;}"
-    "QScrollBar::add-page:vertical{margin-left:1px;margin-right:1px;background-color:%2;}"
-    "QScrollBar::handle:vertical{margin-left:1px;margin-right:1px;min-height:20px;background-color:%3;}"
-    "QScrollBar:horizontal{margin-top:0px;margin-right:17px;margin-bottom:0px;margin-left:17px;min-height:14px;background-color:%2;}"
-    "QScrollBar::sub-line:horizontal{subcontrol-origin:margin;subcontrol-position:left;width:17px;background-color:%2;}"
-    "QScrollBar::add-line:horizontal{subcontrol-origin:margin;subcontrol-position:right;width:17px;background-color:%2;}"
-    "QScrollBar::left-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowleft.png);}"
-    "QScrollBar::right-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowright.png);}"
-    "QScrollBar::sub-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%2;}"
-    "QScrollBar::add-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%2;}"
-    "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:%3;}"
-    "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:%4;}"
-    "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:%5;}"
+    "QAbstractScrollArea::corner{background-color:%1;}"
+    "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:%1;}"
+    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:%1;border-top:1px solid %2;}"
+    "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:%1;}"
+    "QScrollBar::up-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowup-%5.png);}"
+    "QScrollBar::down-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowdown-%5.png);}"
+    "QScrollBar::sub-page:vertical{margin-left:1px;margin-right:1px;background-color:%1;}"
+    "QScrollBar::add-page:vertical{margin-left:1px;margin-right:1px;background-color:%1;}"
+    "QScrollBar::handle:vertical{margin-left:1px;margin-right:1px;min-height:20px;background-color:%2;}"
+    "QScrollBar:horizontal{margin-top:0px;margin-right:17px;margin-bottom:0px;margin-left:17px;min-height:14px;background-color:%1;}"
+    "QScrollBar::sub-line:horizontal{subcontrol-origin:margin;subcontrol-position:left;width:17px;background-color:%1;}"
+    "QScrollBar::add-line:horizontal{subcontrol-origin:margin;subcontrol-position:right;width:17px;background-color:%1;}"
+    "QScrollBar::left-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowleft-%5.png);}"
+    "QScrollBar::right-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowright-%5.png);}"
+    "QScrollBar::sub-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%1;}"
+    "QScrollBar::add-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%1;}"
+    "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:%2;}"
+    "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:%3;}"
+    "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:%4;}"
 #endif
-    "QPlainTextEdit{background-color:%1;}")).
-            arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
-            arg(Utils::creatorTheme()->color(Utils::Theme::DSscrollBarHandle).name()).
-            arg(Utils::creatorTheme()->color(Utils::Theme::DSscrollBarTrack).name()).
-            arg(Utils::creatorTheme()->color(Utils::Theme::DSsliderHandleHover).name()).
-            arg(Utils::creatorTheme()->color(Utils::Theme::DSsliderHandleFocus).name());
+    )).
+    arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDark).name(QColor::HexArgb)).
+    arg(Utils::creatorTheme()->color(Utils::Theme::SplitterColor).name(QColor::HexArgb)).
+    arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorHover).name(QColor::HexArgb)).
+    arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name(QColor::HexArgb)).
+    arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light"));
 
-    m_highDPIStyleSheet = QStringLiteral("QAbstractScrollArea::corner{background-color:%2;}"
-#ifndef Q_OS_MAC
-    "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:%2;}"
-    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:%2;border-top:1px solid %3;}"
-    "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:%2;}"
-    "QScrollBar::up-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowup_2x.png);}"
-    "QScrollBar::down-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowdown_2x.png);}"
-    "QScrollBar::sub-page:vertical{margin-left:1px;margin-right:1px;background-color:%2;}"
-    "QScrollBar::add-page:vertical{margin-left:1px;margin-right:1px;background-color:%2;}"
-    "QScrollBar::handle:vertical{margin-left:1px;margin-right:1px;min-height:20px;background-color:%3;}"
-    "QScrollBar:horizontal{margin-top:0px;margin-right:17px;margin-bottom:0px;margin-left:17px;min-height:14px;background-color:%2;}"
-    "QScrollBar::sub-line:horizontal{subcontrol-origin:margin;subcontrol-position:left;width:17px;background-color:%2;}"
-    "QScrollBar::add-line:horizontal{subcontrol-origin:margin;subcontrol-position:right;width:17px;background-color:%2;}"
-    "QScrollBar::left-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowleft_2x.png);}"
-    "QScrollBar::right-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowright_2x.png);}"
-    "QScrollBar::sub-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%2;}"
-    "QScrollBar::add-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%2;}"
-    "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:%3;}"
-    "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:%4;}"
-    "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:%5;}"
-#endif
-    "QPlainTextEdit{background-color:#%1;}").
-            arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
-            arg(Utils::creatorTheme()->color(Utils::Theme::DSscrollBarHandle).name()).
-            arg(Utils::creatorTheme()->color(Utils::Theme::DSscrollBarTrack).name()).
-            arg(Utils::creatorTheme()->color(Utils::Theme::DSsliderHandleHover).name()).
-            arg(Utils::creatorTheme()->color(Utils::Theme::DSsliderHandleFocus).name());
+    m_highDPIStyleSheet = QString(m_styleSheet).replace(QStringLiteral(".png"), QStringLiteral("_2x.png"));
 
     QPalette pal = palette();
     pal.setColor(QPalette::Base, Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
