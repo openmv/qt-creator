@@ -146,10 +146,15 @@ EditorToolBar::EditorToolBar(QWidget *parent) :
     d->m_editorList->setModel(DocumentModel::model());
     d->m_editorList->setMaxVisibleItems(40);
     d->m_editorList->setContextMenuPolicy(Qt::CustomContextMenu);
+    // OPENMV-DIFF //
+    d->m_editorList->setProperty("hideborder", true);
+    // OPENMV-DIFF //
 
     d->m_closeEditorButton->setIcon(Utils::Icons::CLOSE_TOOLBAR.icon());
     d->m_closeEditorButton->setEnabled(false);
-    d->m_closeEditorButton->setProperty(Utils::StyleHelper::C_SHOW_BORDER, true);
+    // OPENMV-DIFF //
+    // d->m_closeEditorButton->setProperty(Utils::StyleHelper::C_SHOW_BORDER, true);
+    // OPENMV-DIFF //
 
     d->m_toolBarPlaceholder->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 

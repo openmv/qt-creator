@@ -1728,7 +1728,7 @@ void OpenMVPlugin::extensionsInitialized()
     actionBar1->insertAction(3, Core::ActionManager::command(Core::Constants::COPY)->action(), QIcon(QStringLiteral(":/openmv/images/editcopy.png")));
     actionBar1->insertAction(4, Core::ActionManager::command(Core::Constants::PASTE)->action(), QIcon(QStringLiteral(":/openmv/images/editpaste.png")));
 
-    actionBar1->setProperty("no_separator", false);
+    actionBar1->setProperty("no_separator", true);
     actionBar1->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
 
     Core::Internal::FancyActionBar *actionBar2 = new Core::Internal::FancyActionBar(widget);
@@ -1739,7 +1739,7 @@ void OpenMVPlugin::extensionsInitialized()
     actionBar2->insertAction(2, m_startCommand->action());
     actionBar2->insertAction(3, m_stopCommand->action());
 
-    actionBar2->setProperty("no_separator", false);
+    actionBar2->setProperty("no_separator", true);
     actionBar2->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Maximum);
 
     ///////////////////////////////////////////////////////////////////////////
@@ -1977,10 +1977,14 @@ void OpenMVPlugin::extensionsInitialized()
     connect(widget->m_topDrawer, &QToolButton::clicked, this, [this, widget, vsplitter] {
         vsplitter->setSizes(QList<int>() << 1 <<  vsplitter->sizes().at(1));
         widget->m_topDrawer->parentWidget()->hide();
+        // Handle Special Case to fix 1px Graphical issue.
+        vsplitter->setProperty("NoDrawToolBarBorders", false);
     });
 
     connect(vsplitter, &Core::MiniSplitter::splitterMoved, this, [this, widget, vsplitter] (int pos, int index) {
         Q_UNUSED(pos) Q_UNUSED(index) widget->m_topDrawer->parentWidget()->setVisible(!vsplitter->sizes().at(0));
+        // Handle Special Case to fix 1px Graphical issue.
+        vsplitter->setProperty("NoDrawToolBarBorders", widget->m_topDrawer->parentWidget()->isVisible());
     });
 
     connect(widget->m_bottomDrawer, &QToolButton::clicked, this, [this, widget, vsplitter] {
@@ -2073,7 +2077,7 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorActionBar->insertAction(0, datasetEditorNewFolder->action());
     datasetEditorActionBar->insertAction(1, datasetEditorSnapshot->action());
 
-    datasetEditorActionBar->setProperty("no_separator", false);
+    datasetEditorActionBar->setProperty("no_separator", true);
     datasetEditorActionBar->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
 
     QWidget *datasetEditorWidget = new QWidget;
@@ -2206,6 +2210,8 @@ void OpenMVPlugin::extensionsInitialized()
         widget->m_topDrawer->parentWidget()->setVisible(settings->contains(QStringLiteral(VSPLITTER_STATE)) ? (!vsplitter->sizes().at(0)) : false);
         widget->m_bottomDrawer->parentWidget()->setVisible(settings->contains(QStringLiteral(VSPLITTER_STATE)) ? (!vsplitter->sizes().at(1)) : false);
         settings->endGroup();
+        // Handle Special Case to fix 1px Graphical issue.
+        vsplitter->setProperty("NoDrawToolBarBorders", widget->m_topDrawer->parentWidget()->isVisible());
     });
 
     connect(q_check_ptr(qobject_cast<Core::Internal::MainWindow *>(Core::ICore::mainWindow())), &Core::Internal::MainWindow::hideEventSignal, this, [this, widget, settings, msplitter, hsplitter, vsplitter] {

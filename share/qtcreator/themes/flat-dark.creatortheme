@@ -509,7 +509,12 @@ DrawIndicatorBranch=true
 DrawSearchResultWidgetFrame=false
 DrawTargetSelectorBottom=false
 DrawToolBarHighlights=false
-DrawToolBarBorders=false
+;OPENMV-DIFF;
+;DrawToolBarBorders=false
+;OPENMV-DIFF;
+DrawToolBarBorders=true
+;OPENMV-DIFF;
+ApplyThemePaletteGlobally=true
 FlatToolBars=true
 FlatSideBarIcons=true
 FlatProjectsMode=true

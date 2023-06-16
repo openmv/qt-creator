@@ -116,6 +116,9 @@ void TabbedEditorPlugin::updateStyleToBaseColor()
     // OPENMV-DIFF //
     stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_TEXT_COLOR%"),
                                                   getQssStringFromColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    if (!Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)) {
+        stylesheetPattern = stylesheetPattern.replace(QStringLiteral("close_button_light_grey.png"), QStringLiteral("close_button_dark.png"));
+    }
     // OPENMV-DIFF //
 
     m_tabBar->setStyleSheet(stylesheetPattern);

@@ -138,9 +138,16 @@ void MiniSplitterHandle::resizeEvent(QResizeEvent *event)
 void MiniSplitterHandle::paintEvent(QPaintEvent *event)
 {
     QPainter painter(this);
-    const QColor color = Utils::creatorColor(
+    // OPENMV-DIFF //
+    // const QColor color = Utils::creatorColor(
+    // OPENMV-DIFF //
+    QColor color = Utils::creatorColor(
+    // OPENMV-DIFF //
                 m_lightColored ? Utils::Theme::FancyToolBarSeparatorColor
                                : Utils::Theme::SplitterColor);
+    // OPENMV-DIFF //
+    if (parent()->property("NoDrawToolBarBorders").toBool()) color = Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDark);
+    // OPENMV-DIFF //
     painter.fillRect(event->rect(), color);
 }
 
