@@ -24,7 +24,9 @@ constexpr const char debuggerApplicationFileC[] = "qtcdebugger";
 constexpr const WCHAR debuggerRegistryKeyC[]
     = L"Software\\Microsoft\\Windows NT\\CurrentVersion\\AeDebug";
 constexpr const WCHAR debuggerRegistryValueNameC[] = L"Debugger";
-constexpr const WCHAR autoRegistryValueNameC[] = L"Auto";
+// OPENMV-DIFF //
+// constexpr const WCHAR autoRegistryValueNameC[] = L"Auto";
+// OPENMV-DIFF //
 
 static inline QString wCharToQString(const WCHAR *w)
 {
