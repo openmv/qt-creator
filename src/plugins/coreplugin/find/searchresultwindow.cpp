@@ -657,7 +657,11 @@ QList<QWidget *> SearchResultWindowPrivate::toolBarWidgets()
         m_historyLabel = new QLabel(Tr::tr("History:"));
     if (!m_recentSearchesBox) {
         m_recentSearchesBox = new QComboBox;
-        m_recentSearchesBox->setProperty(Utils::StyleHelper::C_DRAW_LEFT_BORDER, true);
+        // OPENMV-DIFF //
+        // m_recentSearchesBox->setProperty(Utils::StyleHelper::C_DRAW_LEFT_BORDER, true);
+        // OPENMV-DIFF //
+        m_recentSearchesBox->setProperty(Utils::StyleHelper::C_HIDE_BORDER, true);
+        // OPENMV-DIFF //
         m_recentSearchesBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
         m_recentSearchesBox->addItem(Tr::tr("New Search"));
         connect(m_recentSearchesBox, &QComboBox::activated,

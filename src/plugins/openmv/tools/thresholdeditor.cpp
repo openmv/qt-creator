@@ -170,7 +170,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             m_raw->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
             m_raw->setMinimumWidth(160);
             m_raw->setMinimumHeight(120);
-            m_raw->setBackgroundBrush(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDisabled));
+            m_raw->setBackgroundBrush(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDark));
             m_raw->setScene(new QGraphicsScene(this));
             m_raw->scene()->addPixmap(pixmap);
             v_layout->addWidget(new QLabel(tr("Source Image")));
@@ -192,7 +192,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             m_bin->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
             m_bin->setMinimumWidth(160);
             m_bin->setMinimumHeight(120);
-            m_bin->setBackgroundBrush(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDisabled));
+            m_bin->setBackgroundBrush(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDark));
             m_bin->setScene(new QGraphicsScene(this));
             m_bin->scene()->addPixmap(white);
             v_layout->addWidget(new QLabel(tr("Binary Image (white pixels are tracked pixels)")));
