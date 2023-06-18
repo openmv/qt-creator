@@ -123,7 +123,7 @@ KeypointsView::KeypointsView(Keypoints *keypoints, const QPixmap &pixmap, QWidge
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setMinimumWidth(160);
     setMinimumHeight(120);
-    setBackgroundBrush(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDisabled));
+    setBackgroundBrush(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDark));
     setScene(new QGraphicsScene(this));
     scene()->addPixmap(pixmap);
 

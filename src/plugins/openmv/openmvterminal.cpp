@@ -1050,6 +1050,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     Utils::StyledBar *topBar = new Utils::StyledBar;
     topBar->setSingleRow(true);
+    topBar->setProperty("NoDrawToolBarBorders", false);
     QHBoxLayout *topBarLayout = new QHBoxLayout;
     topBarLayout->setContentsMargins(0, 0, 0, 0);
     topBarLayout->setSpacing(0);
@@ -1071,6 +1072,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     Utils::StyledBar *bottomBar = new Utils::StyledBar;
     bottomBar->setSingleRow(true);
+    bottomBar->setProperty("NoDrawToolBarBorders", true);
     QHBoxLayout *bottomBarLayout = new QHBoxLayout;
     bottomBarLayout->setContentsMargins(0, 0, 0, 0);
     bottomBarLayout->setSpacing(0);
@@ -1096,6 +1098,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     Utils::StyledBar *leftBar = new Utils::StyledBar;
     leftBar->setSingleRow(false);
+    leftBar->setProperty("NoDrawToolBarBorders", true);
     QVBoxLayout *leftBarLayout = new QVBoxLayout;
     leftBarLayout->setContentsMargins(0, 0, 0, 0);
     leftBarLayout->setSpacing(0);
@@ -1112,6 +1115,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     Utils::StyledBar *rightBar = new Utils::StyledBar;
     rightBar->setSingleRow(false);
+    rightBar->setProperty("NoDrawToolBarBorders", true);
     QVBoxLayout *rightBarLayout = new QVBoxLayout;
     rightBarLayout->setContentsMargins(0, 0, 0, 0);
     rightBarLayout->setSpacing(0);
@@ -1147,10 +1151,14 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
     connect(m_topDrawer, &QToolButton::clicked, this, [this] {
         m_vsplitter->setSizes(QList<int>() << 1 <<  m_vsplitter->sizes().at(1));
         m_topDrawer->parentWidget()->hide();
+        // Handle Special Case to fix 1px Graphical issue.
+        m_vsplitter->setProperty("NoDrawToolBarBorders", false);
     });
 
     connect(m_vsplitter, &Core::MiniSplitter::splitterMoved, this, [this] (int pos, int index) {
         Q_UNUSED(pos) Q_UNUSED(index) m_topDrawer->parentWidget()->setVisible(!m_vsplitter->sizes().at(0));
+        // Handle Special Case to fix 1px Graphical issue.
+        m_vsplitter->setProperty("NoDrawToolBarBorders", m_topDrawer->parentWidget()->isVisible());
     });
 
     connect(m_bottomDrawer, &QToolButton::clicked, this, [this] {
@@ -1241,6 +1249,8 @@ void OpenMVTerminal::showEvent(QShowEvent *event)
     m_rightDrawer->parentWidget()->setVisible(m_settings->contains(QStringLiteral(HSPLITTER_STATE)) ? (!m_hsplitter->sizes().at(1)) : false);
     m_topDrawer->parentWidget()->setVisible(m_settings->contains(QStringLiteral(VSPLITTER_STATE)) ? (!m_vsplitter->sizes().at(0)) : false);
     m_bottomDrawer->parentWidget()->setVisible(m_settings->contains(QStringLiteral(VSPLITTER_STATE)) ? (!m_vsplitter->sizes().at(1)) : false);
+    // Handle Special Case to fix 1px Graphical issue.
+    m_vsplitter->setProperty("NoDrawToolBarBorders", m_topDrawer->parentWidget()->isVisible());
 
     QWidget::showEvent(event);
 }

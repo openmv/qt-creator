@@ -36,7 +36,9 @@
         <file>images/snapshot.png</file>
         <file>images/arduino-partnership.png</file>
         <file>images/arduino-partnership@2x.png</file>
-        <file>images/edge-impulse-partnership.png</file>
-        <file>images/edge-impulse-partnership@2x.png</file>
+        <file>images/edge-impulse-partnership-dark.png</file>
+        <file>images/edge-impulse-partnership-dark@2x.png</file>
+        <file>images/edge-impulse-partnership-light.png</file>
+        <file>images/edge-impulse-partnership-light@2x.png</file>
     </qresource>
 </RCC>

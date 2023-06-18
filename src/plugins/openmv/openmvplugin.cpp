@@ -1625,7 +1625,7 @@ void OpenMVPlugin::extensionsInitialized()
         "<p>OpenMV IDE English translation by Kwabena W. Agyeman.</p>") + tr(
         "<p><b>Partners</b></p>") +
         QStringLiteral("<p><a href=\"https://www.arduino.cc/\"><img source=\":/openmv/images/arduino-partnership.png\"></a></p>") +
-        QStringLiteral("<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership.png\"></a></p>")
+        QString(QStringLiteral("<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership-%1.png\"></a></p>")).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light"))
         );
     });
 
@@ -2080,15 +2080,25 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorActionBar->setProperty("no_separator", true);
     datasetEditorActionBar->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
 
-    QWidget *datasetEditorWidget = new QWidget;
-    QVBoxLayout *datasetEditorLayout = new QVBoxLayout;
-    datasetEditorLayout->setContentsMargins(0, 0, 0, 0);
-    datasetEditorLayout->setSpacing(0);
-    datasetEditorLayout->addWidget(datasetEditorStyledBar0);
-    datasetEditorLayout->addWidget(m_datasetEditor);
-    datasetEditorLayout->addWidget(datasetEditorStyledBar1);
-    datasetEditorLayout->addWidget(datasetEditorFB);
-    datasetEditorWidget->setLayout(datasetEditorLayout);
+    Core::MiniSplitter *datasetEditorWidget = new Core::MiniSplitter(Qt::Vertical);
+
+    QWidget *datasetEditorWidgetTop = new QWidget;
+    QVBoxLayout *datasetEditorLayoutTop = new QVBoxLayout;
+    datasetEditorLayoutTop->setContentsMargins(0, 0, 0, 0);
+    datasetEditorLayoutTop->setSpacing(0);
+    datasetEditorLayoutTop->addWidget(datasetEditorStyledBar0);
+    datasetEditorLayoutTop->addWidget(m_datasetEditor);
+    datasetEditorWidgetTop->setLayout(datasetEditorLayoutTop);
+    datasetEditorWidget->insertWidget(0, datasetEditorWidgetTop);
+
+    QWidget *datasetEditorWidgetBottom = new QWidget;
+    QVBoxLayout *datasetEditorLayoutBottom = new QVBoxLayout;
+    datasetEditorLayoutBottom->setContentsMargins(0, 0, 0, 0);
+    datasetEditorLayoutBottom->setSpacing(0);
+    datasetEditorLayoutBottom->addWidget(datasetEditorStyledBar1);
+    datasetEditorLayoutBottom->addWidget(datasetEditorFB);
+    datasetEditorWidgetBottom->setLayout(datasetEditorLayoutBottom);
+    datasetEditorWidget->insertWidget(1, datasetEditorWidgetBottom);
 
     connect(closeDatasetAction, &QAction::triggered, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
     connect(datasetEditorCloseButton, &QToolButton::clicked, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
