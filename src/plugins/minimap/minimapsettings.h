@@ -35,8 +35,8 @@ public:
    explicit MinimapSettings(QObject* parent);
    ~MinimapSettings();
 
-   void toMap(const QString& prefix, QVariantMap* map) const;
-   void fromMap(const QString& prefix, const QVariantMap& map);
+   QVariantMap toMap() const;
+   void fromMap(const QVariantMap& map);
 
    static MinimapSettings* instance();
 
@@ -44,6 +44,11 @@ public:
    static int width();
    static int lineCountThreshold();
    static int alpha();
+
+   void setEnabled(bool enabled);
+   void setWidth(int width);
+   void setLineCountThreshold(int lineCountThreshold);
+   void setAlpha(int alpha);
 
 signals:
    void enabledChanged(bool);
@@ -53,11 +58,6 @@ signals:
 
 private:
    friend class MinimapSettingsPage;
-
-   void setEnabled(bool enabled);
-   void setWidth(int width);
-   void setLineCountThreshold(int lineCountThreshold);
-   void setAlpha(int alpha);
 
    bool m_enabled;
    int m_width;
