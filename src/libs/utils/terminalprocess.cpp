@@ -78,10 +78,12 @@ static QString msgCannotWriteTempFile()
     return Tr::tr("Cannot write temporary file. Disk full?");
 }
 
-static QString msgCannotCreateTempDir(const QString & dir, const QString &why)
-{
-    return Tr::tr("Cannot create temporary directory \"%1\": %2").arg(dir, why);
-}
+// OPENMV-DIFF //
+// static QString msgCannotCreateTempDir(const QString & dir, const QString &why)
+// {
+//     return Tr::tr("Cannot create temporary directory \"%1\": %2").arg(dir, why);
+// }
+// OPENMV-DIFF //
 
 static QString msgUnexpectedOutput(const QByteArray &what)
 {
@@ -571,10 +573,12 @@ void TerminalImpl::stubConnectionAvailable()
         connect(d->m_stubSocket, &QLocalSocket::disconnected, this, &TerminalImpl::stubExited);
 }
 
-static QString errorMsg(int code)
-{
-    return QString::fromLocal8Bit(strerror(code));
-}
+// OPENMV-DIFF //
+// static QString errorMsg(int code)
+// {
+//     return QString::fromLocal8Bit(strerror(code));
+// }
+// OPENMV-DIFF //
 
 void TerminalImpl::readStubOutput()
 {

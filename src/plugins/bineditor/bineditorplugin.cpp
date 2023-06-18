@@ -337,11 +337,18 @@ public:
 
         auto l = new QHBoxLayout;
         auto w = new QWidget;
-        l->setContentsMargins(0, 0, 5, 0);
+        // OPENMV-DIFF //
+        // l->setContentsMargins(0, 0, 5, 0);
+        // OPENMV-DIFF //
+        l->setContentsMargins(0, 0, 0, 1);
+        // OPENMV-DIFF //
         l->addStretch(1);
         l->addWidget(m_codecChooser);
         l->addWidget(m_addressEdit);
         w->setLayout(l);
+        // OPENMV-DIFF //
+        m_codecChooser->hide();
+        // OPENMV-DIFF //
 
         m_toolBar = new QToolBar;
         m_toolBar->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);

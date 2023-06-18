@@ -1174,7 +1174,11 @@ QString BinEditorWidget::toolTip(const QHelpEvent *helpEvent) const
     quint64 bigEndianValue, littleEndianValue;
     quint64 bigEndianValueOld, littleEndianValueOld;
     asIntegers(selStart, byteCount, bigEndianValue, littleEndianValue);
-    asIntegers(selStart, byteCount, bigEndianValueOld, littleEndianValueOld, true);
+    // OPENMV-DIFF //
+    // asIntegers(selStart, byteCount, bigEndianValueOld, littleEndianValueOld, true);
+    // OPENMV-DIFF //
+    asIntegers(selStart, byteCount, bigEndianValueOld, littleEndianValueOld);
+    // OPENMV-DIFF //
     QString littleEndianSigned;
     QString bigEndianSigned;
     QString littleEndianSignedOld;
@@ -1303,7 +1307,11 @@ QString BinEditorWidget::toolTip(const QHelpEvent *helpEvent) const
         str << "<br><table>";
         double doubleValue, doubleValueOld;
         asDouble(selStart, doubleValue, false);
-        asDouble(selStart, doubleValueOld, true);
+        // OPENMV-DIFF //
+        // asDouble(selStart, doubleValueOld, true);
+        // OPENMV-DIFF //
+        asDouble(selStart, doubleValueOld, false);
+        // OPENMV-DIFF //
         str << tableRowStartC << Tr::tr("<i>double</i>&nbsp;value:") << numericTableRowSepC
             << doubleValue << tableRowEndC;
         if (doubleValue != doubleValueOld)
@@ -1317,7 +1325,11 @@ QString BinEditorWidget::toolTip(const QHelpEvent *helpEvent) const
         str << "<br><table>";
         float floatValue, floatValueOld;
         asFloat(selStart, floatValue, false);
-        asFloat(selStart, floatValueOld, true);
+        // OPENMV-DIFF //
+        // asFloat(selStart, floatValueOld, true);
+        // OPENMV-DIFF //
+        asFloat(selStart, floatValueOld, false);
+        // OPENMV-DIFF //
         str << tableRowStartC << Tr::tr("<i>float</i>&nbsp;value:") << numericTableRowSepC
             << floatValue << tableRowEndC;
         if (floatValue != floatValueOld)
@@ -1591,6 +1603,9 @@ void BinEditorWidget::contextMenuEvent(QContextMenuEvent *event)
     contextMenu->addAction(addWatchpointAction);
 
     addWatchpointAction->setEnabled(byteCount > 0 && byteCount <= 32);
+    // OPENMV-DIFF //
+    addWatchpointAction->setVisible(false);
+    // OPENMV-DIFF //
 
     quint64 beAddress = 0;
     quint64 leAddress = 0;
@@ -1620,6 +1635,11 @@ void BinEditorWidget::contextMenuEvent(QContextMenuEvent *event)
         contextMenu->addAction(copyBeValue);
         contextMenu->addAction(jumpToBeAddressHereAction);
         contextMenu->addAction(jumpToBeAddressNewWindowAction);
+        // OPENMV-DIFF //
+        copyBeValue->setVisible(false);
+        jumpToBeAddressHereAction->setVisible(false);
+        jumpToBeAddressNewWindowAction->setVisible(false);
+        // OPENMV-DIFF //
     }
 
     QAction *action = contextMenu->exec(event->globalPos());
@@ -1650,12 +1670,20 @@ void BinEditorWidget::contextMenuEvent(QContextMenuEvent *event)
 void BinEditorWidget::setupJumpToMenuAction(QMenu *menu, QAction *actionHere,
                                       QAction *actionNew, quint64 addr)
 {
-    actionHere->setText(Tr::tr("Jump to Address 0x%1 in This Window")
+    // OPENMV-DIFF //
+    // actionHere->setText(Tr::tr("Jump to Address 0x%1 in This Window")
+    //                     .arg(QString::number(addr, 16)));
+    // OPENMV-DIFF //
+    actionHere->setText(Tr::tr("Jump to Address 0x%1")
                         .arg(QString::number(addr, 16)));
+    // OPENMV-DIFF //
     actionNew->setText(Tr::tr("Jump to Address 0x%1 in New Window")
                         .arg(QString::number(addr, 16)));
     menu->addAction(actionHere);
     menu->addAction(actionNew);
+    // OPENMV-DIFF //
+    actionNew->setVisible(false);
+    // OPENMV-DIFF //
     if (!m_canRequestNewWindow)
         actionNew->setEnabled(false);
 }
