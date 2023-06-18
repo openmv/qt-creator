@@ -539,7 +539,7 @@ bool MinimapStyle::drawMinimap(const QStyleOptionComplex* option,
       bool cont(true);
       QRgb* scanLine = reinterpret_cast<QRgb*>(image.scanLine(y));
       QVector<QTextLayout::FormatRange> formats = b.layout()->formats();
-      qSort(formats.begin(), formats.end(),
+      std::sort(formats.begin(), formats.end(),
             [](const QTextLayout::FormatRange& r1,
                const QTextLayout::FormatRange& r2) {
                if (r1.start < r2.start)
