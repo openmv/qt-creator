@@ -2,6 +2,9 @@
 Includes=light.figmatokens, light-palette.inc
 ThemeName=Flat Light
 PreferredStyles=
+;OPENMV-DIFF;
+DefaultTextEditorColorScheme=flat-light.xml
+;OPENMV-DIFF;
 
 [Palette]
 shadowBackground=PaletteDark
