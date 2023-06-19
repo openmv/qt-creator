@@ -330,6 +330,9 @@ public:
         setWidget(widget);
         m_file = new BinEditorDocument(widget);
         m_addressEdit = new QLineEdit;
+        // OPENMV-DIFF //
+        m_addressEdit->setToolTip(Tr::tr("Byte Address"));
+        // OPENMV-DIFF //
         auto addressValidator = new QRegularExpressionValidator(QRegularExpression("[0-9a-fA-F]{1,16}"), m_addressEdit);
         m_addressEdit->setValidator(addressValidator);
         m_codecChooser = new CodecChooser(CodecChooser::Filter::SingleByte);

@@ -115,7 +115,9 @@ Core::IDocument::OpenResult ImageViewerFile::openImpl(QString *errorString,
             return OpenResult::CannotHandle;
         }
         m_type = TypeMovie;
-        m_movie->setCacheMode(QMovie::CacheAll);
+        // OPENMV-DIFF //
+        // m_movie->setCacheMode(QMovie::CacheAll);
+        // OPENMV-DIFF //
         connect(
             m_movie,
             &QMovie::finished,
@@ -125,6 +127,9 @@ Core::IDocument::OpenResult ImageViewerFile::openImpl(QString *errorString,
                     m_movie->start();
             },
             Qt::QueuedConnection);
+        // OPENMV-DIFF //
+        emit imageSizeChanged(m_movie->frameRect().size());
+        // OPENMV-DIFF //
         connect(m_movie, &QMovie::resized, this, &ImageViewerFile::imageSizeChanged);
         m_movie->start();
         m_isPaused = false; // force update

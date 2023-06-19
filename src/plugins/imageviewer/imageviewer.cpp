@@ -174,22 +174,44 @@ void ImageViewer::ctor()
 
     d->labelImageSize = new QLabel;
     d->labelInfo = new QLabel;
+    // OPENMV-DIFF //
+    d->labelImageSize->setToolTip(Tr::tr("Resolution"));
+    d->labelInfo->setToolTip(Tr::tr("Zoom"));
+    // OPENMV-DIFF //
 
     auto bar = new QToolBar;
     bar->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Minimum);
 
-    bar->addWidget(d->shareButton);
+    // OPENMV-DIFF //
+    // bar->addWidget(d->shareButton);
+    // OPENMV-DIFF //
+    d->shareButton->setParent(bar);
+    // OPENMV-DIFF //
     bar->addSeparator();
     bar->addAction(d->actionOriginalSize);
     bar->addAction(d->actionZoomIn);
     bar->addAction(d->actionZoomOut);
-    bar->addAction(d->actionPlayPause);
-    bar->addAction(d->actionPlayPause);
+    // OPENMV-DIFF //
+    bar->addAction(d->actionFitToScreen);
     bar->addSeparator();
+    // OPENMV-DIFF //
+    bar->addAction(d->actionPlayPause);
+    bar->addAction(d->actionPlayPause);
+    // OPENMV-DIFF //
+    // bar->addSeparator();
+    // OPENMV-DIFF //
     bar->addAction(d->actionBackground);
     bar->addAction(d->actionOutline);
-    bar->addAction(d->actionFitToScreen);
+    // OPENMV-DIFF //
+    // bar->addAction(d->actionFitToScreen);
+    // OPENMV-DIFF //
     bar->addAction(setAsDefault);
+    // OPENMV-DIFF //
+    d->shareButton->setVisible(false);
+    d->actionBackground->setVisible(false);
+    d->actionOutline->setVisible(false);
+    setAsDefault->setVisible(false);
+    // OPENMV-DIFF //
 
     auto horizontalLayout = new QHBoxLayout(d->toolbar);
     horizontalLayout->setSpacing(0);
@@ -299,7 +321,11 @@ void ImageViewer::imageSizeUpdated(const QSize &size)
 
 void ImageViewer::scaleFactorUpdate(qreal factor)
 {
-    const QString info = QString::number(factor * 100, 'f', 2) + QLatin1Char('%');
+    // OPENMV-DIFF //
+    // const QString info = QString::number(factor * 100, 'f', 2) + QLatin1Char('%');
+    // OPENMV-DIFF //
+    QString info = QString::number(factor * 100, 'f', 2) + QLatin1Char('%') + QLatin1Char(' ');
+    // OPENMV-DIFF //
     d->labelInfo->setText(info);
 }
 
