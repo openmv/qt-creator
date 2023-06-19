@@ -1,7 +1,11 @@
 [General]
 ThemeName=Flat Dark
 PreferredStyles=
-DefaultTextEditorColorScheme=creator-dark.xml
+;OPENMV-DIFF;
+;DefaultTextEditorColorScheme=creator-dark.xml
+;OPENMV-DIFF;
+DefaultTextEditorColorScheme=flat-dark.xml
+;OPENMV-DIFF;
 
 [Palette]
 shadowBackground=ff404142

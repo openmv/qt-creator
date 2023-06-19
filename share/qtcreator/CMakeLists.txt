@@ -1,4 +1,5 @@
 set(resource_directories
+  #OPENMV-DIFF#
   #android
   #cplusplus
   #glsl
@@ -9,9 +10,10 @@ set(resource_directories
   #qml-type-descriptions
   #schemes
   #snippets
-  styles
+  #styles
   #templates
-  themes
+  #themes
+  #OPENMV-DIFF#
   examples
   firmware
   html
@@ -19,6 +21,7 @@ set(resource_directories
 )
 
 set(resource_files
+  #OPENMV-DIFF#
   #debugger/.pylintrc
   #debugger/boosttypes.py
   #debugger/cdbbridge.py
@@ -39,6 +42,11 @@ set(resource_files
   #debugger/libcpp_stdtypes.py
   #debugger/stdtypes.py
   #debugger/utils.py
+  #OPENMV-DIFF#
+  styles/flat-dark.xml
+  styles/flat-light.xml
+  themes/flat-dark.creatortheme
+  themes/flat-light.creatortheme
 )
 
 if (WIN32)

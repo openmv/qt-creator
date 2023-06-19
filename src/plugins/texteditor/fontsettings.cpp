@@ -520,14 +520,11 @@ FilePath FontSettings::defaultSchemeFileName(const QString &fileName)
         defaultScheme = defaultScheme / fileName;
     } else {
         const QString themeScheme = Utils::creatorTheme()->defaultTextEditorColorScheme();
+
         if (!themeScheme.isEmpty() && (defaultScheme / themeScheme).exists())
             defaultScheme = defaultScheme / themeScheme;
         else
-            // OPENMV-DIFF //
-            // defaultScheme = defaultScheme / "default.xml";
-            // OPENMV-DIFF //
-            defaultScheme = defaultScheme / "inkpot.xml";
-            // OPENMV-DIFF //
+            defaultScheme = defaultScheme / "default.xml";
     }
 
     return defaultScheme;

@@ -1,6 +1,9 @@
 [General]
 ThemeName=Flat Light
 PreferredStyles=
+;OPENMV-DIFF;
+DefaultTextEditorColorScheme=flat-light.xml
+;OPENMV-DIFF;
 
 [Palette]
 shadowBackground=ffe4e4e4
