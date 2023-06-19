@@ -287,7 +287,11 @@ QPixmap IFindFilter::pixmapForFindFlags(FindFlags flags)
     if (width == 0)
         return QPixmap();
     QPixmap pixmap(QSize(width, casesensitiveIcon.height()));
-    pixmap.fill(QColor(0xff, 0xff, 0xff, 0x28)); // Subtile contrast for dark themes
+    // OPENMV-DIFF //
+    // pixmap.fill(QColor(0xff, 0xff, 0xff, 0x28)); // Subtile contrast for dark themes
+    // OPENMV-DIFF //
+    pixmap.fill(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
+    // OPENMV-DIFF //
     const int dpr = int(qApp->devicePixelRatio());
     pixmap.setDevicePixelRatio(dpr);
     QPainter painter(&pixmap);

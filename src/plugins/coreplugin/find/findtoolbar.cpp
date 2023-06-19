@@ -68,6 +68,9 @@ FindToolBar::FindToolBar(CurrentDocumentFind *currentDocumentFind)
     m_findEdit->setObjectName("findEdit");
     m_findEdit->setMinimumWidth(100);
     m_findEdit->setAttribute(Qt::WA_MacShowFocusRect, false);
+    // OPENMV-DIFF //
+    m_findEdit->setButtonToolTip(FancyLineEdit::Left, Tr::tr("Find Flags"));
+    // OPENMV-DIFF //
 
     m_findPreviousButton = new QToolButton;
 

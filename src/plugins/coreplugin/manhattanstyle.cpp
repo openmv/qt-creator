@@ -538,7 +538,9 @@ void ManhattanStyle::drawPrimitive(PrimitiveElement element, const QStyleOption 
     if (!isPanelWidget) {
         const bool tweakDarkTheme =
                 (element == PE_Frame
-                 || element == PE_FrameLineEdit
+                 // OPENMV-DIFF //
+                 // || element == PE_FrameLineEdit
+                 // OPENMV-DIFF //
                  || element == PE_FrameGroupBox
                  || element == PE_IndicatorRadioButton
                  || element == PE_IndicatorCheckBox
