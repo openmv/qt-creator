@@ -152,6 +152,14 @@ public:
         //! Text style for attributes that do not match any of the other default
         //! styles.
         Others
+        // OPENMV-DIFF //
+        , OpenMVModules
+        , OpenMVClasses
+        , OpenMVDatas
+        , OpenMVFunctions
+        , OpenMVMethods
+        , OpenMVArguments
+        // OPENMV-DIFF //
     };
     Q_ENUM(TextStyle)
 

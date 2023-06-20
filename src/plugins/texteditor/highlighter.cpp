@@ -84,6 +84,14 @@ TextStyle categoryForTextStyle(int style)
     case KSyntaxHighlighting::Theme::Alert: return C_ERROR;
     case KSyntaxHighlighting::Theme::Error: return C_ERROR;
     case KSyntaxHighlighting::Theme::Others: return C_TEXT;
+    // OPENMV-DIFF //
+    case KSyntaxHighlighting::Theme::OpenMVModules: return C_KEYWORD;
+    case KSyntaxHighlighting::Theme::OpenMVClasses: return C_FUNCTION;
+    case KSyntaxHighlighting::Theme::OpenMVDatas: return C_FUNCTION;
+    case KSyntaxHighlighting::Theme::OpenMVFunctions: return C_FUNCTION;
+    case KSyntaxHighlighting::Theme::OpenMVMethods: return C_FUNCTION;
+    case KSyntaxHighlighting::Theme::OpenMVArguments: return C_LABEL;
+    // OPENMV-DIFF //
     }
     return C_TEXT;
 }
@@ -109,7 +117,12 @@ Highlighter::Definitions Highlighter::definitionsForDocument(const TextDocument 
     // If we check the MIME type first and then skip the pattern, the definition for "*.rb.xml" is
     // never considered.
     // The KSyntaxHighlighting CLI also completely ignores MIME types.
-    const FilePath &filePath = document->filePath();
+    // OPENMV-DIFF //
+    // const FilePath &filePath = document->filePath();
+    // OPENMV-DIFF //
+    FilePath filePath = document->filePath();
+    if (filePath.isEmpty()) filePath = FilePath::fromString(document->displayName());
+    // OPENMV-DIFF //
     Definitions definitions = definitionsForFileName(filePath);
     if (definitions.isEmpty()) {
         // check for *.in filename since those are usually used for

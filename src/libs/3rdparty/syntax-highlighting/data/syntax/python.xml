@@ -494,8 +494,8 @@
 				<DetectSpaces attribute="Normal Text"/>
 
                                 <!--OPENMV-DIFF-->
-                                <string attribute="Import" String="import" context="ImportHighlight"/>
-                                <string attribute="Import" String="from" context="FromHighlight"/>
+                                <StringDetect attribute="Import" String="import" context="ImportHighlight"/>
+                                <StringDetect attribute="Import" String="from" context="FromHighlight"/>
                                 <RegExpr attribute="Definition Keyword" String="(class|def)\s+" context="ClassDefHighlight"/>
                                 <!--OPENMV-DIFF-->
 				<keyword attribute="Import" String="import" context="#stay"/>

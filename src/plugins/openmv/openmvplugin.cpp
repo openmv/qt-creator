@@ -527,7 +527,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     if(id.isValid())
     {
-        if(id.d)
+        if(id.d && id.d->load())
         {
             KSyntaxHighlighting::KeywordList *modulesList = id.d->keywordList(QStringLiteral("listOpenMVModules"));
             KSyntaxHighlighting::KeywordList *classesList = id.d->keywordList(QStringLiteral("listOpenMVClasses"));
@@ -538,50 +538,74 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
             if(modulesList)
             {
+                QStringList list;
+
                 foreach(const documentation_t &d, m_modules)
                 {
-                    modulesList->addKeyword(d.name);
+                    list.append(d.name);
                 }
+
+                modulesList->setKeywordList(list);
             }
 
             if(classesList)
             {
+                QStringList list;
+
                 foreach(const documentation_t &d, m_classes)
                 {
-                    classesList->addKeyword(d.name);
+                    list.append(d.name);
                 }
+
+                classesList->setKeywordList(list);
             }
 
             if(datasList)
             {
+                QStringList list;
+
                 foreach(const documentation_t &d, m_datas)
                 {
-                    datasList->addKeyword(d.name);
+                    list.append(d.name);
                 }
+
+                datasList->setKeywordList(list);
             }
 
             if(functionsList)
             {
+                QStringList list;
+
                 foreach(const documentation_t &d, m_functions)
                 {
-                    functionsList->addKeyword(d.name);
+                    list.append(d.name);
                 }
+
+                functionsList->setKeywordList(list);
             }
 
             if(methodsList)
             {
+                QStringList list;
+
                 foreach(const documentation_t &d, m_methods)
                 {
-                    methodsList->addKeyword(d.name);
+                    list.append(d.name);
                 }
+
+                methodsList->setKeywordList(list);
             }
 
             if(argumentsList)
             {
+                QStringList list;
+
                 foreach(const QString &d, m_arguments.values())
                 {
-                    argumentsList->addKeyword(d);
+                    list.append(d);
                 }
+
+                argumentsList->setKeywordList(list);
             }
         }
     }
