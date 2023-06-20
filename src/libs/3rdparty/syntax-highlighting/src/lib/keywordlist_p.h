@@ -79,13 +79,6 @@ public:
     void initLookupForCaseSensitivity(Qt::CaseSensitivity caseSensitive);
     void resolveIncludeKeywords(DefinitionData &def);
 
-    // OPENMV-DIFF //
-    void addKeyword(const QString &keyword)
-    {
-        m_keywords.append(keyword);
-    }
-    // OPENMV-DIFF //
-
 private:
     /**
      * name of keyword list as in XML
