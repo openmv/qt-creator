@@ -172,7 +172,11 @@ int SearchResultTreeItemDelegate::drawLineNumber(QPainter *painter, const QStyle
 
     painter->fillRect(lineNumberAreaRect, QBrush(isSelected ?
         option.palette.brush(cg, QPalette::Highlight) :
-        option.palette.color(cg, QPalette::Base).darker(111)));
+        // OPENMV-DIFF //
+        // option.palette.color(cg, QPalette::Base).darker(111)));
+        // OPENMV-DIFF //
+        option.palette.color(cg, QPalette::Base)));
+        // OPENMV-DIFF //
 
     QStyleOptionViewItem opt = option;
     opt.displayAlignment = Qt::AlignRight | Qt::AlignVCenter;

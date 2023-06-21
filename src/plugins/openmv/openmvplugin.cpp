@@ -2329,6 +2329,16 @@ void OpenMVPlugin::extensionsInitialized()
 
     Core::IEditor *editor = Core::EditorManager::currentEditor();
 
+    if(!editor)
+    {
+        QList<Core::IEditor *> editors = Core::EditorManager::visibleEditors();
+
+        if(!editors.isEmpty())
+        {
+            editor = editors.first();
+        }
+    }
+
     if(editor ? (editor->document() ? editor->document()->contents().isEmpty() : true) : true)
     {
         QString filePath = Core::ICore::userResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toString();
