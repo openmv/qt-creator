@@ -85,8 +85,8 @@ TextStyle categoryForTextStyle(int style)
     case KSyntaxHighlighting::Theme::Error: return C_ERROR;
     case KSyntaxHighlighting::Theme::Others: return C_TEXT;
     // OPENMV-DIFF //
-    case KSyntaxHighlighting::Theme::OpenMVModules: return C_KEYWORD;
-    case KSyntaxHighlighting::Theme::OpenMVClasses: return C_FUNCTION;
+    case KSyntaxHighlighting::Theme::OpenMVModules: return C_TYPE;
+    case KSyntaxHighlighting::Theme::OpenMVClasses: return C_TYPE;
     case KSyntaxHighlighting::Theme::OpenMVDatas: return C_FUNCTION;
     case KSyntaxHighlighting::Theme::OpenMVFunctions: return C_FUNCTION;
     case KSyntaxHighlighting::Theme::OpenMVMethods: return C_FUNCTION;
