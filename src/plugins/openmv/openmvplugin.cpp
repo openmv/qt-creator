@@ -538,7 +538,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
             if(modulesList)
             {
-                QStringList list;
+                QStringList list = modulesList->keywords();
+                list.removeAll(QStringLiteral("OpenMVVModulesPlaceHolderKeyword"));
 
                 foreach(const documentation_t &d, m_modules)
                 {
@@ -550,7 +551,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
             if(classesList)
             {
-                QStringList list;
+                QStringList list = classesList->keywords();
+                list.removeAll(QStringLiteral("OpenMVClassesPlaceHolderKeyword"));
 
                 foreach(const documentation_t &d, m_classes)
                 {
@@ -562,7 +564,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
             if(datasList)
             {
-                QStringList list;
+                QStringList list = datasList->keywords();
+                list.removeAll(QStringLiteral("OpenMVDatasPlaceHolderKeyword"));
 
                 foreach(const documentation_t &d, m_datas)
                 {
@@ -574,7 +577,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
             if(functionsList)
             {
-                QStringList list;
+                QStringList list = functionsList->keywords();
+                list.removeAll(QStringLiteral("OpenMVFunctionsPlaceHolderKeyword"));
 
                 foreach(const documentation_t &d, m_functions)
                 {
@@ -586,7 +590,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
             if(methodsList)
             {
-                QStringList list;
+                QStringList list = methodsList->keywords();
+                list.removeAll(QStringLiteral("OpenMVMethodsPlaceHolderKeyword"));
 
                 foreach(const documentation_t &d, m_methods)
                 {
@@ -598,7 +603,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
             if(argumentsList)
             {
-                QStringList list;
+                QStringList list = argumentsList->keywords();
+                list.removeAll(QStringLiteral("OpenMVArgumentsPlaceHolderKeyword"));
 
                 foreach(const QString &d, m_arguments.values())
                 {

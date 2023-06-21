@@ -18,7 +18,7 @@
   <style name="Label" foreground="#e76000"/>
   <style name="LineNumber" foreground="#8b8bcd" background="#2E2F30"/>
   <style name="Link" foreground="#409090"/>
-  <style name="Local"/>
+  <style name="Local" foreground="#808bed"/>
   <style name="Parameter"/>
   <style name="Number" foreground="#f0ad6d"/>
   <style name="Occurrences" foreground="#000000" background="#616161"/>
@@ -36,12 +36,12 @@
   <style name="SearchResultAlt1" foreground="#000000" background="#6464ff"/>
   <style name="SearchResultAlt2" foreground="#000000" background="#ff6464"/>
   <style name="SearchResultContainingFunction" foreground="#cfbfad" background="#1e1e27"/>
-  <style name="SearchScope" foreground="#000000" background="#f8fafc"/>
+  <style name="SearchScope" foreground="#f8fafc" background="#2E2F30"/>
   <style name="Selection" foreground="#ffffff" background="#4e4e8f"/>
   <style name="Static" foreground="#cb6ecb"/>
   <style name="String" foreground="#ffcd8b" background="#404040"/>
   <style name="Text" foreground="#cfbfad" background="#2E2F30"/>
-  <style name="Type" foreground="#ff8bff"/>
+  <style name="Type" foreground="#808bed"/>
   <style name="VirtualMethod" italic="true"/>
   <style name="VisualWhitespace" foreground="#3d3d50"/>
   <style name="QmlTypeId" foreground="#ff8bff"/>

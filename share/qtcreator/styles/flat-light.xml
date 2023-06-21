@@ -17,12 +17,12 @@
   <style name="Number" foreground="#000080"/>
   <style name="String" foreground="#008000"/>
   <style name="Type" foreground="#800080"/>
-  <style name="Local"/>
+  <style name="Local" foreground="#808000"/>
   <style name="Global"/>
   <style name="Field" foreground="#800000"/>
   <style name="Static" foreground="#800080"/>
   <style name="VirtualMethod" foreground="#000000" background="#ffffff" italic="true"/>
-  <style name="Function" background="#ffffff"/>
+  <style name="Function" foreground="#00677C" background="#ffffff"/>
   <style name="Macro" background="#ffffff"/>
   <style name="Keyword" foreground="#808000"/>
   <style name="PrimitiveType" foreground="#808000"/>
