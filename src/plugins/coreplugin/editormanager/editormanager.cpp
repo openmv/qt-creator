@@ -2987,6 +2987,10 @@ void EditorManager::addNativeDirAndOpenWithActions(QMenu *contextMenu, DocumentM
     // if (enabled)
     //     populateOpenWithMenu(openWith, entry->filePath());
     // OPENMV-DIFF //
+    d->m_showInFileSystemViewContextAction->setVisible(false);
+    d->m_openTerminalAction->setVisible(false);
+    d->m_filePropertiesAction->setVisible(false);
+    // OPENMV-DIFF //
 }
 
 /*!

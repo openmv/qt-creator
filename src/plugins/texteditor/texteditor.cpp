@@ -8093,6 +8093,9 @@ void TextEditorWidget::appendStandardContextMenuActions(QMenu *menu)
             a->setVisible(true);
             a->setText(doc->format().hasUtf8Bom ? Tr::tr("Delete UTF-8 BOM on Save")
                                                 : Tr::tr("Add UTF-8 BOM on Save"));
+            // OPENMV-DIFF //
+            a->setVisible(false);
+            // OPENMV-DIFF //
         } else {
             a->setVisible(false);
         }
