@@ -56,7 +56,13 @@ public:
                               const QString &settingsSubKey,
                               QDialogButtonBox::StandardButtons buttons = QDialogButtonBox::Yes|QDialogButtonBox::No,
                               QDialogButtonBox::StandardButton defaultButton = QDialogButtonBox::No,
-                              QDialogButtonBox::StandardButton acceptButton = QDialogButtonBox::Yes);
+                              // OPENMV-DIFF //
+                              // QDialogButtonBox::StandardButton acceptButton = QDialogButtonBox::Yes);
+                              // OPENMV-DIFF //
+                              QDialogButtonBox::StandardButton acceptButton = QDialogButtonBox::Yes,
+                              QDialogButtonBox::StandardButton acceptButton2 = QDialogButtonBox::NoButton);
+                              // OPENMV-DIFF //
+
 
     static QDialogButtonBox::StandardButton
         doNotShowAgainInformation(QWidget *parent,

@@ -381,7 +381,12 @@ CheckableMessageBox::doNotAskAgainQuestion(QWidget *parent, const QString &title
                                            const QString &settingsSubKey,
                                            QDialogButtonBox::StandardButtons buttons,
                                            QDialogButtonBox::StandardButton defaultButton,
-                                           QDialogButtonBox::StandardButton acceptButton)
+                                           // OPENMV-DIFF //
+                                           // QDialogButtonBox::StandardButton acceptButton)
+                                           // OPENMV-DIFF //
+                                           QDialogButtonBox::StandardButton acceptButton,
+                                           QDialogButtonBox::StandardButton acceptButton2)
+                                           // OPENMV-DIFF //
 
 {
     if (!shouldAskAgain(settings, settingsSubKey))
@@ -390,7 +395,11 @@ CheckableMessageBox::doNotAskAgainQuestion(QWidget *parent, const QString &title
     CheckableMessageBox messageBox(parent);
     initDoNotAskAgainMessageBox(messageBox, title, text, buttons, defaultButton, Question);
     messageBox.exec();
-    if (messageBox.isChecked() && (messageBox.clickedStandardButton() == acceptButton))
+    // OPENMV-DIFF //
+    // if (messageBox.isChecked() && (messageBox.clickedStandardButton() == acceptButton))
+    // OPENMV-DIFF //
+    if (messageBox.isChecked() && ((messageBox.clickedStandardButton() == acceptButton) || (messageBox.clickedStandardButton() == acceptButton2)))
+    // OPENMV-DIFF //
         doNotAskAgain(settings, settingsSubKey);
 
     return messageBox.clickedStandardButton();

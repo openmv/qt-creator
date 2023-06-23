@@ -1670,7 +1670,19 @@ void MainWindow::restoreWindowState()
     // OPENMV-DIFF //
     StatusBarManager::restoreSettings();
     // OPENMV-DIFF //
-    EditorManager::activateEditor(EditorManager::currentEditor());
+    Core::IEditor *editor = Core::EditorManager::currentEditor();
+
+    if(!editor)
+    {
+        QList<Core::IEditor *> editors = Core::EditorManager::visibleEditors();
+
+        if(!editors.isEmpty())
+        {
+            editor = editors.first();
+        }
+    }
+
+    EditorManager::activateEditor(editor);
     // OPENMV-DIFF //
 }
 

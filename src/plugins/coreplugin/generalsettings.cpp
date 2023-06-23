@@ -86,11 +86,15 @@ GeneralSettingsWidget::GeneralSettingsWidget(GeneralSettings *q)
     m_colorButton->setMinimumSize(QSize(64, 0));
     m_colorButton->setProperty("alphaAllowed", QVariant(false));
 
-    m_resetWarningsButton->setText(Tr::tr("Reset Warnings", "Button text"));
-    m_resetWarningsButton->setToolTip(
-        Tr::tr("Re-enable warnings that were suppressed by selecting \"Do Not "
-           "Show Again\" (for example, missing highlighter).",
-           nullptr));
+    // OPENMV-DIFF //
+    // m_resetWarningsButton->setText(Tr::tr("Reset Warnings", "Button text"));
+    // m_resetWarningsButton->setToolTip(
+    //     Tr::tr("Re-enable warnings that were suppressed by selecting \"Do Not "
+    //        "Show Again\" (for example, missing highlighter).",
+    //        nullptr));
+    // OPENMV-DIFF //
+    m_resetWarningsButton->setText(Tr::tr("Reset Do Not Ask/Show Again Dialogs"));
+    // OPENMV-DIFF //
 
     auto resetColorButton = new QPushButton(Tr::tr("Reset"));
     resetColorButton->setToolTip(Tr::tr("Reset to default.", "Color"));
@@ -117,7 +121,9 @@ GeneralSettingsWidget::GeneralSettingsWidget(GeneralSettings *q)
 
     // OPENMV-DIFF //
     // form.addRow({empty, m_showShortcutsInContextMenus});
-    // form.addRow(Row{m_resetWarningsButton, st});
+    // OPENMV-DIFF //
+    form.addRow(Row{m_resetWarningsButton, st});
+    // OPENMV-DIFF //
     // form.addRow({Tr::tr("Text codec for tools:"), m_codecBox, st});
     // OPENMV-DIFF //
     Column{Group{title(Tr::tr("User Interface")), form}}.attachTo(this);
@@ -149,8 +155,6 @@ GeneralSettingsWidget::GeneralSettingsWidget(GeneralSettings *q)
     resetColorButton->hide();
     m_showShortcutsInContextMenus->setParent(this);
     m_showShortcutsInContextMenus->hide();
-    m_resetWarningsButton->setParent(this);
-    m_resetWarningsButton->hide();
     m_codecBox->setParent(this);
     m_codecBox->hide();
     // OPENMV-DIFF //

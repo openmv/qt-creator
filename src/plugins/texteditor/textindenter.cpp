@@ -6,6 +6,10 @@
 #include <QTextDocument>
 #include <QTextCursor>
 
+// OPENMV-DIFF //
+#include <QStack>
+// OPENMV-DIFF //
+
 using namespace TextEditor;
 
 TextIndenter::TextIndenter(QTextDocument *doc)
@@ -49,8 +53,74 @@ int TextIndenter::indentFor(const QTextBlock &block,
     // if (previousText.isEmpty() || previousText.trimmed().isEmpty())
     //     return 0;
     // OPENMV-DIFF //
-    if (previousText.isEmpty() || (block.text().isEmpty()) || (block.text().trimmed().isEmpty()))
-            return 0;
+    if(!previousText.isEmpty())
+    {
+        enum
+        {
+            IN_PUSH_0, // (
+            IN_PUSH_1, // [
+            IN_PUSH_2, // {
+            IN_COLON
+        };
+
+        QStack<QPair<int, int> > in_stack;
+
+        enum
+        {
+            IN_NONE,
+            IN_COMMENT,
+            IN_STRING_0,
+            IN_STRING_1
+        }
+        in_state = IN_NONE;
+
+        for(int i = 0; i < previousText.size(); i++)
+        {
+            switch(in_state)
+            {
+                case IN_NONE:
+                {
+                    if((previousText.at(i) == QLatin1Char('#')) && ((!i) || (previousText.at(i-1) != QLatin1Char('\\')))) in_state = IN_COMMENT;
+                    if((previousText.at(i) == QLatin1Char('\'')) && ((!i) || (previousText.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_0;
+                    if((previousText.at(i) == QLatin1Char('\"')) && ((!i) || (previousText.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_1;
+                    if(previousText.at(i) == QLatin1Char('(')) in_stack.push(QPair<int, int>(IN_PUSH_0, i));
+                    if(previousText.at(i) == QLatin1Char('[')) in_stack.push(QPair<int, int>(IN_PUSH_1, i));
+                    if(previousText.at(i) == QLatin1Char('{')) in_stack.push(QPair<int, int>(IN_PUSH_2, i));
+                    if(previousText.at(i) == QLatin1Char(')')) while(in_stack.size() && (in_stack.pop().first != IN_PUSH_0));
+                    if(previousText.at(i) == QLatin1Char(']')) while(in_stack.size() && (in_stack.pop().first != IN_PUSH_1));
+                    if(previousText.at(i) == QLatin1Char('}')) while(in_stack.size() && (in_stack.pop().first != IN_PUSH_2));
+                    if(previousText.at(i) == QLatin1Char(':')) in_stack.push(QPair<int, int>(IN_COLON, i));
+                    break;
+                }
+                case IN_COMMENT:
+                {
+                    if((previousText.at(i) == QLatin1Char('\n')) && (previousText.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                    break;
+                }
+                case IN_STRING_0:
+                {
+                    if((previousText.at(i) == QLatin1Char('\'')) && (previousText.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                    break;
+                }
+                case IN_STRING_1:
+                {
+                    if((previousText.at(i) == QLatin1Char('\"')) && (previousText.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                    break;
+                }
+            }
+        }
+
+        if((in_state != IN_NONE) && (in_state != IN_COMMENT)) return tabSettings.indentationColumn(previousText);
+
+        if(in_stack.size() == 1)
+        {
+            if(in_stack.top().first == IN_COLON) return tabSettings.indentationColumn(previousText) + tabSettings.m_tabSize;
+
+            if((in_stack.top().first == IN_PUSH_0)
+            || (in_stack.top().first == IN_PUSH_1)
+            || (in_stack.top().first == IN_PUSH_2)) return tabSettings.columnAt(previousText, in_stack.top().second + 1);
+        }
+    }
     // OPENMV-DIFF //
 
     return tabSettings.indentationColumn(previousText);

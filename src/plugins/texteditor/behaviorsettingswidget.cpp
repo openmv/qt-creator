@@ -68,7 +68,9 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
     resize(801, 693);
 
     d->tabPreferencesWidget = new SimpleCodeStylePreferencesWidget(this);
-    d->tabPreferencesWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed); // FIXME: Desirable?
+    // OPENMV-DIFF //
+    // d->tabPreferencesWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed); // FIXME: Desirable?
+    // OPENMV-DIFF //
 
     d->tabKeyBehavior = new QComboBox;
     d->tabKeyBehavior->addItem(Tr::tr("Never"));
@@ -97,16 +99,25 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
     d->autoIndent = new QCheckBox(Tr::tr("Enable automatic &indentation"));
 
     d->preferSingleLineComments = new QCheckBox(Tr::tr("Prefer single line comments"));
+    // OPENMV-DIFF //
+    d->preferSingleLineComments->hide();
+    // OPENMV-DIFF //
 
     d->skipTrailingWhitespace = new QCheckBox(Tr::tr("Skip clean whitespace for file types:"));
     d->skipTrailingWhitespace->setToolTip(Tr::tr("For the file patterns listed, do not trim trailing whitespace."));
     d->skipTrailingWhitespace->setEnabled(false);
     d->skipTrailingWhitespace->setChecked(false);
+    // OPENMV-DIFF //
+    d->skipTrailingWhitespace->hide();
+    // OPENMV-DIFF //
 
     d->ignoreFileTypes = new QLineEdit;
     d->ignoreFileTypes->setEnabled(false);
     d->ignoreFileTypes->setAcceptDrops(false);
     d->ignoreFileTypes->setToolTip(Tr::tr("List of wildcard-aware file patterns, separated by commas or semicolons."));
+    // OPENMV-DIFF //
+    d->ignoreFileTypes->hide();
+    // OPENMV-DIFF //
 
     d->addFinalNewLine = new QCheckBox(Tr::tr("&Ensure newline at end of file"));
     d->addFinalNewLine->setToolTip(Tr::tr("Always writes a newline character at the end of the file."));
@@ -208,8 +219,12 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
     }.attachTo(d->groupBoxMouse);
 
     Row {
-        Column { d->tabPreferencesWidget, d->groupBoxTyping, st },
-        Column { d->groupBoxStorageSettings, d->groupBoxEncodings, d->groupBoxMouse, st }
+        // OPENMV-DIFF //
+        // Column { d->tabPreferencesWidget, d->groupBoxTyping, st },
+        // Column { d->groupBoxStorageSettings, d->groupBoxEncodings, d->groupBoxMouse, st }
+        // OPENMV-DIFF //
+        Column { d->tabPreferencesWidget, d->groupBoxTyping, d->groupBoxStorageSettings, st },
+        // OPENMV-DIFF //
     }.attachTo(this, WithoutMargins);
 
     connect(d->cleanWhitespace, &QCheckBox::toggled,
@@ -255,14 +270,11 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
     connect(d->smartSelectionChanging, &QAbstractButton::clicked,
             this, &BehaviorSettingsWidget::slotBehaviorSettingsChanged);
     // OPENMV-DIFF //
-    d->autoIndent->hide();
     d->tabKeyBehavior->hide();
+    d->groupBoxMouse->hide();
+    d->groupBoxMouse->setParent(this);
     d->groupBoxEncodings->hide();
-    d->mouseHiding->hide();
-    d->mouseNavigation->hide();
-    d->scrollWheelZooming->hide();
-    d->camelCaseNavigation->hide();
-    d->smartSelectionChanging->hide();
+    d->groupBoxEncodings->setParent(this);
     // OPENMV-DIFF //
 
     d->mouseHiding->setVisible(!Utils::HostOsInfo::isMacHost());

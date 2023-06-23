@@ -33,6 +33,7 @@
 #include <extensionsystem/pluginmanager.h>
 #include <extensionsystem/pluginspec.h>
 #include <utils/appmainwindow.h>
+#include <utils/checkablemessagebox.h>
 #include <utils/elidinglabel.h>
 #include <utils/environment.h>
 #include <utils/hostosinfo.h>
@@ -450,7 +451,6 @@ private:
     QRegularExpression m_dictionaryRegEx;
 
     void processDocumentationMatch(const QRegularExpressionMatch &match, QStringList &providerVariables, QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs);
-
     void parseImports(const QString &fileText, const QString &moduleFolder, const QStringList &builtInModules, importDataList_t &targetModules, QStringList &errorModules);
     bool importHelper(const QByteArray &text);
 };

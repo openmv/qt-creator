@@ -83,6 +83,9 @@ TabSettingsWidget::TabSettingsWidget(QWidget *parent) :
     m_continuationAlignBehavior->addItem(Tr::tr("With Spaces"));
     m_continuationAlignBehavior->addItem(Tr::tr("With Regular Indent"));
     m_continuationAlignBehavior->setToolTip(continuationTooltip());
+    // OPENMV-DIFF //
+    m_continuationAlignBehavior->hide();
+    // OPENMV-DIFF //
 
     // OPENMV-DIFF //
     auto serialTerminalTabSizeLabel = new QLabel(Tr::tr("Serial Terminal Tab size:"));
@@ -105,7 +108,9 @@ TabSettingsWidget::TabSettingsWidget(QWidget *parent) :
         Tr::tr("Tab policy:"),
         indent(m_tabPolicy),
         Row { tabSizeLabel, m_tabSize, indentSizeLabel, m_indentSize, st },
-        Tr::tr("Align continuation lines:"),
+        // OPENMV-DIFF //
+        // Tr::tr("Align continuation lines:"),
+        // OPENMV-DIFF //
         indent(m_continuationAlignBehavior)
         // OPENMV-DIFF //
         , Row { serialTerminalTabSizeLabel, m_serialTerminalTabSize, st }

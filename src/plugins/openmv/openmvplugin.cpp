@@ -2574,52 +2574,22 @@ bool OpenMVPlugin::delayedInitialize()
         : false)
     {
         QTimer::singleShot(2000, this, [this] {
-            QSettings *settings = ExtensionSystem::PluginManager::settings();
-            settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
-
-            if(!settings->value(QStringLiteral(DONT_SHOW_LED_STATES_AGAIN), false).toBool())
-            {
-                QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                dialog->setWindowTitle(tr("OpenMV Cam LED Colors"));
-                QVBoxLayout *v_layout = new QVBoxLayout(dialog);
-
-                QLabel *label = new QLabel(tr("Thanks for using the OpenMV Cam and OpenMV IDE!\n\n"
-                                              "Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:\n\n"
-                                              "Blinking Green:\n\nYour OpenMV Cam's onboard bootloader is running. "
-                                              "The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.\n\n"
-                                              "Blinking Blue:\n\nYour OpenMV Cam is running the default main.py script onboard.\n\n"
-                                              "If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.\n\n"
-                                              "If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam "
-                                              "please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.\n\n"
-                                              "Blinking White:\n\nYour OpenMV Cam's firmware is panicking because of a hardware failure. "
-                                              "Please check that your OpenMV Cam's camera module is installed securely.\n\n"));
-                label->setWordWrap(true);
-                v_layout->addWidget(label);
-
-                QWidget *widget = new QWidget();
-                QHBoxLayout *h_layout = new QHBoxLayout(widget);
-                h_layout->setContentsMargins(0, 0, 0, 0);
-
-                QCheckBox *checkBox = new QCheckBox(tr("Don't show this message again."));
-                h_layout->addWidget(checkBox);
-
-                QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok);
-                connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-                connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
-                h_layout->addWidget(box);
-
-                v_layout->addSpacing(10);
-                v_layout->addWidget(widget);
-
-                dialog->exec();
-                settings->setValue(QStringLiteral(DONT_SHOW_LED_STATES_AGAIN), checkBox->isChecked());
-
-                delete dialog;
-            }
-
-            settings->endGroup();
+            Utils::CheckableMessageBox::doNotShowAgainInformation(Core::ICore::dialogParent(),
+                    tr("OpenMV Cam LED Colors"),
+                    tr("Thanks for using the OpenMV Cam and OpenMV IDE!\n\n"
+                       "Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:\n\n"
+                       "Blinking Green:\n\nYour OpenMV Cam's onboard bootloader is running. "
+                       "The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.\n\n"
+                       "Blinking Blue:\n\nYour OpenMV Cam is running the default main.py script onboard.\n\n"
+                       "If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.\n\n"
+                       "If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam "
+                       "please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.\n\n"
+                       "Blinking White:\n\nYour OpenMV Cam's firmware is panicking because of a hardware failure. "
+                       "Please check that your OpenMV Cam's camera module is installed securely.\n\n"),
+                    ExtensionSystem::PluginManager::settings(),
+                    QStringLiteral(DONT_SHOW_LED_STATES_AGAIN),
+                    QDialogButtonBox::Ok,
+                    QDialogButtonBox::Ok);
         });
     }
 

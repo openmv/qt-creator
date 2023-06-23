@@ -8799,7 +8799,11 @@ public:
     bool m_duplicatedSupported = true;
     bool m_codeFoldingSupported = false;
     bool m_paranthesesMatchinEnabled = false;
-    bool m_marksVisible = true;
+    // OPENMV-DIFF //
+    // bool m_marksVisible = true;
+    // OPENMV-DIFF //
+    bool m_marksVisible = false;
+    // OPENMV-DIFF //
 };
 
 } /// namespace Internal
