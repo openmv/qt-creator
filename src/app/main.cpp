@@ -507,6 +507,8 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
         if(msg.compare(QLatin1String("JIT is disabled for QML. Property bindings and animations will be "
                                      "very slow. Visit https://wiki.qt.io/V4 to learn about possible "
                                      "solutions for your platform.")) == 0) break;
+        if(msg.startsWith(QLatin1String("DirectWrite: CreateFontFaceFromHDC() failed (Indicates an error "
+                                        "in an input file such as a font file.)"))) break;
         fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
         break;
     case QtCriticalMsg:
