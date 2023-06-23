@@ -752,9 +752,16 @@ void PluginManager::formatPluginOptions(QTextStream &str, int optionIndentation,
     for (PluginSpec *ps : std::as_const(d->pluginSpecs)) {
         const PluginSpec::PluginArgumentDescriptions pargs = ps->argumentDescriptions();
         if (!pargs.empty()) {
-            str << "\nPlugin: " <<  ps->name() << '\n';
+            // OPENMV-DIFF //
+            // str << "\nPlugin: " <<  ps->name() << '\n';
+            // OPENMV-DIFF //
             for (const PluginArgumentDescription &pad : pargs)
-                formatOption(str, pad.name, pad.parameter, pad.description, optionIndentation, descriptionIndentation);
+                // OPENMV-DIFF //
+                // formatOption(str, pad.name, pad.parameter, pad.description, optionIndentation, descriptionIndentation);
+                // OPENMV-DIFF //
+                if (ps->name() != QStringLiteral("Core") || ((pad.name != QStringLiteral("-color")) && (pad.name != QStringLiteral("-theme"))))
+                    formatOption(str, pad.name, pad.parameter, pad.description, optionIndentation, descriptionIndentation);
+                // OPENMV-DIFF //
         }
     }
 }

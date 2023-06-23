@@ -117,9 +117,7 @@ CoreArguments parseArguments(const QStringList &arguments)
             i++; // skip the argument
         }
         if (arguments.at(i) == QLatin1String("-presentationMode"))
-            // OPENMV-DIFF //
-            // args.presentationMode = true;
-            // OPENMV-DIFF //
+            args.presentationMode = true;
         if (arguments.at(i) == QLatin1String("-theme")) {
             // OPENMV-DIFF //
             // args.themeId = Id::fromString(arguments.at(i + 1));
