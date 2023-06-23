@@ -162,7 +162,7 @@ void OpenMVPlugin::packageUpdate()
                             delete dialog;
                         });
 
-                        QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("http://upload.openmv.io/openmv-ide-resources-%1.%2.%3/openmv-ide-resources-%1.%2.%3.zip").arg(new_major).arg(new_minor).arg(new_patch)));
+                        QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/openmv-ide-resources-%1.%2.%3/openmv-ide-resources-%1.%2.%3.zip").arg(new_major).arg(new_minor).arg(new_patch)));
                         QNetworkReply *reply2 = manager2->get(request2);
 
                         if(reply2)
@@ -190,7 +190,7 @@ void OpenMVPlugin::packageUpdate()
         connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
     });
 
-    QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("http://upload.openmv.io/openmv-ide-resources-version-v2.txt")));
+    QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/openmv-ide-resources-version-v2.txt")));
     QNetworkReply *reply = manager->get(request);
 
     if(reply)
@@ -395,7 +395,7 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
         delete dialog;
     });
 
-    QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("http://github.com/openmv/openmv/releases/tag/development")));
+    QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv/releases/tag/development")));
     QNetworkReply *reply2 = manager2->get(request2);
 
     if(reply2)
@@ -511,7 +511,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
         delete dialog;
     });
 
-    QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("http://github.com/openmv/openmv/releases/download/development/firmware_%1.zip").arg(arch)));
+    QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv/releases/download/development/firmware_%1.zip").arg(arch)));
     QNetworkReply *reply2 = manager2->get(request2);
 
     if(reply2)
@@ -3078,7 +3078,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
                         });
 
-                        QNetworkRequest request = QNetworkRequest(QUrl(QString(QStringLiteral("http://upload.openmv.io/openmv-swd-ids-check.php?board=%L1&id=%L2")).arg(board).arg(id)));
+                        QNetworkRequest request = QNetworkRequest(QUrl(QString(QStringLiteral("https://upload.openmv.io/openmv-swd-ids-check.php?board=%L1&id=%L2")).arg(board).arg(id)));
                         QNetworkReply *reply = manager->get(request);
 
                         if(reply)
