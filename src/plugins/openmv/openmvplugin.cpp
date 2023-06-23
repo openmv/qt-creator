@@ -1655,7 +1655,9 @@ void OpenMVPlugin::extensionsInitialized()
         "<p>OpenMV IDE English translation by Kwabena W. Agyeman.</p>") + tr(
         "<p><b>Partners</b></p>") +
         QStringLiteral("<p><a href=\"https://www.arduino.cc/\"><img source=\":/openmv/images/arduino-partnership.png\"></a></p>") +
-        QString(QStringLiteral("<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership-%1.png\"></a></p>")).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light"))
+        QString(QStringLiteral("<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership-%1.png\"></a></p>")).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light")) +
+        QStringLiteral("<p><a href=\"https://www.nxp.com/\"><img source=\":/openmv/images/nxp-logo.png\"></a></p>") +
+        QString(QStringLiteral("<p><a href=\"https://www.st.com/\"><img source=\":/openmv/images/st-logo-%1.png\"></a></p>")).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light"))
         );
     });
 
