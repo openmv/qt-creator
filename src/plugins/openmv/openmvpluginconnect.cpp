@@ -3291,53 +3291,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     m_versionButton->setText(m_versionButton->text().append(tr(" - [ out of date - click here to updgrade ]")));
 
                     QTimer::singleShot(1, this, [this] {
-                        QSettings *settings = ExtensionSystem::PluginManager::settings();
-                        settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
-                        bool update = false;
-
-                        if((!m_autoConnect) && (!settings->value(QStringLiteral(DONT_SHOW_UPGRADE_FW_AGAIN), false).toBool()))
-                        {
-                            QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
-                                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                            dialog->setWindowTitle(tr("Connect"));
-                            QVBoxLayout *v_layout = new QVBoxLayout(dialog);
-
-                            QLabel *label = new QLabel(tr("Your OpenMV Cam's firmware is out of date. Would you like to upgrade?"));
-                            v_layout->addWidget(label);
-
-                            QWidget *widget = new QWidget();
-                            QHBoxLayout *h_layout = new QHBoxLayout(widget);
-                            h_layout->setContentsMargins(0, 0, 0, 0);
-
-                            QCheckBox *checkBox = new QCheckBox(tr("Don't show this message again."));
-                            h_layout->addWidget(checkBox);
-
-                            QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-                            connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-                            connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
-                            h_layout->addWidget(box);
-
-                            QPushButton *ok = box->button(QDialogButtonBox::Ok);
-                            ok->setAutoDefault(true);
-                            ok->setDefault(true);
-
-                            QPushButton *cancel = box->button(QDialogButtonBox::Cancel);
-                            cancel->setAutoDefault(false);
-                            cancel->setDefault(false);
-
-                            v_layout->addSpacing(10);
-                            v_layout->addWidget(widget);
-
-                            update = dialog->exec() == QDialog::Accepted;
-                            settings->setValue(QStringLiteral(DONT_SHOW_UPGRADE_FW_AGAIN), checkBox->isChecked());
-
-                            delete dialog;
-                        }
-
-                        settings->endGroup();
-
-                        if(update)
+                        if ((!m_autoConnect) && Utils::CheckableMessageBox::doNotAskAgainQuestion(Core::ICore::dialogParent(),
+                                tr("Connect"),
+                                tr("Your OpenMV Cam's firmware is out of date. Would you like to upgrade?"),
+                                ExtensionSystem::PluginManager::settings(),
+                                QStringLiteral(DONT_SHOW_UPGRADE_FW_AGAIN),
+                                QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Cancel,
+                                QDialogButtonBox::Yes, QDialogButtonBox::No, QDialogButtonBox::Yes) == QDialogButtonBox::Yes)
                         {
                             OpenMVPlugin::updateCam(true);
                         }
@@ -3773,44 +3733,14 @@ void OpenMVPlugin::stopClicked()
             : false)
         {
             QTimer::singleShot(2000, this, [this] {
-                QSettings *settings = ExtensionSystem::PluginManager::settings();
-                settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
-
-                if(!settings->value(QStringLiteral(DONT_SHOW_EXAMPLES_AGAIN), false).toBool())
-                {
-                    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
-                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                    dialog->setWindowTitle(tr("More Examples"));
-                    QVBoxLayout *v_layout = new QVBoxLayout(dialog);
-
-                    QLabel *label = new QLabel(tr("New to OpenMV?\n\n"
-                                                  "You can find more examples under the File -> Examples menu.\n\n"
-                                                  "In particular, checkout the Color-Tracking examples."));
-                    v_layout->addWidget(label);
-
-                    QWidget *widget = new QWidget();
-                    QHBoxLayout *h_layout = new QHBoxLayout(widget);
-                    h_layout->setContentsMargins(0, 0, 0, 0);
-
-                    QCheckBox *checkBox = new QCheckBox(tr("Don't show this message again."));
-                    h_layout->addWidget(checkBox);
-
-                    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok);
-                    connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-                    connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
-                    h_layout->addWidget(box);
-
-                    v_layout->addSpacing(10);
-                    v_layout->addWidget(widget);
-
-                    dialog->exec();
-                    settings->setValue(QStringLiteral(DONT_SHOW_EXAMPLES_AGAIN), checkBox->isChecked());
-
-                    delete dialog;
-                }
-
-                settings->endGroup();
+                Utils::CheckableMessageBox::doNotShowAgainInformation(Core::ICore::dialogParent(),
+                        tr("More Examples"),
+                        tr("You can find more examples under the File -> Examples menu.\n\n"
+                           "In particular, checkout the Color-Tracking examples."),
+                        ExtensionSystem::PluginManager::settings(),
+                        QStringLiteral(DONT_SHOW_EXAMPLES_AGAIN),
+                        QDialogButtonBox::Ok,
+                        QDialogButtonBox::Ok);
             });
         }
 

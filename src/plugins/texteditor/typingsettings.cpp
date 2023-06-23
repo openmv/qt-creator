@@ -21,14 +21,14 @@ using namespace Utils;
 namespace TextEditor {
 
 TypingSettings::TypingSettings():
-    // OPENMV-DIFF //
-    // m_autoIndent(true),
-    // OPENMV-DIFF //
-    m_autoIndent(false),
-    // OPENMV-DIFF //
+    m_autoIndent(true),
     m_tabKeyBehavior(TabNeverIndents),
     m_smartBackspaceBehavior(BackspaceUnindents),
-    m_preferSingleLineComments(false)
+    // OPENMV-DIFF //
+    // m_preferSingleLineComments(false)
+    // OPENMV-DIFF //
+    m_preferSingleLineComments(true)
+    // OPENMV-DIFF //
 {
 }
 
@@ -46,9 +46,6 @@ Store TypingSettings::toMap() const
 void TypingSettings::fromMap(const Store &map)
 {
     m_autoIndent = map.value(autoIndentKey, m_autoIndent).toBool();
-    // OPENMV-DIFF //
-    m_autoIndent = false;
-    // OPENMV-DIFF //
     m_tabKeyBehavior = (TabKeyBehavior) map.value(tabKeyBehaviorKey, m_tabKeyBehavior).toInt();
     // OPENMV-DIFF //
     m_tabKeyBehavior = TabNeverIndents;

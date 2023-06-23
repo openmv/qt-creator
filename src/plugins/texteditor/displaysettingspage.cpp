@@ -170,7 +170,11 @@ public:
         settingsToUI();
         // OPENMV-DIFF //
         useIndenter->hide();
+        displayFoldingMarkers->hide();
+        centerOnScroll->hide();
         autoFoldFirstComment->hide();
+        animateNavigationWithinFile->hide();
+        highlightBlocks->hide();
         openLinksInNextSplit->hide();
         displayFileEncoding->hide();
         displayFileLineEnding->hide();
