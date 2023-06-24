@@ -596,6 +596,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         foreach(const QString &device, getDevices())
         {
+            dfuDevices.append(device);
             QStringList vidpid = device.split(QStringLiteral(",")).first().split(QStringLiteral(":"));
 
             for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
@@ -607,7 +608,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 && info.hasProductIdentifier()
                 && info.productIdentifier() == vidpid.at(1).toInt(nullptr, 16))
                 {
-                    dfuDevices.append(device);
                     it = stringList.erase(it);
                 }
                 else
@@ -651,6 +651,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         int originalEraseFlashSectorAllEnd = FLASH_SECTOR_ALL_END;
         QString originalDfuVidPid = QString();
         bool isIMX = m_boardType.contains(QStringLiteral("IMX"), Qt::CaseInsensitive);
+        bool dfuNoDialogs = false;
 
         if(stringList.isEmpty())
         {
@@ -728,6 +729,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 {
                                     dfuDeviceResetToRelease = true;
                                     dfuDeviceEraseFlash = checkBox->isChecked();
+                                    dfuNoDialogs = true;
                                 }
                                 else if(combo->currentIndex() == 1)
                                 {
@@ -1052,6 +1054,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                 CONNECT_END();
             }
+        }
+
+        if (dfuNoDialogs && (!isIMX) && (!isArduino)) {
+            firmwarePath = QFileInfo(firmwarePath).path() + QStringLiteral("/bootloader.dfu");
         }
 
         // Open Port //////////////////////////////////////////////////////////
@@ -2800,14 +2806,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             if(firmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive))
             {
-                if(forceFlashFSErase || (QMessageBox::warning(Core::ICore::dialogParent(),
+                if(dfuNoDialogs || forceFlashFSErase || (QMessageBox::warning(Core::ICore::dialogParent(),
                     tr("Connect"),
                     tr("DFU update erases your OpenMV Cam's internal flash file system.\n\n"
                        "Backup your data before continuing!"),
                     QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
                 == QMessageBox::Ok))
                 {
-                    if(QMessageBox::information(Core::ICore::dialogParent(),
+                    if(dfuNoDialogs || QMessageBox::information(Core::ICore::dialogParent(),
                         tr("Connect"),
                         tr("Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.\n\n"
                            "Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated."),
@@ -2818,7 +2824,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         Utils::QtcProcess process;
                         downloadFirmware(command, process, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), originalDfuVidPid, QStringLiteral("-a 0 -s :leave"));
 
-                        if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
+                        if((process.result() == Utils::ProcessResult::FinishedWithSuccess) || (command.contains(QStringLiteral("dfu-util")) && (process.result() == Utils::ProcessResult::FinishedWithError)))
                         {
                             QMessageBox::information(Core::ICore::dialogParent(),
                                 tr("Connect"),
