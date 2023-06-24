@@ -77,8 +77,10 @@
 #include "tools/videotools.h"
 
 #define ICON_PATH ":/openmv/openmv-media/icons/openmv-icon/openmv.png"
-#define SPLASH_PATH ":/openmv/openmv-media/splash/openmv-splash-slate/splash-small-2.png"
-#define SPLASH_HIDPI_PATH ":/openmv/openmv-media/splash/openmv-splash-slate/splash-large-2.png"
+#define LIGHT_SPLASH_PATH ":/openmv/openmv-media/splash/openmv-splash/splash-small.png"
+#define LIGHT_SPLASH_HIDPI_PATH ":/openmv/openmv-media/splash/openmv-splash/splash-large.png"
+#define DARK_SPLASH_PATH ":/openmv/openmv-media/splash/openmv-splash-slate/splash-small.png"
+#define DARK_SPLASH_HIDPI_PATH ":/openmv/openmv-media/splash/openmv-splash-slate/splash-large.png"
 #define CONNECT_PATH ":/openmv/images/connect.png"
 #define CONNECT_USB_DARK_PATH ":/openmv/images/connect-usb-dark.png"
 #define CONNECT_WIFI_DARK_PATH ":/openmv/images/connect-wifi-dark.png"
