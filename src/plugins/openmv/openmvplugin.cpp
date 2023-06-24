@@ -409,21 +409,35 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         }
         else
         {
-            QStringList list = QStringList() << QStringLiteral("examples") << QStringLiteral("firmware") << QStringLiteral("html") << QStringLiteral("models");
+            Utils::FilePath oldUserResourcesPath = Core::ICore::userResourcePath().parentDir().pathAppended(QStringLiteral("qtcreator"));
 
-            foreach(const QString &dir, list)
+            if(oldUserResourcesPath.exists())
             {
-                QString error;
-
-                if(!Utils::FileUtils::copyRecursively(Core::ICore::resourcePath(dir),
-                                                      Core::ICore::userResourcePath(dir),
-                                                      &error,
-                                                      copyOperator))
-
+                if(!oldUserResourcesPath.removeRecursively(&error))
                 {
                     QMessageBox::critical(Q_NULLPTR, QString(), tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
                     ok = false;
-                    break;
+                }
+            }
+
+            if(ok)
+            {
+                QStringList list = QStringList() << QStringLiteral("examples") << QStringLiteral("firmware") << QStringLiteral("html") << QStringLiteral("models");
+
+                foreach(const QString &dir, list)
+                {
+                    QString error;
+
+                    if(!Utils::FileUtils::copyRecursively(Core::ICore::resourcePath(dir),
+                                                          Core::ICore::userResourcePath(dir),
+                                                          &error,
+                                                          copyOperator))
+
+                    {
+                        QMessageBox::critical(Q_NULLPTR, QString(), tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                        ok = false;
+                        break;
+                    }
                 }
             }
         }
