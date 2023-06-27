@@ -21,6 +21,10 @@
 #include <QTextCodec>
 #include <QUuid>
 
+// OPENMV-DIFF //
+#include <QStandardPaths>
+// OPENMV-DIFF //
+
 using namespace Core;
 using namespace Utils;
 
@@ -340,7 +344,11 @@ QString DiffEditorDocument::fallbackSaveAsFileName() const
         name.append(".patch");
         return name;
     }
-    return QStringLiteral("0001.patch");
+    // OPENMV-DIFF //
+    // return QStringLiteral("0001.patch");
+    // OPENMV-DIFF //
+    return QStringLiteral("diff.patch");
+    // OPENMV-DIFF //
 }
 
 // ### fixme: git-specific handling should be done in the git plugin:

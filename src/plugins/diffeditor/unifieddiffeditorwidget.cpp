@@ -187,10 +187,16 @@ void UnifiedDiffEditorWidget::addContextMenuActions(QMenu *menu, int fileIndex, 
 {
     menu->addSeparator();
 
-    m_controller.addCodePasterAction(menu, fileIndex, chunkIndex);
-    m_controller.addPatchAction(menu, fileIndex, chunkIndex, PatchAction::Apply);
-    m_controller.addPatchAction(menu, fileIndex, chunkIndex, PatchAction::Revert);
-    m_controller.addExtraActions(menu, fileIndex, chunkIndex, selection);
+    // OPENMV-DIFF //
+    // m_controller.addCodePasterAction(menu, fileIndex, chunkIndex);
+    // m_controller.addPatchAction(menu, fileIndex, chunkIndex, PatchAction::Apply);
+    // m_controller.addPatchAction(menu, fileIndex, chunkIndex, PatchAction::Revert);
+    // m_controller.addExtraActions(menu, fileIndex, chunkIndex, selection);
+    // OPENMV-DIFF //
+    Q_UNUSED(fileIndex)
+    Q_UNUSED(chunkIndex)
+    Q_UNUSED(selection)
+    // OPENMV-DIFF //
 }
 
 void UnifiedDiffEditorWidget::clear(const QString &message)

@@ -1031,10 +1031,17 @@ void SideBySideDiffEditorWidget::contextMenuRequested(DiffSide side, QMenu *menu
 {
     menu->addSeparator();
 
-    const PatchAction patchAction = side == LeftSide ? PatchAction::Apply : PatchAction::Revert;
-    m_controller.addCodePasterAction(menu, fileIndex, chunkIndex);
-    m_controller.addPatchAction(menu, fileIndex, chunkIndex, patchAction);
-    m_controller.addExtraActions(menu, fileIndex, chunkIndex, selection);
+    // OPENMV-DIFF //
+    // const PatchAction patchAction = side == LeftSide ? PatchAction::Apply : PatchAction::Revert;
+    // m_controller.addCodePasterAction(menu, fileIndex, chunkIndex);
+    // m_controller.addPatchAction(menu, fileIndex, chunkIndex, patchAction);
+    // m_controller.addExtraActions(menu, fileIndex, chunkIndex, selection);
+    // OPENMV-DIFF //
+    Q_UNUSED(side)
+    Q_UNUSED(fileIndex)
+    Q_UNUSED(chunkIndex)
+    Q_UNUSED(selection)
+    // OPENMV-DIFF //
 }
 
 void SideBySideDiffEditorWidget::verticalSliderChanged(DiffSide side)

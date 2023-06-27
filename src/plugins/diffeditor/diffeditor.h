@@ -9,6 +9,10 @@
 #include <coreplugin/idocument.h>
 #include <utils/guard.h>
 
+// OPENMV-DIFF //
+#include "utils/styledbar.h"
+// OPENMV-DIFF //
+
 QT_BEGIN_NAMESPACE
 class QComboBox;
 class QSpinBox;

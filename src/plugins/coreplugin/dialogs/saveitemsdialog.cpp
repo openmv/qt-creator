@@ -180,8 +180,17 @@ void SaveItemsDialog::collectFilesToDiff()
     m_filesToDiff.clear();
     const QList<QTreeWidgetItem *> items = m_treeWidget->selectedItems();
     for (const QTreeWidgetItem *item : items) {
-        if (auto doc = item->data(0, Qt::UserRole).value<IDocument*>())
-            m_filesToDiff.append(doc->filePath().toString());
+        // OPENMV-DIFF //
+        // if (auto doc = item->data(0, Qt::UserRole).value<IDocument*>())
+        //     m_filesToDiff.append(doc->filePath().toString());
+        // OPENMV-DIFF //
+        if (auto doc = item->data(0, Qt::UserRole).value<IDocument*>()) {
+            QString filePath = doc->filePath().toString();
+            if (filePath.isEmpty()) filePath = doc->property("diffFilePath").toString();
+            m_filesToDiff.append(filePath);
+        }
+        // OPENMV-DIFF //
+
     }
     reject();
 }

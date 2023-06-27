@@ -24,6 +24,11 @@
 #include <QAction>
 #include <QMenu>
 
+// OPENMV-DIFF //
+#include <QStandardPaths>
+#include <extensionsystem/pluginmanager.h>
+// OPENMV-DIFF //
+
 using namespace Core;
 using namespace TextEditor;
 using namespace Utils;
@@ -177,6 +182,16 @@ QList<ReloadInput> DiffCurrentFileController::reloadInputList() const
 
     auto textDocument = qobject_cast<TextDocument *>(
         DocumentModel::documentForFilePath(FilePath::fromString(m_fileName)));
+    // OPENMV-DIFF //
+    if (!textDocument) {
+        foreach (IDocument *d, DocumentModel::openedDocuments()) {
+            if (FilePath::fromVariant(d->property("diffFilePath")) == FilePath::fromString(m_fileName)) {
+                textDocument = qobject_cast<TextDocument *>(d);
+                break;
+            }
+        }
+    }
+    // OPENMV-DIFF //
 
     if (textDocument && textDocument->isModified()) {
         QString errorString;
@@ -231,7 +246,12 @@ QList<ReloadInput> DiffOpenFilesController::reloadInputList() const
             TextFileFormat format = textDocument->format();
 
             QString leftText;
-            const QString fileName = textDocument->filePath().toString();
+            // OPENMV-DIFF //
+            // const QString fileName = textDocument->filePath().toString();
+            // OPENMV-DIFF //
+            QString fileName = textDocument->filePath().toString();
+            if (fileName.isEmpty()) fileName = textDocument->property("diffFilePath").toString();
+            // OPENMV-DIFF //
             const TextFileFormat::ReadResult leftResult = TextFileFormat::readFile(
                 FilePath::fromString(fileName), format.codec, &leftText, &format, &errorString);
 
@@ -278,13 +298,28 @@ QList<ReloadInput> DiffModifiedFilesController::reloadInputList() const
     for (const QString &fileName : m_fileNames) {
         auto textDocument = qobject_cast<TextDocument *>(
             DocumentModel::documentForFilePath(FilePath::fromString(fileName)));
+        // OPENMV-DIFF //
+        if (!textDocument) {
+            foreach (IDocument *d, DocumentModel::openedDocuments()) {
+                if (FilePath::fromVariant(d->property("diffFilePath")) == FilePath::fromString(fileName)) {
+                    textDocument = qobject_cast<TextDocument *>(d);
+                    break;
+                }
+            }
+        }
+        // OPENMV-DIFF //
 
         if (textDocument && textDocument->isModified()) {
             QString errorString;
             TextFileFormat format = textDocument->format();
 
             QString leftText;
-            const QString fileName = textDocument->filePath().toString();
+            // OPENMV-DIFF //
+            // const QString fileName = textDocument->filePath().toString();
+            // OPENMV-DIFF //
+            QString fileName = textDocument->filePath().toString();
+            if (fileName.isEmpty()) fileName = textDocument->property("diffFilePath").toString();
+            // OPENMV-DIFF //
             const TextFileFormat::ReadResult leftResult = TextFileFormat::readFile(
                 FilePath::fromString(fileName), format.codec, &leftText, &format, &errorString);
 
@@ -483,7 +518,12 @@ void DiffEditorPluginPrivate::diffCurrentFile()
     if (!textDocument)
         return;
 
-    const QString fileName = textDocument->filePath().toString();
+    // OPENMV-DIFF //
+    // const QString fileName = textDocument->filePath().toString();
+    // OPENMV-DIFF //
+    QString fileName = textDocument->filePath().toString();
+    if (fileName.isEmpty()) fileName = textDocument->property("diffFilePath").toString();
+    // OPENMV-DIFF //
     if (fileName.isEmpty())
         return;
 
@@ -501,16 +541,43 @@ void DiffEditorPluginPrivate::diffOpenFiles()
 
 void DiffEditorPluginPrivate::diffExternalFiles()
 {
-    const FilePath filePath1 = FileUtils::getOpenFilePath(nullptr, Tr::tr("Select First File for Diff"));
-    if (filePath1.isEmpty())
+    // OPENMV-DIFF //
+    // const FilePath filePath1 = FileUtils::getOpenFilePath(nullptr, Tr::tr("Select First File for Diff"));
+    // if (filePath1.isEmpty())
+    //     return;
+    // if (EditorManager::skipOpeningBigTextFile(filePath1))
+    //     return;
+    // const FilePath filePath2 = FileUtils::getOpenFilePath(nullptr, Tr::tr("Select Second File for Diff"));
+    // if (filePath2.isEmpty())
+    //     return;
+    // if (EditorManager::skipOpeningBigTextFile(filePath2))
+    //     return;
+    // OPENMV-DIFF //
+    QSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->beginGroup(QLatin1String(Constants::DIFF_EDITOR_PLUGIN));
+    const FilePath filePath1 = FileUtils::getOpenFilePath(nullptr, Tr::tr("Select First File for Diff"),
+                                                          Utils::FilePath::fromVariant(settings->value(QLatin1String(Constants::DIFF_EXTERNAL_FILES_PATH),
+                                                          QString(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV")))));
+    if (filePath1.isEmpty()) {
+        settings->endGroup();
         return;
-    if (EditorManager::skipOpeningBigTextFile(filePath1))
+    }
+    if (EditorManager::skipOpeningBigTextFile(filePath1)) {
+        settings->endGroup();
         return;
-    const FilePath filePath2 = FileUtils::getOpenFilePath(nullptr, Tr::tr("Select Second File for Diff"));
-    if (filePath2.isEmpty())
+    }
+    const FilePath filePath2 = FileUtils::getOpenFilePath(nullptr, Tr::tr("Select Second File for Diff"), filePath1);
+    if (filePath2.isEmpty()) {
+        settings->endGroup();
         return;
-    if (EditorManager::skipOpeningBigTextFile(filePath2))
+    }
+    if (EditorManager::skipOpeningBigTextFile(filePath2)) {
+        settings->endGroup();
         return;
+    }
+    settings->setValue(QLatin1String(Constants::DIFF_EXTERNAL_FILES_PATH), filePath1.toVariant());
+    settings->endGroup();
+    // OPENMV-DIFF //
 
     const QString documentId = QLatin1String(Constants::DIFF_EDITOR_PLUGIN)
             + ".DiffExternalFiles." + filePath1.toString() + '.' + filePath2.toString();

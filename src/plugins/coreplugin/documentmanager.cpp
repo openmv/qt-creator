@@ -659,6 +659,8 @@ static bool saveModifiedFilesHelper(const QList<IDocument *> &documents,
             // OPENMV-DIFF //
             if (name.isEmpty())
                 name = document->displayName();
+            if (name.isEmpty())
+                name = document->property("diffFilePath").toString();
             // OPENMV-DIFF //
 
             // There can be several IDocuments pointing to the same file
@@ -1288,8 +1290,16 @@ void DocumentManager::checkForReload()
                         break;
                     }
                 }
-                if (previousReloadAnswer == ReloadNoneAndDiff)
-                    filesToDiff.append(document->filePath().toString());
+                // OPENMV-DIFF //
+                // if (previousReloadAnswer == ReloadNoneAndDiff)
+                //     filesToDiff.append(document->filePath().toString());
+                // OPENMV-DIFF //
+                if (previousReloadAnswer == ReloadNoneAndDiff) {
+                    QString filePath = document->filePath().toString();
+                    if (filePath.isEmpty()) filePath = document->property("diffFilePath").toString();
+                    filesToDiff.append(filePath);
+                }
+                // OPENMV-DIFF //
 
             // IDocument wants us to ask, and it's the TypeRemoved case
             } else {

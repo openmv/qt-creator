@@ -16,6 +16,9 @@ const char C_DIFF_EDITOR_DESCRIPTION[] = "DiffEditor.Description";
 const char SIDE_BY_SIDE_VIEW_ID[] = "DiffEditor.SideBySide";
 const char UNIFIED_VIEW_ID[] = "DiffEditor.Unified";
 const char SELECT_ENCODING[] = "DiffEditor.SelectEncoding";
+// OPENMV-DIFF //
+const char DIFF_EXTERNAL_FILES_PATH[] = "DiffExternalFilesPath";
+// OPENMV-DIFF //
 
 const char G_TOOLS_DIFF[] = "QtCreator.Group.Tools.Diff";
 

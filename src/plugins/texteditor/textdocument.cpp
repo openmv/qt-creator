@@ -363,7 +363,12 @@ QAction *TextDocument::createDiffAgainstCurrentFileAction(
     const auto diffAgainstCurrentFile = [filePath]() {
         auto diffService = DiffService::instance();
         auto textDocument = TextEditor::TextDocument::currentTextDocument();
-        const QString leftFilePath = textDocument ? textDocument->filePath().toString() : QString();
+        // OPENMV-DIFF //
+        // const QString leftFilePath = textDocument ? textDocument->filePath().toString() : QString();
+        // OPENMV-DIFF //
+        QString leftFilePath = textDocument ? textDocument->filePath().toString() : QString();
+        if (leftFilePath.isEmpty()) leftFilePath = textDocument->property("diffFilePath").toString();
+        // OPENMV-DIFF //
         const QString rightFilePath = filePath().toString();
         if (diffService && !leftFilePath.isEmpty() && !rightFilePath.isEmpty())
             diffService->diffFiles(leftFilePath, rightFilePath);

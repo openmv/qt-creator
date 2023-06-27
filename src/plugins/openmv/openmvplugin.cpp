@@ -976,7 +976,10 @@ void OpenMVPlugin::extensionsInitialized()
                        "    img = sensor.snapshot()\n"
                        "    print(clock.fps())\n").arg(Utils::Environment::systemEnvironment().toDictionary().userName()).arg(QDate::currentDate().toString()).toUtf8();
 
-        if((m_sensorType == QStringLiteral("HM01B0")) || (m_sensorType == QStringLiteral("MT9V034")))
+        if((m_sensorType == QStringLiteral("HM01B0")) ||
+           (m_sensorType == QStringLiteral("HM0360")) ||
+           (m_sensorType == QStringLiteral("MT9V0X2")) ||
+           (m_sensorType == QStringLiteral("MT9V0X4")))
         {
             data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
             if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
@@ -986,9 +989,33 @@ void OpenMVPlugin::extensionsInitialized()
 
         if(editor)
         {
-            Core::EditorManager::addCurrentPositionToNavigationHistory();
-            editor->editorWidget()->configureGenericHighlighter();
-            Core::EditorManager::activateEditor(editor);
+            QTemporaryFile file;
+
+            if(file.open())
+            {
+                if(file.write(data) == data.size())
+                {
+                    file.setAutoRemove(false);
+                    file.close();
+
+                    editor->document()->setProperty("diffFilePath", QFileInfo(file).canonicalFilePath());
+                    Core::EditorManager::addCurrentPositionToNavigationHistory();
+                    editor->editorWidget()->configureGenericHighlighter();
+                    Core::EditorManager::activateEditor(editor);
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        QObject::tr("New File"),
+                        QObject::tr("Can't open the new file!"));
+                }
+            }
+            else
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    QObject::tr("New File"),
+                    QObject::tr("Can't open the new file!"));
+            }
         }
         else
         {
@@ -2367,7 +2394,10 @@ void OpenMVPlugin::extensionsInitialized()
 
             if((file.error() == QFile::NoError) && (!data.isEmpty()))
             {
-                if((m_sensorType == QStringLiteral("HM01B0")) || (m_sensorType == QStringLiteral("MT9V034")))
+                if((m_sensorType == QStringLiteral("HM01B0")) ||
+                   (m_sensorType == QStringLiteral("HM0360")) ||
+                   (m_sensorType == QStringLiteral("MT9V0X2")) ||
+                   (m_sensorType == QStringLiteral("MT9V0X4")))
                 {
                     data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
                     if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
@@ -2381,6 +2411,7 @@ void OpenMVPlugin::extensionsInitialized()
 
                 if(editor)
                 {
+                    editor->document()->setProperty("diffFilePath", filePath);
                     Core::EditorManager::addCurrentPositionToNavigationHistory();
                     editor->editorWidget()->configureGenericHighlighter();
                     Core::EditorManager::activateEditor(editor);
@@ -3765,6 +3796,7 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
 
                         if(editor)
                         {
+                            editor->document()->setProperty("diffFilePath", filePath);
                             Core::EditorManager::addCurrentPositionToNavigationHistory();
                             if(!notExamples) editor->editorWidget()->configureGenericHighlighter();
                             Core::EditorManager::activateEditor(editor);
