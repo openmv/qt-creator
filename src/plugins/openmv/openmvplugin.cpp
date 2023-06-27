@@ -989,7 +989,7 @@ void OpenMVPlugin::extensionsInitialized()
 
         if(editor)
         {
-            QTemporaryFile file;
+            QTemporaryFile file(QDir::tempPath() + QDir::separator() + QString(editor->document()->displayName()).replace(QStringLiteral(".py"), QStringLiteral("_XXXXXX.py")));
 
             if(file.open())
             {
