@@ -768,10 +768,6 @@ void ManhattanStyle::drawPrimitiveForPanelWidget(PrimitiveElement element,
             painter->save();
             if (creatorTheme()->flag(Theme::FlatToolBars)) {
                 painter->fillRect(rect, StyleHelper::baseColor());
-                // OPENMV-DIFF //
-                painter->setPen(QColor(32, 33, 34));
-                painter->drawLine(rect.x(), rect.y(), rect.x() + rect.width() - 1, rect.y());
-                // OPENMV-DIFF //
             } else {
                 QLinearGradient grad = StyleHelper::statusBarGradient(rect);
                 painter->fillRect(rect, grad);

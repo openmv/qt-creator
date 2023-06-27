@@ -252,7 +252,9 @@ void ImageViewer::ctor()
     horizontalLayout->addWidget(bar);
     horizontalLayout->addItem(
         new QSpacerItem(315, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
-    horizontalLayout->addWidget(new StyledSeparator);
+    // OPENMV-DIFF //
+    // horizontalLayout->addWidget(new StyledSeparator);
+    // OPENMV-DIFF //
     horizontalLayout->addWidget(m_labelImageSize);
     horizontalLayout->addWidget(new StyledSeparator);
     horizontalLayout->addWidget(m_labelInfo);

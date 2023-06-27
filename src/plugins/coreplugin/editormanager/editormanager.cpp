@@ -2736,7 +2736,13 @@ void EditorManagerPrivate::revertToSaved(IDocument *document)
 {
     if (!document)
         return;
-    const QString fileName =  document->filePath().toString();
+    // OPENMV-DIFF //
+    // const QString fileName =  document->filePath().toString();
+    // OPENMV-DIFF //
+    QString fileName =  document->filePath().toString();
+    if (fileName.isEmpty())
+        fileName = document->property("diffFilePath").toString();
+    // OPENMV-DIFF //
     if (fileName.isEmpty())
         return;
     if (document->isModified()) {

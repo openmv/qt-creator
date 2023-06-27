@@ -185,6 +185,12 @@ DiffEditor::DiffEditor()
     m_entriesComboBox->setSizePolicy(policy);
     connect(m_entriesComboBox, &QComboBox::currentIndexChanged,
             this, &DiffEditor::currentIndexChanged);
+    // OPENMV-DIFF //
+    m_entriesComboBox->hide();
+    QLabel *spacer = new QLabel();
+    spacer->setSizePolicy(QSizePolicy::Expanding, spacer->sizePolicy().verticalPolicy());
+    m_toolBar->addWidget(spacer);
+    // OPENMV-DIFF //
     m_toolBar->addWidget(m_entriesComboBox);
 
     QLabel *contextLabel = new QLabel(m_toolBar);
@@ -197,6 +203,9 @@ DiffEditor::DiffEditor()
     m_contextSpinBox->setFrame(false);
     m_contextSpinBox->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Expanding); // Mac Qt5
     m_contextSpinBoxAction = m_toolBar->addWidget(m_contextSpinBox);
+    // OPENMV-DIFF //
+    m_toolBar->addWidget(new QLabel());
+    // OPENMV-DIFF //
 
     m_whitespaceButtonAction = m_toolBar->addAction(Tr::tr("Ignore Whitespace"));
     m_whitespaceButtonAction->setCheckable(true);
