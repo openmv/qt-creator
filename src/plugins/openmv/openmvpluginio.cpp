@@ -265,7 +265,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                                 serializeByte(buffer, __USBDBG_CMD);
                                 serializeByte(buffer, __USBDBG_FRAME_DUMP);
                                 serializeLong(buffer, new_size);
-                                m_postedQueue.push_front(OpenMVPluginSerialPortCommand(buffer, new_size, FRAME_DUMP_START_DELAY, FRAME_DUMP_END_DELAY));
+                                m_postedQueue.push_front(OpenMVPluginSerialPortCommand(buffer, new_size, FRAME_DUMP_START_DELAY, FRAME_DUMP_END_DELAY, true, true));
                                 m_completionQueue.insert(1, USBDBG_FRAME_DUMP_CPL);
                             }
 
@@ -436,7 +436,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                             serializeByte(buffer, __USBDBG_CMD);
                             serializeByte(buffer, __USBDBG_TX_BUF);
                             serializeLong(buffer, new_len);
-                            m_postedQueue.push_front(OpenMVPluginSerialPortCommand(buffer, new_len, TX_BUF_START_DELAY, TX_BUF_END_DELAY));
+                            m_postedQueue.push_front(OpenMVPluginSerialPortCommand(buffer, new_len, TX_BUF_START_DELAY, TX_BUF_END_DELAY, true, true));
                             m_completionQueue.insert(1, USBDBG_TX_BUF_CPL);
                         }
                     }

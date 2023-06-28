@@ -48,7 +48,7 @@
         {
             \"Name\" : \"-override_read_timeout\",
             \"Parameter\" : \"time_in_ms\",
-            \"Description\" : \"Ms to wait for a response (default 5000)\"
+            \"Description\" : \"Ms to wait for a response (default 10000)\"
         },
         {
             \"Name\" : \"-override_read_stall_timeout\",

@@ -216,13 +216,14 @@ int deserializeLong(QByteArray &buffer); // LittleEndian
 class OpenMVPluginSerialPortCommand
 {
 public:
-    explicit OpenMVPluginSerialPortCommand(const QByteArray &data = QByteArray(), int responseLen = int(), int startWait = int(), int endWait = int(), bool perCommandWait = true) :
-        m_data(data), m_responseLen(responseLen), m_startWait(startWait), m_endWait(endWait), m_perCommandWait(perCommandWait) { }
+    explicit OpenMVPluginSerialPortCommand(const QByteArray &data = QByteArray(), int responseLen = int(), int startWait = int(), int endWait = int(), bool perCommandWait = true, bool commandAbortOkay = false) :
+        m_data(data), m_responseLen(responseLen), m_startWait(startWait), m_endWait(endWait), m_perCommandWait(perCommandWait), m_commandAbortOkay(commandAbortOkay) { }
     QByteArray m_data;
     int m_responseLen;
     int m_startWait; // in ms
     int m_endWait; // in ms
     bool m_perCommandWait;
+    bool m_commandAbortOkay;
 };
 
 class OpenMVPluginSerialPortCommandResult
