@@ -9,8 +9,124 @@
 #include <utils/qtcprocess.h>
 #include <utils/theme/theme.h>
 
+#ifdef Q_OS_WIN
+#include <windows.h>
+#endif
+
 #define IMX_SETTINGS_GROUP "OpenMVIMX"
 #define LAST_IMX_TERMINAL_WINDOW_GEOMETRY "LastIMXTerminalWindowGeometry"
+
+QList<QPair<int, int> > imxVidPidList(bool spd_host, bool bl_host)
+{
+    QList<QPair<int, int> > pidvidlist;
+
+    QFile imxSettings(Core::ICore::userResourcePath(QStringLiteral("firmware/imx.txt")).toString());
+
+    if(imxSettings.open(QIODevice::ReadOnly))
+    {
+        QJsonParseError error;
+        QJsonDocument doc = QJsonDocument::fromJson(imxSettings.readAll(), &error);
+
+        if(error.error == QJsonParseError::NoError)
+        {
+            foreach(const QJsonValue &val, doc.array())
+            {
+                QJsonObject obj = val.toObject();
+
+                if(spd_host)
+                {
+                    QStringList pidvid = obj.value(QStringLiteral("sdphost_pidvid")).toString().split(QChar(','));
+
+                    if(pidvid.size() == 2)
+                    {
+                        bool okay_pid; int pid = pidvid.at(0).toInt(&okay_pid, 16);
+                        bool okay_vid; int vid = pidvid.at(1).toInt(&okay_vid, 16);
+
+                        if(okay_pid && okay_vid)
+                        {
+                            QPair<int, int> entry(pid, vid);
+
+                            if(!pidvidlist.contains(entry))
+                            {
+                                pidvidlist.append(entry);
+                            }
+                        }
+                    }
+                }
+
+                if(bl_host)
+                {
+                    QStringList pidvid = obj.value(QStringLiteral("blhost_pidvid")).toString().split(QChar(','));
+
+                    if(pidvid.size() == 2)
+                    {
+                        bool okay_pid; int pid = pidvid.at(0).toInt(&okay_pid, 16);
+                        bool okay_vid; int vid = pidvid.at(1).toInt(&okay_vid, 16);
+
+                        if(okay_pid && okay_vid)
+                        {
+                            QPair<int, int> entry(pid, vid);
+
+                            if(!pidvidlist.contains(entry))
+                            {
+                                pidvidlist.append(entry);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return pidvidlist;
+}
+
+QStringList imxGetAllDevices(bool spd_host, bool bl_host)
+{
+    QList<QPair<int, int> > pidvidlist = imxVidPidList(spd_host, bl_host);
+
+    QStringList devices;
+
+    if(!pidvidlist.isEmpty())
+    {
+#ifdef Q_OS_WIN
+        UINT nDevices = 0;
+
+        if((GetRawInputDeviceList(NULL, &nDevices, sizeof(RAWINPUTDEVICELIST)) == 0) && (nDevices != 0))
+        {
+            PRAWINPUTDEVICELIST pRawInputDeviceList = new RAWINPUTDEVICELIST[sizeof(RAWINPUTDEVICELIST) * nDevices];
+
+            if(pRawInputDeviceList && (GetRawInputDeviceList(pRawInputDeviceList, &nDevices, sizeof(RAWINPUTDEVICELIST)) == nDevices))
+            {
+                for(UINT i = 0; i < nDevices; i++)
+                {
+                    RID_DEVICE_INFO rdiDeviceInfo;
+                    UINT nBufferSize = sizeof(RID_DEVICE_INFO);
+
+                    if(GetRawInputDeviceInfo(pRawInputDeviceList[i].hDevice, RIDI_DEVICEINFO, &rdiDeviceInfo, &nBufferSize) == sizeof(RID_DEVICE_INFO))
+                    {
+                        if(rdiDeviceInfo.dwType == RIM_TYPEHID)
+                        {
+                            QPair<int, int> entry(rdiDeviceInfo.hid.dwVendorId, rdiDeviceInfo.hid.dwProductId);
+
+                            if(pidvidlist.contains(entry))
+                            {
+                                devices.append(QString(QStringLiteral("%1:%2,NULL")).
+                                               arg(rdiDeviceInfo.hid.dwVendorId, 4, 16, QChar('0')).
+                                               arg(rdiDeviceInfo.hid.dwProductId, 4, 16, QChar('0')));
+                            }
+                        }
+                    }
+                }
+
+                delete[] pRawInputDeviceList;
+            }
+        }
+#endif
+    }
+
+    return devices;
+}
 
 bool imxGetDevice(QJsonObject &obj)
 {
