@@ -592,7 +592,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             }
         }
 
-        QStringList dfuDevices = picotoolGetDevices();
+        QStringList dfuDevices = picotoolGetDevices() + imxGetAllDevices();
 
         foreach(const QString &device, getDevices())
         {
@@ -650,7 +650,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         int originalEraseFlashSectorAllStart = FLASH_SECTOR_ALL_START;
         int originalEraseFlashSectorAllEnd = FLASH_SECTOR_ALL_END;
         QString originalDfuVidPid = QString();
-        bool isIMX = m_boardType.contains(QStringLiteral("IMX"), Qt::CaseInsensitive);
         bool dfuNoDialogs = false;
 
         if(stringList.isEmpty())
@@ -864,7 +863,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                         originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
                                         originalEraseFlashSectorAllEnd = eraseAllMappings.value(temp).second;
                                         originalDfuVidPid = vidpidMappings.value(temp);
-                                        isIMX = originalFirmwareFolder.contains(QStringLiteral("IMX"), Qt::CaseInsensitive);
                                     }
                                 }
                             }
@@ -946,6 +944,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             settings->endGroup();
         }
 
+        bool isIMX = false;
         bool isArduino = false;
         bool isTouchToReset = false;
         bool isPortenta = false;
@@ -990,6 +989,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         {
             QStringList vidpid = selectedDfuDevice.split(QStringLiteral(",")).first().split(QStringLiteral(":"));
 
+            isIMX = imxVidPidList().contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16)));
             isArduino = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                                  ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
                                                                                  ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
@@ -1024,6 +1024,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         {
             QStringList vidpid = originalDfuVidPid.split(QStringLiteral(":"));
 
+            isIMX = imxVidPidList().contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16)));
             isArduino = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                                  ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
                                                                                  ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
@@ -1035,6 +1036,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             isRPIPico = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == RPI_LDR_PID))) ||
                         ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
 
+            if(isIMX) selectedDfuDevice = originalDfuVidPid + QStringLiteral(",NULL");
             if(isArduino) selectedDfuDevice = originalDfuVidPid + QStringLiteral(",NULL");
 
             if((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == NRF_OLD_PID))
@@ -1216,6 +1218,48 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         m_reconnects = 0;
 
+        if(((major2 > OLD_API_MAJOR)
+        || ((major2 == OLD_API_MAJOR) && (minor2 > OLD_API_MINOR))
+        || ((major2 == OLD_API_MAJOR) && (minor2 == OLD_API_MINOR) && (patch2 >= OLD_API_PATCH))))
+        {
+            QString arch2 = QString();
+            QString *arch2Ptr = &arch2;
+
+            QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::archString,
+                this, [this, arch2Ptr] (const QString &arch) {
+                *arch2Ptr = arch;
+            });
+
+            QEventLoop loop;
+
+            connect(m_iodevice, &OpenMVPluginIO::archString,
+                    &loop, &QEventLoop::quit);
+
+            m_iodevice->getArchString();
+
+            loop.exec();
+
+            disconnect(conn);
+
+            if(!arch2.isEmpty())
+            {
+                QRegularExpressionMatch match = QRegularExpression(QStringLiteral("\\[(.+?):(.+?)\\]")).match(arch2);
+
+                if(match.hasMatch())
+                {
+                    isIMX = match.captured(1).contains(QStringLiteral("IMX"));
+                }
+            }
+            else
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    tr("Connect"),
+                    tr("Timeout error while getting board architecture!"));
+
+                CLOSE_CONNECT_END();
+            }
+        }
+
         // Bootloader /////////////////////////////////////////////////////////
 
         if(forceBootloader)
@@ -1300,7 +1344,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                                     originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
                                     originalEraseFlashSectorAllEnd = eraseAllMappings.value(temp).second;
-                                    isIMX = originalFirmwareFolder.contains(QStringLiteral("IMX"), Qt::CaseInsensitive);
 
                                     if(installTheLatestDevelopmentFirmware)
                                     {
@@ -1312,6 +1355,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 }
 
                                 QStringList vidpid = vidpidMappings.value(temp).split(QStringLiteral(":"));
+                                isIMX = imxVidPidList().contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16)));
                                 isArduino = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                                                      ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
                                                                                                      ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
@@ -1361,7 +1405,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     }
                 }
 
-                if((!isArduino) && firmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive))
+                if((!isIMX) && (!isArduino) && firmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive))
                 {
                     QEventLoop loop;
 
@@ -1803,6 +1847,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             if(boards.open(QIODevice::ReadOnly))
                             {
+                                QList<QPair<int, int> > vidpidlist = imxVidPidList(false, true);
                                 QMap<QString, QString> mappings;
 
                                 forever
@@ -1813,7 +1858,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     {
                                         QRegularExpressionMatch mapping = QRegularExpression(QStringLiteral("(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\d+)\\s+(\\d+)\\s+(\\d+)\\s+(\\S+)")).match(QString::fromUtf8(data));
                                         QString temp = mapping.captured(2).replace(QStringLiteral("_"), QStringLiteral(" "));
-                                        if(mapping.captured(3).contains(QStringLiteral("IMX"), Qt::CaseInsensitive)) mappings.insert(temp, mapping.captured(3));
+                                        QStringList vidpid = mapping.captured(7).split(QStringLiteral(":"));
+                                        if(vidpidlist.contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16)))) mappings.insert(temp, mapping.captured(3));
                                     }
                                     else
                                     {
@@ -1906,129 +1952,177 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     CONNECT_END();
                 }
 
-                if(!m_portPath.isEmpty())
+                if(selectedDfuDevice.isEmpty())
                 {
-#if defined(Q_OS_WIN)
-                    wchar_t driveLetter[m_portPath.size()];
-                    m_portPath.toWCharArray(driveLetter);
+                    if(!m_portPath.isEmpty())
+                    {
+    #if defined(Q_OS_WIN)
+                        wchar_t driveLetter[m_portPath.size()];
+                        m_portPath.toWCharArray(driveLetter);
 
-                    if(!ejectVolume(driveLetter[0]))
+                        if(!ejectVolume(driveLetter[0]))
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                tr("Disconnect"),
+                                tr("Failed to eject \"%L1\"!").arg(m_portPath));
+                        }
+    #elif defined(Q_OS_LINUX)
+                        Utils::SynchronousProcess process;
+                        Utils::SynchronousProcessResponse response;
+
+                        response = process.run(QStringLiteral("umount"), QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath)));
+
+                        if(response.result != Utils::SynchronousProcessResponse::Finished)
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                tr("Disconnect"),
+                                tr("Failed to eject \"%L1\"!").arg(m_portPath));
+                        }
+    #elif defined(Q_OS_MAC)
+                        if(sync_volume_np(m_portPath.toUtf8().constData(), SYNC_VOLUME_FULLSYNC | SYNC_VOLUME_WAIT) < 0)
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                tr("Disconnect"),
+                                tr("Failed to eject \"%L1\"!").arg(m_portPath));
+                        }
+    #endif
+                    }
+
+                    QProgressDialog dialog(forceBootloaderBricked ? QString(QStringLiteral("%1%2")).arg(tr("Disconnect your OpenMV Cam and then reconnect it...")).arg(justEraseFlashFs ? QString() : tr("\n\nHit cancel to skip to SBL reprogramming.")) : tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+                        (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
+                    dialog.setWindowModality(Qt::ApplicationModal);
+                    dialog.setAttribute(Qt::WA_ShowWithoutActivating);
+                    dialog.show();
+
+                    bool canceled = false;
+                    bool *canceledPtr = &canceled;
+
+                    connect(&dialog, &QProgressDialog::canceled, this, [this, canceledPtr] {
+                        *canceledPtr = true;
+                    });
+
+                    QEventLoop loop;
+
+                    connect(m_iodevice, &OpenMVPluginIO::closeResponse,
+                            &loop, &QEventLoop::quit);
+
+                    m_iodevice->sysReset(false);
+                    m_iodevice->close();
+
+                    loop.exec();
+
+                    QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
+
+                    while((!imxGetDevice(outObj)) && (!canceled))
+                    {
+                        QApplication::processEvents();
+                    }
+
+                    QApplication::restoreOverrideCursor();
+
+                    bool userCanceled = canceled;
+                    dialog.close();
+
+                    if(userCanceled)
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("Disconnect"),
-                            tr("Failed to eject \"%L1\"!").arg(m_portPath));
-                    }
-#elif defined(Q_OS_LINUX)
-                    Utils::SynchronousProcess process;
-                    Utils::SynchronousProcessResponse response;
-
-                    response = process.run(QStringLiteral("umount"), QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath)));
-
-                    if(response.result != Utils::SynchronousProcessResponse::Finished)
-                    {
-                        QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("Disconnect"),
-                            tr("Failed to eject \"%L1\"!").arg(m_portPath));
-                    }
-#elif defined(Q_OS_MAC)
-                    if(sync_volume_np(m_portPath.toUtf8().constData(), SYNC_VOLUME_FULLSYNC | SYNC_VOLUME_WAIT) < 0)
-                    {
-                        QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("Disconnect"),
-                            tr("Failed to eject \"%L1\"!").arg(m_portPath));
-                    }
-#endif
-                }
-
-                QProgressDialog dialog(forceBootloaderBricked ? QString(QStringLiteral("%1%2")).arg(tr("Disconnect your OpenMV Cam and then reconnect it...")).arg(justEraseFlashFs ? QString() : tr("\n\nHit cancel to skip to SBL reprogramming.")) : tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-                    (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
-                dialog.setWindowModality(Qt::ApplicationModal);
-                dialog.setAttribute(Qt::WA_ShowWithoutActivating);
-                dialog.show();
-
-                bool canceled = false;
-                bool *canceledPtr = &canceled;
-
-                connect(&dialog, &QProgressDialog::canceled, this, [this, canceledPtr] {
-                    *canceledPtr = true;
-                });
-
-                QEventLoop loop;
-
-                connect(m_iodevice, &OpenMVPluginIO::closeResponse,
-                        &loop, &QEventLoop::quit);
-
-                m_iodevice->sysReset(false);
-                m_iodevice->close();
-
-                loop.exec();
-
-                QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
-
-                while((!imxGetDevice(outObj)) && (!canceled))
-                {
-                    QApplication::processEvents();
-                }
-
-                QApplication::restoreOverrideCursor();
-
-                bool userCanceled = canceled;
-                dialog.close();
-
-                if(userCanceled)
-                {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("Connect"),
-                        tr("Unable to connect to your OpenMV Cam's normal bootloader!"));
-
-                    if((!justEraseFlashFs) && forceFirmwarePath.isEmpty() && QMessageBox::question(Core::ICore::dialogParent(),
-                        tr("Connect"),
-                        tr("OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.\n\n"
-                           "Continue?"),
-                        QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
-                    == QMessageBox::Ok)
-                    {
-                        if(QMessageBox::information(Core::ICore::dialogParent(),
                             tr("Connect"),
-                            tr("Disconnect your OpenMV Cam from your computer and then reconnect your OpenMV Cam to your computer while pressing the SBL button on your OpenMV Cam.\n\n"
-                               "Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated."),
+                            tr("Unable to connect to your OpenMV Cam's normal bootloader!"));
+
+                        if((!justEraseFlashFs) && forceFirmwarePath.isEmpty() && QMessageBox::question(Core::ICore::dialogParent(),
+                            tr("Connect"),
+                            tr("OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.\n\n"
+                               "Continue?"),
                             QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
                         == QMessageBox::Ok)
                         {
-                            if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
+                            if(QMessageBox::information(Core::ICore::dialogParent(),
+                                tr("Connect"),
+                                tr("Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.\n\n"
+                                   "Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated."),
+                                QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
+                            == QMessageBox::Ok)
                             {
-                                QMessageBox::information(Core::ICore::dialogParent(),
-                                    tr("Connect"),
-                                    tr("Firmware update complete!\n\n") +
-                                    tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
-                                    tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
-                                       "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open)."));
+                                if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
+                                {
+                                    QMessageBox::information(Core::ICore::dialogParent(),
+                                        tr("Connect"),
+                                        tr("Firmware update complete!\n\n") +
+                                        tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
+                                        tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
+                                           "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open)."));
 
-                                RECONNECT_END();
+                                    RECONNECT_END();
+                                }
                             }
                         }
-                    }
 
-                    CONNECT_END();
-                }
-                else
-                {
-                    if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
-                    {
-                        QMessageBox::information(Core::ICore::dialogParent(),
-                            tr("Connect"),
-                            QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? tr("Onboard Data Flash Erased!\n\n") : tr("Firmware Upgrade complete!\n\n")))
-                            .arg(tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
-                            .arg(tr("Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete."))
-                            .arg(tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
-                                    "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
-
-                        RECONNECT_END();
+                        CONNECT_END();
                     }
                     else
                     {
-                        CONNECT_END();
+                        if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
+                        {
+                            QMessageBox::information(Core::ICore::dialogParent(),
+                                tr("Connect"),
+                                QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? tr("Onboard Data Flash Erased!\n\n") : tr("Firmware Upgrade complete!\n\n")))
+                                .arg(tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
+                                .arg(tr("Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete."))
+                                .arg(tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
+                                        "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
+
+                            RECONNECT_END();
+                        }
+                        else
+                        {
+                            CONNECT_END();
+                        }
+                    }
+                }
+                else
+                {
+                    QStringList vidpid = selectedDfuDevice.split(QStringLiteral(",")).first().split(QStringLiteral(":"));
+                    QPair<int , int> entry(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16));
+
+                    // SPD Mode (SBL)
+                    if(imxVidPidList(true, false).contains(entry))
+                    {
+                        if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
+                        {
+                            QMessageBox::information(Core::ICore::dialogParent(),
+                                tr("Connect"),
+                                tr("Firmware update complete!\n\n") +
+                                tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
+                                tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
+                                   "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open)."));
+
+                            RECONNECT_END();
+                        }
+                        else
+                        {
+                            CONNECT_END();
+                        }
+                    }
+                    // BL Mode
+                    else if(imxVidPidList(false, true).contains(entry))
+                    {
+                        if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
+                        {
+                            QMessageBox::information(Core::ICore::dialogParent(),
+                                tr("Connect"),
+                                QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? tr("Onboard Data Flash Erased!\n\n") : tr("Firmware Upgrade complete!\n\n")))
+                                .arg(tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
+                                .arg(tr("Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete."))
+                                .arg(tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
+                                        "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
+
+                            RECONNECT_END();
+                        }
+                        else
+                        {
+                            CONNECT_END();
+                        }
                     }
                 }
             }
