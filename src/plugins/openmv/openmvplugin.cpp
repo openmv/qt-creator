@@ -87,7 +87,11 @@ static bool copyOperator(const Utils::FilePath &src, const Utils::FilePath &dest
     return true;
 }
 
-void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &match, QStringList &providerVariables, QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs)
+void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &match,
+                                             QStringList &providerVariables,
+                                             QStringList &providerClasses, QMap<QString, QStringList> &providerClassArgs,
+                                             QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs,
+                                             QStringList &providerMethods, QMap<QString, QStringList> &providerMethodArgs)
 {
     QString type = match.captured(1);
     QString id = match.captured(2);
@@ -124,7 +128,11 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
 
         if(cdfmRegExInsideMatch.hasMatch())
         {
-            processDocumentationMatch(cdfmRegExInsideMatch, providerVariables, providerFunctions, providerFunctionArgs);
+            processDocumentationMatch(cdfmRegExInsideMatch,
+                                      providerVariables,
+                                      providerClasses, providerClassArgs,
+                                      providerFunctions, providerFunctionArgs,
+                                      providerMethods, providerMethodArgs);
             body.remove(m_cdfmRegExInside);
         }
 
@@ -150,12 +158,12 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
             return;
         }
 
-        if(type == QStringLiteral("class"))
+        if((type == QStringLiteral("class")) || (type == QStringLiteral("exception")))
         {
             m_classes.append(d);
-            providerFunctions.append(d.name);
+            providerClasses.append(d.name);
         }
-        else if((type == QStringLiteral("data")) || (type == QStringLiteral("exception")))
+        else if(type == QStringLiteral("data"))
         {
             m_datas.append(d);
             providerVariables.append(d.name);
@@ -168,7 +176,7 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
         else if(type == QStringLiteral("method"))
         {
             m_methods.append(d);
-            providerFunctions.append(d.name);
+            providerMethods.append(d.name);
         }
 
         if(args.hasMatch())
@@ -197,7 +205,18 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
                 list.append(temp);
             }
 
-            providerFunctionArgs.insert(d.name, list);
+            if(type == QStringLiteral("class"))
+            {
+                providerClassArgs.insert(d.name, list);
+            }
+            else if(type == QStringLiteral("function"))
+            {
+                providerFunctionArgs.insert(d.name, list);
+            }
+            else if(type == QStringLiteral("method"))
+            {
+                providerMethodArgs.insert(d.name, list);
+            }
         }
     }
 }
@@ -462,8 +481,12 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     ///////////////////////////////////////////////////////////////////////////
 
     QStringList providerVariables;
+    QStringList providerClasses;
+    QMap<QString, QStringList> providerClassArgs;
     QStringList providerFunctions;
     QMap<QString, QStringList> providerFunctionArgs;
+    QStringList providerMethods;
+    QMap<QString, QStringList> providerMethodArgs;
 
     QRegularExpression moduleRegEx(QStringLiteral("<section id=\"module-(.+?)\">(.*?)<section"), QRegularExpression::DotMatchesEverythingOption);
     QRegularExpression moduleRegEx2(QStringLiteral("<section id=\"module-(.+?)\">(.*?)</section>"), QRegularExpression::DotMatchesEverythingOption);
@@ -529,7 +552,11 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
                 while(matches.hasNext())
                 {
-                    processDocumentationMatch(matches.next(), providerVariables, providerFunctions, providerFunctionArgs);
+                    processDocumentationMatch(matches.next(),
+                                              providerVariables,
+                                              providerClasses, providerClassArgs,
+                                              providerFunctions, providerFunctionArgs,
+                                              providerMethods, providerMethodArgs);
                 }
             }
         }
@@ -632,7 +659,11 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     ///////////////////////////////////////////////////////////////////////////
 
-    OpenMVPluginCompletionAssistProvider *provider = new OpenMVPluginCompletionAssistProvider(providerVariables, providerFunctions, providerFunctionArgs, this);
+    OpenMVPluginCompletionAssistProvider *provider = new OpenMVPluginCompletionAssistProvider(providerVariables,
+                                                                                              providerClasses, providerClassArgs,
+                                                                                              providerFunctions, providerFunctionArgs,
+                                                                                              providerMethods, providerMethodArgs,
+                                                                                              this);
 
     connect(Core::EditorManager::instance(), &Core::EditorManager::editorCreated, this, [this, provider] (Core::IEditor *editor, const QString &fileName) {
         TextEditor::BaseTextEditor *textEditor = qobject_cast<TextEditor::BaseTextEditor *>(editor);

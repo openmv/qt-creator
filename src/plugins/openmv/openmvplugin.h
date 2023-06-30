@@ -211,9 +211,16 @@ class OpenMVPluginCompletionAssistProvider : public TextEditor::CompletionAssist
 
 public:
 
-    OpenMVPluginCompletionAssistProvider(const QStringList &variables, const QStringList &functions, const QMap<QString, QStringList> &functionArgs, QObject *parent) : CompletionAssistProvider(parent)
+    OpenMVPluginCompletionAssistProvider(const QStringList &variables,
+                                         const QStringList &classes, const QMap<QString, QStringList> &classArgs,
+                                         const QStringList &functions, const QMap<QString, QStringList> &functionArgs,
+                                         const QStringList &methods, const QMap<QString, QStringList> &methodArgs,
+                                         QObject *parent) : CompletionAssistProvider(parent)
     {
-        m_keywords = TextEditor::Keywords(variables, functions, functionArgs);
+        m_keywords = TextEditor::Keywords(variables,
+                                          classes, classArgs,
+                                          functions, functionArgs,
+                                          methods, methodArgs);
     }
 
     TextEditor::IAssistProcessor *createProcessor(const TextEditor::AssistInterface *assistInterface) const
@@ -452,7 +459,11 @@ private:
     QRegularExpression m_listRegEx;
     QRegularExpression m_dictionaryRegEx;
 
-    void processDocumentationMatch(const QRegularExpressionMatch &match, QStringList &providerVariables, QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs);
+    void processDocumentationMatch(const QRegularExpressionMatch &match,
+                                   QStringList &providerVariables,
+                                   QStringList &providerClasses, QMap<QString, QStringList> &providerClassArgs,
+                                   QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs,
+                                   QStringList &providerMethods, QMap<QString, QStringList> &providerMethodArgs);
     void parseImports(const QString &fileText, const QString &moduleFolder, const QStringList &builtInModules, importDataList_t &targetModules, QStringList &errorModules);
     bool importHelper(const QByteArray &text);
 };

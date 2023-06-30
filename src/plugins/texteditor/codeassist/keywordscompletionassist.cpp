@@ -30,11 +30,29 @@ namespace TextEditor {
 // Keywords
 // --------------------------
 // Note: variables and functions must be sorted
-Keywords::Keywords(const QStringList &variables, const QStringList &functions, const QMap<QString, QStringList> &functionArgs)
+// OPENMV-DIFF //
+// Keywords::Keywords(const QStringList &variables, const QStringList &functions, const QMap<QString, QStringList> &functionArgs)
+// OPENMV-DIFF //
+Keywords::Keywords(const QStringList &variables,
+                   const QStringList &classes, const QMap<QString, QStringList> &classArgs,
+                   const QStringList &functions, const QMap<QString, QStringList> &functionArgs,
+                   const QStringList &methods, const QMap<QString, QStringList> &methodArgs)
+// OPENMV-DIFF //
     : m_variables(Utils::sorted(variables)),
+      // OPENMV-DIFF //
+      m_classes(Utils::sorted(classes)),
+      m_classArgs(classArgs),
+      m_methods(Utils::sorted(methods)),
+      m_methodArgs(methodArgs),
+      // OPENMV-DIFF //
       m_functions(Utils::sorted(functions)),
       m_functionArgs(functionArgs)
 {
+    // OPENMV-DIFF //
+    publicRegex = QRegularExpression("^[^_].+$");
+    protectedRegex = QRegularExpression("^_[^_].+$");
+    privateRegex = QRegularExpression("^__[^_].+$");
+    // OPENMV-DIFF //
 }
 
 bool Keywords::isVariable(const QString &word) const
@@ -46,14 +64,31 @@ bool Keywords::isFunction(const QString &word) const
 {
     return std::binary_search(m_functions.constBegin(), m_functions.constEnd(), word);
 }
-
-QStringList Keywords::variables() const
+// OPENMV-DIFF //
+// QStringList Keywords::variables() const
+// OPENMV-DIFF //
+QStringList Keywords::variables(KeywordsScope_t scope) const
+// OPENMV-DIFF //
 {
+    // OPENMV-DIFF //
+    if (scope == KEYWORDS_SCOPE_PUBLIC) return m_variables.filter(publicRegex);
+    if (scope == KEYWORDS_SCOPE_PROTECTED) return m_variables.filter(protectedRegex);
+    if (scope == KEYWORDS_SCOPE_PRIVATE) return m_variables.filter(privateRegex);
+    // OPENMV-DIFF //
     return m_variables;
 }
 
-QStringList Keywords::functions() const
+// OPENMV-DIFF //
+// QStringList Keywords::functions() const
+// OPENMV-DIFF //
+QStringList Keywords::functions(KeywordsScope_t scope) const
+// OPENMV-DIFF //
 {
+    // OPENMV-DIFF //
+    if (scope == KEYWORDS_SCOPE_PUBLIC) return m_functions.filter(publicRegex);
+    if (scope == KEYWORDS_SCOPE_PROTECTED) return m_functions.filter(protectedRegex);
+    if (scope == KEYWORDS_SCOPE_PRIVATE) return m_functions.filter(privateRegex);
+    // OPENMV-DIFF //
     return m_functions;
 }
 
@@ -62,6 +97,43 @@ QStringList Keywords::argsForFunction(const QString &function) const
     return m_functionArgs.value(function);
 }
 
+// OPENMV-DIFF //
+bool Keywords::isClass(const QString &word) const
+{
+    return std::binary_search(m_classes.constBegin(), m_classes.constEnd(), word);
+}
+
+bool Keywords::isMethod(const QString &word) const
+{
+    return std::binary_search(m_methods.constBegin(), m_methods.constEnd(), word);
+}
+
+QStringList Keywords::classes(KeywordsScope_t scope) const
+{
+    if (scope == KEYWORDS_SCOPE_PUBLIC) return m_classes.filter(publicRegex);
+    if (scope == KEYWORDS_SCOPE_PROTECTED) return m_classes.filter(protectedRegex);
+    if (scope == KEYWORDS_SCOPE_PRIVATE) return m_classes.filter(privateRegex);
+    return m_classes;
+}
+
+QStringList Keywords::argsForClass(const QString &className) const
+{
+    return m_classArgs.value(className);
+}
+
+QStringList Keywords::methods(KeywordsScope_t scope) const
+{
+    if (scope == KEYWORDS_SCOPE_PUBLIC) return m_methods.filter(publicRegex);
+    if (scope == KEYWORDS_SCOPE_PROTECTED) return m_methods.filter(protectedRegex);
+    if (scope == KEYWORDS_SCOPE_PRIVATE) return m_methods.filter(privateRegex);
+    return m_methods;
+}
+
+QStringList Keywords::argsForMethod(const QString &methodName) const
+{
+    return m_methodArgs.value(methodName);
+}
+// OPENMV-DIFF //
 
 // --------------------------
 // KeywordsAssistProposalItem
@@ -209,7 +281,6 @@ int KeywordsFunctionHintModel::activeArgument(const QString &prefix) const
             while(in_stack.size() && (in_stack.top() == IN_COMMA))
             {
                 commaCount += 1;
-
                 in_stack.pop();
             }
 
@@ -226,8 +297,21 @@ int KeywordsFunctionHintModel::activeArgument(const QString &prefix) const
 // ---------------------------------
 KeywordsCompletionAssistProcessor::KeywordsCompletionAssistProcessor(const Keywords &keywords)
     : m_snippetCollector(QString(), QIcon(":/texteditor/images/snippet.png"))
-    , m_variableIcon(QLatin1String(":/codemodel/images/keyword.png"))
-    , m_functionIcon(QLatin1String(":/codemodel/images/member.png"))
+    // OPENMV-DIFF //
+    // , m_variableIcon(QLatin1String(":/codemodel/images/keyword.png"))
+    // , m_functionIcon(QLatin1String(":/codemodel/images/member.png"))
+    // OPENMV-DIFF //
+    , m_variableIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::VarPublic))
+    , m_functionIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncPublicStatic))
+    , m_variableProtectedIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::VarProtected))
+    , m_variablePrivateIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::VarPrivate))
+    , m_functionProtectedIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncProtectedStatic))
+    , m_functionPrivateIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncPrivateStatic))
+    , m_classIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::Class))
+    , m_methodPublicIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncPublic))
+    , m_methodProtectedIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncProtected))
+    , m_methodPrivateIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncPrivate))
+    // OPENMV-DIFF //
     , m_keywords(keywords)
 {}
 
@@ -319,8 +403,16 @@ IAssistProposal *KeywordsCompletionAssistProcessor::performAsync()
                 int startPosition = interface()->position();
 
                 QList<AssistProposalItemInterface *> items;
-                items.append(generateProposalList(m_keywords.variables(), m_variableIcon));
-                items.append(generateProposalList(m_keywords.functions(), m_functionIcon));
+                items.append(generateProposalList(m_keywords.classes(), m_classIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PUBLIC), m_functionIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PROTECTED), m_functionProtectedIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PRIVATE), m_functionPrivateIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PUBLIC), m_methodPublicIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PROTECTED), m_methodProtectedIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PRIVATE), m_methodPrivateIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PUBLIC), m_variableIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PROTECTED), m_variableProtectedIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PRIVATE), m_variablePrivateIcon));
                 return new GenericProposal(startPosition, items);
             }
             else if(chr == QLatin1Char('('))
@@ -328,11 +420,16 @@ IAssistProposal *KeywordsCompletionAssistProcessor::performAsync()
                 if(!(interface()->position() - 1)) return 0;
                 cursor.setPosition(interface()->position() - 2);
                 cursor.select(QTextCursor::WordUnderCursor);
-                if(!m_keywords.isFunction(cursor.selectedText())) return 0;
+                if((!m_keywords.isClass(cursor.selectedText()))
+                && (!m_keywords.isFunction(cursor.selectedText()))
+                && (!m_keywords.isMethod(cursor.selectedText()))) return 0;
                 int startPosition = interface()->position() - cursor.selectedText().size() - 1;
 
                 QString word = cursor.selectedText();
-                QStringList keywords = (m_keywords.functions().count(word) > 1) ? QStringList() : m_keywords.argsForFunction(word);
+                QStringList keywords;
+                if (m_keywords.isClass(word)) keywords = m_keywords.argsForClass(word);
+                else if (m_keywords.isFunction(word)) keywords = m_keywords.argsForFunction(word);
+                else if (m_keywords.isMethod(word)) keywords = m_keywords.argsForMethod(word);
                 if(keywords.isEmpty()) return 0;
                 return new FunctionHintProposal(startPosition, FunctionHintProposalModelPtr(new KeywordsFunctionHintModel(keywords)));
             }
@@ -341,11 +438,16 @@ IAssistProposal *KeywordsCompletionAssistProcessor::performAsync()
                 if(!in_stack.top().second) return 0;
                 cursor.setPosition(in_stack.top().second - 1);
                 cursor.select(QTextCursor::WordUnderCursor);
-                if(!m_keywords.isFunction(cursor.selectedText())) return 0;
+                if((!m_keywords.isClass(cursor.selectedText()))
+                && (!m_keywords.isFunction(cursor.selectedText()))
+                && (!m_keywords.isMethod(cursor.selectedText()))) return 0;
                 int startPosition = in_stack.top().second - cursor.selectedText().size();
 
                 QString word = cursor.selectedText();
-                QStringList keywords = (m_keywords.functions().count(word) > 1) ? QStringList() : m_keywords.argsForFunction(word);
+                QStringList keywords;
+                if (m_keywords.isClass(word)) keywords = m_keywords.argsForClass(word);
+                else if (m_keywords.isFunction(word)) keywords = m_keywords.argsForFunction(word);
+                else if (m_keywords.isMethod(word)) keywords = m_keywords.argsForMethod(word);
                 if(keywords.isEmpty()) return 0;
                 return new FunctionHintProposal(startPosition, FunctionHintProposalModelPtr(new KeywordsFunctionHintModel(keywords)));
             }
@@ -358,8 +460,16 @@ IAssistProposal *KeywordsCompletionAssistProcessor::performAsync()
                 int startPosition = interface()->position() - cursor.selectedText().size();
 
                 QList<AssistProposalItemInterface *> items;
-                items.append(generateProposalList(m_keywords.variables(), m_variableIcon));
-                items.append(generateProposalList(m_keywords.functions(), m_functionIcon));
+                items.append(generateProposalList(m_keywords.classes(), m_classIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PUBLIC), m_functionIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PROTECTED), m_functionProtectedIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PRIVATE), m_functionPrivateIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PUBLIC), m_methodPublicIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PROTECTED), m_methodProtectedIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PRIVATE), m_methodPrivateIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PUBLIC), m_variableIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PROTECTED), m_variableProtectedIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PRIVATE), m_variablePrivateIcon));
                 return new GenericProposal(startPosition, items);
             }
         }
@@ -453,7 +563,11 @@ QList<AssistProposalItemInterface *>
 KeywordsCompletionAssistProcessor::generateProposalList(const QStringList &words, const QIcon &icon)
 {
     return Utils::transform(words, [this, &icon](const QString &word) -> AssistProposalItemInterface * {
-        AssistProposalItem *item = new KeywordsAssistProposalItem(m_keywords.isFunction(word));
+        // OPENMV-DIFF //
+        // AssistProposalItem *item = new KeywordsAssistProposalItem(m_keywords.isFunction(word));
+        // OPENMV-DIFF //
+        AssistProposalItem *item = new KeywordsAssistProposalItem(m_keywords.isClass(word) || m_keywords.isFunction(word) || m_keywords.isMethod(word));
+        // OPENMV-DIFF //
         item->setText(word);
         item->setIcon(icon);
         return item;
