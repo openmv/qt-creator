@@ -383,11 +383,15 @@ PaletteBrightText=ffff3333
 PaletteText=text
 PaletteButtonText=text
 PaletteButtonTextDisabled=textDisabled
-PaletteToolTipBase=shadowBackground
+;OPENMV-DIFF;
+;PaletteToolTipBase=shadowBackground
+;OPENMV-DIFF;
 PaletteHighlight=selectedBackgroundText
 PaletteDark=shadowBackground
 PaletteHighlightedText=textHighlighted
-PaletteToolTipText=text
+;OPENMV-DIFF;
+;PaletteToolTipText=text
+;OPENMV-DIFF;
 PaletteLink=textColorLink
 PaletteLinkVisited=textColorLinkVisited
 PaletteWindowDisabled=backgroundColorDisabled
