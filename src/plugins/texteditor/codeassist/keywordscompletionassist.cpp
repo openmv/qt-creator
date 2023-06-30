@@ -388,19 +388,27 @@ IAssistProposal *KeywordsCompletionAssistProcessor::performAsync()
                 in_stack.pop();
             }
 
-            if(!interface()->position()) return 0;
-            QChar chr = interface()->characterAt(interface()->position() - 1);
+            int pos = interface()->position();
+            QChar chr;
+
+            forever
+            {
+                if(!pos) return 0;
+                chr = interface()->characterAt(pos - 1);
+                if ((chr == QLatin1Char('\t')) || (chr == QLatin1Char(' '))) pos--;
+                else break;
+            }
 
             if(chr == QLatin1Char('.'))
             {
-                if(!(interface()->position() - 1)) return 0;
-                QChar chr2 = interface()->characterAt(interface()->position() - 2);
+                if(!(pos - 1)) return 0;
+                QChar chr2 = interface()->characterAt(pos - 2);
                 bool chr2IsBracket = (chr2 == QLatin1Char(')')) || (chr2 == QLatin1Char(']')) || (chr2 == QLatin1Char('}'));
-                cursor.setPosition(interface()->position() - 2);
+                cursor.setPosition(pos - 2);
                 cursor.select(QTextCursor::WordUnderCursor);
                 if((!chr2IsBracket) && (cursor.selectedText().isEmpty())) return 0;
                 if((!chr2IsBracket) && (!cursor.selectedText().contains(QRegularExpression(QStringLiteral("[a-zA-Z_][a-zA-Z_0-9]*"))))) return 0;
-                int startPosition = interface()->position();
+                int startPosition = pos;
 
                 QList<AssistProposalItemInterface *> items;
                 items.append(generateProposalList(m_keywords.classes(), m_classIcon));
@@ -417,13 +425,13 @@ IAssistProposal *KeywordsCompletionAssistProcessor::performAsync()
             }
             else if(chr == QLatin1Char('('))
             {
-                if(!(interface()->position() - 1)) return 0;
-                cursor.setPosition(interface()->position() - 2);
+                if(!(pos - 1)) return 0;
+                cursor.setPosition(pos - 2);
                 cursor.select(QTextCursor::WordUnderCursor);
                 if((!m_keywords.isClass(cursor.selectedText()))
                 && (!m_keywords.isFunction(cursor.selectedText()))
                 && (!m_keywords.isMethod(cursor.selectedText()))) return 0;
-                int startPosition = interface()->position() - cursor.selectedText().size() - 1;
+                int startPosition = pos - cursor.selectedText().size() - 1;
 
                 QString word = cursor.selectedText();
                 QStringList keywords;
@@ -453,11 +461,11 @@ IAssistProposal *KeywordsCompletionAssistProcessor::performAsync()
             }
             else if(chr.isLetterOrNumber() || (chr == QLatin1Char('_')))
             {
-                cursor.setPosition(interface()->position() - 1);
+                cursor.setPosition(pos - 1);
                 cursor.select(QTextCursor::WordUnderCursor);
                 if(cursor.selectedText().isEmpty()) return 0;
                 if(!cursor.selectedText().contains(QRegularExpression(QStringLiteral("[a-zA-Z_][a-zA-Z_0-9]*")))) return 0;
-                int startPosition = interface()->position() - cursor.selectedText().size();
+                int startPosition = pos - cursor.selectedText().size();
 
                 QList<AssistProposalItemInterface *> items;
                 items.append(generateProposalList(m_keywords.classes(), m_classIcon));
