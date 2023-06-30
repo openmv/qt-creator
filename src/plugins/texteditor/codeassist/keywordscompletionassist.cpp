@@ -391,12 +391,18 @@ IAssistProposal *KeywordsCompletionAssistProcessor::performAsync()
             int pos = interface()->position();
             QChar chr;
 
-            forever
+            if(!pos) return 0;
+            chr = interface()->characterAt(pos - 1);
+
+            if(interface()->reason() == ExplicitlyInvoked)
             {
-                if(!pos) return 0;
-                chr = interface()->characterAt(pos - 1);
-                if ((chr == QLatin1Char('\t')) || (chr == QLatin1Char(' '))) pos--;
-                else break;
+                forever
+                {
+                    if (chr.isSpace()) pos--;
+                    else break;
+                    if(!pos) return 0;
+                    chr = interface()->characterAt(pos - 1);
+                }
             }
 
             if(chr == QLatin1Char('.'))
