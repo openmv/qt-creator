@@ -507,40 +507,24 @@ void MyPlainTextEdit::save()
 
 void MyPlainTextEdit::execute(bool standAlone)
 {
-    // Write bytes slowly so as to not overload the MicroPython board.
-
     if(!standAlone)
     {
-        QByteArray data = "\x03\r\n\x01" + QString::fromUtf8(Core::EditorManager::currentEditor()->document()->contents()).toUtf8() + "\x04\r\n\x02";
-
-        for(int i = 0; i < data.size(); i += (TABOO_PACKET_SIZE - 1))
-        {
-            emit writeBytes(data.mid(i, TABOO_PACKET_SIZE - 1));
-        }
-
-        // emit writeBytes("\x03\r\n\x01" + QString::fromUtf8(Core::EditorManager::currentEditor()->document()->contents()).toUtf8() + "\x04\r\n\x02");
+        emit execScript(QString::fromUtf8(Core::EditorManager::currentEditor()->document()->contents()).toUtf8());
     }
     else
     {
-        QByteArray data = "\x03\r\n\x01\r\nexecfile(\"/main.py\")\r\n\x04\r\n\x02";
-
-        for(int i = 0; i < data.size(); i += (TABOO_PACKET_SIZE - 1))
-        {
-            emit writeBytes(data.mid(i, TABOO_PACKET_SIZE - 1));
-        }
-
-        // emit writeBytes("\x03\r\n\x01\r\nexecfile(\"/main.py\")\r\n\x04\r\n\x02");
+        emit execScript("execfile(\"/main.py\")\r\n");
     }
 }
 
 void MyPlainTextEdit::interrupt()
 {
-    emit writeBytes("\x03");
+    emit interruptScript();
 }
 
 void MyPlainTextEdit::reload()
 {
-    emit writeBytes("\x04");
+    emit reloadScript();
 }
 
 void MyPlainTextEdit::keyPressEvent(QKeyEvent *event)
@@ -680,7 +664,6 @@ void MyPlainTextEdit::keyPressEvent(QKeyEvent *event)
 
             if((data == "\r") || (data == "\r\n") || (data == "\n"))
             {
-                // emit writeBytes("\r\n");
                 emit writeBytes("\r");
                 emit writeBytes("\n");
             }
@@ -738,16 +721,7 @@ void MyPlainTextEdit::contextMenuEvent(QContextMenuEvent *event)
     });
 
     connect(menu.addAction(tr("Paste")), &QAction::triggered, this, [this] {
-        // Write bytes slowly so as to not overload the MicroPython board.
-
-        QByteArray data = QApplication::clipboard()->text().toUtf8();
-
-        for(int i = 0; i < data.size(); i += (TABOO_PACKET_SIZE - 1))
-        {
-            emit writeBytes(data.mid(i, TABOO_PACKET_SIZE - 1));
-        }
-
-        // emit writeBytes(QApplication::clipboard()->text().toUtf8());
+        emit paste(QApplication::clipboard()->text().toUtf8());
     });
 
     menu.addSeparator();
@@ -1021,6 +995,10 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
     m_edit = new MyPlainTextEdit(m_settings->value(QStringLiteral(FONT_ZOOM_STATE), TextEditor::TextEditorSettings::fontSettings().defaultFontSize()).toReal());
     connect(this, &OpenMVTerminal::readBytes, m_edit, &MyPlainTextEdit::readBytes);
     connect(m_edit, &MyPlainTextEdit::writeBytes, this, &OpenMVTerminal::writeBytes);
+    connect(m_edit, &MyPlainTextEdit::execScript, this, &OpenMVTerminal::execScript);
+    connect(m_edit, &MyPlainTextEdit::interruptScript, this, &OpenMVTerminal::interruptScript);
+    connect(m_edit, &MyPlainTextEdit::reloadScript, this, &OpenMVTerminal::reloadScript);
+    connect(m_edit, &MyPlainTextEdit::paste, this, &OpenMVTerminal::paste);
     connect(m_edit, &MyPlainTextEdit::frameBufferData, frameBuffer, &OpenMVPluginFB::frameBufferData);
     connect(clearButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::clear);
     connect(saveButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::save);
@@ -1284,6 +1262,7 @@ void OpenMVTerminal::paintEvent(QPaintEvent *event)
 OpenMVTerminalSerialPort_private::OpenMVTerminalSerialPort_private(QObject *parent) : QObject(parent)
 {
     m_port = Q_NULLPTR;
+    m_readEnabled = true;
 }
 
 void OpenMVTerminalSerialPort_private::open(const QString &portName, int buadRate)
@@ -1298,7 +1277,7 @@ void OpenMVTerminalSerialPort_private::open(const QString &portName, int buadRat
     m_port->setReadBufferSize(1000000);
 
     connect(m_port, &QSerialPort::readyRead, this, [this] {
-        emit readBytes(m_port->readAll());
+        if(m_readEnabled) emit readBytes(m_port->readAll());
     });
 
     if((!m_port->setBaudRate(buadRate))
@@ -1333,6 +1312,140 @@ void OpenMVTerminalSerialPort_private::writeBytes(const QByteArray &data)
     }
 }
 
+void OpenMVTerminalSerialPort_private::execScript(const QByteArray &data)
+{
+    m_readEnabled = false;
+
+    writeBytes("\r\x03\x03");
+
+    do
+    {
+        m_port->waitForReadyRead(1);
+    }
+    while(!m_port->readAll().isEmpty());
+
+    writeBytes("\r\x01");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) goto execScriptFinished;
+            array.append(temp);
+            if (array.endsWith("raw REPL; CTRL-B to exit\r\n>")) break;
+        }
+    }
+
+    writeBytes("\x04");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) goto execScriptFinished;
+            array.append(temp);
+            if (array.endsWith("raw REPL; CTRL-B to exit\r\n>")) break;
+        }
+    }
+
+    for(int i = 0; i < data.size(); i += 256)
+    {
+        writeBytes(data.mid(i, qMin(data.size(), 256)));
+        QThread::msleep(10);
+    }
+
+    writeBytes("\x04");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) goto execScriptFinished;
+            array.append(temp);
+            if (array.endsWith("OK")) break;
+        }
+    }
+
+execScriptFinished:
+
+    m_readEnabled = true;
+
+    writeBytes("\r\x02");
+}
+
+void OpenMVTerminalSerialPort_private::interruptScript()
+{
+    m_readEnabled = false;
+
+    writeBytes("\r\x03\x03");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) break;
+            array.append(temp);
+        }
+
+        array = array.replace("\x04>\r\n", "");
+        array = array.replace("\x04", "");
+        array = array.replace("\r\n>>> \r\n>>> \r\n>>> ", "\r\n>>> ");
+        array = array.replace("\r\n>>> \r\n>>> ", "\r\n>>> ");
+        emit readBytes(array);
+    }
+
+    m_readEnabled = true;
+}
+
+void OpenMVTerminalSerialPort_private::reloadScript()
+{
+    m_readEnabled = false;
+
+    writeBytes("\r\x03\x03");
+
+    do
+    {
+        m_port->waitForReadyRead(1);
+    }
+    while(!m_port->readAll().isEmpty());
+
+    writeBytes("\r\x04");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) break;
+            array.append(temp);
+        }
+
+        emit readBytes(array.replace("\r\n>>> \r\n", "\r\n"));
+    }
+
+    m_readEnabled = true;
+}
+
+void OpenMVTerminalSerialPort_private::paste(const QByteArray &data)
+{
+    QByteArray out = QString::fromUtf8(data).split(QRegularExpression(QStringLiteral("\n|\r\n|\r"))).join("\r\n").toUtf8();
+
+    for(int i = 0; i < out.size(); i += 256)
+    {
+        writeBytes(out.mid(i, qMin(out.size(), 256)));
+        QThread::msleep(10);
+    }
+}
+
 OpenMVTerminalSerialPort::OpenMVTerminalSerialPort(QObject *parent) : OpenMVTerminalPort(parent)
 {
     QThread *thread = new QThread;
@@ -1347,6 +1460,18 @@ OpenMVTerminalSerialPort::OpenMVTerminalSerialPort(QObject *parent) : OpenMVTerm
 
     connect(this, &OpenMVTerminalSerialPort::writeBytes,
             port, &OpenMVTerminalSerialPort_private::writeBytes);
+
+    connect(this, &OpenMVTerminalSerialPort::execScript,
+            port, &OpenMVTerminalSerialPort_private::execScript);
+
+    connect(this, &OpenMVTerminalSerialPort::interruptScript,
+            port, &OpenMVTerminalSerialPort_private::interruptScript);
+
+    connect(this, &OpenMVTerminalSerialPort::reloadScript,
+            port, &OpenMVTerminalSerialPort_private::reloadScript);
+
+    connect(this, &OpenMVTerminalSerialPort::paste,
+            port, &OpenMVTerminalSerialPort_private::paste);
 
     connect(port, &OpenMVTerminalSerialPort_private::readBytes,
             this, &OpenMVTerminalSerialPort::readBytes);
@@ -1366,6 +1491,7 @@ OpenMVTerminalSerialPort::OpenMVTerminalSerialPort(QObject *parent) : OpenMVTerm
 OpenMVTerminalUDPPort_private::OpenMVTerminalUDPPort_private(QObject *parent) : QObject(parent)
 {
     m_port = Q_NULLPTR;
+    m_readEnabled = true;
 }
 
 void OpenMVTerminalUDPPort_private::open(const QString &hostName, int port)
@@ -1378,7 +1504,7 @@ void OpenMVTerminalUDPPort_private::open(const QString &hostName, int port)
     m_port = new QUdpSocket(this);
 
     connect(m_port, &QSerialPort::readyRead, this, [this] {
-        emit readBytes(m_port->readAll());
+        if(m_readEnabled) emit readBytes(m_port->readAll());
     });
 
     if(!hostName.isEmpty())
@@ -1465,6 +1591,140 @@ void OpenMVTerminalUDPPort_private::writeBytes(const QByteArray &data)
     }
 }
 
+void OpenMVTerminalUDPPort_private::execScript(const QByteArray &data)
+{
+    m_readEnabled = false;
+
+    writeBytes("\r\x03\x03");
+
+    do
+    {
+        m_port->waitForReadyRead(1);
+    }
+    while(!m_port->readAll().isEmpty());
+
+    writeBytes("\r\x01");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) goto execScriptFinished;
+            array.append(temp);
+            if (array.endsWith("raw REPL; CTRL-B to exit\r\n>")) break;
+        }
+    }
+
+    writeBytes("\x04");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) goto execScriptFinished;
+            array.append(temp);
+            if (array.endsWith("raw REPL; CTRL-B to exit\r\n>")) break;
+        }
+    }
+
+    for(int i = 0; i < data.size(); i += 256)
+    {
+        writeBytes(data.mid(i, qMin(data.size(), 256)));
+        QThread::msleep(10);
+    }
+
+    writeBytes("\x04");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) goto execScriptFinished;
+            array.append(temp);
+            if (array.endsWith("OK")) break;
+        }
+    }
+
+execScriptFinished:
+
+    m_readEnabled = true;
+
+    writeBytes("\r\x02");
+}
+
+void OpenMVTerminalUDPPort_private::interruptScript()
+{
+    m_readEnabled = false;
+
+    writeBytes("\r\x03\x03");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) break;
+            array.append(temp);
+        }
+
+        array = array.replace("\x04>\r\n", "");
+        array = array.replace("\x04", "");
+        array = array.replace("\r\n>>> \r\n>>> \r\n>>> ", "\r\n>>> ");
+        array = array.replace("\r\n>>> \r\n>>> ", "\r\n>>> ");
+        emit readBytes(array);
+    }
+
+    m_readEnabled = true;
+}
+
+void OpenMVTerminalUDPPort_private::reloadScript()
+{
+    m_readEnabled = false;
+
+    writeBytes("\r\x03\x03");
+
+    do
+    {
+        m_port->waitForReadyRead(1);
+    }
+    while(!m_port->readAll().isEmpty());
+
+    writeBytes("\r\x04");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) break;
+            array.append(temp);
+        }
+
+        emit readBytes(array.replace("\r\n>>> \r\n", "\r\n"));
+    }
+
+    m_readEnabled = true;
+}
+
+void OpenMVTerminalUDPPort_private::paste(const QByteArray &data)
+{
+    QByteArray out = QString::fromUtf8(data).split(QRegularExpression(QStringLiteral("\n|\r\n|\r"))).join("\r\n").toUtf8();
+
+    for(int i = 0; i < out.size(); i += 256)
+    {
+        writeBytes(out.mid(i, qMin(out.size(), 256)));
+        QThread::msleep(10);
+    }
+}
+
 OpenMVTerminalUDPPort::OpenMVTerminalUDPPort(QObject *parent) : OpenMVTerminalPort(parent)
 {
     QThread *thread = new QThread;
@@ -1479,6 +1739,18 @@ OpenMVTerminalUDPPort::OpenMVTerminalUDPPort(QObject *parent) : OpenMVTerminalPo
 
     connect(this, &OpenMVTerminalUDPPort::writeBytes,
             port, &OpenMVTerminalUDPPort_private::writeBytes);
+
+    connect(this, &OpenMVTerminalUDPPort::execScript,
+            port, &OpenMVTerminalUDPPort_private::execScript);
+
+    connect(this, &OpenMVTerminalUDPPort::interruptScript,
+            port, &OpenMVTerminalUDPPort_private::interruptScript);
+
+    connect(this, &OpenMVTerminalUDPPort::reloadScript,
+            port, &OpenMVTerminalUDPPort_private::reloadScript);
+
+    connect(this, &OpenMVTerminalUDPPort::paste,
+            port, &OpenMVTerminalUDPPort_private::paste);
 
     connect(port, &OpenMVTerminalUDPPort_private::readBytes,
             this, &OpenMVTerminalUDPPort::readBytes);
@@ -1498,6 +1770,7 @@ OpenMVTerminalUDPPort::OpenMVTerminalUDPPort(QObject *parent) : OpenMVTerminalPo
 OpenMVTerminalTCPPort_private::OpenMVTerminalTCPPort_private(QObject *parent) : QObject(parent)
 {
     m_port = Q_NULLPTR;
+    m_readEnabled = true;
 }
 
 void OpenMVTerminalTCPPort_private::open(const QString &hostName, int port)
@@ -1510,7 +1783,7 @@ void OpenMVTerminalTCPPort_private::open(const QString &hostName, int port)
     m_port = new QTcpSocket(this);
 
     connect(m_port, &QSerialPort::readyRead, this, [this] {
-        emit readBytes(m_port->readAll());
+        if(m_readEnabled) emit readBytes(m_port->readAll());
     });
 
     if(!hostName.isEmpty())
@@ -1597,6 +1870,140 @@ void OpenMVTerminalTCPPort_private::writeBytes(const QByteArray &data)
     }
 }
 
+void OpenMVTerminalTCPPort_private::execScript(const QByteArray &data)
+{
+    m_readEnabled = false;
+
+    writeBytes("\r\x03\x03");
+
+    do
+    {
+        m_port->waitForReadyRead(1);
+    }
+    while(!m_port->readAll().isEmpty());
+
+    writeBytes("\r\x01");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) goto execScriptFinished;
+            array.append(temp);
+            if (array.endsWith("raw REPL; CTRL-B to exit\r\n>")) break;
+        }
+    }
+
+    writeBytes("\x04");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) goto execScriptFinished;
+            array.append(temp);
+            if (array.endsWith("raw REPL; CTRL-B to exit\r\n>")) break;
+        }
+    }
+
+    for(int i = 0; i < data.size(); i += 256)
+    {
+        writeBytes(data.mid(i, qMin(data.size(), 256)));
+        QThread::msleep(10);
+    }
+
+    writeBytes("\x04");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) goto execScriptFinished;
+            array.append(temp);
+            if (array.endsWith("OK")) break;
+        }
+    }
+
+execScriptFinished:
+
+    m_readEnabled = true;
+
+    writeBytes("\r\x02");
+}
+
+void OpenMVTerminalTCPPort_private::interruptScript()
+{
+    m_readEnabled = false;
+
+    writeBytes("\r\x03\x03");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) break;
+            array.append(temp);
+        }
+
+        array = array.replace("\x04>\r\n", "");
+        array = array.replace("\x04", "");
+        array = array.replace("\r\n>>> \r\n>>> \r\n>>> ", "\r\n>>> ");
+        array = array.replace("\r\n>>> \r\n>>> ", "\r\n>>> ");
+        emit readBytes(array);
+    }
+
+    m_readEnabled = true;
+}
+
+void OpenMVTerminalTCPPort_private::reloadScript()
+{
+    m_readEnabled = false;
+
+    writeBytes("\r\x03\x03");
+
+    do
+    {
+        m_port->waitForReadyRead(1);
+    }
+    while(!m_port->readAll().isEmpty());
+
+    writeBytes("\r\x04");
+    {
+        QByteArray array;
+
+        forever
+        {
+            m_port->waitForReadyRead(1);
+            QByteArray temp = m_port->readAll();
+            if (temp.isEmpty()) break;
+            array.append(temp);
+        }
+
+        emit readBytes(array.replace("\r\n>>> \r\n", "\r\n"));
+    }
+
+    m_readEnabled = true;
+}
+
+void OpenMVTerminalTCPPort_private::paste(const QByteArray &data)
+{
+    QByteArray out = QString::fromUtf8(data).split(QRegularExpression(QStringLiteral("\n|\r\n|\r"))).join("\r\n").toUtf8();
+
+    for(int i = 0; i < out.size(); i += 256)
+    {
+        writeBytes(out.mid(i, qMin(out.size(), 256)));
+        QThread::msleep(10);
+    }
+}
+
 OpenMVTerminalTCPPort::OpenMVTerminalTCPPort(QObject *parent) : OpenMVTerminalPort(parent)
 {
     QThread *thread = new QThread;
@@ -1611,6 +2018,18 @@ OpenMVTerminalTCPPort::OpenMVTerminalTCPPort(QObject *parent) : OpenMVTerminalPo
 
     connect(this, &OpenMVTerminalTCPPort::writeBytes,
             port, &OpenMVTerminalTCPPort_private::writeBytes);
+
+    connect(this, &OpenMVTerminalTCPPort::execScript,
+            port, &OpenMVTerminalTCPPort_private::execScript);
+
+    connect(this, &OpenMVTerminalTCPPort::interruptScript,
+            port, &OpenMVTerminalTCPPort_private::interruptScript);
+
+    connect(this, &OpenMVTerminalTCPPort::reloadScript,
+            port, &OpenMVTerminalTCPPort_private::reloadScript);
+
+    connect(this, &OpenMVTerminalTCPPort::paste,
+            port, &OpenMVTerminalTCPPort_private::paste);
 
     connect(port, &OpenMVTerminalTCPPort_private::readBytes,
             this, &OpenMVTerminalTCPPort::readBytes);

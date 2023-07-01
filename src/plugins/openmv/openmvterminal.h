@@ -54,6 +54,10 @@ public slots:
 signals:
 
     void writeBytes(const QByteArray &data);
+    void execScript(const QByteArray &data);
+    void interruptScript();
+    void reloadScript();
+    void paste(const QByteArray &data);
     void frameBufferData(const QPixmap &data);
 
 protected:
@@ -99,6 +103,10 @@ signals:
 
     void readBytes(const QByteArray &data);
     void writeBytes(const QByteArray &data);
+    void execScript(const QByteArray &data);
+    void interruptScript();
+    void reloadScript();
+    void paste(const QByteArray &data);
 
 protected:
 
@@ -140,6 +148,10 @@ signals:
     void openResult(const QString &errorMessage);
 
     void writeBytes(const QByteArray &data);
+    void execScript(const QByteArray &data);
+    void interruptScript();
+    void reloadScript();
+    void paste(const QByteArray &data);
     void readBytes(const QByteArray &data);
 };
 
@@ -157,6 +169,10 @@ public slots:
 
     void open(const QString &portName, int buadRate);
     void writeBytes(const QByteArray &data);
+    void execScript(const QByteArray &data);
+    void interruptScript();
+    void reloadScript();
+    void paste(const QByteArray &data);
 
 signals:
 
@@ -166,6 +182,7 @@ signals:
 private:
 
     QSerialPort *m_port;
+    bool m_readEnabled;
 };
 
 class OpenMVTerminalSerialPort : public OpenMVTerminalPort
@@ -191,6 +208,10 @@ public slots:
 
     void open(const QString &hostName, int port);
     void writeBytes(const QByteArray &data);
+    void execScript(const QByteArray &data);
+    void interruptScript();
+    void reloadScript();
+    void paste(const QByteArray &data);
 
 signals:
 
@@ -200,6 +221,7 @@ signals:
 private:
 
     QUdpSocket *m_port;
+    bool m_readEnabled;
 };
 
 class OpenMVTerminalUDPPort : public OpenMVTerminalPort
@@ -225,6 +247,10 @@ public slots:
 
     void open(const QString &hostName, int port);
     void writeBytes(const QByteArray &data);
+    void execScript(const QByteArray &data);
+    void interruptScript();
+    void reloadScript();
+    void paste(const QByteArray &data);
 
 signals:
 
@@ -234,6 +260,7 @@ signals:
 private:
 
     QTcpSocket *m_port;
+    bool m_readEnabled;
 };
 
 class OpenMVTerminalTCPPort : public OpenMVTerminalPort

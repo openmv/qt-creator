@@ -2738,6 +2738,18 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                         connect(terminal, &OpenMVTerminal::writeBytes,
                                 terminalDevice, &OpenMVTerminalPort::writeBytes);
 
+                        connect(terminal, &OpenMVTerminal::execScript,
+                                terminalDevice, &OpenMVTerminalPort::execScript);
+
+                        connect(terminal, &OpenMVTerminal::interruptScript,
+                                terminalDevice, &OpenMVTerminalPort::interruptScript);
+
+                        connect(terminal, &OpenMVTerminal::reloadScript,
+                                terminalDevice, &OpenMVTerminalPort::reloadScript);
+
+                        connect(terminal, &OpenMVTerminal::paste,
+                                terminalDevice, &OpenMVTerminalPort::paste);
+
                         connect(terminalDevice, &OpenMVTerminalPort::readBytes,
                                 terminal, &OpenMVTerminal::readBytes);
 
@@ -2832,6 +2844,18 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                         connect(terminal, &OpenMVTerminal::writeBytes,
                                 terminalDevice, &OpenMVTerminalPort::writeBytes);
 
+                        connect(terminal, &OpenMVTerminal::execScript,
+                                terminalDevice, &OpenMVTerminalPort::execScript);
+
+                        connect(terminal, &OpenMVTerminal::interruptScript,
+                                terminalDevice, &OpenMVTerminalPort::interruptScript);
+
+                        connect(terminal, &OpenMVTerminal::reloadScript,
+                                terminalDevice, &OpenMVTerminalPort::reloadScript);
+
+                        connect(terminal, &OpenMVTerminal::paste,
+                                terminalDevice, &OpenMVTerminalPort::paste);
+
                         connect(terminalDevice, &OpenMVTerminalPort::readBytes,
                                 terminal, &OpenMVTerminal::readBytes);
 
@@ -2915,6 +2939,18 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                     connect(terminal, &OpenMVTerminal::writeBytes,
                             terminalDevice, &OpenMVTerminalPort::writeBytes);
+
+                    connect(terminal, &OpenMVTerminal::execScript,
+                            terminalDevice, &OpenMVTerminalPort::execScript);
+
+                    connect(terminal, &OpenMVTerminal::interruptScript,
+                            terminalDevice, &OpenMVTerminalPort::interruptScript);
+
+                    connect(terminal, &OpenMVTerminal::reloadScript,
+                            terminalDevice, &OpenMVTerminalPort::reloadScript);
+
+                    connect(terminal, &OpenMVTerminal::paste,
+                            terminalDevice, &OpenMVTerminalPort::paste);
 
                     connect(terminalDevice, &OpenMVTerminalPort::readBytes,
                             terminal, &OpenMVTerminal::readBytes);
@@ -3005,6 +3041,18 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                         connect(terminal, &OpenMVTerminal::writeBytes,
                                 terminalDevice, &OpenMVTerminalPort::writeBytes);
 
+                        connect(terminal, &OpenMVTerminal::execScript,
+                                terminalDevice, &OpenMVTerminalPort::execScript);
+
+                        connect(terminal, &OpenMVTerminal::interruptScript,
+                                terminalDevice, &OpenMVTerminalPort::interruptScript);
+
+                        connect(terminal, &OpenMVTerminal::reloadScript,
+                                terminalDevice, &OpenMVTerminalPort::reloadScript);
+
+                        connect(terminal, &OpenMVTerminal::paste,
+                                terminalDevice, &OpenMVTerminalPort::paste);
+
                         connect(terminalDevice, &OpenMVTerminalPort::readBytes,
                                 terminal, &OpenMVTerminal::readBytes);
 
@@ -3088,6 +3136,18 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                     connect(terminal, &OpenMVTerminal::writeBytes,
                             terminalDevice, &OpenMVTerminalPort::writeBytes);
+
+                    connect(terminal, &OpenMVTerminal::execScript,
+                            terminalDevice, &OpenMVTerminalPort::execScript);
+
+                    connect(terminal, &OpenMVTerminal::interruptScript,
+                            terminalDevice, &OpenMVTerminalPort::interruptScript);
+
+                    connect(terminal, &OpenMVTerminal::reloadScript,
+                            terminalDevice, &OpenMVTerminalPort::reloadScript);
+
+                    connect(terminal, &OpenMVTerminal::paste,
+                            terminalDevice, &OpenMVTerminalPort::paste);
 
                     connect(terminalDevice, &OpenMVTerminalPort::readBytes,
                             terminal, &OpenMVTerminal::readBytes);
@@ -4056,6 +4116,18 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     connect(terminal, &OpenMVTerminal::writeBytes,
                                             terminalDevice, &OpenMVTerminalPort::writeBytes);
 
+                                    connect(terminal, &OpenMVTerminal::execScript,
+                                            terminalDevice, &OpenMVTerminalPort::execScript);
+
+                                    connect(terminal, &OpenMVTerminal::interruptScript,
+                                            terminalDevice, &OpenMVTerminalPort::interruptScript);
+
+                                    connect(terminal, &OpenMVTerminal::reloadScript,
+                                            terminalDevice, &OpenMVTerminalPort::reloadScript);
+
+                                    connect(terminal, &OpenMVTerminal::paste,
+                                            terminalDevice, &OpenMVTerminalPort::paste);
+
                                     connect(terminalDevice, &OpenMVTerminalPort::readBytes,
                                             terminal, &OpenMVTerminal::readBytes);
 
@@ -4189,6 +4261,18 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     connect(terminal, &OpenMVTerminal::writeBytes,
                                             terminalDevice, &OpenMVTerminalPort::writeBytes);
 
+                                    connect(terminal, &OpenMVTerminal::execScript,
+                                            terminalDevice, &OpenMVTerminalPort::execScript);
+
+                                    connect(terminal, &OpenMVTerminal::interruptScript,
+                                            terminalDevice, &OpenMVTerminalPort::interruptScript);
+
+                                    connect(terminal, &OpenMVTerminal::reloadScript,
+                                            terminalDevice, &OpenMVTerminalPort::reloadScript);
+
+                                    connect(terminal, &OpenMVTerminal::paste,
+                                            terminalDevice, &OpenMVTerminalPort::paste);
+
                                     connect(terminalDevice, &OpenMVTerminalPort::readBytes,
                                             terminal, &OpenMVTerminal::readBytes);
 
@@ -4290,6 +4374,18 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                             connect(terminal, &OpenMVTerminal::writeBytes,
                                     terminalDevice, &OpenMVTerminalPort::writeBytes);
+
+                            connect(terminal, &OpenMVTerminal::execScript,
+                                    terminalDevice, &OpenMVTerminalPort::execScript);
+
+                            connect(terminal, &OpenMVTerminal::interruptScript,
+                                    terminalDevice, &OpenMVTerminalPort::interruptScript);
+
+                            connect(terminal, &OpenMVTerminal::reloadScript,
+                                    terminalDevice, &OpenMVTerminalPort::reloadScript);
+
+                            connect(terminal, &OpenMVTerminal::paste,
+                                    terminalDevice, &OpenMVTerminalPort::paste);
 
                             connect(terminalDevice, &OpenMVTerminalPort::readBytes,
                                     terminal, &OpenMVTerminal::readBytes);
@@ -4408,6 +4504,18 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     connect(terminal, &OpenMVTerminal::writeBytes,
                                             terminalDevice, &OpenMVTerminalPort::writeBytes);
 
+                                    connect(terminal, &OpenMVTerminal::execScript,
+                                            terminalDevice, &OpenMVTerminalPort::execScript);
+
+                                    connect(terminal, &OpenMVTerminal::interruptScript,
+                                            terminalDevice, &OpenMVTerminalPort::interruptScript);
+
+                                    connect(terminal, &OpenMVTerminal::reloadScript,
+                                            terminalDevice, &OpenMVTerminalPort::reloadScript);
+
+                                    connect(terminal, &OpenMVTerminal::paste,
+                                            terminalDevice, &OpenMVTerminalPort::paste);
+
                                     connect(terminalDevice, &OpenMVTerminalPort::readBytes,
                                             terminal, &OpenMVTerminal::readBytes);
 
@@ -4509,6 +4617,18 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                             connect(terminal, &OpenMVTerminal::writeBytes,
                                     terminalDevice, &OpenMVTerminalPort::writeBytes);
+
+                            connect(terminal, &OpenMVTerminal::execScript,
+                                    terminalDevice, &OpenMVTerminalPort::execScript);
+
+                            connect(terminal, &OpenMVTerminal::interruptScript,
+                                    terminalDevice, &OpenMVTerminalPort::interruptScript);
+
+                            connect(terminal, &OpenMVTerminal::reloadScript,
+                                    terminalDevice, &OpenMVTerminalPort::reloadScript);
+
+                            connect(terminal, &OpenMVTerminal::paste,
+                                    terminalDevice, &OpenMVTerminalPort::paste);
 
                             connect(terminalDevice, &OpenMVTerminalPort::readBytes,
                                     terminal, &OpenMVTerminal::readBytes);
@@ -4615,6 +4735,18 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
             connect(terminal, &OpenMVTerminal::writeBytes,
                     terminalDevice, &OpenMVTerminalPort::writeBytes);
+
+            connect(terminal, &OpenMVTerminal::execScript,
+                    terminalDevice, &OpenMVTerminalPort::execScript);
+
+            connect(terminal, &OpenMVTerminal::interruptScript,
+                    terminalDevice, &OpenMVTerminalPort::interruptScript);
+
+            connect(terminal, &OpenMVTerminal::reloadScript,
+                    terminalDevice, &OpenMVTerminalPort::reloadScript);
+
+            connect(terminal, &OpenMVTerminal::paste,
+                    terminalDevice, &OpenMVTerminalPort::paste);
 
             connect(terminalDevice, &OpenMVTerminalPort::readBytes,
                     terminal, &OpenMVTerminal::readBytes);
