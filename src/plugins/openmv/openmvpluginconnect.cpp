@@ -1420,6 +1420,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             // BIN Bootloader /////////////////////////////////////////////////
 
+            bool tryFastMode = true;
+
             while((!isIMX) && (!isArduino) && (justEraseFlashFs || firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)))
             {
                 QFile file(firmwarePath);
@@ -1436,7 +1438,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         int qspif_max_block = int();
                         int qspif_block_size_in_bytes = int();
                         int packet_chunksize = int();
-                        int frame_chunksize = int();
+                        int packet_batchsize = int();
 
                         // Start Bootloader ///////////////////////////////////
                         {
@@ -1458,7 +1460,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 *done2Ptr2 = true;
                             });
 
-                            QProgressDialog dialog(forceBootloaderBricked ? QString(QStringLiteral("%1%2")).arg(tr("Disconnect your OpenMV Cam and then reconnect it...")).arg(justEraseFlashFs ? QString() : tr("\n\nHit cancel to skip to DFU reprogramming.")) : tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                            QProgressDialog dialog(((!tryFastMode) || forceBootloaderBricked)
+                                    ? QString(QStringLiteral("%1%2")).arg(tr("Disconnect your OpenMV Cam and then reconnect it...")).arg(justEraseFlashFs ? QString() : tr("\n\nHit cancel to skip to DFU reprogramming."))
+                                    : tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                                 (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
@@ -1525,9 +1529,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             }
 
                             m_iodevice->bootloaderHS(highspeed2);
+                            m_iodevice->bootloaderFastMode(tryFastMode);
 
-                            packet_chunksize = highspeed2 ? HS_CHUNK_SIZE : FS_CHUNK_SIZE;
-                            frame_chunksize = highspeed2 ? HS_BYTES_PER_SOF : FS_BYTES_PER_SOF;
+                            packet_chunksize = highspeed2 ? (tryFastMode ? HS_CHUNK_SIZE : SAFE_HS_CHUNK_SIZE)
+                                                          : (tryFastMode ? FS_CHUNK_SIZE : SAFE_FS_CHUNK_SIZE);
+                            packet_batchsize = tryFastMode ? FAST_FLASH_PACKET_BATCH_COUNT : SAFE_FLASH_PACKET_BATCH_COUNT;
 
                             if((version2 == V2_BOOTLDR) || (version2 == V3_BOOTLDR))
                             {
@@ -1591,9 +1597,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                         QList<QByteArray> dataChunks;
 
-                        for(int i = 0; i < data.size(); i += frame_chunksize)
+                        for(int i = 0; i < data.size(); i += packet_chunksize)
                         {
-                            dataChunks.append(data.mid(i, qMin(frame_chunksize, data.size() - i)));
+                            dataChunks.append(data.mid(i, qMin(packet_chunksize, data.size() - i)));
                         }
 
                         if(dataChunks.size() && (dataChunks.last().size() % 4))
@@ -1629,14 +1635,28 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     *ok2Ptr = ok;
                                 });
 
-                                QEventLoop loop;
+                                QEventLoop loop0, loop1;
 
-                                connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
-                                        &loop, &QEventLoop::quit);
+                                if(tryFastMode)
+                                {
+                                    connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
+                                            &loop0, &QEventLoop::quit);
+                                }
+                                else
+                                {
+                                    connect(m_iodevice, &OpenMVPluginIO::bootloaderQSPIFEraseDone,
+                                            &loop0, &QEventLoop::quit);
+                                }
 
                                 m_iodevice->bootloaderQSPIFErase(qspif_start_block);
 
-                                loop.exec();
+                                loop0.exec();
+
+                                if((!tryFastMode) && ok2)
+                                {
+                                    QTimer::singleShot(SAFE_FLASH_ERASE_DELAY, &loop1, &QEventLoop::quit);
+                                    loop1.exec();
+                                }
 
                                 disconnect(conn2);
 
@@ -1644,11 +1664,19 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 {
                                     dialog.close();
 
-                                    QMessageBox::critical(Core::ICore::dialogParent(),
-                                        tr("Connect"),
-                                        tr("Timeout Error!"));
+                                    if(tryFastMode)
+                                    {
+                                        tryFastMode = false;
+                                        continue;
+                                    }
+                                    else
+                                    {
+                                        QMessageBox::critical(Core::ICore::dialogParent(),
+                                            tr("Connect"),
+                                            tr("Timeout Error!"));
 
-                                    CLOSE_CONNECT_END();
+                                        CLOSE_CONNECT_END();
+                                    }
                                 }
                             }
 
@@ -1662,18 +1690,32 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             for(int i = flash_start; i <= flash_end; i++)
                             {
-                                QEventLoop loop;
+                                QEventLoop loop0, loop1;
 
-                                connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
-                                        &loop, &QEventLoop::quit);
+                                if(tryFastMode)
+                                {
+                                    connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
+                                            &loop0, &QEventLoop::quit);
+                                }
+                                else
+                                {
+                                    connect(m_iodevice, &OpenMVPluginIO::flashEraseDone,
+                                            &loop0, &QEventLoop::quit);
+                                }
 
                                 m_iodevice->flashErase(i);
 
-                                loop.exec();
+                                loop0.exec();
 
                                 if(!ok2)
                                 {
                                     break;
+                                }
+
+                                if(!tryFastMode)
+                                {
+                                    QTimer::singleShot(SAFE_FLASH_ERASE_DELAY, &loop1, &QEventLoop::quit);
+                                    loop1.exec();
                                 }
 
                                 dialog.setValue(i);
@@ -1685,11 +1727,19 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             if(!ok2)
                             {
-                                QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("Connect"),
-                                    tr("Timeout Error!"));
+                                if(tryFastMode)
+                                {
+                                    tryFastMode = false;
+                                    continue;
+                                }
+                                else
+                                {
+                                    QMessageBox::critical(Core::ICore::dialogParent(),
+                                        tr("Connect"),
+                                        tr("Timeout Error!"));
 
-                                CLOSE_CONNECT_END();
+                                    CLOSE_CONNECT_END();
+                                }
                             }
                         }
 
@@ -1713,22 +1763,36 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             dialog.setCancelButton(Q_NULLPTR);
                             dialog.show();
 
-                            for(int i = 0; i < dataChunks.size(); i += FLASH_PACKET_BATCH_COUNT)
+                            for(int i = 0; i < dataChunks.size(); i += packet_batchsize)
                             {
-                                QEventLoop loop;
+                                QEventLoop loop0, loop1;
 
-                                connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
-                                        &loop, &QEventLoop::quit);
-
-                                for (int j = 0, jj = qMin(FLASH_PACKET_BATCH_COUNT, dataChunks.size() - i); j < jj; j++) {
-                                    m_iodevice->flashWrite(dataChunks.at(i + j), packet_chunksize);
+                                if(tryFastMode)
+                                {
+                                    connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
+                                            &loop0, &QEventLoop::quit);
+                                }
+                                else
+                                {
+                                    connect(m_iodevice, &OpenMVPluginIO::flashWriteDone,
+                                            &loop0, &QEventLoop::quit);
                                 }
 
-                                loop.exec();
+                                for (int j = 0, jj = qMin(packet_batchsize, dataChunks.size() - i); j < jj; j++) {
+                                    m_iodevice->flashWrite(dataChunks.at(i + j));
+                                }
+
+                                loop0.exec();
 
                                 if(!ok2)
                                 {
                                     break;
+                                }
+
+                                if(!tryFastMode)
+                                {
+                                    QTimer::singleShot(SAFE_FLASH_WRITE_DELAY, &loop1, &QEventLoop::quit);
+                                    loop1.exec();
                                 }
 
                                 dialog.setValue(i);
@@ -1740,11 +1804,19 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             if(!ok2)
                             {
-                                QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("Connect"),
-                                    tr("Timeout Error!"));
+                                if(tryFastMode)
+                                {
+                                    tryFastMode = false;
+                                    continue;
+                                }
+                                else
+                                {
+                                    QMessageBox::critical(Core::ICore::dialogParent(),
+                                        tr("Connect"),
+                                        tr("Timeout Error!"));
 
-                                CLOSE_CONNECT_END();
+                                    CLOSE_CONNECT_END();
+                                }
                             }
                         }
 
