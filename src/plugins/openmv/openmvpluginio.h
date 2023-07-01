@@ -14,13 +14,16 @@
 #define TEMPLATE_SAVE_PATH_MAX_LEN      55
 #define DESCRIPTOR_SAVE_PATH_MAX_LEN    55
 
-#define FLASH_PACKET_BATCH_COUNT        32
-#define FLASH_PER_COMMAND_WAIT          false
+#define FAST_FLASH_PACKET_BATCH_COUNT   32
+#define SAFE_FLASH_PACKET_BATCH_COUNT   1
 
 #define FLASH_SECTOR_START              4
 #define FLASH_SECTOR_END                11
 #define FLASH_SECTOR_ALL_START          1
 #define FLASH_SECTOR_ALL_END            11
+
+#define SAFE_FLASH_ERASE_DELAY          2000
+#define SAFE_FLASH_WRITE_DELAY          1
 
 #define OLD_IS_JPG(bpp)                 ((bpp) > 3)
 #define OLD_IS_BAYER(bpp)               ((bpp) == 3)
@@ -163,10 +166,10 @@ public slots:
     void bootloaderStart();
     void bootloaderReset();
     void flashErase(int sector);
-    void flashWrite(const QByteArray &data, int chunksize);
+    void flashWrite(const QByteArray &data);
     void bootloaderQuery();
     void bootloaderQSPIFErase(int sector);
-    void bootloaderQSPIFWrite(const QByteArray &data, int chunksize);
+    void bootloaderQSPIFWrite(const QByteArray &data);
     void bootloaderQSPIFLayout();
     void bootloaderQSPIFMemtest();
     void close();
@@ -183,6 +186,7 @@ public slots: // private
     void newPixformatEnable(bool on) { m_newPixformat = on; }
     void mainTerminalInputEnable(bool on) { m_mainTerminalInput = on; }
     void bootloaderHS(bool on) { m_bootloaderHS = on; }
+    void bootloaderFastMode(bool on) { m_bootloaderFastMode = on; }
 
 signals:
 
@@ -235,6 +239,7 @@ private:
     bool m_newPixformat;
     bool m_mainTerminalInput;
     bool m_bootloaderHS;
+    bool m_bootloaderFastMode;
 };
 
 #endif // OPENMVPLUGINIO_H
