@@ -2,7 +2,7 @@ add_qtc_plugin(OpenMV
   DEPENDS Qt::PrintSupport Qt::SerialPort
   PLUGIN_DEPENDS Core TextEditor
   SOURCES
-    openmvplugin.cpp openmvplugin.h
+    openmvplugin.cpp openmvplugin.h openmvtr.h
     openmvpluginconnect.cpp
     openmvpluginparse.cpp
     openmveject.cpp openmveject.h

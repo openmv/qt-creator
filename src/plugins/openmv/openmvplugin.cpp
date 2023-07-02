@@ -2,6 +2,8 @@
 
 #include "app/app_version.h"
 
+#include "openmvtr.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -78,7 +80,7 @@ static bool copyOperator(const Utils::FilePath &src, const Utils::FilePath &dest
     {
         if (error)
         {
-            *error = QObject::tr("Could not copy file \"%1\" to \"%2\".").arg(src.toUserOutput(), dest.toUserOutput());
+            *error = Tr::tr("Could not copy file \"%1\" to \"%2\".").arg(src.toUserOutput(), dest.toUserOutput());
         }
 
         return false;
@@ -252,13 +254,13 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             }
             else
             {
-                displayError(tr("Invalid argument (%1) for -override_read_timeout").arg(arguments.at(index_override_read_timeout + 1)));
+                displayError(Tr::tr("Invalid argument (%1) for -override_read_timeout").arg(arguments.at(index_override_read_timeout + 1)));
                 exit(-1);
             }
         }
         else
         {
-            displayError(tr("Missing argument for -override_read_timeout"));
+            displayError(Tr::tr("Missing argument for -override_read_timeout"));
             exit(-1);
         }
     }
@@ -279,13 +281,13 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             }
             else
             {
-                displayError(tr("Invalid argument (%1) for -override_read_stall_timeout").arg(arguments.at(index_override_read_stall_timeout + 1)));
+                displayError(Tr::tr("Invalid argument (%1) for -override_read_stall_timeout").arg(arguments.at(index_override_read_stall_timeout + 1)));
                 exit(-1);
             }
         }
         else
         {
-            displayError(tr("Missing argument for -override_read_stall_timeout"));
+            displayError(Tr::tr("Missing argument for -override_read_stall_timeout"));
             exit(-1);
         }
     }
@@ -341,7 +343,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         }
         else
         {
-            displayError(tr("Missing argument for -serial_number_filter"));
+            displayError(Tr::tr("Missing argument for -serial_number_filter"));
             exit(-1);
         }
     }
@@ -423,7 +425,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
         if(!Core::ICore::userResourcePath().removeRecursively(&error))
         {
-            QMessageBox::critical(Q_NULLPTR, QString(), tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+            QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
             ok = false;
         }
         else
@@ -434,7 +436,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             {
                 if(!oldUserResourcesPath.removeRecursively(&error))
                 {
-                    QMessageBox::critical(Q_NULLPTR, QString(), tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                    QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
                     ok = false;
                 }
             }
@@ -453,7 +455,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                                                           copyOperator))
 
                     {
-                        QMessageBox::critical(Q_NULLPTR, QString(), tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                        QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
                         ok = false;
                         break;
                     }
@@ -846,7 +848,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                 if(grayscaleMatch.hasMatch())
                 {
                     menu->addSeparator();
-                    QAction *action = new QAction(tr("Edit Grayscale threshold with Threshold Editor"), menu);
+                    QAction *action = new QAction(Tr::tr("Edit Grayscale threshold with Threshold Editor"), menu);
                     connect(action, &QAction::triggered, this, [this, textEditor, grayscaleMatch] {
                         QList<int> list = openThresholdEditor(QList<QVariant>()
                             << grayscaleMatch.captured(1).toInt()
@@ -869,7 +871,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                 if(labMatch.hasMatch())
                 {
                     menu->addSeparator();
-                    QAction *action = new QAction(tr("Edit LAB threshold with Threshold Editor"), menu);
+                    QAction *action = new QAction(Tr::tr("Edit LAB threshold with Threshold Editor"), menu);
                     connect(action, &QAction::triggered, this, [this, textEditor, labMatch] {
                         QList<int> list = openThresholdEditor(QList<QVariant>()
                             << labMatch.captured(1).toInt()
@@ -970,7 +972,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         }
         else
         {
-            displayError(tr("Missing argument for -form_key"));
+            displayError(Tr::tr("Missing argument for -form_key"));
             exit(-1);
         }
     }
@@ -980,7 +982,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
 void OpenMVPlugin::extensionsInitialized()
 {
-    QApplication::setApplicationDisplayName(tr("OpenMV IDE"));
+    QApplication::setApplicationDisplayName(Tr::tr("OpenMV IDE"));
     QApplication::setWindowIcon(QIcon(QStringLiteral(ICON_PATH)));
 
     ///////////////////////////////////////////////////////////////////////////
@@ -988,7 +990,7 @@ void OpenMVPlugin::extensionsInitialized()
     connect(Core::ActionManager::command(Core::Constants::NEW_FILE)->action(), &QAction::triggered, this, [this] {
         Core::EditorManager::cutForwardNavigationHistory();
         Core::EditorManager::addCurrentPositionToNavigationHistory();
-        QString titlePattern = tr("untitled_$.py");
+        QString titlePattern = Tr::tr("untitled_$.py");
 
         QByteArray data =
         QStringLiteral("# Untitled - By: %L1 - %L2\n"
@@ -1037,22 +1039,22 @@ void OpenMVPlugin::extensionsInitialized()
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        QObject::tr("New File"),
-                        QObject::tr("Can't open the new file!"));
+                        Tr::tr("New File"),
+                        Tr::tr("Can't open the new file!"));
                 }
             }
             else
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    QObject::tr("New File"),
-                    QObject::tr("Can't open the new file!"));
+                    Tr::tr("New File"),
+                    Tr::tr("Can't open the new file!"));
             }
         }
         else
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("New File"),
-                QObject::tr("Can't open the new file!"));
+                Tr::tr("New File"),
+                Tr::tr("Can't open the new file!"));
         }
     });
 
@@ -1060,7 +1062,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     Core::ActionContainer *documentsFolder = Core::ActionManager::createMenu(Utils::Id("OpenMV.DocumentsFolder"));
     filesMenu->addMenu(Core::ActionManager::actionContainer(Core::Constants::M_FILE_RECENTFILES), documentsFolder);
-    documentsFolder->menu()->setTitle(tr("Documents Folder"));
+    documentsFolder->menu()->setTitle(Tr::tr("Documents Folder"));
     documentsFolder->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     connect(filesMenu->menu(), &QMenu::aboutToShow, this, [this, documentsFolder] {
         documentsFolder->menu()->clear();
@@ -1068,7 +1070,7 @@ void OpenMVPlugin::extensionsInitialized()
 
         if(actions.isEmpty())
         {
-            QAction *action = new QAction(tr("Add some code to \"%L1\"").arg(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV")), documentsFolder->menu());
+            QAction *action = new QAction(Tr::tr("Add some code to \"%L1\"").arg(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV")), documentsFolder->menu());
             action->setDisabled(true);
             documentsFolder->menu()->addAction(action);
         }
@@ -1080,7 +1082,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     Core::ActionContainer *examplesMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.Examples"));
     filesMenu->addMenu(Core::ActionManager::actionContainer(Core::Constants::M_FILE_RECENTFILES), examplesMenu);
-    examplesMenu->menu()->setTitle(tr("Examples"));
+    examplesMenu->menu()->setTitle(Tr::tr("Examples"));
     examplesMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     connect(filesMenu->menu(), &QMenu::aboutToShow, this, [this, examplesMenu] {
         examplesMenu->menu()->clear();
@@ -1092,34 +1094,34 @@ void OpenMVPlugin::extensionsInitialized()
     Core::ActionContainer *toolsMenu = Core::ActionManager::actionContainer(Core::Constants::M_TOOLS);
     Core::ActionContainer *helpMenu = Core::ActionManager::actionContainer(Core::Constants::M_HELP);
 
-    m_bootloaderAction = new QAction(tr("Run Bootloader (Load Firmware)"), this);
+    m_bootloaderAction = new QAction(Tr::tr("Run Bootloader (Load Firmware)"), this);
     Core::Command *bootloaderCommand = Core::ActionManager::registerAction(m_bootloaderAction, Utils::Id("OpenMV.Bootloader"));
-    bootloaderCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+L")));
+    bootloaderCommand->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+L")));
     toolsMenu->addAction(bootloaderCommand);
     connect(m_bootloaderAction, &QAction::triggered, this, &OpenMVPlugin::bootloaderClicked);
 
-    m_eraseAction = new QAction(tr("Erase Onboard Data Flash"), this);
+    m_eraseAction = new QAction(Tr::tr("Erase Onboard Data Flash"), this);
     Core::Command *eraseCommand = Core::ActionManager::registerAction(m_eraseAction, Utils::Id("OpenMV.Erase"));
-    eraseCommand->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+E")));
+    eraseCommand->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+E")));
     toolsMenu->addAction(eraseCommand);
     connect(m_eraseAction, &QAction::triggered, this, [this] {
         if(QMessageBox::warning(Core::ICore::dialogParent(),
-            tr("Erase Onboard Data Flash"),
-            tr("Are you sure you want to erase your OpenMV Cam's onboard flash drive?"),
+            Tr::tr("Erase Onboard Data Flash"),
+            Tr::tr("Are you sure you want to erase your OpenMV Cam's onboard flash drive?"),
             QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
         == QMessageBox::Yes)connectClicked(true, QString(), true, true);
     });
     toolsMenu->addSeparator();
 
-    m_autoReconnectAction = new QAction(tr("Auto Reconnect to OpenMV Cam"), this);
-    m_autoReconnectAction->setToolTip(tr("When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected."));
+    m_autoReconnectAction = new QAction(Tr::tr("Auto Reconnect to OpenMV Cam"), this);
+    m_autoReconnectAction->setToolTip(Tr::tr("When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected."));
     Core::Command *autoReconnectCommand = Core::ActionManager::registerAction(m_autoReconnectAction, Utils::Id("OpenMV.AutoReconnect"));
     toolsMenu->addAction(autoReconnectCommand);
     m_autoReconnectAction->setCheckable(true);
     m_autoReconnectAction->setChecked(false);
 
-    m_stopOnConnectDiconnectionAction = new QAction(tr("Stop Script on Connect/Disconnect"), this);
-    m_stopOnConnectDiconnectionAction->setToolTip(tr("Stop the script on Connect or Disconnect (note that the IDE disconnects on close if connected)."));
+    m_stopOnConnectDiconnectionAction = new QAction(Tr::tr("Stop Script on Connect/Disconnect"), this);
+    m_stopOnConnectDiconnectionAction->setToolTip(Tr::tr("Stop the script on Connect or Disconnect (note that the IDE disconnects on close if connected)."));
     Core::Command *stopOnConnectDiconnectionCommand = Core::ActionManager::registerAction(m_stopOnConnectDiconnectionAction, Utils::Id("OpenMV.StopOnConnectDisconnect"));
     toolsMenu->addAction(stopOnConnectDiconnectionCommand);
     m_stopOnConnectDiconnectionAction->setCheckable(true);
@@ -1127,31 +1129,31 @@ void OpenMVPlugin::extensionsInitialized()
 
     toolsMenu->addSeparator();
 
-    m_openDriveFolderAction = new QAction(tr("Open OpenMV Cam Drive folder"), this);
+    m_openDriveFolderAction = new QAction(Tr::tr("Open OpenMV Cam Drive folder"), this);
     m_openDriveFolderCommand = Core::ActionManager::registerAction(m_openDriveFolderAction, Utils::Id("OpenMV.OpenDriveFolder"));
     toolsMenu->addAction(m_openDriveFolderCommand);
     m_openDriveFolderAction->setEnabled(false);
     connect(m_openDriveFolderAction, &QAction::triggered, this, [this] {Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(), Utils::FilePath::fromString(m_portPath).pathAppended(Utils::HostOsInfo::isWindowsHost() ? QStringLiteral("") : QStringLiteral(".openmv_disk"))); });
 
-    m_configureSettingsAction = new QAction(tr("Configure OpenMV Cam settings file"), this);
+    m_configureSettingsAction = new QAction(Tr::tr("Configure OpenMV Cam settings file"), this);
     m_configureSettingsCommand = Core::ActionManager::registerAction(m_configureSettingsAction, Utils::Id("OpenMV.Settings"));
     toolsMenu->addAction(m_configureSettingsCommand);
     m_configureSettingsAction->setEnabled(false);
     connect(m_configureSettingsAction, &QAction::triggered, this, &OpenMVPlugin::configureSettings);
 
-    m_saveAction = new QAction(tr("Save open script to OpenMV Cam (as main.py)"), this);
+    m_saveAction = new QAction(Tr::tr("Save open script to OpenMV Cam (as main.py)"), this);
     m_saveCommand = Core::ActionManager::registerAction(m_saveAction, Utils::Id("OpenMV.Save"));
     toolsMenu->addAction(m_saveCommand);
     m_saveAction->setEnabled(false);
     connect(m_saveAction, &QAction::triggered, this, &OpenMVPlugin::saveScript);
 
-    m_resetAction = new QAction(tr("Reset OpenMV Cam"), this);
+    m_resetAction = new QAction(Tr::tr("Reset OpenMV Cam"), this);
     m_resetCommand = Core::ActionManager::registerAction(m_resetAction, Utils::Id("OpenMV.Reset"));
     toolsMenu->addAction(m_resetCommand);
     m_resetAction->setEnabled(false);
     connect(m_resetAction, &QAction::triggered, this, [this] {disconnectClicked(true);});
 
-    m_developmentReleaseAction = new QAction(tr("Install the Latest Development Release"), this);
+    m_developmentReleaseAction = new QAction(Tr::tr("Install the Latest Development Release"), this);
     m_developmentReleaseCommand = Core::ActionManager::registerAction(m_developmentReleaseAction, Utils::Id("OpenMV.InstallTheLatestDevelopmentRelease"));
     toolsMenu->addAction(m_developmentReleaseCommand);
     m_developmentReleaseAction->setEnabled(false);
@@ -1160,61 +1162,61 @@ void OpenMVPlugin::extensionsInitialized()
     toolsMenu->addSeparator();
     m_openTerminalMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.OpenTermnial"));
     m_openTerminalMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
-    m_openTerminalMenu->menu()->setTitle(tr("Open Terminal"));
+    m_openTerminalMenu->menu()->setTitle(Tr::tr("Open Terminal"));
     toolsMenu->addMenu(m_openTerminalMenu);
     connect(m_openTerminalMenu->menu(), &QMenu::aboutToShow, this, &OpenMVPlugin::openTerminalAboutToShow);
 
     Core::ActionContainer *machineVisionToolsMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.MachineVision"));
-    machineVisionToolsMenu->menu()->setTitle(tr("Machine Vision"));
+    machineVisionToolsMenu->menu()->setTitle(Tr::tr("Machine Vision"));
     machineVisionToolsMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     toolsMenu->addMenu(machineVisionToolsMenu);
 
-    QAction *thresholdEditorAction = new QAction(tr("Threshold Editor"), this);
+    QAction *thresholdEditorAction = new QAction(Tr::tr("Threshold Editor"), this);
     Core::Command *thresholdEditorCommand = Core::ActionManager::registerAction(thresholdEditorAction, Utils::Id("OpenMV.ThresholdEditor"));
     machineVisionToolsMenu->addAction(thresholdEditorCommand);
     connect(thresholdEditorAction, &QAction::triggered, this, &OpenMVPlugin::openThresholdEditor);
 
-    QAction *keypointsEditorAction = new QAction(tr("Keypoints Editor"), this);
+    QAction *keypointsEditorAction = new QAction(Tr::tr("Keypoints Editor"), this);
     Core::Command *keypointsEditorCommand = Core::ActionManager::registerAction(keypointsEditorAction, Utils::Id("OpenMV.KeypointsEditor"));
     machineVisionToolsMenu->addAction(keypointsEditorCommand);
     connect(keypointsEditorAction, &QAction::triggered, this, &OpenMVPlugin::openKeypointsEditor);
 
     machineVisionToolsMenu->addSeparator();
     Core::ActionContainer *aprilTagGeneratorSubmenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.AprilTagGenerator"));
-    aprilTagGeneratorSubmenu->menu()->setTitle(tr("AprilTag Generator"));
+    aprilTagGeneratorSubmenu->menu()->setTitle(Tr::tr("AprilTag Generator"));
     machineVisionToolsMenu->addMenu(aprilTagGeneratorSubmenu);
 
-    QAction *tag16h5Action = new QAction(tr("TAG16H5 Family (30 Tags)"), this);
+    QAction *tag16h5Action = new QAction(Tr::tr("TAG16H5 Family (30 Tags)"), this);
     Core::Command *tag16h5Command = Core::ActionManager::registerAction(tag16h5Action, Utils::Id("OpenMV.TAG16H5"));
     aprilTagGeneratorSubmenu->addAction(tag16h5Command);
     connect(tag16h5Action, &QAction::triggered, this, [this] {openAprilTagGenerator(tag16h5_create());});
 
-    QAction *tag25h7Action = new QAction(tr("TAG25H7 Family (242 Tags)"), this);
+    QAction *tag25h7Action = new QAction(Tr::tr("TAG25H7 Family (242 Tags)"), this);
     Core::Command *tag25h7Command = Core::ActionManager::registerAction(tag25h7Action, Utils::Id("OpenMV.TAG25H7"));
     aprilTagGeneratorSubmenu->addAction(tag25h7Command);
     connect(tag25h7Action, &QAction::triggered, this, [this] {openAprilTagGenerator(tag25h7_create());});
 
-    QAction *tag25h9Action = new QAction(tr("TAG25H9 Family (35 Tags)"), this);
+    QAction *tag25h9Action = new QAction(Tr::tr("TAG25H9 Family (35 Tags)"), this);
     Core::Command *tag25h9Command = Core::ActionManager::registerAction(tag25h9Action, Utils::Id("OpenMV.TAG25H9"));
     aprilTagGeneratorSubmenu->addAction(tag25h9Command);
     connect(tag25h9Action, &QAction::triggered, this, [this] {openAprilTagGenerator(tag25h9_create());});
 
-    QAction *tag36h10Action = new QAction(tr("TAG36H10 Family (2320 Tags)"), this);
+    QAction *tag36h10Action = new QAction(Tr::tr("TAG36H10 Family (2320 Tags)"), this);
     Core::Command *tag36h10Command = Core::ActionManager::registerAction(tag36h10Action, Utils::Id("OpenMV.TAG36H10"));
     aprilTagGeneratorSubmenu->addAction(tag36h10Command);
     connect(tag36h10Action, &QAction::triggered, this, [this] {openAprilTagGenerator(tag36h10_create());});
 
-    QAction *tag36h11Action = new QAction(tr("TAG36H11 Family (587 Tags - Recommended)"), this);
+    QAction *tag36h11Action = new QAction(Tr::tr("TAG36H11 Family (587 Tags - Recommended)"), this);
     Core::Command *tag36h11Command = Core::ActionManager::registerAction(tag36h11Action, Utils::Id("OpenMV.TAG36H11"));
     aprilTagGeneratorSubmenu->addAction(tag36h11Command);
     connect(tag36h11Action, &QAction::triggered, this, [this] {openAprilTagGenerator(tag36h11_create());});
 
-    QAction *tag36artoolkitAction = new QAction(tr("ARKTOOLKIT Family (512 Tags)"), this);
+    QAction *tag36artoolkitAction = new QAction(Tr::tr("ARKTOOLKIT Family (512 Tags)"), this);
     Core::Command *tag36artoolkitCommand = Core::ActionManager::registerAction(tag36artoolkitAction, Utils::Id("OpenMV.ARKTOOLKIT"));
     aprilTagGeneratorSubmenu->addAction(tag36artoolkitCommand);
     connect(tag36artoolkitAction, &QAction::triggered, this, [this] {openAprilTagGenerator(tag36artoolkit_create());});
 
-    QAction *QRCodeGeneratorAction = new QAction(tr("QRCode Generator"), this);
+    QAction *QRCodeGeneratorAction = new QAction(Tr::tr("QRCode Generator"), this);
     Core::Command *QRCodeGeneratorCommand = Core::ActionManager::registerAction(QRCodeGeneratorAction, Utils::Id("OpenMV.QRCodeGenerator"));
     machineVisionToolsMenu->addAction(QRCodeGeneratorCommand);
     connect(QRCodeGeneratorAction, &QAction::triggered, this, [this] {
@@ -1224,11 +1226,11 @@ void OpenMVPlugin::extensionsInitialized()
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
                                   QString(),
-                                  tr("Failed to open: \"%L1\"").arg(url.toString()));
+                                  Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
         }
     });
 
-    QAction *DatamatrixGeneratorAction = new QAction(tr("DataMatrix Generator"), this);
+    QAction *DatamatrixGeneratorAction = new QAction(Tr::tr("DataMatrix Generator"), this);
     Core::Command *DataMatrixGeneratorCommand = Core::ActionManager::registerAction(DatamatrixGeneratorAction, Utils::Id("OpenMV.DataMatrixGenerator"));
     machineVisionToolsMenu->addAction(DataMatrixGeneratorCommand);
     connect(DatamatrixGeneratorAction, &QAction::triggered, this, [this] {
@@ -1238,11 +1240,11 @@ void OpenMVPlugin::extensionsInitialized()
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
                                   QString(),
-                                  tr("Failed to open: \"%L1\"").arg(url.toString()));
+                                  Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
         }
     });
 
-    QAction *BarcodeGeneratorAction = new QAction(tr("Barcode Generator"), this);
+    QAction *BarcodeGeneratorAction = new QAction(Tr::tr("Barcode Generator"), this);
     Core::Command *BarcodeGeneratorCommand = Core::ActionManager::registerAction(BarcodeGeneratorAction, Utils::Id("OpenMV.BarcodeGenerator"));
     machineVisionToolsMenu->addAction(BarcodeGeneratorCommand);
     connect(BarcodeGeneratorAction, &QAction::triggered, this, [this] {
@@ -1252,13 +1254,13 @@ void OpenMVPlugin::extensionsInitialized()
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
                                   QString(),
-                                  tr("Failed to open: \"%L1\"").arg(url.toString()));
+                                  Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
         }
     });
 
     machineVisionToolsMenu->addSeparator();
 
-    QAction *networkLibraryAction = new QAction(tr("CNN Network Library"), this);
+    QAction *networkLibraryAction = new QAction(Tr::tr("CNN Network Library"), this);
     Core::Command *networkLibraryCommand = Core::ActionManager::registerAction(networkLibraryAction, Utils::Id("OpenMV.NetworkLibrary"));
     machineVisionToolsMenu->addAction(networkLibraryCommand);
     connect(networkLibraryAction, &QAction::triggered, this, [this] {
@@ -1266,9 +1268,9 @@ void OpenMVPlugin::extensionsInitialized()
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
         QString src =
-            QFileDialog::getOpenFileName(Core::ICore::dialogParent(), QObject::tr("Network to copy to OpenMV Cam"),
+            QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Network to copy to OpenMV Cam"),
                 Core::ICore::userResourcePath(QStringLiteral("models")).toString(),
-                QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)"));
+                Tr::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)"));
 
         if(!src.isEmpty())
         {
@@ -1277,17 +1279,17 @@ void OpenMVPlugin::extensionsInitialized()
             forever
             {
                 dst =
-                QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Where to save the network on the OpenMV Cam"),
+                QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Where to save the network on the OpenMV Cam"),
                     m_portPath.isEmpty()
                     ? Utils::FilePath::fromVariant(settings->value(QStringLiteral(LAST_MODEL_NO_CAM_PATH), QDir::homePath())).pathAppended(QFileInfo(src).fileName()).toString()
                     : Utils::FilePath::fromVariant(settings->value(QStringLiteral(LAST_MODEL_WITH_CAM_PATH), m_portPath)).pathAppended(QFileInfo(src).fileName()).toString(),
-                    QObject::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)"));
+                    Tr::tr("TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)"));
 
                 if((!dst.isEmpty()) && QFileInfo(dst).completeSuffix().isEmpty())
                 {
                     QMessageBox::warning(Core::ICore::dialogParent(),
-                        QObject::tr("Where to save the network on the OpenMV Cam"),
-                        QObject::tr("Please add a file extension!"));
+                        Tr::tr("Where to save the network on the OpenMV Cam"),
+                        Tr::tr("Please add a file extension!"));
 
                     continue;
                 }
@@ -1307,14 +1309,14 @@ void OpenMVPlugin::extensionsInitialized()
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
                             QString(),
-                            QObject::tr("Unable to overwrite output file!"));
+                            Tr::tr("Unable to overwrite output file!"));
                     }
                 }
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         QString(),
-                        QObject::tr("Unable to overwrite output file!"));
+                        Tr::tr("Unable to overwrite output file!"));
                 }
             }
         }
@@ -1323,21 +1325,21 @@ void OpenMVPlugin::extensionsInitialized()
     });
 
     Core::ActionContainer *videoToolsMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.VideoTools"));
-    videoToolsMenu->menu()->setTitle(tr("Video Tools"));
+    videoToolsMenu->menu()->setTitle(Tr::tr("Video Tools"));
     videoToolsMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     toolsMenu->addMenu(videoToolsMenu);
 
-    QAction *convertVideoFile = new QAction(tr("Convert Video File"), this);
+    QAction *convertVideoFile = new QAction(Tr::tr("Convert Video File"), this);
     Core::Command *convertVideoFileCommand = Core::ActionManager::registerAction(convertVideoFile, Utils::Id("OpenMV.ConvertVideoFile"));
     videoToolsMenu->addAction(convertVideoFileCommand);
     connect(convertVideoFile, &QAction::triggered, this, [this] {convertVideoFileAction(m_portPath);});
 
-    QAction *playVideoFile = new QAction(tr("Play Video File"), this);
+    QAction *playVideoFile = new QAction(Tr::tr("Play Video File"), this);
     Core::Command *playVideoFileCommand = Core::ActionManager::registerAction(playVideoFile, Utils::Id("OpenMV.PlayVideoFile"));
     videoToolsMenu->addAction(playVideoFileCommand);
     connect(playVideoFile, &QAction::triggered, this, [this] {playVideoFileAction(m_portPath);});
 
-    QAction *playRTSPStream = new QAction(tr("Play RTSP Stream"), this);
+    QAction *playRTSPStream = new QAction(Tr::tr("Play RTSP Stream"), this);
     Core::Command *playRTSPStreamCommand = Core::ActionManager::registerAction(playRTSPStream, Utils::Id("OpenMV.PlayRTSPStream"));
     if(!Utils::HostOsInfo::isLinuxHost())
     {
@@ -1347,11 +1349,11 @@ void OpenMVPlugin::extensionsInitialized()
     connect(playRTSPStream, &QAction::triggered, this, [this] {playRTSPStreamAction();});
 
     Core::ActionContainer *datasetEditorMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.DatasetEditor"));
-    datasetEditorMenu->menu()->setTitle(tr("Dataset Editor"));
+    datasetEditorMenu->menu()->setTitle(Tr::tr("Dataset Editor"));
     datasetEditorMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     toolsMenu->addMenu(datasetEditorMenu);
 
-    QAction *newDatasetAction = new QAction(tr("New Dataset"), this);
+    QAction *newDatasetAction = new QAction(Tr::tr("New Dataset"), this);
     Core::Command *newDatasetCommand = Core::ActionManager::registerAction(newDatasetAction, Utils::Id("OpenMV.NewDataset"));
     datasetEditorMenu->addAction(newDatasetCommand);
     connect(newDatasetAction, &QAction::triggered, this, [this] {
@@ -1359,7 +1361,7 @@ void OpenMVPlugin::extensionsInitialized()
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
         QString path =
-            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), tr("Dataset Editor - Choose a folder to build the dataset in"),
+            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("Dataset Editor - Choose a folder to build the dataset in"),
                 settings->value(QStringLiteral(LAST_DATASET_EDITOR_PATH), QDir::homePath()).toString());
 
         if(!path.isEmpty())
@@ -1369,8 +1371,8 @@ void OpenMVPlugin::extensionsInitialized()
             if(!ok)
             {
                 if(QMessageBox::warning(Core::ICore::dialogParent(),
-                    tr("New Dataset"),
-                    tr("The selected folder is not empty and the contents will be deleted. Continue?"),
+                    Tr::tr("New Dataset"),
+                    Tr::tr("The selected folder is not empty and the contents will be deleted. Continue?"),
                     QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)
                 == QMessageBox::Yes)
                 {
@@ -1384,14 +1386,14 @@ void OpenMVPlugin::extensionsInitialized()
                     if(!Utils::FilePath::fromString(path).removeRecursively(&error))
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("New Dataset"),
-                            tr("Failed to remove \"%L1\"!").arg(path));
+                            Tr::tr("New Dataset"),
+                            Tr::tr("Failed to remove \"%L1\"!").arg(path));
                     }
                     else if(!QDir().mkdir(path))
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("New Dataset"),
-                            tr("Failed to create \"%L1\"!").arg(path));
+                            Tr::tr("New Dataset"),
+                            Tr::tr("Failed to create \"%L1\"!").arg(path));
                     }
                     else
                     {
@@ -1442,8 +1444,8 @@ void OpenMVPlugin::extensionsInitialized()
                     if((!file.write(contents)) || (!file.finalize()))
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("New Dataset"),
-                            tr("Error: %L1!").arg(file.errorString()));
+                            Tr::tr("New Dataset"),
+                            Tr::tr("Error: %L1!").arg(file.errorString()));
                     }
                     else
                     {
@@ -1461,8 +1463,8 @@ void OpenMVPlugin::extensionsInitialized()
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("New Dataset"),
-                        tr("Error: %L1!").arg(file.errorString()));
+                        Tr::tr("New Dataset"),
+                        Tr::tr("Error: %L1!").arg(file.errorString()));
                 }
             }
         }
@@ -1470,7 +1472,7 @@ void OpenMVPlugin::extensionsInitialized()
         settings->endGroup();
     });
 
-    QAction *openDatasetAction = new QAction(tr("Open Dataset"), this);
+    QAction *openDatasetAction = new QAction(Tr::tr("Open Dataset"), this);
     Core::Command *openDatasetCommand = Core::ActionManager::registerAction(openDatasetAction, Utils::Id("OpenMV.OpenDataset"));
     datasetEditorMenu->addAction(openDatasetCommand);
     connect(openDatasetAction, &QAction::triggered, this, [this] {
@@ -1478,7 +1480,7 @@ void OpenMVPlugin::extensionsInitialized()
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
         QString path =
-            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), tr("Dataset Editor - Choose a dataset folder to open"),
+            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("Dataset Editor - Choose a dataset folder to open"),
                 settings->value(QStringLiteral(LAST_DATASET_EDITOR_PATH), QDir::homePath()).toString());
 
         if(!path.isEmpty())
@@ -1500,8 +1502,8 @@ void OpenMVPlugin::extensionsInitialized()
             else
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Open Dataset"),
-                    tr("The selected folder does not appear to be a valid OpenMV Cam Image Dataset!"));
+                    Tr::tr("Open Dataset"),
+                    Tr::tr("The selected folder does not appear to be a valid OpenMV Cam Image Dataset!"));
             }
         }
 
@@ -1511,11 +1513,11 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorMenu->addSeparator();
 
     Core::ActionContainer *datasetEditorExportMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.DatasetEditorExport"));
-    datasetEditorExportMenu->menu()->setTitle(tr("Export"));
+    datasetEditorExportMenu->menu()->setTitle(Tr::tr("Export"));
     datasetEditorExportMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     datasetEditorMenu->addMenu(datasetEditorExportMenu);
 
-    QAction *exportDataseFlatAction = new QAction(tr("Export Dataset to Zip File"), this);
+    QAction *exportDataseFlatAction = new QAction(Tr::tr("Export Dataset to Zip File"), this);
     Core::Command *exportDatasetFlatCommand = Core::ActionManager::registerAction(exportDataseFlatAction, Utils::Id("OpenMV.ExportDataset"));
     datasetEditorExportMenu->addAction(exportDatasetFlatCommand);
     connect(exportDataseFlatAction, &QAction::triggered, this, [this] {
@@ -1527,15 +1529,15 @@ void OpenMVPlugin::extensionsInitialized()
         forever
         {
             path =
-            QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Export Dataset"),
+            QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Export Dataset"),
                 settings->value(QStringLiteral(LAST_DATASET_EDITOR_EXPORT_PATH), QDir::homePath()).toString(),
-                tr("Zip Files (*.zip)"));
+                Tr::tr("Zip Files (*.zip)"));
 
             if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
             {
                 QMessageBox::warning(Core::ICore::dialogParent(),
-                    tr("Export Dataset"),
-                    QObject::tr("Please add a file extension!"));
+                    Tr::tr("Export Dataset"),
+                    Tr::tr("Please add a file extension!"));
 
                 continue;
             }
@@ -1555,7 +1557,7 @@ void OpenMVPlugin::extensionsInitialized()
                 }
             }
 
-            QProgressDialog progress(tr("Exporting..."), tr("Cancel"), 0, list.size(), Core::ICore::dialogParent(),
+            QProgressDialog progress(Tr::tr("Exporting..."), Tr::tr("Cancel"), 0, list.size(), Core::ICore::dialogParent(),
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
 
@@ -1576,8 +1578,8 @@ void OpenMVPlugin::extensionsInitialized()
                     progress.cancel();
 
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("Export Dataset"),
-                        tr("Error: %L1!").arg(file.errorString()));
+                        Tr::tr("Export Dataset"),
+                        Tr::tr("Error: %L1!").arg(file.errorString()));
                 }
 
                 if(progress.wasCanceled())
@@ -1597,8 +1599,8 @@ void OpenMVPlugin::extensionsInitialized()
             else if(!QFile::remove(path))
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Export Dataset"),
-                    tr("Failed to remove \"%L1\"!").arg(path));
+                    Tr::tr("Export Dataset"),
+                    Tr::tr("Failed to remove \"%L1\"!").arg(path));
             }
         }
 
@@ -1607,17 +1609,17 @@ void OpenMVPlugin::extensionsInitialized()
 
     datasetEditorExportMenu->addSeparator();
 
-    QAction *uploadToEdgeImpulseProjectAction = new QAction(tr("Upload to Edge Impulse Project"), this);
+    QAction *uploadToEdgeImpulseProjectAction = new QAction(Tr::tr("Upload to Edge Impulse Project"), this);
     Core::Command *uploadToEdgeImpulseProjectCommand = Core::ActionManager::registerAction(uploadToEdgeImpulseProjectAction, Utils::Id("OpenMV.UploadToEdgeImpulseProjectAction"));
     datasetEditorExportMenu->addAction(uploadToEdgeImpulseProjectCommand);
     connect(uploadToEdgeImpulseProjectAction, &QAction::triggered, this, [this] { uploadToSelectedProject(m_datasetEditor); });
 
-    QAction *logInToEdgeImpulseAccountAction = new QAction(tr("Login to Edge Impulse Account"), this);
+    QAction *logInToEdgeImpulseAccountAction = new QAction(Tr::tr("Login to Edge Impulse Account"), this);
     Core::Command *loginToEdgeImpulseAccountCommand = Core::ActionManager::registerAction(logInToEdgeImpulseAccountAction, Utils::Id("OpenMV.LogInToEdgeImpulseAccount"));
     datasetEditorExportMenu->addAction(loginToEdgeImpulseAccountCommand);
     connect(logInToEdgeImpulseAccountAction, &QAction::triggered, this, [this] { loginToEdgeImpulse(m_datasetEditor); });
 
-    QAction *logOutFromEdgeImpulseAccountAction = new QAction(tr("Logout from Account: %L1").arg(loggedIntoEdgeImpulse()), this);
+    QAction *logOutFromEdgeImpulseAccountAction = new QAction(Tr::tr("Logout from Account: %L1").arg(loggedIntoEdgeImpulse()), this);
     Core::Command *logOutFromEdgeImpulseAccountCommand = Core::ActionManager::registerAction(logOutFromEdgeImpulseAccountAction, Utils::Id("OpenMV.LogOutFromEdgeImpulseAccount"));
     datasetEditorExportMenu->addAction(logOutFromEdgeImpulseAccountCommand);
     connect(logOutFromEdgeImpulseAccountAction, &QAction::triggered, this, [this] { logoutFromEdgeImpulse(); });
@@ -1629,26 +1631,26 @@ void OpenMVPlugin::extensionsInitialized()
         uploadToEdgeImpulseProjectAction->setEnabled(m_datasetEditor->isVisible() && (!accountName.isEmpty()));
         logInToEdgeImpulseAccountAction->setVisible(accountName.isEmpty());
         // Text/Image has to be set through the proxy action - enabled/visible through regular action.
-        loginToEdgeImpulseAccountCommand->action()->setText(m_datasetEditor->isVisible() ? tr("Login to Edge Impulse Account and Upload to Project") : tr("Login to Edge Impulse Account"));
+        loginToEdgeImpulseAccountCommand->action()->setText(m_datasetEditor->isVisible() ? Tr::tr("Login to Edge Impulse Account and Upload to Project") : Tr::tr("Login to Edge Impulse Account"));
         logOutFromEdgeImpulseAccountAction->setVisible(!accountName.isEmpty());
         // Text/Image has to be set through the proxy action - enabled/visible through regular action.
-        logOutFromEdgeImpulseAccountCommand->action()->setText(tr("Logout from Account: %L1").arg(accountName));
+        logOutFromEdgeImpulseAccountCommand->action()->setText(Tr::tr("Logout from Account: %L1").arg(accountName));
     });
 
     datasetEditorExportMenu->addSeparator();
 
-    QAction *uploadToEdgeImpulseByAPIKeyAction = new QAction(tr("Upload to Edge Impulse by API Key"), this);
+    QAction *uploadToEdgeImpulseByAPIKeyAction = new QAction(Tr::tr("Upload to Edge Impulse by API Key"), this);
     Core::Command *uploadToEdgeImpulseByAPIKeyCommand = Core::ActionManager::registerAction(uploadToEdgeImpulseByAPIKeyAction, Utils::Id("OpenMV.UploadEdgeImpulseAPIKey"));
     datasetEditorExportMenu->addAction(uploadToEdgeImpulseByAPIKeyCommand);
     connect(uploadToEdgeImpulseByAPIKeyAction, &QAction::triggered, this, [this] { uploadProjectByAPIKey(m_datasetEditor); });
 
     datasetEditorMenu->addSeparator();
 
-    QAction *closeDatasetAction = new QAction(tr("Close Dataset"), this);
+    QAction *closeDatasetAction = new QAction(Tr::tr("Close Dataset"), this);
     Core::Command *closeDatasetCommand = Core::ActionManager::registerAction(closeDatasetAction, Utils::Id("OpenMV.CloseDataset"));
     datasetEditorMenu->addAction(closeDatasetCommand);
 
-    QAction *docsAction = new QAction(tr("OpenMV Docs"), this);
+    QAction *docsAction = new QAction(Tr::tr("OpenMV Docs"), this);
     Core::Command *docsCommand = Core::ActionManager::registerAction(docsAction, Utils::Id("OpenMV.Docs"));
     helpMenu->addAction(docsCommand, Core::Constants::G_HELP_SUPPORT);
     connect(docsAction, &QAction::triggered, this, [this] {
@@ -1658,11 +1660,11 @@ void OpenMVPlugin::extensionsInitialized()
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
                                   QString(),
-                                  tr("Failed to open: \"%L1\"").arg(url.toString()));
+                                  Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
         }
     });
 
-    QAction *forumsAction = new QAction(tr("OpenMV Forums"), this);
+    QAction *forumsAction = new QAction(Tr::tr("OpenMV Forums"), this);
     Core::Command *forumsCommand = Core::ActionManager::registerAction(forumsAction, Utils::Id("OpenMV.Forums"));
     helpMenu->addAction(forumsCommand, Core::Constants::G_HELP_SUPPORT);
     connect(forumsAction, &QAction::triggered, this, [this] {
@@ -1672,12 +1674,12 @@ void OpenMVPlugin::extensionsInitialized()
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
                                   QString(),
-                                  tr("Failed to open: \"%L1\"").arg(url.toString()));
+                                  Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
         }
     });
 
     Core::ActionContainer *pinoutMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.PinoutMenu"));
-    pinoutMenu->menu()->setTitle(Utils::HostOsInfo::isMacHost() ? tr("About OpenMV Cam") : tr("About OpenMV Cam..."));
+    pinoutMenu->menu()->setTitle(Utils::HostOsInfo::isMacHost() ? Tr::tr("About OpenMV Cam") : Tr::tr("About OpenMV Cam..."));
     pinoutMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     helpMenu->addMenu(pinoutMenu);
 
@@ -1693,7 +1695,7 @@ void OpenMVPlugin::extensionsInitialized()
     foreach(const QStringPair &cam, cameras)
     {
         QAction *pinout = new QAction(
-             Utils::HostOsInfo::isMacHost() ? tr("About OpenMV Cam %1").arg(cam.first) : tr("About OpenMV Cam %1...").arg(cam.first), this);
+             Utils::HostOsInfo::isMacHost() ? Tr::tr("About OpenMV Cam %1").arg(cam.first) : Tr::tr("About OpenMV Cam %1...").arg(cam.first), this);
         Core::Command *pinoutCommand = Core::ActionManager::registerAction(pinout, Utils::Id(QString(QStringLiteral("OpenMV.Pinout.%1")).arg(cam.second).toUtf8().constData()));
         pinoutMenu->addAction(pinoutCommand);
         connect(pinout, &QAction::triggered, this, [this, cam] {
@@ -1703,18 +1705,18 @@ void OpenMVPlugin::extensionsInitialized()
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
                                       QString(),
-                                      tr("Failed to open: \"%L1\"").arg(url.toString()));
+                                      Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
             }
         });
     }
 
     QAction *aboutAction = new QAction(QIcon::fromTheme(QStringLiteral("help-about")),
-        Utils::HostOsInfo::isMacHost() ? tr("About OpenMV IDE") : tr("About OpenMV IDE..."), this);
+        Utils::HostOsInfo::isMacHost() ? Tr::tr("About OpenMV IDE") : Tr::tr("About OpenMV IDE..."), this);
     aboutAction->setMenuRole(QAction::AboutRole);
      Core::Command *aboutCommand = Core::ActionManager::registerAction(aboutAction, Utils::Id("OpenMV.About"));
     helpMenu->addAction(aboutCommand, Core::Constants::G_HELP_ABOUT);
     connect(aboutAction, &QAction::triggered, this, [this] {
-        QMessageBox::about(Core::ICore::dialogParent(), tr("About OpenMV IDE"), tr(
+        QMessageBox::about(Core::ICore::dialogParent(), Tr::tr("About OpenMV IDE"), Tr::tr(
         "<p><b>About OpenMV IDE %L1</b></p>"
         "<p>By: Ibrahim Abdelkader & Kwabena W. Agyeman</p>"
         "<p><b>GNU GENERAL PUBLIC LICENSE</b></p>"
@@ -1722,9 +1724,9 @@ void OpenMVPlugin::extensionsInitialized()
         "<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href=\"https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT\">GNU General Public License</a> for more details.</p>"
         "<p><b>Questions or Comments?</b></p>"
         "<p>Contact us at <a href=\"mailto:openmv@openmv.io\">openmv@openmv.io</a>.</p>"
-        ).arg(QLatin1String(Core::Constants::IDE_VERSION_LONG)).arg(QLatin1String(Core::Constants::IDE_YEAR)).arg(QLatin1String(Core::Constants::IDE_AUTHOR)) + tr(
-        "<p><b>Credits</b></p>") + tr(
-        "<p>OpenMV IDE English translation by Kwabena W. Agyeman.</p>") + tr(
+        ).arg(QLatin1String(Core::Constants::IDE_VERSION_LONG)).arg(QLatin1String(Core::Constants::IDE_YEAR)).arg(QLatin1String(Core::Constants::IDE_AUTHOR)) + Tr::tr(
+        "<p><b>Credits</b></p>") + Tr::tr(
+        "<p>OpenMV IDE English translation by Kwabena W. Agyeman.</p>") + Tr::tr(
         "<p><b>Partners</b></p>") +
         QStringLiteral("<p><a href=\"https://www.arduino.cc/\"><img source=\":/openmv/images/arduino-partnership.png\"></a></p>") +
         QString(QStringLiteral("<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership-%1.png\"></a></p>")).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light")) +
@@ -1737,7 +1739,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     m_connectCommand =
         Core::ActionManager::registerAction(m_connectAction = new QAction(QIcon(QStringLiteral(CONNECT_PATH)),
-        tr("Connect"), this), Utils::Id("OpenMV.Connect"));
+        Tr::tr("Connect"), this), Utils::Id("OpenMV.Connect"));
     m_connectCommand->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
     m_connectAction->setEnabled(true);
     m_connectAction->setVisible(true);
@@ -1745,7 +1747,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     m_disconnectCommand =
         Core::ActionManager::registerAction(m_disconnectAction = new QAction(QIcon(QStringLiteral(DISCONNECT_PATH)),
-        tr("Disconnect"), this), Utils::Id("OpenMV.Disconnect"));
+        Tr::tr("Disconnect"), this), Utils::Id("OpenMV.Disconnect"));
     m_disconnectCommand->setDefaultKeySequence(QStringLiteral("Ctrl+E"));
     m_disconnectAction->setEnabled(false);
     m_disconnectAction->setVisible(false);
@@ -1764,7 +1766,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     m_startCommand =
         Core::ActionManager::registerAction(m_startAction = new QAction(QIcon(QStringLiteral(START_PATH)),
-        tr("Start (run script)"), this), Utils::Id("OpenMV.Start"));
+        Tr::tr("Start (run script)"), this), Utils::Id("OpenMV.Start"));
     m_startCommand->setDefaultKeySequence(QStringLiteral("Ctrl+R"));
     m_startAction->setEnabled(false);
     m_startAction->setVisible(true);
@@ -1785,7 +1787,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     m_stopCommand =
         Core::ActionManager::registerAction(m_stopAction = new QAction(QIcon(QStringLiteral(STOP_PATH)),
-        tr("Stop (halt script)"), this), Utils::Id("OpenMV.Stop"));
+        Tr::tr("Stop (halt script)"), this), Utils::Id("OpenMV.Stop"));
     m_stopCommand->setDefaultKeySequence(QStringLiteral("Ctrl+R"));
     m_stopAction->setEnabled(false);
     m_stopAction->setVisible(false);
@@ -1853,32 +1855,32 @@ void OpenMVPlugin::extensionsInitialized()
     styledBar0Layout->setContentsMargins(0, 0, 0, 0);
     styledBar0Layout->setSpacing(0);
     styledBar0Layout->addSpacing(4);
-    styledBar0Layout->addWidget(new QLabel(tr("Frame Buffer")));
+    styledBar0Layout->addWidget(new QLabel(Tr::tr("Frame Buffer")));
     styledBar0Layout->addSpacing(6);
     styledBar0->setLayout(styledBar0Layout);
 
     QToolButton *beginRecordingButton = new QToolButton;
-    beginRecordingButton->setText(tr("Record"));
-    beginRecordingButton->setToolTip(tr("Record the Frame Buffer"));
+    beginRecordingButton->setText(Tr::tr("Record"));
+    beginRecordingButton->setToolTip(Tr::tr("Record the Frame Buffer"));
     beginRecordingButton->setEnabled(false);
     styledBar0Layout->addWidget(beginRecordingButton);
 
     QToolButton *endRecordingButton = new QToolButton;
-    endRecordingButton->setText(tr("Stop"));
-    endRecordingButton->setToolTip(tr("Stop recording"));
+    endRecordingButton->setText(Tr::tr("Stop"));
+    endRecordingButton->setToolTip(Tr::tr("Stop recording"));
     endRecordingButton->setVisible(false);
     styledBar0Layout->addWidget(endRecordingButton);
 
     QToolButton *zoomButton = new QToolButton;
-    zoomButton->setText(tr("Zoom"));
-    zoomButton->setToolTip(tr("Zoom to fit"));
+    zoomButton->setText(Tr::tr("Zoom"));
+    zoomButton->setToolTip(Tr::tr("Zoom to fit"));
     zoomButton->setCheckable(true);
     zoomButton->setChecked(false);
     styledBar0Layout->addWidget(zoomButton);
 
     m_jpgCompress = new QToolButton;
-    m_jpgCompress->setText(tr("JPG"));
-    m_jpgCompress->setToolTip(tr("JPEG compress the Frame Buffer for higher performance"));
+    m_jpgCompress->setText(Tr::tr("JPG"));
+    m_jpgCompress->setToolTip(Tr::tr("JPEG compress the Frame Buffer for higher performance"));
     m_jpgCompress->setCheckable(true);
     m_jpgCompress->setChecked(true);
     ///// Disable JPEG Compress /////
@@ -1894,15 +1896,15 @@ void OpenMVPlugin::extensionsInitialized()
             else
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("JPG"),
-                    tr("Busy... please wait..."));
+                    Tr::tr("JPG"),
+                    Tr::tr("Busy... please wait..."));
             }
         }
     });
 
     m_disableFrameBuffer = new QToolButton;
-    m_disableFrameBuffer->setText(tr("Disable"));
-    m_disableFrameBuffer->setToolTip(tr("Disable the Frame Buffer for maximum performance"));
+    m_disableFrameBuffer->setText(Tr::tr("Disable"));
+    m_disableFrameBuffer->setToolTip(Tr::tr("Disable the Frame Buffer for maximum performance"));
     m_disableFrameBuffer->setCheckable(true);
     m_disableFrameBuffer->setChecked(false);
     styledBar0Layout->addWidget(m_disableFrameBuffer);
@@ -1916,13 +1918,13 @@ void OpenMVPlugin::extensionsInitialized()
             else
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Disable"),
-                    tr("Busy... please wait..."));
+                    Tr::tr("Disable"),
+                    Tr::tr("Busy... please wait..."));
             }
         }
     });
 
-    Utils::ElidingLabel *disableLabel = new Utils::ElidingLabel(tr("Frame Buffer Disabled - click the disable button again to enable (top right)"));
+    Utils::ElidingLabel *disableLabel = new Utils::ElidingLabel(Tr::tr("Frame Buffer Disabled - click the disable button again to enable (top right)"));
     disableLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
     disableLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
                                 arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
@@ -1931,7 +1933,7 @@ void OpenMVPlugin::extensionsInitialized()
     disableLabel->setVisible(m_disableFrameBuffer->isChecked());
     connect(m_disableFrameBuffer, &QToolButton::toggled, disableLabel, &QLabel::setVisible);
 
-    Utils::ElidingLabel *recordingLabel = new Utils::ElidingLabel(tr("Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0"));
+    Utils::ElidingLabel *recordingLabel = new Utils::ElidingLabel(Tr::tr("Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0"));
     recordingLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
     recordingLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
                                   arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
@@ -1989,22 +1991,22 @@ void OpenMVPlugin::extensionsInitialized()
     styledBar1Layout->setContentsMargins(0, 0, 0, 0);
     styledBar1Layout->setSpacing(0);
     styledBar1Layout->addSpacing(4);
-    styledBar1Layout->addWidget(new QLabel(tr("Histogram")));
+    styledBar1Layout->addWidget(new QLabel(Tr::tr("Histogram")));
     styledBar1Layout->addSpacing(6);
     styledBar1->setLayout(styledBar1Layout);
 
     QComboBox *colorSpace = new QComboBox;
     colorSpace->setProperty("hideborder", true);
     colorSpace->setProperty("drawleftborder", false);
-    colorSpace->insertItem(RGB_COLOR_SPACE, tr("RGB Color Space"));
-    colorSpace->insertItem(GRAYSCALE_COLOR_SPACE, tr("Grayscale Color Space"));
-    colorSpace->insertItem(LAB_COLOR_SPACE, tr("LAB Color Space"));
-    colorSpace->insertItem(YUV_COLOR_SPACE, tr("YUV Color Space"));
+    colorSpace->insertItem(RGB_COLOR_SPACE, Tr::tr("RGB Color Space"));
+    colorSpace->insertItem(GRAYSCALE_COLOR_SPACE, Tr::tr("Grayscale Color Space"));
+    colorSpace->insertItem(LAB_COLOR_SPACE, Tr::tr("LAB Color Space"));
+    colorSpace->insertItem(YUV_COLOR_SPACE, Tr::tr("YUV Color Space"));
     colorSpace->setCurrentIndex(RGB_COLOR_SPACE);
-    colorSpace->setToolTip(tr("Use Grayscale/LAB for color tracking"));
+    colorSpace->setToolTip(Tr::tr("Use Grayscale/LAB for color tracking"));
     styledBar1Layout->addWidget(colorSpace);
 
-    Utils::ElidingLabel *resLabel = new Utils::ElidingLabel(tr("Res - No Image"));
+    Utils::ElidingLabel *resLabel = new Utils::ElidingLabel(Tr::tr("Res - No Image"));
     resLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
     resLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
                             arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
@@ -2032,21 +2034,21 @@ void OpenMVPlugin::extensionsInitialized()
                 if((roi.width() > 1)
                 || (roi.height() > 1))
                 {
-                    resLabel->setText(tr("Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()).arg(roi.width()).arg(roi.height()).arg(roi.width() * roi.height()));
+                    resLabel->setText(Tr::tr("Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()).arg(roi.width()).arg(roi.height()).arg(roi.width() * roi.height()));
                 }
                 else
                 {
-                    resLabel->setText(tr("Res (w:%1, h:%2) - Point (x:%3, y:%4)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()));
+                    resLabel->setText(Tr::tr("Res (w:%1, h:%2) - Point (x:%3, y:%4)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()));
                 }
             }
             else
             {
-                resLabel->setText(tr("Res (w:%1, h:%2)").arg(res.width()).arg(res.height()));
+                resLabel->setText(Tr::tr("Res (w:%1, h:%2)").arg(res.width()).arg(res.height()));
             }
         }
         else
         {
-            resLabel->setText(tr("Res - No Image"));
+            resLabel->setText(Tr::tr("Res - No Image"));
         }
     });
 
@@ -2120,7 +2122,7 @@ void OpenMVPlugin::extensionsInitialized()
 
         average /= m_queue.size();
 
-        m_fpsLabel->setText(tr("FPS: %L1").arg(average ? (1000 / double(average)) : 0, 5, 'f', 1));
+        m_fpsLabel->setText(Tr::tr("FPS: %L1").arg(average ? (1000 / double(average)) : 0, 5, 'f', 1));
     });
 
     ///////////////////////////////////////////////////////////////////////////
@@ -2128,7 +2130,7 @@ void OpenMVPlugin::extensionsInitialized()
     m_datasetEditor = new OpenMVDatasetEditor;
     connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, m_datasetEditor, &OpenMVDatasetEditor::frameBufferData);
 
-    QLabel *dataSetEditorLabel = new QLabel(tr("Dataset Editor"));
+    QLabel *dataSetEditorLabel = new QLabel(Tr::tr("Dataset Editor"));
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, this, [this, dataSetEditorLabel] (const QString &path) { dataSetEditorLabel->setToolTip(path); });
 
     Utils::StyledBar *datasetEditorStyledBar0 = new Utils::StyledBar;
@@ -2142,7 +2144,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     QToolButton *datasetEditorCloseButton = new QToolButton;
     datasetEditorCloseButton->setIcon(Utils::Icons::CLOSE_TOOLBAR.icon());
-    datasetEditorCloseButton->setToolTip(tr("Close"));
+    datasetEditorCloseButton->setToolTip(Tr::tr("Close"));
     datasetEditorStyledBarLayout0->addWidget(datasetEditorCloseButton);
 
     Utils::StyledBar *datasetEditorStyledBar1 = new Utils::StyledBar;
@@ -2150,7 +2152,7 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorStyledBarLayout1->setContentsMargins(0, 0, 0, 0);
     datasetEditorStyledBarLayout1->setSpacing(0);
     datasetEditorStyledBarLayout1->addSpacing(4);
-    datasetEditorStyledBarLayout1->addWidget(new QLabel(tr("Image Preview")));
+    datasetEditorStyledBarLayout1->addWidget(new QLabel(Tr::tr("Image Preview")));
     datasetEditorStyledBarLayout1->addSpacing(6);
     datasetEditorStyledBar1->setLayout(datasetEditorStyledBarLayout1);
 
@@ -2159,7 +2161,7 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorFB->enableFitInView(true);
     connect(m_datasetEditor, &OpenMVDatasetEditor::pixmapUpdate, datasetEditorFB, &OpenMVPluginFB::frameBufferData);
 
-    QAction *datasetEditorNewFolderAction = new QAction(QIcon(QStringLiteral(NEW_FOLDER_PATH)), tr("New Class Folder"), this);
+    QAction *datasetEditorNewFolderAction = new QAction(QIcon(QStringLiteral(NEW_FOLDER_PATH)), Tr::tr("New Class Folder"), this);
     Core::Command *datasetEditorNewFolder = Core::ActionManager::registerAction(datasetEditorNewFolderAction, Utils::Id("OpenMV.NewClassFolder"));
     datasetEditorNewFolder->setDefaultKeySequence(QStringLiteral("Ctrl+Shift+N"));
     datasetEditorNewFolderAction->setEnabled(false);
@@ -2167,7 +2169,7 @@ void OpenMVPlugin::extensionsInitialized()
     connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, datasetEditorNewFolderAction, &QAction::setEnabled);
     connect(datasetEditorNewFolderAction, &QAction::triggered, m_datasetEditor, &OpenMVDatasetEditor::newClassFolder);
 
-    QAction *datasetEditorSnapshotAction = new QAction(QIcon(QStringLiteral(SNAPSHOT_PATH)), tr("Capture Data"), this);
+    QAction *datasetEditorSnapshotAction = new QAction(QIcon(QStringLiteral(SNAPSHOT_PATH)), Tr::tr("Capture Data"), this);
     Core::Command *datasetEditorSnapshot = Core::ActionManager::registerAction(datasetEditorSnapshotAction, Utils::Id("OpenMV.CaptureData"));
     datasetEditorSnapshot->setDefaultKeySequence(QStringLiteral("Ctrl+Shift+S"));
     datasetEditorSnapshotAction->setEnabled(false);
@@ -2232,42 +2234,42 @@ void OpenMVPlugin::extensionsInitialized()
 
     ///////////////////////////////////////////////////////////////////////////
 
-    m_boardLabel = new Utils::ElidingLabel(tr("Board:"));
-    m_boardLabel->setToolTip(tr("Camera board type"));
+    m_boardLabel = new Utils::ElidingLabel(Tr::tr("Board:"));
+    m_boardLabel->setToolTip(Tr::tr("Camera board type"));
     m_boardLabel->setDisabled(true);
     Core::ICore::statusBar()->addPermanentWidget(m_boardLabel);
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
 
-    m_sensorLabel = new Utils::ElidingLabel(tr("Sensor:"));
-    m_sensorLabel->setToolTip(tr("Camera sensor module"));
+    m_sensorLabel = new Utils::ElidingLabel(Tr::tr("Sensor:"));
+    m_sensorLabel->setToolTip(Tr::tr("Camera sensor module"));
     m_sensorLabel->setDisabled(true);
     Core::ICore::statusBar()->addPermanentWidget(m_sensorLabel);
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
 
     m_versionButton = new Utils::ElidingToolButton;
-    m_versionButton->setText(tr("Firmware Version:"));
-    m_versionButton->setToolTip(tr("Camera firmware version"));
+    m_versionButton->setText(Tr::tr("Firmware Version:"));
+    m_versionButton->setToolTip(Tr::tr("Camera firmware version"));
     m_versionButton->setDisabled(true);
     Core::ICore::statusBar()->addPermanentWidget(m_versionButton);
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
     connect(m_versionButton, &QToolButton::clicked, this, &OpenMVPlugin::updateCam);
 
-    m_portLabel = new Utils::ElidingLabel(tr("Serial Port:"));
-    m_portLabel->setToolTip(tr("Camera serial port"));
+    m_portLabel = new Utils::ElidingLabel(Tr::tr("Serial Port:"));
+    m_portLabel->setToolTip(Tr::tr("Camera serial port"));
     m_portLabel->setDisabled(true);
     Core::ICore::statusBar()->addPermanentWidget(m_portLabel);
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
 
     m_pathButton = new Utils::ElidingToolButton;
-    m_pathButton->setText(tr("Drive:"));
-    m_pathButton->setToolTip(tr("Drive associated with port"));
+    m_pathButton->setText(Tr::tr("Drive:"));
+    m_pathButton->setToolTip(Tr::tr("Drive associated with port"));
     m_pathButton->setDisabled(true);
     Core::ICore::statusBar()->addPermanentWidget(m_pathButton);
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
     connect(m_pathButton, &QToolButton::clicked, this, &OpenMVPlugin::setPortPath);
 
-    m_fpsLabel = new Utils::ElidingLabel(tr("FPS:"));
-    m_fpsLabel->setToolTip(tr("May be different from camera FPS"));
+    m_fpsLabel = new Utils::ElidingLabel(Tr::tr("FPS:"));
+    m_fpsLabel->setToolTip(Tr::tr("May be different from camera FPS"));
     m_fpsLabel->setDisabled(true);
     m_fpsLabel->setMinimumWidth(m_fpsLabel->fontMetrics().horizontalAdvance(QStringLiteral("FPS: 000.000")));
     Core::ICore::statusBar()->addPermanentWidget(m_fpsLabel);
@@ -2475,10 +2477,10 @@ void OpenMVPlugin::extensionsInitialized()
                 || ((IDE_VERSION_MAJOR == major) && (IDE_VERSION_MINOR < minor))
                 || ((IDE_VERSION_MAJOR == major) && (IDE_VERSION_MINOR == minor) && (IDE_VERSION_RELEASE < patch)))
                 {
-                    QMessageBox box(QMessageBox::Information, tr("Update Available"), tr("A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.").arg(major).arg(minor).arg(patch), QMessageBox::Cancel, Core::ICore::dialogParent(),
+                    QMessageBox box(QMessageBox::Information, Tr::tr("Update Available"), Tr::tr("A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.").arg(major).arg(minor).arg(patch), QMessageBox::Cancel, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                    QPushButton *button = box.addButton(tr("Download"), QMessageBox::AcceptRole);
+                    QPushButton *button = box.addButton(Tr::tr("Download"), QMessageBox::AcceptRole);
                     box.setDefaultButton(button);
                     box.setEscapeButton(QMessageBox::Cancel);
                     box.exec();
@@ -2491,7 +2493,7 @@ void OpenMVPlugin::extensionsInitialized()
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
                                                   QString(),
-                                                  tr("Failed to open: \"%L1\"").arg(url.toString()));
+                                                  Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
                         }
                     }
                     else
@@ -2631,8 +2633,8 @@ bool OpenMVPlugin::delayedInitialize()
         delete socket;
 
         if(!isNoShow()) QMessageBox::warning(Core::ICore::dialogParent(),
-            tr("WiFi Programming Disabled!"),
-            tr("Another application is using the OpenMV Cam broadcast discovery port. "
+            Tr::tr("WiFi Programming Disabled!"),
+            Tr::tr("Another application is using the OpenMV Cam broadcast discovery port. "
                "Please close that application and restart OpenMV IDE to enable WiFi programming."));
     }
 
@@ -2641,8 +2643,8 @@ bool OpenMVPlugin::delayedInitialize()
     if(!QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV")))
     {
         QMessageBox::warning(Core::ICore::dialogParent(),
-                    tr("Documents Folder Error"),
-                    tr("Failed to create the documents folder!"));
+                    Tr::tr("Documents Folder Error"),
+                    Tr::tr("Failed to create the documents folder!"));
     }
 
     if(Core::EditorManager::currentEditor()
@@ -2653,8 +2655,8 @@ bool OpenMVPlugin::delayedInitialize()
     {
         QTimer::singleShot(2000, this, [this] {
             Utils::CheckableMessageBox::doNotShowAgainInformation(Core::ICore::dialogParent(),
-                    tr("OpenMV Cam LED Colors"),
-                    tr("Thanks for using the OpenMV Cam and OpenMV IDE!\n\n"
+                    Tr::tr("OpenMV Cam LED Colors"),
+                    Tr::tr("Thanks for using the OpenMV Cam and OpenMV IDE!\n\n"
                        "Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:\n\n"
                        "Blinking Green:\n\nYour OpenMV Cam's onboard bootloader is running. "
                        "The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.\n\n"
@@ -2731,7 +2733,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                     if(ok)
                     {
-                        QString displayName = tr("Serial Port - %L1 - %L2 BPS").arg(portNameValue).arg(baudRateValue);
+                        QString displayName = Tr::tr("Serial Port - %L1 - %L2 BPS").arg(portNameValue).arg(baudRateValue);
                         OpenMVTerminal *terminal = new OpenMVTerminal(displayName, ExtensionSystem::PluginManager::settings(), Core::Context(Utils::Id::fromString(displayName)), true);
                         OpenMVTerminalSerialPort *terminalDevice = new OpenMVTerminalSerialPort(terminal);
 
@@ -2763,7 +2765,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                         // QProgressDialog scoping...
                         {
-                            QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Q_NULLPTR,
+                            QProgressDialog dialog(Tr::tr("Connecting... (30 second timeout)"), Tr::tr("Cancel"), 0, 0, Q_NULLPTR,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                                 (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
@@ -2786,11 +2788,11 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                         if(!errorMessage2.isEmpty())
                         {
-                            QString errorMessage = tr("Error: %L1!").arg(errorMessage2);
+                            QString errorMessage = Tr::tr("Error: %L1!").arg(errorMessage2);
 
                             if(Utils::HostOsInfo::isLinuxHost() && errorMessage2.contains(QStringLiteral("Permission Denied"), Qt::CaseInsensitive))
                             {
-                                errorMessage += tr("\n\nTry doing:\n\nsudo adduser %L1 dialout\n\n...in a terminal and then restart your computer.").arg(Utils::Environment::systemEnvironment().toDictionary().userName());
+                                errorMessage += Tr::tr("\n\nTry doing:\n\nsudo adduser %L1 dialout\n\n...in a terminal and then restart your computer.").arg(Utils::Environment::systemEnvironment().toDictionary().userName());
                             }
 
                             delete terminalDevice;
@@ -2805,17 +2807,17 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                     }
                     else
                     {
-                        displayError(tr("Invalid baud rate argument (%1) for -open_serial_terminal").arg(list.at(1)));
+                        displayError(Tr::tr("Invalid baud rate argument (%1) for -open_serial_terminal").arg(list.at(1)));
                     }
                 }
                 else
                 {
-                    displayError(tr("-open_serial_terminal requires two arguments <port_name:baud_rate>"));
+                    displayError(Tr::tr("-open_serial_terminal requires two arguments <port_name:baud_rate>"));
                 }
             }
             else
             {
-                displayError(tr("Missing arguments for -open_serial_terminal"));
+                displayError(Tr::tr("Missing arguments for -open_serial_terminal"));
             }
         }
 
@@ -2837,7 +2839,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                     if(ok)
                     {
-                        QString displayName = tr("UDP Client Connection - %1:%2").arg(hostNameValue).arg(portValue);
+                        QString displayName = Tr::tr("UDP Client Connection - %1:%2").arg(hostNameValue).arg(portValue);
                         OpenMVTerminal *terminal = new OpenMVTerminal(displayName, ExtensionSystem::PluginManager::settings(), Core::Context(Utils::Id::fromString(displayName)), true);
                         OpenMVTerminalUDPPort *terminalDevice = new OpenMVTerminalUDPPort(terminal);
 
@@ -2869,7 +2871,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                         // QProgressDialog scoping...
                         {
-                            QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Q_NULLPTR,
+                            QProgressDialog dialog(Tr::tr("Connecting... (30 second timeout)"), Tr::tr("Cancel"), 0, 0, Q_NULLPTR,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                                 (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
@@ -2892,7 +2894,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                         if(!errorMessage2.isEmpty())
                         {
-                            QString errorMessage = tr("Error: %L1!").arg(errorMessage2);
+                            QString errorMessage = Tr::tr("Error: %L1!").arg(errorMessage2);
 
                             delete terminalDevice;
                             delete terminal;
@@ -2906,17 +2908,17 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                     }
                     else
                     {
-                        displayError(tr("Invalid port argument (%1) for -open_udp_client_terminal").arg(list.at(1)));
+                        displayError(Tr::tr("Invalid port argument (%1) for -open_udp_client_terminal").arg(list.at(1)));
                     }
                 }
                 else
                 {
-                    displayError(tr("-open_udp_client_terminal requires two arguments <host_name:port>"));
+                    displayError(Tr::tr("-open_udp_client_terminal requires two arguments <host_name:port>"));
                 }
             }
             else
             {
-                displayError(tr("Missing arguments for -open_udp_client_terminal"));
+                displayError(Tr::tr("Missing arguments for -open_udp_client_terminal"));
             }
         }
 
@@ -2933,7 +2935,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                 if(ok)
                 {
-                    QString displayName = tr("UDP Server Connection - %1").arg(portValue);
+                    QString displayName = Tr::tr("UDP Server Connection - %1").arg(portValue);
                     OpenMVTerminal *terminal = new OpenMVTerminal(displayName, ExtensionSystem::PluginManager::settings(), Core::Context(Utils::Id::fromString(displayName)), true);
                     OpenMVTerminalUDPPort *terminalDevice = new OpenMVTerminalUDPPort(terminal);
 
@@ -2965,7 +2967,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                     // QProgressDialog scoping...
                     {
-                        QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Q_NULLPTR,
+                        QProgressDialog dialog(Tr::tr("Connecting... (30 second timeout)"), Tr::tr("Cancel"), 0, 0, Q_NULLPTR,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                             (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                         dialog.setWindowModality(Qt::ApplicationModal);
@@ -2988,7 +2990,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                     if((!errorMessage2.isEmpty()) && (!errorMessage2.startsWith(QStringLiteral("OPENMV::"))))
                     {
-                        QString errorMessage = tr("Error: %L1!").arg(errorMessage2);
+                        QString errorMessage = Tr::tr("Error: %L1!").arg(errorMessage2);
 
                         delete terminalDevice;
                         delete terminal;
@@ -3007,12 +3009,12 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                 }
                 else
                 {
-                    displayError(tr("Invalid port argument (%1) for -open_udp_server_terminal").arg(options.at(i)));
+                    displayError(Tr::tr("Invalid port argument (%1) for -open_udp_server_terminal").arg(options.at(i)));
                 }
             }
             else
             {
-                displayError(tr("Missing arguments for -open_udp_server_terminal"));
+                displayError(Tr::tr("Missing arguments for -open_udp_server_terminal"));
             }
         }
 
@@ -3034,7 +3036,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                     if(ok)
                     {
-                        QString displayName = tr("TCP Client Connection - %1:%2").arg(hostNameValue).arg(portValue);
+                        QString displayName = Tr::tr("TCP Client Connection - %1:%2").arg(hostNameValue).arg(portValue);
                         OpenMVTerminal *terminal = new OpenMVTerminal(displayName, ExtensionSystem::PluginManager::settings(), Core::Context(Utils::Id::fromString(displayName)), true);
                         OpenMVTerminalTCPPort *terminalDevice = new OpenMVTerminalTCPPort(terminal);
 
@@ -3066,7 +3068,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                         // QProgressDialog scoping...
                         {
-                            QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Q_NULLPTR,
+                            QProgressDialog dialog(Tr::tr("Connecting... (30 second timeout)"), Tr::tr("Cancel"), 0, 0, Q_NULLPTR,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                                 (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                             dialog.setWindowModality(Qt::ApplicationModal);
@@ -3089,7 +3091,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                         if(!errorMessage2.isEmpty())
                         {
-                            QString errorMessage = tr("Error: %L1!").arg(errorMessage2);
+                            QString errorMessage = Tr::tr("Error: %L1!").arg(errorMessage2);
 
                             delete terminalDevice;
                             delete terminal;
@@ -3103,17 +3105,17 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                     }
                     else
                     {
-                        displayError(tr("Invalid port argument (%1) for -open_tcp_client_terminal").arg(list.at(1)));
+                        displayError(Tr::tr("Invalid port argument (%1) for -open_tcp_client_terminal").arg(list.at(1)));
                     }
                 }
                 else
                 {
-                    displayError(tr("-open_tcp_client_terminal requires two arguments <host_name:port>"));
+                    displayError(Tr::tr("-open_tcp_client_terminal requires two arguments <host_name:port>"));
                 }
             }
             else
             {
-                displayError(tr("Missing arguments for -open_tcp_client_terminal"));
+                displayError(Tr::tr("Missing arguments for -open_tcp_client_terminal"));
             }
         }
 
@@ -3130,7 +3132,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                 if(ok)
                 {
-                    QString displayName = tr("TCP Server Connection - %1").arg(portValue);
+                    QString displayName = Tr::tr("TCP Server Connection - %1").arg(portValue);
                     OpenMVTerminal *terminal = new OpenMVTerminal(displayName, ExtensionSystem::PluginManager::settings(), Core::Context(Utils::Id::fromString(displayName)), true);
                     OpenMVTerminalTCPPort *terminalDevice = new OpenMVTerminalTCPPort(terminal);
 
@@ -3162,7 +3164,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                     // QProgressDialog scoping...
                     {
-                        QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Q_NULLPTR,
+                        QProgressDialog dialog(Tr::tr("Connecting... (30 second timeout)"), Tr::tr("Cancel"), 0, 0, Q_NULLPTR,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                             (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                         dialog.setWindowModality(Qt::ApplicationModal);
@@ -3185,7 +3187,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
                     if((!errorMessage2.isEmpty()) && (!errorMessage2.startsWith(QStringLiteral("OPENMV::"))))
                     {
-                        QString errorMessage = tr("Error: %L1!").arg(errorMessage2);
+                        QString errorMessage = Tr::tr("Error: %L1!").arg(errorMessage2);
 
                         delete terminalDevice;
                         delete terminal;
@@ -3204,12 +3206,12 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                 }
                 else
                 {
-                    displayError(tr("Invalid port argument (%1) for -open_tcp_server_terminal").arg(options.at(i)));
+                    displayError(Tr::tr("Invalid port argument (%1) for -open_tcp_server_terminal").arg(options.at(i)));
                 }
             }
             else
             {
-                displayError(tr("Missing arguments for -open_tcp_server_terminal"));
+                displayError(Tr::tr("Missing arguments for -open_tcp_server_terminal"));
             }
         }
     }
@@ -3261,16 +3263,16 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
                 if(QString::fromUtf8(data).contains(QStringLiteral("Done")))
                 {
                     QMessageBox::information(Core::ICore::dialogParent(),
-                        tr("Register OpenMV Cam"),
-                        tr("OpenMV Cam automatically registered!\n\nBoard: %1\nID: %2\n\nPlease run Examples->HelloWorld->helloworld.py to test the vision quality and focus the camera (if applicable).").arg(board).arg(id));
+                        Tr::tr("Register OpenMV Cam"),
+                        Tr::tr("OpenMV Cam automatically registered!\n\nBoard: %1\nID: %2\n\nPlease run Examples->HelloWorld->helloworld.py to test the vision quality and focus the camera (if applicable).").arg(board).arg(id));
 
                     return;
                 }
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("Register OpenMV Cam"),
-                        tr("Database Error!"));
+                        Tr::tr("Register OpenMV Cam"),
+                        Tr::tr("Database Error!"));
 
                     return;
                 }
@@ -3278,16 +3280,16 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
             else if(reply->error() != QNetworkReply::NoError)
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Register OpenMV Cam"),
-                    tr("Error: %L1!").arg(reply->error()));
+                    Tr::tr("Register OpenMV Cam"),
+                    Tr::tr("Error: %L1!").arg(reply->error()));
 
                 return;
             }
             else
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Register OpenMV Cam"),
-                    tr("GET Network error!"));
+                    Tr::tr("Register OpenMV Cam"),
+                    Tr::tr("GET Network error!"));
 
                 return;
             }
@@ -3295,16 +3297,16 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
         else
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                tr("Register OpenMV Cam"),
-                tr("GET network error!"));
+                Tr::tr("Register OpenMV Cam"),
+                Tr::tr("GET network error!"));
 
             return;
         }
     }
 
     if(QMessageBox::warning(Core::ICore::dialogParent(),
-        tr("Unregistered OpenMV Cam Detected"),
-        tr("Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.\n\n"
+        Tr::tr("Unregistered OpenMV Cam Detected"),
+        Tr::tr("Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.\n\n"
            "Would you like to register your OpenMV Cam now?"),
         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
     == QMessageBox::Yes)
@@ -3313,8 +3315,8 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
     }
 
     if(QMessageBox::warning(Core::ICore::dialogParent(),
-        tr("Unregistered OpenMV Cam Detected"),
-        tr("Unregistered OpenMV Cams hurt the open-source OpenMV ecosystem by undercutting offical OpenMV Cam sales which help fund OpenMV Cam software development.\n\n"
+        Tr::tr("Unregistered OpenMV Cam Detected"),
+        Tr::tr("Unregistered OpenMV Cams hurt the open-source OpenMV ecosystem by undercutting offical OpenMV Cam sales which help fund OpenMV Cam software development.\n\n"
            "Would you like to register your OpenMV Cam now?"),
         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
     == QMessageBox::Yes)
@@ -3323,8 +3325,8 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
     }
 
     if(QMessageBox::warning(Core::ICore::dialogParent(),
-        tr("Unregistered OpenMV Cam Detected"),
-        tr("OpenMV IDE will display these three messages boxes each time you connect until you register your OpenMV Cam...\n\n"
+        Tr::tr("Unregistered OpenMV Cam Detected"),
+        Tr::tr("OpenMV IDE will display these three messages boxes each time you connect until you register your OpenMV Cam...\n\n"
            "Would you like to register your OpenMV Cam now?"),
         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
     == QMessageBox::Yes)
@@ -3340,10 +3342,10 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
         QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-        dialog->setWindowTitle(tr("Register OpenMV Cam"));
+        dialog->setWindowTitle(Tr::tr("Register OpenMV Cam"));
         QVBoxLayout *layout = new QVBoxLayout(dialog);
 
-        QLabel *label = new QLabel(tr("Please enter a board key to register your OpenMV Cam.<br/><br/>If you do not have a board key you may purchase one from OpenMV <a href=\"https://openmv.io/products/openmv-cam-board-key\">here</a>."));
+        QLabel *label = new QLabel(Tr::tr("Please enter a board key to register your OpenMV Cam.<br/><br/>If you do not have a board key you may purchase one from OpenMV <a href=\"https://openmv.io/products/openmv-cam-board-key\">here</a>."));
         label->setOpenExternalLinks(true);
         layout->addWidget(label);
 
@@ -3390,7 +3392,7 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
             if(QRegularExpression(QStringLiteral("^[0-9A-Z]{5}-[0-9A-Z]{5}-[0-9A-Z]{5}-[0-9A-Z]{5}-[0-9A-Z]{5}$")).match(chars).hasMatch())
             {
                 QNetworkAccessManager manager(this);
-                QProgressDialog dialog(tr("Registering OpenMV Cam..."), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                QProgressDialog dialog(Tr::tr("Registering OpenMV Cam..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                     (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
 
@@ -3417,62 +3419,62 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
                             if(QString::fromUtf8(data).contains(QStringLiteral("<p>Done</p>")))
                             {
                                 QMessageBox::information(Core::ICore::dialogParent(),
-                                    tr("Register OpenMV Cam"),
-                                    tr("Thank you for registering your OpenMV Cam!"));
+                                    Tr::tr("Register OpenMV Cam"),
+                                    Tr::tr("Thank you for registering your OpenMV Cam!"));
 
                                 return true;
                             }
                             else if(QString::fromUtf8(data).contains(QStringLiteral("<p>Error: Invalid ID Key!</p>")))
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("Register OpenMV Cam"),
-                                    tr("Invalid Board Key!"));
+                                    Tr::tr("Register OpenMV Cam"),
+                                    Tr::tr("Invalid Board Key!"));
                             }
                             else if(QString::fromUtf8(data).contains(QStringLiteral("<p>Error: ID Key already used!</p>")))
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("Register OpenMV Cam"),
-                                    tr("Board Key already used!"));
+                                    Tr::tr("Register OpenMV Cam"),
+                                    Tr::tr("Board Key already used!"));
                             }
                             else if(QString::fromUtf8(data).contains(QStringLiteral("<p>Error: Board and ID already registered!</p>")))
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("Register OpenMV Cam"),
-                                    tr("Board and ID already registered!"));
+                                    Tr::tr("Register OpenMV Cam"),
+                                    Tr::tr("Board and ID already registered!"));
                             }
                             else
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("Register OpenMV Cam"),
-                                    tr("Database Error!"));
+                                    Tr::tr("Register OpenMV Cam"),
+                                    Tr::tr("Database Error!"));
                             }
                         }
                         else if(reply->error() != QNetworkReply::NoError)
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
-                                tr("Register OpenMV Cam"),
-                                tr("Error: %L1!").arg(reply->error()));
+                                Tr::tr("Register OpenMV Cam"),
+                                Tr::tr("Error: %L1!").arg(reply->error()));
                         }
                         else
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
-                                tr("Register OpenMV Cam"),
-                                tr("GET Network error!"));
+                                Tr::tr("Register OpenMV Cam"),
+                                Tr::tr("GET Network error!"));
                         }
                     }
                 }
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("Register OpenMV Cam"),
-                        tr("GET network error!"));
+                        Tr::tr("Register OpenMV Cam"),
+                        Tr::tr("GET network error!"));
                 }
             }
             else
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Register OpenMV Cam"),
-                    tr("Invalidly formatted Board Key!"));
+                    Tr::tr("Register OpenMV Cam"),
+                    Tr::tr("Invalidly formatted Board Key!"));
             }
         }
         else
@@ -3517,7 +3519,7 @@ void OpenMVPlugin::processEvents()
 
             if(m_timer.hasExpired(FPS_TIMER_EXPIRATION_TIME))
             {
-                m_fpsLabel->setText(tr("FPS: 0"));
+                m_fpsLabel->setText(Tr::tr("FPS: 0"));
             }
         }
     }
@@ -3534,7 +3536,7 @@ void OpenMVPlugin::errorFilter(const QByteArray &data)
     {
         QString fileName = match.captured(1);
         int lineNumber = match.captured(2).toInt();
-        QString errorMessage = tr(match.captured(3).toUtf8().data());
+        QString errorMessage = Tr::tr(match.captured(3).toUtf8().data());
 
         bool builtinModule = false;
         QString builtinModuleName = QFileInfo(fileName).baseName();
@@ -3598,8 +3600,8 @@ void OpenMVPlugin::configureSettings()
     else
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            tr("Configure Settings"),
-            tr("Busy... please wait..."));
+            Tr::tr("Configure Settings"),
+            Tr::tr("Busy... please wait..."));
     }
 }
 
@@ -3608,8 +3610,8 @@ void OpenMVPlugin::saveScript()
     if(!m_working)
     {
         int answer = QMessageBox::question(Core::ICore::dialogParent(),
-            tr("Save Script"),
-            tr("Strip comments and convert spaces to tabs?"),
+            Tr::tr("Save Script"),
+            Tr::tr("Strip comments and convert spaces to tabs?"),
             QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
 
         if((answer == QMessageBox::Yes) || (answer == QMessageBox::No))
@@ -3630,8 +3632,8 @@ void OpenMVPlugin::saveScript()
                     if((!file.write(contents)) || (!file.finalize()))
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("Save Script"),
-                            tr("Error: %L1!").arg(file.errorString()));
+                            Tr::tr("Save Script"),
+                            Tr::tr("Error: %L1!").arg(file.errorString()));
                     }
                     else
                     {
@@ -3644,8 +3646,8 @@ void OpenMVPlugin::saveScript()
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("Save Script"),
-                        tr("Error: %L1!").arg(file.errorString()));
+                        Tr::tr("Save Script"),
+                        Tr::tr("Error: %L1!").arg(file.errorString()));
                 }
             }
         }
@@ -3653,8 +3655,8 @@ void OpenMVPlugin::saveScript()
     else
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            tr("Save Script"),
-            tr("Busy... please wait..."));
+            Tr::tr("Save Script"),
+            Tr::tr("Busy... please wait..."));
     }
 }
 
@@ -3668,15 +3670,15 @@ void OpenMVPlugin::saveImage(const QPixmap &data)
     forever
     {
         path =
-        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Image"),
+        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Image"),
             settings->value(QStringLiteral(LAST_SAVE_IMAGE_PATH), QDir::homePath()).toString(),
-            tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
+            Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
 
         if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
         {
             QMessageBox::warning(Core::ICore::dialogParent(),
-                tr("Save Image"),
-                QObject::tr("Please add a file extension!"));
+                Tr::tr("Save Image"),
+                Tr::tr("Please add a file extension!"));
 
             continue;
         }
@@ -3693,8 +3695,8 @@ void OpenMVPlugin::saveImage(const QPixmap &data)
         else
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                tr("Save Image"),
-                tr("Failed to save the image file for an unknown reason!"));
+                Tr::tr("Save Image"),
+                Tr::tr("Failed to save the image file for an unknown reason!"));
         }
     }
 
@@ -3715,15 +3717,15 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
         forever
         {
             path =
-            QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Template"),
+            QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Template"),
                 settings->value(QStringLiteral(LAST_SAVE_TEMPLATE_PATH), drivePath).toString(),
-                tr("Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)"));
+                Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)"));
 
             if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
             {
                 QMessageBox::warning(Core::ICore::dialogParent(),
-                    tr("Save Template"),
-                    QObject::tr("Please add a file extension!"));
+                    Tr::tr("Save Template"),
+                    Tr::tr("Please add a file extension!"));
 
                 continue;
             }
@@ -3739,8 +3741,8 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
             || (!QDir(QFileInfo(path).path()).exists()))
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Save Template"),
-                    tr("Please select a valid path on the OpenMV Cam!"));
+                    Tr::tr("Save Template"),
+                    Tr::tr("Please select a valid path on the OpenMV Cam!"));
             }
             else
             {
@@ -3754,8 +3756,8 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("Save Template"),
-                        tr("\"%L1\" is longer than a max length of %L2 characters!").arg(QString::fromUtf8(sendPath)).arg(DESCRIPTOR_SAVE_PATH_MAX_LEN));
+                        Tr::tr("Save Template"),
+                        Tr::tr("\"%L1\" is longer than a max length of %L2 characters!").arg(QString::fromUtf8(sendPath)).arg(DESCRIPTOR_SAVE_PATH_MAX_LEN));
                 }
             }
         }
@@ -3765,8 +3767,8 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
     else
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            tr("Save Template"),
-            tr("Busy... please wait..."));
+            Tr::tr("Save Template"),
+            Tr::tr("Busy... please wait..."));
     }
 }
 
@@ -3784,15 +3786,15 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
         forever
         {
             path =
-            QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Descriptor"),
+            QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Descriptor"),
                 settings->value(QStringLiteral(LAST_SAVE_DESCRIPTOR_PATH), drivePath).toString(),
-                tr("Keypoints Files (*.lbp *.orb)"));
+                Tr::tr("Keypoints Files (*.lbp *.orb)"));
 
             if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
             {
                 QMessageBox::warning(Core::ICore::dialogParent(),
-                    tr("Save Descriptor"),
-                    QObject::tr("Please add a file extension!"));
+                    Tr::tr("Save Descriptor"),
+                    Tr::tr("Please add a file extension!"));
 
                 continue;
             }
@@ -3808,8 +3810,8 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
             || (!QDir(QFileInfo(path).path()).exists()))
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Save Descriptor"),
-                    tr("Please select a valid path on the OpenMV Cam!"));
+                    Tr::tr("Save Descriptor"),
+                    Tr::tr("Please select a valid path on the OpenMV Cam!"));
             }
             else
             {
@@ -3823,8 +3825,8 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("Save Descriptor"),
-                        tr("\"%L1\" is longer than a max length of %L2 characters!").arg(QString::fromUtf8(sendPath)).arg(DESCRIPTOR_SAVE_PATH_MAX_LEN));
+                        Tr::tr("Save Descriptor"),
+                        Tr::tr("\"%L1\" is longer than a max length of %L2 characters!").arg(QString::fromUtf8(sendPath)).arg(DESCRIPTOR_SAVE_PATH_MAX_LEN));
                 }
             }
         }
@@ -3834,8 +3836,8 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
     else
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            tr("Save Descriptor"),
-            tr("Busy... please wait..."));
+            Tr::tr("Save Descriptor"),
+            Tr::tr("Busy... please wait..."));
     }
 }
 
@@ -3895,28 +3897,28 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
                         else
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
-                                notExamples ? tr("Open File") : tr("Open Example"),
-                                notExamples ? tr("Cannot open the file \"%L1\"!").arg(filePath) : tr("Cannot open the example file \"%L1\"!").arg(filePath));
+                                notExamples ? Tr::tr("Open File") : Tr::tr("Open Example"),
+                                notExamples ? Tr::tr("Cannot open the file \"%L1\"!").arg(filePath) : Tr::tr("Cannot open the example file \"%L1\"!").arg(filePath));
                         }
                     }
                     else if(file.error() != QFile::NoError)
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            notExamples ? tr("Open File") : tr("Open Example"),
-                            tr("Error: %L1!").arg(file.errorString()));
+                            notExamples ? Tr::tr("Open File") : Tr::tr("Open Example"),
+                            Tr::tr("Error: %L1!").arg(file.errorString()));
                     }
                     else
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            notExamples ? tr("Open File") : tr("Open Example"),
-                            notExamples ? tr("Cannot open the file \"%L1\"!").arg(filePath) : tr("Cannot open the example file \"%L1\"!").arg(filePath));
+                            notExamples ? Tr::tr("Open File") : Tr::tr("Open Example"),
+                            notExamples ? Tr::tr("Cannot open the file \"%L1\"!").arg(filePath) : Tr::tr("Cannot open the example file \"%L1\"!").arg(filePath));
                     }
                 }
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        notExamples ? tr("Open File") : tr("Open Example"),
-                        tr("Error: %L1!").arg(file.errorString()));
+                        notExamples ? Tr::tr("Open File") : Tr::tr("Open Example"),
+                        Tr::tr("Error: %L1!").arg(file.errorString()));
                 }
             });
 
@@ -3962,8 +3964,8 @@ void OpenMVPlugin::setPortPath(bool silent)
             if(!silent)
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Select Drive"),
-                    tr("No valid drives were found to associate with your OpenMV Cam!"));
+                    Tr::tr("Select Drive"),
+                    Tr::tr("No valid drives were found to associate with your OpenMV Cam!"));
             }
 
             m_portPath = QString();
@@ -3973,8 +3975,8 @@ void OpenMVPlugin::setPortPath(bool silent)
             if(m_portPath == drives.first())
             {
                 QMessageBox::information(Core::ICore::dialogParent(),
-                    tr("Select Drive"),
-                    tr("\"%L1\" is the only drive available so it must be your OpenMV Cam's drive.").arg(drives.first()));
+                    Tr::tr("Select Drive"),
+                    Tr::tr("\"%L1\" is the only drive available so it must be your OpenMV Cam's drive.").arg(drives.first()));
             }
             else
             {
@@ -3988,7 +3990,7 @@ void OpenMVPlugin::setPortPath(bool silent)
 
             bool ok = silent;
             QString temp = silent ? drives.first() : QInputDialog::getItem(Core::ICore::dialogParent(),
-                tr("Select Drive"), tr("Please associate a drive with your OpenMV Cam"),
+                Tr::tr("Select Drive"), Tr::tr("Please associate a drive with your OpenMV Cam"),
                 drives, (index != -1) ? index : 0, false, &ok,
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType() : Qt::WindowCloseButtonHint));
@@ -4002,7 +4004,7 @@ void OpenMVPlugin::setPortPath(bool silent)
 
         settings->endGroup();
 
-        m_pathButton->setText((!m_portPath.isEmpty()) ? tr("Drive: %L1").arg(m_portPath) : tr("Drive:"));
+        m_pathButton->setText((!m_portPath.isEmpty()) ? Tr::tr("Drive: %L1").arg(m_portPath) : Tr::tr("Drive:"));
 
         Core::IEditor *editor = Core::EditorManager::currentEditor();
         m_openDriveFolderAction->setEnabled(!m_portPath.isEmpty());
@@ -4015,8 +4017,8 @@ void OpenMVPlugin::setPortPath(bool silent)
     else
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            tr("Select Drive"),
-            tr("Busy... please wait..."));
+            Tr::tr("Select Drive"),
+            Tr::tr("Busy... please wait..."));
     }
 }
 
@@ -4027,20 +4029,20 @@ const int connectToTCPPortIndex = 2;
 void OpenMVPlugin::openTerminalAboutToShow()
 {
     m_openTerminalMenu->menu()->clear();
-    connect(m_openTerminalMenu->menu()->addAction(tr("New Terminal")), &QAction::triggered, this, [this] {
+    connect(m_openTerminalMenu->menu()->addAction(Tr::tr("New Terminal")), &QAction::triggered, this, [this] {
         QSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
 
         QStringList optionList = QStringList()
-            << tr("Connect to serial port")
-            << tr("Connect to UDP port")
-            << tr("Connect to TCP port");
+            << Tr::tr("Connect to serial port")
+            << Tr::tr("Connect to UDP port")
+            << Tr::tr("Connect to TCP port");
 
         int optionListIndex = optionList.indexOf(settings->value(QStringLiteral(LAST_OPEN_TERMINAL_SELECT)).toString());
 
         bool optionNameOk;
         QString optionName = QInputDialog::getItem(Core::ICore::dialogParent(),
-            tr("New Terminal"), tr("Please select an option"),
+            Tr::tr("New Terminal"), Tr::tr("Please select an option"),
             optionList, (optionListIndex != -1) ? optionListIndex : 0, false, &optionNameOk,
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -4069,7 +4071,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                         bool portNameValueOk;
                         QString portNameValue = QInputDialog::getItem(Core::ICore::dialogParent(),
-                            tr("New Terminal"), tr("Please select a serial port"),
+                            Tr::tr("New Terminal"), Tr::tr("Please select a serial port"),
                             stringList, (index != -1) ? index : 0, false, &portNameValueOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -4078,7 +4080,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                         {
                             bool baudRateOk;
                             QString baudRate = QInputDialog::getText(Core::ICore::dialogParent(),
-                                tr("New Terminal"), tr("Please enter a baud rate"),
+                                Tr::tr("New Terminal"), Tr::tr("Please enter a baud rate"),
                                 QLineEdit::Normal, settings->value(QStringLiteral(LAST_OPEN_TERMINAL_SERIAL_PORT_BAUD_RATE), QStringLiteral("115200")).toString(), &baudRateOk,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -4095,7 +4097,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     settings->setValue(QStringLiteral(LAST_OPEN_TERMINAL_SERIAL_PORT_BAUD_RATE), baudRateValue);
 
                                     openTerminalMenuData_t data;
-                                    data.displayName = tr("Serial Port - %L1 - %L2 BPS").arg(portNameValue).arg(baudRateValue);
+                                    data.displayName = Tr::tr("Serial Port - %L1 - %L2 BPS").arg(portNameValue).arg(baudRateValue);
                                     data.optionIndex = connectToSerialPortIndex;
                                     data.commandStr = portNameValue;
                                     data.commandVal = baudRateValue;
@@ -4141,7 +4143,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                                     // QProgressDialog scoping...
                                     {
-                                        QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                                        QProgressDialog dialog(Tr::tr("Connecting... (30 second timeout)"), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                                             (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                                         dialog.setWindowModality(Qt::ApplicationModal);
@@ -4165,14 +4167,14 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     if(!errorMessage2.isEmpty())
                                     {
                                         QMessageBox::critical(Core::ICore::dialogParent(),
-                                            tr("New Terminal"),
-                                            tr("Error: %L1!").arg(errorMessage2));
+                                            Tr::tr("New Terminal"),
+                                            Tr::tr("Error: %L1!").arg(errorMessage2));
 
                                         if(Utils::HostOsInfo::isLinuxHost() && errorMessage2.contains(QStringLiteral("Permission Denied"), Qt::CaseInsensitive))
                                         {
                                             QMessageBox::information(Core::ICore::dialogParent(),
-                                                tr("New Terminal"),
-                                                tr("Try doing:\n\n") + QStringLiteral("sudo adduser %L1 dialout\n\n").arg(Utils::Environment::systemEnvironment().toDictionary().userName()) + tr("...in a terminal and then restart your computer."));
+                                                Tr::tr("New Terminal"),
+                                                Tr::tr("Try doing:\n\n") + QStringLiteral("sudo adduser %L1 dialout\n\n").arg(Utils::Environment::systemEnvironment().toDictionary().userName()) + Tr::tr("...in a terminal and then restart your computer."));
                                         }
 
                                         delete terminalDevice;
@@ -4188,8 +4190,8 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                 else
                                 {
                                     QMessageBox::critical(Core::ICore::dialogParent(),
-                                        tr("New Terminal"),
-                                        tr("Invalid string: \"%L1\"!").arg(baudRate));
+                                        Tr::tr("New Terminal"),
+                                        Tr::tr("Invalid string: \"%L1\"!").arg(baudRate));
                                 }
                             }
                         }
@@ -4197,19 +4199,19 @@ void OpenMVPlugin::openTerminalAboutToShow()
                     else
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("New Terminal"),
-                            tr("No serial ports found!"));
+                            Tr::tr("New Terminal"),
+                            Tr::tr("No serial ports found!"));
                     }
 
                     break;
                 }
                 case connectToUDPPortIndex:
                 {
-                    QMessageBox box(QMessageBox::Question, tr("New Terminal"), tr("Connect to a UDP server as a client or start a UDP Server?"), QMessageBox::Cancel, Core::ICore::dialogParent(),
+                    QMessageBox box(QMessageBox::Question, Tr::tr("New Terminal"), Tr::tr("Connect to a UDP server as a client or start a UDP Server?"), QMessageBox::Cancel, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                    QPushButton *button0 = box.addButton(tr(" Connect to a Server "), QMessageBox::AcceptRole);
-                    QPushButton *button1 = box.addButton(tr(" Start a Server "), QMessageBox::AcceptRole);
+                    QPushButton *button0 = box.addButton(Tr::tr(" Connect to a Server "), QMessageBox::AcceptRole);
+                    QPushButton *button1 = box.addButton(Tr::tr(" Start a Server "), QMessageBox::AcceptRole);
                     box.setDefaultButton(settings->value(QStringLiteral(LAST_OPEN_TERMINAL_UDP_TYPE_SELECT), 0).toInt() ? button1 : button0);
                     box.setEscapeButton(QMessageBox::Cancel);
                     box.exec();
@@ -4218,7 +4220,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                     {
                         bool hostNameOk;
                         QString hostName = QInputDialog::getText(Core::ICore::dialogParent(),
-                            tr("New Terminal"), tr("Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)"),
+                            Tr::tr("New Terminal"), Tr::tr("Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)"),
                             QLineEdit::Normal, settings->value(QStringLiteral(LAST_OPEN_TERMINAL_UDP_PORT), QStringLiteral("xxx.xxx.xxx.xxx:xxxx")).toString(), &hostNameOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -4240,7 +4242,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     settings->setValue(QStringLiteral(LAST_OPEN_TERMINAL_UDP_PORT), hostName);
 
                                     openTerminalMenuData_t data;
-                                    data.displayName = tr("UDP Client Connection - %1").arg(hostName);
+                                    data.displayName = Tr::tr("UDP Client Connection - %1").arg(hostName);
                                     data.optionIndex = connectToUDPPortIndex;
                                     data.commandStr = hostNameValue;
                                     data.commandVal = portValue;
@@ -4286,7 +4288,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                                     // QProgressDialog scoping...
                                     {
-                                        QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                                        QProgressDialog dialog(Tr::tr("Connecting... (30 second timeout)"), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                                             (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                                         dialog.setWindowModality(Qt::ApplicationModal);
@@ -4310,8 +4312,8 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     if(!errorMessage2.isEmpty())
                                     {
                                         QMessageBox::critical(Core::ICore::dialogParent(),
-                                            tr("New Terminal"),
-                                            tr("Error: %L1!").arg(errorMessage2));
+                                            Tr::tr("New Terminal"),
+                                            Tr::tr("Error: %L1!").arg(errorMessage2));
 
                                         delete terminalDevice;
                                         delete terminal;
@@ -4326,15 +4328,15 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                 else
                                 {
                                     QMessageBox::critical(Core::ICore::dialogParent(),
-                                        tr("New Terminal"),
-                                        tr("Invalid string: \"%L1\"!").arg(hostName));
+                                        Tr::tr("New Terminal"),
+                                        Tr::tr("Invalid string: \"%L1\"!").arg(hostName));
                                 }
                             }
                             else
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("New Terminal"),
-                                    tr("Invalid string: \"%L1\"!").arg(hostName));
+                                    Tr::tr("New Terminal"),
+                                    Tr::tr("Invalid string: \"%L1\"!").arg(hostName));
                             }
                         }
                     }
@@ -4342,7 +4344,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                     {
                         bool portValueOk;
                         int portValue = QInputDialog::getInt(Core::ICore::dialogParent(),
-                            tr("New Terminal"), tr("Please enter a port number (enter 0 for any random free port)"),
+                            Tr::tr("New Terminal"), Tr::tr("Please enter a port number (enter 0 for any random free port)"),
                             settings->value(QStringLiteral(LAST_OPEN_TERMINAL_UDP_SERVER_PORT), 0).toInt(), 0, 65535, 1, &portValueOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -4354,7 +4356,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             settings->setValue(QStringLiteral(LAST_OPEN_TERMINAL_UDP_SERVER_PORT), portValue);
 
                             openTerminalMenuData_t data;
-                            data.displayName = tr("UDP Server Connection - %1").arg(portValue);
+                            data.displayName = Tr::tr("UDP Server Connection - %1").arg(portValue);
                             data.optionIndex = connectToUDPPortIndex;
                             data.commandStr = QString();
                             data.commandVal = portValue;
@@ -4400,7 +4402,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                             // QProgressDialog scoping...
                             {
-                                QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                                QProgressDialog dialog(Tr::tr("Connecting... (30 second timeout)"), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                                     (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                                 dialog.setWindowModality(Qt::ApplicationModal);
@@ -4424,8 +4426,8 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             if((!errorMessage2.isEmpty()) && (!errorMessage2.startsWith(QStringLiteral("OPENMV::"))))
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("New Terminal"),
-                                    tr("Error: %L1!").arg(errorMessage2));
+                                    Tr::tr("New Terminal"),
+                                    Tr::tr("Error: %L1!").arg(errorMessage2));
 
                                 delete terminalDevice;
                                 delete terminal;
@@ -4448,11 +4450,11 @@ void OpenMVPlugin::openTerminalAboutToShow()
                 }
                 case connectToTCPPortIndex:
                 {
-                    QMessageBox box(QMessageBox::Question, tr("New Terminal"), tr("Connect to a TCP server as a client or start a TCP Server?"), QMessageBox::Cancel, Core::ICore::dialogParent(),
+                    QMessageBox box(QMessageBox::Question, Tr::tr("New Terminal"), Tr::tr("Connect to a TCP server as a client or start a TCP Server?"), QMessageBox::Cancel, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                    QPushButton *button0 = box.addButton(tr(" Connect to a Server "), QMessageBox::AcceptRole);
-                    QPushButton *button1 = box.addButton(tr(" Start a Server "), QMessageBox::AcceptRole);
+                    QPushButton *button0 = box.addButton(Tr::tr(" Connect to a Server "), QMessageBox::AcceptRole);
+                    QPushButton *button1 = box.addButton(Tr::tr(" Start a Server "), QMessageBox::AcceptRole);
                     box.setDefaultButton(settings->value(QStringLiteral(LAST_OPEN_TERMINAL_TCP_TYPE_SELECT), 0).toInt() ? button1 : button0);
                     box.setEscapeButton(QMessageBox::Cancel);
                     box.exec();
@@ -4461,7 +4463,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                     {
                         bool hostNameOk;
                         QString hostName = QInputDialog::getText(Core::ICore::dialogParent(),
-                            tr("New Terminal"), tr("Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)"),
+                            Tr::tr("New Terminal"), Tr::tr("Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)"),
                             QLineEdit::Normal, settings->value(QStringLiteral(LAST_OPEN_TERMINAL_TCP_PORT), QStringLiteral("xxx.xxx.xxx.xxx:xxxx")).toString(), &hostNameOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -4483,7 +4485,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     settings->setValue(QStringLiteral(LAST_OPEN_TERMINAL_TCP_PORT), hostName);
 
                                     openTerminalMenuData_t data;
-                                    data.displayName = tr("TCP Client Connection - %1").arg(hostName);
+                                    data.displayName = Tr::tr("TCP Client Connection - %1").arg(hostName);
                                     data.optionIndex = connectToTCPPortIndex;
                                     data.commandStr = hostNameValue;
                                     data.commandVal = portValue;
@@ -4529,7 +4531,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                                     // QProgressDialog scoping...
                                     {
-                                        QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                                        QProgressDialog dialog(Tr::tr("Connecting... (30 second timeout)"), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                                             (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                                         dialog.setWindowModality(Qt::ApplicationModal);
@@ -4553,8 +4555,8 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     if(!errorMessage2.isEmpty())
                                     {
                                         QMessageBox::critical(Core::ICore::dialogParent(),
-                                            tr("New Terminal"),
-                                            tr("Error: %L1!").arg(errorMessage2));
+                                            Tr::tr("New Terminal"),
+                                            Tr::tr("Error: %L1!").arg(errorMessage2));
 
                                         delete terminalDevice;
                                         delete terminal;
@@ -4569,15 +4571,15 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                 else
                                 {
                                     QMessageBox::critical(Core::ICore::dialogParent(),
-                                        tr("New Terminal"),
-                                        tr("Invalid string: \"%L1\"!").arg(hostName));
+                                        Tr::tr("New Terminal"),
+                                        Tr::tr("Invalid string: \"%L1\"!").arg(hostName));
                                 }
                             }
                             else
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("New Terminal"),
-                                    tr("Invalid string: \"%L1\"!").arg(hostName));
+                                    Tr::tr("New Terminal"),
+                                    Tr::tr("Invalid string: \"%L1\"!").arg(hostName));
                             }
                         }
                     }
@@ -4585,7 +4587,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                     {
                         bool portValueOk;
                         int portValue = QInputDialog::getInt(Core::ICore::dialogParent(),
-                            tr("New Terminal"), tr("Please enter a port number (enter 0 for any random free port)"),
+                            Tr::tr("New Terminal"), Tr::tr("Please enter a port number (enter 0 for any random free port)"),
                             settings->value(QStringLiteral(LAST_OPEN_TERMINAL_TCP_SERVER_PORT), 0).toInt(), 0, 65535, 1, &portValueOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -4597,7 +4599,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             settings->setValue(QStringLiteral(LAST_OPEN_TERMINAL_TCP_SERVER_PORT), portValue);
 
                             openTerminalMenuData_t data;
-                            data.displayName = tr("TCP Server Connection - %1").arg(portValue);
+                            data.displayName = Tr::tr("TCP Server Connection - %1").arg(portValue);
                             data.optionIndex = connectToTCPPortIndex;
                             data.commandStr = QString();
                             data.commandVal = portValue;
@@ -4643,7 +4645,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                             // QProgressDialog scoping...
                             {
-                                QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                                QProgressDialog dialog(Tr::tr("Connecting... (30 second timeout)"), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                                     (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                                 dialog.setWindowModality(Qt::ApplicationModal);
@@ -4667,8 +4669,8 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             if((!errorMessage2.isEmpty()) && (!errorMessage2.startsWith(QStringLiteral("OPENMV::"))))
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    tr("New Terminal"),
-                                    tr("Error: %L1!").arg(errorMessage2));
+                                    Tr::tr("New Terminal"),
+                                    Tr::tr("Error: %L1!").arg(errorMessage2));
 
                                 delete terminalDevice;
                                 delete terminal;
@@ -4726,8 +4728,8 @@ void OpenMVPlugin::openTerminalAboutToShow()
                     delete terminal;
 
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("Open Terminal"),
-                        tr("Error: Option Index!"));
+                        Tr::tr("Open Terminal"),
+                        Tr::tr("Error: Option Index!"));
 
                     return;
                 }
@@ -4761,7 +4763,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
             // QProgressDialog scoping...
             {
-                QProgressDialog dialog(tr("Connecting... (30 second timeout)"), tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                QProgressDialog dialog(Tr::tr("Connecting... (30 second timeout)"), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                     (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                 dialog.setWindowModality(Qt::ApplicationModal);
@@ -4785,8 +4787,8 @@ void OpenMVPlugin::openTerminalAboutToShow()
             if((!errorMessage2.isEmpty()) && (!errorMessage2.startsWith(QStringLiteral("OPENMV::"))))
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Open Terminal"),
-                    tr("Error: %L1!").arg(errorMessage2));
+                    Tr::tr("Open Terminal"),
+                    Tr::tr("Error: %L1!").arg(errorMessage2));
 
                 delete terminalDevice;
                 delete terminal;
@@ -4808,7 +4810,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
     if(m_openTerminalMenuData.size())
     {
         m_openTerminalMenu->menu()->addSeparator();
-        connect(m_openTerminalMenu->menu()->addAction(tr("Clear Menu")), &QAction::triggered, this, [this] {
+        connect(m_openTerminalMenu->menu()->addAction(Tr::tr("Clear Menu")), &QAction::triggered, this, [this] {
             m_openTerminalMenuData.clear();
         });
     }
@@ -4816,11 +4818,11 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
 QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
 {
-    QMessageBox box(QMessageBox::Question, tr("Threshold Editor"), tr("Source image location?"), QMessageBox::Cancel, Core::ICore::dialogParent(),
+    QMessageBox box(QMessageBox::Question, Tr::tr("Threshold Editor"), Tr::tr("Source image location?"), QMessageBox::Cancel, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    QPushButton *button0 = box.addButton(tr(" Frame Buffer "), QMessageBox::AcceptRole);
-    QPushButton *button1 = box.addButton(tr(" Image File "), QMessageBox::AcceptRole);
+    QPushButton *button0 = box.addButton(Tr::tr(" Frame Buffer "), QMessageBox::AcceptRole);
+    QPushButton *button1 = box.addButton(Tr::tr(" Image File "), QMessageBox::AcceptRole);
     box.setDefaultButton(button0);
     box.setEscapeButton(QMessageBox::Cancel);
     box.exec();
@@ -4840,7 +4842,7 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
                 Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
                 ((!parameters.toList().isEmpty()) && ((parameters.toList().size() == 2) || (parameters.toList().size() == 6)))
-                ? tr("The selected threshold tuple will be updated on close.")
+                ? Tr::tr("The selected threshold tuple will be updated on close.")
                 : QString());
 
             if(settings->contains(QStringLiteral(LAST_THRESHOLD_EDITOR_STATE "_2")))
@@ -4892,16 +4894,16 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
         else
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                tr("Threshold Editor"),
-                tr("No image loaded!"));
+                Tr::tr("Threshold Editor"),
+                Tr::tr("No image loaded!"));
         }
     }
     else if(box.clickedButton() == button1)
     {
         QString path =
-            QFileDialog::getOpenFileName(Core::ICore::dialogParent(), tr("Image File"),
+            QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Image File"),
                 settings->value(QStringLiteral(LAST_THRESHOLD_EDITOR_PATH), drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
-                tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
+                Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
 
         if(!path.isEmpty())
         {
@@ -4911,7 +4913,7 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
                 Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
                 ((!parameters.toList().isEmpty()) && ((parameters.toList().size() == 2) || (parameters.toList().size() == 6)))
-                ? tr("The selected threshold tuple will be updated on close.")
+                ? Tr::tr("The selected threshold tuple will be updated on close.")
                 : QString());
 
             if(settings->contains(QStringLiteral(LAST_THRESHOLD_EDITOR_STATE "_2")))
@@ -4970,11 +4972,11 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
 
 void OpenMVPlugin::openKeypointsEditor()
 {
-    QMessageBox box(QMessageBox::Question, tr("Keypoints Editor"), tr("What would you like to do?"), QMessageBox::Cancel, Core::ICore::dialogParent(),
+    QMessageBox box(QMessageBox::Question, Tr::tr("Keypoints Editor"), Tr::tr("What would you like to do?"), QMessageBox::Cancel, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    QPushButton *button0 = box.addButton(tr(" Edit File "), QMessageBox::AcceptRole);
-    QPushButton *button1 = box.addButton(tr(" Merge Files "), QMessageBox::AcceptRole);
+    QPushButton *button0 = box.addButton(Tr::tr(" Edit File "), QMessageBox::AcceptRole);
+    QPushButton *button1 = box.addButton(Tr::tr(" Merge Files "), QMessageBox::AcceptRole);
     box.setDefaultButton(button0);
     box.setEscapeButton(QMessageBox::Cancel);
     box.exec();
@@ -4987,9 +4989,9 @@ void OpenMVPlugin::openKeypointsEditor()
     if(box.clickedButton() == button0)
     {
         QString path =
-            QFileDialog::getOpenFileName(Core::ICore::dialogParent(), tr("Edit Keypoints"),
+            QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Edit Keypoints"),
                 settings->value(QStringLiteral(LAST_EDIT_KEYPOINTS_PATH), drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
-                tr("Keypoints Files (*.lbp *.orb)"));
+                Tr::tr("Keypoints Files (*.lbp *.orb)"));
 
         if(!path.isEmpty())
         {
@@ -5039,8 +5041,8 @@ void OpenMVPlugin::openKeypointsEditor()
                         else
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
-                                tr("Save Edited Keypoints"),
-                                tr("Failed to save the edited keypoints for an unknown reason!"));
+                                Tr::tr("Save Edited Keypoints"),
+                                Tr::tr("Failed to save the edited keypoints for an unknown reason!"));
                         }
                     }
                     else
@@ -5052,24 +5054,24 @@ void OpenMVPlugin::openKeypointsEditor()
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("Edit Keypoints"),
-                        tr("Failed to find the keypoints image file!"));
+                        Tr::tr("Edit Keypoints"),
+                        Tr::tr("Failed to find the keypoints image file!"));
                 }
             }
             else
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Edit Keypoints"),
-                    tr("Failed to load the keypoints file for an unknown reason!"));
+                    Tr::tr("Edit Keypoints"),
+                    Tr::tr("Failed to load the keypoints file for an unknown reason!"));
             }
         }
     }
     else if(box.clickedButton() == button1)
     {
         QStringList paths =
-            QFileDialog::getOpenFileNames(Core::ICore::dialogParent(), tr("Merge Keypoints"),
+            QFileDialog::getOpenFileNames(Core::ICore::dialogParent(), Tr::tr("Merge Keypoints"),
                 settings->value(QStringLiteral(LAST_MERGE_KEYPOINTS_OPEN_PATH), drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
-                tr("Keypoints Files (*.lbp *.orb)"));
+                Tr::tr("Keypoints Files (*.lbp *.orb)"));
 
         if(!paths.isEmpty())
         {
@@ -5088,15 +5090,15 @@ void OpenMVPlugin::openKeypointsEditor()
                 forever
                 {
                     path =
-                    QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Merged Keypoints"),
+                    QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Merged Keypoints"),
                         settings->value(QStringLiteral(LAST_MERGE_KEYPOINTS_SAVE_PATH), drivePath).toString(),
-                        tr("Keypoints Files (*.lbp *.orb)"));
+                        Tr::tr("Keypoints Files (*.lbp *.orb)"));
 
                     if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
                     {
                         QMessageBox::warning(Core::ICore::dialogParent(),
-                            tr("Save Merged Keypoints"),
-                            QObject::tr("Please add a file extension!"));
+                            Tr::tr("Save Merged Keypoints"),
+                            Tr::tr("Please add a file extension!"));
 
                         continue;
                     }
@@ -5114,16 +5116,16 @@ void OpenMVPlugin::openKeypointsEditor()
                     else
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            tr("Save Merged Keypoints"),
-                            tr("Failed to save the merged keypoints for an unknown reason!"));
+                            Tr::tr("Save Merged Keypoints"),
+                            Tr::tr("Failed to save the merged keypoints for an unknown reason!"));
                     }
                 }
             }
             else
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Merge Keypoints"),
-                    tr("Failed to load the first keypoints file for an unknown reason!"));
+                    Tr::tr("Merge Keypoints"),
+                    Tr::tr("Failed to load the first keypoints file for an unknown reason!"));
             }
         }
     }
@@ -5136,9 +5138,9 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
     QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    dialog->setWindowTitle(tr("AprilTag Generator"));
+    dialog->setWindowTitle(Tr::tr("AprilTag Generator"));
     QVBoxLayout *layout = new QVBoxLayout(dialog);
-    layout->addWidget(new QLabel(tr("What tag images from the %L1 tag family do you want to generate?").arg(QString::fromUtf8(family->name).toUpper())));
+    layout->addWidget(new QLabel(Tr::tr("What tag images from the %L1 tag family do you want to generate?").arg(QString::fromUtf8(family->name).toUpper())));
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
@@ -5155,7 +5157,7 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
     minRange->setMaximum(family->ncodes - 1);
     minRange->setValue(settings->value(QStringLiteral(LAST_APRILTAG_RANGE_MIN), 0).toInt());
     minRange->setAccelerated(true);
-    minTempLayout->addRow(tr("Min (%1)").arg(0), minRange); // don't use %L1 here
+    minTempLayout->addRow(Tr::tr("Min (%1)").arg(0), minRange); // don't use %L1 here
     tempLayout->addWidget(minTemp);
 
     QWidget *maxTemp = new QWidget();
@@ -5166,12 +5168,12 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
     maxRange->setMaximum(family->ncodes - 1);
     maxRange->setValue(settings->value(QStringLiteral(LAST_APRILTAG_RANGE_MAX), family->ncodes - 1).toInt());
     maxRange->setAccelerated(true);
-    maxTempLayout->addRow(tr("Max (%1)").arg(family->ncodes - 1), maxRange); // don't use %L1 here
+    maxTempLayout->addRow(Tr::tr("Max (%1)").arg(family->ncodes - 1), maxRange); // don't use %L1 here
     tempLayout->addWidget(maxTemp);
 
     layout->addWidget(temp);
 
-    QCheckBox *checkBox = new QCheckBox(tr("Inlcude tag family and ID number in the image"));
+    QCheckBox *checkBox = new QCheckBox(Tr::tr("Inlcude tag family and ID number in the image"));
     checkBox->setCheckable(true);
     checkBox->setChecked(settings->value(QStringLiteral(LAST_APRILTAG_INCLUDE), true).toBool());
     layout->addWidget(checkBox);
@@ -5189,12 +5191,12 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
         bool include = checkBox->isChecked();
 
         QString path =
-            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), tr("AprilTag Generator - Where do you want to save %n tag image(s) to?", "", number),
+            QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("AprilTag Generator - Where do you want to save %n tag image(s) to?", "", number),
                 settings->value(QStringLiteral(LAST_APRILTAG_PATH), QDir::homePath()).toString());
 
         if(!path.isEmpty())
         {
-            QProgressDialog progress(tr("Generating images..."), tr("Cancel"), 0, number - 1, Core::ICore::dialogParent(),
+            QProgressDialog progress(Tr::tr("Generating images..."), Tr::tr("Cancel"), 0, number - 1, Core::ICore::dialogParent(),
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
             progress.setWindowModality(Qt::ApplicationModal);
@@ -5234,8 +5236,8 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
                     progress.cancel();
 
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("AprilTag Generator"),
-                        tr("Painting - begin failed!"));
+                        Tr::tr("AprilTag Generator"),
+                        Tr::tr("Painting - begin failed!"));
 
                     break;
                 }
@@ -5258,8 +5260,8 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
                     progress.cancel();
 
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("AprilTag Generator"),
-                        tr("Painting - end failed!"));
+                        Tr::tr("AprilTag Generator"),
+                        Tr::tr("Painting - end failed!"));
 
                     break;
                 }
@@ -5269,8 +5271,8 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
                     progress.cancel();
 
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        tr("AprilTag Generator"),
-                        tr("Failed to save the image file for an unknown reason!"));
+                        Tr::tr("AprilTag Generator"),
+                        Tr::tr("Failed to save the image file for an unknown reason!"));
                 }
 
                 if(progress.wasCanceled())
@@ -5287,8 +5289,8 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
                 settings->setValue(QStringLiteral(LAST_APRILTAG_PATH), path);
 
                 QMessageBox::information(Core::ICore::dialogParent(),
-                    tr("AprilTag Generator"),
-                    tr("Generation complete!"));
+                    Tr::tr("AprilTag Generator"),
+                    Tr::tr("Generation complete!"));
             }
         }
     }

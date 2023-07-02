@@ -6,6 +6,11 @@
 #include "openmvpluginio.h"
 #include "tools/videotools.h"
 
+#include "openmvtr.h"
+
+namespace OpenMV {
+namespace Internal {
+
 OpenMVPluginFB::OpenMVPluginFB(QWidget *parent) : QGraphicsView(parent), m_enableSaveTemplate(false), m_enableSaveDescriptor(false), m_enableInteraction(true)
 {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -21,7 +26,7 @@ OpenMVPluginFB::OpenMVPluginFB(QWidget *parent) : QGraphicsView(parent), m_enabl
     "<div align=\"center\">"
     "<div style=\"font-size:20px\">%2</div>"
     "</div>"
-    "</body></html>")).arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name()).arg(tr("No Image")));
+    "</body></html>")).arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name()).arg(Tr::tr("No Image")));
     scene()->addItem(item);
 
     m_enableFitInView = false;
@@ -68,15 +73,15 @@ bool OpenMVPluginFB::beginImageWriter()
         else
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                tr("Video Record"),
-                tr("Error: %L1!").arg(m_tempFile->errorString()));
+                Tr::tr("Video Record"),
+                Tr::tr("Error: %L1!").arg(m_tempFile->errorString()));
         }
     }
     else
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            tr("Video Record"),
-            tr("Error: %L1!").arg(m_tempFile->errorString()));
+            Tr::tr("Video Record"),
+            Tr::tr("Error: %L1!").arg(m_tempFile->errorString()));
     }
 
     delete m_tempFile;
@@ -135,7 +140,7 @@ void OpenMVPluginFB::frameBufferData(const QPixmap &data)
         "<div align=\"center\">"
         "<div style=\"font-size:20px\">%2</div>"
         "</div>"
-        "</body></html>")).arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name()).arg(tr("No Image")));
+        "</body></html>")).arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name()).arg(Tr::tr("No Image")));
         scene()->addItem(item);
     }
 
@@ -195,7 +200,7 @@ void OpenMVPluginFB::private_timerCallBack()
 
         if(m_tempFile->size() < kilobyte)
         {
-            emit imageWriterTick(tr("Elapsed: ") +
+            emit imageWriterTick(Tr::tr("Elapsed: ") +
                                  QString(QStringLiteral("%1h:")).arg(hours) +
                                  QString(QStringLiteral("%1m:")).arg(minutes, 2, 10, QLatin1Char('0')) +
                                  QString(QStringLiteral("%1s:")).arg(seconds, 2, 10, QLatin1Char('0')) +
@@ -205,7 +210,7 @@ void OpenMVPluginFB::private_timerCallBack()
         }
         else if(m_tempFile->size() < megabyte)
         {
-            emit imageWriterTick(tr("Elapsed: ") +
+            emit imageWriterTick(Tr::tr("Elapsed: ") +
                                  QString(QStringLiteral("%1h:")).arg(hours) +
                                  QString(QStringLiteral("%1m:")).arg(minutes, 2, 10, QLatin1Char('0')) +
                                  QString(QStringLiteral("%1s:")).arg(seconds, 2, 10, QLatin1Char('0')) +
@@ -215,7 +220,7 @@ void OpenMVPluginFB::private_timerCallBack()
         }
         else if(m_tempFile->size() < gigabyte)
         {
-            emit imageWriterTick(tr("Elapsed: ") +
+            emit imageWriterTick(Tr::tr("Elapsed: ") +
                                  QString(QStringLiteral("%1h:")).arg(hours) +
                                  QString(QStringLiteral("%1m:")).arg(minutes, 2, 10, QLatin1Char('0')) +
                                  QString(QStringLiteral("%1s:")).arg(seconds, 2, 10, QLatin1Char('0')) +
@@ -225,7 +230,7 @@ void OpenMVPluginFB::private_timerCallBack()
         }
         else
         {
-            emit imageWriterTick(tr("Elapsed: ") +
+            emit imageWriterTick(Tr::tr("Elapsed: ") +
                                  QString(QStringLiteral("%1h:")).arg(hours) +
                                  QString(QStringLiteral("%1m:")).arg(minutes, 2, 10, QLatin1Char('0')) +
                                  QString(QStringLiteral("%1s:")).arg(seconds, 2, 10, QLatin1Char('0')) +
@@ -242,8 +247,8 @@ void OpenMVPluginFB::private_timerCallBack()
         m_previousElaspedTimers = QQueue<qint64>();
 
         QMessageBox::critical(Core::ICore::dialogParent(),
-            QObject::tr("Video Recorder"),
-            QObject::tr("Failed to write frame!"));
+            Tr::tr("Video Recorder"),
+            Tr::tr("Failed to write frame!"));
 
         emit imageWriterShutdown();
 
@@ -305,11 +310,11 @@ void OpenMVPluginFB::contextMenuEvent(QContextMenuEvent *event)
 
         QMenu menu(this);
 
-        QAction *sImage = menu.addAction(cropped ? tr("Save Image selection to PC") : tr("Save Image to PC"));
+        QAction *sImage = menu.addAction(cropped ? Tr::tr("Save Image selection to PC") : Tr::tr("Save Image to PC"));
         menu.addSeparator();
-        QAction *sTemplate = menu.addAction(cropped ? tr("Save Template selection to Cam") : tr("Save Template to Cam"));
+        QAction *sTemplate = menu.addAction(cropped ? Tr::tr("Save Template selection to Cam") : Tr::tr("Save Template to Cam"));
         sTemplate->setVisible(m_enableSaveTemplate);
-        QAction *sDescriptor = menu.addAction(cropped ? tr("Save Descriptor selection to Cam") : tr("Save Descriptor to Cam"));
+        QAction *sDescriptor = menu.addAction(cropped ? Tr::tr("Save Descriptor selection to Cam") : Tr::tr("Save Descriptor to Cam"));
         sDescriptor->setVisible(m_enableSaveDescriptor);
 
         QAction *selected = menu.exec(event->globalPos());
@@ -397,3 +402,6 @@ void OpenMVPluginFB::myFitInView(QGraphicsPixmapItem *item)
 
     if(item) centerOn(item);
 }
+
+} // namespace Internal
+} // namespace OpenMV

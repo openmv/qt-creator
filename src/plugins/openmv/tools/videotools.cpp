@@ -12,6 +12,8 @@
 
 #include "../openmvpluginio.h"
 
+#include "openmvtr.h"
+
 #define VIDEO_SETTINGS_GROUP "OpenMVFFMPEG"
 #define LAST_CONVERT_VIDEO_SRC_PATH "LastConvertSrcPath"
 #define LAST_CONVERT_VIDEO_DST_PATH "LastConvertDstPath"
@@ -30,6 +32,9 @@
 #define LAST_PLAY_TERMINAL_WINDOW_GEOMETRY "LastPlayTerminalWindowGeometry"
 
 #define serializeData(fp, data, size) fp.append(data, size)
+
+namespace OpenMV {
+namespace Internal {
 
 static QByteArray jpgToBytes(const QImage &image)
 {
@@ -166,7 +171,7 @@ static QByteArray addMJPEG(uint32_t *frames, uint32_t *bytes, const QPixmap &pix
 
 static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW, int *maxH, bool newPixformat)
 {
-    QProgressDialog progress(QObject::tr("Reading File..."), QObject::tr("Cancel"), imageWriterFile->pos() / 1024, imageWriterFile->size() / 1024, Core::ICore::dialogParent(),
+    QProgressDialog progress(Tr::tr("Reading File..."), Tr::tr("Cancel"), imageWriterFile->pos() / 1024, imageWriterFile->size() / 1024, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint | // Dividing by 1024 above makes sure that a 4GB max file size fits in an int.
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
     progress.setWindowModality(Qt::ApplicationModal);
@@ -177,8 +182,8 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
     if(stream.atEnd())
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            QObject::tr("Reading File"),
-            QObject::tr("No frames found!"));
+            Tr::tr("Reading File"),
+            Tr::tr("No frames found!"));
 
         return false;
     }
@@ -202,8 +207,8 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
             {
                 qDebug() << "here1";
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    QObject::tr("Reading File"),
-                    QObject::tr("File is corrupt!"));
+                    Tr::tr("Reading File"),
+                    Tr::tr("File is corrupt!"));
 
                 return false;
             }
@@ -212,8 +217,8 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
         if((M <= 0) || (M > (1000 * 60 * 60 * 24)) || (W <= 0) || (W > 32767) || (H <= 0) || (H > 32767) || (BPP < 0) || (BPP > (1024 * 1204 * 1024))) // Sane limits.
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Reading File"),
-                QObject::tr("File is corrupt!"));
+                Tr::tr("Reading File"),
+                Tr::tr("File is corrupt!"));
 
             return false;
         }
@@ -223,8 +228,8 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
         if(stream.skipRawData(size) != size)
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Reading File"),
-                QObject::tr("File is corrupt!"));
+                Tr::tr("Reading File"),
+                Tr::tr("File is corrupt!"));
 
             return false;
         }
@@ -244,7 +249,7 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
 
 static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32_t *frames, uint32_t *bytes, QFile *imageWriterFile, int maxW, int maxH, bool rgb565ByteReversed, bool newPixformat)
 {
-    QProgressDialog progress(QObject::tr("Transcoding File..."), QObject::tr("Cancel"), imageWriterFile->pos() / 1024, imageWriterFile->size() / 1024, Core::ICore::dialogParent(),
+    QProgressDialog progress(Tr::tr("Transcoding File..."), Tr::tr("Cancel"), imageWriterFile->pos() / 1024, imageWriterFile->size() / 1024, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint | // Dividing by 1024 above makes sure that a 4GB max file size fits in an int.
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
     progress.setWindowModality(Qt::ApplicationModal);
@@ -255,8 +260,8 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
     if(stream.atEnd())
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            QObject::tr("Transcoding File"),
-            QObject::tr("No frames found!"));
+            Tr::tr("Transcoding File"),
+            Tr::tr("No frames found!"));
 
         return false;
     }
@@ -279,8 +284,8 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
             if(stream.skipRawData(12) != 12)
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    QObject::tr("Reading File"),
-                    QObject::tr("File is corrupt!"));
+                    Tr::tr("Reading File"),
+                    Tr::tr("File is corrupt!"));
 
                 return false;
             }
@@ -289,8 +294,8 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
         if((M <= 0) || (M > (1000 * 60 * 60 * 24)) || (W <= 0) || (W > 32767) || (H <= 0) || (H > 32767) || (BPP < 0) || (BPP > (1024 * 1204 * 1024))) // Sane limits.
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Transcoding File"),
-                QObject::tr("File is corrupt!"));
+                Tr::tr("Transcoding File"),
+                Tr::tr("File is corrupt!"));
 
             return false;
         }
@@ -300,8 +305,8 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
         if(stream.readRawData(data.data(), data.size()) != data.size())
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Transcoding File"),
-                QObject::tr("File is corrupt!"));
+                Tr::tr("Transcoding File"),
+                Tr::tr("File is corrupt!"));
 
             return false;
         }
@@ -313,8 +318,8 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
         if((size != 16) && (stream.skipRawData(size) != size))
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Transcoding File"),
-                QObject::tr("File is corrupt!"));
+                Tr::tr("Transcoding File"),
+                Tr::tr("File is corrupt!"));
 
             return false;
         }
@@ -327,8 +332,8 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
         if(!painter.begin(&image))
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Transcoding File"),
-                QObject::tr("Painter Failed!"));
+                Tr::tr("Transcoding File"),
+                Tr::tr("Painter Failed!"));
 
             return false;
         }
@@ -338,8 +343,8 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
         if(!painter.end())
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Transcoding File"),
-                QObject::tr("Painter Failed!"));
+                Tr::tr("Transcoding File"),
+                Tr::tr("Painter Failed!"));
 
             return false;
         }
@@ -349,8 +354,8 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
         if(mjpegVideoFile->write(jpeg) != jpeg.size())
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Transcoding File"),
-                QObject::tr("Failed to write!"));
+                Tr::tr("Transcoding File"),
+                Tr::tr("Failed to write!"));
 
             return false;
         }
@@ -412,45 +417,45 @@ static QString handleImageWriterFiles(const QString &path)
                                             else
                                             {
                                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                                    QObject::tr("Transcoder"),
-                                                    QObject::tr("Failed to write header again!"));
+                                                    Tr::tr("Transcoder"),
+                                                    Tr::tr("Failed to write header again!"));
                                             }
                                         }
                                         else
                                         {
                                             QMessageBox::critical(Core::ICore::dialogParent(),
-                                                QObject::tr("Transcoder"),
-                                                QObject::tr("Seek failed!"));
+                                                Tr::tr("Transcoder"),
+                                                Tr::tr("Seek failed!"));
                                         }
                                     }
                                 }
                                 else
                                 {
                                     QMessageBox::critical(Core::ICore::dialogParent(),
-                                        QObject::tr("Transcoder"),
-                                        QObject::tr("Failed to write header!"));
+                                        Tr::tr("Transcoder"),
+                                        Tr::tr("Failed to write header!"));
                                 }
                             }
                             else
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    QObject::tr("Transcoder"),
-                                    QObject::tr("Seek failed!"));
+                                    Tr::tr("Transcoder"),
+                                    Tr::tr("Seek failed!"));
                             }
                         }
                     }
                     else
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            QObject::tr("Transcoder"),
-                            QObject::tr("Error: %L1!").arg(tempFile.errorString()));
+                            Tr::tr("Transcoder"),
+                            Tr::tr("Error: %L1!").arg(tempFile.errorString()));
                     }
                 }
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        QObject::tr("Transcoder"),
-                        QObject::tr("Unsupported OpenMV ImageWriter File version!"));
+                        Tr::tr("Transcoder"),
+                        Tr::tr("Unsupported OpenMV ImageWriter File version!"));
                 }
             }
             else
@@ -461,8 +466,8 @@ static QString handleImageWriterFiles(const QString &path)
         else if(file.error() != QFile::NoError)
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Transcoder"),
-                QObject::tr("Error: %L1!").arg(file.errorString()));
+                Tr::tr("Transcoder"),
+                Tr::tr("Error: %L1!").arg(file.errorString()));
         }
         else
         {
@@ -472,8 +477,8 @@ static QString handleImageWriterFiles(const QString &path)
     else
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            QObject::tr("Transcoder"),
-            QObject::tr("Error: %L1!").arg(file.errorString()));
+            Tr::tr("Transcoder"),
+            Tr::tr("Error: %L1!").arg(file.errorString()));
     }
 
     return QString();
@@ -546,7 +551,7 @@ static QString getInputFormats()
     }
     else
     {
-        QMessageBox box(QMessageBox::Warning, QObject::tr("Get Input Formats"), QObject::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+        QMessageBox box(QMessageBox::Warning, Tr::tr("Get Input Formats"), Tr::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
         box.setDetailedText(command.toString() + QStringLiteral("\n\n") + process.stdOut());
@@ -625,7 +630,7 @@ static QString getOutputFormats()
     }
     else
     {
-        QMessageBox box(QMessageBox::Warning, QObject::tr("Get Input Formats"), QObject::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+        QMessageBox box(QMessageBox::Warning, Tr::tr("Get Input Formats"), Tr::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
         box.setDetailedText(command.toString() + QStringLiteral("\n\n") + process.stdOut());
@@ -662,7 +667,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
         (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
     dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-    dialog->setWindowTitle(QObject::tr("Convert Video"));
+    dialog->setWindowTitle(Tr::tr("Convert Video"));
     dialog->setSizeGripEnabled(true);
 
     if(settings->contains(QStringLiteral(LAST_CONVERT_TERMINAL_WINDOW_GEOMETRY)))
@@ -764,7 +769,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
 
     if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
     {
-        QMessageBox box(QMessageBox::Critical, QObject::tr("Convert Video"), QObject::tr("Failed to launch ffmpeg!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+        QMessageBox box(QMessageBox::Critical, Tr::tr("Convert Video"), Tr::tr("Failed to launch ffmpeg!"), QMessageBox::Ok, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
         box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
@@ -791,7 +796,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
         {
             QStringList list = QDir(QFileInfo(newDst).path()).entryList(QStringList() << (QFileInfo(dst).completeBaseName() + QStringLiteral("-*.jpg")));
 
-            QProgressDialog progress(QObject::tr("Transcoding File..."), QObject::tr("Cancel"), 0, list.size(), Core::ICore::dialogParent(),
+            QProgressDialog progress(Tr::tr("Transcoding File..."), Tr::tr("Cancel"), 0, list.size(), Core::ICore::dialogParent(),
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
             progress.setWindowModality(Qt::ApplicationModal);
@@ -823,8 +828,8 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
                     {
                         result = false;
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            QObject::tr("Convert Video"),
-                            QObject::tr("Unable to write to output video file!"));
+                            Tr::tr("Convert Video"),
+                            Tr::tr("Unable to write to output video file!"));
                         break;
                     }
 
@@ -838,8 +843,8 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
         {
             result = false;
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Convert Video"),
-                QObject::tr("Unable to open output video file!"));
+                Tr::tr("Convert Video"),
+                Tr::tr("Unable to open output video file!"));
         }
     }
 
@@ -978,8 +983,8 @@ static bool playVideoFile(const QString &path)
     if(!result)
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            QObject::tr("Play Video"),
-            QObject::tr("Failed to launch ffplay!"));
+            Tr::tr("Play Video"),
+            Tr::tr("Failed to launch ffplay!"));
     }
 
     return result;
@@ -1097,8 +1102,8 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
     if(!result)
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            QObject::tr("Play RTSP Stream"),
-            QObject::tr("Failed to launch ffplay!"));
+            Tr::tr("Play RTSP Stream"),
+            Tr::tr("Failed to launch ffplay!"));
     }
 
     return result;
@@ -1110,25 +1115,25 @@ void convertVideoFileAction(const QString &drivePath)
     settings->beginGroup(QStringLiteral(VIDEO_SETTINGS_GROUP));
 
     QStringList srcList =
-        QFileDialog::getOpenFileNames(Core::ICore::dialogParent(), QObject::tr("Convert Video Source"),
+        QFileDialog::getOpenFileNames(Core::ICore::dialogParent(), Tr::tr("Convert Video Source"),
             settings->value(QStringLiteral(LAST_CONVERT_VIDEO_SRC_PATH), drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
-            QObject::tr("Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;") + getInputFormats());
+            Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;") + getInputFormats());
 
     if(srcList.size() > 1)
     {
         QString dstFolder =
-        QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), QObject::tr("Convert Video Output"),
+        QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("Convert Video Output"),
             settings->value(QStringLiteral(LAST_CONVERT_VIDEO_DST_FOLDER_PATH), QDir::homePath()).toString());
 
         if(!dstFolder.isEmpty())
         {
-            QString extensions = QObject::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats();
+            QString extensions = Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats();
             QStringList extensionsList = extensions.split(QStringLiteral(";;"));
             int index = extensionsList.indexOf(settings->value(QStringLiteral(LAST_CONVERT_VIDEO_DST_EXTENSION)).toString());
 
             bool ok;
             QString extension = QInputDialog::getItem(Core::ICore::dialogParent(),
-                QObject::tr("Convert Video Output"), QObject::tr("Please select output format"),
+                Tr::tr("Convert Video Output"), Tr::tr("Please select output format"),
                 extensionsList, (index != -1) ? index : 0, true, &ok,
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType() : Qt::WindowCloseButtonHint));
@@ -1142,8 +1147,8 @@ void convertVideoFileAction(const QString &drivePath)
                     QString ext = match.captured(1).mid(1);
 
                     int rescale = QMessageBox::information(Core::ICore::dialogParent(),
-                        QObject::tr("Convert Video"),
-                        QObject::tr("Rescale the video?"),
+                        Tr::tr("Convert Video"),
+                        Tr::tr("Rescale the video?"),
                         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
 
                     if(rescale != QMessageBox::Cancel)
@@ -1154,8 +1159,8 @@ void convertVideoFileAction(const QString &drivePath)
                         if(rescale == QMessageBox::Yes)
                         {
                             scale = QInputDialog::getInt(Core::ICore::dialogParent(),
-                                    QObject::tr("Convert Video"),
-                                    QObject::tr("Enter a new width (the aspect ratio will be kept the same)"),
+                                    Tr::tr("Convert Video"),
+                                    Tr::tr("Enter a new width (the aspect ratio will be kept the same)"),
                                     settings->value(QStringLiteral(LAST_CONVERT_VIDEO_HRES), 320).toInt(), 16, 65535, 1, &ok,
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                     (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -1164,8 +1169,8 @@ void convertVideoFileAction(const QString &drivePath)
                         if(ok)
                         {
                             int skipFrames = ext.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? QMessageBox::information(Core::ICore::dialogParent(),
-                                QObject::tr("Convert Video"),
-                                QObject::tr("Skip frames?"),
+                                Tr::tr("Convert Video"),
+                                Tr::tr("Skip frames?"),
                                 QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No) : QMessageBox::No;
 
                             if(skipFrames != QMessageBox::Cancel)
@@ -1176,8 +1181,8 @@ void convertVideoFileAction(const QString &drivePath)
                                 if(skipFrames == QMessageBox::Yes)
                                 {
                                     skip = QInputDialog::getInt(Core::ICore::dialogParent(),
-                                           QObject::tr("Convert Video"),
-                                           QObject::tr("Enter how many frames to skip at a time"),
+                                           Tr::tr("Convert Video"),
+                                           Tr::tr("Enter how many frames to skip at a time"),
                                            settings->value(QStringLiteral(LAST_CONVERT_VIDEO_SKIP), 0).toInt(), 0, 255, 1, &ok,
                                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -1192,8 +1197,8 @@ void convertVideoFileAction(const QString &drivePath)
                                         if(tempSrc.isEmpty())
                                         {
                                             QMessageBox::critical(Core::ICore::dialogParent(),
-                                                QObject::tr("Convert Video"),
-                                                QObject::tr("Unable to overwrite output file!"));
+                                                Tr::tr("Convert Video"),
+                                                Tr::tr("Unable to overwrite output file!"));
 
                                             return;
                                         }
@@ -1205,8 +1210,8 @@ void convertVideoFileAction(const QString &drivePath)
                                             if(!convertVideoFile(dst, tempSrc, scale, skip))
                                             {
                                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                                    QObject::tr("Convert Video"),
-                                                    QObject::tr("Unable to overwrite output file!"));
+                                                    Tr::tr("Convert Video"),
+                                                    Tr::tr("Unable to overwrite output file!"));
 
                                                 return;
                                             }
@@ -1214,8 +1219,8 @@ void convertVideoFileAction(const QString &drivePath)
                                         else
                                         {
                                             QMessageBox::critical(Core::ICore::dialogParent(),
-                                                QObject::tr("Convert Video"),
-                                                QObject::tr("Unable to overwrite output file!"));
+                                                Tr::tr("Convert Video"),
+                                                Tr::tr("Unable to overwrite output file!"));
 
                                             return;
                                         }
@@ -1228,8 +1233,8 @@ void convertVideoFileAction(const QString &drivePath)
                                     if(skipFrames == QMessageBox::Yes) settings->setValue(QStringLiteral(LAST_CONVERT_VIDEO_SKIP), skip);
 
                                     QMessageBox::information(Core::ICore::dialogParent(),
-                                        QObject::tr("Convert Video"),
-                                        QObject::tr("Video conversion finished!"));
+                                        Tr::tr("Convert Video"),
+                                        Tr::tr("Video conversion finished!"));
                                 }
                             }
                         }
@@ -1245,15 +1250,15 @@ void convertVideoFileAction(const QString &drivePath)
         forever
         {
             dst =
-            QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Convert Video Output"),
+            QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Convert Video Output"),
                 settings->value(QStringLiteral(LAST_CONVERT_VIDEO_DST_PATH), QDir::homePath()).toString(),
-                QObject::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats());
+                Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats());
 
             if((!dst.isEmpty()) && QFileInfo(dst).completeSuffix().isEmpty())
             {
                 QMessageBox::warning(Core::ICore::dialogParent(),
-                    QObject::tr("Convert Video Output"),
-                    QObject::tr("Please add a file extension!"));
+                    Tr::tr("Convert Video Output"),
+                    Tr::tr("Please add a file extension!"));
 
                 continue;
             }
@@ -1264,8 +1269,8 @@ void convertVideoFileAction(const QString &drivePath)
         if(!dst.isEmpty())
         {
             int rescale = QMessageBox::information(Core::ICore::dialogParent(),
-                QObject::tr("Convert Video"),
-                QObject::tr("Rescale the video?"),
+                Tr::tr("Convert Video"),
+                Tr::tr("Rescale the video?"),
                 QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
 
             if(rescale != QMessageBox::Cancel)
@@ -1276,8 +1281,8 @@ void convertVideoFileAction(const QString &drivePath)
                 if(rescale == QMessageBox::Yes)
                 {
                     scale = QInputDialog::getInt(Core::ICore::dialogParent(),
-                            QObject::tr("Convert Video"),
-                            QObject::tr("Enter a new width (the aspect ratio will be kept the same)"),
+                            Tr::tr("Convert Video"),
+                            Tr::tr("Enter a new width (the aspect ratio will be kept the same)"),
                             settings->value(QStringLiteral(LAST_CONVERT_VIDEO_HRES), 320).toInt(), 16, 65535, 1, &ok,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -1286,8 +1291,8 @@ void convertVideoFileAction(const QString &drivePath)
                 if(ok)
                 {
                     int skipFrames = dst.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? QMessageBox::information(Core::ICore::dialogParent(),
-                        QObject::tr("Convert Video"),
-                        QObject::tr("Skip frames?"),
+                        Tr::tr("Convert Video"),
+                        Tr::tr("Skip frames?"),
                         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No) : QMessageBox::No;
 
                     if(skipFrames != QMessageBox::Cancel)
@@ -1298,8 +1303,8 @@ void convertVideoFileAction(const QString &drivePath)
                         if(skipFrames == QMessageBox::Yes)
                         {
                             skip = QInputDialog::getInt(Core::ICore::dialogParent(),
-                                   QObject::tr("Convert Video"),
-                                   QObject::tr("Enter how many frames to skip at a time"),
+                                   Tr::tr("Convert Video"),
+                                   Tr::tr("Enter how many frames to skip at a time"),
                                    settings->value(QStringLiteral(LAST_CONVERT_VIDEO_SKIP), 0).toInt(), 0, 255, 1, &ok,
                                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -1319,15 +1324,15 @@ void convertVideoFileAction(const QString &drivePath)
                                     if(skipFrames == QMessageBox::Yes) settings->setValue(QStringLiteral(LAST_CONVERT_VIDEO_SKIP), skip);
 
                                     QMessageBox::information(Core::ICore::dialogParent(),
-                                        QObject::tr("Convert Video"),
-                                        QObject::tr("Video conversion finished!"));
+                                        Tr::tr("Convert Video"),
+                                        Tr::tr("Video conversion finished!"));
                                 }
                             }
                             else
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    QObject::tr("Convert Video"),
-                                    QObject::tr("Unable to overwrite output file!"));
+                                    Tr::tr("Convert Video"),
+                                    Tr::tr("Unable to overwrite output file!"));
                             }
                         }
                     }
@@ -1345,9 +1350,9 @@ void playVideoFileAction(const QString &drivePath)
     settings->beginGroup(QStringLiteral(VIDEO_SETTINGS_GROUP));
 
     QString path =
-        QFileDialog::getOpenFileName(Core::ICore::dialogParent(), QObject::tr("Play Video"),
+        QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Play Video"),
             settings->value(QStringLiteral(LAST_PLAY_VIDEO_PATH), drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
-            QObject::tr("Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;") + getInputFormats());
+            Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;") + getInputFormats());
 
     if(!path.isEmpty())
     {
@@ -1370,11 +1375,11 @@ void playRTSPStreamAction()
     QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    dialog->setWindowTitle(QObject::tr("Play RTSP Stream"));
+    dialog->setWindowTitle(Tr::tr("Play RTSP Stream"));
     QFormLayout *layout = new QFormLayout(dialog);
     layout->setVerticalSpacing(0);
 
-    QLabel *urlChooserTitle = new QLabel(QObject::tr("Please enter a IP address (or domain name)"));
+    QLabel *urlChooserTitle = new QLabel(Tr::tr("Please enter a IP address (or domain name)"));
     layout->addRow(urlChooserTitle);
     layout->addItem(new QSpacerItem(0, 6));
 
@@ -1382,7 +1387,7 @@ void playRTSPStreamAction()
     layout->addRow(urlChooser);
     layout->addItem(new QSpacerItem(0, 6));
 
-    QLabel *portChooserTitle = new QLabel(QObject::tr("Please enter a Port (the RTSP default port is 554)"));
+    QLabel *portChooserTitle = new QLabel(Tr::tr("Please enter a Port (the RTSP default port is 554)"));
     layout->addRow(portChooserTitle);
     layout->addItem(new QSpacerItem(0, 6));
 
@@ -1395,16 +1400,16 @@ void playRTSPStreamAction()
     QWidget *widget = new QWidget;
     widget->setLayout(layout2);
 
-    QCheckBox *checkBox = new QCheckBox(QObject::tr("Stream video over TCP (versus UDP)?"));
+    QCheckBox *checkBox = new QCheckBox(Tr::tr("Stream video over TCP (versus UDP)?"));
     checkBox->setChecked(settings->value(QStringLiteral(LAST_PLAY_RTSP_TCP), false).toBool());
     layout2->addWidget(checkBox);
-    checkBox->setToolTip(QObject::tr("Keeps the RTP video stream inside of the same TCP socket used for setting up the initial connection "
+    checkBox->setToolTip(Tr::tr("Keeps the RTP video stream inside of the same TCP socket used for setting up the initial connection "
                                      "verus creating a new UDP video stream. This may help the connection on networks with firewalls."));
 
     QUrl u(QStringLiteral("rtsp://") + urlChooser->text() + QLatin1Char(':') + QString::number(portChooser->text().toInt()));
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
-    QPushButton *run = new QPushButton(QObject::tr("Play"));
+    QPushButton *run = new QPushButton(Tr::tr("Play"));
     run->setEnabled(u.isValid());
     box->addButton(run, QDialogButtonBox::AcceptRole);
     layout2->addSpacing(160);
@@ -1453,15 +1458,15 @@ void saveVideoFile(const QString &srcPath)
     forever
     {
         dst =
-        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Save Video"),
+        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Video"),
             settings->value(QStringLiteral(LAST_SAVE_VIDEO_PATH), QDir::homePath()).toString(),
-            QObject::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats());
+            Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats());
 
         if((!dst.isEmpty()) && QFileInfo(dst).completeSuffix().isEmpty())
         {
             QMessageBox::warning(Core::ICore::dialogParent(),
-                QObject::tr("Save Video"),
-                QObject::tr("Please add a file extension!"));
+                Tr::tr("Save Video"),
+                Tr::tr("Please add a file extension!"));
 
             continue;
         }
@@ -1472,8 +1477,8 @@ void saveVideoFile(const QString &srcPath)
     if(!dst.isEmpty())
     {
         int rescale = QMessageBox::information(Core::ICore::dialogParent(),
-            QObject::tr("Convert Video"),
-            QObject::tr("Rescale the video?"),
+            Tr::tr("Convert Video"),
+            Tr::tr("Rescale the video?"),
             QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
 
         if(rescale != QMessageBox::Cancel)
@@ -1484,8 +1489,8 @@ void saveVideoFile(const QString &srcPath)
             if(rescale == QMessageBox::Yes)
             {
                 scale = QInputDialog::getInt(Core::ICore::dialogParent(),
-                        QObject::tr("Convert Video"),
-                        QObject::tr("Enter a new width (the aspect ratio will be kept the same)"),
+                        Tr::tr("Convert Video"),
+                        Tr::tr("Enter a new width (the aspect ratio will be kept the same)"),
                         settings->value(QStringLiteral(LAST_SAVE_VIDEO_HRES), 320).toInt(), 16, 65535, 1, &ok,
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -1494,8 +1499,8 @@ void saveVideoFile(const QString &srcPath)
             if(ok)
             {
                 int skipFrames = dst.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? QMessageBox::information(Core::ICore::dialogParent(),
-                    QObject::tr("Convert Video"),
-                    QObject::tr("Skip frames?"),
+                    Tr::tr("Convert Video"),
+                    Tr::tr("Skip frames?"),
                     QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No) : QMessageBox::No;
 
                 if(skipFrames != QMessageBox::Cancel)
@@ -1506,8 +1511,8 @@ void saveVideoFile(const QString &srcPath)
                     if(skipFrames == QMessageBox::Yes)
                     {
                         skip = QInputDialog::getInt(Core::ICore::dialogParent(),
-                               QObject::tr("Convert Video"),
-                               QObject::tr("Enter how many frames to skip at a time"),
+                               Tr::tr("Convert Video"),
+                               Tr::tr("Enter how many frames to skip at a time"),
                                settings->value(QStringLiteral(LAST_SAVE_VIDEO_SKIP), 0).toInt(), 0, 255, 1, &ok,
                                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -1526,15 +1531,15 @@ void saveVideoFile(const QString &srcPath)
                                 if(skipFrames == QMessageBox::Yes) settings->setValue(QStringLiteral(LAST_SAVE_VIDEO_SKIP), skip);
 
                                 QMessageBox::information(Core::ICore::dialogParent(),
-                                    QObject::tr("Convert Video"),
-                                    QObject::tr("Video conversion finished!"));
+                                    Tr::tr("Convert Video"),
+                                    Tr::tr("Video conversion finished!"));
                             }
                         }
                         else
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
-                                QObject::tr("Convert Video"),
-                                QObject::tr("Unable to overwrite output file!"));
+                                Tr::tr("Convert Video"),
+                                Tr::tr("Unable to overwrite output file!"));
                         }
                     }
                 }
@@ -1544,3 +1549,6 @@ void saveVideoFile(const QString &srcPath)
 
     settings->endGroup();
 }
+
+} // namespace Internal
+} // namespace OpenMV

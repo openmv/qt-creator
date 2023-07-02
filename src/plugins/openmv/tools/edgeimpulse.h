@@ -17,11 +17,17 @@
 #define LAST_PROJECT_ID "LastProjectId"
 #define LAST_API_KEY "LastAPIKey"
 
+namespace OpenMV {
+namespace Internal {
+
 QString loggedIntoEdgeImpulse();
 void loginToEdgeImpulse(OpenMVDatasetEditor *editor);
 void logoutFromEdgeImpulse();
 
 void uploadToSelectedProject(OpenMVDatasetEditor *editor);
 void uploadProjectByAPIKey(OpenMVDatasetEditor *editor);
+
+} // namespace Internal
+} // namespace OpenMV
 
 #endif // EDGEIMPULSE_H

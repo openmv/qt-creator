@@ -1,6 +1,11 @@
 #include "keypointseditor.h"
 
+#include "openmvtr.h"
+
 #include <utils/theme/theme.h>
+
+namespace OpenMV {
+namespace Internal {
 
 Keypoints *Keypoints::newKeypoints(const QString &path, QObject *parent)
 {
@@ -178,18 +183,18 @@ void KeypointsEditor::showEvent(QShowEvent *event)
 KeypointsEditor::KeypointsEditor(Keypoints *keypoints, const QPixmap &pixmap, QByteArray geometry, QWidget *parent, Qt::WindowFlags f) : QDialog(parent, f)
 {
     m_geometry = geometry;
-    setWindowTitle(tr("Keypoints Editor"));
+    setWindowTitle(Tr::tr("Keypoints Editor"));
 
     QVBoxLayout *layout = new QVBoxLayout(this);
     KeypointsView *view = new KeypointsView(keypoints, pixmap);
     layout->addWidget(view);
-    layout->addWidget(new QLabel(tr("Select and delete outlier keypoints using both the mouse and the delete key.")));
+    layout->addWidget(new QLabel(Tr::tr("Select and delete outlier keypoints using both the mouse and the delete key.")));
 
     if(keypoints->m_max_octave > 1)
     {
         for(int i = 1; i <= keypoints->m_max_octave; i++)
         {
-            QCheckBox *box = new QCheckBox(tr("Show Octave %L1").arg(i));
+            QCheckBox *box = new QCheckBox(Tr::tr("Show Octave %L1").arg(i));
             box->setCheckable(true);
             box->setChecked(true);
             layout->addWidget(box);
@@ -208,10 +213,13 @@ KeypointsEditor::KeypointsEditor(Keypoints *keypoints, const QPixmap &pixmap, QB
     }
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
-    QPushButton *done = new QPushButton(tr("Done"));
+    QPushButton *done = new QPushButton(Tr::tr("Done"));
     box->addButton(done, QDialogButtonBox::AcceptRole);
     layout->addWidget(box);
 
     connect(box, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &QDialog::reject);
 }
+
+} // namespace Internal
+} // namespace OpenMV

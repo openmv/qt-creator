@@ -1,11 +1,16 @@
 #include "thresholdeditor.h"
 
+#include "openmvtr.h"
+
 #include <utils/theme/theme.h>
 
 extern const uint8_t rb825_table[256];
 extern const uint8_t g826_table[256];
 extern const int8_t lab_table[196608];
 extern const int8_t yuv_table[196608];
+
+namespace OpenMV {
+namespace Internal {
 
 static inline int toR5(QRgb value)
 {
@@ -147,7 +152,7 @@ void ThresholdEditor::showEvent(QShowEvent *event)
 ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWidget *parent, Qt::WindowFlags f, const QString &altMessage) : QDialog(parent, f)
 {
     m_geometry = geometry;
-    setWindowTitle(tr("Threhsold Editor"));
+    setWindowTitle(Tr::tr("Threhsold Editor"));
 
     QVBoxLayout *layout = new QVBoxLayout(this);
 
@@ -173,7 +178,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             m_raw->setBackgroundBrush(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDark));
             m_raw->setScene(new QGraphicsScene(this));
             m_raw->scene()->addPixmap(pixmap);
-            v_layout->addWidget(new QLabel(tr("Source Image")));
+            v_layout->addWidget(new QLabel(Tr::tr("Source Image")));
             v_layout->addWidget(m_raw);
 
             h_layout->addWidget(tmp);
@@ -195,7 +200,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             m_bin->setBackgroundBrush(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDark));
             m_bin->setScene(new QGraphicsScene(this));
             m_bin->scene()->addPixmap(white);
-            v_layout->addWidget(new QLabel(tr("Binary Image (white pixels are tracked pixels)")));
+            v_layout->addWidget(new QLabel(Tr::tr("Binary Image (white pixels are tracked pixels)")));
             v_layout->addWidget(m_bin);
 
             h_layout->addWidget(tmp);
@@ -218,20 +223,20 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
         h_layout->setSpacing(0);
 
         m_combo = new QComboBox();
-        m_combo->addItem(tr("Grayscale"));
-        m_combo->addItem(tr("LAB"));
+        m_combo->addItem(Tr::tr("Grayscale"));
+        m_combo->addItem(Tr::tr("LAB"));
         m_combo->setCurrentIndex(m_image.isGrayscale() ? 0 : 1);
         h_layout->addWidget(m_combo);
         h_layout->addItem(new QSpacerItem(10, 0));
         connect(m_combo, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &ThresholdEditor::changed);
 
-        m_invert = new QCheckBox(tr("Invert"));
+        m_invert = new QCheckBox(Tr::tr("Invert"));
         m_invert->setCheckable(true);
         m_invert->setChecked(false);
         h_layout->addWidget(m_invert);
         connect(m_invert, &QCheckBox::toggled, this, &ThresholdEditor::changed);
 
-        QPushButton *resetButton = new QPushButton(tr("Reset Sliders"));
+        QPushButton *resetButton = new QPushButton(Tr::tr("Reset Sliders"));
         h_layout->addWidget(resetButton);
 
         connect(resetButton, &QPushButton::clicked, this, [this] {
@@ -253,7 +258,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
 
         QHBoxLayout *t_layout = new QHBoxLayout();
         t_layout->setContentsMargins(0, 0, 0, 0);
-        t_layout->addWidget(new QLabel(tr("Select the best color tracking thresholds.")));
+        t_layout->addWidget(new QLabel(Tr::tr("Select the best color tracking thresholds.")));
         t_layout->addWidget(temp);
         QWidget *t_widget = new QWidget();
         t_widget->setLayout(t_layout);
@@ -286,7 +291,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             h_layout->addWidget(number);
             connect(m_GMin, &QSlider::valueChanged, number, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
 
-            v_layout->addRow(tr("Grayscale Min"), temp);
+            v_layout->addRow(Tr::tr("Grayscale Min"), temp);
         }
 
         {
@@ -309,12 +314,12 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             h_layout->addWidget(number);
             connect(m_GMax, &QSlider::valueChanged, number, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
 
-            v_layout->addRow(tr("Grayscale Max"), temp);
+            v_layout->addRow(Tr::tr("Grayscale Max"), temp);
         }
 
         m_GOut = new QLineEdit(QStringLiteral("(0, 255)"));
         m_GOut->setReadOnly(true);
-        v_layout->addRow(tr("Grayscale Threshold"), m_GOut);
+        v_layout->addRow(Tr::tr("Grayscale Threshold"), m_GOut);
 
         if(!altMessage.isEmpty())
         {
@@ -353,7 +358,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             h_layout->addWidget(number);
             connect(m_LMin, &QSlider::valueChanged, number, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
 
-            v_layout->addRow(tr("L Min"), temp);
+            v_layout->addRow(Tr::tr("L Min"), temp);
         }
 
         {
@@ -376,7 +381,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             h_layout->addWidget(number);
             connect(m_LMax, &QSlider::valueChanged, number, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
 
-            v_layout->addRow(tr("L Max"), temp);
+            v_layout->addRow(Tr::tr("L Max"), temp);
         }
 
         {
@@ -399,7 +404,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             h_layout->addWidget(number);
             connect(m_AMin, &QSlider::valueChanged, number, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
 
-            v_layout->addRow(tr("A Min"), temp);
+            v_layout->addRow(Tr::tr("A Min"), temp);
         }
 
         {
@@ -422,7 +427,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             h_layout->addWidget(number);
             connect(m_AMax, &QSlider::valueChanged, number, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
 
-            v_layout->addRow(tr("A Max"), temp);
+            v_layout->addRow(Tr::tr("A Max"), temp);
         }
 
         {
@@ -445,7 +450,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             h_layout->addWidget(number);
             connect(m_BMin, &QSlider::valueChanged, number, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
 
-            v_layout->addRow(tr("B Min"), temp);
+            v_layout->addRow(Tr::tr("B Min"), temp);
         }
 
         {
@@ -468,12 +473,12 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
             h_layout->addWidget(number);
             connect(m_BMax, &QSlider::valueChanged, number, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
 
-            v_layout->addRow(tr("B Max"), temp);
+            v_layout->addRow(Tr::tr("B Max"), temp);
         }
 
         m_LABOut = new QLineEdit(QStringLiteral("(0, 100, -128, 127, -128, 127)"));
         m_LABOut->setReadOnly(true);
-        v_layout->addRow(tr("LAB Threshold"), m_LABOut);
+        v_layout->addRow(Tr::tr("LAB Threshold"), m_LABOut);
 
         if(!altMessage.isEmpty())
         {
@@ -488,7 +493,7 @@ ThresholdEditor::ThresholdEditor(const QPixmap &pixmap, QByteArray geometry, QWi
 
     QHBoxLayout *b_layout = new QHBoxLayout();
     b_layout->setContentsMargins(0, 0, 0, 0);
-    b_layout->addWidget(new QLabel(altMessage.isEmpty() ? tr("Copy the threshold above before closing.") : altMessage));
+    b_layout->addWidget(new QLabel(altMessage.isEmpty() ? Tr::tr("Copy the threshold above before closing.") : altMessage));
     QDialogButtonBox *box = new QDialogButtonBox(altMessage.isEmpty() ? QDialogButtonBox::Close : (QDialogButtonBox::Ok | QDialogButtonBox::Cancel));
     b_layout->addWidget(box);
     QWidget *b_widget = new QWidget();
@@ -531,3 +536,6 @@ QList<QVariant> ThresholdEditor::getState() const
     << m_BMin->value()
     << m_BMax->value();
 }
+
+} // namespace Internal
+} // namespace OpenMV

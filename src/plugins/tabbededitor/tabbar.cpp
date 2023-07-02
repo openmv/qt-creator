@@ -20,6 +20,10 @@
 #include <QShortcut>
 #include <QTabBar>
 
+// OPENMV-DIFF //
+#include "tabbededitortr.h"
+// OPENMV-DIFF //
+
 using namespace Core::Internal;
 
 using namespace TabbedEditor::Internal;
@@ -89,7 +93,7 @@ TabBar::TabBar(QWidget *parent) :
     connect(prevTabAction, SIGNAL(triggered()), this, SLOT(prevTabAction()));
 
     // OPENMV-DIFF //
-    QAction *moveTabLeftAction = new QAction(tr("Move tab left"), this);
+    QAction *moveTabLeftAction = new QAction(Tr::tr("Move tab left"), this);
     Core::Command *moveTabLeftCommand
             = Core::ActionManager::registerAction(moveTabLeftAction,
                                                   TabbedEditor::Constants::MOVE_TAB_LEFT_ID,
@@ -98,7 +102,7 @@ TabBar::TabBar(QWidget *parent) :
     connect(moveTabLeftAction, SIGNAL(triggered()), this, SLOT(moveTabLeftAction()));
     // OPENMV-DIFF //
 
-    QAction *nextTabAction = new QAction(tr("Switch to next tab"), this);
+    QAction *nextTabAction = new QAction(Tr::tr("Switch to next tab"), this);
     Core::Command *nextTabCommand
             = Core::ActionManager::registerAction(nextTabAction,
                                                   TabbedEditor::Constants::NEXT_TAB_ID,
@@ -112,7 +116,7 @@ TabBar::TabBar(QWidget *parent) :
     connect(nextTabAction, SIGNAL(triggered()), this, SLOT(nextTabAction()));
 
     // OPENMV-DIFF //
-    QAction *moveTabRightAction = new QAction(tr("Move tab right"), this);
+    QAction *moveTabRightAction = new QAction(Tr::tr("Move tab right"), this);
     Core::Command *moveTabRightCommand
             = Core::ActionManager::registerAction(moveTabRightAction,
                                                   TabbedEditor::Constants::MOVE_TAB_RIGHT_ID,

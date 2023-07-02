@@ -9,8 +9,13 @@
 #include <utils/qtcprocess.h>
 #include <utils/theme/theme.h>
 
+#include "openmvtr.h"
+
 #define PICOTOOL_SETTINGS_GROUP "OpenMVPICOTOOL"
 #define LAST_PICOTOOL_TERMINAL_WINDOW_GEOMETRY "LastPICOTOOLTerminalWindowGeometry"
+
+namespace OpenMV {
+namespace Internal {
 
 QList<QString> picotoolGetDevices()
 {
@@ -76,7 +81,7 @@ QList<QString> picotoolGetDevices()
     }
     else
     {
-        QMessageBox box(QMessageBox::Warning, QObject::tr("Get Devices"), QObject::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+        QMessageBox box(QMessageBox::Warning, Tr::tr("Get Devices"), Tr::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
         box.setDetailedText(command.toString() + QStringLiteral("\n\n") + process.stdOut());
@@ -141,7 +146,7 @@ void picotoolDownloadFirmware(QString &command, Utils::QtcProcess &process, cons
         (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
     dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-    dialog->setWindowTitle(QObject::tr("PicoTool"));
+    dialog->setWindowTitle(Tr::tr("PicoTool"));
     dialog->setSizeGripEnabled(true);
 
     if(settings->contains(QStringLiteral(LAST_PICOTOOL_TERMINAL_WINDOW_GEOMETRY)))
@@ -303,3 +308,6 @@ void picotoolDownloadFirmware(QString &command, Utils::QtcProcess &process, cons
     settings->endGroup();
     delete dialog;
 }
+
+} // namespace Internal
+} // namespace OpenMV

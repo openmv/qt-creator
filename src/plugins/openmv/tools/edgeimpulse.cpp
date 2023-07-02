@@ -1,14 +1,19 @@
 #include "edgeimpulse.h"
 
+#include "openmvtr.h"
+
+namespace OpenMV {
+namespace Internal {
+
 static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVDatasetEditor *editor)
 {
     QDialog dialog(Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    dialog.setWindowTitle(QObject::tr("Dataset Split"));
+    dialog.setWindowTitle(Tr::tr("Dataset Split"));
     QVBoxLayout *layout = new QVBoxLayout(&dialog);
 
-    layout->addWidget(new QLabel(QObject::tr("Please choose how to split the data to upload.\nOpenMV recommends leaving this at the default 80/20% split.")));
+    layout->addWidget(new QLabel(Tr::tr("Please choose how to split the data to upload.\nOpenMV recommends leaving this at the default 80/20% split.")));
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(EDGE_IMPULSE_SETTINGS_GROUP));
@@ -17,7 +22,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
 
     QHBoxLayout *layout2 = new QHBoxLayout();
 
-    QLabel *trainLabel = new QLabel(QObject::tr("Training Data\nPercentage\n%1%").arg(split));
+    QLabel *trainLabel = new QLabel(Tr::tr("Training Data\nPercentage\n%1%").arg(split));
     layout2->addWidget(trainLabel);
 
     QSlider *splitSlider = new QSlider(Qt::Horizontal);
@@ -25,7 +30,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
     splitSlider->setValue(split);
     layout2->addWidget(splitSlider);
 
-    QLabel *testLabel =  new QLabel(QObject::tr("Test Data\nPercentage\n%1%").arg(100 - split));
+    QLabel *testLabel =  new QLabel(Tr::tr("Test Data\nPercentage\n%1%").arg(100 - split));
     layout2->addWidget(testLabel);
 
     QWidget *temp = new QWidget();
@@ -33,8 +38,8 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
     layout->addWidget(temp);
 
     QObject::connect(splitSlider, &QSlider::valueChanged, [trainLabel, testLabel] (int value) {
-        trainLabel->setText(QObject::tr("Training Data\nPercentage\n%1%").arg(value));
-        testLabel->setText(QObject::tr("Test Data\nPercentage\n%1%").arg(100 - value));
+        trainLabel->setText(Tr::tr("Training Data\nPercentage\n%1%").arg(value));
+        testLabel->setText(Tr::tr("Test Data\nPercentage\n%1%").arg(100 - value));
     });
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
@@ -92,7 +97,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
 
         if(!list.isEmpty())
         {
-            QProgressDialog *progress = new QProgressDialog(QObject::tr("Uploading..."), QObject::tr("Cancel"), 0, list.size() - 1, Core::ICore::dialogParent(),
+            QProgressDialog *progress = new QProgressDialog(Tr::tr("Uploading..."), Tr::tr("Cancel"), 0, list.size() - 1, Core::ICore::dialogParent(),
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
 
@@ -122,7 +127,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
                             progress->cancel();
 
                             QMessageBox::critical(Core::ICore::dialogParent(),
-                                QObject::tr("Uploading Dataset"),
+                                Tr::tr("Uploading Dataset"),
                                 reply->errorString());
                         }
                         else
@@ -229,8 +234,8 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
                         delete parts;
 
                         QMessageBox::critical(Core::ICore::dialogParent(),
-                            QObject::tr("Uploading Dataset"),
-                            QObject::tr("Error posting!"));
+                            Tr::tr("Uploading Dataset"),
+                            Tr::tr("Error posting!"));
                     }
                 }
                 else
@@ -238,8 +243,8 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
                     progress->cancel();
 
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        QObject::tr("Uploading Dataset"),
-                        QObject::tr("Error: %L1!").arg(file.errorString()));
+                        Tr::tr("Uploading Dataset"),
+                        Tr::tr("Error: %L1!").arg(file.errorString()));
                 }
 
                 if(progress->wasCanceled())
@@ -257,8 +262,8 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
             delete progress;
 
             QMessageBox::information(Core::ICore::dialogParent(),
-                QObject::tr("Uploading Dataset"),
-                QObject::tr("Upload Statistics:\n\n"
+                Tr::tr("Uploading Dataset"),
+                Tr::tr("Upload Statistics:\n\n"
                             "%L1 Files Uploaded\n"
                             "%L2 Responses from Edge Impulse\n\n"
                             "%L3 New Images Added\n"
@@ -267,8 +272,8 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
         else
         {
             QMessageBox::information(Core::ICore::dialogParent(),
-                QObject::tr("Uploading Dataset"),
-                QObject::tr("Nothing to upload\n\n"
+                Tr::tr("Uploading Dataset"),
+                Tr::tr("Nothing to upload\n\n"
                             "Only jpg/png/bmp images with a numeric name (e.g. \"00001.jpg\")\nin class folders (\"*.class\") can be uploaded."));
         }
     }
@@ -311,15 +316,15 @@ static void uploadProject(const QString &apiKey, OpenMVDatasetEditor *editor)
                             else
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    QObject::tr("Edge Impulse Projects"),
+                                    Tr::tr("Edge Impulse Projects"),
                                     error2);
                             }
                         }
                         else
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
-                                QObject::tr("Edge Impulse Projects"),
-                                (reply2->error() == QNetworkReply::NoError) ? QObject::tr("No request data received") : reply2->errorString());
+                                Tr::tr("Edge Impulse Projects"),
+                                (reply2->error() == QNetworkReply::NoError) ? Tr::tr("No request data received") : reply2->errorString());
                         }
 
                         QObject::connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
@@ -339,22 +344,22 @@ static void uploadProject(const QString &apiKey, OpenMVDatasetEditor *editor)
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        QObject::tr("Edge Impulse Projects"),
-                        QObject::tr("An unkown error occured"));
+                        Tr::tr("Edge Impulse Projects"),
+                        Tr::tr("An unkown error occured"));
                 }
             }
             else
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    QObject::tr("Edge Impulse Projects"),
+                    Tr::tr("Edge Impulse Projects"),
                     error);
             }
         }
         else
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Edge Impulse Projects"),
-                (reply->error() == QNetworkReply::NoError) ? QObject::tr("No request data received") : reply->errorString());
+                Tr::tr("Edge Impulse Projects"),
+                (reply->error() == QNetworkReply::NoError) ? Tr::tr("No request data received") : reply->errorString());
         }
 
         QObject::connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
@@ -406,8 +411,8 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
                 if(editor->rootPath().isEmpty())
                 {
                     QMessageBox::information(Core::ICore::dialogParent(),
-                        QObject::tr("Edge Impulse Login"),
-                        QObject::tr("Sucessfully logged into your Edge Impulse account.\n\nOpen a data set to upload it."));
+                        Tr::tr("Edge Impulse Login"),
+                        Tr::tr("Sucessfully logged into your Edge Impulse account.\n\nOpen a data set to upload it."));
                 }
                 else
                 {
@@ -417,15 +422,15 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
             else
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    QObject::tr("Edge Impulse Login"),
+                    Tr::tr("Edge Impulse Login"),
                     error);
             }
         }
         else
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Edge Impulse Login"),
-                (reply->error() == QNetworkReply::NoError) ? QObject::tr("No request data received") : reply->errorString());
+                Tr::tr("Edge Impulse Login"),
+                (reply->error() == QNetworkReply::NoError) ? Tr::tr("No request data received") : reply->errorString());
         }
 
         QObject::connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
@@ -434,20 +439,20 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
     QDialog dialog(Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    dialog.setWindowTitle(QObject::tr("Edge Impulse Login"));
+    dialog.setWindowTitle(Tr::tr("Edge Impulse Login"));
     QFormLayout *layout = new QFormLayout(&dialog);
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(EDGE_IMPULSE_SETTINGS_GROUP));
 
     QLineEdit *usernameBox = new QLineEdit(settings->value(QStringLiteral(LAST_JWT_TOKEN_EMAIL)).toString());
-    usernameBox->setPlaceholderText(QObject::tr("Email Address"));
-    layout->addRow(QObject::tr("Username"), usernameBox);
+    usernameBox->setPlaceholderText(Tr::tr("Email Address"));
+    layout->addRow(Tr::tr("Username"), usernameBox);
 
     QLineEdit *passwordBox = new QLineEdit();
     passwordBox->setEchoMode(QLineEdit::PasswordEchoOnEdit);
     passwordBox->setPlaceholderText(QStringLiteral("********************"));
-    layout->addRow(QObject::tr("Password"), passwordBox);
+    layout->addRow(Tr::tr("Password"), passwordBox);
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QObject::connect(box, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
@@ -517,7 +522,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
 
                     bool ok;
                     id = map.key(QInputDialog::getItem(Core::ICore::dialogParent(),
-                        QObject::tr("Edge Impulse Projects"), QObject::tr("Please select a project"),
+                        Tr::tr("Edge Impulse Projects"), Tr::tr("Please select a project"),
                         map.values(), (index != -1) ? index : 0, false, &ok,
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint)));
@@ -544,7 +549,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                                 else
                                 {
                                     QMessageBox::critical(Core::ICore::dialogParent(),
-                                        QObject::tr("Edge Impulse Projects"),
+                                        Tr::tr("Edge Impulse Projects"),
                                         error2);
                                 }
                             }
@@ -553,8 +558,8 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                                 logoutFromEdgeImpulse();
 
                                 QMessageBox::critical(Core::ICore::dialogParent(),
-                                    QObject::tr("Edge Impulse Projects"),
-                                    (reply2->error() == QNetworkReply::NoError) ? QObject::tr("No request data received") : reply2->errorString());
+                                    Tr::tr("Edge Impulse Projects"),
+                                    (reply2->error() == QNetworkReply::NoError) ? Tr::tr("No request data received") : reply2->errorString());
                             }
 
                             QObject::connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
@@ -577,8 +582,8 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                 else
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
-                        QObject::tr("Edge Impulse Projects"),
-                        QObject::tr("No projects found"));
+                        Tr::tr("Edge Impulse Projects"),
+                        Tr::tr("No projects found"));
                 }
             }
             else
@@ -586,7 +591,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                 logoutFromEdgeImpulse();
 
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    QObject::tr("Edge Impulse Projects"),
+                    Tr::tr("Edge Impulse Projects"),
                     error);
             }
         }
@@ -595,8 +600,8 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
             logoutFromEdgeImpulse();
 
             QMessageBox::critical(Core::ICore::dialogParent(),
-                QObject::tr("Edge Impulse Projects"),
-                (reply->error() == QNetworkReply::NoError) ? QObject::tr("No request data received") : reply->errorString());
+                Tr::tr("Edge Impulse Projects"),
+                (reply->error() == QNetworkReply::NoError) ? Tr::tr("No request data received") : reply->errorString());
         }
 
         QObject::connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
@@ -626,7 +631,7 @@ void uploadProjectByAPIKey(OpenMVDatasetEditor *editor)
 
     bool ok;
     QString apiKey = QInputDialog::getText(Core::ICore::dialogParent(),
-        QObject::tr("Upload Project"), QObject::tr("Please enter an Edge Impluse Project API Key"),
+        Tr::tr("Upload Project"), Tr::tr("Please enter an Edge Impluse Project API Key"),
         QLineEdit::Normal, settings->value(QStringLiteral(LAST_API_KEY)).toString(), &ok,
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -645,3 +650,6 @@ void uploadProjectByAPIKey(OpenMVDatasetEditor *editor)
         uploadProject(apiKey, editor);
     }
 }
+
+} // namespace Internal
+} // namespace OpenMV

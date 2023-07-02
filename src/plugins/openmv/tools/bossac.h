@@ -6,7 +6,13 @@
 
 #include <utils/qtcprocess.h>
 
+namespace OpenMV {
+namespace Internal {
+
 void bossacRunBootloader(Utils::QtcProcess &process, const QString &device);
 void bossacDownloadFirmware(QString &command, Utils::QtcProcess &process, const QString &path, const QString &device, const QString &moreArgs = QString());
+
+} // namespace Internal
+} // namespace OpenMV
 
 #endif // BOSSAC_H

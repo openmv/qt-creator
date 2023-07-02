@@ -5,6 +5,9 @@
 #include <QtGui>
 #include <QtWidgets>
 
+namespace OpenMV {
+namespace Internal {
+
 class OpenMVPluginFB : public QGraphicsView
 {
     Q_OBJECT
@@ -65,5 +68,8 @@ private:
     QElapsedTimer m_elaspedTimer;
     QQueue<qint64> m_previousElaspedTimers;
 };
+
+} // namespace Internal
+} // namespace OpenMV
 
 #endif // OPENMVPLUGINFB_H

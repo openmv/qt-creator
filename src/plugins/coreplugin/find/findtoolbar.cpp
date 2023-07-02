@@ -453,7 +453,7 @@ FindToolBar::FindToolBar(CurrentDocumentFind *currentDocumentFind)
     QWidget::setTabOrder(m_replaceAllButton, m_advancedButton);
     QWidget::setTabOrder(m_advancedButton, m_close);
     // OPENMV-DIFF //
-    m_close->setToolTip(tr("Close"));
+    m_close->setToolTip(Tr::tr("Close"));
     // OPENMV-DIFF //
 }
 

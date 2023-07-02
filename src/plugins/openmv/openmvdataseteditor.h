@@ -14,6 +14,9 @@
 #include <texteditor/texteditor.h>
 #include <texteditor/texteditorsettings.h>
 
+namespace OpenMV {
+namespace Internal {
+
 class OpenMVDatasetEditorModel : public QFileSystemModel
 {
     Q_OBJECT
@@ -75,5 +78,8 @@ private:
     QString m_styleSheet, m_highDPIStyleSheet;
     qreal m_devicePixelRatio;
 };
+
+} // namespace Internal
+} // namespace OpenMV
 
 #endif // OPENMVDATASETEDITOR_H
