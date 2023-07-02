@@ -13,6 +13,9 @@ namespace Ui
     class OpenMVCameraSettings;
 }
 
+namespace OpenMV {
+namespace Internal {
+
 class OpenMVCameraSettings : public QDialog
 {
     Q_OBJECT
@@ -31,5 +34,8 @@ private:
     QSettings *m_settings;
     Ui::OpenMVCameraSettings *m_ui;
 };
+
+} // namespace Internal
+} // namespace OpenMV
 
 #endif // OPENMVCAMERASETTINGS_H

@@ -17,6 +17,9 @@ namespace Ui
     class OpenMVPluginHistogram;
 }
 
+namespace OpenMV {
+namespace Internal {
+
 class OpenMVPluginHistogram : public QWidget
 {
     Q_OBJECT
@@ -57,5 +60,8 @@ private:
 
     Ui::OpenMVPluginHistogram *m_ui;
 };
+
+} // namespace Internal
+} // namespace OpenMV
 
 #endif // OPENMVPLUGINHISTOGRAM_H

@@ -1,8226 +1,2496 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it">
+<TS version="2.1" language="it_IT">
 <context>
-    <name>Application</name>
+    <name>Language</name>
     <message>
-        <source>Failed to load core: %1</source>
-        <translation>Errore nel caricamento del core: %1</translation>
+        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+107"/>
+        <source>None</source>
+        <translation>Nessuno</translation>
+    </message>
+</context>
+<context>
+    <name>OpenMVCameraSettings</name>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvcamerasettings.ui"/>
+        <source>OpenMV Cam Settings</source>
+        <translation>Impostazioni OpenMV Cam</translation>
     </message>
     <message>
-        <source>Unable to send command line arguments to the already running instance. It appears to be not responding.</source>
-        <translation>Impossibile inviare i parametri della linea di comando all&apos;istanza in esecuzione. Sembra non rispondere.</translation>
+        <location/>
+        <source>Turn on WiFi Shield on startup</source>
+        <translation>Attiva WiFi Shield all&apos;avvio</translation>
     </message>
     <message>
-        <source>Could not find &apos;Core.pluginspec&apos; in %1</source>
+        <location/>
+        <source>Client Mode (Normal)</source>
+        <translation>Modalità client (normale)</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Password</source>
+        <translation>Password</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Please enter your WiFi network password here</source>
+        <translation>Inserisci qui la password della rete WiFi</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Type</source>
+        <translation>Tipo</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Open (No password)</source>
+        <translation>Apri (Nessuna password)</translation>
+    </message>
+    <message>
+        <location/>
+        <source>WPA (Modern WiFi Security)</source>
+        <translation>WPA (Modern WiFi Security)</translation>
+    </message>
+    <message>
+        <location/>
+        <source>WEP (Hexadecimal password)</source>
+        <translation>WEP (Password esadecimale)</translation>
+    </message>
+    <message>
+        <location/>
+        <source>SSID</source>
+        <translation>SSID</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Please enter or select your WiFi network here</source>
+        <translation>Inserisci o seleziona la tua rete WiFi qui</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Acess Point Mode</source>
+        <translation>Modalità Access Point</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Please enter the name of the WiFi network to create password here</source>
+        <translation>Inserisci il nome della rete WiFi per creare la password</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Please enter the name of the WiFI network to create here</source>
+        <translation>Inserisci il nome della rete WiFi da creare qui</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Board Name</source>
+        <translation>Nome della scheda</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Please enter a name for your OpenMV Cam here</source>
+        <translation>Inserisci un nome per la tua OpenMV Cam qui</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Duplicate REPL on the UART on startup</source>
+        <translation>REPL duplicato sulla UART all&apos;avvio</translation>
+    </message>
+</context>
+<context>
+    <name>OpenMVPluginHistogram</name>
+    <message>
+        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.ui"/>
+        <source>000</source>
+        <translation>000</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Max</source>
+        <translation>Max</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Median</source>
+        <translation>Mediana</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Mode</source>
+        <translation>Moda</translation>
+    </message>
+    <message>
+        <location/>
+        <source>LQ</source>
+        <translation>LQ</translation>
+    </message>
+    <message>
+        <location/>
+        <source>UQ</source>
+        <translation>UQ</translation>
+    </message>
+    <message>
+        <location/>
+        <source>StDev</source>
+        <translation>StDev</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Min</source>
+        <translation>Min</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Mean</source>
+        <translation>Media</translation>
+    </message>
+</context>
+<context>
+    <name>QAbstractFileIconProvider</name>
+    <message>
+        <location filename="../../../src/libs/utils/fsengine/fileiconprovider.cpp" line="+130"/>
+        <source>File Folder</source>
+        <comment>Match Windows Explorer</comment>
+        <translation>Cartella di file</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Folder</source>
+        <comment>All other platforms</comment>
+        <translation>Cartella</translation>
+    </message>
+</context>
+<context>
+    <name>QDockWidget</name>
+    <message>
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+144"/>
+        <source>Float</source>
+        <translation>Float</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Undocks and re-attaches the dock widget</source>
+        <translation>Scollega e riattacca il widget del dock</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Closes the dock widget</source>
+        <translation>Chiude il widget del dock</translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definitiondownloader.cpp" line="+64"/>
+        <source>All syntax definitions are up-to-date.</source>
+        <translation>Tutte le definizioni di sintassi sono aggiornate.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation>Download della nuova definizione di sintassi per &apos;%1&apos;...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation>Aggiornamento della definizione della sintassi per &apos;%1&apos; alla versione %2...</translation>
+    </message>
+</context>
+<context>
+    <name>QtC::ADS</name>
+    <message>
+        <location filename="../../../src/libs/advanceddockingsystem/dockareatitlebar.cpp" line="+123"/>
+        <source>List All Tabs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Qt Creator - Plugin loader messages</source>
+        <location line="+14"/>
+        <source>Detach Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Couldn&apos;t find &apos;Core.pluginspec&apos; in %1</source>
-        <translation type="obsolete">Impossibile trovare &apos;Core.pluginspec&apos; in %1</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Debugger</name>
-    <message>
-        <source>Start Debugger</source>
-        <translation>Avvia il Debug</translation>
+        <location line="+21"/>
+        <source>Close Active Tab</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Executable:</source>
-        <translation>Eseguibile:</translation>
+        <location line="+2"/>
+        <source>Close Group</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Core File:</source>
-        <translation>File Core:</translation>
-    </message>
-</context>
-<context>
-    <name>AttachExternalDialog</name>
-    <message>
-        <source>Start Debugger</source>
-        <translation>Avvia il Debug</translation>
+        <location line="+376"/>
+        <source>Detach Area</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attach to Process ID:</source>
-        <translation>Collegati all&apos;ID di Processo:</translation>
+        <location line="+5"/>
+        <source>Close Area</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Filter:</source>
-        <translation>Filtro:</translation>
+        <location line="+2"/>
+        <source>Close Other Areas</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Clear</source>
-        <translation>Cancella</translation>
-    </message>
-</context>
-<context>
-    <name>AttachTcfDialog</name>
-    <message>
-        <source>Start Debugger</source>
-        <translation type="obsolete">Avvia il Debug</translation>
+        <location filename="../../../src/libs/advanceddockingsystem/dockwidgettab.cpp" line="+162"/>
+        <source>Close Tab</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Host and port:</source>
-        <translation type="obsolete">Host e porta:</translation>
+        <location line="+252"/>
+        <source>Detach</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Architecture:</source>
-        <translation type="obsolete">Architettura:</translation>
+        <location line="+3"/>
+        <source>Close</source>
+        <translation type="unfinished">Chiudi</translation>
     </message>
     <message>
-        <source>Use server start script:</source>
-        <translation type="obsolete">Usa script di avvio del server:</translation>
+        <location line="+2"/>
+        <source>Close Others</source>
+        <translation type="unfinished">Chiudi gli Altri</translation>
     </message>
     <message>
-        <source>Server start script:</source>
-        <translation type="obsolete">Script di avvio del server:</translation>
+        <location filename="../../../src/libs/advanceddockingsystem/workspacedialog.cpp" line="+69"/>
+        <source>Enter the name of the workspace:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>&amp;New</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/libs/advanceddockingsystem/workspacemodel.cpp" line="+200"/>
+        <source>&amp;Rename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>C&amp;lone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reset</source>
+        <translation type="unfinished">Ripristina</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Switch To</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Export</source>
+        <translation>Esportare</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Restore last workspace on startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Workspace Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/advanceddockingsystem/workspacemodel.cpp" line="-154"/>
+        <source>Workspace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Last Modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+117"/>
+        <location line="+11"/>
+        <source>New Workspace Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>&amp;Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Create and &amp;Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Clone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Clone and &amp;Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Rename Workspace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rename and &amp;Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/advanceddockingsystem/workspaceview.cpp" line="+99"/>
+        <source>Import Workspace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Export Workspace</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QtC::BinEditor</name>
     <message>
+        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+238"/>
+        <source>Cannot open %1: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+5"/>
+        <location line="+9"/>
+        <location line="+10"/>
+        <source>File Error</source>
+        <translation>Errore file</translation>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>The Binary Editor cannot open empty files.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The file is too big for the Binary Editor (max. 32GB).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>Byte Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+96"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annulla</translation>
     </message>
     <message>
+        <location line="+1"/>
         <source>&amp;Redo</source>
         <translation>&amp;Ripeti</translation>
     </message>
-</context>
-<context>
-    <name>QtC::Bookmarks</name>
     <message>
-        <source>Add Bookmark</source>
-        <translation>Aggiungi un Segnalibro</translation>
-    </message>
-    <message>
-        <source>Bookmark:</source>
-        <translation>Segnalibro:</translation>
-    </message>
-    <message>
-        <source>Add in Folder:</source>
-        <translation>Inserisci nella Cartella:</translation>
-    </message>
-    <message>
-        <source>+</source>
-        <translation>+</translation>
-    </message>
-    <message>
-        <source>New Folder</source>
-        <translation>Nuova Cartella</translation>
-    </message>
-    <message>
-        <source>Bookmarks</source>
-        <translation>Segnalibri</translation>
-    </message>
-    <message>
-        <source>Delete Folder</source>
-        <translation>Cancella la Cartella</translation>
-    </message>
-    <message>
-        <source>Rename Folder</source>
-        <translation>Rinomina la Cartella</translation>
-    </message>
-    <message>
-        <source>Bookmark</source>
-        <translation type="obsolete">Segnalibro</translation>
-    </message>
-    <message>
-        <source>Remove</source>
-        <translation>Rimuovi</translation>
-    </message>
-    <message>
-        <source>You are going to delete a Folder which will also&lt;br&gt;remove its content. Are you sure you would like to continue?</source>
-        <translation>Stai per cancellare una Cartella, questo cancellerà&lt;br&gt;anche il suo contenuto. Sei sicuro di volerlo fare?</translation>
-    </message>
-    <message>
-        <source>New Folder</source>
-        <translation>Nuova Cartella</translation>
-    </message>
-    <message>
-        <source>Show Bookmark</source>
-        <translation>Mostra il Segnalibro</translation>
-    </message>
-    <message>
-        <source>Show Bookmark in New Tab</source>
-        <translation>Mostra il Segnalibro in una Nuova Scheda</translation>
-    </message>
-    <message>
-        <source>Delete Bookmark</source>
-        <translation>Cancella il Segnalibro</translation>
-    </message>
-    <message>
-        <source>Rename Bookmark</source>
-        <translation>Rinomina il Segnalibro</translation>
-    </message>
-    <message>
-        <source>Filter:</source>
-        <translation>Filtro:</translation>
-    </message>
-    <message>
-        <source>Add</source>
-        <translation>Aggiungi</translation>
-    </message>
-    <message>
-        <source>&amp;Remove Bookmark</source>
-        <translation>&amp;Rimuovi Segnalibro</translation>
-    </message>
-    <message>
-        <source>Remove all Bookmarks</source>
-        <translation>Rimuovi tutti i Segnalibri</translation>
-    </message>
-    <message>
-        <source>&amp;Bookmarks</source>
-        <translation>&amp;Segnalibri</translation>
-    </message>
-    <message>
-        <source>Toggle Bookmark</source>
-        <translation>Commuta il Segnalibro</translation>
-    </message>
-    <message>
-        <source>Ctrl+M</source>
+        <location filename="../../../src/plugins/bineditor/bineditorwidget.cpp" line="+1226"/>
+        <source>Memory at 0x%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Meta+M</source>
+        <location line="+8"/>
+        <source>Decimal&amp;nbsp;unsigned&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Move Up</source>
-        <translation>Sposta Su</translation>
-    </message>
-    <message>
-        <source>Move Down</source>
-        <translation>Sposta Giu</translation>
-    </message>
-    <message>
-        <source>Previous Bookmark</source>
-        <translation>Segnalibro Precedente</translation>
-    </message>
-    <message>
-        <source>Ctrl+,</source>
+        <location line="+1"/>
+        <source>Decimal&amp;nbsp;signed&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Meta+,</source>
+        <location line="+1"/>
+        <source>Previous&amp;nbsp;decimal&amp;nbsp;unsigned&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Next Bookmark</source>
-        <translation>Segnalibro Successivo</translation>
-    </message>
-    <message>
-        <source>Ctrl+.</source>
+        <location line="+1"/>
+        <source>Previous&amp;nbsp;decimal&amp;nbsp;signed&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Meta+.</source>
+        <location line="+5"/>
+        <source>%1-bit&amp;nbsp;Integer&amp;nbsp;Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Previous Bookmark In Document</source>
-        <translation>Segnalibro Precedente nel Documento</translation>
-    </message>
-    <message>
-        <source>Next Bookmark In Document</source>
-        <translation>Segnalibro Successivo nel Documento</translation>
-    </message>
-</context>
-<context>
-    <name>BreakByFunctionDialog</name>
-    <message>
-        <source>Set Breakpoint at Function</source>
-        <translation>Imposta l&apos;Interruzione alla Funzione</translation>
-    </message>
-    <message>
-        <source>Function to break on:</source>
-        <translation>Funzione dove interrompere:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Debugger</name>
-    <message>
-        <source>Condition:</source>
-        <translation>Condizione:</translation>
-    </message>
-    <message>
-        <source>Ignore count:</source>
-        <translation>Numero di scarti:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::CMakeProjectManager</name>
-    <message>
-        <source>Clear system environment</source>
+        <location line="+1"/>
+        <source>Little Endian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Build Environment</source>
-        <translation>Ambiente di Compilazione</translation>
-    </message>
-    <message>
-        <source>Create</source>
+        <location line="+0"/>
+        <source>Big Endian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New configuration</source>
-        <translation type="unfinished">Nuova configurazione</translation>
-    </message>
-    <message>
-        <source>New Configuration Name:</source>
-        <translation type="unfinished">Nome della Nuova Configurazione:</translation>
-    </message>
-    <message>
-        <source>&amp;Change</source>
-        <translation>&amp;Cambia</translation>
-    </message>
-    <message>
-        <source>CMake Wizard</source>
-        <translation>Procedura Guidata di CMake</translation>
-    </message>
-    <message>
-        <source>Arguments:</source>
-        <translation>Parametri:</translation>
-    </message>
-    <message>
-        <source>Select the working directory</source>
-        <translation type="unfinished">Selezionare la cartella di lavoro</translation>
-    </message>
-    <message>
-        <source>Reset to default</source>
-        <translation type="unfinished">Ripristina predefinito</translation>
-    </message>
-    <message>
-        <source>Working Directory:</source>
+        <location line="+26"/>
+        <source>Binary&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Run Environment</source>
+        <location line="+7"/>
+        <source>Octal&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Base environment for this runconfiguration:</source>
+        <location line="+13"/>
+        <source>Previous&amp;nbsp;binary&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Clean Environment</source>
+        <location line="+6"/>
+        <source>Previous&amp;nbsp;octal&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>System Environment</source>
+        <location line="+20"/>
+        <source>&lt;i&gt;double&lt;/i&gt;&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Build Environment</source>
-        <translation type="unfinished">Ambiente di Compilazione</translation>
-    </message>
-    <message>
-        <source>Running executable: &lt;b&gt;%1&lt;/b&gt; %2</source>
+        <location line="+3"/>
+        <source>Previous &lt;i&gt;double&lt;/i&gt;&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Qt Creator has detected an &lt;b&gt;in-source-build in %1&lt;/b&gt; which prevents shadow builds. Qt Creator will not allow you to change the build directory. If you want a shadow build, clean your source directory and re-open the project.</source>
+        <location line="+15"/>
+        <source>&lt;i&gt;float&lt;/i&gt;&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Qt Creator has detected an in-source-build which prevents shadow builds. Qt Creator will not allow you to change the build directory. If you want a shadow build, clean your source directory and re-open the project.</source>
-        <translation type="obsolete">Qt Creator ha rilevato che la compilazione avviene nella cartella dei file sorgenti e ciò impedisce la compilazione in cartelle separate. Qt Creator non permette di di cambiare la cartella di compilazione, perciò se vuoi una compilazione in cartella separata, pulisci la cartella dei file sorgenti e apri nuovamente il progetto.</translation>
-    </message>
-    <message>
-        <source>Please specify the path to the cmake executable. No cmake executable was found in the path.</source>
+        <location line="+3"/>
+        <source>Previous &lt;i&gt;float&lt;/i&gt;&amp;nbsp;value:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> The cmake executable (%1) does not exist.</source>
+        <location line="+121"/>
+        <source>Zoom: %1%</source>
+        <translation>Zoom: %1%</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Copying Failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> The path %1 is not a executable.</source>
+        <location line="+1"/>
+        <source>You cannot copy more than 4 MB of binary data.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> The path %1 is not a valid cmake.</source>
+        <location line="+111"/>
+        <source>Copy Selection as ASCII Characters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Run CMake</source>
-        <translation>Avvia CMake</translation>
-    </message>
-    <message>
-        <source>Arguments</source>
-        <translation>Parametri</translation>
-    </message>
-    <message>
-        <source>The directory %1 already contains a cbp file, which is recent enough. You can pass special arguments or change the used toolchain here and rerun cmake. Or simply finish the wizard directly</source>
+        <location line="+1"/>
+        <source>Copy Selection as Hex Values</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The directory %1 does not contain a cbp file. Qt Creator needs to create this file by running cmake. Some projects require command line arguments to the initial cmake call.</source>
-        <translation>La cartella %1 non contiene un file cbp. Qt Creator creerà questo file eseguendo cmake. Alcuni progetti necessitano di parametri per la chiamata a cmake iniziale.</translation>
-    </message>
-    <message>
-        <source>The directory %1 contains an outdated .cbp file. Qt Creator needs to update this file by running cmake. If you want to add additional command line arguments, add them below. Note that cmake remembers command line arguments from the previous runs.</source>
-        <translation>La cartella %1 contiene un file .cbp obsoleto. Qt Creator deve aggiornare questo file lanciando cmake. Se vuoi aggiungere dei parametri alla chiamata, aggiungili qui sotto. CMake ricorda inoltre i parametri delle esecuzioni precedenti.</translation>
-    </message>
-    <message>
-        <source>The directory %1 specified in a build-configuration, does not contain a cbp file. Qt Creator needs to recreate this file, by running cmake. Some projects require command line arguments to the initial cmake call. Note that cmake remembers command line arguments from the previous runs.</source>
-        <translation>La cartella %1, impostata in una configurazione di compilazione, non contiene un file cbp. Qt Creator deve ricreare questo file, lanciando cmake. Alcuni progetti necessitano di parametri per la chiamata iniziale a cmake. CMake ricorda inoltre i parametri delle esecuzioni precedenti.</translation>
-    </message>
-    <message>
-        <source>Qt Creator needs to run cmake in the new build directory. Some projects require command line arguments to the initial cmake call.</source>
-        <translation>Qt Creator deve eseguire cmake nella nuova directory di compilazione. Alcuni progetti necessitano di parametri per la chiamata iniziale a cmake.</translation>
-    </message>
-    <message>
-        <source>NMake Generator</source>
+        <location line="+7"/>
+        <source>Set Data Breakpoint on Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>NMake Generator (%1)</source>
+        <location line="+14"/>
+        <location line="+4"/>
+        <source>Copy 0x%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MinGW Generator</source>
+        <location line="+11"/>
+        <source>Jump to Address in This Window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No valid cmake executable specified.</source>
+        <location line="+1"/>
+        <source>Jump to Address in New Window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>CMake</source>
-        <translation>CMake</translation>
-    </message>
-    <message>
-        <source>CMake executable</source>
-        <translation>Eseguibile CMake</translation>
-    </message>
-    <message>
-        <source>Additional arguments:</source>
-        <translation>Parametri aggiuntivi:</translation>
-    </message>
-    <message>
-        <source>Targets:</source>
-        <translation>Destinazioni:</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Make:&lt;/b&gt; %1 %2</source>
+        <location line="+1"/>
+        <source>Copy Value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Please enter the directory in which you want to build your project. </source>
-        <translation>Inserisci la cartella in cui vuoi compilare il tuo progetto. </translation>
-    </message>
-    <message>
-        <source>Please enter the directory in which you want to build your project. Qt Creator recommends to not use the source directory for building. This ensures that the source directory remains clean and enables multiple builds with different settings.</source>
-        <translation>Inserisci la cartella in cui vuoi compilare il tuo progetto. Qt Creator suggerisce di non usare la cartella dei file sorgenti per la compilazione. Questo assicura che la cartella dei file sorgenti rimanga pulita e permette compilazioni multiple con impostazioni differenti.</translation>
-    </message>
-    <message>
-        <source>Build directory:</source>
-        <translation>Cartella di compilazione:</translation>
-    </message>
-    <message>
-        <source>Qt Creator has found a recent cbp file, which Qt Creator will parse to gather information about the project. You can change the command line arguments used to create this file in the project mode. Click finish to load the project.</source>
-        <translation type="obsolete">Qt Creator ha rilevato un file cbp recente, e lo leggerà per ricavare informazioni sul progetto. Puoi cambiare i parametri usati per creare questo file nella modalità di progetto. Fai clic su fine per caricare il progetto.</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::CppEditor</name>
-    <message>
-        <source>&lt;Select Symbol&gt;</source>
-        <translation>&lt;Scegli un Simbolo&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;No Symbols&gt;</source>
-        <translation>&lt;Nessun Simbolo&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>CdbOptionsPageWidget</name>
-    <message>
-        <source>These options take effect at the next start of Qt Creator.</source>
-        <translation>Queste opzioni saranno effettive dal prossimo riavvio di Qt Creator.</translation>
-    </message>
-    <message>
-        <source>Cdb</source>
-        <extracomment>Placeholder</extracomment>
-        <translation>Cdb</translation>
-    </message>
-    <message>
-        <source>Debugger Paths</source>
-        <translation>Percorsi del Debugger</translation>
-    </message>
-    <message>
-        <source>Symbol paths:</source>
-        <translation>Percorsi dei Simboli:</translation>
-    </message>
-    <message>
-        <source>Source paths:</source>
-        <translation>Percorso dei sorgenti:</translation>
-    </message>
-    <message numerus="yes">
-        <source>&lt;html&gt;&lt;body&gt;&lt;p&gt;Specify the path to the &lt;a href=&quot;%1&quot;&gt;Debugging Tools for Windows&lt;/a&gt; (%n bit-version) here.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; Restarting Qt Creator is required for these settings to take effect.&lt;/p&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>Label text for path configuration. Singular form is not very likely to occur ;-)</extracomment>
-        <translation type="obsolete">
-            <numerusform>&lt;html&gt;&lt;body&gt;&lt;p&gt;Specifica qui il percorso degli &lt;a href=&quot;%1&quot;&gt;Strumenti di Debug per Windows&lt;/a&gt; (versione %n bit).&lt;/p&gt;&lt;p&gt;&lt;b&gt;Nota:&lt;/b&gt; Per rendere effettivi i cambiamenti è necessario riavviare Qt Creator.&lt;/p&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</numerusform>
-            <numerusform>&lt;html&gt;&lt;body&gt;&lt;p&gt;Specifica qui il percorso degli &lt;a href=&quot;%1&quot;&gt;Strumenti di Debug per Windows&lt;/a&gt; (versione %n bit).&lt;/p&gt;&lt;p&gt;&lt;b&gt;Nota:&lt;/b&gt; Per rendere effettivi i cambiamenti è necessario riavviare Qt Creator.&lt;/p&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Path:</source>
-        <translation>Percorso:</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;body&gt;&lt;p&gt;Specify the path to the &lt;a href=&quot;%1&quot;&gt;Debugging Tools for Windows&lt;/a&gt; (%2) here.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; Restarting Qt Creator is required for these settings to take effect.&lt;/p&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>Label text for path configuration. %2 is &quot;x-bit version&quot;.</extracomment>
+        <location line="+46"/>
+        <source>Jump to Address 0x%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>64-bit version</source>
+        <location line="+3"/>
+        <source>Jump to Address 0x%1 in New Window</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>32-bit version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Other options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Verbose Symbol Loading</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ChangeSelectionDialog</name>
-    <message>
-        <source>Repository Location:</source>
-        <translation>Posizione del deposito:</translation>
-    </message>
-    <message>
-        <source>Select</source>
-        <translation>Seleziona</translation>
-    </message>
-    <message>
-        <source>Change:</source>
-        <translation>Cambia:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::CodePaster</name>
-    <message>
-        <source>&amp;CodePaster</source>
-        <translation>&amp;CodePaster</translation>
-    </message>
-    <message>
-        <source>Paste Snippet...</source>
-        <translation>Imcolla Frammento...</translation>
-    </message>
-    <message>
-        <source>Alt+C,Alt+P</source>
-        <translation>Alt+C,Alt+I</translation>
-    </message>
-    <message>
-        <source>Fetch Snippet...</source>
-        <translation>Carica Frammento...</translation>
-    </message>
-    <message>
-        <source>Alt+C,Alt+F</source>
-        <translation>Alt+C,Alt+C</translation>
-    </message>
-    <message>
-        <source>This protocol supports no listing</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Waiting for items</source>
-        <translation>Sto aspettando gli elementi</translation>
-    </message>
-    <message>
-        <source>CodePaster Error</source>
-        <translation type="obsolete">Errore CodePaster</translation>
-    </message>
-    <message>
-        <source>Could not fetch code</source>
-        <translation type="obsolete">Non riesco a caricare il codice</translation>
-    </message>
-    <message>
-        <source>Some error occured while posting</source>
-        <translation type="obsolete">C&apos;è stato un errore nella spedizione</translation>
-    </message>
-    <message>
-        <source>Paste:</source>
-        <translation>Incolla:</translation>
-    </message>
-    <message>
-        <source>Protocol:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>CodePaster Server:</source>
-        <translation type="obsolete">Server CodePaster:</translation>
-    </message>
-    <message>
-        <source>Username:</source>
-        <translation>Nome utente:</translation>
-    </message>
-    <message>
-        <source>Copy Paste URL to clipboard</source>
-        <translation>Copia l&apos;URL negli appunti</translation>
-    </message>
-    <message>
-        <source>Display Output Pane after sending a post</source>
-        <translation>Mostra la Finestra di Output dopo una spedizione</translation>
-    </message>
-    <message>
-        <source>General</source>
-        <translation>Generale</translation>
-    </message>
-    <message>
-        <source>CodePaster</source>
-        <translation>CodePaster</translation>
-    </message>
-    <message>
-        <source>Default Protocol:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pastebin.ca</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pastebin.com</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>CommonOptionsPage</name>
-    <message>
-        <source>User interface</source>
-        <translation>Interfaccia utente</translation>
-    </message>
-    <message>
-        <source>Checking this will populate the source file view automatically but might slow down debugger startup considerably.</source>
-        <translation>Marcando questa casella la vista dei file sorgente sarà riempita automaticamente, ma l&apos;avvio del debugger risulterà rallentato.</translation>
-    </message>
-    <message>
-        <source>Populate source file view automatically</source>
-        <translation>Riempimento automatico della vista dei file sorgente</translation>
-    </message>
-    <message>
-        <source>When this option is checked, &apos;Step Into&apos; compresses several steps into one in certain situations, leading to &apos;less noisy&apos; debugging. So will, e.g., the atomic
- reference counting code be skipped, and a single &apos;Step Into&apos; for a signal emission will end up directly in the slot connected to it.</source>
-        <translation>Quando questa casella è marcata &apos;Entra in&apos; comprime più passi in uno in certe situazioni, rendendo il debug &apos;meno rumoroso&apos;. Ad esempio il reference counting atomico sarà saltato, e un &quot;Entra in&quot; relativo all&apos;emissione di un segnale porterà direttamente allo slot connesso al segnale.</translation>
-    </message>
-    <message>
-        <source>Skip known frames when stepping</source>
-        <translation>Semplifica le sequenze note</translation>
-    </message>
-    <message>
-        <source>Use tooltips while debugging</source>
-        <translation type="obsolete">Usa i suggerimenti durante il debug</translation>
-    </message>
-    <message>
-        <source>Maximal stack depth:</source>
-        <translation>Dimesione massima dello stack:</translation>
-    </message>
-    <message>
-        <source>&lt;unlimited&gt;</source>
-        <translation>&lt;illimitata&gt;</translation>
-    </message>
-    <message>
-        <source>Use alternating row colors in debug views</source>
-        <translation>Alterna i colori delle righe nelle finestre di debug</translation>
-    </message>
-    <message>
-        <source>Checking this will enable tooltips for variable values during debugging. Since this can slow down debugging and does not provide reliable information as it does not use scope information, it is switched off by default.</source>
-        <translation type="obsolete">Marcando questa casella si abiliteranno i suggerimenti dei valori delle variabili durante il debug. Dato che questo può rallentare il debug e non fornisce informazioni affidabili dato che non usa informazioni di contesto, questa opzione è normalmente disattivata.</translation>
-    </message>
-    <message>
-        <source>Enable reverse debugging</source>
-        <translation>Abilita il debug all&apos;indietro</translation>
-    </message>
-    <message>
-        <source>Show a message box when receiving a signal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Use tooltips in main editor while debugging</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QtC::TextEditor</name>
-    <message>
-        <source>Code Completion</source>
-        <translation>Completamento del Codice</translation>
-    </message>
-    <message>
-        <source>Do a case-sensitive match for completion items.</source>
-        <translation>Distingui le maiuscole negli elementi del completamento.</translation>
-    </message>
-    <message>
-        <source>&amp;Case-sensitive completion</source>
-        <translation>Distingui le &amp;Maiuscole</translation>
-    </message>
-    <message>
-        <source>Automatically insert (, ) and ; when appropriate.</source>
-        <translation>Inserisci automaticamente (, ) e ; dove appropriato.</translation>
-    </message>
-    <message>
-        <source>Insert the common prefix of available completion items.</source>
-        <translation>Inserisci il prefisso comune dei completamenti disponibili.</translation>
-    </message>
-    <message>
-        <source>Autocomplete common &amp;prefix</source>
-        <translation>Autocompleta il prefisso &amp;comune</translation>
-    </message>
-    <message>
-        <source>&amp;Automatically insert brackets</source>
-        <translation>&amp;Parentesi automatiche</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Help</name>
-    <message>
-        <source>Open Link</source>
-        <translation>Apri il Collegamento</translation>
-    </message>
-    <message>
-        <source>Open Link in New Tab</source>
-        <translation>Apri il Collegamento in una Nuova Scheda</translation>
     </message>
 </context>
 <context>
     <name>QtC::Core</name>
     <message>
+        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142"/>
         <source>Unable to create the directory %1.</source>
         <translation>Impossibile creare la cartella %1.</translation>
     </message>
     <message>
-        <source>Unable to open %1 for writing: %2</source>
-        <translation>Impossibile aprire %1 in scrittura: %2</translation>
-    </message>
-    <message>
-        <source>Error while writing to %1: %2</source>
-        <translation>Errore durante la scrittura su %1: %2</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+86"/>
+        <location line="+11"/>
+        <location line="+17"/>
+        <location line="+16"/>
         <source>File Generation Failure</source>
         <translation>Errore Generando il File</translation>
     </message>
     <message>
+        <location line="-59"/>
         <source>Existing files</source>
         <translation>File esistenti</translation>
     </message>
     <message>
-        <source>Failed to open an editor for &apos;%1&apos;.</source>
-        <translation>Impossibile aprire un editor per &apos;%1&apos;.</translation>
+        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+170"/>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Impossibile aprire un editor per &quot;%1&quot;.</translation>
     </message>
     <message>
-        <source> [read only]</source>
-        <translation> [sola lettura]</translation>
+        <location line="+25"/>
+        <source>[read only]</source>
+        <translation>[sola lettura]</translation>
     </message>
     <message>
-        <source> [directory]</source>
-        <translation> [cartella]</translation>
+        <location line="+1"/>
+        <source>[folder]</source>
+        <translation>[cartella]</translation>
     </message>
     <message>
-        <source> [symbolic link]</source>
-        <translation> [link simbolico]</translation>
+        <location line="+1"/>
+        <source>[symbolic link]</source>
+        <translation>[link simbolico]</translation>
     </message>
     <message>
+        <location line="+40"/>
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
         <translation>La cartella di progetto %1 contiene file che non possono essere sovrascritti:
 %2.</translation>
     </message>
     <message>
-        <source>The following files already exist in the directory %1:
-%2.
-Would you like to overwrite them?</source>
-        <translation>Questi file sono già presenti nella cartella %1:
-%2.
-Vuoi sovrascriverli?</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+369"/>
+        <location line="+17"/>
+        <location line="+1728"/>
+        <location line="+499"/>
         <source>Revert to Saved</source>
         <translation>Torna al Salvato</translation>
     </message>
     <message>
+        <location line="-2241"/>
+        <location line="+15"/>
+        <location line="+94"/>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+425"/>
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+63"/>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+339"/>
+        <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57"/>
+        <location line="+1"/>
         <source>Close</source>
         <translation>Chiudi</translation>
     </message>
     <message>
+        <location line="-108"/>
+        <location line="+15"/>
         <source>Close All</source>
         <translation>Chiudi Tutti</translation>
     </message>
     <message>
+        <location line="-14"/>
+        <location line="+15"/>
+        <location line="+1749"/>
         <source>Close Others</source>
         <translation>Chiudi gli Altri</translation>
     </message>
     <message>
-        <source>Next Document in History</source>
-        <translation type="obsolete">Documento Successivo nella Cronologia</translation>
-    </message>
-    <message>
-        <source>Previous Document in History</source>
-        <translation type="obsolete">Documento Precedente nella Cronologia</translation>
-    </message>
-    <message>
-        <source>Open in External Editor</source>
-        <translation>Apri con un Editor Esterno</translation>
-    </message>
-    <message>
+        <location line="-1696"/>
         <source>Revert File to Saved</source>
         <translation>Torna al file Salvato</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
-        <source>Ctrl+Shift+W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+Tab</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+Tab</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+Shift+Tab</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+Tab</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+Alt+Left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+Alt+Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location line="+158"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+82"/>
+        <location line="+65"/>
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9"/>
+        <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="-7"/>
+        <location line="+1"/>
         <source>Split</source>
         <translation>Dividi</translation>
     </message>
     <message>
-        <source>Ctrl+E,2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location line="+9"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-63"/>
         <source>Split Side by Side</source>
         <translation>Dividi Parte a Parte</translation>
     </message>
     <message>
-        <source>Ctrl+E,3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location line="+17"/>
         <source>Remove Current Split</source>
         <translation>Rimuovi la Divisione Corrente</translation>
     </message>
     <message>
-        <source>Ctrl+E,0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location line="+9"/>
         <source>Remove All Splits</source>
         <translation>Rimuovi Tutte le Divisioni</translation>
     </message>
     <message>
-        <source>Ctrl+E,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Goto Other Split</source>
-        <translation>Vai all&apos;Altra Divisione</translation>
-    </message>
-    <message>
-        <source>Ctrl+E,o</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Advanced</source>
-        <translation>&amp;Avanzate</translation>
-    </message>
-    <message>
-        <source>Alt+V,Alt+I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>All Files (*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location line="+2628"/>
         <source>Opening File</source>
         <translation>Apertura del File</translation>
     </message>
     <message>
-        <source>Cannot open file %1!</source>
-        <translation>Non posso aprire il file %1!</translation>
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+710"/>
+        <source>Could not save the files.</source>
+        <comment>error message</comment>
+        <translation>Impossibile salvare i file.</translation>
     </message>
     <message>
+        <location line="+43"/>
+        <location line="+600"/>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2434"/>
+        <location line="+39"/>
+        <location line="+24"/>
+        <location line="+1488"/>
+        <location line="+235"/>
+        <source>File Error</source>
+        <translation>Errore file</translation>
+    </message>
+    <message>
+        <location line="-599"/>
+        <source>Error while saving file: %1</source>
+        <translation>Errore durante il salvataggio del file: %1</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>All Files (*.*)</source>
+        <comment>On Windows</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>All Files (*)</source>
+        <comment>On Linux/macOS</comment>
+        <translation>Tutti i file (*)</translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>Un elemento denominato &quot;%1&quot; esiste già in questa posizione. Vuoi sovrascriverlo?</translation>
+    </message>
+    <message>
+        <location line="+229"/>
         <source>Open File</source>
         <translation>Apri file</translation>
     </message>
     <message>
-        <source>File is Read Only</source>
-        <translation>Il file è di Sola Lettura</translation>
+        <location line="+258"/>
+        <source>Cannot reload %1</source>
+        <translation>Impossibile ricaricare %1</translation>
     </message>
     <message>
-        <source>The file %1 is read only.</source>
-        <translation>Il file %1 è di sola lettura.</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+58"/>
         <source>Open with VCS (%1)</source>
         <translation>Apri con il VCS (%1)</translation>
     </message>
     <message>
-        <source>Save as ...</source>
-        <translation>Salva con nome...</translation>
-    </message>
-    <message>
-        <source>Failed!</source>
-        <translation>Non riuscito!</translation>
-    </message>
-    <message>
-        <source>Could not set permissions to writable.</source>
-        <translation>Impossibile impostare il permesso di scrittura.</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-557"/>
         <source>&lt;b&gt;Warning:&lt;/b&gt; You are changing a read-only file.</source>
         <translation>&lt;b&gt;Attenzione:&lt;/b&gt; Stai modificando un file di sola lettura.</translation>
     </message>
     <message>
-        <source>Make writable</source>
-        <translation>Rendi scrivibile</translation>
-    </message>
-    <message>
+        <location line="-1705"/>
         <source>Next Open Document in History</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri documento successivo nella cronologia</translation>
     </message>
     <message>
+        <location line="+1"/>
         <source>Previous Open Document in History</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri documento precedente nella cronologia</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-8"/>
         <source>Go Back</source>
         <translation>Indietro</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+1"/>
         <source>Go Forward</source>
         <translation>Avanti</translation>
     </message>
     <message>
-        <source>Could not open the file for editing with SCC.</source>
-        <translation>Impossibile aprire il file per modificarlo con l&apos;SCC.</translation>
+        <location line="-4"/>
+        <location line="+15"/>
+        <source>Close All Except Visible</source>
+        <translation>Chiudi tutti tranne visibile</translation>
     </message>
     <message>
-        <source>Save %1 As...</source>
-        <translation>Salva %1 con Nome...</translation>
+        <location line="-10"/>
+        <source>Go to Last Edit</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Copy Full Path</source>
+        <translation>Copia percorso completo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy Path and Line Number</source>
+        <translation>Copia percorso e numero di riga</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy File Name</source>
+        <translation>Copia nome file</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Properties...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <source>Alternative Close</source>
+        <translation>Chiusura alternativa</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl+F4</source>
+        <translation>Ctrl+F4</translation>
+    </message>
+    <message>
+        <location line="+160"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+8"/>
+        <source>Open in New Window</source>
+        <translation>Apri in una nuova finestra</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Go to Previous Split or Window</source>
+        <translation>Vai alla divisione o finestra precedente</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Go to Next Split or Window</source>
+        <translation>Vai alla divisione o finestra successiva</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Ad&amp;vanced</source>
+        <translation>A&amp;vanzate</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Current document</source>
+        <translation>Documento corrente</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
+        <translation>Coordinata X dell&apos;angolo in alto a sinistra dell&apos;editor corrente, relativa allo schermo.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
+        <translation>Coordinata Y dell&apos;angolo in alto a sinistra dell&apos;editor corrente, relativa allo schermo.</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Continue Opening Huge Text File?</source>
+        <translation>Continua ad aprire un file di testo enorme?</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
+
+Continue?</source>
+        <translation>Il file di testo &quot;%1&quot; ha la dimensione di %2 MB e potrebbe richiedere più memoria per l&apos;apertura e l&apos;elaborazione di quanto disponibile.
+
+Continuare?</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
+        <translation>Impossibile aprire &quot;%1&quot;: impossibile aprire i file di tipo &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <translation>Impossibile aprire &quot;%1&quot; per la lettura. O il file non esiste o non hai i permessi per aprirlo.</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
+        <translation>Impossibile aprire &quot;%1&quot;: errore sconosciuto.</translation>
+    </message>
+    <message>
+        <location line="+1163"/>
+        <source>&lt;b&gt;Warning:&lt;/b&gt; This file was not opened in %1 yet.</source>
+        <translation>&lt;b&gt;Avviso:&lt;/b&gt; questo file non è stato ancora aperto in %1.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Open</source>
+        <translation type="unfinished">Apri</translation>
+    </message>
+    <message>
+        <location line="+29"/>
         <source>&amp;Save %1</source>
         <translation>&amp;Salva %1</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Save %1 &amp;As...</source>
+        <translation>S&amp;alva %1 come ...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Revert %1 to Saved</source>
         <translation>Torna %1 al file Salvato</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Reload %1</source>
+        <translation>Ricarica %1</translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Close %1</source>
         <translation>Chiudi %1</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Close All Except %1</source>
         <translation>Chiudi Tutti Tranne %1</translation>
     </message>
     <message>
+        <location line="+191"/>
+        <source>Cannot Open File</source>
+        <translation>Non è possibile aprire questo file</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot open the file for editing with VCS.</source>
+        <translation>Impossibile aprire il file per la modifica con VCS.</translation>
+    </message>
+    <message>
+        <location line="+285"/>
         <source>You will lose your current changes if you proceed reverting %1.</source>
         <translation>Perderai le modifiche correnti se ricarichi %1.</translation>
     </message>
     <message>
+        <location line="+4"/>
         <source>Proceed</source>
         <translation>Procedi</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+142"/>
+        <location line="+117"/>
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+162"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%l&lt;/td&gt;&lt;td&gt;current line number&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%c&lt;/td&gt;&lt;td&gt;current column number&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%x&lt;/td&gt;&lt;td&gt;editor&apos;s x position on screen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%y&lt;/td&gt;&lt;td&gt;editor&apos;s y position on screen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%w&lt;/td&gt;&lt;td&gt;editor&apos;s width in pixels&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%h&lt;/td&gt;&lt;td&gt;editor&apos;s height in pixels&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%W&lt;/td&gt;&lt;td&gt;editor&apos;s width in characters&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;editor&apos;s height in characters&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variabile&lt;/th&gt;&lt;th&gt;Espansa in&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;nome del file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%l&lt;/td&gt;&lt;td&gt;numero di riga corrente&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%c&lt;/td&gt;&lt;td&gt;numero di colonna corrente&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%x&lt;/td&gt;&lt;td&gt;posizione x dell&apos;editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%y&lt;/td&gt;&lt;td&gt;posizione y dell&apos;editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%w&lt;/td&gt;&lt;td&gt;larghezza dell&apos;editor, in pixel&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%h&lt;/td&gt;&lt;td&gt;altezza dell&apos;editor, in pixel&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%W&lt;/td&gt;&lt;td&gt;larghezza dell&apos;editor, in caratteri&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;altezza dell&apos;editor, in caratteri&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
-    </message>
-    <message>
-        <source>Can&apos;t save file</source>
-        <translation type="obsolete">Impossibile salvare il file</translation>
-    </message>
-    <message>
-        <source>Can&apos;t save changes to &apos;%1&apos;. Do you want to continue and loose your changes?</source>
-        <translation type="obsolete">Impossibile salvare le modifiche a &apos;%1&apos;. Vuoi continuare e perdere le tue modifiche?</translation>
-    </message>
-    <message>
-        <source>Cannot save file</source>
+        <location line="+5"/>
+        <source>Cancel &amp;&amp; &amp;Diff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot save changes to &apos;%1&apos;. Do you want to continue and lose your changes?</source>
+        <location line="+311"/>
+        <source>Close &quot;%1&quot;</source>
+        <translation>Chiudi &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Unpin &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Pin &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Pin Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-488"/>
         <source>Overwrite?</source>
         <translation>Sovrascrivere?</translation>
     </message>
     <message>
-        <source>An item named &apos;%1&apos; already exists at this location. Do you want to overwrite it?</source>
-        <translation>L&apos;elemento &apos;%1&apos; è già presente in questa posizione. Vuoi sovrascriverlo?</translation>
-    </message>
-    <message>
+        <location line="+71"/>
         <source>Save File As</source>
         <translation>Salva il File Come</translation>
     </message>
     <message>
-        <source>Activate %1</source>
-        <translation>Attiva %1</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+30"/>
         <source>Edit</source>
         <translation>Modifica</translation>
     </message>
     <message>
-        <source>Split Left/Right</source>
-        <translation>Dividi Sinistra/Destra</translation>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28"/>
+        <source>Drag to drag documents between splits</source>
+        <translation>Trascina per trascinare i documenti tra le divisioni</translation>
     </message>
     <message>
-        <source>Split Top/Bottom</source>
-        <translation>Dividi Sopra/Sotto</translation>
+        <location line="+254"/>
+        <source>Close Document</source>
+        <translation>Chiudi il documento</translation>
     </message>
     <message>
-        <source>Unsplit</source>
-        <translation>Unisci</translation>
+        <location line="+3"/>
+        <source>Remove Split</source>
+        <translation>Rimuovi divisione</translation>
     </message>
     <message>
-        <source>Default Splitter Layout</source>
-        <translation>Struttura Divisione Predefinita</translation>
-    </message>
-    <message>
-        <source>Save Current as Default</source>
-        <translation>Salva l&apos;Attuale come Predefinita</translation>
-    </message>
-    <message>
-        <source>Restore Default Layout</source>
-        <translation>Ripristina la Struttura Predefinita</translation>
-    </message>
-    <message>
-        <source>Previous Document</source>
-        <translation>Documento Precedente</translation>
-    </message>
-    <message>
-        <source>Next Document</source>
-        <translation>Documento Successivo</translation>
-    </message>
-    <message>
-        <source>Previous Group</source>
-        <translation>Gruppo Precedente</translation>
-    </message>
-    <message>
-        <source>Next Group</source>
-        <translation>Gruppo Successivo</translation>
-    </message>
-    <message>
-        <source>Move Document to Previous Group</source>
-        <translation>Sposta il Documento al Gruppo Precedente</translation>
-    </message>
-    <message>
-        <source>Move Document to Next Group</source>
-        <translation>Sposta il Documento al Gruppo Successivo</translation>
-    </message>
-    <message id="===============EditorView====================">
-        <source>Go Back</source>
-        <translation type="unfinished">Indietro</translation>
-    </message>
-    <message>
-        <source>Go Forward</source>
-        <translation type="unfinished">Avanti</translation>
-    </message>
-    <message>
-        <source>Placeholder</source>
-        <translation>Segnaposto</translation>
-    </message>
-    <message>
+        <location line="+38"/>
         <source>File is writable</source>
         <translation>Il file è scrivibile</translation>
     </message>
     <message>
-        <source>Copy full path to clipboard</source>
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+96"/>
+        <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>General</source>
-        <translation>Generale</translation>
+        <location line="+4"/>
+        <source>Reset to default.</source>
+        <comment>Color</comment>
+        <translation>Ripristina le impostazioni predefinite.</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>Theme:</source>
+        <translation>Tema:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Language:</source>
+        <translation type="unfinished">Lingua:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Enable high DPI scaling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>The high DPI settings will take effect after restart.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>User Interface</source>
+        <translation>Interfaccia utente</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Show keyboard shortcuts in context menus (default: %1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&lt;System Language&gt;</source>
+        <translation>&lt;Lingua del sistema&gt;</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>The language change will take effect after restart.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Interface</source>
+        <translation>Interfaccia</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Environment</source>
         <translation>Ambiente</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+490"/>
         <source>Variables</source>
         <translation>Variabili</translation>
     </message>
     <message>
-        <source>General settings</source>
-        <translation>Impostazioni Generali</translation>
-    </message>
-    <message>
-        <source>User &amp;interface color:</source>
-        <translation>Colore &amp;interfaccia utente:</translation>
-    </message>
-    <message>
-        <source>Reset to default</source>
-        <translation>Ripristina predefinito</translation>
-    </message>
-    <message>
-        <source>R</source>
-        <translation>R</translation>
-    </message>
-    <message>
+        <location line="-340"/>
         <source>Terminal:</source>
         <translation>Terminale:</translation>
     </message>
     <message>
-        <source>External editor:</source>
-        <translation>Editor esterno:</translation>
+        <location line="-96"/>
+        <source>Bytes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+0"/>
+        <source>KB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+50"/>
+        <source>MB</source>
+        <translation>MB</translation>
+    </message>
+    <message>
+        <location line="-49"/>
+        <source>GB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>TB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Auto-suspend unmodified files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Enable crash reporting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Warn before opening text files greater than</source>
+        <translation>Avvisa prima di aprire file di testo superiori a</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Ask for confirmation before exiting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Auto-save modified files</source>
+        <translation>Salva automaticamente i file modificati</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Clear Local Crash Reports</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto-save files after refactoring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Automatically free resources of old documents that are not visible and not modified. They stay visible in the list of open documents.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Allow crashes to be automatically reported. Collected reports are used for the sole purpose of fixing bugs.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Always Ask</source>
+        <translation>Chiedi sempre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reload All Unchanged Editors</source>
+        <translation>Ricarica tutti gli editor invariati</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ignore Modifications</source>
+        <translation>Ignora modifiche</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>min</source>
+        <translation>min</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>File system case sensitivity:</source>
+        <translation>Distinzione maiuscono/minuscolo file del sistema:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Influences how file names are matched to decide if they are the same.</source>
+        <translation>Influenza come i nomi dei file sono combinati per decidere se sono gli stessi.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Files to keep open:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Minimum number of open documents that should be kept in memory. Increasing this number will lead to greater resource usage when not manually closing documents.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+2"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Reset to default.</source>
+        <comment>Terminal</comment>
+        <translation>Ripristina le impostazioni predefinite.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Patch command:</source>
+        <translation>Comando patch:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>External file browser:</source>
+        <translation>Browser dei file esterni:</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>When files are externally modified:</source>
+        <translation>Quando i file sono modificati esternamente:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Interval:</source>
+        <translation>Intervallo:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Always ask</source>
+        <location line="+12"/>
+        <location line="+309"/>
+        <source>System</source>
+        <translation>Sistema</translation>
+    </message>
+    <message>
+        <location line="-288"/>
+        <source>Command used for reverting diff chunks.</source>
+        <translation>Comando usato per ripristinare blocchi diff.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Automatically creates temporary copies of modified files. If %1 is restarted after a crash or power failure, it asks whether to recover the auto-saved content.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Reload all modified files</source>
+        <location line="+7"/>
+        <source>Automatically saves all open files affected by a refactoring operation,
+provided they were unmodified before the refactoring.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ignore modifications</source>
+        <location line="+25"/>
+        <source>Crash Reporting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Qt Creator</source>
-        <translation>Qt Creator</translation>
+        <location line="+3"/>
+        <source>The change will take effect after restart.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+41"/>
+        <source>Case Sensitive (Default)</source>
+        <translation>Considera maiuscole e minuscole (predefinito)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Case Insensitive (Default)</source>
+        <translation>Considera maiuscole e minuscole (predefinito)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Case Insensitive</source>
+        <translation>Considera maiuscole e minuscole</translation>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>The file system case sensitivity change will take effect after restart.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-26"/>
         <source>Output</source>
         <translation>Uscita</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+488"/>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
     <message>
+        <location line="+15"/>
         <source>&amp;Edit</source>
         <translation>&amp;Modifica</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>&amp;Tools</source>
         <translation>&amp;Strumenti</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>&amp;Window</source>
         <translation>&amp;Finestra</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Help</source>
         <translation>&amp;Guida</translation>
     </message>
     <message>
-        <source>&amp;New...</source>
-        <translation type="obsolete">&amp;Nuovo...</translation>
-    </message>
-    <message>
-        <source>&amp;Open...</source>
-        <translation type="obsolete">&amp;Apri...</translation>
-    </message>
-    <message>
-        <source>&amp;Open With...</source>
-        <translation type="obsolete">&amp;Apri con...</translation>
-    </message>
-    <message>
-        <source>&amp;New File or Project...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Open File or Project...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Open File With...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Recent Files</source>
-        <translation>File Recenti</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+123"/>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2581"/>
+        <location line="+1728"/>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+137"/>
         <source>&amp;Save</source>
         <translation>&amp;Salva</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1727"/>
+        <location line="+1728"/>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+10"/>
         <source>Save &amp;As...</source>
         <translation>Salva con &amp;Nome...</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+3"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-669"/>
         <source>Save A&amp;ll</source>
         <translation>Salva T&amp;utti</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="-287"/>
+        <location line="+1"/>
+        <source>Exit %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+114"/>
+        <source>&amp;View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>Return to Editor</source>
+        <translation>Ritorna all&apos;editor</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;New Project...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>New Project</source>
+        <comment>Title of dialog</comment>
+        <translation type="unfinished">Nuovo Progetto</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>&amp;New File...</source>
+        <translation>&amp;Nuovo file...</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>&amp;Open File...</source>
+        <translation>&amp;Apri il file...</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Open File &amp;With...</source>
+        <translation>Apri file &amp;con ...</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Open From Device...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Recent &amp;Files</source>
+        <translation>&amp;File recenti</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Save As...</source>
+        <translation>Salva come…</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>&amp;Print...</source>
         <translation>Stam&amp;pa...</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>E&amp;xit</source>
         <translation>&amp;Esci</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annulla</translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>Undo</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>&amp;Redo</source>
         <translation>&amp;Ripeti</translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>Redo</source>
+        <translation>Ripristina</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Cu&amp;t</source>
         <translation>&amp;Taglia</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copia</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>&amp;Paste</source>
         <translation>&amp;Incolla</translation>
     </message>
     <message>
-        <source>&amp;Select All</source>
-        <translation>&amp;Seleziona tutto</translation>
+        <location line="+8"/>
+        <source>Select &amp;All</source>
+        <translation>Seleziona tu&amp;tto</translation>
     </message>
     <message>
-        <source>&amp;Go To Line...</source>
-        <translation>&amp;Vai alla Linea...</translation>
+        <location line="+8"/>
+        <source>&amp;Go to Line...</source>
+        <translation>&amp;Vai alla riga...</translation>
     </message>
     <message>
-        <source>Ctrl+L</source>
+        <location line="+9"/>
+        <source>Zoom In</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Opzioni...</translation>
+        <location line="+2"/>
+        <source>Ctrl++</source>
+        <translation>Ctrl++</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>Zoom Out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+2"/>
+        <source>Ctrl+-</source>
+        <translation>Ctrl+-</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Ctrl+Shift+-</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Original Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Meta+0</source>
+        <translation>Meta+0</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ctrl+0</source>
+        <translation>Ctrl+0</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Show Logs...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Pr&amp;eferences...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Ctrl+Meta+F</source>
+        <translation>Ctrl+Meta+F</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ctrl+Shift+F11</source>
+        <translation type="unfinished">Ctrl+Shift+F11</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Close Window</source>
+        <translation>Chiudi la finestra</translation>
+    </message>
+    <message>
+        <location line="+58"/>
+        <source>&amp;Views</source>
+        <translation type="unfinished">&amp;Viste</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>About &amp;%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>About &amp;%1...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Change Log...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Contact...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Cycle Mode Selector Styles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Mode Selector Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Icons and Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Icons Only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+535"/>
+        <source>Version:</source>
+        <translation type="unfinished">Versione:</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Change Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Contact</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;p&gt;Qt Creator developers can be reached at the Qt Creator mailing list:&lt;/p&gt;%1&lt;p&gt;or the #qt-creator channel on Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Our bug tracker is located at %3.&lt;/p&gt;&lt;p&gt;Please use %4 for bigger chunks of text.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-859"/>
+        <source>Ctrl+L</source>
+        <translation>Ctrl+L</translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-30"/>
         <source>Minimize</source>
         <translation>Minimizza</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Ctrl+M</source>
+        <translation>Ctrl+M</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Zoom</source>
         <translation>Zoom</translation>
     </message>
     <message>
-        <source>Show Sidebar</source>
-        <translation>Mostra Barra Laterale</translation>
-    </message>
-    <message>
+        <location line="+7"/>
         <source>Full Screen</source>
         <translation>Schermo Intero</translation>
     </message>
     <message>
-        <source>About &amp;Qt Creator</source>
-        <translation>Informazioni su &amp;Qt Creator</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt Creator...</source>
-        <translation>Informazioni su &amp;Qt Creator...</translation>
-    </message>
-    <message>
+        <location line="+92"/>
         <source>About &amp;Plugins...</source>
         <translation>Informazioni sui &amp;Plugin...</translation>
     </message>
     <message>
-        <source>New...</source>
-        <comment>Title of dialog</comment>
-        <translation>Nuovo...</translation>
-    </message>
-    <message>
-        <source>Activate %1 Pane</source>
-        <translation>Attiva il Pannello %1</translation>
-    </message>
-    <message>
-        <source>New Project</source>
-        <translation>Nuovo Progetto</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation>1</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+26"/>
+        <location line="+88"/>
+        <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+24"/>
         <source>Open Documents</source>
         <translation>Documenti Aperti</translation>
     </message>
     <message>
-        <source>Close %1</source>
-        <translation type="unfinished">Chiudi %1</translation>
+        <location line="+1"/>
+        <source>Meta+O</source>
+        <translation>Meta+O</translation>
     </message>
     <message>
+        <location line="+0"/>
+        <source>Alt+O</source>
+        <translation>Alt+O</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+823"/>
         <source>Close Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiudi l&apos;editor</translation>
     </message>
     <message>
-        <source>Close All Except %1</source>
-        <translation type="unfinished">Chiudi Tutti Tranne %1</translation>
+        <location line="+2"/>
+        <source>Close All Except &quot;%1&quot;</source>
+        <translation>Chiudi tutto tranne &quot;%1&quot;</translation>
     </message>
     <message>
+        <location line="+1"/>
         <source>Close Other Editors</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiudi gli altri editor</translation>
     </message>
     <message>
-        <source>Close All Editors</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorswindow.cpp" line="+229"/>
         <source>*</source>
         <translation>*</translation>
     </message>
     <message>
-        <source>Open file &apos;%1&apos; with:</source>
-        <translation>Apri il file &apos;%1&apos; con:</translation>
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+218"/>
+        <location line="+222"/>
+        <source>Category</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="-221"/>
+        <location line="+221"/>
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+327"/>
+        <source>Type</source>
+        <translation type="unfinished">Tipo</translation>
+    </message>
+    <message>
+        <location line="-220"/>
+        <source>Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+165"/>
+        <source>Logging Category Viewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+864"/>
+        <location line="+13"/>
+        <location line="+11"/>
+        <source>Save Log</source>
+        <translation>Salvare log</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+36"/>
         <source>Clear</source>
         <translation>Cancella</translation>
     </message>
     <message>
+        <location line="+4"/>
+        <location line="+124"/>
+        <source>Stop Logging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-120"/>
+        <source>Toggle Qt Internal Logging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Auto Scroll</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Timestamps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Message Types</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Timestamp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Message</source>
+        <translation type="unfinished">Messaggio</translation>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>Start Logging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Copy Selected Logs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Copy All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Save Enabled as Preset...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Update from Preset...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Uncheck All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Save Logs As</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Save Enabled Categories As</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Load Enabled Categories From</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Unexpected preset file format.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-182"/>
+        <source>Show Non-matching Lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Filter output...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+142"/>
+        <location line="+48"/>
+        <source>Maximize</source>
+        <translation>Ingrandisci</translation>
+    </message>
+    <message>
+        <location line="-10"/>
         <source>Next Item</source>
         <translation>Elemento Successivo</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Previous Item</source>
         <translation>Elemento Precedente</translation>
     </message>
     <message>
-        <source>Output &amp;Panes</source>
-        <translation>&amp;Pannelli di Uscita</translation>
+        <location line="+60"/>
+        <source>Out&amp;put</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-197"/>
+        <source>MIME Type</source>
+        <translation>Tipo MIME</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Handler</source>
+        <translation>Handler</translation>
+    </message>
+    <message>
+        <location line="+178"/>
+        <source>Reset all MIME type definitions to their defaults.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+247"/>
+        <source>Reset MIME Types</source>
+        <translation>Reimposta tipi MIME</translation>
+    </message>
+    <message>
+        <location line="-244"/>
+        <source>Reset the assigned handler for all MIME type definitions to the default.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reset Handlers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Patterns:</source>
+        <translation>Pattern:</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>A semicolon-separated list of wildcarded file names.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Magic Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Range</source>
+        <translation>Intervallo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Priority</source>
+        <translation>Priorità</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Registered MIME Types</source>
+        <translation>Tipi MIME registrati</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+50"/>
         <source>Details</source>
         <translation>Dettagli</translation>
     </message>
     <message>
+        <location line="+211"/>
+        <source>Changes will take effect after restart.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+162"/>
+        <source>MIME Types</source>
+        <translation>Tipi MIME</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+1"/>
         <source>Error Details</source>
         <translation>Dettagli Errore</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Install Plugin...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Installed Plugins</source>
         <translation>Plugin Installati</translation>
     </message>
     <message>
+        <location line="+25"/>
+        <source>Plugin changes will take effect after restart.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
         <source>Plugin Details of %1</source>
         <translation>Dettagli Plugin di %1</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Plugin Errors of %1</source>
         <translation>Errore Plugin di %1</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+23"/>
         <source>Processes</source>
         <translation>Processi</translation>
     </message>
     <message>
-        <source>Don&apos;t Save</source>
-        <translation type="obsolete">Non Salvare</translation>
-    </message>
-    <message>
-        <source>Do not Save</source>
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-70"/>
+        <source>&amp;Diff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>Do &amp;Not Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <source>&amp;Diff &amp;&amp; Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Save All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Diff All &amp;&amp; Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&amp;Save Selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Diff Selected &amp;&amp; Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
         <source>Save All</source>
         <translation>Salva Tutti</translation>
     </message>
     <message>
+        <location line="+0"/>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="-262"/>
+        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+47"/>
         <source>Save</source>
         <translation>Salva</translation>
     </message>
     <message>
+        <location line="+2"/>
         <source>Save Selected</source>
         <translation>Salva Selezionati</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+134"/>
+        <source>Click and type the new key sequence.</source>
+        <translation>Fare clic e digitare la nuova sequenza di tasti.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Stop Recording</source>
+        <translation>Interrompere la registrazione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Record</source>
+        <translation>Registra</translation>
+    </message>
+    <message>
+        <location line="+159"/>
         <source>Keyboard</source>
         <translation>Tastiera</translation>
     </message>
     <message>
+        <location line="+96"/>
+        <source>Invalid key sequence.</source>
+        <translation>Sequenza di tasti non valida.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Key sequence will not work in editor.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+74"/>
         <source>Import Keyboard Mapping Scheme</source>
         <translation>Importa la Mappatura della Tastiera</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <location line="+40"/>
         <source>Keyboard Mapping Scheme (*.kms)</source>
         <translation>Mappatura della Tastiera (*.kms)</translation>
     </message>
     <message>
+        <location line="-2"/>
         <source>Export Keyboard Mapping Scheme</source>
         <translation>Esporta Mappatura della Tastiera</translation>
     </message>
     <message>
-        <source>About Qt Creator</source>
-        <translation>Informazioni su Qt Creator</translation>
+        <location line="+113"/>
+        <source>Key sequence:</source>
+        <translation>Sequenza di tasti:</translation>
     </message>
     <message>
-        <source>From revision %1&lt;br/&gt;</source>
-        <extracomment>This gets conditionally inserted as argument %8 into the description string.</extracomment>
-        <translation>Dalla revisione %1&lt;br/&gt;</translation>
+        <location line="+4"/>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Usa &quot;Cmd &quot;, &quot;Opt&quot;, &quot;Ctrl&quot; e &quot;Maiusc&quot; per i tasti di modifica. Utilizzare &quot;Esc&quot;, &quot;Backspace&quot;, &quot;Canc&quot;, &quot;Insert &quot;, &quot;Home&quot; e così via, per tasti speciali. Combina i tasti singoli con &quot;+&quot; e combina le scorciatoie multiple in una sequenza di scelta rapida con &quot;,&quot;. Ad esempio, se l&apos;utente deve tenere premuto i tasti modificatore Ctrl e Maiusc mentre si preme Esc, quindi rilasciare e premere A, immettere &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
     <message>
-        <source>&lt;h3&gt;Qt Creator %1&lt;/h3&gt;Based on Qt %2 (%3 bit)&lt;br/&gt;&lt;br/&gt;Built on %4 at %5&lt;br /&gt;&lt;br/&gt;%8&lt;br/&gt;Copyright 2008-%6 %7. All rights reserved.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</source>
-        <translatorcomment>Italian legalese is needed here...</translatorcomment>
-        <translation>&lt;h3&gt;Qt Creator %1&lt;/h3&gt;Basato su Qt %2 (%3 bit)&lt;br/&gt;&lt;br/&gt;Compilato su %4 alle %5&lt;br /&gt;&lt;br/&gt;%8&lt;br/&gt;Copyright 2008-%6 %7. Tutti i diritti riservati.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</translation>
+        <location line="+10"/>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Usa &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot; e &quot;Maiusc&quot; per i tasti di modifica. Utilizzare &quot;Esc&quot;, &quot;Backspace&quot;, &quot;Canc&quot;, &quot;Insert&quot;, &quot;Home&quot; e così via, per tasti speciali. Combina i tasti singoli con&quot;+ &quot; e combina le scorciatoie multiple in una sequenza di scelta rapida con &quot;,&quot;. Ad esempio, se l&apos;utente deve tenere premuto i tasti modificatori Ctrl e Maiusc mentre si preme Esc, quindi rilasciare e premere A, immettere &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
-</context>
-<context>
-    <name>QtC::Welcome</name>
     <message>
-        <source>http://labs.trolltech.com/blogs/feed</source>
-        <extracomment>Add localized feed here only if one exists</extracomment>
-        <translation type="obsolete">http://labs.trolltech.com/blogs/feed</translation>
+        <location line="+12"/>
+        <source>Enter key sequence as text</source>
+        <translation>Inserisci la sequenza di tasti come testo</translation>
     </message>
     <message>
-        <source>Qt Home</source>
-        <translation type="obsolete">Qt Home</translation>
+        <location line="+24"/>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>La sequenza di tasti ha potenziali conflitti. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</translation>
     </message>
     <message>
-        <source>Qt Labs</source>
-        <translation type="obsolete">Qt Lab</translation>
-    </message>
-    <message>
-        <source>Qt Git Hosting</source>
-        <translation type="obsolete">Qt Git Hosting</translation>
-    </message>
-    <message>
-        <source>Qt Centre</source>
-        <translation type="obsolete">Qt Centre</translation>
-    </message>
-    <message>
-        <source>Understanding widgets</source>
-        <translation type="obsolete">Capire i widget</translation>
-    </message>
-    <message>
-        <source>Creating an address book</source>
-        <translation type="obsolete">Creare una rubrica</translation>
-    </message>
-    <message>
-        <source>Tutorials</source>
-        <translation type="obsolete">Guide</translation>
-    </message>
-    <message>
-        <source>Explore Qt Examples</source>
-        <translation type="obsolete">Esplora gli Esempi Qt</translation>
-    </message>
-    <message>
-        <source>Qt Websites</source>
-        <translation type="obsolete">Siti Web Qt</translation>
-    </message>
-    <message>
-        <source>Qt for S60 at Forum Nokia</source>
-        <translation type="obsolete">Qt per S60 su Forum Nokia</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Qt Creator - A quick tour&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Qt Creator - Introduzione veloce&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Building with qmake</source>
-        <translation type="obsolete">Compilare con qmake</translation>
-    </message>
-    <message>
-        <source>Writing test cases</source>
-        <translation type="obsolete">Scrivere test case</translation>
-    </message>
-    <message>
-        <source>Welcome</source>
-        <translation type="obsolete">Benvenuto</translation>
-    </message>
-    <message>
-        <source>%1 (last session)</source>
-        <translation type="obsolete">%1 (sessione precedente)</translation>
-    </message>
-    <message>
-        <source>Choose an example...</source>
-        <translation type="obsolete">Scegli un esempio...</translation>
-    </message>
-    <message>
-        <source>New Project...</source>
-        <translation type="obsolete">Nuovo Progetto...</translation>
-    </message>
-    <message>
-        <source>The code completion is CamelCase-aware. For example, to complete &lt;tt&gt;namespaceUri&lt;/tt&gt; you can just type &lt;tt&gt;nU&lt;/tt&gt; and hit &lt;tt&gt;Ctrl+Space&lt;/tt&gt;.</source>
-        <translation type="obsolete">Il completamento del codice conosce il CamelCase. Ad esempio, per completare &lt;tt&gt;namespaceUri&lt;/tt&gt; basta digitare &lt;tt&gt;nU&lt;/tt&gt; e premere &lt;tt&gt;Ctrl+Spazio&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can force code completion at any time using &lt;tt&gt;Ctrl+Space&lt;/tt&gt;.</source>
-        <translation type="obsolete">Puoi invocare il completamento del codice in qualsiasi momento usando &lt;tt&gt;Ctrl+Spazio&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can fine tune the &lt;tt&gt;Find&lt;/tt&gt; function by selecting &amp;quot;Whole Words&amp;quot; or &amp;quot;Case Sensitive&amp;quot;. Simply click on the icons on the right end of the line edit.</source>
-        <translation type="obsolete">Puoi affinare la funzione &lt;tt&gt;Ricerca&lt;/tt&gt; selezionando &amp;quot;Parole Intere&amp;quot; o &amp;quot;Distingui le Maiuscole&amp;quot;. Basta fare clic sulle icone a destra della casella di ricerca.</translation>
-    </message>
-    <message>
-        <source>Open Recent Project</source>
-        <translation type="obsolete">Apri un Progetto Recente</translation>
-    </message>
-    <message>
-        <source>Resume Session</source>
-        <translation type="obsolete">Ripristina la Sessione</translation>
-    </message>
-    <message>
-        <source>Did You Know?</source>
-        <translation type="obsolete">Lo Sapevi Che..?</translation>
-    </message>
-    <message>
-        <source>News From the Qt Labs</source>
-        <translation type="obsolete">Notizie dai Qt Labs</translation>
-    </message>
-    <message>
-        <source>You can switch between Qt Creator&apos;s modes using &lt;tt&gt;Ctrl+number&lt;/tt&gt;:&lt;ul&gt;&lt;li&gt;1 - Welcome&lt;/li&gt;&lt;li&gt;2 - Edit&lt;/li&gt;&lt;li&gt;3 - Debug&lt;/li&gt;&lt;li&gt;4 - Projects&lt;/li&gt;&lt;li&gt;5 - Help&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;6 - Output&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="obsolete">Puoi passare tra le modalità di Qt Creator usando &lt;tt&gt;Ctrl+numero&lt;/tt&gt;:&lt;ul&gt;&lt;li&gt;1 - Benvenuto&lt;/li&gt;&lt;li&gt;2 - Modifica&lt;/li&gt;&lt;li&gt;3 - Debug&lt;/li&gt;&lt;li&gt;4 - Progetti&lt;/li&gt;&lt;li&gt;5 - Guida&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;6 - Output&lt;/li&gt;&lt;/ul&gt;</translation>
-    </message>
-    <message>
-        <source>You can show and hide the side bar using &lt;tt&gt;%1+0&lt;tt&gt;.</source>
-        <extracomment>%1 gets replaced by Alt (Win/Unix) or Cmd (Mac)</extracomment>
-        <translation type="obsolete">Puoi mostrare o nascondere la barra laterale con &lt;tt&gt;%1+0&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>If you add &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-external-library-handling.html&quot;&gt;external libraries&lt;/a&gt;, Qt Creator will automatically offer syntax highlighting and code completion.</source>
-        <translation type="obsolete">Se aggiungi &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-external-library-handling.html&quot;&gt;librerie esterne&lt;/a&gt;, Qt Creator ne evidenzierà la sintassi e offrirà il relativo completamento del codice automaticamente.</translation>
-    </message>
-    <message>
-        <source>You can start Qt Creator with a session by calling &lt;tt&gt;qtcreator &amp;lt;sessionname&amp;gt;&lt;/tt&gt;.</source>
-        <translation type="obsolete">Puoi avviare una sessione di Qt Creator lanciando &lt;tt&gt;qtcreator &amp;lt;nomesessione&amp;gt;&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can return to edit mode from any other mode at any time by hitting &lt;tt&gt;Escape&lt;/tt&gt;.</source>
-        <translation type="obsolete">Puoi tornare alla modalità di modifica da ogni altra modalità, ed in qualsiasi momento, premendo &lt;tt&gt;Esc&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can switch between the output pane by hitting &lt;tt&gt;%1+n&lt;/tt&gt; where n is the number denoted on the buttons at the window bottom:&lt;ul&gt;&lt;li&gt;1 - Build Issues&lt;/li&gt;&lt;li&gt;2 - Search Results&lt;/li&gt;&lt;li&gt;3 - Application Output&lt;/li&gt;&lt;li&gt;4 - Compile Output&lt;/li&gt;&lt;/ul&gt;</source>
-        <extracomment>%1 gets replaced by Alt (Win/Unix) or Cmd (Mac)</extracomment>
-        <translation type="obsolete">Puoi passare tra i pannelli di output premendo &lt;tt&gt;%1+n&lt;/tt&gt; dove n è il numero scritto sui bottoni in basso alla finestra: &lt;ul&gt;&lt;li&gt;1 - Problemi di Compilazione&lt;/li&gt;&lt;li&gt;2 - Risultati della Ricerca&lt;/li&gt;&lt;li&gt;3 - Output dell&apos;Applicazione&lt;/li&gt;&lt;li&gt;4 - Output di Compilazione&lt;/li&gt;&lt;/ul&gt;</translation>
-    </message>
-    <message>
-        <source>You can quickly search methods, classes, help and more using the &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-navigation.html&quot;&gt;Locator bar&lt;/a&gt; (&lt;tt&gt;Ctrl+K&lt;/tt&gt;).</source>
-        <translation type="obsolete">Puoi trovare rapidamente metodi, classi, aiuto ed altro usando la &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-navigation.html&quot;&gt;Ricerca Rapida&lt;/a&gt; (&lt;tt&gt;Ctrl+K&lt;/tt&gt;).</translation>
-    </message>
-    <message>
-        <source>You can add custom build steps in the &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-build-settings.html&quot;&gt;build settings&lt;/a&gt;.</source>
-        <translation type="obsolete">Puoi aggiungere passi di compilazione nelle &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-build-settings.html&quot;&gt;impostazioni di compilazione&lt;/a&gt;.</translation>
-    </message>
-    <message>
-        <source>Within a session, you can add &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-build-settings.html#dependencies&quot;&gt;dependencies&lt;/a&gt; between projects.</source>
-        <translation type="obsolete">Nell&apos;ambito di una sessione, puoi aggiungere &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-build-settings.html#dependencies&quot;&gt;dipendenze&lt;/a&gt; tra i progetti.</translation>
-    </message>
-    <message>
-        <source>You can set the preferred editor encoding for every project in &lt;tt&gt;Projects -&gt; Editor Settings -&gt; Default Encoding&lt;/tt&gt;.</source>
-        <translation type="obsolete">Puoi impostare la codifica dei file preferita, per ciascun progetto, in &lt;tt&gt;Progetti -&gt; Impostazioni dell&apos;Editor -&gt; Codifica&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can modify the binary that is being executed when you press the &lt;tt&gt;Run&lt;/tt&gt; button: Add a &lt;tt&gt;Custom Executable&lt;/tt&gt; by clicking the &lt;tt&gt;+&lt;/tt&gt; button in &lt;tt&gt;Projects -&gt; Run Settings -&gt; Run Configuration&lt;/tt&gt; and then select the new target in the combo box.</source>
-        <translation type="obsolete">Puoi cambiare l&apos;eseguibile che sarà avviato premendo il bottone &lt;tt&gt;Esegui&lt;/tt&gt;: Aggiungi un &lt;tt&gt;Eseguibile Personalizzato&lt;/tt&gt; facendo clic sul bottone &lt;tt&gt;+&lt;/tt&gt; in &lt;tt&gt;Progetti -&gt; Impostazioni di Esecuzione -&gt; Configurazione di Esecuzione&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can use Qt Creator with a number of &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-version-control.html&quot;&gt;revision control systems&lt;/a&gt; such as Subversion, Perforce and Git.</source>
-        <translation type="obsolete">Puoi usare Qt Creator sopra diversi &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-version-control.html&quot;&gt;sistemi di controllo di versione&lt;/a&gt;, tipo Subversion, Perforce e Git.</translation>
-    </message>
-    <message>
-        <source>In the editor, &lt;tt&gt;F2&lt;/tt&gt; toggles declaration and definition while &lt;tt&gt;F4&lt;/tt&gt; toggles header file and source file.</source>
-        <translation type="obsolete">Nell&apos;editor, &lt;tt&gt;F2&lt;/tt&gt; commuta tra la dichiarazione e la definizione mentre &lt;tt&gt;F4&lt;/tt&gt; alterna tra il file header ed il file sorgente.</translation>
-    </message>
-    <message>
-        <source>Help us make Qt Creator even better</source>
-        <translation type="obsolete">Aiutaci a migliorare Qt Creator</translation>
-    </message>
-    <message>
-        <source>#gradientWidget {
-  background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(247, 247, 247, 255), stop:1 rgba(215, 215, 215, 255));
-}</source>
-        <translation type="obsolete">#gradientWidget {
-  background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(247, 247, 247, 255), stop:1 rgba(215, 215, 215, 255));
-}</translation>
-    </message>
-    <message>
-        <source>#headerFrame {
-    border-image: url(:/core/images/welcomemode/center_frame_header.png) 0;
-    border-width: 0;
-}
-</source>
-        <translation type="obsolete">#headerFrame {
-    border-image: url(:/core/images/welcomemode/center_frame_header.png) 0;
-    border-width: 0;
-}
-</translation>
-    </message>
-    <message>
-        <source>Getting Started</source>
-        <translation type="obsolete">Comincia</translation>
-    </message>
-    <message>
-        <source>Develop</source>
-        <translation type="obsolete">Sviluppa</translation>
-    </message>
-    <message>
-        <source>Community</source>
-        <translation type="obsolete">Comunità</translation>
-    </message>
-    <message>
-        <source>Open</source>
-        <translation type="obsolete">Apri</translation>
-    </message>
-    <message>
-        <source>Examples not installed</source>
-        <translation type="obsolete">Gli esempi non sono installati</translation>
-    </message>
-    <message>
-        <source>Manage Sessions...</source>
-        <translation type="obsolete">Gestisci le Sessioni...</translation>
-    </message>
-    <message>
-        <source>Create New Project...</source>
-        <translation type="obsolete">Crea un Nuovo Progetto...</translation>
-    </message>
-    <message>
-        <source>Feedback</source>
-        <translation type="obsolete">Commenti</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Core</name>
-    <message>
-        <source>Switch to %1 mode</source>
-        <translation>Passa alla modalità %1</translation>
-    </message>
-    <message>
-        <source>Exception at line %1: %2
-%3</source>
-        <translation>Eccezione alla linea %1: %2
-%3</translation>
-    </message>
-    <message>
-        <source>Unknown error</source>
-        <translation>Errore sconosciuto</translation>
-    </message>
-    <message>
-        <source>New %1</source>
-        <translation>Nuovo %1</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Utils</name>
-    <message>
-        <source>The class name must not contain namespace delimiters.</source>
-        <translation>Il nome della classe non deve contenere namespace.</translation>
-    </message>
-    <message>
-        <source>Please enter a class name.</source>
-        <translation>Inserisci il nome di una classe.</translation>
-    </message>
-    <message>
-        <source>The class name contains invalid characters.</source>
-        <translation>Il nome della classe contiene caratteri non validi.</translation>
-    </message>
-    <message>
-        <source>Cannot set up communication channel: %1</source>
-        <translation>Impossibile impostare il canale di comunicazione: %1</translation>
-    </message>
-    <message>
-        <source>Cannot create temporary file: %1</source>
-        <translation>Impossibile creare il file temporaneo: %1</translation>
-    </message>
-    <message>
-        <source>Press &lt;RETURN&gt; to close this window...</source>
-        <translation>Premi &lt;INVIO&gt; per chiudere questa finestra...</translation>
-    </message>
-    <message>
-        <source>Cannot start the terminal emulator &apos;%1&apos;.</source>
-        <translation>Impossibile avviare l&apos;emulatore di terminale &apos;%1&apos;.</translation>
-    </message>
-    <message>
-        <source>Cannot create temporary directory &apos;%1&apos;: %2</source>
-        <translation>Impossibile create la cartella temporanea &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>Cannot create socket &apos;%1&apos;: %2</source>
-        <translation>Impossibile creare il socket &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>Cannot change to working directory &apos;%1&apos;: %2</source>
-        <translation>Impossibile entrare nella cartella di lavoro &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>Cannot execute &apos;%1&apos;: %2</source>
-        <translation>Impossibile eseguire &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>Unexpected output from helper program.</source>
-        <translation>Uscita non attesa dal programma helper.</translation>
-    </message>
-    <message>
-        <source>The process &apos;%1&apos; could not be started: %2</source>
-        <translation>Impossibile avviare il processo &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>Cannot obtain a handle to the inferior: %1</source>
-        <translation>Impossibile ottenere un collegamento a: %1</translation>
-    </message>
-    <message>
-        <source>Cannot obtain exit status from inferior: %1</source>
-        <translation>Impossibile ottenere lo stato di uscita da: %1</translation>
-    </message>
-    <message>
-        <source>The name must not be empty</source>
-        <translation>Il nome non deve essere vuoto</translation>
-    </message>
-    <message>
-        <source>The name must not contain any of the characters &apos;%1&apos;.</source>
-        <translation>Il nome non deve contenere i caratteri &apos;%1&apos;.</translation>
-    </message>
-    <message>
-        <source>The name must not contain &apos;%1&apos;.</source>
-        <translation>Il nome non deve contenere &apos;%1&apos;.</translation>
-    </message>
-    <message>
-        <source>The name must not match that of a MS Windows device. (%1).</source>
-        <translation>Il nome non può essere quello di un dispositivo MS Windows (%1).</translation>
-    </message>
-    <message numerus="yes">
-        <source>%1: canceled. %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: annullato. %n ricorrenza trovata in %2 file.</numerusform>
-            <numerusform>%1: annullato. %n ricorrenze trovate in %2 file.</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <source>%1: %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: %n ricorrenza trovata in %2 file.</numerusform>
-            <numerusform>%1: %n ricorrenze trovate in %2 file.</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <source>%1: %n occurrences found in %2 of %3 files.</source>
-        <translation>
-            <numerusform>%1: %n ricorrenza trovata in %2 di %3 file.</numerusform>
-            <numerusform>%1: %n ricorrenze trovate in %2 di %3 file.</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Class name:</source>
-        <translation>Nome classe:</translation>
-    </message>
-    <message>
-        <source>Base class:</source>
-        <translation>Classe Base:</translation>
-    </message>
-    <message>
-        <source>Header file:</source>
-        <translation>File Header:</translation>
-    </message>
-    <message>
-        <source>Source file:</source>
-        <translation>File Sorgente:</translation>
-    </message>
-    <message>
-        <source>Generate form:</source>
-        <translation>Genera form:</translation>
-    </message>
-    <message>
-        <source>Form file:</source>
-        <translation>File form:</translation>
-    </message>
-    <message>
-        <source>Path:</source>
-        <translation>Percorso:</translation>
-    </message>
-    <message>
-        <source>Invalid base class name</source>
-        <translation>Nome della classe base non valido</translation>
-    </message>
-    <message>
-        <source>Invalid header file name: &apos;%1&apos;</source>
-        <translation>Nome del file header non valido: &apos;%1&apos;</translation>
-    </message>
-    <message>
-        <source>Invalid source file name: &apos;%1&apos;</source>
-        <translation>Nome del file sorgente non valido: &apos;%1&apos;</translation>
-    </message>
-    <message>
-        <source>Invalid form file name: &apos;%1&apos;</source>
-        <translation>Nome del file form non valido: &apos;%1&apos;</translation>
-    </message>
-    <message>
-        <source>Choose...</source>
-        <translation>Scegli...</translation>
-    </message>
-    <message>
-        <source>Browse...</source>
-        <translation>Sfoglia...</translation>
-    </message>
-    <message>
-        <source>Choose a directory</source>
-        <translation>Scegli una cartella</translation>
-    </message>
-    <message>
-        <source>Choose a file</source>
-        <translation>Scegli un file</translation>
-    </message>
-    <message>
-        <source>The path must not be empty.</source>
-        <translation>Il percorso non può essere vuoto.</translation>
-    </message>
-    <message>
-        <source>The path &apos;%1&apos; does not exist.</source>
-        <translation>Il percorso &apos;%1&apos; non esiste.</translation>
-    </message>
-    <message>
-        <source>The path &apos;%1&apos; is not a directory.</source>
-        <translation>Il percorso &apos;%1&apos; non è una cartella.</translation>
-    </message>
-    <message>
-        <source>The path &apos;%1&apos; is not a file.</source>
-        <translation>Il percorso &apos;%1&apos; non è un file.</translation>
-    </message>
-    <message>
-        <source>Path:</source>
-        <translation>Percorso:</translation>
-    </message>
-    <message>
-        <source>Insert...</source>
-        <translation>Inserisci...</translation>
-    </message>
-    <message>
-        <source>Add...</source>
-        <translation>Aggiungi...</translation>
-    </message>
-    <message>
-        <source>Delete line</source>
-        <translation>Cancella riga</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>Cancella</translation>
-    </message>
-    <message>
-        <source>From &quot;%1&quot;</source>
-        <translation>Da &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Introduction and project location</source>
-        <translation>Introduzione e posizione del progetto</translation>
-    </message>
-    <message>
-        <source>Name:</source>
-        <translation>Nome:</translation>
-    </message>
-    <message>
-        <source>Create in:</source>
-        <translation>Crea in:</translation>
-    </message>
-    <message>
-        <source>&lt;Enter_Name&gt;</source>
-        <translation>&lt;Inserisci__Nome&gt;</translation>
-    </message>
-    <message>
-        <source>The project already exists.</source>
-        <translation>Il progetto è già presente.</translation>
-    </message>
-    <message>
-        <source>A file with that name already exists.</source>
-        <translation>Un file con lo stesso nome è già presente.</translation>
-    </message>
-    <message>
-        <source>The name must not contain the &apos;.&apos;-character.</source>
-        <translation>Il nome non può contenere il carattere &apos;.&apos;.</translation>
-    </message>
-    <message>
-        <source>Subversion Submit</source>
-        <translation>Invio Subversion</translation>
-    </message>
-    <message>
-        <source>Des&amp;cription</source>
-        <translation>Des&amp;crizione</translation>
-    </message>
-    <message>
-        <source>F&amp;iles</source>
-        <translation>F&amp;ile</translation>
-    </message>
-    <message>
-        <source>Choose the location</source>
-        <translation>Scegli la posizione</translation>
-    </message>
-    <message>
-        <source>File Changed</source>
-        <translation>File Modificato</translation>
-    </message>
-    <message>
-        <source>The unsaved file %1 has been changed outside Qt Creator. Do you want to reload it and discard your changes?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The file %1 has changed outside Qt Creator. Do you want to reload it?</source>
-        <translation>Il file %1 è stato modificato fuori da Qt Creator. Vuoi ricaricarlo?</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::CppEditor</name>
-    <message>
-        <source>Sort alphabetically</source>
-        <translation>Ordine alfabetico</translation>
-    </message>
-    <message>
-        <source>This change cannot be undone.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Yes, I know what I am doing.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Enter class name</source>
-        <translation>Inserisci il nome della classe</translation>
-    </message>
-    <message>
-        <source>The header and source file names will be derived from the class name</source>
-        <translation>I nomi dei file header e sorgente saranno derivati dal nome della classe</translation>
-    </message>
-    <message>
-        <source>Configure...</source>
-        <translation>Configura...</translation>
-    </message>
-    <message>
-        <source>Error while generating file contents.</source>
-        <translation>Errore durante la generazione del contenuto dei file.</translation>
-    </message>
-    <message>
-        <source>C++ Class Wizard</source>
-        <translation>Assistente alla creazione Classe C++</translation>
-    </message>
-    <message>
-        <source>Unfiltered</source>
-        <translation>Non filtrato</translation>
-    </message>
-    <message>
-        <source>C++</source>
-        <translation>C++</translation>
-    </message>
-    <message>
-        <source>C++ Header File</source>
-        <translation>File Header C++</translation>
-    </message>
-    <message>
-        <source>Creates a C++ header file.</source>
-        <translation>Crea un file header C++.</translation>
-    </message>
-    <message>
-        <source>Creates a C++ source file.</source>
-        <translation>Crea un file sorgente C++.</translation>
-    </message>
-    <message>
-        <source>C++ Source File</source>
-        <translation>File Sorgente C++</translation>
-    </message>
-    <message>
-        <source>C++ Class</source>
-        <translation>Classe C++</translation>
-    </message>
-    <message>
-        <source>Creates a header and a source file for a new class.</source>
-        <translation>Crea i file header e sorgente per una nuova classe.</translation>
-    </message>
-    <message>
-        <source>Follow Symbol under Cursor</source>
-        <translation>Segui il Simbolo sotto al Cursore</translation>
-    </message>
-    <message>
-        <source>Switch between Method Declaration/Definition</source>
-        <translation>Passa tra Dichiarazione e Definizione del Metodo</translation>
-    </message>
-    <message>
-        <source>Find Usages</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Rename Symbol under Cursor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Header suffix:</source>
-        <translation>Estensione header:</translation>
-    </message>
-    <message>
-        <source>Source suffix:</source>
-        <translation>Estensione sorgente:</translation>
-    </message>
-    <message>
-        <source>File Naming Conventions</source>
-        <translation>Convenzioni sui Nomi dei File</translation>
-    </message>
-    <message>
-        <source>Lower case file names</source>
-        <translation>Nomi dei file in minuscolo</translation>
-    </message>
-    <message>
-        <source>License Template:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1: No such file or directory</source>
-        <translation>%1: File o cartella inesistente.</translation>
-    </message>
-    <message>
-        <source>Scanning</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Indexing</source>
-        <translation>Indicizzazione</translation>
-    </message>
-    <message>
-        <source>File Naming Conventions</source>
-        <translation>Convenzioni sui Nomi dei File</translation>
-    </message>
-    <message>
-        <source>Completion</source>
-        <translation>Completamento</translation>
-    </message>
-    <message>
-        <source>Text Editor</source>
-        <translation>Editor di Testo</translation>
-    </message>
-    <message>
-        <source>Classes</source>
-        <translation>Classi</translation>
-    </message>
-    <message>
-        <source>Methods</source>
-        <translation>Metodi</translation>
-    </message>
-    <message>
-        <source>Classes and Methods</source>
-        <translation>Classi e Metodi</translation>
-    </message>
-    <message>
-        <source>Search class</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Class Declarations</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search functions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Function calls</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;C++</source>
-        <translation>&amp;C++</translation>
-    </message>
-    <message>
-        <source>Switch Header/Source</source>
-        <translation>Passa tra Header/Sorgente</translation>
-    </message>
-    <message>
-        <source>%1 of %2</source>
-        <translation>%1 di %2</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Debugger</name>
-    <message>
-        <source>Common</source>
-        <translation>Comune</translation>
-    </message>
-    <message>
-        <source>Debugger</source>
-        <translation>Debugger</translation>
-    </message>
-    <message>
-        <source>&lt;Encoding error&gt;</source>
-        <translation>&lt;Errore di codifica&gt;</translation>
-    </message>
-    <message>
-        <source>Found a too-old version of the debugging helper library (%1); version %2 is required.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n known types, Qt version: %1, Qt namespace: %2 Dumper version: %3</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>&lt;none&gt;</source>
-        <translation>&lt;nessuno&gt;</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n known types, Qt version: %1, Qt namespace: %2</source>
-        <translation type="obsolete">
-            <numerusform>un tipo conosciuto, versione Qt: %1, namespace Qt: %2</numerusform>
-            <numerusform>%n tipi conosciuti, versione Qt: %1, namespace Qt: %2</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Select Executable</source>
-        <translation>Scegli l&apos;Eseguibile</translation>
-    </message>
-    <message>
-        <source>Select Core File</source>
-        <translation>Scegli il File Core</translation>
-    </message>
-    <message>
-        <source>Process ID</source>
-        <translation>ID di Processo</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation>Nome</translation>
-    </message>
-    <message>
-        <source>State</source>
-        <translation>Stato</translation>
-    </message>
-    <message>
-        <source>Refresh</source>
-        <translation>Aggiorna</translation>
-    </message>
-    <message>
-        <source>Select start address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Enter an address: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Settings...</source>
-        <translation type="unfinished">Impostazioni...</translation>
-    </message>
-    <message>
-        <source>Marker File:</source>
-        <translation>File Marker:</translation>
-    </message>
-    <message>
-        <source>Marker Line:</source>
-        <translation>Riga Marker:</translation>
-    </message>
-    <message>
-        <source>Breakpoint Number:</source>
-        <translation>Numero Punto di Interruzione:</translation>
-    </message>
-    <message>
-        <source>Breakpoint Address:</source>
-        <translation>Indirizzo Punto di Interruzione:</translation>
-    </message>
-    <message>
-        <source>Property</source>
-        <translation>Proprietà</translation>
-    </message>
-    <message>
-        <source>Requested</source>
-        <translation>Richiesto</translation>
-    </message>
-    <message>
-        <source>Obtained</source>
-        <translation>Ottenuto</translation>
-    </message>
-    <message>
-        <source>Internal Number:</source>
-        <translation>Numero Interno:</translation>
-    </message>
-    <message>
-        <source>File Name:</source>
-        <translation>Nome del File:</translation>
-    </message>
-    <message>
-        <source>Function Name:</source>
-        <translation>Nome della Funzione:</translation>
-    </message>
-    <message>
-        <source>Line Number:</source>
-        <translation>Numero Riga:</translation>
-    </message>
-    <message>
-        <source>Ignore Count:</source>
-        <translation>Numero di Scarti:</translation>
-    </message>
-    <message>
-        <source>Number</source>
-        <translation>Numero</translation>
-    </message>
-    <message>
-        <source>Condition</source>
-        <translation>Condizione</translation>
-    </message>
-    <message>
-        <source>Ignore</source>
-        <translation>Ignora</translation>
-    </message>
-    <message>
-        <source>Breakpoint will only be hit if this condition is met.</source>
-        <translation>L&apos;interruzione avverrà solo se questa condizione è soddisfatta.</translation>
-    </message>
-    <message>
-        <source>Breakpoint will only be hit after being ignored so many times.</source>
-        <translation>L&apos;interruzione avverrà dopo essere stata ignorata per queste volte.</translation>
-    </message>
-    <message>
-        <source>Breakpoints</source>
-        <translation>Punti di Interruzione</translation>
-    </message>
-    <message>
-        <source>Delete breakpoint</source>
-        <translation>Cancella punto di interruzione</translation>
-    </message>
-    <message>
-        <source>Delete all breakpoints</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Delete breakpoints of &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Delete breakpoints of file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Edit condition...</source>
-        <translation>Modifica la condizione...</translation>
-    </message>
-    <message>
-        <source>Disable breakpoint</source>
-        <translation>Disabilita punto di interruzione</translation>
-    </message>
-    <message>
-        <source>Enable breakpoint</source>
-        <translation>Abilita punto di interruzione</translation>
-    </message>
-    <message>
-        <source>Use short path</source>
-        <translation>Usa percorso breve</translation>
-    </message>
-    <message>
-        <source>Use full path</source>
-        <translation>Usa percorso completo</translation>
-    </message>
-    <message>
-        <source>Set Breakpoint at Function...</source>
-        <translation>Imposta Punto di Interruzione alla Funzione...</translation>
-    </message>
-    <message>
-        <source>Set Breakpoint at Function &quot;main&quot;</source>
-        <translation>Imposta Punto di Interruzione alla Funzione &quot;main&quot;</translation>
-    </message>
-    <message>
-        <source>Conditions on Breakpoint %1</source>
-        <translation>Condizioni sul punto di interruzione %1</translation>
-    </message>
-    <message>
-        <source>Unable to load the debugger engine library &apos;%1&apos;: %2</source>
-        <translation>Impossibile caricare la libreria del debugger &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>The function &quot;%1()&quot; failed: %2</source>
-        <extracomment>Function call failed</extracomment>
-        <translation>La chiamata alla funzione &quot;%1()&quot; è fallita: %2</translation>
-    </message>
-    <message>
-        <source>Unable to resolve &apos;%1&apos; in the debugger engine library &apos;%2&apos;</source>
-        <translation>Impossibile risolvere &apos;%1&apos; nella libreria del debugger &apos;%2&apos;</translation>
-    </message>
-    <message>
-        <source>The dumper library &apos;%1&apos; does not exist.</source>
-        <translation type="obsolete">La libreria dumper &apos;%1&apos; non esiste.</translation>
-    </message>
-    <message>
-        <source>The dumper library was not found at %1.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The console stub process was unable to start &apos;%1&apos;.</source>
-        <translation>Il caricatore da console non è riuscito a lanciare &apos;%1&apos;.</translation>
-    </message>
-    <message>
-        <source>Attaching to core files is not supported!</source>
-        <translation>L&apos;aggancio al core non è supportato!</translation>
-    </message>
-    <message>
-        <source>Debugger running</source>
-        <translation>Debugger in esecuzione</translation>
-    </message>
-    <message>
-        <source>Attaching to a process failed for process id %1: %2</source>
-        <translation>Aggancio al processo non riuscito per il pid %1: %2</translation>
-    </message>
-    <message>
-        <source>Unable to set the image path to %1: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unable to create a process &apos;%1&apos;: %2</source>
-        <translation>Impossibile creare il processo &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>The process exited with exit code %1.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Continuing with &apos;%1&apos;...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unable to continue: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reverse stepping is not implemented.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stepping %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Running to 0x%1...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Running up to %1:%2...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Running up to function &apos;%1()&apos;...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Jump to line is not implemented</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unable to assign the value &apos;%1&apos; to &apos;%2&apos;: %3</source>
-        <translation>Impossibile assegnare il valore &apos;%1&apos; a &apos;%2&apos;: %3</translation>
-    </message>
-    <message>
-        <source>Unable to retrieve %1 bytes of memory at 0x%2: %3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot retrieve symbols while the debuggee is running.</source>
-        <translation>Impossibile recuperare i simboli mentre il debugger è in esecuzione.</translation>
-    </message>
-    <message>
-        <source>Debugger Error</source>
-        <translation>Errore del Debugger</translation>
-    </message>
-    <message>
-        <source>Stopped, current thread: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Changing threads: %1 -&gt; %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thread %1: Missing debug information for top stack frame (%2).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thread %1: No debug information available (%2).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>injection</source>
-        <translation>iniezione</translation>
-    </message>
-    <message>
-        <source>debugger call</source>
-        <translation>chiamata al debugger</translation>
-    </message>
-    <message>
-        <source>Loading the custom dumper library &apos;%1&apos; (%2) ...</source>
-        <translation>Caricamento della libreria dei dumper speciali &apos;%1&apos; (%2) ...</translation>
-    </message>
-    <message>
-        <source>Loading of the custom dumper library &apos;%1&apos; (%2) failed: %3</source>
-        <translation>Errore nel caricamento della libreria dei dumper speciali &apos;%1&apos; (%2): %3</translation>
-    </message>
-    <message>
-        <source>Loaded the custom dumper library &apos;%1&apos; (%2).</source>
-        <translation>La libreria dei dumper speciali è stata caricata &apos;%1&apos; (%2).</translation>
-    </message>
-    <message>
-        <source>Disabling dumpers due to debuggee crash...</source>
-        <translation>Disabilitazione dei dumper a causa del crash del programma di cui si sta facendo il debug...</translation>
-    </message>
-    <message>
-        <source>The debuggee does not appear to be Qt application.</source>
-        <translation>Il programma di cui si sta eseguendo il debug non pare un&apos;applicazione Qt.</translation>
-    </message>
-    <message>
-        <source>Initializing dumpers...</source>
-        <translation>Inizializzazione dei dumper...</translation>
-    </message>
-    <message>
-        <source>Custom dumper library initialized.</source>
-        <translation>La libreria dei dumper speciali è stata inizializzata.</translation>
-    </message>
-    <message>
-        <source>The custom dumper library could not be initialized: %1</source>
-        <translation>La libreria dei dumper speciali non può essere inizializzata: %1</translation>
-    </message>
-    <message>
-        <source>Querying dumpers for &apos;%1&apos;/&apos;%2&apos; (%3)</source>
-        <translation>Interrogazione dei dumper per &apos;%1&apos;/&apos;%2&apos; (%3)</translation>
-    </message>
-    <message>
-        <source>Cdb</source>
-        <translation>Cdb</translation>
-    </message>
-    <message>
-        <source>Autodetect</source>
-        <translation>Autorilevamento</translation>
-    </message>
-    <message>
-        <source>&quot;Debugging Tools for Windows&quot; could not be found.</source>
-        <translation>Non è stato possibile trovare gli &quot;Strumenti di Debug per Windows&quot;.</translation>
-    </message>
-    <message>
-        <source>Checked:
-%1</source>
-        <translation>Controllati:
-%1</translation>
-    </message>
-    <message>
-        <source>Autodetection</source>
-        <translation>Autorilevamento</translation>
-    </message>
-    <message>
-        <source>Symbol Server...</source>
-        <translation>Server dei Simboli...</translation>
-    </message>
-    <message>
-        <source>Adds the Microsoft symbol server providing symbols for operating system libraries.Requires specifying a local cache directory.</source>
-        <translation>Aggiunge il server dei simboli Microsoft, che fornisce i simboli delle librerie del sistema operativo. Richiede di impostare una cartella di cache locale.</translation>
-    </message>
-    <message>
-        <source>Pick a local cache directory</source>
-        <translation>Scegli una cartella di cache locale</translation>
-    </message>
-    <message>
-        <source>Continue</source>
-        <translation>Continua</translation>
-    </message>
-    <message>
-        <source>Interrupt</source>
-        <translation>Interrompi</translation>
-    </message>
-    <message>
-        <source>Reset Debugger</source>
-        <translation>Reimposta il Debugger</translation>
-    </message>
-    <message>
-        <source>Step Over</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Step Into</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Step Out</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Run to Line</source>
-        <translation>Esegui fino alla Riga</translation>
-    </message>
-    <message>
-        <source>Run to Outermost Function</source>
-        <translation>Esegui fino alla Funzione più Esterna</translation>
-    </message>
-    <message>
-        <source>Jump to Line</source>
-        <translation>Salta alla Riga</translation>
-    </message>
-    <message>
-        <source>Toggle Breakpoint</source>
-        <translation>Commuta Punto di Interruzione</translation>
-    </message>
-    <message>
-        <source>Add to Watch Window</source>
-        <translation>Aggiungi alla Finestra di Osservazione</translation>
-    </message>
-    <message>
-        <source>Reverse Direction</source>
-        <translation>All&apos;indietro</translation>
-    </message>
-    <message>
-        <source>Stopped.</source>
-        <translation>Fermato.</translation>
-    </message>
-    <message>
-        <source>Running...</source>
-        <translation>In esecuzione...</translation>
-    </message>
-    <message>
-        <source>Changing breakpoint state requires either a fully running or fully stopped application.</source>
-        <translation>Per commutare un punto di interruzione si richiede un&apos;applicazione completamente in esecuzione oppure completamente arrestata.</translation>
-    </message>
-    <message>
-        <source>Debugging VS executables is currently not enabled.</source>
-        <translation>Il debug degli eseguibili VS non è abilitato al momento.</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Attenzione</translation>
-    </message>
-    <message>
-        <source>Cannot debug &apos;%1&apos;: %2</source>
-        <translation type="obsolete">Impossibile debuggare &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>Save Debugger Log</source>
-        <translation>Salva il Log del Debugger</translation>
-    </message>
-    <message>
-        <source>The debugging helper is used to nicely format the values of some Qt and Standard Library data types. It must be compiled for each Qt version which you can do in the Qt preferences page by selecting a Qt installation and clicking on &apos;Rebuild&apos; for the debugging helper.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stop Debugger</source>
-        <translation>Ferma il Debugger</translation>
-    </message>
-    <message>
-        <source>Open Qt preferences</source>
-        <translation>Apri le preferenze Qt</translation>
-    </message>
-    <message>
-        <source>Exited.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The application requires the debugger engine &apos;%1&apos;, which is disabled.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Starting debugger for tool chain &apos;%1&apos;...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot debug &apos;%1&apos; (tool chain: &apos;%2&apos;): %3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 (explicitly set in the Debugger Options)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turn helper usage off</source>
-        <translation>Disattiva l&apos;utilizzo degli helper</translation>
-    </message>
-    <message>
-        <source>Continue anyway</source>
-        <translation>Continua comunque</translation>
-    </message>
-    <message>
-        <source>Debugging helper missing</source>
-        <translation>Mancano gli helper per il debug</translation>
-    </message>
-    <message>
-        <source>The debugger did not find the debugging helper library.</source>
-        <translation>Il debugger non ha trovato la libreria helper.</translation>
-    </message>
-    <message>
-        <source>The debugging helper is used to nicely format the values of Qt data types and some STL data types. It must be compiled for each Qt version which you can do in the Qt preferences page by selecting a Qt installation and clicking on &apos;Rebuild&apos; for the debugging helper.</source>
-        <translation type="obsolete">La libreria helper per il debug serve a presentare i valori dei tipi di dati Qt e di alcuni tipi STL. Deve essere compilata per ogni versione di Qt e per farlo è necessario aprire le preferenze Qt, selezionare una versione di Qt e fare clic su &apos;Ricompila&apos;.</translation>
-    </message>
-    <message>
-        <source>Start and Debug External Application...</source>
-        <translation>Avvio e Debug di Applicazione Esterna...</translation>
-    </message>
-    <message>
-        <source>Attach to Running External Application...</source>
-        <translation>Collegamento ad una Applicazione in Esecuzione...</translation>
-    </message>
-    <message>
-        <source>Attach to Core...</source>
-        <translation>Collegamento ad un Core...</translation>
-    </message>
-    <message>
-        <source>Attach to Running Tcf Agent...</source>
-        <translation type="obsolete">Collegamento ad un Agente Tcf in Esecuzione...</translation>
-    </message>
-    <message>
-        <source>This attaches to a running &apos;Target Communication Framework&apos; agent.</source>
-        <translation type="obsolete">Ci si collega ad un agente &apos;Target Communication Framework&apos; in esecuzione.</translation>
-    </message>
-    <message>
-        <source>Start and Attach to Remote Application...</source>
-        <translation>Avvia e Collegati ad un&apos;Applicazione Remota...</translation>
-    </message>
-    <message>
-        <source>Option &apos;%1&apos; is missing the parameter.</source>
-        <translation>L&apos;opzione &apos;%1&apos; richiede un parametro.</translation>
-    </message>
-    <message>
-        <source>The parameter &apos;%1&apos; of option &apos;%2&apos; is not a number.</source>
-        <translation>Il parametro &apos;%1&apos; dell&apos;opzione &apos;%2&apos; non è un numero.</translation>
-    </message>
-    <message>
-        <source>Invalid debugger option: %1</source>
-        <translation>Opzione del debugger non valida: %1</translation>
-    </message>
-    <message>
-        <source>Error evaluating command line arguments: %1</source>
-        <translation>Errore nei i parametri della linea di comando: %1</translation>
-    </message>
-    <message>
-        <source>Detach Debugger</source>
-        <translation>Stacca il Debugger</translation>
-    </message>
-    <message>
-        <source>Stop Debugger/Interrupt Debugger</source>
-        <translation>Ferma/Interrompi il Debugger</translation>
-    </message>
-    <message>
-        <source>&amp;Views</source>
-        <translation>&amp;Viste</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation>Bloccato</translation>
-    </message>
-    <message>
-        <source>Reset to default layout</source>
-        <translation>Ripristina la struttura predefinita</translation>
-    </message>
-    <message>
-        <source>Threads:</source>
-        <translation>Thread:</translation>
-    </message>
-    <message>
-        <source>Attaching to PID %1.</source>
-        <translation>Collegamento al PID %1.</translation>
-    </message>
-    <message>
-        <source>Remove Breakpoint</source>
-        <translation>Rimuovi Punto di Interruzione</translation>
-    </message>
-    <message>
-        <source>Disable Breakpoint</source>
-        <translation>Disabilita Punto di Interruzione</translation>
-    </message>
-    <message>
-        <source>Enable Breakpoint</source>
-        <translation>Abilita Punto di Interruzione</translation>
-    </message>
-    <message>
-        <source>Set Breakpoint</source>
-        <translation>Imposta Punto di Interruzione</translation>
-    </message>
-    <message>
-        <source>Cannot attach to PID 0</source>
-        <translation>Impossibile collegarsi al PID 0</translation>
-    </message>
-    <message>
-        <source>Attaching to core %1.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Debug</source>
-        <translation type="obsolete">Debug</translation>
-    </message>
-    <message>
-        <source>Debugger properties...</source>
-        <translation>Proprietà del Debugger...</translation>
-    </message>
-    <message>
-        <source>Use alternating row colors</source>
-        <translation>Alterna i colori delle righe</translation>
-    </message>
-    <message>
-        <source>Show a message box when receiving a signal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Log time stamps</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Operate by instruction</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This switches the debugger to instruction-wise operation mode. In this mode, stepping operates on single instructions and the source location view also shows the disassembled instructions.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dereference pointers automatically</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This switches the Locals&amp;Watchers view to automatically derefence pointers. This saves a level in the tree view, but also loses data for the now-missing intermediate level.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Watch expression &quot;%1&quot;</source>
-        <translation>Osserva espressione &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Remove watch expression &quot;%1&quot;</source>
-        <translation>Rimuovi osserva espressione &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Watch expression &quot;%1&quot; in separate window</source>
-        <translation>Osserva espressione &quot;%1&quot; in un&apos;altra finestra</translation>
-    </message>
-    <message>
-        <source>Use tooltips in main editor when debugging</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Checking this will enable tooltips for variable values during debugging. Since this can slow down debugging and does not provide reliable information as it does not use scope information, it is switched off by default.</source>
-        <translation type="unfinished">Marcando questa casella si abiliteranno i suggerimenti dei valori delle variabili durante il debug. Dato che questo può rallentare il debug e non fornisce informazioni affidabili dato che non usa informazioni di contesto, questa opzione è normalmente disattivata.</translation>
-    </message>
-    <message>
-        <source>Use tooltips in locals view when debugging</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Checking this will enable tooltips in the locals view during debugging.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Use tooltips in breakpoints view when debugging</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Checking this will enable tooltips in the breakpoints view during debugging.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show address data in breakpoints view when debugging</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Checking this will show a column with address information in the breakpoint view during debugging.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show address data in stack view when debugging</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Checking this will show a column with address information in the stack view during debugging.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Expand item</source>
-        <translation type="obsolete">Espandi elemento</translation>
-    </message>
-    <message>
-        <source>Collapse item</source>
-        <translation type="obsolete">Comprimi elemento</translation>
-    </message>
-    <message>
-        <source>Use debugging helper</source>
-        <translation>Usa l&apos;helper del debug</translation>
-    </message>
-    <message>
-        <source>Debug debugging helper</source>
-        <translation>Debug dell&apos;helper di debug</translation>
-    </message>
-    <message>
-        <source>Recheck debugging helper availability</source>
-        <translation>Controlla la disponibilità dell&apos;helper di debug</translation>
-    </message>
-    <message>
-        <source>Synchronize breakpoints</source>
-        <translation>Sincronizza i punti di interruzione</translation>
-    </message>
-    <message>
-        <source>Hexadecimal</source>
-        <translation type="obsolete">Esadecimale</translation>
-    </message>
-    <message>
-        <source>Decimal</source>
-        <translation type="obsolete">Decimale</translation>
-    </message>
-    <message>
-        <source>Octal</source>
-        <translation type="obsolete">Ottale</translation>
-    </message>
-    <message>
-        <source>Binary</source>
-        <translation type="obsolete">Binario</translation>
-    </message>
-    <message>
-        <source>Raw</source>
-        <translation type="obsolete">Grezzo</translation>
-    </message>
-    <message>
-        <source>Natural</source>
-        <translation type="obsolete">Naturale</translation>
-    </message>
-    <message>
-        <source>Automatically quit debugger</source>
-        <translation>Chiudi il debugger automaticamente</translation>
-    </message>
-    <message>
-        <source>Use tooltips when debugging</source>
-        <translation type="obsolete">Usa i suggerimenti durante il debug</translation>
-    </message>
-    <message>
-        <source>List source files</source>
-        <translation>Mostra i file sorgenti</translation>
-    </message>
-    <message>
-        <source>Skip known frames</source>
-        <translation>Semplifica le sequenze note</translation>
-    </message>
-    <message>
-        <source>Enable reverse debugging</source>
-        <translation>Abilita il debug all&apos;indietro</translation>
-    </message>
-    <message>
-        <source>Reload full stack</source>
-        <translation>Ricarica lo stack completo</translation>
-    </message>
-    <message>
-        <source>Execute line</source>
-        <translation>Esegui riga</translation>
-    </message>
-    <message>
-        <source>Debugging Helper</source>
-        <translation>Helper del Debug</translation>
-    </message>
-    <message>
-        <source>Choose DebuggingHelper Location</source>
-        <translation>Scegli la posizione dell&apos;Helper del Debug</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+F11</source>
-        <translation>Ctrl+Shift+F11</translation>
-    </message>
-    <message>
-        <source>The Gdb process failed to start. Either the invoked program &apos;%1&apos; is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Il progesso Gdb non è partito. Può essere che manchi il programma &apos;%1&apos; o che i permessi siano insufficienti.</translation>
-    </message>
-    <message>
-        <source>The Gdb process crashed some time after starting successfully.</source>
-        <translation>Il processo Gdb è andato in crash dopo essere stato avviato correttamente.</translation>
-    </message>
-    <message>
-        <source>The last waitFor...() function timed out. The state of QProcess is unchanged, and you can try calling waitFor...() again.</source>
-        <translation>L&apos;ultima funzione waitFor...() è andata oltre il tempo masimo. Lo stato del QProcess non è cambiato, e puoi provare a chiamare waitFor...() nuovamente.</translation>
-    </message>
-    <message>
-        <source>An error occurred when attempting to write to the Gdb process. For example, the process may not be running, or it may have closed its input channel.</source>
-        <translation>C&apos;è stato un errore inviando dati al progesso Gdb. Può darsi che il processo non sia in esecuzione o potrebbe avere chiuso il suo canale d&apos;ingresso.</translation>
-    </message>
-    <message>
-        <source>An error occurred when attempting to read from the Gdb process. For example, the process may not be running.</source>
-        <translation>C&apos;è stato un errore leggendo i dati dal processo Gdb. Può essere che il processo non sia più in esecuzione.</translation>
-    </message>
-    <message>
-        <source>An unknown error in the Gdb process occurred. This is the default return value of error().</source>
-        <translation type="obsolete">C&apos;è stato un errore sconosciuto relativo al processo Gdb. Questo è il valore di ritorno di error().</translation>
-    </message>
-    <message>
-        <source>Library %1 loaded.</source>
-        <translation>Libreria &apos;%1&apos; caricata.</translation>
-    </message>
-    <message>
-        <source>Library %1 unloaded.</source>
-        <translation>Libreria &apos;%1&apos; rimossa.</translation>
-    </message>
-    <message>
-        <source>Thread group %1 created.</source>
-        <translation>Creato il gruppo di thread %1.</translation>
-    </message>
-    <message>
-        <source>Thread %1 created.</source>
-        <translation>Creato il thread %1.</translation>
-    </message>
-    <message>
-        <source>Thread group %1 exited.</source>
-        <translation>Il gruppo di thread %1 è uscito.</translation>
-    </message>
-    <message>
-        <source>Thread %1 in group %2 exited.</source>
-        <translation>Il thread %1 del gruppo %2 è uscito.</translation>
-    </message>
-    <message>
-        <source>Thread %1 selected.</source>
-        <translation>Selezionato il thread %1.</translation>
-    </message>
-    <message>
-        <source>Reading %1...</source>
-        <translation>Lettura di %1...</translation>
-    </message>
-    <message>
-        <source>Stopping temporarily.</source>
-        <translation>Interruzione temporanea.</translation>
-    </message>
-    <message>
-        <source>Continuing after temporary stop.</source>
-        <translation>Continuo dopo l&apos;interruzione temporanea.</translation>
-    </message>
-    <message>
-        <source>Core file loaded.</source>
-        <translation type="obsolete">Caricato il file core.</translation>
-    </message>
-    <message>
-        <source>Jumped. Stopped.</source>
-        <translation>Salto concluso. Fermato.</translation>
-    </message>
-    <message>
-        <source>Run to Function finished. Stopped.</source>
-        <translation>Esegui fino alla Funzione concluso. Fermato.</translation>
-    </message>
-    <message>
-        <source>Program exited with exit code %1</source>
-        <translation type="obsolete">Il programma è uscito con il codice %1</translation>
-    </message>
-    <message>
-        <source>Program exited after receiving signal %1</source>
-        <translation type="obsolete">Il programma è uscito dopo aver ricevuto il segnale %1</translation>
-    </message>
-    <message>
-        <source>Program exited normally</source>
-        <translation type="obsolete">Il programma è uscito normalmente</translation>
-    </message>
-    <message>
-        <source>Processing queued commands.</source>
-        <translation>Esecuzione dei comandi accodati.</translation>
-    </message>
-    <message>
-        <source>Running requested...</source>
-        <translation type="unfinished">Richiesta esecuzione...</translation>
-    </message>
-    <message numerus="yes">
-        <source>Retrieving data for watch view (%n requests pending)...</source>
-        <translation>
-            <numerusform>Recupero dei dati per la vista delle osservazioni (%n richiesta rimanente)...</numerusform>
-            <numerusform>Recupero dei dati per la vista delle osservazioni (%n richieste rimanenti)...</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <source>%n custom dumpers found.</source>
-        <translation type="obsolete">
-            <numerusform>Trovato un dumper speciale.</numerusform>
-            <numerusform>Trovati %n dumper speciali.</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>&lt;0 items&gt;</source>
-        <translation>&lt;0 elementi&gt;</translation>
-    </message>
-    <message numerus="yes">
-        <source>&lt;%n items&gt;</source>
-        <extracomment>In string list</extracomment>
-        <translation>
-            <numerusform>&lt;1 elemento&gt;</numerusform>
-            <numerusform>&lt;%n elementi&gt;</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Dumper injection loading triggered (%1)...</source>
-        <translation>L&apos;iniezione dei dumper ha sollevato (%1)...</translation>
-    </message>
-    <message>
-        <source>Dumper loading (%1) failed: %2</source>
-        <translation>Non è stato possibile caricare i dumper (%1): %2</translation>
-    </message>
-    <message>
-        <source>Loading dumpers via debugger call (%1)...</source>
-        <translation>Caricamento dei dumper tramite chiamata al debugger (%1)...</translation>
-    </message>
-    <message>
-        <source>Loading %1...</source>
-        <translation>Caricamento di %1...</translation>
-    </message>
-    <message>
-        <source>Stopped at breakpoint.</source>
-        <translation>Fermato al punto di interruzione.</translation>
-    </message>
-    <message>
-        <source>An unknown error in the Gdb process occurred. </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stop requested...</source>
-        <translation type="unfinished">Richiesta interruzione...</translation>
-    </message>
-    <message>
-        <source>Executable failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Process failed to start.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Executable failed: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Function reached. Stopped.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Program exited with exit code %1.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Program exited after receiving signal %1.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Program exited normally.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;The inferior stopped because it received a signal from the Operating System.&lt;p&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;Signal name : &lt;/td&gt;&lt;td&gt;%1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Signal meaning : &lt;/td&gt;&lt;td&gt;%2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> &lt;Unknown&gt; </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Signal received</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stopped: &quot;%1&quot;</source>
-        <translation>Fermato: &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>The debugger you are using identifies itself as:</source>
-        <translation>Il debugger che stai usando si identifica come:</translation>
-    </message>
-    <message>
-        <source>This version is not officially supported by Qt Creator.
-Debugging will most likely not work well.
-Using gdb 6.7 or later is strongly recommended.</source>
-        <translation>Questa versione non è supportata ufficialmente da Qt Creator.
-Il debug probabilmente non funzionerà molto bene.
-L&apos;utilizzo di gdb 6.7 o successivi è fortemente consigliato.</translation>
-    </message>
-    <message>
-        <source>Starting executable failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Starting executable failed:
-</source>
-        <translation>Avvio dell&apos;eseguibile non riuscito:</translation>
-    </message>
-    <message numerus="yes">
-        <source>Dumper version %1, %n custom dumpers found.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Disassembler failed: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Adapter start failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inferior start preparation failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inferior prepared for startup.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Setting breakpoints...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Starting inferior...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inferior start failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inferior shutdown failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Adapter crashed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Adapter shutdown failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Debugger Startup Failure</source>
-        <translation type="obsolete">Errore in Avvio del Debugger</translation>
-    </message>
-    <message>
-        <source>Cannot set up communication with child process: %1</source>
-        <translation type="obsolete">Impossibile instaurare una comunicazione con il processo figlio: %1</translation>
-    </message>
-    <message>
-        <source>Starting Debugger: </source>
-        <translation type="obsolete">Avvio del Debugger:</translation>
-    </message>
-    <message>
-        <source>Cannot start debugger: %1</source>
-        <translation type="obsolete">Impossibile avviare il debugger: %1</translation>
-    </message>
-    <message>
-        <source>Gdb Running...</source>
-        <translation type="obsolete">Gdb in Esecuzione...</translation>
-    </message>
-    <message>
-        <source>Cannot find debugger initialization script</source>
-        <translation>Impossibile trovare lo script di inizializzazione del debugger</translation>
-    </message>
-    <message>
-        <source>The debugger settings point to a script file at &apos;%1&apos; which is not accessible. If a script file is not needed, consider clearing that entry to avoid this warning. </source>
-        <translation>Le impostazioni del debugger puntano da un file di script &apos;%1&apos; che non è accessibile. Se non si ha bisogno del file di script, cancellare quell&apos;impostazione per evitare questo avviso.</translation>
-    </message>
-    <message>
-        <source>Attached to running process. Stopped.</source>
-        <translation type="obsolete">Collegato al processo in esecuzione. Fermato.</translation>
-    </message>
-    <message>
-        <source>Debugger exited.</source>
-        <translation type="obsolete">Il debugger è uscito.</translation>
-    </message>
-    <message>
-        <source>&lt;could not retreive module information&gt;</source>
-        <translation type="obsolete">&lt;impossibile recuperare le informazioni del modulo&gt;</translation>
-    </message>
-    <message>
-        <source>Unable to run &apos;%1&apos;: %2</source>
-        <translation>Impossibile eseguire &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>&lt;unknown&gt;</source>
-        <extracomment>End address of loaded module</extracomment>
-        <translation>&lt;sconosciuto&gt;</translation>
-    </message>
-    <message>
-        <source>Retrieving data for stack view...</source>
-        <translation>Recupero dei dati per la vista dello stack...</translation>
-    </message>
-    <message>
-        <source>&lt;not in scope&gt;</source>
-        <extracomment>Variable</extracomment>
-        <translation>&lt;fuori contesto&gt;</translation>
-    </message>
-    <message>
-        <source>Finished retrieving data.</source>
-        <translation>Fine del recupero dei dati.</translation>
-    </message>
-    <message>
-        <source>Cannot evaluate expression: %1</source>
-        <translation type="obsolete">Impossibile valutare l&apos;espressione: %1</translation>
-    </message>
-    <message>
-        <source>Debugging helpers not found.</source>
-        <translation>Helper per il debug non trovati.</translation>
-    </message>
-    <message>
-        <source>Custom dumper setup: %1</source>
-        <translation>Setup dumper speciali: %1</translation>
-    </message>
-    <message>
-        <source>%1 &lt;shadowed %2&gt;</source>
-        <extracomment>Variable %1 is the variable name, %2 is a simple count</extracomment>
-        <translation>%1 &lt;oscura %2&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;shadowed&gt;</source>
-        <extracomment>Type of local variable or parameter shadowed by another</extracomment>
-        <translation>&lt;oscurata&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;n/a&gt;</source>
-        <translation>&lt;n/d&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;anonymous union&gt;</source>
-        <translation>&lt;unione anonima&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;no information&gt;</source>
-        <extracomment>About variable&apos;s value</extracomment>
-        <translation>&lt;nessuna informazione&gt;</translation>
-    </message>
-    <message>
-        <source>Unknown error: </source>
-        <translation>Errore sconosciuto:</translation>
-    </message>
-    <message>
-        <source>%1 is a typedef.</source>
-        <translation type="obsolete">%1 è un typedef.</translation>
-    </message>
-    <message>
-        <source>Retrieving data for tooltip...</source>
-        <translation type="obsolete">Recupero dei dati per il suggerimento...</translation>
-    </message>
-    <message>
-        <source>Gdb</source>
-        <translation>Gdb</translation>
-    </message>
-    <message>
-        <source>Choose Gdb Location</source>
-        <translation>Scegli la posizione di Gdb</translation>
-    </message>
-    <message>
-        <source>Choose Location of Startup Script File</source>
-        <translation>Scegli la posizione dello Script di Avvio</translation>
-    </message>
-    <message>
-        <source>Module name</source>
-        <translation>Nome del Modulo</translation>
-    </message>
-    <message>
-        <source>Symbols read</source>
-        <translation>Simboli letti</translation>
-    </message>
-    <message>
-        <source>Start address</source>
-        <translation>Indirizzo di partenza</translation>
-    </message>
-    <message>
-        <source>End address</source>
-        <translation>Indirizzo di fine</translation>
-    </message>
-    <message>
-        <source>Modules</source>
-        <translation>Moduli</translation>
-    </message>
-    <message>
-        <source>Update module list</source>
-        <translation>Aggiorna la lista dei moduli</translation>
-    </message>
-    <message>
-        <source>Adjust column widths to contents</source>
-        <translation>Adatta la larghezza delle colonne al contenuto</translation>
-    </message>
-    <message>
-        <source>Always adjust column widths to contents</source>
-        <translation>Adatta sempre la larghezza al contenuto</translation>
-    </message>
-    <message>
-        <source>Show source files for module &quot;%1&quot;</source>
-        <translation>Mostra i file sorgenti per il modulo &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Load symbols for all modules</source>
-        <translation>Carica i simboli per tutti i moduli</translation>
-    </message>
-    <message>
-        <source>Load symbols for module</source>
-        <translation>Carica i simboli del modulo</translation>
-    </message>
-    <message>
-        <source>Edit file</source>
-        <translation>Modifica il file</translation>
-    </message>
-    <message>
-        <source>Show symbols</source>
-        <translation>Mostra i simboli</translation>
-    </message>
-    <message>
-        <source>Load symbols for module &quot;%1&quot;</source>
-        <translation>Carica i simboli per il modulo &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Edit file &quot;%1&quot;</source>
-        <translation>Modifica il file &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Show symbols in file &quot;%1&quot;</source>
-        <translation>Mostra i simboli dei file &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Address</source>
-        <translation>Indirizzo</translation>
-    </message>
-    <message>
-        <source>Code</source>
-        <translation>Codice</translation>
-    </message>
-    <message>
-        <source>Symbol</source>
-        <translation>Simbolo</translation>
-    </message>
-    <message>
-        <source>Symbols in &quot;%1&quot;</source>
-        <translation>Simboli in &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Cannot create temporary file: %2</source>
-        <translation type="obsolete">Impossibile creare il file temporaneo: %2</translation>
-    </message>
-    <message>
-        <source>Cannot create temporary file: %1</source>
-        <translation type="unfinished">Impossibile creare il file temporaneo: %1</translation>
-    </message>
-    <message>
-        <source>Cannot create FiFo %1: %2</source>
-        <translation>Impossibile creare la FiFo %1: %2</translation>
-    </message>
-    <message>
-        <source>Cannot open FiFo %1: %2</source>
-        <translation>Impossibile aprire la FiFo %1: %2</translation>
-    </message>
-    <message>
-        <source>Value (base %1)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Registers</source>
-        <translation>Registri</translation>
-    </message>
-    <message>
-        <source>Reload register listing</source>
-        <translation>Ricarica i registri</translation>
-    </message>
-    <message>
-        <source>Always reload register listing</source>
-        <translation type="obsolete">Ricarica sempre i registri</translation>
-    </message>
-    <message>
-        <source>&apos;%1&apos; contains no identifier</source>
-        <translation>&apos;%1&apos; non contiene identificatori</translation>
-    </message>
-    <message>
-        <source>String literal %1</source>
-        <translation>Stringa %1</translation>
-    </message>
-    <message>
-        <source>Cowardly refusing to evaluate expression &apos;%1&apos; with potential side effects</source>
-        <translation>Rifiuto la valutazione dell&apos;espressione &apos;%1&apos; con potenziali effetti collaterali</translation>
-    </message>
-    <message>
-        <source>Internal name</source>
-        <translation type="obsolete">Nome interno</translation>
-    </message>
-    <message>
-        <source>Full name</source>
-        <translation type="obsolete">Nome completo</translation>
-    </message>
-</context>
-<context>
-    <name>SourceFilesModel</name>
-    <message>
-        <source>Internal name</source>
-        <translation type="unfinished">Nome interno</translation>
-    </message>
-    <message>
-        <source>Full name</source>
-        <translation type="unfinished">Nome completo</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Debugger</name>
-    <message>
-        <source>Source Files</source>
-        <translation>File Sorgenti</translation>
-    </message>
-    <message>
-        <source>Reload data</source>
-        <translation>Ricarica i dati</translation>
-    </message>
-    <message>
-        <source>Open file</source>
-        <translation>Apri file</translation>
-    </message>
-    <message>
-        <source>Open file &quot;%1&quot;&apos;</source>
-        <translation>Apri file &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>...</source>
-        <translation>...</translation>
-    </message>
-    <message>
-        <source>&lt;More&gt;</source>
-        <translation>&lt;Successivi&gt;</translation>
-    </message>
-    <message>
-        <source>Address:</source>
-        <translation>Indirizzo:</translation>
-    </message>
-    <message>
-        <source>Function:</source>
-        <translation>Funzione:</translation>
-    </message>
-    <message>
-        <source>File:</source>
-        <translation>File:</translation>
-    </message>
-    <message>
-        <source>Line:</source>
-        <translation>Riga:</translation>
-    </message>
-    <message>
-        <source>From:</source>
-        <translation>Da:</translation>
-    </message>
-    <message>
-        <source>To:</source>
-        <translation>A:</translation>
-    </message>
-    <message>
-        <source>Level</source>
-        <translation>Livello</translation>
-    </message>
-    <message>
-        <source>Thread: %1</source>
-        <translation>Thread: %1</translation>
-    </message>
-    <message>
-        <source>Thread: %1 at %2 (0x%3)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thread: %1 at %2, %3:%4 (0x%5)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thread ID</source>
-        <translation>ID del Thread</translation>
-    </message>
-    <message>
-        <source>Stack</source>
-        <translation>Stack</translation>
-    </message>
-    <message>
-        <source>Copy contents to clipboard</source>
-        <translation>Copia il contenuto negli appunti</translation>
-    </message>
-    <message>
-        <source>Arguments:</source>
-        <translation>Parametri:</translation>
-    </message>
-    <message>
-        <source>%1.</source>
-        <translation type="obsolete">%1.</translation>
-    </message>
-    <message>
-        <source>Thread</source>
-        <translation>Thread</translation>
-    </message>
-    <message>
-        <source>Expression</source>
-        <translation>Espressione</translation>
-    </message>
-    <message>
-        <source> ... &lt;cut off&gt;</source>
-        <translation>... &lt;tagliato&gt;</translation>
-    </message>
-    <message>
-        <source>Object Address</source>
-        <translation>Indirizzo Oggetto</translation>
-    </message>
-    <message>
-        <source>Stored Address</source>
-        <translation>Indirizzo Salvato</translation>
-    </message>
-    <message>
-        <source>Internal ID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Generation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;Edit&gt;</source>
-        <translation type="unfinished">&lt;Modifica&gt;</translation>
-    </message>
-    <message>
-        <source>iname</source>
-        <translation type="obsolete">iname</translation>
-    </message>
-    <message>
-        <source>Root</source>
-        <translation>Radice</translation>
-    </message>
-    <message>
-        <source>Locals</source>
-        <translation>Variabili Locali</translation>
-    </message>
-    <message>
-        <source>Tooltip</source>
-        <translation>Suggerimenti</translation>
-    </message>
-    <message>
-        <source>Watchers</source>
-        <translation>Osservazione</translation>
-    </message>
-    <message>
-        <source>Value</source>
-        <translation>Valore</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Tipo</translation>
-    </message>
-    <message>
-        <source>&lt;No Locals&gt;</source>
-        <translation type="obsolete">&lt;Niente Variabili Locali&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;No Tooltip&gt;</source>
-        <translation type="obsolete">&lt;Niente Suggerimenti&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;No Watchers&gt;</source>
-        <translation type="obsolete">&lt;Niente Osservazioni&gt;</translation>
-    </message>
-    <message>
-        <source>Locals and Watchers</source>
-        <translation>Variabili Locali e Osservazione</translation>
-    </message>
-    <message>
-        <source>Insert new watch item</source>
-        <translation>Inserisci una nuova osservazione</translation>
-    </message>
-    <message>
-        <source>Clear contents</source>
-        <translation>Cancella il contenuto</translation>
-    </message>
-    <message>
-        <source>Save contents</source>
-        <translation>Salva il contenuto</translation>
-    </message>
-</context>
-<context>
-    <name>DebuggingHelperOptionPage</name>
-    <message>
-        <source>This will enable nice display of Qt and Standard Library objects in the Locals&amp;Watchers view</source>
-        <translation>Marcando questa casella si abilita la visualizzazione dei tipi Qt e STL nella vista Variabili Locali &amp; Osservazione</translation>
-    </message>
-    <message>
-        <source>Use debugging helper</source>
-        <translation>Usa l&apos;helper del debug</translation>
-    </message>
-    <message>
-        <source>This will load a dumper library</source>
-        <translation>Marcando questa casella si caricherà una libreria di dumper</translation>
-    </message>
-    <message>
-        <source>Use debugging helper from custom location</source>
-        <translation>Usa un helper del debug personale</translation>
-    </message>
-    <message>
-        <source>Location: </source>
-        <translation>Posizione: </translation>
-    </message>
-    <message>
-        <source>Debug debugging helper</source>
-        <translation>Debug dell&apos;helper di debug</translation>
-    </message>
-    <message>
-        <source>Debugging helper</source>
-        <translation>Helper del Debug</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::ProjectExplorer</name>
-    <message>
-        <source>Unable to add dependency</source>
-        <translation>Impossibile aggiungere la dipendenza</translation>
-    </message>
-    <message>
-        <source>This would create a circular dependency.</source>
-        <translation>Questo creerebbe una dipendenza circolare.</translation>
-    </message>
-    <message>
-        <source>%1 has no dependencies.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 depends on %2.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 depends on: %2.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Project Dependencies</source>
-        <translation type="obsolete">Dipendenze del Progetto</translation>
-    </message>
-    <message>
-        <source>Project Dependencies:</source>
-        <translation type="obsolete">Dipendenze del Progetto:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Designer</name>
-    <message>
-        <source>The file name is empty.</source>
-        <translation>Il nome del file è vuoto.</translation>
-    </message>
-    <message>
-        <source>XML error on line %1, col %2: %3</source>
-        <translation>Errore XML alla riga %1, colonna %2: %3</translation>
-    </message>
-    <message>
-        <source>The &lt;RCC&gt; root element is missing.</source>
-        <translation>Non è presente l&apos;elemento &lt;RCC&gt; nella radice.</translation>
-    </message>
-    <message>
-        <source>Designer</source>
-        <translation type="unfinished">Designer</translation>
-    </message>
-    <message>
-        <source>Class Generation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Action editor</source>
-        <translation type="obsolete">Editor delle azioni</translation>
-    </message>
-    <message>
-        <source>Signals and slots editor</source>
-        <translation type="obsolete">Editor di segnali e slot</translation>
-    </message>
-    <message>
-        <source>Qt Designer Form Class</source>
-        <translation>Classe Form di Qt Designer</translation>
-    </message>
-    <message>
-        <source>Choose a class name</source>
-        <translation>Scegli il nome della classe</translation>
-    </message>
-    <message>
-        <source>Class</source>
-        <translation>Classe</translation>
-    </message>
-    <message>
-        <source>Configure...</source>
-        <translation>Configura...</translation>
-    </message>
-    <message>
-        <source>More</source>
-        <translation type="obsolete">&lt;Altro&gt;</translation>
-    </message>
-    <message>
-        <source>Embedding of the UI class</source>
-        <translation type="obsolete">Integrazione della classe UI</translation>
-    </message>
-    <message>
-        <source>Aggregation as a pointer member</source>
-        <translation type="obsolete">Aggregazione come membro puntatore</translation>
-    </message>
-    <message>
-        <source>Aggregation</source>
-        <translation type="obsolete">Aggregazione</translation>
-    </message>
-    <message>
-        <source>Multiple Inheritance</source>
-        <translation type="obsolete">Eredità Multipla</translation>
-    </message>
-    <message>
-        <source>Support for changing languages at runtime</source>
-        <translation type="obsolete">Supporta il cambio della lingua durante l&apos;esecuzione</translation>
-    </message>
-    <message>
-        <source>%1 - Error</source>
-        <translation>%1 - Errore</translation>
-    </message>
-    <message>
-        <source>Qt</source>
-        <translation>Qt</translation>
-    </message>
-    <message>
-        <source>Qt Designer Form</source>
-        <translation>Form di Qt Designer</translation>
-    </message>
-    <message>
-        <source>Creates a Qt Designer form file (.ui).</source>
-        <translation>Crea un file form Qt Designer (.ui).</translation>
-    </message>
-    <message>
-        <source>Creates a Qt Designer form file (.ui) with a matching class.</source>
-        <translation>Crea un file form Qt Designer (.ui) e la relativa classe.</translation>
-    </message>
-    <message>
-        <source>Designer widgetbox</source>
-        <translation type="obsolete">Collezione Widget</translation>
-    </message>
-    <message>
-        <source>Object inspector</source>
-        <translation type="obsolete">Ispettore Oggetto</translation>
-    </message>
-    <message>
-        <source>Property editor</source>
-        <translation type="obsolete">Editor delle Proprietà</translation>
-    </message>
-    <message>
-        <source>Widget Box</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Object Inspector</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Property Editor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Signals &amp; Slots Editor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Action Editor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>For&amp;m editor</source>
-        <translation>Editor dei For&amp;m</translation>
-    </message>
-    <message>
-        <source>Edit widgets</source>
-        <translation>Modifica i widget</translation>
-    </message>
-    <message>
-        <source>F3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Edit signals/slots</source>
-        <translation>Modifica segnali/slot</translation>
-    </message>
-    <message>
-        <source>F4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Edit buddies</source>
-        <translation>Modifica amici</translation>
-    </message>
-    <message>
-        <source>Edit tab order</source>
-        <translation>Modifica l&apos;ordine di tabulazione</translation>
-    </message>
-    <message>
-        <source>Meta+H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Meta+L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Meta+G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Meta+J</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+J</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Views</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Signals &amp;&amp; Slots Editor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="unfinished">Bloccato</translation>
-    </message>
-    <message>
-        <source>Reset to Default Layout</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+Alt+R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About Qt Designer plugins....</source>
-        <translation>Informazioni sui plugin Qt Designer...</translation>
-    </message>
-    <message>
-        <source>Preview in</source>
-        <translation>Anteprima in</translation>
-    </message>
-    <message>
-        <source>Designer</source>
-        <translation>Designer</translation>
-    </message>
-    <message>
-        <source>The image could not be created: %1</source>
-        <translation>L&apos;immagine non può essere creata: %1</translation>
-    </message>
-    <message>
-        <source>Choose a form template</source>
-        <translation>Scegli un modello di form</translation>
-    </message>
-    <message>
-        <source>untitled</source>
-        <translation type="obsolete">senza titolo</translation>
-    </message>
-    <message>
-        <source>Error saving %1</source>
-        <translation>Errore durante il salvataggio di %1</translation>
-    </message>
-    <message>
-        <source>Unable to open %1: %2</source>
-        <translation>Impossibile aprire %1: %2</translation>
-    </message>
-    <message>
-        <source>Unable to write to %1: %2</source>
-        <translation>Impossibile scrivere su %1: %2</translation>
-    </message>
-    <message>
-        <source>The class definition of &apos;%1&apos; could not be found in %2.</source>
-        <translation>La definizione della classe &apos;%1&apos; non è stata trovata in %2.</translation>
-    </message>
-    <message>
-        <source>Error finding/adding a slot.</source>
-        <translation>Errore durante la ricerca/aggiunta dello slot.</translation>
-    </message>
-    <message>
-        <source>No documents matching &apos;%1&apos; could be found.
-Rebuilding the project might help.</source>
-        <translation>Non è stato possibile trovare documenti contenenti &apos;%1&apos;.
-La ricompilazione del progetto potrebbe aiutare.</translation>
-    </message>
-    <message>
-        <source>Unable to add the method definition.</source>
-        <translation>Impossibile aggiungere la definizione del metodo.</translation>
-    </message>
-    <message>
-        <source>Designer</source>
-        <translation type="obsolete">Designer</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Help</name>
-    <message>
-        <source>Registered Documentation</source>
-        <translation>Documentazione Registrata</translation>
-    </message>
-    <message>
-        <source>Add...</source>
-        <translation>Aggiungi...</translation>
-    </message>
-    <message>
-        <source>Remove</source>
-        <translation>Rimuovi</translation>
-    </message>
-</context>
-<context>
-    <name>DuiEditor::Internal::DuiEditorPlugin</name>
-    <message>
-        <source>Creates a Qt QML file.</source>
-        <translation type="obsolete">Crea un file Qt QML.</translation>
-    </message>
-    <message>
-        <source>Qt QML File</source>
-        <translation type="obsolete">File Qt QML</translation>
-    </message>
-    <message>
-        <source>Qt</source>
-        <translation type="obsolete">Qt</translation>
-    </message>
-</context>
-<context>
-    <name>DuiEditor::Internal::ScriptEditor</name>
-    <message>
-        <source>&lt;Select Symbol&gt;</source>
-        <translation type="obsolete">&lt;Scegli un Simbolo&gt;</translation>
-    </message>
-    <message>
-        <source>Rename...</source>
-        <translation type="obsolete">Rinomina...</translation>
-    </message>
-    <message>
-        <source>New id:</source>
-        <translation type="obsolete">Nuovo id:</translation>
-    </message>
-    <message>
-        <source>Rename id &apos;%1&apos;...</source>
-        <translation type="obsolete">Rinomina l&apos;id &apos;%1&apos;...</translation>
-    </message>
-</context>
-<context>
-    <name>EmbeddedPropertiesPage</name>
-    <message>
-        <source>Skin:</source>
-        <translation>Tema:</translation>
-    </message>
-    <message>
-        <source>Use Virtual Box
-Note: This adds the toolchain to the build environment and runs the program inside a virtual machine.
-It also automatically sets the correct Qt version.</source>
-        <translation>Usa Virtual Box
-Nota: verrà aggiunta la toolchain dell&apos;ambiente di compilazione e il programma sarà eseguito in una macchina virtuale.
-Imposta automaticamente la Versione di Qt corretta.</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::ExtensionSystem</name>
-    <message>
-        <source>Name:</source>
-        <translation>Nome:</translation>
-    </message>
-    <message>
-        <source>Version:</source>
-        <translation>Versione:</translation>
-    </message>
-    <message>
-        <source>Compatibility Version:</source>
-        <translation>Versione di Compatibilità:</translation>
-    </message>
-    <message>
-        <source>Vendor:</source>
-        <translation>Produttore:</translation>
-    </message>
-    <message>
-        <source>Url:</source>
-        <translation>Url:</translation>
-    </message>
-    <message>
-        <source>Location:</source>
-        <translation>Posizione:</translation>
-    </message>
-    <message>
-        <source>Description:</source>
-        <translation>Descrizione:</translation>
-    </message>
-    <message>
-        <source>Copyright:</source>
-        <translation>Copyright:</translation>
-    </message>
-    <message>
-        <source>License:</source>
-        <translation>Licenza:</translation>
-    </message>
-    <message>
-        <source>Dependencies:</source>
-        <translation>Dipendenze:</translation>
-    </message>
-    <message>
-        <source>State:</source>
-        <translation>Stato:</translation>
-    </message>
-    <message>
-        <source>Error Message:</source>
-        <translation>Messaggio d&apos;Errore:</translation>
-    </message>
-    <message>
-        <source>File does not exist: %1</source>
-        <translation>Il file non esiste: %1</translation>
-    </message>
-    <message>
-        <source>Could not open file for read: %1</source>
-        <translation>Impossibile aprire il file in lettura: %1</translation>
-    </message>
-    <message>
-        <source>Error parsing file %1: %2, at line %3, column %4</source>
-        <translation>Errore leggendo dal file %1: %2, alla riga %3, colonna %4</translation>
-    </message>
-    <message>
-        <source>State</source>
-        <translation>Stato</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation>Nome</translation>
-    </message>
-    <message>
-        <source>Version</source>
-        <translation>Versione</translation>
-    </message>
-    <message>
-        <source>Vendor</source>
-        <translation>Produttore</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Posizione</translation>
-    </message>
-    <message>
-        <source>Invalid</source>
-        <translation>Non valido</translation>
-    </message>
-    <message>
-        <source>Description file found, but error on read</source>
-        <translation>Il file di descrizione è stato trovato, ma c&apos;è stato un errore in lettura</translation>
-    </message>
-    <message>
-        <source>Read</source>
-        <translation>Letto</translation>
-    </message>
-    <message>
-        <source>Description successfully read</source>
-        <translation>La descrizione è stata letta con successo</translation>
-    </message>
-    <message>
-        <source>Resolved</source>
-        <translation>Risolto</translation>
-    </message>
-    <message>
-        <source>Dependencies are successfully resolved</source>
-        <translation>Le dipendenze sono state risolte correttamente</translation>
-    </message>
-    <message>
-        <source>Loaded</source>
-        <translation>Caricato</translation>
-    </message>
-    <message>
-        <source>Library is loaded</source>
-        <translation>La libreria è caricata</translation>
-    </message>
-    <message>
-        <source>Initialized</source>
-        <translation>Inizializzato</translation>
-    </message>
-    <message>
-        <source>Plugin&apos;s initialization method succeeded</source>
-        <translation>La funzione di inizializzazione del plugin ha avuto successo</translation>
-    </message>
-    <message>
-        <source>Running</source>
-        <translation>In esecuzione</translation>
-    </message>
-    <message>
-        <source>Plugin successfully loaded and running</source>
-        <translation>Il plugin è stato caricato correttamente ed è in esecuzione</translation>
-    </message>
-    <message>
-        <source>Stopped</source>
-        <translation>Fermato</translation>
-    </message>
-    <message>
-        <source>Plugin was shut down</source>
-        <translation>Il plugin è stato fermato</translation>
-    </message>
-    <message>
-        <source>Deleted</source>
-        <translation>Cancellato</translation>
-    </message>
-    <message>
-        <source>Plugin ended its life cycle and was deleted</source>
-        <translation>Il plugin ha concluso il suo ciclo di vita ed è stato cancellato</translation>
-    </message>
-    <message>
-        <source>Circular dependency detected:
-</source>
-        <translation>Rilevata una dipendenza circolare:</translation>
-    </message>
-    <message>
-        <source>%1(%2) depends on
-</source>
-        <translation>%1(%2) dipende da
-</translation>
-    </message>
-    <message>
-        <source>%1(%2)</source>
-        <translation>%1(%2)</translation>
-    </message>
-    <message>
-        <source>Cannot load plugin because dependencies are not resolved</source>
-        <translation>Impossibile caricare il plugin poiché le dipendenze non sono risolte</translation>
-    </message>
-    <message>
-        <source>Cannot load plugin because dependency failed to load: %1(%2)
-Reason: %3</source>
-        <translation>Impossibile caricare il plugin perché la dipendenza non è stata caricata: %1(%2)
-Causa: %3</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::FakeVim</name>
-    <message>
-        <source>Toggle vim-style editing</source>
-        <translation>Commuta l&apos;editor vim-style</translation>
-    </message>
-    <message>
-        <source>FakeVim properties...</source>
-        <translation>Proprietà di FakeVim...</translation>
-    </message>
-    <message>
-        <source>%1,%2</source>
-        <translation type="obsolete">%1,%2</translation>
-    </message>
-    <message>
-        <source>%1</source>
-        <translation type="obsolete">%1</translation>
-    </message>
-    <message>
-        <source>Not implemented in FakeVim</source>
-        <translation>Non implementato in FakeVim</translation>
-    </message>
-    <message>
-        <source>E20: Mark &apos;%1&apos; not set</source>
-        <translation>E20: Mark &apos;%1&apos; non impostato</translation>
-    </message>
-    <message>
-        <source>%1%2%</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1All</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>File &apos;%1&apos; exists (add ! to override)</source>
-        <translation>Il file &apos;%1&apos; esiste (aggiungi ! per procedere)</translation>
-    </message>
-    <message>
-        <source>Cannot open file &apos;%1&apos; for writing</source>
-        <translation>Impossibile aprire il file &apos;%1&apos; in scrittura</translation>
-    </message>
-    <message>
-        <source>&quot;%1&quot; %2 %3L, %4C written</source>
-        <translation>&quot;%1&quot; %2 %3R, %4C scritto</translation>
-    </message>
-    <message>
-        <source>Cannot open file &apos;%1&apos; for reading</source>
-        <translation>Impossibile aprire il file &apos;%1&apos; in lettura</translation>
-    </message>
-    <message>
-        <source>&quot;%1&quot; %2L, %3C</source>
-        <translation>&quot;%1&quot; %2R, %3C</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n lines filtered</source>
-        <translation>
-            <numerusform>una riga filtrata</numerusform>
-            <numerusform>%n righe filtrate</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <source>%n lines &gt;ed %1 time</source>
-        <translation>
-            <numerusform>una riga &gt;ed %2 volte</numerusform>
-            <numerusform>%n righe &gt;ed %2 volte</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>E512: Unknown option: </source>
-        <translation>E512: Opzione sconosciuta: </translation>
-    </message>
-    <message>
-        <source>Pattern not found: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>E492: Not an editor command: </source>
-        <translation type="obsolete">E492: Non è un comando di modifica: </translation>
-    </message>
-    <message>
-        <source>search hit BOTTOM, continuing at TOP</source>
-        <translation>la ricerca è arrivata alla FINE, continuo dall&apos;INIZIO</translation>
-    </message>
-    <message>
-        <source>search hit TOP, continuing at BOTTOM</source>
-        <translation>la ricerca è arrivata all&apos;INIZIO, continuo dalla FINE</translation>
-    </message>
-    <message>
-        <source>E486: Pattern not found: </source>
-        <translation type="obsolete">E486: Pattern non trovato: </translation>
-    </message>
-    <message>
-        <source>Already at oldest change</source>
-        <translation>Già alla modifica più vecchia</translation>
-    </message>
-    <message>
-        <source>Already at newest change</source>
-        <translation>Già alla modifica più recente</translation>
-    </message>
-    <message>
-        <source>General</source>
-        <translation>Generale</translation>
-    </message>
-    <message>
-        <source>FakeVim</source>
-        <translation>FakeVim</translation>
-    </message>
-    <message>
-        <source>Quit FakeVim</source>
-        <translation>Esci da FakeVim</translation>
-    </message>
-    <message>
-        <source>Saving succeeded</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n files not saved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Not an editor command: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FakeVim Information</source>
-        <translation>Informazioni su FakeVim</translation>
-    </message>
-    <message>
-        <source>Use FakeVim</source>
-        <translation>Usa FakeVim</translation>
-    </message>
-    <message>
-        <source>Vim style settings</source>
-        <translation>Impostazioni dello stile Vim</translation>
-    </message>
-    <message>
-        <source>vim&apos;s &quot;expandtab&quot; option</source>
-        <translation>opzione &quot;expandtab&quot; di vim</translation>
-    </message>
-    <message>
-        <source>Expand tabulators:</source>
-        <translation>Espandi le tabulazioni:</translation>
-    </message>
-    <message>
-        <source>Highlight search results:</source>
-        <translation>Evidenzia i risultati della ricerca:</translation>
-    </message>
-    <message>
-        <source>Shift width:</source>
-        <translation>Larghezza spostamento:</translation>
-    </message>
-    <message>
-        <source>Smart tabulators:</source>
-        <translation>Tabulazioni intelligenti:</translation>
-    </message>
-    <message>
-        <source>Start of line:</source>
-        <translation>Inizio della riga:</translation>
-    </message>
-    <message>
-        <source>vim&apos;s &quot;tabstop&quot; option</source>
-        <translation>opzione &quot;tabstop&quot; di vim</translation>
-    </message>
-    <message>
-        <source>Tabulator size:</source>
-        <translation>Larghezza della tabulazione:</translation>
-    </message>
-    <message>
-        <source>Backspace:</source>
-        <translation>Backspace:</translation>
-    </message>
-    <message>
-        <source>VIM&apos;s &quot;autoindent&quot; option</source>
-        <translation>opzione &quot;autoindent&quot; di vim</translation>
-    </message>
-    <message>
-        <source>Automatic indentation:</source>
-        <translation>Indentazione automatica:</translation>
-    </message>
-    <message>
-        <source>Copy text editor settings</source>
-        <translation>Copia stile dall&apos;editor di testo</translation>
-    </message>
-    <message>
-        <source>Set Qt style</source>
-        <translation>Stile Qt</translation>
-    </message>
-    <message>
-        <source>Set plain style</source>
-        <translation>Stile semplice</translation>
-    </message>
-    <message>
-        <source>Incremental search:</source>
-        <translation>Ricerca incrementale:</translation>
-    </message>
-</context>
-<context>
-    <name>FilterNameDialogClass</name>
-    <message>
-        <source>Add Filter Name</source>
-        <translation>Aggiungi Nome Filtrato</translation>
-    </message>
-    <message>
-        <source>Filter Name:</source>
-        <translation>Filtra il Nome:</translation>
-    </message>
-</context>
-<context>
-    <name>FilterSettingsPage</name>
-    <message>
-        <source>Filters</source>
-        <translation>Filtri</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation>1</translation>
-    </message>
-    <message>
-        <source>Add</source>
-        <translation>Aggiungi</translation>
-    </message>
-    <message>
-        <source>Remove</source>
-        <translation>Rimuovi</translation>
-    </message>
-    <message>
-        <source>Attributes</source>
-        <translation>Attributi</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Core</name>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+111"/>
         <source>Search for...</source>
         <translation>Cerca...</translation>
     </message>
     <message>
-        <source>Sc&amp;ope:</source>
-        <translation>Ambit&amp;o:</translation>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+38"/>
+        <source>Empty search term.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+22"/>
         <source>&amp;Search</source>
         <translation>&amp;Cerca</translation>
     </message>
     <message>
-        <source>Search &amp;for:</source>
-        <translation>Co&amp;sa:</translation>
+        <location line="+4"/>
+        <source>Search &amp;&amp; &amp;Replace</source>
+        <translation>Cerca &amp;&amp; &amp;Sostituisci</translation>
     </message>
     <message>
-        <source>Close</source>
-        <translation>Chiudi</translation>
+        <location line="+6"/>
+        <source>Search f&amp;or:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+14"/>
+        <source>Whole words o&amp;nly</source>
+        <translation>Solo parole &amp;intere</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use re&amp;gular expressions</source>
+        <translation>Usa espressioni &amp;regolari</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Sco&amp;pe:</source>
+        <translation>&amp;Scopo:</translation>
+    </message>
+    <message>
+        <location line="-9"/>
         <source>&amp;Case sensitive</source>
         <translation>Distingui le &amp;Maiuscole</translation>
     </message>
     <message>
-        <source>&amp;Whole words only</source>
-        <translation>&amp;Parole intere</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+265"/>
         <source>&amp;Find/Replace</source>
         <translation>&amp;Cerca/Sostituisci</translation>
     </message>
     <message>
-        <source>Find...</source>
-        <translation type="unfinished"></translation>
+        <location line="+10"/>
+        <source>Advanced Find</source>
+        <translation>Ricerca avanzata</translation>
     </message>
     <message>
-        <source>Find Dialog</source>
-        <translation type="obsolete">Finestra di Ricerca</translation>
+        <location line="+2"/>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-289"/>
+        <source>Open Advanced Find...</source>
+        <translation>Apri la ricerca avanzata...</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-121"/>
+        <location line="+122"/>
+        <source>Advanced...</source>
+        <translation>Avanzate...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Ctrl+Shift+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+F</translation>
     </message>
     <message>
-        <source>Current Document</source>
-        <translation>Documento Corrente</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+31"/>
         <source>Enter Find String</source>
         <translation>Inserire la Stringa di Ricerca</translation>
     </message>
     <message>
+        <location line="+2"/>
         <source>Ctrl+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+E</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Find Next</source>
         <translation>Trova Successivo</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Find Previous</source>
         <translation>Trova Precedente</translation>
     </message>
     <message>
-        <source>Replace &amp;&amp; Find Next</source>
-        <translation>Sostituisci &amp;&amp; Trova Successivo</translation>
-    </message>
-    <message>
+        <location line="+48"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Replace &amp;&amp; Find Previous</source>
         <translation>Sostituisci &amp;&amp; Trova Precedente</translation>
     </message>
     <message>
+        <location line="-235"/>
+        <location line="+246"/>
         <source>Replace All</source>
         <translation>Sostituisci Tutto</translation>
     </message>
     <message>
+        <location line="-296"/>
+        <source>Find Flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <location line="+228"/>
+        <source>Replace &amp;&amp; Find</source>
+        <translation>Sostituisci &amp; Trova</translation>
+    </message>
+    <message>
+        <location line="-131"/>
+        <location line="+13"/>
+        <source>Shift+Enter</source>
+        <translation>Shift+Enter</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <location line="+13"/>
+        <source>Shift+Return</source>
+        <translation>Shift+Return</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Find/Replace</source>
+        <translation>Trova/Sostituisci</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Find Next (Selected)</source>
+        <translation>Trova successivo (selezionato)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl+F3</source>
+        <translation>Ctrl+F3</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Find Previous (Selected)</source>
+        <translation>Trova precedente (selezionato)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl+Shift+F3</source>
+        <translation type="unfinished">Ctrl+Shift+F3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Select All</source>
+        <translation type="unfinished">Seleziona Tutto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl+Alt+Return</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-259"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-115"/>
         <source>Case Sensitive</source>
         <translation>Distingui le Maiuscole</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Whole Words Only</source>
         <translation>Parole Intere</translation>
     </message>
     <message>
+        <location line="+8"/>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-6"/>
         <source>Use Regular Expressions</source>
         <translation>Usa Espressioni Regolari</translation>
     </message>
     <message>
+        <location line="+8"/>
+        <source>Preserve Case when Replacing</source>
+        <translation>Mantieni la capitalizzazione quando sostituisci</translation>
+    </message>
+    <message>
+        <location line="+148"/>
+        <source>Replace with...</source>
+        <translation>Sostituito con...</translation>
+    </message>
+    <message>
+        <location line="-488"/>
         <source>Find</source>
         <translation>Trova</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Find:</source>
         <translation>Trova:</translation>
     </message>
     <message>
+        <location line="+39"/>
         <source>Replace with:</source>
         <translation>Sostituisci con:</translation>
     </message>
     <message>
-        <source>All</source>
-        <translation>Tutti</translation>
-    </message>
-    <message>
-        <source>...</source>
-        <translation type="unfinished">...</translation>
-    </message>
-    <message>
-        <source>No matches found!</source>
-        <translation>Nessuna corrispondenza trovata!</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+120"/>
+        <location line="+491"/>
         <source>Expand All</source>
         <translation>Espandi Tutto</translation>
     </message>
     <message>
-        <source>Replace with:</source>
-        <translation type="unfinished">Sostituisci con:</translation>
-    </message>
-    <message>
-        <source>Replace all occurances</source>
+        <location line="-464"/>
+        <source>Filter Results</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+7"/>
+        <location line="+480"/>
+        <source>New Search</source>
+        <translation>Nuova ricerca</translation>
+    </message>
+    <message>
+        <location line="-149"/>
+        <source>%1 %2</source>
+        <translation type="unfinished">%1 %2</translation>
+    </message>
+    <message>
+        <location line="+123"/>
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+713"/>
+        <source>Collapse All</source>
+        <translation>Comprimi tutto</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>History:</source>
+        <translation>Cronologia:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8"/>
+        <location line="+222"/>
         <source>Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>Sostituisci</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+106"/>
         <source>Search Results</source>
         <translation>Risultati della Ricerca</translation>
     </message>
-</context>
-<context>
-    <name>QtC::Debugger</name>
     <message>
-        <source>Gdb interaction</source>
-        <translation>Interazione con gdb</translation>
-    </message>
-    <message>
-        <source>Gdb location:</source>
-        <translation>Posizione gdb:</translation>
-    </message>
-    <message>
-        <source>Environment:</source>
-        <translation>Ambiente:</translation>
-    </message>
-    <message>
-        <source>This is either empty or points to a file containing gdb commands that will be executed immediately after gdb starts up.</source>
-        <translation>Questo può essere vuoto, o puntare ad un file contenente comandi gdb che saranno eseguiti all&apos;avvio di gdb.</translation>
-    </message>
-    <message>
-        <source>Gdb startup script:</source>
-        <translation>Script di avvio gdb:</translation>
-    </message>
-    <message>
-        <source>Behaviour of breakpoint setting in plugins</source>
-        <translation>Impostazione di punti di interruzione nei plugin</translation>
-    </message>
-    <message>
-        <source>This is the slowest but safest option.</source>
-        <translation>Questa è l&apos;impostazione più lenta e più sicura.</translation>
-    </message>
-    <message>
-        <source>Try to set breakpoints in plugins always automatically.</source>
-        <translation>Imposta i punti di interruzione nei plugin automaticamente.</translation>
-    </message>
-    <message>
-        <source>Try to set breakpoints in selected plugins</source>
-        <translation>Imposta i punti di interruzione nei plugin selezionati</translation>
-    </message>
-    <message>
-        <source>Matching regular expression: </source>
-        <translation>Secondo l&apos;espressione regolare:</translation>
-    </message>
-    <message>
-        <source>Never set breakpoints in plugins automatically</source>
-        <translation>Non impostare mai i punti di interruzione automaticamente</translation>
-    </message>
-    <message>
-        <source>This is either a full absolute path leading to the gdb binary you intend to use or the name of a gdb binary that will be searched in your PATH.</source>
-        <translation>Questo può essere il percorso assoluto completo dell&apos;eseguibile gdb che vuoi usare, oppure il nome di un eseguibile che sarà cercato nel tuo PATH.</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::ProjectExplorer</name>
-    <message>
-        <source>Override %1:</source>
-        <translation>Ridefinisci %1:</translation>
-    </message>
-    <message>
-        <source>Make arguments:</source>
-        <translation>Parametri make:</translation>
-    </message>
-    <message>
-        <source>Targets:</source>
-        <translation>Destinazioni:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::GenericProjectManager</name>
-    <message>
-        <source>&lt;new&gt;</source>
-        <translation>&lt;nuovo&gt;</translation>
-    </message>
-    <message>
-        <source>Create</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New configuration</source>
-        <translation type="unfinished">Nuova configurazione</translation>
-    </message>
-    <message>
-        <source>New Configuration Name:</source>
-        <translation type="unfinished">Nome della Nuova Configurazione:</translation>
-    </message>
-    <message>
-        <source>Build directory:</source>
-        <translation>Cartella di compilazione:</translation>
-    </message>
-    <message>
-        <source>Tool Chain:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Toolchain:</source>
-        <translation type="obsolete">Toolchain:</translation>
-    </message>
-    <message>
-        <source>Generic Manager</source>
-        <translation>Manager Generico</translation>
-    </message>
-    <message>
-        <source>Override %1:</source>
-        <translation>Ridefinisci %1:</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Make:&lt;/b&gt; %1 %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Import of Makefile-based Project</source>
-        <translation>Importazione di un Progetto basato su Makefile</translation>
-    </message>
-    <message>
-        <source>Creates a generic project, supporting any build system.</source>
-        <translation>Crea un progetto generico, che supporta qualsiasi sistema di build.</translation>
-    </message>
-    <message>
-        <source>Projects</source>
-        <translation>Progetti</translation>
-    </message>
-    <message>
-        <source>The project %1 could not be opened.</source>
-        <translation>Non è possibile aprire il progetto %1.</translation>
-    </message>
-    <message>
-        <source>Generic Project</source>
-        <translation>Progetto Generico</translation>
-    </message>
-    <message>
-        <source>Project name:</source>
-        <translation>Nome progetto:</translation>
-    </message>
-    <message>
-        <source>Location:</source>
-        <translation>Posizione:</translation>
-    </message>
-    <message>
-        <source>Second Page Title</source>
-        <translation>Titolo della Seconda Pagina</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Git</name>
-    <message>
-        <source>Branches</source>
-        <translation>Rami</translation>
-    </message>
-    <message>
-        <source>General information</source>
-        <translation>Informazioni Generali</translation>
-    </message>
-    <message>
-        <source>Repository:</source>
-        <translation>Deposito:</translation>
-    </message>
-    <message>
-        <source>Remote branches</source>
-        <translation>Rami remoti</translation>
-    </message>
-    <message>
-        <source>Checkout</source>
-        <translation>Checkout</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Elimina</translation>
-    </message>
-    <message>
-        <source>Unable to find the repository directory for &apos;%1&apos;.</source>
-        <translation>Impossibile trovare il deposito di &apos;%1&apos;.</translation>
-    </message>
-    <message>
-        <source>Delete Branch</source>
-        <translation>Cancella Ramo</translation>
-    </message>
-    <message>
-        <source>Would you like to delete the branch &apos;%1&apos;?</source>
-        <translation>Vuoi cancellare il ramo &apos;%1&apos;?</translation>
-    </message>
-    <message>
-        <source>Failed to delete branch</source>
-        <translation>Cancellazione del ramo non riuscita</translation>
-    </message>
-    <message>
-        <source>Failed to create branch</source>
-        <translation>Creazione del ramo non riuscita</translation>
-    </message>
-    <message>
-        <source>Failed to stash</source>
-        <translation>Stash non riuscito</translation>
-    </message>
-    <message>
-        <source>Would you like to create a local branch &apos;%1&apos; tracking the remote branch &apos;%2&apos;?</source>
-        <translation>Vuoi creare un ramo locale &apos;%1&apos; che tenga traccia del ramo remoto &apos;%2&apos;?</translation>
-    </message>
-    <message>
-        <source>Create branch</source>
-        <translation>Crea ramo</translation>
-    </message>
-    <message>
-        <source>Failed to create a tracking branch</source>
-        <translation>Creazione del ramo con traccia non riuscita</translation>
-    </message>
-    <message>
-        <source>Select a Git commit</source>
-        <translation>Selezionare un commit Git</translation>
-    </message>
-    <message>
-        <source>Select Git repository</source>
-        <translation>Selezionare un deposito Git</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Errore</translation>
-    </message>
-    <message>
-        <source>Selected directory is not a Git repository</source>
-        <translation>La cartella selezionata non è un deposito Git</translation>
-    </message>
-    <message>
-        <source>Note that the git plugin for QtCreator is not able to interact with the server so far. Thus, manual ssh-identification etc. will not work.</source>
-        <translation>Il plugin git di Qt Creator non è ancora in grado di interagire con il server. Perciò l&apos;identificazione ssh manuale e cose simili non funzioneranno.</translation>
-    </message>
-    <message>
-        <source>Unable to determine the repository for %1.</source>
-        <translation>Impossibile trovare il deposito di &apos;%1&apos;.</translation>
-    </message>
-    <message>
-        <source>Unable to parse the file output.</source>
-        <translation>Impossibile leggere il file di uscita.</translation>
-    </message>
-    <message>
-        <source>%1 Executing: %2 %3
-</source>
-        <extracomment>&lt;timestamp&gt; Executing: &lt;executable&gt; &lt;arguments&gt;</extracomment>
-        <translation type="obsolete">%1 Eseguo: %2 %3
-</translation>
-    </message>
-    <message>
-        <source>Executing: %1 %2
-</source>
-        <extracomment>Executing: &lt;executable&gt; &lt;arguments&gt;</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Waiting for data...</source>
-        <translation>In attesa dei dati...</translation>
-    </message>
-    <message>
-        <source>Git Diff</source>
-        <translation>Git Diff</translation>
-    </message>
-    <message>
-        <source>Git Diff %1</source>
-        <translation>Git Diff %1</translation>
-    </message>
-    <message>
-        <source>Git Log %1</source>
-        <translation>Git Log %1</translation>
-    </message>
-    <message>
-        <source>Git Show %1</source>
-        <translation>Git Show %1</translation>
-    </message>
-    <message>
-        <source>Git Blame %1</source>
-        <translation>Git Blame %1</translation>
-    </message>
-    <message numerus="yes">
-        <source>Unable to add %n file(s) to %1: %2</source>
-        <translation>
-            <numerusform>Impossibile aggiungere il file a %1: %2</numerusform>
-            <numerusform>Impossibile aggiungere %n file a %1: %2</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <source>Unable to reset %n file(s) in %1: %2</source>
-        <translation>
-            <numerusform>Impossibile fare il reset del file in %1: %2</numerusform>
-            <numerusform>Impossibile fare il reset di %n file in %1: %2</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <source>Unable to checkout %n file(s) in %1: %2</source>
-        <translation>
-            <numerusform>Impossibile fare il checkout del file in %1: %2</numerusform>
-            <numerusform>Impossibile fare il checkout di %n file in %1: %2</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Unable stash in %1: %2</source>
-        <translation>Impossibile fare lo stash in %1: %2</translation>
-    </message>
-    <message>
-        <source>Unable to run branch command: %1: %2</source>
-        <translation>Impossibile eseguire il comando di branch: %1: %2</translation>
-    </message>
-    <message>
-        <source>Unable to run show: %1: %2</source>
-        <translation>Impossibile eseguire show: %1: %2</translation>
-    </message>
-    <message>
-        <source>Changes</source>
-        <translation>Modifiche</translation>
-    </message>
-    <message>
-        <source>You have modified files. Would you like to stash your changes?</source>
-        <translation>Sono presenti modifiche ai file. Vuoi fare lo stash delle modifiche?</translation>
-    </message>
-    <message>
-        <source>Unable to obtain the status: %1</source>
-        <translation>Impossibile ottenere lo stato: %1</translation>
-    </message>
-    <message>
-        <source>The repository %1 is not initialized yet.</source>
-        <translation>Il deposito %1 non è ancora inizializzato.</translation>
-    </message>
-    <message numerus="yes">
-        <source>Committed %n file(s).
-</source>
-        <translation>
-            <numerusform>Eseguito il commit di un file.</numerusform>
-            <numerusform>Eseguito il commit di %n file.</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <source>Unable to commit %n file(s): %1
-</source>
-        <translation>
-            <numerusform>Impossibile eseguire il commit del file: %1</numerusform>
-            <numerusform>Impossibile eseguire il commit di %n file: %1</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Revert</source>
-        <translation>Ripristina</translation>
-    </message>
-    <message>
-        <source>The file has been changed. Do you want to revert it?</source>
-        <translation>Il file è stato modificato. Vuoi ripristinarlo?</translation>
-    </message>
-    <message>
-        <source>The file is not modified.</source>
-        <translation>Il file non è stato modificato.</translation>
-    </message>
-    <message>
-        <source>There are no modified files.</source>
-        <translation>Non ci sono file modificati.</translation>
-    </message>
-    <message>
-        <source>Git Output</source>
-        <translation type="obsolete">Output di Git</translation>
-    </message>
-    <message>
-        <source>Git</source>
-        <translation type="obsolete">Git</translation>
-    </message>
-    <message>
-        <source>&amp;Git</source>
-        <translation>&amp;Git</translation>
-    </message>
-    <message>
-        <source>Diff Current File</source>
-        <translation>Diff del file corrente</translation>
-    </message>
-    <message>
-        <source>Diff &quot;%1&quot;</source>
-        <translation>Diff &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+G,Alt+D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>File Status</source>
-        <translation>Stato del file</translation>
-    </message>
-    <message>
-        <source>Status Related to &quot;%1&quot;</source>
-        <translation>Stato Relativo a &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+G,Alt+S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Log File</source>
-        <translation>Log del file</translation>
-    </message>
-    <message>
-        <source>Log of &quot;%1&quot;</source>
-        <translation>Log di &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+G,Alt+L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Blame</source>
-        <translation>Blame</translation>
-    </message>
-    <message>
-        <source>Blame for &quot;%1&quot;</source>
-        <translation>Blame su &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+G,Alt+B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Undo Changes</source>
-        <translation>Annulla le Modifiche</translation>
-    </message>
-    <message>
-        <source>Undo Changes for &quot;%1&quot;</source>
-        <translation>Annulla le modifiche di &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+G,Alt+U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stage File for Commit</source>
-        <translation>Prepara il file per il commit</translation>
-    </message>
-    <message>
-        <source>Stage &quot;%1&quot; for Commit</source>
-        <translation>Prepara &quot;%1&quot; per il Commit</translation>
-    </message>
-    <message>
-        <source>Alt+G,Alt+A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unstage File from Commit</source>
-        <translation>Rimuovi il file dal commit</translation>
-    </message>
-    <message>
-        <source>Unstage &quot;%1&quot; from Commit</source>
-        <translation>Rimuovi &quot;%1&quot; dal Commit</translation>
-    </message>
-    <message>
-        <source>Revert...</source>
-        <translation type="obsolete">Ripristina...</translation>
-    </message>
-    <message>
-        <source>Revert &quot;%1&quot;...</source>
-        <translation type="obsolete">Ripristina &quot;%1&quot;...</translation>
-    </message>
-    <message>
-        <source>Diff Current Project</source>
-        <translation>Diff del progetto corrente</translation>
-    </message>
-    <message>
-        <source>Diff Project &quot;%1&quot;</source>
-        <translation>Diff del Progetto &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Project Status</source>
-        <translation>Stato del progetto</translation>
-    </message>
-    <message>
-        <source>Status Project &quot;%1&quot;</source>
-        <translation>Stato del Progetto &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Log Project</source>
-        <translation>Log del progetto</translation>
-    </message>
-    <message>
-        <source>Log Project &quot;%1&quot;</source>
-        <translation>Log del Progetto &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+G,Alt+K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Undo Project Changes</source>
-        <translation>Annulla le modifiche al progetto</translation>
-    </message>
-    <message>
-        <source>Stash</source>
-        <translation>Stash</translation>
-    </message>
-    <message>
-        <source>Saves the current state of your work.</source>
-        <translation>Salva lo stato corrente del tuo lavoro.</translation>
-    </message>
-    <message>
-        <source>Pull</source>
-        <translation>Recupera</translation>
-    </message>
-    <message>
-        <source>Stash Pop</source>
-        <translation>Pop di uno stash</translation>
-    </message>
-    <message>
-        <source>Restores changes saved to the stash list using &quot;Stash&quot;.</source>
-        <translation>Ripristina le modifiche salvate nella lista degli stash usando &quot;Stash&quot;.</translation>
-    </message>
-    <message>
-        <source>Commit...</source>
-        <translation>Nuova revisione...</translation>
-    </message>
-    <message>
-        <source>Alt+G,Alt+C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Push</source>
-        <translation>Propaga</translation>
-    </message>
-    <message>
-        <source>Branches...</source>
-        <translation>Rami...</translation>
-    </message>
-    <message>
-        <source>List Stashes</source>
-        <translation>Lista degli stash</translation>
-    </message>
-    <message>
-        <source>Show Commit...</source>
-        <translation>Mostra una revisione...</translation>
-    </message>
-    <message>
-        <source>Commit</source>
-        <translation>Revisione</translation>
-    </message>
-    <message>
-        <source>Diff Selected Files</source>
-        <translation>Diff dei file selezionati</translation>
-    </message>
-    <message>
-        <source>&amp;Undo</source>
-        <translation>&amp;Annulla</translation>
-    </message>
-    <message>
-        <source>&amp;Redo</source>
-        <translation>&amp;Ripeti</translation>
-    </message>
-    <message>
-        <source>Could not find working directory</source>
-        <translation>Non trovo la cartella di lavoro</translation>
-    </message>
-    <message>
-        <source>Revert</source>
-        <translation type="unfinished">Ripristina</translation>
-    </message>
-    <message>
-        <source>Would you like to revert all pending changes to the project?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Another submit is currently being executed.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Another submit is currently beeing executed.</source>
-        <translation type="obsolete">Si sta già creando una revisione.</translation>
-    </message>
-    <message>
-        <source>Cannot create temporary file: %1</source>
-        <translation>Impossibile creare il file temporaneo: %1</translation>
-    </message>
-    <message>
-        <source>Closing git editor</source>
-        <translation>Chiusura dell&apos;editor git</translation>
-    </message>
-    <message>
-        <source>Do you want to commit the change?</source>
-        <translation>Vuoi creare una revisione con la modifica?</translation>
-    </message>
-    <message>
-        <source>The commit message check failed. Do you want to commit the change?</source>
-        <translation>Il controllo sul messaggio della nuova revisione è fallito. Vuoi creare la revisione?</translation>
-    </message>
-    <message>
-        <source>The binary &apos;%1&apos; could not be located in the path &apos;%2&apos;</source>
-        <translation>Impossibile trovare il binario &apos;%1&apos; nel percorso &apos;%2&apos;</translation>
-    </message>
-    <message>
-        <source>Git Commit</source>
-        <translation>Nuova revisione git</translation>
-    </message>
-    <message>
-        <source>General Information</source>
-        <translation>Informazioni Generali</translation>
-    </message>
-    <message>
-        <source>repository</source>
-        <translation>deposito</translation>
-    </message>
-    <message>
-        <source>Branch:</source>
-        <translation>Ramo:</translation>
-    </message>
-    <message>
-        <source>branch</source>
-        <translation>ramo</translation>
-    </message>
-    <message>
-        <source>Commit Information</source>
-        <translation>Informazioni del Commit</translation>
-    </message>
-    <message>
-        <source>Author:</source>
-        <translation>Autore:</translation>
-    </message>
-    <message>
-        <source>Email:</source>
-        <translation>Email:</translation>
-    </message>
-    <message>
-        <source>&lt;New branch&gt;</source>
-        <translation>&lt;nuovo branch&gt;</translation>
-    </message>
-    <message>
-        <source>Type to create a new branch</source>
-        <translation>Scrivi il nome del nuovo ramo</translation>
-    </message>
-    <message>
-        <source>Environment variables</source>
-        <translation>Variabili d&apos;ambiente</translation>
-    </message>
-    <message>
-        <source>PATH:</source>
-        <translation>PATH:</translation>
-    </message>
-    <message>
-        <source>From system</source>
-        <translation>Dal sistema</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Note:&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Nota:&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Git needs to find Perl in the environment as well.</source>
-        <translation>Git necessita di tovare anche Perl nell&apos;ambiente.</translation>
-    </message>
-    <message>
-        <source>Log commit display count:</source>
-        <translation>Numero di revisioni da mostrare per un Log:</translation>
-    </message>
-    <message>
-        <source>Note that huge amount of commits might take some time.</source>
-        <translation>Un numero elevato di revisioni può richiedere parecchio tempo.</translation>
-    </message>
-    <message>
-        <source>Timeout (seconds):</source>
-        <translation>Timeout (secondi):</translation>
-    </message>
-    <message>
-        <source>Git</source>
-        <translation>Git</translation>
-    </message>
-    <message>
-        <source>Git Settings</source>
-        <translation>Impostazioni di Git</translation>
-    </message>
-    <message>
-        <source>Prompt to submit</source>
-        <translation type="unfinished">Prompt del submit</translation>
-    </message>
-    <message>
-        <source>Omit date from annotation output</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>
-&apos;%1&apos; failed (exit code %2).
-</source>
-        <translation>
-&apos;%1&apos; è fallito (codice di uscita %2).
-</translation>
-    </message>
-    <message>
-        <source>
-&apos;%1&apos; completed (exit code %2).
-</source>
-        <translation>
-&apos;%1&apos; completato (codice di uscita %2).
-</translation>
-    </message>
-</context>
-<context>
-    <name>HelloWorld::Internal::HelloWorldPlugin</name>
-    <message>
-        <source>Say &quot;&amp;Hello World!&quot;</source>
-        <translation>Dimmi &quot;&amp;Ciao Mondo!&quot;</translation>
-    </message>
-    <message>
-        <source>&amp;Hello World</source>
-        <translation>&amp;Ciao Mondo</translation>
-    </message>
-    <message>
-        <source>Hello world!</source>
-        <translation>Ciao mondo!</translation>
-    </message>
-    <message>
-        <source>Hello World PushButton!</source>
-        <translation>Bottone Ciao Mondo!</translation>
-    </message>
-    <message>
-        <source>Hello World!</source>
-        <translation>Ciao Mondo!</translation>
-    </message>
-    <message>
-        <source>Hello World! Beautiful day today, isn&apos;t it?</source>
-        <translation>Ciao Mondo! Hai visto che bella giornata, oggi?</translation>
-    </message>
-</context>
-<context>
-    <name>HelloWorld::Internal::HelloWorldWindow</name>
-    <message>
-        <source>Focus me to activate my context!</source>
-        <translation>Posizionati su di me per attivare il mio contesto!</translation>
-    </message>
-    <message>
-        <source>Hello, world!</source>
-        <translation>Ciao, mondo!</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Help</name>
-    <message>
-        <source>Add new page</source>
-        <translation>Aggiungi una pagina</translation>
-    </message>
-    <message>
-        <source>Print Document</source>
-        <translation>Stampa il Documento</translation>
-    </message>
-    <message>
-        <source>unknown</source>
-        <translation>sconosciuto</translation>
-    </message>
-    <message>
-        <source>Add New Page</source>
-        <translation>Aggiungi una Pagina</translation>
-    </message>
-    <message>
-        <source>Close This Page</source>
-        <translation>Chiudi questa Pagina</translation>
-    </message>
-    <message>
-        <source>Close Other Pages</source>
-        <translation>Chiudi le Altre Pagine</translation>
-    </message>
-    <message>
-        <source>Add Bookmark for this Page...</source>
-        <translation>Aggiungi un Segnalibro su questa Pagina...</translation>
-    </message>
-    <message>
-        <source>Documentation</source>
-        <translation>Documentazione</translation>
-    </message>
-    <message>
-        <source>Help</source>
-        <translation>Guida</translation>
-    </message>
-    <message>
-        <source>Add Documentation</source>
-        <translation>Aggiungi Documentazione</translation>
-    </message>
-    <message>
-        <source>Qt Help Files (*.qch)</source>
-        <translation>File Qt Help (*.qch)</translation>
-    </message>
-    <message>
-        <source>The file %1 is not a valid Qt Help file!</source>
-        <translation>Il file %1 non è un file Qt Help valido!</translation>
-    </message>
-    <message>
-        <source>Cannot unregister documentation file %1!</source>
-        <translation>Impossibile de-registrare il file di documentazione %1!</translation>
-    </message>
-    <message>
-        <source>Filters</source>
-        <translation>Filtri</translation>
-    </message>
-    <message>
-        <source>Help index</source>
-        <translation>Indice della guida</translation>
-    </message>
-    <message>
-        <source>Contents</source>
-        <translation>Contenuti</translation>
-    </message>
-    <message>
-        <source>Index</source>
-        <translation>Indice</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Cerca</translation>
-    </message>
-    <message>
-        <source>Bookmarks</source>
-        <translation>Segnalibri</translation>
-    </message>
-    <message>
-        <source>Home</source>
-        <translation>Home</translation>
-    </message>
-    <message>
-        <source>Previous</source>
-        <translation>Indietro</translation>
-    </message>
-    <message>
-        <source>Next</source>
-        <translation>Avanti</translation>
-    </message>
-    <message>
-        <source>Add Bookmark</source>
-        <translation>Aggiungi un Segnalibro</translation>
-    </message>
-    <message>
-        <source>Previous Page</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Next Page</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Context Help</source>
-        <translation>Aiuto Contestuale</translation>
-    </message>
-    <message>
-        <source>Activate Index in Help mode</source>
-        <translation>Attiva l&apos;Indice nella Guida</translation>
-    </message>
-    <message>
-        <source>Activate Contents in Help mode</source>
-        <translation>Attiva i contenuti nella Guida</translation>
-    </message>
-    <message>
-        <source>Activate Search in Help mode</source>
-        <translation>Attiva la ricerca nella Guida</translation>
-    </message>
-    <message>
-        <source>Increase Font Size</source>
-        <translation type="unfinished">Aumenta la Dimensione dei Caratteri</translation>
-    </message>
-    <message>
-        <source>Ctrl++</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Decrease Font Size</source>
-        <translation type="unfinished">Diminuisci la Dimensione dei Caratteri</translation>
-    </message>
-    <message>
-        <source>Ctrl+-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reset Font Size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unfiltered</source>
-        <translation>Non filtrato</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head&gt;&lt;title&gt;No Documentation&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;br/&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;No documentation available.&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head&gt;&lt;title&gt;Nessuna Documentazione&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;br/&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;Non è disponibile alcuna documentazione.&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Filtered by:</source>
-        <translation>Filtrato da:</translation>
-    </message>
-    <message>
-        <source>&amp;Copy</source>
-        <translation>&amp;Copia</translation>
-    </message>
-    <message>
-        <source>Copy &amp;Link Location</source>
-        <translation>Copia il &amp;Collegamento</translation>
-    </message>
-    <message>
-        <source>Select All</source>
-        <translation>Seleziona Tutto</translation>
-    </message>
-</context>
-<context>
-    <name>HelpViewer</name>
-    <message>
-        <source>Open Link in New Tab</source>
-        <translation>Apri il Collegamento in una Nuova Scheda</translation>
-    </message>
-    <message>
-        <source>&lt;title&gt;Error 404...&lt;/title&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;h1&gt;The page could not be found&lt;/h1&gt;&lt;br&gt;&lt;h3&gt;&apos;%1&apos;&lt;/h3&gt;&lt;/div&gt;</source>
-        <translation>&lt;title&gt;Errore 404...&lt;/title&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;h1&gt;Non è stato possibile trovare la pagina&lt;/h1&gt;&lt;br&gt;&lt;h3&gt;&apos;%1&apos;&lt;/h3&gt;&lt;/div&gt;</translation>
-    </message>
-    <message>
-        <source>Help</source>
-        <translation>Guida</translation>
-    </message>
-    <message>
-        <source>Unable to launch external application.
-</source>
-        <translation>Impossibile lanciare l&apos;applicazione esterna.
-</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>Copy &amp;Link Location</source>
-        <translation>Copia il Co&amp;llegamento</translation>
-    </message>
-    <message>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
-        <translation>Apri il Collegamento in una Nuova Scheda	Ctrl+LMB</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Help</name>
-    <message>
-        <source>&amp;Look for:</source>
-        <translation>&amp;Cerca:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Debugger</name>
-    <message>
-        <source>Type Ctrl-&lt;Return&gt; to execute a line.</source>
-        <translation>Premi Ctrl-&lt;Invio&gt; per eseguire la riga.</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Core</name>
-    <message>
-        <source>Filters</source>
-        <translation>Filtri</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorconstants.h" line="+12"/>
         <source>Locator</source>
         <translation>Ricerca Rapida</translation>
     </message>
-</context>
-<context>
-    <name>MainWindow</name>
     <message>
-        <source>Open file</source>
-        <translation>Apri file</translation>
-    </message>
-    <message>
-        <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Quit</source>
-        <translation>Esci</translation>
-    </message>
-    <message>
-        <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Run to main()</source>
-        <translation>Esegui fino al main()</translation>
-    </message>
-    <message>
-        <source>Ctrl+F5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>F5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shift+F5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>F6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>F7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shift+F6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shift+F9</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shift+F7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shift+F8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>F8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ALT+D,ALT+W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Files</source>
-        <translation>File</translation>
-    </message>
-    <message>
-        <source>File</source>
-        <translation>File</translation>
-    </message>
-    <message>
-        <source>Debug</source>
-        <translation>Debug</translation>
-    </message>
-    <message>
-        <source>Not a runnable project</source>
-        <translation>Non è un progetto eseguibile</translation>
-    </message>
-    <message>
-        <source>The current startup project can not be run.</source>
-        <translation>Il progetto corrente non può essere eseguito.</translation>
-    </message>
-    <message>
-        <source>Open File</source>
-        <translation>Apri File</translation>
-    </message>
-    <message>
-        <source>Cannot find special data dumpers</source>
-        <translation>Impossibile trovare dumper di dati personali</translation>
-    </message>
-    <message>
-        <source>The debugged binary does not contain information needed for nice display of Qt data types.
-
-Make sure you use something like
-
-SOURCES *= .../ide/main/bin/dumper/dumper.cpp
-
-in your .pro file.</source>
-        <translation>L&apos;eseguibile di cui si sta facendo il debug non contiene le informazioni necessarie alla visualizzazione dei tipi di dati Qt.
-
-Puoi risolvere inserendo qualcosa tipo
-
-SOURCES *= .../ide/main/bin/dumper/dumper.cpp
-
-nel tuo file .pro.</translation>
-    </message>
-    <message>
-        <source>Open Executable File</source>
-        <translation>Apri l&apos;Eseguibile</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::ProjectExplorer</name>
-</context>
-<context>
-    <name>MyMain</name>
-    <message>
-        <source>N/A</source>
-        <translation>N/D</translation>
-    </message>
-</context>
-<context>
-    <name>NickNameDialog</name>
-    <message>
-        <source>Nick Names</source>
-        <translation>Nick Name</translation>
-    </message>
-    <message>
-        <source>Filter:</source>
-        <translation>Filtro:</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>Cancella</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Core</name>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/openwithdialog.cpp" line="+23"/>
         <source>Open File With...</source>
         <translation>Apri il file con...</translation>
     </message>
     <message>
-        <source>Open file extension with:</source>
-        <translation>Apri l&apos;estensione del file con:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Perforce</name>
-    <message>
-        <source>No executable specified</source>
-        <translation>Non è stato impostato alcun eseguibile</translation>
+        <location line="+8"/>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>Apri il file &quot;%1&quot; con:</translation>
     </message>
     <message>
-        <source>Unable to launch &quot;%1&quot;: %2</source>
-        <translation>Impossibile lanciare &quot;%1&quot;: %2</translation>
-    </message>
-    <message>
-        <source>&quot;%1&quot; timed out after %2ms.</source>
-        <translation>&quot;%1&quot; ha superato il limite di tempo dopo %2ms.</translation>
-    </message>
-    <message>
-        <source>&quot;%1&quot; crashed.</source>
-        <translation>&quot;%1&quot; è andato in crash.</translation>
-    </message>
-    <message>
-        <source>&quot;%1&quot; terminated with exit code %2: %3</source>
-        <translation>&quot;%1&quot; è terminato con il codice di uscita %2: %3</translation>
-    </message>
-    <message>
-        <source>The client does not seem to contain any mapped files.</source>
-        <translation>Il client non sembra contenere alcun file mappato.</translation>
-    </message>
-    <message>
-        <source>Change Number</source>
-        <translation>Numero della Modifica</translation>
-    </message>
-    <message>
-        <source>Change Number:</source>
-        <translation>Numero della Modifica:</translation>
-    </message>
-    <message>
-        <source>P4 Pending Changes</source>
-        <translation>P4 Modifiche in Sospeso</translation>
-    </message>
-    <message>
-        <source>Submit</source>
-        <translation>Invio</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation>Annulla</translation>
-    </message>
-    <message>
-        <source>Change %1: %2</source>
-        <translation>Modifica %1: %2</translation>
-    </message>
-    <message>
-        <source>Perforce Output</source>
-        <translation type="obsolete">Output di Perforce</translation>
-    </message>
-    <message>
-        <source>Diff</source>
-        <translation type="obsolete">Diff</translation>
-    </message>
-    <message>
-        <source>Perforce</source>
-        <translation type="obsolete">Perforce</translation>
-    </message>
-    <message>
-        <source>&amp;Perforce</source>
-        <translation>&amp;Perforce</translation>
-    </message>
-    <message>
-        <source>Edit</source>
-        <translation>Modifica</translation>
-    </message>
-    <message>
-        <source>Edit &quot;%1&quot;</source>
-        <translation>Modifica &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+P,Alt+E</source>
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459"/>
+        <source>Show Hidden Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Edit File</source>
-        <translation>Modifica il File</translation>
-    </message>
-    <message>
-        <source>Add</source>
-        <translation>Aggiungi</translation>
-    </message>
-    <message>
-        <source>Add &quot;%1&quot;</source>
-        <translation>Aggiungi &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+P,Alt+A</source>
+        <location line="+1"/>
+        <source>Show Bread Crumbs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add File</source>
-        <translation>Aggiungi il File</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Elimina</translation>
-    </message>
-    <message>
-        <source>Delete &quot;%1&quot;</source>
-        <translation>Cancella &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Delete File</source>
-        <translation>Cancella il File</translation>
-    </message>
-    <message>
-        <source>Revert</source>
-        <translation>Ripristina</translation>
-    </message>
-    <message>
-        <source>Revert &quot;%1&quot;</source>
-        <translation>Ripristina &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+P,Alt+R</source>
+        <location line="+1"/>
+        <source>Show Folders on Top</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Revert File</source>
-        <translation>Ripristina il file</translation>
-    </message>
-    <message>
-        <source>Diff Current File</source>
-        <translation>Diff del file corrente</translation>
-    </message>
-    <message>
-        <source>Diff &quot;%1&quot;</source>
-        <translation>Diff &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Diff Current Project/Session</source>
-        <translation>Diff del progetto/sessione corrente</translation>
-    </message>
-    <message>
-        <source>Diff Project &quot;%1&quot;</source>
-        <translation>Diff del Progetto &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+P,Alt+D</source>
+        <location line="+75"/>
+        <source>Synchronize Root Directory with Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Diff Opened Files</source>
-        <translation>Diff dei File Aperti</translation>
+        <location line="+142"/>
+        <source>New File</source>
+        <comment>Title of dialog</comment>
+        <translation type="unfinished">Nuovo File</translation>
     </message>
     <message>
-        <source>Opened</source>
-        <translation>Aperti</translation>
+        <location line="+154"/>
+        <location line="+80"/>
+        <source>New Folder</source>
+        <translation type="unfinished">Nuova Cartella</translation>
     </message>
     <message>
-        <source>Alt+P,Alt+O</source>
+        <location line="-18"/>
+        <source>Open &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Submit Project</source>
-        <translation>Invia Progetto</translation>
-    </message>
-    <message>
-        <source>Alt+P,Alt+S</source>
+        <location line="+20"/>
+        <source>Remove Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Pending Changes...</source>
-        <translation>Modifiche in Sospeso...</translation>
-    </message>
-    <message>
-        <source>Update Current Project/Session</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Update Project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Describe...</source>
-        <translation>Descrivi...</translation>
-    </message>
-    <message>
-        <source>Annotate Current File</source>
-        <translation>Annota il File Corrente</translation>
-    </message>
-    <message>
-        <source>Annotate &quot;%1&quot;</source>
-        <translation>Annota &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Annotate...</source>
-        <translation>Annota...</translation>
-    </message>
-    <message>
-        <source>Filelog Current File</source>
-        <translation>Filelog del File Corrente</translation>
-    </message>
-    <message>
-        <source>Filelog &quot;%1&quot;</source>
-        <translation>Filelog &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+P,Alt+F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filelog...</source>
-        <translation>Filelog...</translation>
-    </message>
-    <message>
-        <source>Update All</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Submit</source>
-        <translation>Invio</translation>
-    </message>
-    <message>
-        <source>Diff Selected Files</source>
-        <translation>Diff dei File Selezionati</translation>
-    </message>
-    <message>
-        <source>&amp;Undo</source>
-        <translation>&amp;Annulla</translation>
-    </message>
-    <message>
-        <source>&amp;Redo</source>
-        <translation>&amp;Ripeti</translation>
-    </message>
-    <message>
-        <source>p4 revert</source>
-        <translation>ripristina p4</translation>
-    </message>
-    <message>
-        <source>The file has been changed. Do you want to revert it?</source>
-        <translation>Il file è stato modificato. Vuoi ripristinarlo?</translation>
-    </message>
-    <message>
-        <source>Another submit is currently executed.</source>
-        <translation>Un altro invio è già in corso.</translation>
-    </message>
-    <message>
-        <source>Cannot create temporary file.</source>
-        <translation>Impossibile creare il file temporaneo.</translation>
-    </message>
-    <message>
-        <source>Project has no files</source>
-        <translation>Il progetto non ha file</translation>
-    </message>
-    <message>
-        <source>p4 annotate</source>
-        <translation>p4 annotate</translation>
-    </message>
-    <message>
-        <source>p4 annotate %1</source>
-        <translation>p4 annotate %1</translation>
-    </message>
-    <message>
-        <source>p4 filelog</source>
-        <translation>p4 filelog</translation>
-    </message>
-    <message>
-        <source>p4 filelog %1</source>
-        <translation>p4 filelog %1</translation>
-    </message>
-    <message>
-        <source>Executing: %1
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 Executing: %2
-</source>
-        <translation type="obsolete">%1 Eseguo: %2
-</translation>
-    </message>
-    <message>
-        <source>The process terminated with exit code %1.</source>
-        <translation>Il processo è terminato con il codice di uscita %1.</translation>
-    </message>
-    <message>
-        <source>The process terminated abnormally.</source>
-        <translation>Il processo è terminato in modo anomalo.</translation>
-    </message>
-    <message>
-        <source>Could not start perforce &apos;%1&apos;. Please check your settings in the preferences.</source>
-        <translation>Impossibile avviare perforce &apos;%1&apos;. Controlla le tue impostazioni nelle preferenze.</translation>
-    </message>
-    <message>
-        <source>Perforce did not respond within timeout limit (%1 ms).</source>
-        <translation>Perforce non ha risposto entro il limite di tempo (%1 ms).</translation>
-    </message>
-    <message>
-        <source>p4 diff %1</source>
-        <translation>p4 diff %1</translation>
-    </message>
-    <message>
-        <source>p4 describe %1</source>
-        <translation>p4 describe %1</translation>
-    </message>
-    <message>
-        <source>Closing p4 Editor</source>
-        <translation>Chiusura dell&apos;editor p4</translation>
-    </message>
-    <message>
-        <source>Do you want to submit this change list?</source>
-        <translation>Vuoi inviare questa lista di modifiche?</translation>
-    </message>
-    <message>
-        <source>The commit message check failed. Do you want to submit this change list</source>
-        <translation>Il controllo del messaggio del commit è fallito. Vuoi inviare questa lista di modifiche</translation>
-    </message>
-    <message>
-        <source>Cannot open temporary file.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot execute p4 submit.</source>
-        <translation>Impossibile eseguire il submit p4.</translation>
-    </message>
-    <message>
-        <source>p4 submit failed (exit code %1).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pending change</source>
-        <translation>Modifica in attesa</translation>
-    </message>
-    <message>
-        <source>Could not submit the change, because your workspace was out of date. Created a pending submit instead.</source>
-        <translation>Impossibile inviare la modifica, perché il tuo workspace non è aggiornato. Creato un submit in sospeso.</translation>
-    </message>
-    <message>
-        <source>Invalid configuration: %1</source>
-        <translation>Configurazione non valida: %1</translation>
-    </message>
-    <message>
-        <source>Timeout waiting for &quot;where&quot; (%1).</source>
-        <translation>Superato il limite di tempo in attesa di &quot;where&quot; (%1).</translation>
-    </message>
-    <message>
-        <source>Error running &quot;where&quot; on %1: The file is not mapped</source>
-        <translation>Errore in esecuzione di &quot;where&quot; su %1. Il file non è mappato</translation>
-    </message>
-    <message>
-        <source>Perforce Submit</source>
-        <translation>Invio Perforce</translation>
-    </message>
-    <message>
-        <source>Perforce Prompt</source>
-        <translation>Richiesta Perforce</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>P4 Command:</source>
-        <translation>Comando P4:</translation>
-    </message>
-    <message>
-        <source>Use default P4 environment variables</source>
-        <translation>Usa le variabili d&apos;ambiente predefinite di P4</translation>
-    </message>
-    <message>
-        <source>Environment variables</source>
-        <translation>Variabili d&apos;ambiente</translation>
-    </message>
-    <message>
-        <source>P4 Client:</source>
-        <translation>Client P4:</translation>
-    </message>
-    <message>
-        <source>P4 User:</source>
-        <translation>Utente P4:</translation>
-    </message>
-    <message>
-        <source>P4 Port:</source>
-        <translation>Porta P4:</translation>
-    </message>
-    <message>
-        <source>Perforce</source>
-        <translation>Perforce</translation>
-    </message>
-    <message>
-        <source>Test</source>
-        <translation>Prova</translation>
-    </message>
-    <message>
-        <source>Prompt to submit</source>
-        <translation type="unfinished">Prompt del submit</translation>
-    </message>
-    <message>
-        <source>Testing...</source>
-        <translation>Test...</translation>
-    </message>
-    <message>
-        <source>Test succeeded.</source>
-        <translation>Il test ha avuto successo.</translation>
-    </message>
-    <message>
-        <source>Perforce Command</source>
-        <translation>Comando Perforce</translation>
-    </message>
-    <message>
-        <source>Change:</source>
-        <translation>Cambia:</translation>
-    </message>
-    <message>
-        <source>Client:</source>
-        <translation>Client:</translation>
-    </message>
-    <message>
-        <source>User:</source>
-        <translation>Utente:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Core</name>
-</context>
-<context>
-    <name>QtC::ExtensionSystem</name>
-    <message>
-        <source>The plugin &apos;%1&apos; does not exist.</source>
-        <translation>Il plugin &apos;%1&apos; non esiste.</translation>
-    </message>
-    <message>
-        <source>Unknown option %1</source>
-        <translation>Opzione sconosciuta %1</translation>
-    </message>
-    <message>
-        <source>The option %1 requires an argument.</source>
-        <translation>L&apos;opzione %1 richiede un parametro.</translation>
-    </message>
-    <message>
-        <source>&apos;%1&apos; misses attribute &apos;%2&apos;</source>
-        <translation>In &apos;%1&apos; manca l&apos;attributo &apos;%2&apos;</translation>
-    </message>
-    <message>
-        <source>&apos;%1&apos; has invalid format</source>
-        <translation>&apos;%1&apos; ha un formato non valido</translation>
-    </message>
-    <message>
-        <source>Invalid element &apos;%1&apos;</source>
-        <translation>Elemento &apos;%1&apos; non valido</translation>
-    </message>
-    <message>
-        <source>Unexpected closing element &apos;%1&apos;</source>
-        <translation>Elemento di chiusura &apos;%1&apos; non atteso</translation>
-    </message>
-    <message>
-        <source>Unexpected token</source>
-        <translation>Elemento non atteso</translation>
-    </message>
-    <message>
-        <source>Expected element &apos;%1&apos; as top level element</source>
-        <translation>Atteso l&apos;elemento &apos;%1&apos; come elemento di primo livello</translation>
-    </message>
-    <message>
-        <source>Resolving dependencies failed because state != Read</source>
-        <translation>La risoluzione delle dipendenze non è riuscita poiché state != Read</translation>
-    </message>
-    <message>
-        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
-        <translation>Impossibile risolvere la dipendenza &apos;%1(%2)&apos;</translation>
-    </message>
-    <message>
-        <source>Loading the library failed because state != Resolved</source>
-        <translation>Il caricamento della libreria è fallito poiché state != Resolved</translation>
-    </message>
-    <message>
-        <source>Plugin is not valid (does not derive from IPlugin)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>
-Library base name: %1</source>
-        <translation type="obsolete">
-Nome di base della libreria: %1</translation>
-    </message>
-    <message>
-        <source>Plugin is not valid (doesn&apos;t derive from IPlugin)</source>
-        <translation type="obsolete">Il plugin non è valido (non deriva da IPlugin)</translation>
-    </message>
-    <message>
-        <source>Initializing the plugin failed because state != Loaded</source>
-        <translation>L&apos;inizializzazione del plugin non è riuscita poiché state != Loaded</translation>
-    </message>
-    <message>
-        <source>Internal error: have no plugin instance to initialize</source>
-        <translation>Errore interno: non ho un&apos;istanza di plugin da inizializzare</translation>
-    </message>
-    <message>
-        <source>Plugin initialization failed: %1</source>
-        <translation>L&apos;inizializzazione del plugin è fallita: %1</translation>
-    </message>
-    <message>
-        <source>Cannot perform extensionsInitialized because state != Initialized</source>
-        <translation>Impossibile eseguire extensionsInitialized poiché state != Initialized</translation>
-    </message>
-    <message>
-        <source>Internal error: have no plugin instance to perform extensionsInitialized</source>
-        <translation>Errore interno: non ho un&apos;istanza di plugin su cui eseguire extensionsInitialized</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::ProjectExplorer</name>
-    <message>
-        <source>&lt;font color=&quot;#0000ff&quot;&gt;Starting: %1 %2&lt;/font&gt;
-</source>
-        <translation>&lt;font color=&quot;#0000ff&quot;&gt;Eseguo: %1 %2&lt;/font&gt;
-</translation>
-    </message>
-    <message>
-        <source>&lt;font color=&quot;#0000ff&quot;&gt;Exited with code %1.&lt;/font&gt;</source>
-        <translation>&lt;font color=&quot;#0000ff&quot;&gt;Uscito con codice %1.&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Exited with code %1.&lt;/b&gt;&lt;/font&gt;</source>
-        <translation>&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Uscito con codice %1.&lt;/b&gt;&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;font color=&quot;#ff0000&quot;&gt;Could not start process %1 &lt;/b&gt;&lt;/font&gt;</source>
-        <translation>&lt;font color=&quot;#ff0000&quot;&gt;Impossibile avviare il processo %1 &lt;/b&gt;&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;font color=&quot;#ff0000&quot;&gt;Canceled build.&lt;/font&gt;</source>
-        <translation>&lt;font color=&quot;#ff0000&quot;&gt;Compilazione annullata.&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <source>Build</source>
-        <translation>Compilazione</translation>
-    </message>
-    <message numerus="yes">
-        <source>Finished %n of %1 build steps</source>
-        <translation>
-            <numerusform>Conclusa la prima fase di %1</numerusform>
-            <numerusform>Conclusa la fase %n di %1</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>&lt;font color=&quot;#ff0000&quot;&gt;Error while building project %1&lt;/font&gt;</source>
-        <translation>&lt;font color=&quot;#ff0000&quot;&gt;Errore durante la compilazione del progetto %1&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;font color=&quot;#ff0000&quot;&gt;When executing build step &apos;%1&apos;&lt;/font&gt;</source>
-        <translation>&lt;font color=&quot;#ff0000&quot;&gt;Durante il passo &apos;%1&apos;&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <source>Error while building project %1</source>
-        <translation>Errore durante la compilazione del progetto %1</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Running build steps for project %2...&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Avvio delle fasi di compilazione del progetto %2...&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Custom Executable</source>
-        <translation>Eseguibile Speciale</translation>
-    </message>
-    <message>
-        <source>Could not find the executable, please specify one.</source>
-        <translation>Non è stato trovato l&apos;eseguibile, specificane uno.</translation>
-    </message>
-    <message>
-        <source>Run %1</source>
-        <translation>Esegui %1</translation>
-    </message>
-    <message>
-        <source>&lt;UNSET&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Variable</source>
-        <translation>Variabile</translation>
-    </message>
-    <message>
-        <source>Value</source>
-        <translation>Valore</translation>
-    </message>
-    <message>
-        <source>&lt;VARIABLE&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;VALUE&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Edit</source>
-        <translation type="unfinished">&amp;Modifica</translation>
-    </message>
-    <message>
-        <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Reset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Unset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unset &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set &lt;b&gt;%1&lt;/b&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summary: No changes to Environment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Files in any project</source>
-        <translation>File in tutti i progetti</translation>
-    </message>
-    <message>
-        <source>All Projects</source>
-        <translation>Tutti i Progetti</translation>
-    </message>
-    <message>
-        <source>File &amp;pattern:</source>
-        <translation>&amp;Schema file:</translation>
-    </message>
-    <message>
-        <source>Failed to start program. Path or permissions wrong?</source>
-        <translation type="obsolete">Non è possibile avviare il programma. Il percorso o i permessi sono errati?</translation>
-    </message>
-    <message>
-        <source>The program has unexpectedly finished.</source>
-        <translation type="obsolete">Il programma è finito inaspettatamente.</translation>
-    </message>
-    <message>
-        <source>Some error has occurred while running the program.</source>
-        <translation type="obsolete">C&apos;è stato un errore durante l&apos;esecuzione del programma.</translation>
-    </message>
-    <message>
-        <source>Run</source>
-        <translation type="obsolete">Esegui</translation>
-    </message>
-    <message>
-        <source>Starting %1...</source>
-        <translation type="obsolete">Avvio di %1...</translation>
-    </message>
-    <message>
-        <source>%1 exited with code %2</source>
-        <translation type="obsolete">%1 è uscito con il codice %2</translation>
-    </message>
-    <message>
-        <source>Build Settings</source>
-        <translation>Impostazioni di Compilazione</translation>
-    </message>
-    <message>
-        <source>Configurations</source>
-        <translation type="obsolete">Configurazioni</translation>
-    </message>
-    <message>
-        <source>+</source>
-        <translation type="obsolete">+</translation>
-    </message>
-    <message>
-        <source>-</source>
-        <translation type="obsolete">-</translation>
-    </message>
-    <message>
-        <source>Create &amp;New</source>
-        <translation type="obsolete">Crea &amp;Nuovo</translation>
-    </message>
-    <message>
-        <source>&amp;Clone Selected</source>
-        <translation>&amp;Clona il Selezionato</translation>
-    </message>
-    <message>
-        <source>%1 - %2</source>
-        <translation type="obsolete">%1 - %2</translation>
-    </message>
-    <message>
-        <source>General</source>
-        <translation type="obsolete">Generale</translation>
-    </message>
-    <message>
-        <source>Build Steps</source>
-        <translation>Fasi di Compilazione</translation>
-    </message>
-    <message>
-        <source>Set as Active</source>
-        <translation type="obsolete">Imposta come Attivo</translation>
-    </message>
-    <message>
-        <source>Clone</source>
-        <translation type="obsolete">Clona</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation type="obsolete">Elimina</translation>
-    </message>
-    <message>
-        <source>New configuration</source>
-        <translation type="obsolete">Nuova configurazione</translation>
-    </message>
-    <message>
-        <source>Edit Build Configuration:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Add</source>
-        <translation type="unfinished">Aggiungi</translation>
-    </message>
-    <message>
-        <source>Remove</source>
-        <translation type="unfinished">Rimuovi</translation>
-    </message>
-    <message>
-        <source>Clean Steps</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New Configuration Name:</source>
-        <translation>Nome della Nuova Configurazione:</translation>
-    </message>
-    <message>
-        <source>Clone configuration</source>
-        <translation>Clona la configurazione</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation type="obsolete">1</translation>
-    </message>
-    <message>
-        <source>^</source>
-        <translation type="obsolete">^</translation>
-    </message>
-    <message>
-        <source>v</source>
-        <translation type="obsolete">v</translation>
-    </message>
-    <message>
-        <source>No Build Steps</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Add clean step</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Add build step</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove clean step</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove build step</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Compile Output</source>
-        <translation>Output di Compilazione</translation>
-    </message>
-    <message>
-        <source>Cancel Build &amp;&amp; Close</source>
-        <translation>Annulla la Compilazione &amp;&amp; Chiudi</translation>
-    </message>
-    <message>
-        <source>Don&apos;t Close</source>
-        <translation type="obsolete">Non Chiudere</translation>
-    </message>
-    <message>
-        <source>Do not Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Close Qt Creator?</source>
-        <translation>Chiudere Qt Creator?</translation>
-    </message>
-    <message>
-        <source>A project is currently being built.</source>
-        <translation>Un progetto è in compilazione.</translation>
-    </message>
-    <message>
-        <source>Do you want to cancel the build process and close Qt Creator anyway?</source>
-        <translation>Vuoi annullare il processo di compilazione e chiudere Qt Creator comunque?</translation>
-    </message>
-    <message>
-        <source>Files in current project</source>
-        <translation>File nel progetto corrente</translation>
-    </message>
-    <message>
-        <source>Current Project</source>
-        <translation>Progetto Corrente</translation>
-    </message>
-    <message>
-        <source>Name:</source>
-        <translation>Nome:</translation>
-    </message>
-    <message>
-        <source>Executable:</source>
-        <translation>Eseguibile:</translation>
-    </message>
-    <message>
-        <source>Arguments:</source>
-        <translation>Parametri:</translation>
-    </message>
-    <message>
-        <source>Working Directory:</source>
-        <translation>Cartella di Lavoro:</translation>
-    </message>
-    <message>
-        <source>Run in &amp;Terminal</source>
-        <translation>Esegui nel &amp;Terminale</translation>
-    </message>
-    <message>
-        <source>Run Environment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Base environment for this runconfiguration:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Clean Environment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>System Environment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Build Environment</source>
-        <translation type="unfinished">Ambiente di Compilazione</translation>
-    </message>
-    <message>
-        <source>No Executable specified.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Running executable: &lt;b&gt;%1&lt;/b&gt; %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dependencies</source>
-        <translation>Dipendenze</translation>
-    </message>
-    <message>
-        <source>%1 of project %2</source>
-        <translation>%1 del progetto %2</translation>
-    </message>
-    <message>
-        <source>Could not rename file</source>
-        <translation>Impossibile rinominare il file</translation>
-    </message>
-    <message>
-        <source>Renaming file %1 to %2 failed.</source>
-        <translation>Non è stato possibile rinominare %1 in %2.</translation>
-    </message>
-    <message>
-        <source>Editor Settings</source>
-        <translation>Impostazioni dell&apos;Editor</translation>
-    </message>
-    <message>
-        <source>Default File Encoding:</source>
-        <translation>Codifica File Predefinita:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Core</name>
-    <message>
+        <location line="+25"/>
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-86"/>
+        <location line="+8"/>
+        <location line="+27"/>
+        <location line="+14"/>
+        <location line="+8"/>
+        <location line="+28"/>
+        <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="+159"/>
+        <source>Error</source>
+        <translation type="unfinished">Errore</translation>
+    </message>
+    <message>
+        <location line="+42"/>
         <source>File System</source>
         <translation>File System</translation>
     </message>
     <message>
-        <source>Synchronize with Editor</source>
-        <translation>Sincronizza con l&apos;Editor</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::ProjectExplorer</name>
-    <message>
-        <source>New session name</source>
-        <translation>Nome della nuova sessione</translation>
-    </message>
-    <message>
-        <source>Enter the name of the new session:</source>
-        <translation>Inserisci il nome della nuova sessione:</translation>
-    </message>
-    <message>
-        <source>Switch to session</source>
+        <location line="+3"/>
+        <source>Meta+Y,Meta+F</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Session Manager</source>
-        <translation>Gestione della Sessione</translation>
-    </message>
-    <message>
-        <source>Create New Session</source>
-        <translation>Crea Nuova</translation>
-    </message>
-    <message>
-        <source>Clone Session</source>
-        <translation>Clona</translation>
-    </message>
-    <message>
-        <source>Delete Session</source>
-        <translation>Elimina</translation>
-    </message>
-    <message>
-        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-quick-tour.html#session-management-in-qt-creator&quot;&gt;What is a Session?&lt;/a&gt;</source>
-        <translation>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-quick-tour.html#session-management-in-qt-creator&quot;&gt;Cos&apos;è una Sessione?&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>Re-run this run-configuration</source>
-        <translation>Riavvia questa esecuzione</translation>
-    </message>
-    <message>
-        <source>Stop</source>
-        <translation>Ferma</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+R</source>
+        <location line="+1"/>
+        <source>Alt+Y,Alt+F</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Application Output</source>
-        <translation>Output dell&apos;Applicazione</translation>
-    </message>
-    <message>
-        <source>The application is still running. Close it first.</source>
-        <translation>L&apos;applicazione è ancora in esecuzione. Prima chiudila.</translation>
-    </message>
-    <message>
-        <source>Unable to close</source>
-        <translation>Impossibile chiudere</translation>
-    </message>
-    <message>
-        <source>Application Output Window</source>
-        <translation>Finestra di Output dell&apos;Applicazione</translation>
-    </message>
-    <message>
-        <source>Custom Process Step</source>
-        <translation>Fase Speciale</translation>
-    </message>
-    <message>
-        <source>Custom Process Step</source>
-        <comment>item in combobox</comment>
-        <translation type="unfinished">Fase Speciale</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;%1&lt;/b&gt; %2 %3 %4</source>
+        <location line="+3"/>
+        <source>Computer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>(disabled)</source>
-        <translation type="unfinished"></translation>
+        <location line="+5"/>
+        <source>Home</source>
+        <translation type="unfinished">Home</translation>
     </message>
     <message>
-        <source>Enable custom process step</source>
-        <translation type="obsolete">Abilita fase speciale</translation>
-    </message>
-    <message>
-        <source>Command:</source>
-        <translation>Comando:</translation>
-    </message>
-    <message>
-        <source>Working Directory:</source>
-        <translation>Directory di Lavoro:</translation>
-    </message>
-    <message>
-        <source>Command Arguments:</source>
-        <translation>Parametri del Comando:</translation>
-    </message>
-    <message>
-        <source>Enable Custom Process Step</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Build and Run</source>
-        <translation>Compila ed Esegui</translation>
-    </message>
-    <message>
-        <source>Projects</source>
-        <translation type="unfinished">Progetti</translation>
-    </message>
-    <message>
-        <source>Projectexplorer</source>
-        <translation type="obsolete">Projectexplorer</translation>
-    </message>
-    <message>
-        <source>Could not open the following project: &apos;%1&apos;</source>
-        <translation>Non è stato possibile aprire il progetto: &apos;%1&apos;</translation>
-    </message>
-    <message>
-        <source>Failed to add one or more files to project
-&apos;%1&apos; (%2).</source>
-        <translation>Non è stato possibile aggiungere file al progetto
-&apos;%1&apos; (%2).</translation>
-    </message>
-    <message>
-        <source>Failed to add &apos;%1&apos; to the version control system.</source>
-        <translation>Non è stato possibile aggiungere &apos;%1&apos; al sistema di revisione del codice.</translation>
-    </message>
-    <message>
-        <source>Simplify tree</source>
-        <translation>Semplifica albero</translation>
-    </message>
-    <message>
-        <source>Hide generated files</source>
-        <translation>Nascondi i file generati</translation>
-    </message>
-    <message>
-        <source>Synchronize with Editor</source>
-        <translation>Sincronizza con l&apos;Editor</translation>
-    </message>
-    <message>
-        <source>Projects</source>
-        <translation>Progetti</translation>
-    </message>
-    <message>
-        <source>Filter tree</source>
-        <translation>Filtra l&apos;albero</translation>
-    </message>
-    <message>
-        <source>Project Explorer</source>
-        <translation type="obsolete">Progetto</translation>
-    </message>
-    <message>
-        <source>Projects</source>
-        <translation type="obsolete">Progetti</translation>
-    </message>
-    <message>
-        <source>Startup</source>
-        <translation type="obsolete">Avvio</translation>
-    </message>
-    <message>
-        <source>Path</source>
-        <translation type="obsolete">Percorso</translation>
-    </message>
-    <message>
-        <source>Active Build and Run Configurations</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No project loaded.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Add to &amp;VCS (%1)</source>
-        <translation>Aggiungi al &amp;VCS (%1)</translation>
-    </message>
-    <message>
-        <source>Files to be added:</source>
-        <translation>File da aggiungere:</translation>
-    </message>
-    <message>
-        <source>Save all files before Build</source>
-        <translation type="obsolete">Salva tutti i file prima della Compilazione</translation>
-    </message>
-    <message>
-        <source>Always build Project before Running</source>
-        <translation type="obsolete">Compila sempre il Progetto prima dell&apos;Esecuzione</translation>
-    </message>
-    <message>
-        <source>Build and Run</source>
-        <translation type="obsolete">Compila ed Esegui</translation>
-    </message>
-    <message>
-        <source>Remove File</source>
-        <translation>Rimozione del File</translation>
-    </message>
-    <message>
-        <source>File to remove:</source>
-        <translation>File da rimuovere:</translation>
-    </message>
-    <message>
-        <source>&amp;Delete file permanently</source>
-        <translation>&amp;Cancella il file in modo permanente</translation>
-    </message>
-    <message>
-        <source>&amp;Remove from Version Control</source>
-        <translation>&amp;Rimuovi dal sistema di revisione</translation>
-    </message>
-    <message>
-        <source>Run Settings</source>
-        <translation>Impostazioni di Esecuzione</translation>
-    </message>
-    <message>
-        <source>Run &amp;configuration:</source>
-        <translation type="obsolete">Ese&amp;cuzione di:</translation>
-    </message>
-    <message>
-        <source>+</source>
-        <translation>+</translation>
-    </message>
-    <message>
-        <source>-</source>
-        <translation>-</translation>
-    </message>
-    <message>
-        <source>Settings</source>
-        <translation type="obsolete">Impostazioni</translation>
-    </message>
-    <message>
-        <source>Edit run configuration:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Session</source>
-        <translation>Sessione</translation>
-    </message>
-    <message>
-        <source>Untitled</source>
-        <comment>default file name to display</comment>
-        <translation>Senza titolo</translation>
-    </message>
-    <message>
-        <source>File not found: %1</source>
-        <translation>File non trovato: %1</translation>
-    </message>
-    <message>
-        <source>Build Issues</source>
-        <translation>Problemi di Compilazione</translation>
-    </message>
-    <message>
-        <source>&amp;Copy</source>
-        <translation>&amp;Copia</translation>
-    </message>
-    <message>
-        <source>Show Warnings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The process could not be started!</source>
-        <translation>Non è stato possibile avviare il processo!</translation>
-    </message>
-    <message>
-        <source>Cannot retrieve debugging output!</source>
-        <translation>Non è possibile recuperare l&apos;output di debug!</translation>
-    </message>
-    <message>
-        <source>Project management</source>
-        <translation>Gestione progetto</translation>
-    </message>
-    <message>
-        <source>&amp;Add to Project</source>
-        <translation>&amp;Aggiungi al Progetto</translation>
-    </message>
-    <message>
-        <source>&amp;Project</source>
-        <translation>&amp;Progetto</translation>
-    </message>
-    <message>
-        <source>Add to &amp;version control</source>
-        <translation>Aggiungi al &amp;VCS</translation>
-    </message>
-    <message>
-        <source>The following files will be added:
-
-
-
-</source>
-        <translation>Saranno aggiunti i file seguenti:
-
-
-
-</translation>
-    </message>
-    <message>
-        <source>&amp;Build</source>
-        <translation>&amp;Compila</translation>
-    </message>
-    <message>
-        <source>&amp;Debug</source>
-        <translation>&amp;Debug</translation>
-    </message>
-    <message>
-        <source>&amp;Start Debugging</source>
-        <translation>&amp;Avvia il Debug</translation>
-    </message>
-    <message>
-        <source>Open With</source>
-        <translation>Apri con</translation>
-    </message>
-    <message>
-        <source>Session Manager...</source>
-        <translation>Gestione della Sessione...</translation>
-    </message>
-    <message>
-        <source>New Project...</source>
-        <translation>Nuovo Progetto...</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Project...</source>
-        <translation>Carica Progetto...</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+O</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Open File</source>
-        <translation>Apri File</translation>
-    </message>
-    <message>
-        <source>Show in Explorer...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show in Finder...</source>
-        <translation>Mostra nel Finder...</translation>
-    </message>
-    <message>
-        <source>Show containing folder...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Recent Projects</source>
-        <translation>Progetti Recenti</translation>
-    </message>
-    <message>
-        <source>Close Project</source>
-        <translation>Chiudi Progetto</translation>
-    </message>
-    <message>
-        <source>Close All Projects</source>
-        <translation>Chiudi Tutti i Progetti</translation>
-    </message>
-    <message>
-        <source>Set Build Configuration</source>
-        <translation>Compilazione di</translation>
-    </message>
-    <message>
-        <source>Build All</source>
-        <translation>Compila Tutto</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Rebuild All</source>
-        <translation>Ricompila Tutto</translation>
-    </message>
-    <message>
-        <source>Clean All</source>
-        <translation>Pulisci Tutto</translation>
-    </message>
-    <message>
-        <source>Build Project</source>
-        <translation>Compila il Progetto</translation>
-    </message>
-    <message>
-        <source>Build Project &quot;%1&quot;</source>
-        <translation>Compila il Progetto &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Ctrl+B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Rebuild Project</source>
-        <translation>Ricompila il Progetto</translation>
-    </message>
-    <message>
-        <source>Rebuild Project &quot;%1&quot;</source>
-        <translation>Ricompila il Progetto &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Clean Project</source>
-        <translation>Pulisci il Progetto</translation>
-    </message>
-    <message>
-        <source>Clean Project &quot;%1&quot;</source>
-        <translation>Pulisci il Progetto &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Build Without Dependencies</source>
-        <translation>Compila Senza le Dipendenze</translation>
-    </message>
-    <message>
-        <source>Rebuild Without Dependencies</source>
-        <translation>Ricompila Senza le Dipendenze</translation>
-    </message>
-    <message>
-        <source>Clean Without Dependencies</source>
-        <translation>Pulisci Senza le Dipendenze</translation>
-    </message>
-    <message>
-        <source>Run</source>
-        <translation>Esegui</translation>
-    </message>
-    <message>
-        <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set Run Configuration</source>
-        <translation>Esecuzione di</translation>
-    </message>
-    <message>
-        <source>Go to Task Window</source>
-        <translation type="obsolete">Vai alla Finestra dei Task</translation>
-    </message>
-    <message>
-        <source>Cancel Build</source>
-        <translation>Annulla la Compilazione</translation>
-    </message>
-    <message>
-        <source>Start Debugging</source>
-        <translation>Avvia il Debug</translation>
-    </message>
-    <message>
-        <source>F5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location line="+144"/>
         <source>Add New...</source>
-        <translation>Aggiungi Nuovo...</translation>
+        <translation type="unfinished">Aggiungi Nuovo...</translation>
     </message>
     <message>
-        <source>Add Existing Files...</source>
-        <translation>Aggiungi File Esistenti...</translation>
+        <location line="+7"/>
+        <source>Rename...</source>
+        <translation type="unfinished">Rinomina...</translation>
     </message>
     <message>
-        <source>Remove File...</source>
-        <translation>Rimuovi File...</translation>
-    </message>
-    <message>
-        <source>Rename</source>
-        <translation>Rinomina</translation>
-    </message>
-    <message>
-        <source>Load Project</source>
-        <translation>Carica Progetto</translation>
-    </message>
-    <message>
-        <source>New Project</source>
-        <comment>Title of dialog</comment>
-        <translation>Nuovo Progetto</translation>
-    </message>
-    <message>
-        <source>Close Project &quot;%1&quot;</source>
-        <translation>Chiudi il Progetto &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>New File</source>
-        <comment>Title of dialog</comment>
-        <translation>Nuovo File</translation>
-    </message>
-    <message>
-        <source>Add Existing Files</source>
-        <translation>Aggiungi File Esistenti</translation>
-    </message>
-    <message>
-        <source>Could not add following files to project %1:
-</source>
-        <translation>Non è stato possibile aggiungere questi file al progetto %1:
-</translation>
-    </message>
-    <message>
-        <source>Add files to project failed</source>
-        <translation>Impossibile aggiungere file al progetto</translation>
-    </message>
-    <message>
-        <source>Add to Version Control</source>
-        <translation>Aggiungi al VCS</translation>
-    </message>
-    <message>
-        <source>Add files
-%1
-to version control (%2)?</source>
-        <translation>Aggiungere i file
-%1
-al VCS (%2)?</translation>
-    </message>
-    <message>
-        <source>Could not add following files to version control (%1)
-</source>
-        <translation>Non è stato possibile aggiungere questi file al VCS (%1)
-</translation>
-    </message>
-    <message>
-        <source>Add files to version control failed</source>
-        <translation>Impossibile aggiungere file al VCS</translation>
-    </message>
-    <message>
-        <source>Launching Windows Explorer failed</source>
+        <location line="+7"/>
+        <source>Remove...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Could not find explorer.exe in path to launch Windows Explorer.</source>
-        <translation type="unfinished"></translation>
+        <location line="-619"/>
+        <source>Synchronize with Editor</source>
+        <translation>Sincronizza con l&apos;Editor</translation>
     </message>
     <message>
-        <source>Launching a file explorer failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not find xdg-open to launch the native file explorer.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove file failed</source>
-        <translation>Rimozione del file fallita</translation>
-    </message>
-    <message>
-        <source>Could not remove file %1 from project %2.</source>
-        <translation>Non è stato possibile rimuovere il file %1 dal progetto %2.</translation>
-    </message>
-    <message>
-        <source>Delete file failed</source>
-        <translation>Cancellazione del file fallita</translation>
-    </message>
-    <message>
-        <source>Could not delete file %1.</source>
-        <translation>Non è stato possibile cancellare il file %1.</translation>
-    </message>
-    <message>
-        <source>Error while restoring session</source>
-        <translation>Errore durante il ripristino della sessione</translation>
-    </message>
-    <message>
-        <source>Could not restore session %1</source>
-        <translation>Impossibile ripristinare la sessione %1</translation>
-    </message>
-    <message>
-        <source>Error while saving session</source>
-        <translation>Errore durante il salvataggio della sessione</translation>
-    </message>
-    <message>
-        <source>Could not save session to file %1</source>
-        <translation>Impossibile salvare la sessione sul file %1</translation>
-    </message>
-    <message>
-        <source>Qt Creator</source>
-        <translation>Qt Creator</translation>
-    </message>
-    <message>
-        <source>Untitled</source>
-        <translation>Senza titolo</translation>
-    </message>
-    <message>
-        <source>Session (&apos;%1&apos;)</source>
-        <translation>Sessione (&apos;%1&apos;)</translation>
-    </message>
-</context>
-<context>
-    <name>QLibrary</name>
-    <message>
-        <source>Could not mmap &apos;%1&apos;: %2</source>
-        <translation type="obsolete">Non è stato possibile fare mmap &apos;%1&apos;: &apos;%2&apos;</translation>
-    </message>
-    <message>
-        <source>Plugin verification data mismatch in &apos;%1&apos;</source>
-        <translation type="obsolete">Errore nella verifica dei dati del plugin su &apos;%1&apos;</translation>
-    </message>
-    <message>
-        <source>Could not unmap &apos;%1&apos;: %2</source>
-        <translation type="obsolete">Non è stato possibile fare unmap &apos;%1&apos;: &apos;%2&apos;</translation>
-    </message>
-    <message>
-        <source>The shared library was not found.</source>
-        <translation type="obsolete">Non è stata trovata la libreria.</translation>
-    </message>
-    <message>
-        <source>The file &apos;%1&apos; is not a valid Qt plugin.</source>
-        <translation type="obsolete">Il file &apos;%1&apos; non è un Qt plugin valido.</translation>
-    </message>
-    <message>
-        <source>The plugin &apos;%1&apos; uses incompatible Qt library. (%2.%3.%4) [%5]</source>
-        <translation type="obsolete">Il plugin &apos;%1&apos; usa una libreria Qt non compatibile. (%2.%3.%4) [%5]</translation>
-    </message>
-    <message>
-        <source>The plugin &apos;%1&apos; uses incompatible Qt library. Expected build key &quot;%2&quot;, got &quot;%3&quot;</source>
-        <translation type="obsolete">Il plugin &apos;%1&apos; usa una libreria Qt non compatibile. Attesa la build key &quot;%2&quot;, al posto di &quot;%3&quot;</translation>
-    </message>
-    <message>
-        <source>The plugin &apos;%1&apos; uses incompatible Qt library. (Cannot mix debug and release libraries.)</source>
-        <translation type="obsolete">Il plugin &apos;%1&apos; usa una libreria Qt non compatibile (non è possibile mescolare librerie debug e release).</translation>
-    </message>
-    <message>
-        <source>The plugin was not loaded.</source>
-        <translation type="obsolete">Il plugin non è stato caricato.</translation>
-    </message>
-    <message>
-        <source>Unknown error</source>
-        <translation type="obsolete">Errore sconosciuto</translation>
-    </message>
-    <message>
-        <source>Cannot load library %1: %2</source>
-        <translation type="obsolete">Impossibile caricare la libreria %1: %2</translation>
-    </message>
-    <message>
-        <source>Cannot unload library %1: %2</source>
-        <translation type="obsolete">Impossibile chiudere la libreria %1: %2</translation>
-    </message>
-    <message>
-        <source>Cannot resolve symbol &quot;%1&quot; in %2: %3</source>
-        <translation type="obsolete">Impossibile risolvere il simbolo &quot;%1&quot; in %2: %3</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::QmakeProjectManager</name>
-    <message>
-        <source>QMake Build Configuration:</source>
-        <translation>Configurazione di QMake:</translation>
-    </message>
-    <message>
-        <source>debug</source>
-        <translation>debug</translation>
-    </message>
-    <message>
-        <source>release</source>
-        <translation>release</translation>
-    </message>
-    <message>
-        <source>Additional arguments:</source>
-        <translation>Parametri aggiuntivi:</translation>
-    </message>
-    <message>
-        <source>Effective qmake call:</source>
-        <translation>Chiamata effettiva a qmake:</translation>
-    </message>
-</context>
-<context>
-    <name>QObject</name>
-    <message>
-        <source>Pass</source>
-        <translation>Passato</translation>
-    </message>
-    <message>
-        <source>Expected Failure</source>
-        <translation>Atteso Fallimento</translation>
-    </message>
-    <message>
-        <source>Failure</source>
-        <translation>Fallimento</translation>
-    </message>
-    <message>
-        <source>Expected Pass</source>
-        <translation>Atteso Passaggio</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Warning</translation>
-    </message>
-    <message>
-        <source>Qt Warning</source>
-        <translation>Qt Warning</translation>
-    </message>
-    <message>
-        <source>Qt Debug</source>
-        <translation>Qt Debug</translation>
-    </message>
-    <message>
-        <source>Critical</source>
-        <translation>Critical</translation>
-    </message>
-    <message>
-        <source>Fatal</source>
-        <translation>Fatal</translation>
-    </message>
-    <message>
-        <source>Skipped</source>
-        <translation>Skipped</translation>
-    </message>
-    <message>
-        <source>Info</source>
-        <translation>Info</translation>
-    </message>
-</context>
-<context>
-    <name>QTestLib::Internal::QTestOutputPane</name>
-    <message>
-        <source>Test Results</source>
-        <translation>Risultati del test</translation>
-    </message>
-    <message>
-        <source>Result</source>
-        <translation>Risultato</translation>
-    </message>
-    <message>
-        <source>Message</source>
-        <translation>Messaggio</translation>
-    </message>
-</context>
-<context>
-    <name>QTestLib::Internal::QTestOutputWidget</name>
-    <message>
-        <source>All Incidents</source>
-        <translation>Tutti gli Incidenti</translation>
-    </message>
-    <message>
-        <source>Show Only:</source>
-        <translation>Mostra Solo:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::QmlProjectManager</name>
-    <message>
-        <source>QML Application</source>
-        <translation>Applicazione QML</translation>
-    </message>
-    <message>
-        <source>Creates a QML application.</source>
-        <translation>Crea un&apos;applicazione QML.</translation>
-    </message>
-    <message>
-        <source>Projects</source>
-        <translation>Progetti</translation>
-    </message>
-    <message>
-        <source>The project %1 could not be opened.</source>
-        <translation>Non è possibile aprire il progetto %1.</translation>
-    </message>
-    <message>
-        <source>New QML Project</source>
-        <translation>Nuovo Progetto QML</translation>
-    </message>
-    <message>
-        <source>This wizard generates a QML application project.</source>
-        <translation>Questa procedura guidata genera un&apos;applicazione QML.</translation>
-    </message>
-    <message>
-        <source>Import of existing QML directory</source>
-        <translation>Importa una cartella QML esistente</translation>
-    </message>
-    <message>
-        <source>Creates a QML project from an existing directory of QML files.</source>
-        <translation>Crea un progetto QML da una cartella che contiene file QML.</translation>
-    </message>
-    <message>
-        <source>Import of QML Project</source>
-        <translation>Importazione di un Progetto QML</translation>
-    </message>
-    <message>
-        <source>QML Project</source>
-        <translation>Progetto QML</translation>
-    </message>
-    <message>
-        <source>Project name:</source>
-        <translation>Nome progetto:</translation>
-    </message>
-    <message>
-        <source>Location:</source>
-        <translation>Posizione:</translation>
-    </message>
-    <message>
-        <source>QML Viewer</source>
-        <translation>Visualizzatore QML</translation>
-    </message>
-    <message>
-        <source>Could not find the qmlviewer executable, please specify one.</source>
-        <translation type="obsolete">Impossibile trovare l&apos;eseguibile qmlviewer, impostalo manualmente.</translation>
-    </message>
-    <message>
-        <source>&lt;Current File&gt;</source>
-        <translation>&lt;File Corrente&gt;</translation>
-    </message>
-    <message>
-        <source>QML Viewer arguments:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Main QML File:</source>
-        <translation>File QML Principale:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::ResourceEditor</name>
-    <message>
-        <source>Add</source>
-        <translation>Aggiungi</translation>
-    </message>
-    <message>
-        <source>Remove</source>
-        <translation>Rimuovi</translation>
-    </message>
-    <message>
-        <source>Properties</source>
-        <translation>Proprietà</translation>
-    </message>
-    <message>
-        <source>Prefix:</source>
-        <translation>Prefisso:</translation>
-    </message>
-    <message>
-        <source>Language:</source>
-        <translation>Lingua:</translation>
-    </message>
-    <message>
-        <source>Alias:</source>
-        <translation>Alias:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::QmakeProjectManager</name>
-    <message>
-        <source>Qt4 Console Application</source>
-        <translation>Applicazione Qt4 per Linea di Comando</translation>
-    </message>
-    <message>
-        <source>Creates a Qt4 console application.</source>
-        <translation>Crea una applicazione per console Qt4.</translation>
-    </message>
-    <message>
-        <source>This wizard generates a Qt4 console application project. The application derives from QCoreApplication and does not provide a GUI.</source>
-        <translation>Questa procedura guidata genera un progetto per applicazione console Qt4. L&apos;applicazione deriva da QCoreApplication e non include una GUI.</translation>
-    </message>
-    <message>
-        <source>Qt Designer is not responding (%1).</source>
-        <translation>Qt Designer non risponde (%1).</translation>
-    </message>
-    <message>
-        <source>Unable to create server socket: %1</source>
-        <translation>Impossibile creare il socket del server: %1</translation>
-    </message>
-    <message>
-        <source>Embedded Linux</source>
-        <translation>Embedded Linux</translation>
-    </message>
-    <message>
-        <source>Empty Qt4 Project</source>
-        <translation>Progetto Qt4 Vuoto</translation>
-    </message>
-    <message>
-        <source>Creates an empty Qt project.</source>
-        <translation>Crea un progetto Qt4 vuoto.</translation>
-    </message>
-    <message>
-        <source>This wizard generates an empty Qt4 project. Add files to it later on by using the other wizards.</source>
-        <translation>Questa procedura guidata genera un progetto Qt4 vuoto. Altri file potranno essere aggiunti in seguito con altre procedure guidate.</translation>
-    </message>
-    <message>
-        <source>Unable to start &quot;%1&quot;</source>
-        <translation>Impossibile avviare &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>The application &quot;%1&quot; could not be found.</source>
-        <translation>L&apos;applicazione &quot;%1&quot; non è stata trovata.</translation>
-    </message>
-    <message>
-        <source>Class Information</source>
-        <translation>Informazioni sulla Classe</translation>
-    </message>
-    <message>
-        <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
-        <translation>Inserisci le informazioni fondamentali sulla classe di cui vuoi generare lo scheletro dei file sorgenti.</translation>
-    </message>
-    <message>
-        <source>Qt4 Gui Application</source>
-        <translation>Applicazione Qt4 Gui</translation>
-    </message>
-    <message>
-        <source>Creates a Qt4 Gui Application with one form.</source>
-        <translation>Crea una applicazione Gui Qt4 con una form.</translation>
-    </message>
-    <message>
-        <source>The template file &apos;%1&apos; could not be opened for reading: %2</source>
-        <translation>Il file template &apos;%1&apos; non può essere aperto in lettura: %2</translation>
-    </message>
-    <message>
-        <source>This wizard generates a Qt4 GUI application project. The application derives by default from QApplication and includes an empty widget.</source>
-        <translation>Questa procedura guidata genera un progetto per applicazione Gui Qt4. L&apos;applicazione deriva da QApplication ed include un widget vuoto.</translation>
-    </message>
-    <message>
-        <source>C++ Library</source>
-        <translation>Libreria C++</translation>
-    </message>
-    <message>
-        <source>Creates a C++ Library.</source>
-        <translation>Crea una Libreria C++.</translation>
-    </message>
-    <message>
-        <source>Shared library</source>
-        <translation>Libreria condivisa</translation>
-    </message>
-    <message>
-        <source>Statically linked library</source>
-        <translation>Libreria statica</translation>
-    </message>
-    <message>
-        <source>Qt 4 plugin</source>
-        <translation>Plugin Qt4</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Tipo</translation>
-    </message>
-    <message>
-        <source>This wizard generates a C++ library project.</source>
-        <translation>Questa procedura guidata genera un progetto per una libreria C++.</translation>
-    </message>
-    <message>
-        <source>Select required modules</source>
-        <translation>Marca i moduli richiesti</translation>
-    </message>
-    <message>
-        <source>Select the modules you want to include in your project. The recommended modules for this project are selected by default.</source>
-        <translation>Seleziona tutti i moduli che vuoi includere nel tuo progetto. Quelli raccomandati per questo progetto sono già selezionati.</translation>
-    </message>
-    <message>
-        <source>New</source>
-        <translation>Nuovo</translation>
-    </message>
-    <message>
-        <source>Remove</source>
-        <translation>Rimuovi</translation>
-    </message>
-    <message>
-        <source>Up</source>
-        <translation>Su</translation>
-    </message>
-    <message>
-        <source>Down</source>
-        <translation>Giu</translation>
-    </message>
-    <message>
-        <source>Cut</source>
-        <translation>Taglia</translation>
-    </message>
-    <message>
-        <source>Copy</source>
-        <translation>Copia</translation>
-    </message>
-    <message>
-        <source>Paste</source>
-        <translation>Incolla</translation>
-    </message>
-    <message>
-        <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Add Variable</source>
-        <translation>Aggiungi Variabile</translation>
-    </message>
-    <message>
-        <source>Add Scope</source>
-        <translation>Aggiungi Ambito</translation>
-    </message>
-    <message>
-        <source>Add Block</source>
-        <translation>Aggiungi Blocco</translation>
-    </message>
-    <message>
-        <source>&lt;Global Scope&gt;</source>
-        <translation>&lt;Ambito Globale&gt;</translation>
-    </message>
-    <message>
-        <source>Change Item</source>
-        <translation>Cambia Elemento</translation>
-    </message>
-    <message>
-        <source>Change Variable Assignment</source>
-        <translation>Cambia Assegnazione della Variabile</translation>
-    </message>
-    <message>
-        <source>Change Variable Type</source>
-        <translation>Cambia Tipo della Variabile</translation>
-    </message>
-    <message>
-        <source>Change Scope Condition</source>
-        <translation>Cambia Condizione di Ambito</translation>
-    </message>
-    <message>
-        <source>Change Expression</source>
-        <translation>Cambia Espressione</translation>
-    </message>
-    <message>
-        <source>Move Item</source>
-        <translation>Sposta Elemento</translation>
-    </message>
-    <message>
-        <source>Remove Item</source>
-        <translation>Rimuovi Elemento</translation>
-    </message>
-    <message>
-        <source>Insert Item</source>
-        <translation>Inserisci Elemento</translation>
-    </message>
-    <message>
-        <source>Import existing settings</source>
-        <translation>Importa le impostazioni esistenti</translation>
-    </message>
-    <message>
-        <source>Qt Creator has found an already existing build in the source directory.&lt;br&gt;&lt;br&gt;&lt;b&gt;Qt Version:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Build configuration:&lt;/b&gt; %2&lt;br&gt;&lt;b&gt;Additional QMake Arguments:&lt;/b&gt;%3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Note:&lt;/b&gt; Importing the settings will automatically add the Qt Version identified by &lt;br&gt;&lt;b&gt;%1&lt;/b&gt; to the list of Qt versions.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Qt Creator has found an already existing build in the source directory.&lt;br&gt;&lt;br&gt;&lt;b&gt;Qt Version:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Build configuration:&lt;/b&gt; %2&lt;br&gt;</source>
-        <translation type="obsolete">Qt creator ha rilevato una compilazione precedente nella cartella dei sorgenti.&lt;br&gt;&lt;br&gt;&lt;b&gt;Versione Qt:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Configurazione della Compilazione:&lt;/b&gt; %2&lt;br&gt;</translation>
-    </message>
-    <message>
-        <source>Import existing build settings.</source>
-        <translation>Importa le impostazioni della compilazione esistenti.</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Note:&lt;/b&gt; Importing the settings will automatically add the Qt Version from:&lt;br&gt;&lt;b&gt;%1&lt;/b&gt; to the list of Qt versions.</source>
-        <translation type="obsolete">&lt;b&gt;Nota:&lt;/b&gt; Importando le impostazioni, si aggiungerà automaticamente la Versione di Qt in:&lt;br&gt;&lt;b&gt;%1&lt;/b&gt; alla lista delle Versioni di Qt.</translation>
-    </message>
-    <message>
-        <source>Clear system environment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Build Environment</source>
-        <translation>Ambiente di Compilazione</translation>
-    </message>
-    <message>
-        <source>Headers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sources</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Forms</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Resources</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Other files</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Failed!</source>
-        <translation>Non riuscito!</translation>
-    </message>
-    <message>
-        <source>Could not open the file for edit with SCC.</source>
-        <translation>Impossibile aprire il file per modifica con l&apos;SCC.</translation>
-    </message>
-    <message>
-        <source>Could not set permissions to writable.</source>
-        <translation>Impossibile impostare il permesso di scrittura.</translation>
-    </message>
-    <message>
-        <source>There are unsaved changes for project file %1.</source>
-        <translation>Ci sono delle modifiche non salvati sul file di progetto %1.</translation>
-    </message>
-    <message>
-        <source>Error while parsing file %1. Giving up.</source>
-        <translation>Errore durante la lettura del file %1. Rinuncio.</translation>
-    </message>
-    <message>
-        <source>Error while changing pro file %1.</source>
-        <translation>Errore durante la modifica del file pro %1.</translation>
-    </message>
-    <message>
-        <source>Could not find .pro file for sub dir &apos;%1&apos; in &apos;%2&apos;</source>
-        <translation>Impossibile trovare il file .pro della sottocartella &apos;%1&apos; in &apos;%2&apos;</translation>
-    </message>
-    <message>
-        <source>Configuration Name:</source>
-        <translation>Nome della Configurazione:</translation>
-    </message>
-    <message>
-        <source>Qt Version:</source>
-        <translation>Versione Qt:</translation>
-    </message>
-    <message>
-        <source>Manage Qt Versions</source>
-        <translation type="obsolete">Gestione Versioni Qt</translation>
-    </message>
-    <message>
-        <source>This Qt-Version is invalid.</source>
-        <translation>Questa Versione Qt non è valida.</translation>
-    </message>
-    <message>
-        <source>Shadow Build:</source>
-        <translation>Compila in cartella separata:</translation>
-    </message>
-    <message>
-        <source>Build Directory:</source>
-        <translation>Cartella di Compilazione:</translation>
-    </message>
-    <message>
-        <source>&lt;a href=&quot;import&quot;&gt;Import existing build&lt;/a&gt;</source>
-        <translation>&lt;a href=&quot;import&quot;&gt;Importa compilazione esistente&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>Shadow Build Directory</source>
-        <translation>Cartella di Compilazione</translation>
-    </message>
-    <message>
-        <source>Default Qt Version (%1)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No Qt Version set</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>using Qt version: &lt;b&gt;%1&lt;/b&gt;&lt;br&gt;with tool chain &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;building in &lt;b&gt;%3&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>General</source>
-        <translation>Generale</translation>
-    </message>
-    <message>
-        <source>Default Qt Version</source>
-        <translation type="obsolete">Versione Qt Predefinita</translation>
-    </message>
-    <message>
-        <source>Manage</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tool Chain:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Run qmake</source>
-        <translation>Avvia qmake</translation>
-    </message>
-    <message>
-        <source>Qt4RunConfiguration</source>
-        <translation>Qt4RunConfiguration</translation>
-    </message>
-    <message>
-        <source>Could not parse %1. The Qt4 run configuration %2 can not be started.</source>
-        <translation>Impossibile leggere %1. L&apos;esecuzione &apos;%2&apos; non può essere avviata.</translation>
-    </message>
-    <message>
-        <source>Arguments:</source>
-        <translation type="unfinished">Parametri:</translation>
-    </message>
-    <message>
-        <source>Run in Terminal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Run Environment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Base environment for this runconfiguration:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Clean Environment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>System Environment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Build Environment</source>
-        <translation type="unfinished">Ambiente di Compilazione</translation>
-    </message>
-    <message>
-        <source>Running executable: &lt;b&gt;%1&lt;/b&gt; %2 %3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>(in terminal)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Name:</source>
-        <translation>Nome:</translation>
-    </message>
-    <message>
-        <source>Executable:</source>
-        <translation>Eseguibile:</translation>
-    </message>
-    <message>
-        <source>Select the working directory</source>
-        <translation>Selezionare la cartella di lavoro</translation>
-    </message>
-    <message>
-        <source>Reset to default</source>
-        <translation>Ripristina predefinito</translation>
-    </message>
-    <message>
-        <source>Working Directory:</source>
-        <translation>Cartella di Lavoro:</translation>
-    </message>
-    <message>
-        <source>&amp;Arguments:</source>
-        <translation type="obsolete">&amp;Parametri:</translation>
-    </message>
-    <message>
-        <source>Run in &amp;Terminal</source>
-        <translation type="obsolete">Esegui nel &amp;Terminale</translation>
-    </message>
-    <message>
-        <source>Use debug version of frameworks (DYLD_IMAGE_SUFFIX=_debug)</source>
-        <translation>Utilizza la versione di debug dei framework (DYLD_IMAGE_SUFFIX=_debug)</translation>
-    </message>
-    <message>
-        <source>&lt;specify a name&gt;</source>
-        <translation>&lt;specifica un nome&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;specify a qmake location&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select QMake Executable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select the MinGW Directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select &quot;x86build&quot; Directory from Carbide Install</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Auto-detected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Manual</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Building helpers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;body&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;File:&lt;/td&gt;&lt;td&gt;&lt;pre&gt;%1&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Last&amp;nbsp;modified:&lt;/td&gt;&lt;td&gt;%2&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Size:&lt;/td&gt;&lt;td&gt;%3 Bytes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>Tooltip showing the debugging helper library file.</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The Qt Version identified by %1 is not installed. Run make install</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 does not specify a valid Qt installation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;specify a path&gt;</source>
-        <translation type="obsolete">&lt;specifica un percorso&gt;</translation>
-    </message>
-    <message>
-        <source>Select QTDIR</source>
-        <translation type="obsolete">Selezionare QTDIR</translation>
-    </message>
-    <message>
-        <source>Select the Qt Directory</source>
-        <translation type="obsolete">Selezionare la Cartella Qt</translation>
-    </message>
-    <message>
-        <source>The Qt Version %1 is not installed. Run make install</source>
-        <translation type="obsolete">La Versione Qt %1 non è installata. Esegui make install</translation>
-    </message>
-    <message>
-        <source>%1 is not a valid Qt directory</source>
-        <translation type="obsolete">%1 non è una cartella Qt valida</translation>
-    </message>
-    <message>
-        <source>Found Qt version %1, using mkspec %2</source>
-        <translation>Trovata la versione Qt %1, uso l&apos;mkspec %2</translation>
-    </message>
-    <message>
-        <source>Qt versions</source>
-        <translation>Versioni Qt</translation>
-    </message>
-    <message>
-        <source>+</source>
-        <translation>+</translation>
-    </message>
-    <message>
-        <source>-</source>
-        <translation>-</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation>Nome</translation>
-    </message>
-    <message>
-        <source>Path</source>
-        <translation type="obsolete">Percorso</translation>
-    </message>
-    <message>
-        <source>Debugging Helper</source>
-        <translation>Helper del Debug</translation>
-    </message>
-    <message>
-        <source>Version Name:</source>
-        <translation>Nome della Versione:</translation>
-    </message>
-    <message>
-        <source>Path:</source>
-        <translation type="obsolete">Percorso:</translation>
-    </message>
-    <message>
-        <source>MinGW Directory:</source>
-        <translation>Cartella MinGW:</translation>
-    </message>
-    <message>
-        <source>Debugging Helper:</source>
-        <translation>Helper del Debug:</translation>
-    </message>
-    <message>
-        <source>Show &amp;Log</source>
-        <translation>Mostra &amp;Log</translation>
-    </message>
-    <message>
-        <source>&amp;Rebuild</source>
-        <translation>&amp;Ricompila</translation>
-    </message>
-    <message>
-        <source>Default Qt Version:</source>
-        <translation>Versione Qt Predefinita:</translation>
-    </message>
-    <message>
-        <source>MSVC Version:</source>
-        <translation>Versione MSVC:</translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;Unable to detect MSVC version.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;Impossibile rilevare la versione di MSVC.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>QMake Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>QMake Location:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MWC Directory:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The project %1 could not be opened.</source>
-        <translation>Impossibile aprire il progetto %1.</translation>
-    </message>
-    <message>
-        <source>Edit Variable</source>
-        <translation>Modifica Variabile</translation>
-    </message>
-    <message>
-        <source>Variable Name:</source>
-        <translation>Nome Variabile:</translation>
-    </message>
-    <message>
-        <source>Assignment Operator:</source>
-        <translation>Operatore di Assegnazione:</translation>
-    </message>
-    <message>
-        <source>Variable:</source>
-        <translation>Variabile:</translation>
-    </message>
-    <message>
-        <source>Append (+=)</source>
-        <translation>Aggiungi (+=)</translation>
-    </message>
-    <message>
-        <source>Remove (-=)</source>
-        <translation>Rimuovi (-=)</translation>
-    </message>
-    <message>
-        <source>Replace (~=)</source>
-        <translation>Sostituisci (~=)</translation>
-    </message>
-    <message>
-        <source>Set (=)</source>
-        <translation>Imposta (=)</translation>
-    </message>
-    <message>
-        <source>Unique (*=)</source>
-        <translation>Unica (*=)</translation>
-    </message>
-    <message>
-        <source>Select Item</source>
-        <translation>Scegli Elemento</translation>
-    </message>
-    <message>
-        <source>Edit Item</source>
-        <translation>Modifica Elemento</translation>
-    </message>
-    <message>
-        <source>Select Items</source>
-        <translation>Scegli Elementi</translation>
-    </message>
-    <message>
-        <source>Edit Items</source>
-        <translation>Modifica Elementi</translation>
-    </message>
-    <message>
-        <source>New</source>
-        <translation>Nuovo</translation>
-    </message>
-    <message>
-        <source>Edit Values</source>
-        <translation>Modifica i Valori</translation>
-    </message>
-    <message>
-        <source>Edit %1</source>
-        <translation>Modifica %1</translation>
-    </message>
-    <message>
-        <source>Edit Scope</source>
-        <translation>Modifica Ambito</translation>
-    </message>
-    <message>
-        <source>Edit Advanced Expression</source>
-        <translation>Modifica Espressione Avanzata</translation>
-    </message>
-    <message>
-        <source>&lt;font color=&quot;#ff0000&quot;&gt;Could not find make command: %1 in the build environment&lt;/font&gt;</source>
-        <translation>&lt;font color=&quot;#ff0000&quot;&gt;Impossibile trovare il comando make: %1 nell&apos;ambiente di compilazione&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;font color=&quot;#0000ff&quot;&gt;&lt;b&gt;No Makefile found, assuming project is clean.&lt;/b&gt;&lt;/font&gt;</source>
-        <translation>&lt;font color=&quot;#0000ff&quot;&gt;&lt;b&gt;Non trovo il Makefile. Assumo che il progetto sia pulito.&lt;/b&gt;&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <source>Override %1:</source>
-        <translation>Ridefinisci %1:</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Make Step:&lt;/b&gt; %1 not found in the environment.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Make:&lt;/b&gt; %1 %2 in %3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Make</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>
-&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;No valid Qt version set. Set one in Preferences &lt;/b&gt;&lt;/font&gt;
-</source>
-        <translation>
-&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Non è stata impostata una Versione Qt valida. Impostane una nelle Preferenze &lt;/b&gt;&lt;/font&gt;
-</translation>
-    </message>
-    <message>
-        <source>
-&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;No valid Qt version set. Set one in Tools/Options &lt;/b&gt;&lt;/font&gt;
-</source>
-        <translation>
-&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Non è stata impostata una Versione Qt valida. Impostane una in Strumenti/Opzioni &lt;/b&gt;&lt;/font&gt;
-</translation>
-    </message>
-    <message>
-        <source>&lt;font color=&quot;#0000ff&quot;&gt;Configuration unchanged, skipping QMake step.&lt;/font&gt;</source>
-        <translation>&lt;font color=&quot;#0000ff&quot;&gt;La configurazione non è cambiata, salto la fase QMake.&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;QMake:&lt;/b&gt; No Qt version set. QMake can not be run.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;QMake:&lt;/b&gt; %1 %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No valid Qt version set.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>QMake</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Loading project %1 ...</source>
-        <translation>Caricamento del progetto %1 ...</translation>
-    </message>
-    <message>
-        <source>Failed opening project &apos;%1&apos;: Project file does not exist</source>
-        <translation>Non è stato possibile aprire il progetto &apos;%1&apos;: il file di progetto non esiste</translation>
-    </message>
-    <message>
-        <source>Failed opening project</source>
-        <translation>Impossibile aprire il progetto</translation>
-    </message>
-    <message>
-        <source>Failed opening project &apos;%1&apos;: Project already open</source>
-        <translation>Non è stato possibile aprire il progetto &apos;%1&apos;: il progetto è già aperto</translation>
-    </message>
-    <message>
-        <source>Opening %1 ...</source>
-        <translation>Apertura di %1 ...</translation>
-    </message>
-    <message>
-        <source>Done opening project</source>
-        <translation>Progetto aperto</translation>
-    </message>
-    <message>
-        <source>&lt;not found&gt;</source>
-        <translation>&lt;non trovato&gt;</translation>
-    </message>
-    <message>
-        <source>Qt in PATH</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Auto-detected Qt</source>
-        <translation type="obsolete">Qt auto-rilevate</translation>
-    </message>
-</context>
-<context>
-    <name>QtModulesInfo</name>
-    <message>
-        <source>QtCore Module</source>
-        <translation>Modulo QtCore</translation>
-    </message>
-    <message>
-        <source>Core non-GUI classes used by other modules</source>
-        <translation>Classi di Core, non-GUI, usate dagli altri moduli</translation>
-    </message>
-    <message>
-        <source>QtGui Module</source>
-        <translation>Modulo QtGui</translation>
-    </message>
-    <message>
-        <source>Graphical user interface components</source>
-        <translation>Componenti dell&apos;interfaccia grafica</translation>
-    </message>
-    <message>
-        <source>QtNetwork Module</source>
-        <translation>Modulo QtNetwork</translation>
-    </message>
-    <message>
-        <source>Classes for network programming</source>
-        <translation>Classi per la programmazione della rete</translation>
-    </message>
-    <message>
-        <source>QtOpenGL Module</source>
-        <translation>Modulo QtOpenGL</translation>
-    </message>
-    <message>
-        <source>OpenGL support classes</source>
-        <translation>Classi per il supporto OpenGL</translation>
-    </message>
-    <message>
-        <source>QtSql Module</source>
-        <translation>Modulo QtSql</translation>
-    </message>
-    <message>
-        <source>Classes for database integration using SQL</source>
-        <translation>Classi per l&apos;integrazione con database SQL</translation>
-    </message>
-    <message>
-        <source>QtScript Module</source>
-        <translation>Modulo QtScript</translation>
-    </message>
-    <message>
-        <source>Classes for evaluating Qt Scripts</source>
-        <translation>Classi per l&apos;esecuzione di Qt Script</translation>
-    </message>
-    <message>
-        <source>QtScriptTools Module</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Additional Qt Script components</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>QtSvg Module</source>
-        <translation>Modulo QtSvg</translation>
-    </message>
-    <message>
-        <source>Classes for displaying the contents of SVG files</source>
-        <translation>Classi per la visualizzazione del contenuto di file SVG</translation>
-    </message>
-    <message>
-        <source>QtWebKit Module</source>
-        <translation>Modulo QtWebKit</translation>
-    </message>
-    <message>
-        <source>Classes for displaying and editing Web content</source>
-        <translation>Classi per la visualizzazione e modifica del contenuto Web</translation>
-    </message>
-    <message>
-        <source>QtXml Module</source>
-        <translation>Modulo QtXml</translation>
-    </message>
-    <message>
-        <source>Classes for handling XML</source>
-        <translation>Classi per la gestione di XML</translation>
-    </message>
-    <message>
-        <source>QtXmlPatterns Module</source>
-        <translation>Modulo QtXmlPatterns</translation>
-    </message>
-    <message>
-        <source>An XQuery/XPath engine for XML and custom data models</source>
-        <translation>Un motore XQuery/XPath per XML e modelli di dati speciali</translation>
-    </message>
-    <message>
-        <source>Phonon Module</source>
-        <translation>Modulo Phonon</translation>
-    </message>
-    <message>
-        <source>Multimedia framework classes</source>
-        <translation>Classi del framework multimediale</translation>
-    </message>
-    <message>
-        <source>QtMultimedia Module</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Classes for low-level multimedia functionality</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Qt3Support Module</source>
-        <translation>Modulo Qt3Support</translation>
-    </message>
-    <message>
-        <source>Classes that ease porting from Qt 3 to Qt 4</source>
-        <translation>Classi che facilitano il porting da Qt 3 a Qt 4</translation>
-    </message>
-    <message>
-        <source>QtTest Module</source>
-        <translation>Modulo QtTest</translation>
-    </message>
-    <message>
-        <source>Tool classes for unit testing</source>
-        <translation>Classi di ausilio per lo unit testing</translation>
-    </message>
-    <message>
-        <source>QtDBus Module</source>
-        <translation>Modulo QtDBus</translation>
-    </message>
-    <message>
-        <source>Classes for Inter-Process Communication using the D-Bus</source>
-        <translation>Classi per la comunicazione-intra-processo usando il D-Bus</translation>
-    </message>
-</context>
-<context>
-    <name>QtScriptEditor::Internal::QtScriptEditorActionHandler</name>
-    <message>
-        <source>Qt Script Error</source>
-        <translation>Errore Qt Script</translation>
-    </message>
-</context>
-<context>
-    <name>QtScriptEditor::Internal::QtScriptEditorPlugin</name>
-    <message>
-        <source>Creates a Qt Script file.</source>
-        <translation>Crea un file Qt Script.</translation>
-    </message>
-    <message>
-        <source>Qt Script file</source>
-        <translation>File Qt Script</translation>
-    </message>
-    <message>
-        <source>Qt</source>
-        <translation>Qt</translation>
-    </message>
-    <message>
-        <source>Run</source>
-        <translation>Esegui</translation>
-    </message>
-    <message>
-        <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QtScriptEditor::Internal::ScriptEditor</name>
-    <message>
-        <source>&lt;Select Symbol&gt;</source>
-        <translation>&lt;Scegli un Simbolo&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Core</name>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+257"/>
         <source>Filter Configuration</source>
         <translation>Configurazione del Filtro</translation>
     </message>
     <message>
-        <source>Limit to prefix</source>
-        <translation>Limita al prefisso</translation>
+        <location line="+16"/>
+        <source>Type the prefix followed by a space and search term to restrict search to the filter.</source>
+        <translation>Digitare il prefisso seguito da uno spazio e un termine di ricerca per limitare la ricerca al filtro.</translation>
     </message>
     <message>
+        <location line="+9"/>
+        <source>Include by default</source>
+        <translation>Includi per impostazione predefinita</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Include the filter when not using a prefix for searches.</source>
+        <translation>Includere il filtro quando non si utilizza un prefisso per le ricerche.</translation>
+    </message>
+    <message>
+        <location line="-26"/>
         <source>Prefix:</source>
         <translation>Prefisso:</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+46"/>
         <source>Generic Directory Filter</source>
         <translation>Filtro Cartella Generica</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+267"/>
+        <location line="+10"/>
+        <source>Select Directory</source>
+        <translation>Seleziona la directory</translation>
+    </message>
     <message numerus="yes">
+        <location line="+56"/>
         <source>%1 filter update: %n files</source>
         <translation>
             <numerusform>%1 aggiornamento filtri: un file</numerusform>
@@ -8228,3585 +2498,13042 @@ p, li { white-space: pre-wrap; }
         </translation>
     </message>
     <message>
-        <source>Choose a directory to add</source>
-        <translation>Scegli una cartella da aggiungere</translation>
-    </message>
-    <message>
+        <location line="-18"/>
         <source>%1 filter update: 0 files</source>
         <translation>%1 aggiornamento filtri: 0 file</translation>
     </message>
     <message>
+        <location line="+28"/>
         <source>%1 filter update: canceled</source>
         <translation>%1 aggiornamento filtri: annullato</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+69"/>
+        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-246"/>
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+36"/>
         <source>Name:</source>
         <translation>Nome:</translation>
     </message>
     <message>
-        <source>File Types:</source>
-        <translation>Tipi di File:</translation>
+        <location line="+1"/>
+        <source>Path:</source>
+        <translation type="unfinished">Percorso:</translation>
     </message>
     <message>
-        <source>Specify file name filters, separated by comma. Filters may contain wildcards.</source>
-        <translation>Specifica filtri sul nome, separati da una virgola. I filtri possono contenere wildcard.</translation>
+        <location line="+1"/>
+        <source>MIME type:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Prefix:</source>
-        <translation>Prefisso:</translation>
+        <location line="+1"/>
+        <source>Default editor:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Limit to prefix</source>
-        <translation>Limita al prefisso</translation>
+        <location line="+1"/>
+        <source>Line endings:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Indentation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Owner:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Group:</source>
+        <translation>Gruppo:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Size:</source>
+        <translation type="unfinished">Dimensione:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Last read:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Last modified:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Readable:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Writable:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Symbolic link:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <location line="+1"/>
+        <location line="+18"/>
+        <location line="+50"/>
+        <location line="+32"/>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+58"/>
+        <source>Unknown</source>
+        <translation>Sconosciuto</translation>
+    </message>
+    <message>
+        <location line="-91"/>
+        <source>Windows (CRLF)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unix (LF)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mac (CR)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+102"/>
+        <source>Mixed</source>
+        <translation>Misto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 Spaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Undefined</source>
+        <translation>Non definito</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+24"/>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+158"/>
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-385"/>
         <source>Add...</source>
         <translation>Aggiungi...</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+41"/>
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+3"/>
         <source>Edit...</source>
         <translation>Modifica...</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+133"/>
+        <source>Uncategorized</source>
+        <translation>Senza categoria</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tools that will appear directly under the External Tools menu.</source>
+        <translation>Strumenti che appariranno direttamente nel menu Strumenti esterni.</translation>
+    </message>
+    <message>
+        <location line="+199"/>
+        <source>New Category</source>
+        <translation>Nuova categoria</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>New Tool</source>
+        <translation>Nuovo strumento</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This tool prints a line of useful text</source>
+        <translation>Questo strumento stampa una riga di testo utile</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Useful text</source>
+        <extracomment>Sample external tool text</extracomment>
+        <translation>Testo utile</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>System Environment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>Add tool.</source>
+        <translation>Aggiungi strumento.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-3"/>
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+20"/>
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+3"/>
         <source>Remove</source>
         <translation>Rimuovi</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Remove tool.</source>
+        <translation>Rimuovi strumento.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Revert tool to default.</source>
+        <translation>Ripristina lo strumento a predefinito.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Output:</source>
+        <translation>Output:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+&lt;p&gt;What to do with the executable&apos;s standard output.
+&lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+13"/>
+        <source>Ignore</source>
+        <translation type="unfinished">Ignora</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <location line="+13"/>
+        <source>Show in General Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <location line="+13"/>
+        <source>Replace Selection</source>
+        <translation>Sostituisci la selezione</translation>
+    </message>
+    <message>
+        <location line="-11"/>
+        <source>Error output:</source>
+        <translation>Output di errore:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
+&lt;li&gt;Show in General Messages.&lt;/li&gt;
+&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+413"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+153"/>
+        <source>No changes to apply.</source>
+        <translation>Nessuna modifica da applicare.</translation>
+    </message>
+    <message>
+        <location line="-410"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-308"/>
+        <source>Change...</source>
+        <translation>Cambia...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Modifies current document</source>
+        <translation>Modifica il documento corrente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>If the tool modifies the current document, set this flag to ensure that the document is saved before running the tool and is reloaded after the tool finished.</source>
+        <translation>Se lo strumento modifica il documento corrente, impostare questo flag per assicurarsi che il documento venga salvato prima di applicare lo strumento e che venga ricaricato dopo che lo strumento abbia terminato.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Input:</source>
+        <translation>Input:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text to pass to the executable via standard input. Leave empty if the executable should not receive any input.</source>
+        <translation>Testo da passare all&apos;eseguibile tramite input standard. Lascia vuoto se l&apos;eseguibile non deve ricevere alcun input.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Description:</source>
+        <translation type="unfinished">Descrizione:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="-115"/>
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+270"/>
+        <source>Executable:</source>
+        <translation type="unfinished">Eseguibile:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+1"/>
+        <source>Arguments:</source>
+        <translation type="unfinished">Parametri:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working directory:</source>
+        <translation>Directory di lavoro:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Base environment:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+6"/>
+        <source>Environment:</source>
+        <translation type="unfinished">Ambiente:</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Add Tool</source>
+        <translation>Aggiungi strumento</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add Category</source>
+        <translation>Aggiungi categoria</translation>
+    </message>
+    <message>
+        <location line="+292"/>
+        <source>PATH=C:\dev\bin;${PATH}</source>
+        <translation>PATH=C:\dev\bin;${PATH}</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PATH=/opt/bin:${PATH}</source>
+        <translation>PATH=/opt/bin:${PATH}</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>External Tools</source>
+        <translation>Strumenti esterni</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-4"/>
         <source>Directories:</source>
         <translation>Cartelle:</translation>
     </message>
     <message>
+        <location line="-8"/>
         <source>Specify a short word/abbreviation that can be used to restrict completions to files from this directory tree.
 To do this, you type this shortcut and a space in the Locator entry field, and then the word to search for.</source>
         <translation>Specifica la parola breve/abbreviazione che sarà usata per restringere il completamento ai file di queste cartelle.
 Per eseguire la ricerca, scrivi questo prefisso, uno spazio e poi il termine da cercare nella casella di Ricerca Rapida.</translation>
     </message>
     <message>
-        <source>Files in file system</source>
+        <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+53"/>
+        <source>Files in File System</source>
         <translation>File nel file system</translation>
     </message>
     <message>
-        <source>Filter configuration</source>
-        <translation>Configurazione del filtro</translation>
+        <location line="+1"/>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+91"/>
+        <source>Create and Open &quot;%1&quot;</source>
+        <translation>Crea e apri &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Create File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Create &quot;%1&quot;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Always create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Include hidden files</source>
         <translation>Includi i file nascosti</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Filter:</source>
         <translation>Filtro:</translation>
     </message>
     <message>
-        <source>Open documents</source>
-        <translation>Documenti aperti</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+21"/>
         <source>Available filters</source>
         <translation>Filtri disponibili</translation>
     </message>
     <message>
-        <source>Indexing</source>
-        <translation>Indicizzazione</translation>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+563"/>
+        <source>Open as Centered Popup</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+1"/>
         <source>Refresh</source>
         <translation>Aggiorna</translation>
     </message>
     <message>
-        <source>Configure...</source>
-        <translation>Configura...</translation>
+        <location line="+102"/>
+        <source>Type to locate (%1)</source>
+        <translation>Digitare per individuare (%1)</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+62"/>
+        <source>Web Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt Project Bugs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Locate...</source>
         <translation>Trova...</translation>
     </message>
     <message>
+        <location line="+147"/>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Apri un documento&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Apri File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Esempi &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; File recenti&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Trascina i file qui&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- digita &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; per passare a una definizione di classe&lt;/div&gt;</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- digita &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; per passare a una definizione di funzione&lt;/div&gt;</translation>
+    </message>
+    <message>
+        <location line="+130"/>
+        <source>Updating Locator Caches</source>
+        <translation>Aggiornamento delle cache dei locator</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-2"/>
         <source>Type to locate</source>
         <translation>Trova qui</translation>
     </message>
     <message>
-        <source>&lt;type here&gt;</source>
-        <translation>&lt;scrivi qui&gt;</translation>
-    </message>
-    <message>
-        <source>Configure Filters</source>
-        <translation>Configura i Filtri</translation>
-    </message>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-485"/>
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-298"/>
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-1"/>
         <source>Add</source>
         <translation>Aggiungi</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-36"/>
+        <source>Refresh interval:</source>
+        <translation>Intervallo di aggiornamento:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Locator filters that do not update their cached data immediately, such as the custom directory filters, update it after this time interval.</source>
+        <translation>I filtri del Locator che non aggiornano immediatamente i propri dati memorizzati nella cache (come i filtri di directory personalizzati) li aggiornano dopo questo intervallo di tempo.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source> min</source>
         <translation> min</translation>
     </message>
     <message>
-        <source>Refresh now!</source>
-        <translation>Aggiorna adesso!</translation>
+        <location line="+65"/>
+        <source>Files in Directories</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Refresh Interval:</source>
-        <translation>Intervallo di aggiornamento:</translation>
+        <location line="+4"/>
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+102"/>
+        <source>URL Template</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 (Prefix: %2)</source>
-        <translation>%1 (Prefisso: %2)</translation>
+        <location line="+105"/>
+        <source>Name</source>
+        <translation type="unfinished">Nome</translation>
     </message>
     <message>
-        <source>Edit</source>
-        <translation>Modifica</translation>
-    </message>
-</context>
-<context>
-    <name>RegExp::Internal::RegExpWindow</name>
-    <message>
-        <source>&amp;Pattern:</source>
-        <translation>&amp;Pattern:</translation>
+        <location line="+0"/>
+        <source>Prefix</source>
+        <translation>Prefisso</translation>
     </message>
     <message>
-        <source>&amp;Escaped Pattern:</source>
-        <translation>Sequenza di &amp;Escape:</translation>
+        <location line="+0"/>
+        <source>Default</source>
+        <translation>Predefinito</translation>
     </message>
     <message>
-        <source>&amp;Pattern Syntax:</source>
-        <translation>&amp;Sintassi del Pattern:</translation>
+        <location line="+8"/>
+        <source>Built-in</source>
+        <translation>Built-in</translation>
     </message>
     <message>
-        <source>&amp;Text:</source>
-        <translation>&amp;Testo:</translation>
+        <location line="+4"/>
+        <source>Custom</source>
+        <translation>Personalizza</translation>
     </message>
     <message>
-        <source>Case &amp;Sensitive</source>
-        <translation>Distingui le &amp;Maiuscole</translation>
-    </message>
-    <message>
-        <source>&amp;Minimal</source>
-        <translation>&amp;Minimale</translation>
-    </message>
-    <message>
-        <source>Index of Match:</source>
-        <translation>Indice della Corrispondenza:</translation>
-    </message>
-    <message>
-        <source>Matched Length:</source>
-        <translation>Lunghezza della Corrispondenza:</translation>
-    </message>
-    <message>
-        <source>Regular expression v1</source>
-        <translation>Espressione Regolare v1</translation>
-    </message>
-    <message>
-        <source>Regular expression v2</source>
-        <translation>Espressione Regolare v2</translation>
-    </message>
-    <message>
-        <source>Wildcard</source>
-        <translation>Wildcard</translation>
-    </message>
-    <message>
-        <source>Fixed string</source>
-        <translation>Stringa fissa</translation>
-    </message>
-    <message>
-        <source>Capture %1:</source>
-        <translation>Cattura %1:</translation>
-    </message>
-    <message>
-        <source>Match:</source>
-        <translation>Corrispondenza:</translation>
-    </message>
-    <message>
-        <source>Regular Expression</source>
-        <translation>Espressione Regolare</translation>
-    </message>
-    <message>
-        <source>Enter pattern from code...</source>
-        <translation>Inserisci il pattern dal codice...</translation>
-    </message>
-    <message>
-        <source>Clear patterns</source>
-        <translation>Cancella i pattern</translation>
-    </message>
-    <message>
-        <source>Clear texts</source>
-        <translation>Cancella il testo</translation>
-    </message>
-    <message>
-        <source>Enter pattern from code</source>
-        <translation>Inserisci il pattern dal codice</translation>
-    </message>
-    <message>
-        <source>Pattern</source>
-        <translation>Pattern</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::ResourceEditor</name>
-    <message>
-        <source>Creates a Qt Resource file (.qrc).</source>
-        <translation>Crea un file di Risorse Qt (.qrc).</translation>
-    </message>
-    <message>
-        <source>Qt Resource file</source>
-        <translation>File di Risorse Qt</translation>
-    </message>
-    <message>
-        <source>Qt</source>
-        <translation>Qt</translation>
-    </message>
-    <message>
-        <source>&amp;Undo</source>
-        <translation>&amp;Annulla</translation>
-    </message>
-    <message>
-        <source>&amp;Redo</source>
-        <translation>&amp;Ripeti</translation>
-    </message>
-    <message>
-        <source>untitled</source>
-        <translation>senza titolo</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Core</name>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-111"/>
         <source>Save Changes</source>
         <translation>Salva le Modifiche</translation>
     </message>
     <message>
+        <location line="-6"/>
         <source>The following files have unsaved changes:</source>
         <translation>Questi file hanno delle modifiche non salvate:</translation>
     </message>
     <message>
+        <location line="+2"/>
         <source>Automatically save all files before building</source>
         <translation>Salva i file automaticamente prima di </translation>
     </message>
-</context>
-<context>
-    <name>SettingsDialog</name>
     <message>
-        <source>Options</source>
-        <translation>Opzioni</translation>
-    </message>
-    <message>
-        <source>0</source>
-        <translation>0</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::ResourceEditor</name>
-    <message>
-        <source>Add Files</source>
-        <translation>Aggiungi File</translation>
-    </message>
-    <message>
-        <source>Add Prefix</source>
-        <translation>Aggiungi Prefisso</translation>
-    </message>
-    <message>
-        <source>Invalid file</source>
-        <translation>File non valido</translation>
-    </message>
-    <message>
-        <source>Copy</source>
-        <translation>Copia</translation>
-    </message>
-    <message>
-        <source>Skip</source>
-        <translation>Salta</translation>
-    </message>
-    <message>
-        <source>Abort</source>
-        <translation>Interrompi</translation>
-    </message>
-    <message>
-        <source>The file %1 is not in a subdirectory of the resource file. Continuing will result in an invalid resource file.</source>
-        <translation>Il file %1 non è in una sottocartella del file di risorse. Procedere genererebbe un file delle risorse non valido.</translation>
-    </message>
-    <message>
-        <source>Choose copy location</source>
-        <translation>Scegli la posizione della copia</translation>
-    </message>
-    <message>
-        <source>Overwrite failed</source>
-        <translation>Sovrascrittura fallita</translation>
-    </message>
-    <message>
-        <source>Could not overwrite file %1.</source>
-        <translation>Impossibile sovrascrivere il file %1.</translation>
-    </message>
-    <message>
-        <source>Copying failed</source>
-        <translation>Copia fallita</translation>
-    </message>
-    <message>
-        <source>Could not copy the file to %1.</source>
-        <translation>Impossibile copiare il file su %1.</translation>
-    </message>
-    <message>
-        <source>Add Files...</source>
-        <translation>Aggiungi File...</translation>
-    </message>
-    <message>
-        <source>Change Alias...</source>
-        <translation>Cambia l&apos;Alias...</translation>
-    </message>
-    <message>
-        <source>Add Prefix...</source>
-        <translation>Aggiungi Prefisso...</translation>
-    </message>
-    <message>
-        <source>Change Prefix...</source>
-        <translation>Cambia Prefisso...</translation>
-    </message>
-    <message>
-        <source>Change Language...</source>
-        <translation>Cambia Lingua...</translation>
-    </message>
-    <message>
-        <source>Remove Item</source>
-        <translation>Rimuovi Elemento</translation>
-    </message>
-    <message>
-        <source>Open file</source>
-        <translation>Apri file</translation>
-    </message>
-    <message>
-        <source>All files (*)</source>
-        <translation>Tutti i file (*)</translation>
-    </message>
-    <message>
-        <source>Change Prefix</source>
-        <translation>Cambia Prefisso</translation>
-    </message>
-    <message>
-        <source>Input Prefix:</source>
-        <translation>Inserisci il Prefisso:</translation>
-    </message>
-    <message>
-        <source>Change Language</source>
-        <translation>Cambia Lingua</translation>
-    </message>
-    <message>
-        <source>Change File Alias</source>
-        <translation>Cambia l&apos;Alias del file</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Core</name>
-    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-112"/>
         <source>Keyboard Shortcuts</source>
         <translation>Scorciatoie della Tastiera</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+50"/>
+        <location line="+100"/>
         <source>Command</source>
         <translation>Comando</translation>
     </message>
     <message>
+        <location line="-101"/>
+        <location line="+101"/>
         <source>Label</source>
         <translation>Etichetta</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+1"/>
+        <location line="+12"/>
         <source>Shortcut</source>
         <translation>Scorciatoia</translation>
     </message>
     <message>
-        <source>Defaults</source>
-        <translation>Predefiniti</translation>
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-114"/>
+        <source>Command Mappings</source>
+        <translation>Mappature dei comandi</translation>
     </message>
     <message>
+        <location line="+12"/>
+        <source>Target</source>
+        <translation>Target</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Reset All</source>
+        <translation>Rirpristina tutto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reset all to default.</source>
+        <translation>Ripristina tutto alle impostazioni predefinite.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-14"/>
+        <source>Reset to default.</source>
+        <translation>Ripristina le impostazioni predefinite.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Import...</source>
         <translation>Importa...</translation>
     </message>
     <message>
+        <location line="+1"/>
         <source>Export...</source>
         <translation>Esporta...</translation>
     </message>
     <message>
-        <source>Key Sequence</source>
-        <translation>Sequenza di Tasti</translation>
-    </message>
-    <message>
-        <source>Shortcut:</source>
-        <translation>Scorciatoia:</translation>
-    </message>
-    <message>
+        <location line="-5"/>
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+6"/>
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-206"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-1"/>
+        <location line="+6"/>
         <source>Reset</source>
         <translation>Ripristina</translation>
     </message>
-</context>
-<context>
-    <name>ShowBuildLog</name>
     <message>
-        <source>Debugging Helper Build Log</source>
-        <translation>Log di Compilazione dell&apos;Helper del Debug</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::TextEditor</name>
-    <message>
-        <source>Snippets</source>
-        <translation>Frammenti</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Debugger</name>
-    <message>
-        <source>Break at &apos;main&apos;:</source>
-        <translation>Interrompi su &apos;main&apos;</translation>
+        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+51"/>
+        <source>Plain Text Editor</source>
+        <translation>Editor di testo puro</translation>
     </message>
     <message>
-        <source>Host and port:</source>
-        <translation>Host e porta:</translation>
-    </message>
-    <message>
-        <source>Architecture:</source>
-        <translation>Architettura:</translation>
-    </message>
-    <message>
-        <source>Use server start script:</source>
-        <translation>Usa script di avvio del server:</translation>
-    </message>
-    <message>
-        <source>Server start script:</source>
-        <translation>Script di avvio del server:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Subversion</name>
-    <message>
-        <source>Subversion Command:</source>
-        <translation>Comando Subversion:</translation>
-    </message>
-    <message>
-        <source>Authentication</source>
-        <translation>Autenticazione</translation>
-    </message>
-    <message>
-        <source>User name:</source>
-        <translation>Nome utente:</translation>
-    </message>
-    <message>
-        <source>Password:</source>
-        <translation>Password:</translation>
-    </message>
-    <message>
-        <source>Subversion</source>
-        <translation>Subversion</translation>
-    </message>
-    <message>
-        <source>Prompt to submit</source>
-        <translation type="unfinished">Prompt del submit</translation>
-    </message>
-    <message>
-        <source>Subversion Command</source>
-        <translation>Comando Subversion</translation>
-    </message>
-    <message>
-        <source>Subversion Output</source>
-        <translation type="obsolete">Output di Subversion</translation>
-    </message>
-    <message>
-        <source>Subversion</source>
-        <translation type="obsolete">Subversion</translation>
-    </message>
-    <message>
-        <source>&amp;Subversion</source>
-        <translation>&amp;Subversion</translation>
-    </message>
-    <message>
-        <source>Add</source>
-        <translation>Aggiungi</translation>
-    </message>
-    <message>
-        <source>Add &quot;%1&quot;</source>
-        <translation>Aggiungi &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+S,Alt+A</source>
+        <location line="+38"/>
+        <source>Show Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Delete</source>
-        <translation>Elimina</translation>
-    </message>
-    <message>
-        <source>Delete &quot;%1&quot;</source>
-        <translation>Cancella &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Revert</source>
-        <translation>Ripristina</translation>
-    </message>
-    <message>
-        <source>Revert &quot;%1&quot;</source>
-        <translation>Ripristina &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Diff Project</source>
-        <translation>Diff del progetto</translation>
-    </message>
-    <message>
-        <source>Diff Current File</source>
-        <translation>Diff del file corrente</translation>
-    </message>
-    <message>
-        <source>Diff &quot;%1&quot;</source>
-        <translation>Diff &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+S,Alt+D</source>
+        <location line="+1"/>
+        <source>Hide Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Commit All Files</source>
-        <translation>Esegui il Commit di Tutti i File</translation>
-    </message>
-    <message>
-        <source>Commit Current File</source>
-        <translation>Esegui il Commit del File Corrente</translation>
-    </message>
-    <message>
-        <source>Commit &quot;%1&quot;</source>
-        <translation>Esegui il Commit di &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+S,Alt+C</source>
+        <location line="+2"/>
+        <source>Show Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Filelog Current File</source>
-        <translation>Filelog del File Corrente</translation>
-    </message>
-    <message>
-        <source>Filelog &quot;%1&quot;</source>
-        <translation>Filelog &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Annotate Current File</source>
-        <translation>Annota il File Corrente</translation>
-    </message>
-    <message>
-        <source>Annotate &quot;%1&quot;</source>
-        <translation>Annota &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Describe...</source>
-        <translation>Descrivi...</translation>
-    </message>
-    <message>
-        <source>Project Status</source>
-        <translation>Stato del progetto</translation>
-    </message>
-    <message>
-        <source>Update Project</source>
-        <translation>Aggiorna il Progetto</translation>
-    </message>
-    <message>
-        <source>Commit</source>
-        <translation>Revisione</translation>
-    </message>
-    <message>
-        <source>Diff Selected Files</source>
-        <translation>Diff dei file selezionati</translation>
-    </message>
-    <message>
-        <source>&amp;Undo</source>
-        <translation>&amp;Annulla</translation>
-    </message>
-    <message>
-        <source>&amp;Redo</source>
-        <translation>&amp;Ripeti</translation>
-    </message>
-    <message>
-        <source>Closing Subversion Editor</source>
-        <translation>Chiusura dell&apos;editor subversion</translation>
-    </message>
-    <message>
-        <source>Do you want to commit the change?</source>
-        <translation>Vuoi creare una revisione con la modifica?</translation>
-    </message>
-    <message>
-        <source>The commit message check failed. Do you want to commit the change?</source>
-        <translation>Il controllo sul messaggio della nuova revisione è fallito. Vuoi creare la revisione?</translation>
-    </message>
-    <message>
-        <source>The file has been changed. Do you want to revert it?</source>
-        <translation>Il file è stato modificato. Vuoi ripristinarlo?</translation>
-    </message>
-    <message>
-        <source>The commit list spans several repositories (%1). Please commit them one by one.</source>
+        <location line="+1"/>
+        <source>Hide Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Executing: %1 %2
+        <location line="+100"/>
+        <source>Qt</source>
+        <translation type="unfinished">Qt</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Clear Menu</source>
+        <translation>Cancella menu</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+27"/>
+        <source>Binary Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+433"/>
+        <source>Preferences</source>
+        <translation>Preferenze</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492"/>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-79"/>
+        <source>Options</source>
+        <translation type="unfinished">Opzioni</translation>
+    </message>
+    <message>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3"/>
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Release Translations (lrelease)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+5"/>
+        <source>Linguist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Update Translations (lupdate)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Opens the current file in Notepad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Edit with Notepad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+15"/>
+        <location line="+5"/>
+        <source>Text</source>
+        <translation type="unfinished">Testo</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <source>Runs the current QML file with QML utility.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QML utility</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+5"/>
+        <source>Qt Quick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Runs the current QML file with qmlscene. This requires Qt 5.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt Quick 2 Preview (qmlscene)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+5"/>
+        <source>Opens the current file in vi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <location line="+5"/>
+        <source>Edit with vi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+40"/>
+        <source>Global Actions &amp; Actions from the Menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+145"/>
+        <source>No themes found in installation.</source>
+        <translation>Nessun tema trovato nell&apos;installazione.</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>The current date (ISO).</source>
+        <translation>La data corrente (ISO).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The current time (ISO).</source>
+        <translation>L&apos;ora corrente (ISO).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The current date (RFC2822).</source>
+        <translation>La data corrente (RFC2822).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The current time (RFC2822).</source>
+        <translation>L&apos;ora corrente (RFC2822).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The current date (Locale).</source>
+        <translation>La data corrente (locale).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The current time (Locale).</source>
+        <translation>L&apos;ora corrente (locale).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The configured default directory for projects.</source>
+        <translation>La directory predefinita per i progetti.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The directory last visited in a file dialog.</source>
+        <translation>Ultima directory visitata in una finestra di dialogo.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Is %1 running on Windows?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Is %1 running on OS X?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Is %1 running on Linux?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Is %1 running on any unix-based platform?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>The path list separator for the platform.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The platform executable suffix.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The directory where %1 finds its pre-installed resources.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The current date (QDate formatstring).</source>
+        <translation>La data corrente (QDate formatstring).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The current time (QTime formatstring).</source>
+        <translation>L&apos;ora corrente (QTime formatstring).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Generate a new UUID.</source>
+        <translation>Genera un nuovo UUID.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>A comment.</source>
+        <translation>Un commento.</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>%1 &gt; %2 Preferences...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+103"/>
+        <source>Create Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Settings File Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>The settings file &quot;%1&quot; is not writable.
+You will not be able to store any %2 settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The file is not readable.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The file is invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Error reading settings file &quot;%1&quot;: %2
+You will likely experience further problems using this instance of %3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>%1 collects crash reports for the sole purpose of fixing bugs. To disable this feature go to %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source> &gt; Preferences &gt; Environment &gt; System</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Edit &gt; Preferences &gt; Environment &gt; System</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>%1 uses Google Crashpad for collecting crashes and sending them to our backend for processing. Crashpad may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>More information:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Crashpad Overview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 security policy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+69"/>
+        <source>Design</source>
+        <translation>Design</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49"/>
+        <source>Add the file to version control (%1)</source>
+        <translation>Aggiungi il file al controllo della versione (%1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add the files to version control (%1)</source>
+        <translation>Aggiungi i file al controllo della versione (%1)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+43"/>
+        <source>Text Encoding</source>
+        <translation type="unfinished">Codifica del Testo</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>The following encodings are likely to fit:</source>
+        <translation>È probabile che le seguenti codifiche possono adattarsi:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation type="unfinished">Seleziona la codifica per &quot;%1&quot;.%2</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Reload with Encoding</source>
+        <translation type="unfinished">Ricarica con Codifica</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Save with Encoding</source>
+        <translation type="unfinished">Salva con Codifica</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+201"/>
+        <source>Choose a template:</source>
+        <translation>Scegli un template:</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Choose...</source>
+        <translation type="unfinished">Scegli...</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+88"/>
+        <source>Projects</source>
+        <translation type="unfinished">Progetti</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Files and Classes</source>
+        <translation>File e classi</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>All Templates</source>
+        <translation>Tutti i template</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 Templates</source>
+        <translation>%1 Template</translation>
+    </message>
+    <message>
+        <location line="+146"/>
+        <source>Platform independent</source>
+        <translation>Piattaforma indipendente</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Supported Platforms</source>
+        <translation>Piattaforme supportate</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+48"/>
+        <source>Overwrite Existing Files</source>
+        <translation>Sovrascrivi file esistenti</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>The following files already exist in the folder
+%1.
+Would you like to overwrite them?</source>
+        <translation>I seguenti file esistono già nella cartella 
+%1.
+Vuoi sovrascriverli?</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+1"/>
+        <location line="+299"/>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-857"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-5"/>
+        <source>Make Writable</source>
+        <translation>Rendi scrivibile</translation>
+    </message>
+    <message>
+        <location line="-298"/>
+        <location line="+299"/>
+        <source>Open with VCS</source>
+        <translation>Apri con VCS</translation>
+    </message>
+    <message>
+        <location line="-298"/>
+        <location line="+299"/>
+        <source>Save As</source>
+        <translation>Salva come</translation>
+    </message>
+    <message>
+        <location line="-185"/>
+        <source>Failed to %1 File</source>
+        <translation>Impossibile %1 file</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 file %2 from version control system %3 failed.</source>
+        <translation>%1 file %2 dal sistema di controllo versione %3 non riuscito.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>No Version Control System Found</source>
+        <translation>Nessun sistema di controllo versione trovato</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot open file %1 from version control system.
+No version control system found.</source>
+        <translation>Impossibile aprire il file %1 dal sistema di controllo versione. 
+Nessun sistema di controllo versione trovato.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Cannot Set Permissions</source>
+        <translation>Impossibile impostare le autorizzazioni</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot set permissions for %1 to writable.</source>
+        <translation>Impossibile impostare le autorizzazioni per %1 su scrivibile.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Cannot Save File</source>
+        <translation>Impossibile salvare il file</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot save file %1</source>
+        <translation>Impossibile salvare il file %1</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Canceled Changing Permissions</source>
+        <translation>Autorizzazioni di modifica annullate</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Could Not Change Permissions on Some Files</source>
+        <translation>Non è possibile modificare le autorizzazioni su alcuni file</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>See details for a complete list of files.</source>
+        <translation>Vedi i dettagli per un elenco completo di file.</translation>
+    </message>
+    <message>
+        <location line="+138"/>
+        <source>Files Without Write Permissions</source>
+        <translation>File non riscrivibili</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The following files have no write permissions. Do you want to change the permissions?</source>
+        <translation>I seguenti file non sono riscrivibili. Vuoi cambiare le autorizzazioni?</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Filename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Path</source>
+        <translation type="unfinished">Percorso</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Change &amp;Permission</source>
+        <translation>Modifica &amp;autorizzazione</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Select all, if possible: </source>
+        <translation>Seleziona tutto, se possibile: </translation>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>The following files are not checked out yet.
+Do you want to check them out now?</source>
+        <translation>I seguenti file non sono ancora stati estratti. 
+Vuoi controllarli ora?</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/restartdialog.cpp" line="+16"/>
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+18"/>
+        <source>Restart Required</source>
+        <translation>Avvio richiesto</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Later</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Restart Now</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+294"/>
+        <source>&lt;no document&gt;</source>
+        <translation>&lt;nessun documento&gt;</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>No document is selected.</source>
+        <translation>Nessun documento selezionato.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+21"/>
+        <source>System Editor</source>
+        <translation>Editor di sistema</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Could not open URL %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+592"/>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>Impossibile trovare l&apos;eseguibile per &quot;%1&quot; (expanded &quot;%2&quot;)</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>&quot;%1&quot; finished</source>
+        <translation>&quot;%1&quot; finito</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&quot;%1&quot; finished with error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+60"/>
+        <source>&amp;External</source>
+        <translation>&amp;Esterno</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Error while parsing external tool %1: %2</source>
+        <translation>Errore durante l&apos;analisi dello strumento esterno %1: %2</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Error: External tool in %1 has duplicate id</source>
+        <translation>Errore: lo strumento esterno in %1 ha un ID duplicato</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+42"/>
+        <source>Launching a file browser failed</source>
+        <translation>Avvio browser file non riuscito</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unable to start the file manager:
+
+%1
+
 </source>
-        <extracomment>Executing: &lt;executable&gt; &lt;arguments&gt;</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The commit list spans several respositories (%1). Please commit them one by one.</source>
-        <translation type="obsolete">La lista dei commit include più depositi (%1). Esegui il commit su ciascuno separatamente.</translation>
-    </message>
-    <message>
-        <source>Another commit is currently being executed.</source>
-        <translation>Si sta già creando eseguendo un commit.</translation>
-    </message>
-    <message>
-        <source>There are no modified files.</source>
-        <translation>Non ci sono file modificati.</translation>
-    </message>
-    <message>
-        <source>Cannot create temporary file: %1</source>
-        <translation>Impossibile creare il file temporaneo: %1</translation>
-    </message>
-    <message>
-        <source>Describe</source>
-        <translation>Descrivi</translation>
-    </message>
-    <message>
-        <source>Revision number:</source>
-        <translation>Numero della revisione:</translation>
-    </message>
-    <message>
-        <source>No subversion executable specified!</source>
-        <translation>Non è stato specificato l&apos;eseguibile subversion!</translation>
-    </message>
-    <message>
-        <source>%1 Executing: %2 %3
-</source>
-        <extracomment>&lt;timestamp&gt; Executing: &lt;executable&gt; &lt;arguments&gt;</extracomment>
-        <translation type="obsolete">%1 Eseguo: %2 %3
+        <translation>Impossibile avviare il file manager:
+
+%1
+
 </translation>
     </message>
     <message>
-        <source>The process terminated with exit code %1.</source>
-        <translation>Il processo è terminato con il codice di uscita %1.</translation>
+        <location line="+3"/>
+        <source>&quot;%1&quot; returned the following error:
+
+%2</source>
+        <translation>&quot;%1&quot; ha dato il seguente errore:
+
+%2</translation>
     </message>
     <message>
-        <source>The process terminated abnormally.</source>
-        <translation>Il processo è terminato in modo anomalo.</translation>
+        <location line="+16"/>
+        <source>Launching Windows Explorer Failed</source>
+        <translation>Avvio di Windows Explorer non riuscito</translation>
     </message>
     <message>
-        <source>Could not start subversion &apos;%1&apos;. Please check your settings in the preferences.</source>
-        <translation>Impossibile avviare subversion &apos;%1&apos;. Controlla le tue impostazioni nelle preferenze.</translation>
+        <location line="+1"/>
+        <source>Could not find explorer.exe in path to launch Windows Explorer.</source>
+        <translation>Impossibile trovare explorer.exe nel percorso per avviare Windows Explorer.</translation>
     </message>
     <message>
-        <source>Subversion did not respond within timeout limit (%1 ms).</source>
-        <translation>Subversion non ha risposto entro il limite di tempo (%1 ms).</translation>
+        <location line="+18"/>
+        <source>The command for file browser is not set.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Subversion Submit</source>
-        <translation>Invio Subversion</translation>
+        <location line="+8"/>
+        <source>Error while starting file browser.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Find in This Directory...</source>
+        <translation>Trova in questa directory...</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show in File System View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show in Explorer</source>
+        <translation>Mostra in Explorer</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Show in Finder</source>
+        <translation>Mostra nel Finder</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show Containing Folder</source>
+        <translation>Mostra cartella</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Open Command Prompt Here</source>
+        <translation>Apri il prompt dei comandi qui</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Open Terminal Here</source>
+        <translation>Apri il terminale qui</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Open Command Prompt With</source>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Open Terminal With</source>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Impossibile rimuovere il file &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+130"/>
+        <source>%n occurrences replaced.</source>
+        <translation>
+            <numerusform>%n occorrenze sostituite.@%n occorrenze sostituite.</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+323"/>
+        <source>Case sensitive</source>
+        <translation>Distingue maiuscole/minuscole</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Whole words</source>
+        <translation>Parole intere</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Regular expressions</source>
+        <translation>Espressioni regolari</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Preserve case</source>
+        <translation>Mantieni la capitalizzazione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Flags: %1</source>
+        <translation>Notifiche: %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>None</source>
+        <translation>Nessuno</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>, </source>
+        <translation>, </translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="-113"/>
+        <source>Repeat the search with same parameters.</source>
+        <translation>Ripeti la ricerca con gli stessi parametri.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Search Again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Repla&amp;ce with:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Preser&amp;ve case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Replace all occurrences.</source>
+        <translation>Sostituisci tutte le occorrenze.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Replace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+75"/>
+        <source>This change cannot be undone.</source>
+        <translation>Questo cambiamento non può essere annullato.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+18"/>
+        <source>The search resulted in more than %n items, do you still want to continue?</source>
+        <translation>
+            <numerusform>La ricerca ha generato più di %n elementi, vuoi continuare?@La ricerca ha generato più di %n elementi, vuoi continuare?</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Continue</source>
+        <translation type="unfinished">Continua</translation>
+    </message>
+    <message>
+        <location line="+179"/>
+        <source>Search was canceled.</source>
+        <translation>La ricerca è stata annullata.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+82"/>
+        <source>%n matches found.</source>
+        <translation>
+            <numerusform>%n corrispondenze trovate.@%n corrispondenze trovate.</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Searching...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>No matches found.</source>
+        <translation>Nessuna corrispondenza trovata.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+294"/>
+        <source>Configure...</source>
+        <comment>msgShowOptionsDialog</comment>
+        <translation type="unfinished">Configura...</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Open Preferences dialog.</source>
+        <comment>msgShowOptionsDialogToolTip (mac version)</comment>
+        <translation>Apri la finestra di dialogo Preferenze.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Open Options dialog.</source>
+        <comment>msgShowOptionsDialogToolTip (non-mac version)</comment>
+        <translation>Apri la finestra di dialogo Opzioni.</translation>
+    </message>
+    <message>
+        <location line="+315"/>
+        <source> (%1)</source>
+        <translation> (%1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 %2%3</source>
+        <translation type="unfinished">%1 %2%3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Based on Qt %1 (%2, %3)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+618"/>
+        <source>File was restored from auto-saved copy. Select Save to confirm or Revert to Saved to discard changes.</source>
+        <translation>Il file è stato ripristinato dalla copia salvata automaticamente. Seleziona Salva per confermare o Ripristina su Salvato per annullare le modifiche.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+186"/>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>Factory id = &quot;%1&quot; già registrato. Eliminazione.</translation>
+    </message>
+    <message>
+        <location line="+218"/>
+        <source>Reload All Wizards</source>
+        <translation>Ricarica tutti i Wizard</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Inspect Wizard State</source>
+        <translation>Ispeziona lo stato del Wizard</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49"/>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>Errore in &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
+        <translation>Impossibile convertire il risultato di &quot;%1&quot; in stringa.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28"/>
+        <source>Execute Custom Commands</source>
+        <translation>Esegui comandi personalizzati</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Runs an arbitrary command with arguments. The command is searched for in the PATH environment variable if needed. Note that the command is run directly, not in a shell.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>Previous command is still running (&quot;%1&quot;).
+Do you want to kill it?</source>
+        <translation>Il comando precedente è ancora in esecuzione (&quot;%1&quot;).
+Vuoi interromperlo?</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Kill Previous Process?</source>
+        <translation>Interrompere il processo precedente?</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>Impossibile trovare l&apos;eseguibile per &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>Comando di avvio &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+20"/>
+        <source>Run External Tool</source>
+        <translation>Esegui strumento esterno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Runs an external tool that you have set up in the preferences (Environment &gt; External Tools).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+20"/>
+        <source>Evaluate JavaScript</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Evaluates arbitrary JavaScript expressions and copies the result.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Reset Engine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Engine aborted after timeout.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+1"/>
+        <source>Copy to clipboard: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-198"/>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+125"/>
+        <source>Locator query string.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Locator query string with quotes escaped with backslash.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Locator query string as regular expression.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>File Name Index</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Case sensitive:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110"/>
+        <source>Add &quot;%1&quot; placeholder for the query string.
+Double-click to edit item.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Move Up</source>
+        <translation type="unfinished">Sposta Su</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Move Down</source>
+        <translation type="unfinished">Sposta Giu</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>URLs:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+45"/>
+        <source>Serial Terminal</source>
+        <translation>Terminale seriale</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="-128"/>
+        <source>Add Magic Header</source>
+        <translation>Aggiungi Magic Header</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;I MIME data sono interpretati come definiti dalla specifica del Shared MIME-info Database da &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/ html&gt;</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>String</source>
+        <translation type="unfinished">Stringa</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>RegExp</source>
+        <translation>RegExp</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Host16</source>
+        <translation>Host16</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Host32</source>
+        <translation>Host32</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Big16</source>
+        <translation>Big16</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Big32</source>
+        <translation>Big32</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Little16</source>
+        <translation>Little16</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Little32</source>
+        <translation>Little32</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Byte</source>
+        <translation>Byte</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Use Recommended</source>
+        <translation>Uso consigliato</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Range start:</source>
+        <translation>Inizio intervallo:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Range end:</source>
+        <translation>Fine intervallo:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Priority:</source>
+        <translation>Priorità:</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Value:</source>
+        <translation>Valore:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type:</source>
+        <translation>Tipo:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Mask:</source>
+        <translation>Maschera:</translation>
+    </message>
+    <message>
+        <location line="+118"/>
+        <source>Internal error: Type is invalid</source>
+        <translation>Errore interno:  il tipo non è valido</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+219"/>
+        <source>Switch to &lt;b&gt;%1&lt;/b&gt; mode</source>
+        <translation>Passa alla modalità &lt;b&gt;%1&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+167"/>
+        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+235"/>
+        <source>Activate %1 View</source>
+        <translation>Attiva %1 visualizzazione</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-599"/>
+        <source>Zoom: %1%</source>
+        <translation>Zoom: %1%</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+145"/>
+        <source>Elided %n characters due to Application Output settings</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+154"/>
+        <source>[Discarding excessive amount of pending output.]
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+278"/>
+        <source>Text Files (*.txt);;All files (*)</source>
+        <translation>File di testo (* .txt) ;; Tutti i file (*)</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+11"/>
+        <source>Error: %L1!</source>
+        <translation>Errore: %L1!</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/patchtool.cpp" line="+52"/>
+        <source>Apply Chunk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Revert Chunk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Would you like to apply the chunk?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Would you like to revert the chunk?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Note: The file will be saved before this operation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
+        <translation>Non esiste un comando patch configurato nelle impostazioni generali &quot;Ambiente &quot;.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Running in %1: %2 %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation type="unfinished">Impossibile lanciare &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>A timeout occurred running &quot;%1&quot;</source>
+        <translation>Si è verificato un timeout nell&apos;esecuzione &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation type="unfinished">&quot;%1&quot; è andato in crash.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>&quot;%1&quot; non riuscito (codice di uscita %2).</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-80"/>
+        <source>Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Choose source location. This can be a plugin library file or a zip file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>File does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Check Archive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Checking archive...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The file is not an archive.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <location line="+14"/>
+        <source>Canceled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-11"/>
+        <source>There was an error while unarchiving.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Archive is OK.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Plugin requires an incompatible version of %1 (%2).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Did not find %1 plugin.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Install Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Choose install location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>User plugins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>%1 installation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The plugin will be available only to this %1 installation, but for all users that can access it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Summary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Overwrite File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Overwrite</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Failed to Write File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Failed to write file &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Install Plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Failed to Copy Plugin Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+298"/>
+        <source>Toggle Progress Details</source>
+        <translation>Attiva/disattiva i dettagli del progresso</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+49"/>
+        <source>unnamed</source>
+        <translation>Senza nome</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Current theme: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>The theme change will take effect after restart.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+265"/>
+        <source>%1 repository was detected but %1 is not configured.</source>
+        <translation>Repository %1 rilevato ma %1 non è configurato.</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Version Control</source>
+        <translation type="unfinished">Controllo di Revisione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Remove the following files from the version control system (%2)? %1Note: This might remove the local file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Add to Version Control</source>
+        <translation type="unfinished">Aggiungi al VCS</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Add the file
+%1
+to version control (%2)?</source>
+        <translation>Aggiungi il file 
+%1
+al controllo della versione (%2)?</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Add the files
+%1
+to version control (%2)?</source>
+        <translation>Aggiungi i file 
+%1
+al controllo della versione (%2)?</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Adding to Version Control Failed</source>
+        <translation>Aggiunta al controllo della versione non riuscita</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Could not add the file
+%1
+to version control (%2)
+</source>
+        <translation>Impossibile aggiungere il file 
+%1
+al controllo della versione (%2)
+</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Could not add the following files to version control (%1)
+%2</source>
+        <translation>Impossibile aggiungere i seguenti file al controllo della versione (%1)
+%2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+35"/>
+        <source>About %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&lt;br/&gt;From revision %1&lt;br/&gt;</source>
+        <translation>&lt;br/&gt;Dalla revisione %1&lt;br/&gt;</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&lt;br/&gt;Built on %1 %2&lt;br/&gt;</source>
+        <translation>&lt;br/&gt;Realizzato su %1 %2&lt;br/&gt;</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Copyright 2008-%6 %7. All rights reserved.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</source>
+        <translation>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Copyright 2008-%6 %7. Tutti i diritti riservati. &lt;br/&gt;&lt;br/&gt;Il programma è fornito COSÌ COM&apos;È, SENZA ALCUNA GARANZIA DI ALCUN TIPO, COMPRESA LA GARANZIA DI PROGETTAZIONE, COMMERCIABILITÀ E IDONEITÀ PER UN PARTICOLARE SCOPO.&lt;br/&gt;</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>The Qt logo as well as Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® and Qt Embedded® are registered trademarks of The Qt Company Ltd.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+555"/>
+        <source>Tags:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+131"/>
+        <source>Exit Full Screen</source>
+        <translation>Esci dalla modalità schermo intero</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Enter Full Screen</source>
+        <translation>Entra in modalità schermo intero</translation>
     </message>
 </context>
 <context>
-    <name>QtC::TextEditor</name>
+    <name>QtC::DiffEditor</name>
     <message>
-        <source>%1 found</source>
-        <translation>%1 trovati</translation>
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+198"/>
+        <source>Context lines:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>List of comma separated wildcard filters</source>
-        <translation>Lista di filtri con wildcard separati da una virgola</translation>
+        <location line="+13"/>
+        <source>Ignore Whitespace</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Use Regular E&amp;xpressions</source>
-        <translation>Usa &amp;Espressioni Regolari</translation>
+        <location line="+6"/>
+        <location line="+1"/>
+        <source>Reload Diff</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>untitled</source>
-        <translation>senza titolo</translation>
+        <location line="+126"/>
+        <source>[%1] vs. [%2] %3</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;em&gt;Binary data&lt;/em&gt;</source>
-        <translation>&lt;em&gt;Dati binari&lt;/em&gt;</translation>
+        <location line="+9"/>
+        <location line="+6"/>
+        <source>%1 vs. %2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Print Document</source>
-        <translation>Stampa il Documento</translation>
+        <location line="+4"/>
+        <source>[%1] %2 vs. [%3] %4</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;Errore:&lt;/b&gt; Impossibile decodificare &quot;%1&quot; con l&apos;encoding &quot;%2&quot;. Modifica non consentita.</translation>
+        <location line="+35"/>
+        <source>Hide Change Description</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Show Change Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+301"/>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+48"/>
+        <source>Diff Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+114"/>
+        <source>Diff</source>
+        <translation type="unfinished">Diff</translation>
+    </message>
+    <message>
+        <location line="+94"/>
+        <location line="+54"/>
+        <location line="+68"/>
+        <source>Saved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-121"/>
+        <location line="+54"/>
+        <location line="+68"/>
+        <source>Modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+96"/>
+        <source>Diff Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Diff Modified Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>&amp;Diff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Diff Current File</source>
+        <translation type="unfinished">Diff del file corrente</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Meta+H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ctrl+H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+65"/>
+        <source>Diff Open Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-63"/>
+        <source>Meta+Shift+H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ctrl+Shift+H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Diff External Files...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Diff &quot;%1&quot;</source>
+        <translation type="unfinished">Diff &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Select First File for Diff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Select Second File for Diff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+229"/>
+        <source>Send Chunk to CodePaster...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Apply Chunk...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Revert Chunk...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Select Encoding</source>
-        <translation>Seleziona Codifica</translation>
+        <translation type="unfinished">Seleziona Codifica</translation>
     </message>
     <message>
-        <source>Line: %1, Col: %2</source>
-        <translation>Riga: %1, Col: %2</translation>
-    </message>
-    <message>
-        <source>Line: %1, Col: 999</source>
-        <translation>Riga: %1, Col: 999</translation>
-    </message>
-    <message>
-        <source>Storage</source>
-        <translation>Salvataggio</translation>
-    </message>
-    <message>
-        <source>Removes trailing whitespace on saving.</source>
-        <translation>Rimuove gli spazi in coda al salvataggio.</translation>
-    </message>
-    <message>
-        <source>&amp;Clean whitespace</source>
-        <translation>&amp;Pulizia spaziature</translation>
-    </message>
-    <message>
-        <source>Clean whitespace in entire document instead of only for changed parts.</source>
-        <translation>Pulisce gli spazi in tutto il documento, non solo nelle parti modificate.</translation>
-    </message>
-    <message>
-        <source>In entire &amp;document</source>
-        <translation>In tutto il &amp;documento</translation>
-    </message>
-    <message>
-        <source>Correct leading whitespace according to tab settings.</source>
-        <translation>Correggi le tabulazioni del documento.</translation>
-    </message>
-    <message>
-        <source>Clean indentation</source>
-        <translation>Pulizia indentazione</translation>
-    </message>
-    <message>
-        <source>&amp;Ensure newline at end of file</source>
-        <translation>&amp;Garantisci una riga vuota alla fine del file</translation>
-    </message>
-    <message>
-        <source>Tabs and Indentation</source>
-        <translation>Tab ed Indentazione</translation>
-    </message>
-    <message>
-        <source>Ta&amp;b size:</source>
-        <translation>Ta&amp;b:</translation>
-    </message>
-    <message>
-        <source>&amp;Indent size:</source>
-        <translation>&amp;Indentazione:</translation>
-    </message>
-    <message>
-        <source>Backspace will go back one indentation level instead of one space.</source>
-        <translation>Backspace cancellerà un livello di indentazione al posto di uno spazio.</translation>
-    </message>
-    <message>
-        <source>&amp;Backspace follows indentation</source>
-        <translation>&amp;Backspace segue l&apos;indentazione</translation>
-    </message>
-    <message>
-        <source>Insert &amp;spaces instead of tabs</source>
-        <translation>Inserisci &amp;spazi invece che tab</translation>
-    </message>
-    <message>
-        <source>Enable automatic &amp;indentation</source>
-        <translation>Abilita l&apos;&amp;indentazione automatica</translation>
-    </message>
-    <message>
-        <source>Tab key performs auto-indent:</source>
-        <translation>Il tasto Tab auto-indenta:</translation>
-    </message>
-    <message>
-        <source>Never</source>
-        <translation>Mai</translation>
-    </message>
-    <message>
-        <source>Always</source>
-        <translation>Sempre</translation>
-    </message>
-    <message>
-        <source>In leading white space</source>
-        <translation>Sugli spazi all&apos;inizio</translation>
-    </message>
-    <message>
-        <source>Display</source>
-        <translation>Visualizzazione</translation>
-    </message>
-    <message>
-        <source>Display line &amp;numbers</source>
-        <translation>Mostra il &amp;numero della righe</translation>
-    </message>
-    <message>
-        <source>Display &amp;folding markers</source>
-        <translation>Mostra i segni di &amp;raggruppamento del codice</translation>
-    </message>
-    <message>
-        <source>Show tabs and spaces.</source>
-        <translation>Mostra i tab e gli spazi.</translation>
-    </message>
-    <message>
-        <source>&amp;Visualize whitespace</source>
-        <translation>&amp;Mostra spaziature</translation>
-    </message>
-    <message>
-        <source>Highlight current &amp;line</source>
-        <translation>Evidenzia la r&amp;iga corrente</translation>
-    </message>
-    <message>
-        <source>Highlight &amp;blocks</source>
-        <translation>Evidenzia i &amp;blocchi</translation>
-    </message>
-    <message>
-        <source>Text Wrapping</source>
-        <translation>Ritorno a capo</translation>
-    </message>
-    <message>
-        <source>Enable text &amp;wrapping</source>
-        <translation>Abilita il ri&amp;torno a capo</translation>
-    </message>
-    <message>
-        <source>Display right &amp;margin at column:</source>
-        <translation>Mostra il &amp;margine destro alla colonna:</translation>
-    </message>
-    <message>
-        <source>Animate matching parentheses</source>
-        <translation>Mostra l&apos;animazione sulle parentesi</translation>
-    </message>
-    <message>
-        <source>Navigation</source>
-        <translation>Navigazione</translation>
-    </message>
-    <message>
-        <source>Enable &amp;mouse navigation</source>
-        <translation>Abitila la navigazione con il &amp;mouse</translation>
-    </message>
-    <message>
-        <source>Mark text changes</source>
+        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+77"/>
+        <source>Switch to Unified Diff Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Font &amp; Colors</source>
-        <translation>Font &amp; Colori</translation>
+        <location line="+27"/>
+        <location line="+16"/>
+        <location line="+64"/>
+        <location line="+16"/>
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+821"/>
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+272"/>
+        <source>Waiting for data...</source>
+        <translation type="unfinished">In attesa dei dati...</translation>
     </message>
     <message>
-        <source>Copy Color Scheme</source>
+        <location line="-93"/>
+        <location line="+28"/>
+        <location line="+52"/>
+        <location line="+34"/>
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+58"/>
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+196"/>
+        <source>Retrieving data failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Color Scheme name:</source>
+        <location line="-67"/>
+        <source>Switch to Side By Side Diff Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 (copy)</source>
+        <location line="+2"/>
+        <source>Synchronize Horizontal Scroll Bars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-325"/>
+        <source>Skipped %n lines...</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Binary files differ</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Delete Color Scheme</source>
+        <location line="+1"/>
+        <source>Skipped unknown number of lines...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Are you sure you want to delete this color scheme permanently?</source>
+        <location line="+35"/>
+        <source>[%1] %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Delete</source>
-        <translation type="unfinished">Elimina</translation>
-    </message>
-    <message>
-        <source>Color Scheme Changed</source>
+        <location line="+233"/>
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-9"/>
+        <source>No difference.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <location line="+157"/>
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+80"/>
+        <source>Rendering diff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Discard</source>
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-493"/>
+        <source>No document</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QtC::ExtensionSystem</name>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+60"/>
+        <source>Name:</source>
+        <translation>Nome:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Version:</source>
+        <translation>Versione:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Vendor:</source>
+        <translation>Produttore:</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Compatibility version:</source>
+        <translation>Versione di compatibilità:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Group:</source>
+        <translation>Gruppo:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>URL:</source>
+        <translation>URL:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Location:</source>
+        <translation>Posizione:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Platforms:</source>
+        <translation>Piattaforme:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Description:</source>
+        <translation>Descrizione:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copyright:</source>
+        <translation>Copyright:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>License:</source>
+        <translation>Licenza:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dependencies:</source>
+        <translation>Dipendenze:</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>None</source>
+        <translation>Nessuno</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>All</source>
+        <translation type="unfinished">Tutti</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1 (current: &quot;%2&quot;)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/pluginerrorview.cpp" line="+47"/>
+        <source>State:</source>
+        <translation>Stato:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Error message:</source>
+        <translation>Messaggio di errore:</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Description file found, but error on read.</source>
+        <translation>File descrizione trovato, ma c&apos;è un errore di lettura.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Description successfully read.</source>
+        <translation>Descrizione letta correttamente.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Dependencies are successfully resolved.</source>
+        <translation>Le dipendenze sono state risolte con successo.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Library is loaded.</source>
+        <translation>La libreria è stata caricata.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Plugin&apos;s initialization function succeeded.</source>
+        <translation>La funzione di inizializzazione del plugin è stata effettuata con successo.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Plugin successfully loaded and running.</source>
+        <translation>Plugin caricato con successo e funzionante.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Plugin was shut down.</source>
+        <translation>Il plugin è stato chiuso.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Plugin ended its life cycle and was deleted.</source>
+        <translation>Plugin ha terminato il suo ciclo di vita ed è stato cancellato.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+103"/>
+        <source>%1 (experimental)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>
-        This is only an example.</source>
-        <translation type="obsolete">
-        Questo è solo un esempio.</translation>
+        <location line="+7"/>
+        <source>Path: %1
+Plugin is not available on this platform.</source>
+        <translation>Percorso: %1
+Plugin non è disponibile su questa piattaforma.</translation>
     </message>
     <message>
-        <source>Text Encoding</source>
-        <translation>Codifica del Testo</translation>
+        <location line="+2"/>
+        <source>Path: %1
+Plugin is enabled as dependency of an enabled plugin.</source>
+        <translation>Percorso: %1
+Plugin è abilitato come dipendenza di un plugin abilitato.</translation>
     </message>
     <message>
-        <source>
-The following encodings are likely to fit:</source>
-        <translation>
-Queste codifiche dovrebbero andare bene:</translation>
+        <location line="+2"/>
+        <source>Path: %1
+Plugin is enabled by command line argument.</source>
+        <translation>Percorso: %1
+Plugin è abilitato dall&apos;argomento della riga di comando.</translation>
     </message>
     <message>
-        <source>Select encoding for &quot;%1&quot;.%2</source>
-        <translation>Seleziona la codifica per &quot;%1&quot;.%2</translation>
+        <location line="+2"/>
+        <source>Path: %1
+Plugin is disabled by command line argument.</source>
+        <translation>Percorso: %1
+Plugin è disabilitato dall&apos;argomento della riga di comando.</translation>
     </message>
     <message>
-        <source>Reload with Encoding</source>
-        <translation>Ricarica con Codifica</translation>
+        <location line="+2"/>
+        <source>Path: %1</source>
+        <translation>Percorso: %1</translation>
     </message>
     <message>
-        <source>Save with Encoding</source>
-        <translation>Salva con Codifica</translation>
+        <location line="+17"/>
+        <source>Plugin is not available on this platform.</source>
+        <translation>Il plugin non è disponibile su questa piattaforma.</translation>
     </message>
     <message>
-        <source>Current File</source>
-        <translation>File Corrente</translation>
+        <location line="+5"/>
+        <source>Plugin is required.</source>
+        <translation>È richiesto il plugin.</translation>
     </message>
     <message>
-        <source>Files on Disk</source>
-        <translation>File sul Disco</translation>
+        <location line="+5"/>
+        <source>Load on startup</source>
+        <translation>Carica all&apos;avvio</translation>
     </message>
     <message>
-        <source>&amp;Directory:</source>
-        <translation>&amp;Cartella:</translation>
+        <location line="+71"/>
+        <source>Load on Startup</source>
+        <translation>Carica all&apos;avvio</translation>
     </message>
     <message>
-        <source>&amp;Browse</source>
-        <translation>&amp;Sfoglia</translation>
+        <location line="+73"/>
+        <source>Name</source>
+        <translation>Nome</translation>
     </message>
     <message>
-        <source>File &amp;pattern:</source>
-        <translation>&amp;Schema file:</translation>
+        <location line="+0"/>
+        <source>Version</source>
+        <translation>Versione</translation>
     </message>
     <message>
-        <source>Directory to search</source>
-        <translation>Cartella di ricerca</translation>
+        <location line="+0"/>
+        <source>Vendor</source>
+        <translation>Produttore</translation>
     </message>
     <message>
-        <source>Font</source>
-        <translation>Tipo di carattere</translation>
+        <location line="+0"/>
+        <source>Load</source>
+        <translation>Carica</translation>
     </message>
     <message>
-        <source>Family:</source>
-        <translation>Famiglia:</translation>
+        <location line="+69"/>
+        <source>Utilities</source>
+        <translation>Utility</translation>
     </message>
     <message>
-        <source>Size:</source>
-        <translation>Dimensione:</translation>
+        <location line="+31"/>
+        <source>Enabling Plugins</source>
+        <translation>Abilitazione dei plugin</translation>
     </message>
     <message>
-        <source>Color Scheme</source>
-        <translation>Schema dei Colori</translation>
+        <location line="+1"/>
+        <source>Enabling
+%1
+will also enable the following plugins:
+
+%2</source>
+        <translation>Abilitando 
+%1
+abiliterai anche i seguenti plugin:
+
+%2</translation>
     </message>
     <message>
-        <source>Bold</source>
-        <translation type="obsolete">Grassetto</translation>
+        <location line="+16"/>
+        <source>Disabling Plugins</source>
+        <translation>Disabilitare i plugin</translation>
     </message>
     <message>
-        <source>Italic</source>
-        <translation type="obsolete">Corsivo</translation>
+        <location line="+1"/>
+        <source>Disabling
+%1
+will also disable the following plugins:
+
+%2</source>
+        <translation>Disabilitando 
+%1
+disabiliterai anche i seguenti plugin:
+
+%2</translation>
     </message>
     <message>
-        <source>Background:</source>
-        <translation type="obsolete">Sfondo:</translation>
+        <location filename="../../../src/libs/extensionsystem/pluginerrorview.cpp" line="-29"/>
+        <source>Invalid</source>
+        <translation>Non valido</translation>
     </message>
     <message>
-        <source>Foreground:</source>
-        <translation type="obsolete">Primo piano:</translation>
+        <location line="+4"/>
+        <source>Read</source>
+        <translation>Letto</translation>
     </message>
     <message>
-        <source>Erase background</source>
-        <translation type="obsolete">Cancella sfondo</translation>
+        <location line="+4"/>
+        <source>Resolved</source>
+        <translation>Risolto</translation>
     </message>
     <message>
-        <source>x</source>
-        <translation type="obsolete">x</translation>
+        <location line="+4"/>
+        <source>Loaded</source>
+        <translation>Caricato</translation>
     </message>
     <message>
-        <source>Preview:</source>
-        <translation type="obsolete">Anteprima:</translation>
+        <location line="+4"/>
+        <source>Initialized</source>
+        <translation>Inizializzato</translation>
     </message>
     <message>
-        <source>Antialias</source>
-        <translation>Antialiasing</translation>
+        <location line="+4"/>
+        <source>Running</source>
+        <translation>In esecuzione</translation>
     </message>
     <message>
-        <source>Copy...</source>
+        <location line="+4"/>
+        <source>Stopped</source>
+        <translation>Fermato</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Deleted</source>
+        <translation>Cancellato</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1427"/>
+        <source>Circular dependency detected:</source>
+        <translation>Rilevata dipendenza circolare:</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 (%2) depends on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Delete</source>
-        <translation type="unfinished">Elimina</translation>
-    </message>
-    <message>
-        <source>Line %1</source>
-        <translation>Riga %1</translation>
-    </message>
-    <message>
-        <source>Line in current document</source>
-        <translation>Riga nel documento corrente</translation>
-    </message>
-    <message>
-        <source>Creates a text file (.txt).</source>
-        <translation>Crea un file di testo (.txt).</translation>
-    </message>
-    <message>
-        <source>Text File</source>
-        <translation>File di Testo</translation>
-    </message>
-    <message>
-        <source>General</source>
-        <translation>Generale</translation>
-    </message>
-    <message>
-        <source>Triggers a completion in this scope</source>
-        <translation>Lancia il completamento in questo contesto</translation>
-    </message>
-    <message>
-        <source>Ctrl+Space</source>
+        <location line="+4"/>
+        <source>%1 (%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Meta+Space</source>
+        <location line="+21"/>
+        <source>Cannot load plugin because dependency failed to load: %1 (%2)
+Reason: %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Triggers a quick fix in this scope</source>
+        <location line="+73"/>
+        <source>%1 &gt; About Plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Alt+Return</source>
+        <location line="+2"/>
+        <source>Help &gt; About Plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Undo</source>
-        <translation>&amp;Annulla</translation>
-    </message>
-    <message>
-        <source>&amp;Redo</source>
-        <translation>&amp;Ripeti</translation>
-    </message>
-    <message>
-        <source>Select Encoding...</source>
-        <translation>Seleziona Codifica...</translation>
-    </message>
-    <message>
-        <source>Auto-&amp;indent Selection</source>
-        <translation>Auto-&amp;indenta la Selezione</translation>
-    </message>
-    <message>
-        <source>Ctrl+I</source>
+        <location line="+2"/>
+        <source>If you temporarily disable %1, the following plugins that depend on it are also disabled: %2.
+
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Visualize Whitespace</source>
-        <translation>&amp;Mostra Spaziature</translation>
-    </message>
-    <message>
-        <source>Ctrl+E, Ctrl+V</source>
+        <location line="+4"/>
+        <source>Disable plugins permanently in %1.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Clean Whitespace</source>
-        <translation>Pulizia Spaziature</translation>
-    </message>
-    <message>
-        <source>Enable Text &amp;Wrapping</source>
-        <translation>Abilita il Ri&amp;torno a Capo</translation>
-    </message>
-    <message>
-        <source>Ctrl+E, Ctrl+W</source>
+        <location line="+1"/>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>(Un)Comment &amp;Selection</source>
-        <translation>(De)Commenta la &amp;Selezione</translation>
-    </message>
-    <message>
-        <source>Ctrl+/</source>
+        <location line="+8"/>
+        <source>Disable Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Delete &amp;Line</source>
-        <translation>Cancella &amp;Riga</translation>
+        <location line="+67"/>
+        <source>Cannot load plugin because dependency failed to load: %1(%2)
+Reason: %3</source>
+        <translation>Impossibile caricare il plugin perché la dipendenza non è stata caricata: %1(%2)
+Causa: %3</translation>
     </message>
     <message>
-        <source>Shift+Del</source>
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+116"/>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
+        <translation>Il plugin&quot;%1&quot; viene specificato due volte per test.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+18"/>
+        <location line="+44"/>
+        <location line="+25"/>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
+        <translation>Il plugin&quot;%1&quot; non esiste.</translation>
+    </message>
+    <message>
+        <location line="-76"/>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
+        <translation>Il plugin&quot;%1&quot; non è testato.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Rewrap Paragraph</source>
+        <location line="+120"/>
+        <source>Unknown option %1</source>
+        <translation>Opzione sconosciuta %1</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>The option %1 requires an argument.</source>
+        <translation>L&apos;opzione %1 richiede un parametro.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1009"/>
+        <source>Resolving dependencies failed because state != Read</source>
+        <translation>La risoluzione delle dipendenze non è riuscita poiché state != Read</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>Impossibile risolvere la dipendenza &apos;%1(%2)&apos;</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Loading the library failed because state != Resolved</source>
+        <translation>Il caricamento della libreria è fallito poiché state != Resolved</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Plugin is not valid (does not derive from IPlugin)</source>
+        <translation>Il plugin non è valido (non deriva da IPlugin)</translation>
+    </message>
+    <message>
+        <location line="-392"/>
+        <source>&quot;%1&quot; is missing</source>
+        <translation>&quot;%1&quot; mancante</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Value for key &quot;%1&quot; is not a string</source>
+        <translation>Il valore per la chiave &quot;%1&quot; non è una stringa</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>Il valore per la chiave &quot;%1&quot; non è un bool</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
+        <translation>Il valore della chiave &quot;%1&quot; non è una matrice di oggetti</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
+        <translation>Il valore della chiave &quot;%1&quot; non è una stringa e una serie di stringhe</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
+        <translation>Il valore &quot;%2&quot; per la chiave &quot;%1&quot; ha un formato non valido</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Plugin meta data not found</source>
+        <translation>Plugin dei meta dati non trovato</translation>
+    </message>
+    <message>
+        <location line="+88"/>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>Specifica della piattaforma non valida &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <location line="+5"/>
+        <location line="+7"/>
+        <location line="+6"/>
+        <location line="+7"/>
+        <source>Dependency: %1</source>
+        <translation>Dipendenza: %1</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ctrl+E, R</source>
-        <translation type="unfinished"></translation>
+        <location line="+25"/>
+        <location line="+5"/>
+        <location line="+12"/>
+        <location line="+7"/>
+        <source>Argument: %1</source>
+        <translation>Argomento: %1</translation>
     </message>
     <message>
-        <source>Cut &amp;Line</source>
-        <translation>Taglia &amp;Riga</translation>
+        <location line="-13"/>
+        <source>Argument: &quot;%1&quot; is empty</source>
+        <translation>Argomento: &quot;%1&quot; è vuoto</translation>
     </message>
     <message>
-        <source>Collapse</source>
-        <translation>Comprimi</translation>
+        <location line="+180"/>
+        <source>Initializing the plugin failed because state != Loaded</source>
+        <translation>L&apos;inizializzazione del plugin non è riuscita poiché state != Loaded</translation>
     </message>
     <message>
-        <source>Ctrl+&lt;</source>
-        <translation type="unfinished"></translation>
+        <location line="+6"/>
+        <source>Internal error: have no plugin instance to initialize</source>
+        <translation>Errore interno: non ho un&apos;istanza di plugin da inizializzare</translation>
     </message>
     <message>
-        <source>Expand</source>
-        <translation>Espandi</translation>
+        <location line="+7"/>
+        <source>Plugin initialization failed: %1</source>
+        <translation>L&apos;inizializzazione del plugin è fallita: %1</translation>
     </message>
     <message>
-        <source>Ctrl+&gt;</source>
-        <translation type="unfinished"></translation>
+        <location line="+18"/>
+        <source>Cannot perform extensionsInitialized because state != Initialized</source>
+        <translation>Impossibile eseguire extensionsInitialized poiché state != Initialized</translation>
     </message>
     <message>
-        <source>(Un)&amp;Collapse All</source>
-        <translation>(De)&amp;Comprimi Tutti</translation>
+        <location line="+6"/>
+        <source>Internal error: have no plugin instance to perform extensionsInitialized</source>
+        <translation>Errore interno: non ho un&apos;istanza di plugin su cui eseguire extensionsInitialized</translation>
     </message>
     <message>
-        <source>Increase Font Size</source>
-        <translation>Aumenta la Dimensione dei Caratteri</translation>
+        <location line="+20"/>
+        <source>Internal error: have no plugin instance to perform delayedInitialize</source>
+        <translation>Errore interno: nessuna istanza di plugin per eseguire Inizializzazione Riardata</translation>
     </message>
     <message>
-        <source>Ctrl++</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+33"/>
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-65"/>
+        <source>Continue</source>
+        <translation type="unfinished">Continua</translation>
     </message>
     <message>
-        <source>Decrease Font Size</source>
-        <translation>Diminuisci la Dimensione dei Caratteri</translation>
+        <location line="+21"/>
+        <source>The following plugins have errors and cannot be loaded:</source>
+        <translation>I seguenti plugin presentano errori e non possono essere caricati:</translation>
     </message>
     <message>
-        <source>Ctrl+-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Goto Block Start</source>
-        <translation>Vai all&apos;Inizio del Blocco</translation>
-    </message>
-    <message>
-        <source>Ctrl+[</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Goto Block End</source>
-        <translation>Vai alla Fine del Blocco</translation>
-    </message>
-    <message>
-        <source>Ctrl+]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Goto Block Start With Selection</source>
-        <translation>Vai all&apos;Inizio del Blocco con la Selezione</translation>
-    </message>
-    <message>
-        <source>Ctrl+{</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Goto Block End With Selection</source>
-        <translation>Vai alla Fine del Blocco con la Selezione</translation>
-    </message>
-    <message>
-        <source>Ctrl+}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select Block Up</source>
-        <translation>Sposta il Blocco in Su</translation>
-    </message>
-    <message>
-        <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select Block Down</source>
-        <translation>Sposta il Blocco in Giu</translation>
-    </message>
-    <message>
-        <source>Move Line Up</source>
-        <translation>Sposta la Riga in Su</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Move Line Down</source>
-        <translation>Sposta la Riga in Giu</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Copy Line Up</source>
-        <translation>Copia la Riga in Su</translation>
-    </message>
-    <message>
-        <source>Ctrl+Alt+Up</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Copy Line Down</source>
-        <translation>Copia la Riga in Giu</translation>
-    </message>
-    <message>
-        <source>Ctrl+Alt+Down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;line number&gt;</source>
-        <translation>&lt;numero di riga&gt;</translation>
-    </message>
-    <message>
-        <source>Text</source>
-        <translation>Testo</translation>
-    </message>
-    <message>
-        <source>Link</source>
-        <translation>Collegamento</translation>
-    </message>
-    <message>
-        <source>Selection</source>
-        <translation>Selezione</translation>
-    </message>
-    <message>
-        <source>Line Number</source>
-        <translation>Numero Riga</translation>
-    </message>
-    <message>
-        <source>Search Result</source>
-        <translation>Risultato della Ricerca</translation>
-    </message>
-    <message>
-        <source>Search Scope</source>
-        <translation>Ambito della Ricerca</translation>
-    </message>
-    <message>
-        <source>Parentheses</source>
-        <translation>Parentesi</translation>
-    </message>
-    <message>
-        <source>Current Line</source>
-        <translation>Riga Corrente</translation>
-    </message>
-    <message>
-        <source>Current Line Number</source>
-        <translation>Numero della Riga Corrente</translation>
-    </message>
-    <message>
-        <source>Occurrences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unused Occurrence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Renaming Occurrence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Number</source>
-        <translation>Numero</translation>
-    </message>
-    <message>
-        <source>String</source>
-        <translation>Stringa</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Tipo</translation>
-    </message>
-    <message>
-        <source>Keyword</source>
-        <translation>Parola Chiave</translation>
-    </message>
-    <message>
-        <source>Operator</source>
-        <translation>Operatore</translation>
-    </message>
-    <message>
-        <source>Preprocessor</source>
-        <translation>Preprocessore</translation>
-    </message>
-    <message>
-        <source>Label</source>
-        <translation>Etichetta</translation>
-    </message>
-    <message>
-        <source>Comment</source>
-        <translation>Commento</translation>
-    </message>
-    <message>
-        <source>Doxygen Comment</source>
-        <translation>Commento Doxygen</translation>
-    </message>
-    <message>
-        <source>Doxygen Tag</source>
-        <translation>Tag Doxygen</translation>
-    </message>
-    <message>
-        <source>Visual Whitespace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Disabled Code</source>
-        <translation>Codice Disabilitato</translation>
-    </message>
-    <message>
-        <source>Added Line</source>
-        <translation>Riga Aggiunta</translation>
-    </message>
-    <message>
-        <source>Removed Line</source>
-        <translation>Riga Rimossa</translation>
-    </message>
-    <message>
-        <source>Diff File</source>
-        <translation>File Diff</translation>
-    </message>
-    <message>
-        <source>Diff Location</source>
-        <translation>Posizione Diff</translation>
-    </message>
-    <message>
-        <source>Text Editor</source>
-        <translation>Editor di Testo</translation>
-    </message>
-    <message>
-        <source>Behavior</source>
-        <translation>Comportamento</translation>
+        <location line="+2"/>
+        <source>Details:</source>
+        <translation>Dettagli:</translation>
     </message>
 </context>
 <context>
     <name>QtC::Help</name>
     <message>
+        <location filename="../../../src/shared/help/contentwindow.cpp" line="+111"/>
+        <location filename="../../../src/shared/help/indexwindow.cpp" line="+136"/>
+        <source>Open Link</source>
+        <translation>Apri il Collegamento</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location filename="../../../src/shared/help/indexwindow.cpp" line="+3"/>
+        <source>Open Link as New Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/shared/help/bookmarkmanager.cpp" line="+75"/>
+        <location line="+685"/>
+        <location line="+9"/>
+        <source>New Folder</source>
+        <translation type="unfinished">Nuova Cartella</translation>
+    </message>
+    <message>
+        <location line="-688"/>
+        <source>Bookmark:</source>
+        <translation type="unfinished">Segnalibro:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add in folder:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+137"/>
+        <location line="+151"/>
+        <source>Delete Folder</source>
+        <translation type="unfinished">Cancella la Cartella</translation>
+    </message>
+    <message>
+        <location line="-150"/>
+        <location line="+151"/>
+        <source>Rename Folder</source>
+        <translation type="unfinished">Rinomina la Cartella</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Show Bookmark</source>
+        <translation type="unfinished">Mostra il Segnalibro</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Show Bookmark as New Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Delete Bookmark</source>
+        <translation type="unfinished">Cancella il Segnalibro</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rename Bookmark</source>
+        <translation type="unfinished">Rinomina il Segnalibro</translation>
+    </message>
+    <message>
+        <location line="+267"/>
+        <source>Remove</source>
+        <translation>Rimuovi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deleting a folder also removes its content.&lt;br&gt;Do you want to continue?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-470"/>
+        <location line="+16"/>
+        <location line="+39"/>
+        <location line="+17"/>
+        <location line="+31"/>
+        <location line="+328"/>
+        <source>Bookmarks</source>
+        <translation>Segnalibri</translation>
+    </message>
+    <message>
+        <location line="-558"/>
+        <source>Add Bookmark</source>
+        <translation>Aggiungi un Segnalibro</translation>
+    </message>
+    <message>
+        <location filename="../../../src/shared/help/indexwindow.cpp" line="-89"/>
+        <source>&amp;Look for:</source>
+        <translation>&amp;Cerca:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/shared/help/topicchooser.cpp" line="+27"/>
         <source>Choose Topic</source>
         <translation>Scelta Argomento</translation>
     </message>
     <message>
-        <source>&amp;Topics</source>
-        <translation>&amp;Argomenti</translation>
-    </message>
-    <message>
-        <source>&amp;Display</source>
-        <translation>&amp;Visualizza</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>&amp;Chiudi</translation>
-    </message>
-    <message>
+        <location line="+30"/>
         <source>Choose a topic for &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Scegli un argomento per &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
 </context>
 <context>
-    <name>QtC::VcsBase</name>
+    <name>QtC::ImageViewer</name>
     <message>
-        <source>Version Control</source>
-        <translation>Controllo di Revisione</translation>
+        <location filename="../../../src/plugins/imageviewer/exportdialog.cpp" line="+69"/>
+        <location filename="../../../src/plugins/imageviewer/multiexportdialog.cpp" line="+166"/>
+        <source>File:</source>
+        <translation type="unfinished">File:</translation>
     </message>
     <message>
-        <source>Common</source>
-        <translation>Comune</translation>
+        <location line="+8"/>
+        <source>x</source>
+        <extracomment>Multiplication, as in 32x32</extracomment>
+        <translation type="unfinished">x</translation>
     </message>
     <message>
-        <source>Name</source>
-        <translation>Nome</translation>
-    </message>
-    <message>
-        <source>E-mail</source>
-        <translation>E-mail</translation>
-    </message>
-    <message>
-        <source>Alias</source>
-        <translation>Alias</translation>
-    </message>
-    <message>
-        <source>Alias e-mail</source>
-        <translation>E-mail alias</translation>
-    </message>
-    <message>
-        <source>Cannot open &apos;%1&apos;: %2</source>
-        <translation>Impossibile aprire &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>State</source>
-        <translation>Stato</translation>
-    </message>
-    <message>
-        <source>File</source>
-        <translation>File</translation>
-    </message>
-    <message>
-        <source>Describe change %1</source>
-        <translation>Descrivi la modifica %1</translation>
-    </message>
-    <message>
-        <source>Check message</source>
-        <translation>Controlla il messaggio</translation>
-    </message>
-    <message>
-        <source>Insert name...</source>
-        <translation>Inserisci il nome...</translation>
-    </message>
-    <message>
-        <source>Prompt to submit</source>
-        <translation type="unfinished">Prompt del submit</translation>
-    </message>
-    <message>
-        <source>Submit Message Check failed</source>
-        <translation>Controllo del Messaggio di Submit fallito</translation>
-    </message>
-    <message>
-        <source>Unable to open &apos;%1&apos;: %2</source>
-        <translation>Impossibile aprire &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>The check script &apos;%1&apos; could not be started: %2</source>
-        <translation>Lo script di verifica &apos;%1&apos; non può essere lanciato: %2</translation>
-    </message>
-    <message>
-        <source>The check script &apos;%1&apos; could not be run: %2</source>
-        <translation>Lo script di verifica &apos;%1&apos; non può essere eseguito: %2</translation>
-    </message>
-    <message>
-        <source>The check script returned exit code %1.</source>
-        <translation>Lo script di verifica è uscito con il codice %1.</translation>
-    </message>
-    <message>
-        <source>Prompt to submit</source>
-        <translation type="obsolete">Prompt del submit</translation>
-    </message>
-    <message>
-        <source>Wrap submit message at:</source>
-        <translation>Ritorno a capo del messaggio alla colonna:</translation>
-    </message>
-    <message>
-        <source>An executable which is called with the submit message in a temporary file as first argument. It should return with an exit != 0 and a message on standard error to indicate failure.</source>
-        <translation>Un eseguibile che sia chiamato con il file temporaneo contenente il messaggio di submit come primo parametro. Deve uscire con un valore != 0 e scrivere un messaggio sullo standard error per indicare un problema.</translation>
-    </message>
-    <message>
-        <source>Submit message check script:</source>
-        <translation>Script di controllo del messaggio:</translation>
-    </message>
-    <message>
-        <source>A file listing user names and email addresses in a 4-column mailmap format:
-name &lt;email&gt; alias &lt;email&gt;</source>
-        <translation>Un file contenente nomi utenti e mail nel formato mailmap a 4 colonne:
-nome &lt;email&gt; alias &lt;email&gt;</translation>
-    </message>
-    <message>
-        <source>User/alias configuration file:</source>
-        <translation>File di configurazione utenti/alias:</translation>
-    </message>
-    <message>
-        <source>A simple file containing lines with field names like &quot;Reviewed-By:&quot; which will be added below the submit editor.</source>
-        <translation>Un file semplice che contiene righe con nomi dei campi tipo &quot;Reviewed-By:&quot; che saranno aggiunti sotto l&apos;editor del submit.</translation>
-    </message>
-    <message>
-        <source>User fields configuration file:</source>
-        <translation>File di configurazione dei campi utente:</translation>
-    </message>
-    <message>
-        <source>Would you like to remove this file from the version control system (%1)?
-Note: This might remove the local file.</source>
-        <translation>Vuoi rimuovere questo file dal VCS (%1)?
-Nota: questa operazione potrebbe cancellare il file locale.</translation>
-    </message>
-</context>
-<context>
-    <name>View</name>
-    <message>
-        <source>Paste</source>
-        <translation type="obsolete">Incolla</translation>
-    </message>
-    <message>
-        <source>&lt;Username&gt;</source>
-        <translation type="obsolete">&lt;Nome utente&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;Description&gt;</source>
-        <translation type="obsolete">&lt;Descrizione&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;Comment&gt;</source>
-        <translation type="obsolete">&lt;Commento&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>ViewDialog</name>
-    <message>
-        <source>Send to Codepaster</source>
-        <translation>Invia a Codepaster</translation>
-    </message>
-    <message>
-        <source>&amp;Username:</source>
-        <translation>Nome &amp;utente:</translation>
-    </message>
-    <message>
-        <source>&lt;Username&gt;</source>
-        <translation>&lt;Nome utente&gt;</translation>
-    </message>
-    <message>
-        <source>&amp;Description:</source>
-        <translation>&amp;Descrizione:</translation>
-    </message>
-    <message>
-        <source>&lt;Description&gt;</source>
-        <translation>&lt;Descrizione&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;lt;Comment&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;lt;Commento&amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Parts to send to codepaster</source>
-        <translation type="obsolete">Parti da inviare a codepaster</translation>
-    </message>
-    <message>
-        <source>Patch 1</source>
-        <translation>Patch 1</translation>
-    </message>
-    <message>
-        <source>Patch 2</source>
-        <translation>Patch 2</translation>
-    </message>
-    <message>
-        <source>Protocol:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt;&quot;&gt;&amp;lt;Comment&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Parts to send to server</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>mainClass</name>
-    <message>
-        <source>main</source>
-        <translation>main</translation>
-    </message>
-    <message>
-        <source>Text1:</source>
-        <translation>Testo1:</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>N/D</translation>
-    </message>
-    <message>
-        <source>Text2:</source>
-        <translation>Testo2:</translation>
-    </message>
-    <message>
-        <source>Text3:</source>
-        <translation>Testo3:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Utils</name>
-    <message>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QtC::CodePaster</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Server Prefix:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://pastebin.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;pastebin.com&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; allows to send posts to custom subdomains (eg. qtcreator.pastebin.com). Fill in the desired prefix.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Note that the plugin will use this for posting as well as fetching.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QtC::CVS</name>
-    <message>
-        <source>Prompt to submit</source>
-        <translation type="unfinished">Prompt del submit</translation>
-    </message>
-    <message>
-        <source>When checked, all files touched by a commit will be displayed when clicking on a revision number in the annotation view (retrieved via commit id). Otherwise, only the respective file will be displayed.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Describe all files matching commit id:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>CVS Command:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>CVS Root:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Diff Options:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>CVS</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Designer</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Embedding of the UI Class</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Aggregation as a pointer member</source>
-        <translation type="unfinished">Aggregazione come membro puntatore</translation>
-    </message>
-    <message>
-        <source>Aggregation</source>
-        <translation type="unfinished">Aggregazione</translation>
-    </message>
-    <message>
-        <source>Multiple Inheritance</source>
-        <translation type="unfinished">Eredità Multipla</translation>
-    </message>
-    <message>
-        <source>Code Generation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Support for changing languages at runtime</source>
-        <translation type="unfinished">Supporta il cambio della lingua durante l&apos;esecuzione</translation>
-    </message>
-    <message>
-        <source>Use Qt module name in #include-directive</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Gitorious::Internal::GitoriousHostWidget</name>
-    <message>
-        <source>...</source>
-        <translation type="unfinished">...</translation>
-    </message>
-    <message>
-        <source>&lt;New Host&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Host</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Projects</source>
-        <translation type="unfinished">Progetti</translation>
-    </message>
-    <message>
-        <source>Description</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Gitorious::Internal::GitoriousProjectWidget</name>
-    <message>
-        <source>WizardPage</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filter:</source>
-        <translation type="unfinished">Filtro:</translation>
-    </message>
-    <message>
-        <source>...</source>
-        <translation type="unfinished">...</translation>
-    </message>
-    <message>
-        <source>Keep updating</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Description</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Gitorious::Internal::GitoriousRepositoryWizardPage</name>
-    <message>
-        <source>WizardPage</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filter:</source>
-        <translation type="unfinished">Filtro:</translation>
-    </message>
-    <message>
-        <source>...</source>
-        <translation type="unfinished">...</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation type="unfinished">Nome</translation>
-    </message>
-    <message>
-        <source>Owner</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Description</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Choose a repository of the project &apos;%1&apos;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mainline Repositories</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Clones</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Baseline Repositories</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shared Project Repositories</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Personal Repositories</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Help</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Font</source>
-        <translation type="unfinished">Tipo di carattere</translation>
-    </message>
-    <message>
-        <source>Family:</source>
-        <translation type="unfinished">Famiglia:</translation>
-    </message>
-    <message>
-        <source>Style:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location line="+10"/>
         <source>Size:</source>
         <translation type="unfinished">Dimensione:</translation>
     </message>
     <message>
-        <source>Startup</source>
-        <translation type="unfinished">Avvio</translation>
-    </message>
-    <message>
-        <source>On context help:</source>
+        <location line="+16"/>
+        <source>%1 already exists.
+Would you like to overwrite it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show side-by-side if possible</source>
+        <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+162"/>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Always show side-by-side</source>
+        <location line="+6"/>
+        <source>Could not write file &quot;%1&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Always start full help</source>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/imageviewer/imageviewerplugin.cpp" line="+96"/>
+        <source>Export Image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>On help start:</source>
+        <location line="+31"/>
+        <source>Export %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show my home page</source>
+        <location line="+16"/>
+        <source>Export a Series of Images from %1 (%2x%3)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show a blank page</source>
+        <location filename="../../../src/plugins/imageviewer/imageviewer.cpp" line="+112"/>
+        <source>Export</source>
+        <translation>Esportare</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Set as Default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show my tabs from last session</source>
+        <location line="+3"/>
+        <source>on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Home Page:</source>
+        <location line="+1"/>
+        <source>off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Use &amp;Current Page</source>
+        <location line="+3"/>
+        <source>Use the current settings for background, outline, and fitting to screen as the default for new image viewers. Current default:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Use &amp;Blank Page</source>
+        <location line="+2"/>
+        <source>Background: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Restore to Default</source>
+        <location line="+1"/>
+        <source>Outline: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Help Bookmarks</source>
+        <location line="+1"/>
+        <source>Fit to Screen: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Import...</source>
-        <translation type="unfinished">Importa...</translation>
+        <location line="+7"/>
+        <source>Resolution</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Export...</source>
-        <translation type="unfinished">Esporta...</translation>
+        <location line="+1"/>
+        <source>Zoom</source>
+        <translation type="unfinished">Zoom</translation>
+    </message>
+    <message>
+        <location line="+207"/>
+        <source>Pause Animation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Play Animation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Image Viewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+87"/>
+        <source>Image format not supported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Failed to read SVG image.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+29"/>
+        <source>Failed to read image.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/imageviewer/imageviewerplugin.cpp" line="-27"/>
+        <source>Fit to Screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+=</source>
+        <translation>Ctrl+=</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Switch Background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+[</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Switch Outline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Toggle Animation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Export Multiple Images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Copy as Data URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/imageviewer/multiexportdialog.cpp" line="-4"/>
+        <source>Enter a file name containing place holders %1 which will be replaced by the width and height of the image, respectively.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Clear</source>
+        <translation type="unfinished">Cancella</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Set Standard Icon Sizes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Generate Sizes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sizes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>Please specify some sizes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Invalid size specification: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The file name must contain one of the placeholders %1, %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>The file %1 already exists.
+Would you like to overwrite it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The files %1 already exist.
+Would you like to overwrite them?</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QtC::OpenMV</name>
+    <message>
+        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+518"/>
+        <location line="+34"/>
+        <source>Value %L1</source>
+        <translation>Valore %L1</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <location line="+205"/>
+        <source>R</source>
+        <translation>R</translation>
+    </message>
+    <message>
+        <location line="-189"/>
+        <location line="+205"/>
+        <source>G</source>
+        <translation>G</translation>
+    </message>
+    <message>
+        <location line="-189"/>
+        <location line="+82"/>
+        <location line="+123"/>
+        <location line="+72"/>
+        <source>B</source>
+        <translation>B</translation>
+    </message>
+    <message>
+        <location line="-252"/>
+        <location line="+82"/>
+        <location line="+118"/>
+        <location line="+72"/>
+        <source>Y</source>
+        <translation>Y</translation>
+    </message>
+    <message>
+        <location line="-247"/>
+        <location line="+195"/>
+        <source>L</source>
+        <translation>L</translation>
+    </message>
+    <message>
+        <location line="-179"/>
+        <location line="+195"/>
+        <source>A</source>
+        <translation>A</translation>
+    </message>
+    <message>
+        <location line="-138"/>
+        <location line="+190"/>
+        <source>U</source>
+        <translation>U</translation>
+    </message>
+    <message>
+        <location line="-174"/>
+        <location line="+190"/>
+        <source>V</source>
+        <translation>V</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvcamerasettings.cpp" line="+51"/>
+        <source>Please enter your WiFi network here</source>
+        <translation>Inserisci qui la tua rete WiFi</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+115"/>
+        <location line="+43"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <location line="+31"/>
+        <location line="+21"/>
+        <location line="+11"/>
+        <location line="+20"/>
+        <location line="+10"/>
+        <location line="+14"/>
+        <location line="+12"/>
+        <location line="+9"/>
+        <location line="+31"/>
+        <location line="+11"/>
+        <location line="+130"/>
+        <location line="+7"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1352"/>
+        <location line="+781"/>
+        <source>Dataset Editor</source>
+        <translation>Editor del set di dati</translation>
+    </message>
+    <message>
+        <location line="-364"/>
+        <source>Please enter a class name</source>
+        <translation>Inserisci un nome di classe</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+7"/>
+        <location line="+70"/>
+        <location line="+107"/>
+        <location line="+130"/>
+        <location line="+7"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-685"/>
+        <location line="+19"/>
+        <location line="+115"/>
+        <location line="+1209"/>
+        <location line="+106"/>
+        <location line="+96"/>
+        <location line="+101"/>
+        <location line="+96"/>
+        <location line="+94"/>
+        <location line="+172"/>
+        <location line="+180"/>
+        <location line="+14"/>
+        <location line="+258"/>
+        <location line="+13"/>
+        <location line="+250"/>
+        <location line="+145"/>
+        <location line="+114"/>
+        <location line="+129"/>
+        <location line="+114"/>
+        <location line="+118"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+153"/>
+        <location line="+233"/>
+        <location line="+130"/>
+        <location line="+623"/>
+        <location line="+276"/>
+        <location line="+468"/>
+        <location line="+31"/>
+        <location line="+122"/>
+        <location line="+9"/>
+        <location line="+360"/>
+        <location line="+9"/>
+        <location line="+68"/>
+        <location line="+9"/>
+        <location line="+197"/>
+        <location line="+9"/>
+        <location line="+158"/>
+        <location line="+9"/>
+        <location line="+78"/>
+        <location line="+9"/>
+        <location line="+187"/>
+        <location line="+904"/>
+        <location line="+13"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+77"/>
+        <location line="+7"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+495"/>
+        <location line="+11"/>
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+247"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+451"/>
+        <location line="+19"/>
+        <location line="+11"/>
+        <source>Error: %L1!</source>
+        <translation>Errore: %L1!</translation>
+    </message>
+    <message>
+        <location line="-307"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3395"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+427"/>
+        <location line="+34"/>
+        <location line="+48"/>
+        <location line="+9"/>
+        <location line="+25"/>
+        <location line="+41"/>
+        <location line="+9"/>
+        <location line="+25"/>
+        <location line="+9"/>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>Impossibile creare &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2303"/>
+        <location line="+1576"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353"/>
+        <source>Failed to save the image file for an unknown reason!</source>
+        <translation>Impossibile salvare il file di immagine per un motivo sconosciuto!</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Delete</source>
+        <translation>Elimina</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+107"/>
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>Sei sicuro di voler eliminare definitivamente &quot;%L1&quot;?</translation>
+    </message>
+    <message>
+        <location line="-86"/>
+        <source>Rename</source>
+        <translation>Rinomina</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+24"/>
+        <source>Please enter a new name</source>
+        <translation>Per favore inserisci un nuovo nome</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <location line="+26"/>
+        <source>Failed to rename the folder for an unknown reason!</source>
+        <translation>Impossibile rinominare la cartella per un motivo sconosciuto!</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Failed to rename the file for an unknown reason!</source>
+        <translation>Impossibile rinominare il file per un motivo sconosciuto!</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5192"/>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>Impossibile copiare il file &quot;%1&quot; in &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+174"/>
+        <source>Invalid argument (%1) for -override_read_timeout</source>
+        <translation>Argomento non valido (%1) per -override_read_timeout</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Missing argument for -override_read_timeout</source>
+        <translation>Argomento mancante per -override_read_timeout</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Invalid argument (%1) for -override_read_stall_timeout</source>
+        <translation>Argomento non valido (%1) per -override_read_stall_timeout</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Missing argument for -override_read_stall_timeout</source>
+        <translation>Argomento mancante per -override_read_stall_timeout</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Missing argument for -serial_number_filter</source>
+        <translation>Argomento mancante per -serial_number_filter</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <location line="+11"/>
+        <location line="+19"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3940"/>
+        <source>
+
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
+        <translation>
+
+Chiudi tutti i programmi che stanno visualizzando/modificando i dati dell&apos;applicazione di OpenMV IDE e quindi riavvia OpenMV IDE!</translation>
+    </message>
+    <message>
+        <location line="+393"/>
+        <source>Edit Grayscale threshold with Threshold Editor</source>
+        <translation>Modifica la soglia della scala di grigi con l&apos;Editor soglie</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Edit LAB threshold with Threshold Editor</source>
+        <translation>Modifica soglia LAB con Editor soglie</translation>
+    </message>
+    <message>
+        <location line="+101"/>
+        <source>Missing argument for -form_key</source>
+        <translation>Argomento mancante per -form_key</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>OpenMV IDE</source>
+        <translation>OpenMV IDE</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>untitled_$.py</source>
+        <translation>untitled_$.py</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>New File</source>
+        <translation>Nuovo File</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Can&apos;t open the new file!</source>
+        <translation>Impossibile aprire il nuovo file!</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Documents Folder</source>
+        <translation>Cartella Documenti</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>Aggiungi del codice a &quot;%L1&quot;</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Examples</source>
+        <translation>Esempi</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Run Bootloader (Load Firmware)</source>
+        <translation>Esegui Bootloader (carica firmware)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl+Shift+L</source>
+        <translation>Ctrl+Shift+L</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+6"/>
+        <source>Erase Onboard Data Flash</source>
+        <translation>Cancella Flash dati integrato</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>Ctrl+Shift+E</source>
+        <translation>Ctrl+Shift+E</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s onboard flash drive?</source>
+        <translation>Sei sicuro di voler cancellare l&apos;unità flash integrata della tua Cam OpenMV?</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Auto Reconnect to OpenMV Cam</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected.</source>
+        <translation>Quando la riconnessione automatica è abilitata, OpenMV IDE si ricollegherà automaticamente al tuo OpenMV se rilevato.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Stop Script on Connect/Disconnect</source>
+        <translation>Interrompi script su connessione/disconnessione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Stop the script on Connect or Disconnect (note that the IDE disconnects on close if connected).</source>
+        <translation>Arresta lo script su Connetti o Disconnetti (nota che l&apos;IDE si disconnette alla chiusura se connesso).</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Open OpenMV Cam Drive folder</source>
+        <translation>Apri la cartella OpenMV Cam Drive</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Configure OpenMV Cam settings file</source>
+        <translation>Configura il file delle impostazioni di OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Save open script to OpenMV Cam (as main.py)</source>
+        <translation>Salva script aperto su OpenMV Cam (come main.py)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Reset OpenMV Cam</source>
+        <translation>Reimposta OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Install the Latest Development Release</source>
+        <translation>Installa l&apos;ultima versione di sviluppo</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+3566"/>
+        <location line="+59"/>
+        <source>Open Terminal</source>
+        <translation>Apri terminale</translation>
+    </message>
+    <message>
+        <location line="-3620"/>
+        <source>Machine Vision</source>
+        <translation>Visione artificiale</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+3647"/>
+        <location line="+76"/>
+        <source>Threshold Editor</source>
+        <translation>Editor soglia</translation>
+    </message>
+    <message>
+        <location line="-3718"/>
+        <location line="+3796"/>
+        <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+186"/>
+        <source>Keypoints Editor</source>
+        <translation>Editor keypoints</translation>
+    </message>
+    <message>
+        <location line="-3789"/>
+        <location line="+3955"/>
+        <location line="+98"/>
+        <location line="+24"/>
+        <location line="+11"/>
+        <location line="+18"/>
+        <source>AprilTag Generator</source>
+        <translation>AprilTag Generator</translation>
+    </message>
+    <message>
+        <location line="-4103"/>
+        <source>TAG16H5 Family (30 Tags)</source>
+        <translation>Famiglia TAG16H5 (30 Tag)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>TAG25H7 Family (242 Tags)</source>
+        <translation>Famiglia TAG25H7 (242 Tag)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>TAG25H9 Family (35 Tags)</source>
+        <translation>Famiglia TAG25H9 (35 Tag)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>TAG36H10 Family (2320 Tags)</source>
+        <translation>Famiglia TAG36H10 (2320 Tag)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>TAG36H11 Family (587 Tags - Recommended)</source>
+        <translation>Famiglia TAG36H11 (587 Tag - Consigliati)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>ARKTOOLKIT Family (512 Tags)</source>
+        <translation>Famiglia ARKTOOLKIT (512 Tag)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>QRCode Generator</source>
+        <translation>QRCode Generator</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+14"/>
+        <location line="+14"/>
+        <location line="+406"/>
+        <location line="+14"/>
+        <location line="+31"/>
+        <location line="+788"/>
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>Apertura non riuscita: &quot;%L1&quot;</translation>
+    </message>
+    <message>
+        <location line="-1263"/>
+        <source>DataMatrix Generator</source>
+        <translation>DataMatrix Generator</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Barcode Generator</source>
+        <translation>Generatore di codici a barre</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>CNN Network Library</source>
+        <translation>Biblioteca di rete CNN</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Network to copy to OpenMV Cam</source>
+        <translation>Rete da copiare su OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+13"/>
+        <source>TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)</source>
+        <translation>Modello TensorFlow (*.tflite);;Modello di rete neurale (*.network);;File etichetta (*.txt);;Tutti i file (*.*)</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <location line="+9"/>
+        <source>Where to save the network on the OpenMV Cam</source>
+        <translation>Dove salvare la rete su OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+248"/>
+        <location line="+2141"/>
+        <location line="+47"/>
+        <location line="+69"/>
+        <location line="+1304"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382"/>
+        <location line="+364"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+780"/>
+        <location line="+208"/>
+        <source>Please add a file extension!</source>
+        <translation>Aggiungi un&apos;estensione di file!</translation>
+    </message>
+    <message>
+        <location line="-3789"/>
+        <location line="+7"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268"/>
+        <location line="+13"/>
+        <location line="+9"/>
+        <location line="+112"/>
+        <location line="+207"/>
+        <source>Unable to overwrite output file!</source>
+        <translation>Impossibile sovrascrivere il file di output!</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Video Tools</source>
+        <translation>Strumenti video</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Convert Video File</source>
+        <translation>Converti file video</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Play Video File</source>
+        <translation>Riproduci file video</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437"/>
+        <location line="+273"/>
+        <source>Play RTSP Stream</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <location line="+18"/>
+        <location line="+15"/>
+        <location line="+6"/>
+        <location line="+52"/>
+        <location line="+19"/>
+        <source>New Dataset</source>
+        <translation>Nuovo set di dati</translation>
+    </message>
+    <message>
+        <location line="-102"/>
+        <source>Dataset Editor - Choose a folder to build the dataset in</source>
+        <translation>Editor set di dati: scegliere una cartella in cui creare il set di dati</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>The selected folder is not empty and the contents will be deleted. Continue?</source>
+        <translation>La cartella selezionata non è vuota e il contenuto verrà eliminato. Continua?</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <location line="+213"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209"/>
+        <location line="+34"/>
+        <location line="+48"/>
+        <location line="+33"/>
+        <source>Failed to remove &quot;%L1&quot;!</source>
+        <translation>Impossibile rimuovere &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="-128"/>
+        <location line="+30"/>
+        <source>Open Dataset</source>
+        <translation>Apri set di dati</translation>
+    </message>
+    <message>
+        <location line="-22"/>
+        <source>Dataset Editor - Choose a dataset folder to open</source>
+        <translation>Editor set di dati: selezionare una cartella del set di dati da aprire</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>The selected folder does not appear to be a valid OpenMV Cam Image Dataset!</source>
+        <translation>La cartella selezionata non sembra essere un set di dati di immagini Cam OpenMV valido!</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Export</source>
+        <translation>Esportare</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Export Dataset to Zip File</source>
+        <translation>Esporta set di dati in file zip</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+7"/>
+        <location line="+42"/>
+        <location line="+21"/>
+        <source>Export Dataset</source>
+        <translation>Esporta set di dati</translation>
+    </message>
+    <message>
+        <location line="-68"/>
+        <source>Zip Files (*.zip)</source>
+        <translation>File zip (*.zip)</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Exporting...</source>
+        <translation>Esportazione...</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+1208"/>
+        <location line="+106"/>
+        <location line="+96"/>
+        <location line="+101"/>
+        <location line="+96"/>
+        <location line="+228"/>
+        <location line="+751"/>
+        <location line="+145"/>
+        <location line="+114"/>
+        <location line="+129"/>
+        <location line="+114"/>
+        <location line="+118"/>
+        <location line="+433"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-34"/>
+        <location line="+222"/>
+        <location line="+175"/>
+        <location line="+621"/>
+        <location line="+388"/>
+        <location line="+156"/>
+        <location line="+138"/>
+        <location line="+67"/>
+        <location line="+238"/>
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1204"/>
+        <location line="+78"/>
+        <location line="+547"/>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <location line="-3587"/>
+        <source>Upload to Edge Impulse Project</source>
+        <translation>Carica nel progetto Edge Impulse</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+17"/>
+        <source>Login to Edge Impulse Account</source>
+        <translation>Accedi all&apos;account Edge Impulse</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <location line="+15"/>
+        <source>Logout from Account: %L1</source>
+        <translation>Esci dall&apos;account: %L1</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>Login to Edge Impulse Account and Upload to Project</source>
+        <translation>Accedi all&apos;account Edge Impulse e carica nel progetto</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Upload to Edge Impulse by API Key</source>
+        <translation>Carica su Edge Impulse tramite chiave API</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Close Dataset</source>
+        <translation>Chiudi set di dati</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>OpenMV Docs</source>
+        <translation>Documenti OpenMV</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>OpenMV Forums</source>
+        <translation>Forum di OpenMV</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>About OpenMV Cam</source>
+        <translation>Informazioni su OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>About OpenMV Cam...</source>
+        <translation>Informazioni su OpenMV Cam...</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>About OpenMV Cam %1</source>
+        <translation>Informazioni su OpenMV Cam %1</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>About OpenMV Cam %1...</source>
+        <translation>Informazioni su OpenMV Cam %1...</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <location line="+5"/>
+        <source>About OpenMV IDE</source>
+        <translation>Informazioni su OpenMV IDE</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>About OpenMV IDE...</source>
+        <translation>Informazioni su OpenMV IDE...</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Informazioni su OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Di: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Diritto d&apos;autore (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Questo programma è distribuito nella speranza che possa essere utile, ma SENZA ALCUNA GARANZIA; senza nemmeno la garanzia implicita di COMMERCIABILITÀ o IDONEITÀ A UN PARTICOLARE SCOPO. Vedi la &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; per maggiori dettagli.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Domande o commenti?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contattaci al &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Crediti&lt;/b&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;p&gt;OpenMV IDE English translation by Kwabena W. Agyeman.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;OpenMV IDE traduzione italiana di Roberto Portesani.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Partner&lt;/b&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1701"/>
+        <location line="+6"/>
+        <location line="+26"/>
+        <location line="+98"/>
+        <location line="+8"/>
+        <location line="+33"/>
+        <location line="+148"/>
+        <location line="+72"/>
+        <location line="+35"/>
+        <location line="+50"/>
+        <location line="+10"/>
+        <location line="+22"/>
+        <location line="+19"/>
+        <location line="+36"/>
+        <location line="+80"/>
+        <location line="+9"/>
+        <location line="+29"/>
+        <location line="+9"/>
+        <location line="+63"/>
+        <location line="+6"/>
+        <location line="+73"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+52"/>
+        <location line="+128"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+113"/>
+        <location line="+4"/>
+        <location line="+158"/>
+        <location line="+63"/>
+        <location line="+77"/>
+        <location line="+31"/>
+        <location line="+13"/>
+        <location line="+15"/>
+        <location line="+16"/>
+        <location line="+58"/>
+        <location line="+46"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+81"/>
+        <location line="+4"/>
+        <location line="+7"/>
+        <location line="+9"/>
+        <location line="+18"/>
+        <location line="+26"/>
+        <location line="+19"/>
+        <location line="+146"/>
+        <location line="+40"/>
+        <location line="+10"/>
+        <location line="+9"/>
+        <location line="+36"/>
+        <location line="+19"/>
+        <location line="+13"/>
+        <location line="+9"/>
+        <location line="+20"/>
+        <location line="+24"/>
+        <location line="+14"/>
+        <location line="+32"/>
+        <location line="+33"/>
+        <location line="+39"/>
+        <location line="+25"/>
+        <location line="+10"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+32"/>
+        <location line="+13"/>
+        <location line="+14"/>
+        <location line="+50"/>
+        <location line="+30"/>
+        <location line="+10"/>
+        <location line="+9"/>
+        <location line="+27"/>
+        <location line="+22"/>
+        <location line="+16"/>
+        <location line="+13"/>
+        <location line="+9"/>
+        <location line="+16"/>
+        <location line="+14"/>
+        <location line="+19"/>
+        <location line="+7"/>
+        <location line="+15"/>
+        <location line="+10"/>
+        <location line="+14"/>
+        <location line="+92"/>
+        <location line="+9"/>
+        <location line="+156"/>
+        <location line="+33"/>
+        <location line="+168"/>
+        <location line="+27"/>
+        <source>Connect</source>
+        <translation>Collega</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1469"/>
+        <location line="+12"/>
+        <location line="+7"/>
+        <location line="+165"/>
+        <location line="+12"/>
+        <location line="+7"/>
+        <location line="+1297"/>
+        <location line="+12"/>
+        <location line="+7"/>
+        <location line="+127"/>
+        <source>Disconnect</source>
+        <translation>Disconnetti</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Start (run script)</source>
+        <translation>Start (esegui script)</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Stop (halt script)</source>
+        <translation>Stop (ferma script)</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-58"/>
+        <source>Frame Buffer</source>
+        <translation>Frame buffer</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5"/>
+        <source>Record</source>
+        <translation>Registra</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+1"/>
+        <source>Record the Frame Buffer</source>
+        <translation>Registra il frame buffer</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+255"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5"/>
+        <source>Stop</source>
+        <translation>Ferma</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+1"/>
+        <source>Stop recording</source>
+        <translation>Interrompere la registrazione</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5"/>
+        <source>Zoom</source>
+        <translation>Zoom</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+1"/>
+        <source>Zoom to fit</source>
+        <translation>Zoom per adattare</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+17"/>
+        <source>JPG</source>
+        <translation>JPG</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>JPEG compress the Frame Buffer for higher performance</source>
+        <translation>JPEG comprime il Frame Buffer per prestazioni più elevate</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location line="+22"/>
+        <location line="+1682"/>
+        <location line="+55"/>
+        <location line="+112"/>
+        <location line="+69"/>
+        <location line="+181"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-431"/>
+        <location line="+177"/>
+        <location line="+124"/>
+        <location line="+131"/>
+        <location line="+99"/>
+        <source>Busy... please wait...</source>
+        <translation>Impegnato... Per favore attendi...</translation>
+    </message>
+    <message>
+        <location line="-2115"/>
+        <location line="+15"/>
+        <source>Disable</source>
+        <translation>Disabilita</translation>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>Disable the Frame Buffer for maximum performance</source>
+        <translation>Disabilita il Frame Buffer per le massime prestazioni</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
+        <translation>Frame Buffer Disabilitato - fai di nuovo clic sul pulsante Disabilita per abilitare (in alto a destra)</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4"/>
+        <source>Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0</source>
+        <translation>Trascorso: 0h: 00m: 00s: 000ms - Dimensioni: 0 B - FPS: 0</translation>
+    </message>
+    <message>
+        <location line="+58"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+92"/>
+        <source>Histogram</source>
+        <translation>Istogramma</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+7"/>
+        <source>RGB Color Space</source>
+        <translation>Spazio colore RGB</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+1"/>
+        <source>Grayscale Color Space</source>
+        <translation>Spazio colore in scala di grigi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+1"/>
+        <source>LAB Color Space</source>
+        <translation>Spazio colore LAB</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+1"/>
+        <source>YUV Color Space</source>
+        <translation>Spazio colore YUV</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+1"/>
+        <source>Use Grayscale/LAB for color tracking</source>
+        <translation>Utilizza Scala grigi/LAB per il tracciamento del colore</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+42"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+3"/>
+        <location line="+44"/>
+        <source>Res - No Image</source>
+        <translation>Risoluzione - Nessuna immagine</translation>
+    </message>
+    <message>
+        <location line="-14"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-14"/>
+        <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)</source>
+        <translation>Risoluzione (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4"/>
+        <source>Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
+        <translation>Risoluzione (w:%1, h:%2) - Punto (x:%3, y:%4)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5"/>
+        <source>Res (w:%1, h:%2)</source>
+        <translation>Risoluzione (w: %1, h: %2)</translation>
+    </message>
+    <message>
+        <location line="+79"/>
+        <source>FPS: %L1</source>
+        <translation>FPS: %L1</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Close</source>
+        <translation>Chiudi</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Image Preview</source>
+        <translation>Anteprima dell&apos;immagine</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>New Class Folder</source>
+        <translation>Nuova cartella di classe</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Capture Data</source>
+        <translation>Acquisisci dati</translation>
+    </message>
+    <message>
+        <location line="+65"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-377"/>
+        <source>Board:</source>
+        <translation>Tavola:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Camera board type</source>
+        <translation>Tipo di scheda della fotocamera</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
+        <source>Sensor:</source>
+        <translation>Sensore:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Camera sensor module</source>
+        <translation>Modulo sensore fotocamera</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
+        <source>Firmware Version:</source>
+        <translation>Versione firmware:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Camera firmware version</source>
+        <translation>Versione del firmware della fotocamera</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
+        <source>Serial Port:</source>
+        <translation>Porta seriale:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Camera serial port</source>
+        <translation>Porta seriale della fotocamera</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+1743"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-249"/>
+        <location line="+251"/>
+        <source>Drive:</source>
+        <translation>Drive:</translation>
+    </message>
+    <message>
+        <location line="-1742"/>
+        <source>Drive associated with port</source>
+        <translation>Unità associata alla porta</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
+        <source>FPS:</source>
+        <translation>FPS:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>May be different from camera FPS</source>
+        <translation>Può essere diverso dalla fotocamera FPS</translation>
+    </message>
+    <message>
+        <location line="+208"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3624"/>
+        <source>Update Available</source>
+        <translation>Aggiornamento disponibile</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.</source>
+        <translation>Una nuova versione di OpenMV IDE (%L1.%L2.%L3) è disponibile per il download.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Download</source>
+        <translation>Scarica</translation>
+    </message>
+    <message>
+        <location line="+153"/>
+        <source>WiFi Programming Disabled!</source>
+        <translation>Programmazione WiFi disabilitata!</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Another application is using the OpenMV Cam broadcast discovery port. Please close that application and restart OpenMV IDE to enable WiFi programming.</source>
+        <translation>Un&apos;altra applicazione utilizza la porta di rilevamento broadcast OpenMV Cam. Chiudi l&apos;applicazione e riavvia OpenMV IDE per abilitare la programmazione WiFi.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Documents Folder Error</source>
+        <translation>Errore cartella documenti</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Failed to create the documents folder!</source>
+        <translation>Impossibile creare la cartella documenti!</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>OpenMV Cam LED Colors</source>
+        <translation>Colori LED OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Thanks for using the OpenMV Cam and OpenMV IDE!
+
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
+
+Blinking Green:
+
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+
+Blinking Blue:
+
+Your OpenMV Cam is running the default main.py script onboard.
+
+If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
+
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+
+Blinking White:
+
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
+
+</source>
+        <translation>Grazie per aver utilizzato OpenMV Cam e OpenMV IDE!
+
+Il LED di bordo della videocamera OpenMV lampeggia con colori diversi per indicarne lo stato:
+
+Verde lampeggiante:
+
+Il bootloader di bordo della tua OpenMV Cam è in esecuzione. Il bootloader di bordo funziona per alcuni secondi quando OpenMV Cam è alimentato tramite USB per consentire a OpenMV IDE di riprogrammare la tua OpenMV Cam.
+
+Blu lampeggiante:
+
+La tua OpenMV Cam esegue lo script main.py predefinito a bordo.
+
+Se hai una scheda SD installata o sovrascrivi lo script main.py su OpenMV Cam, eseguirà invece il codice che hai caricato su di essa.
+
+Se il LED lampeggia in blu ma OpenMV IDE non è in grado di connettersi alla tua OpenMV Cam, assicurati di collegare la tua OpenMV Cam al PC con un cavo USB che fornisce sia dati che alimentazione.
+
+Lampeggiante bianco:
+
+Il firmware di OpenMV Cam è in panico a causa di un errore hardware. Verifica che il modulo della videocamera OpenMV Cam sia installato in modo sicuro.
+
+</translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <location line="+1364"/>
+        <source>Serial Port - %L1 - %L2 BPS</source>
+        <translation>Porta seriale -%L1 - %L2 BPS</translation>
+    </message>
+    <message>
+        <location line="-1332"/>
+        <location line="+106"/>
+        <location line="+96"/>
+        <location line="+101"/>
+        <location line="+96"/>
+        <location line="+979"/>
+        <location line="+145"/>
+        <location line="+114"/>
+        <location line="+129"/>
+        <location line="+114"/>
+        <location line="+118"/>
+        <source>Connecting... (30 second timeout)</source>
+        <translation>Connessione in corso... (30 secondi di timeout)</translation>
+    </message>
+    <message>
+        <location line="-1971"/>
+        <source>
+
+Try doing:
+
+sudo adduser %L1 dialout
+
+...in a terminal and then restart your computer.</source>
+        <translation>
+
+Prova:
+
+sudo adduser %L1 dialout
+
+... in un terminale e quindi riavvia il computer.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Invalid baud rate argument (%1) for -open_serial_terminal</source>
+        <translation>Argomento della velocità di trasmissione non valido (%1) per -open_serial_terminal</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>-open_serial_terminal requires two arguments &lt;port_name:baud_rate&gt;</source>
+        <translation>-open_serial_terminal richiede due argomenti &lt;port_name: baud_rate&gt;</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Missing arguments for -open_serial_terminal</source>
+        <translation>Argomenti mancanti per -open_serial_terminal</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>UDP Client Connection - %1:%2</source>
+        <translation>Connessione client UDP -%1: %2</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Invalid port argument (%1) for -open_udp_client_terminal</source>
+        <translation>Argomento della porta non valido (%1) per -open_udp_client_terminal</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>-open_udp_client_terminal requires two arguments &lt;host_name:port&gt;</source>
+        <translation>-open_udp_client_terminal richiede due argomenti &lt;host_name:port&gt;</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Missing arguments for -open_udp_client_terminal</source>
+        <translation>Argomenti mancanti per -open_udp_client_terminal</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location line="+1421"/>
+        <source>UDP Server Connection - %1</source>
+        <translation>Connessione server UDP -%1</translation>
+    </message>
+    <message>
+        <location line="-1347"/>
+        <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
+        <translation>Argomento della porta non valido (%1) per -open_udp_server_terminal</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Missing arguments for -open_udp_server_terminal</source>
+        <translation>Argomenti mancanti per -open_udp_server_terminal</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>TCP Client Connection - %1:%2</source>
+        <translation>Connessione client TCP -%1: %2</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Invalid port argument (%1) for -open_tcp_client_terminal</source>
+        <translation>Argomento della porta non valido (%1) per -open_tcp_client_terminal</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>-open_tcp_client_terminal requires two arguments &lt;host_name:port&gt;</source>
+        <translation>-open_tcp_client_terminal richiede due argomenti &lt;host_name:port&gt;</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Missing arguments for -open_tcp_client_terminal</source>
+        <translation>Argomenti mancanti per -open_tcp_client_terminal</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location line="+1467"/>
+        <source>TCP Server Connection - %1</source>
+        <translation>Connessione server TCP -%1</translation>
+    </message>
+    <message>
+        <location line="-1393"/>
+        <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
+        <translation>Argomento della porta non valido (%1) per -open_tcp_server_terminal</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Missing arguments for -open_tcp_server_terminal</source>
+        <translation>Argomenti mancanti per -open_tcp_server_terminal</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <location line="+8"/>
+        <location line="+9"/>
+        <location line="+8"/>
+        <location line="+9"/>
+        <location line="+45"/>
+        <location line="+77"/>
+        <location line="+8"/>
+        <location line="+6"/>
+        <location line="+6"/>
+        <location line="+6"/>
+        <location line="+7"/>
+        <location line="+6"/>
+        <location line="+8"/>
+        <location line="+7"/>
+        <source>Register OpenMV Cam</source>
+        <translation>Registra OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="-209"/>
+        <source>OpenMV Cam automatically registered!
+
+Board: %1
+ID: %2
+
+Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality and focus the camera (if applicable).</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+174"/>
+        <source>Database Error!</source>
+        <translation>Errore database!</translation>
+    </message>
+    <message>
+        <location line="-157"/>
+        <location line="+170"/>
+        <source>GET Network error!</source>
+        <translation>Errore di rete!</translation>
+    </message>
+    <message>
+        <location line="-161"/>
+        <location line="+169"/>
+        <source>GET network error!</source>
+        <translation>Errore di rete!</translation>
+    </message>
+    <message>
+        <location line="-162"/>
+        <location line="+10"/>
+        <location line="+10"/>
+        <source>Unregistered OpenMV Cam Detected</source>
+        <translation>Rilevata OpenMV Cam non registrata</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>La tua OpenMV Cam non è registrata. Devi registrare OpenMV Cam con OpenMV per un uso illimitato con OpenMV IDE senza interruzioni.
+
+Vuoi registrare la tua OpenMV Cam ora?</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Unregistered OpenMV Cams hurt the open-source OpenMV ecosystem by undercutting offical OpenMV Cam sales which help fund OpenMV Cam software development.
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>Le OpenMV Cam non registrate danneggiano l&apos;ecosistema OpenMV open source tagliando le vendite ufficiali di OpenMV Cam che aiutano a finanziare lo sviluppo del software OpenMV Cam.
+
+Vuoi registrare la tua OpenMV Cam ora?</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>OpenMV IDE will display these three messages boxes each time you connect until you register your OpenMV Cam...
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>OpenMV IDE visualizzerà queste caselle di tre messaggi ogni volta che ci si connette fino a quando non si registra la OpenMV Cam ...
+
+Vuoi registrare la tua OpenMV Cam ora?</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Per favore inserisci un codice per registrare la tua OpenMV Cam. &lt;br/&gt; &lt;br/&gt; Se non hai una Board Key, puoi acquistarne una da OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;qui&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Registering OpenMV Cam...</source>
+        <translation>Registrazione di OpenMV Cam...</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Thank you for registering your OpenMV Cam!</source>
+        <translation>Grazie per aver registrato OpenMV Cam!</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Invalid Board Key!</source>
+        <translation>Board Key non valida!</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Board Key already used!</source>
+        <translation>Board Key già utilizzata!</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Board and ID already registered!</source>
+        <translation>Board e ID già registrati!</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Invalidly formatted Board Key!</source>
+        <translation>Formattazione Board Key non valida!</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3373"/>
+        <location line="+375"/>
+        <location line="+110"/>
+        <source>FPS: 0</source>
+        <translation>FPS: 0</translation>
+    </message>
+    <message>
+        <location line="+81"/>
+        <source>Configure Settings</source>
+        <translation>Configura impostazioni</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+22"/>
+        <location line="+14"/>
+        <location line="+9"/>
+        <source>Save Script</source>
+        <translation>Salva script</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>Strip comments and convert spaces to tabs?</source>
+        <translation>Elimina commenti e converti spazi in tabs?</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <location line="+7"/>
+        <location line="+18"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117"/>
+        <location line="+7"/>
+        <location line="+18"/>
+        <source>Save Image</source>
+        <translation>Salva immagine</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <location line="+1231"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23"/>
+        <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
+        <translation>File immagine (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
+    </message>
+    <message>
+        <location line="-1186"/>
+        <location line="+7"/>
+        <location line="+17"/>
+        <location line="+15"/>
+        <location line="+11"/>
+        <source>Save Template</source>
+        <translation>Salva Template</translation>
+    </message>
+    <message>
+        <location line="-48"/>
+        <source>Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)</source>
+        <translation>File di immagine (* .bmp * .jpg * .jpeg * .pgm * .ppm)</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <location line="+69"/>
+        <source>Please select a valid path on the OpenMV Cam!</source>
+        <translation>Si prega di selezionare un percorso valido su OpenMV Cam!</translation>
+    </message>
+    <message>
+        <location line="-54"/>
+        <location line="+69"/>
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>&quot;%L1&quot; è più lungo di una lunghezza massima di %L2 caratteri!</translation>
+    </message>
+    <message>
+        <location line="-40"/>
+        <location line="+7"/>
+        <location line="+17"/>
+        <location line="+15"/>
+        <location line="+11"/>
+        <source>Save Descriptor</source>
+        <translation>Salva descrittore</translation>
+    </message>
+    <message>
+        <location line="-48"/>
+        <location line="+1203"/>
+        <location line="+80"/>
+        <location line="+21"/>
+        <source>Keypoints Files (*.lbp *.orb)</source>
+        <translation>File Keypoints (*.lbp *.orb)</translation>
+    </message>
+    <message>
+        <location line="-1195"/>
+        <location line="+7"/>
+        <location line="+6"/>
+        <location line="+7"/>
+        <source>Open File</source>
+        <translation>Apri file</translation>
+    </message>
+    <message>
+        <location line="-20"/>
+        <location line="+7"/>
+        <location line="+6"/>
+        <location line="+7"/>
+        <source>Open Example</source>
+        <translation>Apri esempi</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <location line="+13"/>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>Impossibile aprire il file &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <location line="+13"/>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
+        <translation>Impossibile aprire il file di esempio &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <location line="+11"/>
+        <location line="+15"/>
+        <location line="+27"/>
+        <source>Select Drive</source>
+        <translation>Seleziona drive</translation>
+    </message>
+    <message>
+        <location line="-52"/>
+        <source>No valid drives were found to associate with your OpenMV Cam!</source>
+        <translation>Non sono state trovate unità valide da associare a OpenMV Cam!</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&quot;%L1&quot; is the only drive available so it must be your OpenMV Cam&apos;s drive.</source>
+        <translation>&quot;%L1&quot; è l&apos;unica unità disponibile, quindi deve essere il driver della tua OpenMV Cam.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Please associate a drive with your OpenMV Cam</source>
+        <translation>Associare un drive alla tua OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Drive: %L1</source>
+        <translation>Drive: %L1</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <location line="+13"/>
+        <location line="+29"/>
+        <location line="+9"/>
+        <location line="+87"/>
+        <location line="+6"/>
+        <location line="+17"/>
+        <location line="+9"/>
+        <location line="+8"/>
+        <location line="+13"/>
+        <location line="+92"/>
+        <location line="+16"/>
+        <location line="+7"/>
+        <location line="+9"/>
+        <location line="+82"/>
+        <location line="+24"/>
+        <location line="+13"/>
+        <location line="+92"/>
+        <location line="+16"/>
+        <location line="+7"/>
+        <location line="+9"/>
+        <location line="+82"/>
+        <source>New Terminal</source>
+        <translation>Nuovo Terminale</translation>
+    </message>
+    <message>
+        <location line="-635"/>
+        <source>Connect to serial port</source>
+        <translation>Connetti alla porta seriale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Connect to UDP port</source>
+        <translation>Connetti alla porta UDP</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Connect to TCP port</source>
+        <translation>Connetti alla porta TCP</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Please select an option</source>
+        <translation>Seleziona una opzione</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3017"/>
+        <source>Please select a serial port</source>
+        <translation>Si prega di selezionare una porta seriale</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Please enter a baud rate</source>
+        <translation>Inserisci velocità di trasmissione</translation>
+    </message>
+    <message>
+        <location line="+94"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+233"/>
+        <source>Try doing:
+
+</source>
+        <translation>Prova a fare:
+
+</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+0"/>
+        <source>...in a terminal and then restart your computer.</source>
+        <translation>... in un terminale e quindi riavviare il computer.</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location line="+138"/>
+        <location line="+7"/>
+        <location line="+236"/>
+        <location line="+7"/>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>Stringa non valida: &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="-379"/>
+        <source>No serial ports found!</source>
+        <translation>Nessuna porta seriale trovata!</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Connect to a UDP server as a client or start a UDP Server?</source>
+        <translation>Connettersi a un server UDP come client o avviare un server UDP?</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+243"/>
+        <source> Connect to a Server </source>
+        <translation> Connetti a un server </translation>
+    </message>
+    <message>
+        <location line="-242"/>
+        <location line="+243"/>
+        <source> Start a Server </source>
+        <translation> Avvia un server </translation>
+    </message>
+    <message>
+        <location line="-234"/>
+        <location line="+243"/>
+        <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
+        <translation>Inserisci un indirizzo IP (o nome di dominio) e una porta (ad es. xxx.xxx.xxx.xxx:xxxx)</translation>
+    </message>
+    <message>
+        <location line="-221"/>
+        <source>UDP Client Connection - %1</source>
+        <translation>Connessione client UDP -%1</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <location line="+243"/>
+        <source>Please enter a port number (enter 0 for any random free port)</source>
+        <translation>Inserisci un numero di porta (inserisci 0 per qualsiasi porta libera a caso)</translation>
+    </message>
+    <message>
+        <location line="-137"/>
+        <source>Connect to a TCP server as a client or start a TCP Server?</source>
+        <translation>Connettersi a un server TCP come client o avviare un server TCP?</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>TCP Client Connection - %1</source>
+        <translation>Connessione client TCP -%1</translation>
+    </message>
+    <message>
+        <location line="+244"/>
+        <source>Error: Option Index!</source>
+        <translation>Errore: indice delle opzioni!</translation>
+    </message>
+    <message>
+        <location line="+81"/>
+        <source>Clear Menu</source>
+        <translation>Cancella menu</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Source image location?</source>
+        <translation>Posizione dell&apos;immagine sorgente?</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source> Frame Buffer </source>
+        <translation> Frame buffer </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source> Image File </source>
+        <translation> File immagine </translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <location line="+71"/>
+        <source>The selected threshold tuple will be updated on close.</source>
+        <translation>La tupla di soglia selezionata verrà aggiornata alla chiusura.</translation>
+    </message>
+    <message>
+        <location line="-18"/>
+        <source>No image loaded!</source>
+        <translation>Nessuna immagine caricata!</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Image File</source>
+        <translation>File immagine</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>What would you like to do?</source>
+        <translation>Cosa ti piacerebbe fare?</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source> Edit File </source>
+        <translation> Modifica file </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source> Merge Files </source>
+        <translation> Unisci file </translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+65"/>
+        <location line="+7"/>
+        <source>Edit Keypoints</source>
+        <translation>Modifica keypoints</translation>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Save Edited Keypoints</source>
+        <translation>Salva i keypoints modificati</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Failed to save the edited keypoints for an unknown reason!</source>
+        <translation>Impossibile salvare i keypoints modificati per un motivo sconosciuto!</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Failed to find the keypoints image file!</source>
+        <translation>Impossibile trovare il file dei keypoints immagine!</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Failed to load the keypoints file for an unknown reason!</source>
+        <translation>Impossibile caricare il file keypoints per un motivo sconosciuto!</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+55"/>
+        <source>Merge Keypoints</source>
+        <translation>Unisci keypoints</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <location line="+7"/>
+        <location line="+19"/>
+        <source>Save Merged Keypoints</source>
+        <translation>Salva keypoints uniti</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Failed to save the merged keypoints for an unknown reason!</source>
+        <translation>Impossibile salvare i keypoints uniti per un motivo sconosciuto!</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Failed to load the first keypoints file for an unknown reason!</source>
+        <translation>Impossibile caricare il primo file keypoints per un motivo sconosciuto!</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>What tag images from the %L1 tag family do you want to generate?</source>
+        <translation>Quali immagini di tag della famiglia di tag %L1 vuoi generare?</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Min (%1)</source>
+        <translation>Min (%1)</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Max (%1)</source>
+        <translation>Max (%1)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Inlcude tag family and ID number in the image</source>
+        <translation>Inlcude la famiglia di tag e il numero ID nell&apos;immagine</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+18"/>
+        <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
+        <translation>
+            <numerusform>AprilTag Generator - Dove vuoi salvare l&apos;immagine/i tag %n?@AprilTag Generator - Dove vuoi salvare l&apos;immagine/i tag %n?</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Generating images...</source>
+        <translation>Generazione di immagini...</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Painting - begin failed!</source>
+        <translation>Pittura - inizio non riuscito!</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Painting - end failed!</source>
+        <translation>Pittura - fine non riuscita!</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Generation complete!</source>
+        <translation>Generazione completa!</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1074"/>
+        <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Install</source>
+        <translation>Installa</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+222"/>
+        <location line="+175"/>
+        <source>Downloading...</source>
+        <translation>Download in corso...</translation>
+    </message>
+    <message>
+        <location line="-383"/>
+        <source>Installing...</source>
+        <translation>Installazione...</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
+        <translation>Chiudi tutti i programmi che stanno visualizzando/modificando i dati dell&apos;applicazione di OpenMV IDE e quindi riavvia OpenMV IDE!</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Installation Sucessful! Please restart OpenMV IDE.</source>
+        <translation>Installazione avvenuta con successo! Riavvia OpenMV IDE.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+6"/>
+        <location line="+26"/>
+        <source>Package Update</source>
+        <translation>Aggiornamento del pacchetto</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <location line="+233"/>
+        <location line="+132"/>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
+        <translation>Impossibile aprire il file delle risorse &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="-339"/>
+        <location line="+233"/>
+        <location line="+139"/>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>Richiesta di rete non riuscita &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="-348"/>
+        <location line="+78"/>
+        <location line="+45"/>
+        <source>Bootloader</source>
+        <translation>Bootloader</translation>
+    </message>
+    <message>
+        <location line="-114"/>
+        <location line="+3"/>
+        <source>Firmware Path</source>
+        <translation>Percorso del firmware</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Firmware Binary (*.bin *.dfu)</source>
+        <translation>Firmware Binary (*.bin *.dfu)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+6"/>
+        <location line="+115"/>
+        <location line="+374"/>
+        <source>Erase internal file system</source>
+        <translation>Cancella il file system interno</translation>
+    </message>
+    <message>
+        <location line="-491"/>
+        <location line="+120"/>
+        <location line="+375"/>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <translation>Se abiliti questa opzione, tutti i file sull&apos;unità flash interna di OpenMV Cam verranno eliminati. Ciò non cancella i file su alcuna scheda SD rimovibile (se inserita).</translation>
+    </message>
+    <message>
+        <location line="-490"/>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <translation>Il caricamento del firmware tramite DFU cancella sempre l&apos;unità flash interna della tua OpenMV Cam. Ciò non cancella i file su alcuna scheda SD rimovibile (se inserita).</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+113"/>
+        <source>Run</source>
+        <translation>Esegui</translation>
+    </message>
+    <message>
+        <location line="-69"/>
+        <source>&quot;%L1&quot; is not a file!</source>
+        <translation>&quot;%L1&quot; non è un file!</translation>
+    </message>
+    <message>
+        <location line="+207"/>
+        <source>Extracting...</source>
+        <translation>Estrazione...</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Unable to extract firmware!</source>
+        <translation>Impossibile estrarre il firmware!</translation>
+    </message>
+    <message>
+        <location line="+205"/>
+        <source>A board in DFU mode was detected. What would you like to do?</source>
+        <translation>È stata rilevata una scheda in modalità DFU. Cosa ti piacerebbe fare?</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
+        <translation>Installa l&apos;ultima versione del firmware (v%L1.%L2.%L3)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Load a specific firmware</source>
+        <translation>Carica un firmware specifico</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Just erase the interal file system</source>
+        <translation>Basta cancellare il file system interno</translation>
+    </message>
+    <message>
+        <location line="+63"/>
+        <source>No OpenMV Cams found!</source>
+        <translation>Nessuna OpenMV Cam trovata!</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Do you have an OpenMV Cam connected and is it bricked?</source>
+        <translation>Hai una OpenMV Cam collegata ed è brickata?</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <location line="+1110"/>
+        <source>Please select the board type</source>
+        <translation>Si prega di selezionare il tipo di scheda</translation>
+    </message>
+    <message>
+        <location line="-1099"/>
+        <location line="+3123"/>
+        <location line="+28"/>
+        <source>Erase the internal file system?</source>
+        <translation>Cancellare il file system interno?</translation>
+    </message>
+    <message>
+        <location line="-3129"/>
+        <source>No released firmware available for the attached board!</source>
+        <translation>Nessun firmware rilasciato disponibile per la scheda allegata!</translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Please select a DFU Device</source>
+        <translation>Seleziona un dispositivo DFU</translation>
+    </message>
+    <message>
+        <location line="+81"/>
+        <location line="+38"/>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Aggiorna il bootloader alla versione più recente e installa SoftDevice per eseguire il flashing del firmware OpenMV. Ulteriori informazioni sono disponibili su &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <location line="-29"/>
+        <location line="+38"/>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Si prega di accorciare REC su GND e ripristinare la scheda. Ulteriori informazioni sono disponibili su &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Connecting...
+
+(Hit cancel if this takes more than 5 seconds).</source>
+        <translation>Collegamento ...
+
+(Premi Annulla se questo richiede più di 5 secondi).</translation>
+    </message>
+    <message>
+        <location line="+119"/>
+        <source>Timeout error while getting firmware version!</source>
+        <translation>Errore di timeout durante il recupero della versione del firmware!</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Do not try to connect while the green light on your OpenMV Cam is on!</source>
+        <translation>Non provare a connetterti mentre è accesa la luce verde sulla tua OpenMV Cam!</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Try to connect again?</source>
+        <translation>Vuoi provare a connetterti di nuovo?</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <location line="+146"/>
+        <location line="+1879"/>
+        <source>Timeout error while getting board architecture!</source>
+        <translation>Errore di timeout durante l&apos;acquisizione dell&apos;architettura della scheda!</translation>
+    </message>
+    <message>
+        <location line="-1897"/>
+        <source>Unsupported board architecture!</source>
+        <translation>Architettura della scheda non supportata!</translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <location line="+600"/>
+        <source>Disconnect your OpenMV Cam and then reconnect it...</source>
+        <translation>Scollega OpenMV Cam e quindi ricollegala...</translation>
+    </message>
+    <message>
+        <location line="-600"/>
+        <source>
+
+Hit cancel to skip to DFU reprogramming.</source>
+        <translation>
+
+Premi Annulla per saltare alla riprogrammazione DFU.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+599"/>
+        <source>Connecting... (Hit cancel if this takes more than 5 seconds).</source>
+        <translation>Connessione in corso... (Premi Annulla se questo richiede più di 5 secondi).</translation>
+    </message>
+    <message>
+        <location line="-549"/>
+        <location line="+589"/>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
+        <translation>Impossibile connettersi al normale bootloader di OpenMV Cam!</translation>
+    </message>
+    <message>
+        <location line="-585"/>
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
+
+Continue?</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Erasing...</source>
+        <translation>Cancellazione in corso...</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <location line="+63"/>
+        <location line="+77"/>
+        <location line="+610"/>
+        <location line="+441"/>
+        <location line="+22"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+414"/>
+        <location line="+40"/>
+        <location line="+50"/>
+        <location line="+43"/>
+        <location line="+41"/>
+        <location line="+44"/>
+        <location line="+43"/>
+        <location line="+41"/>
+        <location line="+41"/>
+        <location line="+51"/>
+        <location line="+50"/>
+        <location line="+41"/>
+        <location line="+42"/>
+        <location line="+39"/>
+        <location line="+215"/>
+        <location line="+50"/>
+        <location line="+41"/>
+        <location line="+40"/>
+        <source>Timeout Error!</source>
+        <translation>Errore di timeout!</translation>
+    </message>
+    <message>
+        <location line="-1131"/>
+        <location line="+67"/>
+        <source>Programming...</source>
+        <translation>Programmazione in corso...</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+294"/>
+        <location line="+45"/>
+        <location line="+260"/>
+        <location line="+460"/>
+        <source>Onboard Data Flash Erased!
+
+</source>
+        <translation>Flash dati integrato cancellato!
+
+</translation>
+    </message>
+    <message>
+        <location line="-1059"/>
+        <location line="+294"/>
+        <location line="+45"/>
+        <source>Firmware Upgrade complete!
+
+</source>
+        <translation>Aggiornamento firmware completato!
+
+</translation>
+    </message>
+    <message>
+        <location line="-338"/>
+        <location line="+294"/>
+        <location line="+45"/>
+        <location line="+260"/>
+        <location line="+460"/>
+        <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
+
+</source>
+        <translation>La tua OpenMV Cam inizierà a eseguire l&apos;autotest integrato se non è collegata alcuna scheda SD ... ciò potrebbe richiedere del tempo.
+
+</translation>
+    </message>
+    <message>
+        <location line="-1058"/>
+        <location line="+294"/>
+        <location line="+45"/>
+        <location line="+260"/>
+        <location line="+460"/>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <translation>Fai clic su OK quando il LED RGB di OpenMV Cam inizia a lampeggiare in blu, a indicare che l&apos;autotest è completo.</translation>
+    </message>
+    <message>
+        <location line="-1058"/>
+        <location line="+275"/>
+        <location line="+19"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+260"/>
+        <location line="+65"/>
+        <location line="+216"/>
+        <location line="+179"/>
+        <location line="+37"/>
+        <source>
+
+If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
+
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
+        <translation>
+
+Se hai sovrascritto main.py sulla tua OpenMV Cam e non hai cancellato il disco, la tua OpenMV Cam eseguirà semplicemente quel main.py.
+
+In questo caso, fai clic su OK quando vedi il supporto dell&apos;unità flash interna di OpenMV Cam (una finestra potrebbe aprirsi o meno).</translation>
+    </message>
+    <message>
+        <location line="-1071"/>
+        <source>The firmware file is empty!</source>
+        <translation>Il file del firmware è vuoto!</translation>
+    </message>
+    <message>
+        <location line="+120"/>
+        <source>No IMX settings for the selected board type %L1!</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>No IMX settings found!</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+12"/>
+        <location line="+7"/>
+        <location line="+165"/>
+        <location line="+12"/>
+        <location line="+7"/>
+        <location line="+1297"/>
+        <location line="+12"/>
+        <location line="+7"/>
+        <source>Failed to eject &quot;%L1&quot;!</source>
+        <translation>Impossibile espellere &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="-1495"/>
+        <source>
+
+Hit cancel to skip to SBL reprogramming.</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
+
+Continue?</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
+
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
+        <translation>Scollega la tua OpenMV Cam dal computer, aggiungi un ponticello tra i pin SBL e 3.3V, quindi ricollega la tua OpenMV Cam al computer.
+
+Fai clic sul pulsante Ok dopo che il Bootloader SBL di OpenMV Cam è stato enumerato.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+44"/>
+        <source>Firmware update complete!
+
+</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="-43"/>
+        <location line="+44"/>
+        <location line="+345"/>
+        <location line="+216"/>
+        <location line="+216"/>
+        <location line="+66"/>
+        <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
+        <translation>Fai clic sul pulsante OK dopo che EnemMV Cam ha enumerato e finito di eseguire il suo autotest integrato (led blu lampeggiante - ciò richiede un po&apos; di tempo).</translation>
+    </message>
+    <message>
+        <location line="-679"/>
+        <source>No DFU settings for the selected board type!</source>
+        <translation>Nessuna impostazione DFU per il tipo di scheda selezionato!</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>No DFU settings for the selected device!</source>
+        <translation>Nessuna impostazione DFU per il dispositivo selezionato!</translation>
+    </message>
+    <message>
+        <location line="+115"/>
+        <location line="+38"/>
+        <location line="+497"/>
+        <source>DFU firmware update failed!</source>
+        <translation>Aggiornamento del firmware DFU non riuscito!</translation>
+    </message>
+    <message>
+        <location line="-510"/>
+        <location line="+497"/>
+        <source>DFU firmware update complete!
+
+</source>
+        <translation>Aggiornamento del firmware DFU completato!
+
+</translation>
+    </message>
+    <message>
+        <location line="-451"/>
+        <location line="+33"/>
+        <location line="+124"/>
+        <source>BOSSAC device %1 missing!</source>
+        <translation>Dispositivo BOSSAC %1 mancante!</translation>
+    </message>
+    <message>
+        <location line="-85"/>
+        <source>No BOSSAC settings for the selected board type!</source>
+        <translation>Nessuna impostazione BOSSAC per il tipo di scheda selezionato!</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>No BOSSAC settings for the selected device!</source>
+        <translation>Nessuna impostazione BOSSAC per il dispositivo selezionato!</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
+        <translation>Il tuo Nano 33 BLE non ha un disco flash dati integrato.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>BOSSAC firmware update complete!
+
+</source>
+        <translation>Aggiornamento firmware BOSSAC completato!
+
+</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>BOSSAC firmware update failed!</source>
+        <translation>L&apos;aggiornamento del firmware BOSSAC non è riuscito!</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>No PicoTool settings for the selected board type!</source>
+        <translation>Nessuna impostazione PicoTool per il tipo di scheda selezionato!</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>No PicoTool settings for the selected device!</source>
+        <translation>Nessuna impostazione PicoTool per il dispositivo selezionato!</translation>
+    </message>
+    <message>
+        <location line="+122"/>
+        <source>PicoTool firmware update complete!
+
+</source>
+        <translation>Aggiornamento del firmware PicoTool completato!
+
+</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>PicoTool firmware update failed!</source>
+        <translation>L&apos;aggiornamento del firmware PicoTool non è riuscito!</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
+
+Backup your data before continuing!</source>
+        <translation>L&apos;aggiornamento DFU cancella il file system flash interno di OpenMV Cam.
+
+Fai un backup dei tuoi dati prima di continuare!</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
+
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
+        <translation>Scollega OpenMV Cam dal computer, aggiungi un jumper i pin BOOT e RST, quindi ricollega OpenMV Cam al computer.
+
+Fai clic sul pulsante OK dopo aver enumerato il DFU Bootloader di OpenMV Cam.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>DFU bootloader reset complete!
+
+</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Disconnect your OpenMV Cam from your computer and remove the jumper wire between the BOOT and RST pins.
+
+</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>OpenMV IDE will now try to update your OpenMV Cam again.</source>
+        <translation>OpenMV IDE ora tenterà di aggiornare nuovamente la tua OpenMV Cam.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Disconnect your OpenMV Cam from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
+
+</source>
+        <translation>Scollega OpenMV Cam dal computer, rimuovi il cavo di collegamento tra i pin BOOT e RST, quindi ricollega OpenMV Cam al computer.
+
+</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>DFU bootloader reset failed!</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+61"/>
+        <source>None</source>
+        <translation>Nessuno</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <location line="+18"/>
+        <location line="+43"/>
+        <source>Unknown</source>
+        <translation>Sconosciuto</translation>
+    </message>
+    <message>
+        <location line="-46"/>
+        <source>Timeout error while getting sensor type!</source>
+        <translation>Errore di timeout durante l&apos;acquisizione del tipo di sensore!</translation>
+    </message>
+    <message>
+        <location line="+189"/>
+        <source>Timeout error while learning MTU!</source>
+        <translation>Errore di timeout durante l&apos;apprendimento di MTU!</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Board: %L1</source>
+        <translation>Tavola: %L1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Sensor: %L1</source>
+        <translation>Sensore: %L1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Firmware Version: %L1.%L2.%L3</source>
+        <translation>Versione firmware: %L1.%L2.%L3</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Serial Port: %L1</source>
+        <translation>Porta seriale: %L1</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source> - [ out of date - click here to updgrade ]</source>
+        <translation> - [non aggiornato - clicca qui per aggiornare]</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
+        <translation>Il firmware del tuo OpenMV Cam non è aggiornato. Ti piacerebbe aggiornare?</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source> - [ latest ]</source>
+        <translation> - [ ultimo ]</translation>
+    </message>
+    <message>
+        <location line="+191"/>
+        <source>Reset</source>
+        <translation>Ripristina</translation>
+    </message>
+    <message>
+        <location line="+124"/>
+        <source>Start</source>
+        <translation>Avvia</translation>
+    </message>
+    <message>
+        <location line="+114"/>
+        <source>More Examples</source>
+        <translation>Altri esempi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>You can find more examples under the File -&gt; Examples menu.
+
+In particular, checkout the Color-Tracking examples.</source>
+        <translation>Puoi trovare altri esempi nel menu File -&gt; Esempi.
+
+In particolare, dai un&apos;occhiata agli esempi di tracciamento del colore.</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <location line="+6"/>
+        <location line="+18"/>
+        <location line="+4"/>
+        <location line="+6"/>
+        <location line="+19"/>
+        <location line="+6"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Firmware Update</source>
+        <translation>Aggiornamento firmware</translation>
+    </message>
+    <message>
+        <location line="-72"/>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
+        <translation>Aggiornare il firmware di OpenMV Cam alla versione più recente?</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
+        <translation>Il firmware di OpenMV Cam è aggiornato.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
+        <translation>È necessario ripristinare il firmware di OpenMV Cam nella versione di rilascio?</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Cannot open firmware.txt!</source>
+        <translation>Impossibile aprire firmware.txt!</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="-55"/>
+        <location line="+114"/>
+        <source>No Image</source>
+        <translation>Nessuna immagine</translation>
+    </message>
+    <message>
+        <location line="-67"/>
+        <location line="+7"/>
+        <source>Video Record</source>
+        <translation>Registrazione video</translation>
+    </message>
+    <message>
+        <location line="+120"/>
+        <location line="+10"/>
+        <location line="+10"/>
+        <location line="+10"/>
+        <source>Elapsed: </source>
+        <translation>Trascorso: </translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Video Recorder</source>
+        <translation>Videoregistratore</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Failed to write frame!</source>
+        <translation>Impossibile scrivere frame!</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>Save Image selection to PC</source>
+        <translation>Salva la selezione dell&apos;immagine sul PC</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Save Image to PC</source>
+        <translation>Salva l&apos;immagine sul PC</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Save Template selection to Cam</source>
+        <translation>Salva la selezione del modello in Cam</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Save Template to Cam</source>
+        <translation>Salva modello in Cam</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Save Descriptor selection to Cam</source>
+        <translation>Salva la selezione del descrittore su Cam</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Save Descriptor to Cam</source>
+        <translation>Salva descrittore in Cam</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-131"/>
+        <location line="+15"/>
+        <location line="+9"/>
+        <location line="+25"/>
+        <location line="+9"/>
+        <location line="+17"/>
+        <location line="+22"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+15"/>
+        <location line="+10"/>
+        <location line="+26"/>
+        <location line="+15"/>
+        <location line="+9"/>
+        <location line="+25"/>
+        <location line="+9"/>
+        <source>Import Helper</source>
+        <translation>Import Helper</translation>
+    </message>
+    <message>
+        <location line="-223"/>
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
+
+Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
+        <translation>Il modulo &quot;%L1&quot; su OpenMV Cam è diverso dalla copia sul tuo computer.
+
+Volete OpenMV IDE per aggiornare il modulo su OpenMV Cam?</translation>
+    </message>
+    <message>
+        <location line="+75"/>
+        <source>Would you like OpenMV IDE to update the module on your computer?</source>
+        <translation>Vorresti OpenMV IDE per aggiornare il modulo sul tuo computer?</translation>
+    </message>
+    <message>
+        <location line="+91"/>
+        <source>Module &quot;%L1&quot; may be required to run your script.
+
+Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
+        <translation>Il modulo &quot;%L1&quot; potrebbe essere richiesto per eseguire il tuo script.
+
+Vorresti OpenMV IDE copiarlo su OpenMV Cam?</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-366"/>
+        <location line="+7"/>
+        <location line="+18"/>
+        <location line="+11"/>
+        <source>Save Log</source>
+        <translation>Salvare log</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <source>Text Files (*.txt);;All files (*)</source>
+        <translation>File di testo (* .txt) ;; Tutti i file (*)</translation>
+    </message>
+    <message>
+        <location line="+230"/>
+        <source>Zoom: %1%</source>
+        <translation>Zoom: %1%</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Copy</source>
+        <translation>Copia</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Paste</source>
+        <translation>Incolla</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Select All</source>
+        <translation>Seleziona Tutto</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Find</source>
+        <translation>Trova</translation>
+    </message>
+    <message>
+        <location line="+226"/>
+        <source>Serial Terminal</source>
+        <translation>Terminale seriale</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Clear</source>
+        <translation>Cancella</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Save</source>
+        <translation>Salva</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>Esegui &quot;/main.py&quot;</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Run current script in editor window</source>
+        <translation>Esegui lo script corrente nella finestra dell&apos;editor</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Stop running script</source>
+        <translation>Interrompi lo script in esecuzione</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Soft reset</source>
+        <translation>Soft reset</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+72"/>
+        <source>BOSSAC</source>
+        <translation>BOSSAC</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+97"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+84"/>
+        <source>Get Devices</source>
+        <translation>Ottieni dispositivi</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-245"/>
+        <location line="+79"/>
+        <source>Query failed!</source>
+        <translation>Query non riuscita!</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>DfuSe</source>
+        <translation>DfuSe</translation>
+    </message>
+    <message>
+        <location line="+137"/>
+        <source>PyDfu</source>
+        <translation>PyDfu</translation>
+    </message>
+    <message>
+        <location line="+104"/>
+        <source>DFU Util</source>
+        <translation>DFU Util</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-87"/>
+        <source>Dataset Split</source>
+        <translation>Dataset Split</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Please choose how to split the data to upload.
+OpenMV recommends leaving this at the default 80/20% split.</source>
+        <translation>Scegli come dividere i dati da caricare.
+OpenMV consiglia di lasciare questo valore predefinito all&apos;80/20%.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+16"/>
+        <source>Training Data
+Percentage
+%1%</source>
+        <translation>Dati di allenamento
+Percentuale
+%1%</translation>
+    </message>
+    <message>
+        <location line="-8"/>
+        <location line="+9"/>
+        <source>Test Data
+Percentage
+%1%</source>
+        <translation>Dati di test
+Percentuale
+%1%</translation>
+    </message>
+    <message>
+        <location line="+58"/>
+        <source>Uploading...</source>
+        <translation>Caricamento in corso...</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <location line="+107"/>
+        <location line="+9"/>
+        <location line="+19"/>
+        <location line="+10"/>
+        <source>Uploading Dataset</source>
+        <translation>Caricamento del set di dati</translation>
+    </message>
+    <message>
+        <location line="-37"/>
+        <source>Error posting!</source>
+        <translation>Errore durante la pubblicazione!</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Upload Statistics:
+
+%L1 Files Uploaded
+%L2 Responses from Edge Impulse
+
+%L3 New Images Added
+%L4 Marked as Duplicates</source>
+        <translation>Statistiche di caricamento:
+
+%L1 file caricati
+%L2 risposte da Edge Impulse
+
+%L3 Nuove immagini aggiunte
+%L4 contrassegnato come duplicato</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Nothing to upload
+
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
+        <translation>Niente da caricare
+
+Solo immagini jpg / png / bmp con un nome numerico (ad es. &quot;00001.jpg&quot;)
+nelle cartelle di classe (&quot;*.class&quot;) possono essere caricate.</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <location line="+7"/>
+        <location line="+21"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <location line="+164"/>
+        <location line="+27"/>
+        <location line="+9"/>
+        <location line="+24"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <source>Edge Impulse Projects</source>
+        <translation>Progetti Edge Impulse</translation>
+    </message>
+    <message>
+        <location line="-276"/>
+        <location line="+35"/>
+        <location line="+71"/>
+        <location line="+129"/>
+        <location line="+42"/>
+        <source>No request data received</source>
+        <translation>Nessun dato di richiesta ricevuto</translation>
+    </message>
+    <message>
+        <location line="-256"/>
+        <source>An unkown error occured</source>
+        <translation>Si è verificato un errore sconosciuto</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <location line="+11"/>
+        <location line="+7"/>
+        <location line="+10"/>
+        <source>Edge Impulse Login</source>
+        <translation>Accesso Edge Impulse</translation>
+    </message>
+    <message>
+        <location line="-27"/>
+        <source>Sucessfully logged into your Edge Impulse account.
+
+Open a data set to upload it.</source>
+        <translation>Accedi con successo al tuo account Edge Impulse.
+
+Apri un set di dati per caricarlo.</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Email Address</source>
+        <translation>Indirizzo email</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Username</source>
+        <translation>Nome utente</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Password</source>
+        <translation>Password</translation>
+    </message>
+    <message>
+        <location line="+70"/>
+        <source>Please select a project</source>
+        <translation>Seleziona un progetto</translation>
+    </message>
+    <message>
+        <location line="+61"/>
+        <source>No projects found</source>
+        <translation>Nessun progetto trovato</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Upload Project</source>
+        <translation>Carica progetto</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Please enter an Edge Impluse Project API Key</source>
+        <translation>Immettere una chiave API del progetto Edge Impluse</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1119"/>
+        <location line="+149"/>
+        <location line="+26"/>
+        <location line="+32"/>
+        <location line="+40"/>
+        <location line="+50"/>
+        <location line="+43"/>
+        <location line="+41"/>
+        <location line="+44"/>
+        <location line="+43"/>
+        <location line="+41"/>
+        <location line="+41"/>
+        <location line="+51"/>
+        <location line="+50"/>
+        <location line="+41"/>
+        <location line="+42"/>
+        <location line="+39"/>
+        <location line="+40"/>
+        <location line="+133"/>
+        <location line="+42"/>
+        <location line="+50"/>
+        <location line="+41"/>
+        <location line="+40"/>
+        <source>NXP IMX</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="-969"/>
+        <location line="+26"/>
+        <location line="+771"/>
+        <source>This feature is not supported on this machine!</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="-373"/>
+        <location line="+50"/>
+        <location line="+337"/>
+        <location line="+50"/>
+        <source>This command takes a while to execute. Please be patient.</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+5"/>
+        <source>Select and delete outlier keypoints using both the mouse and the delete key.</source>
+        <translation>Seleziona ed elimina i keypoints outlier usando sia il mouse che il tasto cancella.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show Octave %L1</source>
+        <translation>Mostra Octave %L1</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Done</source>
+        <translation>Fatto</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+65"/>
+        <source>PicoTool</source>
+        <translation>PicoTool</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/thresholdeditor.cpp" line="+155"/>
+        <source>Threhsold Editor</source>
+        <translation>Editor soglia</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Source Image</source>
+        <translation>Immagine di origine</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Binary Image (white pixels are tracked pixels)</source>
+        <translation>Immagine binaria (i pixel bianchi sono pixel tracciati)</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Grayscale</source>
+        <translation>Scala di grigi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>LAB</source>
+        <translation>LAB</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Invert</source>
+        <translation>Inverti</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Reset Sliders</source>
+        <translation>Reimposta i cursori</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Select the best color tracking thresholds.</source>
+        <translation>Seleziona le migliori soglie di tracciamento del colore.</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Grayscale Min</source>
+        <translation>Min scala di grigi</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Grayscale Max</source>
+        <translation>Max scala di grigi</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Grayscale Threshold</source>
+        <translation>Soglia scala di grigi</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>L Min</source>
+        <translation>L Min</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>L Max</source>
+        <translation>L Max</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>A Min</source>
+        <translation>A Min</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>A Max</source>
+        <translation>A Max</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>B Min</source>
+        <translation>B Min</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>B Max</source>
+        <translation>B Max</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>LAB Threshold</source>
+        <translation>Soglia LAB</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Copy the threshold above before closing.</source>
+        <translation>Copia la soglia sopra prima di chiudere.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-459"/>
+        <source>Reading File...</source>
+        <translation>Lettura del file...</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+25"/>
+        <location line="+10"/>
+        <location line="+11"/>
+        <location line="+56"/>
+        <source>Reading File</source>
+        <translation>Lettura del file</translation>
+    </message>
+    <message>
+        <location line="-101"/>
+        <location line="+78"/>
+        <source>No frames found!</source>
+        <translation>Nessun frame trovato!</translation>
+    </message>
+    <message>
+        <location line="-53"/>
+        <location line="+10"/>
+        <location line="+11"/>
+        <location line="+56"/>
+        <location line="+10"/>
+        <location line="+11"/>
+        <location line="+13"/>
+        <source>File is corrupt!</source>
+        <translation>Il file è corrotto!</translation>
+    </message>
+    <message>
+        <location line="-70"/>
+        <location line="+547"/>
+        <source>Transcoding File...</source>
+        <translation>Transcodifica file...</translation>
+    </message>
+    <message>
+        <location line="-536"/>
+        <location line="+34"/>
+        <location line="+11"/>
+        <location line="+13"/>
+        <location line="+14"/>
+        <location line="+11"/>
+        <location line="+11"/>
+        <source>Transcoding File</source>
+        <translation>File di transcodifica</translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <location line="+11"/>
+        <source>Painter Failed!</source>
+        <translation>Pittura non riuscita!</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Failed to write!</source>
+        <translation>Impossibile scrivere!</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <location line="+7"/>
+        <location line="+8"/>
+        <location line="+7"/>
+        <location line="+8"/>
+        <location line="+7"/>
+        <location line="+12"/>
+        <location line="+11"/>
+        <source>Transcoder</source>
+        <translation>Transcoder</translation>
+    </message>
+    <message>
+        <location line="-59"/>
+        <source>Failed to write header again!</source>
+        <translation>Impossibile scrivere di nuovo l&apos;intestazione!</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+15"/>
+        <source>Seek failed!</source>
+        <translation>Ricerca non riuscita!</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Failed to write header!</source>
+        <translation>Impossibile scrivere l&apos;intestazione!</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Unsupported OpenMV ImageWriter File version!</source>
+        <translation>Versione file OpenMV ImageWriter non supportata!</translation>
+    </message>
+    <message>
+        <location line="+96"/>
+        <location line="+79"/>
+        <source>Get Input Formats</source>
+        <translation>Ottieni formati di input</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <location line="+102"/>
+        <location line="+59"/>
+        <location line="+15"/>
+        <location line="+304"/>
+        <location line="+12"/>
+        <location line="+10"/>
+        <location line="+12"/>
+        <location line="+16"/>
+        <location line="+13"/>
+        <location line="+9"/>
+        <location line="+14"/>
+        <location line="+36"/>
+        <location line="+12"/>
+        <location line="+10"/>
+        <location line="+12"/>
+        <location line="+21"/>
+        <location line="+7"/>
+        <location line="+146"/>
+        <location line="+12"/>
+        <location line="+10"/>
+        <location line="+12"/>
+        <location line="+20"/>
+        <location line="+7"/>
+        <source>Convert Video</source>
+        <translation>Converti video</translation>
+    </message>
+    <message>
+        <location line="-769"/>
+        <source>Failed to launch ffmpeg!</source>
+        <translation>Impossibile avviare ffmpeg!</translation>
+    </message>
+    <message>
+        <location line="+60"/>
+        <source>Unable to write to output video file!</source>
+        <translation>Impossibile scrivere sul file video di uscita!</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Unable to open output video file!</source>
+        <translation>Impossibile aprire il file video di uscita!</translation>
+    </message>
+    <message>
+        <location line="+139"/>
+        <location line="+367"/>
+        <source>Play Video</source>
+        <translation>Riproduci video</translation>
+    </message>
+    <message>
+        <location line="-366"/>
+        <location line="+119"/>
+        <source>Failed to launch ffplay!</source>
+        <translation>Impossibile avviare ffplay!</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Convert Video Source</source>
+        <translation>Converti sorgente video</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+235"/>
+        <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
+        <translation>File video (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</translation>
+    </message>
+    <message>
+        <location line="-230"/>
+        <location line="+11"/>
+        <location line="+117"/>
+        <location line="+7"/>
+        <source>Convert Video Output</source>
+        <translation>Converti output video</translation>
+    </message>
+    <message>
+        <location line="-130"/>
+        <location line="+125"/>
+        <location line="+208"/>
+        <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
+        <translation>File video (*.mp4 *.*);;File OpenMV ImageReader (*.bin);;</translation>
+    </message>
+    <message>
+        <location line="-327"/>
+        <source>Please select output format</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <location line="+122"/>
+        <location line="+208"/>
+        <source>Rescale the video?</source>
+        <translation>Ridimensiona il video?</translation>
+    </message>
+    <message>
+        <location line="-318"/>
+        <location line="+122"/>
+        <location line="+208"/>
+        <source>Enter a new width (the aspect ratio will be kept the same)</source>
+        <translation>Inserisci una nuova larghezza (il rapporto aspetto verrà mantenuto lo stesso)</translation>
+    </message>
+    <message>
+        <location line="-320"/>
+        <location line="+122"/>
+        <location line="+208"/>
+        <source>Skip frames?</source>
+        <translation>Saltare fotogrammi?</translation>
+    </message>
+    <message>
+        <location line="-318"/>
+        <location line="+122"/>
+        <location line="+208"/>
+        <source>Enter how many frames to skip at a time</source>
+        <translation>Inserisci il numero di fotogrammi da saltare alla volta</translation>
+    </message>
+    <message>
+        <location line="-278"/>
+        <location line="+91"/>
+        <location line="+207"/>
+        <source>Video conversion finished!</source>
+        <translation>Conversione video terminata!</translation>
+    </message>
+    <message>
+        <location line="-153"/>
+        <source>Please enter a IP address (or domain name)</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Please enter a Port (the RTSP default port is 554)</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Stream video over TCP (versus UDP)?</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Keeps the RTP video stream inside of the same TCP socket used for setting up the initial connection verus creating a new UDP video stream. This may help the connection on networks with firewalls.</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Play</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <location line="+7"/>
+        <source>Save Video</source>
+        <translation>Salva video</translation>
     </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
     <message>
-        <source>Build and Run</source>
-        <translation type="unfinished">Compila ed Esegui</translation>
-    </message>
-    <message>
-        <source>Save all files before Build</source>
-        <translation type="unfinished">Salva tutti i file prima della Compilazione</translation>
-    </message>
-    <message>
-        <source>Always build Project before Running</source>
-        <translation type="unfinished">Compila sempre il Progetto prima dell&apos;Esecuzione</translation>
-    </message>
-    <message>
-        <source>Show Compiler Output on building</source>
+        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4"/>
+        <source>This wizard creates a simple unit test project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Use jom instead of nmake</source>
+        <location line="+1"/>
+        <location line="+104"/>
+        <location line="+194"/>
+        <location line="+21"/>
+        <location line="+46"/>
+        <location line="+11"/>
+        <location line="+40"/>
+        <location line="+18"/>
+        <location line="+19"/>
+        <location line="+11"/>
+        <location line="+12"/>
+        <location line="+20"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+29"/>
+        <location line="+22"/>
+        <location line="+28"/>
+        <location line="+15"/>
+        <location line="+152"/>
+        <source>Project Location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;i&gt;jom&lt;/i&gt; is a drop-in replacement for &lt;i&gt;nmake&lt;/i&gt; which distributes the compilation process to multiple CPU cores. For more details, see the &lt;a href=&quot;http://qt.gitorious.org/qt-labs/jom/&quot;&gt;jom Homepage&lt;/a&gt;. Disable it if you experience problems with your builds.</source>
+        <location line="-777"/>
+        <location line="+104"/>
+        <location line="+18"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+10"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+15"/>
+        <location line="+13"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+17"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+10"/>
+        <location line="+21"/>
+        <location line="+46"/>
+        <location line="+11"/>
+        <location line="+40"/>
+        <location line="+18"/>
+        <location line="+19"/>
+        <location line="+11"/>
+        <location line="+12"/>
+        <location line="+20"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+29"/>
+        <location line="+22"/>
+        <location line="+28"/>
+        <location line="+15"/>
+        <location line="+56"/>
+        <location line="+1"/>
+        <location line="+17"/>
+        <location line="+1"/>
+        <location line="+23"/>
+        <location line="+1"/>
+        <location line="+19"/>
+        <location line="+1"/>
+        <location line="+20"/>
+        <location line="+1"/>
+        <location line="+12"/>
+        <source>Location</source>
+        <translation type="unfinished">Posizione</translation>
+    </message>
+    <message>
+        <location line="-777"/>
+        <source>Qt Test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Form</source>
+        <location line="+1"/>
+        <source>Google Test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Manage Sessions...</source>
-        <translation type="unfinished">Gestisci le Sessioni...</translation>
-    </message>
-    <message>
-        <source>Create New Project...</source>
-        <translation type="unfinished">Crea un Nuovo Progetto...</translation>
-    </message>
-    <message>
-        <source>Open Recent Project</source>
-        <translation type="unfinished">Apri un Progetto Recente</translation>
-    </message>
-    <message>
-        <source>Resume Session</source>
-        <translation type="unfinished">Ripristina la Sessione</translation>
-    </message>
-    <message>
-        <source>%1 (last session)</source>
-        <translation type="unfinished">%1 (sessione precedente)</translation>
-    </message>
-    <message>
-        <source>New Project...</source>
-        <translation type="unfinished">Nuovo Progetto...</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Welcome</name>
-    <message>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QtC::QmakeProjectManager</name>
-    <message>
-        <source>Form</source>
+        <location line="+1"/>
+        <source>Qt Quick Test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The header file</source>
+        <location line="+1"/>
+        <source>Boost Test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Sources</source>
+        <location line="+1"/>
+        <source>Catch2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Widget librar&amp;y:</source>
+        <location line="+1"/>
+        <source>Test framework:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Widget project &amp;file:</source>
+        <location line="+1"/>
+        <source>GUI Application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Widget h&amp;eader file:</source>
+        <location line="+1"/>
+        <source>Test suite name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The header file has to be specified in source code.</source>
+        <location line="+1"/>
+        <source>Test case name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Widge&amp;t source file:</source>
+        <location line="+1"/>
+        <source>Requires QApplication</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Widget &amp;base class:</source>
+        <location line="+1"/>
+        <source>Generate setup code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>QWidget</source>
+        <location line="+1"/>
+        <source>Generate initialization and cleanup code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Plugin class &amp;name:</source>
+        <location line="+1"/>
+        <source>Enable C++11</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Plugin &amp;header file:</source>
+        <location line="+1"/>
+        <source>Googletest source directory (optional):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Plugin sou&amp;rce file:</source>
+        <location line="+1"/>
+        <source>Boost include directory (optional):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Icon file:</source>
+        <location line="+1"/>
+        <source>Catch2 include directory (optional):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Link library</source>
+        <location line="+1"/>
+        <source>Use Qt libraries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Create s&amp;keleton</source>
+        <location line="+1"/>
+        <location line="+281"/>
+        <location line="+21"/>
+        <location line="+97"/>
+        <location line="+18"/>
+        <location line="+99"/>
+        <location line="+50"/>
+        <location line="+43"/>
+        <source>qmake</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Include pro&amp;ject</source>
+        <location line="-608"/>
+        <location line="+281"/>
+        <location line="+21"/>
+        <location line="+97"/>
+        <location line="+18"/>
+        <location line="+97"/>
+        <location line="+29"/>
+        <location line="+23"/>
+        <location line="+43"/>
+        <source>CMake</source>
+        <translation type="unfinished">CMake</translation>
+    </message>
+    <message>
+        <location line="-608"/>
+        <location line="+281"/>
+        <location line="+21"/>
+        <location line="+97"/>
+        <location line="+18"/>
+        <location line="+126"/>
+        <location line="+23"/>
+        <location line="+44"/>
+        <source>Qbs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Description</source>
+        <location line="-609"/>
+        <location line="+282"/>
+        <location line="+21"/>
+        <location line="+97"/>
+        <location line="+18"/>
+        <location line="+96"/>
+        <location line="+29"/>
+        <location line="+23"/>
+        <location line="+44"/>
+        <source>Build system:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>G&amp;roup:</source>
+        <location line="-609"/>
+        <source>Project and Test Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Tooltip:</source>
+        <location line="+1"/>
+        <location line="+30"/>
+        <location line="+21"/>
+        <location line="+21"/>
+        <location line="+257"/>
+        <location line="+115"/>
+        <location line="+20"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+27"/>
+        <location line="+22"/>
+        <location line="+26"/>
+        <location line="+16"/>
+        <location line="+32"/>
+        <location line="+148"/>
+        <source>Details</source>
+        <translation type="unfinished">Dettagli</translation>
+    </message>
+    <message>
+        <location line="-770"/>
+        <location line="+89"/>
+        <location line="+195"/>
+        <location line="+47"/>
+        <location line="+11"/>
+        <location line="+40"/>
+        <location line="+18"/>
+        <location line="+18"/>
+        <location line="+12"/>
+        <location line="+97"/>
+        <location line="+22"/>
+        <location line="+28"/>
+        <location line="+14"/>
+        <location line="+34"/>
+        <location line="+148"/>
+        <source>Kit Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>W&amp;hat&apos;s this:</source>
+        <location line="-772"/>
+        <location line="+89"/>
+        <location line="+195"/>
+        <location line="+47"/>
+        <location line="+11"/>
+        <location line="+40"/>
+        <location line="+18"/>
+        <location line="+18"/>
+        <location line="+12"/>
+        <location line="+97"/>
+        <location line="+22"/>
+        <location line="+28"/>
+        <location line="+14"/>
+        <location line="+34"/>
+        <location line="+148"/>
+        <source>Kits</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The widget is a &amp;container</source>
+        <location line="-772"/>
+        <location line="+28"/>
+        <location line="+21"/>
+        <location line="+21"/>
+        <location line="+19"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+11"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+12"/>
+        <location line="+12"/>
+        <location line="+14"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+17"/>
+        <location line="+9"/>
+        <location line="+21"/>
+        <location line="+47"/>
+        <location line="+11"/>
+        <location line="+40"/>
+        <location line="+18"/>
+        <location line="+18"/>
+        <location line="+12"/>
+        <location line="+12"/>
+        <location line="+20"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+29"/>
+        <location line="+22"/>
+        <location line="+28"/>
+        <location line="+14"/>
+        <location line="+34"/>
+        <location line="+148"/>
+        <source>Project Management</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Property defa&amp;ults</source>
+        <location line="-772"/>
+        <location line="+28"/>
+        <location line="+21"/>
+        <location line="+40"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+11"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+12"/>
+        <location line="+12"/>
+        <location line="+14"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+17"/>
+        <location line="+9"/>
+        <location line="+21"/>
+        <location line="+47"/>
+        <location line="+11"/>
+        <location line="+40"/>
+        <location line="+18"/>
+        <location line="+18"/>
+        <location line="+12"/>
+        <location line="+12"/>
+        <location line="+20"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+29"/>
+        <location line="+22"/>
+        <location line="+28"/>
+        <location line="+14"/>
+        <location line="+34"/>
+        <location line="+148"/>
+        <source>Summary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>dom&amp;XML:</source>
+        <location line="-772"/>
+        <source>Creates a new unit test project. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Select Icon</source>
+        <location line="+1"/>
+        <location line="+89"/>
+        <location line="+341"/>
+        <location line="+161"/>
+        <source>Other Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Icon files (*.png *.ico *.jpg *.xpm *.tif *.svg)</source>
+        <location line="-590"/>
+        <source>Auto Test Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>WizardPage</source>
+        <location line="+3"/>
+        <source>Fully qualified name, including namespaces</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Plugin and Collection Class Information</source>
+        <location line="+1"/>
+        <location line="+27"/>
+        <location line="+21"/>
+        <location line="+251"/>
+        <location line="+146"/>
+        <location line="+37"/>
+        <location line="+120"/>
+        <source>Class name:</source>
+        <translation type="unfinished">Nome classe:</translation>
+    </message>
+    <message>
+        <location line="-601"/>
+        <location line="+49"/>
+        <location line="+396"/>
+        <source>&lt;Custom&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify the properties of the plugin library and the collection class.</source>
+        <location line="-444"/>
+        <location line="+26"/>
+        <location line="+23"/>
+        <location line="+256"/>
+        <location line="+140"/>
+        <location line="+36"/>
+        <location line="+120"/>
+        <source>Base class:</source>
+        <translation type="unfinished">Classe Base:</translation>
+    </message>
+    <message>
+        <location line="-600"/>
+        <location line="+1"/>
+        <location line="+49"/>
+        <source>%{BaseCB}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Collection class:</source>
+        <location line="-48"/>
+        <source>Include QObject</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Collection header file:</source>
+        <location line="+1"/>
+        <source>Include QWidget</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Collection source file:</source>
+        <location line="+1"/>
+        <source>Include QMainWindow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Include QDeclarativeItem - Qt Quick 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Include QQuickItem - Qt Quick 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Include QSharedData</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add Q_OBJECT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add QML_ELEMENT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+21"/>
+        <location line="+279"/>
+        <location line="+291"/>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-590"/>
+        <location line="+21"/>
+        <location line="+279"/>
+        <location line="+291"/>
+        <source>Header file:</source>
+        <translation type="unfinished">File Header:</translation>
+    </message>
+    <message>
+        <location line="-590"/>
+        <location line="+21"/>
+        <location line="+279"/>
+        <location line="+291"/>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-590"/>
+        <location line="+21"/>
+        <location line="+21"/>
+        <location line="+258"/>
+        <location line="+133"/>
+        <location line="+36"/>
+        <location line="+122"/>
+        <source>Source file:</source>
+        <translation type="unfinished">File Sorgente:</translation>
+    </message>
+    <message>
+        <location line="-590"/>
+        <location line="+21"/>
+        <location line="+21"/>
+        <location line="+570"/>
+        <location line="+35"/>
+        <location line="+20"/>
+        <location line="+22"/>
+        <location line="+20"/>
+        <source>Path:</source>
+        <translation type="unfinished">Percorso:</translation>
+    </message>
+    <message>
+        <location line="-708"/>
+        <location line="+42"/>
+        <location line="+392"/>
+        <location line="+36"/>
+        <source>Define Class</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-466"/>
+        <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+70"/>
+        <location line="+9"/>
+        <source>C/C++</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-78"/>
+        <source>C++ Class</source>
+        <translation type="unfinished">Classe C++</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Customize header row</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Items are editable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows and columns can be added</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows and columns can be removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fetch data dynamically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Define Item Model Class</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Creates a Qt item model.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+69"/>
+        <location line="+57"/>
+        <location line="+53"/>
+        <location line="+9"/>
+        <source>Qt</source>
+        <translation type="unfinished">Qt</translation>
+    </message>
+    <message>
+        <location line="-187"/>
+        <source>Qt Item Model</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Qt for Python module:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>You can choose Qt classes only if you select a Qt for Python module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Import QtCore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Import QtWidgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Import QtQuick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Creates new Python class file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+150"/>
+        <source>Python</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-149"/>
+        <source>Python Class</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+15"/>
+        <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <source>int main(int argc, char *argv[])
+{
+    return 0;
+}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Code:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QtCore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QtCore, QtWidgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use Qt Modules:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Application bundle (macOS)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Define Code snippet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Code snippet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Code Snippet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a header file that you can add to a C/C++ project.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>C/C++ Header File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a source file that you can add to a C/C++ project.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>C/C++ Source File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose a Form Template</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Form Template</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Creates a Qt Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Designer Form</source>
+        <translation type="unfinished">Form di Qt Designer</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <source>GLSL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-26"/>
+        <source>Fragment Shader (Desktop OpenGL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Vertex Shader (Desktop OpenGL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Fragment Shader (OpenGL/ES 2.0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Vertex Shader (OpenGL/ES 2.0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a Java file with boilerplate code.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Java</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Java File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Stateless library</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Options</source>
+        <translation type="unfinished">Opzioni</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Creates a JavaScript file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>JS File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Model name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+67"/>
+        <source>Location:</source>
+        <translation type="unfinished">Posizione:</translation>
+    </message>
+    <message>
+        <location line="-66"/>
+        <location line="+67"/>
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-66"/>
+        <source>Model Name and Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Creates a new empty model with an empty diagram.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+5"/>
+        <location line="+62"/>
+        <source>Modeling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-66"/>
+        <source>Model</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Creates a scratch model using a temporary file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Scratch Model</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates an empty Nim file using UTF-8 charset.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+9"/>
+        <source>Nim</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-8"/>
+        <source>Nim File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates an empty Nim script file using UTF-8 charset.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Nim Script File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates an empty Python script file using UTF-8 charset.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Python File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a Qt Resource file (.qrc).</source>
+        <translation type="unfinished">Crea un file di Risorse Qt (.qrc).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Resource File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>QML File (Qt Quick 2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Creates a scratch buffer using a temporary file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+21"/>
+        <source>General</source>
+        <translation type="unfinished">Generale</translation>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Scratch Buffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>State chart name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>State Chart Name and Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Creates a new empty state chart.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>State Chart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates an empty file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Empty File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This wizard creates a simple Qt-based console application.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+21"/>
+        <location line="+97"/>
+        <location line="+18"/>
+        <location line="+191"/>
+        <source>Meson</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-325"/>
+        <location line="+21"/>
+        <location line="+97"/>
+        <location line="+18"/>
+        <location line="+96"/>
+        <location line="+29"/>
+        <location line="+23"/>
+        <location line="+44"/>
+        <source>Define Build System</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-327"/>
+        <location line="+21"/>
+        <location line="+97"/>
+        <location line="+18"/>
+        <location line="+96"/>
+        <location line="+29"/>
+        <location line="+23"/>
+        <location line="+44"/>
+        <source>Build System</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-327"/>
+        <location line="+47"/>
+        <location line="+246"/>
+        <location line="+48"/>
+        <location line="+148"/>
+        <source>Translation File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-488"/>
+        <location line="+47"/>
+        <location line="+246"/>
+        <location line="+48"/>
+        <location line="+148"/>
+        <source>Translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-484"/>
+        <source>Creates a project containing a single main.cpp file with a stub implementation.
+
+Preselects a desktop Qt for building the application if available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+265"/>
+        <location line="+28"/>
+        <location line="+48"/>
+        <source>Application (Qt)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-340"/>
+        <source>Qt Console Application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This wizard creates a C++ library project.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+307"/>
+        <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
+        <translation type="unfinished">Inserisci le informazioni fondamentali sulla classe di cui vuoi generare lo scheletro dei file sorgenti.</translation>
+    </message>
+    <message>
+        <location line="-306"/>
+        <source>Shared Library</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Statically Linked Library</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt Plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+49"/>
+        <source>Type:</source>
+        <translation>Tipo:</translation>
+    </message>
+    <message>
+        <location line="-48"/>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>QAccessiblePlugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QGenericPlugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QIconEnginePlugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QImageIOPlugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QScriptExtensionPlugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QSqlDriverPlugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QStylePlugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>None</source>
+        <translation>Nessuno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Core</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gui</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Widgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt module:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+115"/>
+        <location line="+37"/>
+        <location line="+68"/>
+        <location line="+26"/>
+        <location line="+16"/>
+        <location line="+180"/>
+        <source>Define Project Details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-434"/>
+        <source>Creates a C++ library. This can be used to create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+18"/>
+        <location line="+178"/>
+        <location line="+246"/>
+        <source>Library</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-441"/>
+        <source>C++ Library</source>
+        <translation type="unfinished">Libreria C++</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Creates a simple Nim application.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+40"/>
+        <location line="+18"/>
+        <location line="+18"/>
+        <source>Non-Qt Project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-75"/>
+        <source>Nim Application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Binary</source>
+        <translation type="unfinished">Binario</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Hybrid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Author:</source>
+        <translation type="unfinished">Autore:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+407"/>
+        <source>Description:</source>
+        <translation type="unfinished">Descrizione:</translation>
+    </message>
+    <message>
+        <location line="-406"/>
+        <source>0.1.0</source>
+        <translation type="unfinished">0.1.0</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Version:</source>
+        <translation type="unfinished">Versione:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>MIT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>GPL-2.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Apache-2.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>GPL-3.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>BSD-3-Clause</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>LGPL-2.1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>LGPL-3.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPL-2.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Proprietary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+391"/>
+        <source>License:</source>
+        <translation type="unfinished">Licenza:</translation>
+    </message>
+    <message>
+        <location line="-390"/>
+        <source>C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cpp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Objective C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Javascript</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Backend:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1.0.0</source>
+        <translation type="unfinished">1.0.0</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Min Nim Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Define Project Configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+253"/>
+        <location line="+1"/>
+        <location line="+34"/>
+        <location line="+1"/>
+        <location line="+17"/>
+        <location line="+1"/>
+        <location line="+23"/>
+        <location line="+1"/>
+        <location line="+19"/>
+        <location line="+1"/>
+        <source>Configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Creates a Nim application with Nimble.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Nimble Application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Creates a simple C application with no dependencies.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Plain C Application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Creates a simple C++ application with no dependencies.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Plain C++ Application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This wizard creates an empty .pro file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a qmake-based project without any files. This allows you to create an application without any default classes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Empty qmake Project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+12"/>
+        <location line="+25"/>
+        <location line="+12"/>
+        <source>PySide version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+20"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <source>Application (Qt for Python)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-55"/>
+        <source>Empty Application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+37"/>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <location line="+36"/>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <location line="+36"/>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-35"/>
+        <location line="+36"/>
+        <source>Project file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-31"/>
+        <source>Creates a Qt for Python application that contains an empty window.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Empty Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>PySide 6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PySide 5.15</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PySide 5.14</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PySide 5.13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PySide 5.12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Creates a Qt Quick application that contains an empty window.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Quick Application - Empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Creates a Qt for Python application that includes a Qt Designer-based widget (ui file) - Requires .ui to Python conversion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Window UI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+52"/>
+        <source>Qt 6.2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <location line="+52"/>
+        <source>Qt 5.15</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <location line="+52"/>
+        <source>Qt 5.14</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <location line="+52"/>
+        <source>Qt 5.13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <location line="+52"/>
+        <source>Qt 5.12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <location line="+52"/>
+        <source>Minimum required Qt version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <source>MyItem</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Object class-name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>com.mycompany.qmlcomponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>URI:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Create example project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Custom Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Creates a C++ plugin to load Qt Quick extensions dynamically into applications using the QQmlEngine class.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Quick 2 Extension Plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Create a project that you can open in Qt Design Studio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Create a project with a structure that is compatible both with Qt Design Studio (via .qmlproject) and with Qt Creator (via CMakeLists.txt). It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+27"/>
+        <location line="+16"/>
+        <source>Use Qt Virtual Keyboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>The minimum version of Qt you want to build the application for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a Qt Quick application that contains an empty window. Optionally, you can create a Qt Design Studio project.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Quick Application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Creates a Qt Quick application that contains an empty window.
+
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Quick Application (compat)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Creates a Qt Quick 2 UI project with a QML entry point. To use it, you need to have a QML runtime environment.
+
+Use this only if you are prototyping. You cannot create a full application with this. Consider using a Qt Quick Application project instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Quick UI Prototype</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Generate form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Form file:</source>
+        <translation type="unfinished">File form:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Class Information</source>
+        <translation type="unfinished">Informazioni sulla Classe</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Creates a widget-based Qt application that contains a Qt Designer-based main window.
+
+Preselects a desktop Qt for building the application if available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Widgets Application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+35"/>
+        <location line="+18"/>
+        <location line="+24"/>
+        <location line="+20"/>
+        <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <location line="+53"/>
+        <location line="+24"/>
+        <location line="+20"/>
+        <source>Repository:</source>
+        <translation type="unfinished">Deposito:</translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <location line="+35"/>
+        <location line="+18"/>
+        <location line="+24"/>
+        <location line="+20"/>
+        <source>Repository URL is not valid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-95"/>
+        <location line="+55"/>
+        <location line="+22"/>
+        <location line="+20"/>
+        <source>%{defaultDir}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <location line="+55"/>
+        <location line="+22"/>
+        <location line="+20"/>
+        <source>Directory:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <location line="+33"/>
+        <location line="+22"/>
+        <location line="+22"/>
+        <location line="+20"/>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <source>Use existing directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Proceed with cloning the repository, even if the target directory already exists.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Stacked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Make the new branch depend on the availability of the source branch.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Standalone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Do not use a shared repository.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bind new branch to source location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bind the new branch to the source location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Switch checkout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Switch the checkout in the current directory to the new branch.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hardlink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use hard-links in working tree.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No working-tree</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Do not create a working tree.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Revision:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+62"/>
+        <location line="+21"/>
+        <source>Specify repository URL, checkout directory, and path.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-82"/>
+        <source>Running Bazaar branch...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Clones a Bazaar branch and tries to load the contained project.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+18"/>
+        <location line="+24"/>
+        <location line="+20"/>
+        <location line="+21"/>
+        <source>Import Project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-82"/>
+        <source>Bazaar Clone (Or Branch)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Module:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Specify module and checkout directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Running CVS checkout...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+23"/>
+        <location line="+1"/>
+        <location line="+19"/>
+        <location line="+1"/>
+        <location line="+20"/>
+        <location line="+1"/>
+        <source>Checkout</source>
+        <translation type="unfinished">Checkout</translation>
+    </message>
+    <message>
+        <location line="-64"/>
+        <source>Checks out a CVS repository and tries to load the contained project.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>CVS Checkout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&lt;default branch&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Branch:</source>
+        <translation type="unfinished">Ramo:</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Recursive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Recursively initialize submodules.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Specify repository URL, branch, checkout directory, and path.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Running Git clone...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Clones a Git repository and tries to load the contained project.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Git Clone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Running Mercurial clone...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Clones a Mercurial repository and tries to load the contained project.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mercurial Clone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Trust Server Certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Running Subversion checkout...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Checks out a Subversion repository and tries to load the contained project.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Subversion Checkout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This wizard creates a custom Qt Creator plugin.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Specify details about your custom Qt Creator plugin.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Plugin name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Resource file:</source>
+        <location line="+1"/>
+        <source>MyCompany</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>icons.qrc</source>
+        <location line="+1"/>
+        <source>Vendor name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Custom Qt Widget Wizard</source>
+        <location line="+1"/>
+        <source>(C) %{VendorName}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Custom Widget List</source>
+        <location line="+1"/>
+        <source>Copyright:</source>
+        <translation type="unfinished">Copyright:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Put short license information here</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Widget &amp;Classes:</source>
+        <location line="+2"/>
+        <source>Put a short description of your plugin here</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify the list of custom widgets and their properties.</source>
+        <location line="+2"/>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>URL:</source>
+        <translation>URL:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt Creator build:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Creates a custom Qt Creator plugin.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Creator Plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-117"/>
+        <location line="+1"/>
+        <source>Clone</source>
+        <translation type="unfinished">Clona</translation>
     </message>
 </context>
 <context>
-    <name>QtC::Welcome</name>
+    <name>QtC::QmlJS</name>
     <message>
-        <source>Examples not installed</source>
-        <translation type="unfinished">Gli esempi non sono installati</translation>
+        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+364"/>
+        <location line="+9"/>
+        <source>XML error on line %1, col %2: %3</source>
+        <translation type="unfinished">Errore XML alla riga %1, colonna %2: %3</translation>
     </message>
     <message>
-        <source>Open</source>
-        <translation type="unfinished">Apri</translation>
-    </message>
-    <message>
-        <source>Tutorials</source>
-        <translation type="unfinished">Guide</translation>
-    </message>
-    <message>
-        <source>Explore Qt Examples</source>
-        <translation type="unfinished">Esplora gli Esempi Qt</translation>
-    </message>
-    <message>
-        <source>Did You Know?</source>
-        <translation type="unfinished">Lo Sapevi Che..?</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Qt Creator - A quick tour&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Qt Creator - Introduzione veloce&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Creating an address book</source>
-        <translation type="unfinished">Creare una rubrica</translation>
-    </message>
-    <message>
-        <source>Understanding widgets</source>
-        <translation type="unfinished">Capire i widget</translation>
-    </message>
-    <message>
-        <source>Building with qmake</source>
-        <translation type="unfinished">Compilare con qmake</translation>
-    </message>
-    <message>
-        <source>Writing test cases</source>
-        <translation type="unfinished">Scrivere test case</translation>
-    </message>
-    <message>
-        <source>Choose an example...</source>
-        <translation type="unfinished">Scegli un esempio...</translation>
-    </message>
-    <message>
-        <source>Cmd</source>
-        <comment>Shortcut key</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt</source>
-        <comment>Shortcut key</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl</source>
-        <comment>Shortcut key</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>You can switch between Qt Creator&apos;s modes using &lt;tt&gt;Ctrl+number&lt;/tt&gt;:&lt;ul&gt;&lt;li&gt;1 - Welcome&lt;/li&gt;&lt;li&gt;2 - Edit&lt;/li&gt;&lt;li&gt;3 - Debug&lt;/li&gt;&lt;li&gt;4 - Projects&lt;/li&gt;&lt;li&gt;5 - Help&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;6 - Output&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="unfinished">Puoi passare tra le modalità di Qt Creator usando &lt;tt&gt;Ctrl+numero&lt;/tt&gt;:&lt;ul&gt;&lt;li&gt;1 - Benvenuto&lt;/li&gt;&lt;li&gt;2 - Modifica&lt;/li&gt;&lt;li&gt;3 - Debug&lt;/li&gt;&lt;li&gt;4 - Progetti&lt;/li&gt;&lt;li&gt;5 - Guida&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;6 - Output&lt;/li&gt;&lt;/ul&gt;</translation>
-    </message>
-    <message>
-        <source>You can show and hide the side bar using &lt;tt&gt;%1+0&lt;tt&gt;.</source>
-        <extracomment>%1 gets replaced by Alt (Win/Unix) or Cmd (Mac)</extracomment>
-        <translation type="unfinished">Puoi mostrare o nascondere la barra laterale con &lt;tt&gt;%1+0&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can fine tune the &lt;tt&gt;Find&lt;/tt&gt; function by selecting &amp;quot;Whole Words&amp;quot; or &amp;quot;Case Sensitive&amp;quot;. Simply click on the icons on the right end of the line edit.</source>
-        <translation type="unfinished">Puoi affinare la funzione &lt;tt&gt;Ricerca&lt;/tt&gt; selezionando &amp;quot;Parole Intere&amp;quot; o &amp;quot;Distingui le Maiuscole&amp;quot;. Basta fare clic sulle icone a destra della casella di ricerca.</translation>
-    </message>
-    <message>
-        <source>If you add &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-external-library-handling.html&quot;&gt;external libraries&lt;/a&gt;, Qt Creator will automatically offer syntax highlighting and code completion.</source>
-        <translation type="unfinished">Se aggiungi &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-external-library-handling.html&quot;&gt;librerie esterne&lt;/a&gt;, Qt Creator ne evidenzierà la sintassi e offrirà il relativo completamento del codice automaticamente.</translation>
-    </message>
-    <message>
-        <source>The code completion is CamelCase-aware. For example, to complete &lt;tt&gt;namespaceUri&lt;/tt&gt; you can just type &lt;tt&gt;nU&lt;/tt&gt; and hit &lt;tt&gt;Ctrl+Space&lt;/tt&gt;.</source>
-        <translation type="unfinished">Il completamento del codice conosce il CamelCase. Ad esempio, per completare &lt;tt&gt;namespaceUri&lt;/tt&gt; basta digitare &lt;tt&gt;nU&lt;/tt&gt; e premere &lt;tt&gt;Ctrl+Spazio&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can force code completion at any time using &lt;tt&gt;Ctrl+Space&lt;/tt&gt;.</source>
-        <translation type="unfinished">Puoi invocare il completamento del codice in qualsiasi momento usando &lt;tt&gt;Ctrl+Spazio&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can start Qt Creator with a session by calling &lt;tt&gt;qtcreator &amp;lt;sessionname&amp;gt;&lt;/tt&gt;.</source>
-        <translation type="unfinished">Puoi avviare una sessione di Qt Creator lanciando &lt;tt&gt;qtcreator &amp;lt;nomesessione&amp;gt;&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can return to edit mode from any other mode at any time by hitting &lt;tt&gt;Escape&lt;/tt&gt;.</source>
-        <translation type="unfinished">Puoi tornare alla modalità di modifica da ogni altra modalità, ed in qualsiasi momento, premendo &lt;tt&gt;Esc&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can switch between the output pane by hitting &lt;tt&gt;%1+n&lt;/tt&gt; where n is the number denoted on the buttons at the window bottom:&lt;ul&gt;&lt;li&gt;1 - Build Issues&lt;/li&gt;&lt;li&gt;2 - Search Results&lt;/li&gt;&lt;li&gt;3 - Application Output&lt;/li&gt;&lt;li&gt;4 - Compile Output&lt;/li&gt;&lt;/ul&gt;</source>
-        <extracomment>%1 gets replaced by Alt (Win/Unix) or Cmd (Mac)</extracomment>
-        <translation type="unfinished">Puoi passare tra i pannelli di output premendo &lt;tt&gt;%1+n&lt;/tt&gt; dove n è il numero scritto sui bottoni in basso alla finestra: &lt;ul&gt;&lt;li&gt;1 - Problemi di Compilazione&lt;/li&gt;&lt;li&gt;2 - Risultati della Ricerca&lt;/li&gt;&lt;li&gt;3 - Output dell&apos;Applicazione&lt;/li&gt;&lt;li&gt;4 - Output di Compilazione&lt;/li&gt;&lt;/ul&gt;</translation>
-    </message>
-    <message>
-        <source>You can quickly search methods, classes, help and more using the &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-navigation.html&quot;&gt;Locator bar&lt;/a&gt; (&lt;tt&gt;%1+K&lt;/tt&gt;).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>You can add custom build steps in the &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-build-settings.html&quot;&gt;build settings&lt;/a&gt;.</source>
-        <translation type="unfinished">Puoi aggiungere passi di compilazione nelle &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-build-settings.html&quot;&gt;impostazioni di compilazione&lt;/a&gt;.</translation>
-    </message>
-    <message>
-        <source>Within a session, you can add &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-build-settings.html#dependencies&quot;&gt;dependencies&lt;/a&gt; between projects.</source>
-        <translation type="unfinished">Nell&apos;ambito di una sessione, puoi aggiungere &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-build-settings.html#dependencies&quot;&gt;dipendenze&lt;/a&gt; tra i progetti.</translation>
-    </message>
-    <message>
-        <source>You can set the preferred editor encoding for every project in &lt;tt&gt;Projects -&gt; Editor Settings -&gt; Default Encoding&lt;/tt&gt;.</source>
-        <translation type="unfinished">Puoi impostare la codifica dei file preferita, per ciascun progetto, in &lt;tt&gt;Progetti -&gt; Impostazioni dell&apos;Editor -&gt; Codifica&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can modify the binary that is being executed when you press the &lt;tt&gt;Run&lt;/tt&gt; button: Add a &lt;tt&gt;Custom Executable&lt;/tt&gt; by clicking the &lt;tt&gt;+&lt;/tt&gt; button in &lt;tt&gt;Projects -&gt; Run Settings -&gt; Run Configuration&lt;/tt&gt; and then select the new target in the combo box.</source>
-        <translation type="unfinished">Puoi cambiare l&apos;eseguibile che sarà avviato premendo il bottone &lt;tt&gt;Esegui&lt;/tt&gt;: Aggiungi un &lt;tt&gt;Eseguibile Personalizzato&lt;/tt&gt; facendo clic sul bottone &lt;tt&gt;+&lt;/tt&gt; in &lt;tt&gt;Progetti -&gt; Impostazioni di Esecuzione -&gt; Configurazione di Esecuzione&lt;/tt&gt;.</translation>
-    </message>
-    <message>
-        <source>You can use Qt Creator with a number of &lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-version-control.html&quot;&gt;revision control systems&lt;/a&gt; such as Subversion, Perforce, CVS and Git.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>In the editor, &lt;tt&gt;F2&lt;/tt&gt; toggles declaration and definition while &lt;tt&gt;F4&lt;/tt&gt; toggles header file and source file.</source>
-        <translation type="unfinished">Nell&apos;editor, &lt;tt&gt;F2&lt;/tt&gt; commuta tra la dichiarazione e la definizione mentre &lt;tt&gt;F4&lt;/tt&gt; alterna tra il file header ed il file sorgente.</translation>
+        <location line="+8"/>
+        <source>The &lt;RCC&gt; root element is missing.</source>
+        <translation type="unfinished">Non è presente l&apos;elemento &lt;RCC&gt; nella radice.</translation>
     </message>
 </context>
 <context>
-    <name>QtC::QmakeProjectManager</name>
+    <name>QtC::TabbedEditor</name>
     <message>
-        <source>Installed S60 SDKs:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+96"/>
+        <source>Move tab left</source>
+        <translation>Sposta scheda a sinistra</translation>
     </message>
     <message>
-        <source>SDK Location</source>
-        <translation type="unfinished"></translation>
+        <location line="+9"/>
+        <source>Switch to next tab</source>
+        <translation>Passa alla scheda successiva</translation>
     </message>
     <message>
-        <source>Qt Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Refresh</source>
-        <translation type="unfinished">Aggiorna</translation>
-    </message>
-    <message>
-        <source>S60 SDKs</source>
-        <translation type="unfinished"></translation>
+        <location line="+14"/>
+        <source>Move tab right</source>
+        <translation>Sposta scheda a destra</translation>
     </message>
 </context>
 <context>
     <name>QtC::TextEditor</name>
     <message>
+        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+72"/>
+        <source>Full</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>First Letter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Case-sensitivity:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Manually</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>When Triggered</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Activate completion:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Timeout in ms:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Character threshold:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Autocomplete common &amp;prefix</source>
+        <translation>Autocompleta il prefisso &amp;comune</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Inserts the common prefix of available completion items.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Automatically split strings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Splits a string into two lines by adding an end quote at the cursor position when you press Enter and a start quote to the next line, before the rest of the string.
+
+In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Insert opening or closing brackets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Insert closing quote</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Surround text selection with brackets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>When typing a matching bracket and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Insert &amp;space after function name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Surround text selection with quotes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>When typing a matching quote and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Animate automatically inserted text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Show a visual hint when for example a brace or a quote is automatically inserted by the editor.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Highlight automatically inserted text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Skip automatically inserted character when typing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Skip automatically inserted character if re-typed manually after completion or by pressing tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Remove automatically inserted text on backspace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Remove the automatically inserted character if the trigger is deleted by backspace after the completion.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Overwrite closing punctuation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Automatically overwrite closing parentheses and quotes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Enable Doxygen blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Generate brief description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Generates a &lt;i&gt;brief&lt;/i&gt; command with an initial description for the corresponding declaration.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add leading asterisks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+78"/>
+        <source>&amp;Automatically insert matching characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Documentation Comments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+101"/>
+        <source>Completion</source>
+        <translation type="unfinished">Completamento</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+125"/>
+        <location line="+79"/>
+        <location line="+268"/>
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+319"/>
+        <source>Error</source>
+        <translation type="unfinished">Errore</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Not a valid trigger. A valid trigger can only contain letters, numbers, or underscores, where the first character is limited to letter or underscore.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Trigger</source>
+        <translation>Trigger</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Trigger Variant</source>
+        <translation>Variante trigger</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Error reverting snippet.</source>
+        <translation>Errore durante il ripristino dello snippet.</translation>
+    </message>
+    <message>
+        <location line="+121"/>
+        <source>Revert Built-in</source>
+        <translation>Ripristina Built-in</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Group:</source>
+        <translation>Gruppo:</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Add</source>
+        <translation type="unfinished">Aggiungi</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Restore Removed Built-ins</source>
+        <translation>Ripristina Built-in rimossi</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Reset All</source>
+        <translation>Rirpristina tutto</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Error While Saving Snippet Collection</source>
+        <translation>Errore durante il salvataggio della raccolta di snippet</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>No snippet selected.</source>
+        <translation>Nessuno snippet selezionato.</translation>
+    </message>
+    <message>
+        <location line="+88"/>
+        <source>Snippets</source>
+        <translation>Frammenti</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+158"/>
+        <source>Line: 9999, Col: 999</source>
+        <translation>Riga: 9999, Col: 999</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Cursor position: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+880"/>
+        <source>Other annotations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+277"/>
+        <source>Print Document</source>
+        <translation>Stampa il Documento</translation>
+    </message>
+    <message>
+        <location line="+327"/>
+        <source>File Error</source>
+        <translation>Errore file</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>The text is too large to be displayed (%1 MB).</source>
+        <translation>Il testo è troppo grande per essere visualizzato (%1 MB).</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;Errore:&lt;/b&gt; Impossibile decodificare &quot;%1&quot; con l&apos;encoding &quot;%2&quot;. Modifica non consentita.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Select Encoding</source>
+        <translation>Seleziona Codifica</translation>
+    </message>
+    <message>
+        <location line="+1154"/>
+        <source>Snippet Parse Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+491"/>
+        <source>A highlight definition was not found for this file. Would you like to download additional highlight definition files?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>More than one highlight definition was found for this file. Which one should be used to highlight this file?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Remember My Choice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2932"/>
+        <source>Zoom: %1%</source>
+        <translation>Zoom: %1%</translation>
+    </message>
+    <message>
+        <location line="+1762"/>
+        <source>Delete UTF-8 BOM on Save</source>
+        <translation>Elimina BOM UTOM-8 su Salva</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add UTF-8 BOM on Save</source>
+        <translation>Aggiungi BOM UTF-8 su Salva</translation>
+    </message>
+    <message>
+        <location line="-7916"/>
+        <source>Line: %1, Col: %2</source>
+        <translation>Riga: %1, Col: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+125"/>
+        <source>&amp;Clean whitespace</source>
+        <translation>&amp;Pulizia spaziature</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>In entire &amp;document</source>
+        <translation>In tutto il &amp;documento</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>Clean indentation</source>
+        <translation>Pulizia indentazione</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>&amp;Ensure newline at end of file</source>
+        <translation>&amp;Garantisci una riga vuota alla fine del file</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+22"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+Influences the indentation of continuation lines.
+
+&lt;ul&gt;
+&lt;li&gt;Not At All: Do not align at all. Lines will only be indented to the current logical indentation depth.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;With Spaces: Always use spaces for alignment, regardless of the other indentation settings.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)            c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;With Regular Indent: Use tabs and/or spaces for alignment, as configured above.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)(tab)(tab)  c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt; &lt;head/&gt;&lt;body&gt;
+Influenza l&apos;indentazione delle righe di continuazione.
+
+&lt;ul&gt;
+&lt;li&gt; Non allineare: le righe saranno indentate secondo i valori correnti.
+&lt;pre&gt;
+(tab)int i = foo (a, b
+(tab)c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt; Con spazi: usa sempre gli spazi per l&apos;allineamento, indipendentemente dalle altre impostazioni di indentazione.
+&lt;pre&gt;
+(tab)int i = foo (a, b
+(tab)          c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt; Con indentazione regolare: usa tabulazioni e/o spazi per l&apos;allineamento, come configurato sopra.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)(tab)(tab) c,d);
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Tabs And Indentation</source>
+        <translation>Tabulazioni e indentazione</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;L&apos;indentazione del codice è configurata nelle impostazioni &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; e &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The text editor indentation setting is used for non-code files only. See the C++ and Qt Quick coding style settings to configure indentation for code files.</source>
+        <translation>L&apos;impostazione dell&apos;indentazione dell&apos;editor di testo viene utilizzata solo per i file non di codice. Vedi le impostazioni di stile di codifica C++ e Qt Quick per configurare l&apos;indentazione per i file di codice.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Spaces Only</source>
+        <translation>Solo spazi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tabs Only</source>
+        <translation>Solo tabulazioni</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Mixed</source>
+        <translation>Misto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ta&amp;b size:</source>
+        <translation>Ta&amp;b:</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&amp;Indent size:</source>
+        <translation>&amp;Indentazione:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Not At All</source>
+        <translation>Non allineare</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>With Spaces</source>
+        <translation>Con spazi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>With Regular Indent</source>
+        <translation>Con indantazione regolare</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Serial Terminal Tab size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Tab policy:</source>
+        <translation>Regole tabulazione:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-23"/>
+        <source>Enable automatic &amp;indentation</source>
+        <translation>Abilita l&apos;&amp;indentazione automatica</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <source>Never</source>
+        <translation>Mai</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-279"/>
+        <source>Always</source>
+        <translation>Sempre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>In Leading White Space</source>
+        <translation>Nello spazio bianco iniziale</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-9"/>
+        <source>None</source>
+        <translation>Nessuno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Follows Previous Indents</source>
+        <translation>Segue le indentazioni precedenti</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unindents</source>
+        <translation>Elimina l&apos;indentazione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+Specifies how backspace interacts with indentation.
+
+&lt;ul&gt;
+&lt;li&gt;None: No interaction at all. Regular plain backspace behavior.
+&lt;/li&gt;
+
+&lt;li&gt;Follows Previous Indents: In leading white space it will take the cursor back to the nearest indentation level used in previous lines.
+&lt;/li&gt;
+
+&lt;li&gt;Unindents: If the character behind the cursor is a space it behaves as a backtab.
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
+</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+Specifica in che modo il Backspace interagisce con l&apos;indentazione.
+
+&lt;ul&gt;
+&lt;li&gt;Nessuno: nessuna interazione. Comportamento normale del Backspace.
+&lt;/li&gt;
+
+&lt;li&gt;Segue le indentazioni precedenti: nello spazio bianco iniziale riporta il cursore al livello dell&apos;indentazione più vicina utilizzata nelle righe precedenti.
+&lt;/li&gt;
+
+&lt;li&gt; Elimina l&apos;indentazione: se il carattere dietro il cursore è uno spazio si comporta come un backtab.
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Prefer single line comments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Skip clean whitespace for file types:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>For the file patterns listed, do not trim trailing whitespace.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>List of wildcard-aware file patterns, separated by commas or semicolons.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Always writes a newline character at the end of the file.</source>
+        <translation>Scrive sempre un carattere su una nuova riga alla fine del file.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Removes trailing whitespace upon saving.</source>
+        <translation>Rimuove gli spazi vuoti finali durante salvataggio.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Corrects leading whitespace according to tab settings.</source>
+        <translation>Corregge gli spazi bianchi iniziali in base alle impostazioni di tabulazione.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cleans whitespace in entire document instead of only for changed parts.</source>
+        <translation>Pulisce gli spazi bianchi in tutto il documento anziché solo nelle parti modificate.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Add If Encoding Is UTF-8</source>
+        <translation>Aggiungi se la codifica è UTF-8</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Keep If Already Present</source>
+        <translation>Mantieni se già presente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Always Delete</source>
+        <translation>Elimina sempre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+&lt;p&gt;How text editors should deal with UTF-8 Byte Order Marks. The options are:&lt;/p&gt;
+&lt;ul &gt;&lt;li&gt;&lt;i&gt;Add If Encoding Is UTF-8:&lt;/i&gt; always add a BOM when saving a file in UTF-8 encoding. Note that this will not work if the encoding is &lt;i&gt;System&lt;/i&gt;, as the text editor does not know what it actually is.&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Keep If Already Present: &lt;/i&gt;save the file with a BOM if it already had one when it was loaded.&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Always Delete:&lt;/i&gt; never write an UTF-8 BOM, possibly deleting a pre-existing one.&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Note that UTF-8 BOMs are uncommon and treated incorrectly by some editors, so it usually makes little sense to add any.&lt;/p&gt;
+&lt;p&gt;This setting does &lt;b&gt;not&lt;/b&gt; influence the use of UTF-16 and UTF-32 BOMs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Hide mouse cursor while typing</source>
+        <translation>Nascondi il cursore del mouse durante la digitazione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Enable scroll &amp;wheel zooming</source>
+        <translation>Abilita scorrimento e zoom attraverso la &amp;rotella del mouse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enable built-in camel case &amp;navigation</source>
+        <translation>Abilita CamelCase &amp;Navigazione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Enable smart selection changing</source>
+        <translation>Abilita modifica selezione intelligente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Using Select Block Up / Down actions will now provide smarter selections.</source>
+        <translation>L&apos;utilizzo delle azioni Seleziona Blocco Su/Giù  fornirà selezioni più intelligenti.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Show help tooltips using keyboard shortcut (Alt)</source>
+        <translation>Mostra suggerimenti utilizzando la scorciatoia della tastiera (Alt)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pressing Alt displays context-sensitive help or type information as tooltips.</source>
+        <translation>Premendo Alt viene visualizzata la guida al contesto o le informazioni sul tipo sottoforma di suggerimenti.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>On Mouseover</source>
+        <translation>On Mouseover</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>On Shift+Mouseover</source>
+        <translation>On Shift+Mouseover</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Typing</source>
+        <translation>Digitando</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Cleanups Upon Saving</source>
+        <translation>Pulizie durante il salvataggio</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cleanup actions which are automatically performed right before the file is saved to disk.</source>
+        <translation>Azioni di pulizia che vengono eseguite automaticamente poco prima che il file venga salvato sul disco.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>File Encodings</source>
+        <translation>Codifica dei file</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mouse and Keyboard</source>
+        <translation>Mouse e tastiera</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Backspace indentation:</source>
+        <translation>Indentazione Backspace:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Default encoding:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>UTF-8 BOM:</source>
+        <translation>UTF-8 BOM:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Default line endings:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Show help tooltips using the mouse:</source>
+        <translation>Mostra suggerimenti utilizzando il mouse:</translation>
+    </message>
+    <message>
+        <location line="+142"/>
+        <source>Displays context-sensitive help or type information on mouseover.</source>
+        <translation>Visualizza la guida sensibile al contesto o digita le informazioni sul mouseover.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Displays context-sensitive help or type information on Shift+Mouseover.</source>
+        <translation>Visualizza la guida sensibile al contesto o digita le informazioni su Shift+Mouseover.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+141"/>
+        <location line="+217"/>
+        <source>Display</source>
+        <translation>Visualizzazione</translation>
+    </message>
+    <message>
+        <location line="-268"/>
+        <source>Display line &amp;numbers</source>
+        <translation>Mostra il &amp;numero della righe</translation>
+    </message>
+    <message>
+        <location line="-40"/>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Tint whole margin area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Use context-specific margin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>If available, use a different margin. For example, the ColumnLimit from the ClangFormat plugin.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Animate matching parentheses</source>
+        <translation>&amp;Anima parentesi corrispondenti</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Highlight search results on the scrollbar</source>
+        <translation>Evidenzia i risultati della ricerca sulla barra di scorrimento</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Animate navigation within file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Mark &amp;text changes</source>
+        <translation>Segna le modifiche al &amp;testo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto-fold first &amp;comment</source>
+        <translation>Folding automatico prima e &amp;commenta</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Display &amp;folding markers</source>
+        <translation>Mostra i segni di &amp;raggruppamento del codice</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Center &amp;cursor on scroll</source>
+        <translation>Centro e &amp;cursore su scroll</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Visualize indent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Display file line ending</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Display file encoding</source>
+        <translation>Mostra la codifica del file</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Always open links in another split</source>
+        <translation>Apri sempre i collegamenti in un&apos;altra divisione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Highlight matching parentheses</source>
+        <translation>&amp;Evidenzia parentesi corrispondenti</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Shows tabs and spaces.</source>
+        <translation>Mostra schede e spazi.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Next to editor content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Next to right margin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Aligned at right side</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Between lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Line annotations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Margin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Wrapping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-30"/>
+        <source>&amp;Visualize whitespace</source>
+        <translation>&amp;Mostra spaziature</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <source>Highlight current &amp;line</source>
+        <translation>Evidenzia la r&amp;iga corrente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Highlight &amp;blocks</source>
+        <translation>Evidenzia i &amp;blocchi</translation>
+    </message>
+    <message>
+        <location line="-45"/>
+        <source>Enable text &amp;wrapping</source>
+        <translation>Abilita il ri&amp;torno a capo</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Display right &amp;margin at column:</source>
+        <translation>Mostra il &amp;margine destro alla colonna:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-206"/>
+        <source>Enable &amp;mouse navigation</source>
+        <translation>Abitila la navigazione con il &amp;mouse</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+544"/>
+        <source>Copy Color Scheme</source>
+        <translation>Copia schema colori</translation>
+    </message>
+    <message>
+        <location line="-428"/>
+        <location line="+7"/>
+        <source>%</source>
+        <translation>%</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>A line spacing value other than 100% disables text wrapping.
+A value less than 100% can result in overlapping and misaligned graphics.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Export</source>
+        <translation>Esportare</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Zoom:</source>
+        <translation>Zoom:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Line spacing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+363"/>
+        <location line="+92"/>
+        <source>Color scheme name:</source>
+        <translation>Nome schema colori:</translation>
+    </message>
+    <message>
+        <location line="-91"/>
+        <source>%1 (copy)</source>
+        <translation>%1 (copia)</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Delete Color Scheme</source>
+        <translation>Elimina schema colori</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Are you sure you want to delete this color scheme permanently?</source>
+        <translation>Sei sicuro di voler eliminare questo schema di colori in modo permanente?</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <location line="+13"/>
+        <source>Import Color Scheme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-11"/>
+        <location line="+49"/>
+        <source>Color scheme (*.xml);;All files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Export Color Scheme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+43"/>
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-217"/>
+        <source>Remove</source>
+        <translation type="unfinished">Rimuovi</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Export...</source>
+        <translation type="unfinished">Esporta...</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Import...</source>
+        <translation type="unfinished">Importa...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Current settings:</source>
+        <translation>Impostazioni attuali:</translation>
+    </message>
+    <message>
+        <location line="+105"/>
+        <source>Copy Code Style</source>
+        <translation>Copia stile di codice</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Code style name:</source>
+        <translation>Nome dello stile di codice:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 (Copy)</source>
+        <translation>%1 (Copia)</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Delete Code Style</source>
+        <translation>Elimina stile di codice</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Are you sure you want to delete this code style permanently?</source>
+        <translation>Sei sicuro di voler eliminare questo stile di codice in modo permanente?</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-527"/>
+        <location line="+453"/>
+        <source>Delete</source>
+        <translation type="unfinished">Elimina</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+9"/>
+        <source>Import Code Style</source>
+        <translation>Stile di codice di importazione</translation>
+    </message>
+    <message>
+        <location line="-8"/>
+        <location line="+19"/>
+        <source>Code styles (*.xml);;All files (*)</source>
+        <translation>Stili di codice (*.xml);;Tutti i file (*)</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Export Code Style</source>
+        <translation>Stile codice di esportazione</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>%1 [proxy: %2]</source>
+        <translation>%1 [proxy: %2]</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 [built-in]</source>
+        <translation>%1 [built-in]</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+89"/>
+        <source>Color Scheme Changed</source>
+        <translation>Schema colori modificato</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <translation>Lo schema di colori &quot;%1&quot; è stata modificato, vuoi salvare le modifiche?</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Discard</source>
+        <translation>Scarta</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+38"/>
+        <source>Current File</source>
+        <translation>File Corrente</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>File &quot;%1&quot;:</source>
+        <translation>File &quot;%1&quot;:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>File path: %1
+%2</source>
+        <translation>Percorso file: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+87"/>
+        <source>Please note that this only searches files that have been saved to disk.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+197"/>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-519"/>
+        <location line="+621"/>
+        <source>Font</source>
+        <translation>Tipo di carattere</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-618"/>
+        <source>Family:</source>
+        <translation>Famiglia:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Size:</source>
+        <translation>Dimensione:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+1"/>
         <source>Bold</source>
         <translation type="unfinished">Grassetto</translation>
     </message>
     <message>
+        <location line="+1"/>
         <source>Italic</source>
         <translation type="unfinished">Corsivo</translation>
     </message>
     <message>
+        <location line="-18"/>
         <source>Background:</source>
         <translation type="unfinished">Sfondo:</translation>
     </message>
     <message>
+        <location line="-38"/>
+        <source>Unset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Foreground:</source>
         <translation type="unfinished">Primo piano:</translation>
     </message>
     <message>
-        <source>Erase background</source>
-        <translation type="unfinished">Cancella sfondo</translation>
-    </message>
-    <message>
-        <source>x</source>
-        <translation type="unfinished">x</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::VcsBase</name>
-    <message>
-        <source>WizardPage</source>
+        <location line="+2"/>
+        <source>Unset foreground.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Checkout Directory:</source>
+        <location line="+3"/>
+        <location line="+21"/>
+        <source>Unset background.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Path:</source>
-        <translation type="unfinished">Percorso:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Welcome</name>
-    <message>
-        <source>News From the Qt Labs</source>
-        <translation type="unfinished">Notizie dai Qt Labs</translation>
-    </message>
-    <message>
-        <source>Qt Websites</source>
-        <translation type="unfinished">Siti Web Qt</translation>
-    </message>
-    <message>
-        <source>http://labs.trolltech.com/blogs/feed</source>
-        <extracomment>Add localized feed here only if one exists</extracomment>
-        <translation type="unfinished">http://labs.trolltech.com/blogs/feed</translation>
-    </message>
-    <message>
-        <source>Qt Home</source>
-        <translation type="unfinished">Qt Home</translation>
-    </message>
-    <message>
-        <source>Qt Labs</source>
-        <translation type="unfinished">Qt Lab</translation>
-    </message>
-    <message>
-        <source>Qt Git Hosting</source>
-        <translation type="unfinished">Qt Git Hosting</translation>
-    </message>
-    <message>
-        <source>Qt Centre</source>
-        <translation type="unfinished">Qt Centre</translation>
-    </message>
-    <message>
-        <source>Qt for S60 at Forum Nokia</source>
-        <translation type="unfinished">Qt per S60 su Forum Nokia</translation>
-    </message>
-    <message>
-        <source>#gradientWidget {
-  background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(247, 247, 247, 255), stop:1 rgba(215, 215, 215, 255));
-}</source>
-        <translation type="unfinished">#gradientWidget {
-  background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(247, 247, 247, 255), stop:1 rgba(215, 215, 215, 255));
-}</translation>
-    </message>
-    <message>
-        <source>#headerFrame {
-    border-image: url(:/welcome/images/center_frame_header.png) 0;
-    border-width: 0;
-}
-</source>
+        <location line="-19"/>
+        <source>Relative Foreground</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Help us make Qt Creator even better</source>
-        <translation type="unfinished">Aiutaci a migliorare Qt Creator</translation>
+        <location line="+1"/>
+        <location line="+6"/>
+        <source>Saturation:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Feedback</source>
-        <translation type="unfinished">Commenti</translation>
+        <location line="-4"/>
+        <location line="+6"/>
+        <source>Lightness:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Welcome</source>
-        <translation type="unfinished">Benvenuto</translation>
+        <location line="-3"/>
+        <source>Relative Background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Color:</source>
+        <translation>Colore:</translation>
+    </message>
+    <message>
+        <location line="+488"/>
+        <source>No Underline</source>
+        <translation>Nessuna sottolineatura</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Single Underline</source>
+        <translation>Sottolineatura singola</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Wave Underline</source>
+        <translation>Sottolineatura con riga ondeggiata</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dot Underline</source>
+        <translation>Sottolineatura con riga punteggiata</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dash Underline</source>
+        <translation>Sottolineatura con riga tratteggiata</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dash-Dot Underline</source>
+        <translation>Sottolineatura con trattino basso - punto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dash-Dot-Dot Underline</source>
+        <translation>Sottolineatura con trattino basso - punto - punto</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-68"/>
+        <source>Antialias</source>
+        <translation>Antialiasing</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-249"/>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+31"/>
+        <source>Copy...</source>
+        <translation>Copia...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+28"/>
+        <source>Line in Current Document</source>
+        <translation>Riga nel documento corrente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Jumps to the given line in the current document.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;line&gt;:&lt;column&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Line %1, Column %2</source>
+        <translation>Riga %1, Colonna %2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Line %1</source>
+        <translation>Riga %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Column %1</source>
+        <translation>Colonna %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+98"/>
+        <source>Trigger Completion</source>
+        <translation>Completamento trigger</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl+Space</source>
+        <translation>Ctrl+Space</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Meta+Space</source>
+        <translation>Meta+Space</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Display Function Hint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Meta+Shift+D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Shift+D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Trigger Refactoring Action</source>
+        <translation>Azione refactoring trigger</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Show Context Menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Text</source>
+        <comment>SnippetProvider</comment>
+        <translation type="unfinished">Testo</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Selected text within the current document.</source>
+        <translation>Testo selezionato all&apos;interno del documento corrente.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Line number of the text cursor position in current document (starts with 1).</source>
+        <translation>Numero di riga della posizione del cursore del testo nel documento corrente (inizia con 1).</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Column number of the text cursor position in current document (starts with 0).</source>
+        <translation>Numero di colonna della posizione del cursore del testo nel documento corrente (inizia con 0).</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Number of lines visible in current document.</source>
+        <translation>Numero di righe visibili nel documento corrente.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Number of columns visible in current document.</source>
+        <translation>Numero di colonne visibili nel documento corrente.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Current document&apos;s font size in points.</source>
+        <translation>Dimensione del carattere del documento corrente in punti.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Word under the current document&apos;s text cursor.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
+        <source>Alt+Return</source>
+        <translation>Alt+Return</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditoractionhandler.cpp" line="+153"/>
+        <source>&amp;Undo</source>
+        <translation>&amp;Annulla</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Redo</source>
+        <translation>&amp;Ripeti</translation>
+    </message>
+    <message>
+        <location line="+158"/>
+        <source>&amp;Visualize Whitespace</source>
+        <translation>&amp;Mostra Spaziature</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+E, Ctrl+V</source>
+        <translation>Ctrl+E, Ctrl+V</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Clean Whitespace</source>
+        <translation>Pulizia Spaziature</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Enable Text &amp;Wrapping</source>
+        <translation>Abilita il Ri&amp;torno a Capo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+E, Ctrl+W</source>
+        <translation>Ctrl+E, Ctrl+W</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Ctrl+/</source>
+        <translation>Ctrl+/</translation>
+    </message>
+    <message>
+        <location line="-141"/>
+        <source>Delete &amp;Line</source>
+        <translation>Cancella &amp;Riga</translation>
+    </message>
+    <message>
+        <location line="+145"/>
+        <source>Shift+Del</source>
+        <translation>Shift+Del</translation>
+    </message>
+    <message>
+        <location line="-37"/>
+        <source>&amp;Rewrap Paragraph</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-129"/>
+        <source>Go to line number...</source>
+        <translation>Vai al numero di riga...</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Delete Line from Cursor On</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Delete Word from Cursor On</source>
+        <translation>Elimina parola da Cursor On</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Delete Word Camel Case from Cursor On</source>
+        <translation>Elimina CamelCase da Cursor On</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Delete Line up to Cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Backspace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Delete Word up to Cursor</source>
+        <translation>Elimina parola fino a Cursor</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Delete Word Camel Case up to Cursor</source>
+        <translation>Elimina Camel Case fino a Cursor</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Block Start with Selection</source>
+        <translation>Vai a Blocca Inizia con selezione</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Go to Block End with Selection</source>
+        <translation>Vai a Blocca Termina con selezione</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Join Lines</source>
+        <translation>Unisci righe</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+J</source>
+        <translation>Ctrl+J</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Insert Line Above Current Line</source>
+        <translation>Inserisci riga sopra la riga corrente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Shift+Return</source>
+        <translation>Ctrl+Shift+Return</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Insert Line Below Current Line</source>
+        <translation>Inserisci riga sotto la riga corrente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Return</source>
+        <translation>Ctrl+Return</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Toggle UTF-8 BOM</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Indent</source>
+        <translation>Indentazione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unindent</source>
+        <translation>Elimina indentazione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Follow Symbol Under Cursor</source>
+        <translation>Segui il simbolo sotto il cursore</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Follow Symbol Under Cursor in Next Split</source>
+        <translation>Segui il simbolo sotto il cursore nella divisione successiva</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+12"/>
+        <source>Meta+E, F2</source>
+        <translation>Meta+E, F2</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <location line="+12"/>
+        <source>Ctrl+E, F2</source>
+        <translation>Ctrl+E, F2</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Find References to Symbol Under Cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Shift+U</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rename Symbol Under Cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Shift+R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Jump to File Under Cursor</source>
+        <translation>Passa al file sotto il cursore</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Jump to File Under Cursor in Next Split</source>
+        <translation>Passa al file sotto il cursore nella divisione successiva</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Paste from Clipboard History</source>
+        <translation>Incolla dalla cronologia degli appunti</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Shift+V</source>
+        <translation>Ctrl+Shift+V</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Paste Without Formatting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Alt+Shift+V</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Ctrl+E, R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Meta+E, R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Meta+E, Meta+V</source>
+        <translation>Meta+E, Meta+V</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Meta+E, Meta+W</source>
+        <translation>Meta+E, Meta+W</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Toggle Comment &amp;Selection</source>
+        <translation>Attiva/disattiva &amp;selezione commento</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cut &amp;Line</source>
+        <translation>Taglia &amp;Riga</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Copy &amp;Line</source>
+        <translation>Copia &amp;riga</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Ins</source>
+        <translation>Ctrl+Ins</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Copy With Highlighting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Create Cursors at Selected Line Ends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alt+Shift+I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add Next Occurrence to Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Uppercase Selection</source>
+        <translation>Selezione maiuscola</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Meta+Shift+U</source>
+        <translation>Meta+Shift+U</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Alt+Shift+U</source>
+        <translation>Alt+Shift+U</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Lowercase Selection</source>
+        <translation>Selezione minuscola</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Meta+U</source>
+        <translation>Meta+U</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Alt+U</source>
+        <translation>Alt+U</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Sort Selected Lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Meta+Shift+S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Alt+Shift+S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Fold</source>
+        <translation>Piega</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Unfold</source>
+        <translation>Dispiega</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Toggle &amp;Fold All</source>
+        <translation>Attiva &amp;piega tutto</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Reset Font Size</source>
+        <translation>Ripristina dimensione carattere</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Meta+0</source>
+        <translation>Meta+0</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ctrl+0</source>
+        <translation>Ctrl+0</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Select Word Under Cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Go to Document Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Document End</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Line Start</source>
+        <translation>Vai a inizio riga</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Line End</source>
+        <translation>Vai a fine riga</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Next Line</source>
+        <translation>Vai alla riga successiva</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Previous Line</source>
+        <translation>Vai alla riga precedente</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Previous Character</source>
+        <translation>Vai al carattere precedente</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Next Character</source>
+        <translation>Vai al carattere successivo</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Previous Word</source>
+        <translation>Vai alla parola precedente</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Next Word</source>
+        <translation>Vai alla parola successiva</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Previous Word Camel Case</source>
+        <translation>Vai alla parola CamelCase precedente</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Next Word Camel Case</source>
+        <translation>Vai alla parola CamelCase successiva</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Go to Line Start with Selection</source>
+        <translation>Vai a Inizio riga con selezione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Line End with Selection</source>
+        <translation>Vai a Fine riga con selezione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Next Line with Selection</source>
+        <translation>Vai a Riga successiva con selezione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Previous Line with Selection</source>
+        <translation>Vai a Riga precedente con selezione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Previous Character with Selection</source>
+        <translation>Vai a Carattere precedente con selezione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Next Character with Selection</source>
+        <translation>Vai a Carattere successivo con selezione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Previous Word with Selection</source>
+        <translation>Vai a Parola precedente con selezione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Next Word with Selection</source>
+        <translation>Vai a Parola successiva con selezione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Previous Word Camel Case with Selection</source>
+        <translation>Vai a Parola CamelCase precedente con selezione</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Go to Next Word Camel Case with Selection</source>
+        <translation>Vai a Parola Camel Case successiva con selezione</translation>
+    </message>
+    <message>
+        <location line="-90"/>
+        <source>Ctrl+&lt;</source>
+        <translation>Ctrl+&lt;</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Ctrl+&gt;</source>
+        <translation>Ctrl+&gt;</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Increase Font Size</source>
+        <translation>Aumenta la Dimensione dei Caratteri</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl++</source>
+        <translation>Ctrl++</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Decrease Font Size</source>
+        <translation>Diminuisci la Dimensione dei Caratteri</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+-</source>
+        <translation>Ctrl+-</translation>
+    </message>
+    <message>
+        <location line="-187"/>
+        <source>Ctrl+{</source>
+        <translation>Ctrl+{</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+}</source>
+        <translation>Ctrl+}</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Move Line Up</source>
+        <translation>Sposta la Riga in Su</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Shift+Up</source>
+        <translation>Ctrl+Shift+Up</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Move Line Down</source>
+        <translation>Sposta la Riga in Giu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Shift+Down</source>
+        <translation>Ctrl+Shift+Down</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Copy Line Up</source>
+        <translation>Copia la Riga in Su</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Alt+Up</source>
+        <translation>Ctrl+Alt+Up</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Copy Line Down</source>
+        <translation>Copia la Riga in Giu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Alt+Down</source>
+        <translation>Ctrl+Alt+Down</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-253"/>
+        <source>Text</source>
+        <translation>Testo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Generic text and punctuation tokens.
+Applied to text that matched no other rule.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Link</source>
+        <translation>Collegamento</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Links that follow symbol under cursor.</source>
+        <translation>Collegamenti che seguono il simbolo sotto il cursore.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Selection</source>
+        <translation>Selezione</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Selected text.</source>
+        <translation>Testo selezionato.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Line Number</source>
+        <translation>Numero Riga</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Line numbers located on the left side of the editor.</source>
+        <translation>I numeri di riga si trovano sul lato sinistro dell&apos;editor.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Search Result</source>
+        <translation>Risultato della Ricerca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Highlighted search results inside the editor.</source>
+        <translation>Risultati della ricerca evidenziati all&apos;interno dell&apos;editor.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Search Result (Alternative 1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Highlighted search results inside the editor.
+Used to mark read accesses to C++ symbols.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Search Result (Alternative 2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Highlighted search results inside the editor.
+Used to mark write accesses to C++ symbols.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Search Result Containing function</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Highlighted search results inside the editor.
+Used to mark containing function of the symbol usage.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Search Scope</source>
+        <translation>Ambito della Ricerca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Section where the pattern is searched in.</source>
+        <translation>Sezione in cui viene cercato il pattern.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Parentheses</source>
+        <translation>Parentesi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Displayed when matching parentheses, square brackets or curly brackets are found.</source>
+        <translation>Visualizzato quando si trovano parentesi tonde, parentesi quadre o parentesi graffe.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mismatched Parentheses</source>
+        <translation>Parentesi non corrispondenti</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Displayed when mismatched parentheses, square brackets, or curly brackets are found.</source>
+        <translation>Visualizzato quando vengono trovate parentesi tonde, parentesi quadre o parentesi graffe non corrispondenti.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Auto Complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Displayed when a character is automatically inserted like brackets or quotes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Current Line</source>
+        <translation>Riga Corrente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Line where the cursor is placed in.</source>
+        <translation>Riga in cui è posizionato il cursore.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Current Line Number</source>
+        <translation>Numero della Riga Corrente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Line number located on the left side of the editor where the cursor is placed in.</source>
+        <translation>Il numero di riga si trova sul lato sinistro dell&apos;editor in cui è posizionato il cursore.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Occurrences</source>
+        <translation>Occorrenze</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Occurrences of the symbol under the cursor.
+(Only the background will be applied.)</source>
+        <translation>Occorrenze del simbolo sotto il cursore.
+(Sarà applicato solo lo sfondo)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Unused Occurrence</source>
+        <translation>Occorrenza non utilizzata</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Occurrences of unused variables.</source>
+        <translation>Occorrenze di variabili non utilizzate.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Renaming Occurrence</source>
+        <translation>Rinominare l&apos;occorrenza</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Occurrences of a symbol that will be renamed.</source>
+        <translation>Occorrenze di un simbolo che verrà rinominato.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Number</source>
+        <translation>Numero</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Number literal.</source>
+        <translation>Literal numero.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>String</source>
+        <translation>Stringa</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Character and string literals.</source>
+        <translation>Literal caratteri e stringhe.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Primitive Type</source>
+        <translation>Tipo primitivo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Name of a primitive data type.</source>
+        <translation>Nome di un tipo di dati primitivo.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation>Tipo</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Name of a type.</source>
+        <translation>Nome di un tipo.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Namespace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Name of a namespace.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Local</source>
+        <translation>Locale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Local variables.</source>
+        <translation>Variabili locali.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Parameter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Function or method parameters.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Field</source>
+        <translation>Campo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Class&apos; data members.</source>
+        <translation>Membri dei dati di classe.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Global</source>
+        <translation>Globale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Global variables.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enumeration</source>
+        <translation>Enumerazione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to enumeration items.</source>
+        <translation>Applicato agli elementi di enumerazione.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Function</source>
+        <translation>Funzione</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Name of a function.</source>
+        <translation>Nome di una funzione.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Declaration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Style adjustments to declarations.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Function Definition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Name of function at its definition.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Virtual Function</source>
+        <translation>Funzione virtuale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Name of function declared as virtual.</source>
+        <translation>Nome della funzione dichiarato come virtuale.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>QML Binding</source>
+        <translation>QML Binding</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QML item property, that allows a binding to another property.</source>
+        <translation>Proprietà dell&apos;elemento QML, che consente l&apos;associazione a un&apos;altra proprietà.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>QML Local Id</source>
+        <translation>ID locale QML</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QML item id within a QML file.</source>
+        <translation>ID elemento QML all&apos;interno di un file QML.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>QML Root Object Property</source>
+        <translation>Proprietà dell&apos;oggetto radice QML</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QML property of a parent item.</source>
+        <translation>Proprietà QML di un elemento principale.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>QML Scope Object Property</source>
+        <translation>Proprietà dell&apos;oggetto QML Scope</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Property of the same QML item.</source>
+        <translation>Proprietà dello stesso elemento QML.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QML State Name</source>
+        <translation>Nome stato QML</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Name of a QML state.</source>
+        <translation>Nome di uno stato QML.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>QML Type Name</source>
+        <translation>Nome del tipo QML</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Name of a QML type.</source>
+        <translation>Nome di un tipo QML.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>QML External Id</source>
+        <translation>ID esterno QML</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QML id defined in another QML file.</source>
+        <translation>ID QML definito in un altro file QML.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>QML External Object Property</source>
+        <translation>Proprietà dell&apos;oggetto esterno QML</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QML property defined in another QML file.</source>
+        <translation>Proprietà QML definita in un altro file QML.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>JavaScript Scope Var</source>
+        <translation>Var Scope JavaScript</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Variables defined inside the JavaScript file.</source>
+        <translation>Variabili definite all&apos;interno del file JavaScript.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>JavaScript Import</source>
+        <translation>Importazione JavaScript</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Name of a JavaScript import inside a QML file.</source>
+        <translation>Nome di un&apos;importazione JavaScript all&apos;interno di un file QML.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>JavaScript Global Variable</source>
+        <translation>Variabile globale JavaScript</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Variables defined outside the script.</source>
+        <translation>Variabili definite al di fuori dello script.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Keyword</source>
+        <translation>Parola Chiave</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reserved keywords of the programming language except keywords denoting primitive types.</source>
+        <translation>Parole chiave riservate della lingua di programmazione tranne le parole chiave che indicano tipi primitivi.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Punctuation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Punctuation excluding operators.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Operator</source>
+        <translation>Operatore</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Non user-defined language operators.
+To style user-defined operators, use Overloaded Operator.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Overloaded Operators</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Calls and declarations of overloaded (user-defined) operators.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Preprocessor</source>
+        <translation>Preprocessore</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Preprocessor directives.</source>
+        <translation>Direttive preprocessore.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Macro</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Macros.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Label</source>
+        <translation>Etichetta</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Labels for goto statements.</source>
+        <translation>Tag per istruzioni goto.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Comment</source>
+        <translation>Commento</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>All style of comments except Doxygen comments.</source>
+        <translation>Tutti gli stili di commenti tranne commenti Doxygen.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Doxygen Comment</source>
+        <translation>Commento Doxygen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Doxygen comments.</source>
+        <translation>Commenti Doxygen.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Doxygen Tag</source>
+        <translation>Tag Doxygen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Doxygen tags.</source>
+        <translation>Tag Doxygen.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Visual Whitespace</source>
+        <translation>Spazio bianco visibile</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Whitespace.
+Will not be applied to whitespace in comments and strings.</source>
+        <translation>Spazio bianco. 
+Non verrà applicato agli spazi bianchi nei commenti e nelle stringhe.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Disabled Code</source>
+        <translation>Codice Disabilitato</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Code disabled by preprocessor directives.</source>
+        <translation>Codice disabilitato dalle direttive del preprocessore.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Added Line</source>
+        <translation>Riga Aggiunta</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to added lines in differences (in diff editor).</source>
+        <translation>Applicato alle righe aggiunte nelle differenze (nell&apos;editor diff).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Removed Line</source>
+        <translation>Riga Rimossa</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to removed lines in differences (in diff editor).</source>
+        <translation>Applicato alle righe rimosse nelle differenze (nell&apos;editor diff).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Diff File</source>
+        <translation>File Diff</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Compared files (in diff editor).</source>
+        <translation>File comparati (nell&apos;editor diff).</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Diff Location</source>
+        <translation>Posizione Diff</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Location in the files where the difference is (in diff editor).</source>
+        <translation>Posizione nei file in cui si trova la differenza (nell&apos;editor diff).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Diff File Line</source>
+        <translation>Riga file diff</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to lines with file information in differences (in side-by-side diff editor).</source>
+        <translation>Applicato alle righe con informazioni sui file nelle differenze (nell&apos;editor diff side-by-side).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Diff Context Line</source>
+        <translation>Riga contesto diff</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to lines describing hidden context in differences (in side-by-side diff editor).</source>
+        <translation>Applicato alle righe che descrivono il contesto nascosto nelle differenze (nell&apos;editor diff side-by-side).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Diff Source Line</source>
+        <translation>Riga sorgente diff</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to source lines with changes in differences (in side-by-side diff editor).</source>
+        <translation>Applicato alle righe sorgente con variazioni nelle differenze (nell&apos;editor diff side-by-side).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Diff Source Character</source>
+        <translation>Carattere sorgente diff</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to removed characters in differences (in side-by-side diff editor).</source>
+        <translation>Applicato ai caratteri rimossi nelle differenze (nell&apos;editor diff side-by-side).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Diff Destination Line</source>
+        <translation>Riga di destinazione diff</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to destination lines with changes in differences (in side-by-side diff editor).</source>
+        <translation>Applicato alle righe di destinazione con variazioni nelle differenze (nell&apos;editor diff side-by-side).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Diff Destination Character</source>
+        <translation>Carattere di destinazione diff</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to added characters in differences (in side-by-side diff editor).</source>
+        <translation>Applicato ai caratteri aggiunti nelle differenze (nell&apos;editor diff side-by-side).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Log Change Line</source>
+        <translation>Registra riga di cambiamento</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to lines describing changes in VCS log.</source>
+        <translation>Applicato alle righe che descrivono le modifiche nel registro VCS.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Log Author Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to author names in VCS log.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Log Commit Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to commit dates in VCS log.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Log Commit Hash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to commit hashes in VCS log.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Log Decoration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to commit decorations in VCS log.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Log Commit Subject</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to commit subjects in VCS log.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Underline color of error diagnostics.</source>
+        <translation>Colore sottolineato della diagnostica degli errori.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Error Context</source>
+        <translation>Contesto errore</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Underline color of the contexts of error diagnostics.</source>
+        <translation>Sottolinea il colore dei contesti della diagnostica degli errori.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Warning</source>
+        <translation>Avvertimento</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Underline color of warning diagnostics.</source>
+        <translation>Colore sottolineato della diagnostica di avvertimento.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Warning Context</source>
+        <translation>Contesto di avvertimento</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Underline color of the contexts of warning diagnostics.</source>
+        <translation>Sottolinea il colore contesto della diagnostica di avvertimento.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Output Argument</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Writable arguments of a function call.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Static Member</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Names of static fields or member functions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Code Coverage Added Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>New code that was not checked for tests.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Partially Covered Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Partial branch/condition coverage.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Uncovered Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Not covered at all.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Fully Covered Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fully covered code.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Manually Validated Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>User added validation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Code Coverage Dead Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unreachable code.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Code Coverage Execution Count Too Low</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Minimum count not reached.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Implicitly Not Covered Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+5"/>
+        <location line="+5"/>
+        <source>PLACEHOLDER</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>Implicitly Covered Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Implicit Manual Coverage Validation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettingspage.cpp" line="+59"/>
+        <source>Global</source>
+        <comment>Settings</comment>
+        <translation>Globale</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+290"/>
+        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+285"/>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+657"/>
+        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+163"/>
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+219"/>
+        <source>Text Editor</source>
+        <translation>Editor di Testo</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-134"/>
+        <source>Behavior</source>
+        <translation>Comportamento</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+302"/>
+        <source>Not a color scheme file.</source>
+        <translation>Non un file di combinazioni di colori.</translation>
+    </message>
+    <message>
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+3"/>
+        <source>derived from QObject</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>derived from QWidget</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>template</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>with if</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>range-based</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>and else</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>with closing brace comment</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>and catch</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>namespace</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>template</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>with targets</source>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>with target</source>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>with targets</source>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>with target</source>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>example</source>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+48"/>
+        <source>Internal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+261"/>
+        <source>Searching</source>
+        <translation>Ricerca</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n found.</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+30"/>
+        <source>%n occurrences replaced.</source>
+        <translation>
+            <numerusform>%n occorrenze sostituite.@%n occorrenze sostituite.</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+158"/>
+        <source>Aborting replace.</source>
+        <translation>Sostituire l&apos;interruzione.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371"/>
+        <source>%1 of %2</source>
+        <translation type="unfinished">%1 di %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+51"/>
+        <source>Edit preview contents to see how the current settings are applied to custom code snippets. Changes in the preview do not affect the current settings.</source>
+        <translation>Modifica i contenuti dell&apos;anteprima per vedere come vengono applicate le impostazioni correnti agli snippet di codice personalizzati. Le modifiche nell&apos;anteprima non influiscono sulle impostazioni correnti.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+59"/>
+        <source>Unix (LF)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Windows (CRLF)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/findinfiles.cpp" line="+62"/>
+        <source>Files in File System</source>
+        <translation>File nel file system</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Folder &quot;%2&quot;:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Path: %1
+Filter: %2
+Excluding: %3
+%4</source>
+        <extracomment>the last arg is filled by BaseFileFind::runNewSearch</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Search engine:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Director&amp;y:</source>
+        <translation>Director&amp;y:</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Directory to Search</source>
+        <translation>Directory da cercare</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="-49"/>
+        <source>Open Documents</source>
+        <translation type="unfinished">Documenti Aperti</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Open documents:</source>
+        <translation>Apri documenti:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Open Documents
+%1</source>
+        <translation>Apri documenti 
+%1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+164"/>
+        <source>Unused variable</source>
+        <translation>Variabile non utilizzata</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+59"/>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>TextEditor</source>
+        <comment>Failed to format: %1.</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+152"/>
+        <source>TextEditor</source>
+        <comment>Error in text formatting: %1</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Could not format file %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>File %1 was closed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>File was modified.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/highlighter.cpp" line="+247"/>
+        <source>Highlighter updates: done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Highlighter updates:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Highlighter updates: starting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-113"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3203"/>
+        <source>Download Definitions</source>
+        <translation>Scarica definizioni</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Download missing and update existing syntax definition files.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Reload Definitions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reload externally modified definition files.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Reset Remembered Definitions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reset definitions remembered for files that can be associated with more than one highlighter definition.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Syntax Highlight Definition Files</source>
+        <translation>File di definizione per syntax highlighting</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>User Highlight Definition Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Ignored file patterns:</source>
+        <translation>Pattern dei file ignorati:</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Download finished</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <source>Generic Highlighter</source>
+        <translation>Evidenziatore generico</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+48"/>
+        <source>No outline available</source>
+        <translation>Nessuna struttura disponibile</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Synchronize with Editor</source>
+        <translation type="unfinished">Sincronizza con l&apos;Editor</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Filter tree</source>
+        <translation type="unfinished">Filtra l&apos;albero</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Sort Alphabetically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+125"/>
+        <source>Outline</source>
+        <translation>Schema</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+300"/>
+        <source>Refactoring cannot be applied.</source>
+        <translation>Non è possibile applicare il refactoring.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+226"/>
+        <source>Expected delimiter after mangler ID.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Missing closing variable delimiter for:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="+287"/>
+        <source>Cannot create user snippet directory %1</source>
+        <translation>Impossibile creare la directory snippet utente %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+376"/>
+        <source>Diff Against Current File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+406"/>
+        <source>Opening File</source>
+        <translation type="unfinished">Apertura del File</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+286"/>
+        <source>Show inline annotations for %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Temporarily hide inline annotations for %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Show Diagnostic Settings</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QtC::Utils</name>
     <message>
-        <source>Show Details</source>
+        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+82"/>
+        <source>The class name must not contain namespace delimiters.</source>
+        <translation>Il nome della classe non deve contenere namespace.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Please enter a class name.</source>
+        <translation>Inserisci il nome di una classe.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>The class name contains invalid characters.</source>
+        <translation>Il nome della classe contiene caratteri non validi.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/terminalprocess.cpp" line="+62"/>
+        <source>Cannot set up communication channel: %1</source>
+        <translation>Impossibile impostare il canale di comunicazione: %1</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Cannot create temporary file: %1</source>
+        <translation>Impossibile creare il file temporaneo: %1</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Cannot write temporary file. Disk full?</source>
+        <translation>Impossibile scrivere il file temporaneo. Disco pieno?</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Unexpected output from helper program (%1).</source>
+        <translation>Output imprevisto dal programma di supporto (%1).</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>Impossibile passare alla directory di lavoro &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>Impossibile eseguire &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+195"/>
+        <source>The process &quot;%1&quot; could not be started: %2</source>
+        <translation>Il processo &quot;%1&quot; non può essere avviato: %2</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Quoting error in command.</source>
+        <translation>Errore riportato nel comando.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Debugging complex shell commands in a terminal is currently not supported.</source>
+        <translation>Il debug di comandi complessi della shell in un terminale non è attualmente supportato.</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Quoting error in terminal command.</source>
+        <translation>Errore riportato nel comando del terminale.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Terminal command may not be a shell command.</source>
+        <translation>Il comando terminale potrebbe non essere un comando di shell.</translation>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>QtC::Core</name>
     <message>
-        <source>Plain Text Editor</source>
+        <location line="+131"/>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>Impossibile creare socket &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="-466"/>
+        <source>Press &lt;RETURN&gt; to close this window...</source>
+        <translation>Premi &lt;INVIO&gt; per chiudere questa finestra...</translation>
+    </message>
+    <message>
+        <location line="+541"/>
+        <source>Cannot obtain a handle to the inferior: %1</source>
+        <translation>Impossibile ottenere un collegamento a: %1</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Cannot obtain exit status from inferior: %1</source>
+        <translation>Impossibile ottenere lo stato di uscita da: %1</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../src/libs/utils/filesearch.cpp" line="+26"/>
+        <source>%1: canceled. %n occurrences found in %2 files.</source>
+        <translation>
+            <numerusform>%1: annullato. %n ricorrenza trovata in %2 file.</numerusform>
+            <numerusform>%1: annullato. %n ricorrenze trovate in %2 file.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+6"/>
+        <source>%1: %n occurrences found in %2 files.</source>
+        <translation>
+            <numerusform>%1: %n ricorrenza trovata in %2 file.</numerusform>
+            <numerusform>%1: %n ricorrenze trovate in %2 file.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+501"/>
+        <source>Fi&amp;le pattern:</source>
+        <translation>Pattern fi&amp;le:</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Excl&amp;usion pattern:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Binary Editor</source>
+        <location line="+5"/>
+        <source>List of comma separated wildcard filters. Files with file name or full file path matching any filter are included.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>C++ Editor</source>
+        <location filename="../../../src/libs/utils/filewizardpage.cpp" line="+47"/>
+        <source>Choose the Location</source>
+        <translation>Scegli la posizione</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>File name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>.pro File Editor</source>
+        <location line="+1"/>
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+653"/>
+        <source>Path:</source>
+        <translation>Percorso:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+138"/>
+        <source>Location</source>
+        <translation type="unfinished">Posizione</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Preferences</source>
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-384"/>
+        <source>Local</source>
+        <translation>Locale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Remote</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Options</source>
-        <translation type="unfinished">Opzioni</translation>
+        <location line="+41"/>
+        <source>Choose...</source>
+        <translation>Scegli...</translation>
     </message>
-</context>
-<context>
-    <name>QtC::CodePaster</name>
     <message>
-        <source>No such paste</source>
+        <location line="+0"/>
+        <source>Browse...</source>
+        <translation>Sfoglia...</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Choose Directory</source>
+        <translation>Scegli la directory</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Choose Executable</source>
+        <translation>Scegli l&apos;eseguibile</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+11"/>
+        <location line="+9"/>
+        <source>Choose File</source>
+        <translation>Scegli il file</translation>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
+        <translation>Il percorso &quot;%1&quot; è stato espanso in una stringa vuota.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+12"/>
+        <location line="+24"/>
+        <source>The path &quot;%1&quot; does not exist.</source>
+        <translation>Il percorso &quot;%1&quot; non esiste.</translation>
+    </message>
+    <message>
+        <location line="-31"/>
+        <location line="+43"/>
+        <source>The path &quot;%1&quot; is not a directory.</source>
+        <translation>Il percorso &quot;%1&quot; non è una directory.</translation>
+    </message>
+    <message>
+        <location line="-31"/>
+        <location line="+12"/>
+        <source>The path &quot;%1&quot; is not a file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>CodePaster</source>
-        <translation type="unfinished">CodePaster</translation>
+        <location line="-5"/>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>La directory &quot;%1&quot; non esiste.</translation>
     </message>
     <message>
-        <source>Server:</source>
+        <location line="+17"/>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Error during paste</source>
+        <location line="+13"/>
+        <source>Invalid path &quot;%1&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Pastebin.com</source>
+        <location line="+7"/>
+        <source>Cannot execute &quot;%1&quot;.</source>
+        <translation>Impossibile eseguire &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Full path: &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Paste</source>
-        <translation type="unfinished">Incolla</translation>
+        <location line="-88"/>
+        <source>The path must not be empty.</source>
+        <translation>Il percorso non può essere vuoto.</translation>
     </message>
     <message>
-        <source>&lt;Username&gt;</source>
-        <translation type="unfinished">&lt;Nome utente&gt;</translation>
+        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+101"/>
+        <source>Insert...</source>
+        <translation>Inserisci...</translation>
     </message>
     <message>
-        <source>&lt;Description&gt;</source>
-        <translation type="unfinished">&lt;Descrizione&gt;</translation>
+        <location line="+5"/>
+        <source>Delete Line</source>
+        <translation>Elimina riga</translation>
     </message>
     <message>
-        <source>&lt;Comment&gt;</source>
-        <translation type="unfinished">&lt;Commento&gt;</translation>
+        <location line="+1"/>
+        <source>Clear</source>
+        <translation>Cancella</translation>
     </message>
-</context>
-<context>
-    <name>QtC::CppEditor</name>
     <message>
-        <source>Methods in current Document</source>
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-68"/>
+        <source>Introduction and Project Location</source>
+        <translation>Introduzione e posizione del progetto</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Use as default project location</source>
+        <translation>Utilizzare come posizione predefinita del progetto</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Enter project name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>/**************************************************************************
-** Qt Creator license header template
-**   Special keywords: %USER% %DATE% %YEAR%
-**   Environment variables: %$VARIABLE%
-**   To protect a percent sign, use &apos;%%&apos;.
-**************************************************************************/
+        <location line="+13"/>
+        <source>Name:</source>
+        <translation>Nome:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Create in:</source>
+        <translation>Crea in:</translation>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Project name is invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>Carattere non valido &quot;.&quot;.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Invalid character &quot;%1&quot; found.</source>
+        <translation>Trovato carattere &quot;%1&quot; non valido.</translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <source>The project already exists.</source>
+        <translation>Il progetto è già presente.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>A file with that name already exists.</source>
+        <translation>Un file con lo stesso nome è già presente.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+23"/>
+        <source>File Changed</source>
+        <translation>File Modificato</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>The unsaved file &lt;i&gt;%1&lt;/i&gt; has been changed on disk. Do you want to reload it and discard your changes?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The file &lt;i&gt;%1&lt;/i&gt; has been changed on disk. Do you want to reload it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>The default behavior can be set in %1 &gt; Preferences &gt; Environment &gt; System.</source>
+        <comment>macOS</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>The default behavior can be set in Edit &gt; Preferences &gt; Environment &gt; System.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <location line="+35"/>
+        <source>&amp;Close</source>
+        <translation type="unfinished">&amp;Chiudi</translation>
+    </message>
+    <message>
+        <location line="-31"/>
+        <source>No to All &amp;&amp; &amp;Diff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>File Has Been Removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The file %1 has been removed from disk. Do you want to save it under a different name, or close the editor?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>C&amp;lose All</source>
+        <translation>&amp;Chiudi tutto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Save &amp;as...</source>
+        <translation>S&amp;alva come...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Save</source>
+        <translation type="unfinished">&amp;Salva</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/advanceddockingsystem/dockmanager.cpp" line="+579"/>
+        <location line="+108"/>
+        <source>Cannot Save Workspace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-107"/>
+        <location line="+108"/>
+        <source>Could not save workspace to file %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <source>Delete Workspace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Delete Workspaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Delete workspace %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Delete these workspaces?
+    %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+196"/>
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="+87"/>
+        <location line="+33"/>
+        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+418"/>
+        <source>File Error</source>
+        <translation>Errore file</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Cannot Restore Workspace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Could not restore workspace %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/archive.cpp" line="+124"/>
+        <source>File format not supported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Could not find any unarchiving executable in PATH (%1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Command failed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Running %1
+in &quot;%2&quot;.
+
 </source>
+        <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Edit...</source>
-        <translation type="unfinished">Modifica...</translation>
+        <location filename="../../../src/libs/utils/aspects.cpp" line="+1142"/>
+        <source>Reset</source>
+        <translation type="unfinished">Ripristina</translation>
     </message>
     <message>
-        <source>Choose a location for the new license template file</source>
+        <location line="+876"/>
+        <source>Enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Template write error</source>
+        <location line="+1"/>
+        <source>Disable</source>
+        <translation>Disabilita</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Leave at Default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot write to %1: %2</source>
+        <location filename="../../../src/libs/utils/basetreeview.cpp" line="+544"/>
+        <source>Show %1 Column</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Searching...</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QtC::CVS</name>
-    <message>
-        <source>Checks out a project from a CVS repository.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+60"/>
+        <source>Do not ask again</source>
+        <translation>Non chiedere di nuovo</translation>
     </message>
     <message>
-        <source>CVS Checkout</source>
+        <location line="+2"/>
+        <source>Show Details...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify repository and path.</source>
+        <location line="+9"/>
+        <source>Hide Details...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Repository:</source>
-        <translation type="unfinished">Deposito:</translation>
+        <location line="+403"/>
+        <source>Do not &amp;ask again</source>
+        <translation>Non &amp;chiedere di nuovo</translation>
     </message>
     <message>
-        <source>Cannot find repository for &apos;%1&apos;</source>
+        <location line="+9"/>
+        <source>Do not &amp;show again</source>
+        <translation>Non &amp;mostrare più</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/clangutils.cpp" line="+53"/>
+        <source>Failed to retrieve clangd version: Unexpected clangd output.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Parsing of the log output failed</source>
+        <location line="+1"/>
+        <source>The clangd version is %1, but %2 or greater is required.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;CVS</source>
+        <location filename="../../../src/libs/utils/detailsbutton.cpp" line="+73"/>
+        <source>Details</source>
+        <translation type="unfinished">Dettagli</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+156"/>
+        <source>copyFile is not implemented for &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add</source>
-        <translation type="unfinished">Aggiungi</translation>
-    </message>
-    <message>
-        <source>Add &quot;%1&quot;</source>
-        <translation type="unfinished">Aggiungi &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+C,Alt+A</source>
+        <location line="+36"/>
+        <source>Cannot copy from %1, it is not a directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>Cannot copy %1 to %2, it is not a writable directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>fileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>writeFileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+88"/>
+        <source>createTempFile is not implemented for &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+148"/>
+        <source>Refusing to remove root directory.</source>
+        <translation>Impossibile rimuovere la root directory.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Refusing to remove your home directory.</source>
+        <translation>Impossibile rimuovere la tua home directory.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
+        <translation>Impossibile rimuovere la directory &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Impossibile rimuovere il file &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+73"/>
+        <source>File &quot;%1&quot; does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Could not open File &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Cannot read &quot;%1&quot;: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Could not open file &quot;%1&quot; for writing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+222"/>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/differ.cpp" line="+924"/>
         <source>Delete</source>
         <translation type="unfinished">Elimina</translation>
     </message>
     <message>
-        <source>Delete &quot;%1&quot;</source>
-        <translation type="unfinished">Cancella &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Revert</source>
-        <translation type="unfinished">Ripristina</translation>
-    </message>
-    <message>
-        <source>Revert &quot;%1&quot;</source>
-        <translation type="unfinished">Ripristina &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Diff Project</source>
-        <translation type="unfinished">Diff del progetto</translation>
-    </message>
-    <message>
-        <source>Diff Current File</source>
-        <translation type="unfinished">Diff del file corrente</translation>
-    </message>
-    <message>
-        <source>Diff &quot;%1&quot;</source>
-        <translation type="unfinished">Diff &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Alt+C,Alt+D</source>
+        <location line="+2"/>
+        <source>Insert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Commit All Files</source>
-        <translation type="unfinished">Esegui il Commit di Tutti i File</translation>
+        <location line="+1"/>
+        <source>Equal</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Commit Current File</source>
-        <translation type="unfinished">Esegui il Commit del File Corrente</translation>
+        <location filename="../../../src/libs/utils/elfreader.cpp" line="+130"/>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
+        <translation>&quot;%1&quot; è un oggetto ELF non valido (%2)</translation>
     </message>
     <message>
-        <source>Commit &quot;%1&quot;</source>
-        <translation type="unfinished">Esegui il Commit di &quot;%1&quot;</translation>
+        <location line="+18"/>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
+        <translation>&quot;%1&quot; non è un oggetto ELF (file troppo piccolo)</translation>
     </message>
     <message>
-        <source>Alt+C,Alt+C</source>
-        <translation type="unfinished"></translation>
+        <location line="+5"/>
+        <source>&quot;%1&quot; is not an ELF object</source>
+        <translation>&quot;%1&quot; non è un oggetto ELF</translation>
     </message>
     <message>
-        <source>Filelog Current File</source>
-        <translation type="unfinished">Filelog del File Corrente</translation>
+        <location line="+8"/>
+        <source>odd cpu architecture</source>
+        <translation>strana architettura della CPU</translation>
     </message>
     <message>
-        <source>Filelog &quot;%1&quot;</source>
-        <translation type="unfinished">Filelog &quot;%1&quot;</translation>
+        <location line="+19"/>
+        <source>odd endianness</source>
+        <translation>strana endianità</translation>
     </message>
     <message>
-        <source>Annotate Current File</source>
-        <translation type="unfinished">Annota il File Corrente</translation>
+        <location line="+17"/>
+        <source>unexpected e_shsize</source>
+        <translation>e_shsize inaspettato</translation>
     </message>
     <message>
-        <source>Annotate &quot;%1&quot;</source>
-        <translation type="unfinished">Annota &quot;%1&quot;</translation>
+        <location line="+11"/>
+        <source>unexpected e_shentsize</source>
+        <translation>e_shentsize inaspettato</translation>
     </message>
-    <message>
-        <source>Project Status</source>
-        <translation type="unfinished">Stato del progetto</translation>
+    <message numerus="yes">
+        <location line="+9"/>
+        <source>announced %n sections, each %1 bytes, exceed file size</source>
+        <translation>
+            <numerusform>annunciate %n sezioni, ciascuna %1 byte, supera la dimensione del file@annunciate %n sezioni, ciascuna %1 byte, supera la dimensione del file</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <source>Update Project</source>
-        <translation type="unfinished">Aggiorna il Progetto</translation>
+        <location line="+23"/>
+        <source>string table seems to be at 0x%1</source>
+        <translation>la tabella delle stringhe sembra essere 0x%1</translation>
     </message>
     <message>
-        <source>Commit</source>
-        <translation type="unfinished">Revisione</translation>
+        <location line="+11"/>
+        <source>section name %1 of %2 behind end of file</source>
+        <translation>nome della sezione%1 di %2 dietro la fine del file</translation>
     </message>
     <message>
-        <source>Diff Selected Files</source>
+        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+19"/>
+        <source>Edit Environment</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Undo</source>
-        <translation type="unfinished">&amp;Annulla</translation>
-    </message>
-    <message>
-        <source>&amp;Redo</source>
-        <translation type="unfinished">&amp;Ripeti</translation>
     </message>
     <message>
-        <source>Closing CVS Editor</source>
+        <location line="+1"/>
+        <source>Enter one environment variable per line.
+To set or change a variable, use VARIABLE=VALUE.
+To append to a variable, use VARIABLE+=VALUE.
+To prepend to a variable, use VARIABLE=+VALUE.
+Existing variables can be referenced in a VALUE with ${OTHER}.
+To clear a variable, put its name on a line with nothing else on it.
+To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Do you want to commit the change?</source>
-        <translation type="unfinished">Vuoi creare una revisione con la modifica?</translation>
+        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+422"/>
+        <source>Filter</source>
+        <translation>Filtro</translation>
     </message>
     <message>
-        <source>The commit message check failed. Do you want to commit the change?</source>
-        <translation type="unfinished">Il controllo sul messaggio della nuova revisione è fallito. Vuoi creare la revisione?</translation>
+        <location line="+1"/>
+        <source>Clear text</source>
+        <translation>Testo chiaro</translation>
     </message>
     <message>
-        <source>The files do not differ.</source>
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+180"/>
+        <source>Central Widget</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The file &apos;%1&apos; could not be deleted.</source>
-        <translation type="unfinished"></translation>
+        <location line="+3"/>
+        <source>Reset to Default Layout</source>
+        <translation>Ripristina layout predefinito</translation>
     </message>
     <message>
-        <source>The file has been changed. Do you want to revert it?</source>
-        <translation type="unfinished">Il file è stato modificato. Vuoi ripristinarlo?</translation>
+        <location line="+1"/>
+        <source>Automatically Hide View Title Bars</source>
+        <translation>Nascondi automaticamente le barre del titolo di visualizzazione</translation>
     </message>
     <message>
-        <source>The commit list spans several repositories (%1). Please commit them one by one.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+92"/>
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-25"/>
+        <location line="+86"/>
+        <source>Name is empty.</source>
+        <translation>Il nome è vuoto.</translation>
     </message>
     <message>
-        <source>Another commit is currently being executed.</source>
-        <translation type="unfinished">Si sta già creando eseguendo un commit.</translation>
+        <location line="+10"/>
+        <source>Name contains white space.</source>
+        <translation>Il nome contiene uno spazio bianco.</translation>
     </message>
     <message>
-        <source>There are no modified files.</source>
-        <translation type="unfinished">Non ci sono file modificati.</translation>
+        <location line="+2"/>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>Carattere non valido &quot;%1&quot;.</translation>
     </message>
     <message>
-        <source>Cannot create temporary file: %1</source>
-        <translation type="unfinished">Impossibile creare il file temporaneo: %1</translation>
+        <location line="+10"/>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>Caratteri non validi &quot;%1&quot;.</translation>
     </message>
     <message>
-        <source>Project status</source>
+        <location line="+10"/>
+        <source>Name matches MS Windows device (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The initial revision %1 cannot be described.</source>
-        <translation type="unfinished"></translation>
+        <location line="+35"/>
+        <source>File extension %1 is required:</source>
+        <translation>È richiesta l&apos;estensione del file %1:</translation>
     </message>
     <message>
-        <source>Could not find commits of id &apos;%1&apos; on %2.</source>
-        <translation type="unfinished"></translation>
+        <location line="+2"/>
+        <source>File extensions %1 are required:</source>
+        <translation>Sono richieste le estensioni dei file %1:</translation>
     </message>
     <message>
-        <source>Executing: %1 %2
-</source>
+        <location filename="../../../src/libs/utils/filepath.cpp" line="+865"/>
+        <source>%1 on %2</source>
+        <comment>File on device</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Executing in %1: %2 %3
-</source>
+        <location line="+6"/>
+        <source>%1 %2 on %3</source>
+        <comment>File and args on device</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No cvs executable specified!</source>
+        <location line="+580"/>
+        <source>Error while trying to copy file: %1</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The process terminated with exit code %1.</source>
-        <translation type="unfinished">Il processo è terminato con il codice di uscita %1.</translation>
     </message>
     <message>
-        <source>The process terminated abnormally.</source>
-        <translation type="unfinished">Il processo è terminato in modo anomalo.</translation>
+        <location line="+7"/>
+        <source>Could not copy file: %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Could not start cvs &apos;%1&apos;. Please check your settings in the preferences.</source>
+        <location line="+5"/>
+        <source>Could not set permissions on &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>CVS did not respond within timeout limit (%1 ms).</source>
+        <location line="+272"/>
+        <source>No &quot;localSource&quot; device hook set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Added</source>
+        <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+750"/>
+        <source>My Computer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Removed</source>
+        <location line="+1"/>
+        <source>Computer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <location line="+758"/>
+        <source>Name</source>
+        <translation type="unfinished">Nome</translation>
     </message>
     <message>
-        <source>CVS Submit</source>
+        <location line="+2"/>
+        <source>Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>CVS Command</source>
+        <location line="+3"/>
+        <source>Kind</source>
+        <comment>Match OS X Finder</comment>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>QtC::Debugger</name>
     <message>
-        <source>Connecting to remote server failed:</source>
-        <translation type="unfinished">Problema con la connessione al server remoto:</translation>
+        <location line="+1"/>
+        <source>Type</source>
+        <comment>All other platforms</comment>
+        <translation type="unfinished">Tipo</translation>
     </message>
-</context>
-<context>
-    <name>NameDemanglerPrivate</name>
     <message>
-        <source>Premature end of input</source>
+        <location line="+6"/>
+        <source>Date Modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid encoding</source>
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="+23"/>
+        <source>Cannot write file %1: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid name</source>
-        <translation type="unfinished"></translation>
+        <location line="+3"/>
+        <source>Cannot write file %1. Disk full?</source>
+        <translation>Impossibile scrivere il file %1. Disco pieno?</translation>
     </message>
     <message>
-        <source>Invalid nested-name</source>
+        <location line="+38"/>
+        <source>%1: Is a reserved filename on Windows. Cannot save.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid template args</source>
-        <translation type="unfinished"></translation>
+        <location line="+22"/>
+        <source>Cannot overwrite file %1: %2</source>
+        <translation>Impossibile sovrascrivere il file %1: %2</translation>
     </message>
     <message>
-        <source>Invalid template-param</source>
-        <translation type="unfinished"></translation>
+        <location line="+0"/>
+        <source>Cannot create file %1: %2</source>
+        <translation>Impossibile creare il file %1: %2</translation>
     </message>
     <message>
-        <source>Invalid qualifiers: unexpected &apos;volatile&apos;</source>
-        <translation type="unfinished"></translation>
+        <location line="+40"/>
+        <source>Cannot create temporary file in %1: %2</source>
+        <translation>Impossibile creare il file temporaneo in%1: %2</translation>
     </message>
     <message>
-        <source>Invalid qualifiers: &apos;const&apos; appears twice</source>
+        <location line="+39"/>
+        <source>Overwrite File?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid non-negative number</source>
+        <location line="+1"/>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid template-arg</source>
-        <translation type="unfinished"></translation>
+        <location line="+21"/>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>Impossibile copiare il file &quot;%1&quot; in &quot;%2&quot;.</translation>
     </message>
     <message>
-        <source>Invalid expression</source>
-        <translation type="unfinished"></translation>
+        <location line="+379"/>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>Impossibile creare la directory &quot;%1&quot;.</translation>
     </message>
     <message>
-        <source>Invalid primary expression</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+91"/>
+        <source>Cannot create OpenGL context.</source>
+        <translation>Impossibile creare il contesto OpenGL.</translation>
     </message>
     <message>
-        <source>Invalid expr-primary</source>
+        <location filename="../../../src/libs/utils/infobar.cpp" line="+303"/>
+        <source>&amp;Show Details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid type</source>
-        <translation type="unfinished"></translation>
+        <location line="+43"/>
+        <source>Do Not Show Again</source>
+        <translation>Non mostrare più</translation>
     </message>
     <message>
-        <source>Invalid built-in type</source>
-        <translation type="unfinished"></translation>
+        <location line="+23"/>
+        <source>Close</source>
+        <translation type="unfinished">Chiudi</translation>
     </message>
     <message>
-        <source>Invalid builtin-type</source>
+        <location filename="../../../src/libs/utils/jsontreeitem.cpp" line="+22"/>
+        <source>Null</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid function type</source>
+        <location line="+2"/>
+        <source>Bool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid unqualified-name</source>
+        <location line="+2"/>
+        <source>Double</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid operator-name &apos;%s&apos;</source>
-        <translation type="unfinished"></translation>
+        <location line="+2"/>
+        <source>String</source>
+        <translation type="unfinished">Stringa</translation>
     </message>
     <message>
-        <source>Invalid array-type</source>
+        <location line="+2"/>
+        <source>Array</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid pointer-to-member-type</source>
+        <location line="+2"/>
+        <source>Object</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid substitution</source>
-        <translation type="unfinished"></translation>
+        <location line="+2"/>
+        <source>Undefined</source>
+        <translation>Non definito</translation>
     </message>
-    <message>
-        <source>Invalid substitution: element %1 was requested, but there are only %2</source>
-        <translation type="unfinished"></translation>
+    <message numerus="yes">
+        <location line="+14"/>
+        <location line="+2"/>
+        <source>%n Items</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <source>Invalid substitution: There are no elements</source>
+        <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+126"/>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid special-name</source>
+        <location line="+7"/>
+        <source>Process launcher closed unexpectedly: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid local-name</source>
+        <location filename="../../../src/libs/utils/launchersocket.cpp" line="+222"/>
+        <source>Process launcher socket error.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid discriminator</source>
+        <location line="+236"/>
+        <source>Internal socket error: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid ctor-dtor-name</source>
+        <location line="+135"/>
+        <source>Socket error: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid call-offset</source>
+        <location line="+10"/>
+        <source>Internal protocol error: invalid packet size %1.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid v-offset</source>
+        <location line="+13"/>
+        <source>Internal protocol error: invalid packet type %1.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invalid digit</source>
+        <location line="+14"/>
+        <source>Launcher socket closed unexpectedly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>At position %1: </source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+269"/>
+        <source>Infinite recursion error</source>
+        <translation>Errore di ricorsione infinita</translation>
     </message>
-</context>
-<context>
-    <name>QtC::Designer</name>
     <message>
-        <source>untitled</source>
-        <translation type="unfinished">senza titolo</translation>
+        <location line="+112"/>
+        <source>%1: Full path including file name.</source>
+        <translation>%1: percorso completo compreso il nome del file.</translation>
     </message>
-</context>
-<context>
-    <name>QtC::Git</name>
     <message>
-        <source>Clones a project from a git repository.</source>
-        <translation type="unfinished"></translation>
+        <location line="+5"/>
+        <source>%1: Full path excluding file name.</source>
+        <translation>%1: percorso completo escluso il nome del file.</translation>
     </message>
     <message>
-        <source>Git Repository Clone</source>
-        <translation type="unfinished"></translation>
+        <location line="+5"/>
+        <source>%1: Full path including file name, with native path separator (backslash on Windows).</source>
+        <translation>%1: percorso completo con nome file, con separatore di percorso nativo (barra rovesciata su Windows).</translation>
     </message>
     <message>
-        <source>Specify repository URL, checkout directory and path.</source>
-        <translation type="unfinished"></translation>
+        <location line="+8"/>
+        <source>%1: Full path excluding file name, with native path separator (backslash on Windows).</source>
+        <translation>%1: percorso completo escluso il nome file, con separatore di percorso nativo (barra rovesciata su Windows).</translation>
     </message>
     <message>
-        <source>Clone URL:</source>
-        <translation type="unfinished"></translation>
+        <location line="+8"/>
+        <source>%1: File name without path.</source>
+        <translation>%1: nome file senza percorso.</translation>
     </message>
-</context>
-<context>
-    <name>Gitorious::Internal::Gitorious</name>
     <message>
-        <source>Error parsing reply from &apos;%1&apos;: %2</source>
-        <translation type="unfinished"></translation>
+        <location line="+5"/>
+        <source>%1: File base name without path and suffix.</source>
+        <translation>%1: nome di base del file senza percorso e suffisso.</translation>
     </message>
     <message>
-        <source>Request failed for &apos;%1&apos;: %2</source>
-        <translation type="unfinished"></translation>
+        <location line="+69"/>
+        <source>Global variables</source>
+        <translation>Variabili globali</translation>
     </message>
     <message>
-        <source>Open source projects that use Git.</source>
-        <translation type="unfinished"></translation>
+        <location line="+1"/>
+        <source>Access environment variables.</source>
+        <translation>Accedere alle variabili d&apos;ambiente.</translation>
     </message>
-</context>
-<context>
-    <name>Gitorious::Internal::GitoriousCloneWizard</name>
     <message>
-        <source>Clones a project from a Gitorious repository.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+111"/>
+        <source>Minimize</source>
+        <translation type="unfinished">Minimizza</translation>
     </message>
     <message>
-        <source>Gitorious Repository Clone</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/namevaluemodel.cpp" line="+34"/>
+        <source>&lt;UNSET&gt;</source>
+        <translation>&lt;UNSET&gt;</translation>
     </message>
-</context>
-<context>
-    <name>Gitorious::Internal::GitoriousHostWizardPage</name>
     <message>
-        <source>Select a host.</source>
-        <translation type="unfinished"></translation>
+        <location line="+155"/>
+        <source>Variable</source>
+        <translation type="unfinished">Variabile</translation>
     </message>
-</context>
-<context>
-    <name>Gitorious::Internal::GitoriousProjectWizardPage</name>
     <message>
-        <source>Choose a project from &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <location line="+0"/>
+        <source>Value</source>
+        <translation type="unfinished">Valore</translation>
     </message>
-</context>
-<context>
-    <name>QtC::Help</name>
     <message>
-        <source>General settings</source>
-        <translation type="unfinished">Impostazioni Generali</translation>
+        <location line="+79"/>
+        <source>&lt;VARIABLE&gt;</source>
+        <extracomment>Name when inserting a new variable</extracomment>
+        <translation>&lt;VARIABILE&gt;</translation>
     </message>
     <message>
-        <source>Help</source>
-        <translation type="unfinished">Guida</translation>
+        <location line="+2"/>
+        <source>&lt;VALUE&gt;</source>
+        <extracomment>Value when inserting a new variable</extracomment>
+        <translation>&lt;VALORE&gt;</translation>
     </message>
     <message>
-        <source>Open Image</source>
+        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+78"/>
+        <source>&amp;OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Files (*.xbel)</source>
+        <location line="+1"/>
+        <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>There was an error while importing bookmarks!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+249"/>
+        <source>Error in command line.</source>
+        <translation>Errore nella riga di comando.</translation>
     </message>
     <message>
-        <source>Save File</source>
+        <location line="+29"/>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The file is not an XBEL version 1.0 file.</source>
+        <location line="+970"/>
+        <source>Process Not Responding</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unknown title</source>
-        <translation type="unfinished"></translation>
+        <location line="+1"/>
+        <source>The process is not responding.</source>
+        <translation>Il processo non risponde.</translation>
     </message>
-</context>
-<context>
-    <name>QtC::ProjectExplorer</name>
     <message>
-        <source>Failed to start program. Path or permissions wrong?</source>
-        <translation type="unfinished">Non è possibile avviare il programma. Il percorso o i permessi sono errati?</translation>
+        <location line="+1"/>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>Il processo &quot;%1&quot; non risponde.</translation>
     </message>
     <message>
-        <source>The program has unexpectedly finished.</source>
-        <translation type="unfinished">Il programma è finito inaspettatamente.</translation>
+        <location line="+3"/>
+        <source>Terminate the process?</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Some error has occurred while running the program.</source>
-        <translation type="unfinished">C&apos;è stato un errore durante l&apos;esecuzione del programma.</translation>
+        <location line="+271"/>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>Il comando &quot;%1&quot; è stato terminato con successo.</translation>
     </message>
     <message>
-        <source>Run</source>
-        <translation type="unfinished">Esegui</translation>
+        <location line="+2"/>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>Il comando &quot;%1&quot; è stato terminato con il codice di uscita %2.</translation>
     </message>
     <message>
-        <source>Starting %1...</source>
-        <translation type="unfinished">Avvio di %1...</translation>
+        <location line="+3"/>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>Il comando &quot;%1&quot; è stato terminato in modo anomalo.</translation>
     </message>
     <message>
-        <source>%1 exited with code %2</source>
-        <translation type="unfinished">%1 è uscito con il codice %2</translation>
+        <location line="+2"/>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>Il comando &quot;%1&quot; non può essere avviato.</translation>
     </message>
     <message>
-        <source>The target directory %1 could not be created.</source>
-        <translation type="unfinished"></translation>
+        <location line="+2"/>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
+        <translation>Il comando &quot;%1&quot; non ha risposto entro il limite di timeout (%2 s).</translation>
     </message>
     <message>
-        <source>The existing file %1 could not be removed.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21"/>
+        <source>Remove File</source>
+        <translation type="unfinished">Rimozione del File</translation>
     </message>
     <message>
-        <source>The file %1 could not be copied to %2.</source>
+        <location line="+0"/>
+        <source>Remove Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The debugger helpers could not be built in any of the directories:
-- %1
-
-Reason: %2</source>
-        <translation type="unfinished"></translation>
+        <location line="+10"/>
+        <source>&amp;Delete file permanently</source>
+        <translation type="unfinished">&amp;Cancella il file in modo permanente</translation>
     </message>
     <message>
-        <source>Building debugging helper library in %1
-</source>
+        <location line="+2"/>
+        <source>&amp;Remove from version control</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Running %1 %2...
-</source>
-        <translation type="unfinished"></translation>
+        <location line="+8"/>
+        <source>File to remove:</source>
+        <translation type="unfinished">File da rimuovere:</translation>
     </message>
     <message>
-        <source>%1 not found in PATH
-</source>
+        <location line="+0"/>
+        <source>Folder to remove:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Running %1 ...
-</source>
+        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+118"/>
+        <source>Failed to Read File</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Develop</source>
-        <translation type="unfinished">Sviluppa</translation>
     </message>
     <message>
-        <source>Active run configuration</source>
+        <location line="+1"/>
+        <source>Could not open &quot;%1&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Edit Project Settings for Project &lt;b&gt;%1&lt;/b&gt;</source>
+        <location line="+23"/>
+        <location line="+10"/>
+        <source>Failed to Write File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No Project loaded</source>
+        <location line="-9"/>
+        <source>There was nothing to write.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Select Project</source>
+        <location line="+112"/>
+        <location line="+269"/>
+        <source>No Valid Settings Found</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>ToolChain</name>
     <message>
-        <source>GCC</source>
+        <location line="-268"/>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Intel C++ Compiler (Linux)</source>
+        <location line="+269"/>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MinGW</source>
+        <location line="+11"/>
+        <source>Using Old Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Microsoft Visual C++</source>
+        <location line="+1"/>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Windows CE</source>
+        <location line="+15"/>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>WINSCW</source>
+        <location line="+2"/>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>GCCE</source>
+        <location line="+60"/>
+        <source>Unsupported Merge Settings File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>RVCT (ARMV5)</source>
+        <location line="+1"/>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>RVCT (ARMV6)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+32"/>
+        <source>Add</source>
+        <translation type="unfinished">Aggiungi</translation>
     </message>
     <message>
-        <source>Other</source>
-        <translation type="unfinished"></translation>
+        <location line="+1"/>
+        <location line="+83"/>
+        <source>Remove</source>
+        <translation type="unfinished">Rimuovi</translation>
     </message>
     <message>
-        <source>&lt;Invalid&gt;</source>
-        <translation type="unfinished"></translation>
+        <location line="-82"/>
+        <source>Rename</source>
+        <translation type="unfinished">Rinomina</translation>
     </message>
     <message>
-        <source>&lt;Unknown&gt;</source>
-        <translation type="unfinished"></translation>
+        <location line="+83"/>
+        <source>Do you really want to delete the configuration &lt;b&gt;%1&lt;/b&gt;?</source>
+        <translation>Vuoi davvero eliminare la configurazione &lt;b&gt;%1&lt;/b&gt;?</translation>
     </message>
-</context>
-<context>
-    <name>QmlEditor::Internal::ScriptEditor</name>
     <message>
-        <source>&lt;Select Symbol&gt;</source>
-        <translation type="unfinished">&lt;Scegli un Simbolo&gt;</translation>
+        <location line="+23"/>
+        <source>New name for configuration &lt;b&gt;%1&lt;/b&gt;:</source>
+        <translation>Nuovo nome per la configurazione &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
+        <location line="+2"/>
         <source>Rename...</source>
         <translation type="unfinished">Rinomina...</translation>
     </message>
     <message>
-        <source>New id:</source>
-        <translation type="unfinished">Nuovo id:</translation>
-    </message>
-    <message>
-        <source>Rename id &apos;%1&apos;...</source>
-        <translation type="unfinished">Rinomina l&apos;id &apos;%1&apos;...</translation>
-    </message>
-</context>
-<context>
-    <name>QmlEditor::Internal::QmlEditorPlugin</name>
-    <message>
-        <source>Qt</source>
-        <translation type="unfinished">Qt</translation>
-    </message>
-    <message>
-        <source>Creates a Qt QML file.</source>
-        <translation type="unfinished">Crea un file Qt QML.</translation>
-    </message>
-    <message>
-        <source>Qt QML File</source>
-        <translation type="unfinished">File Qt QML</translation>
-    </message>
-</context>
-<context>
-    <name>QmlEditor::Internal::QmlModelManager</name>
-    <message>
-        <source>Indexing</source>
-        <translation type="unfinished">Indicizzazione</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::QmlProjectManager</name>
-    <message>
-        <source>&lt;b&gt;QML Make&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QtC::QmakeProjectManager</name>
-    <message>
-        <source>&lt;New class&gt;</source>
+        <location filename="../../../src/libs/utils/stringutils.cpp" line="+341"/>
+        <source>Elapsed time: %1.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Confirm Delete</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+194"/>
+        <location line="+66"/>
+        <source>Out of memory.</source>
+        <translation>Memoria piena.</translation>
     </message>
     <message>
-        <source>Delete class %1 from list?</source>
-        <translation type="unfinished"></translation>
+        <location line="-55"/>
+        <source>An encoding error was encountered.</source>
+        <translation>Si è verificato un errore di codifica.</translation>
     </message>
     <message>
-        <source>Qt4 Designer Custom Widget</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/unixutils.cpp" line="+36"/>
+        <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variabile&lt;/th&gt;&lt;th&gt;Espande alla&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory del file corrente&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;Nome file (con percorso completo)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;nome file (senza percorso)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <source>Creates a Qt4 Designer Custom Widget or a Custom Widget Collection.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86"/>
+        <source>Insert Variable</source>
+        <translation>Inserisci variabile</translation>
     </message>
     <message>
-        <source>This wizard generates a Qt4 Designer Custom Widget or a Qt4 Designer Custom Widget Collection project.</source>
-        <translation type="unfinished"></translation>
+        <location line="+106"/>
+        <source>Current Value: %1</source>
+        <translation>Valore corrente: %1</translation>
     </message>
     <message>
-        <source>Cannot open icon file %1.</source>
-        <translation type="unfinished"></translation>
+        <location line="+24"/>
+        <source>Insert Unexpanded Value</source>
+        <translation>Inserisci valore non espanso</translation>
     </message>
     <message>
-        <source>Creating multiple widget libraries (%1, %2) in one project (%3) is not supported.</source>
-        <translation type="unfinished"></translation>
+        <location line="+3"/>
+        <location line="+7"/>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>Inserisci &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>Cannot open %1: %2</source>
-        <translation type="unfinished"></translation>
+        <location line="-3"/>
+        <source>Insert Expanded Value</source>
+        <translation>Inserisci valore espanso</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Select a variable to insert.</source>
+        <translation>Seleziona una variabile da inserire.</translation>
+    </message>
+    <message>
+        <location line="+121"/>
+        <source>Variables</source>
+        <translation type="unfinished">Variabili</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/wizard.cpp" line="+119"/>
+        <source>...</source>
+        <translation type="unfinished">...</translation>
     </message>
 </context>
 <context>
-    <name>QtC::Welcome</name>
-    <message>
-        <source>Getting Started</source>
-        <translation type="unfinished">Comincia</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::QmakeProjectManager</name>
-    <message>
-        <source>%1 on Device</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>QtS60DeviceRunConfiguration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not parse %1. The QtS60 Device run configuration %2 can not be started.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Name:</source>
-        <translation type="unfinished">Nome:</translation>
-    </message>
-    <message>
-        <source>Install File:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Device on Serial Port:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Self-signed certificate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Choose certificate file (.cer)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Custom certificate:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Choose key file (.key / .pem)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Key file:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Creating %1.sisx ...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Executable file: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not read template package file &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not write package file &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>An error occurred while creating the package.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Package: %1
-Deploying application to &apos;%2&apos;...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not connect to phone on port &apos;%1&apos;: %2
-Check if the phone is connected and the TRK application is running.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not create file %1 on device: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not write to file %1 on device: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not close file %1 on device: %2. It will be closed when App TRK is closed.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Copying install file...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1% copied.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Installing application...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not install from package %1 on device: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Failed to start %1.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 has unexpectedly finished.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>An error has occurred while running %1.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Finished.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Starting application...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Application running with pid %1.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not start application: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Warning: Cannot locate the symbol file belonging to %1.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Launching debugger...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Debugging finished.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No Qt installed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 in Emulator</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>QtS60EmulatorRunConfiguration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not parse %1. The QtS60 emulator run configuration %2 can not be started.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Executable:</source>
-        <translation type="unfinished">Eseguibile:</translation>
-    </message>
-    <message>
-        <source>Starting %1...</source>
-        <translation type="unfinished">Avvio di %1...</translation>
-    </message>
-    <message>
-        <source>[Qt Message]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 exited with code %2</source>
-        <translation type="unfinished">%1 è uscito con il codice %2</translation>
-    </message>
-    <message>
-        <source>Run in Emulator</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Run on Device</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Debug on Device</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Using Default Qt Version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Using Qt Version &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New configuration</source>
-        <translation type="unfinished">Nuova configurazione</translation>
-    </message>
-    <message>
-        <source>New Configuration Name:</source>
-        <translation type="unfinished">Nome della Nuova Configurazione:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Subversion</name>
-    <message>
-        <source>Checks out a project from a Subversion repository.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Subversion Checkout</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Specify repository, checkout directory and path.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Repository:</source>
-        <translation type="unfinished">Deposito:</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::TextEditor</name>
-    <message>
-        <source>Not a color scheme file.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Customized</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QtC::VcsBase</name>
-    <message>
-        <source>Cannot Open Project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Failed to open project in &apos;%1&apos;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Could not find any project files matching (%1) in the directory &apos;%2&apos;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The Project Explorer is not available.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&apos;%1&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unable to open the project &apos;%1&apos;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The process terminated with exit code %1.</source>
-        <translation type="unfinished">Il processo è terminato con il codice di uscita %1.</translation>
-    </message>
-    <message>
-        <source>The process returned exit code %1.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The process terminated in an abnormal way.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stopping...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Checkout started...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Failed.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Succeeded.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation type="unfinished">Cancella</translation>
-    </message>
-    <message>
-        <source>Version Control</source>
-        <translation type="unfinished">Controllo di Revisione</translation>
-    </message>
-</context>
-<context>
-    <name>QtC::Welcome</name>
-    <message>
-        <source>Community</source>
-        <translation type="unfinished">Comunità</translation>
-    </message>
-</context>
-<context>
-    <name>MimeType</name>
-    <message>
-        <source>unknown</source>
-        <translation type="unfinished">sconosciuto</translation>
-    </message>
-    <message>
-        <source>CMake Project file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C Source file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C Header file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C++ Header file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C++ header</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C++ Source file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C++ source code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Objective-C source code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>CVS submit template</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Qt Designer file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Generic Qt Creator Project file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Generic Project Files</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Generic Project Include Paths</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Generic Project Configuration File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Perforce submit template</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>QML file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Qml Project file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Qt Project file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Qt Project include file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>message catalog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Qt Script file</source>
-        <translation type="unfinished">File Qt Script</translation>
-    </message>
-    <message>
-        <source>Qt Resource file</source>
-        <translation type="unfinished">File di Risorse Qt</translation>
-    </message>
-    <message>
-        <source>Subversion submit template</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Plain text document</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>XML document</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Differences between files</source>
-        <translation type="unfinished"></translation>
+    <name>TextEditor::Internal::Snippets</name>
+    <message>
+        <source></source>
+        <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
+        <translation></translation>
     </message>
 </context>
 </TS>

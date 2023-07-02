@@ -1,6 +1,8 @@
 #include "openmvcamerasettings.h"
 #include "ui_openmvcamerasettings.h"
 
+#include "openmvtr.h"
+
 #define SETTINGS_GROUP "BoardConfig"
 #define REPL_UART "REPLUart"
 #define WIFI_DEBUG "WiFiDebug"
@@ -16,6 +18,9 @@
 #define ACCESS_POINT_MODE_TYPE "AccessPointSecurity"
 #define ACESSS_POINT_MODE_CHANNEL "AccessPointChannel"
 #define BOARD_NAME "BoardName"
+
+namespace OpenMV {
+namespace Internal {
 
 OpenMVCameraSettings::OpenMVCameraSettings(const QString &fileName, QWidget *parent) : QDialog(parent), m_settings(new QSettings(fileName, QSettings::IniFormat, this)), m_ui(new Ui::OpenMVCameraSettings)
 {
@@ -43,7 +48,7 @@ OpenMVCameraSettings::OpenMVCameraSettings(const QString &fileName, QWidget *par
     m_ui->clientModeButton->setChecked(!wifiMode);
     m_ui->accessPointModeButton->setChecked(wifiMode);
 
-    m_ui->clientModeSSIDEntry->addItem(clientModeSSID.isEmpty() ? tr("Please enter your WiFi network here") : clientModeSSID);
+    m_ui->clientModeSSIDEntry->addItem(clientModeSSID.isEmpty() ? Tr::tr("Please enter your WiFi network here") : clientModeSSID);
     m_ui->clientModePasswordEntry->setText(clientModePass);
     m_ui->clientModeTypeEntry->setCurrentIndex(((1 <= clientModeType) && (clientModeType <= 3)) ? (clientModeType - 1) : 0);
 
@@ -97,3 +102,6 @@ void OpenMVCameraSettings::accept()
 
     QDialog::accept();
 }
+
+} // namespace Internal
+} // namespace OpenMV

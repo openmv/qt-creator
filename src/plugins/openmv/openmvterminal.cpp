@@ -2,6 +2,8 @@
 
 #include "openmvpluginio.h"
 
+#include "openmvtr.h"
+
 #include <utils/theme/theme.h>
 
 #define TERMINAL_SETTINGS_GROUP "OpenMVTerminal"
@@ -13,6 +15,9 @@
 #define LAST_SAVE_IMAGE_PATH "LastSaveImagePath"
 #define HISTOGRAM_COLOR_SPACE_STATE "HistogramColorSpace"
 #define LAST_SAVE_LOG_PATH "LastSaveLogPath"
+
+namespace OpenMV {
+namespace Internal {
 
 MyPlainTextEdit::MyPlainTextEdit(qreal fontPointSizeF, QWidget *parent) : QPlainTextEdit(parent)
 {
@@ -461,15 +466,15 @@ void MyPlainTextEdit::save()
     forever
     {
         path =
-        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Log"),
+        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Log"),
             settings->value(QStringLiteral(LAST_SAVE_LOG_PATH), QDir::homePath()).toString(),
-            tr("Text Files (*.txt);;All files (*)"));
+            Tr::tr("Text Files (*.txt);;All files (*)"));
 
         if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
         {
             QMessageBox::warning(Core::ICore::dialogParent(),
-                tr("Save Log"),
-                QObject::tr("Please add a file extension!"));
+                Tr::tr("Save Log"),
+                Tr::tr("Please add a file extension!"));
 
             continue;
         }
@@ -486,8 +491,8 @@ void MyPlainTextEdit::save()
             if((!file.write(toPlainText().toUtf8())) || (!file.finalize()))
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Save Log"),
-                    tr("Error: %L1!").arg(file.errorString()));
+                    Tr::tr("Save Log"),
+                    Tr::tr("Error: %L1!").arg(file.errorString()));
             }
             else
             {
@@ -497,8 +502,8 @@ void MyPlainTextEdit::save()
         else
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                tr("Save Log"),
-                tr("Error: %L1!").arg(file.errorString()));
+                Tr::tr("Save Log"),
+                Tr::tr("Error: %L1!").arg(file.errorString()));
         }
     }
 
@@ -693,7 +698,7 @@ void MyPlainTextEdit::wheelEvent(QWheelEvent *event)
     QPlainTextEdit::wheelEvent(event);
 
     if(event->modifiers() & Qt::ControlModifier) {
-        Utils::FadingIndicator::showText(this, tr("Zoom: %1%").arg(int(100 * (font().pointSizeF() / TextEditor::TextEditorSettings::fontSettings().defaultFontSize()))), Utils::FadingIndicator::SmallText);
+        Utils::FadingIndicator::showText(this, Tr::tr("Zoom: %1%").arg(int(100 * (font().pointSizeF() / TextEditor::TextEditorSettings::fontSettings().defaultFontSize()))), Utils::FadingIndicator::SmallText);
     }
 }
 
@@ -716,23 +721,23 @@ void MyPlainTextEdit::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu menu;
 
-    connect(menu.addAction(tr("Copy")), &QAction::triggered, this, [this] {
+    connect(menu.addAction(Tr::tr("Copy")), &QAction::triggered, this, [this] {
         copy();
     });
 
-    connect(menu.addAction(tr("Paste")), &QAction::triggered, this, [this] {
+    connect(menu.addAction(Tr::tr("Paste")), &QAction::triggered, this, [this] {
         emit paste(QApplication::clipboard()->text().toUtf8());
     });
 
     menu.addSeparator();
 
-    connect(menu.addAction(tr("Select All")), &QAction::triggered, this, [this] {
+    connect(menu.addAction(Tr::tr("Select All")), &QAction::triggered, this, [this] {
         selectAll();
     });
 
     menu.addSeparator();
 
-    connect(menu.addAction(tr("Find")), &QAction::triggered, this, [this] {
+    connect(menu.addAction(Tr::tr("Find")), &QAction::triggered, this, [this] {
         Core::ActionManager::command(Core::Constants::FIND_IN_DOCUMENT)->action()->trigger();
     });
 
@@ -775,29 +780,29 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
     styledBar0Layout->setContentsMargins(0, 0, 0, 0);
     styledBar0Layout->setSpacing(0);
     styledBar0Layout->addSpacing(4);
-    styledBar0Layout->addWidget(new QLabel(tr("Frame Buffer")));
+    styledBar0Layout->addWidget(new QLabel(Tr::tr("Frame Buffer")));
     styledBar0Layout->addSpacing(6);
     styledBar0->setLayout(styledBar0Layout);
 
     QToolButton *beginRecordingButton = new QToolButton;
-    beginRecordingButton->setText(tr("Record"));
-    beginRecordingButton->setToolTip(tr("Record the Frame Buffer"));
+    beginRecordingButton->setText(Tr::tr("Record"));
+    beginRecordingButton->setToolTip(Tr::tr("Record the Frame Buffer"));
     beginRecordingButton->setEnabled(false);
     styledBar0Layout->addWidget(beginRecordingButton);
 
     QToolButton *endRecordingButton = new QToolButton;
-    endRecordingButton->setText(tr("Stop"));
-    endRecordingButton->setToolTip(tr("Stop recording"));
+    endRecordingButton->setText(Tr::tr("Stop"));
+    endRecordingButton->setToolTip(Tr::tr("Stop recording"));
     endRecordingButton->setVisible(false);
     styledBar0Layout->addWidget(endRecordingButton);
 
     m_zoomButton = new QToolButton;
-    m_zoomButton->setText(tr("Zoom"));
-    m_zoomButton->setToolTip(tr("Zoom to fit"));
+    m_zoomButton->setText(Tr::tr("Zoom"));
+    m_zoomButton->setToolTip(Tr::tr("Zoom to fit"));
     m_zoomButton->setCheckable(true);
     styledBar0Layout->addWidget(m_zoomButton);
 
-    Utils::ElidingLabel *recordingLabel = new Utils::ElidingLabel(tr("Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0"));
+    Utils::ElidingLabel *recordingLabel = new Utils::ElidingLabel(Tr::tr("Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0"));
     recordingLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
     recordingLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
                                   arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
@@ -825,15 +830,15 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
         forever
         {
             path =
-            QFileDialog::getSaveFileName(this, tr("Save Image"),
+            QFileDialog::getSaveFileName(this, Tr::tr("Save Image"),
                 m_settings->value(QStringLiteral(LAST_SAVE_IMAGE_PATH), QDir::homePath()).toString(),
-                tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
+                Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
 
             if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
             {
                 QMessageBox::warning(Core::ICore::dialogParent(),
-                    tr("Save Image"),
-                    QObject::tr("Please add a file extension!"));
+                    Tr::tr("Save Image"),
+                    Tr::tr("Please add a file extension!"));
 
                 continue;
             }
@@ -850,8 +855,8 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
             else
             {
                 QMessageBox::critical(this,
-                    tr("Save Image"),
-                    tr("Failed to save the image file for an unknown reason!"));
+                    Tr::tr("Save Image"),
+                    Tr::tr("Failed to save the image file for an unknown reason!"));
             }
         }
     });
@@ -889,21 +894,21 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
     styledBar1Layout->setContentsMargins(0, 0, 0, 0);
     styledBar1Layout->setSpacing(0);
     styledBar1Layout->addSpacing(4);
-    styledBar1Layout->addWidget(new QLabel(tr("Histogram")));
+    styledBar1Layout->addWidget(new QLabel(Tr::tr("Histogram")));
     styledBar1Layout->addSpacing(6);
     styledBar1->setLayout(styledBar1Layout);
 
     m_colorSpace = new QComboBox;
     m_colorSpace->setProperty("hideborder", true);
     m_colorSpace->setProperty("drawleftborder", false);
-    m_colorSpace->insertItem(RGB_COLOR_SPACE, tr("RGB Color Space"));
-    m_colorSpace->insertItem(GRAYSCALE_COLOR_SPACE, tr("Grayscale Color Space"));
-    m_colorSpace->insertItem(LAB_COLOR_SPACE, tr("LAB Color Space"));
-    m_colorSpace->insertItem(YUV_COLOR_SPACE, tr("YUV Color Space"));
-    m_colorSpace->setToolTip(tr("Use Grayscale/LAB for color tracking"));
+    m_colorSpace->insertItem(RGB_COLOR_SPACE, Tr::tr("RGB Color Space"));
+    m_colorSpace->insertItem(GRAYSCALE_COLOR_SPACE, Tr::tr("Grayscale Color Space"));
+    m_colorSpace->insertItem(LAB_COLOR_SPACE, Tr::tr("LAB Color Space"));
+    m_colorSpace->insertItem(YUV_COLOR_SPACE, Tr::tr("YUV Color Space"));
+    m_colorSpace->setToolTip(Tr::tr("Use Grayscale/LAB for color tracking"));
     styledBar1Layout->addWidget(m_colorSpace);
 
-    Utils::ElidingLabel *resLabel = new Utils::ElidingLabel(tr("Res - No Image"));
+    Utils::ElidingLabel *resLabel = new Utils::ElidingLabel(Tr::tr("Res - No Image"));
     resLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
     resLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
                             arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
@@ -933,21 +938,21 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
                 if((roi.width() > 1)
                 || (roi.height() > 1))
                 {
-                    resLabel->setText(tr("Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()).arg(roi.width()).arg(roi.height()).arg(roi.width() * roi.height()));
+                    resLabel->setText(Tr::tr("Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()).arg(roi.width()).arg(roi.height()).arg(roi.width() * roi.height()));
                 }
                 else
                 {
-                    resLabel->setText(tr("Res (w:%1, h:%2) - Point (x:%3, y:%4)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()));
+                    resLabel->setText(Tr::tr("Res (w:%1, h:%2) - Point (x:%3, y:%4)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()));
                 }
             }
             else
             {
-                resLabel->setText(tr("Res (w:%1, h:%2)").arg(res.width()).arg(res.height()));
+                resLabel->setText(Tr::tr("Res (w:%1, h:%2)").arg(res.width()).arg(res.height()));
             }
         }
         else
         {
-            resLabel->setText(tr("Res - No Image"));
+            resLabel->setText(Tr::tr("Res - No Image"));
         }
     });
 
@@ -958,24 +963,24 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
     styledBar2Layout->setContentsMargins(0, 0, 0, 0);
     styledBar2Layout->setSpacing(0);
     styledBar2Layout->addSpacing(5);
-    styledBar2Layout->addWidget(new QLabel(tr("Serial Terminal")));
+    styledBar2Layout->addWidget(new QLabel(Tr::tr("Serial Terminal")));
     styledBar2Layout->addSpacing(7);
     styledBar2Layout->addWidget(new Utils::StyledSeparator);
     styledBar2->setLayout(styledBar2Layout);
 
     QToolButton *clearButton = new QToolButton;
     clearButton->setIcon(Utils::Icons::CLEAN_TOOLBAR.icon());
-    clearButton->setToolTip(tr("Clear"));
+    clearButton->setToolTip(Tr::tr("Clear"));
     styledBar2Layout->addWidget(clearButton);
 
     QToolButton *saveButton = new QToolButton;
     saveButton->setIcon(Utils::Icons::SAVEFILE_TOOLBAR.icon());
-    saveButton->setToolTip(tr("Save"));
+    saveButton->setToolTip(Tr::tr("Save"));
     styledBar2Layout->addWidget(saveButton);
 
     QToolButton *executeButton = new QToolButton;
     executeButton->setIcon(Utils::Icons::RUN_SMALL_TOOLBAR.icon());
-    executeButton->setToolTip(stand_alone ? tr("Run \"/main.py\"") : tr("Run current script in editor window"));
+    executeButton->setToolTip(stand_alone ? Tr::tr("Run \"/main.py\"") : Tr::tr("Run current script in editor window"));
     styledBar2Layout->addWidget(executeButton);
     if(!stand_alone) connect(Core::EditorManager::instance(), &Core::EditorManager::currentEditorChanged, executeButton, [executeButton] (Core::IEditor *editor) {
         executeButton->setEnabled(editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false);
@@ -983,12 +988,12 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     QToolButton *interruptButton = new QToolButton;
     interruptButton->setIcon(Utils::Icons::STOP_SMALL_TOOLBAR.icon());
-    interruptButton->setToolTip(tr("Stop running script"));
+    interruptButton->setToolTip(Tr::tr("Stop running script"));
     styledBar2Layout->addWidget(interruptButton);
 
     QToolButton *reloadButton = new QToolButton;
     reloadButton->setIcon(Utils::Icons::RELOAD_TOOLBAR.icon());
-    reloadButton->setToolTip(tr("Soft reset"));
+    reloadButton->setToolTip(Tr::tr("Soft reset"));
     styledBar2Layout->addWidget(reloadButton);
     styledBar2Layout->addStretch(1);
 
@@ -2045,3 +2050,6 @@ OpenMVTerminalTCPPort::OpenMVTerminalTCPPort(QObject *parent) : OpenMVTerminalPo
 
     thread->start();
 }
+
+} // namespace Internal
+} // namespace OpenMV

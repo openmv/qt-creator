@@ -9,12 +9,17 @@
 #include <utils/qtcprocess.h>
 #include <utils/theme/theme.h>
 
+#include "openmvtr.h"
+
 #define DFU_UTIL_SETTINGS_GROUP "OpenMVDFUUtil"
 #define LAST_DFU_UTIL_TERMINAL_WINDOW_GEOMETRY "LastDFUUtilTerminalWindowGeometry"
 #define DFUSE_SETTINGS_GROUP "OpenMVDfuSe"
 #define LAST_DFUSE_TERMINAL_WINDOW_GEOMETRY "LastDfuSeTerminalWindowGeometry"
 #define PYDFU_SETTINGS_GROUP "OpenMVPyDfu"
 #define LAST_PYDFU_TERMINAL_WINDOW_GEOMETRY "LastPyDfuTerminalWindowGeometry"
+
+namespace OpenMV {
+namespace Internal {
 
 QList<QString> getDevices()
 {
@@ -89,7 +94,7 @@ QList<QString> getDevices()
     }
     else
     {
-        QMessageBox box(QMessageBox::Warning, QObject::tr("Get Devices"), QObject::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+        QMessageBox box(QMessageBox::Warning, Tr::tr("Get Devices"), Tr::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
         box.setDetailedText(command.toString() + QStringLiteral("\n\n") + process.stdOut());
@@ -130,7 +135,7 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
                 (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
             dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-            dialog->setWindowTitle(QObject::tr("DfuSe"));
+            dialog->setWindowTitle(Tr::tr("DfuSe"));
             dialog->setSizeGripEnabled(true);
 
             if(settings->contains(QStringLiteral(LAST_DFUSE_TERMINAL_WINDOW_GEOMETRY)))
@@ -267,7 +272,7 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
                 (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
             dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-            dialog->setWindowTitle(QObject::tr("PyDfu"));
+            dialog->setWindowTitle(Tr::tr("PyDfu"));
             dialog->setSizeGripEnabled(true);
 
             if(settings->contains(QStringLiteral(LAST_PYDFU_TERMINAL_WINDOW_GEOMETRY)))
@@ -371,7 +376,7 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
         (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
     dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-    dialog->setWindowTitle(QObject::tr("DFU Util"));
+    dialog->setWindowTitle(Tr::tr("DFU Util"));
     dialog->setSizeGripEnabled(true);
 
     if(settings->contains(QStringLiteral(LAST_DFU_UTIL_TERMINAL_WINDOW_GEOMETRY)))
@@ -522,3 +527,7 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
     settings->endGroup();
     delete dialog;
 }
+
+} // namespace Internal
+} // namespace OpenMV
+

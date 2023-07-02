@@ -4,5 +4,5 @@ add_qtc_plugin(TabbedEditor
     plugin.cpp plugin.h
     tabbar.cpp tabbar.h
     resources/res.qrc
-    constants.h
+    constants.h tabbededitortr.h
 )

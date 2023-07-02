@@ -861,9 +861,9 @@ void OutputWindow::save()
     settings->beginGroup(QLatin1String(settingsGroup));
 
     QString path =
-        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), tr("Save Log"),
+        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Log"),
             settings->value(QLatin1String(saveLogFilePath), QDir::homePath()).toString(),
-            tr("Text Files (*.txt);;All files (*)"));
+            Tr::tr("Text Files (*.txt);;All files (*)"));
 
     if(!path.isEmpty())
     {
@@ -874,8 +874,8 @@ void OutputWindow::save()
             if((!file.write(toPlainText().toUtf8())) || (!file.finalize()))
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
-                    tr("Save Log"),
-                    tr("Error: %L1!").arg(file.errorString()));
+                    Tr::tr("Save Log"),
+                    Tr::tr("Error: %L1!").arg(file.errorString()));
             }
             else
             {
@@ -885,8 +885,8 @@ void OutputWindow::save()
         else
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                tr("Save Log"),
-                tr("Error: %L1!").arg(file.errorString()));
+                Tr::tr("Save Log"),
+                Tr::tr("Error: %L1!").arg(file.errorString()));
         }
     }
 

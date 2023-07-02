@@ -34,6 +34,9 @@
 #include "openmvpluginfb.h"
 #include "openmv/histogram/openmvpluginhistogram.h"
 
+namespace OpenMV {
+namespace Internal {
+
 class MyPlainTextEdit : public QPlainTextEdit
 {
     Q_OBJECT
@@ -271,5 +274,8 @@ public:
 
     explicit OpenMVTerminalTCPPort(QObject *parent = Q_NULLPTR);
 };
+
+} // namespace Internal
+} // namespace OpenMV
 
 #endif // OPENMVTERMINAL_H

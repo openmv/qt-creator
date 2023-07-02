@@ -9,6 +9,9 @@
 
 #define KEYPOINT_DATA_SIZE 32
 
+namespace OpenMV {
+namespace Internal {
+
 class Keypoint : public QObject
 {
     Q_OBJECT
@@ -159,5 +162,8 @@ private:
 
     QByteArray m_geometry;
 };
+
+} // namespace Internal
+} // namespace OpenMV
 
 #endif // KEYPOINTSEDITOR_H

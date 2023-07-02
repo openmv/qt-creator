@@ -5,6 +5,9 @@
 #include <QtGui>
 #include <QtWidgets>
 
+namespace OpenMV {
+namespace Internal {
+
 class ThresholdEditor : public QDialog
 {
     Q_OBJECT
@@ -53,5 +56,8 @@ private:
     QLineEdit *m_GOut, *m_LABOut;
     QByteArray m_geometry;
 };
+
+} // namespace Internal
+} // namespace OpenMV
 
 #endif // THRESHOLDEDITOR_H

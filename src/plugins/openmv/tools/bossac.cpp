@@ -9,8 +9,13 @@
 #include <utils/qtcprocess.h>
 #include <utils/theme/theme.h>
 
+#include "openmvtr.h"
+
 #define BOSSAC_SETTINGS_GROUP "OpenMVBOSSAC"
 #define LAST_BOSSAC_TERMINAL_WINDOW_GEOMETRY "LastBOSSACTerminalWindowGeometry"
+
+namespace OpenMV {
+namespace Internal {
 
 void bossacRunBootloader(Utils::QtcProcess &process, const QString &device)
 {
@@ -64,7 +69,7 @@ void bossacDownloadFirmware(QString &command, Utils::QtcProcess &process, const 
         (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
     dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-    dialog->setWindowTitle(QObject::tr("BOSSAC"));
+    dialog->setWindowTitle(Tr::tr("BOSSAC"));
     dialog->setSizeGripEnabled(true);
 
     if(settings->contains(QStringLiteral(LAST_BOSSAC_TERMINAL_WINDOW_GEOMETRY)))
@@ -232,3 +237,6 @@ void bossacDownloadFirmware(QString &command, Utils::QtcProcess &process, const 
     settings->endGroup();
     delete dialog;
 }
+
+} // namespace Internal
+} // namespace OpenMV

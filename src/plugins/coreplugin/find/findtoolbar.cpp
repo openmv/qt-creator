@@ -422,7 +422,7 @@ FindToolBar::FindToolBar(CurrentDocumentFind *currentDocumentFind)
 
     setLightColoredIcon(isLightColored());
     // OPENMV-DIFF //
-    m_close->setToolTip(tr("Close"));
+    m_close->setToolTip(Tr::tr("Close"));
     // OPENMV-DIFF //
 }
 
