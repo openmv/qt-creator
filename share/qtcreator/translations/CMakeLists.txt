@@ -2,7 +2,7 @@
 # set(languages cs da de fr hr ja pl ru sl uk zh_CN zh_TW)
 # set(bad_languages hu) # Fix these before including them in languages!
 # OPENMV-DIFF #
-set(languages cs da de es fr hr hu it ja pl ru sl uk zh_CN zh_TW)
+set(languages ar bg ca cs da de en es fa fi fr gd gl he hr hu it ja ko lt lv nl nn pl pt_BR pt_PT ru sk sl sv tr uk zh_CN zh_TW)
 # OPENMV-DIFF #
 
 find_package(Python3 COMPONENTS Interpreter)
