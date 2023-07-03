@@ -206,98 +206,98 @@
     <message>
         <location filename="../../../src/libs/advanceddockingsystem/dockareatitlebar.cpp" line="+123"/>
         <source>List All Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>列出所有選項卡</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Detach Group</source>
-        <translation type="unfinished"></translation>
+        <translation>分離組</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Close Active Tab</source>
-        <translation type="unfinished"></translation>
+        <translation>關閉活動選項卡</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Close Group</source>
-        <translation type="unfinished"></translation>
+        <translation>關閉組</translation>
     </message>
     <message>
         <location line="+376"/>
         <source>Detach Area</source>
-        <translation type="unfinished"></translation>
+        <translation>分離區域</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Close Area</source>
-        <translation type="unfinished"></translation>
+        <translation>關閉區域</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Close Other Areas</source>
-        <translation type="unfinished"></translation>
+        <translation>關閉其他區域</translation>
     </message>
     <message>
         <location filename="../../../src/libs/advanceddockingsystem/dockwidgettab.cpp" line="+162"/>
         <source>Close Tab</source>
-        <translation type="unfinished">關閉分頁</translation>
+        <translation>關閉分頁</translation>
     </message>
     <message>
         <location line="+252"/>
         <source>Detach</source>
-        <translation type="unfinished"></translation>
+        <translation>分離</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Close</source>
-        <translation type="unfinished">關閉</translation>
+        <translation>關閉</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Close Others</source>
-        <translation type="unfinished">關閉其他項目</translation>
+        <translation>關閉其他項目</translation>
     </message>
     <message>
         <location filename="../../../src/libs/advanceddockingsystem/workspacedialog.cpp" line="+69"/>
         <source>Enter the name of the workspace:</source>
-        <translation type="unfinished"></translation>
+        <translation>輸入工作區的名稱：</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>&amp;New</source>
-        <translation type="unfinished">新增(&amp;N)</translation>
+        <translation>新增(&amp;N)</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../../../src/libs/advanceddockingsystem/workspacemodel.cpp" line="+200"/>
         <source>&amp;Rename</source>
-        <translation type="unfinished">重新命名(&amp;R)</translation>
+        <translation>重新命名(&amp;R)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>C&amp;lone</source>
-        <translation type="unfinished">複製(&amp;L)</translation>
+        <translation>複製(&amp;L)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">刪除(&amp;D)</translation>
+        <translation>刪除(&amp;D)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Reset</source>
-        <translation type="unfinished">重置</translation>
+        <translation>重置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&amp;Switch To</source>
-        <translation type="unfinished"></translation>
+        <translation>＆切換到</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import</source>
-        <translation type="unfinished"></translation>
+        <translation>進口</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -307,79 +307,97 @@
     <message>
         <location line="+1"/>
         <source>Restore last workspace on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>啟動時恢復最後一個工作區</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Workspace Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>工作空間管理器</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;什麼是工作空間？&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/advanceddockingsystem/workspacemodel.cpp" line="-154"/>
         <source>Workspace</source>
-        <translation type="unfinished"></translation>
+        <translation>工作空間</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Last Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>上一次更改</translation>
     </message>
     <message>
         <location line="+117"/>
         <location line="+11"/>
         <source>New Workspace Name</source>
-        <translation type="unfinished"></translation>
+        <translation>新工作區名稱</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>&amp;Create</source>
-        <translation type="unfinished"></translation>
+        <translation>＆創造</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Create and &amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>創建並打開(&amp;O)</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Clone</source>
-        <translation type="unfinished"></translation>
+        <translation>＆克隆</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Clone and &amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>克隆並打開(&amp;O)</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Rename Workspace</source>
-        <translation type="unfinished"></translation>
+        <translation>重命名工作區</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rename and &amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>重命名並打開(&amp;O)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/advanceddockingsystem/workspaceview.cpp" line="+99"/>
         <source>Import Workspace</source>
-        <translation type="unfinished"></translation>
+        <translation>導入工作空間</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Export Workspace</source>
-        <translation type="unfinished"></translation>
+        <translation>導出工作空間</translation>
     </message>
 </context>
 <context>
     <name>QtC::BinEditor</name>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+258"/>
+        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+238"/>
+        <source>Cannot open %1: %2</source>
+        <translation>無法開啟 %1：%2</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+5"/>
+        <location line="+9"/>
+        <location line="+10"/>
+        <source>File Error</source>
+        <translation>檔案錯誤</translation>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>The Binary Editor cannot open empty files.</source>
+        <translation>二進制編輯器無法打開空文件。</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>The file is too big for the Binary Editor (max. 32GB).</source>
         <translation>該文件對於二進制編輯器來說太大（最大 32GB）。</translation>
     </message>
@@ -539,24 +557,6 @@
         <source>Jump to Address 0x%1 in New Window</source>
         <translation>在新視窗中跳轉到位址 0x%1</translation>
     </message>
-    <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="-183"/>
-        <source>The Binary Editor cannot open empty files.</source>
-        <translation>二進制編輯器無法打開空文件。</translation>
-    </message>
-    <message>
-        <location line="-10"/>
-        <source>Cannot open %1: %2</source>
-        <translation>無法開啟 %1：%2</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+5"/>
-        <location line="+9"/>
-        <location line="+10"/>
-        <source>File Error</source>
-        <translation>檔案錯誤</translation>
-    </message>
 </context>
 <context>
     <name>QtC::Core</name>
@@ -572,6 +572,11 @@
         <location line="-59"/>
         <source>Existing files</source>
         <translation>已存在的檔案</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142"/>
+        <source>Unable to create the directory %1.</source>
+        <translation>無法建立資料夾 %1。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+170"/>
@@ -634,7 +639,129 @@
         <translation>關閉其他項目</translation>
     </message>
     <message>
-        <location line="-1763"/>
+        <location line="-1696"/>
+        <source>Revert File to Saved</source>
+        <translation>回復檔案到已儲存的狀態</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Ctrl+W</source>
+        <translation>Ctrl+W</translation>
+    </message>
+    <message>
+        <location line="+158"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+82"/>
+        <location line="+65"/>
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9"/>
+        <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="-7"/>
+        <location line="+1"/>
+        <source>Split</source>
+        <translation>分割</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-63"/>
+        <source>Split Side by Side</source>
+        <translation>左右分割</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Remove Current Split</source>
+        <translation>移除目前的分割</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Remove All Splits</source>
+        <translation>移除所有的分割</translation>
+    </message>
+    <message>
+        <location line="+2628"/>
+        <source>Opening File</source>
+        <translation>開啟檔案</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+710"/>
+        <source>Could not save the files.</source>
+        <comment>error message</comment>
+        <translation>無法儲存檔案。</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <location line="+600"/>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2434"/>
+        <location line="+39"/>
+        <location line="+24"/>
+        <location line="+1488"/>
+        <location line="+235"/>
+        <source>File Error</source>
+        <translation>檔案錯誤</translation>
+    </message>
+    <message>
+        <location line="-599"/>
+        <source>Error while saving file: %1</source>
+        <translation>儲存檔案時發生錯誤：%1</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>All Files (*.*)</source>
+        <comment>On Windows</comment>
+        <translation>全部文件 （*。*）</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>All Files (*)</source>
+        <comment>On Linux/macOS</comment>
+        <translation>所有檔案 (*)</translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>在這個位置已經有一個名為&quot;%1&quot;的項目。您想覆蓋它嗎？</translation>
+    </message>
+    <message>
+        <location line="+229"/>
+        <source>Open File</source>
+        <translation>開啟檔案</translation>
+    </message>
+    <message>
+        <location line="+258"/>
+        <source>Cannot reload %1</source>
+        <translation>無法重新載入 %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+58"/>
+        <source>Open with VCS (%1)</source>
+        <translation>使用 VCS 開啟 (%1)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-557"/>
+        <source>&lt;b&gt;Warning:&lt;/b&gt; You are changing a read-only file.</source>
+        <translation>&lt;b&gt;警告：&lt;/b&gt; 您正在變更一個唯讀檔。</translation>
+    </message>
+    <message>
+        <location line="-1705"/>
+        <source>Next Open Document in History</source>
+        <translation>歷史紀錄中下一個開啟的檔案</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Previous Open Document in History</source>
+        <translation>歷史紀錄中前一個開啟的檔案</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-8"/>
+        <source>Go Back</source>
+        <translation>返回</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+1"/>
+        <source>Go Forward</source>
+        <translation>前進</translation>
+    </message>
+    <message>
+        <location line="-4"/>
         <location line="+15"/>
         <source>Close All Except Visible</source>
         <translation>關閉除可見外的全部</translation>
@@ -670,12 +797,7 @@
         <translation>別</translation>
     </message>
     <message>
-        <location line="+44"/>
-        <source>Revert File to Saved</source>
-        <translation>回復檔案到已儲存的狀態</translation>
-    </message>
-    <message>
-        <location line="+36"/>
+        <location line="+80"/>
         <source>Alternative Close</source>
         <translation>選擇關閉</translation>
     </message>
@@ -686,43 +808,12 @@
     </message>
     <message>
         <location line="+160"/>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+85"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+8"/>
         <source>Open in New Window</source>
         <translation>在新視窗中開啟</translation>
     </message>
     <message>
-        <location line="-175"/>
-        <source>Ctrl+W</source>
-        <translation>Ctrl+W</translation>
-    </message>
-    <message>
-        <location line="+158"/>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-3"/>
-        <location line="+65"/>
-        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9"/>
-        <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="-7"/>
-        <location line="+1"/>
-        <source>Split</source>
-        <translation>分割</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-63"/>
-        <source>Split Side by Side</source>
-        <translation>左右分割</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Remove Current Split</source>
-        <translation>移除目前的分割</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Remove All Splits</source>
-        <translation>移除所有的分割</translation>
-    </message>
-    <message>
-        <location line="+9"/>
+        <location line="+27"/>
         <source>Go to Previous Split or Window</source>
         <translation>轉到上一個分割或視窗</translation>
     </message>
@@ -732,12 +823,27 @@
         <translation>轉到下一個分割或視窗</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+11"/>
+        <source>Ad&amp;vanced</source>
+        <translation>高級(&amp;V)</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Current document</source>
         <translation>目前文件</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+7"/>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
+        <translation>目前編輯器相對於螢幕而言的左上角 X 軸座標。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
+        <translation>目前編輯器相對於螢幕而言的左上角 Y 軸座標。</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Continue Opening Huge Text File?</source>
         <translation>繼續開啟巨大文字檔？</translation>
     </message>
@@ -766,22 +872,85 @@ Continue?</source>
         <translation>無法開啟&quot;%1&quot;：未知錯誤。</translation>
     </message>
     <message>
-        <location line="+1195"/>
+        <location line="+1163"/>
+        <source>&lt;b&gt;Warning:&lt;/b&gt; This file was not opened in %1 yet.</source>
+        <translation>&lt;b&gt;警告：&lt;/b&gt; 檔案在 %1 中尚未開啟。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Open</source>
+        <translation>開啟</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&amp;Save %1</source>
+        <translation>儲存 %1(&amp;S)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Save %1 &amp;As...</source>
         <translation>另存 %1 為 (&amp;A)...</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <source>Revert %1 to Saved</source>
+        <translation>回復 %1 到已儲存的狀態</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Reload %1</source>
         <translation>重新載入%1</translation>
     </message>
     <message>
-        <location line="+514"/>
+        <location line="+24"/>
+        <source>Close %1</source>
+        <translation>關閉 %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Close All Except %1</source>
+        <translation>除了 %1 以外全部關閉</translation>
+    </message>
+    <message>
+        <location line="+191"/>
+        <source>Cannot Open File</source>
+        <translation>無法開啟檔案</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot open the file for editing with VCS.</source>
+        <translation>無法使用 VCS 開啟檔案以編輯。</translation>
+    </message>
+    <message>
+        <location line="+285"/>
+        <source>You will lose your current changes if you proceed reverting %1.</source>
+        <translation>若您進行回復 %1 的動作，您將失去您目前的變更。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Proceed</source>
+        <translation>進行</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+142"/>
+        <location line="+117"/>
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+162"/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Cancel &amp;&amp; &amp;Diff</source>
         <translation>取消 &amp;&amp; 差異(&amp;D)</translation>
     </message>
     <message>
-        <location line="+338"/>
+        <location line="+311"/>
+        <source>Close &quot;%1&quot;</source>
+        <translation>關閉 &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Unpin &quot;%1&quot;</source>
         <translation>運氣“%1”</translation>
     </message>
@@ -796,59 +965,690 @@ Continue?</source>
         <translation>引腳編輯器</translation>
     </message>
     <message>
-        <location line="+321"/>
-        <source>Opening File</source>
-        <translation>開啟檔案</translation>
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-488"/>
+        <source>Overwrite?</source>
+        <translation>要覆寫嗎？</translation>
     </message>
     <message>
-        <location line="-1211"/>
-        <source>&lt;b&gt;Warning:&lt;/b&gt; This file was not opened in %1 yet.</source>
-        <translation>&lt;b&gt;警告：&lt;/b&gt; 檔案在 %1 中尚未開啟。</translation>
+        <location line="+71"/>
+        <source>Save File As</source>
+        <translation>另存新檔</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Open</source>
-        <translation>開啟</translation>
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+30"/>
+        <source>Edit</source>
+        <translation>編輯</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28"/>
+        <source>Drag to drag documents between splits</source>
+        <translation>拖動以在分割之間拖動文件</translation>
+    </message>
+    <message>
+        <location line="+254"/>
+        <source>Close Document</source>
+        <translation>關閉文件</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove Split</source>
+        <translation>移除分割</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>File is writable</source>
+        <translation>檔案可寫入</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+96"/>
+        <source>Reset Do Not Ask/Show Again Dialogs</source>
+        <translation>重置“不再詢問/不再顯示”對話框</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>&lt;b&gt;Warning:&lt;/b&gt; You are changing a read-only file.</source>
-        <translation>&lt;b&gt;警告：&lt;/b&gt; 您正在變更一個唯讀檔。</translation>
+        <source>Reset to default.</source>
+        <comment>Color</comment>
+        <translation>重置為預設值。</translation>
     </message>
     <message>
-        <location line="-1703"/>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-8"/>
-        <source>Go Back</source>
-        <translation>返回</translation>
+        <location line="+6"/>
+        <source>Theme:</source>
+        <translation>主題：</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+1"/>
-        <source>Go Forward</source>
-        <translation>前進</translation>
+        <source>Language:</source>
+        <translation>語言:</translation>
     </message>
     <message>
-        <location line="+308"/>
-        <source>Ad&amp;vanced</source>
-        <translation>高級(&amp;V)</translation>
+        <location line="+3"/>
+        <source>Enable high DPI scaling</source>
+        <translation>啟用高 DPI 縮放</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>The high DPI settings will take effect after restart.</source>
+        <translation>高DPI設置將在重啟後生效。</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>User Interface</source>
+        <translation>使用者界面</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Show keyboard shortcuts in context menus (default: %1)</source>
+        <translation>在上下文菜單中顯示鍵盤快捷鍵（默認值：%1）</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>on</source>
+        <translation>在</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>off</source>
+        <translation>離開</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&lt;System Language&gt;</source>
+        <translation>&lt;系統語言&gt;</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>The language change will take effect after restart.</source>
+        <translation>語言更改將在重啟後生效。</translation>
     </message>
     <message>
         <location line="+46"/>
-        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
-        <translation>目前編輯器相對於螢幕而言的左上角 X 軸座標。</translation>
+        <source>Interface</source>
+        <translation>介面</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Environment</source>
+        <translation>環境</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+490"/>
+        <source>Variables</source>
+        <translation>變數</translation>
+    </message>
+    <message>
+        <location line="-340"/>
+        <source>Terminal:</source>
+        <translation>終端機:</translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <source>Bytes</source>
+        <translation>字節</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>KB</source>
+        <translation>知識庫</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+50"/>
+        <source>MB</source>
+        <translation>MB</translation>
+    </message>
+    <message>
+        <location line="-49"/>
+        <source>GB</source>
+        <translation>國標</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>TB</source>
+        <translation>結核病</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Auto-suspend unmodified files</source>
+        <translation>自動掛起未修改的文件</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Enable crash reporting</source>
+        <translation>啟用崩潰報告</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Warn before opening text files greater than</source>
+        <translation>開啟大於此大小的文字檔之前發出警告</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
-        <translation>目前編輯器相對於螢幕而言的左上角 Y 軸座標。</translation>
+        <source>Ask for confirmation before exiting</source>
+        <translation>退出前要求確認</translation>
     </message>
     <message>
-        <location line="+2195"/>
-        <source>Close &quot;%1&quot;</source>
-        <translation>關閉 &quot;%1&quot;</translation>
+        <location line="+2"/>
+        <source>Auto-save modified files</source>
+        <translation>自動儲存變更的檔案</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Clear Local Crash Reports</source>
+        <translation>清除本地崩潰報告</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto-save files after refactoring</source>
+        <translation>重構後自動保存文件</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Automatically free resources of old documents that are not visible and not modified. They stay visible in the list of open documents.</source>
+        <translation>自動釋放不可見且未修改的舊文檔資源。它們在打開的文檔列表中保持可見。</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Allow crashes to be automatically reported. Collected reports are used for the sole purpose of fixing bugs.</source>
+        <translation>允許自動報告崩潰。收集的報告僅用於修復錯誤。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>用於“在終端中運行”的命令行參數。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Always Ask</source>
+        <translation>總是詢問</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reload All Unchanged Editors</source>
+        <translation>重新載入所有未變更的編輯器</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ignore Modifications</source>
+        <translation>忽略變更</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>min</source>
+        <translation>分</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>用於“%1”的命令行參數。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>File system case sensitivity:</source>
+        <translation>檔案系統是否區分大小寫：</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Influences how file names are matched to decide if they are the same.</source>
+        <translation>影響檔案名稱如何相符來決定它們是否相同。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Files to keep open:</source>
+        <translation>要保持打開的文件：</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Minimum number of open documents that should be kept in memory. Increasing this number will lead to greater resource usage when not manually closing documents.</source>
+        <translation>應保存在內存中的打開文檔的最小數量。當不手動關閉文檔時，增加此數字將導致更多的資源使用。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+2"/>
+        <source>?</source>
+        <translation>?</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Reset to default.</source>
+        <comment>Terminal</comment>
+        <translation>重置為預設值。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Patch command:</source>
+        <translation>修補程式命令：</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>External file browser:</source>
+        <translation>外部檔案瀏覽器:</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>When files are externally modified:</source>
+        <translation>當檔案被外部程式變更時:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Interval:</source>
+        <translation>間隔:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
+        <translation>“最近文件”中的最大條目數：</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+309"/>
+        <source>System</source>
+        <translation>系統</translation>
+    </message>
+    <message>
+        <location line="-288"/>
+        <source>Command used for reverting diff chunks.</source>
+        <translation>用於恢復差異區塊的命令。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Automatically creates temporary copies of modified files. If %1 is restarted after a crash or power failure, it asks whether to recover the auto-saved content.</source>
+        <translation>自動創建修改文件的臨時副本。如果%1在崩潰或斷電後重新啟動，它會詢問是否恢復自動保存的內容。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Automatically saves all open files affected by a refactoring operation,
+provided they were unmodified before the refactoring.</source>
+        <translation>自動保存受重構操作影響的所有打開文件，
+前提是它們在重構之前未經修改。</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Crash Reporting</source>
+        <translation>崩潰報告</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The change will take effect after restart.</source>
+        <translation>更改將在重啟後生效。</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Case Sensitive (Default)</source>
+        <translation>區分大小寫(預設)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Case Insensitive (Default)</source>
+        <translation>不區分大小寫(預設)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Case Insensitive</source>
+        <translation>不區分大小寫</translation>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>The file system case sensitivity change will take effect after restart.</source>
+        <translation>文件系統區分大小寫的更改將在重新啟動後生效。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-26"/>
+        <source>Output</source>
+        <translation>輸出</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+488"/>
+        <source>&amp;File</source>
+        <translation>檔案(&amp;F)</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>&amp;Edit</source>
+        <translation>編輯(&amp;E)</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>&amp;Tools</source>
+        <translation>工具(&amp;T)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&amp;Window</source>
+        <translation>視窗(&amp;W)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>&amp;Help</source>
+        <translation>說明(&amp;H)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+123"/>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2581"/>
+        <location line="+1728"/>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+137"/>
+        <source>&amp;Save</source>
+        <translation>儲存(&amp;S)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1727"/>
+        <location line="+1728"/>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+10"/>
+        <source>Save &amp;As...</source>
+        <translation>另存新檔(&amp;A)...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+3"/>
+        <source>Ctrl+Shift+S</source>
+        <translation>Ctrl+Shift+S</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-669"/>
+        <source>Save A&amp;ll</source>
+        <translation>全部儲存(&amp;L)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="-287"/>
+        <location line="+1"/>
+        <source>Exit %1?</source>
+        <translation>退出%1？</translation>
+    </message>
+    <message>
+        <location line="+114"/>
+        <source>&amp;View</source>
+        <translation>＆看法</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>Return to Editor</source>
+        <translation>返回到編輯器</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;New Project...</source>
+        <translation>＆新項目...</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>New Project</source>
+        <comment>Title of dialog</comment>
+        <translation>新建專案</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>&amp;New File...</source>
+        <translation>新建檔案(&amp;N)...</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>&amp;Open File...</source>
+        <translation>開啟檔案(&amp;O)...</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Open File &amp;With...</source>
+        <translation>開啟方式(&amp;W)...</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Open From Device...</source>
+        <translation>從設備打開...</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Recent &amp;Files</source>
+        <translation>最近使用的檔案(&amp;F)</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Save As...</source>
+        <translation>另存新檔...</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Print...</source>
+        <translation>列印(&amp;P)...</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>E&amp;xit</source>
+        <translation>離開(&amp;X)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+Q</source>
+        <translation>Ctrl+Q</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Undo</source>
+        <translation>復原(&amp;U)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Undo</source>
+        <translation>復原</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Redo</source>
+        <translation>重做(&amp;R)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Redo</source>
+        <translation>重做</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Cu&amp;t</source>
+        <translation>剪下(&amp;T)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Copy</source>
+        <translation>複製(&amp;C)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Paste</source>
+        <translation>貼上(&amp;P)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Select &amp;All</source>
+        <translation>全部選取(&amp;A)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Go to Line...</source>
+        <translation>跳到行號(&amp;G)...</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Zoom In</source>
+        <translation>放大</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl++</source>
+        <translation>Ctrl++</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Zoom Out</source>
+        <translation>縮小</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+2"/>
+        <source>Ctrl+-</source>
+        <translation>Ctrl+-</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Ctrl+Shift+-</source>
+        <translation>Ctrl+Shift+-</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Original Size</source>
+        <translation>原始大小</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Meta+0</source>
+        <translation>Meta+0</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ctrl+0</source>
+        <translation>Ctrl+0</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Show Logs...</source>
+        <translation>顯示日誌...</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Pr&amp;eferences...</source>
+        <translation>偏好...</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Ctrl+Meta+F</source>
+        <translation>Ctrl+Meta+F</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ctrl+Shift+F11</source>
+        <translation>Ctrl+Shift+F11</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Close Window</source>
+        <translation>關閉視窗</translation>
+    </message>
+    <message>
+        <location line="+58"/>
+        <source>&amp;Views</source>
+        <translation>檢視(&amp;V)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>About &amp;%1</source>
+        <translation>關於&amp;%1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>About &amp;%1...</source>
+        <translation>關於&amp;%1...</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Change Log...</source>
+        <translation>更改日誌...</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Contact...</source>
+        <translation>接觸...</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Cycle Mode Selector Styles</source>
+        <translation>循環模式選擇器樣式</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Mode Selector Style</source>
+        <translation>模式選擇器風格</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Icons and Text</source>
+        <translation>圖標和文本</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Icons Only</source>
+        <translation>僅圖標</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Hidden</source>
+        <translation>隱</translation>
+    </message>
+    <message>
+        <location line="+535"/>
+        <source>Version:</source>
+        <translation>版本：</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Change Log</source>
+        <translation>變更日誌</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Contact</source>
+        <translation>接觸</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;p&gt;Qt Creator developers can be reached at the Qt Creator mailing list:&lt;/p&gt;%1&lt;p&gt;or the #qt-creator channel on Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Our bug tracker is located at %3.&lt;/p&gt;&lt;p&gt;Please use %4 for bigger chunks of text.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;可以通過 Qt Creator 郵件列表聯繫 Qt Creator 開發人員：&lt;/p&gt;%1&lt;p&gt;或 Libera.Chat IRC 上的 #qt-creator 頻道：&lt;/p&gt;%2&lt;p&gt;我們的錯誤跟踪器位於 %3。&lt;/p&gt;&lt;p&gt;請使用 %4 來獲取更大的文本塊。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="-859"/>
+        <source>Ctrl+L</source>
+        <translation>Ctrl+L</translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-30"/>
+        <source>Minimize</source>
+        <translation>最小化</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+M</source>
+        <translation>Ctrl+M</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Zoom</source>
+        <translation>縮放</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Full Screen</source>
+        <translation>全螢幕</translation>
+    </message>
+    <message>
+        <location line="+92"/>
+        <source>About &amp;Plugins...</source>
+        <translation>關於外掛程式(&amp;P)...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+26"/>
+        <location line="+88"/>
+        <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+24"/>
+        <source>Open Documents</source>
+        <translation>開啟文件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Meta+O</source>
+        <translation>Meta+O</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Alt+O</source>
+        <translation>Alt+O</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+823"/>
         <source>Close Editor</source>
         <translation>關閉編輯器</translation>
     </message>
@@ -863,23 +1663,1873 @@ Continue?</source>
         <translation>關閉其他編輯器</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+753"/>
-        <location line="+600"/>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2087"/>
-        <location line="+39"/>
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorswindow.cpp" line="+229"/>
+        <source>*</source>
+        <translation>*</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+218"/>
+        <location line="+222"/>
+        <source>Category</source>
+        <translation>類別</translation>
+    </message>
+    <message>
+        <location line="-221"/>
+        <location line="+221"/>
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+327"/>
+        <source>Type</source>
+        <translation>型態</translation>
+    </message>
+    <message>
+        <location line="-220"/>
+        <source>Color</source>
+        <translation>顏色</translation>
+    </message>
+    <message>
+        <location line="+165"/>
+        <source>Logging Category Viewer</source>
+        <translation>日誌類別查看器</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+864"/>
+        <location line="+13"/>
+        <location line="+11"/>
+        <source>Save Log</source>
+        <translation>保存日志</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+36"/>
+        <source>Clear</source>
+        <translation>清除</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+124"/>
+        <source>Stop Logging</source>
+        <translation>停止記錄</translation>
+    </message>
+    <message>
+        <location line="-120"/>
+        <source>Toggle Qt Internal Logging</source>
+        <translation>切換 Qt 內部日誌記錄</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Auto Scroll</source>
+        <translation>自動滾屏</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Timestamps</source>
+        <translation>時間戳</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Message Types</source>
+        <translation>消息類型</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Timestamp</source>
+        <translation>時間戳</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Message</source>
+        <translation>訊息</translation>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>Start Logging</source>
+        <translation>開始記錄</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Copy Selected Logs</source>
+        <translation>複製選定的日誌</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Copy All</source>
+        <translation>全部複製</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Save Enabled as Preset...</source>
+        <translation>保存啟用為預設...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Update from Preset...</source>
+        <translation>從預設更新...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Uncheck All</source>
+        <translation>全部取消勾選</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Save Logs As</source>
+        <translation>將日誌另存為</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
+        <translation>無法將日誌寫入“%1”。</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
+        <translation>無法打開文件“%1”以寫入日誌。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Save Enabled Categories As</source>
+        <translation>將啟用的類別另存為</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
+        <translation>無法寫入預設文件“%1”。</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Load Enabled Categories From</source>
+        <translation>加載啟用的類別</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
+        <translation>無法打開預設文件“%1”進行讀取</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
+        <translation>無法讀取預設文件“%1”：%2</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Unexpected preset file format.</source>
+        <translation>意外的預設文件格式。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-182"/>
+        <source>Show Non-matching Lines</source>
+        <translation>顯示不匹配的線</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Filter output...</source>
+        <translation>濾波器輸出...</translation>
+    </message>
+    <message>
+        <location line="+142"/>
+        <location line="+48"/>
+        <source>Maximize</source>
+        <translation>最大化</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Next Item</source>
+        <translation>下一項</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Previous Item</source>
+        <translation>前一項</translation>
+    </message>
+    <message>
+        <location line="+60"/>
+        <source>Out&amp;put</source>
+        <translation>輸出</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-197"/>
+        <source>MIME Type</source>
+        <translation>MIME 型態</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Handler</source>
+        <translation>處理器</translation>
+    </message>
+    <message>
+        <location line="+178"/>
+        <source>Reset all MIME type definitions to their defaults.</source>
+        <translation>將所有 MIME 類型定義重置為其默認值。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+247"/>
+        <source>Reset MIME Types</source>
+        <translation>重設MIME類型</translation>
+    </message>
+    <message>
+        <location line="-244"/>
+        <source>Reset the assigned handler for all MIME type definitions to the default.</source>
+        <translation>將所有 MIME 類型定義的分配處理程序重置為默認值。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reset Handlers</source>
+        <translation>重置處理程序</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Patterns:</source>
+        <translation>樣式：</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>A semicolon-separated list of wildcarded file names.</source>
+        <translation>以分號分隔的通配符文件名列表。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Magic Header</source>
+        <translation>魔術標頭</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Range</source>
+        <translation>範圍</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Priority</source>
+        <translation>優先權</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Registered MIME Types</source>
+        <translation>已註冊的 MIME 型態</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+50"/>
+        <source>Details</source>
+        <translation>詳情</translation>
+    </message>
+    <message>
+        <location line="+211"/>
+        <source>Changes will take effect after restart.</source>
+        <translation>更改將在重新啟動後生效。</translation>
+    </message>
+    <message>
+        <location line="+162"/>
+        <source>MIME Types</source>
+        <translation>MIME 型態</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+1"/>
+        <source>Error Details</source>
+        <translation>錯誤詳情</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Install Plugin...</source>
+        <translation>安裝插件...</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Installed Plugins</source>
+        <translation>已安裝的外掛程式</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Plugin changes will take effect after restart.</source>
+        <translation>插件更改將在重新啟動後生效。</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Plugin Details of %1</source>
+        <translation>外掛程式 %1 的詳情</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Plugin Errors of %1</source>
+        <translation>外掛程式 %1 的錯誤</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+23"/>
+        <source>Processes</source>
+        <translation>行程</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-70"/>
+        <source>&amp;Diff</source>
+        <translation>比較(&amp;D)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Do &amp;Not Save</source>
+        <translation>不要保存</translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <source>&amp;Diff &amp;&amp; Cancel</source>
+        <translation>比較&amp;&amp;取消</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Save All</source>
+        <translation>＆保存全部</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Diff All &amp;&amp; Cancel</source>
+        <translation>比較全部&amp;&amp;取消</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&amp;Save Selected</source>
+        <translation>保存所選內容(&amp;S)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Diff Selected &amp;&amp; Cancel</source>
+        <translation>比較所選內容&amp;&amp;取消</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Save All</source>
+        <translation>全部儲存</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="-262"/>
+        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+47"/>
+        <source>Save</source>
+        <translation>儲存</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Save Selected</source>
+        <translation>儲存選取的項目</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+134"/>
+        <source>Click and type the new key sequence.</source>
+        <translation>按一下並輸入新的按鍵序列。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Stop Recording</source>
+        <translation>停止錄製</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Record</source>
+        <translation>錄製</translation>
+    </message>
+    <message>
+        <location line="+159"/>
+        <source>Keyboard</source>
+        <translation>鍵盤</translation>
+    </message>
+    <message>
+        <location line="+96"/>
+        <source>Invalid key sequence.</source>
+        <translation>無效的按鍵序列。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Key sequence will not work in editor.</source>
+        <translation>鍵序列在編輯器中不起作用。</translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>Import Keyboard Mapping Scheme</source>
+        <translation>匯入鍵盤映射機制</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+40"/>
+        <source>Keyboard Mapping Scheme (*.kms)</source>
+        <translation>鍵盤映射機制 (*.kms)</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Export Keyboard Mapping Scheme</source>
+        <translation>匯出鍵盤映射機制</translation>
+    </message>
+    <message>
+        <location line="+113"/>
+        <source>Key sequence:</source>
+        <translation>按鍵順序:</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>使用「Cmd」、「Opt」、「Ctrl」和「Shift」作為修改鍵。使用「Escape」、「Backspace」、「Delete」、「Insert」、「Home」等作為特殊鍵。將各個鍵用「+」群組合在一起，將多個捷徑用「,”群組合成一個捷徑序列。例如，如果使用者必須在按住Escape鍵的同時按住Ctrl和Shift修改鍵，然後鬆開並按A，則輸入「Ctrl+Shift+Escape,A」。</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>使用「Cmd」、「Alt」、「Meta」和「Shift」作為修改鍵。使用「Escape」、「Backspace」、「Delete」、「Insert」、「Home」等作為特殊鍵。將各個鍵用「+」群組合在一起，將多個捷徑用「,」群組合成一個捷徑序列。例如，如果使用者必須在按住Escape鍵的同時按住Ctrl和Shift修改鍵，然後鬆開並按A，則輸入「Ctrl+Shift+Escape,A」。</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Enter key sequence as text</source>
+        <translation>將按鍵序列作為文字輸入</translation>
+    </message>
+    <message>
         <location line="+24"/>
-        <location line="+1488"/>
-        <location line="+235"/>
-        <source>File Error</source>
-        <translation>檔案錯誤</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>按鍵序列有潛在的衝突。&lt;a href=&quot;#conflicts&quot;&gt;顯示。&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-310"/>
-        <source>Cannot Open File</source>
-        <translation>無法開啟檔案</translation>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+111"/>
+        <source>Search for...</source>
+        <translation>搜尋...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+104"/>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+38"/>
+        <source>Empty search term.</source>
+        <translation>空搜索詞。</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>&amp;Search</source>
+        <translation>搜尋(&amp;S)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Search &amp;&amp; &amp;Replace</source>
+        <translation>搜尋並取代(&amp;R)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Search f&amp;or:</source>
+        <translation>搜索：</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Whole words o&amp;nly</source>
+        <translation>比對整個單字(&amp;N)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use re&amp;gular expressions</source>
+        <translation>使用正規表示式(&amp;G)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Sco&amp;pe:</source>
+        <translation>範圍(&amp;P)：</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>&amp;Case sensitive</source>
+        <translation>＆區分大小寫</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+265"/>
+        <source>&amp;Find/Replace</source>
+        <translation>搜尋/取代(&amp;F)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Advanced Find</source>
+        <translation>進階搜尋</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-289"/>
+        <source>Open Advanced Find...</source>
+        <translation>開啟進階搜尋...</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-121"/>
+        <location line="+122"/>
+        <source>Advanced...</source>
+        <translation>進階...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl+Shift+F</source>
+        <translation>Ctrl+Shift+F</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+31"/>
+        <source>Enter Find String</source>
+        <translation>輸入搜尋字串</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl+E</source>
+        <translation>Ctrl+E</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Find Next</source>
+        <translation>尋找下一個</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Find Previous</source>
+        <translation>尋找前一個</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Ctrl+=</source>
+        <translation>Ctrl+=</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Replace &amp;&amp; Find Previous</source>
+        <translation>取代並且搜尋前一個</translation>
+    </message>
+    <message>
+        <location line="-235"/>
+        <location line="+246"/>
+        <source>Replace All</source>
+        <translation>全部取代</translation>
+    </message>
+    <message>
+        <location line="-296"/>
+        <source>Find Flags</source>
+        <translation>查找標誌</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <location line="+228"/>
+        <source>Replace &amp;&amp; Find</source>
+        <translation>取代並搜尋</translation>
+    </message>
+    <message>
+        <location line="-131"/>
+        <location line="+13"/>
+        <source>Shift+Enter</source>
+        <translation>Shift+Enter</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <location line="+13"/>
+        <source>Shift+Return</source>
+        <translation>Shift+Return</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Find/Replace</source>
+        <translation>搜尋/取代</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Find Next (Selected)</source>
+        <translation>尋找下一個(所選)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl+F3</source>
+        <translation>Ctrl+F3</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Find Previous (Selected)</source>
+        <translation>尋找上一個(所選)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl+Shift+F3</source>
+        <translation>Ctrl+Shift+F3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Select All</source>
+        <translation>全部選取</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ctrl+Alt+Return</source>
+        <translation>Ctrl+Alt+回車</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-259"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-115"/>
+        <source>Case Sensitive</source>
+        <translation>區分大小寫</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Whole Words Only</source>
+        <translation>比對整個單字</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-6"/>
+        <source>Use Regular Expressions</source>
+        <translation>使用正規表示式</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Preserve Case when Replacing</source>
+        <translation>取代時保留大小寫</translation>
+    </message>
+    <message>
+        <location line="+148"/>
+        <source>Replace with...</source>
+        <translation>取代為...</translation>
+    </message>
+    <message>
+        <location line="-488"/>
+        <source>Find</source>
+        <translation>尋找</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Find:</source>
+        <translation>尋找：</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Replace with:</source>
+        <translation>取代為：</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+147"/>
+        <source>Filter Results</source>
+        <translation>篩選結果</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+480"/>
+        <source>New Search</source>
+        <translation>新搜尋</translation>
+    </message>
+    <message>
+        <location line="-149"/>
+        <source>%1 %2</source>
+        <translation>%1 %2</translation>
+    </message>
+    <message>
+        <location line="+123"/>
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+713"/>
+        <source>Collapse All</source>
+        <translation>全部摺疊</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>History:</source>
+        <translation>歷程記錄:</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>Search Results</source>
+        <translation>搜尋結果</translation>
+    </message>
+    <message>
+        <location line="-611"/>
+        <location line="+491"/>
+        <source>Expand All</source>
+        <translation>全部展開</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8"/>
+        <location line="+222"/>
+        <source>Replace</source>
+        <translation>取代</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorconstants.h" line="+12"/>
+        <source>Locator</source>
+        <translation>定位器</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/openwithdialog.cpp" line="+23"/>
+        <source>Open File With...</source>
+        <translation>開啟方式...</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>開啟檔案&quot;%1&quot;方式：</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459"/>
+        <source>Show Hidden Files</source>
+        <translation>顯示隱藏文件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show Bread Crumbs</source>
+        <translation>顯示麵包屑</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show Folders on Top</source>
+        <translation>在頂部顯示文件夾</translation>
+    </message>
+    <message>
+        <location line="+75"/>
+        <source>Synchronize Root Directory with Editor</source>
+        <translation>將根目錄與編輯器同步</translation>
+    </message>
+    <message>
+        <location line="+142"/>
+        <source>New File</source>
+        <comment>Title of dialog</comment>
+        <translation>新增檔案</translation>
+    </message>
+    <message>
+        <location line="+154"/>
+        <location line="+80"/>
+        <source>New Folder</source>
+        <translation>新資料夾</translation>
+    </message>
+    <message>
+        <location line="-18"/>
+        <source>Open &quot;%1&quot;</source>
+        <translation>開啟 &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Remove Folder</source>
+        <translation>刪除文件夾</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-86"/>
+        <location line="+8"/>
+        <location line="+27"/>
+        <location line="+14"/>
+        <location line="+8"/>
+        <location line="+28"/>
+        <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="+159"/>
+        <source>Error</source>
+        <translation>錯誤</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>File System</source>
+        <translation>檔案系統</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Meta+Y,Meta+F</source>
+        <translation>元+Y,元+F</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alt+Y,Alt+F</source>
+        <translation>Alt+Y,Alt+F</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Computer</source>
+        <translation>電腦</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Home</source>
+        <translation>首頁</translation>
+    </message>
+    <message>
+        <location line="+144"/>
+        <source>Add New...</source>
+        <translation>新增檔案...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Rename...</source>
+        <translation>重新命名...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Remove...</source>
+        <translation>消除...</translation>
+    </message>
+    <message>
+        <location line="-619"/>
+        <source>Synchronize with Editor</source>
+        <translation>與編輯器同步</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+257"/>
+        <source>Filter Configuration</source>
+        <translation>篩選器組態</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Type the prefix followed by a space and search term to restrict search to the filter.</source>
+        <translation>輸入首碼，後跟一個空格和搜尋詞以限制篩選器的搜尋。</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Include by default</source>
+        <translation>預設包括</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Include the filter when not using a prefix for searches.</source>
+        <translation>不使用首碼進行搜尋時包括篩選器。</translation>
+    </message>
+    <message>
+        <location line="-26"/>
+        <source>Prefix:</source>
+        <translation>前置字串：</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+46"/>
+        <source>Generic Directory Filter</source>
+        <translation>一般目錄篩選</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>匹配一組自定義目錄中的所有文件。附加“+&lt;number&gt;”或“:&lt;number&gt;”可跳轉到給定的行號。附加另一個“+&lt;number&gt;”或“:&lt;number&gt;”也可以跳轉到列號。</translation>
+    </message>
+    <message>
+        <location line="+267"/>
+        <location line="+10"/>
+        <source>Select Directory</source>
+        <translation>選擇目錄</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>%1 filter update: 0 files</source>
+        <translation>%1 篩選器更新：0 個檔案</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+18"/>
+        <source>%1 filter update: %n files</source>
+        <translation>
+            <numerusform>%1 篩選器更新：%n 個檔案</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>%1 filter update: canceled</source>
+        <translation>%1 篩選器更新：已取消</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+69"/>
+        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-246"/>
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+36"/>
+        <source>Name:</source>
+        <translation>名稱：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Path:</source>
+        <translation>路徑：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>MIME type:</source>
+        <translation>MIME 類型：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Default editor:</source>
+        <translation>默認編輯器：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Line endings:</source>
+        <translation>行結尾：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Indentation:</source>
+        <translation>縮進：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Owner:</source>
+        <translation>所有者：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Group:</source>
+        <translation>群組：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Size:</source>
+        <translation>大小：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Last read:</source>
+        <translation>最後閱讀：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Last modified:</source>
+        <translation>上一次更改：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Readable:</source>
+        <translation>可讀：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Writable:</source>
+        <translation>可寫：</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Symbolic link:</source>
+        <translation>符號鏈接：</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <location line="+1"/>
+        <location line="+18"/>
+        <location line="+50"/>
+        <location line="+32"/>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+58"/>
+        <source>Unknown</source>
+        <translation>未知</translation>
+    </message>
+    <message>
+        <location line="-91"/>
+        <source>Windows (CRLF)</source>
+        <translation>窗口（回車換行）</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unix (LF)</source>
+        <translation>Unix (LF)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mac (CR)</source>
+        <translation>馬克（CR）</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+102"/>
+        <source>Mixed</source>
+        <translation>混合</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 Spaces</source>
+        <translation>%1 個空格</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tabs</source>
+        <translation>選項卡</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Undefined</source>
+        <translation>未定義</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+24"/>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+158"/>
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-385"/>
+        <source>Add...</source>
+        <translation>新增...</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+41"/>
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+3"/>
+        <source>Edit...</source>
+        <translation>編輯...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+133"/>
+        <source>Uncategorized</source>
+        <translation>未分類</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tools that will appear directly under the External Tools menu.</source>
+        <translation>會直接顯示在額外工具選單中的工具。</translation>
+    </message>
+    <message>
+        <location line="+199"/>
+        <source>New Category</source>
+        <translation>新類別</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>New Tool</source>
+        <translation>新工具</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This tool prints a line of useful text</source>
+        <translation>此工具可以列印一行有用的文字</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Useful text</source>
+        <extracomment>Sample external tool text</extracomment>
+        <translation>有用的文字</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>System Environment</source>
+        <translation>系統環境變數</translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>Add tool.</source>
+        <translation>新增工具。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-3"/>
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+20"/>
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+3"/>
+        <source>Remove</source>
+        <translation>移除</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Remove tool.</source>
+        <translation>刪除工具。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Revert tool to default.</source>
+        <translation>將工具還原為預設值。</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Output:</source>
+        <translation>輸出：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+&lt;p&gt;What to do with the executable&apos;s standard output.
+&lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</source>
+        <translation>&lt;html&gt;&lt;頭/&gt;&lt;正文&gt;
+&lt;p&gt;如何處理可執行文件的標準輸出。
+&lt;ul&gt;&lt;li&gt;忽略：不執行任何操作。&lt;/li&gt;&lt;li&gt;在常規消息中顯示。&lt;/li&gt;&lt;li&gt;替換選擇：用它替換當前文檔中的當前選擇。&lt;/li&gt; &lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+13"/>
+        <source>Ignore</source>
+        <translation>忽略</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <location line="+13"/>
+        <source>Show in General Messages</source>
+        <translation>在一般消息中顯示</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <location line="+13"/>
+        <source>Replace Selection</source>
+        <translation>取代選擇</translation>
+    </message>
+    <message>
+        <location line="-11"/>
+        <source>Error output:</source>
+        <translation>錯誤輸出：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
+&lt;li&gt;Show in General Messages.&lt;/li&gt;
+&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;頭&gt;&lt;正文&gt;
+&lt;p&gt;如何處理可執行文件的標準錯誤輸出。&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;忽略：不對其執行任何操作。&lt;/li&gt;
+&lt;li&gt;在一般消息中顯示。&lt;/li&gt;
+&lt;li&gt;替換所選內容：將當前文檔中的當前所選內容替換為當前所選內容。&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+413"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+153"/>
+        <source>No changes to apply.</source>
+        <translation>沒有要套用的變更。</translation>
+    </message>
+    <message>
+        <location line="-410"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-308"/>
+        <source>Change...</source>
+        <translation>變更...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Modifies current document</source>
+        <translation>變更目前的文件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>If the tool modifies the current document, set this flag to ensure that the document is saved before running the tool and is reloaded after the tool finished.</source>
+        <translation>如果工具變更了目前的文檔，設置這個旗幟保證文檔在工具執行前被儲存並且在工具執行後自動重載文檔。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Input:</source>
+        <translation>輸入：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text to pass to the executable via standard input. Leave empty if the executable should not receive any input.</source>
+        <translation>文字傳遞給通過標準輸入可執行檔案，留空此項如果可執行檔不會收到任何輸入.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Description:</source>
+        <translation>描述：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="-115"/>
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+270"/>
+        <source>Executable:</source>
+        <translation>執行檔：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+1"/>
+        <source>Arguments:</source>
+        <translation>引數：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working directory:</source>
+        <translation>工作目錄：</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Base environment:</source>
+        <translation>基礎環境：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+6"/>
+        <source>Environment:</source>
+        <translation>環境：</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Add Tool</source>
+        <translation>新增工具</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add Category</source>
+        <translation>新增類別</translation>
+    </message>
+    <message>
+        <location line="+292"/>
+        <source>PATH=C:\dev\bin;${PATH}</source>
+        <translation>PATH=C:\dev\bin;${PATH}</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PATH=/opt/bin:${PATH}</source>
+        <translation>PATH=/opt/bin:${PATH}</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>External Tools</source>
+        <translation>外部工具</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-4"/>
+        <source>Directories:</source>
+        <translation>目錄：</translation>
+    </message>
+    <message>
+        <location line="-8"/>
+        <source>Specify a short word/abbreviation that can be used to restrict completions to files from this directory tree.
+To do this, you type this shortcut and a space in the Locator entry field, and then the word to search for.</source>
+        <translation>指定用於限定此目錄樹裡的檔案補完功能的短單字或縮寫。
+您可以在定位器的輸入位置鍵入這個縮寫和一個空格，然後輸入搜尋的單字。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+53"/>
+        <source>Files in File System</source>
+        <translation>在檔案系統中的檔案</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation>打開由當前文檔的相對路徑或絕對路徑給出的文件。 “~”指的是你的主目錄。如果文件尚不存在，您可以選擇創建該文件。</translation>
+    </message>
+    <message>
+        <location line="+91"/>
+        <source>Create and Open &quot;%1&quot;</source>
+        <translation>建立並開啟&quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Create File</source>
+        <translation>創建文件</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Create &quot;%1&quot;?</source>
+        <translation>創建“%1”？</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Always create</source>
+        <translation>始終創造</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Create</source>
+        <translation>建立</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Include hidden files</source>
+        <translation>包括隱藏檔案</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Filter:</source>
+        <translation>篩選器：</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+21"/>
+        <source>Available filters</source>
+        <translation>可使用的篩選器</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+563"/>
+        <source>Open as Centered Popup</source>
+        <translation>作為居中彈出窗口打開</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Refresh</source>
+        <translation>刷新</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Type to locate (%1)</source>
+        <translation>輸入以定位(%1)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+62"/>
+        <source>Web Search</source>
+        <translation>搜尋網頁</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt Project Bugs</source>
+        <translation>Qt 項目錯誤</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Locate...</source>
+        <translation>定位...</translation>
+    </message>
+    <message>
+        <location line="+147"/>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;開啟文件&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 檔案 &gt;開啟檔案(%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 檔案 &gt;示例 &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 檔案&gt; 最近檔案&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 在這裡拖放檔案&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- 輸入&lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;跳轉到類定義&lt;/div&gt;</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- 輸入&lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;跳轉到類定義&lt;/div&gt;</translation>
+    </message>
+    <message>
+        <location line="+130"/>
+        <source>Updating Locator Caches</source>
+        <translation>更新定位器快取</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-2"/>
+        <source>Type to locate</source>
+        <translation>輸入以定位</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-485"/>
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-298"/>
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-1"/>
+        <source>Add</source>
+        <translation>新增</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-36"/>
+        <source>Refresh interval:</source>
+        <translation>刷新間隔：</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Locator filters that do not update their cached data immediately, such as the custom directory filters, update it after this time interval.</source>
+        <translation>不立即更新其快取資料的定位器篩選器，例如自訂目錄篩選器，請在此時間間隔後更新它。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source> min</source>
+        <translation> 分</translation>
+    </message>
+    <message>
+        <location line="+65"/>
+        <source>Files in Directories</source>
+        <translation>目錄中的文件</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+102"/>
+        <source>URL Template</source>
+        <translation>網址模板</translation>
+    </message>
+    <message>
+        <location line="+105"/>
+        <source>Name</source>
+        <translation>名稱</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Prefix</source>
+        <translation>首碼</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Default</source>
+        <translation>預設</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Built-in</source>
+        <translation>內建</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Custom</source>
+        <translation>自訂</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-111"/>
+        <source>Save Changes</source>
+        <translation>儲存變更</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>The following files have unsaved changes:</source>
+        <translation>以下檔案有未儲存的變更:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Automatically save all files before building</source>
+        <translation>建置前自動儲存所有檔案</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-112"/>
+        <source>Keyboard Shortcuts</source>
+        <translation>鍵盤快捷鍵</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+50"/>
+        <location line="+100"/>
+        <source>Command</source>
+        <translation>命令</translation>
+    </message>
+    <message>
+        <location line="-101"/>
+        <location line="+101"/>
+        <source>Label</source>
+        <translation>標籤</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+1"/>
+        <location line="+12"/>
+        <source>Shortcut</source>
+        <translation>快捷鍵</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-114"/>
+        <source>Command Mappings</source>
+        <translation>命令映射</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Target</source>
+        <translation>目標</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Reset All</source>
+        <translation>全部重置</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reset all to default.</source>
+        <translation>重置所有為預設值。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-14"/>
+        <source>Reset to default.</source>
+        <translation>重置為預設值。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Import...</source>
+        <translation>匯入...</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Export...</source>
+        <translation>匯出...</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+6"/>
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-206"/>
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-1"/>
+        <location line="+6"/>
+        <source>Reset</source>
+        <translation>重置</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+51"/>
+        <source>Plain Text Editor</source>
+        <translation>純文字編輯器</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Show Left Sidebar</source>
+        <translation>顯示左側邊欄</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hide Left Sidebar</source>
+        <translation>隱藏左側邊欄</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Show Right Sidebar</source>
+        <translation>顯示右側邊欄</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hide Right Sidebar</source>
+        <translation>隱藏右側邊欄</translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <source>Qt</source>
+        <translation>Qt</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Clear Menu</source>
+        <translation>清除選單</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+27"/>
+        <source>Binary Editor</source>
+        <translation>二進位編輯器</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+433"/>
+        <source>Preferences</source>
+        <translation>偏好設定</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492"/>
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-79"/>
+        <source>Options</source>
+        <translation>選項</translation>
+    </message>
+    <message>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3"/>
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
+        <translation>從翻譯者翻譯好的 ts 檔產生給應用程式使用的 qm 檔</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Release Translations (lrelease)</source>
+        <translation>釋出翻譯 (lrelease)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+5"/>
+        <source>Linguist</source>
+        <translation>語言家</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
+        <translation>將給翻譯者翻譯用的 ts 檔案與程式源碼同步</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Update Translations (lupdate)</source>
+        <translation>更新翻譯 (lupdate)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Opens the current file in Notepad</source>
+        <translation>用記事本開啟目前檔案</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Edit with Notepad</source>
+        <translation>使用記事本編輯</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+15"/>
+        <location line="+5"/>
+        <source>Text</source>
+        <translation>文字</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <source>Runs the current QML file with QML utility.</source>
+        <translation>使用 QML 實用程序運行當前的 QML 文件。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QML utility</source>
+        <translation>QML 實用程序</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+5"/>
+        <source>Qt Quick</source>
+        <translation>Qt Quick</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Runs the current QML file with qmlscene. This requires Qt 5.</source>
+        <translation>使用 qmlscene 運行當前的 QML 文件。這需要 Qt 5。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt Quick 2 Preview (qmlscene)</source>
+        <translation>Qt Quick 2 預覽版 (qmlscene)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+5"/>
+        <source>Opens the current file in vi</source>
+        <translation>在 vi 中開啟目前檔案</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <location line="+5"/>
+        <source>Edit with vi</source>
+        <translation>使用 vi 進行編輯</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+40"/>
+        <source>Global Actions &amp; Actions from the Menu</source>
+        <translation>全局操作和菜單中的操作</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation>觸發一個動作。如果它來自菜單，則它與菜單層次結構的任何部分匹配，並用“&gt;”分隔。例如，“sess def”匹配“文件 &gt; 會話 &gt; 默認”。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+145"/>
+        <source>No themes found in installation.</source>
+        <translation>在安裝檔中找不到主題。</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>The current date (ISO).</source>
+        <translation>目前日期(ISO)。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The current time (ISO).</source>
+        <translation>目前時間(ISO)。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The current date (RFC2822).</source>
+        <translation>目前日期(RFC2822)。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The current time (RFC2822).</source>
+        <translation>目前時間(RFC2822)。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The current date (Locale).</source>
+        <translation>目前日期(區域)。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The current time (Locale).</source>
+        <translation>目前時間(區域)。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The configured default directory for projects.</source>
+        <translation>為專案設定的預設目錄。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The directory last visited in a file dialog.</source>
+        <translation>檔案對話方塊中最後訪問的目錄。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Is %1 running on Windows?</source>
+        <translation>%1 是否在 Windows 上運行？</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Is %1 running on OS X?</source>
+        <translation>%1 是否在 OS X 上運行？</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Is %1 running on Linux?</source>
+        <translation>%1 是否在 Linux 上運行？</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Is %1 running on any unix-based platform?</source>
+        <translation>%1 是否在任何基於 UNIX 的平台上運行？</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>The path list separator for the platform.</source>
+        <translation>平台的路徑列表分隔符。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The platform executable suffix.</source>
+        <translation>平台可執行文件後綴。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The directory where %1 finds its pre-installed resources.</source>
+        <translation>%1 找到其預安裝資源的目錄。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The current date (QDate formatstring).</source>
+        <translation>目前日期(QDate formatstring)。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The current time (QTime formatstring).</source>
+        <translation>目前時間(QTime formatstring)。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Generate a new UUID.</source>
+        <translation>產生一個新的UUID。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>A comment.</source>
+        <translation>一條注解。</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>%1 &gt; %2 Preferences...</source>
+        <translation>%1 &gt; %2 首選項...</translation>
+    </message>
+    <message>
+        <location line="+103"/>
+        <source>Create Folder</source>
+        <translation>創建文件夾</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Settings File Error</source>
+        <translation>設置文件錯誤</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>The settings file &quot;%1&quot; is not writable.
+You will not be able to store any %2 settings.</source>
+        <translation>設置文件“%1”不可寫。
+您將無法存儲任何 %2 設置。</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The file is not readable.</source>
+        <translation>該文件不可讀。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The file is invalid.</source>
+        <translation>該文件無效。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Error reading settings file &quot;%1&quot;: %2
+You will likely experience further problems using this instance of %3.</source>
+        <translation>讀取設置文件“%1”時出錯：%2
+使用 %3 的此實例時您可能會遇到更多問題。</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>%1 collects crash reports for the sole purpose of fixing bugs. To disable this feature go to %2.</source>
+        <translation>%1 收集崩潰報告的唯一目的是修復錯誤。要禁用此功能，請轉至 %2。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
+        <translation>%1 可以收集崩潰報告，其唯一目的是修復錯誤。要啟用此功能，請轉至 %2。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source> &gt; Preferences &gt; Environment &gt; System</source>
+        <translation> &gt; 首選項 &gt; 環境 &gt; 系統</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Edit &gt; Preferences &gt; Environment &gt; System</source>
+        <translation>編輯&gt;首選項&gt;環境&gt;系統</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>%1 uses Google Crashpad for collecting crashes and sending them to our backend for processing. Crashpad may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
+        <translation>%1 使用 Google Crashpad 收集崩潰並將其發送到我們的後端進行處理。 Crashpad 可以從崩潰進程的內存中捕獲任意內容，包括用戶敏感信息、URL 以及用戶信任 %1 的任何其他內容。然而，收集的崩潰報告僅用於修復錯誤的唯一目的。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>More information:</source>
+        <translation>更多信息：</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Crashpad Overview</source>
+        <translation>崩潰板概述</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 security policy</source>
+        <translation>%1 安全策略</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+69"/>
+        <source>Design</source>
+        <translation>設計</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49"/>
+        <source>Add the file to version control (%1)</source>
+        <translation>將檔案新增到版本控制(%1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add the files to version control (%1)</source>
+        <translation>將檔案新增到版本控制(%1)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+43"/>
+        <source>Text Encoding</source>
+        <translation>文字編碼</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>The following encodings are likely to fit:</source>
+        <translation>以下編碼可能適合：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation>為 &quot;%1&quot; 選擇編碼 。%2</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Reload with Encoding</source>
+        <translation>根據編碼重新載入</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Save with Encoding</source>
+        <translation>根據編碼儲存</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+201"/>
+        <source>Choose a template:</source>
+        <translation>選擇一個樣本:</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Choose...</source>
+        <translation>選擇...</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+88"/>
+        <source>Projects</source>
+        <translation>專案</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Files and Classes</source>
+        <translation>檔案與類別</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>All Templates</source>
+        <translation>所有樣本</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 Templates</source>
+        <translation>%1 樣本</translation>
+    </message>
+    <message>
+        <location line="+146"/>
+        <source>Platform independent</source>
+        <translation>與平台無相依性</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Supported Platforms</source>
+        <translation>支援的平台</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+48"/>
+        <source>Overwrite Existing Files</source>
+        <translation>覆寫現有檔案</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>The following files already exist in the folder
+%1.
+Would you like to overwrite them?</source>
+        <translation>以下檔案已經存在於資料夾
+%1 
+中。您要覆寫它們嗎？</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+1"/>
+        <location line="+299"/>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-857"/>
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-5"/>
+        <source>Make Writable</source>
+        <translation>設為可寫入</translation>
+    </message>
+    <message>
+        <location line="-298"/>
         <location line="+299"/>
         <source>Open with VCS</source>
         <translation>用VCS開啟</translation>
@@ -985,2205 +3635,60 @@ Do you want to check them out now?</source>
 是否要現在檢查它們？</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+1"/>
-        <source>Cannot open the file for editing with VCS.</source>
-        <translation>無法使用 VCS 開啟檔案以編輯。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="-405"/>
-        <location line="+299"/>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-247"/>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+326"/>
-        <source>Make Writable</source>
-        <translation>設為可寫入</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+24"/>
-        <source>&amp;Save %1</source>
-        <translation>儲存 %1(&amp;S)</translation>
+        <location filename="../../../src/plugins/coreplugin/dialogs/restartdialog.cpp" line="+16"/>
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+18"/>
+        <source>Restart Required</source>
+        <translation>需要重新啟動</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Revert %1 to Saved</source>
-        <translation>回復 %1 到已儲存的狀態</translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>Close %1</source>
-        <translation>關閉 %1</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Close All Except %1</source>
-        <translation>除了 %1 以外全部關閉</translation>
-    </message>
-    <message>
-        <location line="+477"/>
-        <source>You will lose your current changes if you proceed reverting %1.</source>
-        <translation>若您進行回復 %1 的動作，您將失去您目前的變更。</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Proceed</source>
-        <translation>進行</translation>
+        <source>Later</source>
+        <translation>之後</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+142"/>
-        <location line="+117"/>
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+162"/>
-        <source>Cancel</source>
-        <translation>取消</translation>
+        <source>Restart Now</source>
+        <translation>現在重啟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+30"/>
-        <source>Edit</source>
-        <translation>編輯</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+96"/>
-        <source>Reset Do Not Ask/Show Again Dialogs</source>
-        <translation>重置“不再詢問/不再顯示”對話框</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Theme:</source>
-        <translation>主題：</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Enable high DPI scaling</source>
-        <translation>啟用高 DPI 縮放</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>The high DPI settings will take effect after restart.</source>
-        <translation>高DPI設置將在重啟後生效。</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Show keyboard shortcuts in context menus (default: %1)</source>
-        <translation>在上下文菜單中顯示鍵盤快捷鍵（默認值：%1）</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>on</source>
-        <translation>在</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>off</source>
-        <translation>離開</translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>&lt;System Language&gt;</source>
-        <translation>&lt;系統語言&gt;</translation>
-    </message>
-    <message>
-        <location line="+82"/>
-        <source>The language change will take effect after restart.</source>
-        <translation>語言更改將在重啟後生效。</translation>
-    </message>
-    <message>
-        <location line="+46"/>
-        <source>Interface</source>
-        <translation>介面</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+490"/>
-        <source>Variables</source>
-        <translation>變數</translation>
-    </message>
-    <message>
-        <location line="-340"/>
-        <source>Terminal:</source>
-        <translation>終端機:</translation>
-    </message>
-    <message>
-        <location line="-27"/>
-        <source>Command line arguments used for &quot;%1&quot;.</source>
-        <translation>用於“%1”的命令行參數。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>File system case sensitivity:</source>
-        <translation>檔案系統是否區分大小寫：</translation>
+        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+294"/>
+        <source>&lt;no document&gt;</source>
+        <translation>&lt;無檔案&gt;</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Influences how file names are matched to decide if they are the same.</source>
-        <translation>影響檔案名稱如何相符來決定它們是否相同。</translation>
+        <source>No document is selected.</source>
+        <translation>沒有選擇檔案。</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Files to keep open:</source>
-        <translation>要保持打開的文件：</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Minimum number of open documents that should be kept in memory. Increasing this number will lead to greater resource usage when not manually closing documents.</source>
-        <translation>應保存在內存中的打開文檔的最小數量。當不手動關閉文檔時，增加此數字將導致更多的資源使用。</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <location line="+2"/>
-        <source>?</source>
-        <translation>?</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Patch command:</source>
-        <translation>修補程式命令：</translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>When files are externally modified:</source>
-        <translation>當檔案被外部程式變更時:</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-174"/>
-        <source>User Interface</source>
-        <translation>使用者界面</translation>
-    </message>
-    <message>
-        <location line="-22"/>
-        <source>Language:</source>
-        <translation>語言:</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+20"/>
-        <location line="+309"/>
-        <source>System</source>
-        <translation>系統</translation>
-    </message>
-    <message>
-        <location line="-341"/>
-        <source>External file browser:</source>
-        <translation>外部檔案瀏覽器:</translation>
-    </message>
-    <message>
-        <location line="-104"/>
-        <source>Bytes</source>
-        <translation>字節</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>KB</source>
-        <translation>知識庫</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+50"/>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
-        <location line="-49"/>
-        <source>GB</source>
-        <translation>國標</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>TB</source>
-        <translation>結核病</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Auto-suspend unmodified files</source>
-        <translation>自動掛起未修改的文件</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Enable crash reporting</source>
-        <translation>啟用崩潰報告</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Warn before opening text files greater than</source>
-        <translation>開啟大於此大小的文字檔之前發出警告</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Ask for confirmation before exiting</source>
-        <translation>退出前要求確認</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Clear Local Crash Reports</source>
-        <translation>清除本地崩潰報告</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto-save files after refactoring</source>
-        <translation>重構後自動保存文件</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Automatically free resources of old documents that are not visible and not modified. They stay visible in the list of open documents.</source>
-        <translation>自動釋放不可見且未修改的舊文檔資源。它們在打開的文檔列表中保持可見。</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Allow crashes to be automatically reported. Collected reports are used for the sole purpose of fixing bugs.</source>
-        <translation>允許自動報告崩潰。收集的報告僅用於修復錯誤。</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
-        <translation>用於“在終端中運行”的命令行參數。</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Always Ask</source>
-        <translation>總是詢問</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Reload All Unchanged Editors</source>
-        <translation>重新載入所有未變更的編輯器</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ignore Modifications</source>
-        <translation>忽略變更</translation>
-    </message>
-    <message>
-        <location line="+63"/>
-        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
-        <translation>“最近文件”中的最大條目數：</translation>
-    </message>
-    <message>
-        <location line="+33"/>
-        <source>Command used for reverting diff chunks.</source>
-        <translation>用於恢復差異區塊的命令。</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Automatically creates temporary copies of modified files. If %1 is restarted after a crash or power failure, it asks whether to recover the auto-saved content.</source>
-        <translation>自動創建修改文件的臨時副本。如果%1在崩潰或斷電後重新啟動，它會詢問是否恢復自動保存的內容。</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Automatically saves all open files affected by a refactoring operation,
-provided they were unmodified before the refactoring.</source>
-        <translation>自動保存受重構操作影響的所有打開文件，
-前提是它們在重構之前未經修改。</translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>Crash Reporting</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>The change will take effect after restart.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+41"/>
-        <source>Case Sensitive (Default)</source>
-        <translation>區分大小寫(預設)</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Case Insensitive (Default)</source>
-        <translation>不區分大小寫(預設)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Case Insensitive</source>
-        <translation>不區分大小寫</translation>
-    </message>
-    <message>
-        <location line="+109"/>
-        <source>The file system case sensitivity change will take effect after restart.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+55"/>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+473"/>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-8"/>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-279"/>
-        <location line="+6"/>
-        <source>Reset</source>
-        <translation>重置</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+1"/>
-        <source>Reset to default.</source>
-        <comment>Color</comment>
-        <translation>重置為預設值。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+1"/>
-        <source>Reset to default.</source>
-        <comment>Terminal</comment>
-        <translation>重置為預設值。</translation>
-    </message>
-    <message>
-        <location line="-52"/>
-        <source>Auto-save modified files</source>
-        <translation>自動儲存變更的檔案</translation>
-    </message>
-    <message>
-        <location line="+84"/>
-        <source>Interval:</source>
-        <translation>間隔:</translation>
-    </message>
-    <message>
-        <location line="-56"/>
-        <source>min</source>
-        <translation>分</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+131"/>
-        <source>Exit Full Screen</source>
-        <translation>退出全螢幕</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Enter Full Screen</source>
-        <translation>進入全螢幕</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+488"/>
-        <source>&amp;File</source>
-        <translation>檔案(&amp;F)</translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>&amp;Edit</source>
-        <translation>編輯(&amp;E)</translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>&amp;Tools</source>
-        <translation>工具(&amp;T)</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>&amp;Window</source>
-        <translation>視窗(&amp;W)</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>&amp;Help</source>
-        <translation>說明(&amp;H)</translation>
-    </message>
-    <message>
-        <location line="+112"/>
-        <source>Open File &amp;With...</source>
-        <translation>開啟方式(&amp;W)...</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Recent &amp;Files</source>
-        <translation>最近使用的檔案(&amp;F)</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+123"/>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2235"/>
-        <location line="+1728"/>
-        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+5"/>
-        <source>&amp;Save</source>
-        <translation>儲存(&amp;S)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Diff &amp;&amp; Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Save All</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Diff All &amp;&amp; Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>&amp;Save Selected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Diff Selected &amp;&amp; Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+5"/>
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+47"/>
-        <source>Save</source>
-        <translation>儲存</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1727"/>
-        <location line="+1728"/>
-        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+5"/>
-        <source>Save &amp;As...</source>
-        <translation>另存新檔(&amp;A)...</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="+3"/>
-        <source>Ctrl+Shift+S</source>
-        <translation>Ctrl+Shift+S</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Save As...</source>
-        <translation>另存新檔...</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-1100"/>
-        <source>Save A&amp;ll</source>
-        <translation>全部儲存(&amp;L)</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/mainwindow.cpp" line="-289"/>
-        <location line="+1"/>
-        <source>Exit %1?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+114"/>
-        <source>&amp;View</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+68"/>
-        <source>Return to Editor</source>
-        <translation>返回到編輯器</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>&amp;New Project...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>New Project</source>
-        <comment>Title of dialog</comment>
-        <translation>新建專案</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>&amp;New File...</source>
-        <translation>新建檔案(&amp;N)...</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>&amp;Open File...</source>
-        <translation>開啟檔案(&amp;O)...</translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>Open From Device...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+39"/>
-        <source>&amp;Print...</source>
-        <translation>列印(&amp;P)...</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>E&amp;xit</source>
-        <translation>離開(&amp;X)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Ctrl+Q</source>
-        <translation>Ctrl+Q</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>&amp;Undo</source>
-        <translation>復原(&amp;U)</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Undo</source>
-        <translation>復原</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>&amp;Redo</source>
-        <translation>重做(&amp;R)</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Redo</source>
-        <translation>重做</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Cu&amp;t</source>
-        <translation>剪下(&amp;T)</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>&amp;Copy</source>
-        <translation>複製(&amp;C)</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>&amp;Paste</source>
-        <translation>貼上(&amp;P)</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Select &amp;All</source>
-        <translation>全部選取(&amp;A)</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>&amp;Go to Line...</source>
-        <translation>跳到行號(&amp;G)...</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Ctrl+L</source>
-        <translation>Ctrl+L</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Zoom In</source>
-        <translation type="unfinished">放大</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Ctrl++</source>
-        <translation type="unfinished">Ctrl++</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Zoom Out</source>
-        <translation type="unfinished">縮小</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <location line="+2"/>
-        <source>Ctrl+-</source>
-        <translation type="unfinished">Ctrl+-</translation>
-    </message>
-    <message>
-        <location line="-2"/>
-        <source>Ctrl+Shift+-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Original Size</source>
-        <translation type="unfinished">原始大小</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Meta+0</source>
-        <translation>Meta+0</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Show Logs...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Pr&amp;eferences...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+111"/>
-        <source>About &amp;%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>About &amp;%1...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Change Log...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Contact...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Cycle Mode Selector Styles</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Mode Selector Style</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Icons and Text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Icons Only</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Hidden</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+535"/>
-        <source>Version:</source>
-        <translation type="unfinished">版本：</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>Change Log</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+43"/>
-        <source>Contact</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&lt;p&gt;Qt Creator developers can be reached at the Qt Creator mailing list:&lt;/p&gt;%1&lt;p&gt;or the #qt-creator channel on Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Our bug tracker is located at %3.&lt;/p&gt;&lt;p&gt;Please use %4 for bigger chunks of text.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-792"/>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-56"/>
-        <source>Minimize</source>
-        <translation>最小化</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Ctrl+M</source>
-        <translation>Ctrl+M</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Zoom</source>
-        <translation>縮放</translation>
-    </message>
-    <message>
-        <location line="-46"/>
-        <source>Ctrl+0</source>
-        <translation>Ctrl+0</translation>
-    </message>
-    <message>
-        <location line="+53"/>
-        <source>Full Screen</source>
-        <translation>全螢幕</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Ctrl+Shift+F11</source>
-        <translation>Ctrl+Shift+F11</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Ctrl+Meta+F</source>
-        <translation>Ctrl+Meta+F</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Close Window</source>
-        <translation>關閉視窗</translation>
-    </message>
-    <message>
-        <location line="+58"/>
-        <source>&amp;Views</source>
-        <translation>檢視(&amp;V)</translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>About &amp;Plugins...</source>
-        <translation>關於外掛程式(&amp;P)...</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+201"/>
-        <source>Choose a template:</source>
-        <translation>選擇一個樣本:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Choose...</source>
-        <translation type="unfinished">選擇...</translation>
-    </message>
-    <message>
-        <location line="+68"/>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+907"/>
-        <source>Projects</source>
-        <translation>專案</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Files and Classes</source>
-        <translation>檔案與類別</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>All Templates</source>
-        <translation>所有樣本</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>%1 Templates</source>
-        <translation>%1 樣本</translation>
-    </message>
-    <message>
-        <location line="+146"/>
-        <source>Platform independent</source>
-        <translation>與平台無相依性</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Supported Platforms</source>
-        <translation>支援的平台</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+26"/>
-        <location line="+88"/>
-        <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+24"/>
-        <source>Open Documents</source>
-        <translation>開啟文件</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorswindow.cpp" line="+229"/>
-        <source>*</source>
-        <translation>*</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/openwithdialog.cpp" line="+23"/>
-        <source>Open File With...</source>
-        <translation>開啟方式...</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Open file &quot;%1&quot; with:</source>
-        <translation>開啟檔案&quot;%1&quot;方式：</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+30"/>
-        <source>Output</source>
-        <translation>輸出</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+218"/>
-        <location line="+222"/>
-        <source>Category</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-220"/>
-        <source>Color</source>
-        <translation type="unfinished">顏色</translation>
-    </message>
-    <message>
-        <location line="+165"/>
-        <source>Logging Category Viewer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+864"/>
-        <location line="+13"/>
-        <location line="+11"/>
-        <source>Save Log</source>
-        <translation>保存日志</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+6"/>
-        <source>Clear</source>
-        <translation>清除</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <location line="+124"/>
-        <source>Stop Logging</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-120"/>
-        <source>Toggle Qt Internal Logging</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Auto Scroll</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Timestamps</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Message Types</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Timestamp</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Message</source>
-        <translation type="unfinished">訊息</translation>
-    </message>
-    <message>
-        <location line="+83"/>
-        <source>Start Logging</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Copy Selected Logs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Copy All</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>Save Enabled as Preset...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Update from Preset...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Uncheck All</source>
-        <translation type="unfinished">全部取消勾選</translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Save Logs As</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+21"/>
+        <source>System Editor</source>
+        <translation>系統編輯器</translation>
     </message>
     <message>
         <location line="+12"/>
-        <source>Failed to write logs to &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <source>Could not open URL %1.</source>
+        <translation>無法打開 URL %1。</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+592"/>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>無法找到&quot;%1&quot;(展開的&quot;%2&quot;)的可執行檔</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Save Enabled Categories As</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Failed to write preset file &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Load Enabled Categories From</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Failed to open preset file &quot;%1&quot; for reading</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Failed to read preset file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>Unexpected preset file format.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-182"/>
-        <source>Show Non-matching Lines</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Filter output...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+142"/>
-        <location line="+48"/>
-        <source>Maximize</source>
-        <translation>最大化</translation>
-    </message>
-    <message>
-        <location line="-10"/>
-        <source>Next Item</source>
-        <translation>下一項</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Previous Item</source>
-        <translation>前一項</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <source>Out&amp;put</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+348"/>
-        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+50"/>
-        <source>Details</source>
-        <translation>詳情</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+1"/>
-        <source>Error Details</source>
-        <translation>錯誤詳情</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Installed Plugins</source>
-        <translation>已安裝的外掛程式</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+23"/>
-        <source>Processes</source>
-        <translation>行程</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+0"/>
-        <source>Save All</source>
-        <translation>全部儲存</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Save Selected</source>
-        <translation>儲存選取的項目</translation>
-    </message>
-    <message>
-        <location line="-111"/>
-        <source>Save Changes</source>
-        <translation>儲存變更</translation>
-    </message>
-    <message>
-        <location line="-6"/>
-        <source>The following files have unsaved changes:</source>
-        <translation>以下檔案有未儲存的變更:</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Automatically save all files before building</source>
-        <translation>建置前自動儲存所有檔案</translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>&amp;Diff</source>
-        <translation type="unfinished">比較(&amp;D)</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Do &amp;Not Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+296"/>
-        <source>Keyboard</source>
-        <translation>鍵盤</translation>
-    </message>
-    <message>
-        <location line="-33"/>
-        <source>Keyboard Shortcuts</source>
-        <translation>鍵盤快捷鍵</translation>
-    </message>
-    <message>
-        <location line="+360"/>
-        <source>Key sequence:</source>
-        <translation>按鍵順序:</translation>
-    </message>
-    <message>
-        <location line="-359"/>
-        <location line="+12"/>
-        <source>Shortcut</source>
-        <translation>快捷鍵</translation>
-    </message>
-    <message>
-        <location line="-142"/>
-        <source>Click and type the new key sequence.</source>
-        <translation>按一下並輸入新的按鍵序列。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Stop Recording</source>
-        <translation>停止錄製</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Record</source>
-        <translation>錄製</translation>
-    </message>
-    <message>
-        <location line="+255"/>
-        <source>Invalid key sequence.</source>
-        <translation>無效的按鍵序列。</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Key sequence will not work in editor.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+74"/>
-        <source>Import Keyboard Mapping Scheme</source>
-        <translation>匯入鍵盤映射機制</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <location line="+40"/>
-        <source>Keyboard Mapping Scheme (*.kms)</source>
-        <translation>鍵盤映射機制 (*.kms)</translation>
-    </message>
-    <message>
-        <location line="-2"/>
-        <source>Export Keyboard Mapping Scheme</source>
-        <translation>匯出鍵盤映射機制</translation>
-    </message>
-    <message>
-        <location line="+117"/>
-        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
-        <translation>使用「Cmd」、「Opt」、「Ctrl」和「Shift」作為修改鍵。使用「Escape」、「Backspace」、「Delete」、「Insert」、「Home」等作為特殊鍵。將各個鍵用「+」群組合在一起，將多個捷徑用「,”群組合成一個捷徑序列。例如，如果使用者必須在按住Escape鍵的同時按住Ctrl和Shift修改鍵，然後鬆開並按A，則輸入「Ctrl+Shift+Escape,A」。</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
-        <translation>使用「Cmd」、「Alt」、「Meta」和「Shift」作為修改鍵。使用「Escape」、「Backspace」、「Delete」、「Insert」、「Home」等作為特殊鍵。將各個鍵用「+」群組合在一起，將多個捷徑用「,」群組合成一個捷徑序列。例如，如果使用者必須在按住Escape鍵的同時按住Ctrl和Shift修改鍵，然後鬆開並按A，則輸入「Ctrl+Shift+Escape,A」。</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Enter key sequence as text</source>
-        <translation>將按鍵序列作為文字輸入</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
-        <translation>按鍵序列有潛在的衝突。&lt;a href=&quot;#conflicts&quot;&gt;顯示。&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+219"/>
-        <source>Switch to &lt;b&gt;%1&lt;/b&gt; mode</source>
-        <translation>切換至 &lt;b&gt;%1&lt;/b&gt; 模式 </translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+38"/>
-        <source>Empty search term.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>&amp;Search</source>
-        <translation>搜尋(&amp;S)</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Search f&amp;or:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>&amp;Case sensitive</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Sco&amp;pe:</source>
-        <translation>範圍(&amp;P)：</translation>
-    </message>
-    <message>
-        <location line="-6"/>
-        <source>Whole words o&amp;nly</source>
-        <translation>比對整個單字(&amp;N)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Use re&amp;gular expressions</source>
-        <translation>使用正規表示式(&amp;G)</translation>
-    </message>
-    <message>
-        <location line="-23"/>
-        <source>Search &amp;&amp; &amp;Replace</source>
-        <translation>搜尋並取代(&amp;R)</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-161"/>
-        <source>Find/Replace</source>
-        <translation>搜尋/取代</translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Enter Find String</source>
-        <translation>輸入搜尋字串</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Ctrl+E</source>
-        <translation>Ctrl+E</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Find Next</source>
-        <translation>尋找下一個</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Find Previous</source>
-        <translation>尋找前一個</translation>
-    </message>
-    <message>
-        <location line="-85"/>
-        <location line="+13"/>
-        <source>Shift+Enter</source>
-        <translation>Shift+Enter</translation>
-    </message>
-    <message>
-        <location line="-155"/>
-        <source>Find Flags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+148"/>
-        <location line="+13"/>
-        <source>Shift+Return</source>
-        <translation>Shift+Return</translation>
-    </message>
-    <message>
-        <location line="+77"/>
-        <source>Find Next (Selected)</source>
-        <translation>尋找下一個(所選)</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Ctrl+F3</source>
-        <translation type="unfinished">Ctrl+F3</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Find Previous (Selected)</source>
-        <translation>尋找上一個(所選)</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Ctrl+Shift+F3</source>
-        <translation type="unfinished">Ctrl+Shift+F3</translation>
-    </message>
-    <message>
-        <location line="+84"/>
-        <source>Preserve Case when Replacing</source>
-        <translation>取代時保留大小寫</translation>
-    </message>
-    <message>
-        <location line="+134"/>
-        <source>Search for...</source>
-        <translation>搜尋...</translation>
+        <location line="+52"/>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation>正在啟動外部工具“%1”</translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Replace with...</source>
-        <translation>取代為...</translation>
-    </message>
-    <message>
-        <location line="-438"/>
-        <location line="+222"/>
-        <source>Replace</source>
-        <translation>取代</translation>
-    </message>
-    <message>
-        <location line="-217"/>
-        <location line="+228"/>
-        <source>Replace &amp;&amp; Find</source>
-        <translation>取代並搜尋</translation>
-    </message>
-    <message>
-        <location line="-22"/>
-        <source>Select All</source>
-        <translation type="unfinished">全部選取</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Ctrl+Alt+Return</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>Ctrl+=</source>
-        <translation>Ctrl+=</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Replace &amp;&amp; Find Previous</source>
-        <translation>取代並且搜尋前一個</translation>
-    </message>
-    <message>
-        <location line="-235"/>
-        <location line="+246"/>
-        <source>Replace All</source>
-        <translation>全部取代</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-259"/>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+181"/>
-        <source>Case Sensitive</source>
-        <translation>區分大小寫</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Whole Words Only</source>
-        <translation>比對整個單字</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-6"/>
-        <source>Use Regular Expressions</source>
-        <translation>使用正規表示式</translation>
-    </message>
-    <message>
-        <location line="-332"/>
-        <source>Find</source>
-        <translation>尋找</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Find:</source>
-        <translation>尋找：</translation>
-    </message>
-    <message>
-        <location line="+39"/>
-        <source>Replace with:</source>
-        <translation>取代為：</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+278"/>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+22"/>
-        <location line="+122"/>
-        <source>Advanced...</source>
-        <translation>進階...</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+731"/>
-        <source>Search Results</source>
-        <translation>搜尋結果</translation>
-    </message>
-    <message>
-        <location line="-577"/>
-        <location line="+480"/>
-        <source>New Search</source>
-        <translation>新搜尋</translation>
-    </message>
-    <message>
-        <location line="-514"/>
-        <location line="+491"/>
-        <source>Expand All</source>
-        <translation>全部展開</translation>
-    </message>
-    <message>
-        <location line="-464"/>
-        <source>Filter Results</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+338"/>
-        <source>%1 %2</source>
-        <translation>%1 %2</translation>
-    </message>
-    <message>
-        <location line="+123"/>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-194"/>
-        <source>Collapse All</source>
-        <translation>全部摺疊</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>History:</source>
-        <translation>歷程記錄:</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorconstants.h" line="+12"/>
-        <source>Locator</source>
-        <translation>定位器</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="-11"/>
-        <source>Install Plugin...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>Plugin changes will take effect after restart.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>Plugin Details of %1</source>
-        <translation>外掛程式 %1 的詳情</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Plugin Errors of %1</source>
-        <translation>外掛程式 %1 的錯誤</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459"/>
-        <source>Show Hidden Files</source>
-        <translation type="unfinished"></translation>
+        <source>&quot;%1&quot; finished</source>
+        <translation>&quot;%1&quot;已完成</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show Bread Crumbs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Show Folders on Top</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+75"/>
-        <source>Synchronize Root Directory with Editor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+142"/>
-        <source>New File</source>
-        <comment>Title of dialog</comment>
-        <translation type="unfinished">新增檔案</translation>
-    </message>
-    <message>
-        <location line="+154"/>
-        <location line="+80"/>
-        <source>New Folder</source>
-        <translation type="unfinished">新資料夾</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Remove Folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+67"/>
-        <source>File System</source>
-        <translation>檔案系統</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Meta+Y,Meta+F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Alt+Y,Alt+F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Computer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Home</source>
-        <translation type="unfinished">首頁</translation>
-    </message>
-    <message>
-        <location line="+144"/>
-        <source>Add New...</source>
-        <translation type="unfinished">新增檔案...</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Rename...</source>
-        <translation type="unfinished">重新命名...</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Remove...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-619"/>
-        <source>Synchronize with Editor</source>
-        <translation>與編輯器同步</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+257"/>
-        <source>Filter Configuration</source>
-        <translation>篩選器組態</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Type the prefix followed by a space and search term to restrict search to the filter.</source>
-        <translation>輸入首碼，後跟一個空格和搜尋詞以限制篩選器的搜尋。</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Include by default</source>
-        <translation>預設包括</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Include the filter when not using a prefix for searches.</source>
-        <translation>不使用首碼進行搜尋時包括篩選器。</translation>
-    </message>
-    <message>
-        <location line="-26"/>
-        <source>Prefix:</source>
-        <translation>前置字串：</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+46"/>
-        <source>Generic Directory Filter</source>
-        <translation>一般目錄篩選</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+267"/>
-        <location line="+10"/>
-        <source>Select Directory</source>
-        <translation>選擇目錄</translation>
-    </message>
-    <message numerus="yes">
-        <location line="+56"/>
-        <source>%1 filter update: %n files</source>
-        <translation>
-            <numerusform>%1 篩選器更新：%n 個檔案</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location line="-18"/>
-        <source>%1 filter update: 0 files</source>
-        <translation>%1 篩選器更新：0 個檔案</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>%1 filter update: canceled</source>
-        <translation>%1 篩選器更新：已取消</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+69"/>
-        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-246"/>
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+36"/>
-        <source>Name:</source>
-        <translation>名稱：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Path:</source>
-        <translation type="unfinished">路徑：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>MIME type:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Default editor:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Line endings:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Indentation:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Owner:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Group:</source>
-        <translation type="unfinished">群組：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Size:</source>
-        <translation type="unfinished">大小：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Last read:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Last modified:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Readable:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Writable:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Symbolic link:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <location line="+1"/>
-        <location line="+18"/>
-        <location line="+50"/>
-        <location line="+32"/>
-        <location line="+1"/>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+58"/>
-        <source>Unknown</source>
-        <translation>未知</translation>
-    </message>
-    <message>
-        <location line="-91"/>
-        <source>Windows (CRLF)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Unix (LF)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Mac (CR)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+47"/>
-        <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="-300"/>
-        <source>Mixed</source>
-        <translation type="unfinished">混合</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 Spaces</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Tabs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-3"/>
-        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+26"/>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+196"/>
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+20"/>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-6"/>
-        <source>Remove</source>
-        <translation>移除</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-4"/>
-        <source>Directories:</source>
-        <translation>目錄：</translation>
-    </message>
-    <message>
-        <location line="-8"/>
-        <source>Specify a short word/abbreviation that can be used to restrict completions to files from this directory tree.
-To do this, you type this shortcut and a space in the Locator entry field, and then the word to search for.</source>
-        <translation>指定用於限定此目錄樹裡的檔案補完功能的短單字或縮寫。
-您可以在定位器的輸入位置鍵入這個縮寫和一個空格，然後輸入搜尋的單字。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-3"/>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-298"/>
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-1"/>
-        <source>Add</source>
-        <translation>新增</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+53"/>
-        <source>Files in File System</source>
-        <translation>在檔案系統中的檔案</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+91"/>
-        <source>Create and Open &quot;%1&quot;</source>
-        <translation>建立並開啟&quot;%1&quot;</translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>Create File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Create &quot;%1&quot;?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Always create</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Create</source>
-        <translation type="unfinished">建立</translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>Include hidden files</source>
-        <translation>包括隱藏檔案</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Filter:</source>
-        <translation>篩選器：</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+21"/>
-        <source>Available filters</source>
-        <translation>可使用的篩選器</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+563"/>
-        <source>Open as Centered Popup</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+101"/>
-        <source>Type to locate</source>
-        <translation>輸入以定位</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Type to locate (%1)</source>
-        <translation>輸入以定位(%1)</translation>
-    </message>
-    <message>
-        <location line="-102"/>
-        <source>Refresh</source>
-        <translation>刷新</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+62"/>
-        <source>Web Search</source>
-        <translation type="unfinished">搜尋網頁</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Qt Project Bugs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+41"/>
-        <source>Locate...</source>
-        <translation>定位...</translation>
-    </message>
-    <message>
-        <location line="+147"/>
-        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;開啟文件&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 檔案 &gt;開啟檔案(%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 檔案 &gt;示例 &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 檔案&gt; 最近檔案&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 在這裡拖放檔案&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location line="+37"/>
-        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- 輸入&lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;跳轉到類定義&lt;/div&gt;</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- 輸入&lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;跳轉到類定義&lt;/div&gt;</translation>
-    </message>
-    <message>
-        <location line="+130"/>
-        <source>Updating Locator Caches</source>
-        <translation>更新定位器快取</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492"/>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+21"/>
-        <source>Options</source>
-        <translation>選項</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-34"/>
-        <source>Locator filters that do not update their cached data immediately, such as the custom directory filters, update it after this time interval.</source>
-        <translation>不立即更新其快取資料的定位器篩選器，例如自訂目錄篩選器，請在此時間間隔後更新它。</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source> min</source>
-        <translation> 分</translation>
-    </message>
-    <message>
-        <location line="+65"/>
-        <source>Files in Directories</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+102"/>
-        <source>URL Template</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+105"/>
-        <source>Name</source>
-        <translation type="unfinished">名稱</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Prefix</source>
-        <translation>首碼</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Default</source>
-        <translation>預設</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Built-in</source>
-        <translation>內建</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Custom</source>
-        <translation type="unfinished">自訂</translation>
-    </message>
-    <message>
-        <location line="-193"/>
-        <source>Refresh interval:</source>
-        <translation>刷新間隔：</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+51"/>
-        <source>Plain Text Editor</source>
-        <translation>純文字編輯器</translation>
-    </message>
-    <message>
-        <location line="+38"/>
-        <source>Show Left Sidebar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Hide Left Sidebar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Show Right Sidebar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Hide Right Sidebar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+196"/>
-        <source>Binary Editor</source>
-        <translation>二進位編輯器</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+433"/>
-        <source>Preferences</source>
-        <translation>偏好設定</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+100"/>
-        <source>Qt</source>
-        <translation>Qt</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+205"/>
-        <source>Environment</source>
-        <translation>環境</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+23"/>
-        <source>Clear Menu</source>
-        <translation>清除選單</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-5"/>
-        <location line="+100"/>
-        <source>Command</source>
-        <translation>命令</translation>
-    </message>
-    <message>
-        <location line="-101"/>
-        <location line="+101"/>
-        <source>Label</source>
-        <translation>標籤</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+69"/>
-        <source>Design</source>
-        <translation>設計</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-290"/>
-        <source>Drag to drag documents between splits</source>
-        <translation>拖動以在分割之間拖動文件</translation>
-    </message>
-    <message>
-        <location line="+257"/>
-        <source>Remove Split</source>
-        <translation>移除分割</translation>
-    </message>
-    <message>
-        <location line="+38"/>
-        <source>File is writable</source>
-        <translation>檔案可寫入</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="-13"/>
-        <source>&amp;Find/Replace</source>
-        <translation>搜尋/取代(&amp;F)</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Advanced Find</source>
-        <translation>進階搜尋</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-1"/>
-        <source>Open Advanced Find...</source>
-        <translation>開啟進階搜尋...</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Ctrl+Shift+F</source>
-        <translation>Ctrl+Shift+F</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-130"/>
-        <source>Open &quot;%1&quot;</source>
-        <translation>開啟 &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1737"/>
-        <source>Next Open Document in History</source>
-        <translation>歷史紀錄中下一個開啟的檔案</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Previous Open Document in History</source>
-        <translation>歷史紀錄中前一個開啟的檔案</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-41"/>
-        <source>Close Document</source>
-        <translation>關閉文件</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+90"/>
-        <source>Description:</source>
-        <translation>描述：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="-95"/>
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+270"/>
-        <source>Executable:</source>
-        <translation>執行檔：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+1"/>
-        <source>Arguments:</source>
-        <translation>引數：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Working directory:</source>
-        <translation>工作目錄：</translation>
-    </message>
-    <message>
-        <location line="-57"/>
-        <source>Output:</source>
-        <translation>輸出：</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <location line="+13"/>
-        <source>Ignore</source>
-        <translation>忽略</translation>
-    </message>
-    <message>
-        <location line="-11"/>
-        <location line="+13"/>
-        <source>Replace Selection</source>
-        <translation>取代選擇</translation>
-    </message>
-    <message>
-        <location line="-11"/>
-        <source>Error output:</source>
-        <translation>錯誤輸出：</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Text to pass to the executable via standard input. Leave empty if the executable should not receive any input.</source>
-        <translation type="unfinished">文字傳遞給通過標準輸入可執行檔案，留空此項如果可執行檔不會收到任何輸入.</translation>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>Input:</source>
-        <translation>輸入：</translation>
-    </message>
-    <message>
-        <location line="-4"/>
-        <source>If the tool modifies the current document, set this flag to ensure that the document is saved before running the tool and is reloaded after the tool finished.</source>
-        <translation type="unfinished">如果工具變更了目前的文檔，設置這個旗幟保證文檔在工具執行前被儲存並且在工具執行後自動重載文檔。</translation>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>Modifies current document</source>
-        <translation>變更目前的文件</translation>
-    </message>
-    <message>
-        <location line="-122"/>
-        <source>System Environment</source>
-        <translation type="unfinished">系統環境變數</translation>
-    </message>
-    <message>
-        <location line="+57"/>
-        <source>Add tool.</source>
-        <translation>新增工具。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Remove tool.</source>
-        <translation>刪除工具。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Revert tool to default.</source>
-        <translation>將工具還原為預設值。</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable&apos;s standard output.
-&lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <location line="+13"/>
-        <source>Show in General Messages</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-9"/>
-        <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
-&lt;li&gt;Show in General Messages.&lt;/li&gt;
-&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <location line="+413"/>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+153"/>
-        <source>No changes to apply.</source>
-        <translation>沒有要套用的變更。</translation>
-    </message>
-    <message>
-        <location line="-410"/>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-308"/>
-        <source>Change...</source>
-        <translation>變更...</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>Base environment:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+6"/>
-        <source>Environment:</source>
-        <translation>環境：</translation>
-    </message>
-    <message>
-        <location line="+66"/>
-        <source>Add Tool</source>
-        <translation>新增工具</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Add Category</source>
-        <translation>新增類別</translation>
-    </message>
-    <message>
-        <location line="+292"/>
-        <source>PATH=C:\dev\bin;${PATH}</source>
-        <translation>PATH=C:\dev\bin;${PATH}</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>PATH=/opt/bin:${PATH}</source>
-        <translation>PATH=/opt/bin:${PATH}</translation>
-    </message>
-    <message>
-        <location line="-793"/>
-        <source>Uncategorized</source>
-        <translation>未分類</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Tools that will appear directly under the External Tools menu.</source>
-        <translation>會直接顯示在額外工具選單中的工具。</translation>
-    </message>
-    <message>
-        <location line="+199"/>
-        <source>New Category</source>
-        <translation>新類別</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>New Tool</source>
-        <translation>新工具</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>This tool prints a line of useful text</source>
-        <translation>此工具可以列印一行有用的文字</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Useful text</source>
-        <extracomment>Sample external tool text</extracomment>
-        <translation>有用的文字</translation>
-    </message>
-    <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3"/>
-        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
-        <translation>從翻譯者翻譯好的 ts 檔產生給應用程式使用的 qm 檔</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Release Translations (lrelease)</source>
-        <translation>釋出翻譯 (lrelease)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+5"/>
-        <source>Linguist</source>
-        <translation>語言家</translation>
-    </message>
-    <message>
-        <location line="-2"/>
-        <source>Synchronizes translator&apos;s ts files with the program code</source>
-        <translation>將給翻譯者翻譯用的 ts 檔案與程式源碼同步</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Update Translations (lupdate)</source>
-        <translation>更新翻譯 (lupdate)</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Opens the current file in Notepad</source>
-        <translation>用記事本開啟目前檔案</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Edit with Notepad</source>
-        <translation>使用記事本編輯</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+15"/>
-        <location line="+5"/>
-        <source>Text</source>
-        <translation>文字</translation>
-    </message>
-    <message>
-        <location line="-17"/>
-        <source>Runs the current QML file with QML utility.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>QML utility</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Runs the current QML file with qmlscene. This requires Qt 5.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Qt Quick 2 Preview (qmlscene)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-4"/>
-        <location line="+5"/>
-        <source>Qt Quick</source>
-        <translation>Qt Quick</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <location line="+5"/>
-        <source>Opens the current file in vi</source>
-        <translation>在 vi 中開啟目前檔案</translation>
-    </message>
-    <message>
-        <location line="-4"/>
-        <location line="+5"/>
-        <source>Edit with vi</source>
-        <translation>使用 vi 進行編輯</translation>
+        <source>&quot;%1&quot; finished with error</source>
+        <translation>“%1”已完成，但有錯誤</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+60"/>
@@ -3201,36 +3706,430 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>錯誤：在 %1 的外部工具有重複的代碼</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="+31"/>
+        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+42"/>
+        <source>Launching a file browser failed</source>
+        <translation>啟動檔案瀏覽器失敗</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unable to start the file manager:
+
+%1
+
+</source>
+        <translation>無法啟動檔案管理員：
+
+%1
+
+</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&quot;%1&quot; returned the following error:
+
+%2</source>
+        <translation>&quot;%1&quot;返回了以下錯誤：
+
+%2</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Launching Windows Explorer Failed</source>
+        <translation>啟動 Windows Explorer 失敗</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Could not find explorer.exe in path to launch Windows Explorer.</source>
+        <translation>在路徑中找不到 explorer.exe，無法啟動&#x3000;Windows Explorer。</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The command for file browser is not set.</source>
+        <translation>未設置文件瀏覽器命令。</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Error while starting file browser.</source>
+        <translation>啟動文件瀏覽器時出錯。</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Find in This Directory...</source>
+        <translation>在此目錄中尋找...</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show in File System View</source>
+        <translation>在文件系統視圖中顯示</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show in Explorer</source>
+        <translation>在 Explorer 中顯示</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Show in Finder</source>
+        <translation>在搜尋器中顯示</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show Containing Folder</source>
+        <translation>顯示包含資料夾</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Open Command Prompt Here</source>
+        <translation>在此開啟命令提示</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Open Terminal Here</source>
+        <translation>在此開啟終端機</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Open Command Prompt With</source>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
+        <translation>打開命令提示符</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Open Terminal With</source>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
+        <translation>打開終端</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>無法刪除檔案&quot;%1&quot;。</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
+        <translation>無法重命名文件“%1”中的包含保護。</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+130"/>
+        <source>%n occurrences replaced.</source>
+        <translation>
+            <numerusform>%n個相符項被取代。</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+323"/>
+        <source>Case sensitive</source>
+        <translation>區分大小寫</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Whole words</source>
+        <translation>比對整個單字</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Regular expressions</source>
+        <translation>正規表示式</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Preserve case</source>
+        <translation>保留大小寫</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Flags: %1</source>
+        <translation>旗標：%1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>None</source>
+        <translation>無</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>, </source>
+        <translation>, </translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="-113"/>
+        <source>Repeat the search with same parameters.</source>
+        <translation>用相同的參數重複搜尋。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Search Again</source>
+        <translation>＆再次搜索</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Repla&amp;ce with:</source>
+        <translation>用。。。來代替：</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Preser&amp;ve case</source>
+        <translation>保存案例(&amp;V)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Replace all occurrences.</source>
+        <translation>取代所有相符項。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Replace</source>
+        <translation>＆代替</translation>
+    </message>
+    <message>
+        <location line="+75"/>
+        <source>This change cannot be undone.</source>
+        <translation>這項變將無法復原。</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+18"/>
+        <source>The search resulted in more than %n items, do you still want to continue?</source>
+        <translation>
+            <numerusform>搜尋結果超過了%n%n項目，您還想繼續嗎？</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Continue</source>
+        <translation>繼續</translation>
+    </message>
+    <message>
+        <location line="+179"/>
+        <source>Search was canceled.</source>
+        <translation>搜尋被取消。</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+82"/>
+        <source>%n matches found.</source>
+        <translation>
+            <numerusform>找到 %n 個相符的。</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Searching...</source>
+        <translation>正在尋找...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>No matches found.</source>
+        <translation>找不到相符的。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+294"/>
+        <source>Configure...</source>
+        <comment>msgShowOptionsDialog</comment>
+        <translation>組態...</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Open Preferences dialog.</source>
+        <comment>msgShowOptionsDialogToolTip (mac version)</comment>
+        <translation>開啟喜好設定對話方塊.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Open Options dialog.</source>
+        <comment>msgShowOptionsDialogToolTip (non-mac version)</comment>
+        <translation>開啟選項對話方塊。</translation>
+    </message>
+    <message>
+        <location line="+315"/>
+        <source> (%1)</source>
+        <translation> (%1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 %2%3</source>
+        <translation>%1 %2%3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Based on Qt %1 (%2, %3)</source>
+        <translation>基於 Qt %1（%2、%3）</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+618"/>
+        <source>File was restored from auto-saved copy. Select Save to confirm or Revert to Saved to discard changes.</source>
+        <translation>檔案已從自動儲存的副本中恢復。選擇「儲存」確認或「還原到已儲存」以放棄變更。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+186"/>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>id=&quot;%1&quot;的工廠已經註冊。正在刪除。</translation>
+    </message>
+    <message>
+        <location line="+218"/>
+        <source>Reload All Wizards</source>
+        <translation>重新載入所有精靈</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Inspect Wizard State</source>
+        <translation>檢查精靈狀態</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49"/>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>&quot;%1&quot;中的錯誤：%2</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
+        <translation>無法將&quot;%1&quot;的結果轉換為字串。</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation>評估簡單的 JavaScript 語句。&lt;br&gt;文字“}”字符必須轉義為“\}”，“\”字符必須轉義為“\\”，“%{”必須轉義為“%\{”。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28"/>
+        <source>Execute Custom Commands</source>
+        <translation>執行自訂命令</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Runs an arbitrary command with arguments. The command is searched for in the PATH environment variable if needed. Note that the command is run directly, not in a shell.</source>
+        <translation>運行帶參數的任意命令。如果需要，可以在 PATH 環境變量中搜索該命令。請注意，該命令是直接運行的，而不是在 shell 中運行。</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>Previous command is still running (&quot;%1&quot;).
+Do you want to kill it?</source>
+        <translation>上一個命令仍在運行(&quot;%1&quot;)。
+是否要終止它？</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Kill Previous Process?</source>
+        <translation>要強行結束先前的行程嗎？</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>無法找到&quot;%1&quot;的可執行檔。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>正在啟動命令&quot;%1&quot;。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+20"/>
+        <source>Run External Tool</source>
+        <translation>運行外部工具</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Runs an external tool that you have set up in the preferences (Environment &gt; External Tools).</source>
+        <translation>運行您在首選項（環境 &gt; 外部工具）中設置的外部工具。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+20"/>
+        <source>Evaluate JavaScript</source>
+        <translation>評估 JavaScript</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Evaluates arbitrary JavaScript expressions and copies the result.</source>
+        <translation>計算任意 JavaScript 表達式並複制結果。</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Reset Engine</source>
+        <translation>重置引擎</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Engine aborted after timeout.</source>
+        <translation>超時後引擎中止。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+1"/>
+        <source>Copy to clipboard: %1</source>
+        <translation>複製到剪貼板：%1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-198"/>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
+        <translation>定位器：運行“%1”時出錯。</translation>
+    </message>
+    <message>
+        <location line="+125"/>
+        <source>Locator query string.</source>
+        <translation>定位器查詢字符串。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Locator query string with quotes escaped with backslash.</source>
+        <translation>帶有用反斜杠轉義的引號的定位器查詢字符串。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
+        <translation>定位器查詢字符串，其中引號用反斜杠轉義，空格用“*”通配符替換。</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Locator query string as regular expression.</source>
+        <translation>作為正則表達式的定位器查詢字符串。</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>File Name Index</source>
+        <translation>文件名索引</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>匹配全局文件系統索引（Spotlight、Locate、Everything）中的文件。附加“+&lt;number&gt;”或“:&lt;number&gt;”可跳轉到給定的行號。附加另一個“+&lt;number&gt;”或“:&lt;number&gt;”也可以跳轉到列號。</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Case sensitive:</source>
+        <translation>區分大小寫：</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110"/>
+        <source>Add &quot;%1&quot; placeholder for the query string.
+Double-click to edit item.</source>
+        <translation>為查詢字符串添加“%1”佔位符。
+雙擊可編輯項目。</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Move Up</source>
+        <translation>提升</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Move Down</source>
+        <translation>下移</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>URLs:</source>
+        <translation>網址：</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+45"/>
+        <source>Serial Terminal</source>
+        <translation>串列終端</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="-128"/>
         <source>Add Magic Header</source>
         <translation>新增魔法標題</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+45"/>
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-86"/>
-        <location line="+8"/>
-        <location line="+27"/>
-        <location line="+14"/>
-        <location line="+8"/>
-        <location line="+28"/>
-        <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="+128"/>
-        <source>Error</source>
-        <translation>錯誤</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="-64"/>
-        <source>Value:</source>
-        <translation>值：</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-475"/>
-        <location line="+221"/>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-15"/>
-        <source>Type</source>
-        <translation>型態</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="-61"/>
+        <location line="+3"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME魔法資料按照由&lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;中的共用MIME-info資料庫規範的定義解釋。&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -3287,7 +4186,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+3"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;注意：較大範圍的值可能會影響打開文件時的性能。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3300,9 +4199,19 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>範圍結束於：</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+2"/>
+        <source>Priority:</source>
+        <translation>優先等級：</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Value:</source>
+        <translation>值：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Type:</source>
-        <translation type="unfinished">型態：</translation>
+        <translation>型態：</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3315,54 +4224,276 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>內部錯誤：類型無效</translation>
     </message>
     <message>
-        <location line="-148"/>
-        <source>Priority:</source>
-        <translation>優先等級：</translation>
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+219"/>
+        <source>Switch to &lt;b&gt;%1&lt;/b&gt; mode</source>
+        <translation>切換至 &lt;b&gt;%1&lt;/b&gt; 模式 </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-197"/>
-        <source>MIME Type</source>
-        <translation>MIME 型態</translation>
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+167"/>
+        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+235"/>
+        <source>Activate %1 View</source>
+        <translation>啟動%1檢視</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-599"/>
+        <source>Zoom: %1%</source>
+        <translation>縮放：%1%</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+145"/>
+        <source>Elided %n characters due to Application Output settings</source>
+        <translation>
+            <numerusform>由於應用程序輸出設置而刪除了 %n 個字符</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+154"/>
+        <source>[Discarding excessive amount of pending output.]
+</source>
+        <translation>[丟棄過多的待處理輸出。]
+</translation>
+    </message>
+    <message>
+        <location line="+278"/>
+        <source>Text Files (*.txt);;All files (*)</source>
+        <translation>文本文件 (*.txt);;所有的文件 (*)</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+11"/>
+        <source>Error: %L1!</source>
+        <translation>錯誤：%L1!</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/patchtool.cpp" line="+52"/>
+        <source>Apply Chunk</source>
+        <translation>套用區塊</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Revert Chunk</source>
+        <translation>回復區塊</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Handler</source>
-        <translation>處理器</translation>
+        <source>Would you like to apply the chunk?</source>
+        <translation>您要套用此區塊嗎？</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+115"/>
-        <source>Undefined</source>
-        <translation>未定義</translation>
+        <location line="+1"/>
+        <source>Would you like to revert the chunk?</source>
+        <translation>您要回復此區塊嗎？</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+589"/>
-        <source>MIME Types</source>
-        <translation>MIME 型態</translation>
+        <location line="+2"/>
+        <source>Note: The file will be saved before this operation.</source>
+        <translation>注意：執行此操作之前將保存文件。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+588"/>
-        <source>External Tools</source>
-        <translation>外部工具</translation>
+        <location line="+10"/>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
+        <translation>在一般「環境」設定中沒有設定修補程式命令。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+337"/>
-        <source>Version Control</source>
-        <translation>版本控制</translation>
+        <location line="+6"/>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
+        <translation>常規“環境”設置中配置的補丁命令不存在。</translation>
     </message>
     <message>
-        <location line="-72"/>
+        <location line="+22"/>
+        <source>Running in %1: %2 %3</source>
+        <translation>在 %1 中運行：%2 %3</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation>無法啟動 &quot;%1&quot;：%2</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>A timeout occurred running &quot;%1&quot;</source>
+        <translation>運行&quot;%1&quot;時發生逾時</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation>&quot;%1&quot; 已崩潰。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>&quot;%1&quot;失敗(退出代碼%2)。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-80"/>
+        <source>Source</source>
+        <translation>來源</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Choose source location. This can be a plugin library file or a zip file.</source>
+        <translation>選擇源位置。這可以是插件庫文件或 zip 文件。</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>File does not exist.</source>
+        <translation>文件不存在。</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Check Archive</source>
+        <translation>檢查檔案</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Checking archive...</source>
+        <translation>正在檢查存檔...</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The file is not an archive.</source>
+        <translation>該文件不是存檔。</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <location line="+14"/>
+        <source>Canceled.</source>
+        <translation>取消。</translation>
+    </message>
+    <message>
+        <location line="-11"/>
+        <source>There was an error while unarchiving.</source>
+        <translation>取消存檔時出錯。</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Archive is OK.</source>
+        <translation>存檔就OK了。</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Plugin requires an incompatible version of %1 (%2).</source>
+        <translation>插件需要不兼容的 %1 (%2) 版本。</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Did not find %1 plugin.</source>
+        <translation>未找到 %1 插件。</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Install Location</source>
+        <translation>安裝位置</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Choose install location.</source>
+        <translation>選擇安裝位置。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>User plugins</source>
+        <translation>用戶插件</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
+        <translation>該插件將可供所有兼容的 %1 安裝使用，但僅限當前用戶。</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>%1 installation</source>
+        <translation>%1 安裝</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The plugin will be available only to this %1 installation, but for all users that can access it.</source>
+        <translation>該插件僅適用於此 %1 安裝，但可供所有可以訪問它的用戶使用。</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Summary</source>
+        <translation>摘要</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
+        <translation>“%1”將安裝到“%2”中。</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Overwrite File</source>
+        <translation>覆蓋文件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation>文件“%1”存在。覆蓋？</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Overwrite</source>
+        <translation>覆寫</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Failed to Write File</source>
+        <translation>寫入文件失敗</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Failed to write file &quot;%1&quot;.</source>
+        <translation>無法寫入文件“%1”。</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Install Plugin</source>
+        <translation>安裝插件</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Failed to Copy Plugin Files</source>
+        <translation>複製插件文件失敗</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+298"/>
+        <source>Toggle Progress Details</source>
+        <translation>切換進度詳情</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+49"/>
+        <source>unnamed</source>
+        <translation>未命名</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Current theme: %1</source>
+        <translation>當前主題：%1</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>The theme change will take effect after restart.</source>
+        <translation>主題更改將在重啟後生效。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+265"/>
         <source>%1 repository was detected but %1 is not configured.</source>
         <translation>已檢測到%1儲存庫，但%1未設定。</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+72"/>
+        <source>Version Control</source>
+        <translation>版本控制</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Remove the following files from the version control system (%2)? %1Note: This might remove the local file.</source>
-        <translation type="unfinished"></translation>
+        <translation>從版本控制系統 (%2) 中刪除以下文件嗎？ %1注意：這可能會刪除本地文件。</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Add to Version Control</source>
-        <translation type="unfinished">新增至版本控制系統</translation>
+        <translation>新增至版本控制系統</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3385,7 +4516,7 @@ to version control (%2)?</source>
     <message>
         <location line="+6"/>
         <source>Adding to Version Control Failed</source>
-        <translation type="unfinished">新增檔案到版本控制系統失敗</translation>
+        <translation>新增檔案到版本控制系統失敗</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3406,1138 +4537,9 @@ to version control (%2)
 %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+48"/>
-        <source>Overwrite Existing Files</source>
-        <translation>覆寫現有檔案</translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>The following files already exist in the folder
-%1.
-Would you like to overwrite them?</source>
-        <translation>以下檔案已經存在於資料夾
-%1 
-中。您要覆寫它們嗎？</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+42"/>
-        <source>Launching a file browser failed</source>
-        <translation>啟動檔案瀏覽器失敗</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Unable to start the file manager:
-
-%1
-
-</source>
-        <translation>無法啟動檔案管理員：
-
-%1
-
-</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&quot;%1&quot; returned the following error:
-
-%2</source>
-        <translation>&quot;%1&quot;返回了以下錯誤：
-
-%2</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Launching Windows Explorer Failed</source>
-        <translation>啟動 Windows Explorer 失敗</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Could not find explorer.exe in path to launch Windows Explorer.</source>
-        <translation>在路徑中找不到 explorer.exe，無法啟動&#x3000;Windows Explorer。</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>The command for file browser is not set.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Error while starting file browser.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Find in This Directory...</source>
-        <translation>在此目錄中尋找...</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Show in File System View</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Show in Explorer</source>
-        <translation>在 Explorer 中顯示</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Show in Finder</source>
-        <translation>在搜尋器中顯示</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Show Containing Folder</source>
-        <translation>顯示包含資料夾</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Open Command Prompt Here</source>
-        <translation>在此開啟命令提示</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Open Terminal Here</source>
-        <translation>在此開啟終端機</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Failed to remove file &quot;%1&quot;.</source>
-        <translation>無法刪除檔案&quot;%1&quot;。</translation>
-    </message>
-    <message>
-        <location line="+37"/>
-        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142"/>
-        <source>Unable to create the directory %1.</source>
-        <translation>無法建立資料夾 %1。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+323"/>
-        <source>Case sensitive</source>
-        <translation>區分大小寫</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Whole words</source>
-        <translation>比對整個單字</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Regular expressions</source>
-        <translation>正規表示式</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Preserve case</source>
-        <translation>保留大小寫</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Flags: %1</source>
-        <translation>旗標：%1</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>None</source>
-        <translation>無</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>, </source>
-        <translation>, </translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+180"/>
-        <source>Search was canceled.</source>
-        <translation>搜尋被取消。</translation>
-    </message>
-    <message>
-        <location line="-200"/>
-        <source>This change cannot be undone.</source>
-        <translation>這項變將無法復原。</translation>
-    </message>
-    <message>
-        <location line="-93"/>
-        <source>Repeat the search with same parameters.</source>
-        <translation>用相同的參數重複搜尋。</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Search Again</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Repla&amp;ce with:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Preser&amp;ve case</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Replace all occurrences.</source>
-        <translation>取代所有相符項。</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Replace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location line="+93"/>
-        <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation>
-            <numerusform>搜尋結果超過了%n%n項目，您還想繼續嗎？</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Continue</source>
-        <translation type="unfinished">繼續</translation>
-    </message>
-    <message>
-        <location line="+263"/>
-        <source>Searching...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>No matches found.</source>
-        <translation>找不到相符的。</translation>
-    </message>
-    <message numerus="yes">
-        <location line="-4"/>
-        <source>%n matches found.</source>
-        <translation>
-            <numerusform>找到 %n 個相符的。</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-114"/>
-        <source>Command Mappings</source>
-        <translation>命令映射</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Target</source>
-        <translation>目標</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Reset All</source>
-        <translation>全部重置</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-14"/>
-        <source>Reset to default.</source>
-        <translation type="unfinished">重置為預設值。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Import...</source>
-        <translation>匯入...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Export...</source>
-        <translation>匯出...</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-376"/>
-        <source>Registered MIME Types</source>
-        <translation>已註冊的 MIME 型態</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-7"/>
-        <source>Reset all to default.</source>
-        <translation>重置所有為預設值。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-35"/>
-        <source>Reset all MIME type definitions to their defaults.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+247"/>
-        <source>Reset MIME Types</source>
-        <translation>重設MIME類型</translation>
-    </message>
-    <message>
-        <location line="-244"/>
-        <source>Reset the assigned handler for all MIME type definitions to the default.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Reset Handlers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Patterns:</source>
-        <translation>樣式：</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>A semicolon-separated list of wildcarded file names.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Magic Header</source>
-        <translation>魔術標頭</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Range</source>
-        <translation>範圍</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Priority</source>
-        <translation>優先權</translation>
-    </message>
-    <message>
-        <location line="+230"/>
-        <source>Changes will take effect after restart.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+10"/>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-2"/>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-223"/>
-        <source>Add...</source>
-        <translation>新增...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+41"/>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+3"/>
-        <source>Edit...</source>
-        <translation>編輯...</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+457"/>
-        <source>Could not save the files.</source>
-        <comment>error message</comment>
-        <translation>無法儲存檔案。</translation>
-    </message>
-    <message>
-        <location line="+44"/>
-        <source>Error while saving file: %1</source>
-        <translation>儲存檔案時發生錯誤：%1</translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>All Files (*.*)</source>
-        <comment>On Windows</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>All Files (*)</source>
-        <comment>On Linux/macOS</comment>
-        <translation type="unfinished">所有檔案 (*)</translation>
-    </message>
-    <message>
-        <location line="+73"/>
-        <source>Overwrite?</source>
-        <translation>要覆寫嗎？</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
-        <translation>在這個位置已經有一個名為&quot;%1&quot;的項目。您想覆蓋它嗎？</translation>
-    </message>
-    <message>
-        <location line="+70"/>
-        <source>Save File As</source>
-        <translation>另存新檔</translation>
-    </message>
-    <message>
-        <location line="+159"/>
-        <source>Open File</source>
-        <translation>開啟檔案</translation>
-    </message>
-    <message>
-        <location line="+258"/>
-        <source>Cannot reload %1</source>
-        <translation>無法重新載入 %1</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+618"/>
-        <source>File was restored from auto-saved copy. Select Save to confirm or Revert to Saved to discard changes.</source>
-        <translation>檔案已從自動儲存的副本中恢復。選擇「儲存」確認或「還原到已儲存」以放棄變更。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+29"/>
-        <source>Runs an arbitrary command with arguments. The command is searched for in the PATH environment variable if needed. Note that the command is run directly, not in a shell.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+68"/>
-        <source>Previous command is still running (&quot;%1&quot;).
-Do you want to kill it?</source>
-        <translation>上一個命令仍在運行(&quot;%1&quot;)。
-是否要終止它？</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Kill Previous Process?</source>
-        <translation>要強行結束先前的行程嗎？</translation>
-    </message>
-    <message>
-        <location line="+48"/>
-        <source>Could not find executable for &quot;%1&quot;.</source>
-        <translation>無法找到&quot;%1&quot;的可執行檔。</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Starting command &quot;%1&quot;.</source>
-        <translation>正在啟動命令&quot;%1&quot;。</translation>
-    </message>
-    <message>
-        <location line="-124"/>
-        <source>Execute Custom Commands</source>
-        <translation>執行自訂命令</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+1"/>
-        <source>Meta+O</source>
-        <translation>Meta+O</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Alt+O</source>
-        <translation>Alt+O</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+58"/>
-        <source>Open with VCS (%1)</source>
-        <translation type="unfinished">使用 VCS 開啟 (%1)</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+40"/>
-        <source>Global Actions &amp; Actions from the Menu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+145"/>
-        <source>No themes found in installation.</source>
-        <translation>在安裝檔中找不到主題。</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>The current date (ISO).</source>
-        <translation>目前日期(ISO)。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>The current time (ISO).</source>
-        <translation>目前時間(ISO)。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>The current date (RFC2822).</source>
-        <translation>目前日期(RFC2822)。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>The current time (RFC2822).</source>
-        <translation>目前時間(RFC2822)。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>The current date (Locale).</source>
-        <translation>目前日期(區域)。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>The current time (Locale).</source>
-        <translation>目前時間(區域)。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>The configured default directory for projects.</source>
-        <translation>為專案設定的預設目錄。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>The directory last visited in a file dialog.</source>
-        <translation>檔案對話方塊中最後訪問的目錄。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Is %1 running on Windows?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Is %1 running on OS X?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Is %1 running on Linux?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Is %1 running on any unix-based platform?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>The path list separator for the platform.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>The platform executable suffix.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>The directory where %1 finds its pre-installed resources.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>The current date (QDate formatstring).</source>
-        <translation>目前日期(QDate formatstring)。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>The current time (QTime formatstring).</source>
-        <translation>目前時間(QTime formatstring)。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Generate a new UUID.</source>
-        <translation>產生一個新的UUID。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>A comment.</source>
-        <translation>一條注解。</translation>
-    </message>
-    <message>
-        <location line="+43"/>
-        <source>%1 &gt; %2 Preferences...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+103"/>
-        <source>Create Folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Settings File Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>The settings file &quot;%1&quot; is not writable.
-You will not be able to store any %2 settings.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>The file is not readable.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>The file is invalid.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Error reading settings file &quot;%1&quot;: %2
-You will likely experience further problems using this instance of %3.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>%1 collects crash reports for the sole purpose of fixing bugs. To disable this feature go to %2.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source> &gt; Preferences &gt; Environment &gt; System</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Edit &gt; Preferences &gt; Environment &gt; System</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>%1 uses Google Crashpad for collecting crashes and sending them to our backend for processing. Crashpad may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>More information:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Crashpad Overview</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>%1 security policy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49"/>
-        <source>Add the file to version control (%1)</source>
-        <translation>將檔案新增到版本控制(%1)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Add the files to version control (%1)</source>
-        <translation>將檔案新增到版本控制(%1)</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+43"/>
-        <source>Text Encoding</source>
-        <translation type="unfinished">文字編碼</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>The following encodings are likely to fit:</source>
-        <translation>以下編碼可能適合：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Select encoding for &quot;%1&quot;.%2</source>
-        <translation type="unfinished">為 &quot;%1&quot; 選擇編碼 。%2</translation>
-    </message>
-    <message>
-        <location line="+49"/>
-        <source>Reload with Encoding</source>
-        <translation type="unfinished">根據編碼重新載入</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Save with Encoding</source>
-        <translation type="unfinished">根據編碼儲存</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/restartdialog.cpp" line="+16"/>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-188"/>
-        <source>Restart Required</source>
-        <translation>需要重新啟動</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Later</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Restart Now</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+294"/>
-        <source>&lt;no document&gt;</source>
-        <translation>&lt;無檔案&gt;</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>No document is selected.</source>
-        <translation>沒有選擇檔案。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+21"/>
-        <source>System Editor</source>
-        <translation>系統編輯器</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Could not open URL %1.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+592"/>
-        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
-        <translation>無法找到&quot;%1&quot;(展開的&quot;%2&quot;)的可執行檔</translation>
-    </message>
-    <message>
-        <location line="+52"/>
-        <source>Starting external tool &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>&quot;%1&quot; finished</source>
-        <translation>&quot;%1&quot;已完成</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&quot;%1&quot; finished with error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+130"/>
-        <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>%n個相符項被取代。</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+294"/>
-        <source>Configure...</source>
-        <comment>msgShowOptionsDialog</comment>
-        <translation type="unfinished">組態...</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Open Preferences dialog.</source>
-        <comment>msgShowOptionsDialogToolTip (mac version)</comment>
-        <translation>開啟喜好設定對話方塊.</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Open Options dialog.</source>
-        <comment>msgShowOptionsDialogToolTip (non-mac version)</comment>
-        <translation>開啟選項對話方塊。</translation>
-    </message>
-    <message>
-        <location line="+315"/>
-        <source> (%1)</source>
-        <translation> (%1)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>%1 %2%3</source>
-        <translation type="unfinished">%1 %2%3</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Based on Qt %1 (%2, %3)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+186"/>
-        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
-        <translation>id=&quot;%1&quot;的工廠已經註冊。正在刪除。</translation>
-    </message>
-    <message>
-        <location line="+218"/>
-        <source>Reload All Wizards</source>
-        <translation>重新載入所有精靈</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Inspect Wizard State</source>
-        <translation>檢查精靈狀態</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49"/>
-        <source>Error in &quot;%1&quot;: %2</source>
-        <translation>&quot;%1&quot;中的錯誤：%2</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Cannot convert result of &quot;%1&quot; to string.</source>
-        <translation>無法將&quot;%1&quot;的結果轉換為字串。</translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+20"/>
-        <source>Run External Tool</source>
-        <translation>運行外部工具</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Runs an external tool that you have set up in the preferences (Environment &gt; External Tools).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+20"/>
-        <source>Evaluate JavaScript</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Evaluates arbitrary JavaScript expressions and copies the result.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>Reset Engine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Engine aborted after timeout.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <location line="+1"/>
-        <source>Copy to clipboard: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-198"/>
-        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+125"/>
-        <source>Locator query string.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Locator query string with quotes escaped with backslash.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Locator query string as regular expression.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>File Name Index</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+43"/>
-        <source>Case sensitive:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110"/>
-        <source>Add &quot;%1&quot; placeholder for the query string.
-Double-click to edit item.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Move Up</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Move Down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>URLs:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+45"/>
-        <source>Serial Terminal</source>
-        <translation>串列終端</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+167"/>
-        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+235"/>
-        <source>Activate %1 View</source>
-        <translation>啟動%1檢視</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-599"/>
-        <source>Zoom: %1%</source>
-        <translation>縮放：%1%</translation>
-    </message>
-    <message numerus="yes">
-        <location line="+145"/>
-        <source>Elided %n characters due to Application Output settings</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <location line="+154"/>
-        <source>[Discarding excessive amount of pending output.]
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+278"/>
-        <source>Text Files (*.txt);;All files (*)</source>
-        <translation>文本文件 (*.txt);;所有的文件 (*)</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <location line="+11"/>
-        <source>Error: %L1!</source>
-        <translation>錯誤：%L1!</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/patchtool.cpp" line="+52"/>
-        <source>Apply Chunk</source>
-        <translation type="unfinished">套用區塊</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Revert Chunk</source>
-        <translation type="unfinished">回復區塊</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Would you like to apply the chunk?</source>
-        <translation type="unfinished">您要套用此區塊嗎？</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Would you like to revert the chunk?</source>
-        <translation type="unfinished">您要回復此區塊嗎？</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Note: The file will be saved before this operation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
-        <translation>在一般「環境」設定中沒有設定修補程式命令。</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>Running in %1: %2 %3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Unable to launch &quot;%1&quot;: %2</source>
-        <translation type="unfinished">無法啟動 &quot;%1&quot;：%2</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>A timeout occurred running &quot;%1&quot;</source>
-        <translation>運行&quot;%1&quot;時發生逾時</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>&quot;%1&quot; crashed.</source>
-        <translation type="unfinished">&quot;%1&quot; 已崩潰。</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>&quot;%1&quot; failed (exit code %2).</source>
-        <translation>&quot;%1&quot;失敗(退出代碼%2)。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-80"/>
-        <source>Source</source>
-        <translation type="unfinished">來源</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Choose source location. This can be a plugin library file or a zip file.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>File does not exist.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+38"/>
-        <source>Check Archive</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>Checking archive...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>The file is not an archive.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <location line="+14"/>
-        <source>Canceled.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-11"/>
-        <source>There was an error while unarchiving.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Archive is OK.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+43"/>
-        <source>Plugin requires an incompatible version of %1 (%2).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Did not find %1 plugin.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>Install Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Choose install location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>User plugins</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>%1 installation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>The plugin will be available only to this %1 installation, but for all users that can access it.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Summary</source>
-        <translation type="unfinished">摘要</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>Overwrite File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>The file &quot;%1&quot; exists. Overwrite?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Overwrite</source>
-        <translation type="unfinished">覆寫</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Failed to Write File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write file &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Install Plugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>Failed to Copy Plugin Files</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+298"/>
-        <source>Toggle Progress Details</source>
-        <translation>切換進度詳情</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+49"/>
-        <source>unnamed</source>
-        <translation>未命名</translation>
-    </message>
-    <message>
-        <location line="+72"/>
-        <source>Current theme: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+48"/>
-        <source>The theme change will take effect after restart.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+35"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>關於%1</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4557,12 +4559,22 @@ Double-click to edit item.</source>
     <message>
         <location line="+19"/>
         <source>The Qt logo as well as Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® and Qt Embedded® are registered trademarks of The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt 徽標以及 Qt®、Qt Quick®、Built with Qt®、Boot to Qt®、Qt Quick Compiler®、Qt Enterprise®、Qt Mobile® 和 Qt Embedded® 是 Qt Company Ltd 的註冊商標。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+555"/>
         <source>Tags:</source>
-        <translation type="unfinished">標籤：</translation>
+        <translation>標籤：</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+131"/>
+        <source>Exit Full Screen</source>
+        <translation>退出全螢幕</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Enter Full Screen</source>
+        <translation>進入全螢幕</translation>
     </message>
 </context>
 <context>
@@ -4827,7 +4839,22 @@ Double-click to edit item.</source>
         <translation>製造商：</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-1"/>
+        <source>Compatibility version:</source>
+        <translation>相容版本：</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Group:</source>
+        <translation>群組：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>URL:</source>
+        <translation>網址：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Location:</source>
         <translation>位置：</translation>
     </message>
@@ -4857,7 +4884,12 @@ Double-click to edit item.</source>
         <translation>相依性：</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+69"/>
+        <source>None</source>
+        <translation>無</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>All</source>
         <translation>所有</translation>
     </message>
@@ -4865,21 +4897,6 @@ Double-click to edit item.</source>
         <location line="+1"/>
         <source>%1 (current: &quot;%2&quot;)</source>
         <translation>%1 (目前：&quot;%2&quot;)</translation>
-    </message>
-    <message>
-        <location line="-81"/>
-        <source>Group:</source>
-        <translation>群組：</translation>
-    </message>
-    <message>
-        <location line="-2"/>
-        <source>Compatibility version:</source>
-        <translation>相容版本：</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>URL:</source>
-        <translation>網址：</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/pluginerrorview.cpp" line="+47"/>
@@ -4985,7 +5002,12 @@ Plugin is disabled by command line argument.</source>
         <translation>在啟動時載入</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+71"/>
+        <source>Load on Startup</source>
+        <translation>啟動時載入</translation>
+    </message>
+    <message>
+        <location line="+73"/>
         <source>Name</source>
         <translation>名稱</translation>
     </message>
@@ -5005,7 +5027,12 @@ Plugin is disabled by command line argument.</source>
         <translation>載入</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+69"/>
+        <source>Utilities</source>
+        <translation>工具</translation>
+    </message>
+    <message>
+        <location line="+31"/>
         <source>Enabling Plugins</source>
         <translation>啟用外掛程式</translation>
     </message>
@@ -5177,7 +5204,27 @@ Reason: %3</source>
         <translation>選項 %1 需要引數。</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+693"/>
+        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1009"/>
+        <source>Resolving dependencies failed because state != Read</source>
+        <translation>解決相依性失敗，因為 state != Read</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>無法解決相依性 &apos;%1(%2)&apos;</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Loading the library failed because state != Resolved</source>
+        <translation>載入函式庫失敗，因為 state != Resolved</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Plugin is not valid (does not derive from IPlugin)</source>
+        <translation>外掛程式無效 (並非從 IPlugin 衍生)</translation>
+    </message>
+    <message>
+        <location line="-392"/>
         <source>&quot;%1&quot; is missing</source>
         <translation>&quot;%1&quot;缺失</translation>
     </message>
@@ -5244,27 +5291,7 @@ Reason: %3</source>
         <translation>參數：&quot;%1&quot;為空</translation>
     </message>
     <message>
-        <location line="+84"/>
-        <source>Resolving dependencies failed because state != Read</source>
-        <translation>解決相依性失敗，因為 state != Read</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
-        <translation>無法解決相依性 &apos;%1(%2)&apos;</translation>
-    </message>
-    <message>
-        <location line="+47"/>
-        <source>Loading the library failed because state != Resolved</source>
-        <translation>載入函式庫失敗，因為 state != Resolved</translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Plugin is not valid (does not derive from IPlugin)</source>
-        <translation>外掛程式無效 (並非從 IPlugin 衍生)</translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+180"/>
         <source>Initializing the plugin failed because state != Loaded</source>
         <translation>外掛程式初始化失敗，因為 state != Loaded</translation>
     </message>
@@ -5294,22 +5321,13 @@ Reason: %3</source>
         <translation>內部錯誤：沒有可進行延遲初始化的外掛程式實體</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+75"/>
-        <source>None</source>
-        <translation>無</translation>
+        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+33"/>
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-65"/>
+        <source>Continue</source>
+        <translation>繼續</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="-191"/>
-        <source>Load on Startup</source>
-        <translation>啟動時載入</translation>
-    </message>
-    <message>
-        <location line="+142"/>
-        <source>Utilities</source>
-        <translation>工具</translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+54"/>
+        <location line="+21"/>
         <source>The following plugins have errors and cannot be loaded:</source>
         <translation>以下外掛程式有錯誤，無法被載入：</translation>
     </message>
@@ -5317,12 +5335,6 @@ Reason: %3</source>
         <location line="+2"/>
         <source>Details:</source>
         <translation>詳情：</translation>
-    </message>
-    <message>
-        <location line="-23"/>
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-65"/>
-        <source>Continue</source>
-        <translation>繼續</translation>
     </message>
 </context>
 <context>
@@ -5432,6 +5444,56 @@ Reason: %3</source>
 <context>
     <name>QtC::ImageViewer</name>
     <message>
+        <location filename="../../../src/plugins/imageviewer/exportdialog.cpp" line="+69"/>
+        <location filename="../../../src/plugins/imageviewer/multiexportdialog.cpp" line="+166"/>
+        <source>File:</source>
+        <translation>檔案：</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>x</source>
+        <extracomment>Multiplication, as in 32x32</extracomment>
+        <translation>x</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Size:</source>
+        <translation>大小：</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>%1 already exists.
+Would you like to overwrite it?</source>
+        <translation>%1 已存在。
+您想覆蓋它嗎？</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+162"/>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
+        <translation>已導出“%1”，%2x%3，%4 字節</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Could not write file &quot;%1&quot;.</source>
+        <translation>無法寫入文件“%1”。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/imageviewer/imageviewerplugin.cpp" line="+96"/>
+        <source>Export Image</source>
+        <translation>導出圖片</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Export %1</source>
+        <translation>導出%1</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Export a Series of Images from %1 (%2x%3)</source>
+        <translation>從 %1 (%2x%3) 導出一系列圖像</translation>
+    </message>
+    <message>
         <location filename="../../../src/plugins/imageviewer/imageviewer.cpp" line="+112"/>
         <source>Export</source>
         <translation>出口</translation>
@@ -5482,114 +5544,19 @@ Reason: %3</source>
         <translation>縮放</translation>
     </message>
     <message>
-        <location line="+221"/>
-        <source>Image Viewer</source>
-        <translation>影像檢視器</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/imageviewer/imageviewerplugin.cpp" line="+69"/>
-        <source>Fit to Screen</source>
-        <translation>適合螢幕</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ctrl+=</source>
-        <translation>Ctrl+=</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Switch Background</source>
-        <translation>切換背景</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Switch Outline</source>
-        <translation>切換大綱</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Toggle Animation</source>
-        <translation>切換動畫</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Export Multiple Images</source>
-        <translation>導出多張圖像</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Copy as Data URL</source>
-        <translation>複製為數據 URL</translation>
-    </message>
-    <message>
-        <location line="-31"/>
-        <source>Ctrl+[</source>
-        <translation>Ctrl+[</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Ctrl+]</source>
-        <translation>Ctrl+]</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/imageviewer/imageviewer.cpp" line="-11"/>
-        <source>Play Animation</source>
-        <translation>播放動畫</translation>
-    </message>
-    <message>
-        <location line="-3"/>
+        <location line="+207"/>
         <source>Pause Animation</source>
         <translation>暫停動畫</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/imageviewer/exportdialog.cpp" line="+69"/>
-        <location filename="../../../src/plugins/imageviewer/multiexportdialog.cpp" line="+166"/>
-        <source>File:</source>
-        <translation>檔案：</translation>
+        <location line="+3"/>
+        <source>Play Animation</source>
+        <translation>播放動畫</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>x</source>
-        <extracomment>Multiplication, as in 32x32</extracomment>
-        <translation>x</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Size:</source>
-        <translation>大小：</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>%1 already exists.
-Would you like to overwrite it?</source>
-        <translation>%1 已存在。
-您想覆蓋它嗎？</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+162"/>
-        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
-        <translation>已導出“%1”，%2x%3，%4 字節</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Could not write file &quot;%1&quot;.</source>
-        <translation>無法寫入文件“%1”。</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location filename="../../../src/plugins/imageviewer/imageviewerplugin.cpp" line="+12"/>
-        <source>Export Image</source>
-        <translation>導出圖片</translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>Export %1</source>
-        <translation>導出%1</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Export a Series of Images from %1 (%2x%3)</source>
-        <translation>從 %1 (%2x%3) 導出一系列圖像</translation>
+        <location line="+11"/>
+        <source>Image Viewer</source>
+        <translation>影像檢視器</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+87"/>
@@ -5606,6 +5573,51 @@ Would you like to overwrite it?</source>
         <location line="+29"/>
         <source>Failed to read image.</source>
         <translation>讀取圖像失敗。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/imageviewer/imageviewerplugin.cpp" line="-27"/>
+        <source>Fit to Screen</source>
+        <translation>適合螢幕</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+=</source>
+        <translation>Ctrl+=</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Switch Background</source>
+        <translation>切換背景</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+[</source>
+        <translation>Ctrl+[</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Switch Outline</source>
+        <translation>切換大綱</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+]</source>
+        <translation>Ctrl+]</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Toggle Animation</source>
+        <translation>切換動畫</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Export Multiple Images</source>
+        <translation>導出多張圖像</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Copy as Data URL</source>
+        <translation>複製為數據 URL</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/multiexportdialog.cpp" line="-4"/>
@@ -8993,34 +9005,21 @@ Open a data set to upload it.</source>
 <context>
     <name>QtC::ProjectExplorer</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+33"/>
-        <location line="+28"/>
+        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4"/>
+        <source>This wizard creates a simple unit test project.</source>
+        <translation>該嚮導創建一個簡單的單元測試項目。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+104"/>
+        <location line="+194"/>
         <location line="+21"/>
-        <location line="+40"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+11"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+12"/>
-        <location line="+12"/>
-        <location line="+14"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+17"/>
-        <location line="+9"/>
-        <location line="+21"/>
-        <location line="+47"/>
+        <location line="+46"/>
         <location line="+11"/>
         <location line="+40"/>
         <location line="+18"/>
-        <location line="+18"/>
-        <location line="+12"/>
+        <location line="+19"/>
+        <location line="+11"/>
         <location line="+12"/>
         <location line="+20"/>
         <location line="+17"/>
@@ -9028,57 +9027,13 @@ Open a data set to upload it.</source>
         <location line="+29"/>
         <location line="+22"/>
         <location line="+28"/>
-        <location line="+14"/>
-        <location line="+34"/>
-        <location line="+148"/>
-        <source>Summary</source>
-        <translation>摘要</translation>
+        <location line="+15"/>
+        <location line="+152"/>
+        <source>Project Location</source>
+        <translation>項目地點</translation>
     </message>
     <message>
-        <location line="-774"/>
-        <location line="+28"/>
-        <location line="+21"/>
-        <location line="+21"/>
-        <location line="+19"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+11"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+12"/>
-        <location line="+12"/>
-        <location line="+14"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+17"/>
-        <location line="+9"/>
-        <location line="+21"/>
-        <location line="+47"/>
-        <location line="+11"/>
-        <location line="+40"/>
-        <location line="+18"/>
-        <location line="+18"/>
-        <location line="+12"/>
-        <location line="+12"/>
-        <location line="+20"/>
-        <location line="+17"/>
-        <location line="+19"/>
-        <location line="+29"/>
-        <location line="+22"/>
-        <location line="+28"/>
-        <location line="+14"/>
-        <location line="+34"/>
-        <location line="+148"/>
-        <source>Project Management</source>
-        <translation>專案管理</translation>
-    </message>
-    <message>
-        <location line="-799"/>
+        <location line="-777"/>
         <location line="+104"/>
         <location line="+18"/>
         <location line="+1"/>
@@ -9143,775 +9098,89 @@ Open a data set to upload it.</source>
         <translation>位置</translation>
     </message>
     <message>
-        <location line="-749"/>
-        <location line="+89"/>
-        <location line="+341"/>
-        <location line="+161"/>
-        <source>Other Project</source>
-        <translation>其他專案</translation>
-    </message>
-    <message>
-        <location line="-249"/>
-        <location line="+40"/>
-        <location line="+18"/>
-        <location line="+18"/>
-        <source>Non-Qt Project</source>
-        <translation>非 Qt 專案</translation>
-    </message>
-    <message>
-        <location line="-64"/>
-        <source>0.1.0</source>
-        <translation type="unfinished">0.1x {0.1.0?}</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Version:</source>
-        <translation type="unfinished">版本：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>MIT</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>GPL-2.0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Apache-2.0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>ISC</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>GPL-3.0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>BSD-3-Clause</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>LGPL-2.1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>LGPL-3.0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>EPL-2.0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Proprietary</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Other</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Cpp</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Objective C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Javascript</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Backend:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>1.0.0</source>
-        <translation type="unfinished">0.1x {1.0.0?}</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Min Nim Version:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Define Project Configuration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+253"/>
-        <location line="+1"/>
-        <location line="+34"/>
-        <location line="+1"/>
-        <location line="+17"/>
-        <location line="+1"/>
-        <location line="+23"/>
-        <location line="+1"/>
-        <location line="+19"/>
-        <location line="+1"/>
-        <source>Configuration</source>
-        <translation type="unfinished">組態</translation>
-    </message>
-    <message>
-        <location line="-346"/>
-        <source>Creates a Nim application with Nimble.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Nimble Application</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Creates a simple C application with no dependencies.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Plain C Application</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Creates a simple C++ application with no dependencies.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Plain C++ Application</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>This wizard creates an empty .pro file.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates a qmake-based project without any files. This allows you to create an application without any default classes.</source>
-        <translation type="unfinished">建立一個基於 qmake 的空白專案，不含任何檔案。這樣可以讓您建立一個不包含任何預設類別的應用程式。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Empty qmake Project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <location line="+12"/>
-        <location line="+25"/>
-        <location line="+12"/>
-        <source>PySide version:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-44"/>
-        <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+20"/>
-        <location line="+17"/>
-        <location line="+19"/>
-        <source>Application (Qt for Python)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-55"/>
-        <source>Empty Application</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <location line="+37"/>
-        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-33"/>
-        <location line="+36"/>
-        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-34"/>
-        <location line="+36"/>
-        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-35"/>
-        <location line="+36"/>
-        <source>Project file:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-31"/>
-        <source>Creates a Qt for Python application that contains an empty window.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Empty Window</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>PySide 6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>PySide 5.15</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>PySide 5.14</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>PySide 5.13</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>PySide 5.12</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Creates a Qt Quick application that contains an empty window.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Qt Quick Application - Empty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Creates a Qt for Python application that includes a Qt Designer-based widget (ui file) - Requires .ui to Python conversion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Window UI</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <location line="+52"/>
-        <source>Qt 6.2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-51"/>
-        <location line="+52"/>
-        <source>Qt 5.15</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-51"/>
-        <location line="+52"/>
-        <source>Qt 5.14</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-51"/>
-        <location line="+52"/>
-        <source>Qt 5.13</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-51"/>
-        <location line="+52"/>
-        <source>Qt 5.12</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-51"/>
-        <location line="+52"/>
-        <source>Minimum required Qt version:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-51"/>
-        <source>MyItem</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Object class-name:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>com.mycompany.qmlcomponents</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Create example project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Custom Parameters</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Creates a C++ plugin to load Qt Quick extensions dynamically into applications using the QQmlEngine class.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Qt Quick 2 Extension Plugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Create a project that you can open in Qt Design Studio</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Create a project with a structure that is compatible both with Qt Design Studio (via .qmlproject) and with Qt Creator (via CMakeLists.txt). It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+27"/>
-        <location line="+16"/>
-        <source>Use Qt Virtual Keyboard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-42"/>
-        <source>The minimum version of Qt you want to build the application for</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates a Qt Quick application that contains an empty window. Optionally, you can create a Qt Design Studio project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Qt Quick Application</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Creates a Qt Quick application that contains an empty window.
-
-Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Qt Quick Application (compat)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Creates a Qt Quick 2 UI project with a QML entry point. To use it, you need to have a QML runtime environment.
-
-Use this only if you are prototyping. You cannot create a full application with this. Consider using a Qt Quick Application project instead.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Qt Quick UI Prototype</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Generate form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Form file:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Class Information</source>
-        <translation type="unfinished">類別資訊</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Creates a widget-based Qt application that contains a Qt Designer-based main window.
-
-Preselects a desktop Qt for building the application if available.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Qt Widgets Application</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <location line="+35"/>
-        <location line="+18"/>
-        <location line="+24"/>
-        <location line="+20"/>
-        <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-96"/>
-        <location line="+53"/>
-        <location line="+24"/>
-        <location line="+20"/>
-        <source>Repository:</source>
-        <translation type="unfinished">儲存庫：</translation>
-    </message>
-    <message>
-        <location line="-96"/>
-        <location line="+35"/>
-        <location line="+18"/>
-        <location line="+24"/>
-        <location line="+20"/>
-        <source>Repository URL is not valid</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-95"/>
-        <location line="+55"/>
-        <location line="+22"/>
-        <location line="+20"/>
-        <source>%{defaultDir}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-96"/>
-        <location line="+55"/>
-        <location line="+22"/>
-        <location line="+20"/>
-        <source>Directory:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-96"/>
-        <location line="+33"/>
-        <location line="+22"/>
-        <location line="+22"/>
-        <location line="+20"/>
-        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-96"/>
-        <source>Use existing directory</source>
-        <translation type="unfinished">使用現有的目錄</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Proceed with cloning the repository, even if the target directory already exists.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Stacked</source>
-        <translation type="unfinished">已堆疊</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Make the new branch depend on the availability of the source branch.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Standalone</source>
-        <translation type="unfinished">獨立的</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Do not use a shared repository.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Bind new branch to source location</source>
-        <translation type="unfinished">綁定新的分支到源碼位置</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Bind the new branch to the source location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Switch checkout</source>
-        <translation type="unfinished">切換分支</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Switch the checkout in the current directory to the new branch.</source>
-        <translation type="unfinished">將目前目錄切換到新的分支。</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Hardlink</source>
-        <translation type="unfinished">硬式連結</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Use hard-links in working tree.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>No working-tree</source>
-        <translation type="unfinished">沒有工作樹</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Do not create a working tree.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Revision:</source>
-        <translation type="unfinished">版本：</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <location line="+62"/>
-        <location line="+21"/>
-        <source>Specify repository URL, checkout directory, and path.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-82"/>
-        <source>Running Bazaar branch...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Clones a Bazaar branch and tries to load the contained project.</source>
-        <translation type="unfinished">複製一個 Bazaar 分支，並試著載入裡面包含的專案。</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+18"/>
-        <location line="+24"/>
-        <location line="+20"/>
-        <location line="+21"/>
-        <source>Import Project</source>
-        <translation>匯入專案</translation>
-    </message>
-    <message>
-        <location line="-225"/>
-        <source>URI:</source>
-        <translation>URI：</translation>
-    </message>
-    <message>
-        <location line="+254"/>
-        <source>Creates a custom Qt Creator plugin.</source>
-        <translation>建立一個自訂的 Qt Creator 外掛程式。</translation>
-    </message>
-    <message>
-        <location line="-10"/>
-        <source>URL:</source>
-        <translation>URL:</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Qt Creator Plugin</source>
-        <translation>Qt Creator 外掛程式</translation>
-    </message>
-    <message>
-        <location line="-22"/>
-        <source>Plugin name:</source>
-        <translation>外掛程式名稱：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>MyCompany</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Vendor name:</source>
-        <translation>廠商名稱：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>(C) %{VendorName}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Copyright:</source>
-        <translation>版權：</translation>
-    </message>
-    <message>
-        <location line="-389"/>
-        <location line="+391"/>
-        <source>License:</source>
-        <translation>授權：</translation>
-    </message>
-    <message>
-        <location line="-789"/>
-        <source>This wizard creates a simple unit test project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+104"/>
-        <location line="+194"/>
-        <location line="+21"/>
-        <location line="+46"/>
-        <location line="+11"/>
-        <location line="+40"/>
-        <location line="+18"/>
-        <location line="+19"/>
-        <location line="+11"/>
-        <location line="+12"/>
-        <location line="+20"/>
-        <location line="+17"/>
-        <location line="+19"/>
-        <location line="+29"/>
-        <location line="+22"/>
-        <location line="+28"/>
-        <location line="+15"/>
-        <location line="+152"/>
-        <source>Project Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-776"/>
+        <location line="-777"/>
         <source>Qt Test</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt測試</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Google Test</source>
-        <translation type="unfinished"></translation>
+        <translation>谷歌測試</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Qt Quick Test</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt 快速測試</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Boost Test</source>
-        <translation type="unfinished"></translation>
+        <translation>升壓測試</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Catch2</source>
-        <translation type="unfinished"></translation>
+        <translation>第二條軍規</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Test framework:</source>
-        <translation type="unfinished"></translation>
+        <translation>測試框架：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>GUI Application</source>
-        <translation type="unfinished"></translation>
+        <translation>圖形化應用程序</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Test suite name:</source>
-        <translation type="unfinished"></translation>
+        <translation>測試套件名稱：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Test case name:</source>
-        <translation type="unfinished"></translation>
+        <translation>測試用例名稱：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Requires QApplication</source>
-        <translation type="unfinished">需要 QApplication</translation>
+        <translation>需要 QApplication</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Generate setup code</source>
-        <translation type="unfinished"></translation>
+        <translation>生成設置代碼</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Generate initialization and cleanup code</source>
-        <translation type="unfinished">產生初始化和清除代碼</translation>
+        <translation>產生初始化和清除代碼</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Enable C++11</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用 C++11</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Googletest source directory (optional):</source>
-        <translation type="unfinished"></translation>
+        <translation>Googletest源目錄（可選）：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Boost include directory (optional):</source>
-        <translation type="unfinished"></translation>
+        <translation>Boost包含目錄（可選）：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Catch2 include directory (optional):</source>
-        <translation type="unfinished"></translation>
+        <translation>Catch2 包含目錄（可選）：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use Qt libraries</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 Qt 庫</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9923,7 +9192,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+50"/>
         <location line="+43"/>
         <source>qmake</source>
-        <translation type="unfinished">qmake</translation>
+        <translation>qmake</translation>
     </message>
     <message>
         <location line="-608"/>
@@ -9936,7 +9205,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+23"/>
         <location line="+43"/>
         <source>CMake</source>
-        <translation type="unfinished">CMake</translation>
+        <translation>CMake</translation>
     </message>
     <message>
         <location line="-608"/>
@@ -9948,7 +9217,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+23"/>
         <location line="+44"/>
         <source>Qbs</source>
-        <translation type="unfinished"></translation>
+        <translation>Qbs</translation>
     </message>
     <message>
         <location line="-609"/>
@@ -9961,12 +9230,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+23"/>
         <location line="+44"/>
         <source>Build system:</source>
-        <translation type="unfinished"></translation>
+        <translation>構建系統：</translation>
     </message>
     <message>
         <location line="-609"/>
         <source>Project and Test Information</source>
-        <translation type="unfinished"></translation>
+        <translation>項目和測試信息</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9985,7 +9254,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+32"/>
         <location line="+148"/>
         <source>Details</source>
-        <translation type="unfinished">詳情</translation>
+        <translation>詳情</translation>
     </message>
     <message>
         <location line="-770"/>
@@ -10004,7 +9273,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+34"/>
         <location line="+148"/>
         <source>Kit Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>套件選擇</translation>
     </message>
     <message>
         <location line="-772"/>
@@ -10023,22 +9292,115 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+34"/>
         <location line="+148"/>
         <source>Kits</source>
-        <translation type="unfinished"></translation>
+        <translation>套件</translation>
     </message>
     <message>
-        <location line="-770"/>
+        <location line="-772"/>
+        <location line="+28"/>
+        <location line="+21"/>
+        <location line="+21"/>
+        <location line="+19"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+11"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+12"/>
+        <location line="+12"/>
+        <location line="+14"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+17"/>
+        <location line="+9"/>
+        <location line="+21"/>
+        <location line="+47"/>
+        <location line="+11"/>
+        <location line="+40"/>
+        <location line="+18"/>
+        <location line="+18"/>
+        <location line="+12"/>
+        <location line="+12"/>
+        <location line="+20"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+29"/>
+        <location line="+22"/>
+        <location line="+28"/>
+        <location line="+14"/>
+        <location line="+34"/>
+        <location line="+148"/>
+        <source>Project Management</source>
+        <translation>專案管理</translation>
+    </message>
+    <message>
+        <location line="-772"/>
+        <location line="+28"/>
+        <location line="+21"/>
+        <location line="+40"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+11"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+12"/>
+        <location line="+12"/>
+        <location line="+14"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+17"/>
+        <location line="+9"/>
+        <location line="+21"/>
+        <location line="+47"/>
+        <location line="+11"/>
+        <location line="+40"/>
+        <location line="+18"/>
+        <location line="+18"/>
+        <location line="+12"/>
+        <location line="+12"/>
+        <location line="+20"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+29"/>
+        <location line="+22"/>
+        <location line="+28"/>
+        <location line="+14"/>
+        <location line="+34"/>
+        <location line="+148"/>
+        <source>Summary</source>
+        <translation>摘要</translation>
+    </message>
+    <message>
+        <location line="-772"/>
         <source>Creates a new unit test project. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
-        <translation type="unfinished"></translation>
+        <translation>創建一個新的單元測試項目。單元測試允許您驗證代碼是否適合使用並且沒有回歸。</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+89"/>
+        <location line="+341"/>
+        <location line="+161"/>
+        <source>Other Project</source>
+        <translation>其他專案</translation>
+    </message>
+    <message>
+        <location line="-590"/>
         <source>Auto Test Project</source>
-        <translation type="unfinished"></translation>
+        <translation>自動測試項目</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Fully qualified name, including namespaces</source>
-        <translation type="unfinished"></translation>
+        <translation>完全限定名稱，包括命名空間</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10049,14 +9411,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+37"/>
         <location line="+120"/>
         <source>Class name:</source>
-        <translation type="unfinished">類別名稱：</translation>
+        <translation>類別名稱：</translation>
     </message>
     <message>
         <location line="-601"/>
         <location line="+49"/>
         <location line="+396"/>
         <source>&lt;Custom&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;自定義&gt;</translation>
     </message>
     <message>
         <location line="-444"/>
@@ -10067,54 +9429,54 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+36"/>
         <location line="+120"/>
         <source>Base class:</source>
-        <translation type="unfinished"></translation>
+        <translation>基類：</translation>
     </message>
     <message>
         <location line="-600"/>
         <location line="+1"/>
         <location line="+49"/>
         <source>%{BaseCB}</source>
-        <translation type="unfinished"></translation>
+        <translation>%{BaseCB}</translation>
     </message>
     <message>
         <location line="-48"/>
         <source>Include QObject</source>
-        <translation type="unfinished"></translation>
+        <translation>包含QObject</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include QWidget</source>
-        <translation type="unfinished"></translation>
+        <translation>包括 QWidget</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include QMainWindow</source>
-        <translation type="unfinished"></translation>
+        <translation>包含 QMainWindow</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include QDeclarativeItem - Qt Quick 1</source>
-        <translation type="unfinished"></translation>
+        <translation>包含 QDeclarativeItem - Qt Quick 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include QQuickItem - Qt Quick 2</source>
-        <translation type="unfinished"></translation>
+        <translation>包括 QQuickItem - Qt Quick 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include QSharedData</source>
-        <translation type="unfinished"></translation>
+        <translation>包含 QSharedData</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Add Q_OBJECT</source>
-        <translation type="unfinished"></translation>
+        <translation>添加Q_OBJECT</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Add QML_ELEMENT</source>
-        <translation type="unfinished"></translation>
+        <translation>添加 QML_ELEMENT</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10122,7 +9484,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+279"/>
         <location line="+291"/>
         <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
-        <translation type="unfinished"></translation>
+        <translation>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
         <location line="-590"/>
@@ -10130,7 +9492,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+279"/>
         <location line="+291"/>
         <source>Header file:</source>
-        <translation type="unfinished"></translation>
+        <translation>頭文件：</translation>
     </message>
     <message>
         <location line="-590"/>
@@ -10138,7 +9500,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+279"/>
         <location line="+291"/>
         <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
-        <translation type="unfinished"></translation>
+        <translation>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
         <location line="-590"/>
@@ -10149,829 +9511,10 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+36"/>
         <location line="+122"/>
         <source>Source file:</source>
-        <translation type="unfinished"></translation>
+        <translation>源文件：</translation>
     </message>
     <message>
-        <location line="-589"/>
-        <location line="+42"/>
-        <location line="+392"/>
-        <location line="+36"/>
-        <source>Define Class</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-466"/>
-        <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
-        <translation type="unfinished">為新類別建立一組標頭檔與源碼檔，讓您可以新增到 C++ 專案中。</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+70"/>
-        <location line="+9"/>
-        <source>C/C++</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-78"/>
-        <source>C++ Class</source>
-        <translation type="unfinished">C++ 類別</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Customize header row</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Items are editable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Rows and columns can be added</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Rows and columns can be removed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Fetch data dynamically</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Define Item Model Class</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Creates a Qt item model.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+69"/>
-        <location line="+57"/>
-        <location line="+53"/>
-        <location line="+9"/>
-        <source>Qt</source>
-        <translation type="unfinished">Qt</translation>
-    </message>
-    <message>
-        <location line="-187"/>
-        <source>Qt Item Model</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Qt for Python module:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>You can choose Qt classes only if you select a Qt for Python module.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Import QtCore</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Import QtWidgets</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Import QtQuick</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Creates new Python class file.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+150"/>
-        <source>Python</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-149"/>
-        <source>Python Class</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <location line="+15"/>
-        <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-12"/>
-        <source>int main(int argc, char *argv[])
-{
-    return 0;
-}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Code:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>QtCore</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>QtCore, QtWidgets</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Use Qt Modules:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Application bundle (macOS)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Define Code snippet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Code snippet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Code Snippet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates a header file that you can add to a C/C++ project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>C/C++ Header File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates a source file that you can add to a C/C++ project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>C/C++ Source File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Choose a Form Template</source>
-        <translation type="unfinished">選擇表單樣本</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Form Template</source>
-        <translation type="unfinished">表單樣本</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Creates a Qt Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
-        <translation type="unfinished">建立 Qt 設計師表單，讓您可以新增到 Qt 元件專案中。這在您已經有現成的使用者介面類別時很好用。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Qt Designer Form</source>
-        <translation type="unfinished">Qt 設計師表單</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
-        <translation type="unfinished">使用桌面 OpenGL 著色語言 (GLSL)來建立一個片段著色器。片段著色器生成的三角形，點與線的最終像素顏色都是OpenGL渲染的。</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <source>GLSL</source>
-        <translation type="unfinished">GLSL</translation>
-    </message>
-    <message>
-        <location line="-26"/>
-        <source>Fragment Shader (Desktop OpenGL)</source>
-        <translation type="unfinished">片段著色器 (Desktop OpenGL)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Vertex Shader (Desktop OpenGL)</source>
-        <translation type="unfinished">頂點著色器 (Desktop OpenGL)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
-        <translation type="unfinished">使用 OpenGL/ES 2.0 著色語言 (GLSL/ES) 來建立片段著色器。片段著色器生成的三角形，點與線的最終像素顏色都是 OpenGL 渲染的。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Fragment Shader (OpenGL/ES 2.0)</source>
-        <translation type="unfinished">片段著色器 (OpenGL/ES 2.0)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Vertex Shader (OpenGL/ES 2.0)</source>
-        <translation type="unfinished">頂點著色器 (OpenGL/ES 2.0)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates a Java file with boilerplate code.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Java</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Java File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Stateless library</source>
-        <translation type="unfinished">無狀態函式庫</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Options</source>
-        <translation type="unfinished">選項</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Creates a JavaScript file.</source>
-        <translation type="unfinished">建立一個 JavaScript 檔。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>JS File</source>
-        <translation type="unfinished">JS 檔</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Model name:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+67"/>
-        <source>Location:</source>
-        <translation type="unfinished">位置：</translation>
-    </message>
-    <message>
-        <location line="-66"/>
-        <location line="+67"/>
-        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-66"/>
-        <source>Model Name and Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Creates a new empty model with an empty diagram.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+5"/>
-        <location line="+62"/>
-        <source>Modeling</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-66"/>
-        <source>Model</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Creates a scratch model using a temporary file.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Scratch Model</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates an empty Nim file using UTF-8 charset.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+9"/>
-        <source>Nim</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-8"/>
-        <source>Nim File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates an empty Nim script file using UTF-8 charset.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Nim Script File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates an empty Python script file using UTF-8 charset.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Python File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates a Qt Resource file (.qrc).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Qt Resource File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>QML File (Qt Quick 2)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Creates a scratch buffer using a temporary file.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Scratch Buffer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>State chart name:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>State Chart Name and Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Creates a new empty state chart.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>State Chart</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Creates an empty file.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Empty File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>This wizard creates a simple Qt-based console application.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <location line="+21"/>
-        <location line="+97"/>
-        <location line="+18"/>
-        <location line="+191"/>
-        <source>Meson</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-325"/>
-        <location line="+21"/>
-        <location line="+97"/>
-        <location line="+18"/>
-        <location line="+96"/>
-        <location line="+29"/>
-        <location line="+23"/>
-        <location line="+44"/>
-        <source>Define Build System</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-327"/>
-        <location line="+21"/>
-        <location line="+97"/>
-        <location line="+18"/>
-        <location line="+96"/>
-        <location line="+29"/>
-        <location line="+23"/>
-        <location line="+44"/>
-        <source>Build System</source>
-        <translation type="unfinished">建置系統</translation>
-    </message>
-    <message>
-        <location line="-327"/>
-        <location line="+47"/>
-        <location line="+246"/>
-        <location line="+48"/>
-        <location line="+148"/>
-        <source>Translation File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-488"/>
-        <location line="+47"/>
-        <location line="+246"/>
-        <location line="+48"/>
-        <location line="+148"/>
-        <source>Translation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-484"/>
-        <source>Creates a project containing a single main.cpp file with a stub implementation.
-
-Preselects a desktop Qt for building the application if available.</source>
-        <translation type="unfinished">建立包含單一 main.cpp 檔案及基本實作的專案。
-
-它會預選一個可用的 Qt 桌面版本來建置此應用程式。</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+265"/>
-        <location line="+28"/>
-        <location line="+48"/>
-        <source>Application (Qt)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-340"/>
-        <source>Qt Console Application</source>
-        <translation type="unfinished">Qt4 主控台應用程式</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>This wizard creates a C++ library project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <location line="+307"/>
-        <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
-        <translation type="unfinished">指定您要建立的源碼檔案的基本類別資訊。</translation>
-    </message>
-    <message>
-        <location line="-306"/>
-        <source>Shared Library</source>
-        <translation type="unfinished">共享函式庫</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Statically Linked Library</source>
-        <translation type="unfinished">靜態連結函式庫</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Qt Plugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>QAccessiblePlugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>QGenericPlugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>QIconEnginePlugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>QImageIOPlugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>QScriptExtensionPlugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>QSqlDriverPlugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>QStylePlugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Core</source>
-        <translation type="unfinished">Core 檔</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Gui</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Widgets</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Qt module:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <location line="+115"/>
-        <location line="+37"/>
-        <location line="+68"/>
-        <location line="+26"/>
-        <location line="+16"/>
-        <location line="+180"/>
-        <source>Define Project Details</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-434"/>
-        <source>Creates a C++ library. This can be used to create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+18"/>
-        <location line="+178"/>
-        <location line="+246"/>
-        <source>Library</source>
-        <translation type="unfinished">函式庫</translation>
-    </message>
-    <message>
-        <location line="-441"/>
-        <source>C++ Library</source>
-        <translation type="unfinished">C++ 函式庫</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Creates a simple Nim application.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Nim Application</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Binary</source>
-        <translation type="unfinished">二進位</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Hybrid</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Author:</source>
-        <translation type="unfinished">作者：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+407"/>
-        <source>Description:</source>
-        <translation>描述：</translation>
-    </message>
-    <message>
-        <location line="-99"/>
-        <source>Bazaar Clone (Or Branch)</source>
-        <translation type="unfinished">Bazaar 複製 (或分支)</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Module:</source>
-        <translation type="unfinished">模組：</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Specify module and checkout directory.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Running CVS checkout...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location line="+23"/>
-        <location line="+1"/>
-        <location line="+19"/>
-        <location line="+1"/>
-        <location line="+20"/>
-        <location line="+1"/>
-        <source>Checkout</source>
-        <translation type="unfinished">取出</translation>
-    </message>
-    <message>
-        <location line="-64"/>
-        <source>Checks out a CVS repository and tries to load the contained project.</source>
-        <translation type="unfinished">從 CVS 儲存庫中取出，並試著載入裡面包含的專案。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>CVS Checkout</source>
-        <translation type="unfinished">CVS 取出</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>&lt;default branch&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Branch:</source>
-        <translation type="unfinished">分支：</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Recursive</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Recursively initialize submodules.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Specify repository URL, branch, checkout directory, and path.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Running Git clone...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Clones a Git repository and tries to load the contained project.</source>
-        <translation type="unfinished">複製一個 Git 儲存庫，並試著載入裡面包含的專案。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Git Clone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Running Mercurial clone...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Clones a Mercurial repository and tries to load the contained project.</source>
-        <translation type="unfinished">複製一個 Mercurial 儲存庫，並試著載入裡面包含的專案。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Mercurial Clone</source>
-        <translation type="unfinished">Mercurial 複製</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Trust Server Certificate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Running Subversion checkout...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Checks out a Subversion repository and tries to load the contained project.</source>
-        <translation type="unfinished">從 Subversion 儲存庫中取出，並試著載入裡面包含的專案。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Subversion Checkout</source>
-        <translation type="unfinished">Subversion 取出</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>This wizard creates a custom Qt Creator plugin.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Specify details about your custom Qt Creator plugin.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Put short license information here</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Put a short description of your plugin here</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Qt Creator build:</source>
-        <translation>Qt Creator 建置：</translation>
-    </message>
-    <message>
-        <location line="-741"/>
+        <location line="-590"/>
         <location line="+21"/>
         <location line="+21"/>
         <location line="+570"/>
@@ -10983,27 +9526,1505 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>路徑：</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-708"/>
+        <location line="+42"/>
+        <location line="+392"/>
+        <location line="+36"/>
+        <source>Define Class</source>
+        <translation>定義類</translation>
+    </message>
+    <message>
+        <location line="-466"/>
+        <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
+        <translation>為新類別建立一組標頭檔與源碼檔，讓您可以新增到 C++ 專案中。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+70"/>
+        <location line="+9"/>
+        <source>C/C++</source>
+        <translation>C/C++</translation>
+    </message>
+    <message>
+        <location line="-78"/>
+        <source>C++ Class</source>
+        <translation>C++ 類別</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Customize header row</source>
+        <translation>自定義標題行</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Items are editable</source>
+        <translation>項目可編輯</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows and columns can be added</source>
+        <translation>可以添加行和列</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows and columns can be removed</source>
+        <translation>可以刪除行和列</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fetch data dynamically</source>
+        <translation>動態獲取數據</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Define Item Model Class</source>
+        <translation>定義項目模型類</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Creates a Qt item model.</source>
+        <translation>創建 Qt 項目模型。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+69"/>
+        <location line="+57"/>
+        <location line="+53"/>
+        <location line="+9"/>
+        <source>Qt</source>
+        <translation>Qt</translation>
+    </message>
+    <message>
+        <location line="-187"/>
+        <source>Qt Item Model</source>
+        <translation>Qt 項目模型</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Qt for Python module:</source>
+        <translation>Qt for Python 模塊：</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>You can choose Qt classes only if you select a Qt for Python module.</source>
+        <translation>僅當選擇 Qt for Python 模塊時才可以選擇 Qt 類。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Import QtCore</source>
+        <translation>導入QtCore</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Import QtWidgets</source>
+        <translation>導入 QtWidget</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Import QtQuick</source>
+        <translation>導入QtQuick</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Creates new Python class file.</source>
+        <translation>創建新的 Python 類文件。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+150"/>
+        <source>Python</source>
+        <translation>Python</translation>
+    </message>
+    <message>
+        <location line="-149"/>
+        <source>Python Class</source>
+        <translation>Python類</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+15"/>
+        <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
+        <translation>創建一個基於 CMake 的測試項目，可以為其輸入代碼片段。</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <source>int main(int argc, char *argv[])
+{
+    return 0;
+}</source>
+        <translation>int main(int argc, char *argv[])
+{
+    返回0；
+}</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Code:</source>
+        <translation>代碼：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QtCore</source>
+        <translation>QtCore</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QtCore, QtWidgets</source>
+        <translation>QtCore、QtWidgets</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use Qt Modules:</source>
+        <translation>使用 Qt 模塊：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Application bundle (macOS)</source>
+        <translation>應用程序包 (macOS)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Define Code snippet</source>
+        <translation>定義代碼片段</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Code snippet</source>
+        <translation>代碼片段</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Code Snippet</source>
+        <translation>代碼片段</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a header file that you can add to a C/C++ project.</source>
+        <translation>創建可添加到 C/C++ 項目的頭文件。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>C/C++ Header File</source>
+        <translation>C/C++ 頭文件</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a source file that you can add to a C/C++ project.</source>
+        <translation>創建可以添加到 C/C++ 項目的源文件。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>C/C++ Source File</source>
+        <translation>C/C++ 源文件</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose a Form Template</source>
+        <translation>選擇表單樣本</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Form Template</source>
+        <translation>表單樣本</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Creates a Qt Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
+        <translation>建立 Qt 設計師表單，讓您可以新增到 Qt 元件專案中。這在您已經有現成的使用者介面類別時很好用。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Designer Form</source>
+        <translation>Qt 設計師表單</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
+        <translation>使用桌面 OpenGL 著色語言 (GLSL)來建立一個片段著色器。片段著色器生成的三角形，點與線的最終像素顏色都是OpenGL渲染的。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <source>GLSL</source>
+        <translation>GLSL</translation>
+    </message>
+    <message>
+        <location line="-26"/>
+        <source>Fragment Shader (Desktop OpenGL)</source>
+        <translation>片段著色器 (Desktop OpenGL)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
+        <translation>使用桌面 OpenGL 著色語言 (GLSL) 創建頂點著色器。頂點著色器轉換使用 OpenGL 渲染的三角形、點和線的位置、法線和紋理坐標。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Vertex Shader (Desktop OpenGL)</source>
+        <translation>頂點著色器 (Desktop OpenGL)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
+        <translation>使用 OpenGL/ES 2.0 著色語言 (GLSL/ES) 來建立片段著色器。片段著色器生成的三角形，點與線的最終像素顏色都是 OpenGL 渲染的。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Fragment Shader (OpenGL/ES 2.0)</source>
+        <translation>片段著色器 (OpenGL/ES 2.0)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
+        <translation>使用 OpenGL/ES 2.0 著色語言 (GLSL/ES) 創建頂點著色器。頂點著色器轉換使用 OpenGL 渲染的三角形、點和線的位置、法線和紋理坐標。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Vertex Shader (OpenGL/ES 2.0)</source>
+        <translation>頂點著色器 (OpenGL/ES 2.0)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a Java file with boilerplate code.</source>
+        <translation>創建帶有樣板代碼的 Java 文件。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Java</source>
+        <translation>爪哇</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Java File</source>
+        <translation>Java文件</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Stateless library</source>
+        <translation>無狀態函式庫</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Options</source>
+        <translation>選項</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Creates a JavaScript file.</source>
+        <translation>建立一個 JavaScript 檔。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>JS File</source>
+        <translation>JS 檔</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Model name:</source>
+        <translation>型號名稱：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+67"/>
+        <source>Location:</source>
+        <translation>位置：</translation>
+    </message>
+    <message>
+        <location line="-66"/>
+        <location line="+67"/>
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>文件系統中存在“%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}”。</translation>
+    </message>
+    <message>
+        <location line="-66"/>
+        <source>Model Name and Location</source>
+        <translation>型號名稱和位置</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Creates a new empty model with an empty diagram.</source>
+        <translation>使用空圖表創建一個新的空模型。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+5"/>
+        <location line="+62"/>
+        <source>Modeling</source>
+        <translation>造型</translation>
+    </message>
+    <message>
+        <location line="-66"/>
+        <source>Model</source>
+        <translation>模型</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Creates a scratch model using a temporary file.</source>
+        <translation>使用臨時文件創建臨時模型。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Scratch Model</source>
+        <translation>划痕模型</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates an empty Nim file using UTF-8 charset.</source>
+        <translation>使用 UTF-8 字符集創建一個空 Nim 文件。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+9"/>
+        <source>Nim</source>
+        <translation>尼姆</translation>
+    </message>
+    <message>
+        <location line="-8"/>
+        <source>Nim File</source>
+        <translation>尼姆文件</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates an empty Nim script file using UTF-8 charset.</source>
+        <translation>使用 UTF-8 字符集創建一個空的 Nim 腳本文件。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Nim Script File</source>
+        <translation>尼姆腳本文件</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates an empty Python script file using UTF-8 charset.</source>
+        <translation>使用 UTF-8 字符集創建一個空的 Python 腳本文件。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Python File</source>
+        <translation>Python文件</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a Qt Resource file (.qrc).</source>
+        <translation>創建 Qt 資源文件 (.qrc)。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Resource File</source>
+        <translation>Qt 資源文件</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
+        <translation>使用樣板代碼創建 QML 文件，從“import QtQuick”開始。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>QML File (Qt Quick 2)</source>
+        <translation>QML 文件（Qt Quick 2）</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Creates a scratch buffer using a temporary file.</source>
+        <translation>使用臨時文件創建臨時緩衝區。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+21"/>
+        <source>General</source>
+        <translation>一般</translation>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Scratch Buffer</source>
+        <translation>暫存緩衝區</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>State chart name:</source>
+        <translation>狀態圖名稱：</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>State Chart Name and Location</source>
+        <translation>州圖名稱和位置</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Creates a new empty state chart.</source>
+        <translation>創建一個新的空狀態圖。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>State Chart</source>
+        <translation>州圖</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates an empty file.</source>
+        <translation>創建一個空文件。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Empty File</source>
+        <translation>空的文件</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This wizard creates a simple Qt-based console application.</source>
+        <translation>該嚮導創建一個簡單的基於 Qt 的控制台應用程序。</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+21"/>
+        <location line="+97"/>
+        <location line="+18"/>
+        <location line="+191"/>
+        <source>Meson</source>
+        <translation>介子</translation>
+    </message>
+    <message>
+        <location line="-325"/>
+        <location line="+21"/>
+        <location line="+97"/>
+        <location line="+18"/>
+        <location line="+96"/>
+        <location line="+29"/>
+        <location line="+23"/>
+        <location line="+44"/>
+        <source>Define Build System</source>
+        <translation>定義構建系統</translation>
+    </message>
+    <message>
+        <location line="-327"/>
+        <location line="+21"/>
+        <location line="+97"/>
+        <location line="+18"/>
+        <location line="+96"/>
+        <location line="+29"/>
+        <location line="+23"/>
+        <location line="+44"/>
+        <source>Build System</source>
+        <translation>建置系統</translation>
+    </message>
+    <message>
+        <location line="-327"/>
+        <location line="+47"/>
+        <location line="+246"/>
+        <location line="+48"/>
+        <location line="+148"/>
+        <source>Translation File</source>
+        <translation>翻譯文件</translation>
+    </message>
+    <message>
+        <location line="-488"/>
+        <location line="+47"/>
+        <location line="+246"/>
+        <location line="+48"/>
+        <location line="+148"/>
+        <source>Translation</source>
+        <translation>翻譯</translation>
+    </message>
+    <message>
+        <location line="-484"/>
+        <source>Creates a project containing a single main.cpp file with a stub implementation.
+
+Preselects a desktop Qt for building the application if available.</source>
+        <translation>建立包含單一 main.cpp 檔案及基本實作的專案。
+
+它會預選一個可用的 Qt 桌面版本來建置此應用程式。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+265"/>
+        <location line="+28"/>
+        <location line="+48"/>
+        <source>Application (Qt)</source>
+        <translation>應用程序（Qt）</translation>
+    </message>
+    <message>
+        <location line="-340"/>
+        <source>Qt Console Application</source>
+        <translation>Qt4 主控台應用程式</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This wizard creates a C++ library project.</source>
+        <translation>該嚮導創建一個 C++ 庫項目。</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+307"/>
+        <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
+        <translation>指定您要建立的源碼檔案的基本類別資訊。</translation>
+    </message>
+    <message>
+        <location line="-306"/>
+        <source>Shared Library</source>
+        <translation>共享函式庫</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Statically Linked Library</source>
+        <translation>靜態連結函式庫</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt Plugin</source>
+        <translation>Qt插件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+49"/>
+        <source>Type:</source>
+        <translation>型態：</translation>
+    </message>
+    <message>
+        <location line="-48"/>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation>%{JS: value(&apos;類型&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>QAccessiblePlugin</source>
+        <translation>QAccessible插件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QGenericPlugin</source>
+        <translation>QGeneric插件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QIconEnginePlugin</source>
+        <translation>QIconEngine插件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QImageIOPlugin</source>
+        <translation>QImageIO插件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QScriptExtensionPlugin</source>
+        <translation>QScript擴展插件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QSqlDriverPlugin</source>
+        <translation>QSql驅動插件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QStylePlugin</source>
+        <translation>QStyle插件</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>None</source>
+        <translation>無</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Core</source>
+        <translation>Core 檔</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gui</source>
+        <translation>桂</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Widgets</source>
+        <translation>小部件</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt module:</source>
+        <translation>Qt模塊：</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+115"/>
+        <location line="+37"/>
+        <location line="+68"/>
+        <location line="+26"/>
+        <location line="+16"/>
+        <location line="+180"/>
+        <source>Define Project Details</source>
+        <translation>定義項目詳細信息</translation>
+    </message>
+    <message>
+        <location line="-434"/>
+        <source>Creates a C++ library. This can be used to create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
+        <translation>創建 C++ 庫。這可用於創建：&lt;ul&gt;&lt;li&gt;與&lt;tt&gt;QPluginLoader&lt;/tt&gt;和運行時（插件）一起使用的共享 C++ 庫&lt;/li&gt;&lt;li&gt;與另一個一起使用的共享或靜態 C++ 庫鏈接時的項目&lt;/li&gt;&lt;/ul&gt;</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+18"/>
+        <location line="+178"/>
+        <location line="+246"/>
+        <source>Library</source>
+        <translation>函式庫</translation>
+    </message>
+    <message>
+        <location line="-441"/>
+        <source>C++ Library</source>
+        <translation>C++ 函式庫</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Creates a simple Nim application.</source>
+        <translation>創建一個簡單的 Nim 應用程序。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+40"/>
+        <location line="+18"/>
+        <location line="+18"/>
+        <source>Non-Qt Project</source>
+        <translation>非 Qt 專案</translation>
+    </message>
+    <message>
+        <location line="-75"/>
+        <source>Nim Application</source>
+        <translation>尼姆應用</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Binary</source>
+        <translation>二進位</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Hybrid</source>
+        <translation>雜交種</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Author:</source>
+        <translation>作者：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+407"/>
+        <source>Description:</source>
+        <translation>描述：</translation>
+    </message>
+    <message>
+        <location line="-406"/>
+        <source>0.1.0</source>
+        <translation>0.1x {0.1.0?}</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Version:</source>
+        <translation>版本：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>MIT</source>
+        <translation>麻省理工學院</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>GPL-2.0</source>
+        <translation>GPL-2.0</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Apache-2.0</source>
+        <translation>阿帕奇-2.0</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISC</source>
+        <translation>國際標準委員會</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>GPL-3.0</source>
+        <translation>GPL-3.0</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>BSD-3-Clause</source>
+        <translation>BSD-3 條款</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>LGPL-2.1</source>
+        <translation>LGPL-2.1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>LGPL-3.0</source>
+        <translation>LGPL-3.0</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPL-2.0</source>
+        <translation>EPL-2.0</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Proprietary</source>
+        <translation>所有權</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other</source>
+        <translation>其他</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+391"/>
+        <source>License:</source>
+        <translation>授權：</translation>
+    </message>
+    <message>
+        <location line="-390"/>
+        <source>C</source>
+        <translation>C</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cpp</source>
+        <translation>磷酸鈣</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Objective C</source>
+        <translation>目標C</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Javascript</source>
+        <translation>JavaScript</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Backend:</source>
+        <translation>後端：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1.0.0</source>
+        <translation>0.1x {1.0.0?}</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Min Nim Version:</source>
+        <translation>最小尼姆版本：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Define Project Configuration</source>
+        <translation>定義項目配置</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+253"/>
+        <location line="+1"/>
+        <location line="+34"/>
+        <location line="+1"/>
+        <location line="+17"/>
+        <location line="+1"/>
+        <location line="+23"/>
+        <location line="+1"/>
+        <location line="+19"/>
+        <location line="+1"/>
+        <source>Configuration</source>
+        <translation>組態</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Creates a Nim application with Nimble.</source>
+        <translation>使用 Nimble 創建 Nim 應用程序。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Nimble Application</source>
+        <translation>靈活應用</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Creates a simple C application with no dependencies.</source>
+        <translation>創建一個沒有依賴項的簡單 C 應用程序。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Plain C Application</source>
+        <translation>普通 C 應用程序</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Creates a simple C++ application with no dependencies.</source>
+        <translation>創建一個沒有依賴項的簡單 C++ 應用程序。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Plain C++ Application</source>
+        <translation>純 C++ 應用程序</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This wizard creates an empty .pro file.</source>
+        <translation>該嚮導創建一個空的 .pro 文件。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a qmake-based project without any files. This allows you to create an application without any default classes.</source>
+        <translation>建立一個基於 qmake 的空白專案，不含任何檔案。這樣可以讓您建立一個不包含任何預設類別的應用程式。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Empty qmake Project</source>
+        <translation>空 qmake 項目</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+12"/>
+        <location line="+25"/>
+        <location line="+12"/>
+        <source>PySide version:</source>
+        <translation>PySide 版本：</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
+        <translation>創建一個 Qt for Python 應用程序，其中僅包含 QApplication 的主代碼。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+20"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <source>Application (Qt for Python)</source>
+        <translation>應用程序（Qt for Python）</translation>
+    </message>
+    <message>
+        <location line="-55"/>
+        <source>Empty Application</source>
+        <translation>空申請</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+37"/>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation>%{JS: 值(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <location line="+36"/>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <location line="+36"/>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
+    </message>
+    <message>
+        <location line="-35"/>
+        <location line="+36"/>
+        <source>Project file:</source>
+        <translation>項目文件：</translation>
+    </message>
+    <message>
+        <location line="-31"/>
+        <source>Creates a Qt for Python application that contains an empty window.</source>
+        <translation>創建包含空窗口的 Qt for Python 應用程序。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Empty Window</source>
+        <translation>空窗</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>PySide 6</source>
+        <translation>派賽德 6</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PySide 5.15</source>
+        <translation>派賽德 5.15</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PySide 5.14</source>
+        <translation>派賽德 5.14</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PySide 5.13</source>
+        <translation>派賽德 5.13</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PySide 5.12</source>
+        <translation>派賽德 5.12</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Creates a Qt Quick application that contains an empty window.</source>
+        <translation>創建一個包含空窗口的 Qt Quick 應用程序。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Quick Application - Empty</source>
+        <translation>Qt 快速應用程序 - 空</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Creates a Qt for Python application that includes a Qt Designer-based widget (ui file) - Requires .ui to Python conversion</source>
+        <translation>創建一個 Qt for Python 應用程序，其中包括基於 Qt Designer 的小部件（ui 文件） - 需要 .ui 到 Python 的轉換</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Window UI</source>
+        <translation>窗口界面</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+52"/>
+        <source>Qt 6.2</source>
+        <translation>Qt 6.2</translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <location line="+52"/>
+        <source>Qt 5.15</source>
+        <translation>Qt 5.15</translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <location line="+52"/>
+        <source>Qt 5.14</source>
+        <translation>Qt 5.14</translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <location line="+52"/>
+        <source>Qt 5.13</source>
+        <translation>Qt 5.13</translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <location line="+52"/>
+        <source>Qt 5.12</source>
+        <translation>Qt 5.12</translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <location line="+52"/>
+        <source>Minimum required Qt version:</source>
+        <translation>所需的最低 Qt 版本：</translation>
+    </message>
+    <message>
+        <location line="-51"/>
+        <source>MyItem</source>
+        <translation>我的物品</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Object class-name:</source>
+        <translation>對像類名：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>com.mycompany.qmlcomponents</source>
+        <translation>com.mycompany.qmlcomponents</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>URI:</source>
+        <translation>URI：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Create example project</source>
+        <translation>創建示例項目</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Custom Parameters</source>
+        <translation>自定義參數</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Creates a C++ plugin to load Qt Quick extensions dynamically into applications using the QQmlEngine class.</source>
+        <translation>創建一個 C++ 插件，以使用 QQmlEngine 類將 Qt Quick 擴展動態加載到應用程序中。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Quick 2 Extension Plugin</source>
+        <translation>Qt Quick 2 擴展插件</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Create a project that you can open in Qt Design Studio</source>
+        <translation>創建一個可以在 Qt Design Studio 中打開的項目</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Create a project with a structure that is compatible both with Qt Design Studio (via .qmlproject) and with Qt Creator (via CMakeLists.txt). It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
+        <translation>創建一個結構與 Qt Design Studio（通過 .qmlproject）和 Qt Creator（通過 CMakeLists.txt）兼容的項目。它包含一個 .ui.qml 表單，您可以在 Qt Design Studio 中進行可視化編輯。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+27"/>
+        <location line="+16"/>
+        <source>Use Qt Virtual Keyboard</source>
+        <translation>使用Qt虛擬鍵盤</translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>The minimum version of Qt you want to build the application for</source>
+        <translation>您想要為其構建應用程序的 Qt 最低版本</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Creates a Qt Quick application that contains an empty window. Optionally, you can create a Qt Design Studio project.</source>
+        <translation>創建一個包含空窗口的 Qt Quick 應用程序。您也可以選擇創建 Qt Design Studio 項目。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Quick Application</source>
+        <translation>Qt快速應用</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Creates a Qt Quick application that contains an empty window.
+
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+        <translation>創建一個包含空窗口的 Qt Quick 應用程序。
+
+如果您想使用 CMake 或低於 6 的 Qt 版本之外的其他構建系統，請使用此“兼容”版本。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Quick Application (compat)</source>
+        <translation>Qt 快速應用程序（兼容）</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Creates a Qt Quick 2 UI project with a QML entry point. To use it, you need to have a QML runtime environment.
+
+Use this only if you are prototyping. You cannot create a full application with this. Consider using a Qt Quick Application project instead.</source>
+        <translation>創建帶有 QML 入口點的 Qt Quick 2 UI 項目。要使用它，您需要有一個 QML 運行時環境。
+
+僅當您進行原型設計時才使用此選項。您無法用它創建完整的應用程序。考慮改用 Qt Quick Application 項目。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Quick UI Prototype</source>
+        <translation>Qt 快速 UI 原型</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
+        <translation>該嚮導生成一個 Qt Widgets 應用程序項目。默認情況下，該應用程序派生自 QApplication，並包含一個空小部件。</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation>%{JS: 值(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Generate form</source>
+        <translation>生成表格</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Form file:</source>
+        <translation>表格文件：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Class Information</source>
+        <translation>類別資訊</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Creates a widget-based Qt application that contains a Qt Designer-based main window.
+
+Preselects a desktop Qt for building the application if available.</source>
+        <translation>創建一個基於小部件的 Qt 應用程序，其中包含基於 Qt Designer 的主窗口。
+
+預選用於構建應用程序的桌面 Qt（如果可用）。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Widgets Application</source>
+        <translation>Qt 小部件應用程序</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+35"/>
+        <location line="+18"/>
+        <location line="+24"/>
+        <location line="+20"/>
+        <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
+        <translation>請立即配置&lt;b&gt;%{vcsName}&lt;/b&gt;。</translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <location line="+53"/>
+        <location line="+24"/>
+        <location line="+20"/>
+        <source>Repository:</source>
+        <translation>儲存庫：</translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <location line="+35"/>
+        <location line="+18"/>
+        <location line="+24"/>
+        <location line="+20"/>
+        <source>Repository URL is not valid</source>
+        <translation>存儲庫 URL 無效</translation>
+    </message>
+    <message>
+        <location line="-95"/>
+        <location line="+55"/>
+        <location line="+22"/>
+        <location line="+20"/>
+        <source>%{defaultDir}</source>
+        <translation>%{默認目錄}</translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <location line="+55"/>
+        <location line="+22"/>
+        <location line="+20"/>
+        <source>Directory:</source>
+        <translation>目錄：</translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <location line="+33"/>
+        <location line="+22"/>
+        <location line="+22"/>
+        <location line="+20"/>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>文件系統中存在“%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}”。</translation>
+    </message>
+    <message>
+        <location line="-96"/>
+        <source>Use existing directory</source>
+        <translation>使用現有的目錄</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Proceed with cloning the repository, even if the target directory already exists.</source>
+        <translation>即使目標目錄已存在，也請繼續克隆存儲庫。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Stacked</source>
+        <translation>已堆疊</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Make the new branch depend on the availability of the source branch.</source>
+        <translation>使新分支依賴於源分支的可用性。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Standalone</source>
+        <translation>獨立的</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Do not use a shared repository.</source>
+        <translation>不要使用共享存儲庫。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bind new branch to source location</source>
+        <translation>綁定新的分支到源碼位置</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bind the new branch to the source location.</source>
+        <translation>將新分支綁定到源位置。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Switch checkout</source>
+        <translation>切換分支</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Switch the checkout in the current directory to the new branch.</source>
+        <translation>將目前目錄切換到新的分支。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hardlink</source>
+        <translation>硬式連結</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use hard-links in working tree.</source>
+        <translation>在工作樹中使用硬鏈接。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No working-tree</source>
+        <translation>沒有工作樹</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Do not create a working tree.</source>
+        <translation>不要創建工作樹。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Revision:</source>
+        <translation>版本：</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+62"/>
+        <location line="+21"/>
+        <source>Specify repository URL, checkout directory, and path.</source>
+        <translation>指定存儲庫 URL、簽出目錄和路徑。</translation>
+    </message>
+    <message>
+        <location line="-82"/>
+        <source>Running Bazaar branch...</source>
+        <translation>跑巴扎分店...</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <location line="+1"/>
         <source>Clone</source>
         <translation>複製</translation>
     </message>
     <message>
-        <location line="-416"/>
+        <location line="+1"/>
+        <source>Clones a Bazaar branch and tries to load the contained project.</source>
+        <translation>複製一個 Bazaar 分支，並試著載入裡面包含的專案。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+18"/>
+        <location line="+24"/>
+        <location line="+20"/>
         <location line="+21"/>
-        <source>General</source>
-        <translation type="unfinished">一般</translation>
+        <source>Import Project</source>
+        <translation>匯入專案</translation>
     </message>
     <message>
-        <location line="+39"/>
-        <location line="+49"/>
-        <source>Type:</source>
-        <translation type="unfinished">型態：</translation>
+        <location line="-82"/>
+        <source>Bazaar Clone (Or Branch)</source>
+        <translation>Bazaar 複製 (或分支)</translation>
     </message>
     <message>
-        <location line="-38"/>
-        <source>None</source>
-        <translation type="unfinished">無</translation>
+        <location line="+6"/>
+        <source>Module:</source>
+        <translation>模組：</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Specify module and checkout directory.</source>
+        <translation>指定模塊和簽出目錄。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Running CVS checkout...</source>
+        <translation>運行 CVS 結帳...</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+23"/>
+        <location line="+1"/>
+        <location line="+19"/>
+        <location line="+1"/>
+        <location line="+20"/>
+        <location line="+1"/>
+        <source>Checkout</source>
+        <translation>取出</translation>
+    </message>
+    <message>
+        <location line="-64"/>
+        <source>Checks out a CVS repository and tries to load the contained project.</source>
+        <translation>從 CVS 儲存庫中取出，並試著載入裡面包含的專案。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>CVS Checkout</source>
+        <translation>CVS 取出</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&lt;default branch&gt;</source>
+        <translation>&lt;默認分支&gt;</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Branch:</source>
+        <translation>分支：</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Recursive</source>
+        <translation>遞歸</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Recursively initialize submodules.</source>
+        <translation>遞歸初始化子模塊。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Specify repository URL, branch, checkout directory, and path.</source>
+        <translation>指定存儲庫 URL、分支、簽出目錄和路徑。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Running Git clone...</source>
+        <translation>運行 Git 克隆...</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Clones a Git repository and tries to load the contained project.</source>
+        <translation>複製一個 Git 儲存庫，並試著載入裡面包含的專案。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Git Clone</source>
+        <translation>克隆</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Running Mercurial clone...</source>
+        <translation>正在運行 Mercurial 克隆...</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Clones a Mercurial repository and tries to load the contained project.</source>
+        <translation>複製一個 Mercurial 儲存庫，並試著載入裡面包含的專案。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mercurial Clone</source>
+        <translation>Mercurial 複製</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Trust Server Certificate</source>
+        <translation>信任服務器證書</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Running Subversion checkout...</source>
+        <translation>正在運行 Subversion 結帳...</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Checks out a Subversion repository and tries to load the contained project.</source>
+        <translation>從 Subversion 儲存庫中取出，並試著載入裡面包含的專案。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Subversion Checkout</source>
+        <translation>Subversion 取出</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This wizard creates a custom Qt Creator plugin.</source>
+        <translation>該嚮導創建一個自定義 Qt Creator 插件。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Specify details about your custom Qt Creator plugin.</source>
+        <translation>指定有關自定義 Qt Creator 插件的詳細信息。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation>%{JS: value(&apos;項目名稱&apos;).charAt(0).toUpperCase() + value(&apos;項目名稱&apos;).slice(1)}</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plugin name:</source>
+        <translation>外掛程式名稱：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>MyCompany</source>
+        <translation>我的公司</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Vendor name:</source>
+        <translation>廠商名稱：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(C) %{VendorName}</source>
+        <translation>(C) %{供應商名稱}</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copyright:</source>
+        <translation>版權：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Put short license information here</source>
+        <translation>在此放置簡短的許可證信息</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Put a short description of your plugin here</source>
+        <translation>在這裡輸入您的插件的簡短描述</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
+        <translation>https://www.%{JS:encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>URL:</source>
+        <translation>URL:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt Creator build:</source>
+        <translation>Qt Creator 建置：</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Creates a custom Qt Creator plugin.</source>
+        <translation>建立一個自訂的 Qt Creator 外掛程式。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Qt Creator Plugin</source>
+        <translation>Qt Creator 外掛程式</translation>
     </message>
 </context>
 <context>
@@ -11041,20 +11062,885 @@ Preselects a desktop Qt for building the application if available.</source>
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+179"/>
-        <source>Line: %1, Col: %2</source>
-        <translation>行：%1，欄：%2</translation>
+        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+72"/>
+        <source>Full</source>
+        <translation>全部</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="+2"/>
+        <source>First Letter</source>
+        <translation>首字母</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Case-sensitivity:</source>
+        <translation>區分大小寫(&amp;C)：</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Manually</source>
+        <translation>手動</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>When Triggered</source>
+        <translation>觸發時</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Activate completion:</source>
+        <translation>啟動補完功能：</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Timeout in ms:</source>
+        <translation>超時（以毫秒為單位）：</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Character threshold:</source>
+        <translation>字符閾值：</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Autocomplete common &amp;prefix</source>
+        <translation>自動補完的共用前置字串(&amp;P)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Inserts the common prefix of available completion items.</source>
+        <translation>插入可用完成項目的公共前綴。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Automatically split strings</source>
+        <translation>自動分割字符串</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Splits a string into two lines by adding an end quote at the cursor position when you press Enter and a start quote to the next line, before the rest of the string.
+
+In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</source>
+        <translation>通過按 Enter 鍵時在光標位置添加結束引號，並在下一行字符串其餘部分之前添加起始引號，將字符串拆分為兩行。
+
+此外，Shift+Enter 會在光標位置插入轉義字符，並將字符串的其餘部分移動到下一行。</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Insert opening or closing brackets</source>
+        <translation>插入左括號或右括號</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Insert closing quote</source>
+        <translation>插入結束報價</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Surround text selection with brackets</source>
+        <translation>用括號包圍文本選擇</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>When typing a matching bracket and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
+        <translation>當鍵入匹配的括號並且存在文本選擇時，不要刪除該選擇，而是用相應的字符將其包圍。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Insert &amp;space after function name</source>
+        <translation>在函式名稱後插入空格(&amp;S)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Surround text selection with quotes</source>
+        <translation>用引號包圍文本選擇</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>When typing a matching quote and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
+        <translation>當輸入匹配的引號並且存在文本選擇時，不要刪除該選擇，而是用相應的字符將其包圍。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Animate automatically inserted text</source>
+        <translation>自動插入文本的動畫</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Show a visual hint when for example a brace or a quote is automatically inserted by the editor.</source>
+        <translation>例如，當編輯器自動插入大括號或引號時，顯示視覺提示。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Highlight automatically inserted text</source>
+        <translation>突出顯示自動插入的文本</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Skip automatically inserted character when typing</source>
+        <translation>鍵入時跳過自動插入的字符</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Skip automatically inserted character if re-typed manually after completion or by pressing tab.</source>
+        <translation>如果完成後手動重新輸入或按 Tab 鍵，則跳過自動插入的字符。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Remove automatically inserted text on backspace</source>
+        <translation>刪除退格鍵上自動插入的文本</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Remove the automatically inserted character if the trigger is deleted by backspace after the completion.</source>
+        <translation>如果完成後通過退格鍵刪除觸發器，則刪除自動插入的字符。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Overwrite closing punctuation</source>
+        <translation>覆蓋結束標點符號</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Automatically overwrite closing parentheses and quotes.</source>
+        <translation>自動覆蓋右括號和引號。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Enable Doxygen blocks</source>
+        <translation>啟用 Doxygen 區塊</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>在“/**”、“/*!”、“//!”後按 Enter 鍵時自動創建 Doxygen 註釋或者 &apos;///&apos;。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Generate brief description</source>
+        <translation>產生簡易描述</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Generates a &lt;i&gt;brief&lt;/i&gt; command with an initial description for the corresponding declaration.</source>
+        <translation>生成一個簡短的命令，其中包含相應聲明的初始描述。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add leading asterisks</source>
+        <translation>新增開頭的星號</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation>在繼續 C/C++“/*”、Qt“/*!”時添加前導星號以及新行上的 Java“/**” 樣式註釋。</translation>
+    </message>
+    <message>
+        <location line="+78"/>
+        <source>&amp;Automatically insert matching characters</source>
+        <translation>自動插入對應的字元(&amp;A)</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Documentation Comments</source>
+        <translation>文件註解</translation>
+    </message>
+    <message>
+        <location line="+101"/>
+        <source>Completion</source>
+        <translation>補完</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+125"/>
+        <location line="+79"/>
+        <location line="+268"/>
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+319"/>
+        <source>Error</source>
+        <translation>錯誤</translation>
+    </message>
+    <message>
+        <location line="-346"/>
+        <source>Not a valid trigger. A valid trigger can only contain letters, numbers, or underscores, where the first character is limited to letter or underscore.</source>
+        <translation>不是有效的觸發器。有效的觸發器只能包含字母、數字或下劃線，其中第一個字符僅限於字母或下劃線。</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Trigger</source>
+        <translation>觸發</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Trigger Variant</source>
+        <translation>觸發變異</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Error reverting snippet.</source>
+        <translation>回復片段時發生錯誤。</translation>
+    </message>
+    <message>
+        <location line="+121"/>
+        <source>Revert Built-in</source>
+        <translation>回復到內建</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Group:</source>
+        <translation>群組：</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Add</source>
+        <translation>新增</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Restore Removed Built-ins</source>
+        <translation>回復被移除的內建</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Reset All</source>
+        <translation>全部重置</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Error While Saving Snippet Collection</source>
+        <translation>儲存片段收藏時發生錯誤</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>No snippet selected.</source>
+        <translation>沒有選取片段。</translation>
+    </message>
+    <message>
+        <location line="+88"/>
+        <source>Snippets</source>
+        <translation>片段</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+158"/>
         <source>Line: 9999, Col: 999</source>
         <translation>行：9999，欄：9999</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingspage.cpp" line="+59"/>
-        <source>Global</source>
-        <comment>Settings</comment>
-        <translation>全域</translation>
+        <location line="+23"/>
+        <source>Cursor position: %1</source>
+        <translation>光標位置：%1</translation>
+    </message>
+    <message>
+        <location line="+880"/>
+        <source>Other annotations</source>
+        <translation>其他註釋</translation>
+    </message>
+    <message>
+        <location line="+277"/>
+        <source>Print Document</source>
+        <translation>列印文件</translation>
+    </message>
+    <message>
+        <location line="+327"/>
+        <source>File Error</source>
+        <translation>檔案錯誤</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>The text is too large to be displayed (%1 MB).</source>
+        <translation>文字過大，無法顯示（%1 MB)。</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;錯誤：&lt;/b&gt; 無法用 &quot;%2&quot;-編碼來解碼 &quot;%1&quot;。無法編輯。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Select Encoding</source>
+        <translation>選擇編碼</translation>
+    </message>
+    <message>
+        <location line="+1154"/>
+        <source>Snippet Parse Error</source>
+        <translation>片段解析錯誤</translation>
+    </message>
+    <message>
+        <location line="+491"/>
+        <source>A highlight definition was not found for this file. Would you like to download additional highlight definition files?</source>
+        <translation>找不到該文件的突出顯示定義。您想下載額外的高光定義文件嗎？</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>More than one highlight definition was found for this file. Which one should be used to highlight this file?</source>
+        <translation>針對該文件找到了多個突出顯示定義。應該使用哪一個來突出顯示該文件？</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Remember My Choice</source>
+        <translation>記住我的選擇</translation>
+    </message>
+    <message>
+        <location line="+2932"/>
+        <source>Zoom: %1%</source>
+        <translation>縮放：%1%</translation>
+    </message>
+    <message>
+        <location line="+1762"/>
+        <source>Delete UTF-8 BOM on Save</source>
+        <translation>在儲存時刪除UTF-8 BOM</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add UTF-8 BOM on Save</source>
+        <translation>在儲存時新增UTF-8 BOM</translation>
+    </message>
+    <message>
+        <location line="-7916"/>
+        <source>Line: %1, Col: %2</source>
+        <translation>行：%1，欄：%2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+125"/>
+        <source>&amp;Clean whitespace</source>
+        <translation>清除空白(&amp;C)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>In entire &amp;document</source>
+        <translation>於整份文件(&amp;D)</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>Clean indentation</source>
+        <translation>清除縮排</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>&amp;Ensure newline at end of file</source>
+        <translation>確保檔案結尾處有新行(&amp;E)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+22"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+Influences the indentation of continuation lines.
+
+&lt;ul&gt;
+&lt;li&gt;Not At All: Do not align at all. Lines will only be indented to the current logical indentation depth.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;With Spaces: Always use spaces for alignment, regardless of the other indentation settings.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)            c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;With Regular Indent: Use tabs and/or spaces for alignment, as configured above.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)(tab)(tab)  c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+改變連續行的縮排
+
+&lt;ul&gt;
+&lt;li&gt;不對齊: 不進行對齊。代碼行只根據目前邏輯縮排深度進行縮排。
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;伴隨空格: 允許使用空格進行對齊，忽略其他縮排設置。
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)            c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;伴隨規則縮排: 在原組態上使用 tab 或 空格進行對齊。
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)(tab)(tab)  c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Tabs And Indentation</source>
+        <translation>定位點與縮排</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;代碼縮排在&lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt;和&lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;設定中進行設定。&lt;/i&gt;</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The text editor indentation setting is used for non-code files only. See the C++ and Qt Quick coding style settings to configure indentation for code files.</source>
+        <translation>文字編輯器縮排設定僅用於非代碼檔。請參閱C++和Qt Quick編碼樣式設定來設定代碼檔的縮排。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Spaces Only</source>
+        <translation>只有空格</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tabs Only</source>
+        <translation>只有定位點</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Mixed</source>
+        <translation>混合</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ta&amp;b size:</source>
+        <translation>定位點大小(&amp;B)：</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&amp;Indent size:</source>
+        <translation>縮排大小(&amp;I)：</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Not At All</source>
+        <translation>完全不要</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>With Spaces</source>
+        <translation>伴隨空格</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>With Regular Indent</source>
+        <translation>伴隨正規縮排</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Serial Terminal Tab size:</source>
+        <translation>串行端子標籤尺寸：</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Tab policy:</source>
+        <translation>定位點策略：</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-23"/>
+        <source>Enable automatic &amp;indentation</source>
+        <translation>啟用自動縮排(&amp;I)</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <source>Never</source>
+        <translation>從不</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-279"/>
+        <source>Always</source>
+        <translation>總是</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>In Leading White Space</source>
+        <translation>於行首空白</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-9"/>
+        <source>None</source>
+        <translation>無</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Follows Previous Indents</source>
+        <translation>跟隨之前的縮排</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unindents</source>
+        <translation>取消縮排</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+Specifies how backspace interacts with indentation.
+
+&lt;ul&gt;
+&lt;li&gt;None: No interaction at all. Regular plain backspace behavior.
+&lt;/li&gt;
+
+&lt;li&gt;Follows Previous Indents: In leading white space it will take the cursor back to the nearest indentation level used in previous lines.
+&lt;/li&gt;
+
+&lt;li&gt;Unindents: If the character behind the cursor is a space it behaves as a backtab.
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
+</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+指定退格鍵如何與縮排互動.
+
+&lt;ul&gt;
+&lt;li&gt;無: 沒有任何互動. 正常的退格鍵行為.
+&lt;/li&gt;
+
+&lt;li&gt;跟隨上次的縮排: 依據之前行的縮排來進行縮排.
+&lt;/li&gt;
+
+&lt;li&gt;沒有縮排: 如果鼠標之後的字元是空格他將表現為 backtab.
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Prefer single line comments</source>
+        <translation>更喜歡單行註釋</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Skip clean whitespace for file types:</source>
+        <translation>跳過文件類型的干淨空白：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>For the file patterns listed, do not trim trailing whitespace.</source>
+        <translation>對於列出的文件模式，不要修剪尾隨空格。</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>List of wildcard-aware file patterns, separated by commas or semicolons.</source>
+        <translation>通配符識別文件模式列表，以逗號或分號分隔。</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Always writes a newline character at the end of the file.</source>
+        <translation>總是在檔案末尾加一個分行符號。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Removes trailing whitespace upon saving.</source>
+        <translation>儲存時去除尾部空白。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Corrects leading whitespace according to tab settings.</source>
+        <translation>根據tab設定更正前置空格。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cleans whitespace in entire document instead of only for changed parts.</source>
+        <translation>清除整個文件中的空格，而不是僅變更的部分。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Add If Encoding Is UTF-8</source>
+        <translation>如果編碼是 UTF-8 則新增</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Keep If Already Present</source>
+        <translation>如果已存在則保持</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Always Delete</source>
+        <translation>總是刪除</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+&lt;p&gt;How text editors should deal with UTF-8 Byte Order Marks. The options are:&lt;/p&gt;
+&lt;ul &gt;&lt;li&gt;&lt;i&gt;Add If Encoding Is UTF-8:&lt;/i&gt; always add a BOM when saving a file in UTF-8 encoding. Note that this will not work if the encoding is &lt;i&gt;System&lt;/i&gt;, as the text editor does not know what it actually is.&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Keep If Already Present: &lt;/i&gt;save the file with a BOM if it already had one when it was loaded.&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Always Delete:&lt;/i&gt; never write an UTF-8 BOM, possibly deleting a pre-existing one.&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Note that UTF-8 BOMs are uncommon and treated incorrectly by some editors, so it usually makes little sense to add any.&lt;/p&gt;
+&lt;p&gt;This setting does &lt;b&gt;not&lt;/b&gt; influence the use of UTF-16 and UTF-32 BOMs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;頭/&gt;&lt;正文&gt;
+&lt;p&gt;文本編輯器應如何處理 UTF-8 字節順序標記。選項有：&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;i&gt;如果編碼為 UTF-8，則添加：&lt;/i&gt;以 UTF-8 編碼保存文件時，始終添加 BOM。請注意，如果編碼是&lt;i&gt;System&lt;/i&gt;，則此方法將不起作用，因為文本編輯器不知道它實際上是什麼。&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;如果已存在則保留：&lt;/i&gt;如果加載時已有 BOM，則保存文件。&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;始終刪除：&lt;/i&gt;從不寫入 UTF-8 BOM，可能會刪除預先存在的 BOM。&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;請注意，UTF-8 BOM 並不常見，並且某些編輯器處理不當，因此添加任何 BOM 通常沒有什麼意義。&lt;/p&gt;
+&lt;p&gt;此設置&lt;b&gt;不會&lt;/b&gt;影響 UTF-16 和 UTF-32 BOM 的使用。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Hide mouse cursor while typing</source>
+        <translation>輸入時隱藏滑鼠游標</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Enable scroll &amp;wheel zooming</source>
+        <translation>啟用滑鼠滾輪縮放(&amp;W)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enable built-in camel case &amp;navigation</source>
+        <translation>啟用內建的駝峰式大小寫導覽(&amp;N)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Enable smart selection changing</source>
+        <translation>啟用智慧選擇變更</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Using Select Block Up / Down actions will now provide smarter selections.</source>
+        <translation>使用選擇「區塊向上/向下」操作現在將提供更智慧的選擇。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Show help tooltips using keyboard shortcut (Alt)</source>
+        <translation>使用鍵盤快速鍵(Alt)顯示説明工具提示</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pressing Alt displays context-sensitive help or type information as tooltips.</source>
+        <translation>按Alt鍵顯示即時線上說明或鍵入資訊作為工具提示。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>On Mouseover</source>
+        <translation>滑鼠置於上時</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>On Shift+Mouseover</source>
+        <translation>按住 Shift 並將滑鼠置於上時</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Typing</source>
+        <translation>打字</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Cleanups Upon Saving</source>
+        <translation>儲存時清理</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cleanup actions which are automatically performed right before the file is saved to disk.</source>
+        <translation>在檔案儲存到磁碟之前自動執行的清理動作。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>File Encodings</source>
+        <translation>檔案編碼</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mouse and Keyboard</source>
+        <translation>滑鼠和鍵盤</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Backspace indentation:</source>
+        <translation>返回縮排：</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Default encoding:</source>
+        <translation>預設編碼：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>UTF-8 BOM:</source>
+        <translation>UTF-8 BOM：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Default line endings:</source>
+        <translation>默認行結尾：</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Show help tooltips using the mouse:</source>
+        <translation>使用滑鼠顯示説明工具提示：</translation>
+    </message>
+    <message>
+        <location line="+142"/>
+        <source>Displays context-sensitive help or type information on mouseover.</source>
+        <translation>在滑鼠懸停上顯示與內容相關的説明或類型資訊。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Displays context-sensitive help or type information on Shift+Mouseover.</source>
+        <translation>Shift+滑鼠懸停時顯示與內容相關的説明或類型資訊。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+141"/>
+        <location line="+217"/>
+        <source>Display</source>
+        <translation>顯示</translation>
+    </message>
+    <message>
+        <location line="-268"/>
+        <source>Display line &amp;numbers</source>
+        <translation>顯示行號(&amp;N)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Mark &amp;text changes</source>
+        <translation>標記文字改變(&amp;T)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto-fold first &amp;comment</source>
+        <translation>自動摺疊開頭的註解(&amp;C)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Display &amp;folding markers</source>
+        <translation>顯示摺疊標記(&amp;F)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Visualize whitespace</source>
+        <translation>標示空白(&amp;V)</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <source>Highlight current &amp;line</source>
+        <translation>突顯目前行(&amp;L)</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>Enable text &amp;wrapping</source>
+        <translation>啟用文字折行(&amp;W)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;將&lt;a href=&quot;font Zoom&quot;&gt;字體行間距&lt;/a&gt;設置為 100% 以啟用文本換行選項。&lt;/i&gt;</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Display right &amp;margin at column:</source>
+        <translation>顯示在欄右邊的邊界(&amp;M)：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tint whole margin area</source>
+        <translation>對整個邊距區域著色</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Use context-specific margin</source>
+        <translation>使用上下文特定的邊距</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>If available, use a different margin. For example, the ColumnLimit from the ClangFormat plugin.</source>
+        <translation>如果可用，請使用不同的邊距。例如，ClangFormat 插件中的 ColumnLimit。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Animate matching parentheses</source>
+        <translation>動畫顯示對應的括號(&amp;A)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Highlight search results on the scrollbar</source>
+        <translation>在捲軸上醒目提示搜尋結果</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Animate navigation within file</source>
+        <translation>文件內的動畫導航</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Highlight &amp;blocks</source>
+        <translation>突顯段落區塊(&amp;B)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Center &amp;cursor on scroll</source>
+        <translation>滾動時游標居中(&amp;C)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Visualize indent</source>
+        <translation>可視化縮進</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Display file line ending</source>
+        <translation>顯示文件行結尾</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Display file encoding</source>
+        <translation>顯示檔案編碼</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Always open links in another split</source>
+        <translation>總是在新視窗中開啟連結</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Highlight matching parentheses</source>
+        <translation>醒目提示相符的括弧(&amp;H)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Shows tabs and spaces.</source>
+        <translation>顯示定位字元和空格。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Next to editor content</source>
+        <translation>編輯器內容旁邊</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Next to right margin</source>
+        <translation>右邊距旁邊</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Aligned at right side</source>
+        <translation>與右側對齊</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Between lines</source>
+        <translation>行與行之間</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Line annotations</source>
+        <translation>線路註釋</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Margin</source>
+        <translation>邊緣</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Wrapping</source>
+        <translation>包裝</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-206"/>
+        <source>Enable &amp;mouse navigation</source>
+        <translation>啟用滑鼠導覽(&amp;M)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+544"/>
@@ -11062,7 +11948,45 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>複製色彩機制</translation>
     </message>
     <message>
+        <location line="-428"/>
+        <location line="+7"/>
+        <source>%</source>
+        <translation>%</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>A line spacing value other than 100% disables text wrapping.
+A value less than 100% can result in overlapping and misaligned graphics.</source>
+        <translation>100% 以外的行間距值會禁用文本換行。
+小於 100% 的值可能會導致圖形重疊和錯位。</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Import</source>
+        <translation>進口</translation>
+    </message>
+    <message>
         <location line="+1"/>
+        <source>Export</source>
+        <translation>出口</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
+        <translation>主題“%1”的配色方案</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Zoom:</source>
+        <translation>縮放：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Line spacing:</source>
+        <translation>行間距：</translation>
+    </message>
+    <message>
+        <location line="+363"/>
         <location line="+92"/>
         <source>Color scheme name:</source>
         <translation>色彩機制名稱：</translation>
@@ -11083,11 +12007,106 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>您確定您要永久刪除此色彩機制嗎？</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+190"/>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-447"/>
+        <location line="+31"/>
+        <location line="+13"/>
+        <source>Import Color Scheme</source>
+        <translation>導入配色方案</translation>
+    </message>
+    <message>
+        <location line="-11"/>
+        <location line="+49"/>
+        <source>Color scheme (*.xml);;All files (*)</source>
+        <translation>配色方案 (*.xml);;所有文件 (*)</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Export Color Scheme</source>
+        <translation>導出配色方案</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+43"/>
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-217"/>
+        <source>Remove</source>
+        <translation>移除</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Export...</source>
+        <translation>匯出...</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Import...</source>
+        <translation>匯入...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Current settings:</source>
+        <translation>目前設定：</translation>
+    </message>
+    <message>
+        <location line="+105"/>
+        <source>Copy Code Style</source>
+        <translation>複製程式碼樣式</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Code style name:</source>
+        <translation>程式碼樣式名稱：</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 (Copy)</source>
+        <translation>%1 (複製)</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Delete Code Style</source>
+        <translation>刪除程式碼樣式</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Are you sure you want to delete this code style permanently?</source>
+        <translation>您確定要永久刪除這個程式碼樣式嗎？</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-527"/>
         <location line="+453"/>
         <source>Delete</source>
         <translation>刪除</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+9"/>
+        <source>Import Code Style</source>
+        <translation>匯入程式碼樣式</translation>
+    </message>
+    <message>
+        <location line="-8"/>
+        <location line="+19"/>
+        <source>Code styles (*.xml);;All files (*)</source>
+        <translation>程式碼樣式 (*.xml);;所有檔案(*)</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
+        <translation>無法從“%1”導入代碼樣式。</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Export Code Style</source>
+        <translation>匯出程式碼樣式</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>%1 [proxy: %2]</source>
+        <translation>%1 [代理：%2]</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 [built-in]</source>
+        <translation>%1 [內建]</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+89"/>
@@ -11115,20 +12134,27 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>檔案&quot;%1&quot;：</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+87"/>
-        <source>Please note that this only searches files that have been saved to disk.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-7"/>
+        <location line="+6"/>
         <source>File path: %1
 %2</source>
         <translation>檔案路徑：&apos;%1&apos;
 %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-516"/>
+        <location line="+7"/>
+        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+87"/>
+        <source>Please note that this only searches files that have been saved to disk.</source>
+        <translation>請注意，這僅搜索已保存到磁盤的文件。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+197"/>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-519"/>
+        <location line="+621"/>
+        <source>Font</source>
+        <translation>字型</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-618"/>
         <source>Family:</source>
         <translation>家族：</translation>
     </message>
@@ -11138,86 +12164,138 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>大小：</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+197"/>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-4"/>
-        <location line="+621"/>
-        <source>Font</source>
-        <translation>字型</translation>
+        <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+1"/>
+        <source>Bold</source>
+        <translation>粗體</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-685"/>
+        <location line="+1"/>
+        <source>Italic</source>
+        <translation>斜體</translation>
+    </message>
+    <message>
+        <location line="-18"/>
+        <source>Background:</source>
+        <translation>背景：</translation>
+    </message>
+    <message>
+        <location line="-38"/>
+        <source>Unset</source>
+        <translation>取消設置</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;palign=&apos;center&apos;&gt;&lt;b&gt;內置配色方案需要&lt;a href=&quot;copy&quot;&gt;複製&lt;/a&gt;&lt;br/&gt;才能更改&lt;/b&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Foreground:</source>
+        <translation>前景：</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unset foreground.</source>
+        <translation>取消設置前景。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+21"/>
+        <source>Unset background.</source>
+        <translation>取消設置背景。</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Relative Foreground</source>
+        <translation>相對前景</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+6"/>
+        <source>Saturation:</source>
+        <translation>飽和：</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <location line="+6"/>
+        <source>Lightness:</source>
+        <translation>亮度：</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>Relative Background</source>
+        <translation>相關背景</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Underline</source>
+        <translation>強調</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Color:</source>
+        <translation>顏色:</translation>
+    </message>
+    <message>
+        <location line="+488"/>
+        <source>No Underline</source>
+        <translation>無底線</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Single Underline</source>
+        <translation>單底線</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Wave Underline</source>
+        <translation>波浪底線</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dot Underline</source>
+        <translation>點底線</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dash Underline</source>
+        <translation>短線底線</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dash-Dot Underline</source>
+        <translation>短線-點底線</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dash-Dot-Dot Underline</source>
+        <translation>短線-點-點底線</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-68"/>
         <source>Antialias</source>
         <translation>反鋸齒</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-149"/>
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-249"/>
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+31"/>
         <source>Copy...</source>
         <translation>複製...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-27"/>
-        <location line="+7"/>
-        <source>%</source>
-        <translation>%</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>A line spacing value other than 100% disables text wrapping.
-A value less than 100% can result in overlapping and misaligned graphics.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Import</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+28"/>
+        <source>Line in Current Document</source>
+        <translation>目前文件裡的行</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Export</source>
-        <translation>出口</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Color Scheme for Theme &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Zoom:</source>
-        <translation>縮放：</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Line spacing:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+441"/>
-        <location line="+13"/>
-        <source>Import Color Scheme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-11"/>
-        <location line="+49"/>
-        <source>Color scheme (*.xml);;All files (*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-2"/>
-        <source>Export Color Scheme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+29"/>
         <source>Jumps to the given line in the current document.</source>
-        <translation type="unfinished"></translation>
+        <translation>跳轉到當前文檔中的給定行。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&lt;line&gt;:&lt;column&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;行&gt;:&lt;列&gt;</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -11235,12 +12313,12 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>第%1欄</translation>
     </message>
     <message>
-        <location line="-38"/>
-        <source>Line in Current Document</source>
-        <translation>目前文件裡的行</translation>
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+98"/>
+        <source>Trigger Completion</source>
+        <translation>觸發完成</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+100"/>
+        <location line="+2"/>
         <source>Ctrl+Space</source>
         <translation>Ctrl+Space</translation>
     </message>
@@ -11250,24 +12328,19 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Meta+Space</translation>
     </message>
     <message>
-        <location line="-2"/>
-        <source>Trigger Completion</source>
-        <translation>觸發完成</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+11"/>
         <source>Display Function Hint</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示功能提示</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Meta+Shift+D</source>
-        <translation type="unfinished"></translation>
+        <translation>元+Shift+D</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ctrl+Shift+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11275,20 +12348,15 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>觸發重構操作</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Alt+Return</source>
-        <translation>Alt+Return</translation>
-    </message>
-    <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Show Context Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示上下文菜單</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Text</source>
         <comment>SnippetProvider</comment>
-        <translation type="unfinished">文字</translation>
+        <translation>文字</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -11323,7 +12391,12 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+7"/>
         <source>Word under the current document&apos;s text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>當前文檔文本光標下的 Word。</translation>
+    </message>
+    <message>
+        <location line="-102"/>
+        <source>Alt+Return</source>
+        <translation>Alt+Return</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/texteditoractionhandler.cpp" line="+153"/>
@@ -11341,7 +12414,12 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>標示空白(&amp;V)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+1"/>
+        <source>Ctrl+E, Ctrl+V</source>
+        <translation>Ctrl+E, Ctrl+V</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Clean Whitespace</source>
         <translation>清除空白</translation>
     </message>
@@ -11351,47 +12429,22 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>啟用文字折行(&amp;W)</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+1"/>
+        <source>Ctrl+E, Ctrl+W</source>
+        <translation>Ctrl+E, Ctrl+W</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Ctrl+/</source>
         <translation>Ctrl+/</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Copy &amp;Line</source>
-        <translation>複製行(&amp;L)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ctrl+Ins</source>
-        <translation>Ctrl+Ins</translation>
-    </message>
-    <message>
-        <location line="-149"/>
+        <location line="-141"/>
         <source>Delete &amp;Line</source>
         <translation>刪除行(&amp;L)</translation>
     </message>
     <message>
-        <location line="+186"/>
-        <source>Fold</source>
-        <translation>摺疊</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Unfold</source>
-        <translation>展開</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Reset Font Size</source>
-        <translation>重置字型大小</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ctrl+0</source>
-        <translation>Ctrl+0</translation>
-    </message>
-    <message>
-        <location line="-62"/>
+        <location line="+145"/>
         <source>Shift+Del</source>
         <translation>Shift+Del</translation>
     </message>
@@ -11401,127 +12454,37 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>段落重新折行(&amp;R)</translation>
     </message>
     <message>
-        <location line="+32"/>
-        <source>Toggle Comment &amp;Selection</source>
-        <translation>切換選取區的註釋(&amp;S)</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Cut &amp;Line</source>
-        <translation>剪下行(&amp;L)</translation>
-    </message>
-    <message>
-        <location line="+38"/>
-        <source>&amp;Sort Selected Lines</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Meta+Shift+S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Alt+Shift+S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Ctrl+&lt;</source>
-        <translation>Ctrl+&lt;</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Ctrl+&gt;</source>
-        <translation>Ctrl+&gt;</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Increase Font Size</source>
-        <translation>增大字型</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ctrl++</source>
-        <translation>Ctrl++</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Decrease Font Size</source>
-        <translation>減小字型</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ctrl+-</source>
-        <translation>Ctrl+-</translation>
-    </message>
-    <message>
-        <location line="-187"/>
-        <source>Ctrl+{</source>
-        <translation>Ctrl+{</translation>
-    </message>
-    <message>
-        <location line="-12"/>
-        <source>Delete Word from Cursor On</source>
-        <translation>從游標處刪除文字</translation>
-    </message>
-    <message>
-        <location line="-25"/>
+        <location line="-129"/>
         <source>Go to line number...</source>
         <translation>轉到行號...</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Delete Line from Cursor On</source>
-        <translation type="unfinished"></translation>
+        <translation>從光標處刪除行</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>Delete Line up to Cursor</source>
-        <translation type="unfinished"></translation>
+        <location line="+2"/>
+        <source>Delete Word from Cursor On</source>
+        <translation>從游標處刪除文字</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Ctrl+Backspace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+100"/>
-        <source>Meta+E, R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Ctrl+E, R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Meta+E, Meta+V</source>
-        <translation>Meta+E, Meta+V</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Ctrl+E, Ctrl+V</source>
-        <translation>Ctrl+E, Ctrl+V</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Meta+E, Meta+W</source>
-        <translation>Meta+E, Meta+W</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Ctrl+E, Ctrl+W</source>
-        <translation>Ctrl+E, Ctrl+W</translation>
-    </message>
-    <message>
-        <location line="-130"/>
+        <location line="+2"/>
         <source>Delete Word Camel Case from Cursor On</source>
         <translation>從游標處刪除駝峰式大小寫文字</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+2"/>
+        <source>Delete Line up to Cursor</source>
+        <translation>刪除光標處的行</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Backspace</source>
+        <translation>Ctrl+退格鍵</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Delete Word up to Cursor</source>
         <translation>刪除文字到游標處</translation>
     </message>
@@ -11531,17 +12494,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>刪除駝峰式大小寫文字至游標處</translation>
     </message>
     <message>
-        <location line="+181"/>
-        <source>Toggle &amp;Fold All</source>
-        <translation>切換全部折疊(&amp;F)</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Meta+0</source>
-        <translation>Meta+0</translation>
-    </message>
-    <message>
-        <location line="-192"/>
+        <location line="+2"/>
         <source>Go to Block Start with Selection</source>
         <translation>移至選取區開頭</translation>
     </message>
@@ -11551,52 +12504,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>移至選取區結尾</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Ctrl+}</source>
-        <translation>Ctrl+}</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Move Line Up</source>
-        <translation>將行上移</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ctrl+Shift+Up</source>
-        <translation>Ctrl+Shift+Up</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Move Line Down</source>
-        <translation>將行下移</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ctrl+Shift+Down</source>
-        <translation>Ctrl+Shift+Down</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Copy Line Up</source>
-        <translation>將行向上複製</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ctrl+Alt+Up</source>
-        <translation>Ctrl+Alt+Up</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Copy Line Down</source>
-        <translation>將行向下複製</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ctrl+Alt+Down</source>
-        <translation>Ctrl+Alt+Down</translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="+15"/>
         <source>Join Lines</source>
         <translation>合併行</translation>
     </message>
@@ -11628,10 +12536,25 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+2"/>
         <source>Toggle UTF-8 BOM</source>
-        <translation type="unfinished"></translation>
+        <translation>切換 UTF-8 BOM</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+2"/>
+        <source>Indent</source>
+        <translation>縮排</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unindent</source>
+        <translation>不縮排</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Follow Symbol Under Cursor</source>
+        <translation>跟隨游標下的符號</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Follow Symbol Under Cursor in Next Split</source>
         <translation>按照游標下的符號進行下一次分割</translation>
     </message>
@@ -11650,27 +12573,27 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="-10"/>
         <source>Find References to Symbol Under Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>查找對光標下符號的引用</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ctrl+Shift+U</source>
-        <translation type="unfinished">Ctrl+Shift+U</translation>
+        <translation>Ctrl+Shift+U</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rename Symbol Under Cursor</source>
-        <translation type="unfinished">重新命名游標下的符號</translation>
+        <translation>重新命名游標下的符號</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ctrl+Shift+R</source>
-        <translation type="unfinished">Ctrl+Shift+R</translation>
+        <translation>Ctrl+Shift+R</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Jump to File Under Cursor</source>
-        <translation type="unfinished">跳到游標下的檔案</translation>
+        <translation>跳到游標下的檔案</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11678,87 +12601,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>在下一個分割中跳轉到的游標下的檔案</translation>
     </message>
     <message>
-        <location line="+29"/>
-        <source>Paste Without Formatting</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ctrl+Alt+Shift+V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Copy With Highlighting</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Create Cursors at Selected Line Ends</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Alt+Shift+I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Add Next Occurrence to Selection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Uppercase Selection</source>
-        <translation>大寫選擇</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Alt+Shift+U</source>
-        <translation>Alt+Shift+U</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Meta+Shift+U</source>
-        <translation>Meta+Shift+U</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Lowercase Selection</source>
-        <translation>小寫選擇</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Alt+U</source>
-        <translation>Alt+U</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Meta+U</source>
-        <translation>Meta+U</translation>
-    </message>
-    <message>
-        <location line="+50"/>
-        <source>Select Word Under Cursor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Go to Document Start</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Go to Document End</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-146"/>
+        <location line="+26"/>
         <source>Paste from Clipboard History</source>
         <translation>從剪貼簿歷史紀錄貼上</translation>
     </message>
@@ -11768,22 +12611,172 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
-        <location line="-46"/>
-        <source>Indent</source>
-        <translation>縮排</translation>
+        <location line="+2"/>
+        <source>Paste Without Formatting</source>
+        <translation>不設置格式粘貼</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Alt+Shift+V</source>
+        <translation>Ctrl+Alt+Shift+V</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Ctrl+E, R</source>
+        <translation>Ctrl+E、R</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Meta+E, R</source>
+        <translation>元+E、R</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Meta+E, Meta+V</source>
+        <translation>Meta+E, Meta+V</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Meta+E, Meta+W</source>
+        <translation>Meta+E, Meta+W</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Toggle Comment &amp;Selection</source>
+        <translation>切換選取區的註釋(&amp;S)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cut &amp;Line</source>
+        <translation>剪下行(&amp;L)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Copy &amp;Line</source>
+        <translation>複製行(&amp;L)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Ins</source>
+        <translation>Ctrl+Ins</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Copy With Highlighting</source>
+        <translation>複製並突出顯示</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Create Cursors at Selected Line Ends</source>
+        <translation>在選定的行末端創建光標</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alt+Shift+I</source>
+        <translation>Alt+Shift+I</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add Next Occurrence to Selection</source>
+        <translation>將下一個出現添加到選擇中</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+D</source>
+        <translation>Ctrl+D</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Uppercase Selection</source>
+        <translation>大寫選擇</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Meta+Shift+U</source>
+        <translation>Meta+Shift+U</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Alt+Shift+U</source>
+        <translation>Alt+Shift+U</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Lowercase Selection</source>
+        <translation>小寫選擇</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Meta+U</source>
+        <translation>Meta+U</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Alt+U</source>
+        <translation>Alt+U</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Sort Selected Lines</source>
+        <translation>對所選行排序(&amp;S)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Meta+Shift+S</source>
+        <translation>元+Shift+S</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Alt+Shift+S</source>
+        <translation>Alt+Shift+S</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Fold</source>
+        <translation>摺疊</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Unfold</source>
+        <translation>展開</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Toggle &amp;Fold All</source>
+        <translation>切換全部折疊(&amp;F)</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Reset Font Size</source>
+        <translation>重置字型大小</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Meta+0</source>
+        <translation>Meta+0</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ctrl+0</source>
+        <translation>Ctrl+0</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Select Word Under Cursor</source>
+        <translation>選擇光標下的單詞</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Go to Document Start</source>
+        <translation>轉到文檔開始</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Unindent</source>
-        <translation>不縮排</translation>
+        <source>Go to Document End</source>
+        <translation>轉到文檔末尾</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Follow Symbol Under Cursor</source>
-        <translation type="unfinished">跟隨游標下的符號</translation>
-    </message>
-    <message>
-        <location line="+189"/>
         <source>Go to Line Start</source>
         <translation>移至行首</translation>
     </message>
@@ -11883,7 +12876,87 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>移至下一個駝峰式大小寫文字並選取</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+66"/>
+        <location line="-90"/>
+        <source>Ctrl+&lt;</source>
+        <translation>Ctrl+&lt;</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Ctrl+&gt;</source>
+        <translation>Ctrl+&gt;</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Increase Font Size</source>
+        <translation>增大字型</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl++</source>
+        <translation>Ctrl++</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Decrease Font Size</source>
+        <translation>減小字型</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+-</source>
+        <translation>Ctrl+-</translation>
+    </message>
+    <message>
+        <location line="-187"/>
+        <source>Ctrl+{</source>
+        <translation>Ctrl+{</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+}</source>
+        <translation>Ctrl+}</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Move Line Up</source>
+        <translation>將行上移</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Shift+Up</source>
+        <translation>Ctrl+Shift+Up</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Move Line Down</source>
+        <translation>將行下移</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Shift+Down</source>
+        <translation>Ctrl+Shift+Down</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Copy Line Up</source>
+        <translation>將行向上複製</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Alt+Up</source>
+        <translation>Ctrl+Alt+Up</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Copy Line Down</source>
+        <translation>將行向下複製</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ctrl+Alt+Down</source>
+        <translation>Ctrl+Alt+Down</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-253"/>
         <source>Text</source>
         <translation>文字</translation>
     </message>
@@ -11891,7 +12964,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <location line="+1"/>
         <source>Generic text and punctuation tokens.
 Applied to text that matched no other rule.</source>
-        <translation type="unfinished"></translation>
+        <translation>通用文本和標點符號。
+應用於與其他規則不匹配的文本。</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11936,35 +13010,38 @@ Applied to text that matched no other rule.</source>
     <message>
         <location line="+2"/>
         <source>Search Result (Alternative 1)</source>
-        <translation type="unfinished"></translation>
+        <translation>搜索結果（選項 1）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Highlighted search results inside the editor.
 Used to mark read accesses to C++ symbols.</source>
-        <translation type="unfinished"></translation>
+        <translation>在編輯器內突出顯示搜索結果。
+用於標記對 C++ 符號的讀訪問。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Search Result (Alternative 2)</source>
-        <translation type="unfinished"></translation>
+        <translation>搜索結果（備選方案 2）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Highlighted search results inside the editor.
 Used to mark write accesses to C++ symbols.</source>
-        <translation type="unfinished"></translation>
+        <translation>在編輯器內突出顯示搜索結果。
+用於標記對 C++ 符號的寫訪問。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Search Result Containing function</source>
-        <translation type="unfinished"></translation>
+        <translation>搜索結果 包含函數</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Highlighted search results inside the editor.
 Used to mark containing function of the symbol usage.</source>
-        <translation type="unfinished"></translation>
+        <translation>在編輯器內突出顯示搜索結果。
+用於標記符號用途的包含功能。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11999,12 +13076,12 @@ Used to mark containing function of the symbol usage.</source>
     <message>
         <location line="+2"/>
         <source>Auto Complete</source>
-        <translation type="unfinished"></translation>
+        <translation>自動完成</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Displayed when a character is automatically inserted like brackets or quotes.</source>
-        <translation type="unfinished"></translation>
+        <translation>當自動插入字符（如括號或引號）時顯示。</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12101,12 +13178,12 @@ Used to mark containing function of the symbol usage.</source>
     <message>
         <location line="+2"/>
         <source>Namespace</source>
-        <translation type="unfinished"></translation>
+        <translation>命名空間</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Name of a namespace.</source>
-        <translation type="unfinished"></translation>
+        <translation>命名空間的名稱。</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12121,12 +13198,12 @@ Used to mark containing function of the symbol usage.</source>
     <message>
         <location line="+1"/>
         <source>Parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>範圍</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Function or method parameters.</source>
-        <translation type="unfinished"></translation>
+        <translation>函數或方法參數。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12141,12 +13218,12 @@ Used to mark containing function of the symbol usage.</source>
     <message>
         <location line="+1"/>
         <source>Global</source>
-        <translation type="unfinished">全域</translation>
+        <translation>全域</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Global variables.</source>
-        <translation type="unfinished"></translation>
+        <translation>全局變量。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12159,319 +13236,9 @@ Used to mark containing function of the symbol usage.</source>
         <translation>套用於列舉項目。</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>Reserved keywords of the programming language except keywords denoting primitive types.</source>
-        <translation>除表示基本類型的關鍵字外程式設計語言的保留關鍵字。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Punctuation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Punctuation excluding operators.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Non user-defined language operators.
-To style user-defined operators, use Overloaded Operator.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+4"/>
-        <source>Overloaded Operators</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Calls and declarations of overloaded (user-defined) operators.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Doxygen tags.</source>
-        <translation>Doxygen標籤。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Whitespace.
-Will not be applied to whitespace in comments and strings.</source>
-        <translation>空格。
-不會被套用於注解和字串中的空格。</translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Diff File Line</source>
-        <translation>差異檔案行</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to lines with file information in differences (in side-by-side diff editor).</source>
-        <translation>(在並排差異編輯器中)套用於差異中有檔案資訊的行。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Diff Context Line</source>
-        <translation>差異內容行</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to lines describing hidden context in differences (in side-by-side diff editor).</source>
-        <translation>(在並排差異編輯器中)套用於描述差異中隱藏內容的行。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Diff Source Line</source>
-        <translation>差異來源行</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to source lines with changes in differences (in side-by-side diff editor).</source>
-        <translation>(在並排差異編輯器中)套用於差異有變化的來源行。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Diff Source Character</source>
-        <translation>差異來源字元</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to removed characters in differences (in side-by-side diff editor).</source>
-        <translation>(在並排差異編輯器中)套用於差異中刪除的字元。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Diff Destination Line</source>
-        <translation>差異目標行</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to destination lines with changes in differences (in side-by-side diff editor).</source>
-        <translation>(在並排差異編輯器中)套用於具有差異變化的目標行。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Diff Destination Character</source>
-        <translation>差異目標字元</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to added characters in differences (in side-by-side diff editor).</source>
-        <translation>(在並排差異編輯器中)套用於差異中新增的字元。</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Log Change Line</source>
-        <translation>記錄變更行</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to lines describing changes in VCS log.</source>
-        <translation>套用于描述VCS記錄中變更的行。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Log Author Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to author names in VCS log.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Log Commit Date</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to commit dates in VCS log.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Log Commit Hash</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to commit hashes in VCS log.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Log Decoration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to commit decorations in VCS log.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Log Commit Subject</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Applied to commit subjects in VCS log.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Underline color of error diagnostics.</source>
-        <translation>錯誤診斷的底線顏色。</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Error Context</source>
-        <translation>錯誤內容</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Underline color of the contexts of error diagnostics.</source>
-        <translation>錯誤診斷內容的底線顏色。</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Warning</source>
-        <translation type="unfinished">警告</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Underline color of warning diagnostics.</source>
-        <translation>警告診斷的底線顏色。</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Warning Context</source>
-        <translation>警告內容</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Underline color of the contexts of warning diagnostics.</source>
-        <translation>警告診斷內容的底線顏色。</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Output Argument</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Writable arguments of a function call.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Static Member</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Names of static fields or member functions.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Code Coverage Added Code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>New code that was not checked for tests.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Partially Covered Code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Partial branch/condition coverage.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Uncovered Code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Not covered at all.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Fully Covered Code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Fully covered code.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Manually Validated Code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>User added validation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Code Coverage Dead Code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Unreachable code.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Code Coverage Execution Count Too Low</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Minimum count not reached.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Implicitly Not Covered Code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+5"/>
-        <location line="+5"/>
-        <source>PLACEHOLDER</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-6"/>
-        <source>Implicitly Covered Code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Implicit Manual Coverage Validation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-242"/>
         <source>Function</source>
-        <translation type="unfinished">函式</translation>
+        <translation>函式</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12481,22 +13248,22 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+5"/>
         <source>Declaration</source>
-        <translation type="unfinished"></translation>
+        <translation>宣言</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Style adjustments to declarations.</source>
-        <translation type="unfinished"></translation>
+        <translation>聲明的風格調整。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Function Definition</source>
-        <translation type="unfinished"></translation>
+        <translation>功能定義</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Name of function at its definition.</source>
-        <translation type="unfinished"></translation>
+        <translation>定義時的函數名稱。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12509,22 +13276,7 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>聲明為虛擬的函數名稱。</translation>
     </message>
     <message>
-        <location line="+11"/>
-        <source>QML item id within a QML file.</source>
-        <translation>QML檔案中的QML項目ID。</translation>
-    </message>
-    <message>
         <location line="+3"/>
-        <source>QML property of a parent item.</source>
-        <translation>父項的QML屬性。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Property of the same QML item.</source>
-        <translation>相同QML項目的屬性。</translation>
-    </message>
-    <message>
-        <location line="-14"/>
         <source>QML Binding</source>
         <translation>QML 結合</translation>
     </message>
@@ -12539,17 +13291,32 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>QML 本地代碼</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>QML Root Object Property</source>
-        <translation type="unfinished">QML 根物件屬性</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>QML Scope Object Property</source>
-        <translation type="unfinished">QML 範圍物件屬性</translation>
+        <location line="+1"/>
+        <source>QML item id within a QML file.</source>
+        <translation>QML檔案中的QML項目ID。</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>QML Root Object Property</source>
+        <translation>QML 根物件屬性</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QML property of a parent item.</source>
+        <translation>父項的QML屬性。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>QML Scope Object Property</source>
+        <translation>QML 範圍物件屬性</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Property of the same QML item.</source>
+        <translation>相同QML項目的屬性。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>QML State Name</source>
         <translation>QML 狀態名稱</translation>
     </message>
@@ -12624,12 +13391,44 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>關鍵字</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+1"/>
+        <source>Reserved keywords of the programming language except keywords denoting primitive types.</source>
+        <translation>除表示基本類型的關鍵字外程式設計語言的保留關鍵字。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Punctuation</source>
+        <translation>標點</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Punctuation excluding operators.</source>
+        <translation>標點符號不包括運算符。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Operator</source>
         <translation>運算符</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+1"/>
+        <source>Non user-defined language operators.
+To style user-defined operators, use Overloaded Operator.</source>
+        <translation>非用戶定義的語言運算符。
+要設置用戶定義運算符的樣式，請使用重載運算符。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Overloaded Operators</source>
+        <translation>重載運算符</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Calls and declarations of overloaded (user-defined) operators.</source>
+        <translation>重載（用戶定義）運算符的調用和聲明。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Preprocessor</source>
         <translation>預處理器</translation>
     </message>
@@ -12641,12 +13440,12 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+1"/>
         <source>Macro</source>
-        <translation type="unfinished">巨集</translation>
+        <translation>巨集</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Macros.</source>
-        <translation type="unfinished"></translation>
+        <translation>宏。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12684,12 +13483,24 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>Doxygen 標籤</translation>
     </message>
     <message>
+        <location line="+0"/>
+        <source>Doxygen tags.</source>
+        <translation>Doxygen標籤。</translation>
+    </message>
+    <message>
         <location line="+2"/>
         <source>Visual Whitespace</source>
         <translation>標示空白</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
+        <source>Whitespace.
+Will not be applied to whitespace in comments and strings.</source>
+        <translation>空格。
+不會被套用於注解和字串中的空格。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Disabled Code</source>
         <translation>停用的代碼</translation>
     </message>
@@ -12739,124 +13550,293 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>(在差異編輯器中)檔案中存在差異的位置。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingspage.cpp" line="+20"/>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+229"/>
-        <source>Behavior</source>
-        <translation>行為</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+141"/>
-        <location line="+217"/>
-        <source>Display</source>
-        <translation>顯示</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+1"/>
-        <source>Bold</source>
-        <translation>粗體</translation>
+        <location line="+4"/>
+        <source>Diff File Line</source>
+        <translation>差異檔案行</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Italic</source>
-        <translation>斜體</translation>
-    </message>
-    <message>
-        <location line="-18"/>
-        <source>Background:</source>
-        <translation>背景：</translation>
-    </message>
-    <message>
-        <location line="-38"/>
-        <source>Unset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Foreground:</source>
-        <translation>前景：</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Unset foreground.</source>
-        <translation type="unfinished"></translation>
+        <source>Applied to lines with file information in differences (in side-by-side diff editor).</source>
+        <translation>(在並排差異編輯器中)套用於差異中有檔案資訊的行。</translation>
     </message>
     <message>
         <location line="+3"/>
-        <location line="+21"/>
-        <source>Unset background.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-19"/>
-        <source>Relative Foreground</source>
-        <translation type="unfinished"></translation>
+        <source>Diff Context Line</source>
+        <translation>差異內容行</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+6"/>
-        <source>Saturation:</source>
-        <translation type="unfinished"></translation>
+        <source>Applied to lines describing hidden context in differences (in side-by-side diff editor).</source>
+        <translation>(在並排差異編輯器中)套用於描述差異中隱藏內容的行。</translation>
     </message>
     <message>
-        <location line="-4"/>
+        <location line="+3"/>
+        <source>Diff Source Line</source>
+        <translation>差異來源行</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to source lines with changes in differences (in side-by-side diff editor).</source>
+        <translation>(在並排差異編輯器中)套用於差異有變化的來源行。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Diff Source Character</source>
+        <translation>差異來源字元</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to removed characters in differences (in side-by-side diff editor).</source>
+        <translation>(在並排差異編輯器中)套用於差異中刪除的字元。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Diff Destination Line</source>
+        <translation>差異目標行</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to destination lines with changes in differences (in side-by-side diff editor).</source>
+        <translation>(在並排差異編輯器中)套用於具有差異變化的目標行。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Diff Destination Character</source>
+        <translation>差異目標字元</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to added characters in differences (in side-by-side diff editor).</source>
+        <translation>(在並排差異編輯器中)套用於差異中新增的字元。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Log Change Line</source>
+        <translation>記錄變更行</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to lines describing changes in VCS log.</source>
+        <translation>套用于描述VCS記錄中變更的行。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Log Author Name</source>
+        <translation>日誌作者姓名</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to author names in VCS log.</source>
+        <translation>應用於 VCS 日誌中的作者姓名。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Log Commit Date</source>
+        <translation>記錄提交日期</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to commit dates in VCS log.</source>
+        <translation>適用於 VCS 日誌中的提交日期。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Log Commit Hash</source>
+        <translation>日誌提交哈希</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to commit hashes in VCS log.</source>
+        <translation>用於在 VCS 日誌中提交哈希值。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Log Decoration</source>
+        <translation>原木裝飾</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to commit decorations in VCS log.</source>
+        <translation>應用於在 VCS 日誌中提交裝飾。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Log Commit Subject</source>
+        <translation>日誌提交主題</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Applied to commit subjects in VCS log.</source>
+        <translation>用於提交 VCS 日誌中的主題。</translation>
+    </message>
+    <message>
         <location line="+6"/>
-        <source>Lightness:</source>
-        <translation type="unfinished"></translation>
+        <source>Underline color of error diagnostics.</source>
+        <translation>錯誤診斷的底線顏色。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Error Context</source>
+        <translation>錯誤內容</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Underline color of the contexts of error diagnostics.</source>
+        <translation>錯誤診斷內容的底線顏色。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Warning</source>
+        <translation>警告</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Underline color of warning diagnostics.</source>
+        <translation>警告診斷的底線顏色。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Warning Context</source>
+        <translation>警告內容</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Underline color of the contexts of warning diagnostics.</source>
+        <translation>警告診斷內容的底線顏色。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Output Argument</source>
+        <translation>輸出參數</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Writable arguments of a function call.</source>
+        <translation>函數調用的可寫參數。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Static Member</source>
+        <translation>靜態成員</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Names of static fields or member functions.</source>
+        <translation>靜態字段或成員函數的名稱。</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Code Coverage Added Code</source>
+        <translation>代碼覆蓋率添加的代碼</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>New code that was not checked for tests.</source>
+        <translation>未檢查測試的新代碼。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Partially Covered Code</source>
+        <translation>部分覆蓋代碼</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Partial branch/condition coverage.</source>
+        <translation>部分分支/條件覆蓋。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Uncovered Code</source>
+        <translation>未發現的代碼</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Not covered at all.</source>
+        <translation>根本沒有覆蓋。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Fully Covered Code</source>
+        <translation>完全覆蓋的代碼</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fully covered code.</source>
+        <translation>完全覆蓋的代碼。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Manually Validated Code</source>
+        <translation>手動驗證代碼</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>User added validation.</source>
+        <translation>用戶添加了驗證。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Code Coverage Dead Code</source>
+        <translation>代碼覆蓋率死代碼</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unreachable code.</source>
+        <translation>無法訪問的代碼。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Code Coverage Execution Count Too Low</source>
+        <translation>代碼覆蓋率執行計數太低</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Minimum count not reached.</source>
+        <translation>未達到最小計數。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Implicitly Not Covered Code</source>
+        <translation>隱式未涵蓋的代碼</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+5"/>
+        <location line="+5"/>
+        <source>PLACEHOLDER</source>
+        <translation>佔位符</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>Implicitly Covered Code</source>
+        <translation>隱式覆蓋代碼</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Implicit Manual Coverage Validation</source>
+        <translation>隱式手動覆蓋率驗證</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettingspage.cpp" line="+59"/>
+        <source>Global</source>
+        <comment>Settings</comment>
+        <translation>全域</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+290"/>
+        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+226"/>
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+657"/>
+        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+163"/>
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+219"/>
+        <source>Text Editor</source>
+        <translation>文字編輯器</translation>
     </message>
     <message>
         <location line="-3"/>
-        <source>Relative Background</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Underline</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Color:</source>
-        <translation type="unfinished">顏色:</translation>
-    </message>
-    <message>
-        <location line="+488"/>
-        <source>No Underline</source>
-        <translation>無底線</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Single Underline</source>
-        <translation>單底線</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Wave Underline</source>
-        <translation>波浪底線</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Dot Underline</source>
-        <translation>點底線</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Dash Underline</source>
-        <translation>短線底線</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Dash-Dot Underline</source>
-        <translation>短線-點底線</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Dash-Dot-Dot Underline</source>
-        <translation>短線-點-點底線</translation>
+        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-134"/>
+        <source>Behavior</source>
+        <translation>行為</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+302"/>
@@ -12864,203 +13844,129 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>不是一個色彩機制檔。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingspage.cpp" line="+3"/>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+134"/>
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+2"/>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+128"/>
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+163"/>
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+562"/>
-        <source>Text Editor</source>
-        <translation>文字編輯器</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-113"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Download missing and update existing syntax definition files.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Reload Definitions</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+3"/>
+        <source>derived from QObject</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
+        <translation>從 QObject 派生</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Reload externally modified definition files.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Reset Remembered Definitions</source>
-        <translation type="unfinished"></translation>
+        <source>derived from QWidget</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
+        <translation>源自 QWidget</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Reset definitions remembered for files that can be associated with more than one highlighter definition.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>User Highlight Definition Files</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Download finished</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+67"/>
-        <source>Generic Highlighter</source>
-        <translation>一般突顯器</translation>
-    </message>
-    <message>
-        <location line="-107"/>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3224"/>
-        <source>Download Definitions</source>
-        <translation>下載定義</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+48"/>
-        <source>No outline available</source>
-        <translation>沒有可用大綱</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Synchronize with Editor</source>
-        <translation>與編輯器同步</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Filter tree</source>
-        <translation>篩選樹狀圖</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Sort Alphabetically</source>
-        <translation type="unfinished">按字母排序</translation>
-    </message>
-    <message>
-        <location line="+125"/>
-        <source>Outline</source>
-        <translation>大綱</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-3201"/>
-        <source>Cursor position: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+880"/>
-        <source>Other annotations</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+277"/>
-        <source>Print Document</source>
-        <translation>列印文件</translation>
-    </message>
-    <message>
-        <location line="+327"/>
-        <source>File Error</source>
-        <translation>檔案錯誤</translation>
-    </message>
-    <message>
-        <location line="+67"/>
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;錯誤：&lt;/b&gt; 無法用 &quot;%2&quot;-編碼來解碼 &quot;%1&quot;。無法編輯。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Select Encoding</source>
-        <translation>選擇編碼</translation>
-    </message>
-    <message>
-        <location line="+1154"/>
-        <source>Snippet Parse Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+491"/>
-        <source>A highlight definition was not found for this file. Would you like to download additional highlight definition files?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>More than one highlight definition was found for this file. Which one should be used to highlight this file?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Remember My Choice</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2932"/>
-        <source>Zoom: %1%</source>
-        <translation>縮放：%1%</translation>
-    </message>
-    <message>
-        <location line="+1762"/>
-        <source>Delete UTF-8 BOM on Save</source>
-        <translation>在儲存時刪除UTF-8 BOM</translation>
+        <source>template</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
+        <translation>模板</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Add UTF-8 BOM on Save</source>
-        <translation>在儲存時新增UTF-8 BOM</translation>
+        <source>with if</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
+        <translation>與如果</translation>
     </message>
     <message>
-        <location line="-6393"/>
-        <source>The text is too large to be displayed (%1 MB).</source>
-        <translation>文字過大，無法顯示（%1 MB)。</translation>
+        <location line="+1"/>
+        <source>range-based</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
+        <translation>基於範圍的</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-437"/>
-        <location line="+79"/>
-        <location line="+268"/>
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+50"/>
-        <source>Error</source>
-        <translation>錯誤</translation>
+        <location line="+1"/>
+        <source>and else</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
+        <translation>還有其他</translation>
     </message>
     <message>
-        <location line="-322"/>
-        <source>Trigger</source>
-        <translation>觸發</translation>
+        <location line="+1"/>
+        <source>with closing brace comment</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
+        <translation>帶右大括號註釋</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Trigger Variant</source>
-        <translation>觸發變異</translation>
+        <location line="+1"/>
+        <source>and catch</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
+        <translation>並抓住</translation>
     </message>
     <message>
-        <location line="+53"/>
-        <source>Error reverting snippet.</source>
-        <translation>回復片段時發生錯誤。</translation>
+        <location line="+1"/>
+        <source>namespace</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
+        <translation>名稱空間</translation>
     </message>
     <message>
-        <location line="+132"/>
-        <source>Group:</source>
-        <translation type="unfinished">群組：</translation>
+        <location line="+1"/>
+        <source>template</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
+        <translation>模板</translation>
     </message>
     <message>
-        <location line="+223"/>
-        <source>Snippets</source>
-        <translation>片段</translation>
+        <location line="+1"/>
+        <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
+        <translation>（類型名稱 READ 名稱 WRITE setName NOTIFY nameChanged）</translation>
     </message>
     <message>
-        <location line="-160"/>
-        <source>Error While Saving Snippet Collection</source>
-        <translation>儲存片段收藏時發生錯誤</translation>
+        <location line="+3"/>
+        <source>with targets</source>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
+        <translation>有目標</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>No snippet selected.</source>
-        <translation>沒有選取片段。</translation>
+        <location line="+1"/>
+        <source>with target</source>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
+        <translation>有目標</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>with targets</source>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
+        <translation>有目標</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>with target</source>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
+        <translation>有目標</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>example</source>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
+        <translation>例子</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+48"/>
+        <source>Internal</source>
+        <translation>內部的</translation>
+    </message>
+    <message>
+        <location line="+261"/>
+        <source>Searching</source>
+        <translation>搜尋中</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n found.</source>
+        <translation>
+            <numerusform>%n 已找到。</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+30"/>
+        <source>%n occurrences replaced.</source>
+        <translation>
+            <numerusform>%n個相符項被取代。</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+158"/>
+        <source>Aborting replace.</source>
+        <translation>正在終止取代。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371"/>
@@ -13068,76 +13974,29 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>%1/%2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="+287"/>
-        <source>Cannot create user snippet directory %1</source>
-        <translation>無法建立使用者片段目錄 %1</translation>
+        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+51"/>
+        <source>Edit preview contents to see how the current settings are applied to custom code snippets. Changes in the preview do not affect the current settings.</source>
+        <translation>編輯預覽內容來查看目前的設定如何套用到自訂代碼片段。在預覽中的變更並不會影響目前的設定。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+120"/>
-        <source>Code style name:</source>
-        <translation>程式碼樣式名稱：</translation>
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+59"/>
+        <source>Unix (LF)</source>
+        <translation>Unix (LF)</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>%1 (Copy)</source>
-        <translation>%1 (複製)</translation>
-    </message>
-    <message>
-        <location line="-3"/>
-        <source>Copy Code Style</source>
-        <translation>複製程式碼樣式</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Delete Code Style</source>
-        <translation>刪除程式碼樣式</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Are you sure you want to delete this code style permanently?</source>
-        <translation>您確定要永久刪除這個程式碼樣式嗎？</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <location line="+9"/>
-        <source>Import Code Style</source>
-        <translation>匯入程式碼樣式</translation>
-    </message>
-    <message>
-        <location line="-8"/>
-        <location line="+19"/>
-        <source>Code styles (*.xml);;All files (*)</source>
-        <translation>程式碼樣式 (*.xml);;所有檔案(*)</translation>
-    </message>
-    <message>
-        <location line="-10"/>
-        <source>Cannot import code style from &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Export Code Style</source>
-        <translation>匯出程式碼樣式</translation>
-    </message>
-    <message>
-        <location line="+68"/>
-        <source>%1 [proxy: %2]</source>
-        <translation>%1 [代理：%2]</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 [built-in]</source>
-        <translation>%1 [內建]</translation>
+        <location line="+0"/>
+        <source>Windows (CRLF)</source>
+        <translation>窗口（回車換行）</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/findinfiles.cpp" line="+62"/>
         <source>Files in File System</source>
-        <translation type="unfinished">在檔案系統中的檔案</translation>
+        <translation>在檔案系統中的檔案</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Folder &quot;%2&quot;:</source>
-        <translation type="unfinished"></translation>
+        <translation>文件夾“%2”：</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -13146,12 +14005,15 @@ Filter: %2
 Excluding: %3
 %4</source>
         <extracomment>the last arg is filled by BaseFileFind::runNewSearch</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>路徑：%1
+過濾器：%2
+不包括：%3
+%4</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Search engine:</source>
-        <translation type="unfinished"></translation>
+        <translation>搜索引擎：</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -13162,599 +14024,6 @@ Excluding: %3
         <location line="+4"/>
         <source>Directory to Search</source>
         <translation>搜尋的目錄</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+51"/>
-        <source>Edit preview contents to see how the current settings are applied to custom code snippets. Changes in the preview do not affect the current settings.</source>
-        <translation>編輯預覽內容來查看目前的設定如何套用到自訂代碼片段。在預覽中的變更並不會影響目前的設定。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+170"/>
-        <source>Typing</source>
-        <translation>打字</translation>
-    </message>
-    <message>
-        <location line="-71"/>
-        <source>Enable automatic &amp;indentation</source>
-        <translation>啟用自動縮排(&amp;I)</translation>
-    </message>
-    <message>
-        <location line="+86"/>
-        <source>Backspace indentation:</source>
-        <translation>返回縮排：</translation>
-    </message>
-    <message>
-        <location line="-101"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-Specifies how backspace interacts with indentation.
-
-&lt;ul&gt;
-&lt;li&gt;None: No interaction at all. Regular plain backspace behavior.
-&lt;/li&gt;
-
-&lt;li&gt;Follows Previous Indents: In leading white space it will take the cursor back to the nearest indentation level used in previous lines.
-&lt;/li&gt;
-
-&lt;li&gt;Unindents: If the character behind the cursor is a space it behaves as a backtab.
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
-</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-指定退格鍵如何與縮排互動.
-
-&lt;ul&gt;
-&lt;li&gt;無: 沒有任何互動. 正常的退格鍵行為.
-&lt;/li&gt;
-
-&lt;li&gt;跟隨上次的縮排: 依據之前行的縮排來進行縮排.
-&lt;/li&gt;
-
-&lt;li&gt;沒有縮排: 如果鼠標之後的字元是空格他將表現為 backtab.
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
-    </message>
-    <message>
-        <location line="-3"/>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-290"/>
-        <source>None</source>
-        <translation>無</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Follows Previous Indents</source>
-        <translation>跟隨之前的縮排</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Unindents</source>
-        <translation>取消縮排</translation>
-    </message>
-    <message>
-        <location line="-7"/>
-        <source>Never</source>
-        <translation>從不</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+9"/>
-        <source>Always</source>
-        <translation>總是</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>In Leading White Space</source>
-        <translation>於行首空白</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Prefer single line comments</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Skip clean whitespace for file types:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>For the file patterns listed, do not trim trailing whitespace.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>List of wildcard-aware file patterns, separated by commas or semicolons.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Always writes a newline character at the end of the file.</source>
-        <translation>總是在檔案末尾加一個分行符號。</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Corrects leading whitespace according to tab settings.</source>
-        <translation>根據tab設定更正前置空格。</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Cleans whitespace in entire document instead of only for changed parts.</source>
-        <translation>清除整個文件中的空格，而不是僅變更的部分。</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;How text editors should deal with UTF-8 Byte Order Marks. The options are:&lt;/p&gt;
-&lt;ul &gt;&lt;li&gt;&lt;i&gt;Add If Encoding Is UTF-8:&lt;/i&gt; always add a BOM when saving a file in UTF-8 encoding. Note that this will not work if the encoding is &lt;i&gt;System&lt;/i&gt;, as the text editor does not know what it actually is.&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;Keep If Already Present: &lt;/i&gt;save the file with a BOM if it already had one when it was loaded.&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;Always Delete:&lt;/i&gt; never write an UTF-8 BOM, possibly deleting a pre-existing one.&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;Note that UTF-8 BOMs are uncommon and treated incorrectly by some editors, so it usually makes little sense to add any.&lt;/p&gt;
-&lt;p&gt;This setting does &lt;b&gt;not&lt;/b&gt; influence the use of UTF-16 and UTF-32 BOMs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Hide mouse cursor while typing</source>
-        <translation>輸入時隱藏滑鼠游標</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Enable smart selection changing</source>
-        <translation>啟用智慧選擇變更</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Using Select Block Up / Down actions will now provide smarter selections.</source>
-        <translation>使用選擇「區塊向上/向下」操作現在將提供更智慧的選擇。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Show help tooltips using keyboard shortcut (Alt)</source>
-        <translation>使用鍵盤快速鍵(Alt)顯示説明工具提示</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Pressing Alt displays context-sensitive help or type information as tooltips.</source>
-        <translation>按Alt鍵顯示即時線上說明或鍵入資訊作為工具提示。</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Cleanup actions which are automatically performed right before the file is saved to disk.</source>
-        <translation>在檔案儲存到磁碟之前自動執行的清理動作。</translation>
-    </message>
-    <message>
-        <location line="+33"/>
-        <source>Default line endings:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Show help tooltips using the mouse:</source>
-        <translation>使用滑鼠顯示説明工具提示：</translation>
-    </message>
-    <message>
-        <location line="+142"/>
-        <source>Displays context-sensitive help or type information on mouseover.</source>
-        <translation>在滑鼠懸停上顯示與內容相關的説明或類型資訊。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Displays context-sensitive help or type information on Shift+Mouseover.</source>
-        <translation>Shift+滑鼠懸停時顯示與內容相關的説明或類型資訊。</translation>
-    </message>
-    <message>
-        <location line="-190"/>
-        <source>Cleanups Upon Saving</source>
-        <translation>儲存時清理</translation>
-    </message>
-    <message>
-        <location line="-46"/>
-        <source>Removes trailing whitespace upon saving.</source>
-        <translation>儲存時去除尾部空白。</translation>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>&amp;Clean whitespace</source>
-        <translation>清除空白(&amp;C)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>In entire &amp;document</source>
-        <translation>於整份文件(&amp;D)</translation>
-    </message>
-    <message>
-        <location line="-4"/>
-        <source>Clean indentation</source>
-        <translation>清除縮排</translation>
-    </message>
-    <message>
-        <location line="-6"/>
-        <source>&amp;Ensure newline at end of file</source>
-        <translation>確保檔案結尾處有新行(&amp;E)</translation>
-    </message>
-    <message>
-        <location line="+53"/>
-        <source>File Encodings</source>
-        <translation>檔案編碼</translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>Default encoding:</source>
-        <translation>預設編碼：</translation>
-    </message>
-    <message>
-        <location line="-63"/>
-        <source>Add If Encoding Is UTF-8</source>
-        <translation>如果編碼是 UTF-8 則新增</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Keep If Already Present</source>
-        <translation>如果已存在則保持</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Always Delete</source>
-        <translation>總是刪除</translation>
-    </message>
-    <message>
-        <location line="+62"/>
-        <source>UTF-8 BOM:</source>
-        <translation>UTF-8 BOM：</translation>
-    </message>
-    <message>
-        <location line="-28"/>
-        <source>Mouse and Keyboard</source>
-        <translation>滑鼠和鍵盤</translation>
-    </message>
-    <message>
-        <location line="-21"/>
-        <source>Enable &amp;mouse navigation</source>
-        <translation>啟用滑鼠導覽(&amp;M)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Enable scroll &amp;wheel zooming</source>
-        <translation>啟用滑鼠滾輪縮放(&amp;W)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Enable built-in camel case &amp;navigation</source>
-        <translation>啟用內建的駝峰式大小寫導覽(&amp;N)</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>On Mouseover</source>
-        <translation>滑鼠置於上時</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>On Shift+Mouseover</source>
-        <translation>按住 Shift 並將滑鼠置於上時</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-235"/>
-        <source>Current settings:</source>
-        <translation>目前設定：</translation>
-    </message>
-    <message>
-        <location line="-12"/>
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-129"/>
-        <source>Remove</source>
-        <translation>移除</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Export...</source>
-        <translation>匯出...</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Import...</source>
-        <translation>匯入...</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="-270"/>
-        <source>Display line &amp;numbers</source>
-        <translation>顯示行號(&amp;N)</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Highlight current &amp;line</source>
-        <translation>突顯目前行(&amp;L)</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Display &amp;folding markers</source>
-        <translation>顯示摺疊標記(&amp;F)</translation>
-    </message>
-    <message>
-        <location line="-3"/>
-        <source>Highlight &amp;blocks</source>
-        <translation>突顯段落區塊(&amp;B)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Mark &amp;text changes</source>
-        <translation>標記文字改變(&amp;T)</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>&amp;Visualize whitespace</source>
-        <translation>標示空白(&amp;V)</translation>
-    </message>
-    <message>
-        <location line="-16"/>
-        <source>&amp;Animate matching parentheses</source>
-        <translation>動畫顯示對應的括號(&amp;A)</translation>
-    </message>
-    <message>
-        <location line="-38"/>
-        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Tint whole margin area</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Use context-specific margin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>If available, use a different margin. For example, the ColumnLimit from the ClangFormat plugin.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Highlight search results on the scrollbar</source>
-        <translation>在捲軸上醒目提示搜尋結果</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Animate navigation within file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Auto-fold first &amp;comment</source>
-        <translation>自動摺疊開頭的註解(&amp;C)</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Center &amp;cursor on scroll</source>
-        <translation>滾動時游標居中(&amp;C)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Visualize indent</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Display file line ending</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Display file encoding</source>
-        <translation>顯示檔案編碼</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Always open links in another split</source>
-        <translation>總是在新視窗中開啟連結</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Highlight matching parentheses</source>
-        <translation>醒目提示相符的括弧(&amp;H)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Shows tabs and spaces.</source>
-        <translation>顯示定位字元和空格。</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Next to editor content</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Next to right margin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Aligned at right side</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Between lines</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Line annotations</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Margin</source>
-        <translation type="unfinished">邊緣</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Wrapping</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-86"/>
-        <source>Enable text &amp;wrapping</source>
-        <translation>啟用文字折行(&amp;W)</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Display right &amp;margin at column:</source>
-        <translation>顯示在欄右邊的邊界(&amp;M)：</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+24"/>
-        <source>Syntax Highlight Definition Files</source>
-        <translation>語法突顯定義檔</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Ignored file patterns:</source>
-        <translation>被忽略的檔案樣式：</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-2"/>
-        <source>Add</source>
-        <translation>新增</translation>
-    </message>
-    <message>
-        <location line="-15"/>
-        <source>Revert Built-in</source>
-        <translation>回復到內建</translation>
-    </message>
-    <message>
-        <location line="-200"/>
-        <source>Not a valid trigger. A valid trigger can only contain letters, numbers, or underscores, where the first character is limited to letter or underscore.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+220"/>
-        <source>Restore Removed Built-ins</source>
-        <translation>回復被移除的內建</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Reset All</source>
-        <translation>全部重置</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+54"/>
-        <source>Tabs And Indentation</source>
-        <translation>定位點與縮排</translation>
-    </message>
-    <message>
-        <location line="+37"/>
-        <source>Serial Terminal Tab size:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Tab policy:</source>
-        <translation>定位點策略：</translation>
-    </message>
-    <message>
-        <location line="-41"/>
-        <source>Spaces Only</source>
-        <translation>只有空格</translation>
-    </message>
-    <message>
-        <location line="-10"/>
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;代碼縮排在&lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt;和&lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;設定中進行設定。&lt;/i&gt;</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>The text editor indentation setting is used for non-code files only. See the C++ and Qt Quick coding style settings to configure indentation for code files.</source>
-        <translation>文字編輯器縮排設定僅用於非代碼檔。請參閱C++和Qt Quick編碼樣式設定來設定代碼檔的縮排。</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Tabs Only</source>
-        <translation>只有定位點</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Mixed</source>
-        <translation>混合</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Ta&amp;b size:</source>
-        <translation>定位點大小(&amp;B)：</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>&amp;Indent size:</source>
-        <translation>縮排大小(&amp;I)：</translation>
-    </message>
-    <message>
-        <location line="-54"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-Influences the indentation of continuation lines.
-
-&lt;ul&gt;
-&lt;li&gt;Not At All: Do not align at all. Lines will only be indented to the current logical indentation depth.
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(tab)c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;With Spaces: Always use spaces for alignment, regardless of the other indentation settings.
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(tab)            c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;With Regular Indent: Use tabs and/or spaces for alignment, as configured above.
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(tab)(tab)(tab)  c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-改變連續行的縮排
-
-&lt;ul&gt;
-&lt;li&gt;不對齊: 不進行對齊。代碼行只根據目前邏輯縮排深度進行縮排。
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(tab)c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;伴隨空格: 允許使用空格進行對齊，忽略其他縮排設置。
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(tab)            c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;伴隨規則縮排: 在原組態上使用 tab 或 空格進行對齊。
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(tab)(tab)(tab)  c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <source>Not At All</source>
-        <translation>完全不要</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>With Spaces</source>
-        <translation>伴隨空格</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>With Regular Indent</source>
-        <translation>伴隨正規縮排</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="-49"/>
@@ -13774,388 +14043,152 @@ Influences the indentation of continuation lines.
 %1</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+3"/>
-        <source>derived from QObject</source>
-        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>derived from QWidget</source>
-        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>template</source>
-        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>with if</source>
-        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>range-based</source>
-        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>and else</source>
-        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>with closing brace comment</source>
-        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>and catch</source>
-        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>namespace</source>
-        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>template</source>
-        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
-        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>with targets</source>
-        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>with target</source>
-        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>with targets</source>
-        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>with target</source>
-        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>example</source>
-        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+48"/>
-        <source>Internal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+261"/>
-        <source>Searching</source>
-        <translation type="unfinished">搜尋中</translation>
-    </message>
-    <message numerus="yes">
-        <location line="+3"/>
-        <source>%n found.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location line="+30"/>
-        <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>%n個相符項被取代。</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location line="+158"/>
-        <source>Aborting replace.</source>
-        <translation>正在終止取代。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-10"/>
-        <source>Full</source>
-        <translation type="unfinished">全部</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>First Letter</source>
-        <translation type="unfinished">首字母</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Case-sensitivity:</source>
-        <translation type="unfinished">區分大小寫(&amp;C)：</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Manually</source>
-        <translation type="unfinished">手動</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>When Triggered</source>
-        <translation type="unfinished">觸發時</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Activate completion:</source>
-        <translation type="unfinished">啟動補完功能：</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Timeout in ms:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Character threshold:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Autocomplete common &amp;prefix</source>
-        <translation type="unfinished">自動補完的共用前置字串(&amp;P)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Inserts the common prefix of available completion items.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Automatically split strings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Splits a string into two lines by adding an end quote at the cursor position when you press Enter and a start quote to the next line, before the rest of the string.
-
-In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Insert opening or closing brackets</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Insert closing quote</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Surround text selection with brackets</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>When typing a matching bracket and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Insert &amp;space after function name</source>
-        <translation type="unfinished">在函式名稱後插入空格(&amp;S)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Surround text selection with quotes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>When typing a matching quote and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Animate automatically inserted text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Show a visual hint when for example a brace or a quote is automatically inserted by the editor.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Highlight automatically inserted text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Skip automatically inserted character when typing</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Skip automatically inserted character if re-typed manually after completion or by pressing tab.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Remove automatically inserted text on backspace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Remove the automatically inserted character if the trigger is deleted by backspace after the completion.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Overwrite closing punctuation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Automatically overwrite closing parentheses and quotes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Enable Doxygen blocks</source>
-        <translation type="unfinished">啟用 Doxygen 區塊</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Generate brief description</source>
-        <translation type="unfinished">產生簡易描述</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Generates a &lt;i&gt;brief&lt;/i&gt; command with an initial description for the corresponding declaration.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Add leading asterisks</source>
-        <translation type="unfinished">新增開頭的星號</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+78"/>
-        <source>&amp;Automatically insert matching characters</source>
-        <translation type="unfinished">自動插入對應的字元(&amp;A)</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Documentation Comments</source>
-        <translation type="unfinished">文件註解</translation>
-    </message>
-    <message>
-        <location line="+101"/>
-        <source>Completion</source>
-        <translation type="unfinished">補完</translation>
-    </message>
-    <message>
-        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+59"/>
-        <source>Unix (LF)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Windows (CRLF)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+164"/>
         <source>Unused variable</source>
-        <translation type="unfinished">未使用的變數</translation>
+        <translation>未使用的變數</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+59"/>
         <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>無法創建臨時文件“%1”：%2。</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>TextEditor</source>
         <comment>Failed to format: %1.</comment>
-        <translation type="unfinished"></translation>
+        <translation>文本編輯器</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Cannot read file &quot;%1&quot;: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>無法讀取文件“%1”：%2。</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>無法調用 %1 或發生一些其他錯誤。格式化文件 %2 時超時。</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>TextEditor</source>
         <comment>Error in text formatting: %1</comment>
-        <translation type="unfinished"></translation>
+        <translation>文本編輯器</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Could not format file %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>無法格式化文件 %1。</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>File %1 was closed.</source>
-        <translation type="unfinished"></translation>
+        <translation>文件 %1 已關閉。</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>File was modified.</source>
-        <translation type="unfinished"></translation>
+        <translation>文件已修改。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlighter.cpp" line="+247"/>
         <source>Highlighter updates: done</source>
-        <translation type="unfinished"></translation>
+        <translation>熒光筆更新：完成</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Highlighter updates:</source>
-        <translation type="unfinished"></translation>
+        <translation>熒光筆更新：</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Highlighter updates: starting</source>
-        <translation type="unfinished"></translation>
+        <translation>熒光筆更新：開始</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-113"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出顯示定義由 &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/ a&gt; 引擎。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3203"/>
+        <source>Download Definitions</source>
+        <translation>下載定義</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Download missing and update existing syntax definition files.</source>
+        <translation>下載缺失的語法定義文件並更新現有的語法定義文件。</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Reload Definitions</source>
+        <translation>重新加載定義</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reload externally modified definition files.</source>
+        <translation>重新加載外部修改的定義文件。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Reset Remembered Definitions</source>
+        <translation>重置記住的定義</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reset definitions remembered for files that can be associated with more than one highlighter definition.</source>
+        <translation>重置為可與多個熒光筆定義關聯的文件記住的定義。</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Syntax Highlight Definition Files</source>
+        <translation>語法突顯定義檔</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>User Highlight Definition Files</source>
+        <translation>用戶突出顯示定義文件</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Ignored file patterns:</source>
+        <translation>被忽略的檔案樣式：</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Download finished</source>
+        <translation>下載完成</translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <source>Generic Highlighter</source>
+        <translation>一般突顯器</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+48"/>
+        <source>No outline available</source>
+        <translation>沒有可用大綱</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Synchronize with Editor</source>
+        <translation>與編輯器同步</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Filter tree</source>
+        <translation>篩選樹狀圖</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Sort Alphabetically</source>
+        <translation>按字母排序</translation>
+    </message>
+    <message>
+        <location line="+125"/>
+        <source>Outline</source>
+        <translation>大綱</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+300"/>
@@ -14165,42 +14198,47 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+226"/>
         <source>Expected delimiter after mangler ID.</source>
-        <translation type="unfinished"></translation>
+        <translation>mangler ID 之後的預期分隔符。</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
-        <translation type="unfinished"></translation>
+        <translation>冒號後面應有“l”（小寫）、“u”（大寫）或“c”（標題大寫）。</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Missing closing variable delimiter for:</source>
-        <translation type="unfinished"></translation>
+        <translation>缺少結束變量分隔符：</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="+287"/>
+        <source>Cannot create user snippet directory %1</source>
+        <translation>無法建立使用者片段目錄 %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+376"/>
         <source>Diff Against Current File</source>
-        <translation type="unfinished"></translation>
+        <translation>與當前文件的差異</translation>
     </message>
     <message>
         <location line="+406"/>
         <source>Opening File</source>
-        <translation type="unfinished">開啟檔案</translation>
+        <translation>開啟檔案</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+286"/>
         <source>Show inline annotations for %1</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示 %1 的內聯註釋</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Temporarily hide inline annotations for %1</source>
-        <translation type="unfinished"></translation>
+        <translation>暫時隱藏 %1 的內聯註釋</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Show Diagnostic Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示診斷設置</translation>
     </message>
 </context>
 <context>
@@ -14226,12 +14264,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>無法設定通訊頻道：%1</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>Press &lt;RETURN&gt; to close this window...</source>
-        <translation>按 &lt;RETURN&gt; 鍵來關閉此視窗...</translation>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+11"/>
         <source>Cannot create temporary file: %1</source>
         <translation>無法建立暫存檔：%1</translation>
     </message>
@@ -14246,22 +14279,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>從協助程式得到未預期的輸出 (%1)。</translation>
     </message>
     <message>
-        <location line="+519"/>
-        <source>Cannot obtain a handle to the inferior: %1</source>
-        <translation>無法取得底層的處理：%1</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Cannot obtain exit status from inferior: %1</source>
-        <translation>無法從底層取得離開狀態：%1</translation>
-    </message>
-    <message>
-        <location line="-299"/>
-        <source>Quoting error in command.</source>
-        <translation>命令列發生引號錯誤。</translation>
-    </message>
-    <message>
-        <location line="-225"/>
+        <location line="+6"/>
         <source>Cannot change to working directory &quot;%1&quot;: %2</source>
         <translation>無法變更為工作目錄&quot;%1&quot;：%2</translation>
     </message>
@@ -14276,7 +14294,12 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>處理序&quot;%1&quot;無法啟動：%2</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+25"/>
+        <source>Quoting error in command.</source>
+        <translation>命令列發生引號錯誤。</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Debugging complex shell commands in a terminal is currently not supported.</source>
         <translation>目前不支援在終端機中對複雜的 shell 命令除錯。</translation>
     </message>
@@ -14293,7 +14316,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     <message>
         <location line="+55"/>
         <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>無法啟動終端仿真器“%1”，請更改環境首選項中的設置。 (%2)</translation>
     </message>
     <message>
         <location line="+131"/>
@@ -14301,41 +14324,19 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>無法建立通訊端&quot;%1&quot;：%2</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+92"/>
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+211"/>
-        <location line="+86"/>
-        <source>Name is empty.</source>
-        <translation>名稱是空的。</translation>
+        <location line="-466"/>
+        <source>Press &lt;RETURN&gt; to close this window...</source>
+        <translation>按 &lt;RETURN&gt; 鍵來關閉此視窗...</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>Name contains white space.</source>
-        <translation>名稱包含空白。</translation>
+        <location line="+541"/>
+        <source>Cannot obtain a handle to the inferior: %1</source>
+        <translation>無法取得底層的處理：%1</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Invalid character &quot;%1&quot;.</source>
-        <translation>無效的字元&quot;%1&quot;。</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Invalid characters &quot;%1&quot;.</source>
-        <translation>無效的字元&quot;%1&quot;。</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Name matches MS Windows device (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+35"/>
-        <source>File extension %1 is required:</source>
-        <translation>需要副檔名 %1：</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>File extensions %1 are required:</source>
-        <translation>需要副檔名 %1：</translation>
+        <location line="+11"/>
+        <source>Cannot obtain exit status from inferior: %1</source>
+        <translation>無法從底層取得離開狀態：%1</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/libs/utils/filesearch.cpp" line="+26"/>
@@ -14354,27 +14355,54 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     <message>
         <location line="+501"/>
         <source>Fi&amp;le pattern:</source>
-        <translation type="unfinished">檔案樣式(&amp;L)：</translation>
+        <translation>檔案樣式(&amp;L)：</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Excl&amp;usion pattern:</source>
-        <translation type="unfinished"></translation>
+        <translation>排除模式(&amp;U)：</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>List of comma separated wildcard filters. Files with file name or full file path matching any filter are included.</source>
-        <translation type="unfinished"></translation>
+        <translation>逗號分隔的通配符過濾器列表。包含與任何過濾器匹配的文件名或完整文件路徑的文件。</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+269"/>
+        <location filename="../../../src/libs/utils/filewizardpage.cpp" line="+47"/>
+        <source>Choose the Location</source>
+        <translation>選擇位置</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>File name:</source>
+        <translation>文件名：</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+653"/>
+        <source>Path:</source>
+        <translation>路徑：</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+138"/>
+        <source>Location</source>
+        <translation>位置</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
+        <translation>如果未顯式指定文件擴展名，則默認後綴為“.%1”。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-384"/>
         <source>Local</source>
-        <translation type="unfinished">本地</translation>
+        <translation>本地</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Remote</source>
-        <translation type="unfinished">遠端</translation>
+        <translation>遠端</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -14404,12 +14432,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>選擇檔案</translation>
     </message>
     <message>
-        <location line="+101"/>
-        <source>The path must not be empty.</source>
-        <translation>路徑不能空白。</translation>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+109"/>
         <source>The path &quot;%1&quot; expanded to an empty string.</source>
         <translation>路徑&quot;%1&quot;展開為空字串。</translation>
     </message>
@@ -14430,7 +14453,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <location line="-31"/>
         <location line="+12"/>
         <source>The path &quot;%1&quot; is not a file.</source>
-        <translation type="unfinished"></translation>
+        <translation>路徑“%1”不是文件。</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -14440,12 +14463,12 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     <message>
         <location line="+17"/>
         <source>The path &quot;%1&quot; is not an executable file.</source>
-        <translation type="unfinished"></translation>
+        <translation>路徑“%1”不是可執行文件。</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Invalid path &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>路徑“%1”無效。</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -14455,23 +14478,12 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     <message>
         <location line="+10"/>
         <source>Full path: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>完整路徑：“%1”</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filewizardpage.cpp" line="+58"/>
-        <source>File name:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+11"/>
-        <source>Path:</source>
-        <translation>路徑：</translation>
-    </message>
-    <message>
-        <location line="+89"/>
-        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <location line="-88"/>
+        <source>The path must not be empty.</source>
+        <translation>路徑不能空白。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+101"/>
@@ -14489,7 +14501,27 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>清除</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-65"/>
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-68"/>
+        <source>Introduction and Project Location</source>
+        <translation>介紹與專案位置</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Use as default project location</source>
+        <translation>做為預設的專案位置</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Enter project name</source>
+        <translation>輸入項目名稱</translation>
+    </message>
+    <message>
+        <location line="+125"/>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation>將創建目錄“%1”。</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>The project already exists.</source>
         <translation>專案已存在。</translation>
     </message>
@@ -14499,29 +14531,9 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>相同名稱的檔案已存在。</translation>
     </message>
     <message>
-        <location line="-125"/>
-        <source>Name:</source>
-        <translation>名稱：</translation>
-    </message>
-    <message>
-        <location line="-13"/>
-        <source>Enter project name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Create in:</source>
-        <translation>建立於：</translation>
-    </message>
-    <message>
-        <location line="+109"/>
-        <source>Directory &quot;%1&quot; will be created.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+86"/>
+        <location line="+73"/>
         <source>Project name is invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>項目名稱無效。</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -14534,19 +14546,14 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>發現無效字元&quot;%1&quot;。</translation>
     </message>
     <message>
-        <location line="-243"/>
-        <source>Use as default project location</source>
-        <translation>做為預設的專案位置</translation>
+        <location line="-217"/>
+        <source>Name:</source>
+        <translation>名稱：</translation>
     </message>
     <message>
-        <location line="-15"/>
-        <source>Introduction and Project Location</source>
-        <translation>介紹與專案位置</translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/filewizardpage.cpp" line="-101"/>
-        <source>Choose the Location</source>
-        <translation>選擇位置</translation>
+        <location line="+3"/>
+        <source>Create in:</source>
+        <translation>建立於：</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+23"/>
@@ -14554,71 +14561,25 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>檔案已變更</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+60"/>
-        <source>Do not ask again</source>
-        <translation>不要再次詢問</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Show Details...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Hide Details...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+403"/>
-        <source>Do not &amp;ask again</source>
-        <translation>不再詢問(&amp;A)</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Do not &amp;show again</source>
-        <translation>不再顯示(&amp;S)</translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/detailsbutton.cpp" line="+73"/>
-        <source>Details</source>
-        <translation>詳情</translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/filewizardpage.cpp" line="+32"/>
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+68"/>
-        <source>Location</source>
-        <translation>位置</translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+422"/>
-        <source>Filter</source>
-        <translation>篩選器</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Clear text</source>
-        <translation>清除文字</translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+4"/>
+        <location line="+4"/>
         <source>The unsaved file &lt;i&gt;%1&lt;/i&gt; has been changed on disk. Do you want to reload it and discard your changes?</source>
-        <translation type="unfinished"></translation>
+        <translation>磁盤上未保存的文件 &lt;i&gt;%1&lt;/i&gt; 已被更改。您想重新加載它並放棄您的更改嗎？</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The file &lt;i&gt;%1&lt;/i&gt; has been changed on disk. Do you want to reload it?</source>
-        <translation type="unfinished"></translation>
+        <translation>磁盤上的文件 &lt;i&gt;%1&lt;/i&gt; 已更改。您想重新加載嗎？</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>The default behavior can be set in %1 &gt; Preferences &gt; Environment &gt; System.</source>
         <comment>macOS</comment>
-        <translation type="unfinished"></translation>
+        <translation>可以在 %1 &gt; 首選項 &gt; 環境 &gt; 系統中設置默認行為。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>The default behavior can be set in Edit &gt; Preferences &gt; Environment &gt; System.</source>
-        <translation type="unfinished"></translation>
+        <translation>可以在“編輯”&gt;“首選項”&gt;“環境”&gt;“系統”中設置默認行為。</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -14629,17 +14590,17 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     <message>
         <location line="-31"/>
         <source>No to All &amp;&amp; &amp;Diff</source>
-        <translation type="unfinished"></translation>
+        <translation>全部否定 &amp;&amp; &amp;Diff</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>File Has Been Removed</source>
-        <translation type="unfinished"></translation>
+        <translation>文件已被刪除</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file %1 has been removed from disk. Do you want to save it under a different name, or close the editor?</source>
-        <translation type="unfinished"></translation>
+        <translation>文件 %1 已從磁盤中刪除。您想用不同的名稱保存它，還是關閉編輯器？</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -14657,151 +14618,188 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>儲存(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unixutils.cpp" line="+36"/>
-        <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;變數&lt;/th&gt;&lt;th&gt;展開為&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;目前檔案所在目錄&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;檔名 (包含完整路徑)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;檔名 (不含路徑)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <location filename="../../../src/libs/advanceddockingsystem/dockmanager.cpp" line="+579"/>
+        <location line="+108"/>
+        <source>Cannot Save Workspace</source>
+        <translation>無法保存工作空間</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/wizard.cpp" line="+119"/>
-        <source>...</source>
-        <translation>...</translation>
+        <location line="-107"/>
+        <location line="+108"/>
+        <source>Could not save workspace to file %1</source>
+        <translation>無法將工作區保存到文件 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+180"/>
-        <source>Central Widget</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Reset to Default Layout</source>
-        <translation>重置為預設佈局</translation>
+        <location line="+67"/>
+        <source>Delete Workspace</source>
+        <translation>刪除工作區</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Automatically Hide View Title Bars</source>
-        <translation>自動隱藏視圖標題列</translation>
+        <source>Delete Workspaces</source>
+        <translation>刪除工作區</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+278"/>
-        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+970"/>
-        <source>Process Not Responding</source>
-        <translation type="unfinished"></translation>
+        <location line="+2"/>
+        <source>Delete workspace %1?</source>
+        <translation>刪除工作區 %1？</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The process is not responding.</source>
-        <translation>行程無回應。</translation>
+        <source>Delete these workspaces?
+    %1</source>
+        <translation>刪除這些工作區？
+    %1</translation>
+    </message>
+    <message>
+        <location line="+196"/>
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="+87"/>
+        <location line="+33"/>
+        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+418"/>
+        <source>File Error</source>
+        <translation>檔案錯誤</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Cannot Restore Workspace</source>
+        <translation>無法恢復工作區</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The process &quot;%1&quot; is not responding.</source>
-        <translation>處理序&quot;%1&quot;沒有回應。</translation>
+        <source>Could not restore workspace %1</source>
+        <translation>無法恢復工作區 %1</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Terminate the process?</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/archive.cpp" line="+124"/>
+        <source>File format not supported.</source>
+        <translation>不支持的文件格式。</translation>
     </message>
     <message>
-        <location line="+271"/>
-        <source>The command &quot;%1&quot; finished successfully.</source>
-        <translation>命令&quot;%1&quot;已成功完成。</translation>
+        <location line="+8"/>
+        <source>Could not find any unarchiving executable in PATH (%1).</source>
+        <translation>在 PATH (%1) 中找不到任何解檔可執行文件。</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Command failed.</source>
+        <translation>命令失敗。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Running %1
+in &quot;%2&quot;.
+
+</source>
+        <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
+        <translation>正在運行%1
+在“%2”中。
+
+</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/aspects.cpp" line="+1142"/>
+        <source>Reset</source>
+        <translation>重置</translation>
+    </message>
+    <message>
+        <location line="+876"/>
+        <source>Enable</source>
+        <translation>使能夠</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Disable</source>
+        <translation>停用</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Leave at Default</source>
+        <translation>保留默認值</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/basetreeview.cpp" line="+544"/>
+        <source>Show %1 Column</source>
+        <translation>顯示 %1 列</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+60"/>
+        <source>Do not ask again</source>
+        <translation>不要再次詢問</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
-        <translation>命令&quot;%1&quot;以退出代碼%2結束。</translation>
+        <source>Show Details...</source>
+        <translation>顯示詳細資料...</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>The command &quot;%1&quot; terminated abnormally.</source>
-        <translation>命令&quot;%1&quot;異常終止。</translation>
+        <location line="+9"/>
+        <source>Hide Details...</source>
+        <translation>隱藏細節...</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>The command &quot;%1&quot; could not be started.</source>
-        <translation>命令&quot;%1&quot;無法啟動。</translation>
+        <location line="+403"/>
+        <source>Do not &amp;ask again</source>
+        <translation>不再詢問(&amp;A)</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
-        <translation>命令&quot;%1&quot;在逾時限制(%2秒)內沒有回應。</translation>
+        <location line="+9"/>
+        <source>Do not &amp;show again</source>
+        <translation>不再顯示(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/namevaluemodel.cpp" line="+34"/>
-        <source>&lt;UNSET&gt;</source>
-        <translation>&lt;未設定&gt;</translation>
+        <location filename="../../../src/libs/utils/clangutils.cpp" line="+53"/>
+        <source>Failed to retrieve clangd version: Unexpected clangd output.</source>
+        <translation>無法檢索 clangd 版本：意外的 clangd 輸出。</translation>
     </message>
     <message>
-        <location line="+155"/>
-        <source>Variable</source>
-        <translation>變數</translation>
+        <location line="+1"/>
+        <source>The clangd version is %1, but %2 or greater is required.</source>
+        <translation>clangd 版本是 %1，但需要 %2 或更高版本。</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <source>Value</source>
-        <translation>值</translation>
-    </message>
-    <message>
-        <location line="+79"/>
-        <source>&lt;VARIABLE&gt;</source>
-        <extracomment>Name when inserting a new variable</extracomment>
-        <translation>&lt;變數&gt;</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&lt;VALUE&gt;</source>
-        <extracomment>Value when inserting a new variable</extracomment>
-        <translation>&lt;值&gt;</translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="-1284"/>
-        <source>Error in command line.</source>
-        <translation>命令列發生錯誤。</translation>
+        <location filename="../../../src/libs/utils/detailsbutton.cpp" line="+73"/>
+        <source>Details</source>
+        <translation>詳情</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+156"/>
         <source>copyFile is not implemented for &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>未為“%1”實現 copyFile</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cannot copy from %1, it is not a directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>無法從 %1 複製，它不是目錄。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cannot copy %1 to %2, it is not a writable directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>無法將 %1 複製到 %2，它不是可寫目錄。</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>嘗試從源創建 tar 存檔時，無法從“%1”遞歸複製到“%2”：%3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>嘗試將 tar 存檔提取到目標時，無法從“%1”遞歸複製到“%2”：%3</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>fileContents is not implemented for &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>未針對“%1”實現 fileContents</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>writeFileContents is not implemented for &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>未針對“%1”實現 writeFileContents</translation>
     </message>
     <message>
         <location line="+88"/>
         <source>createTempFile is not implemented for &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>未為“%1”實現 createTempFile</translation>
     </message>
     <message>
         <location line="+148"/>
@@ -14826,213 +14824,80 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     <message>
         <location line="+12"/>
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>無法將文件“%1”複製到“%2”。</translation>
     </message>
     <message>
         <location line="+73"/>
         <source>File &quot;%1&quot; does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>文件“%1”不存在</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Could not open File &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>無法打開文件“%1”</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Cannot read &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>無法讀取“%1”：%2</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Could not open file &quot;%1&quot; for writing</source>
-        <translation type="unfinished"></translation>
+        <translation>無法打開文件“%1”進行寫入</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
-        <translation type="unfinished"></translation>
+        <translation>無法寫入文件“%1”（僅寫入了 %2 個字節，共 %3 個字節）</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>無法在“%1”(%2) 中創建臨時文件</translation>
     </message>
     <message>
         <location line="+222"/>
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>無法將文件“%1”複製到“%2”：%3</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Failed reading file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>讀取文件“%1”失敗：%2</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Failed writing file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>寫入文件“%1”失敗：%2</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Failed creating temporary file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>創建臨時文件“%1”失敗：%2</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
-        <translation type="unfinished"></translation>
+        <translation>創建臨時文件“%1”失敗（嘗試次數過多）</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/dockmanager.cpp" line="+579"/>
-        <location line="+108"/>
-        <source>Cannot Save Workspace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-107"/>
-        <location line="+108"/>
-        <source>Could not save workspace to file %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+67"/>
-        <source>Delete Workspace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Delete Workspaces</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../../src/libs/utils/differ.cpp" line="+924"/>
+        <source>Delete</source>
+        <translation>刪除</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Delete workspace %1?</source>
-        <translation type="unfinished"></translation>
+        <source>Insert</source>
+        <translation>插入</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Delete these workspaces?
-    %1</source>
-        <translation type="unfinished"></translation>
+        <source>Equal</source>
+        <translation>平等的</translation>
     </message>
     <message>
-        <location line="+196"/>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+87"/>
-        <location line="+33"/>
-        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+418"/>
-        <source>File Error</source>
-        <translation>檔案錯誤</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Cannot Restore Workspace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Could not restore workspace %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+23"/>
-        <source>Cannot write file %1: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Cannot write file %1. Disk full?</source>
-        <translation>無法寫入檔案 %1。磁碟空間是否已滿？</translation>
-    </message>
-    <message>
-        <location line="+38"/>
-        <source>%1: Is a reserved filename on Windows. Cannot save.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>Cannot overwrite file %1: %2</source>
-        <translation>無法覆寫檔案 %1：%2</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Cannot create file %1: %2</source>
-        <translation>無法建立檔案 %1：%2</translation>
-    </message>
-    <message>
-        <location line="+40"/>
-        <source>Cannot create temporary file in %1: %2</source>
-        <translation>無法於 %1 建立暫存檔：%2</translation>
-    </message>
-    <message>
-        <location line="+39"/>
-        <source>Overwrite File?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Overwrite existing file &quot;%1&quot;?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
-        <translation>無法將檔案&quot;%1&quot;複製到&quot;%2&quot;。</translation>
-    </message>
-    <message>
-        <location line="+379"/>
-        <source>Failed to create directory &quot;%1&quot;.</source>
-        <translation>無法建立目錄&quot;%1&quot;。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+194"/>
-        <location line="+66"/>
-        <source>Out of memory.</source>
-        <translation>記憶體不足。</translation>
-    </message>
-    <message>
-        <location line="-55"/>
-        <source>An encoding error was encountered.</source>
-        <translation>發生了一個編碼錯誤。</translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+32"/>
-        <source>Add</source>
-        <translation>新增</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+83"/>
-        <source>Remove</source>
-        <translation>移除</translation>
-    </message>
-    <message>
-        <location line="-82"/>
-        <source>Rename</source>
-        <translation>重新命名</translation>
-    </message>
-    <message>
-        <location line="+83"/>
-        <source>Do you really want to delete the configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>您確定要刪除此組態 &lt;b&gt;%1&lt;/b&gt; 嗎？</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>New name for configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>組態 &lt;b&gt;%1&lt;/b&gt; 的新名稱：</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Rename...</source>
-        <translation>重新命名...</translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/elfreader.cpp" line="+161"/>
-        <source>odd cpu architecture</source>
-        <translation>奇數CPU架構</translation>
-    </message>
-    <message>
-        <location line="-31"/>
+        <location filename="../../../src/libs/utils/elfreader.cpp" line="+130"/>
         <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
         <translation>&quot;%1&quot;是一個無效的ELF物件(%2)</translation>
     </message>
@@ -15047,7 +14912,12 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>&quot;%1&quot;不是ELF物件</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+8"/>
+        <source>odd cpu architecture</source>
+        <translation>奇數CPU架構</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>odd endianness</source>
         <translation>奇數字節順序</translation>
     </message>
@@ -15079,83 +14949,9 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>檔案結尾後%2的節名稱%1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/archive.cpp" line="+124"/>
-        <source>File format not supported.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Could not find any unarchiving executable in PATH (%1).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+39"/>
-        <source>Command failed.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Running %1
-in &quot;%2&quot;.
-
-</source>
-        <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+1142"/>
-        <source>Reset</source>
-        <translation type="unfinished">重置</translation>
-    </message>
-    <message>
-        <location line="+876"/>
-        <source>Enable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Disable</source>
-        <translation type="unfinished">停用</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Leave at Default</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/basetreeview.cpp" line="+544"/>
-        <source>Show %1 Column</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/clangutils.cpp" line="+53"/>
-        <source>Failed to retrieve clangd version: Unexpected clangd output.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>The clangd version is %1, but %2 or greater is required.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../src/libs/utils/differ.cpp" line="+924"/>
-        <source>Delete</source>
-        <translation type="unfinished">刪除</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Insert</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Equal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+19"/>
         <source>Edit Environment</source>
-        <translation type="unfinished">編輯環境變數</translation>
+        <translation>編輯環境變數</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15166,76 +14962,194 @@ To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
 To disable a variable, prefix the line with &quot;#&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>每行輸入一個環境變量。
+要設置或更改變量，請使用 VARIABLE=VALUE。
+要附加到變量，請使用 VARIABLE+=VALUE。
+要添加到變量前面，請使用 VARIABLE=+VALUE。
+可以使用 ${OTHER} 在 VALUE 中引用現有變量。
+要清除變量，請將其名稱放在一行上，不要再有任何其他內容。
+要禁用變量，請在該行前添加“#”前綴。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+422"/>
+        <source>Filter</source>
+        <translation>篩選器</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Clear text</source>
+        <translation>清除文字</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+180"/>
+        <source>Central Widget</source>
+        <translation>中央小工具</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Reset to Default Layout</source>
+        <translation>重置為預設佈局</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Automatically Hide View Title Bars</source>
+        <translation>自動隱藏視圖標題列</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+92"/>
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+97"/>
+        <location line="+86"/>
+        <source>Name is empty.</source>
+        <translation>名稱是空的。</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Name contains white space.</source>
+        <translation>名稱包含空白。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>無效的字元&quot;%1&quot;。</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>無效的字元&quot;%1&quot;。</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Name matches MS Windows device (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</source>
+        <translation>名稱與 MS Windows 設備匹配（CON、AUX、PRN、NUL、COM1、COM2、...、COM9、LPT1、LPT2、...、LPT9）</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>File extension %1 is required:</source>
+        <translation>需要副檔名 %1：</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>File extensions %1 are required:</source>
+        <translation>需要副檔名 %1：</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filepath.cpp" line="+865"/>
         <source>%1 on %2</source>
         <comment>File on device</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 於 %2</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>%1 %2 on %3</source>
         <comment>File and args on device</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2 在 %3</translation>
     </message>
     <message>
         <location line="+580"/>
         <source>Error while trying to copy file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>嘗試複製文件時出錯：%1</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Could not copy file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>無法複製文件：%1</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Could not set permissions on &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>無法設置“%1”的權限</translation>
     </message>
     <message>
         <location line="+272"/>
         <source>No &quot;localSource&quot; device hook set.</source>
-        <translation type="unfinished"></translation>
+        <translation>沒有設置“localSource”設備掛鉤。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+750"/>
         <source>My Computer</source>
-        <translation type="unfinished"></translation>
+        <translation>我的電腦</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Computer</source>
-        <translation type="unfinished"></translation>
+        <translation>電腦</translation>
     </message>
     <message>
         <location line="+758"/>
         <source>Name</source>
-        <translation type="unfinished">名稱</translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size</source>
-        <translation type="unfinished">大小</translation>
+        <translation>大小</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Kind</source>
         <comment>Match OS X Finder</comment>
-        <translation type="unfinished">種類</translation>
+        <translation>種類</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Type</source>
         <comment>All other platforms</comment>
-        <translation type="unfinished">型態</translation>
+        <translation>型態</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Date Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>修改日期</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="+23"/>
+        <source>Cannot write file %1: %2</source>
+        <translation>無法寫入文件 %1: %2</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot write file %1. Disk full?</source>
+        <translation>無法寫入檔案 %1。磁碟空間是否已滿？</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>%1: Is a reserved filename on Windows. Cannot save.</source>
+        <translation>%1：是 Windows 上的保留文件名。無法保存。</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Cannot overwrite file %1: %2</source>
+        <translation>無法覆寫檔案 %1：%2</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Cannot create file %1: %2</source>
+        <translation>無法建立檔案 %1：%2</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>Cannot create temporary file in %1: %2</source>
+        <translation>無法於 %1 建立暫存檔：%2</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Overwrite File?</source>
+        <translation>覆蓋文件？</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
+        <translation>覆蓋現有文件“%1”嗎？</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>無法將檔案&quot;%1&quot;複製到&quot;%2&quot;。</translation>
+    </message>
+    <message>
+        <location line="+379"/>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>無法建立目錄&quot;%1&quot;。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+91"/>
@@ -15245,7 +15159,7 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
     <message>
         <location filename="../../../src/libs/utils/infobar.cpp" line="+303"/>
         <source>&amp;Show Details</source>
-        <translation type="unfinished"></translation>
+        <translation>＆顯示詳細資料</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -15255,90 +15169,90 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
     <message>
         <location line="+23"/>
         <source>Close</source>
-        <translation type="unfinished">關閉</translation>
+        <translation>關閉</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/jsontreeitem.cpp" line="+22"/>
         <source>Null</source>
-        <translation type="unfinished"></translation>
+        <translation>無效的</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Bool</source>
-        <translation type="unfinished"></translation>
+        <translation>布爾</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Double</source>
-        <translation type="unfinished"></translation>
+        <translation>雙倍的</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>String</source>
-        <translation type="unfinished">字串</translation>
+        <translation>字串</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Array</source>
-        <translation type="unfinished"></translation>
+        <translation>大批</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Object</source>
-        <translation type="unfinished">物件</translation>
+        <translation>物件</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Undefined</source>
-        <translation type="unfinished">未定義</translation>
+        <translation>未定義</translation>
     </message>
     <message numerus="yes">
         <location line="+14"/>
         <location line="+2"/>
         <source>%n Items</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n 項</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+126"/>
         <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>無法在“%1”處啟動進程啟動器：%2</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Process launcher closed unexpectedly: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>進程啟動器意外關閉：%1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launchersocket.cpp" line="+222"/>
         <source>Process launcher socket error.</source>
-        <translation type="unfinished"></translation>
+        <translation>進程啟動器套接字錯誤。</translation>
     </message>
     <message>
         <location line="+236"/>
         <source>Internal socket error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>內部套接字錯誤：%1</translation>
     </message>
     <message>
         <location line="+135"/>
         <source>Socket error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>套接字錯誤：%1</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Internal protocol error: invalid packet size %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>內部協議錯誤：數據包大小 %1 無效。</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Internal protocol error: invalid packet type %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>內部協議錯誤：數據包類型 %1 無效。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Launcher socket closed unexpectedly.</source>
-        <translation type="unfinished"></translation>
+        <translation>啟動器插座意外關閉。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/macroexpander.cpp" line="+269"/>
@@ -15388,119 +15302,248 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
     <message>
         <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+111"/>
         <source>Minimize</source>
-        <translation type="unfinished">最小化</translation>
+        <translation>最小化</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/namevaluemodel.cpp" line="+34"/>
+        <source>&lt;UNSET&gt;</source>
+        <translation>&lt;未設定&gt;</translation>
+    </message>
+    <message>
+        <location line="+155"/>
+        <source>Variable</source>
+        <translation>變數</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Value</source>
+        <translation>值</translation>
+    </message>
+    <message>
+        <location line="+79"/>
+        <source>&lt;VARIABLE&gt;</source>
+        <extracomment>Name when inserting a new variable</extracomment>
+        <translation>&lt;變數&gt;</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&lt;VALUE&gt;</source>
+        <extracomment>Value when inserting a new variable</extracomment>
+        <translation>&lt;值&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+78"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>＆好的</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">取消(&amp;C)</translation>
+        <translation>取消(&amp;C)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+249"/>
+        <source>Error in command line.</source>
+        <translation>命令列發生錯誤。</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>程序“%1”不存在或不可執行。</translation>
+    </message>
+    <message>
+        <location line="+970"/>
+        <source>Process Not Responding</source>
+        <translation>進程沒有響應</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The process is not responding.</source>
+        <translation>行程無回應。</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>處理序&quot;%1&quot;沒有回應。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Terminate the process?</source>
+        <translation>終止進程？</translation>
+    </message>
+    <message>
+        <location line="+271"/>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>命令&quot;%1&quot;已成功完成。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>命令&quot;%1&quot;以退出代碼%2結束。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>命令&quot;%1&quot;異常終止。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>命令&quot;%1&quot;無法啟動。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
+        <translation>命令&quot;%1&quot;在逾時限制(%2秒)內沒有回應。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21"/>
         <source>Remove File</source>
-        <translation type="unfinished">移除檔案</translation>
+        <translation>移除檔案</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Remove Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>刪除文件夾</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Delete file permanently</source>
-        <translation type="unfinished">永久刪除檔案(&amp;D)</translation>
+        <translation>永久刪除檔案(&amp;D)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Remove from version control</source>
-        <translation type="unfinished"></translation>
+        <translation>從版本控制中刪除(&amp;R)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>File to remove:</source>
-        <translation type="unfinished">要移除的檔案：</translation>
+        <translation>要移除的檔案：</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Folder to remove:</source>
-        <translation type="unfinished"></translation>
+        <translation>要刪除的文件夾：</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+118"/>
         <source>Failed to Read File</source>
-        <translation type="unfinished"></translation>
+        <translation>讀取文件失敗</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Could not open &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>無法打開“%1”。</translation>
     </message>
     <message>
         <location line="+23"/>
         <location line="+10"/>
         <source>Failed to Write File</source>
-        <translation type="unfinished"></translation>
+        <translation>寫入文件失敗</translation>
     </message>
     <message>
         <location line="-9"/>
         <source>There was nothing to write.</source>
-        <translation type="unfinished"></translation>
+        <translation>沒什麼可寫的。</translation>
     </message>
     <message>
         <location line="+112"/>
         <location line="+269"/>
         <source>No Valid Settings Found</source>
-        <translation type="unfinished"></translation>
+        <translation>未找到有效設置</translation>
     </message>
     <message>
         <location line="-268"/>
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;找不到有效的設置文件。&lt;/p&gt;&lt;p&gt;在目錄“%1”中找到的所有設置文件都不適合當前版本的 %2，例如，因為它們是由不兼容版本的 % 編寫的2，或者因為使用了不同的設置路徑。&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+269"/>
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;找不到有效的設置文件。&lt;/p&gt;&lt;p&gt;在目錄“%1”中找到的所有設置文件要么太新，要么太舊，無法讀取。&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Using Old Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>使用舊設置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;使用設置文件的版本化備份“%1”，因為非版本化文件是由不兼容的 %2 版本創建的。&lt;/p&gt;&lt;p&gt;自上次使用此版本以來所做的設置更改使用的 %2 將被忽略，現在所做的更改將&lt;b&gt;不會&lt;/b&gt;傳播到較新的版本。&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
-        <translation type="unfinished"></translation>
+        <translation>來自不同環境的“%1”的設置文件？</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;找不到此 %1 實例創建的設置文件。&lt;/p&gt;&lt;p&gt;您之前是否在另一台計算機上處理過此項目或使用過不同的設置路徑？&lt;/p&gt;&lt;p&gt;您仍然這樣做嗎？想要加載設置文件“%2”？&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>Unsupported Merge Settings File</source>
-        <translation type="unfinished"></translation>
+        <translation>不支持的合併設置文件</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>%2 不支持“%1”。您仍然想嘗試加載它嗎？</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+32"/>
+        <source>Add</source>
+        <translation>新增</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+83"/>
+        <source>Remove</source>
+        <translation>移除</translation>
+    </message>
+    <message>
+        <location line="-82"/>
+        <source>Rename</source>
+        <translation>重新命名</translation>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>Do you really want to delete the configuration &lt;b&gt;%1&lt;/b&gt;?</source>
+        <translation>您確定要刪除此組態 &lt;b&gt;%1&lt;/b&gt; 嗎？</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>New name for configuration &lt;b&gt;%1&lt;/b&gt;:</source>
+        <translation>組態 &lt;b&gt;%1&lt;/b&gt; 的新名稱：</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rename...</source>
+        <translation>重新命名...</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/stringutils.cpp" line="+341"/>
         <source>Elapsed time: %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>已用時間：%1。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+194"/>
+        <location line="+66"/>
+        <source>Out of memory.</source>
+        <translation>記憶體不足。</translation>
+    </message>
+    <message>
+        <location line="-55"/>
+        <source>An encoding error was encountered.</source>
+        <translation>發生了一個編碼錯誤。</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/unixutils.cpp" line="+36"/>
+        <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;變數&lt;/th&gt;&lt;th&gt;展開為&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;目前檔案所在目錄&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;檔名 (包含完整路徑)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;檔名 (不含路徑)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86"/>
@@ -15531,19 +15574,17 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
     <message>
         <location line="+31"/>
         <source>Select a variable to insert.</source>
-        <translation type="unfinished">選擇要插入的變數。</translation>
+        <translation>選擇要插入的變數。</translation>
     </message>
     <message>
         <location line="+121"/>
         <source>Variables</source>
-        <translation type="unfinished">變數</translation>
+        <translation>變數</translation>
     </message>
-</context>
-<context>
-    <name>StandardTextGroupBox</name>
     <message>
-        <source></source>
-        <translation></translation>
+        <location filename="../../../src/libs/utils/wizard.cpp" line="+119"/>
+        <source>...</source>
+        <translation>...</translation>
     </message>
 </context>
 <context>
