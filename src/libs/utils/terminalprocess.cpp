@@ -79,10 +79,14 @@ static QString msgCannotWriteTempFile()
 }
 
 // OPENMV-DIFF //
-// static QString msgCannotCreateTempDir(const QString & dir, const QString &why)
-// {
-//     return Tr::tr("Cannot create temporary directory \"%1\": %2").arg(dir, why);
-// }
+#ifndef Q_OS_WIN
+// OPENMV-DIFF //
+static QString msgCannotCreateTempDir(const QString & dir, const QString &why)
+{
+    return Tr::tr("Cannot create temporary directory \"%1\": %2").arg(dir, why);
+}
+// OPENMV-DIFF //
+#endif
 // OPENMV-DIFF //
 
 static QString msgUnexpectedOutput(const QByteArray &what)
@@ -574,10 +578,14 @@ void TerminalImpl::stubConnectionAvailable()
 }
 
 // OPENMV-DIFF //
-// static QString errorMsg(int code)
-// {
-//     return QString::fromLocal8Bit(strerror(code));
-// }
+#ifndef Q_OS_WIN
+// OPENMV-DIFF //
+static QString errorMsg(int code)
+{
+    return QString::fromLocal8Bit(strerror(code));
+}
+// OPENMV-DIFF //
+#endif
 // OPENMV-DIFF //
 
 void TerminalImpl::readStubOutput()
