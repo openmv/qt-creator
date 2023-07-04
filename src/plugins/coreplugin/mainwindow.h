@@ -212,9 +212,11 @@ private:
 
     // OPENMV-DIFF //
     bool m_disableShow;
+#ifdef Q_OS_WIN
     qreal m_devicePixelRatio = 0;
     HICON m_iconSmall = nullptr;
     HICON m_iconBig = nullptr;
+#endif
     void updateWindowIcon();
     // OPENMV-DIFF //
 };

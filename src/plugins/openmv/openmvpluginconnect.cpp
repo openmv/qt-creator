@@ -2062,12 +2062,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 Tr::tr("Failed to eject \"%L1\"!").arg(m_portPath));
                         }
     #elif defined(Q_OS_LINUX)
-                        Utils::SynchronousProcess process;
-                        Utils::SynchronousProcessResponse response;
+                        Utils::QtcProcess process;
+                        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("umount")),
+                                           QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath))));
+                        process.runBlocking(Utils::EventLoopMode::On);
 
-                        response = process.run(QStringLiteral("umount"), QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath)));
-
-                        if(response.result != Utils::SynchronousProcessResponse::Finished)
+                        if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Disconnect"),
@@ -2246,12 +2246,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 Tr::tr("Failed to eject \"%L1\"!").arg(m_portPath));
                         }
 #elif defined(Q_OS_LINUX)
-                        Utils::SynchronousProcess process;
-                        Utils::SynchronousProcessResponse response;
+                        Utils::QtcProcess process;
+                        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("umount")),
+                                                              QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath))));
+                        process.runBlocking(Utils::EventLoopMode::On);
 
-                        response = process.run(QStringLiteral("umount"), QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath)));
-
-                        if(response.result != Utils::SynchronousProcessResponse::Finished)
+                        if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Disconnect"),
@@ -3562,12 +3562,12 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                                 Tr::tr("Failed to eject \"%L1\"!").arg(m_portPath));
                         }
 #elif defined(Q_OS_LINUX)
-                        Utils::SynchronousProcess process;
-                        Utils::SynchronousProcessResponse response;
+                        Utils::QtcProcess process;
+                        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("umount")),
+                                                              QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath))));
+                        process.runBlocking(Utils::EventLoopMode::On);
 
-                        response = process.run(QStringLiteral("umount"), QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath)));
-
-                        if(response.result != Utils::SynchronousProcessResponse::Finished)
+                        if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Disconnect"),
