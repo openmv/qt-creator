@@ -48,7 +48,7 @@ debug_toolchain.cmake
 *.qbs.user*
 *.qmlproject.user*
 CMakeLists.txt.user*
-/share/qtcreator/examples/
+# /share/qtcreator/examples/
 /share/qtcreator/externaltools/
 /share/qtcreator/fonts/
 /share/qtcreator/generic-highlighter/
