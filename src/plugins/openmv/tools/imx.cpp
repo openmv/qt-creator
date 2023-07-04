@@ -127,6 +127,41 @@ QStringList imxGetAllDevices(bool spd_host, bool bl_host)
                 delete[] pRawInputDeviceList;
             }
         }
+#else
+        Utils::QtcProcess process;
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("lsusb")), QStringList()));
+        process.runBlocking(Utils::EventLoopMode::On);
+
+        if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
+        {
+            QRegularExpression regex(QStringLiteral("ID ([0-9a-zA-Z]+):([0-9a-zA-Z]+)"));
+
+            foreach(const QString s, process.stdOut().split(QRegularExpression(QStringLiteral("\n|\r\n|\r")), Qt::SkipEmptyParts))
+            {
+                QRegularExpressionMatch match = regex.match(s);
+
+                if(match.hasMatch())
+                {
+                    bool vidOk, pidOk;
+                    int vid = match.captured(1).toInt(&vidOk, 16);
+                    int pid = match.captured(2).toInt(&pidOk, 16);
+
+                    if(vidOk && pidOk)
+                    {
+                        QPair<int, int> entry(vid, pid);
+
+                        if(pidvidlist.contains(entry))
+                        {
+                            devices.append(QString(QStringLiteral("%1:%2,NULL")).
+                                           arg(vid, 4, 16, QChar('0')).
+                                           arg(pid, 4, 16, QChar('0')));
+                        }
+                    }
+                }
+            }
+        }
 #endif
     }
 
