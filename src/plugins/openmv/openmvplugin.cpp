@@ -982,8 +982,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
 void OpenMVPlugin::extensionsInitialized()
 {
-    QApplication::setApplicationDisplayName(Tr::tr("OpenMV IDE"));
-    QApplication::setWindowIcon(QIcon(QStringLiteral(ICON_PATH)));
+    // QApplication::setApplicationDisplayName(Tr::tr("OpenMV IDE"));
+    // QApplication::setWindowIcon(QIcon(QStringLiteral(ICON_PATH)));
 
     ///////////////////////////////////////////////////////////////////////////
 
