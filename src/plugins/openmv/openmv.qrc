@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/openmv">
-        <file>../../../../openmv-media/icons/openmv-icon/openmv.png</file>
         <file>../../../../openmv-media/splash/openmv-splash/splash-small.png</file>
         <file>../../../../openmv-media/splash/openmv-splash/splash-large.png</file>
         <file>../../../../openmv-media/splash/openmv-splash-slate/splash-small.png</file>

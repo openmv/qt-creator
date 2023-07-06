@@ -76,7 +76,6 @@
 #include "tools/thresholdeditor.h"
 #include "tools/videotools.h"
 
-#define ICON_PATH ":/openmv/openmv-media/icons/openmv-icon/openmv.png"
 #define LIGHT_SPLASH_PATH ":/openmv/openmv-media/splash/openmv-splash/splash-small.png"
 #define LIGHT_SPLASH_HIDPI_PATH ":/openmv/openmv-media/splash/openmv-splash/splash-large.png"
 #define DARK_SPLASH_PATH ":/openmv/openmv-media/splash/openmv-splash-slate/splash-small.png"

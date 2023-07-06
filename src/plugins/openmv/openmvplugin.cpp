@@ -982,11 +982,6 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
 void OpenMVPlugin::extensionsInitialized()
 {
-    // QApplication::setApplicationDisplayName(Tr::tr("OpenMV IDE"));
-    // QApplication::setWindowIcon(QIcon(QStringLiteral(ICON_PATH)));
-
-    ///////////////////////////////////////////////////////////////////////////
-
     connect(Core::ActionManager::command(Core::Constants::NEW_FILE)->action(), &QAction::triggered, this, [this] {
         Core::EditorManager::cutForwardNavigationHistory();
         Core::EditorManager::addCurrentPositionToNavigationHistory();
