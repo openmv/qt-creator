@@ -93,12 +93,6 @@ Component.prototype.createOperations = function()
                                 "OpenMV-openmvide.desktop",
                                 "Type=Application\nExec=" + component.qtCreatorBinaryPath + " %F\nPath=@TargetDir@\nName=OpenMV IDE\nGenericName=The IDE of choice for OpenMV Cam Development.\nX-KDE-StartupNotify=true\nIcon=OpenMV-openmvide\nStartupWMClass=openmvide\nTerminal=false\nCategories=Development;IDE;OpenMV;\nMimeType=text/x-python;"
                                 );
-        if (installer.fileExists("/usr/share/metadata")) {
-            component.addElevatedOperation( "Move",
-                                            "@TargetDir@/share/metadata",
-                                            "/usr/share/metadata"
-                                            );
-        }
         component.addElevatedOperation( "Execute", "{0}", "apt-get", "install", "-y",
                                         "libpng16-16",
                                         "libusb-1.0",
