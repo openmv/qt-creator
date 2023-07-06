@@ -91,8 +91,14 @@ Component.prototype.createOperations = function()
         component.addOperation( "InstallIcons", "@TargetDir@/share/icons" );
         component.addOperation( "CreateDesktopEntry",
                                 "OpenMV-openmvide.desktop",
-                                "Type=Application\nExec=" + component.qtCreatorBinaryPath + "\nPath=@TargetDir@\nName=OpenMV IDE\nGenericName=The IDE of choice for OpenMV Cam Development.\nTerminal=false\nCategories=Development;IDE;\nMimeType=text/x-python;"
+                                "Type=Application\nExec=" + component.qtCreatorBinaryPath + " %F\nPath=@TargetDir@\nName=OpenMV IDE\nGenericName=The IDE of choice for OpenMV Cam Development.\nX-KDE-StartupNotify=true\nIcon=OpenMV-openmvide\nStartupWMClass=openmvide\nTerminal=false\nCategories=Development;IDE;OpenMV;\nMimeType=text/x-python;"
                                 );
+        if (installer.fileExists("/usr/share/metadata")) {
+            component.addElevatedOperation( "Move",
+                                            "@TargetDir@/share/metadata",
+                                            "/usr/share/metadata"
+                                            );
+        }
         component.addElevatedOperation( "Execute", "{0}", "apt-get", "install", "-y",
                                         "libpng16-16",
                                         "libusb-1.0",

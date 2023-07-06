@@ -12,17 +12,14 @@ if (NOT APPLE AND NOT WIN32)
   configure_file(metainfo/io.openmv.openmvide.appdata.xml.cmakein metainfo/io.openmv.openmvide.appdata.xml)
   # OPENMV-DIFF #
 
-  install(
-    # OPENMV-DIFF #
-    # DIRECTORY
-    #   applications
-    # OPENMV-DIFF #
-    FILES
-      ${CMAKE_CURRENT_SOURCE_DIR}/applications/io.openmv.openmvide.desktop
-    # OPENMV-DIFF #
-    DESTINATION
-      ${CMAKE_INSTALL_DATAROOTDIR}
-  )
+  # OPENMV-DIFF #
+  # install(
+  #   DIRECTORY
+  #     applications
+  #   DESTINATION
+  #     ${CMAKE_INSTALL_DATAROOTDIR}
+  # )
+  # OPENMV-DIFF #
   install(
     FILES
       # OPENMV-DIFF #
