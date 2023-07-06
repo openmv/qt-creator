@@ -61,6 +61,20 @@ Component.prototype.beginInstallation = function()
         component.setStopProcessForUpdateRequest(component.qtCreatorBinaryPath, true);
 }
 
+function isUbuntu()
+{
+    if (installer.value("os") == "x11")
+    {
+        var id = installer.execute("lsb_release", new Array("-d"))[0];
+        id = id.replace(/(\r\n|\n|\r)/gm,"");
+        if (id.includes("Ubuntu"))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 Component.prototype.createOperations = function()
 {
     // Call the base createOperations and afterwards set some registry settings
@@ -93,38 +107,38 @@ Component.prototype.createOperations = function()
                                 "OpenMV-openmvide.desktop",
                                 "Type=Application\nExec=" + component.qtCreatorBinaryPath + " %F\nPath=@TargetDir@\nName=OpenMV IDE\nGenericName=The IDE of choice for OpenMV Cam Development.\nX-KDE-StartupNotify=true\nIcon=OpenMV-openmvide\nStartupWMClass=openmvide\nTerminal=false\nCategories=Development;IDE;OpenMV;\nMimeType=text/x-python;"
                                 );
-        component.addElevatedOperation( "Execute", "{0}", "apt-get", "install", "-y",
-                                        "libpng16-16",
-                                        "libusb-1.0",
-                                        "python3",
-                                        "python3-pip",
-                                        "libfontconfig1",
-                                        "libfreetype6",
-                                        "libxcb1",
-                                        "libxcb-glx0",
-                                        "libxcb-keysyms1",
-                                        "libxcb-image0",
-                                        "libxcb-shm0",
-                                        "libxcb-icccm4",
-                                        "libxcb-xfixes0",
-                                        "libxcb-shape0",
-                                        "libxcb-randr0",
-                                        "libxcb-render-util0",
-                                        "libxcb-xinerama0",
-                                        );
-
-        component.addElevatedOperation( "Execute", "{0}", "pip3", "install", "pyusb" );
-        if (!installer.fileExists("/etc/udev/rules.d/99-openmv.rules")) {
-            component.addElevatedOperation( "Copy", "@TargetDir@/share/qtcreator/pydfu/99-openmv.rules", "/etc/udev/rules.d/99-openmv.rules" );
+        var widget = gui.pageWidgetByObjectName("DynamicLinuxWidget");
+        if (widget != null) {
+            if (widget.installLibrariesCheck.checked) {
+                component.addElevatedOperation( "Execute", "{0}", "apt-get", "install", "-y",
+                                                "libpng16-16",
+                                                "libusb-1.0",
+                                                "python3",
+                                                "python3-pip",
+                                                "libfontconfig1",
+                                                "libfreetype6",
+                                                "libxcb1",
+                                                "libxcb-glx0",
+                                                "libxcb-keysyms1",
+                                                "libxcb-image0",
+                                                "libxcb-shm0",
+                                                "libxcb-icccm4",
+                                                "libxcb-xfixes0",
+                                                "libxcb-shape0",
+                                                "libxcb-randr0",
+                                                "libxcb-render-util0",
+                                                "libxcb-xinerama0",
+                                                );
+                component.addElevatedOperation( "Execute", "{0}", "pip3", "install", "pyusb" );
+            }
+            if (widget.udevRulesCheck.checked) {
+                component.addElevatedOperation( "Copy", "@TargetDir@/share/qtcreator/pydfu/99-openmv.rules", "/etc/udev/rules.d/99-openmv.rules" );
+                component.addElevatedOperation( "Copy", "@TargetDir@/share/qtcreator/pydfu/99-openmv-arduino.rules", "/etc/udev/rules.d/99-openmv-arduino.rules" );
+                component.addElevatedOperation( "Copy", "@TargetDir@/share/qtcreator/pydfu/99-openmv-nxp.rules", "/etc/udev/rules.d/99-openmv-nxp.rules" );
+                component.addElevatedOperation( "Execute", "{0}", "udevadm", "trigger" );
+                component.addElevatedOperation( "Execute", "{0}", "udevadm", "control", "--reload-rules" );
+            }
         }
-        if (!installer.fileExists("/etc/udev/rules.d/99-openmv-arduino.rules")) {
-            component.addElevatedOperation( "Copy", "@TargetDir@/share/qtcreator/pydfu/99-openmv-arduino.rules", "/etc/udev/rules.d/99-openmv-arduino.rules" );
-        }
-        if (!installer.fileExists("/etc/udev/rules.d/99-openmv-nxp.rules")) {
-            component.addElevatedOperation( "Copy", "@TargetDir@/share/qtcreator/pydfu/99-openmv-nxp.rules", "/etc/udev/rules.d/99-openmv-nxp.rules" );
-        }
-        component.addElevatedOperation( "Execute", "{0}", "udevadm", "trigger" );
-        component.addElevatedOperation( "Execute", "{0}", "udevadm", "control", "--reload-rules" );
     }
 }
 
@@ -156,6 +170,7 @@ Component.prototype.installationFinishedPageIsShown = function()
 
 Component.prototype.installationFinished = function()
 {
+    isroot = isRoot();
     try {
         if (component.installed && installer.isInstaller() && installer.status == QInstaller.Success && !isroot) {
             var isLaunchQtCreatorCheckBoxChecked = component.userInterface("LaunchQtCreatorCheckBoxForm").launchQtCreatorCheckBox.checked;
@@ -180,6 +195,21 @@ Component.prototype.installerLoaded = function()
     }
 
     gui.pageById(QInstaller.LicenseCheck).entered.connect(this, Component.prototype.licenseCheckPageEntered);
+
+    if ( installer.value("os") == "x11" ) {
+        if (installer.addWizardPage(component, "LinuxWidget", QInstaller.ReadyForInstallation)) {
+            var widget = gui.pageWidgetByObjectName("DynamicLinuxWidget");
+            if (widget != null) {
+                widget.windowTitle = "Root Installs";
+                isUbuntu = isUbuntu();
+                if (!isUbuntu) {
+                    widget.installLibrariesCheck.hide();
+                    widget.installLibrariesCheck.setChecked(false);
+                    widget.installLibrariesLabel.hide();
+                }
+            }
+        }
+    }
 }
 
 Component.prototype.targetChanged = function(text)
