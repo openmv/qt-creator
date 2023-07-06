@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # This file is part of the OpenMV project.
 # Copyright (c) 2013/2014 Ibrahim Abdelkader <i.abdalkader@gmail.com>
 # This work is licensed under the MIT license, see the file LICENSE for
@@ -77,7 +77,7 @@ __verbose = None
 __DFU_INTERFACE = 0
 
 import inspect
-if 'length' in inspect.getargspec(usb.util.get_string).args:
+if 'length' in inspect.getfullargspec(usb.util.get_string).args:
     # PyUSB 1.0.0.b1 has the length argument
     def get_string(dev, index):
         return usb.util.get_string(dev, 255, index)

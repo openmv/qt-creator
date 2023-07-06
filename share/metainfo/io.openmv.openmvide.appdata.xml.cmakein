@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+ <id>io.openmv.openmvide.desktop</id>
+ <name>OpenMV IDE</name>
+ <summary>Provides a cross-platform, complete integrated development environment (IDE) for OpenMV developers to program their OpenMV Cam</summary>
+ <metadata_license>CC0-1.0</metadata_license>
+ <project_license>GPL-3.0</project_license>
+ <description>
+  <p>
+   OpenMV IDE provides a cross-platform, complete integrated development
+   environment (IDE) for OpenMV developers to program their OpenMV Cam.
+  </p>
+  <p>
+   The main goal for OpenMV IDE is meeting the development needs of OpenMV
+   developers who are looking for simplicity, usability, productivity,
+   while aiming to lower the barrier of entry for newcomers to OpenMV.
+  </p>
+ </description>
+ <url type="homepage">https://openmv.io/</url>
+ <project_group>OpenMV</project_group>
+ <content_rating type="oars-1.1" />
+ <releases>
+  <release version="${IDE_VERSION_DISPLAY}"${DATE_ATTRIBUTE}>
+   <description>
+    <p>OpenMV IDE v${IDE_VERSION_DISPLAY}</p>
+   </description>
+  </release>
+ </releases>
+</component>

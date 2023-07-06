@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Exec=openmvide %F
+Name=OpenMV IDE
+GenericName=Python IDE for developing OpenMV Cam applications
+X-KDE-StartupNotify=true
+Icon=OpenMV-openmvide
+StartupWMClass=openmvide
+Terminal=false
+Categories=Development;IDE;OpenMV;
+MimeType=text/x-python;
+

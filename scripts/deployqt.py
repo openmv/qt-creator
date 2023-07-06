@@ -183,7 +183,9 @@ def add_qt_conf(target_path, qt_prefix_path):
     f.write('Binaries={0}\n'.format('bin' if common.is_linux_platform() else '.'))
     f.write('Libraries={0}\n'.format('lib' if common.is_linux_platform() else '.'))
     f.write('Plugins=plugins\n')
-    #f.write('Qml2Imports=qml\n')
+    # OPENMV-DIFF #
+    # f.write('Qml2Imports=qml\n')
+    # OPENMV-DIFF #
     f.close()
 
 def copy_translations(install_dir, qt_tr_dir):
@@ -389,7 +391,11 @@ def main():
     if not common.is_windows_platform():
         print("fixing rpaths...")
         common.fix_rpaths(install_dir, os.path.join(qt_deploy_prefix, 'lib'), qt_install_info, chrpath_bin)
-        add_qt_conf(os.path.join(install_dir, 'libexec', 'qtcreator'), qt_deploy_prefix) # e.g. for qml2puppet
+        # OPENMV-DIFF #
+        # add_qt_conf(os.path.join(install_dir, 'libexec', 'qtcreator'), qt_deploy_prefix) # e.g. for qml2puppet
+        # OPENMV-DIFF #
+        add_qt_conf(os.path.join(install_dir, 'lib', 'qtcreator'), qt_deploy_prefix) # e.g. for qml2puppet
+        # OPENMV-DIFF #
         add_qt_conf(os.path.join(qt_deploy_prefix, 'bin'), qt_deploy_prefix) # e.g. qtdiag
     add_qt_conf(os.path.join(install_dir, 'bin'), qt_deploy_prefix)
 

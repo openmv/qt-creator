@@ -1,6 +1,11 @@
 <RCC>
     <qresource prefix="/core">
-    <file alias="images/qtcreatorlogo-big.png">${IDE_LOGO_PATH}/images/logo/128/QtProject-qtcreator.png</file>
-    <file alias="images/qtcreatorlogo-big@2x.png">${IDE_LOGO_PATH}/images/logo/256/QtProject-qtcreator.png</file>
+    <!-- OPENMV-DIFF -->
+    <!-- <file alias="images/qtcreatorlogo-big.png">${IDE_LOGO_PATH}/images/logo/128/QtProject-qtcreator.png</file>
+         <file alias="images/qtcreatorlogo-big@2x.png">${IDE_LOGO_PATH}/images/logo/256/QtProject-qtcreator.png</file> -->
+    <!-- OPENMV-DIFF -->
+    <file alias="images/qtcreatorlogo-big.png">${IDE_LOGO_PATH}/images/logo/128/OpenMV-openmvide.png</file>
+    <file alias="images/qtcreatorlogo-big@2x.png">${IDE_LOGO_PATH}/images/logo/256/OpenMV-openmvide.png</file>
+    <!-- OPENMV-DIFF -->
     </qresource>
 </RCC>

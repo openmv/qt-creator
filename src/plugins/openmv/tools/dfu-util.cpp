@@ -342,7 +342,7 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
             QObject::connect(dialog, &QDialog::rejected, [&process] { process.terminate(); });
 
-            Utils::FilePath binary = Utils::FilePath::fromString(QStringLiteral("python"));
+            Utils::FilePath binary = Utils::FilePath::fromString(QStringLiteral("python3"));
             QStringList args = QStringList() <<
                                Core::ICore::resourcePath(QStringLiteral("pydfu/pydfu.py")).toString() <<
                                QStringLiteral("-u") <<
