@@ -135,7 +135,7 @@ def main():
                 substitute_file(os.path.join(root, template), os.path.join(root, template[:-3]), substs)
                 os.remove(os.path.join(root, template))
 
-        data_path = os.path.join(out_packages_dir, 'org.qtproject.qtcreator.application', 'data')
+        data_path = os.path.join(out_packages_dir, 'io.openmv.openmvide.application', 'data')
         if not os.path.exists(data_path):
             os.makedirs(data_path)
         for archive in archives:

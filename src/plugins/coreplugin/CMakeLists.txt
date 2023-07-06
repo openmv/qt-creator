@@ -328,6 +328,20 @@ extend_qtc_plugin(Core
   DEFINES ENABLE_CRASHPAD
 )
 
+if ((NOT WIN32) AND (NOT APPLE))
+  # install logo
+  foreach(size 16 24 32 48 64 128 256 512)
+    install(
+      # OPENMV-DIFF #
+      # FILES ${IDE_LOGO_PATH}/images/logo/${size}/QtProject-qtcreator.png
+      # OPENMV-DIFF #
+      FILES ${IDE_LOGO_PATH}/images/logo/${size}/OpenMV-openmvide.png
+      # OPENMV-DIFF #
+      DESTINATION share/icons/hicolor/${size}x${size}/apps
+    )
+  endforeach()
+endif()
+
 set(FONTS_BASE "${QtCreator_SOURCE_DIR}/src/share/3rdparty/studiofonts/")
 qt_add_resources(Core
   CoreWelcomeScreenFonts_rcc

@@ -1,21 +1,4 @@
 <?xml version="1.0"?>
-<!--OPENMV-DIFF-->
-<!--<Installer>-->
-<!--    <Name>Qt Creator</Name>-->
-<!--    <Version>{version}</Version>-->
-<!--    <Title>Qt Creator {display_version}</Title>-->
-<!--    <Publisher>Qt Project</Publisher>-->
-<!--    <ProductUrl>http://www.qt.io</ProductUrl>-->
-
-<!--    <InstallerWindowIcon>logo.png</InstallerWindowIcon>-->
-<!--    <Watermark>watermark.png</Watermark>-->
-<!--    <WizardDefaultHeight>520</WizardDefaultHeight>-->
-<!--    <MaintenanceToolName>QtCreatorUninstaller</MaintenanceToolName>-->
-        <!-- @homeDir@ and @rootDir@ are some of the supported vars -->
-<!--    <TargetDir>@homeDir@/qtcreator-{display_version}</TargetDir>-->
-<!--    <AdminTargetDir>/opt/qtcreator-{display_version}</AdminTargetDir>-->
-<!--</Installer>-->
-<!--OPENMV-DIFF-->
 <Installer>
     <Name>OpenMV IDE</Name>
     <Version>{version}</Version>
@@ -28,4 +11,3 @@
     <AdminTargetDir>/opt/openmvide</AdminTargetDir>
     <ControlScript>controlscript.qs</ControlScript>
 </Installer>
-<!--OPENMV-DIFF-->
