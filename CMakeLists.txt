@@ -114,7 +114,9 @@ find_package(Qt6 OPTIONAL_COMPONENTS Quick QuickWidgets Designer DesignerCompone
                                      Help SerialPort Svg Tools LinguistTools QUIET)
 
 find_package(Threads)
-find_package(Clang QUIET)
+# OPENMV-DIFF #
+# find_package(Clang QUIET)
+# OPENMV-DIFF #
 
 # Crashpad
 set(CRASHPAD_BACKEND_URL "" CACHE STRING "Crashpad backend URL")
@@ -170,15 +172,19 @@ endif()
 
 add_subdirectory(src)
 add_subdirectory(share)
+# OPENMV-DIFF #
 # if (NOT BUILD_DESIGNSTUDIO)
 #     add_subdirectory(dist)
 # endif()
+# OPENMV-DIFF #
 
 if (WITH_TESTS)
   add_subdirectory(tests)
 endif()
 
-#add_subdirectory(doc)
+# OPENMV-DIFF #
+# add_subdirectory(doc)
+# OPENMV-DIFF #
 
 setup_dependencies_component()
 
