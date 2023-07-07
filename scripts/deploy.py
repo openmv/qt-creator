@@ -15,7 +15,11 @@ from glob import glob
 import common
 
 debug_build = False
-encoding = locale.getdefaultlocale()[1]
+# OPENMV-DIFF #
+# encoding = locale.getdefaultlocale()[1]
+# OPENMV-DIFF #
+encoding = locale.getencoding()
+# OPENMV-DIFF #
 
 def get_args():
     parser = argparse.ArgumentParser(description='Deploy Qt Creator dependencies for packaging')
