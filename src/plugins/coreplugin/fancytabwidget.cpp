@@ -624,8 +624,8 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     connect(m_tabBar, &FancyTabBar::menuTriggered, this, &FancyTabWidget::menuTriggered);
 
     // OPENMV-DIFF //
-    m_styleSheet = QString(QStringLiteral(
 #ifndef Q_OS_MAC
+    m_styleSheet = QString(QStringLiteral(
     "QAbstractScrollArea::corner{background-color:%1;}"
     "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:%1;}"
     "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:%1;}"
@@ -645,13 +645,13 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:%2;}"
     "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:%3;}"
     "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:%4;}"
-#endif
     )).
     arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDark).name(QColor::HexArgb)).
     arg(Utils::creatorTheme()->color(Utils::Theme::SplitterColor).name(QColor::HexArgb)).
     arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorHover).name(QColor::HexArgb)).
     arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name(QColor::HexArgb)).
     arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light"));
+#endif
 
     m_highDPIStyleSheet = QString(m_styleSheet).replace(QStringLiteral(".png"), QStringLiteral("_2x.png"));
 
