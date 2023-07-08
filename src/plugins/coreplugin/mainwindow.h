@@ -121,10 +121,10 @@ protected:
     void mousePressEvent(QMouseEvent *event) override;
 
     // OPENMV-DIFF //
-    virtual void showEvent(QShowEvent *event) { emit showEventSignal(); Utils::AppMainWindow::showEvent(event); updateWindowIcon(); }
-    virtual void hideEvent(QHideEvent *event) { emit hideEventSignal(); Utils::AppMainWindow::hideEvent(event); updateWindowIcon(); }
-    virtual void moveEvent(QMoveEvent *event) { Utils::AppMainWindow::moveEvent(event); updateWindowIcon(); }
-    virtual void resizeEvent(QResizeEvent *event) { Utils::AppMainWindow::resizeEvent(event); updateWindowIcon(); }
+    virtual void showEvent(QShowEvent *event) override { emit showEventSignal(); Utils::AppMainWindow::showEvent(event); updateWindowIcon(); }
+    virtual void hideEvent(QHideEvent *event) override { emit hideEventSignal(); Utils::AppMainWindow::hideEvent(event); updateWindowIcon(); }
+    virtual void moveEvent(QMoveEvent *event) override { Utils::AppMainWindow::moveEvent(event); updateWindowIcon(); }
+    virtual void resizeEvent(QResizeEvent *event) override { Utils::AppMainWindow::resizeEvent(event); updateWindowIcon(); }
     // OPENMV-DIFF //
 
 private:

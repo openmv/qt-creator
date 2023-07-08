@@ -369,7 +369,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     if(arguments.contains(QStringLiteral("-full_screen")))
     {
-        connect(ExtensionSystem::PluginManager::instance(), &ExtensionSystem::PluginManager::initializationDone, this, [this] {
+        connect(ExtensionSystem::PluginManager::instance(), &ExtensionSystem::PluginManager::initializationDone, this, [] {
             QAction *action = Core::ActionManager::command(Core::Constants::TOGGLE_FULLSCREEN)->action();
 
             if(!Core::ICore::mainWindow()->isFullScreen())
@@ -392,7 +392,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     if(!qFuzzyCompare(splashScreen->screen()->devicePixelRatio(), 1.0))
     {
         QPixmap hdpi = QPixmap(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral(DARK_SPLASH_HIDPI_PATH) : QStringLiteral(LIGHT_SPLASH_HIDPI_PATH));
-        hdpi.setDevicePixelRatio(2.d);
+        hdpi.setDevicePixelRatio(2.0);
         splashScreen->setPixmap(hdpi);
     }
 
@@ -1214,7 +1214,7 @@ void OpenMVPlugin::extensionsInitialized()
     QAction *QRCodeGeneratorAction = new QAction(Tr::tr("QRCode Generator"), this);
     Core::Command *QRCodeGeneratorCommand = Core::ActionManager::registerAction(QRCodeGeneratorAction, Utils::Id("OpenMV.QRCodeGenerator"));
     machineVisionToolsMenu->addAction(QRCodeGeneratorCommand);
-    connect(QRCodeGeneratorAction, &QAction::triggered, this, [this] {
+    connect(QRCodeGeneratorAction, &QAction::triggered, this, [] {
         QUrl url = QUrl(QStringLiteral("https://www.google.com/search?q=qr+code+generator"));
 
         if(!QDesktopServices::openUrl(url))
@@ -1228,7 +1228,7 @@ void OpenMVPlugin::extensionsInitialized()
     QAction *DatamatrixGeneratorAction = new QAction(Tr::tr("DataMatrix Generator"), this);
     Core::Command *DataMatrixGeneratorCommand = Core::ActionManager::registerAction(DatamatrixGeneratorAction, Utils::Id("OpenMV.DataMatrixGenerator"));
     machineVisionToolsMenu->addAction(DataMatrixGeneratorCommand);
-    connect(DatamatrixGeneratorAction, &QAction::triggered, this, [this] {
+    connect(DatamatrixGeneratorAction, &QAction::triggered, this, [] {
         QUrl url = QUrl(QStringLiteral("https://www.google.com/search?q=data+matrix+generator"));
 
         if(!QDesktopServices::openUrl(url))
@@ -1242,7 +1242,7 @@ void OpenMVPlugin::extensionsInitialized()
     QAction *BarcodeGeneratorAction = new QAction(Tr::tr("Barcode Generator"), this);
     Core::Command *BarcodeGeneratorCommand = Core::ActionManager::registerAction(BarcodeGeneratorAction, Utils::Id("OpenMV.BarcodeGenerator"));
     machineVisionToolsMenu->addAction(BarcodeGeneratorCommand);
-    connect(BarcodeGeneratorAction, &QAction::triggered, this, [this] {
+    connect(BarcodeGeneratorAction, &QAction::triggered, this, [] {
         QUrl url = QUrl(QStringLiteral("https://www.google.com/search?q=barcode+generator"));
 
         if(!QDesktopServices::openUrl(url))
@@ -1341,7 +1341,7 @@ void OpenMVPlugin::extensionsInitialized()
         videoToolsMenu->addSeparator();
         videoToolsMenu->addAction(playRTSPStreamCommand);
     }
-    connect(playRTSPStream, &QAction::triggered, this, [this] {playRTSPStreamAction();});
+    connect(playRTSPStream, &QAction::triggered, this, [] {playRTSPStreamAction();});
 
     Core::ActionContainer *datasetEditorMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.DatasetEditor"));
     datasetEditorMenu->menu()->setTitle(Tr::tr("Dataset Editor"));
@@ -1617,7 +1617,7 @@ void OpenMVPlugin::extensionsInitialized()
     QAction *logOutFromEdgeImpulseAccountAction = new QAction(Tr::tr("Logout from Account: %L1").arg(loggedIntoEdgeImpulse()), this);
     Core::Command *logOutFromEdgeImpulseAccountCommand = Core::ActionManager::registerAction(logOutFromEdgeImpulseAccountAction, Utils::Id("OpenMV.LogOutFromEdgeImpulseAccount"));
     datasetEditorExportMenu->addAction(logOutFromEdgeImpulseAccountCommand);
-    connect(logOutFromEdgeImpulseAccountAction, &QAction::triggered, this, [this] { logoutFromEdgeImpulse(); });
+    connect(logOutFromEdgeImpulseAccountAction, &QAction::triggered, this, [] { logoutFromEdgeImpulse(); });
 
     connect(datasetEditorMenu->menu(), &QMenu::aboutToShow, this,
         [this, uploadToEdgeImpulseProjectAction, logInToEdgeImpulseAccountAction, logOutFromEdgeImpulseAccountAction, loginToEdgeImpulseAccountCommand, logOutFromEdgeImpulseAccountCommand] {
@@ -1648,7 +1648,7 @@ void OpenMVPlugin::extensionsInitialized()
     QAction *docsAction = new QAction(Tr::tr("OpenMV Docs"), this);
     Core::Command *docsCommand = Core::ActionManager::registerAction(docsAction, Utils::Id("OpenMV.Docs"));
     helpMenu->addAction(docsCommand, Core::Constants::G_HELP_SUPPORT);
-    connect(docsAction, &QAction::triggered, this, [this] {
+    connect(docsAction, &QAction::triggered, this, [] {
         QUrl url = QUrl::fromLocalFile(Core::ICore::userResourcePath(QStringLiteral("html/index.html")).toString());
 
         if(!QDesktopServices::openUrl(url))
@@ -1662,7 +1662,7 @@ void OpenMVPlugin::extensionsInitialized()
     QAction *forumsAction = new QAction(Tr::tr("OpenMV Forums"), this);
     Core::Command *forumsCommand = Core::ActionManager::registerAction(forumsAction, Utils::Id("OpenMV.Forums"));
     helpMenu->addAction(forumsCommand, Core::Constants::G_HELP_SUPPORT);
-    connect(forumsAction, &QAction::triggered, this, [this] {
+    connect(forumsAction, &QAction::triggered, this, [] {
         QUrl url = QUrl(QStringLiteral("https://forums.openmv.io/"));
 
         if(!QDesktopServices::openUrl(url))
@@ -1693,7 +1693,7 @@ void OpenMVPlugin::extensionsInitialized()
              Utils::HostOsInfo::isMacHost() ? Tr::tr("About OpenMV Cam %1").arg(cam.first) : Tr::tr("About OpenMV Cam %1...").arg(cam.first), this);
         Core::Command *pinoutCommand = Core::ActionManager::registerAction(pinout, Utils::Id(QString(QStringLiteral("OpenMV.Pinout.%1")).arg(cam.second).toUtf8().constData()));
         pinoutMenu->addAction(pinoutCommand);
-        connect(pinout, &QAction::triggered, this, [this, cam] {
+        connect(pinout, &QAction::triggered, this, [cam] {
             QUrl url = QUrl::fromLocalFile(Core::ICore::userResourcePath(QString(QStringLiteral("/html/_images/pinout-openmv-%1.png")).arg(cam.second)).toString());
 
             if(!QDesktopServices::openUrl(url))
@@ -1710,7 +1710,7 @@ void OpenMVPlugin::extensionsInitialized()
     aboutAction->setMenuRole(QAction::AboutRole);
      Core::Command *aboutCommand = Core::ActionManager::registerAction(aboutAction, Utils::Id("OpenMV.About"));
     helpMenu->addAction(aboutCommand, Core::Constants::G_HELP_ABOUT);
-    connect(aboutAction, &QAction::triggered, this, [this] {
+    connect(aboutAction, &QAction::triggered, this, [] {
         QMessageBox::about(Core::ICore::dialogParent(), Tr::tr("About OpenMV IDE"), Tr::tr(
         "<p><b>About OpenMV IDE %L1</b></p>"
         "<p>By: Ibrahim Abdelkader & Kwabena W. Agyeman</p>"
@@ -1955,7 +1955,7 @@ void OpenMVPlugin::extensionsInitialized()
     connect(m_frameBuffer, &OpenMVPluginFB::saveDescriptor, this, &OpenMVPlugin::saveDescriptor);
     connect(m_frameBuffer, &OpenMVPluginFB::imageWriterTick, recordingLabel, &Utils::ElidingLabel::setText);
 
-    connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, this, [this, beginRecordingButton] (const QPixmap &pixmap) {
+    connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, this, [beginRecordingButton] (const QPixmap &pixmap) {
         beginRecordingButton->setEnabled(!pixmap.isNull());
     });
 
@@ -1975,7 +1975,7 @@ void OpenMVPlugin::extensionsInitialized()
         recordingLabel->setVisible(false);
     });
 
-    connect(m_frameBuffer, &OpenMVPluginFB::imageWriterShutdown, this, [this, beginRecordingButton, endRecordingButton, recordingLabel] {
+    connect(m_frameBuffer, &OpenMVPluginFB::imageWriterShutdown, this, [ beginRecordingButton, endRecordingButton, recordingLabel] {
         beginRecordingButton->setVisible(true);
         endRecordingButton->setVisible(false);
         recordingLabel->setVisible(false);
@@ -2021,7 +2021,7 @@ void OpenMVPlugin::extensionsInitialized()
     connect(colorSpace, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), m_histogram, &OpenMVPluginHistogram::colorSpaceChanged);
     connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, m_histogram, &OpenMVPluginHistogram::pixmapUpdate);
 
-    connect(m_frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [this, resLabel] (const QSize &res, const QRect &roi) {
+    connect(m_frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [resLabel] (const QSize &res, const QRect &roi) {
         if(res.isValid())
         {
             if(roi.isValid())
@@ -2057,43 +2057,43 @@ void OpenMVPlugin::extensionsInitialized()
     vsplitter->setCollapsible(0, true);
     vsplitter->setCollapsible(1, true);
 
-    connect(widget->m_leftDrawer, &QToolButton::clicked, this, [this, widget, hsplitter] {
+    connect(widget->m_leftDrawer, &QToolButton::clicked, this, [widget, hsplitter] {
         hsplitter->setSizes(QList<int>() << 1 << hsplitter->sizes().at(1));
         widget->m_leftDrawer->parentWidget()->hide();
     });
 
-    connect(hsplitter, &Core::MiniSplitter::splitterMoved, this, [this, widget, hsplitter] (int pos, int index) {
+    connect(hsplitter, &Core::MiniSplitter::splitterMoved, this, [widget, hsplitter] (int pos, int index) {
         Q_UNUSED(pos) Q_UNUSED(index) widget->m_leftDrawer->parentWidget()->setVisible(!hsplitter->sizes().at(0));
     });
 
-    connect(widget->m_rightDrawer, &QToolButton::clicked, this, [this, widget, hsplitter] {
+    connect(widget->m_rightDrawer, &QToolButton::clicked, this, [widget, hsplitter] {
         hsplitter->setSizes(QList<int>() << hsplitter->sizes().at(0) << 1);
         widget->m_rightDrawer->parentWidget()->hide();
     });
 
-    connect(hsplitter, &Core::MiniSplitter::splitterMoved, this, [this, widget, hsplitter] (int pos, int index) {
+    connect(hsplitter, &Core::MiniSplitter::splitterMoved, this, [widget, hsplitter] (int pos, int index) {
         Q_UNUSED(pos) Q_UNUSED(index) widget->m_rightDrawer->parentWidget()->setVisible(!hsplitter->sizes().at(1));
     });
 
-    connect(widget->m_topDrawer, &QToolButton::clicked, this, [this, widget, vsplitter] {
+    connect(widget->m_topDrawer, &QToolButton::clicked, this, [widget, vsplitter] {
         vsplitter->setSizes(QList<int>() << 1 <<  vsplitter->sizes().at(1));
         widget->m_topDrawer->parentWidget()->hide();
         // Handle Special Case to fix 1px Graphical issue.
         vsplitter->setProperty("NoDrawToolBarBorders", false);
     });
 
-    connect(vsplitter, &Core::MiniSplitter::splitterMoved, this, [this, widget, vsplitter] (int pos, int index) {
+    connect(vsplitter, &Core::MiniSplitter::splitterMoved, this, [widget, vsplitter] (int pos, int index) {
         Q_UNUSED(pos) Q_UNUSED(index) widget->m_topDrawer->parentWidget()->setVisible(!vsplitter->sizes().at(0));
         // Handle Special Case to fix 1px Graphical issue.
         vsplitter->setProperty("NoDrawToolBarBorders", widget->m_topDrawer->parentWidget()->isVisible());
     });
 
-    connect(widget->m_bottomDrawer, &QToolButton::clicked, this, [this, widget, vsplitter] {
+    connect(widget->m_bottomDrawer, &QToolButton::clicked, this, [widget, vsplitter] {
         vsplitter->setSizes(QList<int>() << vsplitter->sizes().at(0) << 1);
         widget->m_bottomDrawer->parentWidget()->hide();
     });
 
-    connect(vsplitter, &Core::MiniSplitter::splitterMoved, this, [this, widget, vsplitter] (int pos, int index) {
+    connect(vsplitter, &Core::MiniSplitter::splitterMoved, this, [widget, vsplitter] (int pos, int index) {
         Q_UNUSED(pos) Q_UNUSED(index) widget->m_bottomDrawer->parentWidget()->setVisible(!vsplitter->sizes().at(1));
     });
 
@@ -2126,7 +2126,7 @@ void OpenMVPlugin::extensionsInitialized()
     connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, m_datasetEditor, &OpenMVDatasetEditor::frameBufferData);
 
     QLabel *dataSetEditorLabel = new QLabel(Tr::tr("Dataset Editor"));
-    connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, this, [this, dataSetEditorLabel] (const QString &path) { dataSetEditorLabel->setToolTip(path); });
+    connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, this, [dataSetEditorLabel] (const QString &path) { dataSetEditorLabel->setToolTip(path); });
 
     Utils::StyledBar *datasetEditorStyledBar0 = new Utils::StyledBar;
     QHBoxLayout *datasetEditorStyledBarLayout0 = new QHBoxLayout;
@@ -2203,9 +2203,9 @@ void OpenMVPlugin::extensionsInitialized()
 
     connect(closeDatasetAction, &QAction::triggered, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
     connect(datasetEditorCloseButton, &QToolButton::clicked, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
-    connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathClosed, this, [this] (const QString &path) { Core::EditorManager::closeEditors(Core::DocumentModel::editorsForFilePath(Utils::FilePath::fromString(path).pathAppended(QStringLiteral("/dataset_capture_script.py")))); });
+    connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathClosed, this, [] (const QString &path) { Core::EditorManager::closeEditors(Core::DocumentModel::editorsForFilePath(Utils::FilePath::fromString(path).pathAppended(QStringLiteral("/dataset_capture_script.py")))); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, datasetEditorWidget, &QWidget::show);
-    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [this, actionBar1, exportDataseFlatAction, uploadToEdgeImpulseProjectAction, uploadToEdgeImpulseByAPIKeyAction, closeDatasetAction, datasetEditorNewFolderAction, datasetEditorSnapshotAction, datasetEditorActionBar] (bool visible) {
+    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [actionBar1, exportDataseFlatAction, uploadToEdgeImpulseProjectAction, uploadToEdgeImpulseByAPIKeyAction, closeDatasetAction, datasetEditorNewFolderAction, datasetEditorSnapshotAction, datasetEditorActionBar] (bool visible) {
         actionBar1->setSizePolicy(QSizePolicy::Preferred, visible ? QSizePolicy::Maximum : QSizePolicy::Minimum);
         exportDataseFlatAction->setEnabled(visible);
         uploadToEdgeImpulseProjectAction->setEnabled(visible && (!loggedIntoEdgeImpulse().isEmpty()));
@@ -2303,7 +2303,7 @@ void OpenMVPlugin::extensionsInitialized()
     Core::MessageManager::outputWindow()->setFontZoom(
         settings->value(QStringLiteral(OUTPUT_WINDOW_FONT_ZOOM_STATE)).toFloat());
     Core::MessageManager::outputWindow()->setTabSettings(TextEditor::TextEditorSettings::codeStyle()->tabSettings().m_serialTerminalTabSize);
-    connect(TextEditor::TextEditorSettings::codeStyle(), &TextEditor::ICodeStylePreferences::tabSettingsChanged, this, [this] (const TextEditor::TabSettings &settings) {
+    connect(TextEditor::TextEditorSettings::codeStyle(), &TextEditor::ICodeStylePreferences::tabSettingsChanged, this, [] (const TextEditor::TabSettings &settings) {
         Core::MessageManager::outputWindow()->setTabSettings(settings.m_serialTerminalTabSize);
     });
     settings->endGroup();
@@ -2325,7 +2325,7 @@ void OpenMVPlugin::extensionsInitialized()
         vsplitter->setProperty("NoDrawToolBarBorders", widget->m_topDrawer->parentWidget()->isVisible());
     });
 
-    connect(q_check_ptr(qobject_cast<Core::Internal::MainWindow *>(Core::ICore::mainWindow())), &Core::Internal::MainWindow::hideEventSignal, this, [this, widget, settings, msplitter, hsplitter, vsplitter] {
+    connect(q_check_ptr(qobject_cast<Core::Internal::MainWindow *>(Core::ICore::mainWindow())), &Core::Internal::MainWindow::hideEventSignal, this, [this, settings, msplitter, hsplitter, vsplitter] {
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
         if(!isNoShow()) settings->setValue(QStringLiteral(LAST_DATASET_EDITOR_LOADED),
             !m_datasetEditor->rootPath().isEmpty());
@@ -2648,7 +2648,7 @@ bool OpenMVPlugin::delayedInitialize()
             : false
         : false)
     {
-        QTimer::singleShot(2000, this, [this] {
+        QTimer::singleShot(2000, this, [] {
             Utils::CheckableMessageBox::doNotShowAgainInformation(Core::ICore::dialogParent(),
                     Tr::tr("OpenMV Cam LED Colors"),
                     Tr::tr("Thanks for using the OpenMV Cam and OpenMV IDE!\n\n"
@@ -2754,7 +2754,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                         QString *errorMessage2Ptr = &errorMessage2;
 
                         QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                            this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                            this, [errorMessage2Ptr] (const QString &errorMessage) {
                             *errorMessage2Ptr = errorMessage;
                         });
 
@@ -2860,7 +2860,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                         QString *errorMessage2Ptr = &errorMessage2;
 
                         QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                            this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                            this, [errorMessage2Ptr] (const QString &errorMessage) {
                             *errorMessage2Ptr = errorMessage;
                         });
 
@@ -2956,7 +2956,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                     QString *errorMessage2Ptr = &errorMessage2;
 
                     QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                        this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                        this, [errorMessage2Ptr] (const QString &errorMessage) {
                         *errorMessage2Ptr = errorMessage;
                     });
 
@@ -3057,7 +3057,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                         QString *errorMessage2Ptr = &errorMessage2;
 
                         QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                            this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                            this, [errorMessage2Ptr] (const QString &errorMessage) {
                             *errorMessage2Ptr = errorMessage;
                         });
 
@@ -3153,7 +3153,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
                     QString *errorMessage2Ptr = &errorMessage2;
 
                     QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                        this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                        this, [errorMessage2Ptr] (const QString &errorMessage) {
                         *errorMessage2Ptr = errorMessage;
                     });
 
@@ -3225,7 +3225,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
     if(needToExit)
     {
-        QTimer::singleShot(0, this, [this] { QApplication::exit(-1); });
+        QTimer::singleShot(0, this, [] { QApplication::exit(-1); });
     }
 
     return Q_NULLPTR;
@@ -4132,7 +4132,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     QString *errorMessage2Ptr = &errorMessage2;
 
                                     QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                                        this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                                        this, [errorMessage2Ptr] (const QString &errorMessage) {
                                         *errorMessage2Ptr = errorMessage;
                                     });
 
@@ -4277,7 +4277,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     QString *errorMessage2Ptr = &errorMessage2;
 
                                     QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                                        this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                                        this, [errorMessage2Ptr] (const QString &errorMessage) {
                                         *errorMessage2Ptr = errorMessage;
                                     });
 
@@ -4391,7 +4391,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             QString *errorMessage2Ptr = &errorMessage2;
 
                             QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                                this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                                this, [errorMessage2Ptr] (const QString &errorMessage) {
                                 *errorMessage2Ptr = errorMessage;
                             });
 
@@ -4520,7 +4520,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                     QString *errorMessage2Ptr = &errorMessage2;
 
                                     QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                                        this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                                        this, [errorMessage2Ptr] (const QString &errorMessage) {
                                         *errorMessage2Ptr = errorMessage;
                                     });
 
@@ -4634,7 +4634,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             QString *errorMessage2Ptr = &errorMessage2;
 
                             QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                                this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                                this, [errorMessage2Ptr] (const QString &errorMessage) {
                                 *errorMessage2Ptr = errorMessage;
                             });
 
@@ -4752,7 +4752,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
             QString *errorMessage2Ptr = &errorMessage2;
 
             QMetaObject::Connection conn = connect(terminalDevice, &OpenMVTerminalPort::openResult,
-                this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                this, [errorMessage2Ptr] (const QString &errorMessage) {
                 *errorMessage2Ptr = errorMessage;
             });
 

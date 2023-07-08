@@ -41,7 +41,7 @@ public:
     bool canNavigate() const override;
 
     // OPENMV-DIFF //
-    QList<QWidget*> toolBarWidgets() const;
+    QList<QWidget*> toolBarWidgets() const override;
     OutputWindow *m_widget;
     QToolButton *m_saveButton;
     QAction *m_saveAction;

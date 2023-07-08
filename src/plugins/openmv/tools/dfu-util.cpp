@@ -295,10 +295,8 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
             QString stdOutBuffer = QString();
             QString *stdOutBufferPtr = &stdOutBuffer;
-            bool stdOutFirstTime = true;
-            bool *stdOutFirstTimePtr = &stdOutFirstTime;
 
-            QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, plainTextEdit, [plainTextEdit, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
+            QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, plainTextEdit, [plainTextEdit, stdOutBufferPtr] (const QString &text) {
                 stdOutBufferPtr->append(text);
                 QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -315,10 +313,8 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
             QString stdErrBuffer = QString();
             QString *stdErrBufferPtr = &stdErrBuffer;
-            bool stdErrFirstTime = true;
-            bool *stdErrFirstTimePtr = &stdErrFirstTime;
 
-            QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, plainTextEdit, [plainTextEdit, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
+            QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, plainTextEdit, [plainTextEdit, stdErrBufferPtr] (const QString &text) {
                 stdErrBufferPtr->append(text);
                 QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 

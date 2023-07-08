@@ -737,7 +737,7 @@ void MyPlainTextEdit::contextMenuEvent(QContextMenuEvent *event)
 
     menu.addSeparator();
 
-    connect(menu.addAction(Tr::tr("Find")), &QAction::triggered, this, [this] {
+    connect(menu.addAction(Tr::tr("Find")), &QAction::triggered, this, [] {
         Core::ActionManager::command(Core::Constants::FIND_IN_DOCUMENT)->action()->trigger();
     });
 
@@ -863,11 +863,11 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     connect(frameBuffer, &OpenMVPluginFB::imageWriterTick, recordingLabel, &Utils::ElidingLabel::setText);
 
-    connect(frameBuffer, &OpenMVPluginFB::pixmapUpdate, this, [this, beginRecordingButton] (const QPixmap &pixmap) {
+    connect(frameBuffer, &OpenMVPluginFB::pixmapUpdate, this, [beginRecordingButton] (const QPixmap &pixmap) {
         beginRecordingButton->setEnabled(!pixmap.isNull());
     });
 
-    connect(beginRecordingButton, &QToolButton::clicked, this, [this, beginRecordingButton, endRecordingButton, recordingLabel, frameBuffer] {
+    connect(beginRecordingButton, &QToolButton::clicked, this, [beginRecordingButton, endRecordingButton, recordingLabel, frameBuffer] {
         if(frameBuffer->beginImageWriter())
         {
             beginRecordingButton->setVisible(false);
@@ -876,14 +876,14 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
         }
     });
 
-    connect(endRecordingButton, &QToolButton::clicked, this, [this, beginRecordingButton, endRecordingButton, recordingLabel, frameBuffer] {
+    connect(endRecordingButton, &QToolButton::clicked, this, [beginRecordingButton, endRecordingButton, recordingLabel, frameBuffer] {
         frameBuffer->endImageWriter();
         beginRecordingButton->setVisible(true);
         endRecordingButton->setVisible(false);
         recordingLabel->setVisible(false);
     });
 
-    connect(frameBuffer, &OpenMVPluginFB::imageWriterShutdown, this, [this, beginRecordingButton, endRecordingButton, recordingLabel] {
+    connect(frameBuffer, &OpenMVPluginFB::imageWriterShutdown, this, [beginRecordingButton, endRecordingButton, recordingLabel] {
         beginRecordingButton->setVisible(true);
         endRecordingButton->setVisible(false);
         recordingLabel->setVisible(false);
@@ -930,7 +930,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     connect(frameBuffer, &OpenMVPluginFB::pixmapUpdate, histogram, &OpenMVPluginHistogram::pixmapUpdate);
 
-    connect(frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [this, resLabel] (const QSize &res, const QRect &roi) {
+    connect(frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [resLabel] (const QSize &res, const QRect &roi) {
         if(res.isValid())
         {
             if(roi.isValid())
