@@ -123,7 +123,11 @@ void ElidingToolButton::paintEvent(QPaintEvent *event)
     Q_UNUSED(event)
 
     const QFontMetrics fm = fontMetrics();
-    const int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
+    // OPENMV-DIFF //
+    // const int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
+    // OPENMV-DIFF //
+    int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
+    // OPENMV-DIFF //
 
     QPainter p(this);
 
@@ -154,7 +158,7 @@ void ElidingToolButton::paintEvent(QPaintEvent *event)
         p.setPen(Utils::creatorTheme()->color(Utils::Theme::IconsDisabledColor));
     }
 
-#ifdef Q_OS_WINDOWS
+#ifndef Q_OS_LINUX
     baseLine = baseLine - 1;
 #endif
     p.drawText(4, baseLine, fm.elidedText(text(), Qt::ElideRight, width() - 5));

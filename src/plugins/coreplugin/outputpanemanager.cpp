@@ -841,9 +841,11 @@ QSize OutputPaneToggleButton::sizeHint() const
 void OutputPaneToggleButton::paintEvent(QPaintEvent*)
 {
     const QFontMetrics fm = fontMetrics();
-    const int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
     // OPENMV-DIFF //
+    // const int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
     // const int numberWidth = fm.horizontalAdvance(m_number);
+    // OPENMV-DIFF //
+    int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
     // OPENMV-DIFF //
 
     QPainter p(this);
@@ -929,13 +931,11 @@ void OutputPaneToggleButton::paintEvent(QPaintEvent*)
         m_badgeNumberLabel.paint(&p, width() - labelWidth, (height() - labelSize.height()) / 2, isChecked());
     }
     // OPENMV-DIFF //
-    // p.drawText(leftPart, baseLine, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
-    // OPENMV-DIFF //
-#ifdef Q_OS_WINDOWS
+#ifndef Q_OS_LINUX
     baseLine = baseLine - 1;
 #endif
-    p.drawText(leftPart, baseLine, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
     // OPENMV-DIFF //
+    p.drawText(leftPart, baseLine, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
 }
 
 void OutputPaneToggleButton::checkStateSet()
