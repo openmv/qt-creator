@@ -201,6 +201,8 @@ Component.prototype.installerLoaded = function()
             var widget = gui.pageWidgetByObjectName("DynamicLinuxWidget");
             if (widget != null) {
                 widget.windowTitle = "Root Installs";
+                widget.installLibrariesCheck.setChecked(true);
+                widget.udevRulesCheck.setChecked(true);
                 isUbuntu = isUbuntu();
                 if (!isUbuntu) {
                     widget.installLibrariesCheck.hide();

@@ -31,9 +31,6 @@
      <property name="text">
       <string>Install Supporting Libraries (requires root)</string>
      </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
     </widget>
    </item>
    <item>
@@ -50,9 +47,6 @@
     <widget class="QCheckBox" name="udevRulesCheck">
      <property name="text">
       <string>Install Udev Rules (requires root)</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
      </property>
     </widget>
    </item>

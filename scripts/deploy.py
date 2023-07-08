@@ -257,6 +257,10 @@ def deploy_qt_conf_files(qtc_binary_path):
 def deploy_translations(qtc_binary_path, qt_install):
     print("Copying translations...")
     translations = glob(os.path.join(qt_install.translations, '*.qm'))
+    # OPENMV-DIFF #
+    substrings = ['qt_', 'qtbase_', 'qtmultimedia_', 'qtserialport_']
+    translations = list(filter(lambda x: any(s in x for s in substrings), translations))
+    # OPENMV-DIFF #
     destdir = (os.path.join(qtc_binary_path, 'Contents', 'Resources', 'translations') if common.is_mac_platform()
                else os.path.join(qtc_binary_path, '..', 'share', 'qtcreator', 'translations'))
     for translation in translations:
@@ -504,21 +508,6 @@ def main():
             print("fixing rpaths...")
             common.fix_rpaths(install_dir, os.path.join(qt_deploy_prefix, 'lib'), qt_install_info, chrpath_bin)
 
-<<<<<<< HEAD:scripts/deploy.py
-=======
-    if args.elfutils_path:
-        deploy_elfutils(install_dir, chrpath_bin, args)
-    if not common.is_windows_platform():
-        print("fixing rpaths...")
-        common.fix_rpaths(install_dir, os.path.join(qt_deploy_prefix, 'lib'), qt_install_info, chrpath_bin)
-        # OPENMV-DIFF #
-        # add_qt_conf(os.path.join(install_dir, 'libexec', 'qtcreator'), qt_deploy_prefix) # e.g. for qml2puppet
-        # OPENMV-DIFF #
-        add_qt_conf(os.path.join(install_dir, 'lib', 'qtcreator'), qt_deploy_prefix) # e.g. for qml2puppet
-        # OPENMV-DIFF #
-        add_qt_conf(os.path.join(qt_deploy_prefix, 'bin'), qt_deploy_prefix) # e.g. qtdiag
-    add_qt_conf(os.path.join(install_dir, 'bin'), qt_deploy_prefix)
->>>>>>> f3b1fd2a29c (Fix all issues with linux installer build):scripts/deployqt.py
 
 if __name__ == "__main__":
     main()
