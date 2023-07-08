@@ -117,7 +117,11 @@ def ignored_qt_lib_files(path, filenames):
     # Qt ships some unneeded object files in the qml plugins
     # On Windows we also do not want to ship the wrong debug/release .dlls or .lib files etc
     if not common.is_windows_platform():
-        return [fn for fn in filenames if fn.endswith('.cpp.o')]
+        # OPENMV-DIFF #
+        # return [fn for fn in filenames if fn.endswith('.cpp.o')]
+        # OPENMV-DIFF #
+        return [fn for fn in filenames if fn.endswith('.cpp.o') or fn.endswith('.debug')]
+        # OPENMV-DIFF #
     return [fn for fn in filenames
             if fn.endswith('.cpp.obj') or is_ignored_windows_file(debug_build, path, fn)]
 
@@ -194,6 +198,10 @@ def add_qt_conf(target_path, qt_prefix_path):
 
 def copy_translations(install_dir, qt_tr_dir):
     translations = glob(os.path.join(qt_tr_dir, '*.qm'))
+    # OPENMV-DIFF #
+    substrings = ['qt_', 'qtbase_', 'qtmultimedia_', 'qtserialport_']
+    translations = list(filter(lambda x: any(s in x for s in substrings), translations))
+    # OPENMV-DIFF #
     tr_dir = os.path.join(install_dir, 'share', 'qtcreator', 'translations')
 
     print("copying translations...")
