@@ -266,7 +266,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     QEventLoop loop;
 
     QMetaObject::Connection conn = QObject::connect(dialog, &QDialog::finished,
-        &loop, [&loop, okPtr] () {
+        &loop, [okPtr] () {
         *okPtr = false;
     });
 

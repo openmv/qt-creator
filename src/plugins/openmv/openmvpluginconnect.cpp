@@ -87,7 +87,7 @@ void OpenMVPlugin::packageUpdate()
 
                         QNetworkAccessManager *manager2 = new QNetworkAccessManager(this);
 
-                        connect(manager2, &QNetworkAccessManager::finished, this, [this, manager2, new_major, new_minor, new_patch, dialog] (QNetworkReply *reply2) {
+                        connect(manager2, &QNetworkAccessManager::finished, this, [manager2, new_major, new_minor, new_patch, dialog] (QNetworkReply *reply2) {
                             QByteArray data2 = reply2->error() == QNetworkReply::NoError ? reply2->readAll() : QByteArray();
 
                             if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
@@ -171,7 +171,7 @@ void OpenMVPlugin::packageUpdate()
                         {
                             connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
                             connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-                            connect(reply2, &QNetworkReply::downloadProgress, this, [this, dialog, reply2] (qint64 bytesReceived, qint64 bytesTotal) {
+                            connect(reply2, &QNetworkReply::downloadProgress, this, [dialog] (qint64 bytesReceived, qint64 bytesTotal) {
                                 dialog->setMaximum(bytesTotal);
                                 dialog->setValue(bytesReceived);
                             });
@@ -264,7 +264,7 @@ void OpenMVPlugin::bootloaderClicked()
             checkBox2->setVisible(false);
         }
 
-        QTimer::singleShot(0, this, [this, dialog] { dialog->adjustSize(); });
+        QTimer::singleShot(0, this, [dialog] { dialog->adjustSize(); });
     });
 
     if(dialog->exec() == QDialog::Accepted)
@@ -404,7 +404,7 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
     {
         connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
         connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-        connect(reply2, &QNetworkReply::downloadProgress, this, [this, dialog, reply2] (qint64 bytesReceived, qint64 bytesTotal) {
+        connect(reply2, &QNetworkReply::downloadProgress, this, [dialog] (qint64 bytesReceived, qint64 bytesTotal) {
             dialog->setMaximum(bytesTotal);
             dialog->setValue(bytesReceived);
         });
@@ -487,7 +487,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     bool ok = true;
     bool *okPtr = &ok;
 
-    connect(manager2, &QNetworkAccessManager::finished, this, [this, manager2, dialog, okPtr, path] (QNetworkReply *reply2) {
+    connect(manager2, &QNetworkAccessManager::finished, this, [manager2, dialog, okPtr, path] (QNetworkReply *reply2) {
         QByteArray data2 = reply2->error() == QNetworkReply::NoError ? reply2->readAll() : QByteArray();
 
         if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
@@ -538,7 +538,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     {
         connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
         connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-        connect(reply2, &QNetworkReply::downloadProgress, this, [this, dialog, reply2] (qint64 bytesReceived, qint64 bytesTotal) {
+        connect(reply2, &QNetworkReply::downloadProgress, this, [dialog] (qint64 bytesReceived, qint64 bytesTotal) {
             dialog->setMaximum(bytesTotal);
             dialog->setValue(bytesReceived);
         });
@@ -737,7 +737,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
                             connect(combo, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [this, dialog, checkBox] (int index) {
                                 checkBox->setVisible(index == 0);
-                                QTimer::singleShot(0, this, [this, dialog] { dialog->adjustSize(); });
+                                QTimer::singleShot(0, this, [dialog] { dialog->adjustSize(); });
                             });
 
                             if(dialog->exec() == QDialog::Accepted)
@@ -1092,7 +1092,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             QString *errorMessage2Ptr = &errorMessage2;
 
             QMetaObject::Connection conn = connect(m_ioport, &OpenMVPluginSerialPort::openResult,
-                this, [this, errorMessage2Ptr] (const QString &errorMessage) {
+                this, [errorMessage2Ptr] (const QString &errorMessage) {
                 *errorMessage2Ptr = errorMessage;
             });
 
@@ -1184,7 +1184,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             int *patch2Ptr = &patch2;
 
             QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::firmwareVersion,
-                this, [this, major2Ptr, minor2Ptr, patch2Ptr] (int major, int minor, int patch) {
+                this, [major2Ptr, minor2Ptr, patch2Ptr] (int major, int minor, int patch) {
                 *major2Ptr = major;
                 *minor2Ptr = minor;
                 *patch2Ptr = patch;
@@ -1247,7 +1247,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 QString *arch2Ptr = &arch2;
 
                 QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::archString,
-                    this, [this, arch2Ptr] (const QString &arch) {
+                    this, [arch2Ptr] (const QString &arch) {
                     *arch2Ptr = arch;
                 });
 
@@ -1308,7 +1308,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     QString *arch2Ptr = &arch2;
 
                     QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::archString,
-                        this, [this, arch2Ptr] (const QString &arch) {
+                        this, [arch2Ptr] (const QString &arch) {
                         *arch2Ptr = arch;
                     });
 
@@ -1470,7 +1470,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             bool highspeed2 = bool(), *highspeed2Ptr = &highspeed2;
 
                             QMetaObject::Connection conn = connect(m_ioport, &OpenMVPluginSerialPort::bootloaderStartResponse,
-                                this, [this, done2Ptr, loopExitPtr, version2Ptr, highspeed2Ptr] (bool done, int version, bool highspeed) {
+                                this, [done2Ptr, loopExitPtr, version2Ptr, highspeed2Ptr] (bool done, int version, bool highspeed) {
                                 *done2Ptr = done;
                                 *loopExitPtr = true;
                                 *version2Ptr = version;
@@ -1478,7 +1478,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             });
 
                             QMetaObject::Connection conn2 = connect(m_ioport, &OpenMVPluginSerialPort::bootloaderStopResponse,
-                                this, [this, done2Ptr2] {
+                                this, [done2Ptr2] {
                                 *done2Ptr2 = true;
                             });
 
@@ -1565,7 +1565,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 int last2 = int(), *last2Ptr = &last2;
 
                                 QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::bootloaderQueryDone,
-                                    this, [this, all_start2Ptr, start2Ptr, last2Ptr] (int all_start, int start, int last) {
+                                    this, [all_start2Ptr, start2Ptr, last2Ptr] (int all_start, int start, int last) {
                                     *all_start2Ptr = all_start;
                                     *start2Ptr = start;
                                     *last2Ptr = last;
@@ -1599,7 +1599,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 int *block_size_in_bytes2Ptr = &qspif_block_size_in_bytes;
 
                                 QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::bootloaderQSPIFLayoutDone,
-                                    this, [this, start_block2Ptr, max_block2Ptr, block_size_in_bytes2Ptr] (int start_block, int max_block, int block_size_in_bytes) {
+                                    this, [start_block2Ptr, max_block2Ptr, block_size_in_bytes2Ptr] (int start_block, int max_block, int block_size_in_bytes) {
                                     *start_block2Ptr = start_block;
                                     *max_block2Ptr = max_block;
                                     *block_size_in_bytes2Ptr = block_size_in_bytes;
@@ -1627,7 +1627,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                         if(dataChunks.size() && (dataChunks.last().size() % 4))
                         {
-                            dataChunks.last().append(QByteArray(4 - (dataChunks.last().size() % 4), 255));
+                            dataChunks.last().append(QByteArray(4 - (dataChunks.last().size() % 4), (char) 255));
                         }
 
                         // Erase Flash ////////////////////////////////////////
@@ -1654,7 +1654,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 bool *ok2Ptr = &ok2;
 
                                 QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::bootloaderQSPIFEraseDone,
-                                    this, [this, ok2Ptr] (bool ok) {
+                                    this, [ok2Ptr] (bool ok) {
                                     *ok2Ptr = ok;
                                 });
 
@@ -1707,7 +1707,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             bool *ok2Ptr = &ok2;
 
                             QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::flashEraseDone,
-                                this, [this, ok2Ptr] (bool ok) {
+                                this, [ok2Ptr] (bool ok) {
                                 *ok2Ptr = *ok2Ptr && ok;
                             });
 
@@ -1774,7 +1774,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             bool *ok2Ptr = &ok2;
 
                             QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::flashWriteDone,
-                                this, [this, ok2Ptr] (bool ok) {
+                                this, [ok2Ptr] (bool ok) {
                                 *ok2Ptr = *ok2Ptr && ok;
                             });
 
@@ -2093,7 +2093,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     bool canceled = false;
                     bool *canceledPtr = &canceled;
 
-                    connect(&dialog, &QProgressDialog::canceled, this, [this, canceledPtr] {
+                    connect(&dialog, &QProgressDialog::canceled, this, [canceledPtr] {
                         *canceledPtr = true;
                     });
 
@@ -3085,7 +3085,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 int *id2Ptr = &id2;
 
                 QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::sensorIdDone,
-                    this, [this, id2Ptr] (int id) {
+                    this, [id2Ptr] (int id) {
                     *id2Ptr = id;
                 });
 
@@ -3200,7 +3200,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             QString *arch2Ptr = &arch2;
 
             QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::archString,
-                this, [this, arch2Ptr] (const QString &arch) {
+                this, [arch2Ptr] (const QString &arch) {
                 *arch2Ptr = arch;
             });
 
@@ -3314,7 +3314,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             bool *ok2Ptr = &ok2;
 
             QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::learnedMTU,
-                this, [this, ok2Ptr] (bool ok) {
+                this, [ok2Ptr] (bool ok) {
                 *ok2Ptr = ok;
             });
 
@@ -3351,7 +3351,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             QEventLoop loop2;
 
             QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                this, [this, emptyPtr] (bool ok) {
+                this, [emptyPtr] (bool ok) {
                 *emptyPtr = ok;
             });
 
@@ -3375,7 +3375,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             QEventLoop loop2;
 
             QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                this, [this, emptyPtr] (bool ok) {
+                this, [emptyPtr] (bool ok) {
                 *emptyPtr = ok;
             });
 
@@ -3597,7 +3597,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                         QEventLoop loop2;
 
                         QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                            this, [this, emptyPtr] (bool ok) {
+                            this, [emptyPtr] (bool ok) {
                             *emptyPtr = ok;
                         });
 
@@ -3621,7 +3621,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                         QEventLoop loop2;
 
                         QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                            this, [this, emptyPtr] (bool ok) {
+                            this, [emptyPtr] (bool ok) {
                             *emptyPtr = ok;
                         });
 
@@ -3724,7 +3724,7 @@ void OpenMVPlugin::startClicked()
             bool *running2Ptr = &running2;
 
             QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::scriptRunning,
-                this, [this, running2Ptr] (bool running) {
+                this, [running2Ptr] (bool running) {
                 *running2Ptr = running;
             });
 
@@ -3761,7 +3761,7 @@ void OpenMVPlugin::startClicked()
                     QEventLoop loop2;
 
                     QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                        this, [this, emptyPtr] (bool ok) {
+                        this, [emptyPtr] (bool ok) {
                         *emptyPtr = ok;
                     });
 
@@ -3785,7 +3785,7 @@ void OpenMVPlugin::startClicked()
                     QEventLoop loop2;
 
                     QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                        this, [this, emptyPtr] (bool ok) {
+                        this, [emptyPtr] (bool ok) {
                         *emptyPtr = ok;
                     });
 
@@ -3845,7 +3845,7 @@ void OpenMVPlugin::stopClicked()
             bool *running2Ptr = &running2;
 
             QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::scriptRunning,
-                this, [this, running2Ptr] (bool running) {
+                this, [running2Ptr] (bool running) {
                 *running2Ptr = running;
             });
 
@@ -3882,7 +3882,7 @@ void OpenMVPlugin::stopClicked()
                     QEventLoop loop2;
 
                     QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                        this, [this, emptyPtr] (bool ok) {
+                        this, [emptyPtr] (bool ok) {
                         *emptyPtr = ok;
                     });
 
@@ -3906,7 +3906,7 @@ void OpenMVPlugin::stopClicked()
                     QEventLoop loop2;
 
                     QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                        this, [this, emptyPtr] (bool ok) {
+                        this, [emptyPtr] (bool ok) {
                         *emptyPtr = ok;
                     });
 
@@ -3940,7 +3940,7 @@ void OpenMVPlugin::stopClicked()
                 : false
             : false)
         {
-            QTimer::singleShot(2000, this, [this] {
+            QTimer::singleShot(2000, this, [] {
                 Utils::CheckableMessageBox::doNotShowAgainInformation(Core::ICore::dialogParent(),
                         Tr::tr("More Examples"),
                         Tr::tr("You can find more examples under the File -> Examples menu.\n\n"
