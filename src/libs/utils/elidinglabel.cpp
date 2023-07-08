@@ -154,7 +154,10 @@ void ElidingToolButton::paintEvent(QPaintEvent *event)
         p.setPen(Utils::creatorTheme()->color(Utils::Theme::IconsDisabledColor));
     }
 
-    p.drawText(4, baseLine - 1, fm.elidedText(text(), Qt::ElideRight, width() - 5));
+#ifdef Q_OS_WINDOWS
+    baseLine = baseLine - 1;
+#endif
+    p.drawText(4, baseLine, fm.elidedText(text(), Qt::ElideRight, width() - 5));
 }
 // OPENMV-DIFF //
 

@@ -931,7 +931,10 @@ void OutputPaneToggleButton::paintEvent(QPaintEvent*)
     // OPENMV-DIFF //
     // p.drawText(leftPart, baseLine, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
     // OPENMV-DIFF //
-    p.drawText(leftPart, baseLine - 1, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
+#ifdef Q_OS_WINDOWS
+    baseLine = baseLine - 1;
+#endif
+    p.drawText(leftPart, baseLine, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
     // OPENMV-DIFF //
 }
 
