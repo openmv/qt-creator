@@ -147,12 +147,16 @@ void TabBar::addEditorTab(Core::IEditor *editor)
 
     if(path.isEmpty())
     {
+#ifndef Q_OS_MAC
         setTabIcon(index, Utils::FileIconProvider::icon(Core::ICore::userResourcePath().pathAppended(QStringLiteral("/examples/OpenMV/01-Basics/helloworld.py"))));
+#endif
         setTabToolTip(index, document->displayName());
     }
     else
     {
+#ifndef Q_OS_MAC
         setTabIcon(index, Utils::FileIconProvider::icon(document->filePath()));
+#endif
         setTabToolTip(index, document->filePath().toString());
     }
     // OPENMV-DIFF //
