@@ -29,7 +29,11 @@ bool TabbedEditorPlugin::initialize(const QStringList &arguments, QString *error
     // connect(Core::ICore::instance(), SIGNAL(themeChanged()), this, SLOT(updateStyleToBaseColor()));
     // connect(Core::EditorManager::instance(), SIGNAL(editorOpened(Core::IEditor*)), SLOT(showTabBar()));
     // OPENMV-DIFF //
+#ifdef Q_OS_MAC
+    connect(Core::EditorManager::instance(), SIGNAL(editorOpened(Core::IEditor*)), SLOT(showTabBar()));
+#else
     connect(Core::ICore::instance(), &Core::ICore::coreOpened, this, &TabbedEditorPlugin::updateStyleToBaseColor);
+#endif
     // OPENMV-DIFF //
 
     QMainWindow *mainWindow = qobject_cast<QMainWindow *>(Core::ICore::mainWindow());
