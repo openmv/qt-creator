@@ -18,7 +18,10 @@ debug_build = False
 # OPENMV-DIFF #
 # encoding = locale.getdefaultlocale()[1]
 # OPENMV-DIFF #
-encoding = locale.getencoding()
+try:
+  encoding = locale.getencoding()
+except:
+  encoding = locale.getdefaultlocale()[1]
 # OPENMV-DIFF #
 
 def get_args():

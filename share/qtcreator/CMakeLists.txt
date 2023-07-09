@@ -65,7 +65,6 @@ endif()
 
 if (APPLE)
   set(resource_directories ${resource_directories}
-    scripts
     ffmpeg/mac
     dfu-util/osx
     bossac/osx
@@ -77,7 +76,7 @@ endif()
 if(UNIX AND NOT APPLE)
   if(CMAKE_SIZEOF_VOID_P EQUAL 8)
     if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm*")
-      set(resource_directories ${resource_directories} 
+      set(resource_directories ${resource_directories}
         ffmpeg/linux-arm64
         bossac/aarch64
         picotool/aarch64)

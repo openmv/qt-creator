@@ -56,23 +56,29 @@ if [ -d "$quick2_src" ]; then
     fi
 fi
 
-# copy qt creator qt.conf
-if [ ! -f "$resource_path/qt.conf" ]; then
-    echo "- Copying qt.conf"
-    cp -f "$(dirname "${BASH_SOURCE[0]}")/../dist/installer/mac/qt.conf" "$resource_path/qt.conf" || exit 1
-fi
+# OPENMV-DIFF #
+# # copy qt creator qt.conf
+# if [ ! -f "$resource_path/qt.conf" ]; then
+#     echo "- Copying qt.conf"
+#     cp -f "$(dirname "${BASH_SOURCE[0]}")/../dist/installer/mac/qt.conf" "$resource_path/qt.conf" || exit 1
+# fi
+# OPENMV-DIFF #
 
-# copy libexec tools' qt.conf
-if [ ! -f "$libexec_path/qt.conf" ]; then
-    echo "- Copying libexec/qt.conf"
-    cp -f "$(dirname "${BASH_SOURCE[0]}")/../dist/installer/mac/libexec_qt.conf" "$libexec_path/qt.conf" || exit 1
-fi
+# OPENMV-DIFF #
+# # copy libexec tools' qt.conf
+# if [ ! -f "$libexec_path/qt.conf" ]; then
+#     echo "- Copying libexec/qt.conf"
+#     cp -f "$(dirname "${BASH_SOURCE[0]}")/../dist/installer/mac/libexec_qt.conf" "$libexec_path/qt.conf" || exit 1
+# fi
+# OPENMV-DIFF #
 
-# copy ios tools' qt.conf
-if [ ! -f "$libexec_path/ios/qt.conf" ]; then
-    echo "- Copying libexec/ios/qt.conf"
-    cp -f "$(dirname "${BASH_SOURCE[0]}")/../dist/installer/mac/ios_qt.conf" "$libexec_path/ios/qt.conf" || exit 1
-fi
+# OPENMV-DIFF #
+# # copy ios tools' qt.conf
+# if [ ! -f "$libexec_path/ios/qt.conf" ]; then
+#     echo "- Copying libexec/ios/qt.conf"
+#     cp -f "$(dirname "${BASH_SOURCE[0]}")/../dist/installer/mac/ios_qt.conf" "$libexec_path/ios/qt.conf" || exit 1
+# fi
+# OPENMV-DIFF #
 
 # copy Qt translations
 # check for known existing translation to avoid copying multiple times
@@ -131,15 +137,20 @@ if [ ! -d "$app_path/Contents/Frameworks/QtCore.framework" ]; then
         sdktoolArgument="-executable=$sdktoolapp"
     fi
 
+    # OPENMV-DIFF #
+    # "$bin_src/macdeployqt" "$app_path" \
+    #     "-executable=$app_path/Contents/MacOS/qtdiag" \
+    #     "-executable=$libexec_path/qtpromaker" \
+    #     "$sdktoolArgument" \
+    #     "-executable=$libexec_path/ios/iostool" \
+    #     "-executable=$libexec_path/buildoutputparser" \
+    #     "-executable=$libexec_path/cpaster" \
+    #     "${qbsArguments[@]}" \
+    #     "$qml2puppetArgument" || exit 1
+    # OPENMV-DIFF #
     "$bin_src/macdeployqt" "$app_path" \
-        "-executable=$app_path/Contents/MacOS/qtdiag" \
-        "-executable=$libexec_path/qtpromaker" \
-        "$sdktoolArgument" \
-        "-executable=$libexec_path/ios/iostool" \
-        "-executable=$libexec_path/buildoutputparser" \
-        "-executable=$libexec_path/cpaster" \
-        "${qbsArguments[@]}" \
-        "$qml2puppetArgument" || exit 1
+            "-executable=$app_path/Contents/MacOS/qtdiag" || exit 1
+    # OPENMV-DIFF #
 
 fi
 

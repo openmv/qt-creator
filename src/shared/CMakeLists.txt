@@ -1,9 +1,13 @@
-#add_subdirectory(designerintegrationv2)
-#add_subdirectory(proparser)
+# OPENMV-DIFF #
+# add_subdirectory(designerintegrationv2)
+# add_subdirectory(proparser)
+# OPENMV-DIFF #
 add_subdirectory(qtsingleapplication)
 add_subdirectory(qtlockedfile)
-add_subdirectory(help)
-add_subdirectory(registryaccess)
+# OPENMV-DIFF #
+# add_subdirectory(help)
+# add_subdirectory(registryaccess)
+# OPENMV-DIFF #
 
 # PCHs used by qmake based plugin builds
 qtc_add_public_header(qtcreator_pch.h)

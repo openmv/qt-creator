@@ -35,5 +35,5 @@ set(IDE_SETTINGSVARIANT "OpenMV")
 set(IDE_DISPLAY_NAME "OpenMV IDE")
 set(IDE_ID "openmvide")
 set(IDE_CASED_ID "OpenMVIDE")
-set(IDE_BUNDLE_IDENTIFIER "org.qt-project.${IDE_ID}")
+set(IDE_BUNDLE_IDENTIFIER "io.openmv.${IDE_ID}")
 # OPENMV-DIFF #
