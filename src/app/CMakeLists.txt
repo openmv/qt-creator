@@ -102,36 +102,53 @@ if (APPLE)
     set(MACOSX_DEPLOYMENT_TARGET ${CMAKE_OSX_DEPLOYMENT_TARGET})
   endif()
   set_target_properties(qtcreator PROPERTIES
-      MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/app-Info.plist"
+      # OPENMV-DIFF #
+      # MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/app-Info.plist"
+      # OPENMV-DIFF #
+      MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/openmvide-Info.plist"
+      # OPENMV-DIFF #
   )
   # icon
-  add_custom_command(
-    OUTPUT qtcreator.icns qtcreator-project.icns
-    COMMAND
-      xcrun actool --app-icon qtcreator --output-partial-info-plist "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.Info.plist"
-      --platform macosx --minimum-deployment-target 10.7 --compile "${CMAKE_CURRENT_BINARY_DIR}"
-      "${IDE_ICON_PATH}/qtcreator.xcassets"
-      > /dev/null
-    BYPRODUCTS qtcreator.Info.plist
-    VERBATIM
-  )
-  target_sources(qtcreator
-    PRIVATE
-      "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns"
-      "${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns"
-  )
+  # OPENMV-DIFF #
+  # add_custom_command(
+  #   OUTPUT qtcreator.icns qtcreator-project.icns
+  #   COMMAND
+  #     xcrun actool --app-icon qtcreator --output-partial-info-plist "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.Info.plist"
+  #     --platform macosx --minimum-deployment-target 10.7 --compile "${CMAKE_CURRENT_BINARY_DIR}"
+  #     "${IDE_ICON_PATH}/qtcreator.xcassets"
+  #     > /dev/null
+  #   BYPRODUCTS qtcreator.Info.plist
+  #   VERBATIM
+  # )
+  # target_sources(qtcreator
+  #   PRIVATE
+  #     "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns"
+  #     "${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns"
+  # )
+  # qtc_copy_to_builddir(copy_icns
+  #   DESTINATION ${IDE_DATA_PATH}
+  #   FILES
+  #     ${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns
+  #     ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+  # )
+  # install(
+  #   FILES
+  #     ${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns
+  #     ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+  #   DESTINATION ${IDE_DATA_PATH}
+  # )
+  # OPENMV-DIFF #
   qtc_copy_to_builddir(copy_icns
     DESTINATION ${IDE_DATA_PATH}
     FILES
-      ${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns
-      ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+      ${CMAKE_BINARY_DIR}/../openmv-media/icons/openmv-icon/openmv.icns
   )
   install(
     FILES
-      ${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns
-      ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+      ${CMAKE_BINARY_DIR}/../openmv-media/icons/openmv-icon/openmv.icns
     DESTINATION ${IDE_DATA_PATH}
   )
+  # OPENMV-DIFF #
 endif()
 
 option(QTC_FORCE_XCB "Enables that Qt Creator forces XCB on Linux if QT_QPA_PLATFORM is not set." OFF)
