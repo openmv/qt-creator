@@ -10,7 +10,9 @@ namespace OpenMV {
 namespace Internal {
 
 QList<QString> getDevices();
-void downloadFirmware(QString &command, Utils::QtcProcess &process, const QString &path, const QString &device, const QString &moreArgs = QString());
+void downloadFirmware(const QString &details,
+                      QString &command, Utils::QtcProcess &process,
+                      const QString &path, const QString &device, const QString &moreArgs = QString());
 
 } // namespace Internal
 } // namespace OpenMV
