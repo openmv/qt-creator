@@ -9,6 +9,8 @@
 #include <utils/qtcprocess.h>
 #include <utils/theme/theme.h>
 
+#include "loaderdialog.h"
+
 #include "openmvtr.h"
 
 #define DFU_UTIL_SETTINGS_GROUP "OpenMVDFUUtil"
@@ -106,7 +108,9 @@ QList<QString> getDevices()
     }
 }
 
-void downloadFirmware(QString &command, Utils::QtcProcess &process, const QString &path, const QString &device, const QString &moreArgs)
+void downloadFirmware(const QString &details,
+                      QString &command, Utils::QtcProcess &process,
+                      const QString &path, const QString &device, const QString &moreArgs)
 {
     QStringList list;
 
@@ -129,39 +133,15 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
         {
             QSettings *settings = ExtensionSystem::PluginManager::settings();
             settings->beginGroup(QStringLiteral(DFUSE_SETTINGS_GROUP));
-
-            QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
-                Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-            dialog->setWindowTitle(Tr::tr("DfuSe"));
-            dialog->setSizeGripEnabled(true);
-
-            if(settings->contains(QStringLiteral(LAST_DFUSE_TERMINAL_WINDOW_GEOMETRY)))
-            {
-                dialog->restoreGeometry(settings->value(QStringLiteral(LAST_DFUSE_TERMINAL_WINDOW_GEOMETRY)).toByteArray());
-            }
-            else
-            {
-                dialog->resize(640, 480);
-            }
-
-            QVBoxLayout *layout = new QVBoxLayout(dialog);
-
-            QPlainTextEdit *plainTextEdit = new QPlainTextEdit();
-            plainTextEdit->setReadOnly(true);
-            QFont font = TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily();
-            plainTextEdit->setFont(font);
-
-            layout->addWidget(plainTextEdit);
+            LoaderDialog *dialog = new LoaderDialog(Tr::tr("DfuSe"), details, process, settings, QStringLiteral(LAST_DFUSE_TERMINAL_WINDOW_GEOMETRY),
+                                                    Core::ICore::dialogParent());
 
             QString stdOutBuffer = QString();
             QString *stdOutBufferPtr = &stdOutBuffer;
             bool stdOutFirstTime = true;
             bool *stdOutFirstTimePtr = &stdOutFirstTime;
 
-            QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, plainTextEdit, [plainTextEdit, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
+            QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
                 stdOutBufferPtr->append(text);
                 QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -176,19 +156,29 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
                     if(out.startsWith(QStringLiteral("Target")))
                     {
+                        QRegularExpressionMatch m = QRegularExpression(QStringLiteral("Target \\d+: Upgrading - (\\w+) Phase \\((\\d+)\\)")).match(out);
+
+                        if(m.hasMatch())
+                        {
+                            dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : Tr::tr("Downloading..."));
+                            int p = m.captured(2).toInt();
+                            if (p <= 10) dialog->setProgressBarRange(0, 100);
+                            dialog->setProgressBarValue(p);
+                        }
+
                         if(!*stdOutFirstTimePtr)
                         {
-                            QTextCursor cursor = plainTextEdit->textCursor();
+                            QTextCursor cursor = dialog->textCursor();
                             cursor.movePosition(QTextCursor::End);
                             cursor.select(QTextCursor::BlockUnderCursor);
                             cursor.removeSelectedText();
-                            plainTextEdit->setTextCursor(cursor);
+                            dialog->setTextCursor(cursor);
                         }
 
                         *stdOutFirstTimePtr = false;
                     }
 
-                    plainTextEdit->appendPlainText(out);
+                    dialog->appendPlainText(out);
                 }
             });
 
@@ -197,7 +187,7 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
             bool stdErrFirstTime = true;
             bool *stdErrFirstTimePtr = &stdErrFirstTime;
 
-            QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, plainTextEdit, [plainTextEdit, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
+            QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, dialog, [dialog, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
                 stdErrBufferPtr->append(text);
                 QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -212,30 +202,31 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
                     if(out.startsWith(QStringLiteral("Target")))
                     {
+                        QRegularExpressionMatch m = QRegularExpression(QStringLiteral("Target \\d+: Upgrading - (\\w+) Phase \\((\\d+)\\)")).match(out);
+
+                        if(m.hasMatch())
+                        {
+                            dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : Tr::tr("Downloading..."));
+                            int p = m.captured(2).toInt();
+                            if (p <= 10) dialog->setProgressBarRange(0, 100);
+                            dialog->setProgressBarValue(p);
+                        }
+
                         if(!*stdErrFirstTimePtr)
                         {
-                            QTextCursor cursor = plainTextEdit->textCursor();
+                            QTextCursor cursor = dialog->textCursor();
                             cursor.movePosition(QTextCursor::End);
                             cursor.select(QTextCursor::BlockUnderCursor);
                             cursor.removeSelectedText();
-                            plainTextEdit->setTextCursor(cursor);
+                            dialog->setTextCursor(cursor);
                         }
 
                         *stdErrFirstTimePtr = false;
                     }
 
-                    plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:%1\">%2</p>").
-                                              arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightcoral") : QStringLiteral("coral")).
-                                              arg(out));
+                    dialog->appendColoredText(out);
                 }
             });
-
-            QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
-            QObject::connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-            QObject::connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
-            layout->addWidget(box);
-
-            QObject::connect(dialog, &QDialog::rejected, [&process] { process.terminate(); });
 
             Utils::FilePath binary = Core::ICore::resourcePath(QStringLiteral("dfuse/DfuSeCommand.exe"));
             QStringList args = QStringList() <<
@@ -247,9 +238,7 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
                                QDir::toNativeSeparators(QDir::cleanPath(path));
 
             command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
-            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
-                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
-                                      arg(command));
+            dialog->appendColoredText(command);
 
             dialog->show();
             process.setTimeoutS(300); // 5 minutes...
@@ -258,45 +247,20 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
             process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
-            settings->setValue(QStringLiteral(LAST_DFUSE_TERMINAL_WINDOW_GEOMETRY), dialog->saveGeometry());
-            settings->endGroup();
             delete dialog;
+            settings->endGroup();
         }
         else
         {
             QSettings *settings = ExtensionSystem::PluginManager::settings();
             settings->beginGroup(QStringLiteral(PYDFU_SETTINGS_GROUP));
-
-            QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
-                Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-            dialog->setWindowTitle(Tr::tr("PyDfu"));
-            dialog->setSizeGripEnabled(true);
-
-            if(settings->contains(QStringLiteral(LAST_PYDFU_TERMINAL_WINDOW_GEOMETRY)))
-            {
-                dialog->restoreGeometry(settings->value(QStringLiteral(LAST_PYDFU_TERMINAL_WINDOW_GEOMETRY)).toByteArray());
-            }
-            else
-            {
-                dialog->resize(640, 480);
-            }
-
-            QVBoxLayout *layout = new QVBoxLayout(dialog);
-
-            QPlainTextEdit *plainTextEdit = new QPlainTextEdit();
-            plainTextEdit->setReadOnly(true);
-            QFont font = TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily();
-            plainTextEdit->setFont(font);
-
-            layout->addWidget(plainTextEdit);
+            LoaderDialog *dialog = new LoaderDialog(Tr::tr("PyDfu"), details, process, settings, QStringLiteral(LAST_PYDFU_TERMINAL_WINDOW_GEOMETRY),
+                                                    Core::ICore::dialogParent());
 
             QString stdOutBuffer = QString();
             QString *stdOutBufferPtr = &stdOutBuffer;
 
-            QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, plainTextEdit, [plainTextEdit, stdOutBufferPtr] (const QString &text) {
+            QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr] (const QString &text) {
                 stdOutBufferPtr->append(text);
                 QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -307,14 +271,14 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
                 while(list.size())
                 {
-                    plainTextEdit->appendPlainText(list.takeFirst());
+                    dialog->appendPlainText(list.takeFirst());
                 }
             });
 
             QString stdErrBuffer = QString();
             QString *stdErrBufferPtr = &stdErrBuffer;
 
-            QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, plainTextEdit, [plainTextEdit, stdErrBufferPtr] (const QString &text) {
+            QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, dialog, [dialog, stdErrBufferPtr] (const QString &text) {
                 stdErrBufferPtr->append(text);
                 QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -325,18 +289,9 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
                 while(list.size())
                 {
-                    plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:%1\">%2</p>").
-                                              arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightcoral") : QStringLiteral("coral")).
-                                              arg(list.takeFirst()));
+                    dialog->appendColoredText(list.takeFirst());
                 }
             });
-
-            QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
-            QObject::connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-            QObject::connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
-            layout->addWidget(box);
-
-            QObject::connect(dialog, &QDialog::rejected, [&process] { process.terminate(); });
 
             Utils::FilePath binary = Utils::FilePath::fromString(QStringLiteral("python3"));
             QStringList args = QStringList() <<
@@ -345,9 +300,7 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
                                QDir::toNativeSeparators(QDir::cleanPath(path));
 
             command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
-            plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
-                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
-                                      arg(command));
+            dialog->appendColoredText(command);
 
             dialog->show();
             process.setTimeoutS(300); // 5 minutes...
@@ -356,9 +309,8 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
             process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
-            settings->setValue(QStringLiteral(LAST_PYDFU_TERMINAL_WINDOW_GEOMETRY), dialog->saveGeometry());
-            settings->endGroup();
             delete dialog;
+            settings->endGroup();
         }
 
         return;
@@ -366,39 +318,15 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(DFU_UTIL_SETTINGS_GROUP));
-
-    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
-        Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-        (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
-        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-    dialog->setWindowTitle(Tr::tr("DFU Util"));
-    dialog->setSizeGripEnabled(true);
-
-    if(settings->contains(QStringLiteral(LAST_DFU_UTIL_TERMINAL_WINDOW_GEOMETRY)))
-    {
-        dialog->restoreGeometry(settings->value(QStringLiteral(LAST_DFU_UTIL_TERMINAL_WINDOW_GEOMETRY)).toByteArray());
-    }
-    else
-    {
-        dialog->resize(640, 480);
-    }
-
-    QVBoxLayout *layout = new QVBoxLayout(dialog);
-
-    QPlainTextEdit *plainTextEdit = new QPlainTextEdit();
-    plainTextEdit->setReadOnly(true);
-    QFont font = TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily();
-    plainTextEdit->setFont(font);
-
-    layout->addWidget(plainTextEdit);
+    LoaderDialog *dialog = new LoaderDialog(Tr::tr("DFU Util"), details, process, settings, QStringLiteral(LAST_DFU_UTIL_TERMINAL_WINDOW_GEOMETRY),
+                                            Core::ICore::dialogParent());
 
     QString stdOutBuffer = QString();
     QString *stdOutBufferPtr = &stdOutBuffer;
     bool stdOutFirstTime = true;
     bool *stdOutFirstTimePtr = &stdOutFirstTime;
 
-    QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, plainTextEdit, [plainTextEdit, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
         stdOutBufferPtr->append(text);
         QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -413,19 +341,29 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
             if(out.startsWith(QStringLiteral("Erase")) || out.startsWith(QStringLiteral("Download")))
             {
+                QRegularExpressionMatch m = QRegularExpression(QStringLiteral("(\\w+)\\s+\\[=*\\s*\\]\\s+(\\d+)%\\s+(\\d+)\\s+bytes")).match(out);
+
+                if(m.hasMatch())
+                {
+                    dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : Tr::tr("Downloading..."));
+                    int p = m.captured(2).toInt();
+                    if (!p) dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarValue(p);
+                }
+
                 if(!*stdOutFirstTimePtr)
                 {
-                    QTextCursor cursor = plainTextEdit->textCursor();
+                    QTextCursor cursor = dialog->textCursor();
                     cursor.movePosition(QTextCursor::End);
                     cursor.select(QTextCursor::BlockUnderCursor);
                     cursor.removeSelectedText();
-                    plainTextEdit->setTextCursor(cursor);
+                    dialog->setTextCursor(cursor);
                 }
 
                 *stdOutFirstTimePtr = false;
             }
 
-            plainTextEdit->appendPlainText(out);
+            dialog->appendPlainText(out);
         }
     });
 
@@ -434,7 +372,7 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
     bool stdErrFirstTime = true;
     bool *stdErrFirstTimePtr = &stdErrFirstTime;
 
-    QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, plainTextEdit, [plainTextEdit, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, dialog, [dialog, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
         stdErrBufferPtr->append(text);
         QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -449,30 +387,31 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
 
             if(out.startsWith(QStringLiteral("Erase")) || out.startsWith(QStringLiteral("Download")))
             {
+                QRegularExpressionMatch m = QRegularExpression(QStringLiteral("(\\w+)\\s+\\[=*\\s*\\]\\s+(\\d+)%\\s+(\\d+)\\s+bytes")).match(out);
+
+                if(m.hasMatch())
+                {
+                    dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : Tr::tr("Downloading..."));
+                    int p = m.captured(2).toInt();
+                    if (!p) dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarValue(p);
+                }
+
                 if(!*stdErrFirstTimePtr)
                 {
-                    QTextCursor cursor = plainTextEdit->textCursor();
+                    QTextCursor cursor = dialog->textCursor();
                     cursor.movePosition(QTextCursor::End);
                     cursor.select(QTextCursor::BlockUnderCursor);
                     cursor.removeSelectedText();
-                    plainTextEdit->setTextCursor(cursor);
+                    dialog->setTextCursor(cursor);
                 }
 
                 *stdErrFirstTimePtr = false;
             }
 
-            plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:%1\">%2</p>").
-                                      arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightcoral") : QStringLiteral("coral")).
-                                      arg(out));
+            dialog->appendColoredText(out);
         }
     });
-
-    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
-    QObject::connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-    QObject::connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
-    layout->addWidget(box);
-
-    QObject::connect(dialog, &QDialog::rejected, [&process] { process.terminate(); });
 
     Utils::FilePath binary;
     QStringList args = QStringList() <<
@@ -508,9 +447,7 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
     }
 
     command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
-    plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
-                              arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
-                              arg(command));
+    dialog->appendColoredText(command);
 
     dialog->show();
     process.setTimeoutS(300); // 5 minutes...
@@ -519,11 +456,9 @@ void downloadFirmware(QString &command, Utils::QtcProcess &process, const QStrin
     process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
-    settings->setValue(QStringLiteral(LAST_DFU_UTIL_TERMINAL_WINDOW_GEOMETRY), dialog->saveGeometry());
-    settings->endGroup();
     delete dialog;
+    settings->endGroup();
 }
 
 } // namespace Internal
 } // namespace OpenMV
-
