@@ -129,7 +129,7 @@ QStringList imxGetAllDevices(bool spd_host, bool bl_host)
                 delete[] pRawInputDeviceList;
             }
         }
-#else
+#elif defined(Q_OS_LINUX)
         Utils::QtcProcess process;
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
@@ -160,6 +160,43 @@ QStringList imxGetAllDevices(bool spd_host, bool bl_host)
                                            arg(vid, 4, 16, QChar('0')).
                                            arg(pid, 4, 16, QChar('0')));
                         }
+                    }
+                }
+            }
+        }
+#elif defined(Q_OS_MAC)
+        Utils::QtcProcess process;
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("ioreg")), QStringList()
+                                              << QStringLiteral("-p")
+                                              << QStringLiteral("IOUSB")
+                                              << QStringLiteral("-w0")
+                                              << QStringLiteral("-l")));
+        process.runBlocking(Utils::EventLoopMode::On);
+
+        if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
+        {
+            QRegularExpressionMatchIterator matches = QRegularExpression(QStringLiteral("{.*?\"idProduct\" = (\\d+).*?\"idVendor\" = (\\d+).*?}"),
+                                                                         QRegularExpression::DotMatchesEverythingOption).globalMatch(process.stdOut());
+
+            while(matches.hasNext())
+            {
+                QRegularExpressionMatch match = matches.next();
+
+                bool vidOk, pidOk;
+                int pid = match.captured(1).toInt(&pidOk);
+                int vid = match.captured(2).toInt(&vidOk);
+
+                if(vidOk && pidOk)
+                {
+                    QPair<int, int> entry(vid, pid);
+
+                    if(pidvidlist.contains(entry))
+                    {
+                        devices.append(QString(QStringLiteral("%1:%2,NULL")).
+                                       arg(vid, 4, 16, QChar('0')).
+                                       arg(pid, 4, 16, QChar('0')));
                     }
                 }
             }
