@@ -312,14 +312,13 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if(out.startsWith(QStringLiteral("(1/1)")))
             {
-                QRegularExpressionMatch m = QRegularExpression(QStringLiteral("\\(1/1\\)(\\d+)%")).match(out);
+                QRegularExpressionMatch m = QRegularExpression(QStringLiteral("\\(1/1\\)\\s*(\\d+)%")).match(out);
 
                 if(m.hasMatch())
                 {
                     dialog->setProgressBarLabel(Tr::tr("Downloading..."));
-                    int p = m.captured(1).toInt();
-                    if (p <= 10) dialog->setProgressBarRange(0, 100);
-                    dialog->setProgressBarValue(p);
+                    dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarValue(m.captured(1).toInt());
                 }
 
                 if(!*stdOutFirstTimePtr)
@@ -363,14 +362,13 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if(out.startsWith(QStringLiteral("(1/1)")))
             {
-                QRegularExpressionMatch m = QRegularExpression(QStringLiteral("\\(1/1\\)(\\d+)%")).match(out);
+                QRegularExpressionMatch m = QRegularExpression(QStringLiteral("\\(1/1\\)\\s*(\\d+)%")).match(out);
 
                 if(m.hasMatch())
                 {
                     dialog->setProgressBarLabel(Tr::tr("Downloading..."));
-                    int p = m.captured(1).toInt();
-                    if (p <= 10) dialog->setProgressBarRange(0, 100);
-                    dialog->setProgressBarValue(p);
+                    dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarValue(m.captured(1).toInt());
                 }
 
                 if(!*stdErrFirstTimePtr)
@@ -1067,14 +1065,13 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if(out.startsWith(QStringLiteral("(1/1)")))
             {
-                QRegularExpressionMatch m = QRegularExpression(QStringLiteral("\\(1/1\\)(\\d+)%")).match(out);
+                QRegularExpressionMatch m = QRegularExpression(QStringLiteral("\\(1/1\\)\\s*(\\d+)%")).match(out);
 
                 if(m.hasMatch())
                 {
                     dialog->setProgressBarLabel(Tr::tr("Downloading..."));
-                    int p = m.captured(1).toInt();
-                    if (p <= 10) dialog->setProgressBarRange(0, 100);
-                    dialog->setProgressBarValue(p);
+                    dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarValue(m.captured(1).toInt());
                 }
 
                 if(!*stdOutFirstTimePtr)
@@ -1118,14 +1115,13 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if(out.startsWith(QStringLiteral("(1/1)")))
             {
-                QRegularExpressionMatch m = QRegularExpression(QStringLiteral("\\(1/1\\)(\\d+)%")).match(out);
+                QRegularExpressionMatch m = QRegularExpression(QStringLiteral("\\(1/1\\)\\s*(\\d+)%")).match(out);
 
                 if(m.hasMatch())
                 {
                     dialog->setProgressBarLabel(Tr::tr("Downloading..."));
-                    int p = m.captured(1).toInt();
-                    if (p <= 10) dialog->setProgressBarRange(0, 100);
-                    dialog->setProgressBarValue(p);
+                    dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarValue(m.captured(1).toInt());
                 }
 
                 if(!*stdErrFirstTimePtr)

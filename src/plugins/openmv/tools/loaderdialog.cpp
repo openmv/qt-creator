@@ -31,7 +31,7 @@ LoaderDialog::LoaderDialog(const QString &title,
     m_warningLabel->setVisible(false);
     layout->addWidget(m_warningLabel);
 
-    connect(&process, &Utils::QtcProcess::done, m_warningLabel, [this, layout] {
+    connect(&process, &Utils::QtcProcess::done, m_warningLabel, [this] {
         m_warningLabel->setVisible(false);
         m_warningLabel->setText(QString());
         if (!m_detailsButton->isChecked()) {
