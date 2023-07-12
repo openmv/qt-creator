@@ -1229,9 +1229,7 @@ void OpenMVPluginIO::flashWrite(const QByteArray &data)
 
     if(m_bootloaderFastMode)
     {
-        Q_ASSERT(!(buffer.size() % (m_bootloaderHS ? HS_EP_SIZE : FS_EP_SIZE))); // packets should be the size of the ep
-
-        if(Utils::HostOsInfo::isMacHost())
+        if(Utils::HostOsInfo::isMacHost() && (buffer.size() == (m_bootloaderHS ? HS_EP_SIZE : FS_EP_SIZE)))
         {
             // Add non-posted command to ensure sync (also ensures that the packet is not a multiple of 64 bytes)
             serializeLong(buffer, __BOOTLDR_QUERY);
@@ -1244,7 +1242,6 @@ void OpenMVPluginIO::flashWrite(const QByteArray &data)
     }
     else
     {
-        Q_ASSERT(buffer.size() % (m_bootloaderHS ? HS_EP_SIZE : FS_EP_SIZE)); // packets should be not the size of the ep
         m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_WRITE_START_DELAY, BOOTLDR_WRITE_END_DELAY));
     }
 
@@ -1291,9 +1288,7 @@ void OpenMVPluginIO::bootloaderQSPIFWrite(const QByteArray &data)
 
     if(m_bootloaderFastMode)
     {
-        Q_ASSERT(!(buffer.size() % (m_bootloaderHS ? HS_EP_SIZE : FS_EP_SIZE))); // packets should be the size of the ep
-
-        if(Utils::HostOsInfo::isMacHost())
+        if(Utils::HostOsInfo::isMacHost() && (buffer.size() == (m_bootloaderHS ? HS_EP_SIZE : FS_EP_SIZE)))
         {
             // Add non-posted command to ensure sync (also ensures that the packet is not a multiple of 64 bytes)
             serializeLong(buffer, __BOOTLDR_QUERY);
@@ -1306,7 +1301,6 @@ void OpenMVPluginIO::bootloaderQSPIFWrite(const QByteArray &data)
     }
     else
     {
-        Q_ASSERT(buffer.size() % (m_bootloaderHS ? HS_EP_SIZE : FS_EP_SIZE)); // packets should be not the size of the ep
         m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), BOOTLDR_QSPIF_WRITE_START_DELAY, BOOTLDR_QSPIF_WRITE_END_DELAY));
     }
 

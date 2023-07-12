@@ -1862,8 +1862,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             m_iodevice->close();
 
                             loop.exec();
-
                             dialog.close();
+                            QApplication::processEvents();
 
                             QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
