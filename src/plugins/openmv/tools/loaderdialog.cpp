@@ -31,13 +31,11 @@ LoaderDialog::LoaderDialog(const QString &title,
     m_warningLabel->setVisible(false);
     layout->addWidget(m_warningLabel);
 
-    connect(&process, &Utils::QtcProcess::done, m_warningLabel, [this] {
-        if (!m_detailsButton->isChecked()) m_maxHeight = height();
-        m_warningLabel->hide();
+    connect(&process, &Utils::QtcProcess::done, m_warningLabel, [this, layout] {
+        m_warningLabel->setVisible(false);
+        m_warningLabel->setText(QString());
         if (!m_detailsButton->isChecked()) {
             QTimer::singleShot(0, this, [this] { resize(width(), minimumSizeHint().height()); });
-        } else {;
-            QTimer::singleShot(0, this, [this] { resize(width(), m_maxHeight); });
         }
     });
 
