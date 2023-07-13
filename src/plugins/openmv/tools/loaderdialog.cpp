@@ -48,7 +48,7 @@ LoaderDialog::LoaderDialog(const QString &title,
     m_progressBar->setRange(0, 0);
     progressLayout->addWidget(m_progressBar);
 
-    m_detailsButton = new QToolButton();
+    m_detailsButton = new QPushButton();
     m_detailsButton->setText(Tr::tr("Show Details"));
     m_detailsButton->setCheckable(true);
     progressLayout->addWidget(m_detailsButton);
