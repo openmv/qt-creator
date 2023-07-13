@@ -37,7 +37,7 @@ private:
     QString m_settingsName;
     QLabel *m_progressBarLabel;
     QProgressBar *m_progressBar;
-    QToolButton *m_detailsButton;
+    QPushButton *m_detailsButton;
     QLabel *m_warningLabel;
     QPlainTextEdit *m_plainTextEdit;
     int m_maxHeight;
