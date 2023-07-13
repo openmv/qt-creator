@@ -176,7 +176,7 @@ void picotoolDownloadFirmware(const QString &details, QString &command, Utils::Q
                 {
                     dialog->setProgressBarLabel(Tr::tr("Downloading..."));
                     int p = m.captured(1).toInt();
-                    if (!p) dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
                 }
 
@@ -227,7 +227,7 @@ void picotoolDownloadFirmware(const QString &details, QString &command, Utils::Q
                 {
                     dialog->setProgressBarLabel(Tr::tr("Downloading..."));
                     int p = m.captured(1).toInt();
-                    if (!p) dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
                 }
 

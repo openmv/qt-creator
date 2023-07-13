@@ -99,7 +99,7 @@ void bossacDownloadFirmware(const QString &details, QString &command, Utils::Qtc
                 {
                     dialog->setProgressBarLabel(Tr::tr("Downloading..."));
                     int p = m.captured(1).toInt();
-                    if (!p) dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
                 }
 
@@ -150,7 +150,7 @@ void bossacDownloadFirmware(const QString &details, QString &command, Utils::Qtc
                 {
                     dialog->setProgressBarLabel(Tr::tr("Downloading..."));
                     int p = m.captured(1).toInt();
-                    if (!p) dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
                 }
 
