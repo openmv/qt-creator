@@ -184,8 +184,8 @@
 
 #define BOOTLDR_START_START_DELAY           0
 #define BOOTLDR_START_END_DELAY             0
-#define BOOTLDR_RESET_START_DELAY           0
-#define BOOTLDR_RESET_END_DELAY             0
+#define BOOTLDR_RESET_START_DELAY           5
+#define BOOTLDR_RESET_END_DELAY             5
 #define BOOTLDR_ERASE_START_DELAY           0
 #define BOOTLDR_ERASE_END_DELAY             0
 #define BOOTLDR_WRITE_START_DELAY           0
