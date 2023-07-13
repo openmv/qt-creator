@@ -162,7 +162,7 @@ void downloadFirmware(const QString &details,
                         {
                             dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : Tr::tr("Downloading..."));
                             int p = m.captured(2).toInt();
-                            if (p <= 10) dialog->setProgressBarRange(0, 100);
+                            dialog->setProgressBarRange(0, 100);
                             dialog->setProgressBarValue(p);
                         }
 
@@ -208,7 +208,7 @@ void downloadFirmware(const QString &details,
                         {
                             dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : Tr::tr("Downloading..."));
                             int p = m.captured(2).toInt();
-                            if (p <= 10) dialog->setProgressBarRange(0, 100);
+                            dialog->setProgressBarRange(0, 100);
                             dialog->setProgressBarValue(p);
                         }
 
@@ -259,8 +259,10 @@ void downloadFirmware(const QString &details,
 
             QString stdOutBuffer = QString();
             QString *stdOutBufferPtr = &stdOutBuffer;
+            bool stdOutFirstTime = true;
+            bool *stdOutFirstTimePtr = &stdOutFirstTime;
 
-            QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr] (const QString &text) {
+            QObject::connect(&process, &Utils::QtcProcess::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
                 stdOutBufferPtr->append(text);
                 QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -271,14 +273,42 @@ void downloadFirmware(const QString &details,
 
                 while(list.size())
                 {
-                    dialog->appendPlainText(list.takeFirst());
+                    QString out = list.takeFirst();
+
+                    if(out.startsWith(QStringLiteral("0x")))
+                    {
+                        QRegularExpressionMatch m = QRegularExpression(QStringLiteral("(\\d+)%")).match(out);
+
+                        if(m.hasMatch())
+                        {
+                            dialog->setProgressBarLabel(Tr::tr("Downloading..."));
+                            int p = m.captured(1).toInt();
+                            dialog->setProgressBarRange(0, 100);
+                            dialog->setProgressBarValue(p);
+                        }
+
+                        if(!*stdOutFirstTimePtr)
+                        {
+                            QTextCursor cursor = dialog->textCursor();
+                            cursor.movePosition(QTextCursor::End);
+                            cursor.select(QTextCursor::BlockUnderCursor);
+                            cursor.removeSelectedText();
+                            dialog->setTextCursor(cursor);
+                        }
+
+                        *stdOutFirstTimePtr = false;
+                    }
+
+                    dialog->appendPlainText(out);
                 }
             });
 
             QString stdErrBuffer = QString();
             QString *stdErrBufferPtr = &stdErrBuffer;
+            bool stdErrFirstTime = true;
+            bool *stdErrFirstTimePtr = &stdErrFirstTime;
 
-            QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, dialog, [dialog, stdErrBufferPtr] (const QString &text) {
+            QObject::connect(&process, &Utils::QtcProcess::textOnStandardError, dialog, [dialog, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
                 stdErrBufferPtr->append(text);
                 QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -289,7 +319,33 @@ void downloadFirmware(const QString &details,
 
                 while(list.size())
                 {
-                    dialog->appendColoredText(list.takeFirst());
+                    QString out = list.takeFirst();
+
+                    if(out.startsWith(QStringLiteral("0x")))
+                    {
+                        QRegularExpressionMatch m = QRegularExpression(QStringLiteral("(\\d+)%")).match(out);
+
+                        if(m.hasMatch())
+                        {
+                            dialog->setProgressBarLabel(Tr::tr("Downloading..."));
+                            int p = m.captured(1).toInt();
+                            dialog->setProgressBarRange(0, 100);
+                            dialog->setProgressBarValue(p);
+                        }
+
+                        if(!*stdErrFirstTimePtr)
+                        {
+                            QTextCursor cursor = dialog->textCursor();
+                            cursor.movePosition(QTextCursor::End);
+                            cursor.select(QTextCursor::BlockUnderCursor);
+                            cursor.removeSelectedText();
+                            dialog->setTextCursor(cursor);
+                        }
+
+                        *stdErrFirstTimePtr = false;
+                    }
+
+                    dialog->appendColoredText(out);
                 }
             });
 
@@ -347,7 +403,7 @@ void downloadFirmware(const QString &details,
                 {
                     dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : Tr::tr("Downloading..."));
                     int p = m.captured(2).toInt();
-                    if (!p) dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
                 }
 
@@ -393,7 +449,7 @@ void downloadFirmware(const QString &details,
                 {
                     dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : Tr::tr("Downloading..."));
                     int p = m.captured(2).toInt();
-                    if (!p) dialog->setProgressBarRange(0, 100);
+                    dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
                 }
 
