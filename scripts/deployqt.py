@@ -362,6 +362,14 @@ def deploy_mac(args):
 
 def get_qt_install_info(qmake_binary):
     qt_install_info = common.get_qt_install_info(qmake_binary)
+    # OPENMV-DIFF #
+    if ("qt-host" in qmake_binary):
+        for key in qt_install_info:
+            value = qt_install_info[key]
+            if isinstance(value, str) and "qt-host" in value:
+                new_value = value.replace("qt-host", "qt-raspi")
+                qt_install_info[key] = new_value
+    # OPENMV-DIFF #
     QtInstallInfo = collections.namedtuple('QtInstallInfo', ['bin', 'lib', 'plugins',
                                                              'qml', 'translations'])
     return (qt_install_info,

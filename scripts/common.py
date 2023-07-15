@@ -136,6 +136,11 @@ def fix_rpaths(path, qt_deploy_path, qt_install_info, chrpath=None):
         chrpath = 'chrpath'
     qt_install_prefix = qt_install_info['QT_INSTALL_PREFIX']
     qt_install_libs = qt_install_info['QT_INSTALL_LIBS']
+    # OPENMV-DIFF #
+    ldd_path = 'ldd'
+    if ("qt-raspi" in qt_install_prefix):
+        ldd_path = '/usr/bin/aarch64-linux-gnu-ldd'
+    # OPENMV-DIFF #
 
     def fix_rpaths_helper(filepath):
         rpath = get_rpath(filepath, chrpath)
@@ -146,7 +151,11 @@ def fix_rpaths(path, qt_deploy_path, qt_install_info, chrpath=None):
                      and not path.startswith(qt_install_libs)]
 
         # check for Qt linking
-        lddOutput = subprocess.check_output(['ldd', filepath])
+        # OPENMV-DIFF #
+        # lddOutput = subprocess.check_output(['ldd', filepath])
+        # OPENMV-DIFF #
+        lddOutput = subprocess.check_output([ldd_path, filepath])
+        # OPENMV-DIFF #
         lddDecodedOutput = lddOutput.decode(encoding) if encoding else lddOutput
         if lddDecodedOutput.find('libQt') >= 0 or lddDecodedOutput.find('libicu') >= 0:
             # add Qt RPATH if necessary

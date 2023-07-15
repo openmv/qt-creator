@@ -546,10 +546,18 @@ public:
     void emitChangedValue() override;
 
     QList<int> value() const;
-    void setValue(const QList<int> &value);
+    // OPENMV-DIFF //
+    // void setValue(const QList<int> &value);
+    // OPENMV-DIFF //
+    // GCC crashes when compiling this function.
+    // OPENMV-DIFF //
 
     QList<int> defaultValue() const;
-    void setDefaultValue(const QList<int> &value);
+    // OPENMV-DIFF //
+    // void setDefaultValue(const QList<int> &value);
+    // OPENMV-DIFF //
+    // GCC crashes when compiling this function.
+    // OPENMV-DIFF //
 
 signals:
     void valueChanged(const QList<int> &values);

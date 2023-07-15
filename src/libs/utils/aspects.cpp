@@ -2161,10 +2161,14 @@ QList<int> IntegersAspect::value() const
                             [](QVariant v) { return v.toInt(); });
 }
 
-void IntegersAspect::setValue(const QList<int> &value)
-{
-    BaseAspect::setValue(transform(value, &QVariant::fromValue<int>));
-}
+// OPENMV-DIFF //
+// void IntegersAspect::setValue(const QList<int> &value)
+// {
+//     BaseAspect::setValue(transform(value, &QVariant::fromValue<int>));
+// }
+// OPENMV-DIFF //
+// GCC crashes when compiling this function.
+// OPENMV-DIFF //
 
 QList<int> IntegersAspect::defaultValue() const
 {
@@ -2172,10 +2176,14 @@ QList<int> IntegersAspect::defaultValue() const
                      [](QVariant v) { return v.toInt(); });
 }
 
-void IntegersAspect::setDefaultValue(const QList<int> &value)
-{
-    BaseAspect::setDefaultValue(transform(value, &QVariant::fromValue<int>));
-}
+// OPENMV-DIFF //
+// void IntegersAspect::setDefaultValue(const QList<int> &value)
+// {
+//     BaseAspect::setDefaultValue(transform(value, &QVariant::fromValue<int>));
+// }
+// OPENMV-DIFF //
+// GCC crashes when compiling this function.
+// OPENMV-DIFF //
 
 
 /*!
