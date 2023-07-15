@@ -1,53 +1,56 @@
 set(resource_directories
-  #OPENMV-DIFF#
-  #android
-  #cplusplus
-  #glsl
-  #indexer_preincludes
-  #jsonschemas
-  #lua-plugins
-  #modeleditor
-  #qmldesigner
-  #qmlicons
-  #qml-type-descriptions
-  #schemes
-  #snippets
-  #styles
-  #templates
-  #themes
-  #OPENMV-DIFF#
+  # OPENMV-DIFF #
+  # android
+  # cplusplus
+  # glsl
+  # indexer_preincludes
+  # jsonschemas
+  # lua-plugins
+  # modeleditor
+  # qmldesigner
+  # qmlicons
+  # qml-type-descriptions
+  # schemes
+  # snippets
+  # styles
+  # templates
+  # themes
+  # OPENMV-DIFF #
   examples
   firmware
   html
   models
+  # OPENMV-DIFF #
 )
 
 set(resource_files
-  #OPENMV-DIFF#
-  #debugger-with-python2/qttypes.py
-  #debugger-with-python2/personaltypes.py
-  #debugger-with-python2/android_stdtypes.py
-  #debugger-with-python2/README.txt
-  #debugger-with-python2/gdbbridge.py
-  #debugger-with-python2/cdbbridge.py
-  #debugger-with-python2/lldbbridge.py
-  #debugger-with-python2/misctypes.py
-  #debugger-with-python2/opencvtypes.py
-  #debugger-with-python2/libcpp_stdtypes.py
-  #debugger-with-python2/creatortypes.py
-  #debugger-with-python2/stdtypes.py
-  #debugger-with-python2/gdbtracepoint.py
-  #debugger-with-python2/utils.py
-  #debugger-with-python2/boosttypes.py
-  #debugger-with-python2/dumper.py
-  #debugger-with-python2/pdbbridge.py
-  #OPENMV-DIFF#
+  # OPENMV-DIFF #
+  # debugger-with-python2/qttypes.py
+  # debugger-with-python2/personaltypes.py
+  # debugger-with-python2/android_stdtypes.py
+  # debugger-with-python2/README.txt
+  # debugger-with-python2/gdbbridge.py
+  # debugger-with-python2/cdbbridge.py
+  # debugger-with-python2/lldbbridge.py
+  # debugger-with-python2/misctypes.py
+  # debugger-with-python2/opencvtypes.py
+  # debugger-with-python2/libcpp_stdtypes.py
+  # debugger-with-python2/creatortypes.py
+  # debugger-with-python2/stdtypes.py
+  # debugger-with-python2/gdbtracepoint.py
+  # debugger-with-python2/utils.py
+  # debugger-with-python2/boosttypes.py
+  # debugger-with-python2/dumper.py
+  # debugger-with-python2/pdbbridge.py
+  # OPENMV-DIFF #
   styles/flat-dark.xml
   styles/flat-light.xml
   themes/flat-dark.creatortheme
   themes/flat-light.creatortheme
+  # OPENMV-DIFF #
 )
 
+# OPENMV-DIFF #
 if (WIN32)
   set(resource_directories ${resource_directories}
     drivers
@@ -58,8 +61,6 @@ if (WIN32)
     picotool/windows
     blhost/win
     sdphost/win)
-else()
-  set(resource_directories ${resource_directories} pydfu)
 endif()
 
 if (APPLE)
@@ -70,6 +71,7 @@ if (APPLE)
     picotool/osx
     blhost/mac
     sdphost/mac)
+  set(resource_files ${resource_files} pydfu/pydfu.py)
 endif()
 
 if(UNIX AND NOT APPLE)
@@ -78,13 +80,15 @@ if(UNIX AND NOT APPLE)
       set(resource_directories ${resource_directories}
         ffmpeg/linux-arm64
         bossac/aarch64
-        picotool/aarch64)
+        picotool/aarch64
+        pydfu)
     else()
       set(resource_directories ${resource_directories}
         ffmpeg/linux-x86_64 dfu-util/linux64 bossac/linux64
         picotool/linux64
         blhost/linux/amd64
-        sdphost/linux/amd64)
+        sdphost/linux/amd64
+        pydfu)
     endif()
   else()
     if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm*")
@@ -92,17 +96,20 @@ if(UNIX AND NOT APPLE)
         ffmpeg/linux-armhf
         dfu-util/arm
         bossac/arm
-        picotool/arm)
+        picotool/arm
+        pydfu)
     else()
       set(resource_directories ${resource_directories}
         ffmpeg/linux-x86
         dfu-util/linux32
         bossac/linux32
         picotool/linux32
-        sdphost/linux/i386)
+        sdphost/linux/i386
+        pydfu)
     endif()
   endif()
 endif()
+# OPENMV-DIFF #
 
 # copy resource directories during build
 qtc_copy_to_builddir(copy_share_to_builddir
