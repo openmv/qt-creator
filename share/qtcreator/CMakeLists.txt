@@ -1,54 +1,57 @@
 set(resource_directories
-  #OPENMV-DIFF#
-  #android
-  #cplusplus
-  #glsl
-  #indexer_preincludes
-  #modeleditor
-  #qmldesigner
-  #qmlicons
-  #qml-type-descriptions
-  #schemes
-  #snippets
-  #styles
-  #templates
-  #themes
-  #OPENMV-DIFF#
+  # OPENMV-DIFF #
+  # android
+  # cplusplus
+  # glsl
+  # indexer_preincludes
+  # modeleditor
+  # qmldesigner
+  # qmlicons
+  # qml-type-descriptions
+  # schemes
+  # snippets
+  # styles
+  # templates
+  # themes
+  # OPENMV-DIFF #
   examples
   firmware
   html
   models
+  # OPENMV-DIFF #
 )
 
 set(resource_files
-  #OPENMV-DIFF#
-  #debugger/.pylintrc
-  #debugger/boosttypes.py
-  #debugger/cdbbridge.py
-  #debugger/creatortypes.py
-  #debugger/dumper.py
-  #debugger/gdbbridge.py
-  #debugger/gdbtracepoint.py
-  #debugger/LICENSE.GPL3-EXCEPT
-  #debugger/lldbbridge.py
-  #debugger/misctypes.py
-  #debugger/opencvtypes.py
-  #debugger/pdbbridge.py
-  #debugger/personaltypes.py
-  #debugger/qttypes.py
-  #debugger/README.txt
-  #debugger/setup.cfg
-  #debugger/android_stdtypes.py
-  #debugger/libcpp_stdtypes.py
-  #debugger/stdtypes.py
-  #debugger/utils.py
-  #OPENMV-DIFF#
+  # OPENMV-DIFF #
+  # debugger/.pylintrc
+  # debugger/boosttypes.py
+  # debugger/cdbbridge.py
+  # debugger/creatortypes.py
+  # debugger/dumper.py
+  # debugger/gdbbridge.py
+  # debugger/gdbtracepoint.py
+  # debugger/LICENSE.GPL3-EXCEPT
+  # debugger/lldbbridge.py
+  # debugger/misctypes.py
+  # debugger/opencvtypes.py
+  # debugger/pdbbridge.py
+  # debugger/personaltypes.py
+  # debugger/qttypes.py
+  # debugger/README.txt
+  # debugger/setup.cfg
+  # debugger/android_stdtypes.py
+  # debugger/libcpp_stdtypes.py
+  # debugger/stdtypes.py
+  # debugger/utils.py
+  # OPENMV-DIFF #
   styles/flat-dark.xml
   styles/flat-light.xml
   themes/flat-dark.creatortheme
   themes/flat-light.creatortheme
+  # OPENMV-DIFF #
 )
 
+# OPENMV-DIFF #
 if (WIN32)
   set(resource_directories ${resource_directories}
     drivers
@@ -59,8 +62,6 @@ if (WIN32)
     picotool/windows
     blhost/win
     sdphost/win)
-else()
-  set(resource_directories ${resource_directories} pydfu)
 endif()
 
 if (APPLE)
@@ -71,6 +72,7 @@ if (APPLE)
     picotool/osx
     blhost/mac
     sdphost/mac)
+  set(resource_files ${resource_files} pydfu/pydfu.py)
 endif()
 
 if(UNIX AND NOT APPLE)
@@ -79,13 +81,15 @@ if(UNIX AND NOT APPLE)
       set(resource_directories ${resource_directories}
         ffmpeg/linux-arm64
         bossac/aarch64
-        picotool/aarch64)
+        picotool/aarch64
+        pydfu)
     else()
       set(resource_directories ${resource_directories}
         ffmpeg/linux-x86_64 dfu-util/linux64 bossac/linux64
         picotool/linux64
         blhost/linux/amd64
-        sdphost/linux/amd64)
+        sdphost/linux/amd64
+        pydfu)
     endif()
   else()
     if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm*")
@@ -93,17 +97,20 @@ if(UNIX AND NOT APPLE)
         ffmpeg/linux-armhf
         dfu-util/arm
         bossac/arm
-        picotool/arm)
+        picotool/arm
+        pydfu)
     else()
       set(resource_directories ${resource_directories}
         ffmpeg/linux-x86
         dfu-util/linux32
         bossac/linux32
         picotool/linux32
-        sdphost/linux/i386)
+        sdphost/linux/i386
+        pydfu)
     endif()
   endif()
 endif()
+# OPENMV-DIFF #
 
 # copy resource directories during build
 qtc_copy_to_builddir(copy_share_to_builddir

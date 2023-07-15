@@ -134,18 +134,18 @@ def copy_qt_libs(target_qt_prefix_path, qt_bin_dir, qt_libs_dir, qt_plugin_dir, 
     if common.is_windows_platform():
         libraries = glob(os.path.join(qt_libs_dir, '*.dll'))
         # OPENMV-DIFF #
-        libs = ["libgcc_s_seh-1", "libstdc++-6", "libwinpthread-1", "Qt6Core", "Qt6Core5Compat", "Qt6Gui",
-                "Qt6Network", "Qt6PrintSupport", "Qt6Qml", "Qt6SerialPort", "Qt6Sql", "Qt6Svg",
-                "Qt6SvgWidgets", "Qt6Test", "Qt6Widgets", "Qt6Xml"]
+        libs = ["libgcc_s_seh-1", "libstdc++-6", "libwinpthread-1", "Qt6Concurrent", "Qt6Core", "Qt6Core5Compat",
+                "Qt6DBus", "Qt6Gui", "Qt6Network", "Qt6PrintSupport", "Qt6Qml", "Qt6SerialPort",
+                "Qt6Sql", "Qt6Svg", "Qt6SvgWidgets", "Qt6Test", "Qt6Widgets", "Qt6Xml"]
         libraries = list(filter(lambda x: os.path.basename(x).split('.')[0] in libs, libraries))
         # OPENMV-DIFF #
     else:
         libraries = glob(os.path.join(qt_libs_dir, '*.so.*'))
         # OPENMV-DIFF #
-        libs = ["libicudata", "libicui18n", "libicuuc", "libQt6Core", "libQt6Core5Compat", "libQt6DBus",
-                "libQt6EglFSDeviceIntegration", "libQt6Gui", "libQt6Network", "libQt6OpenGL", "libQt6PrintSupport", "libQt6Qml",
-                "libQt6SerialPort", "libQt6Sql", "libQt6Svg", "libQt6SvgWidgets", "libQt6Test", "libQt6WaylandClient",
-                "libQt6WaylandEglClientHwIntegration", "libQt6Widgets", "libQt6WlShellIntegration", "libQt6XcbQpa", "libQt6Xml"]
+        libs = ["libicudata", "libicui18n", "libicuuc", "libQt6Concurrent", "libQt6Core", "libQt6Core5Compat",
+                "libQt6DBus", "libQt6EglFSDeviceIntegration", "libQt6Gui", "libQt6Network", "libQt6OpenGL", "libQt6PrintSupport",
+                "libQt6Qml", "libQt6SerialPort", "libQt6Sql", "libQt6Svg", "libQt6SvgWidgets", "libQt6Test",
+                "libQt6WaylandClient", "libQt6WaylandEglClientHwIntegration", "libQt6Widgets", "libQt6WlShellIntegration", "libQt6XcbQpa", "libQt6Xml"]
         libraries = list(filter(lambda x: os.path.basename(x).split('.')[0] in libs, libraries))
         # OPENMV-DIFF #
 
@@ -215,8 +215,10 @@ def add_qt_conf(target_path, qt_prefix_path):
 def copy_translations(install_dir, qt_tr_dir):
     translations = glob(os.path.join(qt_tr_dir, '*.qm'))
     # OPENMV-DIFF #
-    substrings = ['qt_', 'qtbase_', 'qtmultimedia_', 'qtserialport_']
+    substrings = ['qt_', 'qtbase_', 'qtserialport_'] # add
     translations = list(filter(lambda x: any(s in x for s in substrings), translations))
+    substrings = ['qt_help_'] # remove
+    translations = list(filter(lambda x: not any(s in x for s in substrings), translations))
     # OPENMV-DIFF #
     tr_dir = os.path.join(install_dir, 'share', 'qtcreator', 'translations')
 

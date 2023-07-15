@@ -24,37 +24,43 @@ cp "$bin_src/qtdiag" "$app_path/Contents/MacOS/" || exit 1
   xcrun install_name_tool -add_rpath "@loader_path/../Frameworks" "$app_path/Contents/MacOS/qtdiag" ) || true
 
 
+# OPENMV-DIFF #
 # collect designer plugins
-designerDestDir="$app_path/Contents/PlugIns/designer"
-if [ ! -d "$designerDestDir" ]; then
-    echo "- Copying designer plugins"
-    mkdir -p "$designerDestDir"
-    for plugin in "$plugin_src"/designer/*.dylib; do
-        cp "$plugin" "$designerDestDir"/ || exit 1
-    done
-fi
+# designerDestDir="$app_path/Contents/PlugIns/designer"
+# if [ ! -d "$designerDestDir" ]; then
+#     echo "- Copying designer plugins"
+#     mkdir -p "$designerDestDir"
+#     for plugin in "$plugin_src"/designer/*.dylib; do
+#         cp "$plugin" "$designerDestDir"/ || exit 1
+#     done
+# fi
+# OPENMV-DIFF #
 
+# OPENMV-DIFF #
 # collect 3d assetimporter plugins
-assetimporterDestDir="$app_path/Contents/PlugIns/assetimporters"
-assetimporterSrcDir="$plugin_src/assetimporters"
-if [ -d "$assetimporterSrcDir" ]; then
-    if [ ! -d "$assetimporterDestDir" ]; then
-        echo "- Copying 3d assetimporter plugins"
-        mkdir -p "$assetimporterDestDir"
-        find "$assetimporterSrcDir" -iname "*.dylib" -maxdepth 1 -exec cp {} "$assetimporterDestDir"/ \;
-    fi
-fi
+# assetimporterDestDir="$app_path/Contents/PlugIns/assetimporters"
+# assetimporterSrcDir="$plugin_src/assetimporters"
+# if [ -d "$assetimporterSrcDir" ]; then
+#     if [ ! -d "$assetimporterDestDir" ]; then
+#         echo "- Copying 3d assetimporter plugins"
+#         mkdir -p "$assetimporterDestDir"
+#         find "$assetimporterSrcDir" -iname "*.dylib" -maxdepth 1 -exec cp {} "$assetimporterDestDir"/ \;
+#     fi
+# fi
+# OPENMV-DIFF #
 
-# copy Qt Quick 2 imports
-imports2Dir="$app_path/Contents/Imports/qtquick2"
-if [ -d "$quick2_src" ]; then
-    if [ ! -d "$imports2Dir" ]; then
-        echo "- Copying Qt Quick 2 imports"
-        mkdir -p "$imports2Dir"
-        cp -R "$quick2_src"/ "$imports2Dir"/
-        find "$imports2Dir" -path "*.dylib.dSYM*" -delete
-    fi
-fi
+# OPENMV-DIFF #
+# # copy Qt Quick 2 imports
+# imports2Dir="$app_path/Contents/Imports/qtquick2"
+# if [ -d "$quick2_src" ]; then
+#     if [ ! -d "$imports2Dir" ]; then
+#         echo "- Copying Qt Quick 2 imports"
+#         mkdir -p "$imports2Dir"
+#         cp -R "$quick2_src"/ "$imports2Dir"/
+#         find "$imports2Dir" -path "*.dylib.dSYM*" -delete
+#     fi
+# fi
+# OPENMV-DIFF #
 
 # OPENMV-DIFF #
 # # copy qt creator qt.conf
@@ -84,7 +90,14 @@ fi
 # check for known existing translation to avoid copying multiple times
 if [ ! -f "$resource_path/translations/qt_de.qm" ]; then
     echo "- Copying Qt translations"
-    cp "$translation_src"/*.qm "$resource_path/translations/" || exit 1
+    # OPENMV-DIFF #
+    # cp "$translation_src"/*.qm "$resource_path/translations/" || exit 1
+    # OPENMV-DIFF #
+    cp "$translation_src"/qt_*.qm "$resource_path/translations/" || exit 1
+    cp "$translation_src"/qtbase_*.qm "$resource_path/translations/" || exit 1
+    cp "$translation_src"/qtserialport_*.qm "$resource_path/translations/" || exit 1
+    rm "$resource_path"/translations/qt_help_*.qm || exit 1
+    # OPENMV-DIFF #
 fi
 
 # copy clang if needed
@@ -149,7 +162,9 @@ if [ ! -d "$app_path/Contents/Frameworks/QtCore.framework" ]; then
     #     "$qml2puppetArgument" || exit 1
     # OPENMV-DIFF #
     "$bin_src/macdeployqt" "$app_path" \
+            "-executable=$app_path/Contents/MacOS/OpenMV IDE" \
             "-executable=$app_path/Contents/MacOS/qtdiag" || exit 1
+    echo -e "[Paths]\nPlugins = PlugIns" > "$resource_path/qt.conf" || exit 1
     # OPENMV-DIFF #
 
 fi
