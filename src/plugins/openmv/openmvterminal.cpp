@@ -1325,7 +1325,7 @@ void OpenMVTerminalSerialPort_private::execScript(const QByteArray &data)
 
     do
     {
-        m_port->waitForReadyRead(1);
+        m_port->waitForReadyRead(10);
     }
     while(!m_port->readAll().isEmpty());
 
@@ -1335,7 +1335,7 @@ void OpenMVTerminalSerialPort_private::execScript(const QByteArray &data)
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) goto execScriptFinished;
             array.append(temp);
@@ -1349,7 +1349,7 @@ void OpenMVTerminalSerialPort_private::execScript(const QByteArray &data)
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) goto execScriptFinished;
             array.append(temp);
@@ -1369,13 +1369,15 @@ void OpenMVTerminalSerialPort_private::execScript(const QByteArray &data)
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) goto execScriptFinished;
             array.append(temp);
             if (array.endsWith("OK")) break;
         }
     }
+
+    emit readBytes(QByteArray("OK\n"));
 
 execScriptFinished:
 
@@ -1394,7 +1396,7 @@ void OpenMVTerminalSerialPort_private::interruptScript()
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) break;
             array.append(temp);
@@ -1418,7 +1420,7 @@ void OpenMVTerminalSerialPort_private::reloadScript()
 
     do
     {
-        m_port->waitForReadyRead(1);
+        m_port->waitForReadyRead(10);
     }
     while(!m_port->readAll().isEmpty());
 
@@ -1428,7 +1430,7 @@ void OpenMVTerminalSerialPort_private::reloadScript()
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) break;
             array.append(temp);
@@ -1604,7 +1606,7 @@ void OpenMVTerminalUDPPort_private::execScript(const QByteArray &data)
 
     do
     {
-        m_port->waitForReadyRead(1);
+        m_port->waitForReadyRead(10);
     }
     while(!m_port->readAll().isEmpty());
 
@@ -1614,7 +1616,7 @@ void OpenMVTerminalUDPPort_private::execScript(const QByteArray &data)
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) goto execScriptFinished;
             array.append(temp);
@@ -1628,7 +1630,7 @@ void OpenMVTerminalUDPPort_private::execScript(const QByteArray &data)
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) goto execScriptFinished;
             array.append(temp);
@@ -1648,13 +1650,15 @@ void OpenMVTerminalUDPPort_private::execScript(const QByteArray &data)
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) goto execScriptFinished;
             array.append(temp);
             if (array.endsWith("OK")) break;
         }
     }
+
+    emit readBytes(QByteArray("OK\n"));
 
 execScriptFinished:
 
@@ -1673,7 +1677,7 @@ void OpenMVTerminalUDPPort_private::interruptScript()
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) break;
             array.append(temp);
@@ -1697,7 +1701,7 @@ void OpenMVTerminalUDPPort_private::reloadScript()
 
     do
     {
-        m_port->waitForReadyRead(1);
+        m_port->waitForReadyRead(10);
     }
     while(!m_port->readAll().isEmpty());
 
@@ -1707,7 +1711,7 @@ void OpenMVTerminalUDPPort_private::reloadScript()
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) break;
             array.append(temp);
@@ -1883,7 +1887,7 @@ void OpenMVTerminalTCPPort_private::execScript(const QByteArray &data)
 
     do
     {
-        m_port->waitForReadyRead(1);
+        m_port->waitForReadyRead(10);
     }
     while(!m_port->readAll().isEmpty());
 
@@ -1893,7 +1897,7 @@ void OpenMVTerminalTCPPort_private::execScript(const QByteArray &data)
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) goto execScriptFinished;
             array.append(temp);
@@ -1907,7 +1911,7 @@ void OpenMVTerminalTCPPort_private::execScript(const QByteArray &data)
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) goto execScriptFinished;
             array.append(temp);
@@ -1927,13 +1931,15 @@ void OpenMVTerminalTCPPort_private::execScript(const QByteArray &data)
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) goto execScriptFinished;
             array.append(temp);
             if (array.endsWith("OK")) break;
         }
     }
+
+    emit readBytes(QByteArray("OK\n"));
 
 execScriptFinished:
 
@@ -1952,7 +1958,7 @@ void OpenMVTerminalTCPPort_private::interruptScript()
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) break;
             array.append(temp);
@@ -1976,7 +1982,7 @@ void OpenMVTerminalTCPPort_private::reloadScript()
 
     do
     {
-        m_port->waitForReadyRead(1);
+        m_port->waitForReadyRead(10);
     }
     while(!m_port->readAll().isEmpty());
 
@@ -1986,7 +1992,7 @@ void OpenMVTerminalTCPPort_private::reloadScript()
 
         forever
         {
-            m_port->waitForReadyRead(1);
+            m_port->waitForReadyRead(10);
             QByteArray temp = m_port->readAll();
             if (temp.isEmpty()) break;
             array.append(temp);
