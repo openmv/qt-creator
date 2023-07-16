@@ -11,7 +11,6 @@
 #include <utils/theme/theme.h>
 
 #include "../openmvpluginio.h"
-
 #include "openmvtr.h"
 
 #define VIDEO_SETTINGS_GROUP "OpenMVFFMPEG"
@@ -877,7 +876,7 @@ static bool playVideoFile(const QString &path)
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+        QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
 
         if(file.open(QIODevice::WriteOnly))
         {
@@ -900,27 +899,11 @@ static bool playVideoFile(const QString &path)
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
-
-            if(file.open(QIODevice::WriteOnly))
-            {
-                QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-x86/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n")).toUtf8();
-
-                if(file.write(command) == command.size())
-                {
-                    file.close();
-                    file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
-                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
-                        << QStringLiteral("-e")
-                        << QFileInfo(file).filePath());
-                }
-            }
+            result = false;
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+            QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
 
             if(file.open(QIODevice::WriteOnly))
             {
@@ -935,32 +918,23 @@ static bool playVideoFile(const QString &path)
                     result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
                         << QStringLiteral("-e")
                         << QFileInfo(file).filePath());
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("gnome-terminal"), QStringList()
+                            << QStringLiteral("--")
+                            << QFileInfo(file).filePath());
+                    }
                 }
             }
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
-            QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
-
-            if(file.open(QIODevice::WriteOnly))
-            {
-                QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-armhf/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n")).toUtf8();
-
-                if(file.write(command) == command.size())
-                {
-                    file.close();
-                    file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
-                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
-                        << QStringLiteral("-e")
-                        << QFileInfo(file).filePath());
-                }
-            }
+            result = false;
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
-            QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+            QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
 
             if(file.open(QIODevice::WriteOnly))
             {
@@ -975,6 +949,13 @@ static bool playVideoFile(const QString &path)
                     result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
                         << QStringLiteral("-e")
                         << QFileInfo(file).filePath());
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("gnome-terminal"), QStringList()
+                            << QStringLiteral("--")
+                            << QFileInfo(file).filePath());
+                    }
                 }
             }
         }
@@ -1016,7 +997,7 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+        QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
 
         if(file.open(QIODevice::WriteOnly))
         {
@@ -1039,32 +1020,16 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
-            QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
-
-            if(file.open(QIODevice::WriteOnly))
-            {
-                QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-x86/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
-                    url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer\n") : QStringLiteral("\" -fflags nobuffer\n"))).toUtf8();
-
-                if(file.write(command) == command.size())
-                {
-                    file.close();
-                    file.setPermissions(file.permissions() | QFileDevice::ExeOwner | QFileDevice::ExeUser | QFileDevice::ExeGroup | QFileDevice::ExeOther);
-                    result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
-                        << QStringLiteral("-e")
-                        << QFileInfo(file).filePath());
-                }
-            }
+            result = false;
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+            QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
 
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-x86_64/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-x86_64/bin/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
                     url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer\n") : QStringLiteral("\" -fflags nobuffer\n"))).toUtf8();
 
                 if(file.write(command) == command.size())
@@ -1074,17 +1039,28 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
                     result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
                         << QStringLiteral("-e")
                         << QFileInfo(file).filePath());
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("gnome-terminal"), QStringList()
+                            << QStringLiteral("--")
+                            << QFileInfo(file).filePath());
+                    }
                 }
             }
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
-            QFile file(QDir::tempPath()  + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+            result = false;
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
 
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-arm/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-arm64/bin/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
                     url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer\n") : QStringLiteral("\" -fflags nobuffer\n"))).toUtf8();
 
                 if(file.write(command) == command.size())
@@ -1094,6 +1070,13 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
                     result = QProcess::startDetached(QStringLiteral("xterm"), QStringList()
                         << QStringLiteral("-e")
                         << QFileInfo(file).filePath());
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("gnome-terminal"), QStringList()
+                            << QStringLiteral("--")
+                            << QFileInfo(file).filePath());
+                    }
                 }
             }
         }

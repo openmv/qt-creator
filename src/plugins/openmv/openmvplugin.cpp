@@ -1331,12 +1331,19 @@ void OpenMVPlugin::extensionsInitialized()
 
     QAction *playVideoFile = new QAction(Tr::tr("Play Video File"), this);
     Core::Command *playVideoFileCommand = Core::ActionManager::registerAction(playVideoFile, Utils::Id("OpenMV.PlayVideoFile"));
-    videoToolsMenu->addAction(playVideoFileCommand);
+    if(!(Utils::HostOsInfo::isLinuxHost()
+    && ((QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
+    || (QSysInfo::buildCpuArchitecture() == QStringLiteral("arm")))))
+    {
+        videoToolsMenu->addAction(playVideoFileCommand);
+    }
     connect(playVideoFile, &QAction::triggered, this, [this] {playVideoFileAction(m_portPath);});
 
     QAction *playRTSPStream = new QAction(Tr::tr("Play RTSP Stream"), this);
     Core::Command *playRTSPStreamCommand = Core::ActionManager::registerAction(playRTSPStream, Utils::Id("OpenMV.PlayRTSPStream"));
-    if(!Utils::HostOsInfo::isLinuxHost())
+    if(!(Utils::HostOsInfo::isLinuxHost()
+    && ((QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
+    || (QSysInfo::buildCpuArchitecture() == QStringLiteral("arm")))))
     {
         videoToolsMenu->addSeparator();
         videoToolsMenu->addAction(playRTSPStreamCommand);
