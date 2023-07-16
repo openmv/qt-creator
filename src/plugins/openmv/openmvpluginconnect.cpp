@@ -1356,56 +1356,66 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             QString temp = QString(arch2).remove(QRegularExpression(QStringLiteral("\\[(.+?):(.+?)\\]"))).simplified().replace(QStringLiteral("_"), QStringLiteral(" "));
 
-                            if(mappings.contains(temp))
+                            if(!mappings.contains(temp))
                             {
-                                if(firmwarePath.isEmpty())
-                                {
-                                    originalFirmwareFolder = mappings.value(temp);
-                                    firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(QStringLiteral("firmware.bin")).toString();
-                                    originalEraseFlashSectorStart = eraseMappings.value(temp).first;
-                                    originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
-                                    originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
-                                    originalEraseFlashSectorAllEnd = eraseAllMappings.value(temp).second;
+                                int index = mappings.keys().indexOf(settings->value(QStringLiteral(LAST_BOARD_TYPE_STATE)).toString());
 
-                                    if(installTheLatestDevelopmentFirmware)
-                                    {
-                                        if(!getTheLatestDevelopmentFirmware(mappings.value(temp), &firmwarePath))
-                                        {
-                                            CLOSE_CONNECT_END();
-                                        }
-                                    }
+                                bool ok = mappings.size() == 1;
+                                temp = (mappings.size() == 1) ? mappings.firstKey() : QInputDialog::getItem(Core::ICore::dialogParent(),
+                                    Tr::tr("Connect"), Tr::tr("Please select the board type"),
+                                    mappings.keys(), (index != -1) ? index : 0, false, &ok,
+                                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+
+                                if(ok)
+                                {
+                                    settings->setValue(QStringLiteral(LAST_BOARD_TYPE_STATE), temp);
                                 }
-
-                                QStringList vidpid = vidpidMappings.value(temp).split(QStringLiteral(":"));
-                                isIMX = imxVidPidList().contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16)));
-                                isArduino = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
-                                                                                                     ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                                                     ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
-                                                                                                     ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID))) ||
-                                           ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
-                                isPortenta = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == PORTENTA_LDR_PID);
-                                isNiclav = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == NICLA_LDR_PID);
-                                isNRF = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == NRF_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == NRF_LDR_PID));
-                                isRPIPico = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == RPI_LDR_PID))) ||
-                                            ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
-
-                                QRegularExpressionMatch match = QRegularExpression(QStringLiteral("\\[(.+?):(.+?)\\]")).match(arch2);
-
-                                if(match.hasMatch())
+                                else
                                 {
-                                    m_boardType = match.captured(1);
-                                    m_boardId = match.captured(2);
-                                    m_boardVID = vidpid.at(0).toInt(nullptr, 16);
-                                    m_boardPID = vidpid.at(1).toInt(nullptr, 16);
+                                    CLOSE_CONNECT_END();
                                 }
                             }
-                            else
-                            {
-                                QMessageBox::critical(Core::ICore::dialogParent(),
-                                    Tr::tr("Connect"),
-                                    Tr::tr("Unsupported board architecture!"));
 
-                                CLOSE_CONNECT_END();
+                            if(firmwarePath.isEmpty())
+                            {
+                                originalFirmwareFolder = mappings.value(temp);
+                                firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(QStringLiteral("firmware.bin")).toString();
+                                originalEraseFlashSectorStart = eraseMappings.value(temp).first;
+                                originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
+                                originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
+                                originalEraseFlashSectorAllEnd = eraseAllMappings.value(temp).second;
+
+                                if(installTheLatestDevelopmentFirmware)
+                                {
+                                    if(!getTheLatestDevelopmentFirmware(mappings.value(temp), &firmwarePath))
+                                    {
+                                        CLOSE_CONNECT_END();
+                                    }
+                                }
+                            }
+
+                            QStringList vidpid = vidpidMappings.value(temp).split(QStringLiteral(":"));
+                            isIMX = imxVidPidList().contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16)));
+                            isArduino = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
+                                                                                                 ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
+                                                                                                 ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
+                                                                                                 ((vidpid.at(1).toInt(nullptr, 16) & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID))) ||
+                                       ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
+                            isPortenta = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == PORTENTA_LDR_PID);
+                            isNiclav = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == NICLA_LDR_PID);
+                            isNRF = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == NRF_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == NRF_LDR_PID));
+                            isRPIPico = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == RPI_LDR_PID))) ||
+                                        ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
+
+                            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("\\[(.+?):(.+?)\\]")).match(arch2);
+
+                            if(match.hasMatch())
+                            {
+                                m_boardType = match.captured(1);
+                                m_boardId = match.captured(2);
+                                m_boardVID = vidpid.at(0).toInt(nullptr, 16);
+                                m_boardPID = vidpid.at(1).toInt(nullptr, 16);
                             }
                         }
                         else
