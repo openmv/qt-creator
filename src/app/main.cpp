@@ -509,6 +509,8 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
                                      "solutions for your platform.")) == 0) break;
         if(msg.startsWith(QLatin1String("DirectWrite: CreateFontFaceFromHDC() failed (Indicates an error "
                                         "in an input file such as a font file.)"))) break;
+        if(msg.compare(QLatin1String("Corrupt JPEG data: premature end of data segment")) == 0) break;
+        if(msg.compare(QLatin1String("QIODevice::read (QProcess): device not open")) == 0) break;
         fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
         break;
     case QtCriticalMsg:
