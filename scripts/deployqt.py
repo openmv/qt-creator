@@ -134,9 +134,10 @@ def copy_qt_libs(target_qt_prefix_path, qt_bin_dir, qt_libs_dir, qt_plugin_dir, 
     if common.is_windows_platform():
         libraries = glob(os.path.join(qt_libs_dir, '*.dll'))
         # OPENMV-DIFF #
-        libs = ["libgcc_s_seh-1", "libstdc++-6", "libwinpthread-1", "Qt6Concurrent", "Qt6Core", "Qt6Core5Compat",
-                "Qt6DBus", "Qt6Gui", "Qt6Network", "Qt6PrintSupport", "Qt6Qml", "Qt6SerialPort",
-                "Qt6Sql", "Qt6Svg", "Qt6SvgWidgets", "Qt6Test", "Qt6Widgets", "Qt6Xml"]
+        libs = ["libgcc_s_seh-1", "libstdc++-6", "libwinpthread-1", "opengl32sw", "Qt6Concurrent", "Qt6Core",
+                "Qt6Core5Compat", "Qt6DBus", "Qt6Gui", "Qt6Network", "Qt6OpenGL", "Qt6PrintSupport",
+                "Qt6Qml", "Qt6SerialPort", "Qt6Sql", "Qt6Svg", "Qt6SvgWidgets", "Qt6Test",
+                "Qt6Widgets", "Qt6Xml"]
         libraries = list(filter(lambda x: os.path.basename(x).split('.')[0] in libs, libraries))
         # OPENMV-DIFF #
     else:
