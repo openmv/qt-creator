@@ -105,7 +105,7 @@ Component.prototype.createOperations = function()
         component.addOperation( "InstallIcons", "@TargetDir@/share/icons" );
         component.addOperation( "CreateDesktopEntry",
                                 "OpenMV-openmvide.desktop",
-                                "Type=Application\nExec=" + component.qtCreatorBinaryPath + " %F\nPath=@TargetDir@\nName=OpenMV IDE\nGenericName=The IDE of choice for OpenMV Cam Development.\nX-KDE-StartupNotify=true\nIcon=OpenMV-openmvide\nStartupWMClass=openmvide\nTerminal=false\nCategories=Development;IDE;OpenMV;\nMimeType=text/x-python;"
+                                "Type=Application\nName=OpenMV IDE\nGenericName=OpenMV IDE\nComment=The IDE of choice for OpenMV Cam Development.\nExec=" + component.qtCreatorBinaryPath + " %F\nIcon=OpenMV-openmvide\nTerminal=false\nCategories=Development;IDE;Electronics;OpenMV;\nMimeType=text/x-python;\nKeywords=embedded electronics;electronics;microcontroller;micropython;computer vision;machine vision;\nStartupWMClass=openmvide\n"
                                 );
         var widget = gui.pageWidgetByObjectName("DynamicLinuxWidget");
         if (widget != null) {

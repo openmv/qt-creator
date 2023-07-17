@@ -60,7 +60,7 @@ QList<QString> picotoolGetDevices()
             process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("info")));
             process.runBlocking(Utils::EventLoopMode::On);
         }
-        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("aarch64"))
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
             command = Core::ICore::resourcePath(QStringLiteral("picotool/aarch64/picotool"));
             process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("info")));
@@ -123,7 +123,7 @@ void picotoolReset(QString &command, Utils::QtcProcess &process)
         {
             binary = Core::ICore::resourcePath(QStringLiteral("picotool/arm/picotool"));
         }
-        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("aarch64"))
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
             binary = Core::ICore::resourcePath(QStringLiteral("picotool/aarch64/picotool"));
         }
@@ -275,7 +275,7 @@ void picotoolDownloadFirmware(const QString &details, QString &command, Utils::Q
         {
             binary = Core::ICore::resourcePath(QStringLiteral("picotool/arm/picotool"));
         }
-        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("aarch64"))
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
             binary = Core::ICore::resourcePath(QStringLiteral("picotool/aarch64/picotool"));
         }

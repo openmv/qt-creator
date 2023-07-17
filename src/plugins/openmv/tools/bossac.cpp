@@ -48,7 +48,7 @@ void bossacRunBootloader(Utils::QtcProcess &process, const QString &device)
         {
             binary = Core::ICore::resourcePath(QStringLiteral("bossac/arm/bossac"));
         }
-        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("aarch64"))
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
             binary = Core::ICore::resourcePath(QStringLiteral("bossac/aarch64/bossac"));
         }
@@ -204,7 +204,7 @@ void bossacDownloadFirmware(const QString &details, QString &command, Utils::Qtc
         {
             binary = Core::ICore::resourcePath(QStringLiteral("bossac/arm/bossac"));
         }
-        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("aarch64"))
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
             binary = Core::ICore::resourcePath(QStringLiteral("bossac/aarch64/bossac"));
         }
