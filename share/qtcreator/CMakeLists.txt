@@ -80,12 +80,15 @@ if(UNIX AND NOT APPLE)
     if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm*")
       set(resource_directories ${resource_directories}
         ffmpeg/linux-arm64
+        dfu-util/aarch64
         bossac/aarch64
         picotool/aarch64
         pydfu)
     else()
       set(resource_directories ${resource_directories}
-        ffmpeg/linux-x86_64 dfu-util/linux64 bossac/linux64
+        ffmpeg/linux-x86_64
+        dfu-util/linux64
+        bossac/linux64
         picotool/linux64
         blhost/linux/amd64
         sdphost/linux/amd64
