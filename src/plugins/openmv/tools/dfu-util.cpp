@@ -64,6 +64,12 @@ QList<QString> getDevices()
             process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-l")));
             process.runBlocking(Utils::EventLoopMode::On);
         }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            command = Core::ICore::resourcePath(QStringLiteral("dfu-util/aarch64/dfu-util"));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-l")));
+            process.runBlocking(Utils::EventLoopMode::On);
+        }
     }
 
     if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
@@ -499,6 +505,10 @@ void downloadFirmware(const QString &details,
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
             binary = Core::ICore::resourcePath(QStringLiteral("dfu-util/arm/dfu-util"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("dfu-util/aarch64/dfu-util"));
         }
     }
 
