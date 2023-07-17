@@ -921,8 +921,29 @@ static bool playVideoFile(const QString &path)
 
                     if(!result)
                     {
+                        result = QProcess::startDetached(QStringLiteral("lxterminal"), QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
                         result = QProcess::startDetached(QStringLiteral("gnome-terminal"), QStringList()
                             << QStringLiteral("--")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("konsole"), QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("xfce4-terminal"), QStringList()
+                            << QStringLiteral("-e")
                             << QFileInfo(file).filePath());
                     }
                 }
@@ -952,8 +973,29 @@ static bool playVideoFile(const QString &path)
 
                     if(!result)
                     {
+                        result = QProcess::startDetached(QStringLiteral("lxterminal"), QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
                         result = QProcess::startDetached(QStringLiteral("gnome-terminal"), QStringList()
                             << QStringLiteral("--")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("konsole"), QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("xfce4-terminal"), QStringList()
+                            << QStringLiteral("-e")
                             << QFileInfo(file).filePath());
                     }
                 }
@@ -1042,8 +1084,29 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
 
                     if(!result)
                     {
+                        result = QProcess::startDetached(QStringLiteral("lxterminal"), QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
                         result = QProcess::startDetached(QStringLiteral("gnome-terminal"), QStringList()
                             << QStringLiteral("--")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("konsole"), QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("xfce4-terminal"), QStringList()
+                            << QStringLiteral("-e")
                             << QFileInfo(file).filePath());
                     }
                 }
@@ -1073,8 +1136,29 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
 
                     if(!result)
                     {
+                        result = QProcess::startDetached(QStringLiteral("lxterminal"), QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
                         result = QProcess::startDetached(QStringLiteral("gnome-terminal"), QStringList()
                             << QStringLiteral("--")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("konsole"), QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    if(!result)
+                    {
+                        result = QProcess::startDetached(QStringLiteral("xfce4-terminal"), QStringList()
+                            << QStringLiteral("-e")
                             << QFileInfo(file).filePath());
                     }
                 }
