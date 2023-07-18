@@ -2,6 +2,8 @@
 
 #include "app/app_version.h"
 
+#include "tools/myqserialportinfo.h"
+
 #include "openmvtr.h"
 
 namespace OpenMV {
@@ -296,8 +298,10 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     {
         QStringList stringList;
 
-        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+        foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
         {
+            MyQSerialPortInfo port(raw_port);
+
             if(port.hasVendorIdentifier() && port.hasProductIdentifier() && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
             || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
                                                                 ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
@@ -318,7 +322,9 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
         foreach(const QString &port, stringList)
         {
-            QSerialPortInfo info(port);
+            QSerialPortInfo raw_info = QSerialPortInfo(port);
+            MyQSerialPortInfo info(raw_info);
+
             out << QString(QStringLiteral("\"name\":\"%1\", \"description\":\"%2\", \"manufacturer\":\"%3\", \"vid\":0x%4, \"pid\":0x%5, \"serial\":\"%6\", \"location\":\"%7\""))
                    .arg(info.portName())
                    .arg(info.description())
@@ -2597,8 +2603,10 @@ bool OpenMVPlugin::delayedInitialize()
 
         bool ok = false;
 
-        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+        foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
         {
+            MyQSerialPortInfo port(raw_port);
+
             if(port.hasVendorIdentifier() && port.hasProductIdentifier()
             && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
             && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
@@ -4062,8 +4070,10 @@ void OpenMVPlugin::openTerminalAboutToShow()
                 {
                     QStringList stringList;
 
-                    foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+                    foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
                     {
+                        MyQSerialPortInfo port(raw_port);
+
                         stringList.append(port.portName());
                     }
 

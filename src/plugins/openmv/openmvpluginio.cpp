@@ -2,6 +2,9 @@
 
 #define MTU_DEFAULT_SIZE (1024 * 1024 * 1024)
 
+namespace OpenMV {
+namespace Internal {
+
 enum
 {
     USBDBG_FW_VERSION_CPL,
@@ -1471,3 +1474,6 @@ QByteArray OpenMVPluginIO::pasrsePrintData(const QByteArray &data)
 
     return buffer;
 }
+
+} // namespace Internal
+} // namespace OpenMV

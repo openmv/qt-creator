@@ -16,6 +16,7 @@ add_qtc_plugin(OpenMV
     histogram/rgb2rgb_tab.c
     histogram/lab_tab.c
     histogram/yuv_tab.c
+    tools/myqserialportinfo.cpp tools/myqserialportinfo.h
     tools/loaderdialog.cpp tools/loaderdialog.h
     tools/bossac.cpp tools/bossac.h
     tools/dfu-util.cpp tools/dfu-util.h

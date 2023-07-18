@@ -31,6 +31,9 @@
 #define OLD_IS_GS(bpp)                  ((bpp) == 1)
 #define OLD_IS_BINARY(bpp)              ((bpp) == 0)
 
+namespace OpenMV {
+namespace Internal {
+
 typedef enum {
     PIXFORMAT_ID_BINARY     = 1,
     PIXFORMAT_ID_GRAY       = 2,
@@ -241,5 +244,8 @@ private:
     bool m_bootloaderHS;
     bool m_bootloaderFastMode;
 };
+
+} // namespace Internal
+} // namespace OpenMV
 
 #endif // OPENMVPLUGINIO_H

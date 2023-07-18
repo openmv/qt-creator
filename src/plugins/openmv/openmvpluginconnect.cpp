@@ -1,5 +1,7 @@
 #include "openmvplugin.h"
 
+#include "tools/myqserialportinfo.h"
+
 #include "openmvtr.h"
 
 namespace OpenMV {
@@ -584,8 +586,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         QStringList stringList;
 
-        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+        foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
         {
+            MyQSerialPortInfo port(raw_port);
+
             if(port.hasVendorIdentifier() && port.hasProductIdentifier()
             && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
             && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
@@ -621,7 +625,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
             {
-                QSerialPortInfo info(*it);
+                QSerialPortInfo raw_info = QSerialPortInfo(*it);
+                MyQSerialPortInfo info(raw_info);
 
                 if(info.hasVendorIdentifier()
                 && info.vendorIdentifier() == vidpid.at(0).toInt(nullptr, 16)
@@ -641,7 +646,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         {
             for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
             {
-                QSerialPortInfo info(*it);
+                QSerialPortInfo raw_info = QSerialPortInfo(*it);
+                MyQSerialPortInfo info(raw_info);
 
                 if(info.hasVendorIdentifier()
                 && (info.vendorIdentifier() == ARDUINOCAM_VID)
@@ -975,7 +981,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         if(!selectedPort.isEmpty())
         {
-            QSerialPortInfo arduinoPort(selectedPort);
+            QSerialPortInfo raw_arduinoPort = QSerialPortInfo(selectedPort);
+            MyQSerialPortInfo arduinoPort(raw_arduinoPort);
 
             isArduino = arduinoPort.hasVendorIdentifier() &&
                         arduinoPort.hasProductIdentifier() &&
@@ -2574,8 +2581,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     if((selectedDfuDeviceVidPidList.first().toInt(nullptr, 16) == ARDUINOCAM_VID)
                     && (selectedDfuDeviceVidPidList.last().toInt(nullptr, 16) == NRF_OLD_PID))
                     {
-                        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+                        foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
                         {
+                            MyQSerialPortInfo port(raw_port);
+
                             if(port.hasVendorIdentifier() && ((port.vendorIdentifier() == selectedDfuDeviceVidPidList.first().toInt(nullptr, 16)))
                             && port.hasProductIdentifier() && ((port.productIdentifier() == selectedDfuDeviceVidPidList.last().toInt(nullptr, 16))))
                             {
@@ -2606,8 +2615,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         {
                             QApplication::processEvents();
 
-                            foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+                            foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
                             {
+                                MyQSerialPortInfo port(raw_port);
+
                                 if(port.hasVendorIdentifier() && ((port.vendorIdentifier() == ARDUINOCAM_VID))
                                 && port.hasProductIdentifier() && ((port.productIdentifier() == NRF_LDR_PID)))
                                 {
@@ -2730,8 +2741,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         QApplication::processEvents();
 
-                        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+                        foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
                         {
+                            MyQSerialPortInfo port(raw_port);
+
                             if(port.hasVendorIdentifier() && ((port.vendorIdentifier() == dfuDeviceVidPidList.first().toInt(nullptr, 16)))
                             && port.hasProductIdentifier() && ((port.productIdentifier() == dfuDeviceVidPidList.last().toInt(nullptr, 16))))
                             {
@@ -3231,13 +3244,16 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                 if(match.hasMatch())
                 {
+                    QSerialPortInfo raw_tempPort = QSerialPortInfo(selectedPort);
+                    MyQSerialPortInfo tempPort(raw_tempPort);
+
                     QString board = match.captured(1);
                     QString id = match.captured(2);
 
                     m_boardType = board;
                     m_boardId = id;
-                    m_boardVID = QSerialPortInfo(selectedPort).vendorIdentifier();
-                    m_boardPID = QSerialPortInfo(selectedPort).productIdentifier();
+                    m_boardVID = tempPort.vendorIdentifier();
+                    m_boardPID = tempPort.productIdentifier();
 
                     boardTypeLabel = board;
 
