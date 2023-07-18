@@ -207,6 +207,31 @@ QStringList imxGetAllDevices(bool spd_host, bool bl_host)
     return devices;
 }
 
+bool imxGetDeviceSupported()
+{
+    if(Utils::HostOsInfo::isWindowsHost())
+    {
+        return true;
+    }
+    else if(Utils::HostOsInfo::isMacHost())
+    {
+        return true;
+    }
+    else if(Utils::HostOsInfo::isLinuxHost())
+    {
+        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
+        {
+            return true;
+        }
+    }
+
+    QMessageBox::critical(Core::ICore::dialogParent(),
+        Tr::tr("NXP IMX"),
+        Tr::tr("This feature is not supported on this machine!"));
+
+    return false;
+}
+
 bool imxGetDevice(QJsonObject &obj)
 {
     Utils::QtcProcess process;

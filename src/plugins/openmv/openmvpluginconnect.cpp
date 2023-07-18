@@ -2124,6 +2124,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                     loop.exec();
 
+                    if(!imxGetDeviceSupported())
+                    {
+                        CONNECT_END();
+                    }
+
                     QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 
                     while((!imxGetDevice(outObj)) && (!canceled))
@@ -2300,6 +2305,19 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                 if(isPortenta || isNiclav)
                 {
+                    if(Utils::HostOsInfo::isLinuxHost()
+                    && ((QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
+                    || (QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))))
+                    {
+                        if(QMessageBox::warning(Core::ICore::dialogParent(),
+                            Tr::tr("Connect"),
+                            Tr::tr("DFU Util may not be stable on this platform. If loading fails please use a regular computer."),
+                            QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Cancel) == QMessageBox::Cancel)
+                        {
+                            CONNECT_END();
+                        }
+                    }
+
                     // Erase Flash ////////////////////////////////////////
 
                     QString selectedDfuDeviceVidPid = selectedDfuDevice.isEmpty() ? QString() : selectedDfuDevice.split(QStringLiteral(",")).first();
