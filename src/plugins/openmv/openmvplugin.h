@@ -66,6 +66,7 @@
 #include "tools/edgeimpulse.h"
 #include "tools/imx.h"
 #include "tools/keypointseditor.h"
+#include "tools/myqserialportinfo.h"
 #include "tools/picotool.h"
 #include "tools/tag16h5.h"
 #include "tools/tag25h7.h"
@@ -264,6 +265,25 @@ class LoadFolderThread: public QObject
     public slots: void loadFolderSlot() { emit folderLoaded(loadFolder(m_path, m_path, m_flat)); }
     signals: void folderLoaded(const importDataList_t &output);
     private: QString m_path; bool m_flat;
+};
+
+class ScanSerialPortsThread: public QObject
+{
+    Q_OBJECT
+
+    public: explicit ScanSerialPortsThread() { }
+    public slots: void scanSerialPortsSlot()
+    {
+        QList<MyQSerialPortInfo> list;
+
+        foreach(const QSerialPortInfo &raw_port, QSerialPortInfo::availablePorts())
+        {
+            MyQSerialPortInfo port(raw_port); list.append(port);
+        }
+
+        emit serialPorts(list);
+    }
+    signals: void serialPorts(const QList<MyQSerialPortInfo> &output);
 };
 
 class OpenMVPlugin : public ExtensionSystem::IPlugin

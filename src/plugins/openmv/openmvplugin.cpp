@@ -2,8 +2,6 @@
 
 #include "app/app_version.h"
 
-#include "tools/myqserialportinfo.h"
-
 #include "openmvtr.h"
 
 namespace OpenMV {
@@ -924,10 +922,10 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             m_exampleModules = output;
         });
 
-        connect(this, &OpenMVPluginSerialPort::destroyed,
-                loadFolderThread, &OpenMVPluginSerialPort_private::deleteLater);
+        connect(this, &OpenMVPlugin::destroyed,
+                loadFolderThread, &LoadFolderThread::deleteLater);
 
-        connect(loadFolderThread, &OpenMVPluginSerialPort_private::destroyed,
+        connect(loadFolderThread, &LoadFolderThread::destroyed,
                 thread, &QThread::quit);
 
         connect(thread, &QThread::finished,
@@ -952,10 +950,10 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             m_documentsModules = output;
         });
 
-        connect(this, &OpenMVPluginSerialPort::destroyed,
-                loadFolderThread, &OpenMVPluginSerialPort_private::deleteLater);
+        connect(this, &OpenMVPlugin::destroyed,
+                loadFolderThread, &LoadFolderThread::deleteLater);
 
-        connect(loadFolderThread, &OpenMVPluginSerialPort_private::destroyed,
+        connect(loadFolderThread, &LoadFolderThread::destroyed,
                 thread, &QThread::quit);
 
         connect(thread, &QThread::finished,
@@ -2584,64 +2582,84 @@ bool OpenMVPlugin::delayedInitialize()
         }
     });
 
-    QTimer *timer = new QTimer(this);
+    // Scan Serial Ports
+    {
+        QThread *thread = new QThread;
+        ScanSerialPortsThread *scanSerialPortsThread = new ScanSerialPortsThread();
+        scanSerialPortsThread->moveToThread(thread);
+        QTimer *timer = new QTimer(this);
 
-    connect(timer, &QTimer::timeout, this, [this] {
-        QTime currentTime = QTime::currentTime();
+        connect(timer, &QTimer::timeout,
+                scanSerialPortsThread, &ScanSerialPortsThread::scanSerialPortsSlot);
 
-        for(QList<wifiPort_t>::iterator it = m_availableWifiPorts.begin(); it != m_availableWifiPorts.end(); )
-        {
-            if(qAbs(it->time.secsTo(currentTime)) >= WIFI_PORT_RETIRE)
+        connect(scanSerialPortsThread, &ScanSerialPortsThread::serialPorts, this, [this] (const QList<MyQSerialPortInfo> &output) {
+            QTime currentTime = QTime::currentTime();
+
+            for(QList<wifiPort_t>::iterator it = m_availableWifiPorts.begin(); it != m_availableWifiPorts.end(); )
             {
-                it = m_availableWifiPorts.erase(it);
+                if(qAbs(it->time.secsTo(currentTime)) >= WIFI_PORT_RETIRE)
+                {
+                    it = m_availableWifiPorts.erase(it);
+                }
+                else
+                {
+                    it++;
+                }
             }
-            else
+
+            bool ok = false;
+
+            foreach(const MyQSerialPortInfo &port, output)
             {
-                it++;
+                if(port.hasVendorIdentifier() && port.hasProductIdentifier()
+                && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
+                && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
+                || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
+                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
+                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
+                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID)))
+                || ((port.vendorIdentifier() == RPI2040_VID) && (port.productIdentifier() == RPI2040_PID))))
+                {
+                    ok = true;
+                    break;
+                }
             }
-        }
 
-        bool ok = false;
+            bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
 
-        foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
-        {
-            MyQSerialPortInfo port(raw_port);
-
-            if(port.hasVendorIdentifier() && port.hasProductIdentifier()
-            && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
-            && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
-            || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID)))
-            || ((port.vendorIdentifier() == RPI2040_VID) && (port.productIdentifier() == RPI2040_PID))))
-            {
-                ok = true;
-                break;
-            }
-        }
-
-        bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
-
-        if(!ok) {
-            if(!m_availableWifiPorts.isEmpty()) {
-                m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_WIFI_DARK_PATH) : QStringLiteral(CONNECT_WIFI_LIGHT_PATH)));
+            if(!ok) {
+                if(!m_availableWifiPorts.isEmpty()) {
+                    m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_WIFI_DARK_PATH) : QStringLiteral(CONNECT_WIFI_LIGHT_PATH)));
+                } else {
+                    m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_PATH)));
+                }
             } else {
-                m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_PATH)));
+                if(!m_availableWifiPorts.isEmpty()) {
+                    m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_USB_WIFI_DARK_PATH) : QStringLiteral(CONNECT_USB_WIFI_LIGHT_PATH)));
+                } else {
+                    m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_USB_DARK_PATH) : QStringLiteral(CONNECT_USB_LIGHT_PATH)));
+                }
             }
-        } else {
-            if(!m_availableWifiPorts.isEmpty()) {
-                m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_USB_WIFI_DARK_PATH) : QStringLiteral(CONNECT_USB_WIFI_LIGHT_PATH)));
-            } else {
-                m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_USB_DARK_PATH) : QStringLiteral(CONNECT_USB_LIGHT_PATH)));
-            }
-        }
 
-        if(ok && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected))
-        {
-            QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected)) connectClicked(); });
-        }
-    });
+            if(ok && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected))
+            {
+                QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected)) connectClicked(); });
+            }
+        });
+
+        connect(this, &OpenMVPlugin::destroyed,
+                scanSerialPortsThread, &ScanSerialPortsThread::deleteLater);
+
+        connect(scanSerialPortsThread, &ScanSerialPortsThread::destroyed,
+                thread, &QThread::quit);
+
+        connect(thread, &QThread::finished,
+                thread, &QThread::deleteLater);
+
+        thread->start();
+        timer->start(1000);
+        QTimer::singleShot(0, scanSerialPortsThread, &ScanSerialPortsThread::scanSerialPortsSlot);
+    }
 
     if(!socket->bind(OPENMVCAM_BROADCAST_PORT))
     {
@@ -2652,8 +2670,6 @@ bool OpenMVPlugin::delayedInitialize()
             Tr::tr("Another application is using the OpenMV Cam broadcast discovery port. "
                "Please close that application and restart OpenMV IDE to enable WiFi programming."));
     }
-
-    timer->start(1000);
 
     if(!QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV")))
     {
