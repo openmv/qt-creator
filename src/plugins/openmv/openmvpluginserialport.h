@@ -203,6 +203,9 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 
+namespace OpenMV {
+namespace Internal {
+
 void serializeByte(QByteArray &buffer, int value); // LittleEndian
 void serializeWord(QByteArray &buffer, int value); // LittleEndian
 void serializeLong(QByteArray &buffer, int value); // LittleEndian
@@ -330,5 +333,8 @@ signals:
     void bootloaderStopResponse();
     void bootloaderResetResponse();
 };
+
+} // namespace Internal
+} // namespace OpenMV
 
 #endif // OPENMVPLUGINSERIALPORT_H

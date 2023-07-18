@@ -1,5 +1,7 @@
 #include "openmvpluginserialport.h"
 
+#include "tools/myqserialportinfo.h"
+
 #ifdef Q_OS_WIN
 #include <windows.h>
 #endif
@@ -27,6 +29,9 @@
 
 #define READ_BUFFER_SIZE (64 * 1024 * 1024)
 #define WRITE_BUFFER_SIZE (64 * 1024 * 1024)
+
+namespace OpenMV {
+namespace Internal {
 
 void serializeByte(QByteArray &buffer, int value) // LittleEndian
 {
@@ -351,7 +356,7 @@ void OpenMVPluginSerialPort_private::open(const QString &portName)
     // QSerialPort is buggy unless this is set.
     m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
-    QSerialPortInfo arduinoPort(m_port->portName());
+    MyQSerialPortInfo arduinoPort(QSerialPortInfo(m_port->portName()));
 
     bool isTouchToReset = arduinoPort.hasVendorIdentifier() &&
                           arduinoPort.hasProductIdentifier() &&
@@ -698,8 +703,10 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
     {
         QStringList stringList;
 
-        foreach(QSerialPortInfo port, QSerialPortInfo::availablePorts())
+        foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
         {
+            MyQSerialPortInfo port(raw_port);
+
             if(port.hasVendorIdentifier() && (port.vendorIdentifier() == OPENMVCAM_VID)
             && port.hasProductIdentifier() && (port.productIdentifier() == OPENMVCAM_PID)
             && ((port.serialNumber() == QStringLiteral("000000000010")) ||
@@ -747,7 +754,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
 
             if(m_port)
             {
-                bool hs = QSerialPortInfo(m_port->portName()).serialNumber() == QStringLiteral("000000000010");
+                bool hs = MyQSerialPortInfo(QSerialPortInfo(m_port->portName())).serialNumber() == QStringLiteral("000000000010");
 
                 QByteArray buffer;
                 serializeLong(buffer, __BOOTLDR_START);
@@ -877,3 +884,6 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout, int ov
 
     thread->start();
 }
+
+} // namespace Internal
+} // namespace OpenMV
