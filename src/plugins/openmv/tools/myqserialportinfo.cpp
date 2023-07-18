@@ -7,6 +7,19 @@
 namespace OpenMV {
 namespace Internal {
 
+MyQSerialPortInfo::MyQSerialPortInfo()
+{
+    m_info = QSerialPortInfo();
+    m_description = m_info.description();
+    m_hasProductIdentifier = m_info.hasProductIdentifier();
+    m_hasVendorIdentifier = m_info.hasVendorIdentifier();
+    m_manufacturer = m_info.manufacturer();
+    m_productIdentifier = m_info.productIdentifier();
+    m_serialNumber = m_info.serialNumber();
+    m_systemLocation = m_info.systemLocation();
+    m_vendorIdentifier = m_info.vendorIdentifier();
+}
+
 MyQSerialPortInfo::MyQSerialPortInfo(const QSerialPortInfo &info)
 {
     m_info = info;
@@ -83,6 +96,21 @@ MyQSerialPortInfo::MyQSerialPortInfo(const QSerialPortInfo &info)
 
     if(m_systemLocation.isEmpty()) m_systemLocation = QStringLiteral("/dev/") + info.portName();
 #endif
+}
+
+MyQSerialPortInfo &MyQSerialPortInfo::operator=(const MyQSerialPortInfo &other)
+{
+    m_info = other.m_info;
+    m_description = other.m_description;
+    m_hasProductIdentifier = other.m_hasProductIdentifier;
+    m_hasVendorIdentifier = other.m_hasVendorIdentifier;
+    m_manufacturer = other.m_manufacturer;
+    m_productIdentifier = other.m_productIdentifier;
+    m_serialNumber = other.m_serialNumber;
+    m_systemLocation = other.m_systemLocation;
+    m_vendorIdentifier = other.m_vendorIdentifier;
+
+    return *this;
 }
 
 } // namespace Internal

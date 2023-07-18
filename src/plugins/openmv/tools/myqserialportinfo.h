@@ -9,16 +9,18 @@ namespace Internal {
 class MyQSerialPortInfo
 {
 public:
+    explicit MyQSerialPortInfo();
     explicit MyQSerialPortInfo(const QSerialPortInfo &info);
-    QString description() { return m_description; }
-    bool hasProductIdentifier() { return m_hasProductIdentifier; }
-    bool hasVendorIdentifier() { return m_hasVendorIdentifier; }
-    QString manufacturer() { return m_manufacturer; }
-    QString portName() { return m_info.portName(); }
-    quint16 productIdentifier() { return m_productIdentifier; }
-    QString serialNumber() { return m_serialNumber; }
-    QString systemLocation() { return m_systemLocation; }
-    quint16 vendorIdentifier() { return m_vendorIdentifier; }
+    QString description() const { return m_description; }
+    bool hasProductIdentifier() const { return m_hasProductIdentifier; }
+    bool hasVendorIdentifier() const { return m_hasVendorIdentifier; }
+    QString manufacturer() const { return m_manufacturer; }
+    QString portName() const { return m_info.portName(); }
+    quint16 productIdentifier() const { return m_productIdentifier; }
+    QString serialNumber() const { return m_serialNumber; }
+    QString systemLocation() const { return m_systemLocation; }
+    quint16 vendorIdentifier() const { return m_vendorIdentifier; }
+    MyQSerialPortInfo &operator=(const MyQSerialPortInfo &other);
 private:
     QSerialPortInfo m_info;
     QString m_description;
