@@ -3291,7 +3291,19 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
 
             if((reply->error() == QNetworkReply::NoError) && (!data.isEmpty()))
             {
-                if(QString::fromUtf8(data).contains(QStringLiteral("Done")))
+                QString text = QString::fromUtf8(data);
+                QRegularExpressionMatch match = QRegularExpression(QStringLiteral("Remaining\\s+(\\d+)")).match(text);
+
+                if(match.hasMatch())
+                {
+                    QMessageBox::information(Core::ICore::dialogParent(),
+                        Tr::tr("Register OpenMV Cam"),
+                        Tr::tr("OpenMV Cam automatically registered!\n\nBoard: %1\nID: %2\n\n%3 Board Keys remaining for registering board type: %1\n\n"
+                               "Please run Examples->HelloWorld->helloworld.py to test the vision quality and focus the camera (if applicable).").arg(board).arg(id).arg(match.captured(1)));
+
+                    return;
+                }
+                else if(text.contains(QStringLiteral("Done")))
                 {
                     QMessageBox::information(Core::ICore::dialogParent(),
                         Tr::tr("Register OpenMV Cam"),
@@ -3447,7 +3459,9 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
                     {
                         if((reply->error() == QNetworkReply::NoError) && (!data.isEmpty()))
                         {
-                            if(QString::fromUtf8(data).contains(QStringLiteral("<p>Done</p>")))
+                            QString text = QString::fromUtf8(data);
+
+                            if(text.contains(QStringLiteral("<p>Done</p>")))
                             {
                                 QMessageBox::information(Core::ICore::dialogParent(),
                                     Tr::tr("Register OpenMV Cam"),
@@ -3455,19 +3469,25 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
 
                                 return true;
                             }
-                            else if(QString::fromUtf8(data).contains(QStringLiteral("<p>Error: Invalid ID Key!</p>")))
+                            else if(text.contains(QStringLiteral("<p>Error: Invalid ID Key for board type!</p>")))
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                    Tr::tr("Register OpenMV Cam"),
+                                    Tr::tr("Invalid Board Key for Board Type!"));
+                            }
+                            else if(text.contains(QStringLiteral("<p>Error: Invalid ID Key!</p>")))
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Register OpenMV Cam"),
                                     Tr::tr("Invalid Board Key!"));
                             }
-                            else if(QString::fromUtf8(data).contains(QStringLiteral("<p>Error: ID Key already used!</p>")))
+                            else if(text.contains(QStringLiteral("<p>Error: ID Key already used!</p>")))
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Register OpenMV Cam"),
                                     Tr::tr("Board Key already used!"));
                             }
-                            else if(QString::fromUtf8(data).contains(QStringLiteral("<p>Error: Board and ID already registered!</p>")))
+                            else if(text.contains(QStringLiteral("<p>Error: Board and ID already registered!</p>")))
                             {
                                 QMessageBox::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Register OpenMV Cam"),
