@@ -2525,7 +2525,7 @@ void OpenMVPlugin::extensionsInitialized()
             connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
         });
 
-        QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/openmv-ide-version.txt")));
+        QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://raw.githubusercontent.com/openmv/openmv-ide-version/main/openmv-ide-version.txt")));
         QNetworkReply *reply = manager->get(request);
 
         if(reply)
