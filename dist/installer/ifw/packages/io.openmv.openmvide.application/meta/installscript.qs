@@ -102,14 +102,26 @@ Component.prototype.createOperations = function()
     }
     if ( installer.value("os") == "x11" )
     {
+        var installLibrariesCheck = false;
+        var udevRulesCheck = false;
         component.addOperation( "InstallIcons", "@TargetDir@/share/icons" );
         component.addOperation( "CreateDesktopEntry",
                                 "OpenMV-openmvide.desktop",
-                                "Type=Application\nName=OpenMV IDE\nGenericName=OpenMV IDE\nComment=The IDE of choice for OpenMV Cam Development.\nExec=" + component.qtCreatorBinaryPath + " %F\nIcon=OpenMV-openmvide\nTerminal=false\nCategories=Development;IDE;Electronics;OpenMV;\nMimeType=text/x-python;\nKeywords=embedded electronics;electronics;microcontroller;micropython;computer vision;machine vision;\nStartupWMClass=openmvide\n"
-                                );
+                                "Type=Application\n" +
+                                "Name=OpenMV IDE\n" +
+                                "GenericName=OpenMV IDE\n" +
+                                "Comment=The IDE of choice for OpenMV Cam Development.\n" +
+                                "Exec=" + component.qtCreatorBinaryPath + " %F\n" +
+                                "Icon=OpenMV-openmvide\n" +
+                                "Terminal=false\n" +
+                                "Categories=Development;IDE;Electronics;OpenMV;\n" +
+                                "MimeType=text/x-python;\n" +
+                                "Keywords=embedded electronics;electronics;microcontroller;micropython;computer vision;machine vision;\n" +
+                                "StartupWMClass=openmvide\n" );
         var widget = gui.pageWidgetByObjectName("DynamicLinuxWidget");
         if (widget != null) {
             if (widget.installLibrariesCheck.checked) {
+                installLibrariesCheck = true;
                 component.addElevatedOperation( "Execute", "{0}", "apt-get", "install", "-y",
                                                 "libpng16-16",
                                                 "libusb-1.0",
@@ -132,12 +144,50 @@ Component.prototype.createOperations = function()
                 component.addElevatedOperation( "Execute", "{0}", "pip3", "install", "pyusb" );
             }
             if (widget.udevRulesCheck.checked) {
+                udevRulesCheck = true;
                 component.addElevatedOperation( "Copy", "@TargetDir@/share/qtcreator/pydfu/99-openmv.rules", "/etc/udev/rules.d/99-openmv.rules" );
                 component.addElevatedOperation( "Copy", "@TargetDir@/share/qtcreator/pydfu/99-openmv-arduino.rules", "/etc/udev/rules.d/99-openmv-arduino.rules" );
                 component.addElevatedOperation( "Copy", "@TargetDir@/share/qtcreator/pydfu/99-openmv-nxp.rules", "/etc/udev/rules.d/99-openmv-nxp.rules" );
                 component.addElevatedOperation( "Execute", "{0}", "udevadm", "trigger" );
                 component.addElevatedOperation( "Execute", "{0}", "udevadm", "control", "--reload-rules" );
             }
+        }
+
+        if ((!installLibrariesCheck) || (!udevRulesCheck)) {
+            component.addOperation( "AppendFile", "@TargetDir@/README.txt",
+                                    "Please run setup.sh to install OpenMV IDE dependencies:\n\n" +
+                                    "    ./setup.sh\n\n" +
+                                    "And then run OpenMV IDE:\n\n" +
+                                    "    ./bin/openmvide\n" );
+        }
+
+        if ((!installLibrariesCheck) && udevRulesCheck) {
+            component.addOperation( "AppendFile", "@TargetDir@/setup.sh",
+                                    "#! /bin/sh\n\n" +
+                                    "DIR=\"$(dirname \"$(readlink -f \"$0\")\")\"\n\n" +
+                                    "sudo cp $DIR/share/qtcreator/pydfu/*.rules /etc/udev/rules.d/\n" +
+                                    "sudo udevadm trigger\n" +
+                                    "sudo udevadm control --reload-rules\n" );
+        } else if (installLibrariesCheck && (!udevRulesCheck)) {
+            component.addOperation( "AppendFile", "@TargetDir@/setup.sh",
+                                    "#! /bin/sh\n\n" +
+                                    "sudo apt-get install -y libfontconfig1 libfreetype6 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-xfixes0 libxcb-shape0 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0\n" +
+                                    "sudo apt-get install -y libpng16-16 libusb-1.0 python3 python3-pip\n" +
+                                    "sudo pip install pyusb\n" );
+        } else if ((!installLibrariesCheck) && (!udevRulesCheck)) {
+            component.addOperation( "AppendFile", "@TargetDir@/setup.sh",
+                                    "#! /bin/sh\n\n" +
+                                    "DIR=\"$(dirname \"$(readlink -f \"$0\")\")\"\n\n" +
+                                    "sudo apt-get install -y libfontconfig1 libfreetype6 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-xfixes0 libxcb-shape0 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0\n" +
+                                    "sudo apt-get install -y libpng16-16 libusb-1.0 python3 python3-pip\n" +
+                                    "sudo pip install pyusb\n\n" +
+                                    "sudo cp $DIR/share/qtcreator/pydfu/*.rules /etc/udev/rules.d/\n" +
+                                    "sudo udevadm trigger\n" +
+                                    "sudo udevadm control --reload-rules\n" );
+        }
+
+        if ((!installLibrariesCheck) || (!udevRulesCheck)) {
+            component.addOperation( "Execute", "{0}", "chmod", "+x", "@TargetDir@/setup.sh" );
         }
     }
 }
