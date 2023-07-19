@@ -166,7 +166,7 @@ void OpenMVPlugin::packageUpdate()
                             delete dialog;
                         });
 
-                        QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/openmv-ide-resources-%1.%2.%3/openmv-ide-resources-%1.%2.%3.zip").arg(new_major).arg(new_minor).arg(new_patch)));
+                        QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv-ide/releases/download/development/openmv-ide-resources-%1.%2.%3.zip").arg(new_major).arg(new_minor).arg(new_patch)));
                         QNetworkReply *reply2 = manager2->get(request2);
 
                         if(reply2)
@@ -194,7 +194,7 @@ void OpenMVPlugin::packageUpdate()
         connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
     });
 
-    QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/openmv-ide-resources-version-v2.txt")));
+    QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://raw.githubusercontent.com/openmv/openmv-ide-version/main/openmv-ide-resources-version.txt")));
     QNetworkReply *reply = manager->get(request);
 
     if(reply)
