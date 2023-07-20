@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="lv">
+<TS version="2.1" language="lv_LV">
 <context>
     <name>Language</name>
     <message>
@@ -204,176 +204,140 @@
 <context>
     <name>QtC::ADS</name>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/dockareatitlebar.cpp" line="+123"/>
         <source>List All Tabs</source>
-        <translation>Uzskaitiet visas cilnes</translation>
+        <translation type="vanished">Uzskaitiet visas cilnes</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Detach Group</source>
-        <translation>Atdalīt grupu</translation>
+        <translation type="vanished">Atdalīt grupu</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Close Active Tab</source>
-        <translation>Aizveriet aktīvo cilni</translation>
+        <translation type="vanished">Aizveriet aktīvo cilni</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Close Group</source>
-        <translation>Aizvērt grupu</translation>
+        <translation type="vanished">Aizvērt grupu</translation>
     </message>
     <message>
-        <location line="+376"/>
         <source>Detach Area</source>
-        <translation>Atdalīšanas zona</translation>
+        <translation type="vanished">Atdalīšanas zona</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Close Area</source>
-        <translation>Aizvērt apgabalu</translation>
+        <translation type="vanished">Aizvērt apgabalu</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Close Other Areas</source>
-        <translation>Aizveriet citus apgabalus</translation>
+        <translation type="vanished">Aizveriet citus apgabalus</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/dockwidgettab.cpp" line="+162"/>
         <source>Close Tab</source>
-        <translation>Aizvērt cilni</translation>
+        <translation type="vanished">Aizvērt cilni</translation>
     </message>
     <message>
-        <location line="+252"/>
         <source>Detach</source>
-        <translation>Atvienot</translation>
+        <translation type="vanished">Atvienot</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Close</source>
-        <translation>Aizvērt</translation>
+        <translation type="vanished">Aizvērt</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Close Others</source>
-        <translation>Aizvērt Citi</translation>
+        <translation type="vanished">Aizvērt Citi</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/workspacedialog.cpp" line="+69"/>
         <source>Enter the name of the workspace:</source>
-        <translation>Ievadiet darbvietas nosaukumu:</translation>
+        <translation type="vanished">Ievadiet darbvietas nosaukumu:</translation>
     </message>
     <message>
-        <location line="+48"/>
         <source>&amp;New</source>
-        <translation>&amp;Jauns</translation>
+        <translation type="vanished">&amp;Jauns</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location filename="../../../src/libs/advanceddockingsystem/workspacemodel.cpp" line="+200"/>
         <source>&amp;Rename</source>
-        <translation>&amp;Pārdēvēt</translation>
+        <translation type="vanished">&amp;Pārdēvēt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>C&amp;lone</source>
-        <translation>C&amp;vienots</translation>
+        <translation type="vanished">C&amp;vienots</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Dzēst</translation>
+        <translation type="vanished">&amp;Dzēst</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Reset</source>
-        <translation>Atiestatīt</translation>
+        <translation type="vanished">Atiestatīt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>&amp;Switch To</source>
-        <translation>&amp;Pāriet uz</translation>
+        <translation type="vanished">&amp;Pāriet uz</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Import</source>
-        <translation>Importēt</translation>
+        <translation type="vanished">Importēt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Export</source>
-        <translation>Eksportēt</translation>
+        <translation type="vanished">Eksportēt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Restore last workspace on startup</source>
-        <translation>Atjaunot pēdējo darbvietu startēšanas laikā</translation>
+        <translation type="vanished">Atjaunot pēdējo darbvietu startēšanas laikā</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Workspace Manager</source>
-        <translation>Darbvietas pārvaldnieks</translation>
+        <translation type="vanished">Darbvietas pārvaldnieks</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;Kas ir darbvieta?&lt;/a&gt;</translation>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;Kas ir darbvieta?&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/workspacemodel.cpp" line="-154"/>
         <source>Workspace</source>
-        <translation>Darbvieta</translation>
+        <translation type="vanished">Darbvieta</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Last Modified</source>
-        <translation>Pēdējās izmaiņas</translation>
+        <translation type="vanished">Pēdējās izmaiņas</translation>
     </message>
     <message>
-        <location line="+117"/>
-        <location line="+11"/>
         <source>New Workspace Name</source>
-        <translation>Jauns darbvietas nosaukums</translation>
+        <translation type="vanished">Jauns darbvietas nosaukums</translation>
     </message>
     <message>
-        <location line="-10"/>
         <source>&amp;Create</source>
-        <translation>&amp;Izveidot</translation>
+        <translation type="vanished">&amp;Izveidot</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Create and &amp;Open</source>
-        <translation>Izveidot un &amp;atvērt</translation>
+        <translation type="vanished">Izveidot un &amp;atvērt</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>&amp;Clone</source>
-        <translation>&amp;Klonēt</translation>
+        <translation type="vanished">&amp;Klonēt</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Clone and &amp;Open</source>
-        <translation>Klonēt un &amp;atvērt</translation>
+        <translation type="vanished">Klonēt un &amp;atvērt</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Rename Workspace</source>
-        <translation>Pārdēvēt darbvietu</translation>
+        <translation type="vanished">Pārdēvēt darbvietu</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Rename and &amp;Open</source>
-        <translation>Pārdēvēt un &amp;atvērt</translation>
+        <translation type="vanished">Pārdēvēt un &amp;atvērt</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/workspaceview.cpp" line="+99"/>
         <source>Import Workspace</source>
-        <translation>Importēt darbvietu</translation>
+        <translation type="vanished">Importēt darbvietu</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Export Workspace</source>
-        <translation>Eksportēt darbvietu</translation>
+        <translation type="vanished">Eksportēt darbvietu</translation>
     </message>
 </context>
 <context>
@@ -2500,7 +2464,7 @@ ar nosacījumu, ka tie nebija modificēti pirms pārveidošanas.</translation>
         <source>%1 filter update: %n files</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>%1 filtra atjauninājums: %n faili</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -3816,7 +3780,7 @@ Vai vēlaties tos pārbaudīt tagad?</translation>
         <source>%n occurrences replaced.</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>Aizvietoti %n gadījumi.</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -3895,7 +3859,7 @@ Vai vēlaties tos pārbaudīt tagad?</translation>
         <source>The search resulted in more than %n items, do you still want to continue?</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>Meklēšanas rezultātā tika atrasti vairāk nekā %n vienumi. Vai joprojām vēlaties turpināt?</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -3914,7 +3878,7 @@ Vai vēlaties tos pārbaudīt tagad?</translation>
         <source>%n matches found.</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>Atrastas %n atbilstības.</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -4252,7 +4216,7 @@ Veiciet dubultklikšķi, lai rediģētu vienumu.</translation>
         <source>Elided %n characters due to Application Output settings</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>Likvidētas %n rakstzīmes lietojumprogrammas izvades iestatījumu dēļ</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -4796,7 +4760,7 @@ uz versiju kontroli (% 2)
         <source>Skipped %n lines...</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>Izlaists %n rindiņas...</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -5352,105 +5316,76 @@ Iemesls: %3</translation>
 <context>
     <name>QtC::Help</name>
     <message>
-        <location filename="../../../src/shared/help/contentwindow.cpp" line="+111"/>
-        <location filename="../../../src/shared/help/indexwindow.cpp" line="+136"/>
         <source>Open Link</source>
-        <translation>Atvērt saiti</translation>
+        <translation type="vanished">Atvērt saiti</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location filename="../../../src/shared/help/indexwindow.cpp" line="+3"/>
         <source>Open Link as New Page</source>
-        <translation>Atveriet saiti kā jaunu lapu</translation>
+        <translation type="vanished">Atveriet saiti kā jaunu lapu</translation>
     </message>
     <message>
-        <location filename="../../../src/shared/help/bookmarkmanager.cpp" line="+75"/>
-        <location line="+685"/>
-        <location line="+9"/>
         <source>New Folder</source>
-        <translation>Jauna mape</translation>
+        <translation type="vanished">Jauna mape</translation>
     </message>
     <message>
-        <location line="-688"/>
         <source>Bookmark:</source>
-        <translation>Grāmatzīme:</translation>
+        <translation type="vanished">Grāmatzīme:</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Add in folder:</source>
-        <translation>Pievienot mapē:</translation>
+        <translation type="vanished">Pievienot mapē:</translation>
     </message>
     <message>
-        <location line="+137"/>
-        <location line="+151"/>
         <source>Delete Folder</source>
-        <translation>Dzēst mapi</translation>
+        <translation type="vanished">Dzēst mapi</translation>
     </message>
     <message>
-        <location line="-150"/>
-        <location line="+151"/>
         <source>Rename Folder</source>
-        <translation>Pārdēvēt mapi</translation>
+        <translation type="vanished">Pārdēvēt mapi</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Show Bookmark</source>
-        <translation>Rādīt grāmatzīmi</translation>
+        <translation type="vanished">Rādīt grāmatzīmi</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Show Bookmark as New Page</source>
-        <translation>Rādīt grāmatzīmi kā jaunu lapu</translation>
+        <translation type="vanished">Rādīt grāmatzīmi kā jaunu lapu</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Delete Bookmark</source>
-        <translation>Dzēst grāmatzīmi</translation>
+        <translation type="vanished">Dzēst grāmatzīmi</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Rename Bookmark</source>
-        <translation>Pārdēvēt grāmatzīmi</translation>
+        <translation type="vanished">Pārdēvēt grāmatzīmi</translation>
     </message>
     <message>
-        <location line="+267"/>
         <source>Remove</source>
-        <translation>Noņemt</translation>
+        <translation type="vanished">Noņemt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Deleting a folder also removes its content.&lt;br&gt;Do you want to continue?</source>
-        <translation>Dzēšot mapi, tiek noņemts arī tās saturs.&lt;br&gt;Vai vēlaties turpināt?</translation>
+        <translation type="vanished">Dzēšot mapi, tiek noņemts arī tās saturs.&lt;br&gt;Vai vēlaties turpināt?</translation>
     </message>
     <message>
-        <location line="-470"/>
-        <location line="+16"/>
-        <location line="+39"/>
-        <location line="+17"/>
-        <location line="+31"/>
-        <location line="+328"/>
         <source>Bookmarks</source>
-        <translation>Grāmatzīmes</translation>
+        <translation type="vanished">Grāmatzīmes</translation>
     </message>
     <message>
-        <location line="-558"/>
         <source>Add Bookmark</source>
-        <translation>Pievienot grāmatzīmi</translation>
+        <translation type="vanished">Pievienot grāmatzīmi</translation>
     </message>
     <message>
-        <location filename="../../../src/shared/help/indexwindow.cpp" line="-89"/>
         <source>&amp;Look for:</source>
-        <translation>&amp;Meklēt:</translation>
+        <translation type="vanished">&amp;Meklēt:</translation>
     </message>
     <message>
-        <location filename="../../../src/shared/help/topicchooser.cpp" line="+57"/>
         <source>Choose a topic for &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>Izvēlieties tēmu &lt;b&gt;%1&lt;/b&gt;:</translation>
+        <translation type="vanished">Izvēlieties tēmu &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="-30"/>
         <source>Choose Topic</source>
-        <translation>Izvēlieties tēmu</translation>
+        <translation type="vanished">Izvēlieties tēmu</translation>
     </message>
 </context>
 <context>
@@ -5773,7 +5708,7 @@ Vai vēlaties tos pārrakstīt?</translation>
         <location line="+11"/>
         <location line="+130"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1352"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358"/>
         <location line="+781"/>
         <source>Dataset Editor</source>
         <translation>Datu kopas redaktors</translation>
@@ -5793,51 +5728,51 @@ Vai vēlaties tos pārrakstīt?</translation>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-685"/>
         <location line="+19"/>
         <location line="+115"/>
-        <location line="+1209"/>
+        <location line="+1234"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
-        <location line="+94"/>
-        <location line="+172"/>
+        <location line="+106"/>
+        <location line="+180"/>
         <location line="+180"/>
         <location line="+14"/>
         <location line="+258"/>
         <location line="+13"/>
-        <location line="+250"/>
+        <location line="+252"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
         <location line="+114"/>
         <location line="+118"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+153"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+155"/>
         <location line="+233"/>
         <location line="+130"/>
-        <location line="+623"/>
-        <location line="+276"/>
+        <location line="+628"/>
+        <location line="+286"/>
         <location line="+468"/>
         <location line="+31"/>
         <location line="+122"/>
         <location line="+9"/>
-        <location line="+360"/>
+        <location line="+378"/>
         <location line="+9"/>
         <location line="+68"/>
         <location line="+9"/>
-        <location line="+197"/>
+        <location line="+201"/>
         <location line="+9"/>
-        <location line="+158"/>
+        <location line="+160"/>
         <location line="+9"/>
         <location line="+78"/>
         <location line="+9"/>
         <location line="+187"/>
-        <location line="+904"/>
+        <location line="+907"/>
         <location line="+13"/>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+77"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+495"/>
         <location line="+11"/>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+247"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+451"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+450"/>
         <location line="+19"/>
         <location line="+11"/>
         <source>Error: %L1!</source>
@@ -5845,7 +5780,7 @@ Vai vēlaties tos pārrakstīt?</translation>
     </message>
     <message>
         <location line="-307"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3395"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3442"/>
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+427"/>
         <location line="+34"/>
         <location line="+48"/>
@@ -5860,8 +5795,8 @@ Vai vēlaties tos pārrakstīt?</translation>
     </message>
     <message>
         <location line="+31"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2303"/>
-        <location line="+1576"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2348"/>
+        <location line="+1578"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353"/>
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Nezināma iemesla dēļ neizdevās saglabāt attēla failu!</translation>
@@ -5900,7 +5835,7 @@ Vai vēlaties tos pārrakstīt?</translation>
         <translation>Failu neizdevās pārdēvēt nezināma iemesla dēļ!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5192"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5245"/>
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Nevarēja kopēt failu &quot;%1&quot; uz &quot;%2&quot;.</translation>
     </message>
@@ -5925,7 +5860,7 @@ Vai vēlaties tos pārrakstīt?</translation>
         <translation>Trūkst argumenta -override_read_stall_timeout</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+60"/>
         <source>Missing argument for -serial_number_filter</source>
         <translation>Trūkst argumenta -serial_number_filter</translation>
     </message>
@@ -5933,7 +5868,7 @@ Vai vēlaties tos pārrakstīt?</translation>
         <location line="+82"/>
         <location line="+11"/>
         <location line="+19"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3940"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3982"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -5957,12 +5892,11 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <translation>Trūkst argumenta -form_key</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>OpenMV IDE</source>
-        <translation>OpenMV IDE</translation>
+        <translation type="vanished">OpenMV IDE</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+13"/>
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -6068,33 +6002,33 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
     </message>
     <message>
         <location line="+9"/>
-        <location line="+3566"/>
+        <location line="+3620"/>
         <location line="+59"/>
         <source>Open Terminal</source>
         <translation>Atveriet termināli</translation>
     </message>
     <message>
-        <location line="-3620"/>
+        <location line="-3674"/>
         <source>Machine Vision</source>
         <translation>Mašīnredze</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+3647"/>
+        <location line="+3701"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>Sliekšņa redaktors</translation>
     </message>
     <message>
-        <location line="-3718"/>
-        <location line="+3796"/>
+        <location line="-3772"/>
+        <location line="+3850"/>
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+186"/>
         <source>Keypoints Editor</source>
         <translation>Keypoints redaktors</translation>
     </message>
     <message>
-        <location line="-3789"/>
-        <location line="+3955"/>
+        <location line="-3843"/>
+        <location line="+4009"/>
         <location line="+98"/>
         <location line="+24"/>
         <location line="+11"/>
@@ -6103,7 +6037,7 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <translation>AprilTag ģenerators</translation>
     </message>
     <message>
-        <location line="-4103"/>
+        <location line="-4157"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 ģimene (30&#xa0;tagi)</translation>
     </message>
@@ -6141,15 +6075,15 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <location line="+10"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location line="+406"/>
+        <location line="+413"/>
         <location line="+14"/>
         <location line="+31"/>
-        <location line="+788"/>
+        <location line="+793"/>
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Neizdevās atvērt: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1263"/>
+        <location line="-1275"/>
         <source>DataMatrix Generator</source>
         <translation>DataMatrix ģenerators</translation>
     </message>
@@ -6182,20 +6116,20 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
     </message>
     <message>
         <location line="+1"/>
-        <location line="+248"/>
-        <location line="+2141"/>
+        <location line="+255"/>
+        <location line="+2186"/>
         <location line="+47"/>
         <location line="+69"/>
-        <location line="+1304"/>
+        <location line="+1306"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382"/>
         <location line="+364"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+780"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+848"/>
         <location line="+208"/>
         <source>Please add a file extension!</source>
         <translation>Lūdzu, pievienojiet faila paplašinājumu!</translation>
     </message>
     <message>
-        <location line="-3789"/>
+        <location line="-3843"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268"/>
         <location line="+13"/>
@@ -6221,14 +6155,14 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <translation>Atskaņot video failu</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+10"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437"/>
         <location line="+273"/>
         <source>Play RTSP Stream</source>
         <translation>Spēlējiet RTSP straumi</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+16"/>
         <location line="+18"/>
         <location line="+15"/>
         <location line="+6"/>
@@ -6303,13 +6237,13 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1208"/>
+        <location line="+1233"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
-        <location line="+228"/>
-        <location line="+751"/>
+        <location line="+240"/>
+        <location line="+761"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
@@ -6319,21 +6253,21 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-34"/>
         <location line="+222"/>
         <location line="+175"/>
-        <location line="+621"/>
-        <location line="+388"/>
+        <location line="+626"/>
+        <location line="+398"/>
         <location line="+156"/>
         <location line="+138"/>
         <location line="+67"/>
         <location line="+238"/>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1204"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1272"/>
         <location line="+78"/>
         <location line="+547"/>
         <source>Cancel</source>
         <translation>Atcelt</translation>
     </message>
     <message>
-        <location line="-3587"/>
+        <location line="-3634"/>
         <source>Upload to Edge Impulse Project</source>
         <translation>Augšupielādēt Edge Impulse Project</translation>
     </message>
@@ -6427,13 +6361,13 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1701"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1716"/>
         <location line="+6"/>
         <location line="+26"/>
         <location line="+98"/>
         <location line="+8"/>
         <location line="+33"/>
-        <location line="+148"/>
+        <location line="+152"/>
         <location line="+72"/>
         <location line="+35"/>
         <location line="+50"/>
@@ -6441,7 +6375,7 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <location line="+22"/>
         <location line="+19"/>
         <location line="+36"/>
-        <location line="+80"/>
+        <location line="+81"/>
         <location line="+9"/>
         <location line="+29"/>
         <location line="+9"/>
@@ -6451,8 +6385,8 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <location line="+4"/>
         <location line="+4"/>
         <location line="+52"/>
-        <location line="+128"/>
-        <location line="+9"/>
+        <location line="+88"/>
+        <location line="+59"/>
         <location line="+9"/>
         <location line="+113"/>
         <location line="+4"/>
@@ -6468,14 +6402,15 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <location line="+9"/>
         <location line="+9"/>
         <location line="+9"/>
-        <location line="+81"/>
+        <location line="+86"/>
         <location line="+4"/>
         <location line="+7"/>
         <location line="+9"/>
         <location line="+18"/>
         <location line="+26"/>
         <location line="+19"/>
-        <location line="+146"/>
+        <location line="+83"/>
+        <location line="+76"/>
         <location line="+40"/>
         <location line="+10"/>
         <location line="+9"/>
@@ -6486,14 +6421,14 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <location line="+20"/>
         <location line="+24"/>
         <location line="+14"/>
-        <location line="+32"/>
-        <location line="+33"/>
+        <location line="+34"/>
+        <location line="+35"/>
         <location line="+39"/>
         <location line="+25"/>
         <location line="+10"/>
         <location line="+9"/>
         <location line="+9"/>
-        <location line="+32"/>
+        <location line="+34"/>
         <location line="+13"/>
         <location line="+14"/>
         <location line="+50"/>
@@ -6514,7 +6449,7 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <location line="+14"/>
         <location line="+92"/>
         <location line="+9"/>
-        <location line="+156"/>
+        <location line="+159"/>
         <location line="+33"/>
         <location line="+168"/>
         <location line="+27"/>
@@ -6523,13 +6458,13 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
     </message>
     <message>
         <location line="+8"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1469"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1496"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+165"/>
+        <location line="+170"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1297"/>
+        <location line="+1319"/>
         <location line="+12"/>
         <location line="+7"/>
         <location line="+127"/>
@@ -6603,7 +6538,7 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
     <message>
         <location line="+17"/>
         <location line="+22"/>
-        <location line="+1682"/>
+        <location line="+1727"/>
         <location line="+55"/>
         <location line="+112"/>
         <location line="+69"/>
@@ -6617,7 +6552,7 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <translation>Aizņemts... lūdzu uzgaidiet...</translation>
     </message>
     <message>
-        <location line="-2115"/>
+        <location line="-2160"/>
         <location line="+15"/>
         <source>Disable</source>
         <translation>Atspējot</translation>
@@ -6759,7 +6694,7 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <translation>Kameras programmaparatūras versija</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
         <source>Serial Port:</source>
         <translation>Seriālais ports:</translation>
@@ -6771,14 +6706,14 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
     </message>
     <message>
         <location line="+6"/>
-        <location line="+1743"/>
+        <location line="+1787"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-249"/>
         <location line="+251"/>
         <source>Drive:</source>
         <translation>Braukt:</translation>
     </message>
     <message>
-        <location line="-1742"/>
+        <location line="-1786"/>
         <source>Drive associated with port</source>
         <translation>Ar portu saistīts disks</translation>
     </message>
@@ -6794,8 +6729,8 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <translation>Var atšķirties no kameras FPS</translation>
     </message>
     <message>
-        <location line="+208"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3624"/>
+        <location line="+212"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3666"/>
         <source>Update Available</source>
         <translation>Pieejams atjauninājums</translation>
     </message>
@@ -6810,7 +6745,7 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <translation>Lejupielādēt</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+175"/>
         <source>WiFi Programming Disabled!</source>
         <translation>WiFi programmēšana ir atspējota!</translation>
     </message>
@@ -6820,7 +6755,7 @@ Lūdzu, aizveriet visas programmas, kas skatās/rediģē OpenMV IDE lietojumprog
         <translation>Cita lietojumprogramma izmanto OpenMV Cam apraides atklāšanas portu. Lūdzu, aizveriet šo lietojumprogrammu un restartējiet OpenMV IDE, lai iespējotu WiFi programmēšanu.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+7"/>
         <source>Documents Folder Error</source>
         <translation>Dokumentu mapes kļūda</translation>
     </message>
@@ -6881,17 +6816,17 @@ Jūsu OpenMV Cam programmaparatūra ir panikā aparatūras kļūmes dēļ. Lūdz
     </message>
     <message>
         <location line="+77"/>
-        <location line="+1364"/>
+        <location line="+1386"/>
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Seriālais ports — %L1 — %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1332"/>
+        <location line="-1354"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
-        <location line="+979"/>
+        <location line="+1001"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
@@ -6901,7 +6836,7 @@ Jūsu OpenMV Cam programmaparatūra ir panikā aparatūras kļūmes dēļ. Lūdz
         <translation>Notiek savienojuma izveide... (30&#xa0;sekunžu taimauts)</translation>
     </message>
     <message>
-        <location line="-1971"/>
+        <location line="-1993"/>
         <source>
 
 Try doing:
@@ -6954,12 +6889,12 @@ sudo adduser %L1 iezvanpieeja
     </message>
     <message>
         <location line="+17"/>
-        <location line="+1421"/>
+        <location line="+1443"/>
         <source>UDP Server Connection - %1</source>
         <translation>UDP servera savienojums — %1</translation>
     </message>
     <message>
-        <location line="-1347"/>
+        <location line="-1369"/>
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Nederīgs porta arguments (%1) -open_udp_server_terminal</translation>
     </message>
@@ -6990,12 +6925,12 @@ sudo adduser %L1 iezvanpieeja
     </message>
     <message>
         <location line="+17"/>
-        <location line="+1467"/>
+        <location line="+1489"/>
         <source>TCP Server Connection - %1</source>
         <translation>TCP servera savienojums — %1</translation>
     </message>
     <message>
-        <location line="-1393"/>
+        <location line="-1415"/>
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Nederīgs porta arguments (%1) -open_tcp_server_terminal</translation>
     </message>
@@ -7005,14 +6940,16 @@ sudo adduser %L1 iezvanpieeja
         <translation>Trūkst argumentu -open_tcp_server_terminal</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+55"/>
+        <location line="+9"/>
         <location line="+8"/>
         <location line="+9"/>
         <location line="+8"/>
         <location line="+9"/>
         <location line="+45"/>
-        <location line="+77"/>
+        <location line="+79"/>
         <location line="+8"/>
+        <location line="+6"/>
         <location line="+6"/>
         <location line="+6"/>
         <location line="+6"/>
@@ -7024,7 +6961,26 @@ sudo adduser %L1 iezvanpieeja
         <translation>Reģistrējieties OpenMV Cam</translation>
     </message>
     <message>
-        <location line="-209"/>
+        <location line="-226"/>
+        <source>OpenMV Cam automatically registered!
+
+Board: %1
+ID: %2
+
+%3 Board Keys remaining for registering board type: %1
+
+Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality and focus the camera (if applicable).</source>
+        <translation>OpenMV Cam automātiski reģistrēts!
+
+Dēlis: %1
+ID: %2
+
+%3 atlikušās dēļa atslēgas, lai reģistrētu dēļa veidu: %1
+
+Lūdzu, palaidiet Piemēri-&gt;HelloWorld-&gt;helloworld.py, lai pārbaudītu redzes kvalitāti un fokusētu kameru (ja piemērojams).</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -7040,24 +6996,24 @@ Lūdzu, palaidiet Piemēri-&gt;HelloWorld-&gt;helloworld.py, lai pārbaudītu re
     </message>
     <message>
         <location line="+8"/>
-        <location line="+174"/>
+        <location line="+182"/>
         <source>Database Error!</source>
         <translation>Datu bāzes kļūda!</translation>
     </message>
     <message>
-        <location line="-157"/>
-        <location line="+170"/>
+        <location line="-165"/>
+        <location line="+178"/>
         <source>GET Network error!</source>
         <translation>IEGŪT tīkla kļūdu!</translation>
     </message>
     <message>
-        <location line="-161"/>
-        <location line="+169"/>
+        <location line="-169"/>
+        <location line="+177"/>
         <source>GET network error!</source>
         <translation>IEGŪT tīkla kļūdu!</translation>
     </message>
     <message>
-        <location line="-162"/>
+        <location line="-170"/>
         <location line="+10"/>
         <location line="+10"/>
         <source>Unregistered OpenMV Cam Detected</source>
@@ -7101,12 +7057,17 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
         <translation>Notiek OpenMV kameras reģistrēšana...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+30"/>
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>Paldies, ka reģistrējāt savu OpenMV kameru!</translation>
     </message>
     <message>
         <location line="+8"/>
+        <source>Invalid Board Key for Board Type!</source>
+        <translation>Nederīga dēļa atslēga dēļa tipam!</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Invalid Board Key!</source>
         <translation>Nederīga dēļa atslēga!</translation>
     </message>
@@ -7127,7 +7088,7 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
     </message>
     <message>
         <location line="+45"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3373"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3415"/>
         <location line="+375"/>
         <location line="+110"/>
         <source>FPS: 0</source>
@@ -7163,13 +7124,13 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
     </message>
     <message>
         <location line="-23"/>
-        <location line="+1231"/>
+        <location line="+1233"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Attēlu faili (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1186"/>
+        <location line="-1188"/>
         <location line="+7"/>
         <location line="+17"/>
         <location line="+15"/>
@@ -7205,14 +7166,14 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
     </message>
     <message>
         <location line="-48"/>
-        <location line="+1203"/>
+        <location line="+1205"/>
         <location line="+80"/>
         <location line="+21"/>
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>Keypoints faili (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1195"/>
+        <location line="-1197"/>
         <location line="+7"/>
         <location line="+6"/>
         <location line="+7"/>
@@ -7270,7 +7231,7 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
     <message>
         <location line="+25"/>
         <location line="+13"/>
-        <location line="+29"/>
+        <location line="+31"/>
         <location line="+9"/>
         <location line="+87"/>
         <location line="+6"/>
@@ -7294,7 +7255,7 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
         <translation>Jauns terminālis</translation>
     </message>
     <message>
-        <location line="-635"/>
+        <location line="-637"/>
         <source>Connect to serial port</source>
         <translation>Savienojiet ar seriālo portu</translation>
     </message>
@@ -7314,8 +7275,8 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
         <translation>Lūdzu, atlasiet opciju</translation>
     </message>
     <message>
-        <location line="+29"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3017"/>
+        <location line="+31"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3055"/>
         <source>Please select a serial port</source>
         <translation>Lūdzu, atlasiet seriālo portu</translation>
     </message>
@@ -7326,7 +7287,7 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
     </message>
     <message>
         <location line="+94"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+233"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+234"/>
         <source>Try doing:
 
 </source>
@@ -7529,7 +7490,7 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
         <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>AprilTag Generator — kur vēlaties saglabāt %n atzīmes attēlu(s)?</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -7554,7 +7515,7 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
         <translation>Paaudze pabeigta!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1074"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1079"/>
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Ir pieejami jauni OpenMV IDE resursi (piemēram, piemēri, programmaparatūra, dokumentācija utt.).</translation>
     </message>
@@ -7567,6 +7528,20 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
         <location line="+7"/>
         <location line="+222"/>
         <location line="+175"/>
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+100"/>
+        <location line="+51"/>
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+169"/>
+        <location line="+46"/>
+        <location line="+75"/>
+        <location line="+46"/>
+        <location line="+74"/>
+        <location line="+46"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+344"/>
+        <location line="+50"/>
+        <location line="+703"/>
+        <location line="+50"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+177"/>
+        <location line="+51"/>
         <source>Downloading...</source>
         <translation>Notiek lejupielāde...</translation>
     </message>
@@ -7628,19 +7603,19 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
         <location line="+10"/>
         <location line="+6"/>
         <location line="+115"/>
-        <location line="+374"/>
+        <location line="+378"/>
         <source>Erase internal file system</source>
         <translation>Dzēst iekšējo failu sistēmu</translation>
     </message>
     <message>
-        <location line="-491"/>
+        <location line="-495"/>
         <location line="+120"/>
-        <location line="+375"/>
+        <location line="+379"/>
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Ja iespējosit šo opciju, tiks dzēsti visi faili jūsu OpenMV Cam iekšējā zibatmiņas diskā. Tas neizdzēš failus nevienā noņemamajā SD kartē (ja tā ir ievietota).</translation>
     </message>
     <message>
-        <location line="-490"/>
+        <location line="-494"/>
         <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Ielādējot programmaparatūru, izmantojot DFU, vienmēr tiek izdzēsts jūsu OpenMV Cam iekšējais zibatmiņas disks. Tas neizdzēš failus nevienā noņemamajā SD kartē (ja tā ir ievietota).</translation>
     </message>
@@ -7666,7 +7641,7 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
         <translation>Nevar izvilkt programmaparatūru!</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+209"/>
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Tika atklāta plate DFU režīmā. Ko tu gribētu darīt?</translation>
     </message>
@@ -7697,19 +7672,20 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
     </message>
     <message>
         <location line="+49"/>
-        <location line="+1110"/>
+        <location line="+505"/>
+        <location line="+616"/>
         <source>Please select the board type</source>
         <translation>Lūdzu, izvēlieties dēļa veidu</translation>
     </message>
     <message>
-        <location line="-1099"/>
-        <location line="+3123"/>
+        <location line="-1110"/>
+        <location line="+3161"/>
         <location line="+28"/>
         <source>Erase the internal file system?</source>
         <translation>Vai dzēst iekšējo failu sistēmu?</translation>
     </message>
     <message>
-        <location line="-3129"/>
+        <location line="-3167"/>
         <source>No released firmware available for the attached board!</source>
         <translation>Pievienotajai platei nav pieejama izlaista programmaparatūra!</translation>
     </message>
@@ -7719,7 +7695,7 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
         <translation>Lūdzu, atlasiet DFU ierīci</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+82"/>
         <location line="+38"/>
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Lūdzu, atjauniniet sāknēšanas ielādētāju uz jaunāko versiju un instalējiet SoftDevice, lai mirgotu OpenMV programmaparatūra. Plašāku informāciju var atrast vietnē &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;.</translation>
@@ -7756,18 +7732,17 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
     </message>
     <message>
         <location line="+52"/>
-        <location line="+146"/>
-        <location line="+1879"/>
+        <location line="+156"/>
+        <location line="+1906"/>
         <source>Timeout error while getting board architecture!</source>
         <translation>Taimauta kļūda, iegūstot plates arhitektūru!</translation>
     </message>
     <message>
-        <location line="-1897"/>
         <source>Unsupported board architecture!</source>
-        <translation>Neatbalstīta dēļa arhitektūra!</translation>
+        <translation type="vanished">Neatbalstīta dēļa arhitektūra!</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="-1844"/>
         <location line="+600"/>
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Atvienojiet savu OpenMV kameru un pēc tam pievienojiet to vēlreiz...</translation>
@@ -7789,12 +7764,12 @@ Nospiediet Atcelt, lai pārietu uz DFU pārprogrammēšanu.</translation>
     </message>
     <message>
         <location line="-549"/>
-        <location line="+589"/>
+        <location line="+594"/>
         <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>Nevar izveidot savienojumu ar jūsu OpenMV Cam parasto sāknēšanas programmu!</translation>
     </message>
     <message>
-        <location line="-585"/>
+        <location line="-590"/>
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
@@ -7804,6 +7779,10 @@ Turpināt?</translation>
     </message>
     <message>
         <location line="+102"/>
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-287"/>
+        <location line="+46"/>
+        <location line="+195"/>
+        <location line="+46"/>
         <source>Erasing...</source>
         <translation>Notiek dzēšana...</translation>
     </message>
@@ -7811,42 +7790,42 @@ Turpināt?</translation>
         <location line="+56"/>
         <location line="+63"/>
         <location line="+77"/>
-        <location line="+610"/>
-        <location line="+441"/>
+        <location line="+628"/>
+        <location line="+447"/>
         <location line="+22"/>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+414"/>
-        <location line="+40"/>
-        <location line="+50"/>
-        <location line="+43"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-651"/>
+        <location line="+38"/>
+        <location line="+48"/>
         <location line="+41"/>
-        <location line="+44"/>
-        <location line="+43"/>
-        <location line="+41"/>
-        <location line="+41"/>
-        <location line="+51"/>
-        <location line="+50"/>
-        <location line="+41"/>
-        <location line="+42"/>
         <location line="+39"/>
-        <location line="+215"/>
-        <location line="+50"/>
+        <location line="+42"/>
         <location line="+41"/>
+        <location line="+39"/>
+        <location line="+39"/>
+        <location line="+47"/>
+        <location line="+46"/>
+        <location line="+39"/>
         <location line="+40"/>
+        <location line="+37"/>
+        <location line="+195"/>
+        <location line="+46"/>
+        <location line="+39"/>
+        <location line="+38"/>
         <source>Timeout Error!</source>
         <translation>Taimauta kļūda!</translation>
     </message>
     <message>
-        <location line="-1131"/>
+        <location line="-1155"/>
         <location line="+67"/>
         <source>Programming...</source>
         <translation>Programmēšana...</translation>
     </message>
     <message>
         <location line="+22"/>
-        <location line="+294"/>
+        <location line="+299"/>
         <location line="+45"/>
-        <location line="+260"/>
-        <location line="+460"/>
+        <location line="+273"/>
+        <location line="+466"/>
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -7855,8 +7834,8 @@ Turpināt?</translation>
 </translation>
     </message>
     <message>
-        <location line="-1059"/>
-        <location line="+294"/>
+        <location line="-1083"/>
+        <location line="+299"/>
         <location line="+45"/>
         <source>Firmware Upgrade complete!
 
@@ -7866,11 +7845,11 @@ Turpināt?</translation>
 </translation>
     </message>
     <message>
-        <location line="-338"/>
-        <location line="+294"/>
+        <location line="-343"/>
+        <location line="+299"/>
         <location line="+45"/>
-        <location line="+260"/>
-        <location line="+460"/>
+        <location line="+273"/>
+        <location line="+466"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
@@ -7879,23 +7858,23 @@ Turpināt?</translation>
 </translation>
     </message>
     <message>
-        <location line="-1058"/>
-        <location line="+294"/>
+        <location line="-1082"/>
+        <location line="+299"/>
         <location line="+45"/>
-        <location line="+260"/>
-        <location line="+460"/>
+        <location line="+273"/>
+        <location line="+466"/>
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Noklikšķiniet uz Labi, kad jūsu OpenMV Cam RGB gaismas diode sāk mirgot zilā krāsā, kas norāda, ka pašpārbaude ir pabeigta.</translation>
     </message>
     <message>
-        <location line="-1058"/>
-        <location line="+275"/>
+        <location line="-1082"/>
+        <location line="+280"/>
         <location line="+19"/>
         <location line="+25"/>
         <location line="+20"/>
-        <location line="+260"/>
+        <location line="+273"/>
         <location line="+65"/>
-        <location line="+216"/>
+        <location line="+222"/>
         <location line="+179"/>
         <location line="+37"/>
         <source>
@@ -7910,7 +7889,7 @@ Ja savā OpenMV Cam pārrakstījāt vietni main.py un neizdzēsāt disku, jūsu 
 Šādā gadījumā noklikšķiniet uz Labi, kad redzat OpenMV Cam iekšējā zibatmiņas diska stiprinājumu (logs var atvērties vai neatvērties).</translation>
     </message>
     <message>
-        <location line="-1071"/>
+        <location line="-1095"/>
         <source>The firmware file is empty!</source>
         <translation>Programmaparatūras fails ir tukšs!</translation>
     </message>
@@ -7928,17 +7907,17 @@ Ja savā OpenMV Cam pārrakstījāt vietni main.py un neizdzēsāt disku, jūsu 
         <location line="+35"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+165"/>
+        <location line="+170"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1297"/>
+        <location line="+1319"/>
         <location line="+12"/>
         <location line="+7"/>
         <source>Failed to eject &quot;%L1&quot;!</source>
         <translation>Neizdevās izstumt &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-1495"/>
+        <location line="-1522"/>
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
@@ -7947,7 +7926,7 @@ Hit cancel to skip to SBL reprogramming.</source>
 Nospiediet Atcelt, lai pārietu uz SBL pārprogrammēšanu.</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+49"/>
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
@@ -7977,15 +7956,20 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam SBL sāknēšanas programma 
     <message>
         <location line="-43"/>
         <location line="+44"/>
-        <location line="+345"/>
-        <location line="+216"/>
+        <location line="+358"/>
+        <location line="+222"/>
         <location line="+216"/>
         <location line="+66"/>
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam ir uzskaitījis un pabeidzis iebūvēto pašpārbaudi (mirgo zils indikators&#xa0;— tas aizņem kādu laiku).</translation>
     </message>
     <message>
-        <location line="-679"/>
+        <location line="-761"/>
+        <source>DFU Util may not be stable on this platform. If loading fails please use a regular computer.</source>
+        <translation>DFU Util var nebūt stabils šajā platformā. Ja ielāde neizdodas, lūdzu, izmantojiet parastu datoru.</translation>
+    </message>
+    <message>
+        <location line="+76"/>
         <source>No DFU settings for the selected board type!</source>
         <translation>Nav DFU iestatījumu atlasītajam plates tipam!</translation>
     </message>
@@ -7995,15 +7979,31 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam SBL sāknēšanas programma 
         <translation>Nav DFU iestatījumu atlasītajai ierīcei!</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+50"/>
+        <location line="+447"/>
+        <source>Erasing Disk</source>
+        <translation>Diska dzēšana</translation>
+    </message>
+    <message>
+        <location line="-386"/>
+        <location line="+23"/>
+        <location line="+222"/>
+        <location line="+216"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1050"/>
+        <location line="+765"/>
+        <source>Flashing Firmware</source>
+        <translation>Mirgojoša programmaparatūra</translation>
+    </message>
+    <message>
+        <location line="-457"/>
         <location line="+38"/>
-        <location line="+497"/>
+        <location line="+503"/>
         <source>DFU firmware update failed!</source>
         <translation>DFU programmaparatūras atjaunināšana neizdevās!</translation>
     </message>
     <message>
-        <location line="-510"/>
-        <location line="+497"/>
+        <location line="-516"/>
+        <location line="+503"/>
         <source>DFU firmware update complete!
 
 </source>
@@ -8012,14 +8012,14 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam SBL sāknēšanas programma 
 </translation>
     </message>
     <message>
-        <location line="-451"/>
-        <location line="+33"/>
-        <location line="+124"/>
+        <location line="-455"/>
+        <location line="+35"/>
+        <location line="+126"/>
         <source>BOSSAC device %1 missing!</source>
         <translation>Trūkst BOSSAC ierīces %1!</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-87"/>
         <source>No BOSSAC settings for the selected board type!</source>
         <translation>Nav BOSSAC iestatījumu izvēlētajam dēļa veidam!</translation>
     </message>
@@ -8034,7 +8034,7 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam SBL sāknēšanas programma 
         <translation>Jūsu Nano 33 BLE nav iebūvēta datu zibatmiņas diska.</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+46"/>
         <source>BOSSAC firmware update complete!
 
 </source>
@@ -8090,7 +8090,12 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
 Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam DFU sāknēšanas programma ir uzskaitījusi.</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+7"/>
+        <source>Flashing Bootloader</source>
+        <translation>Mirgojošs sāknēšanas ielādētājs</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>DFU bootloader reset complete!
 
 </source>
@@ -8144,7 +8149,7 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam DFU sāknēšanas programma 
         <translation>Noildzes kļūda, iegūstot sensora veidu!</translation>
     </message>
     <message>
-        <location line="+189"/>
+        <location line="+192"/>
         <source>Timeout error while learning MTU!</source>
         <translation>Taimauta kļūda, mācoties MTU!</translation>
     </message>
@@ -8417,13 +8422,13 @@ Vai vēlaties, lai OpenMV IDE to kopētu jūsu OpenMV kamerā?</translation>
         <translation>Mīksta atiestatīšana</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+72"/>
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="-83"/>
         <source>BOSSAC</source>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+97"/>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+84"/>
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-351"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-142"/>
         <source>Get Devices</source>
         <translation>Iegūstiet ierīces</translation>
     </message>
@@ -8436,17 +8441,17 @@ Vai vēlaties, lai OpenMV IDE to kopētu jūsu OpenMV kamerā?</translation>
         <translation>Vaicājums neizdevās!</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+37"/>
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+121"/>
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+120"/>
         <source>DFU Util</source>
         <translation>DFU util</translation>
     </message>
@@ -8611,44 +8616,46 @@ Atveriet datu kopu, lai to augšupielādētu.</translation>
         <translation>Lūdzu, ievadiet Edge Impluse Project API atslēgu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1119"/>
-        <location line="+149"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-836"/>
+        <location line="+71"/>
+        <location line="+140"/>
         <location line="+26"/>
-        <location line="+32"/>
-        <location line="+40"/>
-        <location line="+50"/>
-        <location line="+43"/>
+        <location line="+30"/>
+        <location line="+38"/>
+        <location line="+48"/>
         <location line="+41"/>
-        <location line="+44"/>
-        <location line="+43"/>
-        <location line="+41"/>
-        <location line="+41"/>
-        <location line="+51"/>
-        <location line="+50"/>
-        <location line="+41"/>
+        <location line="+39"/>
         <location line="+42"/>
+        <location line="+41"/>
+        <location line="+39"/>
+        <location line="+39"/>
+        <location line="+47"/>
+        <location line="+46"/>
         <location line="+39"/>
         <location line="+40"/>
-        <location line="+133"/>
-        <location line="+42"/>
-        <location line="+50"/>
-        <location line="+41"/>
-        <location line="+40"/>
+        <location line="+37"/>
+        <location line="+33"/>
+        <location line="+124"/>
+        <location line="+38"/>
+        <location line="+46"/>
+        <location line="+39"/>
+        <location line="+38"/>
         <source>NXP IMX</source>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-969"/>
+        <location line="-1120"/>
+        <location line="+211"/>
         <location line="+26"/>
-        <location line="+771"/>
+        <location line="+723"/>
         <source>This feature is not supported on this machine!</source>
         <translation>Šī funkcija šajā ierīcē netiek atbalstīta!</translation>
     </message>
     <message>
-        <location line="-373"/>
-        <location line="+50"/>
-        <location line="+337"/>
-        <location line="+50"/>
+        <location line="-345"/>
+        <location line="+46"/>
+        <location line="+311"/>
+        <location line="+46"/>
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Šīs komandas izpilde aizņem kādu laiku. Lūdzu, esiet pacietīgi.</translation>
     </message>
@@ -8668,7 +8675,7 @@ Atveriet datu kopu, lai to augšupielādētu.</translation>
         <translation>Gatavs</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+65"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+59"/>
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -8870,7 +8877,7 @@ Atveriet datu kopu, lai to augšupielādētu.</translation>
         <location line="+102"/>
         <location line="+59"/>
         <location line="+15"/>
-        <location line="+304"/>
+        <location line="+372"/>
         <location line="+12"/>
         <location line="+10"/>
         <location line="+12"/>
@@ -8894,7 +8901,7 @@ Atveriet datu kopu, lai to augšupielādētu.</translation>
         <translation>Konvertēt video</translation>
     </message>
     <message>
-        <location line="-769"/>
+        <location line="-837"/>
         <source>Failed to launch ffmpeg!</source>
         <translation>Neizdevās palaist ffmpeg!</translation>
     </message>
@@ -8909,14 +8916,14 @@ Atveriet datu kopu, lai to augšupielādētu.</translation>
         <translation>Nevar atvērt izvades video failu!</translation>
     </message>
     <message>
-        <location line="+139"/>
-        <location line="+367"/>
+        <location line="+163"/>
+        <location line="+411"/>
         <source>Play Video</source>
         <translation>Atskaņot video</translation>
     </message>
     <message>
-        <location line="-366"/>
-        <location line="+119"/>
+        <location line="-410"/>
+        <location line="+163"/>
         <source>Failed to launch ffplay!</source>
         <translation>Neizdevās palaist ffplay!</translation>
     </message>
@@ -9016,6 +9023,22 @@ Atveriet datu kopu, lai to augšupielādētu.</translation>
         <location line="+7"/>
         <source>Save Video</source>
         <translation>Saglabāt video</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+44"/>
+        <source>Busy</source>
+        <translation>Aizņemts</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+21"/>
+        <source>Show Details</source>
+        <translation>Parādīt detaļas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Hide Details</source>
+        <translation>Slēpt detaļas</translation>
     </message>
 </context>
 <context>
@@ -13970,7 +13993,7 @@ Netiks lietots atstarpēm komentāros un virknēs.</translation>
         <source>%n found.</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>%n atrasts.</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -13979,7 +14002,7 @@ Netiks lietots atstarpēm komentāros un virknēs.</translation>
         <source>%n occurrences replaced.</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>Aizvietoti %n gadījumi.</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -14294,7 +14317,12 @@ Izņemot: %3
         <translation>Nevar ierakstīt pagaidu failu. Disks pilns?</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>Nevar izveidot pagaidu direktoriju &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Unexpected output from helper program (%1).</source>
         <translation>Negaidīta palīgprogrammas (%1) izvade.</translation>
     </message>
@@ -14344,12 +14372,12 @@ Izņemot: %3
         <translation>Nevar izveidot ligzdu &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="-466"/>
+        <location line="-470"/>
         <source>Press &lt;RETURN&gt; to close this window...</source>
         <translation>Nospiediet &lt;RETURN&gt;, lai aizvērtu šo logu...</translation>
     </message>
     <message>
-        <location line="+541"/>
+        <location line="+549"/>
         <source>Cannot obtain a handle to the inferior: %1</source>
         <translation>Nevar iegūt rokturi zemākajam: %1</translation>
     </message>
@@ -14363,7 +14391,7 @@ Izņemot: %3
         <source>%1: canceled. %n occurrences found in %2 files.</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>%1: atcelts. %n atgadījumi atrasti %2 failos.</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -14372,7 +14400,7 @@ Izņemot: %3
         <source>%1: %n occurrences found in %2 files.</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>%1: %2 failos atrasti %n gadījumi.</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -14642,41 +14670,32 @@ Izņemot: %3
         <translation>&amp;Saglabāt</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/dockmanager.cpp" line="+579"/>
-        <location line="+108"/>
         <source>Cannot Save Workspace</source>
-        <translation>Nevar saglabāt darbvietu</translation>
+        <translation type="vanished">Nevar saglabāt darbvietu</translation>
     </message>
     <message>
-        <location line="-107"/>
-        <location line="+108"/>
         <source>Could not save workspace to file %1</source>
-        <translation>Nevarēja saglabāt darbvietu failā %1</translation>
+        <translation type="vanished">Nevarēja saglabāt darbvietu failā %1</translation>
     </message>
     <message>
-        <location line="+67"/>
         <source>Delete Workspace</source>
-        <translation>Dzēst darbvietu</translation>
+        <translation type="vanished">Dzēst darbvietu</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Delete Workspaces</source>
-        <translation>Dzēst darbvietas</translation>
+        <translation type="vanished">Dzēst darbvietas</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Delete workspace %1?</source>
-        <translation>Vai dzēst darbvietu %1?</translation>
+        <translation type="vanished">Vai dzēst darbvietu %1?</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Delete these workspaces?
     %1</source>
-        <translation>Vai dzēst šīs darbvietas?
+        <translation type="vanished">Vai dzēst šīs darbvietas?
     %1</translation>
     </message>
     <message>
-        <location line="+196"/>
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+87"/>
         <location line="+33"/>
         <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+418"/>
@@ -14684,14 +14703,12 @@ Izņemot: %3
         <translation>Faila kļūda</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Cannot Restore Workspace</source>
-        <translation>Nevar atjaunot darbvietu</translation>
+        <translation type="vanished">Nevar atjaunot darbvietu</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Could not restore workspace %1</source>
-        <translation>Nevarēja atjaunot darbvietu %1</translation>
+        <translation type="vanished">Nevarēja atjaunot darbvietu %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/archive.cpp" line="+124"/>
@@ -14960,7 +14977,7 @@ sadaļā &quot;%2&quot;.
         <source>announced %n sections, each %1 bytes, exceed file size</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>paziņoja %n sadaļas, katra %1&#xa0;baits pārsniedz faila lielumu</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -15238,7 +15255,7 @@ Lai atspējotu mainīgo, rindiņas priekšā pievienojiet &quot;#&quot;.</transl
         <source>%n Items</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform>%n vienumi</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
