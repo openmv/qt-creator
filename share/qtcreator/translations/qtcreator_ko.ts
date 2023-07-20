@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ko">
+<TS version="2.1" language="ko_KR">
 <context>
     <name>Language</name>
     <message>
@@ -204,176 +204,140 @@
 <context>
     <name>QtC::ADS</name>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/dockareatitlebar.cpp" line="+123"/>
         <source>List All Tabs</source>
-        <translation>모든 탭 나열</translation>
+        <translation type="vanished">모든 탭 나열</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Detach Group</source>
-        <translation>그룹 분리</translation>
+        <translation type="vanished">그룹 분리</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Close Active Tab</source>
-        <translation>활성 탭 닫기</translation>
+        <translation type="vanished">활성 탭 닫기</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Close Group</source>
-        <translation>그룹 닫기</translation>
+        <translation type="vanished">그룹 닫기</translation>
     </message>
     <message>
-        <location line="+376"/>
         <source>Detach Area</source>
-        <translation>지역 분리</translation>
+        <translation type="vanished">지역 분리</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Close Area</source>
-        <translation>가까운 지역</translation>
+        <translation type="vanished">가까운 지역</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Close Other Areas</source>
-        <translation>다른 지역 닫기</translation>
+        <translation type="vanished">다른 지역 닫기</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/dockwidgettab.cpp" line="+162"/>
         <source>Close Tab</source>
-        <translation>탭 닫기</translation>
+        <translation type="vanished">탭 닫기</translation>
     </message>
     <message>
-        <location line="+252"/>
         <source>Detach</source>
-        <translation>분리하다</translation>
+        <translation type="vanished">분리하다</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Close</source>
-        <translation>닫다</translation>
+        <translation type="vanished">닫다</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Close Others</source>
-        <translation>기타 닫기</translation>
+        <translation type="vanished">기타 닫기</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/workspacedialog.cpp" line="+69"/>
         <source>Enter the name of the workspace:</source>
-        <translation>작업 공간의 이름을 입력하십시오.</translation>
+        <translation type="vanished">작업 공간의 이름을 입력하십시오.</translation>
     </message>
     <message>
-        <location line="+48"/>
         <source>&amp;New</source>
-        <translation>&amp;새로운</translation>
+        <translation type="vanished">&amp;새로운</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location filename="../../../src/libs/advanceddockingsystem/workspacemodel.cpp" line="+200"/>
         <source>&amp;Rename</source>
-        <translation>이름 바꾸기(&amp;R)</translation>
+        <translation type="vanished">이름 바꾸기(&amp;R)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>C&amp;lone</source>
-        <translation>클론(&amp;Lone)</translation>
+        <translation type="vanished">클론(&amp;Lone)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>&amp;Delete</source>
-        <translation>&amp;삭제</translation>
+        <translation type="vanished">&amp;삭제</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Reset</source>
-        <translation>초기화</translation>
+        <translation type="vanished">초기화</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>&amp;Switch To</source>
-        <translation>&amp;로 전환</translation>
+        <translation type="vanished">&amp;로 전환</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Import</source>
-        <translation>수입</translation>
+        <translation type="vanished">수입</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Export</source>
-        <translation>내보내다</translation>
+        <translation type="vanished">내보내다</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Restore last workspace on startup</source>
-        <translation>시작 시 마지막 작업 공간 복원</translation>
+        <translation type="vanished">시작 시 마지막 작업 공간 복원</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Workspace Manager</source>
-        <translation>작업 공간 관리자</translation>
+        <translation type="vanished">작업 공간 관리자</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;작업공간이란 무엇입니까?&lt;/a&gt;</translation>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;작업공간이란 무엇입니까?&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/workspacemodel.cpp" line="-154"/>
         <source>Workspace</source>
-        <translation>작업 공간</translation>
+        <translation type="vanished">작업 공간</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Last Modified</source>
-        <translation>마지막 수정</translation>
+        <translation type="vanished">마지막 수정</translation>
     </message>
     <message>
-        <location line="+117"/>
-        <location line="+11"/>
         <source>New Workspace Name</source>
-        <translation>새 작업 공간 이름</translation>
+        <translation type="vanished">새 작업 공간 이름</translation>
     </message>
     <message>
-        <location line="-10"/>
         <source>&amp;Create</source>
-        <translation>&amp;만들다</translation>
+        <translation type="vanished">&amp;만들다</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Create and &amp;Open</source>
-        <translation>만들기 및 열기(&amp;O)</translation>
+        <translation type="vanished">만들기 및 열기(&amp;O)</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>&amp;Clone</source>
-        <translation>클론(&amp;Clone)</translation>
+        <translation type="vanished">클론(&amp;Clone)</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Clone and &amp;Open</source>
-        <translation>복제 및 열기(&amp;O)</translation>
+        <translation type="vanished">복제 및 열기(&amp;O)</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Rename Workspace</source>
-        <translation>작업 공간 이름 바꾸기</translation>
+        <translation type="vanished">작업 공간 이름 바꾸기</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Rename and &amp;Open</source>
-        <translation>이름 바꾸기 및 열기(&amp;O)</translation>
+        <translation type="vanished">이름 바꾸기 및 열기(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/workspaceview.cpp" line="+99"/>
         <source>Import Workspace</source>
-        <translation>작업공간 가져오기</translation>
+        <translation type="vanished">작업공간 가져오기</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Export Workspace</source>
-        <translation>작업공간 내보내기</translation>
+        <translation type="vanished">작업공간 내보내기</translation>
     </message>
 </context>
 <context>
@@ -5340,105 +5304,76 @@ Reason: %3</source>
 <context>
     <name>QtC::Help</name>
     <message>
-        <location filename="../../../src/shared/help/contentwindow.cpp" line="+111"/>
-        <location filename="../../../src/shared/help/indexwindow.cpp" line="+136"/>
         <source>Open Link</source>
-        <translation>링크 열기</translation>
+        <translation type="vanished">링크 열기</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location filename="../../../src/shared/help/indexwindow.cpp" line="+3"/>
         <source>Open Link as New Page</source>
-        <translation>링크를 새 페이지로 열기</translation>
+        <translation type="vanished">링크를 새 페이지로 열기</translation>
     </message>
     <message>
-        <location filename="../../../src/shared/help/bookmarkmanager.cpp" line="+75"/>
-        <location line="+685"/>
-        <location line="+9"/>
         <source>New Folder</source>
-        <translation>새 폴더</translation>
+        <translation type="vanished">새 폴더</translation>
     </message>
     <message>
-        <location line="-688"/>
         <source>Bookmark:</source>
-        <translation>서표:</translation>
+        <translation type="vanished">서표:</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Add in folder:</source>
-        <translation>폴더에 추가:</translation>
+        <translation type="vanished">폴더에 추가:</translation>
     </message>
     <message>
-        <location line="+137"/>
-        <location line="+151"/>
         <source>Delete Folder</source>
-        <translation>폴더 삭제</translation>
+        <translation type="vanished">폴더 삭제</translation>
     </message>
     <message>
-        <location line="-150"/>
-        <location line="+151"/>
         <source>Rename Folder</source>
-        <translation>폴더 이름 바꾸기</translation>
+        <translation type="vanished">폴더 이름 바꾸기</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Show Bookmark</source>
-        <translation>북마크 표시</translation>
+        <translation type="vanished">북마크 표시</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Show Bookmark as New Page</source>
-        <translation>북마크를 새 페이지로 표시</translation>
+        <translation type="vanished">북마크를 새 페이지로 표시</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Delete Bookmark</source>
-        <translation>북마크 삭제</translation>
+        <translation type="vanished">북마크 삭제</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Rename Bookmark</source>
-        <translation>북마크 이름 바꾸기</translation>
+        <translation type="vanished">북마크 이름 바꾸기</translation>
     </message>
     <message>
-        <location line="+267"/>
         <source>Remove</source>
-        <translation>제거하다</translation>
+        <translation type="vanished">제거하다</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Deleting a folder also removes its content.&lt;br&gt;Do you want to continue?</source>
-        <translation>폴더를 삭제하면 해당 내용도 제거됩니다.&lt;br&gt;계속하시겠습니까?</translation>
+        <translation type="vanished">폴더를 삭제하면 해당 내용도 제거됩니다.&lt;br&gt;계속하시겠습니까?</translation>
     </message>
     <message>
-        <location line="-470"/>
-        <location line="+16"/>
-        <location line="+39"/>
-        <location line="+17"/>
-        <location line="+31"/>
-        <location line="+328"/>
         <source>Bookmarks</source>
-        <translation>북마크</translation>
+        <translation type="vanished">북마크</translation>
     </message>
     <message>
-        <location line="-558"/>
         <source>Add Bookmark</source>
-        <translation>북마크에 추가하다</translation>
+        <translation type="vanished">북마크에 추가하다</translation>
     </message>
     <message>
-        <location filename="../../../src/shared/help/indexwindow.cpp" line="-89"/>
         <source>&amp;Look for:</source>
-        <translation>&amp;찾다:</translation>
+        <translation type="vanished">&amp;찾다:</translation>
     </message>
     <message>
-        <location filename="../../../src/shared/help/topicchooser.cpp" line="+57"/>
         <source>Choose a topic for &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt;에 대한 주제 선택:</translation>
+        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt;에 대한 주제 선택:</translation>
     </message>
     <message>
-        <location line="-30"/>
         <source>Choose Topic</source>
-        <translation>주제 선택</translation>
+        <translation type="vanished">주제 선택</translation>
     </message>
 </context>
 <context>
@@ -5761,7 +5696,7 @@ Would you like to overwrite them?</source>
         <location line="+11"/>
         <location line="+130"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1352"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358"/>
         <location line="+781"/>
         <source>Dataset Editor</source>
         <translation>데이터세트 편집기</translation>
@@ -5781,51 +5716,51 @@ Would you like to overwrite them?</source>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-685"/>
         <location line="+19"/>
         <location line="+115"/>
-        <location line="+1209"/>
+        <location line="+1234"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
-        <location line="+94"/>
-        <location line="+172"/>
+        <location line="+106"/>
+        <location line="+180"/>
         <location line="+180"/>
         <location line="+14"/>
         <location line="+258"/>
         <location line="+13"/>
-        <location line="+250"/>
+        <location line="+252"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
         <location line="+114"/>
         <location line="+118"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+153"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+155"/>
         <location line="+233"/>
         <location line="+130"/>
-        <location line="+623"/>
-        <location line="+276"/>
+        <location line="+628"/>
+        <location line="+286"/>
         <location line="+468"/>
         <location line="+31"/>
         <location line="+122"/>
         <location line="+9"/>
-        <location line="+360"/>
+        <location line="+378"/>
         <location line="+9"/>
         <location line="+68"/>
         <location line="+9"/>
-        <location line="+197"/>
+        <location line="+201"/>
         <location line="+9"/>
-        <location line="+158"/>
+        <location line="+160"/>
         <location line="+9"/>
         <location line="+78"/>
         <location line="+9"/>
         <location line="+187"/>
-        <location line="+904"/>
+        <location line="+907"/>
         <location line="+13"/>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+77"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+495"/>
         <location line="+11"/>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+247"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+451"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+450"/>
         <location line="+19"/>
         <location line="+11"/>
         <source>Error: %L1!</source>
@@ -5833,7 +5768,7 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location line="-307"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3395"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3442"/>
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+427"/>
         <location line="+34"/>
         <location line="+48"/>
@@ -5848,8 +5783,8 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location line="+31"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2303"/>
-        <location line="+1576"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2348"/>
+        <location line="+1578"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353"/>
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>알 수 없는 이유로 이미지 파일을 저장하지 못했습니다!</translation>
@@ -5888,7 +5823,7 @@ Would you like to overwrite them?</source>
         <translation>알 수 없는 이유로 파일 이름을 바꾸지 못했습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5192"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5245"/>
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>파일 &quot;%1&quot;을(를) &quot;%2&quot;(으)로 복사할 수 없습니다.</translation>
     </message>
@@ -5913,7 +5848,7 @@ Would you like to overwrite them?</source>
         <translation>-override_read_stall_timeout에 대한 누락된 인수</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+60"/>
         <source>Missing argument for -serial_number_filter</source>
         <translation>-serial_number_filter에 대한 누락된 인수</translation>
     </message>
@@ -5921,7 +5856,7 @@ Would you like to overwrite them?</source>
         <location line="+82"/>
         <location line="+11"/>
         <location line="+19"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3940"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3982"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -5945,12 +5880,11 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>-form_key에 대한 누락된 인수</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>OpenMV IDE</source>
-        <translation>OpenMV IDE</translation>
+        <translation type="vanished">OpenMV IDE</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+13"/>
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -6056,33 +5990,33 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
     </message>
     <message>
         <location line="+9"/>
-        <location line="+3566"/>
+        <location line="+3620"/>
         <location line="+59"/>
         <source>Open Terminal</source>
         <translation>터미널 열기</translation>
     </message>
     <message>
-        <location line="-3620"/>
+        <location line="-3674"/>
         <source>Machine Vision</source>
         <translation>머신 비전</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+3647"/>
+        <location line="+3701"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>임계값 편집기</translation>
     </message>
     <message>
-        <location line="-3718"/>
-        <location line="+3796"/>
+        <location line="-3772"/>
+        <location line="+3850"/>
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+186"/>
         <source>Keypoints Editor</source>
         <translation>키포인트 편집기</translation>
     </message>
     <message>
-        <location line="-3789"/>
-        <location line="+3955"/>
+        <location line="-3843"/>
+        <location line="+4009"/>
         <location line="+98"/>
         <location line="+24"/>
         <location line="+11"/>
@@ -6091,7 +6025,7 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>AprilTag 생성기</translation>
     </message>
     <message>
-        <location line="-4103"/>
+        <location line="-4157"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 제품군(30개 태그)</translation>
     </message>
@@ -6129,15 +6063,15 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <location line="+10"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location line="+406"/>
+        <location line="+413"/>
         <location line="+14"/>
         <location line="+31"/>
-        <location line="+788"/>
+        <location line="+793"/>
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>열지 못했습니다: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1263"/>
+        <location line="-1275"/>
         <source>DataMatrix Generator</source>
         <translation>데이터 매트릭스 생성기</translation>
     </message>
@@ -6170,20 +6104,20 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
     </message>
     <message>
         <location line="+1"/>
-        <location line="+248"/>
-        <location line="+2141"/>
+        <location line="+255"/>
+        <location line="+2186"/>
         <location line="+47"/>
         <location line="+69"/>
-        <location line="+1304"/>
+        <location line="+1306"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382"/>
         <location line="+364"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+780"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+848"/>
         <location line="+208"/>
         <source>Please add a file extension!</source>
         <translation>파일 확장자를 추가해주세요!</translation>
     </message>
     <message>
-        <location line="-3789"/>
+        <location line="-3843"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268"/>
         <location line="+13"/>
@@ -6209,14 +6143,14 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>비디오 파일 재생</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+10"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437"/>
         <location line="+273"/>
         <source>Play RTSP Stream</source>
         <translation>RTSP 스트림 재생</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+16"/>
         <location line="+18"/>
         <location line="+15"/>
         <location line="+6"/>
@@ -6291,13 +6225,13 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1208"/>
+        <location line="+1233"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
-        <location line="+228"/>
-        <location line="+751"/>
+        <location line="+240"/>
+        <location line="+761"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
@@ -6307,21 +6241,21 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-34"/>
         <location line="+222"/>
         <location line="+175"/>
-        <location line="+621"/>
-        <location line="+388"/>
+        <location line="+626"/>
+        <location line="+398"/>
         <location line="+156"/>
         <location line="+138"/>
         <location line="+67"/>
         <location line="+238"/>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1204"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1272"/>
         <location line="+78"/>
         <location line="+547"/>
         <source>Cancel</source>
         <translation>취소</translation>
     </message>
     <message>
-        <location line="-3587"/>
+        <location line="-3634"/>
         <source>Upload to Edge Impulse Project</source>
         <translation>Edge Impulse 프로젝트에 업로드</translation>
     </message>
@@ -6415,13 +6349,13 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1701"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1716"/>
         <location line="+6"/>
         <location line="+26"/>
         <location line="+98"/>
         <location line="+8"/>
         <location line="+33"/>
-        <location line="+148"/>
+        <location line="+152"/>
         <location line="+72"/>
         <location line="+35"/>
         <location line="+50"/>
@@ -6429,7 +6363,7 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <location line="+22"/>
         <location line="+19"/>
         <location line="+36"/>
-        <location line="+80"/>
+        <location line="+81"/>
         <location line="+9"/>
         <location line="+29"/>
         <location line="+9"/>
@@ -6439,8 +6373,8 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <location line="+4"/>
         <location line="+4"/>
         <location line="+52"/>
-        <location line="+128"/>
-        <location line="+9"/>
+        <location line="+88"/>
+        <location line="+59"/>
         <location line="+9"/>
         <location line="+113"/>
         <location line="+4"/>
@@ -6456,14 +6390,15 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <location line="+9"/>
         <location line="+9"/>
         <location line="+9"/>
-        <location line="+81"/>
+        <location line="+86"/>
         <location line="+4"/>
         <location line="+7"/>
         <location line="+9"/>
         <location line="+18"/>
         <location line="+26"/>
         <location line="+19"/>
-        <location line="+146"/>
+        <location line="+83"/>
+        <location line="+76"/>
         <location line="+40"/>
         <location line="+10"/>
         <location line="+9"/>
@@ -6474,14 +6409,14 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <location line="+20"/>
         <location line="+24"/>
         <location line="+14"/>
-        <location line="+32"/>
-        <location line="+33"/>
+        <location line="+34"/>
+        <location line="+35"/>
         <location line="+39"/>
         <location line="+25"/>
         <location line="+10"/>
         <location line="+9"/>
         <location line="+9"/>
-        <location line="+32"/>
+        <location line="+34"/>
         <location line="+13"/>
         <location line="+14"/>
         <location line="+50"/>
@@ -6502,7 +6437,7 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <location line="+14"/>
         <location line="+92"/>
         <location line="+9"/>
-        <location line="+156"/>
+        <location line="+159"/>
         <location line="+33"/>
         <location line="+168"/>
         <location line="+27"/>
@@ -6511,13 +6446,13 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
     </message>
     <message>
         <location line="+8"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1469"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1496"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+165"/>
+        <location line="+170"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1297"/>
+        <location line="+1319"/>
         <location line="+12"/>
         <location line="+7"/>
         <location line="+127"/>
@@ -6591,7 +6526,7 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
     <message>
         <location line="+17"/>
         <location line="+22"/>
-        <location line="+1682"/>
+        <location line="+1727"/>
         <location line="+55"/>
         <location line="+112"/>
         <location line="+69"/>
@@ -6605,7 +6540,7 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>바쁘신데...기다려주세요...</translation>
     </message>
     <message>
-        <location line="-2115"/>
+        <location line="-2160"/>
         <location line="+15"/>
         <source>Disable</source>
         <translation>장애를 입히다</translation>
@@ -6747,7 +6682,7 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>카메라 펌웨어 버전</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
         <source>Serial Port:</source>
         <translation>직렬 포트:</translation>
@@ -6759,14 +6694,14 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
     </message>
     <message>
         <location line="+6"/>
-        <location line="+1743"/>
+        <location line="+1787"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-249"/>
         <location line="+251"/>
         <source>Drive:</source>
         <translation>운전하다:</translation>
     </message>
     <message>
-        <location line="-1742"/>
+        <location line="-1786"/>
         <source>Drive associated with port</source>
         <translation>포트와 연결된 드라이브</translation>
     </message>
@@ -6782,8 +6717,8 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>카메라 FPS와 다를 수 있음</translation>
     </message>
     <message>
-        <location line="+208"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3624"/>
+        <location line="+212"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3666"/>
         <source>Update Available</source>
         <translation>업데이트 가능</translation>
     </message>
@@ -6798,7 +6733,7 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>다운로드</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+175"/>
         <source>WiFi Programming Disabled!</source>
         <translation>WiFi 프로그래밍 비활성화!</translation>
     </message>
@@ -6808,7 +6743,7 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>다른 응용 프로그램이 OpenMV Cam 브로드캐스트 검색 포트를 사용하고 있습니다. WiFi 프로그래밍을 활성화하려면 해당 응용 프로그램을 닫고 OpenMV IDE를 다시 시작하십시오.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+7"/>
         <source>Documents Folder Error</source>
         <translation>문서 폴더 오류</translation>
     </message>
@@ -6869,17 +6804,17 @@ LED가 파란색으로 깜박이지만 OpenMV IDE가 OpenMV Cam에 연결할 수
     </message>
     <message>
         <location line="+77"/>
-        <location line="+1364"/>
+        <location line="+1386"/>
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>직렬 포트 - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1332"/>
+        <location line="-1354"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
-        <location line="+979"/>
+        <location line="+1001"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
@@ -6889,7 +6824,7 @@ LED가 파란색으로 깜박이지만 OpenMV IDE가 OpenMV Cam에 연결할 수
         <translation>연결 중...(30초 제한 시간)</translation>
     </message>
     <message>
-        <location line="-1971"/>
+        <location line="-1993"/>
         <source>
 
 Try doing:
@@ -6942,12 +6877,12 @@ sudo adduser %L1 다이얼아웃
     </message>
     <message>
         <location line="+17"/>
-        <location line="+1421"/>
+        <location line="+1443"/>
         <source>UDP Server Connection - %1</source>
         <translation>UDP 서버 연결 - %1</translation>
     </message>
     <message>
-        <location line="-1347"/>
+        <location line="-1369"/>
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>-open_udp_server_terminal에 대한 잘못된 포트 인수(%1)</translation>
     </message>
@@ -6978,12 +6913,12 @@ sudo adduser %L1 다이얼아웃
     </message>
     <message>
         <location line="+17"/>
-        <location line="+1467"/>
+        <location line="+1489"/>
         <source>TCP Server Connection - %1</source>
         <translation>TCP 서버 연결 - %1</translation>
     </message>
     <message>
-        <location line="-1393"/>
+        <location line="-1415"/>
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>-open_tcp_server_terminal에 대한 잘못된 포트 인수(%1)</translation>
     </message>
@@ -6993,14 +6928,16 @@ sudo adduser %L1 다이얼아웃
         <translation>-open_tcp_server_terminal에 대한 누락된 인수</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+55"/>
+        <location line="+9"/>
         <location line="+8"/>
         <location line="+9"/>
         <location line="+8"/>
         <location line="+9"/>
         <location line="+45"/>
-        <location line="+77"/>
+        <location line="+79"/>
         <location line="+8"/>
+        <location line="+6"/>
         <location line="+6"/>
         <location line="+6"/>
         <location line="+6"/>
@@ -7012,7 +6949,26 @@ sudo adduser %L1 다이얼아웃
         <translation>OpenMV 캠 등록</translation>
     </message>
     <message>
-        <location line="-209"/>
+        <location line="-226"/>
+        <source>OpenMV Cam automatically registered!
+
+Board: %1
+ID: %2
+
+%3 Board Keys remaining for registering board type: %1
+
+Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality and focus the camera (if applicable).</source>
+        <translation>OpenMV Cam 자동 등록!
+
+보드: %1
+ID: %2
+
+%3 보드 유형을 등록하기 위해 남은 보드 키: %1
+
+Examples-&gt;HelloWorld-&gt;helloworld.py를 실행하여 비전 품질을 테스트하고 카메라 초점을 맞춥니다(해당되는 경우).</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -7028,24 +6984,24 @@ Examples-&gt;HelloWorld-&gt;helloworld.py를 실행하여 비전 품질을 테�
     </message>
     <message>
         <location line="+8"/>
-        <location line="+174"/>
+        <location line="+182"/>
         <source>Database Error!</source>
         <translation>데이터베이스 오류!</translation>
     </message>
     <message>
-        <location line="-157"/>
-        <location line="+170"/>
+        <location line="-165"/>
+        <location line="+178"/>
         <source>GET Network error!</source>
         <translation>GET 네트워크 오류!</translation>
     </message>
     <message>
-        <location line="-161"/>
-        <location line="+169"/>
+        <location line="-169"/>
+        <location line="+177"/>
         <source>GET network error!</source>
         <translation>GET 네트워크 오류!</translation>
     </message>
     <message>
-        <location line="-162"/>
+        <location line="-170"/>
         <location line="+10"/>
         <location line="+10"/>
         <source>Unregistered OpenMV Cam Detected</source>
@@ -7089,12 +7045,17 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>OpenMV 카메라 등록 중...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+30"/>
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>OpenMV Cam을 등록해 주셔서 감사합니다!</translation>
     </message>
     <message>
         <location line="+8"/>
+        <source>Invalid Board Key for Board Type!</source>
+        <translation>보드 유형에 대한 보드 키가 잘못되었습니다!</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Invalid Board Key!</source>
         <translation>잘못된 보드 키!</translation>
     </message>
@@ -7115,7 +7076,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+45"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3373"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3415"/>
         <location line="+375"/>
         <location line="+110"/>
         <source>FPS: 0</source>
@@ -7151,13 +7112,13 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-23"/>
-        <location line="+1231"/>
+        <location line="+1233"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>이미지 파일(*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1186"/>
+        <location line="-1188"/>
         <location line="+7"/>
         <location line="+17"/>
         <location line="+15"/>
@@ -7193,14 +7154,14 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-48"/>
-        <location line="+1203"/>
+        <location line="+1205"/>
         <location line="+80"/>
         <location line="+21"/>
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>키포인트 파일(*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1195"/>
+        <location line="-1197"/>
         <location line="+7"/>
         <location line="+6"/>
         <location line="+7"/>
@@ -7258,7 +7219,7 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+25"/>
         <location line="+13"/>
-        <location line="+29"/>
+        <location line="+31"/>
         <location line="+9"/>
         <location line="+87"/>
         <location line="+6"/>
@@ -7282,7 +7243,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>새 터미널</translation>
     </message>
     <message>
-        <location line="-635"/>
+        <location line="-637"/>
         <source>Connect to serial port</source>
         <translation>직렬 포트에 연결</translation>
     </message>
@@ -7302,8 +7263,8 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>옵션을 선택하세요</translation>
     </message>
     <message>
-        <location line="+29"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3017"/>
+        <location line="+31"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3055"/>
         <source>Please select a serial port</source>
         <translation>직렬 포트를 선택하십시오</translation>
     </message>
@@ -7314,7 +7275,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+94"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+233"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+234"/>
         <source>Try doing:
 
 </source>
@@ -7540,7 +7501,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>세대 완료!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1074"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1079"/>
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>새로운 OpenMV IDE 리소스를 사용할 수 있습니다(예: 예제, 펌웨어, 설명서 등).</translation>
     </message>
@@ -7553,6 +7514,20 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+7"/>
         <location line="+222"/>
         <location line="+175"/>
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+100"/>
+        <location line="+51"/>
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+169"/>
+        <location line="+46"/>
+        <location line="+75"/>
+        <location line="+46"/>
+        <location line="+74"/>
+        <location line="+46"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+344"/>
+        <location line="+50"/>
+        <location line="+703"/>
+        <location line="+50"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+177"/>
+        <location line="+51"/>
         <source>Downloading...</source>
         <translation>다운로드 중...</translation>
     </message>
@@ -7614,19 +7589,19 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+10"/>
         <location line="+6"/>
         <location line="+115"/>
-        <location line="+374"/>
+        <location line="+378"/>
         <source>Erase internal file system</source>
         <translation>내부 파일 시스템 지우기</translation>
     </message>
     <message>
-        <location line="-491"/>
+        <location line="-495"/>
         <location line="+120"/>
-        <location line="+375"/>
+        <location line="+379"/>
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>이 옵션을 활성화하면 OpenMV Cam의 내부 플래시 드라이브에 있는 모든 파일이 삭제됩니다. 이동식 SD 카드(삽입된 경우)의 파일은 삭제되지 않습니다.</translation>
     </message>
     <message>
-        <location line="-490"/>
+        <location line="-494"/>
         <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation>DFU를 통해 펌웨어를 로드하면 항상 OpenMV Cam의 내부 플래시 드라이브가 지워집니다. 이동식 SD 카드(삽입된 경우)의 파일은 삭제되지 않습니다.</translation>
     </message>
@@ -7652,7 +7627,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>펌웨어를 추출할 수 없습니다!</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+209"/>
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>DFU 모드의 보드가 감지되었습니다. 무엇을하고 싶으십니까?</translation>
     </message>
@@ -7683,19 +7658,20 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+49"/>
-        <location line="+1110"/>
+        <location line="+505"/>
+        <location line="+616"/>
         <source>Please select the board type</source>
         <translation>보드 종류를 선택해주세요</translation>
     </message>
     <message>
-        <location line="-1099"/>
-        <location line="+3123"/>
+        <location line="-1110"/>
+        <location line="+3161"/>
         <location line="+28"/>
         <source>Erase the internal file system?</source>
         <translation>내부 파일 시스템을 지우시겠습니까?</translation>
     </message>
     <message>
-        <location line="-3129"/>
+        <location line="-3167"/>
         <source>No released firmware available for the attached board!</source>
         <translation>부착된 보드에 사용할 수 있는 릴리스된 펌웨어가 없습니다!</translation>
     </message>
@@ -7705,7 +7681,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>DFU 장치를 선택하십시오</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+82"/>
         <location line="+38"/>
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>부트로더를 최신 버전으로 업데이트하고 SoftDevice를 설치하여 OpenMV 펌웨어를 플래시하십시오. 자세한 내용은 &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;에서 확인할 수 있습니다.</translation>
@@ -7742,18 +7718,17 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+52"/>
-        <location line="+146"/>
-        <location line="+1879"/>
+        <location line="+156"/>
+        <location line="+1906"/>
         <source>Timeout error while getting board architecture!</source>
         <translation>보드 아키텍처를 가져오는 동안 시간 초과 오류가 발생했습니다!</translation>
     </message>
     <message>
-        <location line="-1897"/>
         <source>Unsupported board architecture!</source>
-        <translation>지원되지 않는 보드 아키텍처!</translation>
+        <translation type="vanished">지원되지 않는 보드 아키텍처!</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="-1844"/>
         <location line="+600"/>
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>OpenMV Cam을 분리했다가 다시 연결하십시오...</translation>
@@ -7775,12 +7750,12 @@ DFU 재프로그래밍으로 건너뛰려면 취소를 누르십시오.</transla
     </message>
     <message>
         <location line="-549"/>
-        <location line="+589"/>
+        <location line="+594"/>
         <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>OpenMV Cam의 일반 부트로더에 연결할 수 없습니다!</translation>
     </message>
     <message>
-        <location line="-585"/>
+        <location line="-590"/>
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
@@ -7790,6 +7765,10 @@ Continue?</source>
     </message>
     <message>
         <location line="+102"/>
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-287"/>
+        <location line="+46"/>
+        <location line="+195"/>
+        <location line="+46"/>
         <source>Erasing...</source>
         <translation>지우는 중...</translation>
     </message>
@@ -7797,42 +7776,42 @@ Continue?</source>
         <location line="+56"/>
         <location line="+63"/>
         <location line="+77"/>
-        <location line="+610"/>
-        <location line="+441"/>
+        <location line="+628"/>
+        <location line="+447"/>
         <location line="+22"/>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+414"/>
-        <location line="+40"/>
-        <location line="+50"/>
-        <location line="+43"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-651"/>
+        <location line="+38"/>
+        <location line="+48"/>
         <location line="+41"/>
-        <location line="+44"/>
-        <location line="+43"/>
-        <location line="+41"/>
-        <location line="+41"/>
-        <location line="+51"/>
-        <location line="+50"/>
-        <location line="+41"/>
-        <location line="+42"/>
         <location line="+39"/>
-        <location line="+215"/>
-        <location line="+50"/>
+        <location line="+42"/>
         <location line="+41"/>
+        <location line="+39"/>
+        <location line="+39"/>
+        <location line="+47"/>
+        <location line="+46"/>
+        <location line="+39"/>
         <location line="+40"/>
+        <location line="+37"/>
+        <location line="+195"/>
+        <location line="+46"/>
+        <location line="+39"/>
+        <location line="+38"/>
         <source>Timeout Error!</source>
         <translation>시간 초과 오류!</translation>
     </message>
     <message>
-        <location line="-1131"/>
+        <location line="-1155"/>
         <location line="+67"/>
         <source>Programming...</source>
         <translation>프로그램 작성...</translation>
     </message>
     <message>
         <location line="+22"/>
-        <location line="+294"/>
+        <location line="+299"/>
         <location line="+45"/>
-        <location line="+260"/>
-        <location line="+460"/>
+        <location line="+273"/>
+        <location line="+466"/>
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -7841,8 +7820,8 @@ Continue?</source>
 </translation>
     </message>
     <message>
-        <location line="-1059"/>
-        <location line="+294"/>
+        <location line="-1083"/>
+        <location line="+299"/>
         <location line="+45"/>
         <source>Firmware Upgrade complete!
 
@@ -7852,11 +7831,11 @@ Continue?</source>
 </translation>
     </message>
     <message>
-        <location line="-338"/>
-        <location line="+294"/>
+        <location line="-343"/>
+        <location line="+299"/>
         <location line="+45"/>
-        <location line="+260"/>
-        <location line="+460"/>
+        <location line="+273"/>
+        <location line="+466"/>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
@@ -7865,23 +7844,23 @@ Continue?</source>
 </translation>
     </message>
     <message>
-        <location line="-1058"/>
-        <location line="+294"/>
+        <location line="-1082"/>
+        <location line="+299"/>
         <location line="+45"/>
-        <location line="+260"/>
-        <location line="+460"/>
+        <location line="+273"/>
+        <location line="+466"/>
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>OpenMV Cam의 RGB LED가 파란색으로 깜박이기 시작하면 확인을 클릭합니다. 자체 테스트가 완료되었음을 나타냅니다.</translation>
     </message>
     <message>
-        <location line="-1058"/>
-        <location line="+275"/>
+        <location line="-1082"/>
+        <location line="+280"/>
         <location line="+19"/>
         <location line="+25"/>
         <location line="+20"/>
-        <location line="+260"/>
+        <location line="+273"/>
         <location line="+65"/>
-        <location line="+216"/>
+        <location line="+222"/>
         <location line="+179"/>
         <location line="+37"/>
         <source>
@@ -7896,7 +7875,7 @@ OpenMV Cam에서 main.py를 덮어쓰고 디스크를 지우지 않은 경우 Op
 이 경우 OpenMV Cam의 내부 플래시 드라이브 마운트가 표시되면 확인을 클릭합니다(창이 열릴 수도 있고 열리지 않을 수도 있음).</translation>
     </message>
     <message>
-        <location line="-1071"/>
+        <location line="-1095"/>
         <source>The firmware file is empty!</source>
         <translation>펌웨어 파일이 비어 있습니다!</translation>
     </message>
@@ -7914,17 +7893,17 @@ OpenMV Cam에서 main.py를 덮어쓰고 디스크를 지우지 않은 경우 Op
         <location line="+35"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+165"/>
+        <location line="+170"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1297"/>
+        <location line="+1319"/>
         <location line="+12"/>
         <location line="+7"/>
         <source>Failed to eject &quot;%L1&quot;!</source>
         <translation>&quot;%L1&quot;을(를) 꺼내지 못했습니다!</translation>
     </message>
     <message>
-        <location line="-1495"/>
+        <location line="-1522"/>
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
@@ -7933,7 +7912,7 @@ Hit cancel to skip to SBL reprogramming.</source>
 SBL 재프로그래밍으로 건너뛰려면 취소를 누르십시오.</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+49"/>
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
@@ -7963,15 +7942,20 @@ OpenMV Cam의 SBL 부트로더가 열거된 후 확인 버튼을 클릭합니다
     <message>
         <location line="-43"/>
         <location line="+44"/>
-        <location line="+345"/>
-        <location line="+216"/>
+        <location line="+358"/>
+        <location line="+222"/>
         <location line="+216"/>
         <location line="+66"/>
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>OpenMV Cam이 열거되고 내장된 자체 테스트 실행을 완료한 후 확인 버튼을 클릭합니다(파란색 LED 깜박임 - 시간이 걸립니다).</translation>
     </message>
     <message>
-        <location line="-679"/>
+        <location line="-761"/>
+        <source>DFU Util may not be stable on this platform. If loading fails please use a regular computer.</source>
+        <translation>DFU Util은 이 플랫폼에서 안정적이지 않을 수 있습니다. 로딩에 실패하면 일반 컴퓨터를 사용하세요.</translation>
+    </message>
+    <message>
+        <location line="+76"/>
         <source>No DFU settings for the selected board type!</source>
         <translation>선택한 보드 유형에 대한 DFU 설정이 없습니다!</translation>
     </message>
@@ -7981,15 +7965,31 @@ OpenMV Cam의 SBL 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation>선택한 장치에 대한 DFU 설정이 없습니다!</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+50"/>
+        <location line="+447"/>
+        <source>Erasing Disk</source>
+        <translation>디스크 지우기</translation>
+    </message>
+    <message>
+        <location line="-386"/>
+        <location line="+23"/>
+        <location line="+222"/>
+        <location line="+216"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1050"/>
+        <location line="+765"/>
+        <source>Flashing Firmware</source>
+        <translation>플래싱 펌웨어</translation>
+    </message>
+    <message>
+        <location line="-457"/>
         <location line="+38"/>
-        <location line="+497"/>
+        <location line="+503"/>
         <source>DFU firmware update failed!</source>
         <translation>DFU 펌웨어 업데이트 실패!</translation>
     </message>
     <message>
-        <location line="-510"/>
-        <location line="+497"/>
+        <location line="-516"/>
+        <location line="+503"/>
         <source>DFU firmware update complete!
 
 </source>
@@ -7998,14 +7998,14 @@ OpenMV Cam의 SBL 부트로더가 열거된 후 확인 버튼을 클릭합니다
 </translation>
     </message>
     <message>
-        <location line="-451"/>
-        <location line="+33"/>
-        <location line="+124"/>
+        <location line="-455"/>
+        <location line="+35"/>
+        <location line="+126"/>
         <source>BOSSAC device %1 missing!</source>
         <translation>BOSSAC 장치 %1이(가) 없습니다!</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-87"/>
         <source>No BOSSAC settings for the selected board type!</source>
         <translation>선택한 보드 유형에 대한 BOSSAC 설정이 없습니다!</translation>
     </message>
@@ -8020,7 +8020,7 @@ OpenMV Cam의 SBL 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation>Nano 33 BLE에는 온보드 데이터 플래시 디스크가 없습니다.</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+46"/>
         <source>BOSSAC firmware update complete!
 
 </source>
@@ -8076,7 +8076,12 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
 OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다.</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+7"/>
+        <source>Flashing Bootloader</source>
+        <translation>플래싱 부트로더</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>DFU bootloader reset complete!
 
 </source>
@@ -8130,7 +8135,7 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation>센서 유형을 가져오는 동안 시간 초과 오류가 발생했습니다!</translation>
     </message>
     <message>
-        <location line="+189"/>
+        <location line="+192"/>
         <source>Timeout error while learning MTU!</source>
         <translation>MTU 학습 중 시간 초과 오류!</translation>
     </message>
@@ -8403,13 +8408,13 @@ OpenMV IDE에서 OpenMV Cam으로 복사하시겠습니까?</translation>
         <translation>소프트 리셋</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+72"/>
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="-83"/>
         <source>BOSSAC</source>
         <translation>보싹</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+97"/>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+84"/>
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-351"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-142"/>
         <source>Get Devices</source>
         <translation>장치 가져오기</translation>
     </message>
@@ -8422,17 +8427,17 @@ OpenMV IDE에서 OpenMV Cam으로 복사하시겠습니까?</translation>
         <translation>쿼리 실패!</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+37"/>
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+121"/>
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+120"/>
         <source>DFU Util</source>
         <translation>DFU 유틸리티</translation>
     </message>
@@ -8597,44 +8602,46 @@ Open a data set to upload it.</source>
         <translation>Edge Impluse 프로젝트 API 키를 입력하세요.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1119"/>
-        <location line="+149"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-836"/>
+        <location line="+71"/>
+        <location line="+140"/>
         <location line="+26"/>
-        <location line="+32"/>
-        <location line="+40"/>
-        <location line="+50"/>
-        <location line="+43"/>
+        <location line="+30"/>
+        <location line="+38"/>
+        <location line="+48"/>
         <location line="+41"/>
-        <location line="+44"/>
-        <location line="+43"/>
-        <location line="+41"/>
-        <location line="+41"/>
-        <location line="+51"/>
-        <location line="+50"/>
-        <location line="+41"/>
+        <location line="+39"/>
         <location line="+42"/>
+        <location line="+41"/>
+        <location line="+39"/>
+        <location line="+39"/>
+        <location line="+47"/>
+        <location line="+46"/>
         <location line="+39"/>
         <location line="+40"/>
-        <location line="+133"/>
-        <location line="+42"/>
-        <location line="+50"/>
-        <location line="+41"/>
-        <location line="+40"/>
+        <location line="+37"/>
+        <location line="+33"/>
+        <location line="+124"/>
+        <location line="+38"/>
+        <location line="+46"/>
+        <location line="+39"/>
+        <location line="+38"/>
         <source>NXP IMX</source>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-969"/>
+        <location line="-1120"/>
+        <location line="+211"/>
         <location line="+26"/>
-        <location line="+771"/>
+        <location line="+723"/>
         <source>This feature is not supported on this machine!</source>
         <translation>이 기능은 이 컴퓨터에서 지원되지 않습니다!</translation>
     </message>
     <message>
-        <location line="-373"/>
-        <location line="+50"/>
-        <location line="+337"/>
-        <location line="+50"/>
+        <location line="-345"/>
+        <location line="+46"/>
+        <location line="+311"/>
+        <location line="+46"/>
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>이 명령은 실행하는 데 시간이 걸립니다. 기다려주십시오.</translation>
     </message>
@@ -8654,7 +8661,7 @@ Open a data set to upload it.</source>
         <translation>완료</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+65"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+59"/>
         <source>PicoTool</source>
         <translation>피코툴</translation>
     </message>
@@ -8856,7 +8863,7 @@ Open a data set to upload it.</source>
         <location line="+102"/>
         <location line="+59"/>
         <location line="+15"/>
-        <location line="+304"/>
+        <location line="+372"/>
         <location line="+12"/>
         <location line="+10"/>
         <location line="+12"/>
@@ -8880,7 +8887,7 @@ Open a data set to upload it.</source>
         <translation>비디오 변환</translation>
     </message>
     <message>
-        <location line="-769"/>
+        <location line="-837"/>
         <source>Failed to launch ffmpeg!</source>
         <translation>ffmpeg를 실행하지 못했습니다!</translation>
     </message>
@@ -8895,14 +8902,14 @@ Open a data set to upload it.</source>
         <translation>출력 비디오 파일을 열 수 없습니다!</translation>
     </message>
     <message>
-        <location line="+139"/>
-        <location line="+367"/>
+        <location line="+163"/>
+        <location line="+411"/>
         <source>Play Video</source>
         <translation>동영상 재생</translation>
     </message>
     <message>
-        <location line="-366"/>
-        <location line="+119"/>
+        <location line="-410"/>
+        <location line="+163"/>
         <source>Failed to launch ffplay!</source>
         <translation>ffplay를 실행하지 못했습니다!</translation>
     </message>
@@ -9002,6 +9009,22 @@ Open a data set to upload it.</source>
         <location line="+7"/>
         <source>Save Video</source>
         <translation>비디오 저장</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+44"/>
+        <source>Busy</source>
+        <translation>바쁘다</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+21"/>
+        <source>Show Details</source>
+        <translation>세부 정보 표시</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Hide Details</source>
+        <translation>세부 정보 숨기기</translation>
     </message>
 </context>
 <context>
@@ -14276,7 +14299,12 @@ Excluding: %3
         <translation>임시 파일을 쓸 수 없습니다. 디스크 꽉 참?</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>임시 디렉터리 &quot;%1&quot;을(를) 만들 수 없습니다: %2</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Unexpected output from helper program (%1).</source>
         <translation>도우미 프로그램(%1)에서 예기치 않은 출력이 발생했습니다.</translation>
     </message>
@@ -14326,12 +14354,12 @@ Excluding: %3
         <translation>소켓 &quot;%1&quot;을(를) 만들 수 없습니다: %2</translation>
     </message>
     <message>
-        <location line="-466"/>
+        <location line="-470"/>
         <source>Press &lt;RETURN&gt; to close this window...</source>
         <translation>이 창을 닫으려면 &lt;RETURN&gt;을 누르십시오...</translation>
     </message>
     <message>
-        <location line="+541"/>
+        <location line="+549"/>
         <source>Cannot obtain a handle to the inferior: %1</source>
         <translation>하위에 대한 핸들을 얻을 수 없습니다: %1</translation>
     </message>
@@ -14620,41 +14648,32 @@ Excluding: %3
         <translation>&amp;구하다</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/advanceddockingsystem/dockmanager.cpp" line="+579"/>
-        <location line="+108"/>
         <source>Cannot Save Workspace</source>
-        <translation>작업 공간을 저장할 수 없음</translation>
+        <translation type="vanished">작업 공간을 저장할 수 없음</translation>
     </message>
     <message>
-        <location line="-107"/>
-        <location line="+108"/>
         <source>Could not save workspace to file %1</source>
-        <translation>파일% 1에작업공간을저장할수없습니다</translation>
+        <translation type="vanished">파일% 1에작업공간을저장할수없습니다</translation>
     </message>
     <message>
-        <location line="+67"/>
         <source>Delete Workspace</source>
-        <translation>작업 공간 삭제</translation>
+        <translation type="vanished">작업 공간 삭제</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Delete Workspaces</source>
-        <translation>작업 공간 삭제</translation>
+        <translation type="vanished">작업 공간 삭제</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Delete workspace %1?</source>
-        <translation>작업 공간 %1을(를) 삭제하시겠습니까?</translation>
+        <translation type="vanished">작업 공간 %1을(를) 삭제하시겠습니까?</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Delete these workspaces?
     %1</source>
-        <translation>이 작업공간을 삭제하시겠습니까?
+        <translation type="vanished">이 작업공간을 삭제하시겠습니까?
     %1</translation>
     </message>
     <message>
-        <location line="+196"/>
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+87"/>
         <location line="+33"/>
         <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+418"/>
@@ -14662,14 +14681,12 @@ Excluding: %3
         <translation>파일 오류</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Cannot Restore Workspace</source>
-        <translation>작업공간을 복원할 수 없음</translation>
+        <translation type="vanished">작업공간을 복원할 수 없음</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Could not restore workspace %1</source>
-        <translation>작업공간% 1을(를복원할수없습니다</translation>
+        <translation type="vanished">작업공간% 1을(를복원할수없습니다</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/archive.cpp" line="+124"/>
