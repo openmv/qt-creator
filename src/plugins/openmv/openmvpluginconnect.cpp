@@ -607,8 +607,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         waitForCameraTimeout.start();
         QStringList dfuDevices;
 
+        QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
+
         do
         {
+
             foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
             {
                 MyQSerialPortInfo port(raw_port);
@@ -690,6 +693,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             if(waitForCamera && stringList.isEmpty()) QApplication::processEvents();
         }
         while(waitForCamera && stringList.isEmpty() && (!waitForCameraTimeout.hasExpired(10000)));
+
+        QApplication::restoreOverrideCursor();
 
         QSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
