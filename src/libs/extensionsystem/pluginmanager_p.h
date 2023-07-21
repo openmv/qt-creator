@@ -122,7 +122,11 @@ public:
     mutable QReadWriteLock m_lock;
 
     bool m_isInitializationDone = false;
-    bool enableCrashCheck = true;
+    // OPENMV-DIFF //
+    // bool enableCrashCheck = true;
+    // OPENMV-DIFF //
+    bool enableCrashCheck = false;
+    // OPENMV-DIFF //
 
     QHash<QString, std::function<bool()>> m_scenarios;
     QString m_requestedScenario;
