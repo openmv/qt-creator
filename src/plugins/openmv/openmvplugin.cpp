@@ -16,6 +16,8 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_autoUpdateOnConnect = QString();
     m_autoEraseOnConnect = false;
     m_autoRunOnConnect = false;
+    m_disableStop = false;
+
     m_ioport = Q_NULLPTR;
     m_iodevice = Q_NULLPTR;
 
@@ -356,15 +358,6 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     m_autoConnect = arguments.contains(QStringLiteral("-auto_connect"));
 
-    if(m_autoConnect)
-    {
-        connect(ExtensionSystem::PluginManager::instance(), &ExtensionSystem::PluginManager::initializationDone, this, [this] {
-            QTimer::singleShot(0, this, [this] {
-                m_connectAction->trigger();
-            });
-        });
-    }
-
     int index_auto_update_on_connect = arguments.indexOf(QRegularExpression(QStringLiteral("-auto_update_on_connect")));
 
     if(index_auto_update_on_connect != -1)
@@ -390,6 +383,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     m_autoEraseOnConnect = arguments.contains(QStringLiteral("-auto_erase_on_connect"));
     m_autoRunOnConnect = arguments.contains(QStringLiteral("-auto_run_on_connect"));
+    m_disableStop = arguments.contains(QStringLiteral("-disable_stop"));
 
     if(arguments.contains(QStringLiteral("-full_screen")))
     {
@@ -1137,14 +1131,16 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Command *autoReconnectCommand = Core::ActionManager::registerAction(m_autoReconnectAction, Utils::Id("OpenMV.AutoReconnect"));
     toolsMenu->addAction(autoReconnectCommand);
     m_autoReconnectAction->setCheckable(true);
-    m_autoReconnectAction->setChecked(false);
+    m_autoReconnectAction->setChecked(m_autoConnect);
+    m_autoReconnectAction->setDisabled(m_autoConnect);
 
     m_stopOnConnectDiconnectionAction = new QAction(Tr::tr("Stop Script on Connect/Disconnect"), this);
     m_stopOnConnectDiconnectionAction->setToolTip(Tr::tr("Stop the script on Connect or Disconnect (note that the IDE disconnects on close if connected)."));
     Core::Command *stopOnConnectDiconnectionCommand = Core::ActionManager::registerAction(m_stopOnConnectDiconnectionAction, Utils::Id("OpenMV.StopOnConnectDisconnect"));
     toolsMenu->addAction(stopOnConnectDiconnectionCommand);
     m_stopOnConnectDiconnectionAction->setCheckable(true);
-    m_stopOnConnectDiconnectionAction->setChecked(true);
+    m_stopOnConnectDiconnectionAction->setChecked(!m_disableStop);
+    m_stopOnConnectDiconnectionAction->setDisabled(m_disableStop);
 
     toolsMenu->addSeparator();
 
@@ -2318,9 +2314,9 @@ void OpenMVPlugin::extensionsInitialized()
     Core::EditorManager::restoreState(
         settings->value(QStringLiteral(EDITOR_MANAGER_STATE)).toByteArray());
     m_autoReconnectAction->setChecked(
-        settings->value(QStringLiteral(AUTO_RECONNECT_STATE), m_autoReconnectAction->isChecked()).toBool());
+        m_autoConnect || settings->value(QStringLiteral(AUTO_RECONNECT_STATE), m_autoReconnectAction->isChecked()).toBool());
     m_stopOnConnectDiconnectionAction->setChecked(
-        settings->value(QStringLiteral(STOP_SCRIPT_CONNECT_DISCONNECT_STATE), m_stopOnConnectDiconnectionAction->isChecked()).toBool());
+        (!m_disableStop) && settings->value(QStringLiteral(STOP_SCRIPT_CONNECT_DISCONNECT_STATE), m_stopOnConnectDiconnectionAction->isChecked()).toBool());
     m_connectAction->setEnabled(!m_autoReconnectAction->isChecked());
     m_disconnectAction->setEnabled(!m_autoReconnectAction->isChecked());
     if(m_autoReconnectAction->isChecked()) {
@@ -2408,9 +2404,9 @@ void OpenMVPlugin::extensionsInitialized()
             hsplitter->saveState());
         if(!isNoShow()) settings->setValue(QStringLiteral(VSPLITTER_STATE),
             vsplitter->saveState());
-        settings->setValue(QStringLiteral(AUTO_RECONNECT_STATE),
+        if(!m_autoConnect) settings->setValue(QStringLiteral(AUTO_RECONNECT_STATE),
             m_autoReconnectAction->isChecked());
-        settings->setValue(QStringLiteral(STOP_SCRIPT_CONNECT_DISCONNECT_STATE),
+        if(!m_disableStop) settings->setValue(QStringLiteral(STOP_SCRIPT_CONNECT_DISCONNECT_STATE),
             m_stopOnConnectDiconnectionAction->isChecked());
         settings->setValue(QStringLiteral(ZOOM_STATE),
             zoomButton->isChecked());
