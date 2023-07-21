@@ -435,6 +435,13 @@ do { \
     return; \
 } while(0)
 
+#define RECONNECT_WAIT_END() \
+do { \
+    m_working = false; \
+    QTimer::singleShot(0, this, [this] {connectClicked(false, QString(), false, false, false, true);}); \
+    return; \
+} while(0)
+
 #define RECONNECT_AND_FORCEBOOTLOADER_END() \
 do { \
     m_working = false; \
@@ -461,6 +468,17 @@ do { \
     m_loop.exec(); \
     m_working = false; \
     QTimer::singleShot(0, this, [this] {connectClicked();}); \
+    return; \
+} while(0)
+
+#define CLOSE_RECONNECT_WAIT_END() \
+do { \
+    QEventLoop m_loop; \
+    connect(m_iodevice, &OpenMVPluginIO::closeResponse, &m_loop, &QEventLoop::quit); \
+    m_iodevice->close(); \
+    m_loop.exec(); \
+    m_working = false; \
+    QTimer::singleShot(0, this, [this] {connectClicked(false, QString(), false, false, false, true);}); \
     return; \
 } while(0)
 
@@ -562,7 +580,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     return false;
 }
 
-void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePath, bool forceFlashFSErase, bool justEraseFlashFs, bool installTheLatestDevelopmentFirmware)
+void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePath, bool forceFlashFSErase, bool justEraseFlashFs, bool installTheLatestDevelopmentFirmware, bool waitForCamera)
 {
     if(!m_working)
     {
@@ -573,8 +591,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         if(m_connected)
         {
-            m_connect_disconnect = connect(this, &OpenMVPlugin::disconnectDone, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware] {
-                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware] {connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware);});
+            m_connect_disconnect = connect(this, &OpenMVPlugin::disconnectDone, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera] {
+                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera] {connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera);});
             });
 
             QTimer::singleShot(0, this, [this] {disconnectClicked();});
@@ -585,84 +603,93 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_working = true;
 
         QStringList stringList;
+        QElapsedTimer waitForCameraTimeout;
+        waitForCameraTimeout.start();
+        QStringList dfuDevices;
 
-        foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
+        do
         {
-            MyQSerialPortInfo port(raw_port);
-
-            if(port.hasVendorIdentifier() && port.hasProductIdentifier()
-            && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
-            && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
-            || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID)))
-            || ((port.vendorIdentifier() == RPI2040_VID) && (port.productIdentifier() == RPI2040_PID))))
+            foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
             {
-                stringList.append(port.portName());
-            }
-        }
+                MyQSerialPortInfo port(raw_port);
 
-        if(Utils::HostOsInfo::isMacHost())
-        {
-            stringList = stringList.filter(QStringLiteral("cu"), Qt::CaseInsensitive);
-        }
-
-        if(!forceBootloader)
-        {
-            foreach(wifiPort_t port, m_availableWifiPorts)
-            {
-                stringList.append(QString(QStringLiteral("%1:%2")).arg(port.name).arg(port.addressAndPort));
-            }
-        }
-
-        QStringList dfuDevices = picotoolGetDevices() + imxGetAllDevices();
-
-        foreach(const QString &device, getDevices())
-        {
-            dfuDevices.append(device);
-            QStringList vidpid = device.split(QStringLiteral(",")).first().split(QStringLiteral(":"));
-
-            for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
-            {
-                QSerialPortInfo raw_info = QSerialPortInfo(*it);
-                MyQSerialPortInfo info(raw_info);
-
-                if(info.hasVendorIdentifier()
-                && info.vendorIdentifier() == vidpid.at(0).toInt(nullptr, 16)
-                && info.hasProductIdentifier()
-                && info.productIdentifier() == vidpid.at(1).toInt(nullptr, 16))
+                if(port.hasVendorIdentifier() && port.hasProductIdentifier()
+                && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
+                && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
+                || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
+                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
+                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
+                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID)))
+                || ((port.vendorIdentifier() == RPI2040_VID) && (port.productIdentifier() == RPI2040_PID))))
                 {
-                    it = stringList.erase(it);
-                }
-                else
-                {
-                    it++;
+                    stringList.append(port.portName());
                 }
             }
-        }
 
-        // Move known bootloader serial ports to dfuDevices.
-        {
-            for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
+            if(Utils::HostOsInfo::isMacHost())
             {
-                QSerialPortInfo raw_info = QSerialPortInfo(*it);
-                MyQSerialPortInfo info(raw_info);
+                stringList = stringList.filter(QStringLiteral("cu"), Qt::CaseInsensitive);
+            }
 
-                if(info.hasVendorIdentifier()
-                && (info.vendorIdentifier() == ARDUINOCAM_VID)
-                && info.hasProductIdentifier()
-                && ((info.productIdentifier() == NRF_OLD_PID) || (info.productIdentifier() == NRF_LDR_PID) || (info.productIdentifier() == RPI_OLD_PID) || (info.productIdentifier() == RPI_LDR_PID)))
+            if(!forceBootloader)
+            {
+                foreach(wifiPort_t port, m_availableWifiPorts)
                 {
-                    dfuDevices.append(QString(QStringLiteral("%1:%2").arg(info.vendorIdentifier(), 4, 16, QLatin1Char('0')).arg(info.productIdentifier(), 4, 16, QLatin1Char('0'))));
-                    it = stringList.erase(it);
-                }
-                else
-                {
-                    it++;
+                    stringList.append(QString(QStringLiteral("%1:%2")).arg(port.name).arg(port.addressAndPort));
                 }
             }
+
+            dfuDevices = picotoolGetDevices() + imxGetAllDevices();
+
+            foreach(const QString &device, getDevices())
+            {
+                dfuDevices.append(device);
+                QStringList vidpid = device.split(QStringLiteral(",")).first().split(QStringLiteral(":"));
+
+                for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
+                {
+                    QSerialPortInfo raw_info = QSerialPortInfo(*it);
+                    MyQSerialPortInfo info(raw_info);
+
+                    if(info.hasVendorIdentifier()
+                    && info.vendorIdentifier() == vidpid.at(0).toInt(nullptr, 16)
+                    && info.hasProductIdentifier()
+                    && info.productIdentifier() == vidpid.at(1).toInt(nullptr, 16))
+                    {
+                        it = stringList.erase(it);
+                    }
+                    else
+                    {
+                        it++;
+                    }
+                }
+            }
+
+            // Move known bootloader serial ports to dfuDevices.
+            {
+                for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
+                {
+                    QSerialPortInfo raw_info = QSerialPortInfo(*it);
+                    MyQSerialPortInfo info(raw_info);
+
+                    if(info.hasVendorIdentifier()
+                    && (info.vendorIdentifier() == ARDUINOCAM_VID)
+                    && info.hasProductIdentifier()
+                    && ((info.productIdentifier() == NRF_OLD_PID) || (info.productIdentifier() == NRF_LDR_PID) || (info.productIdentifier() == RPI_OLD_PID) || (info.productIdentifier() == RPI_LDR_PID)))
+                    {
+                        dfuDevices.append(QString(QStringLiteral("%1:%2").arg(info.vendorIdentifier(), 4, 16, QLatin1Char('0')).arg(info.productIdentifier(), 4, 16, QLatin1Char('0'))));
+                        it = stringList.erase(it);
+                    }
+                    else
+                    {
+                        it++;
+                    }
+                }
+            }
+
+            if(waitForCamera && stringList.isEmpty()) QApplication::processEvents();
         }
+        while(waitForCamera && stringList.isEmpty() && (!waitForCameraTimeout.hasExpired(10000)));
 
         QSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
@@ -681,7 +708,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         if(stringList.isEmpty())
         {
-            if(forceBootloader && (!dfuDevices.isEmpty()))
+            if(forceBootloader && (!dfuDevices.isEmpty())
+            && (m_autoUpdateOnConnect != QStringLiteral("release"))
+            && (m_autoUpdateOnConnect != QStringLiteral("developement")))
             {
                 forceBootloaderBricked = true;
             }
@@ -746,7 +775,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 QTimer::singleShot(0, this, [dialog] { dialog->adjustSize(); });
                             });
 
-                            if(dialog->exec() == QDialog::Accepted)
+                            // If a board is in DFU mode we install the release firmware.
+                            if((m_autoUpdateOnConnect == QStringLiteral("release"))
+                            || (m_autoUpdateOnConnect == QStringLiteral("developement")))
+                            {
+                                combo->setCurrentIndex(0);
+                                checkBox->setChecked(m_autoEraseOnConnect);
+                            }
+
+                            if((m_autoUpdateOnConnect == QStringLiteral("release"))
+                            || (m_autoUpdateOnConnect == QStringLiteral("developement"))
+                            || (dialog->exec() == QDialog::Accepted))
                             {
                                 settings->setValue(QStringLiteral(LAST_DFU_ACTION), combo->currentIndex());
                                 settings->setValue(QStringLiteral(LAST_DFU_FLASH_FS_ERASE_STATE), checkBox->isChecked());
@@ -1882,7 +1921,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             dialog.close();
                             QApplication::processEvents();
 
-                            QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? Tr::tr("Onboard Data Flash Erased!\n\n") : Tr::tr("Firmware Upgrade complete!\n\n")))
                                 .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -1890,7 +1929,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 .arg(Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
                                         "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
 
-                            RECONNECT_END();
+                            RECONNECT_WAIT_END();
                         }
                     }
                     else if(file.error() != QFile::NoError)
@@ -2163,14 +2202,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             {
                                 if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
                                 {
-                                    QMessageBox::information(Core::ICore::dialogParent(),
+                                    if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
                                         Tr::tr("Connect"),
                                         Tr::tr("Firmware update complete!\n\n") +
                                         Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
                                         Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
                                            "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open)."));
 
-                                    RECONNECT_END();
+                                    RECONNECT_WAIT_END();
                                 }
                             }
                         }
@@ -2181,7 +2220,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
                         {
-                            QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? Tr::tr("Onboard Data Flash Erased!\n\n") : Tr::tr("Firmware Upgrade complete!\n\n")))
                                 .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -2189,7 +2228,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 .arg(Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
                                         "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
 
-                            RECONNECT_END();
+                            RECONNECT_WAIT_END();
                         }
                         else
                         {
@@ -2207,14 +2246,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
                         {
-                            QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 Tr::tr("Firmware update complete!\n\n") +
                                 Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
                                 Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
                                    "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open)."));
 
-                            RECONNECT_END();
+                            RECONNECT_WAIT_END();
                         }
                         else
                         {
@@ -2226,7 +2265,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
                         {
-                            QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? Tr::tr("Onboard Data Flash Erased!\n\n") : Tr::tr("Firmware Upgrade complete!\n\n")))
                                 .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -2234,7 +2273,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 .arg(Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
                                         "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
 
-                            RECONNECT_END();
+                            RECONNECT_WAIT_END();
                         }
                         else
                         {
@@ -2499,7 +2538,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                                 if(justEraseFlashFs)
                                 {
-                                    QMessageBox::information(Core::ICore::dialogParent(),
+                                    if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
                                         Tr::tr("Connect"),
                                         QString(QStringLiteral("%1%2%3%4")).arg(Tr::tr("Onboard Data Flash Erased!\n\n"))
                                         .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -2507,7 +2546,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                         .arg(Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
                                                 "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
 
-                                    RECONNECT_END();
+                                    RECONNECT_WAIT_END();
                                 }
                             }
                             else
@@ -2565,14 +2604,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                         if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
                         {
-                            QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 Tr::tr("DFU firmware update complete!\n\n") +
                                 Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
                                 Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
                                    "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open)."));
 
-                            RECONNECT_END();
+                            RECONNECT_WAIT_END();
                         }
                         else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
                         {
@@ -2740,12 +2779,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                     if(forceFlashFSErase && justEraseFlashFs)
                     {
-                        QMessageBox::information(Core::ICore::dialogParent(),
+                        if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
                             QString(QStringLiteral("%1"))
                             .arg(Tr::tr("Your Nano 33 BLE doesn't have an onboard data flash disk.")));
 
-                        RECONNECT_END();
+                        RECONNECT_WAIT_END();
                     }
 
                     QString dfuDeviceVidPid = selectedDfuDevice.isEmpty() ? boardTypeToDfuDeviceVidPid : selectedDfuDeviceVidPid;
@@ -2787,14 +2826,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                     if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
                     {
-                        QMessageBox::information(Core::ICore::dialogParent(),
+                        if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
                             Tr::tr("BOSSAC firmware update complete!\n\n") +
                             Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
                             Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
                                "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open)."));
 
-                        RECONNECT_END();
+                        RECONNECT_WAIT_END();
                     }
                     else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
                     {
@@ -2965,7 +3004,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                         CONNECT_END();
                                     }
 
-                                    QMessageBox::information(Core::ICore::dialogParent(),
+                                    if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
                                         Tr::tr("Connect"),
                                         QString(QStringLiteral("%1%2%3%4")).arg(Tr::tr("Onboard Data Flash Erased!\n\n"))
                                         .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -2973,7 +3012,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                         .arg(Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
                                                 "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
 
-                                    RECONNECT_END();
+                                    RECONNECT_WAIT_END();
                                 }
                             }
                             else
@@ -3003,14 +3042,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                         if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
                         {
-                            QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 Tr::tr("PicoTool firmware update complete!\n\n") +
                                 Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
                                 Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
                                    "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open)."));
 
-                            RECONNECT_END();
+                            RECONNECT_WAIT_END();
                         }
                         else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
                         {
@@ -3564,9 +3603,20 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         ///////////////////////////////////////////////////////////////////////
 
-        QTimer::singleShot(0, this, [this] { OpenMVPlugin::setPortPath(true); });
+        m_working = false;
 
-        CONNECT_END();
+        OpenMVPlugin::setPortPath(true);
+
+        if(m_autoRunOnConnect)
+        {
+            startClicked();
+        }
+        else
+        {
+            QTimer::singleShot(0, this, &OpenMVPlugin::workingDone);
+        }
+
+        return;
     }
     else
     {

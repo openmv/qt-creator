@@ -312,7 +312,8 @@ public slots: // private
                         QString forceFirmwarePath = QString(),
                         bool forceFlashFSErase = false,
                         bool justEraseFlashFs = false,
-                        bool installTheLatestDevelopmentFirmware = false);
+                        bool installTheLatestDevelopmentFirmware = false,
+                        bool waitForCamera = false);
     void disconnectClicked(bool reset = false);
     void startClicked();
     void stopClicked();
@@ -341,6 +342,9 @@ private:
     bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path);
 
     bool m_autoConnect;
+    QString m_autoUpdateOnConnect;
+    bool m_autoEraseOnConnect;
+    bool m_autoRunOnConnect;
     OpenMVPluginSerialPort *m_ioport;
     OpenMVPluginIO *m_iodevice;
 
