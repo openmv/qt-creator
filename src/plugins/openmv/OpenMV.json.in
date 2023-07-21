@@ -87,6 +87,10 @@
             \"Description\" : \"Automatically run the open script on connect\"
         },
         {
+            \"Name\" : \"-disable_stop\",
+            \"Description\" : \"Disables stop on connect or disconnect\"
+        },
+        {
             \"Name\" : \"-full_screen\",
             \"Description\" : \"Launch in full-screen mode\"
         }

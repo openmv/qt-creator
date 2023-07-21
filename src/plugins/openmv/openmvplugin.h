@@ -345,6 +345,8 @@ private:
     QString m_autoUpdateOnConnect;
     bool m_autoEraseOnConnect;
     bool m_autoRunOnConnect;
+    bool m_disableStop;
+
     OpenMVPluginSerialPort *m_ioport;
     OpenMVPluginIO *m_iodevice;
 
