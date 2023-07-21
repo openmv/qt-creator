@@ -342,9 +342,9 @@ private:
     bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path);
 
     bool m_autoConnect;
-    QString m_autoUpdateOnConnect;
-    bool m_autoEraseOnConnect;
-    bool m_autoRunOnConnect;
+    QString m_autoUpdate;
+    bool m_autoErase;
+    bool m_autoRun;
     bool m_disableStop;
 
     OpenMVPluginSerialPort *m_ioport;

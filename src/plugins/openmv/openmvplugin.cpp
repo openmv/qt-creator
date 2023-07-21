@@ -13,9 +13,9 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     qRegisterMetaType<OpenMVPluginSerialPortCommandResult>("OpenMVPluginSerialPortCommandResult");
 
     m_autoConnect = false;
-    m_autoUpdateOnConnect = QString();
-    m_autoEraseOnConnect = false;
-    m_autoRunOnConnect = false;
+    m_autoUpdate = QString();
+    m_autoErase = false;
+    m_autoRun = false;
     m_disableStop = false;
 
     m_ioport = Q_NULLPTR;
@@ -358,31 +358,31 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     m_autoConnect = arguments.contains(QStringLiteral("-auto_connect"));
 
-    int index_auto_update_on_connect = arguments.indexOf(QRegularExpression(QStringLiteral("-auto_update_on_connect")));
+    int index_auto_update = arguments.indexOf(QRegularExpression(QStringLiteral("-auto_update")));
 
-    if(index_auto_update_on_connect != -1)
+    if(index_auto_update != -1)
     {
-        if(arguments.size() > (index_auto_update_on_connect + 1))
+        if(arguments.size() > (index_auto_update + 1))
         {
-            m_autoUpdateOnConnect = arguments.at(index_auto_update_on_connect + 1);
+            m_autoUpdate = arguments.at(index_auto_update + 1);
 
-            if((m_autoUpdateOnConnect != QStringLiteral("release"))
-            && (m_autoUpdateOnConnect != QStringLiteral("development"))
-            && (!QFileInfo(m_autoUpdateOnConnect).isFile()))
+            if((m_autoUpdate != QStringLiteral("release"))
+            && (m_autoUpdate != QStringLiteral("development"))
+            && (!QFileInfo(m_autoUpdate).isFile()))
             {
-                displayError(Tr::tr("Invalid argument (%1) for -auto_update_on_connect").arg(arguments.at(index_auto_update_on_connect + 1)));
+                displayError(Tr::tr("Invalid argument (%1) for -auto_update").arg(arguments.at(index_auto_update + 1)));
                 exit(-1);
             }
         }
         else
         {
-            displayError(Tr::tr("Missing argument for -auto_update_on_connect"));
+            displayError(Tr::tr("Missing argument for -auto_update"));
             exit(-1);
         }
     }
 
-    m_autoEraseOnConnect = arguments.contains(QStringLiteral("-auto_erase_on_connect"));
-    m_autoRunOnConnect = arguments.contains(QStringLiteral("-auto_run_on_connect"));
+    m_autoErase = arguments.contains(QStringLiteral("-auto_erase"));
+    m_autoRun = arguments.contains(QStringLiteral("-auto_run"));
     m_disableStop = arguments.contains(QStringLiteral("-disable_stop"));
 
     if(arguments.contains(QStringLiteral("-full_screen")))
@@ -1766,11 +1766,11 @@ void OpenMVPlugin::extensionsInitialized()
     m_connectAction->setEnabled(true);
     m_connectAction->setVisible(true);
     connect(m_connectAction, &QAction::triggered, this, [this] {
-        if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) connectClicked();
-        else if(m_autoUpdateOnConnect == QStringLiteral("release")) connectClicked(true, QString(), m_autoEraseOnConnect);
-        else if(m_autoUpdateOnConnect == QStringLiteral("developement")) connectClicked(true, QString(), m_autoEraseOnConnect, false, true);
-        else if(QFileInfo(m_autoUpdateOnConnect).isFile()) connectClicked(true, m_autoUpdateOnConnect, (m_autoEraseOnConnect || m_autoUpdateOnConnect.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive)));
-        else if(m_autoEraseOnConnect) connectClicked(true, QString(), true, true);
+        if((m_autoUpdate.isEmpty()) && (!m_autoErase)) connectClicked();
+        else if(m_autoUpdate == QStringLiteral("release")) connectClicked(true, QString(), m_autoErase);
+        else if(m_autoUpdate == QStringLiteral("developement")) connectClicked(true, QString(), m_autoErase, false, true);
+        else if(QFileInfo(m_autoUpdate).isFile()) connectClicked(true, m_autoUpdate, (m_autoErase || m_autoUpdate.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive)));
+        else if(m_autoErase) connectClicked(true, QString(), true, true);
     });
 
     m_disconnectCommand =
@@ -3318,7 +3318,7 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
 
                 if(match.hasMatch())
                 {
-                    if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                         Tr::tr("Register OpenMV Cam"),
                         Tr::tr("OpenMV Cam automatically registered!\n\nBoard: %1\nID: %2\n\n%3 Board Keys remaining for registering board type: %1\n\n"
                                "Please run Examples->HelloWorld->helloworld.py to test the vision quality and focus the camera (if applicable).").arg(board).arg(id).arg(match.captured(1)));
@@ -3327,7 +3327,7 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
                 }
                 else if(text.contains(QStringLiteral("Done")))
                 {
-                    if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                         Tr::tr("Register OpenMV Cam"),
                         Tr::tr("OpenMV Cam automatically registered!\n\nBoard: %1\nID: %2\n\nPlease run Examples->HelloWorld->helloworld.py to test the vision quality and focus the camera (if applicable).").arg(board).arg(id));
 

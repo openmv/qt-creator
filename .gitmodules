@@ -4,7 +4,7 @@
 	ignore = dirty
 [submodule "perfparser"]
 	path = src/tools/perfparser
-	url = ../perfparser.git
+	url = ../../qt-creator/perfparser.git
 	ignore = dirty
 [submodule "src/libs/qlitehtml"]
 	path = src/libs/qlitehtml
