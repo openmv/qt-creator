@@ -74,16 +74,16 @@
             \"Description\" : \"Automatically connect to the first detected port\"
         },
         {
-            \"Name\" : \"-auto_update_on_connect\",
+            \"Name\" : \"-auto_update\",
             \"Parameter\" : \"release|development|path\",
             \"Description\" : \"Automatically update the OpenMV Cam on connect\"
         },
         {
-            \"Name\" : \"-auto_erase_on_connect\",
+            \"Name\" : \"-auto_erase\",
             \"Description\" : \"Automatically erase the onboard flash on connect\"
         },
         {
-            \"Name\" : \"-auto_run_on_connect\",
+            \"Name\" : \"-auto_run\",
             \"Description\" : \"Automatically run the open script on connect\"
         },
         {

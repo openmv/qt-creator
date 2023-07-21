@@ -4,7 +4,7 @@
 	ignore = dirty
 [submodule "perfparser"]
 	path = src/tools/perfparser
-	url = ../perfparser.git
+	url = ../../qt-creator/perfparser.git
 	ignore = dirty
 [submodule "googletest"]
 	path = tests/unit/unittest/3rdparty/googletest

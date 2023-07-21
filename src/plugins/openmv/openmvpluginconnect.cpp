@@ -713,8 +713,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         if(stringList.isEmpty())
         {
             if(forceBootloader && (!dfuDevices.isEmpty())
-            && (m_autoUpdateOnConnect != QStringLiteral("release"))
-            && (m_autoUpdateOnConnect != QStringLiteral("developement")))
+            && (m_autoUpdate != QStringLiteral("release"))
+            && (m_autoUpdate != QStringLiteral("developement")))
             {
                 forceBootloaderBricked = true;
             }
@@ -780,15 +780,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             });
 
                             // If a board is in DFU mode we install the release firmware.
-                            if((m_autoUpdateOnConnect == QStringLiteral("release"))
-                            || (m_autoUpdateOnConnect == QStringLiteral("developement")))
+                            if((m_autoUpdate == QStringLiteral("release"))
+                            || (m_autoUpdate == QStringLiteral("developement")))
                             {
                                 combo->setCurrentIndex(0);
-                                checkBox->setChecked(m_autoEraseOnConnect);
+                                checkBox->setChecked(m_autoErase);
                             }
 
-                            if((m_autoUpdateOnConnect == QStringLiteral("release"))
-                            || (m_autoUpdateOnConnect == QStringLiteral("developement"))
+                            if((m_autoUpdate == QStringLiteral("release"))
+                            || (m_autoUpdate == QStringLiteral("developement"))
                             || (dialog->exec() == QDialog::Accepted))
                             {
                                 settings->setValue(QStringLiteral(LAST_DFU_ACTION), combo->currentIndex());
@@ -1925,7 +1925,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             dialog.close();
                             QApplication::processEvents();
 
-                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? Tr::tr("Onboard Data Flash Erased!\n\n") : Tr::tr("Firmware Upgrade complete!\n\n")))
                                 .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -2206,7 +2206,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             {
                                 if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
                                 {
-                                    if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                                         Tr::tr("Connect"),
                                         Tr::tr("Firmware update complete!\n\n") +
                                         Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
@@ -2224,7 +2224,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
                         {
-                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? Tr::tr("Onboard Data Flash Erased!\n\n") : Tr::tr("Firmware Upgrade complete!\n\n")))
                                 .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -2250,7 +2250,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
                         {
-                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 Tr::tr("Firmware update complete!\n\n") +
                                 Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
@@ -2269,7 +2269,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     {
                         if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
                         {
-                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? Tr::tr("Onboard Data Flash Erased!\n\n") : Tr::tr("Firmware Upgrade complete!\n\n")))
                                 .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -2542,7 +2542,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                                 if(justEraseFlashFs)
                                 {
-                                    if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                                         Tr::tr("Connect"),
                                         QString(QStringLiteral("%1%2%3%4")).arg(Tr::tr("Onboard Data Flash Erased!\n\n"))
                                         .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -2608,7 +2608,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                         if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
                         {
-                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 Tr::tr("DFU firmware update complete!\n\n") +
                                 Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
@@ -2783,7 +2783,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                     if(forceFlashFSErase && justEraseFlashFs)
                     {
-                        if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                        if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
                             QString(QStringLiteral("%1"))
                             .arg(Tr::tr("Your Nano 33 BLE doesn't have an onboard data flash disk.")));
@@ -2830,7 +2830,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                     if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
                     {
-                        if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                        if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
                             Tr::tr("BOSSAC firmware update complete!\n\n") +
                             Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
@@ -3008,7 +3008,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                         CONNECT_END();
                                     }
 
-                                    if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                                         Tr::tr("Connect"),
                                         QString(QStringLiteral("%1%2%3%4")).arg(Tr::tr("Onboard Data Flash Erased!\n\n"))
                                         .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -3046,7 +3046,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                         if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
                         {
-                            if((m_autoUpdateOnConnect.isEmpty()) && (!m_autoEraseOnConnect)) QMessageBox::information(Core::ICore::dialogParent(),
+                            if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 Tr::tr("PicoTool firmware update complete!\n\n") +
                                 Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
@@ -3611,7 +3611,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         OpenMVPlugin::setPortPath(true);
 
-        if(m_autoRunOnConnect)
+        if(m_autoRun)
         {
             startClicked();
         }
