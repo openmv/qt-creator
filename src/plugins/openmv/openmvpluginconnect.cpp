@@ -611,7 +611,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         do
         {
-
             foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
             {
                 MyQSerialPortInfo port(raw_port);
