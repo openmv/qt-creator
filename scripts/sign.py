@@ -22,6 +22,7 @@ def which(program):
     for exe in exes:
         if try_which(program + '.' + exe): return program
     return None
+
 kSignCMDAvailable = which("kSignCMD")
 signtoolAvailable = which("signtool")
 codsignAvailable = which("codesign")
@@ -107,7 +108,6 @@ def try_signFile(file):
             pass
 
 def main():
-    __folder__ = os.path.dirname(os.path.abspath(__file__))
     parser = argparse.ArgumentParser(description = "Sign Script")
     parser.add_argument("target", help = "File or Directory")
     args = parser.parse_args()
