@@ -37,6 +37,11 @@ def getPFXPass():
     with open(file, 'r') as file: return file.readline().strip()
 PFXPass = getPFXPass()
 
+def getCERFile():
+    file = os.path.join(os.path.expanduser('~'), "certificate.cer")
+    return None if not os.path.isfile(file) else file
+CERFile = getCERFile()
+
 def signFile(file):
     if sys.platform.startswith("win"):
         if kSignCMDAvailable and PFXFile and PFXPass:
@@ -48,14 +53,29 @@ def signFile(file):
             else:
                 print("Failure")
                 raise
-        if signtoolAvailable and PFXFile and PFXPass:
-            if not os.system("signtool sign " + \
+        elif signtoolAvailable and PFXFile and PFXPass:
+            if not os.system("signtool sign" + \
             " /f " + PFXFile.replace("/", "\\") + \
             " /p " + PFXPass + \
             " /fd sha1 /t http://timestamp.comodoca.com /q " + file.replace("/", "\\") + " > nul" + \
-            " && signtool sign " + \
+            " && signtool sign" + \
             " /f " + PFXFile.replace("/", "\\") + \
             " /p " + PFXPass + \
+            " /fd sha256 /tr http://timestamp.comodoca.com/?td=sha256 /td sha256 /as /q " + file.replace("/", "\\") + " > nul"):
+                print("Success")
+            else:
+                print("Failure")
+                raise
+        elif signtoolAvailable and CERFile and os.getenv("CS_CONTAINER_NAME") and os.getenv("CS_PASSWORD"):
+            if not os.system("signtool sign" + \
+            " /f " + CERFile.replace("/", "\\") + \
+            " /csp \"eToken Base Cryptographic Provider\"" + \
+            " /kc \"[{{" + os.getenv("CS_PASSWORD") + "}}]=" + os.getenv("CS_CONTAINER_NAME") + "\"" \
+            " /fd sha1 /t http://timestamp.comodoca.com /q " + file.replace("/", "\\") + " > nul" + \
+            " && signtool sign" + \
+            " /f " + CERFile.replace("/", "\\") + \
+            " /csp \"eToken Base Cryptographic Provider\"" + \
+            " /kc \"[{{" + os.getenv("CS_PASSWORD") + "}}]=" + os.getenv("CS_CONTAINER_NAME") + "\"" \
             " /fd sha256 /tr http://timestamp.comodoca.com/?td=sha256 /td sha256 /as /q " + file.replace("/", "\\") + " > nul"):
                 print("Success")
             else:
