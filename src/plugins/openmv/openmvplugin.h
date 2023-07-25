@@ -267,23 +267,33 @@ class LoadFolderThread: public QObject
     private: QString m_path; bool m_flat;
 };
 
+class wifiPort_t
+{
+
+public:
+
+    QString addressAndPort;
+    QString name;
+    QTime time;
+
+    bool operator ==(const wifiPort_t &port) const
+    {
+        return (addressAndPort == port.addressAndPort) && (name == port.name);
+    }
+};
+
+QPair<QStringList, QStringList> filterPorts(const QString &serialNumberFilter,
+                                            bool forceBootloader,
+                                            const QList<wifiPort_t> &availableWifiPorts);
+
 class ScanSerialPortsThread: public QObject
 {
     Q_OBJECT
 
-    public: explicit ScanSerialPortsThread() { }
-    public slots: void scanSerialPortsSlot()
-    {
-        QList<MyQSerialPortInfo> list;
-
-        foreach(const QSerialPortInfo &raw_port, QSerialPortInfo::availablePorts())
-        {
-            MyQSerialPortInfo port(raw_port); list.append(port);
-        }
-
-        emit serialPorts(list);
-    }
-    signals: void serialPorts(const QList<MyQSerialPortInfo> &output);
+    public: explicit ScanSerialPortsThread(const QString &serialNumberFilter) { m_serialNumberFilter = serialNumberFilter; }
+    public slots: void scanSerialPortsSlot() { emit serialPorts(filterPorts(m_serialNumberFilter, true, QList<wifiPort_t>())); }
+    signals: void serialPorts(const QPair<QStringList, QStringList> &output);
+    private: QString m_serialNumberFilter;
 };
 
 class OpenMVPlugin : public ExtensionSystem::IPlugin
@@ -425,25 +435,7 @@ private:
     QList<documentation_t> m_methods;
     QSet<QString> m_arguments;
 
-    ///////////////////////////////////////////////////////////////////////////
-
-    class wifiPort_t
-    {
-        public:
-
-        QString addressAndPort;
-        QString name;
-        QTime time;
-
-        bool operator ==(const wifiPort_t &port) const
-        {
-            return (addressAndPort == port.addressAndPort) && (name == port.name);
-        }
-    };
-
     QList<wifiPort_t> m_availableWifiPorts;
-
-    ///////////////////////////////////////////////////////////////////////////
 
     typedef struct openTerminalMenuData
     {

@@ -2607,14 +2607,14 @@ bool OpenMVPlugin::delayedInitialize()
     // Scan Serial Ports
     {
         QThread *thread = new QThread;
-        ScanSerialPortsThread *scanSerialPortsThread = new ScanSerialPortsThread();
+        ScanSerialPortsThread *scanSerialPortsThread = new ScanSerialPortsThread(m_serialNumberFilter);
         scanSerialPortsThread->moveToThread(thread);
         QTimer *timer = new QTimer(this);
 
         connect(timer, &QTimer::timeout,
                 scanSerialPortsThread, &ScanSerialPortsThread::scanSerialPortsSlot);
 
-        connect(scanSerialPortsThread, &ScanSerialPortsThread::serialPorts, this, [this] (const QList<MyQSerialPortInfo> &output) {
+        connect(scanSerialPortsThread, &ScanSerialPortsThread::serialPorts, this, [this] (const QPair<QStringList, QStringList> &output) {
             QTime currentTime = QTime::currentTime();
 
             for(QList<wifiPort_t>::iterator it = m_availableWifiPorts.begin(); it != m_availableWifiPorts.end(); )
@@ -2629,25 +2629,7 @@ bool OpenMVPlugin::delayedInitialize()
                 }
             }
 
-            bool ok = false;
-
-            foreach(const MyQSerialPortInfo &port, output)
-            {
-                if(port.hasVendorIdentifier() && port.hasProductIdentifier()
-                && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
-                && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
-                || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
-                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
-                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID)))
-                || ((port.vendorIdentifier() == RPI2040_VID) && (port.productIdentifier() == RPI2040_PID))))
-                {
-                    ok = true;
-                    break;
-                }
-            }
-
-            bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
+            bool ok = (!output.first.isEmpty()) || (!output.second.isEmpty()), dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
 
             if(!ok) {
                 if(!m_availableWifiPorts.isEmpty()) {

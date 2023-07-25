@@ -580,6 +580,93 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     return false;
 }
 
+QPair<QStringList, QStringList> filterPorts(const QString &serialNumberFilter,
+                                            bool forceBootloader,
+                                            const QList<wifiPort_t> &availableWifiPorts)
+{
+    QStringList stringList, dfuDevices;
+
+    foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
+    {
+        MyQSerialPortInfo port(raw_port);
+
+        if(port.hasVendorIdentifier() && port.hasProductIdentifier()
+        && (serialNumberFilter.isEmpty() || (serialNumberFilter == port.serialNumber().toUpper()))
+        && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
+        || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
+                                                            ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
+                                                            ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
+                                                            ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID)))
+        || ((port.vendorIdentifier() == RPI2040_VID) && (port.productIdentifier() == RPI2040_PID))))
+        {
+            stringList.append(port.portName());
+        }
+    }
+
+    if(Utils::HostOsInfo::isMacHost())
+    {
+        stringList = stringList.filter(QStringLiteral("cu"), Qt::CaseInsensitive);
+    }
+
+    if(!forceBootloader)
+    {
+        foreach(wifiPort_t port, availableWifiPorts)
+        {
+            stringList.append(QString(QStringLiteral("%1:%2")).arg(port.name).arg(port.addressAndPort));
+        }
+    }
+
+    dfuDevices = picotoolGetDevices() + imxGetAllDevices();
+
+    foreach(const QString &device, getDevices())
+    {
+        dfuDevices.append(device);
+        QStringList vidpid = device.split(QStringLiteral(",")).first().split(QStringLiteral(":"));
+
+        for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
+        {
+            QSerialPortInfo raw_info = QSerialPortInfo(*it);
+            MyQSerialPortInfo info(raw_info);
+
+            if(info.hasVendorIdentifier()
+            && info.vendorIdentifier() == vidpid.at(0).toInt(nullptr, 16)
+            && info.hasProductIdentifier()
+            && info.productIdentifier() == vidpid.at(1).toInt(nullptr, 16))
+            {
+                it = stringList.erase(it);
+            }
+            else
+            {
+                it++;
+            }
+        }
+    }
+
+    // Move known bootloader serial ports to dfuDevices.
+    {
+        for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
+        {
+            QSerialPortInfo raw_info = QSerialPortInfo(*it);
+            MyQSerialPortInfo info(raw_info);
+
+            if(info.hasVendorIdentifier()
+            && (info.vendorIdentifier() == ARDUINOCAM_VID)
+            && info.hasProductIdentifier()
+            && ((info.productIdentifier() == NRF_OLD_PID) || (info.productIdentifier() == NRF_LDR_PID) || (info.productIdentifier() == RPI_OLD_PID) || (info.productIdentifier() == RPI_LDR_PID)))
+            {
+                dfuDevices.append(QString(QStringLiteral("%1:%2").arg(info.vendorIdentifier(), 4, 16, QLatin1Char('0')).arg(info.productIdentifier(), 4, 16, QLatin1Char('0'))));
+                it = stringList.erase(it);
+            }
+            else
+            {
+                it++;
+            }
+        }
+    }
+
+    return QPair<QStringList, QStringList>(stringList, dfuDevices);
+}
+
 void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePath, bool forceFlashFSErase, bool justEraseFlashFs, bool installTheLatestDevelopmentFirmware, bool waitForCamera)
 {
     if(!m_working)
@@ -611,84 +698,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         do
         {
-            foreach(QSerialPortInfo raw_port, QSerialPortInfo::availablePorts())
-            {
-                MyQSerialPortInfo port(raw_port);
-
-                if(port.hasVendorIdentifier() && port.hasProductIdentifier()
-                && (m_serialNumberFilter.isEmpty() || (m_serialNumberFilter == port.serialNumber().toUpper()))
-                && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
-                || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
-                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
-                                                                    ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID)))
-                || ((port.vendorIdentifier() == RPI2040_VID) && (port.productIdentifier() == RPI2040_PID))))
-                {
-                    stringList.append(port.portName());
-                }
-            }
-
-            if(Utils::HostOsInfo::isMacHost())
-            {
-                stringList = stringList.filter(QStringLiteral("cu"), Qt::CaseInsensitive);
-            }
-
-            if(!forceBootloader)
-            {
-                foreach(wifiPort_t port, m_availableWifiPorts)
-                {
-                    stringList.append(QString(QStringLiteral("%1:%2")).arg(port.name).arg(port.addressAndPort));
-                }
-            }
-
-            dfuDevices = picotoolGetDevices() + imxGetAllDevices();
-
-            foreach(const QString &device, getDevices())
-            {
-                dfuDevices.append(device);
-                QStringList vidpid = device.split(QStringLiteral(",")).first().split(QStringLiteral(":"));
-
-                for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
-                {
-                    QSerialPortInfo raw_info = QSerialPortInfo(*it);
-                    MyQSerialPortInfo info(raw_info);
-
-                    if(info.hasVendorIdentifier()
-                    && info.vendorIdentifier() == vidpid.at(0).toInt(nullptr, 16)
-                    && info.hasProductIdentifier()
-                    && info.productIdentifier() == vidpid.at(1).toInt(nullptr, 16))
-                    {
-                        it = stringList.erase(it);
-                    }
-                    else
-                    {
-                        it++;
-                    }
-                }
-            }
-
-            // Move known bootloader serial ports to dfuDevices.
-            {
-                for(QList<QString>::iterator it = stringList.begin(); it != stringList.end(); )
-                {
-                    QSerialPortInfo raw_info = QSerialPortInfo(*it);
-                    MyQSerialPortInfo info(raw_info);
-
-                    if(info.hasVendorIdentifier()
-                    && (info.vendorIdentifier() == ARDUINOCAM_VID)
-                    && info.hasProductIdentifier()
-                    && ((info.productIdentifier() == NRF_OLD_PID) || (info.productIdentifier() == NRF_LDR_PID) || (info.productIdentifier() == RPI_OLD_PID) || (info.productIdentifier() == RPI_LDR_PID)))
-                    {
-                        dfuDevices.append(QString(QStringLiteral("%1:%2").arg(info.vendorIdentifier(), 4, 16, QLatin1Char('0')).arg(info.productIdentifier(), 4, 16, QLatin1Char('0'))));
-                        it = stringList.erase(it);
-                    }
-                    else
-                    {
-                        it++;
-                    }
-                }
-            }
-
+            QPair<QStringList, QStringList> output = filterPorts(m_serialNumberFilter, forceBootloader, m_availableWifiPorts);
+            stringList = output.first;
+            dfuDevices = output.second;
             if(waitForCamera && stringList.isEmpty()) QApplication::processEvents();
         }
         while(waitForCamera && stringList.isEmpty() && (!waitForCameraTimeout.hasExpired(10000)));
