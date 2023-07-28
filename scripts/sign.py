@@ -82,7 +82,19 @@ def signFile(file):
             else:
                 print("Failure")
                 raise
-        else: print("Skipping")
+        elif os.getenv("SM_HOST") and os.getenv("SM_API_KEY") and os.getenv("SM_CLIENT_CERT_PASSWORD") and os.getenv("SM_CODE_SIGNING_CERT_SHA1_HASH"):
+            if not os.system("signtool sign" + \
+            " /sha1 " + os.getenv("SM_CODE_SIGNING_CERT_SHA1_HASH") + \
+            " /fd sha1 /t http://timestamp.digicert.com /q " + file.replace("/", "\\") + " > nul" + \
+            " && signtool sign" + \
+            " /sha1 " + os.getenv("SM_CODE_SIGNING_CERT_SHA1_HASH") + \
+            " /tr http://timestamp.digicert.com /td SHA256 /fd SHA256 /as /q " + file.replace("/", "\\") + " > nul"):
+                print("Success")
+            else:
+                print("Failure")
+                raise
+        else:
+            print("Skipping")
         return
     elif sys.platform == "darwin":
         if codsignAvailable:
