@@ -3364,9 +3364,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         }
                     }
 
-                    if((!disableLicenseCheck)
+                    if((!m_formKey.isEmpty())
                     // Skip OpenMV Cam M4's...
-                    && (board != QStringLiteral("M4")))
+                    || ((!disableLicenseCheck) && (board != QStringLiteral("M4"))))
                     {
                         QNetworkAccessManager *manager = new QNetworkAccessManager(this);
 
@@ -3380,6 +3380,30 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 {
                                     QTimer::singleShot(0, this, [this, board, id] { registerOpenMVCam(board, id); });
                                 }
+                                else if((!m_formKey.isEmpty()) && (!QString::fromUtf8(data).contains(QStringLiteral("<p>Yes</p>"))))
+                                {
+                                    QMessageBox::critical(Core::ICore::dialogParent(),
+                                        Tr::tr("Register OpenMV Cam"),
+                                        Tr::tr("Database Error!"));
+
+                                    CLOSE_CONNECT_END();
+                                }
+                            }
+                            else if((!m_formKey.isEmpty()) && (reply->error() != QNetworkReply::NoError))
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                    Tr::tr("Register OpenMV Cam"),
+                                    Tr::tr("Error: %L1!").arg(reply->error()));
+
+                                CLOSE_CONNECT_END();
+                            }
+                            else if(!m_formKey.isEmpty())
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                    Tr::tr("Register OpenMV Cam"),
+                                    Tr::tr("GET Network error!"));
+
+                                CLOSE_CONNECT_END();
                             }
 
                             connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
@@ -3391,6 +3415,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         if(reply)
                         {
                             connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
+                        }
+                        else if(!m_formKey.isEmpty())
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                Tr::tr("Register OpenMV Cam"),
+                                Tr::tr("GET network error!"));
+
+                            CLOSE_CONNECT_END();
                         }
                     }
                 }
