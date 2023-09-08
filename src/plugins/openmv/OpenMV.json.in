@@ -61,6 +61,10 @@
             \"Description\" : \"OpenMV Cam Registration Key\"
         },
         {
+            \"Name\" : \"-form_key_dialog\",
+            \"Description\" : \"Enter the OpenMV Cam Registration Key via a Dialog Window\"
+        },
+        {
             \"Name\" : \"-list_ports\",
             \"Description\" : \"Prints detected ports\"
         },

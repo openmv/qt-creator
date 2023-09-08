@@ -245,6 +245,10 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     int override_read_timeout = -1;
     int index_override_read_timeout = arguments.indexOf(QRegularExpression(QStringLiteral("-override_read_timeout")));
+    #ifdef FORCE_OVERRIDE_READ_TIMEOUT
+    index_override_read_timeout = -1;
+    override_read_timeout = FORCE_OVERRIDE_READ_TIMEOUT;
+    #endif
 
     if(index_override_read_timeout != -1)
     {
@@ -272,6 +276,10 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     int override_read_stall_timeout = -1;
     int index_override_read_stall_timeout = arguments.indexOf(QRegularExpression(QStringLiteral("-override_read_stall_timeout")));
+    #ifdef FORCE_OVERRIDE_READ_STALL_TIMEOUT
+    index_override_read_stall_timeout = -1;
+    override_read_stall_timeout = FORCE_OVERRIDE_READ_STALL_TIMEOUT;
+    #endif
 
     if(index_override_read_stall_timeout != -1)
     {
@@ -297,7 +305,11 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         }
     }
 
+    #ifdef FORCE_LIST_PORTS
+    if(true)
+    #else
     if(arguments.contains(QStringLiteral("-list_ports")))
+    #endif
     {
         QStringList stringList;
 
@@ -342,6 +354,10 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     }
 
     int index_serial_number_filter = arguments.indexOf(QRegularExpression(QStringLiteral("-serial_number_filter")));
+    #ifdef FORCE_SERIAL_NUMBER_FILTER
+    index_serial_number_filter = -1;
+    m_serialNumberFilter = QStringLiteral("FORCE_SERIAL_NUMBER_FILTER");
+    #endif
 
     if(index_serial_number_filter != -1)
     {
@@ -357,8 +373,19 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     }
 
     m_autoConnect = arguments.contains(QStringLiteral("-auto_connect"));
+    #ifdef FORCE_AUTO_CONNECT
+    m_autoConnect = true;
+    #endif
 
     int index_auto_update = arguments.indexOf(QRegularExpression(QStringLiteral("-auto_update")));
+    #ifdef FORCE_AUTO_UPDATE
+    #define STRINGIFY_INTERNAL(x) #x
+    #define STRINGIFY(x) STRINGIFY_INTERNAL(x)
+    index_auto_update = -1;
+    m_autoUpdate = QStringLiteral(STRINGIFY(FORCE_AUTO_UPDATE));
+    #undef STRINGIFY
+    #undef STRINGIFY_INTERNAL
+    #endif
 
     if(index_auto_update != -1)
     {
@@ -382,11 +409,24 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     }
 
     m_autoErase = arguments.contains(QStringLiteral("-auto_erase"));
+    #ifdef FORCE_AUTO_ERASE
+    m_autoErase = true;
+    #endif
     m_autoRun = arguments.contains(QStringLiteral("-auto_run"));
+    #ifdef FORCE_AUTO_RUN
+    m_autoRun = true;
+    #endif
     m_disableStop = arguments.contains(QStringLiteral("-disable_stop"));
+    #ifdef FORCE_DISABLE_STOP
+    m_disableStop = true;
+    #endif
 
+    #ifdef FORCE_FULL_SCREEN
+    if(true)
+    #else
     if(arguments.contains(QStringLiteral("-full_screen")))
     {
+    #endif
         connect(ExtensionSystem::PluginManager::instance(), &ExtensionSystem::PluginManager::initializationDone, this, [] {
             QAction *action = Core::ActionManager::command(Core::Constants::TOGGLE_FULLSCREEN)->action();
 
@@ -427,7 +467,11 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     int minor = settings->value(QStringLiteral(RESOURCES_MINOR), 0).toInt();
     int patch = settings->value(QStringLiteral(RESOURCES_PATCH), 0).toInt();
 
+    #ifdef FORCE_UPDATE_RESOURCES
+    if(true
+    #else
     if((arguments.contains(QStringLiteral("-update_resources")))
+    #endif
     || (major < IDE_VERSION_MAJOR)
     || ((major == IDE_VERSION_MAJOR) && (minor < IDE_VERSION_MINOR))
     || ((major == IDE_VERSION_MAJOR) && (minor == IDE_VERSION_MINOR) && (patch < IDE_VERSION_RELEASE)))
@@ -981,6 +1025,10 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     ///////////////////////////////////////////////////////////////////////////
 
     int index_form_key = arguments.indexOf(QRegularExpression(QStringLiteral("-form_key")));
+    #ifdef FORCE_FORM_KEY
+    index_form_key = -1;
+    m_formKey = FORCE_FORM_KEY;
+    #endif
 
     if(index_form_key != -1)
     {
@@ -991,6 +1039,35 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         else
         {
             displayError(Tr::tr("Missing argument for -form_key"));
+            exit(-1);
+        }
+    }
+
+    int index_form_key_dialog = arguments.indexOf(QRegularExpression(QStringLiteral("-form_key_dialog")));
+    #if !defined(FORCE_FORM_KEY) && defined(FORCE_FORM_KEY_DIALOG)
+    index_form_key_dialog = 0;
+    #endif
+
+    if((!isNoShow()) && (index_form_key == -1) && (index_form_key_dialog != -1))
+    {
+        settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+
+        bool formkeyOk;
+        QString formKey = QInputDialog::getText(splashScreen,
+            Tr::tr("Form Key"), Tr::tr("Please enter the form key"),
+            QLineEdit::Normal, settings->value(QStringLiteral(LAST_FORM_KEY)).toString(), &formkeyOk,
+            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+
+        if(formkeyOk && (!formKey.isEmpty()))
+        {
+            m_formKey = formKey;
+            settings->setValue(QStringLiteral(LAST_FORM_KEY), formKey);
+            settings->endGroup();
+        }
+        else
+        {
+            settings->endGroup();
             exit(-1);
         }
     }
@@ -2647,7 +2724,7 @@ bool OpenMVPlugin::delayedInitialize()
 
             if(ok && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected))
             {
-                QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected)) connectClicked(); });
+                QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected)) emit m_connectAction->triggered(); });
             }
         });
 
