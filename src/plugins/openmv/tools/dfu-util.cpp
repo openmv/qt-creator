@@ -100,7 +100,7 @@ QList<QString> getDevices()
 
         return list;
     }
-    else
+    else if(QThread::currentThread() == QCoreApplication::instance()->thread())
     {
         QMessageBox box(QMessageBox::Warning, Tr::tr("Get Devices"), Tr::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -110,6 +110,10 @@ QList<QString> getDevices()
         box.setEscapeButton(QMessageBox::Cancel);
         box.exec();
 
+        return QList<QString>();
+    }
+    else
+    {
         return QList<QString>();
     }
 }
