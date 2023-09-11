@@ -81,7 +81,7 @@ QList<QString> picotoolGetDevices()
             return QList<QString>() << QStringLiteral("28ea:0003");
         }
     }
-    else
+    else if(QThread::currentThread() == QCoreApplication::instance()->thread())
     {
         QMessageBox box(QMessageBox::Warning, Tr::tr("Get Devices"), Tr::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -91,6 +91,10 @@ QList<QString> picotoolGetDevices()
         box.setEscapeButton(QMessageBox::Cancel);
         box.exec();
 
+        return QList<QString>();
+    }
+    else
+    {
         return QList<QString>();
     }
 }
