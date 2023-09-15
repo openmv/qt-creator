@@ -17,6 +17,7 @@
 #define ARDUINOCAM_NRF_PID      0x005A
 #define ARDUINOCAM_RPI_PID      0x005E
 #define ARDUINOCAM_NCL_PID      0x005F
+#define ARDUINOCAM_GH7_PID      0x0066
 #define ARDUINOCAM_PID_MASK     0x00FF
 #define PORTENTA_APP_O_PID      0x005B // old
 #define PORTENTA_APP_N_PID      0x045B // new
@@ -35,6 +36,8 @@
 #define NICLA_TTR_1_PID         0x025F
 #define NICLA_TTR_2_PID         0x805F
 #define NICLA_LDR_PID           0x035F
+#define GIGA_LDR_PID            0x0366
+#define GIGA_APP_PID            0x0466
 
 #define OPENMVCAM_BROADCAST_PORT 0xABD1
 
