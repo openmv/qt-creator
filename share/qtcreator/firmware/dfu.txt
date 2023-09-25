@@ -16,7 +16,7 @@
     {
         "boardType" : "H747",
         "vidpid" : "2341:0366",
-        "appvidpid" : ["2341:0466", ""2341:0366"],
+        "appvidpid" : ["2341:0466", "2341:0366"],
         "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
         "extraProgramCommands" : [
                 {
