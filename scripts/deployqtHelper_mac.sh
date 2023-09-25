@@ -90,14 +90,7 @@ cp "$bin_src/qtdiag" "$app_path/Contents/MacOS/" || exit 1
 # check for known existing translation to avoid copying multiple times
 if [ ! -f "$resource_path/translations/qt_de.qm" ]; then
     echo "- Copying Qt translations"
-    # OPENMV-DIFF #
-    # cp "$translation_src"/*.qm "$resource_path/translations/" || exit 1
-    # OPENMV-DIFF #
-    cp "$translation_src"/qt_*.qm "$resource_path/translations/" || exit 1
-    cp "$translation_src"/qtbase_*.qm "$resource_path/translations/" || exit 1
-    cp "$translation_src"/qtserialport_*.qm "$resource_path/translations/" || exit 1
-    rm "$resource_path"/translations/qt_help_*.qm || exit 1
-    # OPENMV-DIFF #
+    cp "$translation_src"/*.qm "$resource_path/translations/" || exit 1
 fi
 
 # copy clang if needed
