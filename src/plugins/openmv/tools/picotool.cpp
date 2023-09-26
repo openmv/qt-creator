@@ -19,8 +19,12 @@
 namespace OpenMV {
 namespace Internal {
 
+static bool working = false;
+
 QList<QString> picotoolGetDevices()
 {
+    if(working) return QList<QString>();
+
     Utils::FilePath command;
     Utils::QtcProcess process;
     process.setTimeoutS(10);
@@ -101,6 +105,8 @@ QList<QString> picotoolGetDevices()
 
 void picotoolReset(QString &command, Utils::QtcProcess &process)
 {
+    working = true;
+
     Utils::FilePath binary;
     QStringList args = QStringList() <<
                        QString(QStringLiteral("reboot"));
@@ -140,10 +146,14 @@ void picotoolReset(QString &command, Utils::QtcProcess &process)
     process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
+
+    working = false;
 }
 
 void picotoolDownloadFirmware(const QString &details, QString &command, Utils::QtcProcess &process, const QString &path, const QString &moreArgs)
 {
+    working = true;
+
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(PICOTOOL_SETTINGS_GROUP));
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("PicoTool"), details, process, settings, QStringLiteral(LAST_PICOTOOL_TERMINAL_WINDOW_GEOMETRY),
@@ -297,6 +307,8 @@ void picotoolDownloadFirmware(const QString &details, QString &command, Utils::Q
 
     delete dialog;
     settings->endGroup();
+
+    working = false;
 }
 
 } // namespace Internal
