@@ -19,8 +19,12 @@
 namespace OpenMV {
 namespace Internal {
 
+bool bossac_working = false;
+
 void bossacRunBootloader(Utils::QtcProcess &process, const QString &device)
 {
+    bossac_working = true;
+
     Utils::FilePath binary;
     QStringList args = QStringList() <<
                        QString(QStringLiteral("--port=%1")).arg(device) <<
@@ -59,10 +63,14 @@ void bossacRunBootloader(Utils::QtcProcess &process, const QString &device)
     process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
+
+    bossac_working = false;
 }
 
 void bossacDownloadFirmware(const QString &details, QString &command, Utils::QtcProcess &process, const QString &path, const QString &device, const QString &moreArgs)
 {
+    bossac_working = true;
+
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(BOSSAC_SETTINGS_GROUP));
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("BOSSAC"), details, process, settings, QStringLiteral(LAST_BOSSAC_TERMINAL_WINDOW_GEOMETRY),
@@ -222,6 +230,8 @@ void bossacDownloadFirmware(const QString &details, QString &command, Utils::Qtc
 
     delete dialog;
     settings->endGroup();
+
+    bossac_working = false;
 }
 
 } // namespace Internal

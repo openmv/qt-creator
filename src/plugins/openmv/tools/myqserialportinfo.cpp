@@ -7,6 +7,11 @@
 namespace OpenMV {
 namespace Internal {
 
+extern bool imx_working;
+extern bool bossac_working;
+extern bool dfu_util_working;
+extern bool picotool_working;
+
 MyQSerialPortInfo::MyQSerialPortInfo()
 {
     m_info = QSerialPortInfo();
@@ -37,6 +42,8 @@ MyQSerialPortInfo::MyQSerialPortInfo(const QSerialPortInfo &info)
     // to instead of the PID/VID of the serial port itself on linux...
 
 #ifdef Q_OS_LINUX
+    if(imx_working || bossac_working || dfu_util_working || picotool_working) return;
+
     QFile file(QStringLiteral("/sys/class/tty/") + info.portName() + "/device/uevent");
 
     if(file.open(QIODevice::ReadOnly))
@@ -109,7 +116,6 @@ MyQSerialPortInfo &MyQSerialPortInfo::operator=(const MyQSerialPortInfo &other)
     m_serialNumber = other.m_serialNumber;
     m_systemLocation = other.m_systemLocation;
     m_vendorIdentifier = other.m_vendorIdentifier;
-
     return *this;
 }
 

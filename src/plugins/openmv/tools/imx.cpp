@@ -23,6 +23,8 @@
 namespace OpenMV {
 namespace Internal {
 
+bool imx_working = false;
+
 QList<QPair<int, int> > imxVidPidList(bool spd_host, bool bl_host)
 {
     QList<QPair<int, int> > pidvidlist;
@@ -90,6 +92,8 @@ QList<QPair<int, int> > imxVidPidList(bool spd_host, bool bl_host)
 
 QStringList imxGetAllDevices(bool spd_host, bool bl_host)
 {
+    if(imx_working) return QStringList();
+
     QList<QPair<int, int> > pidvidlist = imxVidPidList(spd_host, bl_host);
 
     QStringList devices;
@@ -234,6 +238,8 @@ bool imxGetDeviceSupported()
 
 bool imxGetDevice(QJsonObject &obj)
 {
+    imx_working = true;
+
     Utils::QtcProcess process;
     process.setTimeoutS(10);
     process.setProcessChannelMode(QProcess::MergedChannels);
@@ -258,6 +264,7 @@ bool imxGetDevice(QJsonObject &obj)
 
     if(blhost_binary.isEmpty())
     {
+        imx_working = false;
         return false;
     }
 
@@ -277,21 +284,26 @@ bool imxGetDevice(QJsonObject &obj)
 
         if((in.size() == 1) && (in.at(0).contains(QStringLiteral("cannot open USB HID device"))))
         {
+            imx_working = false;
             return false;
         }
         else
         {
+            imx_working = false;
             return true;
         }
     }
     else
     {
+        imx_working = false;
         return false;
     }
 }
 
 bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs)
 {
+    imx_working = true;
+
     bool result = true;
     Utils::QtcProcess process;
 
@@ -1052,11 +1064,15 @@ cleanup:
     delete dialog;
     settings->endGroup();
 
+    imx_working = false;
+
     return result;
 }
 
 bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs)
 {
+    imx_working = true;
+
     bool result = true;
     Utils::QtcProcess process;
 
@@ -1369,6 +1385,8 @@ cleanup:
 
     delete dialog;
     settings->endGroup();
+
+    imx_working = false;
 
     return result;
 }

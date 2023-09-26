@@ -23,11 +23,11 @@
 namespace OpenMV {
 namespace Internal {
 
-static bool working = false;
+bool dfu_util_working = false;
 
 QList<QString> getDevices()
 {
-    if(working) return QList<QString>();
+    if(dfu_util_working) return QList<QString>();
 
     Utils::FilePath command;
     Utils::QtcProcess process;
@@ -126,7 +126,7 @@ void downloadFirmware(const QString &details,
                       QString &command, Utils::QtcProcess &process,
                       const QString &path, const QString &device, const QString &moreArgs)
 {
-    working = true;
+    dfu_util_working = true;
 
     QStringList list;
 
@@ -385,7 +385,7 @@ void downloadFirmware(const QString &details,
             settings->endGroup();
         }
 
-        working = false;
+        dfu_util_working = false;
         return;
     }
 
@@ -536,7 +536,7 @@ void downloadFirmware(const QString &details,
     delete dialog;
     settings->endGroup();
 
-    working = false;
+    dfu_util_working = false;
 }
 
 } // namespace Internal
