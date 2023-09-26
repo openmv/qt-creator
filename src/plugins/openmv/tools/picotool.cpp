@@ -19,11 +19,11 @@
 namespace OpenMV {
 namespace Internal {
 
-static bool working = false;
+bool picotool_working = false;
 
 QList<QString> picotoolGetDevices()
 {
-    if(working) return QList<QString>();
+    if(picotool_working) return QList<QString>();
 
     Utils::FilePath command;
     Utils::QtcProcess process;
@@ -105,7 +105,7 @@ QList<QString> picotoolGetDevices()
 
 void picotoolReset(QString &command, Utils::QtcProcess &process)
 {
-    working = true;
+    picotool_working = true;
 
     Utils::FilePath binary;
     QStringList args = QStringList() <<
@@ -147,12 +147,12 @@ void picotoolReset(QString &command, Utils::QtcProcess &process)
     process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
 
-    working = false;
+    picotool_working = false;
 }
 
 void picotoolDownloadFirmware(const QString &details, QString &command, Utils::QtcProcess &process, const QString &path, const QString &moreArgs)
 {
-    working = true;
+    picotool_working = true;
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(PICOTOOL_SETTINGS_GROUP));
@@ -308,7 +308,7 @@ void picotoolDownloadFirmware(const QString &details, QString &command, Utils::Q
     delete dialog;
     settings->endGroup();
 
-    working = false;
+    picotool_working = false;
 }
 
 } // namespace Internal
