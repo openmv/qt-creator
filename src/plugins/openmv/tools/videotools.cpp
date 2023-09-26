@@ -395,6 +395,8 @@ static QString handleImageWriterFiles(const QString &path)
 
                         if(getMaxSizeAndAvgMsDelta(&file, &avgM, &maxW, &maxH, version == 20))
                         {
+                            if(avgM == -1) avgM = 0;
+
                             if(file.seek(16))
                             {
                                 QByteArray header = getMJPEGHeader(maxW, maxH, 0, 0, 0);
