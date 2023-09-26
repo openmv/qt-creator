@@ -213,7 +213,7 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
             }
         }
 
-        if((M <= 0) || (M > (1000 * 60 * 60 * 24)) || (W <= 0) || (W > 32767) || (H <= 0) || (H > 32767) || (BPP < 0) || (BPP > (1024 * 1204 * 1024))) // Sane limits.
+        if((M < 0) || (M > (1000 * 60 * 60 * 24)) || (W <= 0) || (W > 32767) || (H <= 0) || (H > 32767) || (BPP < 0) || (BPP > (1024 * 1204 * 1024))) // Sane limits.
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
                 Tr::tr("Reading File"),
@@ -233,7 +233,7 @@ static bool getMaxSizeAndAvgMsDelta(QFile *imageWriterFile, int *avgM, int *maxW
             return false;
         }
 
-        *avgM = (*avgM != -1) ? ((*avgM + M) / 2) : M;
+        if(M > 0) *avgM = (*avgM != -1) ? ((*avgM + M) / 2) : M;
         *maxW = qMax(*maxW, W);
         *maxH = qMax(*maxH, H);
 
@@ -290,7 +290,7 @@ static bool convertImageWriterFileToMjpegVideoFile(QFile *mjpegVideoFile, uint32
             }
         }
 
-        if((M <= 0) || (M > (1000 * 60 * 60 * 24)) || (W <= 0) || (W > 32767) || (H <= 0) || (H > 32767) || (BPP < 0) || (BPP > (1024 * 1204 * 1024))) // Sane limits.
+        if((M < 0) || (M > (1000 * 60 * 60 * 24)) || (W <= 0) || (W > 32767) || (H <= 0) || (H > 32767) || (BPP < 0) || (BPP > (1024 * 1204 * 1024))) // Sane limits.
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
                 Tr::tr("Transcoding File"),
