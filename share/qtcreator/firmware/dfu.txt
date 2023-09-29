@@ -14,7 +14,7 @@
         "dfuProgramCommand" : "-a 0 -s :leave"
     },
     {
-        "boardType" : "H747",
+        "boardType" : "H7",
         "vidpid" : "2341:0366",
         "appvidpid" : ["2341:0466", "2341:0366"],
         "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
