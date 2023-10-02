@@ -131,12 +131,22 @@ def main():
 
         if sys.platform.startswith("win"):
             extensions = ["*.[eE][xX][eE]", "*.[dD][lL][lL]"]
+            excludeNames = ["dpinst_x86.exe", "dpinst_amd64.exe",
+                            "dpinst-x86.exe", "dpinst-amd64.exe",
+                            "vcredist_x86.exe", "vcredist_x64.exe"]
+
+            def isExcludedName(path):
+                for n in excludeNames:
+                    if n == path:
+                        return True
+                return False
 
             for dirpath, dirnames, filenames in os.walk(target):
                 paths = dirnames + filenames
                 for extension in extensions:
                     for path in fnmatch.filter(paths, extension):
-                        try_signFile(os.path.join(dirpath, path))
+                        if not isExcludedName(path):
+                            try_signFile(os.path.join(dirpath, path))
 
         elif sys.platform == "darwin":
             files = ["ffmpeg", "ffserver", "ffprobe", "ffplay", "bossac",
