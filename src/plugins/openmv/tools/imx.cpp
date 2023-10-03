@@ -23,7 +23,7 @@
 namespace OpenMV {
 namespace Internal {
 
-bool imx_working = false;
+QMutex imx_working;
 
 QList<QPair<int, int> > imxVidPidList(bool spd_host, bool bl_host)
 {
@@ -92,9 +92,9 @@ QList<QPair<int, int> > imxVidPidList(bool spd_host, bool bl_host)
 
 QStringList imxGetAllDevices(bool spd_host, bool bl_host)
 {
-    if(imx_working) return QStringList();
-
     QList<QPair<int, int> > pidvidlist = imxVidPidList(spd_host, bl_host);
+
+    if(!imx_working.tryLock()) return QStringList();
 
     QStringList devices;
 
@@ -103,28 +103,33 @@ QStringList imxGetAllDevices(bool spd_host, bool bl_host)
 #ifdef Q_OS_WIN
         UINT nDevices = 0;
 
-        if((GetRawInputDeviceList(NULL, &nDevices, sizeof(RAWINPUTDEVICELIST)) == 0) && (nDevices != 0))
+        if((GetRawInputDeviceList(NULL, &nDevices, sizeof(RAWINPUTDEVICELIST)) == 0) && (nDevices > 0))
         {
             PRAWINPUTDEVICELIST pRawInputDeviceList = new RAWINPUTDEVICELIST[sizeof(RAWINPUTDEVICELIST) * nDevices];
 
-            if(pRawInputDeviceList && (GetRawInputDeviceList(pRawInputDeviceList, &nDevices, sizeof(RAWINPUTDEVICELIST)) == nDevices))
+            if(pRawInputDeviceList)
             {
-                for(UINT i = 0; i < nDevices; i++)
+                UINT nDevices2 = 0;
+
+                if((GetRawInputDeviceList(pRawInputDeviceList, &nDevices2, sizeof(RAWINPUTDEVICELIST)) == nDevices) && (nDevices == nDevices2))
                 {
-                    RID_DEVICE_INFO rdiDeviceInfo;
-                    UINT nBufferSize = sizeof(RID_DEVICE_INFO);
-
-                    if(GetRawInputDeviceInfo(pRawInputDeviceList[i].hDevice, RIDI_DEVICEINFO, &rdiDeviceInfo, &nBufferSize) == sizeof(RID_DEVICE_INFO))
+                    for(UINT i = 0; i < nDevices; i++)
                     {
-                        if(rdiDeviceInfo.dwType == RIM_TYPEHID)
-                        {
-                            QPair<int, int> entry(rdiDeviceInfo.hid.dwVendorId, rdiDeviceInfo.hid.dwProductId);
+                        RID_DEVICE_INFO rdiDeviceInfo;
+                        UINT nBufferSize = sizeof(RID_DEVICE_INFO);
 
-                            if(pidvidlist.contains(entry))
+                        if(GetRawInputDeviceInfo(pRawInputDeviceList[i].hDevice, RIDI_DEVICEINFO, &rdiDeviceInfo, &nBufferSize) == sizeof(RID_DEVICE_INFO))
+                        {
+                            if(rdiDeviceInfo.dwType == RIM_TYPEHID)
                             {
-                                devices.append(QString(QStringLiteral("%1:%2,NULL")).
-                                               arg(rdiDeviceInfo.hid.dwVendorId, 4, 16, QChar('0')).
-                                               arg(rdiDeviceInfo.hid.dwProductId, 4, 16, QChar('0')));
+                                QPair<int, int> entry(rdiDeviceInfo.hid.dwVendorId, rdiDeviceInfo.hid.dwProductId);
+
+                                if(pidvidlist.contains(entry))
+                                {
+                                    devices.append(QString(QStringLiteral("%1:%2,NULL")).
+                                                   arg(rdiDeviceInfo.hid.dwVendorId, 4, 16, QChar('0')).
+                                                   arg(rdiDeviceInfo.hid.dwProductId, 4, 16, QChar('0')));
+                                }
                             }
                         }
                     }
@@ -208,6 +213,7 @@ QStringList imxGetAllDevices(bool spd_host, bool bl_host)
 #endif
     }
 
+    imx_working.unlock();
     return devices;
 }
 
@@ -238,7 +244,7 @@ bool imxGetDeviceSupported()
 
 bool imxGetDevice(QJsonObject &obj)
 {
-    imx_working = true;
+    QMutexLocker locker(&imx_working);
 
     Utils::QtcProcess process;
     process.setTimeoutS(10);
@@ -264,7 +270,6 @@ bool imxGetDevice(QJsonObject &obj)
 
     if(blhost_binary.isEmpty())
     {
-        imx_working = false;
         return false;
     }
 
@@ -284,25 +289,22 @@ bool imxGetDevice(QJsonObject &obj)
 
         if((in.size() == 1) && (in.at(0).contains(QStringLiteral("cannot open USB HID device"))))
         {
-            imx_working = false;
             return false;
         }
         else
         {
-            imx_working = false;
             return true;
         }
     }
     else
     {
-        imx_working = false;
         return false;
     }
 }
 
 bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs)
 {
-    imx_working = true;
+    QMutexLocker locker(&imx_working);
 
     bool result = true;
     Utils::QtcProcess process;
@@ -1064,14 +1066,12 @@ cleanup:
     delete dialog;
     settings->endGroup();
 
-    imx_working = false;
-
     return result;
 }
 
 bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs)
 {
-    imx_working = true;
+    QMutexLocker locker(&imx_working);
 
     bool result = true;
     Utils::QtcProcess process;
@@ -1385,8 +1385,6 @@ cleanup:
 
     delete dialog;
     settings->endGroup();
-
-    imx_working = false;
 
     return result;
 }
