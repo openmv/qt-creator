@@ -19,11 +19,11 @@
 namespace OpenMV {
 namespace Internal {
 
-bool bossac_working = false;
+QMutex bossac_working;
 
 void bossacRunBootloader(Utils::QtcProcess &process, const QString &device)
 {
-    bossac_working = true;
+    QMutexLocker locker(&bossac_working);
 
     Utils::FilePath binary;
     QStringList args = QStringList() <<
@@ -63,13 +63,11 @@ void bossacRunBootloader(Utils::QtcProcess &process, const QString &device)
     process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
-
-    bossac_working = false;
 }
 
 void bossacDownloadFirmware(const QString &details, QString &command, Utils::QtcProcess &process, const QString &path, const QString &device, const QString &moreArgs)
 {
-    bossac_working = true;
+    QMutexLocker locker(&bossac_working);
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(BOSSAC_SETTINGS_GROUP));
@@ -230,8 +228,6 @@ void bossacDownloadFirmware(const QString &details, QString &command, Utils::Qtc
 
     delete dialog;
     settings->endGroup();
-
-    bossac_working = false;
 }
 
 } // namespace Internal

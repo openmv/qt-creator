@@ -23,11 +23,11 @@
 namespace OpenMV {
 namespace Internal {
 
-bool dfu_util_working = false;
+QMutex dfu_util_working;
 
 QList<QString> getDevices()
 {
-    if(dfu_util_working) return QList<QString>();
+    if(!dfu_util_working.tryLock()) return QList<QString>();
 
     Utils::FilePath command;
     Utils::QtcProcess process;
@@ -75,6 +75,8 @@ QList<QString> getDevices()
             process.runBlocking(Utils::EventLoopMode::On);
         }
     }
+
+    dfu_util_working.unlock();
 
     if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
     {
@@ -126,8 +128,6 @@ void downloadFirmware(const QString &details,
                       QString &command, Utils::QtcProcess &process,
                       const QString &path, const QString &device, const QString &moreArgs)
 {
-    dfu_util_working = true;
-
     QStringList list;
 
     foreach(const QString &d, getDevices())
@@ -139,6 +139,8 @@ void downloadFirmware(const QString &details,
             list.append(d);
         }
     }
+
+    QMutexLocker locker(&dfu_util_working);
 
     if(!list.isEmpty())
     {
@@ -385,7 +387,6 @@ void downloadFirmware(const QString &details,
             settings->endGroup();
         }
 
-        dfu_util_working = false;
         return;
     }
 
@@ -535,8 +536,6 @@ void downloadFirmware(const QString &details,
 
     delete dialog;
     settings->endGroup();
-
-    dfu_util_working = false;
 }
 
 } // namespace Internal

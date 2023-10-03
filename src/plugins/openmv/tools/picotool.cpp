@@ -19,11 +19,11 @@
 namespace OpenMV {
 namespace Internal {
 
-bool picotool_working = false;
+QMutex picotool_working;
 
 QList<QString> picotoolGetDevices()
 {
-    if(picotool_working) return QList<QString>();
+    if(!picotool_working.tryLock()) return QList<QString>();
 
     Utils::FilePath command;
     Utils::QtcProcess process;
@@ -72,6 +72,8 @@ QList<QString> picotoolGetDevices()
         }
     }
 
+    picotool_working.unlock();
+
     if((process.result() == Utils::ProcessResult::FinishedWithSuccess) || (process.result() == Utils::ProcessResult::FinishedWithError))
     {
         QStringList in = process.stdOut().split(QRegularExpression(QStringLiteral("\n|\r\n|\r")), Qt::SkipEmptyParts);
@@ -105,7 +107,7 @@ QList<QString> picotoolGetDevices()
 
 void picotoolReset(QString &command, Utils::QtcProcess &process)
 {
-    picotool_working = true;
+    QMutexLocker locker(&picotool_working);
 
     Utils::FilePath binary;
     QStringList args = QStringList() <<
@@ -146,13 +148,11 @@ void picotoolReset(QString &command, Utils::QtcProcess &process)
     process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(Utils::EventLoopMode::On);
-
-    picotool_working = false;
 }
 
 void picotoolDownloadFirmware(const QString &details, QString &command, Utils::QtcProcess &process, const QString &path, const QString &moreArgs)
 {
-    picotool_working = true;
+    QMutexLocker locker(&picotool_working);
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(QStringLiteral(PICOTOOL_SETTINGS_GROUP));
@@ -307,8 +307,6 @@ void picotoolDownloadFirmware(const QString &details, QString &command, Utils::Q
 
     delete dialog;
     settings->endGroup();
-
-    picotool_working = false;
 }
 
 } // namespace Internal
