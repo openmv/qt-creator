@@ -10,15 +10,7 @@
 #include <utils/theme/theme.h>
 
 #include "loaderdialog.h"
-
 #include "openmvtr.h"
-
-#define DFU_UTIL_SETTINGS_GROUP "OpenMVDFUUtil"
-#define LAST_DFU_UTIL_TERMINAL_WINDOW_GEOMETRY "LastDFUUtilTerminalWindowGeometry"
-#define DFUSE_SETTINGS_GROUP "OpenMVDfuSe"
-#define LAST_DFUSE_TERMINAL_WINDOW_GEOMETRY "LastDfuSeTerminalWindowGeometry"
-#define PYDFU_SETTINGS_GROUP "OpenMVPyDfu"
-#define LAST_PYDFU_TERMINAL_WINDOW_GEOMETRY "LastPyDfuTerminalWindowGeometry"
 
 namespace OpenMV {
 namespace Internal {
@@ -150,8 +142,8 @@ void downloadFirmware(const QString &details,
         if(Utils::HostOsInfo::isWindowsHost())
         {
             QSettings *settings = ExtensionSystem::PluginManager::settings();
-            settings->beginGroup(QStringLiteral(DFUSE_SETTINGS_GROUP));
-            LoaderDialog *dialog = new LoaderDialog(Tr::tr("DfuSe"), details, process, settings, QStringLiteral(LAST_DFUSE_TERMINAL_WINDOW_GEOMETRY),
+            settings->beginGroup(QStringLiteral(LOADERDIALOG_SETTINGS_GROUP));
+            LoaderDialog *dialog = new LoaderDialog(Tr::tr("DfuSe"), details, process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                                     Core::ICore::dialogParent());
 
             QString stdOutBuffer = QString();
@@ -271,8 +263,8 @@ void downloadFirmware(const QString &details,
         else
         {
             QSettings *settings = ExtensionSystem::PluginManager::settings();
-            settings->beginGroup(QStringLiteral(PYDFU_SETTINGS_GROUP));
-            LoaderDialog *dialog = new LoaderDialog(Tr::tr("PyDfu"), details, process, settings, QStringLiteral(LAST_PYDFU_TERMINAL_WINDOW_GEOMETRY),
+            settings->beginGroup(QStringLiteral(LOADERDIALOG_SETTINGS_GROUP));
+            LoaderDialog *dialog = new LoaderDialog(Tr::tr("PyDfu"), details, process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                                     Core::ICore::dialogParent());
 
             QString stdOutBuffer = QString();
@@ -391,8 +383,8 @@ void downloadFirmware(const QString &details,
     }
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(QStringLiteral(DFU_UTIL_SETTINGS_GROUP));
-    LoaderDialog *dialog = new LoaderDialog(Tr::tr("DFU Util"), details, process, settings, QStringLiteral(LAST_DFU_UTIL_TERMINAL_WINDOW_GEOMETRY),
+    settings->beginGroup(QStringLiteral(LOADERDIALOG_SETTINGS_GROUP));
+    LoaderDialog *dialog = new LoaderDialog(Tr::tr("DFU Util"), details, process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
     QString stdOutBuffer = QString();

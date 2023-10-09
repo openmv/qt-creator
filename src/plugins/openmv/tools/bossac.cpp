@@ -10,11 +10,7 @@
 #include <utils/theme/theme.h>
 
 #include "loaderdialog.h"
-
 #include "openmvtr.h"
-
-#define BOSSAC_SETTINGS_GROUP "OpenMVBOSSAC"
-#define LAST_BOSSAC_TERMINAL_WINDOW_GEOMETRY "LastBOSSACTerminalWindowGeometry"
 
 namespace OpenMV {
 namespace Internal {
@@ -70,8 +66,8 @@ void bossacDownloadFirmware(const QString &details, QString &command, Utils::Qtc
     QMutexLocker locker(&bossac_working);
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(QStringLiteral(BOSSAC_SETTINGS_GROUP));
-    LoaderDialog *dialog = new LoaderDialog(Tr::tr("BOSSAC"), details, process, settings, QStringLiteral(LAST_BOSSAC_TERMINAL_WINDOW_GEOMETRY),
+    settings->beginGroup(QStringLiteral(LOADERDIALOG_SETTINGS_GROUP));
+    LoaderDialog *dialog = new LoaderDialog(Tr::tr("BOSSAC"), details, process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
     QString stdOutBuffer = QString();

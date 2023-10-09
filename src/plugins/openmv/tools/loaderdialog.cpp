@@ -106,6 +106,7 @@ LoaderDialog::LoaderDialog(const QString &title,
     }
     else
     {
+        m_detailsButton->setChecked(true);
         resize(640, minimumSizeHint().height());
         m_maxHeight = 480;
     }

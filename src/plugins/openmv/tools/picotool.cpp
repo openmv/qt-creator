@@ -10,11 +10,7 @@
 #include <utils/theme/theme.h>
 
 #include "loaderdialog.h"
-
 #include "openmvtr.h"
-
-#define PICOTOOL_SETTINGS_GROUP "OpenMVPICOTOOL"
-#define LAST_PICOTOOL_TERMINAL_WINDOW_GEOMETRY "LastPICOTOOLTerminalWindowGeometry"
 
 namespace OpenMV {
 namespace Internal {
@@ -155,8 +151,8 @@ void picotoolDownloadFirmware(const QString &details, QString &command, Utils::Q
     QMutexLocker locker(&picotool_working);
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(QStringLiteral(PICOTOOL_SETTINGS_GROUP));
-    LoaderDialog *dialog = new LoaderDialog(Tr::tr("PicoTool"), details, process, settings, QStringLiteral(LAST_PICOTOOL_TERMINAL_WINDOW_GEOMETRY),
+    settings->beginGroup(QStringLiteral(LOADERDIALOG_SETTINGS_GROUP));
+    LoaderDialog *dialog = new LoaderDialog(Tr::tr("PicoTool"), details, process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
     QString stdOutBuffer = QString();
