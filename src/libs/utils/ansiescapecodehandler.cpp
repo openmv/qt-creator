@@ -4,6 +4,9 @@
 #include "ansiescapecodehandler.h"
 
 #include "qtcassert.h"
+// OPENMV-DIFF //
+#include "theme/theme.h"
+// OPENMV-DIFF //
 
 namespace Utils {
 
@@ -34,10 +37,27 @@ static QColor ansiColor(uint code)
 {
     QTC_ASSERT(code < 8, return QColor());
 
-    const int red   = code & 1 ? 170 : 0;
-    const int green = code & 2 ? 170 : 0;
-    const int blue  = code & 4 ? 170 : 0;
-    return QColor(red, green, blue);
+    // OPENMV-DIFF //
+    // const int red   = code & 1 ? 170 : 0;
+    // const int green = code & 2 ? 170 : 0;
+    // const int blue  = code & 4 ? 170 : 0;
+    // return QColor(red, green, blue);
+    // OPENMV-DIFF //
+    if (Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface))
+    {
+        const int red   = code & 1 ? 255 : 64;
+        const int green = code & 2 ? 255 : 64;
+        const int blue  = code & 4 ? 255 : 64;
+        return QColor(red, green, blue);
+    }
+    else
+    {
+        const int red   = code & 1 ? 170 : 0;
+        const int green = code & 2 ? 170 : 0;
+        const int blue  = code & 4 ? 170 : 0;
+        return QColor(red, green, blue);
+    }
+    // OPENMV-DIFF //
 }
 
 QList<FormattedText> AnsiEscapeCodeHandler::parseText(const FormattedText &input)

@@ -665,186 +665,191 @@ QString OutputWindow::doNewlineEnforcement(const QString &out)
     return s;
 }
 
-void OutputWindow::appendText(const QString &textIn, const QTextCharFormat &format)
+void OutputWindow::appendText(const QString &textIn)
 {
-    QString text = QString(textIn).replace(QLatin1String("\r\n"), QLatin1String("\n"));
-    int index = text.indexOf(QStringLiteral("Traceback (most recent call last):\n"));
-
-    if (index != -1)
+    foreach(const Utils::FormattedText &parsedText, m_handler.parseText(Utils::FormattedText(textIn)))
     {
-        appendText(text.left(index));
-        grayOutOldContent();
-        text = text.mid(index);
-    }
+        QTextCharFormat format = parsedText.format;
+        QString text = QString(parsedText.text).replace(QLatin1String("\r\n"), QLatin1String("\n"));
+        int index = text.indexOf(QStringLiteral("Traceback (most recent call last):\n"));
 
-    QChar lastChar = QChar();
-
-    QString string;
-    int column = 0;
-
-    for(int i = 0, j = text.size(); i < j; i++)
-    {
-        switch(text.at(i).unicode())
+        if (index != -1)
         {
-            case 15:
-            case 17: // XON
-            case 19: // XOFF
-            case 23:
-            case 24:
-            case 25:
-            case 26:
-            case 27: // Escape - AnsiEscapeCodeHandler
-            case 28:
-            case 29:
-            case 30:
-            case 31:
-            {
-                break;
-            }
+            m_handler.endFormatScope();
+            appendText(text.left(index));
+            grayOutOldContent();
+            format = QTextCharFormat();
+            text = text.mid(index);
+        }
 
-            case 0: // Null
-            {
-                break;
-            }
+        QChar lastChar = QChar();
+        QString string;
+        int column = 0;
 
-            case 1: // Home Cursor
+        for(int i = 0, j = text.size(); i < j; i++)
+        {
+            switch(text.at(i).unicode())
             {
-                break;
-            }
-
-            case 2: // Move Cursor Left
-            {
-                break;
-            }
-
-            case 3: // Clear Screen
-            {
-                break;
-            }
-
-            case 4:
-            case 127: // Delete
-            {
-                break;
-            }
-
-            case 5: // End Cursor
-            {
-                break;
-            }
-
-            case 6: // Move Cursor Right
-            {
-                break;
-            }
-
-            case 7: // Beep Speaker
-            {
-                QApplication::beep();
-                break;
-            }
-
-            case 8: // Backspace
-            {
-                break;
-            }
-
-            case 9: // Tab
-            {
-                for(int k = d->tabWidth - (column % d->tabWidth); k > 0; k--)
+                case 15:
+                case 17: // XON
+                case 19: // XOFF
+                case 23:
+                case 24:
+                case 25:
+                case 26:
+                case 27: // Escape - AnsiEscapeCodeHandler
+                case 28:
+                case 29:
+                case 30:
+                case 31:
                 {
-                    string.append(QLatin1Char(' '));
-                    column += 1;
+                    break;
                 }
 
-                break;
-            }
+                case 0: // Null
+                {
+                    break;
+                }
 
-            case 10: // Line Feed
-            {
-                if(lastChar.unicode() != '\r')
+                case 1: // Home Cursor
+                {
+                    break;
+                }
+
+                case 2: // Move Cursor Left
+                {
+                    break;
+                }
+
+                case 3: // Clear Screen
+                {
+                    break;
+                }
+
+                case 4:
+                case 127: // Delete
+                {
+                    break;
+                }
+
+                case 5: // End Cursor
+                {
+                    break;
+                }
+
+                case 6: // Move Cursor Right
+                {
+                    break;
+                }
+
+                case 7: // Beep Speaker
+                {
+                    QApplication::beep();
+                    break;
+                }
+
+                case 8: // Backspace
+                {
+                    break;
+                }
+
+                case 9: // Tab
+                {
+                    for(int k = d->tabWidth - (column % d->tabWidth); k > 0; k--)
+                    {
+                        string.append(QLatin1Char(' '));
+                        column += 1;
+                    }
+
+                    break;
+                }
+
+                case 10: // Line Feed
+                {
+                    if(lastChar.unicode() != '\r')
+                    {
+                        string.append(QLatin1Char('\n'));
+                        column = 0;
+                    }
+
+                    break;
+                }
+
+                case 11: // Clear to end of line.
+                {
+                    break;
+                }
+
+                case 12: // Clear lines below.
+                {
+                    break;
+                }
+
+                case 13: // Carriage Return
                 {
                     string.append(QLatin1Char('\n'));
                     column = 0;
+                    break;
                 }
 
-                break;
+                case 14: // Move Cursor Down
+                {
+                    break;
+                }
+
+                case 16: // Move Cursor Up
+                {
+                    break;
+                }
+
+                case 18: // Move to start of line.
+                {
+                    break;
+                }
+
+                case 20: // Move to end of line.
+                {
+                    break;
+                }
+
+                case 21: // Clear to start of line.
+                {
+                    break;
+                }
+
+                case 22: // Clear lines above.
+                {
+                    break;
+                }
+
+                default:
+                {
+                    string.append(text.at(i));
+                    column += 1;
+                    break;
+                }
             }
 
-            case 11: // Clear to end of line.
-            {
-                break;
-            }
-
-            case 12: // Clear lines below.
-            {
-                break;
-            }
-
-            case 13: // Carriage Return
-            {
-                string.append(QLatin1Char('\n'));
-                column = 0;
-                break;
-            }
-
-            case 14: // Move Cursor Down
-            {
-                break;
-            }
-
-            case 16: // Move Cursor Up
-            {
-                break;
-            }
-
-            case 18: // Move to start of line.
-            {
-                break;
-            }
-
-            case 20: // Move to end of line.
-            {
-                break;
-            }
-
-            case 21: // Clear to start of line.
-            {
-                break;
-            }
-
-            case 22: // Clear lines above.
-            {
-                break;
-            }
-
-            default:
-            {
-                string.append(text.at(i));
-                column += 1;
-                break;
-            }
+            lastChar = text.at(i);
         }
 
-        lastChar = text.at(i);
+        if(d->cursor.document()->isEmpty())
+        {
+            string.remove(QRegularExpression(QStringLiteral("^\\s+")));
+        }
+
+        text = string;
+
+        const bool atBottom = isScrollbarAtBottom();
+        if (!d->cursor.atEnd())
+            d->cursor.movePosition(QTextCursor::End);
+        d->cursor.beginEditBlock();
+        d->cursor.insertText(doNewlineEnforcement(text), format);
+
+        d->cursor.endEditBlock();
+        if (atBottom)
+            scrollToBottom();
     }
-
-    if(d->cursor.document()->isEmpty())
-    {
-        string.remove(QRegularExpression(QStringLiteral("^\\s+")));
-    }
-
-    text = string;
-
-    const bool atBottom = isScrollbarAtBottom();
-    if (!d->cursor.atEnd())
-        d->cursor.movePosition(QTextCursor::End);
-    d->cursor.beginEditBlock();
-    d->cursor.insertText(doNewlineEnforcement(text), format);
-
-    d->cursor.endEditBlock();
-    if (atBottom)
-        scrollToBottom();
 }
 
 bool OutputWindow::isScrollbarAtBottom() const

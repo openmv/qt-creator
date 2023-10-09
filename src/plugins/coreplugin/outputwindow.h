@@ -6,6 +6,9 @@
 #include "core_global.h"
 #include "icontext.h"
 
+// OPENMV-DIFF //
+#include <utils/ansiescapecodehandler.h>
+// OPENMV-DIFF //
 #include <utils/outputformat.h>
 
 #include <QPlainTextEdit>
@@ -67,7 +70,7 @@ public:
             bool isInverted);
 
     // OPENMV-DIFF //
-    void appendText(const QString &text, const QTextCharFormat &format = QTextCharFormat());
+    void appendText(const QString &text);
     void save();
     void setTabSettings(int tabWidth);
     // OPENMV-DIFF //
@@ -107,6 +110,7 @@ private:
 
     // OPENMV-DIFF //
     QString doNewlineEnforcement(const QString &out);
+    Utils::AnsiEscapeCodeHandler m_handler;
     // OPENMV-DIFF //
 
     Internal::OutputWindowPrivate *d = nullptr;
