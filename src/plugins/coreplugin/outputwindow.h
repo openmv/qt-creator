@@ -7,6 +7,9 @@
 #include "icontext.h"
 
 #include <utils/storekey.h>
+// OPENMV-DIFF //
+#include <utils/ansiescapecodehandler.h>
+// OPENMV-DIFF //
 #include <utils/outputformat.h>
 
 #include <QPlainTextEdit>
@@ -68,8 +71,12 @@ public:
             bool isInverted);
 
     // OPENMV-DIFF //
+<<<<<<< HEAD
     void setOutputFileNameHint(const QString &fileName);
     void appendText(const QString &text, const QTextCharFormat &format = QTextCharFormat());
+=======
+    void appendText(const QString &text);
+>>>>>>> 7f1a29ba14d (Add ansi color code support)
     void save();
     void setTabSettings(int tabWidth);
     // OPENMV-DIFF //
@@ -111,6 +118,7 @@ private:
 
     // OPENMV-DIFF //
     QString doNewlineEnforcement(const QString &out);
+    Utils::AnsiEscapeCodeHandler m_handler;
     // OPENMV-DIFF //
 
     Internal::OutputWindowPrivate *d = nullptr;
