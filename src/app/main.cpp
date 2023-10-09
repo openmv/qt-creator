@@ -504,6 +504,7 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
         fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
         break;
     case QtWarningMsg:
+        if(msg.compare(QLatin1String("QMutex: destroying locked mutex")) == 0) break;
         if(msg.compare(QLatin1String("JIT is disabled for QML. Property bindings and animations will be "
                                      "very slow. Visit https://wiki.qt.io/V4 to learn about possible "
                                      "solutions for your platform.")) == 0) break;
