@@ -14,11 +14,7 @@
 #endif
 
 #include "loaderdialog.h"
-
 #include "openmvtr.h"
-
-#define IMX_SETTINGS_GROUP "OpenMVIMX"
-#define LAST_IMX_TERMINAL_WINDOW_GEOMETRY "LastIMXTerminalWindowGeometry"
 
 namespace OpenMV {
 namespace Internal {
@@ -310,8 +306,8 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     Utils::QtcProcess process;
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(QStringLiteral(IMX_SETTINGS_GROUP));
-    LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), Tr::tr("Flashing Firmware"), process, settings, QStringLiteral(LAST_IMX_TERMINAL_WINDOW_GEOMETRY),
+    settings->beginGroup(QStringLiteral(LOADERDIALOG_SETTINGS_GROUP));
+    LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), Tr::tr("Flashing Firmware"), process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
     int ok = true;
@@ -1077,8 +1073,8 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
     Utils::QtcProcess process;
 
     QSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(QStringLiteral(IMX_SETTINGS_GROUP));
-    LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), Tr::tr("Flashing Firmware"), process, settings, QStringLiteral(LAST_IMX_TERMINAL_WINDOW_GEOMETRY),
+    settings->beginGroup(QStringLiteral(LOADERDIALOG_SETTINGS_GROUP));
+    LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), Tr::tr("Flashing Firmware"), process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
     QString stdOutBuffer = QString();

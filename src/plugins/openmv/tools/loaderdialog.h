@@ -6,6 +6,9 @@
 
 #include <utils/qtcprocess.h>
 
+#define LOADERDIALOG_SETTINGS_GROUP "OpenMVLoaderDialog"
+#define LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY "LastLoaderDialogTerminalWindowGeometry"
+
 namespace OpenMV {
 namespace Internal {
 
