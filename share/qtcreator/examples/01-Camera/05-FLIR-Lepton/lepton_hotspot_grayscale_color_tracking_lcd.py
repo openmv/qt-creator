@@ -4,12 +4,12 @@
 
 # FLIR Lepton Shutter Note: FLIR Leptons with radiometry and a shutter will pause the video often
 # as they heatup to re-calibrate. This will happen less and less often as the sensor temperature
-# stablizes. You can force the re-calibration to not happen if you need to via the lepton API.
+# stabilizes. You can force the re-calibration to not happen if you need to via the lepton API.
 # However, it is not recommended because the image will degrade overtime.
 
 import sensor
 import time
-import lcd
+import display
 
 # Color Tracking Thresholds (Grayscale Min, Grayscale Max)
 threshold_list = [(220, 255)]
@@ -33,7 +33,7 @@ sensor.set_pixformat(sensor.GRAYSCALE)
 sensor.set_framesize(sensor.LCD)
 sensor.skip_frames(time=5000)
 clock = time.clock()
-lcd.init()
+lcd = display.SPIDisplay()
 
 # Only blobs that with more pixels than "pixel_threshold" and more area than "area_threshold" are
 # returned by "find_blobs" below. Change "pixels_threshold" and "area_threshold" if you change the
@@ -47,5 +47,5 @@ while True:
     ):
         img.draw_rectangle(blob.rect(), color=127)
         img.draw_cross(blob.cx(), blob.cy(), color=127)
-    lcd.display(img)
+    lcd.write(img)
     print(clock.fps())
