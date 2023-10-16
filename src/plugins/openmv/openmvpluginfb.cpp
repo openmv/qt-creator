@@ -314,8 +314,14 @@ void OpenMVPluginFB::contextMenuEvent(QContextMenuEvent *event)
         menu.addSeparator();
         QAction *sTemplate = menu.addAction(cropped ? Tr::tr("Save Template selection to Cam") : Tr::tr("Save Template to Cam"));
         sTemplate->setVisible(m_enableSaveTemplate);
+        // Disable Save TEMPLATE
+        sTemplate->setVisible(false);
+        // Disable Save TEMPLATE
         QAction *sDescriptor = menu.addAction(cropped ? Tr::tr("Save Descriptor selection to Cam") : Tr::tr("Save Descriptor to Cam"));
         sDescriptor->setVisible(m_enableSaveDescriptor);
+        // Disable Save Descriptor
+        sDescriptor->setVisible(false);
+        // Disable Save Descriptor
 
         QAction *selected = menu.exec(event->globalPos());
 
