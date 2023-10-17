@@ -1220,6 +1220,14 @@ void OpenMVPlugin::extensionsInitialized()
     m_stopOnConnectDiconnectionAction->setChecked(!m_disableStop);
     m_stopOnConnectDiconnectionAction->setDisabled(m_disableStop);
 
+    m_enableSyncingImportsAction = new QAction(Tr::tr("Sync Imports between OpenMV Cam and Documents Folder"), this);
+    m_enableSyncingImportsAction->setToolTip(Tr::tr("Syncs libraries between your OpenMV Cam and Documents Folder automatically."));
+    Core::Command *enableSyncingImportsCommand = Core::ActionManager::registerAction(m_enableSyncingImportsAction, Utils::Id("OpenMV.EnableSyncingImports"));
+    toolsMenu->addAction(enableSyncingImportsCommand);
+    m_enableSyncingImportsAction->setCheckable(true);
+    m_enableSyncingImportsAction->setChecked(false);
+    m_enableSyncingImportsAction->setDisabled(false);
+
     toolsMenu->addSeparator();
 
     m_openDriveFolderAction = new QAction(Tr::tr("Open OpenMV Cam Drive folder"), this);
@@ -2394,6 +2402,8 @@ void OpenMVPlugin::extensionsInitialized()
         m_autoConnect || settings->value(QStringLiteral(AUTO_RECONNECT_STATE), m_autoReconnectAction->isChecked()).toBool());
     m_stopOnConnectDiconnectionAction->setChecked(
         (!m_disableStop) && settings->value(QStringLiteral(STOP_SCRIPT_CONNECT_DISCONNECT_STATE), m_stopOnConnectDiconnectionAction->isChecked()).toBool());
+    m_enableSyncingImportsAction->setChecked(
+        settings->value(QStringLiteral(ENABLE_SYNCING_IMPORTS_STATE), m_enableSyncingImportsAction->isChecked()).toBool());
     m_connectAction->setEnabled(!m_autoReconnectAction->isChecked());
     m_disconnectAction->setEnabled(!m_autoReconnectAction->isChecked());
     if(m_autoReconnectAction->isChecked()) {
@@ -2486,6 +2496,8 @@ void OpenMVPlugin::extensionsInitialized()
             m_autoReconnectAction->isChecked());
         if(!m_disableStop) settings->setValue(QStringLiteral(STOP_SCRIPT_CONNECT_DISCONNECT_STATE),
             m_stopOnConnectDiconnectionAction->isChecked());
+        settings->setValue(QStringLiteral(ENABLE_SYNCING_IMPORTS_STATE),
+            m_enableSyncingImportsAction->isChecked());
         settings->setValue(QStringLiteral(ZOOM_STATE),
             zoomButton->isChecked());
         settings->setValue(QStringLiteral(JPG_COMPRESS_STATE),
