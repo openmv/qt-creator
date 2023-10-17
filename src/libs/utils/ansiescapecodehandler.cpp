@@ -187,11 +187,11 @@ QList<FormattedText> AnsiEscapeCodeHandler::parseText(const FormattedText &input
                 break;
             }
 
-            if (strippedText.startsWith(QStringLiteral("OMV"))) {
+            if (strippedText.startsWith(QLatin1Char('O'))) {
                 m_pendingText.clear();
                 m_escapeCodes.append(numbers);
                 outputData << FormattedText(QString(), charFormat);
-                strippedText.remove(0, 3);
+                strippedText.remove(0, 1);
                 if(strippedText.startsWith("\r\n")) strippedText.remove(0, 2);
                 if(strippedText.startsWith("\r")) strippedText.remove(0, 1);
                 if(strippedText.startsWith("\n")) strippedText.remove(0, 1);
