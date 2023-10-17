@@ -1346,6 +1346,7 @@ QByteArray OpenMVPluginIO::pasrsePrintData(const QByteArray &data)
         EXIT_1
     }
     int_stateMachine = ASCII;
+    bool strip_newline = false;
 
     QByteArray int_shiftReg = QByteArray();
     QByteArray int_frameBufferData = QByteArray();
@@ -1429,9 +1430,18 @@ QByteArray OpenMVPluginIO::pasrsePrintData(const QByteArray &data)
                     }
 
                     int_frameBufferData.clear();
+
+                    strip_newline = true;
                 }
                 else if((data.at(i) & 0x80) == 0x00) // ASCII
                 {
+                    if(strip_newline)
+                    {
+                        if(data.at(i) == '\r') break;
+                        strip_newline = false;
+                        if(data.at(i) == '\n') break;
+                    }
+
                     buffer.append(data.at(i));
                 }
 

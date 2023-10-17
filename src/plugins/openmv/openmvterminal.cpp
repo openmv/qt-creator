@@ -24,6 +24,7 @@ MyPlainTextEdit::MyPlainTextEdit(qreal fontPointSizeF, QWidget *parent) : QPlain
     m_tabWidth = TextEditor::TextEditorSettings::codeStyle()->tabSettings().m_serialTerminalTabSize;
     m_textCursor = QTextCursor(document());
     m_stateMachine = ASCII;
+    m_strip_newline = false;
     m_shiftReg = QByteArray();
     m_frameBufferData = QByteArray();
     m_handler = Utils::AnsiEscapeCodeHandler();
@@ -149,9 +150,18 @@ void MyPlainTextEdit::readBytes(const QByteArray &data)
                     }
 
                     m_frameBufferData.clear();
+
+                    m_strip_newline = true;
                 }
                 else if((data.at(i) & 0x80) == 0x00) // ASCII
                 {
+                    if(m_strip_newline)
+                    {
+                        if(data.at(i) == '\r') break;
+                        m_strip_newline = false;
+                        if(data.at(i) == '\n') break;
+                    }
+
                     buffer.append(data.at(i));
                 }
 
@@ -463,6 +473,7 @@ void MyPlainTextEdit::clear()
     m_textCursor.removeSelectedText();
     m_textCursor = QTextCursor(document());
     m_stateMachine = ASCII;
+    m_strip_newline = false;
     m_shiftReg = QByteArray();
     m_frameBufferData = QByteArray();
     m_handler = Utils::AnsiEscapeCodeHandler();
