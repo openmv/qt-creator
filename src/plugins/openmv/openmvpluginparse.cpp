@@ -367,6 +367,8 @@ static bool myClearFolder(const QString &folder)
 
 bool OpenMVPlugin::importHelper(const QByteArray &text)
 {
+    if (!m_enableSyncingImportsAction->isChecked()) return true;
+
     QMap<QString, QPair<importData_t, QString> > map;
 
     foreach(const importData_t &data, m_exampleModules)

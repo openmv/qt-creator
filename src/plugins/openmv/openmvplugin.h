@@ -102,6 +102,7 @@
 #define VSPLITTER_STATE "VSplitterState"
 #define AUTO_RECONNECT_STATE "AutoReconnectState"
 #define STOP_SCRIPT_CONNECT_DISCONNECT_STATE "StopScriptConnectDisconnect"
+#define ENABLE_SYNCING_IMPORTS_STATE "EnableSyncingImports"
 #define ZOOM_STATE "ZoomState"
 #define OUTPUT_WINDOW_FONT_ZOOM_STATE "OutputWindowFontZoomState"
 #define JPG_COMPRESS_STATE "JPGCompressState"
@@ -394,6 +395,7 @@ private:
     QAction *m_eraseAction;
     QAction *m_autoReconnectAction;
     QAction *m_stopOnConnectDiconnectionAction;
+    QAction *m_enableSyncingImportsAction;
 
     Core::Command *m_openDriveFolderCommand; QAction *m_openDriveFolderAction;
     Core::Command *m_configureSettingsCommand; QAction *m_configureSettingsAction;
