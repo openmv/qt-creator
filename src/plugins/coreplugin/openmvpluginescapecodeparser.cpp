@@ -9,6 +9,7 @@ OpenMVPluginEscapeCodeParser::OpenMVPluginEscapeCodeParser(QObject *parent) : QO
 {
     resetParser();
     m_box = nullptr;
+    m_timer = QElapsedTimer();
 }
 
 void OpenMVPluginEscapeCodeParser::resetParser()
@@ -19,12 +20,14 @@ void OpenMVPluginEscapeCodeParser::resetParser()
 
 void OpenMVPluginEscapeCodeParser::createMessageBox(QMessageBox::Icon icon)
 {
+    if(m_timer.isValid() && (!m_timer.hasExpired(1000))) return;
     if(m_box) delete m_box;
     m_box = new QMessageBox(icon, QString(), m_buffer, QMessageBox::Ok, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
     m_box->setAttribute(Qt::WA_DeleteOnClose, true);
     m_box->show();
+    m_timer.start();
 }
 
 void OpenMVPluginEscapeCodeParser::parseEscapeCodes(const QStringList &escapeCodes)

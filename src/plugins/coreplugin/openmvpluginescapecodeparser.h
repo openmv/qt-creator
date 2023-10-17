@@ -40,6 +40,7 @@ private:
     bool m_buffering;
     QString m_buffer;
     QPointer<QMessageBox> m_box;
+    QElapsedTimer m_timer;
 };
 
 } // namespace Core
