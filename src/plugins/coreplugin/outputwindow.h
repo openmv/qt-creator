@@ -9,6 +9,7 @@
 #include <utils/storekey.h>
 // OPENMV-DIFF //
 #include <utils/ansiescapecodehandler.h>
+#include "openmvpluginescapecodeparser.h"
 // OPENMV-DIFF //
 #include <utils/outputformat.h>
 
@@ -79,6 +80,7 @@ public:
 >>>>>>> 7f1a29ba14d (Add ansi color code support)
     void save();
     void setTabSettings(int tabWidth);
+    OpenMVPluginEscapeCodeParser *getParser() { return m_parser; }
     // OPENMV-DIFF //
 
 signals:
@@ -118,7 +120,9 @@ private:
 
     // OPENMV-DIFF //
     QString doNewlineEnforcement(const QString &out);
+
     Utils::AnsiEscapeCodeHandler m_handler;
+    OpenMVPluginEscapeCodeParser *m_parser;
     // OPENMV-DIFF //
 
     Internal::OutputWindowPrivate *d = nullptr;

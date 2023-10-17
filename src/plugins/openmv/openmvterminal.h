@@ -25,6 +25,7 @@
 #include <coreplugin/icore.h>
 #include <coreplugin/idocument.h>
 #include <coreplugin/minisplitter.h>
+#include <coreplugin/openmvpluginescapecodeparser.h>
 #include <texteditor/icodestylepreferences.h>
 #include <texteditor/fontsettings.h>
 #include <texteditor/texteditorsettings.h>
@@ -91,6 +92,7 @@ private:
     Utils::AnsiEscapeCodeHandler m_handler;
     QChar m_lastChar;
     bool m_isCursorVisible;
+    Core::OpenMVPluginEscapeCodeParser *m_parser;
 };
 
 class OpenMVTerminal : public QWidget
