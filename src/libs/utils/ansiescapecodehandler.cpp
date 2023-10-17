@@ -186,6 +186,17 @@ QList<FormattedText> AnsiEscapeCodeHandler::parseText(const FormattedText &input
                 strippedText.remove(0, 1);
                 break;
             }
+
+            if (strippedText.startsWith(QStringLiteral("OMV"))) {
+                m_pendingText.clear();
+                m_escapeCodes.append(numbers);
+                outputData << FormattedText(QString(), charFormat);
+                strippedText.remove(0, 3);
+                if(strippedText.startsWith("\r\n")) strippedText.remove(0, 2);
+                if(strippedText.startsWith("\r")) strippedText.remove(0, 1);
+                if(strippedText.startsWith("\n")) strippedText.remove(0, 1);
+                break;
+            }
             // OPENMV-DIFF //
             // remove terminating char
             if (!strippedText.startsWith(colorTerminator)) {

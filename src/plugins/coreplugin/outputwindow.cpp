@@ -189,6 +189,9 @@ OutputWindow::OutputWindow(Context context, const QString &settingsKey, QWidget 
     auto agg = new Aggregation::Aggregate;
     agg->add(this);
     agg->add(new BaseTextFind(this));
+    // OPENMV-DIFF //
+    m_parser = new OpenMVPluginEscapeCodeParser(this);
+    // OPENMV-DIFF //
 }
 
 OutputWindow::~OutputWindow()
@@ -669,13 +672,19 @@ void OutputWindow::appendText(const QString &textIn)
 {
     foreach(const Utils::FormattedText &parsedText, m_handler.parseText(Utils::FormattedText(textIn)))
     {
+        if(parsedText.text.isEmpty())
+        {
+            m_parser->parseEscapeCodes(m_handler.getEscapeCodes());
+        }
+
         QTextCharFormat format = parsedText.format;
         QString text = QString(parsedText.text).replace(QLatin1String("\r\n"), QLatin1String("\n"));
         int index = text.indexOf(QStringLiteral("Traceback (most recent call last):\n"));
 
-        if (index != -1)
+        if(index != -1)
         {
             m_handler.endFormatScope();
+            m_parser->resetParser();
             appendText(text.left(index));
             grayOutOldContent();
             format = QTextCharFormat();
@@ -838,7 +847,12 @@ void OutputWindow::appendText(const QString &textIn)
             string.remove(QRegularExpression(QStringLiteral("^\\s+")));
         }
 
-        text = string;
+        text = m_parser->parseText(string);
+
+        if(text.isEmpty())
+        {
+            continue;
+        }
 
         const bool atBottom = isScrollbarAtBottom();
         if (!d->cursor.atEnd())

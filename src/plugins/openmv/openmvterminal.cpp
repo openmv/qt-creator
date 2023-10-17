@@ -27,6 +27,7 @@ MyPlainTextEdit::MyPlainTextEdit(qreal fontPointSizeF, QWidget *parent) : QPlain
     m_shiftReg = QByteArray();
     m_frameBufferData = QByteArray();
     m_handler = Utils::AnsiEscapeCodeHandler();
+    m_parser = new Core::OpenMVPluginEscapeCodeParser(this);
     m_lastChar = QChar();
 
     connect(TextEditor::TextEditorSettings::codeStyle(), &TextEditor::ICodeStylePreferences::tabSettingsChanged, this, [this] (const TextEditor::TabSettings &settings) {
@@ -195,6 +196,11 @@ void MyPlainTextEdit::readBytes(const QByteArray &data)
 
     foreach(const Utils::FormattedText &text, m_handler.parseText(Utils::FormattedText(QString::fromUtf8(buffer))))
     {
+        if(text.text.isEmpty())
+        {
+            m_parser->parseEscapeCodes(m_handler.getEscapeCodes());
+        }
+
         QString string;
         int column = m_textCursor.columnNumber();
 
@@ -431,6 +437,13 @@ void MyPlainTextEdit::readBytes(const QByteArray &data)
             string.remove(QRegularExpression(QStringLiteral("^\\s+")));
         }
 
+        string = m_parser->parseText(string);
+
+        if(string.isEmpty())
+        {
+            continue;
+        }
+
         m_textCursor.insertText(string, text.format);
     }
 
@@ -453,6 +466,7 @@ void MyPlainTextEdit::clear()
     m_shiftReg = QByteArray();
     m_frameBufferData = QByteArray();
     m_handler = Utils::AnsiEscapeCodeHandler();
+    m_parser->resetParser();
     m_lastChar = QChar();
 }
 

@@ -2360,7 +2360,6 @@ void OpenMVPlugin::extensionsInitialized()
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
     connect(m_versionButton, &QToolButton::clicked, this, &OpenMVPlugin::updateCam);
 
-
     m_portLabel = new Utils::ElidingLabel(Tr::tr("Serial Port:"));
     m_portLabel->setToolTip(Tr::tr("Camera serial port"));
     m_portLabel->setDisabled(true);
@@ -2425,6 +2424,7 @@ void OpenMVPlugin::extensionsInitialized()
     settings->endGroup();
 
     connect(Core::MessageManager::outputWindow(), &Core::OutputWindow::writeBytes, m_iodevice, &OpenMVPluginIO::mainTerminalInput);
+    connect(Core::MessageManager::outputWindow()->getParser(), &Core::OpenMVPluginEscapeCodeParser::dataSetEditorSaveImage, datasetEditorSnapshotAction, &QAction::trigger);
 
     connect(q_check_ptr(qobject_cast<Core::Internal::MainWindow *>(Core::ICore::mainWindow())), &Core::Internal::MainWindow::showEventSignal, this, [this, widget, settings, msplitter, hsplitter, vsplitter] {
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));

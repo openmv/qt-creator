@@ -21,6 +21,7 @@
 #include <coreplugin/icore.h>
 #include <coreplugin/mainwindow.h>
 #include <coreplugin/messagemanager.h>
+#include <coreplugin/openmvpluginescapecodeparser.h>
 #include <coreplugin/outputwindow.h>
 #include <syntax-highlighting/src/lib/definition_p.h>
 #include <syntax-highlighting/src/lib/keywordlist_p.h>

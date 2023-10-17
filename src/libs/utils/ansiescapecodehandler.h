@@ -25,6 +25,13 @@ class QTCREATOR_UTILS_EXPORT AnsiEscapeCodeHandler
 public:
     QList<FormattedText> parseText(const FormattedText &input);
     void endFormatScope();
+    // OPENMV-DIFF //
+    QStringList getEscapeCodes()
+    {
+        if(m_escapeCodes.isEmpty()) return QStringList();
+        return m_escapeCodes.takeFirst();
+    }
+    // OPENMV-DIFF //
 
 private:
     void setFormatScope(const QTextCharFormat &charFormat);
@@ -34,6 +41,9 @@ private:
     QString         m_alternateTerminator;
     QTextCharFormat m_previousFormat;
     QString         m_pendingText;
+    // OPENMV-DIFF //
+    QList<QStringList> m_escapeCodes;
+    // OPENMV-DIFF //
 };
 
 } // namespace Utils
