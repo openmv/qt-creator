@@ -86,6 +86,7 @@ private:
         EXIT_1
     }
     m_stateMachine;
+    bool m_strip_newline;
 
     QByteArray m_shiftReg;
     QByteArray m_frameBufferData;
