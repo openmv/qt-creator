@@ -377,6 +377,7 @@ private:
     int m_major;
     int m_minor;
     int m_patch;
+    QString m_fullBoardType;
     QString m_boardType;
     QString m_boardId;
     int m_boardVID;
@@ -487,6 +488,20 @@ private:
                                    QStringList &providerMethods, QMap<QString, QStringList> &providerMethodArgs);
     void parseImports(const QString &fileText, const QString &moduleFolder, const QStringList &builtInModules, importDataList_t &targetModules, QStringList &errorModules);
     bool importHelper(const QByteArray &text);
+
+    ///////////////////////////////////////////////////////////////////////////
+
+    typedef struct exampleFilter
+    {
+        QRegularExpression path;
+        QRegularExpression boardType;
+        QRegularExpression sensorType;
+    }
+    exampleFilter_t;
+
+    QList<exampleFilter_t> m_exampleFilters;
+
+    bool matchExample(const QString &filePath);
 };
 
 } // namespace Internal

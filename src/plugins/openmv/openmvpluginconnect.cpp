@@ -1482,12 +1482,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             isRPIPico = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == RPI_LDR_PID))) ||
                                         ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
 
-                            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("\\[(.+?):(.+?)\\]")).match(arch2);
+                            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(.+?)\\[(.+?):(.+?)\\]")).match(arch2);
 
                             if(match.hasMatch())
                             {
-                                m_boardType = match.captured(1);
-                                m_boardId = match.captured(2);
+                                m_fullBoardType = match.captured(1).trimmed();
+                                m_boardType = match.captured(2);
+                                m_boardId = match.captured(3);
                                 m_boardVID = vidpid.at(0).toInt(nullptr, 16);
                                 m_boardPID = vidpid.at(1).toInt(nullptr, 16);
                             }
@@ -3293,6 +3294,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             m_iodevice->mainTerminalInputEnable(true);
         }
 
+        m_fullBoardType = QString();
         m_boardType = QString();
         m_boardId = QString();
         m_boardVID = 0;
@@ -3325,16 +3327,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
             if(!arch2.isEmpty())
             {
-                QRegularExpressionMatch match = QRegularExpression(QStringLiteral("\\[(.+?):(.+?)\\]")).match(arch2);
+                QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(.+?)\\[(.+?):(.+?)\\]")).match(arch2);
 
                 if(match.hasMatch())
                 {
                     QSerialPortInfo raw_tempPort = QSerialPortInfo(selectedPort);
                     MyQSerialPortInfo tempPort(raw_tempPort);
 
-                    QString board = match.captured(1);
-                    QString id = match.captured(2);
+                    QString board = match.captured(2);
+                    QString id = match.captured(3);
 
+                    m_fullBoardType = match.captured(1).trimmed();
                     m_boardType = board;
                     m_boardId = id;
                     m_boardVID = tempPort.vendorIdentifier();
@@ -3812,6 +3815,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_major = int();
             m_minor = int();
             m_patch = int();
+            // LEAVE CACHED m_fullBoardType = QString();
             // LEAVE CACHED m_boardType = QString();
             // LEAVE CACHED m_boardId = QString();
             // LEAVE CACHED m_boardVID = 0;
