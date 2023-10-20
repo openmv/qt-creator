@@ -34,6 +34,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_major = int();
     m_minor = int();
     m_patch = int();
+    m_fullBoardType = QString();
     m_boardType = QString();
     m_boardId = QString();
     m_boardVID = 0;
@@ -965,6 +966,40 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     ///////////////////////////////////////////////////////////////////////////
 
+    m_exampleFilters = QList<exampleFilter_t>();
+
+    QFile filters(Core::ICore::userResourcePath(QStringLiteral("examples/filters.txt")).toString());
+
+    if(filters.open(QIODevice::ReadOnly))
+    {
+        forever
+        {
+            QByteArray data = filters.readLine();
+
+            if((filters.error() == QFile::NoError) && (!data.isEmpty()))
+            {
+                if (QRegularExpression(QStringLiteral("^\\s*#")).match(QString::fromUtf8(data)).hasMatch()) continue;
+                QRegularExpressionMatch regexes = QRegularExpression(QStringLiteral("\"(.+?)\"\\s*,\\s*\"(.+?)\"\\s*,\\s*\"(.+?)\"")).match(QString::fromUtf8(data));
+                exampleFilter_t filter;
+                filter.path = QRegularExpression(regexes.captured(1));
+                filter.path.optimize();
+                filter.boardType = QRegularExpression(regexes.captured(2));
+                filter.boardType.optimize();
+                filter.sensorType = QRegularExpression(regexes.captured(3));
+                filter.sensorType.optimize();
+
+                m_exampleFilters.append(filter);
+            }
+            else
+            {
+                filters.close();
+                break;
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+
     qRegisterMetaType<importDataList_t>("importDataList_t");
 
     // Scan examples.
@@ -1539,7 +1574,10 @@ void OpenMVPlugin::extensionsInitialized()
                                                      "    print(clock.fps())\n").
                                       arg(Utils::Environment::systemEnvironment().toDictionary().userName()).arg(QDate::currentDate().toString()).toUtf8();
 
-                if((m_sensorType == QStringLiteral("HM01B0")) || (m_sensorType == QStringLiteral("MT9V034")))
+                if((m_sensorType == QStringLiteral("HM01B0")) ||
+                   (m_sensorType == QStringLiteral("HM0360")) ||
+                   (m_sensorType == QStringLiteral("MT9V0X2")) ||
+                   (m_sensorType == QStringLiteral("MT9V0X4")))
                 {
                     contents = contents.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
                     if(m_sensorType == QStringLiteral("HM01B0")) contents = contents.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
@@ -3999,14 +4037,32 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
         {
             QMenu *menu = new QMenu(notExamples ? it.fileName() : it.fileName().remove(QRegularExpression(QStringLiteral("^\\d+-"))).replace(QLatin1Char('-'), QLatin1Char(' ')), parent);
             QMultiMap<QString, QAction *> menuActions = aboutToShowExamplesRecursive(filePath, menu, notExamples);
-            menu->addActions(menuActions.values());
-            menu->setDisabled(menuActions.values().isEmpty());
-            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName());
-            actions.insert(QString(QStringLiteral("%1-")).arg(match.hasMatch() ? match.captured(1).toInt() : INT_MAX, 10) + it.fileName(), menu->menuAction());
+
+            // Skip making this menu if it only has a sub-menu inside of it (only for menus).
+            if((menuActions.size() == 1) && menuActions.first()->data().toBool())
+            {
+                menuActions.first()->parent()->setParent(parent);
+                delete menu;
+                actions.unite(menuActions);
+            }
+            else if(!menuActions.isEmpty())
+            {
+                menu->addActions(menuActions.values());
+                menu->setDisabled(menuActions.values().isEmpty());
+                QRegularExpressionMatch match = QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName());
+                QAction *menuAction = menu->menuAction();
+                menuAction->setData(true); // means it's a menu
+                actions.insert(QString(QStringLiteral("%1-")).arg(match.hasMatch() ? match.captured(1).toInt() : INT_MAX, 10) + it.fileName(), menuAction);
+            }
+            else
+            {
+                delete menu;
+            }
         }
-        else
+        else if(notExamples || matchExample(filePath))
         {
             QAction *action = new QAction(notExamples ? it.fileName() : it.fileName().remove(QRegularExpression(QStringLiteral("^\\d+-"))), parent);
+            action->setData(false); // means it's an action
             connect(action, &QAction::triggered, this, [this, filePath, notExamples]
             {
                 QFile file(filePath);
@@ -4017,10 +4073,11 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
 
                     if((file.error() == QFile::NoError) && (!data.isEmpty()))
                     {
-                        if((m_sensorType == QStringLiteral("HM01B0")) ||
+                        if((!notExamples) &&
+                          ((m_sensorType == QStringLiteral("HM01B0")) ||
                            (m_sensorType == QStringLiteral("HM0360")) ||
                            (m_sensorType == QStringLiteral("MT9V0X2")) ||
-                           (m_sensorType == QStringLiteral("MT9V0X4")))
+                           (m_sensorType == QStringLiteral("MT9V0X4"))))
                         {
                             data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
                             if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
@@ -5447,6 +5504,28 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
     free(family->name);
     free(family->codes);
     free(family);
+}
+
+bool OpenMVPlugin::matchExample(const QString &filePath)
+{
+    // Don't include the filter list file...
+    if (filePath.endsWith(QStringLiteral("filters.txt"))) return false;
+
+    // No Filtering if we are not connected.
+    if ((!m_connected) || m_exampleFilters.isEmpty()) return true;
+
+    bool match = false;
+
+    foreach(const exampleFilter_t &filter, m_exampleFilters)
+    {
+        if(filter.path.match(filePath).hasMatch() && filter.boardType.match(m_fullBoardType).hasMatch() && filter.sensorType.match(m_sensorType).hasMatch())
+        {
+            match = true;
+            break;
+        }
+    }
+
+    return match;
 }
 
 } // namespace Internal
