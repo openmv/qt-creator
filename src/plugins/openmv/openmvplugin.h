@@ -496,12 +496,14 @@ private:
         QRegularExpression path;
         QRegularExpression boardType;
         QRegularExpression sensorType;
+        QString flatten;
     }
     exampleFilter_t;
 
     QList<exampleFilter_t> m_exampleFilters;
 
-    bool matchExample(const QString &filePath);
+    bool matchFlatten(const QString &filePath, const QSet<QString> &flattenSet);
+    bool matchExample(const QString &filePath, QString *flattenRegex);
 };
 
 } // namespace Internal
