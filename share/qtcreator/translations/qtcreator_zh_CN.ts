@@ -6958,7 +6958,7 @@ ID: %2
 Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality and focus the camera (if applicable).</source>
         <translation>OpenMV Cam 自动注册！
 
-董事会：%1
+板子：%1
 ID：%2
 
 剩余 %3 个板密钥可用于注册板类型：%1
@@ -6975,7 +6975,7 @@ ID: %2
 Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality and focus the camera (if applicable).</source>
         <translation>OpenMV Cam 自动注册！
 
-董事会：%1
+板子：%1
 编号：%2
 
 请运行 Examples-&gt;HelloWorld-&gt;helloworld.py 来测试视觉质量和聚焦相机（如果适用）。</translation>
@@ -8140,7 +8140,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
     <message>
         <location line="+98"/>
         <source>Board: %L1</source>
-        <translation>董事会：%L1</translation>
+        <translation>板子：%L1</translation>
     </message>
     <message>
         <location line="+2"/>
