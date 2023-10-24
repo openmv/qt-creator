@@ -968,7 +968,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     m_exampleFilters = QList<exampleFilter_t>();
 
-    QFile filters(Core::ICore::userResourcePath(QStringLiteral("examples/filters.txt")).toString());
+    QFile filters(Core::ICore::userResourcePath(QStringLiteral("examples/index.csv")).toString());
 
     if(filters.open(QIODevice::ReadOnly))
     {
@@ -979,7 +979,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             if((filters.error() == QFile::NoError) && (!data.isEmpty()))
             {
                 if (QRegularExpression(QStringLiteral("^\\s*#")).match(QString::fromUtf8(data)).hasMatch()) continue;
-                QRegularExpressionMatch regexes = QRegularExpression(QStringLiteral("\"(.+?)\"\\s*,\\s*\"(.+?)\"\\s*,\\s*\"(.+?)\"")).match(QString::fromUtf8(data));
+                QRegularExpressionMatch regexes = QRegularExpression(QStringLiteral("\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"")).match(QString::fromUtf8(data));
+
                 exampleFilter_t filter;
                 filter.path = QRegularExpression(regexes.captured(1));
                 filter.path.optimize();
@@ -987,6 +988,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                 filter.boardType.optimize();
                 filter.sensorType = QRegularExpression(regexes.captured(3));
                 filter.sensorType.optimize();
+                filter.flatten = regexes.captured(4);
 
                 m_exampleFilters.append(filter);
             }
@@ -1212,9 +1214,28 @@ void OpenMVPlugin::extensionsInitialized()
     examplesMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     connect(filesMenu->menu(), &QMenu::aboutToShow, this, [this, examplesMenu] {
         examplesMenu->menu()->clear();
-        QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::userResourcePath(QStringLiteral("examples")).toString(), examplesMenu->menu());
-        examplesMenu->menu()->addActions(actions.values());
-        examplesMenu->menu()->setDisabled(actions.values().isEmpty());
+
+        if(m_connected)
+        {
+            QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::userResourcePath(QStringLiteral("examples")).toString(), examplesMenu->menu());
+
+            if(actions.isEmpty())
+            {
+                QAction *action = new QAction(Tr::tr("No examples found for your board"), examplesMenu->menu());
+                action->setDisabled(true);
+                examplesMenu->menu()->addAction(action);
+            }
+            else
+            {
+                examplesMenu->menu()->addActions(actions.values());
+            }
+        }
+        else
+        {
+            QAction *action = new QAction(Tr::tr("Connect to your board first to see examples"), examplesMenu->menu());
+            action->setDisabled(true);
+            examplesMenu->menu()->addAction(action);
+        }
     });
 
     Core::ActionContainer *toolsMenu = Core::ActionManager::actionContainer(Core::Constants::M_TOOLS);
@@ -4031,6 +4052,7 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
 
     while(it.hasNext())
     {
+        QString flattenRegex;
         QString filePath = it.next();
 
         if(it.fileInfo().isDir())
@@ -4039,7 +4061,7 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
             QMultiMap<QString, QAction *> menuActions = aboutToShowExamplesRecursive(filePath, menu, notExamples);
 
             // Skip making this menu if it only has a sub-menu inside of it (only for menus).
-            if((menuActions.size() == 1) && menuActions.first()->data().toBool())
+            if((menuActions.size() == 1) && menuActions.first()->menu())
             {
                 menuActions.first()->parent()->setParent(parent);
                 delete menu;
@@ -4047,22 +4069,59 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
             }
             else if(!menuActions.isEmpty())
             {
-                menu->addActions(menuActions.values());
-                menu->setDisabled(menuActions.values().isEmpty());
-                QRegularExpressionMatch match = QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName());
-                QAction *menuAction = menu->menuAction();
-                menuAction->setData(true); // means it's a menu
-                actions.insert(QString(QStringLiteral("%1-")).arg(match.hasMatch() ? match.captured(1).toInt() : INT_MAX, 10) + it.fileName(), menuAction);
+                QSet<QString> flattenRegexSet;
+
+                foreach(QAction *action, menuActions.values())
+                {
+                    foreach(const QVariant &regex, action->data().toList())
+                    {
+                        flattenRegexSet.insert(regex.toString());
+                    }
+                }
+
+                if((!notExamples) && matchFlatten(filePath, flattenRegexSet))
+                {
+                    foreach(QAction *action, menuActions.values())
+                    {
+                        if(action->menu())
+                        {
+                            action->parent()->setParent(parent);
+                        }
+                        else
+                        {
+                            action->setParent(parent);
+                        }
+                    }
+
+                    delete menu;
+                    actions.unite(menuActions);
+                }
+                else
+                {
+                    menu->addActions(menuActions.values());
+                    menu->setDisabled(menuActions.values().isEmpty());
+                    QAction *menuAction = menu->menuAction();
+                    menuAction->setData(flattenRegexSet.values());
+
+                    if(QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName()).hasMatch())
+                    {
+                        actions.insert(QDir::cleanPath(QFileInfo(filePath).path() + QDir::separator() + it.fileName()), menuAction);
+                    }
+                    else
+                    {
+                        actions.insert(QDir::cleanPath(QFileInfo(filePath).path() + QDir::separator() + QString(QStringLiteral("%1-")).arg(999999) + it.fileName()), menuAction);
+                    }
+                }
             }
             else
             {
                 delete menu;
             }
         }
-        else if(notExamples || matchExample(filePath))
+        else if(notExamples || matchExample(filePath, &flattenRegex))
         {
             QAction *action = new QAction(notExamples ? it.fileName() : it.fileName().remove(QRegularExpression(QStringLiteral("^\\d+-"))), parent);
-            action->setData(false); // means it's an action
+            action->setData(QStringList() << flattenRegex);
             connect(action, &QAction::triggered, this, [this, filePath, notExamples]
             {
                 QFile file(filePath);
@@ -4124,8 +4183,14 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
                 }
             });
 
-            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName());
-            actions.insert(QString(QStringLiteral("%1-")).arg(match.hasMatch() ? match.captured(1).toInt() : INT_MAX, 10) + it.fileName(), action);
+            if(QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName()).hasMatch())
+            {
+                actions.insert(QDir::cleanPath(QFileInfo(filePath).path() + QDir::separator() + it.fileName()), action);
+            }
+            else
+            {
+                actions.insert(QDir::cleanPath(QFileInfo(filePath).path() + QDir::separator() + QString(QStringLiteral("%1-")).arg(999999) + it.fileName()), action);
+            }
         }
     }
 
@@ -5506,20 +5571,39 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
     free(family);
 }
 
-bool OpenMVPlugin::matchExample(const QString &filePath)
+bool OpenMVPlugin::matchFlatten(const QString &filePath, const QSet<QString> &flattenSet)
 {
-    // Don't include the filter list file...
-    if (filePath.endsWith(QStringLiteral("filters.txt"))) return false;
+    bool flatten = true;
 
-    // No Filtering if we are not connected.
-    if ((!m_connected) || m_exampleFilters.isEmpty()) return true;
+    foreach(const QString &regex, flattenSet.values())
+    {
+        if(regex.isEmpty() || (!QRegularExpression(regex).match(filePath).hasMatch()))
+        {
+            flatten = false;
+            break;
+        }
+    }
+
+    return flatten;
+}
+
+bool OpenMVPlugin::matchExample(const QString &filePath, QString *flattenRegex)
+{
+    QString cleanFilePath = QDir::cleanPath(QDir::fromNativeSeparators(filePath));
+
+    // Don't include the filter list file...
+    if (cleanFilePath.endsWith(QStringLiteral("index.csv"))) return false;
+
+    // No Filtering if there are no filters...
+    if (m_exampleFilters.isEmpty()) return true;
 
     bool match = false;
 
     foreach(const exampleFilter_t &filter, m_exampleFilters)
     {
-        if(filter.path.match(filePath).hasMatch() && filter.boardType.match(m_fullBoardType).hasMatch() && filter.sensorType.match(m_sensorType).hasMatch())
+        if(filter.path.match(cleanFilePath).hasMatch() && filter.boardType.match(m_fullBoardType).hasMatch() && filter.sensorType.match(m_sensorType).hasMatch())
         {
+            *flattenRegex = filter.flatten;
             match = true;
             break;
         }
