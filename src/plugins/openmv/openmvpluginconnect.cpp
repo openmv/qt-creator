@@ -1486,6 +1486,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                             if(match.hasMatch())
                             {
+                                m_boardTypeFolder = originalFirmwareFolder;
                                 m_fullBoardType = match.captured(1).trimmed();
                                 m_boardType = match.captured(2);
                                 m_boardId = match.captured(3);
@@ -3294,6 +3295,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             m_iodevice->mainTerminalInputEnable(true);
         }
 
+        m_boardTypeFolder = QString();
         m_fullBoardType = QString();
         m_boardType = QString();
         m_boardId = QString();
@@ -3350,6 +3352,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     if(boards.open(QIODevice::ReadOnly))
                     {
                         QMap<QString, QString> mappings;
+                        QMap<QString, QString> folderMappings;
 
                         forever
                         {
@@ -3360,6 +3363,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 QRegularExpressionMatch mapping = QRegularExpression(QStringLiteral("(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\d+)\\s+(\\d+)\\s+(\\d+)\\s+(\\S+)")).match(QString::fromUtf8(data));
                                 QString temp = mapping.captured(1).replace(QStringLiteral("_"), QStringLiteral(" "));
                                 mappings.insert(temp, mapping.captured(2));
+                                folderMappings.insert(temp, mapping.captured(3));
                             }
                             else
                             {
@@ -3375,6 +3379,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             if(mappings.contains(temp))
                             {
                                 boardTypeLabel = mappings.value(temp).replace(QStringLiteral("_"), QStringLiteral(" "));
+                                m_boardTypeFolder = folderMappings.value(temp);
                             }
                         }
                     }
@@ -3815,6 +3820,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_major = int();
             m_minor = int();
             m_patch = int();
+            // LEAVE CACHED m_boardTypeFolder = QString();
             // LEAVE CACHED m_fullBoardType = QString();
             // LEAVE CACHED m_boardType = QString();
             // LEAVE CACHED m_boardId = QString();

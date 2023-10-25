@@ -377,6 +377,7 @@ private:
     int m_major;
     int m_minor;
     int m_patch;
+    QString m_boardTypeFolder;
     QString m_fullBoardType;
     QString m_boardType;
     QString m_boardId;
