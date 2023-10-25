@@ -34,6 +34,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_major = int();
     m_minor = int();
     m_patch = int();
+    m_boardTypeFolder = QString();
     m_fullBoardType = QString();
     m_boardType = QString();
     m_boardId = QString();
@@ -986,8 +987,10 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                 filter.path.optimize();
                 filter.boardType = QRegularExpression(regexes.captured(2));
                 filter.boardType.optimize();
+                filter.boardType.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
                 filter.sensorType = QRegularExpression(regexes.captured(3));
                 filter.sensorType.optimize();
+                filter.sensorType.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
                 filter.flatten = regexes.captured(4);
 
                 m_exampleFilters.append(filter);
@@ -5601,7 +5604,7 @@ bool OpenMVPlugin::matchExample(const QString &filePath, QString *flattenRegex)
 
     foreach(const exampleFilter_t &filter, m_exampleFilters)
     {
-        if(filter.path.match(cleanFilePath).hasMatch() && filter.boardType.match(m_fullBoardType).hasMatch() && filter.sensorType.match(m_sensorType).hasMatch())
+        if(filter.path.match(cleanFilePath).hasMatch() && filter.boardType.match(m_boardTypeFolder).hasMatch() && filter.sensorType.match(m_sensorType).hasMatch())
         {
             *flattenRegex = filter.flatten;
             match = true;
