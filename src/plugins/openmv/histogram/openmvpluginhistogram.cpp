@@ -139,7 +139,7 @@ static inline int getValue(int value, int channel)
 void OpenMVPluginHistogram::updatePlot(QCPGraph *graph, int channel)
 {
     QImage image = m_pixmap.toImage();
-    QVector<int> vector;
+    QVector<long long> vector;
 
     switch(channel)
     {
