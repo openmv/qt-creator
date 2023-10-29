@@ -4068,7 +4068,11 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
             {
                 menuActions.first()->parent()->setParent(parent);
                 delete menu;
-                actions.unite(menuActions);
+
+                for(auto i = menuActions.begin(), end = menuActions.end(); i != end; i++)
+                {
+                    actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QString(i.key()).remove(it.fileName()))), i.value());
+                }
             }
             else if(!menuActions.isEmpty())
             {
@@ -4097,7 +4101,11 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
                     }
 
                     delete menu;
-                    actions.unite(menuActions);
+
+                    for(auto i = menuActions.begin(), end = menuActions.end(); i != end; i++)
+                    {
+                        actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QString(i.key()).remove(it.fileName()))), i.value());
+                    }
                 }
                 else
                 {
@@ -4108,11 +4116,11 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
 
                     if(QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName()).hasMatch())
                     {
-                        actions.insert(QDir::cleanPath(QFileInfo(filePath).path() + QDir::separator() + it.fileName()), menuAction);
+                        actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QFileInfo(filePath).path() + QDir::separator() + it.fileName())), menuAction);
                     }
                     else
                     {
-                        actions.insert(QDir::cleanPath(QFileInfo(filePath).path() + QDir::separator() + QString(QStringLiteral("%1-")).arg(999999) + it.fileName()), menuAction);
+                        actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QFileInfo(filePath).path() + QDir::separator() + QString(QStringLiteral("%1-")).arg(999999) + it.fileName())), menuAction);
                     }
                 }
             }
@@ -4188,11 +4196,11 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
 
             if(QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName()).hasMatch())
             {
-                actions.insert(QDir::cleanPath(QFileInfo(filePath).path() + QDir::separator() + it.fileName()), action);
+                actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QFileInfo(filePath).path() + QDir::separator() + it.fileName())), action);
             }
             else
             {
-                actions.insert(QDir::cleanPath(QFileInfo(filePath).path() + QDir::separator() + QString(QStringLiteral("%1-")).arg(999999) + it.fileName()), action);
+                actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QFileInfo(filePath).path() + QDir::separator() + QString(QStringLiteral("%1-")).arg(999999) + it.fileName())), action);
             }
         }
     }
