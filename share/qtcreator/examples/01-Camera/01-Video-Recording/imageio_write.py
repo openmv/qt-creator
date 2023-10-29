@@ -1,10 +1,13 @@
+# This work is licensed under the MIT license.
+# Copyright (c) 2013-2023 OpenMV LLC. All rights reserved.
+# https://github.com/openmv/openmv/blob/master/LICENSE
+#
 # Image Writer Example
 #
 # NOTE: This example requires an SD card.
 #
-# This example shows how to use the Image Writer object to record snapshots of what your
-# OpenMV Cam sees for later analysis using the Image Reader object. Images written to disk
-# by the Image Writer object are stored in a simple file format readable by your OpenMV Cam.
+# This example shows how to use the Image Writer object to record a raw video file
+# for later analysis using the Image Reader object.
 
 import sensor
 import image
