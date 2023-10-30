@@ -4200,7 +4200,7 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
             }
             else
             {
-                actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QFileInfo(filePath).path() + QDir::separator() + QString(QStringLiteral("%1-")).arg(999999) + it.fileName())), action);
+                actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QFileInfo(filePath).path() + QDir::separator() + QString(QStringLiteral("%1-")).arg(888888) + it.fileName())), action);
             }
         }
     }
