@@ -105,9 +105,7 @@ QStringList imxGetAllDevices(bool spd_host, bool bl_host)
 
             if(pRawInputDeviceList)
             {
-                UINT nDevices2 = 0;
-
-                if((GetRawInputDeviceList(pRawInputDeviceList, &nDevices2, sizeof(RAWINPUTDEVICELIST)) == nDevices) && (nDevices == nDevices2))
+                if(GetRawInputDeviceList(pRawInputDeviceList, &nDevices, sizeof(RAWINPUTDEVICELIST)) == nDevices)
                 {
                     for(UINT i = 0; i < nDevices; i++)
                     {
