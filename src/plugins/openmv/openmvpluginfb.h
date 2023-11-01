@@ -32,7 +32,7 @@ public slots:
 signals:
 
     void pixmapUpdate(const QPixmap &data);
-    void resolutionAndROIUpdate(const QSize &res, const QRect &roi);
+    void resolutionAndROIUpdate(const QSize &res, const QRect &roi, int focus);
     void saveImage(const QPixmap &data);
     void saveTemplate(const QRect &rect);
     void saveDescriptor(const QRect &rect);
@@ -67,6 +67,8 @@ private:
     QTemporaryFile *m_tempFile;
     QElapsedTimer m_elaspedTimer;
     QQueue<qint64> m_previousElaspedTimers;
+
+    void broadcastUpdate();
 };
 
 } // namespace Internal

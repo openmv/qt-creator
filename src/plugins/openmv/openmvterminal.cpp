@@ -955,7 +955,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
 
     connect(frameBuffer, &OpenMVPluginFB::pixmapUpdate, histogram, &OpenMVPluginHistogram::pixmapUpdate);
 
-    connect(frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [resLabel] (const QSize &res, const QRect &roi) {
+    connect(frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [resLabel] (const QSize &res, const QRect &roi, int focus) {
         if(res.isValid())
         {
             if(roi.isValid())
@@ -963,7 +963,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
                 if((roi.width() > 1)
                 || (roi.height() > 1))
                 {
-                    resLabel->setText(Tr::tr("Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()).arg(roi.width()).arg(roi.height()).arg(roi.width() * roi.height()));
+                    resLabel->setText(Tr::tr("Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()).arg(roi.width()).arg(roi.height()).arg(roi.width() * roi.height()).arg(focus));
                 }
                 else
                 {
@@ -972,7 +972,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
             }
             else
             {
-                resLabel->setText(Tr::tr("Res (w:%1, h:%2)").arg(res.width()).arg(res.height()));
+                resLabel->setText(Tr::tr("Res (w:%1, h:%2) - Focus (%3)").arg(res.width()).arg(res.height()).arg(focus));
             }
         }
         else
