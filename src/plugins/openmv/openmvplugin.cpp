@@ -1218,7 +1218,7 @@ void OpenMVPlugin::extensionsInitialized()
     connect(filesMenu->menu(), &QMenu::aboutToShow, this, [this, examplesMenu] {
         examplesMenu->menu()->clear();
 
-        if(m_connected)
+        if((!m_enableFilteringExamplesAction->isChecked()) || m_connected)
         {
             QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::userResourcePath(QStringLiteral("examples")).toString(), examplesMenu->menu());
 
@@ -1286,6 +1286,14 @@ void OpenMVPlugin::extensionsInitialized()
     m_enableSyncingImportsAction->setCheckable(true);
     m_enableSyncingImportsAction->setChecked(false);
     m_enableSyncingImportsAction->setDisabled(false);
+
+    m_enableFilteringExamplesAction = new QAction(Tr::tr("Filter examples by board and sensor type"), this);
+    m_enableFilteringExamplesAction->setToolTip(Tr::tr("Only show examples that are relevant for your board and sensor type."));
+    Core::Command *enableFilteringExamplesCommand = Core::ActionManager::registerAction(m_enableFilteringExamplesAction, Utils::Id("OpenMV.EnableFilteringExamples"));
+    toolsMenu->addAction(enableFilteringExamplesCommand);
+    m_enableFilteringExamplesAction->setCheckable(true);
+    m_enableFilteringExamplesAction->setChecked(true);
+    m_enableFilteringExamplesAction->setDisabled(false);
 
     toolsMenu->addSeparator();
 
@@ -2466,6 +2474,8 @@ void OpenMVPlugin::extensionsInitialized()
         (!m_disableStop) && settings->value(QStringLiteral(STOP_SCRIPT_CONNECT_DISCONNECT_STATE), m_stopOnConnectDiconnectionAction->isChecked()).toBool());
     m_enableSyncingImportsAction->setChecked(
         settings->value(QStringLiteral(ENABLE_SYNCING_IMPORTS_STATE), m_enableSyncingImportsAction->isChecked()).toBool());
+    m_enableFilteringExamplesAction->setChecked(
+        settings->value(QStringLiteral(ENABLE_FILTERING_EXAMPLES_STATE), m_enableFilteringExamplesAction->isChecked()).toBool());
     m_connectAction->setEnabled(!m_autoReconnectAction->isChecked());
     m_disconnectAction->setEnabled(!m_autoReconnectAction->isChecked());
     if(m_autoReconnectAction->isChecked()) {
@@ -2560,6 +2570,8 @@ void OpenMVPlugin::extensionsInitialized()
             m_stopOnConnectDiconnectionAction->isChecked());
         settings->setValue(QStringLiteral(ENABLE_SYNCING_IMPORTS_STATE),
             m_enableSyncingImportsAction->isChecked());
+        settings->setValue(QStringLiteral(ENABLE_FILTERING_EXAMPLES_STATE),
+            m_enableFilteringExamplesAction->isChecked());
         settings->setValue(QStringLiteral(ZOOM_STATE),
             zoomButton->isChecked());
         settings->setValue(QStringLiteral(JPG_COMPRESS_STATE),
@@ -4114,9 +4126,11 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
                     QAction *menuAction = menu->menuAction();
                     menuAction->setData(flattenRegexSet.values());
 
-                    if(QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName()).hasMatch())
+                    QRegularExpressionMatch m = QRegularExpression(QStringLiteral("(\\d+)-(.+)")).match(it.fileName());
+
+                    if(m.hasMatch())
                     {
-                        actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QFileInfo(filePath).path() + QDir::separator() + it.fileName())), menuAction);
+                        actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QFileInfo(filePath).path() + QDir::separator() + QString(QStringLiteral("%1-%2")).arg(m.captured(1), 5, '0').arg(m.captured(2)))), menuAction);
                     }
                     else
                     {
@@ -4194,9 +4208,11 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
                 }
             });
 
-            if(QRegularExpression(QStringLiteral("^\\d+-")).match(it.fileName()).hasMatch())
+            QRegularExpressionMatch m = QRegularExpression(QStringLiteral("^(\\d+)-(.+)")).match(it.fileName());
+
+            if(m.hasMatch())
             {
-                actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QFileInfo(filePath).path() + QDir::separator() + it.fileName())), action);
+                actions.insert(QDir::cleanPath(QDir::fromNativeSeparators(QFileInfo(filePath).path() + QDir::separator() + QString(QStringLiteral("%1-%2")).arg(m.captured(1), 5, '0').arg(m.captured(2)))), action);
             }
             else
             {
@@ -5606,7 +5622,7 @@ bool OpenMVPlugin::matchExample(const QString &filePath, QString *flattenRegex)
     if (cleanFilePath.endsWith(QStringLiteral("index.csv"))) return false;
 
     // No Filtering if there are no filters...
-    if (m_exampleFilters.isEmpty()) return true;
+    if ((!m_enableFilteringExamplesAction->isChecked()) || m_exampleFilters.isEmpty()) return true;
 
     bool match = false;
 
