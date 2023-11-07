@@ -936,11 +936,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
                                     if((answer == QMessageBox::Yes) || (answer == QMessageBox::No))
                                     {
+                                        originalFirmwareFolder = mappings.value(temp);
+                                        firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(QStringLiteral("firmware.bin")).toString();
+                                        if (forceBootloader && (!forceFirmwarePath.isEmpty())) firmwarePath = forceFirmwarePath;
                                         forceBootloader = true;
                                         forceFlashFSErase = answer == QMessageBox::Yes;
                                         forceBootloaderBricked = true;
-                                        originalFirmwareFolder = mappings.value(temp);
-                                        firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(QStringLiteral("firmware.bin")).toString();
                                         originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                                         originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                                         originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
@@ -1453,6 +1454,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             {
                                 originalFirmwareFolder = mappings.value(temp);
                                 firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(QStringLiteral("firmware.bin")).toString();
+                                if (forceBootloader && (!forceFirmwarePath.isEmpty())) firmwarePath = forceFirmwarePath;
                                 originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                                 originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                                 originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
