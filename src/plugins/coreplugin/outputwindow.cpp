@@ -691,6 +691,8 @@ void OutputWindow::appendText(const QString &textIn)
             text = text.mid(index);
         }
 
+        text = text.replace(QStringLiteral("MPY: soft reboot\n"), QStringLiteral(""));
+
         QChar lastChar = QChar();
         QString string;
         int column = 0;
