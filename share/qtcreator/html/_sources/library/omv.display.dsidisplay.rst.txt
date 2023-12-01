@@ -28,7 +28,7 @@ Constructors
 
     ``framesize`` One of the standard supported resolutions.
 
-    ``refresh`` Sets the LCD refresh rate in hertz. This controls the SPI LCD shield clock.
+    ``refresh`` Sets the screen refresh rate in hertz. This controls the DSI LCD clock.
 
     ``portrait`` Swap the framesize width and height.
 
