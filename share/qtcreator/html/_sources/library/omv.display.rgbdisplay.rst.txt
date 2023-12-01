@@ -28,7 +28,7 @@ Constructors
 
     ``framesize`` One of the standard supported resolutions.
 
-    ``refresh`` Sets the LCD refresh rate in hertz. This controls the SPI LCD shield clock.
+    ``refresh`` Sets the screen refresh rate in hertz. This controls the RGB LCD clock.
 
     ``display_on`` Enables the display. Pass `False` here when the 24-bit parallel LCD output is
     shared by multiple devices like the TFP410 chip for driving HDMI displays to keep the display

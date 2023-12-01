@@ -143,7 +143,7 @@
 <dt class="sig sig-object py" id="display.display.RGBDisplay">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">display.</span></span><span class="sig-name descname"><span class="pre">RGBDisplay</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">framesize=display.FWVGA</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">refresh=60</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">display_on=True</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">portrait=False</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">controller</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">backlight</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#display.display.RGBDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">framesize</span></code> One of the standard supported resolutions.</p>
-<p><code class="docutils literal notranslate"><span class="pre">refresh</span></code> Sets the LCD refresh rate in hertz. This controls the SPI LCD shield clock.</p>
+<p><code class="docutils literal notranslate"><span class="pre">refresh</span></code> Sets the screen refresh rate in hertz. This controls the RGB LCD clock.</p>
 <p><code class="docutils literal notranslate"><span class="pre">display_on</span></code> Enables the display. Pass <a class="reference external" href="https://docs.python.org/3.5/library/constants.html#False" title="(in Python v3.5)"><code class="xref any docutils literal notranslate"><span class="pre">False</span></code></a> here when the 24-bit parallel LCD output is
 shared by multiple devices like the TFP410 chip for driving HDMI displays to keep the display
 off while driving the databus still.</p>
@@ -262,7 +262,7 @@ as a GPIO pin and will only go from 0 (off) to !0 (on).</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 30 Nov 2023.
+      <span class="lastupdated">Last updated on 01 Dec 2023.
       </span></p>
   </div>
 

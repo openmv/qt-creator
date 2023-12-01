@@ -143,7 +143,7 @@
 <dt class="sig sig-object py" id="display.display.DSIDisplay">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">display.</span></span><span class="sig-name descname"><span class="pre">DSIDisplay</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">framesize=display.FWVGA</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">refresh=60</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">portrait=False</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">channel=0</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">controller</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">backlight</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#display.display.DSIDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">framesize</span></code> One of the standard supported resolutions.</p>
-<p><code class="docutils literal notranslate"><span class="pre">refresh</span></code> Sets the LCD refresh rate in hertz. This controls the SPI LCD shield clock.</p>
+<p><code class="docutils literal notranslate"><span class="pre">refresh</span></code> Sets the screen refresh rate in hertz. This controls the DSI LCD clock.</p>
 <p><code class="docutils literal notranslate"><span class="pre">portrait</span></code> Swap the framesize width and height.</p>
 <p><code class="docutils literal notranslate"><span class="pre">channel</span></code> The virtual MIPI DSI channel to use to talk to the display.</p>
 <p><code class="docutils literal notranslate"><span class="pre">controller</span></code> Pass the controller chip class here to initialize it along with the display. E.g.
@@ -273,7 +273,7 @@ as a GPIO pin and will only go from 0 (off) to !0 (on).</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright - The MicroPython Documentation is Copyright © 2014-2023, Damien P. George, Paul Sokolovsky, and contributors.
-      <span class="lastupdated">Last updated on 30 Nov 2023.
+      <span class="lastupdated">Last updated on 01 Dec 2023.
       </span></p>
   </div>
 
