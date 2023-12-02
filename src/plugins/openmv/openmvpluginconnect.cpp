@@ -445,7 +445,11 @@ do { \
 #define RECONNECT_AND_FORCEBOOTLOADER_END() \
 do { \
     m_working = false; \
-    QTimer::singleShot(0, this, [this] {connectClicked(true);}); \
+    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QTimer::singleShot(0, this, [this, previousMapping] {connectClicked(true, QString(), false, false, false, false, previousMapping);}); \
+    else if(m_autoUpdate == QStringLiteral("release")) QTimer::singleShot(0, this, [this, previousMapping] {connectClicked(true, QString(), m_autoErase, false, false, false, previousMapping);}); \
+    else if(m_autoUpdate == QStringLiteral("developement")) QTimer::singleShot(0, this, [this, previousMapping] {connectClicked(true, QString(), m_autoErase, false, true, false, previousMapping);}); \
+    else if(QFileInfo(m_autoUpdate).isFile()) QTimer::singleShot(0, this, [this, previousMapping] {connectClicked(true, m_autoUpdate, (m_autoErase || m_autoUpdate.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive)), false, false, false, previousMapping);}); \
+    else if(m_autoErase) QTimer::singleShot(0, this, [this, previousMapping] {connectClicked(true, QString(), true, true, false, false, previousMapping);}); \
     return; \
 } while(0)
 
@@ -489,7 +493,11 @@ do { \
     m_iodevice->close(); \
     m_loop.exec(); \
     m_working = false; \
-    QTimer::singleShot(0, this, [this] {connectClicked(true);}); \
+    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QTimer::singleShot(0, this, [this, previousMapping] {connectClicked(true, QString(), false, false, false, false, previousMapping);}); \
+    else if(m_autoUpdate == QStringLiteral("release")) QTimer::singleShot(0, this, [this, previousMapping] {connectClicked(true, QString(), m_autoErase, false, false, false, previousMapping);}); \
+    else if(m_autoUpdate == QStringLiteral("developement")) QTimer::singleShot(0, this, [this, previousMapping] {connectClicked(true, QString(), m_autoErase, false, true, false, previousMapping);}); \
+    else if(QFileInfo(m_autoUpdate).isFile()) QTimer::singleShot(0, this, [this, previousMapping] {connectClicked(true, m_autoUpdate, (m_autoErase || m_autoUpdate.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive)), false, false, false, previousMapping);}); \
+    else if(m_autoErase) QTimer::singleShot(0, this, [this, previousMapping] {connectClicked(true, QString(), true, true, false, false, previousMapping);}); \
     return; \
 } while(0)
 
@@ -668,7 +676,7 @@ QPair<QStringList, QStringList> filterPorts(const QString &serialNumberFilter,
     return QPair<QStringList, QStringList>(stringList, dfuDevices);
 }
 
-void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePath, bool forceFlashFSErase, bool justEraseFlashFs, bool installTheLatestDevelopmentFirmware, bool waitForCamera)
+void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePath, bool forceFlashFSErase, bool justEraseFlashFs, bool installTheLatestDevelopmentFirmware, bool waitForCamera, QString previousMapping)
 {
     if(!m_working)
     {
@@ -679,8 +687,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         if(m_connected)
         {
-            m_connect_disconnect = connect(this, &OpenMVPlugin::disconnectDone, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera] {
-                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera] {connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera);});
+            m_connect_disconnect = connect(this, &OpenMVPlugin::disconnectDone, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping] {
+                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping] {connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping);});
             });
 
             QTimer::singleShot(0, this, [this] {disconnectClicked();});
@@ -713,6 +721,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         QString selectedPort;
         bool forceBootloaderBricked = false;
+        bool previousMappingSet = !previousMapping.isEmpty();
         QString originalFirmwareFolder = QString();
         QString firmwarePath = forceFirmwarePath;
         int originalEraseFlashSectorStart = FLASH_SECTOR_START;
@@ -918,24 +927,29 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             {
                                 int index = mappings.keys().indexOf(settings->value(QStringLiteral(LAST_BOARD_TYPE_STATE)).toString());
 
-                                bool ok = mappings.size() == 1;
-                                QString temp = (mappings.size() == 1) ? mappings.firstKey() : QInputDialog::getItem(Core::ICore::dialogParent(),
+                                bool previousMappingAvailable = previousMappingSet && mappings.contains(previousMapping);
+                                bool ok = previousMappingAvailable || (mappings.size() == 1);
+                                QString temp = previousMappingAvailable ? previousMapping :
+                                    ((mappings.size() == 1) ? mappings.firstKey() : QInputDialog::getItem(Core::ICore::dialogParent(),
                                     Tr::tr("Connect"), Tr::tr("Please select the board type"),
                                     mappings.keys(), (index != -1) ? index : 0, false, &ok,
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint)));
 
                                 if(ok)
                                 {
                                     settings->setValue(QStringLiteral(LAST_BOARD_TYPE_STATE), temp);
 
-                                    int answer = dfuDeviceResetToRelease ? (dfuDeviceEraseFlash ? QMessageBox::Yes : QMessageBox::No) : QMessageBox::question(Core::ICore::dialogParent(),
-                                        Tr::tr("Connect"),
-                                        Tr::tr("Erase the internal file system?"),
-                                        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
+                                    int answer = ((forceBootloader && previousMappingSet) ? (forceFlashFSErase ? QMessageBox::Yes : QMessageBox::No) :
+                                        (dfuDeviceResetToRelease ? (dfuDeviceEraseFlash ? QMessageBox::Yes : QMessageBox::No) :
+                                            QMessageBox::question(Core::ICore::dialogParent(),
+                                                                  Tr::tr("Connect"),
+                                                                  Tr::tr("Erase the internal file system?"),
+                                                                  QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)));
 
                                     if((answer == QMessageBox::Yes) || (answer == QMessageBox::No))
                                     {
+                                        previousMapping = temp;
                                         originalFirmwareFolder = mappings.value(temp);
                                         firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(QStringLiteral("firmware.bin")).toString();
                                         if (forceBootloader && (!forceFirmwarePath.isEmpty())) firmwarePath = forceFirmwarePath;
@@ -1571,7 +1585,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             });
 
                             QProgressDialog dialog(((!tryFastMode) || forceBootloaderBricked)
-                                    ? QString(QStringLiteral("%1%2")).arg(Tr::tr("Disconnect your OpenMV Cam and then reconnect it...")).arg(justEraseFlashFs ? QString() : Tr::tr("\n\nHit cancel to skip to DFU reprogramming."))
+                                    ? QString(QStringLiteral("%1%2")).arg(previousMappingSet ? Tr::tr("Reconnect your OpenMV Cam...") : Tr::tr("Disconnect your OpenMV Cam and then reconnect it...")).arg((previousMappingSet || justEraseFlashFs) ? QString() : Tr::tr("\n\nHit cancel to skip to DFU reprogramming."))
                                     : Tr::tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                                 (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
@@ -1624,7 +1638,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     Tr::tr("Connect"),
                                     Tr::tr("Unable to connect to your OpenMV Cam's normal bootloader!"));
 
-                                if((!justEraseFlashFs) && forceFirmwarePath.isEmpty() && QMessageBox::question(Core::ICore::dialogParent(),
+                                if((!previousMappingSet) && (!justEraseFlashFs) && forceFirmwarePath.isEmpty() && QMessageBox::question(Core::ICore::dialogParent(),
                                     Tr::tr("Connect"),
                                     Tr::tr("OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.\n\n"
                                        "Continue?"),
@@ -3133,7 +3147,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     Tr::tr("Connect"),
                                     Tr::tr("DFU bootloader reset complete!\n\n") +
                                     Tr::tr("Disconnect your OpenMV Cam from your computer and remove the jumper wire between the BOOT and RST pins.\n\n") +
-                                    Tr::tr("OpenMV IDE will now try to update your OpenMV Cam again."));
+                                    Tr::tr("Leave your OpenMV Cam unconnected until instructed to reconnect it."));
 
                                 RECONNECT_AND_FORCEBOOTLOADER_END();
                             }

@@ -327,7 +327,8 @@ public slots: // private
                         bool forceFlashFSErase = false,
                         bool justEraseFlashFs = false,
                         bool installTheLatestDevelopmentFirmware = false,
-                        bool waitForCamera = false);
+                        bool waitForCamera = false,
+                        QString previousMapping = QString());
     void disconnectClicked(bool reset = false);
     void startClicked();
     void stopClicked();
@@ -442,7 +443,6 @@ private:
     QList<documentation_t> m_functions;
     QList<documentation_t> m_methods;
     QSet<QString> m_arguments;
-
     QList<wifiPort_t> m_availableWifiPorts;
 
     typedef struct openTerminalMenuData
