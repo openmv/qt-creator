@@ -1863,7 +1863,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     typedef QPair<QString, QString> QStringPair;
     QList<QStringPair> cameras;
-
+    cameras.append(QStringPair(QStringLiteral("RT1062"), QStringLiteral("cam-rt1062-ov5640")));
     cameras.append(QStringPair(QStringLiteral("H7 Plus"), QStringLiteral("cam-h7-plus-ov5640")));
     cameras.append(QStringPair(QStringLiteral("H7"), QStringLiteral("cam-h7-ov7725")));
     cameras.append(QStringPair(QStringLiteral("M7"), QStringLiteral("cam-m7-ov7725")));
