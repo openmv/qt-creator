@@ -1476,7 +1476,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+11"/>
         <source>Pr&amp;eferences...</source>
-        <translation>优先...</translation>
+        <translation>选项...</translation>
     </message>
     <message>
         <location line="+35"/>
