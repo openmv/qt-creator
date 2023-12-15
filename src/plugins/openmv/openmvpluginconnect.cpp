@@ -3414,7 +3414,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                             {
                                 if(QString::fromUtf8(data).contains(QStringLiteral("<p>No</p>")))
                                 {
-                                    QTimer::singleShot(0, this, [this, board, id] { registerOpenMVCam(board, id); });
+                                    //QTimer::singleShot(0, this, [this, board, id] { registerOpenMVCam(board, id); });
                                 }
                                 else if((!m_formKey.isEmpty()) && (!QString::fromUtf8(data).contains(QStringLiteral("<p>Yes</p>"))))
                                 {
