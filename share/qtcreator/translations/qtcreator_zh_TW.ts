@@ -669,7 +669,7 @@
         <location line="+22"/>
         <source>All Files (*.*)</source>
         <comment>On Windows</comment>
-        <translation>全部文件 （*。*）</translation>
+        <translation>全部文件 (*.*)</translation>
     </message>
     <message>
         <location line="+2"/>
