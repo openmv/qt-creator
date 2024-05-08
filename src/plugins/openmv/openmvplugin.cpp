@@ -428,8 +428,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     if(true)
     #else
     if(arguments.contains(QStringLiteral("-full_screen")))
-    {
     #endif
+    {
         connect(ExtensionSystem::PluginManager::instance(), &ExtensionSystem::PluginManager::initializationDone, this, [] {
             QAction *action = Core::ActionManager::command(Core::Constants::TOGGLE_FULLSCREEN)->action();
 
