@@ -97,6 +97,10 @@
         {
             \"Name\" : \"-full_screen\",
             \"Description\" : \"Launch in full-screen mode\"
+        },
+        {
+            \"Name\" : \"-viewer_mode\",
+            \"Description\" : \"Launch in viewer mode\"
         }
     ],
     $$dependencyList

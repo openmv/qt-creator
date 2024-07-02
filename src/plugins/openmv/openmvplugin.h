@@ -356,6 +356,8 @@ private:
 
     bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path);
 
+    bool m_viewerMode;
+
     bool m_autoConnect;
     QString m_autoUpdate;
     bool m_autoErase;

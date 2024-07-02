@@ -93,6 +93,9 @@ void ProxyAction::update(QAction *action, bool initialize)
         return;
     disconnect(this, &ProxyAction::changed, this, &ProxyAction::updateToolTipWithKeySequence);
     if (initialize) {
+        // OPENMV-DIFF //
+        m_realAction = action;
+        // OPENMV-DIFF //
         setSeparator(action->isSeparator());
         setMenuRole(action->menuRole());
     }

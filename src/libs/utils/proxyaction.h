@@ -38,6 +38,7 @@ public:
     static QString stringWithAppendedShortcut(const QString &str, const QKeySequence &shortcut);
     static ProxyAction *proxyActionWithIcon(QAction *original, const QIcon &newIcon);
     // OPENMV-DIFF //
+    QAction *getRealAction() { return m_realAction; }
     void setOverrideToolTip(const QString &str) { m_overrideToolTip = str; setToolTip(m_overrideToolTip); }
     // OPENMV-DIFF //
 
@@ -58,6 +59,7 @@ private:
     QString m_toolTip;
     bool m_block = false;
     // OPENMV-DIFF //
+    QAction *m_realAction;
     QString m_overrideToolTip;
     // OPENMV-DIFF //
 };
