@@ -3592,10 +3592,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         if(!m_autoReconnectAction->isChecked()) m_disconnectAction->setEnabled(true);
         m_disconnectAction->setVisible(true);
         Core::IEditor *editor = Core::EditorManager::currentEditor();
-        m_startAction->setEnabled(editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false);
-        m_startAction->setVisible(true);
-        m_stopAction->setEnabled(false);
-        m_stopAction->setVisible(false);
+        m_startAction->setEnabled((!m_viewerMode) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
+        m_startAction->setVisible((!m_viewerMode) && true);
+        m_stopAction->setEnabled((!m_viewerMode) && false);
+        m_stopAction->setVisible((!m_viewerMode) && false);
 
         m_boardLabel->setEnabled(true);
         m_boardLabel->setText(Tr::tr("Board: %L1").arg(boardTypeLabel));
@@ -3856,10 +3856,10 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             if(!m_autoReconnectAction->isChecked()) m_connectAction->setEnabled(true);
             m_disconnectAction->setVisible(false);
             if(!m_autoReconnectAction->isChecked()) m_disconnectAction->setEnabled(false);
-            m_startAction->setEnabled(false);
-            m_startAction->setVisible(true);
-            m_stopAction->setEnabled(false);
-            m_stopAction->setVisible(false);
+            m_startAction->setEnabled((!m_viewerMode) && false);
+            m_startAction->setVisible((!m_viewerMode) && true);
+            m_stopAction->setEnabled((!m_viewerMode) && false);
+            m_stopAction->setVisible((!m_viewerMode) && false);
 
             m_boardLabel->setDisabled(true);
             m_boardLabel->setText(Tr::tr("Board:"));
