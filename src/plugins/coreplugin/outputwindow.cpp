@@ -692,6 +692,8 @@ void OutputWindow::appendText(const QString &textIn)
         }
 
         text = text.replace(QStringLiteral("MPY: soft reboot\n"), QStringLiteral(""));
+        text = text.replace(QStringLiteral("Exception: IDE interrupt\n"), QStringLiteral(""));
+        text = text.replace(QStringLiteral("KeyboardInterrupt:\n"), QStringLiteral(""));
 
         QChar lastChar = QChar();
         QString string;
