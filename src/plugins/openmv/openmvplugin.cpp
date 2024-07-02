@@ -51,7 +51,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_serialNumberFilter = QString();
     m_errorFilterRegex = QRegularExpression(QStringLiteral(
         "  File \"(.+?)\", line (\\d+).*?\n"
-        "(?!Exception: IDE interrupt)(.+?:.+?)\n"));
+        "(?!Exception: IDE interrupt|KeyboardInterrupt:|  File )(.+?:.+?)\n"));
     m_errorFilterString = QString();
 
     QTimer *timer = new QTimer(this);
