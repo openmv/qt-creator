@@ -337,12 +337,13 @@ bool OpenMVPluginSerialPort_thing::setRequestToSend(bool set)
     return bool();
 }
 
-OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(int override_read_timeout, int override_read_stall_timeout, QObject *parent) : QObject(parent)
+OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(int override_read_timeout, int override_read_stall_timeout, int override_per_command_wait, QObject *parent) : QObject(parent)
 {
     m_port = Q_NULLPTR;
     m_bootloaderStop = false;
     m_override_read_timeout = override_read_timeout;
     m_override_read_stall_timeout = override_read_stall_timeout;
+    m_override_per_command_wait = override_per_command_wait;
 }
 
 void OpenMVPluginSerialPort_private::open(const QString &portName)
@@ -677,7 +678,17 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
     if (command.m_perCommandWait) {
         // Execute commands slowly so as to not overload the OpenMV Cam board.
-        QThread::msleep(Utils::HostOsInfo::isMacHost() ? 2 : 1);
+        int per_command_wait = Utils::HostOsInfo::isMacHost() ? 2 : 1;
+
+        if(m_override_per_command_wait >= 0)
+        {
+            per_command_wait = m_override_per_command_wait;
+        }
+
+        if(per_command_wait > 0)
+        {
+            QThread::msleep(per_command_wait);
+        }
     }
 }
 
@@ -837,10 +848,10 @@ void OpenMVPluginSerialPort_private::bootloaderReset()
     emit bootloaderResetResponse();
 }
 
-OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout, int override_read_stall_timeout, QObject *parent) : QObject(parent)
+OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout, int override_read_stall_timeout, int override_per_command_wait, QObject *parent) : QObject(parent)
 {
     QThread *thread = new QThread;
-    OpenMVPluginSerialPort_private *port = new OpenMVPluginSerialPort_private(override_read_timeout, override_read_stall_timeout);
+    OpenMVPluginSerialPort_private *port = new OpenMVPluginSerialPort_private(override_read_timeout, override_read_stall_timeout, override_per_command_wait);
     port->moveToThread(thread);
 
     connect(this, &OpenMVPluginSerialPort::open,

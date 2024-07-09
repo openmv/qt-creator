@@ -396,6 +396,9 @@ private:
     QString m_serialNumberFilter;
     QRegularExpression m_errorFilterRegex;
     QString m_errorFilterString;
+    bool m_frameSizeDumpSpacing;
+    bool m_getScriptRunningSpacing;
+    bool m_getTxBuffer;
 
     QAction *m_bootloaderAction;
     QAction *m_eraseAction;
