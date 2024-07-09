@@ -26,6 +26,9 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_frameSizeDumpTimer.start();
     m_getScriptRunningTimer.start();
     m_getTxBufferTimer.start();
+    m_frameSizeDumpSpacing = FRAME_SIZE_DUMP_SPACING;
+    m_getScriptRunningSpacing = GET_SCRIPT_RUNNING_SPACING;
+    m_getTxBuffer = GET_TX_BUFFER_SPACING;
 
     m_timer.start();
     m_queue = QQueue<qint64>();
@@ -311,6 +314,127 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         }
     }
 
+    int override_per_command_wait = -1;
+    int index_override_per_command_wait = arguments.indexOf(QRegularExpression(QStringLiteral("-override_per_command_wait")));
+    #ifdef FORCE_OVERRIDE_PER_COMMAND_WAIT
+    index_override_per_command_wait = -1;
+    override_per_command_wait = FORCE_OVERRIDE_PER_COMMAND_WAIT;
+    #endif
+
+    if(index_override_per_command_wait != -1)
+    {
+        if(arguments.size() > (index_override_per_command_wait + 1))
+        {
+            bool ok;
+            int tmp_override_per_command_wait = arguments.at(index_override_per_command_wait + 1).toInt(&ok);
+
+            if(ok)
+            {
+                override_per_command_wait = tmp_override_per_command_wait;
+            }
+            else
+            {
+                displayError(Tr::tr("Invalid argument (%1) for -override_per_command_wait").arg(arguments.at(index_override_per_command_wait + 1)));
+                exit(-1);
+            }
+        }
+        else
+        {
+            displayError(Tr::tr("Missing argument for -override_per_command_wait"));
+            exit(-1);
+        }
+    }
+
+    int index_override_frame_size_dump_spacing = arguments.indexOf(QRegularExpression(QStringLiteral("-override_frame_size_dump_spacing")));
+    #ifdef FORCE_OVERRIDE_FRAME_DUMP_SPACING
+    index_override_frame_size_dump_spacing = -1;
+    m_frameSizeDumpSpacing = FORCE_OVERRIDE_FRAME_DUMP_SPACING;
+    #endif
+
+    if(index_override_frame_size_dump_spacing != -1)
+    {
+        if(arguments.size() > (index_override_frame_size_dump_spacing + 1))
+        {
+            bool ok;
+            int tmp_override_frame_size_dump_spacing = arguments.at(index_override_frame_size_dump_spacing + 1).toInt(&ok);
+
+            if(ok)
+            {
+                m_frameSizeDumpSpacing = tmp_override_frame_size_dump_spacing;
+            }
+            else
+            {
+                displayError(Tr::tr("Invalid argument (%1) for -override_frame_size_dump_spacing").arg(arguments.at(index_override_frame_size_dump_spacing + 1)));
+                exit(-1);
+            }
+        }
+        else
+        {
+            displayError(Tr::tr("Missing argument for -override_frame_size_dump_spacing"));
+            exit(-1);
+        }
+    }
+
+    int index_override_get_script_running_spacing = arguments.indexOf(QRegularExpression(QStringLiteral("-override_get_script_running_spacing")));
+    #ifdef FORCE_OVERRIDE_GET_SCRIPT_SPACING
+    index_override_get_script_running_spacing = -1;
+    m_getScriptRunningSpacing = FORCE_OVERRIDE_GET_SCRIPT_SPACING;
+    #endif
+
+    if(index_override_get_script_running_spacing != -1)
+    {
+        if(arguments.size() > (index_override_get_script_running_spacing + 1))
+        {
+            bool ok;
+            int tmp_override_get_script_running_spacing = arguments.at(index_override_get_script_running_spacing + 1).toInt(&ok);
+
+            if(ok)
+            {
+                m_getScriptRunningSpacing = tmp_override_get_script_running_spacing;
+            }
+            else
+            {
+                displayError(Tr::tr("Invalid argument (%1) for -override_get_script_running_spacing").arg(arguments.at(index_override_get_script_running_spacing + 1)));
+                exit(-1);
+            }
+        }
+        else
+        {
+            displayError(Tr::tr("Missing argument for -override_get_script_running_spacing"));
+            exit(-1);
+        }
+    }
+
+    int index_override_get_tx_buffer_spacing = arguments.indexOf(QRegularExpression(QStringLiteral("-override_get_tx_buffer_spacing")));
+    #ifdef FORCE_OVERRIDE_GET_TX_BUFFER_SPACING
+    index_override_get_tx_buffer_spacing = -1;
+    m_getTxBuffer = FORCE_OVERRIDE_GET_TX_BUFFER_SPACING;
+    #endif
+
+    if(index_override_get_tx_buffer_spacing != -1)
+    {
+        if(arguments.size() > (index_override_get_tx_buffer_spacing + 1))
+        {
+            bool ok;
+            int tmp_override_get_tx_buffer_spacing = arguments.at(index_override_get_tx_buffer_spacing + 1).toInt(&ok);
+
+            if(ok)
+            {
+                m_getTxBuffer = tmp_override_get_tx_buffer_spacing;
+            }
+            else
+            {
+                displayError(Tr::tr("Invalid argument (%1) for -override_get_tx_buffer_spacing").arg(arguments.at(index_override_get_tx_buffer_spacing + 1)));
+                exit(-1);
+            }
+        }
+        else
+        {
+            displayError(Tr::tr("Missing argument for -override_get_tx_buffer_spacing"));
+            exit(-1);
+        }
+    }
+
     #ifdef FORCE_LIST_PORTS
     if(true)
     #else
@@ -444,7 +568,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         });
     }
 
-    m_ioport = new OpenMVPluginSerialPort(override_read_timeout, override_read_stall_timeout, this);
+    m_ioport = new OpenMVPluginSerialPort(override_read_timeout, override_read_stall_timeout, override_per_command_wait, this);
     m_iodevice = new OpenMVPluginIO(m_ioport, this);
 
     ///////////////////////////////////////////////////////////////////////////
@@ -3752,13 +3876,13 @@ void OpenMVPlugin::processEvents()
         }
         else
         {
-            if((!m_disableFrameBuffer->isChecked()) && (!m_iodevice->frameSizeDumpQueued()) && m_frameSizeDumpTimer.hasExpired(FRAME_SIZE_DUMP_SPACING))
+            if((!m_disableFrameBuffer->isChecked()) && (!m_iodevice->frameSizeDumpQueued()) && m_frameSizeDumpTimer.hasExpired(m_frameSizeDumpSpacing))
             {
                 m_frameSizeDumpTimer.restart();
                 m_iodevice->frameSizeDump();
             }
 
-            if((!m_iodevice->getScriptRunningQueued()) && m_getScriptRunningTimer.hasExpired(GET_SCRIPT_RUNNING_SPACING))
+            if((!m_iodevice->getScriptRunningQueued()) && m_getScriptRunningTimer.hasExpired(m_getScriptRunningSpacing))
             {
                 m_getScriptRunningTimer.restart();
                 m_iodevice->getScriptRunning();
@@ -3769,7 +3893,7 @@ void OpenMVPlugin::processEvents()
                 }
             }
 
-            if((!m_iodevice->getTxBufferQueued()) && m_getTxBufferTimer.hasExpired(GET_TX_BUFFER_SPACING))
+            if((!m_iodevice->getTxBufferQueued()) && m_getTxBufferTimer.hasExpired(m_getTxBuffer))
             {
                 m_getTxBufferTimer.restart();
                 m_iodevice->getTxBuffer();

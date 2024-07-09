@@ -56,6 +56,26 @@
             \"Description\" : \"Ms to wait before pinging (default 1000)\"
         },
         {
+            \"Name\" : \"-override_per_command_wait\",
+            \"Parameter\" : \"time_in_ms\",
+            \"Description\" : \"Ms to wait between each command (default 1 - on mac 2)\"
+        },
+        {
+            \"Name\" : \"-override_frame_size_dump_spacing\",
+            \"Parameter\" : \"time_in_ms\",
+            \"Description\" : \"Ms to wait before pinging (default 5)\"
+        },
+        {
+            \"Name\" : \"-override_get_script_running_spacing\",
+            \"Parameter\" : \"time_in_ms\",
+            \"Description\" : \"Ms to wait before pinging (default 100)\"
+        },
+        {
+            \"Name\" : \"-override_get_tx_buffer_spacing\",
+            \"Parameter\" : \"time_in_ms\",
+            \"Description\" : \"Ms to wait before pinging (default 5)\"
+        },
+        {
             \"Name\" : \"-form_key\",
             \"Parameter\" : \"key\",
             \"Description\" : \"OpenMV Cam Registration Key\"
