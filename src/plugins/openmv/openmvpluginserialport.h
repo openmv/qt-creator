@@ -80,6 +80,11 @@
 #define __USBDBG_SENSOR_ID                  0x90
 #define __USBDBG_TX_INPUT                   0x11
 #define __USBDBG_TIME_INPUT                 0x12
+#define __USBDBG_GET_STATE                  0x93
+
+#define __USBDBG_GET_STATE_FLAGS_SCRIPT     (1 << 0)
+#define __USBDBG_GET_STATE_FLAGS_TEXT       (1 << 1)
+#define __USBDBG_GET_STATE_FLAGS_FRAME      (1 << 2)
 
 #define __BOOTLDR_START                     static_cast<int>(0xABCD0001)
 #define __BOOTLDR_RESET                     static_cast<int>(0xABCD0002)
@@ -105,6 +110,7 @@
 #define SENSOR_ID_RESPONSE_LEN              4
 #define TX_INPUT_PAYLOAD_LEN                4
 #define TIME_INPUT_PAYLOAD_LEN              4
+#define GET_STATE_PAYLOAD_LEN               64
 
 #define BOOTLDR_START_RESPONSE_LEN          4
 #define BOOTLDR_QUERY_RESPONSE_LEN          12
@@ -184,6 +190,8 @@
 #define TIME_INPUT_0_END_DELAY              2
 #define TIME_INPUT_1_START_DELAY            2
 #define TIME_INPUT_1_END_DELAY              2
+#define GET_STATE_START_DELAY               0
+#define GET_STATE_END_DELAY                 0
 
 #define BOOTLDR_START_START_DELAY           0
 #define BOOTLDR_START_END_DELAY             0

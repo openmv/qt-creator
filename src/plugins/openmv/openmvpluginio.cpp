@@ -41,6 +41,7 @@ enum
     USBDBG_TX_INPUT_CPL_1,
     USBDBG_TIME_INPUT_CPL_0,
     USBDBG_TIME_INPUT_CPL_1,
+    USBDBG_GET_STATE_CPL,
     BOOTLDR_START_CPL,
     BOOTLDR_RESET_CPL,
     BOOTLDR_ERASE_CPL,
@@ -231,6 +232,60 @@ void OpenMVPluginIO::command()
     }
 }
 
+void OpenMVPluginIO::doFrameSizeCpl(int w, int h, int bpp)
+{
+    if((0 < w) && (w < 32768) && (0 < h) && (h < 32768) && (0 <= bpp) && (bpp <= (1024 * 1024 * 1024)))
+    {
+        int size = getImageSize(w, h, bpp, m_newPixformat, PIXFORMAT_JPEG); // Works for PNG too.
+
+        if(size)
+        {
+            for(int i = 0, j = (size + m_mtu - 1) / m_mtu; i < j; i++)
+            {
+                int new_size = qMin(size - ((j - 1 - i) * m_mtu), m_mtu);
+                QByteArray buffer;
+                serializeByte(buffer, __USBDBG_CMD);
+                serializeByte(buffer, __USBDBG_FRAME_DUMP);
+                serializeLong(buffer, new_size);
+                m_postedQueue.push_front(OpenMVPluginSerialPortCommand(buffer, new_size, FRAME_DUMP_START_DELAY, FRAME_DUMP_END_DELAY, true, true));
+                m_completionQueue.insert(1, USBDBG_FRAME_DUMP_CPL);
+            }
+
+            m_frameSizeW = w;
+            m_frameSizeH = h;
+            m_frameSizeBPP = bpp;
+        }
+        else
+        {
+            emit frameBufferEmpty(true);
+        }
+    }
+    else
+    {
+        emit frameBufferEmpty(true);
+    }
+}
+
+void OpenMVPluginIO::doTxBufCpl()
+{
+    QByteArrayList list = m_lineBuffer.split('\n');
+    m_lineBuffer = list.takeLast();
+
+    QByteArray out;
+
+    for(int i = 0, j = list.size(); i < j; i++)
+    {
+        out.append(pasrsePrintData(list.at(i) + '\n'));
+    }
+
+    if(!out.isEmpty())
+    {
+        emit printData(out);
+    }
+
+    emit printEmpty(m_lineBuffer.isEmpty());
+}
+
 void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &commandResult)
 {
     if(Q_LIKELY(!m_completionQueue.isEmpty()))
@@ -252,41 +307,11 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 }
                 case USBDBG_FRAME_SIZE_CPL:
                 {
+                    // The optimizer will mess up the order if executed in doFrameSizeCpl.
                     int w = deserializeLong(data);
                     int h = deserializeLong(data);
                     int bpp = deserializeLong(data);
-
-                    if((0 < w) && (w < 32768) && (0 < h) && (h < 32768) && (0 <= bpp) && (bpp <= (1024 * 1024 * 1024)))
-                    {
-                        int size = getImageSize(w, h, bpp, m_newPixformat, PIXFORMAT_JPEG); // Works for PNG too.
-
-                        if(size)
-                        {
-                            for(int i = 0, j = (size + m_mtu - 1) / m_mtu; i < j; i++)
-                            {
-                                int new_size = qMin(size - ((j - 1 - i) * m_mtu), m_mtu);
-                                QByteArray buffer;
-                                serializeByte(buffer, __USBDBG_CMD);
-                                serializeByte(buffer, __USBDBG_FRAME_DUMP);
-                                serializeLong(buffer, new_size);
-                                m_postedQueue.push_front(OpenMVPluginSerialPortCommand(buffer, new_size, FRAME_DUMP_START_DELAY, FRAME_DUMP_END_DELAY, true, true));
-                                m_completionQueue.insert(1, USBDBG_FRAME_DUMP_CPL);
-                            }
-
-                            m_frameSizeW = w;
-                            m_frameSizeH = h;
-                            m_frameSizeBPP = bpp;
-                        }
-                        else
-                        {
-                            emit frameBufferEmpty(true);
-                        }
-                    }
-                    else
-                    {
-                        emit frameBufferEmpty(true);
-                    }
-
+                    doFrameSizeCpl(w, h, bpp);
                     break;
                 }
                 case USBDBG_FRAME_DUMP_CPL:
@@ -460,23 +485,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 case USBDBG_TX_BUF_CPL:
                 {
                     m_lineBuffer.append(data);
-                    QByteArrayList list = m_lineBuffer.split('\n');
-                    m_lineBuffer = list.takeLast();
-
-                    QByteArray out;
-
-                    for(int i = 0, j = list.size(); i < j; i++)
-                    {
-                        out.append(pasrsePrintData(list.at(i) + '\n'));
-                    }
-
-                    if(!out.isEmpty())
-                    {
-                        emit printData(out);
-                    }
-
-                    emit printEmpty(m_lineBuffer.isEmpty());
-
+                    doTxBufCpl();
                     break;
                 }
                 case USBDBG_SENSOR_ID_CPL:
@@ -498,6 +507,42 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 }
                 case USBDBG_TIME_INPUT_CPL_1:
                 {
+                    break;
+                }
+                case USBDBG_GET_STATE_CPL:
+                {
+                    int flags = deserializeLong(data);
+                    int w = deserializeLong(data);
+                    int h = deserializeLong(data);
+                    int bpp = deserializeLong(data);
+                    int res0 = deserializeLong(data);
+                    int res1 = deserializeLong(data);
+                    Q_UNUSED(res0)
+                    Q_UNUSED(res1)
+
+                    emit scriptRunning(flags & __USBDBG_GET_STATE_FLAGS_SCRIPT);
+
+                    if(flags & __USBDBG_GET_STATE_FLAGS_TEXT)
+                    {
+                        m_lineBuffer.append(data.split(0).takeFirst());
+                        doTxBufCpl();
+                    }
+                    else if(m_lineBuffer.size())
+                    {
+                        emit printData(pasrsePrintData(m_lineBuffer));
+                        m_lineBuffer.clear();
+                        emit printEmpty(true);
+                    }
+                    else
+                    {
+                        emit printEmpty(true);
+                    }
+
+                    if(flags & __USBDBG_GET_STATE_FLAGS_FRAME)
+                    {
+                        doFrameSizeCpl(w, h, bpp);
+                    }
+
                     break;
                 }
                 case BOOTLDR_START_CPL:
@@ -756,6 +801,22 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     {
                         break;
                     }
+                    case USBDBG_GET_STATE_CPL:
+                    {
+                        emit scriptRunning(bool());
+
+                        emit frameBufferEmpty(true);
+
+                        if(m_lineBuffer.size())
+                        {
+                            emit printData(pasrsePrintData(m_lineBuffer));
+                            m_lineBuffer.clear();
+                        }
+
+                        emit printEmpty(true);
+
+                        break;
+                    }
                     case BOOTLDR_START_CPL:
                     {
                         emit gotBootloaderStart(false, int());
@@ -870,6 +931,12 @@ bool OpenMVPluginIO::getTxBufferQueued() const
 {
     return m_completionQueue.contains(USBDBG_TX_BUF_LEN_CPL) ||
            m_completionQueue.contains(USBDBG_TX_BUF_CPL);
+}
+
+bool OpenMVPluginIO::getStateQueued() const
+{
+    return m_completionQueue.contains(USBDBG_GET_STATE_CPL) ||
+           m_completionQueue.contains(USBDBG_FRAME_DUMP_CPL);
 }
 
 void OpenMVPluginIO::getFirmwareVersion()
@@ -1181,6 +1248,17 @@ void OpenMVPluginIO::timeInput()
     command();
     m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(rtcTuple, int(), TIME_INPUT_1_START_DELAY, TIME_INPUT_1_END_DELAY));
     m_completionQueue.enqueue(USBDBG_TIME_INPUT_CPL_1);
+    command();
+}
+
+void OpenMVPluginIO::getState()
+{
+    QByteArray buffer;
+    serializeByte(buffer, __USBDBG_CMD);
+    serializeByte(buffer, __USBDBG_GET_STATE);
+    serializeLong(buffer, GET_STATE_PAYLOAD_LEN);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, GET_STATE_PAYLOAD_LEN, GET_STATE_START_DELAY, GET_STATE_END_DELAY));
+    m_completionQueue.enqueue(USBDBG_GET_STATE_CPL);
     command();
 }
 
