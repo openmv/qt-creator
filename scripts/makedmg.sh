@@ -41,9 +41,46 @@ cp -a "${sourceApp}" "${intermediateFolder}"
 ln -s /Applications "${intermediateFolder}"
 cp "$(dirname "${BASH_SOURCE[0]}")/../LICENSE.GPL3-EXCEPT" "${intermediateFolder}/LICENSE.GPL3-EXCEPT.txt"
 echo Creating image...
-hdiutil create -srcfolder "${intermediateFolder}" -volname "${title}" -format UDBZ "${finalDMGName}" -ov -scrub -size 1g -verbose
+
+# When building on github runner, 'hdiutil create' occasionally fails (resource busy)
+# so we make several retries
+try_count=0
+hdiutil_success=0
+
+while [ $hdiutil_success -ne 1 -a $try_count -lt 8 ]; do
+    # Create temporary rw image
+    if hdiutil create -srcfolder "${intermediateFolder}" -volname "${title}" -format UDBZ "${finalDMGName}" -ov -scrub -size 1g -verbose
+    then
+        hdiutil_success=1
+        break
+    fi
+    try_count=$(( $try_count + 1 ))
+    echo "'hdiutil create' failed (attempt ${try_count}). Retrying..."
+    sleep 1
+done
+
+if [ $hdiutil_success -ne 1 -a -n "${GITHUB_RUN_ID}" ]; then
+    # Still no success after 8 attempts.
+    # If we are on github runner, kill the Xprotect service and make one
+    # final attempt.
+    # see https://github.com/actions/runner-images/issues/7522
+    echo "Killing XProtect..."
+    sudo pkill -9 XProtect >/dev/null || true;
+    sleep 3
+
+    if hdiutil create -srcfolder "${intermediateFolder}" -volname "${title}" -format UDBZ "${finalDMGName}" -ov -scrub -size 1g -verbose
+    then
+        hdiutil_success=1
+    fi
+fi
+
 # make sure that the image is umounted etc
 sleep 4
 
 # clean up
 rm -rf "${intermediateFolder}"
+
+if [ $hdiutil_success -ne 1 ]; then
+    echo "FATAL: 'hdiutil create' FAILED!"
+    exit 1
+fi
