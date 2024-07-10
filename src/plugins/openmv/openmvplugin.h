@@ -147,6 +147,11 @@
 #define LAST_DATASET_EDITOR_PATH "LastDatasetEditorPath"
 #define LAST_DATASET_EDITOR_LOADED "LastDatasetEditorLoaded"
 #define LAST_DATASET_EDITOR_EXPORT_PATH "LastDatasetEditorExportPath"
+#define LAST_USE_GET_STATE "LastUseGetState"
+#define LAST_FRAME_DUMP_SPACING "LastFrameDumpSpacing"
+#define LAST_GET_SCRIPT_RUNNING_SPACING "LastGetScriptRunningSpacing"
+#define LAST_GET_TX_BUFFER_SPACING "LastGetTxBufferSpacing"
+#define LAST_GET_STATE_SPACING "LastGetStateSpacing"
 #define RESOURCES_MAJOR "ResourcesMajor"
 #define RESOURCES_MINOR "ResourcesMinor"
 #define RESOURCES_PATCH "ResourcesPatch"
@@ -193,9 +198,14 @@
 #define OPENMV_ADD_TIME_INPUT_MINOR 3
 #define OPENMV_ADD_TIME_INPUT_PATCH 2
 
+#define OPENMV_ADD_GET_STATE_MAJOR 4
+#define OPENMV_ADD_GET_STATE_MINOR 5
+#define OPENMV_ADD_GET_STATE_PATCH 6
+
 #define FRAME_SIZE_DUMP_SPACING     5 // in ms
 #define GET_SCRIPT_RUNNING_SPACING  100 // in ms
 #define GET_TX_BUFFER_SPACING       5 // in ms
+#define GET_STATE_SPACING           5 // in ms
 
 #define FPS_AVERAGE_BUFFER_DEPTH    100 // in samples
 #define WIFI_PORT_RETIRE            20 // in seconds
@@ -342,6 +352,7 @@ public slots: // private
     QMultiMap<QString, QAction *> aboutToShowExamplesRecursive(const QString &path, QMenu *parent, bool notExamples = false);
     void updateCam(bool forceYes = false);
     void setPortPath(bool silent = false);
+    void setSpacing();
     void openTerminalAboutToShow();
     QList<int> openThresholdEditor(const QVariant parameters = QVariant());
     void openKeypointsEditor();
@@ -370,6 +381,7 @@ private:
     QElapsedTimer m_frameSizeDumpTimer;
     QElapsedTimer m_getScriptRunningTimer;
     QElapsedTimer m_getTxBufferTimer;
+    QElapsedTimer m_getStateTimer;
 
     QElapsedTimer m_timer;
     QQueue<qint64> m_queue;
@@ -396,9 +408,11 @@ private:
     QString m_serialNumberFilter;
     QRegularExpression m_errorFilterRegex;
     QString m_errorFilterString;
-    bool m_frameSizeDumpSpacing;
-    bool m_getScriptRunningSpacing;
-    bool m_getTxBuffer;
+    bool m_useGetState;
+    int m_frameSizeDumpSpacing;
+    int m_getScriptRunningSpacing;
+    int m_getTxBufferSpacing;
+    int m_getStateSpacing;
 
     QAction *m_bootloaderAction;
     QAction *m_eraseAction;
@@ -429,7 +443,7 @@ private:
     Utils::ElidingToolButton *m_versionButton;
     Utils::ElidingLabel *m_portLabel;
     Utils::ElidingToolButton *m_pathButton;
-    Utils::ElidingLabel  *m_fpsLabel;
+    Utils::ElidingToolButton *m_fpsButton;
 
     ///////////////////////////////////////////////////////////////////////////
 

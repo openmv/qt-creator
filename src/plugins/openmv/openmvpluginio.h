@@ -145,6 +145,7 @@ public:
     bool getScriptRunningQueued() const;
     bool getAttributeQueued() const;
     bool getTxBufferQueued() const;
+    bool getStateQueued() const;
 
 public slots:
 
@@ -166,6 +167,7 @@ public slots:
     void sensorId();
     void mainTerminalInput(const QByteArray &data);
     void timeInput();
+    void getState();
     void bootloaderStart();
     void bootloaderReset();
     void flashErase(int sector);
@@ -225,6 +227,8 @@ signals:
 
 private:
 
+    void doFrameSizeCpl(int w, int h, int bpp);
+    void doTxBufCpl();
     QByteArray pasrsePrintData(const QByteArray &data);
 
     OpenMVPluginSerialPort *m_port;

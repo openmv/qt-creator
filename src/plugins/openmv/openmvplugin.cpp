@@ -26,9 +26,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_frameSizeDumpTimer.start();
     m_getScriptRunningTimer.start();
     m_getTxBufferTimer.start();
-    m_frameSizeDumpSpacing = FRAME_SIZE_DUMP_SPACING;
-    m_getScriptRunningSpacing = GET_SCRIPT_RUNNING_SPACING;
-    m_getTxBuffer = GET_TX_BUFFER_SPACING;
+    m_getStateTimer.start();
 
     m_timer.start();
     m_queue = QQueue<qint64>();
@@ -56,6 +54,11 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
         "  File \"(.+?)\", line (\\d+).*?\n"
         "(?!Exception: IDE interrupt|KeyboardInterrupt:|  File )(.+?:.+?)\n"));
     m_errorFilterString = QString();
+    m_useGetState = true;
+    m_frameSizeDumpSpacing = FRAME_SIZE_DUMP_SPACING;
+    m_getScriptRunningSpacing = GET_SCRIPT_RUNNING_SPACING;
+    m_getTxBufferSpacing = GET_TX_BUFFER_SPACING;
+    m_getStateSpacing = GET_STATE_SPACING;
 
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &OpenMVPlugin::processEvents);
@@ -341,96 +344,6 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         else
         {
             displayError(Tr::tr("Missing argument for -override_per_command_wait"));
-            exit(-1);
-        }
-    }
-
-    int index_override_frame_size_dump_spacing = arguments.indexOf(QRegularExpression(QStringLiteral("-override_frame_size_dump_spacing")));
-    #ifdef FORCE_OVERRIDE_FRAME_DUMP_SPACING
-    index_override_frame_size_dump_spacing = -1;
-    m_frameSizeDumpSpacing = FORCE_OVERRIDE_FRAME_DUMP_SPACING;
-    #endif
-
-    if(index_override_frame_size_dump_spacing != -1)
-    {
-        if(arguments.size() > (index_override_frame_size_dump_spacing + 1))
-        {
-            bool ok;
-            int tmp_override_frame_size_dump_spacing = arguments.at(index_override_frame_size_dump_spacing + 1).toInt(&ok);
-
-            if(ok)
-            {
-                m_frameSizeDumpSpacing = tmp_override_frame_size_dump_spacing;
-            }
-            else
-            {
-                displayError(Tr::tr("Invalid argument (%1) for -override_frame_size_dump_spacing").arg(arguments.at(index_override_frame_size_dump_spacing + 1)));
-                exit(-1);
-            }
-        }
-        else
-        {
-            displayError(Tr::tr("Missing argument for -override_frame_size_dump_spacing"));
-            exit(-1);
-        }
-    }
-
-    int index_override_get_script_running_spacing = arguments.indexOf(QRegularExpression(QStringLiteral("-override_get_script_running_spacing")));
-    #ifdef FORCE_OVERRIDE_GET_SCRIPT_SPACING
-    index_override_get_script_running_spacing = -1;
-    m_getScriptRunningSpacing = FORCE_OVERRIDE_GET_SCRIPT_SPACING;
-    #endif
-
-    if(index_override_get_script_running_spacing != -1)
-    {
-        if(arguments.size() > (index_override_get_script_running_spacing + 1))
-        {
-            bool ok;
-            int tmp_override_get_script_running_spacing = arguments.at(index_override_get_script_running_spacing + 1).toInt(&ok);
-
-            if(ok)
-            {
-                m_getScriptRunningSpacing = tmp_override_get_script_running_spacing;
-            }
-            else
-            {
-                displayError(Tr::tr("Invalid argument (%1) for -override_get_script_running_spacing").arg(arguments.at(index_override_get_script_running_spacing + 1)));
-                exit(-1);
-            }
-        }
-        else
-        {
-            displayError(Tr::tr("Missing argument for -override_get_script_running_spacing"));
-            exit(-1);
-        }
-    }
-
-    int index_override_get_tx_buffer_spacing = arguments.indexOf(QRegularExpression(QStringLiteral("-override_get_tx_buffer_spacing")));
-    #ifdef FORCE_OVERRIDE_GET_TX_BUFFER_SPACING
-    index_override_get_tx_buffer_spacing = -1;
-    m_getTxBuffer = FORCE_OVERRIDE_GET_TX_BUFFER_SPACING;
-    #endif
-
-    if(index_override_get_tx_buffer_spacing != -1)
-    {
-        if(arguments.size() > (index_override_get_tx_buffer_spacing + 1))
-        {
-            bool ok;
-            int tmp_override_get_tx_buffer_spacing = arguments.at(index_override_get_tx_buffer_spacing + 1).toInt(&ok);
-
-            if(ok)
-            {
-                m_getTxBuffer = tmp_override_get_tx_buffer_spacing;
-            }
-            else
-            {
-                displayError(Tr::tr("Invalid argument (%1) for -override_get_tx_buffer_spacing").arg(arguments.at(index_override_get_tx_buffer_spacing + 1)));
-                exit(-1);
-            }
-        }
-        else
-        {
-            displayError(Tr::tr("Missing argument for -override_get_tx_buffer_spacing"));
             exit(-1);
         }
     }
@@ -2451,7 +2364,7 @@ void OpenMVPlugin::extensionsInitialized()
 
         average /= m_queue.size();
 
-        m_fpsLabel->setText(Tr::tr("FPS: %L1").arg(average ? (1000 / double(average)) : 0, 5, 'f', 1));
+        m_fpsButton->setText(Tr::tr("FPS: %L1").arg(average ? (1000 / double(average)) : 0, 5, 'f', 1));
     });
 
     ///////////////////////////////////////////////////////////////////////////
@@ -2597,11 +2510,13 @@ void OpenMVPlugin::extensionsInitialized()
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
     connect(m_pathButton, &QToolButton::clicked, this, &OpenMVPlugin::setPortPath);
 
-    m_fpsLabel = new Utils::ElidingLabel(Tr::tr("FPS:"));
-    m_fpsLabel->setToolTip(Tr::tr("May be different from camera FPS"));
-    m_fpsLabel->setDisabled(true);
-    m_fpsLabel->setMinimumWidth(m_fpsLabel->fontMetrics().horizontalAdvance(QStringLiteral("FPS: 000.000")));
-    Core::ICore::statusBar()->addPermanentWidget(m_fpsLabel);
+    m_fpsButton = new Utils::ElidingToolButton;
+    m_fpsButton->setText(Tr::tr("FPS:"));
+    m_fpsButton->setToolTip(Tr::tr("May be different from camera FPS"));
+    m_fpsButton->setDisabled(true);
+    m_fpsButton->setMinimumWidth(m_fpsButton->fontMetrics().horizontalAdvance(QStringLiteral("FPS: 000.000")));
+    Core::ICore::statusBar()->addPermanentWidget(m_fpsButton);
+    connect(m_fpsButton, &QToolButton::clicked, this, &OpenMVPlugin::setSpacing);
 
 #ifdef Q_OS_MAC
     QApplication::setFont(m_boardLabel->font(), "QToolButton");
@@ -2648,6 +2563,11 @@ void OpenMVPlugin::extensionsInitialized()
     connect(TextEditor::TextEditorSettings::codeStyle(), &TextEditor::ICodeStylePreferences::tabSettingsChanged, this, [] (const TextEditor::TabSettings &settings) {
         Core::MessageManager::outputWindow()->setTabSettings(settings.m_serialTerminalTabSize);
     });
+    m_useGetState = settings->value(QStringLiteral(LAST_USE_GET_STATE), true).toBool();
+    m_frameSizeDumpSpacing = settings->value(QStringLiteral(LAST_FRAME_DUMP_SPACING), FRAME_SIZE_DUMP_SPACING).toInt();
+    m_getScriptRunningSpacing = settings->value(QStringLiteral(LAST_GET_SCRIPT_RUNNING_SPACING), GET_SCRIPT_RUNNING_SPACING).toInt();
+    m_getTxBufferSpacing = settings->value(QStringLiteral(LAST_GET_TX_BUFFER_SPACING), GET_TX_BUFFER_SPACING).toInt();
+    m_getStateSpacing = settings->value(QStringLiteral(LAST_GET_STATE_SPACING), GET_STATE_SPACING).toInt();
     settings->endGroup();
 
     connect(Core::MessageManager::outputWindow(), &Core::OutputWindow::writeBytes, m_iodevice, &OpenMVPluginIO::mainTerminalInput);
@@ -3876,32 +3796,51 @@ void OpenMVPlugin::processEvents()
         }
         else
         {
-            if((!m_disableFrameBuffer->isChecked()) && (!m_iodevice->frameSizeDumpQueued()) && m_frameSizeDumpTimer.hasExpired(m_frameSizeDumpSpacing))
+            if((!m_useGetState)
+            || (m_major < OPENMV_ADD_GET_STATE_MAJOR)
+            || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
+            || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)))
             {
-                m_frameSizeDumpTimer.restart();
-                m_iodevice->frameSizeDump();
-            }
-
-            if((!m_iodevice->getScriptRunningQueued()) && m_getScriptRunningTimer.hasExpired(m_getScriptRunningSpacing))
-            {
-                m_getScriptRunningTimer.restart();
-                m_iodevice->getScriptRunning();
-
-                if(m_portPath.isEmpty())
+                if((!m_disableFrameBuffer->isChecked()) && (!m_iodevice->frameSizeDumpQueued()) && m_frameSizeDumpTimer.hasExpired(m_frameSizeDumpSpacing))
                 {
-                    setPortPath(true);
+                    m_frameSizeDumpTimer.restart();
+                    m_iodevice->frameSizeDump();
+                }
+
+                if((!m_iodevice->getScriptRunningQueued()) && m_getScriptRunningTimer.hasExpired(m_getScriptRunningSpacing))
+                {
+                    m_getScriptRunningTimer.restart();
+                    m_iodevice->getScriptRunning();
+
+                    if(m_portPath.isEmpty())
+                    {
+                        setPortPath(true);
+                    }
+                }
+
+                if((!m_iodevice->getTxBufferQueued()) && m_getTxBufferTimer.hasExpired(m_getTxBufferSpacing))
+                {
+                    m_getTxBufferTimer.restart();
+                    m_iodevice->getTxBuffer();
                 }
             }
-
-            if((!m_iodevice->getTxBufferQueued()) && m_getTxBufferTimer.hasExpired(m_getTxBuffer))
+            else
             {
-                m_getTxBufferTimer.restart();
-                m_iodevice->getTxBuffer();
+                if((!m_iodevice->getStateQueued()) && m_getStateTimer.hasExpired(m_getStateSpacing))
+                {
+                    m_getStateTimer.restart();
+                    m_iodevice->getState();
+
+                    if(m_portPath.isEmpty())
+                    {
+                        setPortPath(true);
+                    }
+                }
             }
 
             if(m_timer.hasExpired(FPS_TIMER_EXPIRATION_TIME))
             {
-                m_fpsLabel->setText(Tr::tr("FPS: 0"));
+                m_fpsButton->setText(Tr::tr("FPS: 0"));
             }
         }
     }
@@ -4482,6 +4421,92 @@ void OpenMVPlugin::setPortPath(bool silent)
             Tr::tr("Select Drive"),
             Tr::tr("Busy... please wait..."));
     }
+}
+
+void OpenMVPlugin::setSpacing()
+{
+    QSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
+
+    bool useGetState = settings->value(QStringLiteral(LAST_USE_GET_STATE), true).toBool();
+    int frameDumpSpacing = settings->value(QStringLiteral(LAST_FRAME_DUMP_SPACING), FRAME_SIZE_DUMP_SPACING).toInt();
+    int getScriptRunningSpacing = settings->value(QStringLiteral(LAST_GET_SCRIPT_RUNNING_SPACING), GET_SCRIPT_RUNNING_SPACING).toInt();
+    int getTxBufferSpacing = settings->value(QStringLiteral(LAST_GET_TX_BUFFER_SPACING), GET_TX_BUFFER_SPACING).toInt();
+    int getStateSpacing = settings->value(QStringLiteral(LAST_GET_STATE_SPACING), GET_STATE_SPACING).toInt();
+
+    int useGetStateAvailable = !((m_major < OPENMV_ADD_GET_STATE_MAJOR)
+    || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
+    || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)));
+
+    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
+        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    dialog->setWindowTitle(Tr::tr("Debug Protocol Settings"));
+    QVBoxLayout *layout = new QVBoxLayout(dialog);
+
+    QGroupBox *getStateGroup = new QGroupBox(Tr::tr("Combined Polling"));
+    getStateGroup->setCheckable(true);
+    getStateGroup->setChecked(useGetState);
+    getStateGroup->setVisible(useGetStateAvailable);
+    layout->addWidget(getStateGroup);
+
+    QFormLayout *getStateGroupLayout = new QFormLayout(getStateGroup);
+
+    QSpinBox *getStateSpacingBox = new QSpinBox(getStateGroup);
+    getStateSpacingBox->setRange(0, 1000);
+    getStateSpacingBox->setValue(getStateSpacing);
+    getStateGroupLayout->addRow(Tr::tr("Polling (ms)"), getStateSpacingBox);
+
+    QGroupBox *oldStateGroup = new QGroupBox(useGetStateAvailable ? Tr::tr("Split Polling") : Tr::tr("Polling Settings"));
+    if(useGetStateAvailable)
+    {
+        oldStateGroup->setDisabled(useGetState);
+        connect(getStateGroup, &QGroupBox::toggled, this, [oldStateGroup] (bool state) {
+            oldStateGroup->setDisabled(state);
+        });
+    }
+    layout->addWidget(oldStateGroup);
+
+    QFormLayout *oldStateGroupLayout = new QFormLayout(oldStateGroup);
+
+    QSpinBox *frameDumpSpacingBox = new QSpinBox(oldStateGroup);
+    frameDumpSpacingBox->setRange(0, 1000);
+    frameDumpSpacingBox->setValue(frameDumpSpacing);
+    oldStateGroupLayout->addRow(Tr::tr("Frame Buffer Polling (ms)"), frameDumpSpacingBox);
+
+    QSpinBox *getScriptRunningSpacingBox = new QSpinBox(oldStateGroup);
+    getScriptRunningSpacingBox->setRange(0, 1000);
+    getScriptRunningSpacingBox->setValue(getScriptRunningSpacing);
+    oldStateGroupLayout->addRow(Tr::tr("Script State Polling (ms)"), getScriptRunningSpacingBox);
+
+    QSpinBox *getTxBufferSpacingBox = new QSpinBox(oldStateGroup);
+    getTxBufferSpacingBox->setRange(0, 1000);
+    getTxBufferSpacingBox->setValue(getTxBufferSpacing);
+    oldStateGroupLayout->addRow(Tr::tr("Text Buffer Polling (ms)"), getTxBufferSpacingBox);
+
+    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+    connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+    layout->addWidget(box);
+
+    if(dialog->exec() == QDialog::Accepted)
+    {
+        settings->setValue(QStringLiteral(LAST_USE_GET_STATE), m_useGetState = getStateGroup->isChecked());
+        settings->setValue(QStringLiteral(LAST_FRAME_DUMP_SPACING), m_frameSizeDumpSpacing = frameDumpSpacingBox->value());
+        settings->setValue(QStringLiteral(LAST_GET_SCRIPT_RUNNING_SPACING), m_getScriptRunningSpacing = getScriptRunningSpacingBox->value());
+        settings->setValue(QStringLiteral(LAST_GET_TX_BUFFER_SPACING), m_getTxBufferSpacing = getTxBufferSpacingBox->value());
+        settings->setValue(QStringLiteral(LAST_GET_STATE_SPACING), m_getStateSpacing = getStateSpacingBox->value());
+
+        m_frameSizeDumpTimer.restart();
+        m_getScriptRunningTimer.restart();
+        m_getTxBufferTimer.restart();
+        m_getStateTimer.restart();
+        m_timer.restart();
+        m_queue.clear();
+    }
+
+    settings->endGroup();
+    delete dialog;
 }
 
 const int connectToSerialPortIndex = 0;

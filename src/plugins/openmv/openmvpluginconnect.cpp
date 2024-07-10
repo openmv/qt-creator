@@ -3607,8 +3607,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         m_portLabel->setText(Tr::tr("Serial Port: %L1").arg(m_portName));
         m_pathButton->setEnabled(true);
         m_pathButton->setText(Tr::tr("Drive:"));
-        m_fpsLabel->setEnabled(true);
-        m_fpsLabel->setText(Tr::tr("FPS: 0"));
+        m_fpsButton->setEnabled(true);
+        m_fpsButton->setText(Tr::tr("FPS: 0"));
 
         m_frameBuffer->enableSaveTemplate(false);
         m_frameBuffer->enableSaveDescriptor(false);
@@ -3871,8 +3871,8 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_portLabel->setText(Tr::tr("Serial Port:"));
             m_pathButton->setDisabled(true);
             m_pathButton->setText(Tr::tr("Drive:"));
-            m_fpsLabel->setDisabled(true);
-            m_fpsLabel->setText(Tr::tr("FPS:"));
+            m_fpsButton->setDisabled(true);
+            m_fpsButton->setText(Tr::tr("FPS:"));
 
             m_frameBuffer->enableSaveTemplate(false);
             m_frameBuffer->enableSaveDescriptor(false);
@@ -3996,7 +3996,7 @@ void OpenMVPlugin::startClicked()
         }
         else
         {
-            m_fpsLabel->setText(Tr::tr("FPS: 0"));
+            m_fpsButton->setText(Tr::tr("FPS: 0"));
         }
 
         ///////////////////////////////////////////////////////////////////////
@@ -4106,7 +4106,7 @@ void OpenMVPlugin::stopClicked()
 
         ///////////////////////////////////////////////////////////////////////
 
-        m_fpsLabel->setText(Tr::tr("FPS: 0"));
+        m_fpsButton->setText(Tr::tr("FPS: 0"));
 
         ///////////////////////////////////////////////////////////////////////
 
