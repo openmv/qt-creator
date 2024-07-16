@@ -515,10 +515,6 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     int w = deserializeLong(data);
                     int h = deserializeLong(data);
                     int bpp = deserializeLong(data);
-                    int res0 = deserializeLong(data);
-                    int res1 = deserializeLong(data);
-                    Q_UNUSED(res0)
-                    Q_UNUSED(res1)
 
                     emit scriptRunning(flags & __USBDBG_GET_STATE_FLAGS_SCRIPT);
 
