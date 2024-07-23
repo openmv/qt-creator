@@ -7,7 +7,11 @@
         "extraProgramCommands" : [
                 {
                     "addr" : "-a 1 -s 0x90F00000",
-                    "path" : "CYW4343/cyw4343.bin"
+                    "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                },
+                {
+                    "addr" : "-a 1 -s 0x90FC0000",
+                    "path" : "CYW4343/cyw4343_btfw.bin"
                 }
             ],
         "binProgramCommand" : "-a 0 -s 0x08040000:leave",
@@ -21,7 +25,11 @@
         "extraProgramCommands" : [
                 {
                     "addr" : "-a 1 -s 0x90F00000",
-                    "path" : "CYW4343/cyw4343.bin"
+                    "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                },
+                {
+                    "addr" : "-a 1 -s 0x90FC0000",
+                    "path" : "CYW4343/cyw4343_btfw.bin"
                 }
             ],
         "binProgramCommand" : "-a 0 -s 0x08040000:leave",
@@ -35,7 +43,11 @@
         "extraProgramCommands" : [
                 {
                     "addr" : "-a 1 -s 0x90F00000",
-                    "path" : "CYW4343/cyw4343.bin"
+                    "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                },
+                {
+                    "addr" : "-a 1 -s 0x90FC0000",
+                    "path" : "CYW4343/cyw4343_btfw.bin"
                 }
             ],
         "binProgramCommand" : "-a 0 -s 0x08040000:leave",
