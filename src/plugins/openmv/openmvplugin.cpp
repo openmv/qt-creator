@@ -2577,8 +2577,8 @@ void OpenMVPlugin::extensionsInitialized()
         settings->beginGroup(QStringLiteral(SETTINGS_GROUP));
         if(settings->contains(QStringLiteral(LAST_DATASET_EDITOR_PATH)) && settings->value(QStringLiteral(LAST_DATASET_EDITOR_LOADED)).toBool()) m_datasetEditor->setRootPath(settings->value(QStringLiteral(LAST_DATASET_EDITOR_PATH)).toString());
         if(settings->contains(QStringLiteral(MSPLITTER_STATE))) msplitter->restoreState(settings->value(QStringLiteral(MSPLITTER_STATE)).toByteArray());
-        if(settings->contains(QStringLiteral(HSPLITTER_STATE))) hsplitter->restoreState(settings->value(QStringLiteral(HSPLITTER_STATE)).toByteArray());
-        if(settings->contains(QStringLiteral(VSPLITTER_STATE))) vsplitter->restoreState(settings->value(QStringLiteral(VSPLITTER_STATE)).toByteArray());
+        if(settings->contains(QStringLiteral(VSPLITTER_STATE))) vsplitter->restoreState(settings->value(QStringLiteral(VSPLITTER_STATE)).toByteArray()); // restore before HSPLITTER
+        if(settings->contains(QStringLiteral(HSPLITTER_STATE))) hsplitter->restoreState(settings->value(QStringLiteral(HSPLITTER_STATE)).toByteArray()); // restore after VSPLITTER
         widget->m_leftDrawer->parentWidget()->setVisible(settings->contains(QStringLiteral(HSPLITTER_STATE)) ? (!hsplitter->sizes().at(0)) : false);
         widget->m_rightDrawer->parentWidget()->setVisible(settings->contains(QStringLiteral(HSPLITTER_STATE)) ? (!hsplitter->sizes().at(1)) : false);
         widget->m_topDrawer->parentWidget()->setVisible(settings->contains(QStringLiteral(VSPLITTER_STATE)) ? (!vsplitter->sizes().at(0)) : false);
