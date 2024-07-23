@@ -46,14 +46,15 @@ Store TypingSettings::toMap() const
 void TypingSettings::fromMap(const Store &map)
 {
     m_autoIndent = map.value(autoIndentKey, m_autoIndent).toBool();
-    m_tabKeyBehavior = (TabKeyBehavior) map.value(tabKeyBehaviorKey, m_tabKeyBehavior).toInt();
     // OPENMV-DIFF //
-    m_tabKeyBehavior = TabNeverIndents;
+    // m_tabKeyBehavior = (TabKeyBehavior) map.value(tabKeyBehaviorKey, m_tabKeyBehavior).toInt();
     // OPENMV-DIFF //
     m_smartBackspaceBehavior = (SmartBackspaceBehavior)map.value(
                 smartBackspaceBehaviorKey, m_smartBackspaceBehavior).toInt();
-    m_preferSingleLineComments =
-        map.value(preferSingleLineCommentsKey, m_preferSingleLineComments).toBool();
+    // OPENMV-DIFF //
+    // m_preferSingleLineComments =
+    //     map.value(preferSingleLineCommentsKey, m_preferSingleLineComments).toBool();
+    // OPENMV-DIFF //
     m_commentPosition = CommentPosition(
         std::clamp(map.value(preferAfterWhitespaceCommentsKey, m_commentPosition).toInt(),
                    int(Automatic),

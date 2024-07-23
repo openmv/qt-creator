@@ -75,17 +75,23 @@ void DisplaySettings::fromSettings(QtcSettings *s)
     m_textWrapping = s->value(textWrappingKey, m_textWrapping).toBool();
     m_visualizeWhitespace = s->value(visualizeWhitespaceKey, m_visualizeWhitespace).toBool();
     m_visualizeIndent = s->value(visualizeIndentKey, m_visualizeIndent).toBool();
-    m_displayFoldingMarkers = s->value(displayFoldingMarkersKey, m_displayFoldingMarkers).toBool();
+    // OPENMV-DIFF //
+    // m_displayFoldingMarkers = s->value(displayFoldingMarkersKey, m_displayFoldingMarkers).toBool();
+    // OPENMV-DIFF //
     m_highlightCurrentLine = s->value(highlightCurrentLineKey, m_highlightCurrentLine).toBool();
     m_highlightBlocks = s->value(highlightBlocksKey, m_highlightBlocks).toBool();
     m_animateMatchingParentheses = s->value(animateMatchingParenthesesKey, m_animateMatchingParentheses).toBool();
     m_highlightMatchingParentheses = s->value(highlightMatchingParenthesesKey, m_highlightMatchingParentheses).toBool();
     m_markTextChanges = s->value(markTextChangesKey, m_markTextChanges).toBool();
-    m_autoFoldFirstComment = s->value(autoFoldFirstCommentKey, m_autoFoldFirstComment).toBool();
+    // OPENMV-DIFF //
+    //m_autoFoldFirstComment = s->value(autoFoldFirstCommentKey, m_autoFoldFirstComment).toBool();
+    // OPENMV-DIFF //
     m_centerCursorOnScroll = s->value(centerCursorOnScrollKey, m_centerCursorOnScroll).toBool();
     m_openLinksInNextSplit = s->value(openLinksInNextSplitKey, m_openLinksInNextSplit).toBool();
     m_displayFileEncoding = s->value(displayFileEncodingKey, m_displayFileEncoding).toBool();
-    m_displayFileLineEnding = s->value(displayFileLineEndingKey, m_displayFileLineEnding).toBool();
+    // OPENMV-DIFF //
+    // m_displayFileLineEnding = s->value(displayFileLineEndingKey, m_displayFileLineEnding).toBool();
+    // OPENMV-DIFF //
     m_scrollBarHighlights = s->value(scrollBarHighlightsKey, m_scrollBarHighlights).toBool();
     m_animateNavigationWithinFile = s->value(animateNavigationWithinFileKey, m_animateNavigationWithinFile).toBool();
     m_animateWithinFileTimeMax = s->value(animateWithinFileTimeMaxKey, m_animateWithinFileTimeMax).toInt();
