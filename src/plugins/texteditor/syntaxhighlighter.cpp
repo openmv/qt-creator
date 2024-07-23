@@ -479,7 +479,7 @@ void SyntaxHighlighter::setFormatWithSpaces(const QString &text, int start, int 
 {
     // OPENMV-DIFF //
     // Q_D(const SyntaxHighlighter);
-    // OPENMV-DIFF //s
+    // OPENMV-DIFF //
     const QTextCharFormat visualSpaceFormat = whitespacified(format);
 
     const int end = std::min(start + count, int(text.length()));

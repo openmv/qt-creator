@@ -71,17 +71,23 @@ void DisplaySettings::fromSettings(QSettings *s)
     m_textWrapping = s->value(QLatin1String(textWrappingKey), m_textWrapping).toBool();
     m_visualizeWhitespace = s->value(QLatin1String(visualizeWhitespaceKey), m_visualizeWhitespace).toBool();
     m_visualizeIndent = s->value(QLatin1String(visualizeIndentKey), m_visualizeIndent).toBool();
-    m_displayFoldingMarkers = s->value(QLatin1String(displayFoldingMarkersKey), m_displayFoldingMarkers).toBool();
+    // OPENMV-DIFF //
+    // m_displayFoldingMarkers = s->value(QLatin1String(displayFoldingMarkersKey), m_displayFoldingMarkers).toBool();
+    // OPENMV-DIFF //
     m_highlightCurrentLine = s->value(QLatin1String(highlightCurrentLineKey), m_highlightCurrentLine).toBool();
     m_highlightBlocks = s->value(QLatin1String(highlightBlocksKey), m_highlightBlocks).toBool();
     m_animateMatchingParentheses = s->value(QLatin1String(animateMatchingParenthesesKey), m_animateMatchingParentheses).toBool();
     m_highlightMatchingParentheses = s->value(QLatin1String(highlightMatchingParenthesesKey), m_highlightMatchingParentheses).toBool();
     m_markTextChanges = s->value(QLatin1String(markTextChangesKey), m_markTextChanges).toBool();
-    m_autoFoldFirstComment = s->value(QLatin1String(autoFoldFirstCommentKey), m_autoFoldFirstComment).toBool();
+    // OPENMV-DIFF //
+    // m_autoFoldFirstComment = s->value(QLatin1String(autoFoldFirstCommentKey), m_autoFoldFirstComment).toBool();
+    // OPENMV-DIFF //
     m_centerCursorOnScroll = s->value(QLatin1String(centerCursorOnScrollKey), m_centerCursorOnScroll).toBool();
     m_openLinksInNextSplit = s->value(QLatin1String(openLinksInNextSplitKey), m_openLinksInNextSplit).toBool();
     m_displayFileEncoding = s->value(QLatin1String(displayFileEncodingKey), m_displayFileEncoding).toBool();
-    m_displayFileLineEnding = s->value(QLatin1String(displayFileLineEndingKey), m_displayFileLineEnding).toBool();
+    // OPENMV-DIFF //
+    // m_displayFileLineEnding = s->value(QLatin1String(displayFileLineEndingKey), m_displayFileLineEnding).toBool();
+    // OPENMV-DIFF //
     m_scrollBarHighlights = s->value(QLatin1String(scrollBarHighlightsKey), m_scrollBarHighlights).toBool();
     m_animateNavigationWithinFile = s->value(QLatin1String(animateNavigationWithinFileKey), m_animateNavigationWithinFile).toBool();
     m_animateWithinFileTimeMax = s->value(QLatin1String(animateWithinFileTimeMaxKey), m_animateWithinFileTimeMax).toInt();
