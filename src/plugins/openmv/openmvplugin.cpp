@@ -1183,16 +1183,7 @@ void OpenMVPlugin::extensionsInitialized()
                            "    img = sensor.snapshot()\n"
                            "    print(clock.fps())\n").arg(Utils::Environment::systemEnvironment().toDictionary().userName()).arg(QDate::currentDate().toString()).toUtf8();
 
-            if((m_sensorType == QStringLiteral("HM01B0")) ||
-               (m_sensorType == QStringLiteral("HM0360")) ||
-               (m_sensorType == QStringLiteral("MT9V0X2")) ||
-               (m_sensorType == QStringLiteral("MT9V0X4")))
-            {
-                data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
-                if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
-            }
-
-            TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditorWithContents(Core::Constants::K_DEFAULT_TEXT_EDITOR_ID, &titlePattern, data));
+            TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditorWithContents(Core::Constants::K_DEFAULT_TEXT_EDITOR_ID, &titlePattern, fixScriptForSensor(data)));
 
             if(editor)
             {
@@ -1661,20 +1652,11 @@ void OpenMVPlugin::extensionsInitialized()
                                                      "    print(clock.fps())\n").
                                       arg(Utils::Environment::systemEnvironment().toDictionary().userName()).arg(QDate::currentDate().toString()).toUtf8();
 
-                if((m_sensorType == QStringLiteral("HM01B0")) ||
-                   (m_sensorType == QStringLiteral("HM0360")) ||
-                   (m_sensorType == QStringLiteral("MT9V0X2")) ||
-                   (m_sensorType == QStringLiteral("MT9V0X4")))
-                {
-                    contents = contents.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
-                    if(m_sensorType == QStringLiteral("HM01B0")) contents = contents.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
-                }
-
                 Utils::FileSaver file(Utils::FilePath::fromString(path).pathAppended(QStringLiteral("dataset_capture_script.py")));
 
                 if(!file.hasError())
                 {
-                    if((!file.write(contents)) || (!file.finalize()))
+                    if((!file.write(fixScriptForSensor(contents))) || (!file.finalize()))
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
                             Tr::tr("New Dataset"),
@@ -2689,20 +2671,11 @@ void OpenMVPlugin::extensionsInitialized()
 
             if((file.error() == QFile::NoError) && (!data.isEmpty()))
             {
-                if((m_sensorType == QStringLiteral("HM01B0")) ||
-                   (m_sensorType == QStringLiteral("HM0360")) ||
-                   (m_sensorType == QStringLiteral("MT9V0X2")) ||
-                   (m_sensorType == QStringLiteral("MT9V0X4")))
-                {
-                    data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
-                    if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
-                }
-
                 Core::EditorManager::cutForwardNavigationHistory();
                 Core::EditorManager::addCurrentPositionToNavigationHistory();
 
                 QString titlePattern = QFileInfo(filePath).baseName().simplified() + QStringLiteral("_$.") + QFileInfo(filePath).completeSuffix();
-                TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditorWithContents(Core::Constants::K_DEFAULT_TEXT_EDITOR_ID, &titlePattern, data));
+                TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(Core::EditorManager::openEditorWithContents(Core::Constants::K_DEFAULT_TEXT_EDITOR_ID, &titlePattern, fixScriptForSensor(data)));
 
                 if(editor)
                 {
@@ -4289,21 +4262,11 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
 
                     if((file.error() == QFile::NoError) && (!data.isEmpty()))
                     {
-                        if((!notExamples) &&
-                          ((m_sensorType == QStringLiteral("HM01B0")) ||
-                           (m_sensorType == QStringLiteral("HM0360")) ||
-                           (m_sensorType == QStringLiteral("MT9V0X2")) ||
-                           (m_sensorType == QStringLiteral("MT9V0X4"))))
-                        {
-                            data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
-                            if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
-                        }
-
                         Core::EditorManager::cutForwardNavigationHistory();
                         Core::EditorManager::addCurrentPositionToNavigationHistory();
 
                         QString titlePattern = QFileInfo(filePath).baseName().simplified() + QStringLiteral("_$.") + QFileInfo(filePath).completeSuffix();
-                        TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(notExamples ? Core::EditorManager::openEditor(Utils::FilePath::fromString(filePath)) : Core::EditorManager::openEditorWithContents(Core::Constants::K_DEFAULT_TEXT_EDITOR_ID, &titlePattern, data));
+                        TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(notExamples ? Core::EditorManager::openEditor(Utils::FilePath::fromString(filePath)) : Core::EditorManager::openEditorWithContents(Core::Constants::K_DEFAULT_TEXT_EDITOR_ID, &titlePattern, fixScriptForSensor(data, notExamples)));
 
                         if(editor)
                         {
@@ -5855,6 +5818,21 @@ bool OpenMVPlugin::matchExample(const QString &filePath, QString *flattenRegex)
     }
 
     return match;
+}
+
+QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples)
+{
+    if((!notExamples) &&
+      ((m_sensorType == QStringLiteral("HM01B0")) ||
+       (m_sensorType == QStringLiteral("HM0360")) ||
+       (m_sensorType == QStringLiteral("MT9V0X2")) ||
+       (m_sensorType == QStringLiteral("MT9V0X4"))))
+    {
+        data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
+        if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+    }
+
+    return data;
 }
 
 } // namespace Internal
