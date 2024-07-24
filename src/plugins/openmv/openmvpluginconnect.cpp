@@ -219,8 +219,8 @@ void OpenMVPlugin::bootloaderClicked()
     pathChooser->setExpectedKind(Utils::PathChooser::File);
     pathChooser->setPromptDialogTitle(Tr::tr("Firmware Path"));
     pathChooser->setPromptDialogFilter(Tr::tr("Firmware Binary (*.bin *.dfu)"));
-    pathChooser->setPlaceholderText(QDir::homePath());
-    pathChooser->setHistoryCompleter(QStringLiteral(LAST_FIRMWARE_HISTORY), true);
+    pathChooser->setFilePath(Utils::FilePath::fromVariant(settings->value(QStringLiteral(LAST_FIRMWARE_PATH), QDir::homePath())));
+    pathChooser->setHistoryCompleter(QStringLiteral(LAST_FIRMWARE_HISTORY), false);
     layout->addRow(Tr::tr("Firmware Path"), pathChooser);
     layout->addItem(new QSpacerItem(0, 6));
 
@@ -277,6 +277,7 @@ void OpenMVPlugin::bootloaderClicked()
 
         if(QFileInfo(forceFirmwarePath).exists() && QFileInfo(forceFirmwarePath).isFile())
         {
+            settings->setValue(QStringLiteral(LAST_FIRMWARE_PATH), forceFirmwarePath);
             settings->setValue(QStringLiteral(LAST_FLASH_FS_ERASE_STATE), flashFSErase);
             settings->endGroup();
             delete dialog;
