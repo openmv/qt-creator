@@ -619,7 +619,7 @@ static QString getOutputFormats()
 
         foreach(const QString &string, in)
         {
-            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("\\s+D\\s+(\\w+)\\s+(.+)")).match(string);
+            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("\\s+E\\s+(\\w+)\\s+(.+)")).match(string);
 
             if(match.hasMatch())
             {
@@ -648,11 +648,18 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     QString newSrc = src;
     QString newDst = dst;
     bool reformat = false;
+    bool mjpeg = false;
 
     if(dst.toLower().endsWith(QStringLiteral(".bin")))
     {
         newDst = QDir::tempPath() + QDir::separator() + QFileInfo(dst).completeBaseName() + QStringLiteral("-%07d.jpg");
         reformat = true;
+    }
+
+    if(dst.toLower().endsWith(QStringLiteral(".mjpeg"))
+    || dst.toLower().endsWith(QStringLiteral(".mjpg")))
+    {
+        mjpeg = true;
     }
 
     float fps, *fpsPtr = &fps;
@@ -719,6 +726,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
                        QStringLiteral("-q:v") <<
                        QStringLiteral("1");
     if(scale != -1) args = args << QStringLiteral("-vf") << QString(QStringLiteral("scale=%1:-1")).arg(scale);
+    if(mjpeg) args = args << QStringLiteral("-f") << QStringLiteral("avi");
     args = args << QDir::toNativeSeparators(QDir::cleanPath(newDst));
 
     if(Utils::HostOsInfo::isWindowsHost())
