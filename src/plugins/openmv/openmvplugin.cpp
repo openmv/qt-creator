@@ -2934,28 +2934,35 @@ bool OpenMVPlugin::delayedInitialize()
                 : false
             : false)
         {
-            QTimer::singleShot(2000, this, [] {
-                Utils::CheckableMessageBox::doNotShowAgainInformation(Core::ICore::dialogParent(),
-                        Tr::tr("OpenMV Cam LED Colors"),
-                        Tr::tr("Thanks for using the OpenMV Cam and OpenMV IDE!\n\n"
-                           "Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:\n\n"
-                           "Blinking Green:\n\nYour OpenMV Cam's onboard bootloader is running. "
-                           "The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.\n\n"
-                           "Blinking Blue:\n\nYour OpenMV Cam is running the default main.py script onboard.\n\n"
-                           "If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.\n\n"
-                           "If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam "
-                           "please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.\n\n"
-                           "Blinking White:\n\nYour OpenMV Cam's firmware is panicking because of a hardware failure. "
-                           "Please check that your OpenMV Cam's camera module is installed securely.\n\n"),
-                        ExtensionSystem::PluginManager::settings(),
-                        QStringLiteral(DONT_SHOW_LED_STATES_AGAIN),
-                        QDialogButtonBox::Ok,
-                        QDialogButtonBox::Ok);
-            });
+            QTimer::singleShot(2000, this, &OpenMVPlugin::showLEDStatesDialog);
         }
     }
 
     return true;
+}
+
+void OpenMVPlugin::showLEDStatesDialog()
+{
+    if (!QApplication::activeModalWidget()) {
+        Utils::CheckableMessageBox::doNotShowAgainInformation(Core::ICore::dialogParent(),
+                Tr::tr("OpenMV Cam LED Colors"),
+                Tr::tr("Thanks for using the OpenMV Cam and OpenMV IDE!\n\n"
+                   "Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:\n\n"
+                   "Blinking Green:\n\nYour OpenMV Cam's onboard bootloader is running. "
+                   "The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.\n\n"
+                   "Blinking Blue:\n\nYour OpenMV Cam is running the default main.py script onboard.\n\n"
+                   "If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.\n\n"
+                   "If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam "
+                   "please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.\n\n"
+                   "Blinking White:\n\nYour OpenMV Cam's firmware is panicking because of a hardware failure. "
+                   "Please check that your OpenMV Cam's camera module is installed securely.\n\n"),
+                ExtensionSystem::PluginManager::settings(),
+                QStringLiteral(DONT_SHOW_LED_STATES_AGAIN),
+                QDialogButtonBox::Ok,
+                QDialogButtonBox::Ok);
+    } else {
+        QTimer::singleShot(2000, this, &OpenMVPlugin::showLEDStatesDialog); // try again
+    }
 }
 
 ExtensionSystem::IPlugin::ShutdownFlag OpenMVPlugin::aboutToShutdown()

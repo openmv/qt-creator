@@ -358,6 +358,9 @@ public slots: // private
     void openKeypointsEditor();
     void openAprilTagGenerator(apriltag_family_t *family);
 
+    void showLEDStatesDialog();
+    void showExamplesDialog();
+
 signals:
 
     void workingDone(); // private
