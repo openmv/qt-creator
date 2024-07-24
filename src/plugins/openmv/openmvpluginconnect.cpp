@@ -3629,20 +3629,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         {
             TextEditor::TextDocument *document = textEditor->textDocument();
 
-            if(document && document->displayName() == QStringLiteral("helloworld_1.py"))
+            if(document && document->displayName() == QStringLiteral("helloworld_1.py") && (!document->isModified()))
             {
-                QByteArray data = document->contents();
-
-                if((m_sensorType == QStringLiteral("HM01B0")) ||
-                   (m_sensorType == QStringLiteral("HM0360")) ||
-                   (m_sensorType == QStringLiteral("MT9V0X2")) ||
-                   (m_sensorType == QStringLiteral("MT9V0X4")))
-                {
-                    data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
-                    if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
-                }
-
-                document->setPlainText(QString::fromUtf8(data));
+                document->setPlainText(QString::fromUtf8(fixScriptForSensor(document->contents())));
             }
         }
 

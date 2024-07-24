@@ -531,6 +531,8 @@ private:
 
     bool matchFlatten(const QString &filePath, const QSet<QString> &flattenSet);
     bool matchExample(const QString &filePath, QString *flattenRegex);
+
+    QByteArray fixScriptForSensor(QByteArray data, bool notExamples = false);
 };
 
 } // namespace Internal
