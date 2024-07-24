@@ -4190,7 +4190,7 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
             QMultiMap<QString, QAction *> menuActions = aboutToShowExamplesRecursive(filePath, menu, notExamples);
 
             // Skip making this menu if it only has a sub-menu inside of it (only for menus).
-            if((menuActions.size() == 1) && menuActions.first()->menu())
+            if(m_enableFilteringExamplesAction->isChecked() && (menuActions.size() == 1) && menuActions.first()->menu())
             {
                 menuActions.first()->parent()->setParent(parent);
                 delete menu;
