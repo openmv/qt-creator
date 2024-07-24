@@ -329,6 +329,8 @@ public:
 
     explicit OpenMVPluginSerialPort(int override_read_timeout = -1, int override_read_stall_timeout = -1, int override_per_command_wait = -1, QObject *parent = Q_NULLPTR);
 
+    void terminate();
+
 signals:
 
     void open(const QString &portName);
@@ -344,6 +346,11 @@ signals:
     void bootloaderStartResponse(bool ok, int version, int highspeed);
     void bootloaderStopResponse();
     void bootloaderResetResponse();
+
+private:
+
+    QThread *m_thread;
+    OpenMVPluginSerialPort_private *m_port;
 };
 
 } // namespace Internal

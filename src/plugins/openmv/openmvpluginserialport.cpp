@@ -850,50 +850,55 @@ void OpenMVPluginSerialPort_private::bootloaderReset()
 
 OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout, int override_read_stall_timeout, int override_per_command_wait, QObject *parent) : QObject(parent)
 {
-    QThread *thread = new QThread;
-    OpenMVPluginSerialPort_private *port = new OpenMVPluginSerialPort_private(override_read_timeout, override_read_stall_timeout, override_per_command_wait);
-    port->moveToThread(thread);
+    m_thread = new QThread;
+    m_port = new OpenMVPluginSerialPort_private(override_read_timeout, override_read_stall_timeout, override_per_command_wait);
+    m_port->moveToThread(m_thread);
 
     connect(this, &OpenMVPluginSerialPort::open,
-            port, &OpenMVPluginSerialPort_private::open);
+            m_port, &OpenMVPluginSerialPort_private::open);
 
-    connect(port, &OpenMVPluginSerialPort_private::openResult,
+    connect(m_port, &OpenMVPluginSerialPort_private::openResult,
             this, &OpenMVPluginSerialPort::openResult);
 
     connect(this, &OpenMVPluginSerialPort::command,
-            port, &OpenMVPluginSerialPort_private::command);
+            m_port, &OpenMVPluginSerialPort_private::command);
 
-    connect(port, &OpenMVPluginSerialPort_private::commandResult,
+    connect(m_port, &OpenMVPluginSerialPort_private::commandResult,
             this, &OpenMVPluginSerialPort::commandResult);
 
     connect(this, &OpenMVPluginSerialPort::bootloaderStart,
-            port, &OpenMVPluginSerialPort_private::bootloaderStart);
+            m_port, &OpenMVPluginSerialPort_private::bootloaderStart);
 
     connect(this, &OpenMVPluginSerialPort::bootloaderStop,
-            port, &OpenMVPluginSerialPort_private::bootloaderStop);
+            m_port, &OpenMVPluginSerialPort_private::bootloaderStop);
 
     connect(this, &OpenMVPluginSerialPort::bootloaderReset,
-            port, &OpenMVPluginSerialPort_private::bootloaderReset);
+            m_port, &OpenMVPluginSerialPort_private::bootloaderReset);
 
-    connect(port, &OpenMVPluginSerialPort_private::bootloaderStartResponse,
+    connect(m_port, &OpenMVPluginSerialPort_private::bootloaderStartResponse,
             this, &OpenMVPluginSerialPort::bootloaderStartResponse);
 
-    connect(port, &OpenMVPluginSerialPort_private::bootloaderStopResponse,
+    connect(m_port, &OpenMVPluginSerialPort_private::bootloaderStopResponse,
             this, &OpenMVPluginSerialPort::bootloaderStopResponse);
 
-    connect(port, &OpenMVPluginSerialPort_private::bootloaderResetResponse,
+    connect(m_port, &OpenMVPluginSerialPort_private::bootloaderResetResponse,
             this, &OpenMVPluginSerialPort::bootloaderResetResponse);
 
     connect(this, &OpenMVPluginSerialPort::destroyed,
-            port, &OpenMVPluginSerialPort_private::deleteLater);
+            m_port, &OpenMVPluginSerialPort_private::deleteLater);
 
-    connect(port, &OpenMVPluginSerialPort_private::destroyed,
-            thread, &QThread::quit);
+    connect(m_port, &OpenMVPluginSerialPort_private::destroyed,
+            m_thread, &QThread::quit);
 
-    connect(thread, &QThread::finished,
-            thread, &QThread::deleteLater);
+    connect(m_thread, &QThread::finished,
+            m_thread, &QThread::deleteLater);
 
-    thread->start();
+    m_thread->start();
+}
+
+void OpenMVPluginSerialPort::terminate()
+{
+    m_thread->terminate();
 }
 
 } // namespace Internal

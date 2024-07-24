@@ -217,6 +217,8 @@
 #define FLASH_SECTOR_ERASE 4096 // Flash sector size in bytes.
 #define FOLDER_SCAN_TIME 10000 // in ms
 
+#define FORCE_SHUTDOWN_TIMEOUT      10000 // in ms
+
 namespace OpenMV {
 namespace Internal {
 

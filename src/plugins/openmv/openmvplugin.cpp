@@ -2977,6 +2977,12 @@ ExtensionSystem::IPlugin::ShutdownFlag OpenMVPlugin::aboutToShutdown()
         {
             connect(this, &OpenMVPlugin::workingDone, this, [this] { disconnectClicked(); });
             connect(this, &OpenMVPlugin::disconnectDone, this, &OpenMVPlugin::asynchronousShutdownFinished);
+            QTimer::singleShot(FORCE_SHUTDOWN_TIMEOUT, this, [this] {
+                // 1. Force shutdown without cleaning up - so we can exit... since we haven't yet after a while.
+                emit asynchronousShutdownFinished();
+                // 2. Kill blocking threads if not exited yet - corrupts state - last resort.
+                QTimer::singleShot(1000, this, [this] { m_ioport->terminate(); });
+            });
             return ExtensionSystem::IPlugin::AsynchronousShutdown;
         }
     }
@@ -2986,12 +2992,24 @@ ExtensionSystem::IPlugin::ShutdownFlag OpenMVPlugin::aboutToShutdown()
         {
             connect(this, &OpenMVPlugin::disconnectDone, this, &OpenMVPlugin::asynchronousShutdownFinished);
             QTimer::singleShot(0, this, [this] { disconnectClicked(); });
+            QTimer::singleShot(FORCE_SHUTDOWN_TIMEOUT, this, [this] {
+                // 1. Force shutdown without cleaning up - so we can exit... since we haven't yet after a while.
+                emit asynchronousShutdownFinished();
+                // 2. Kill blocking threads if not exited yet - corrupts state - last resort.
+                QTimer::singleShot(1000, this, [this] { m_ioport->terminate(); });
+            });
             return ExtensionSystem::IPlugin::AsynchronousShutdown;
         }
         else
         {
             connect(this, &OpenMVPlugin::workingDone, this, [this] { disconnectClicked(); });
             connect(this, &OpenMVPlugin::disconnectDone, this, &OpenMVPlugin::asynchronousShutdownFinished);
+            QTimer::singleShot(FORCE_SHUTDOWN_TIMEOUT, this, [this] {
+                // 1. Force shutdown without cleaning up - so we can exit... since we haven't yet after a while.
+                emit asynchronousShutdownFinished();
+                // 2. Kill blocking threads if not exited yet - corrupts state - last resort.
+                QTimer::singleShot(1000, this, [this] { m_ioport->terminate(); });
+            });
             return ExtensionSystem::IPlugin::AsynchronousShutdown;
         }
     }
