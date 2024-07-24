@@ -1418,6 +1418,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         if(boards.open(QIODevice::ReadOnly))
                         {
                             QMap<QString, QString> mappings;
+                            QMap<QString, QString> mappingsHumanReadable;
                             QMap<QString, QPair<int, int> > eraseMappings;
                             QMap<QString, QPair<int, int> > eraseAllMappings;
                             QMap<QString, QString> vidpidMappings;
@@ -1431,6 +1432,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                     QRegularExpressionMatch mapping = QRegularExpression(QStringLiteral("(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\d+)\\s+(\\d+)\\s+(\\d+)\\s+(\\S+)")).match(QString::fromUtf8(data));
                                     QString temp = mapping.captured(1).replace(QStringLiteral("_"), QStringLiteral(" "));
                                     mappings.insert(temp, mapping.captured(3));
+                                    mappingsHumanReadable.insert(mapping.captured(2).replace(QStringLiteral("_"), QStringLiteral(" ")), temp);
                                     eraseMappings.insert(temp, QPair<int, int>(mapping.captured(5).toInt(), mapping.captured(6).toInt()));
                                     eraseAllMappings.insert(temp, QPair<int, int>(mapping.captured(4).toInt(), mapping.captured(6).toInt()));
                                     vidpidMappings.insert(temp, mapping.captured(7));
@@ -1449,11 +1451,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 int index = mappings.keys().indexOf(settings->value(QStringLiteral(LAST_BOARD_TYPE_STATE)).toString());
 
                                 bool ok = mappings.size() == 1;
-                                temp = (mappings.size() == 1) ? mappings.firstKey() : QInputDialog::getItem(Core::ICore::dialogParent(),
+                                temp = (mappings.size() == 1) ? mappingsHumanReadable.firstKey() : QInputDialog::getItem(Core::ICore::dialogParent(),
                                     Tr::tr("Connect"), Tr::tr("Please select the board type"),
-                                    mappings.keys(), (index != -1) ? index : 0, false, &ok,
+                                    mappingsHumanReadable.keys(), (index != -1) ? index : 0, false, &ok,
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                     (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+
+                                temp = mappingsHumanReadable.value(temp); // Get mappings key.
 
                                 if(ok)
                                 {
