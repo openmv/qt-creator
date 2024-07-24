@@ -4120,16 +4120,7 @@ void OpenMVPlugin::stopClicked()
                 : false
             : false)
         {
-            QTimer::singleShot(2000, this, [] {
-                Utils::CheckableMessageBox::doNotShowAgainInformation(Core::ICore::dialogParent(),
-                        Tr::tr("More Examples"),
-                        Tr::tr("You can find more examples under the File -> Examples menu.\n\n"
-                           "In particular, checkout the Color-Tracking examples."),
-                        ExtensionSystem::PluginManager::settings(),
-                        QStringLiteral(DONT_SHOW_EXAMPLES_AGAIN),
-                        QDialogButtonBox::Ok,
-                        QDialogButtonBox::Ok);
-            });
+            QTimer::singleShot(2000, this, &OpenMVPlugin::showExamplesDialog);
         }
 
         ///////////////////////////////////////////////////////////////////////
@@ -4141,6 +4132,22 @@ void OpenMVPlugin::stopClicked()
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("Stop"),
             Tr::tr("Busy... please wait..."));
+    }
+}
+
+void OpenMVPlugin::showExamplesDialog()
+{
+    if (!QApplication::activeModalWidget()) {
+        Utils::CheckableMessageBox::doNotShowAgainInformation(Core::ICore::dialogParent(),
+                Tr::tr("More Examples"),
+                Tr::tr("You can find more examples under the File -> Examples menu.\n\n"
+                   "In particular, checkout the Color-Tracking examples."),
+                ExtensionSystem::PluginManager::settings(),
+                QStringLiteral(DONT_SHOW_EXAMPLES_AGAIN),
+                QDialogButtonBox::Ok,
+                QDialogButtonBox::Ok);
+    } else {
+        QTimer::singleShot(2000, this, &OpenMVPlugin::showExamplesDialog); // try again
     }
 }
 
