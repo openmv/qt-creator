@@ -1656,7 +1656,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+10"/>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+864"/>
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+887"/>
         <location line="+13"/>
         <location line="+11"/>
         <source>Save Log</source>
@@ -4199,7 +4199,7 @@ Double-click to edit item.</source>
         <translation>فعال کردن نمای %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-599"/>
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-619"/>
         <source>Zoom: %1%</source>
         <translation>بزرگنمایی: %1%</translation>
     </message>
@@ -4218,7 +4218,7 @@ Double-click to edit item.</source>
 </translation>
     </message>
     <message>
-        <location line="+278"/>
+        <location line="+298"/>
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>فایل های متنی (*.txt)؛؛ همه فایل ها (*)</translation>
     </message>
@@ -5696,8 +5696,8 @@ Would you like to overwrite them?</source>
         <location line="+11"/>
         <location line="+130"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358"/>
-        <location line="+781"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1573"/>
+        <location line="+784"/>
         <source>Dataset Editor</source>
         <translation>ویرایشگر مجموعه داده</translation>
     </message>
@@ -5713,36 +5713,36 @@ Would you like to overwrite them?</source>
         <location line="+107"/>
         <location line="+130"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-685"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-694"/>
         <location line="+19"/>
         <location line="+115"/>
-        <location line="+1234"/>
+        <location line="+1274"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
         <location line="+106"/>
         <location line="+180"/>
-        <location line="+180"/>
+        <location line="+204"/>
         <location line="+14"/>
-        <location line="+258"/>
+        <location line="+315"/>
         <location line="+13"/>
-        <location line="+252"/>
+        <location line="+346"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
         <location line="+114"/>
         <location line="+118"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+155"/>
-        <location line="+233"/>
-        <location line="+130"/>
-        <location line="+628"/>
-        <location line="+286"/>
+        <location line="+234"/>
+        <location line="+156"/>
+        <location line="+682"/>
+        <location line="+295"/>
         <location line="+468"/>
         <location line="+31"/>
         <location line="+122"/>
         <location line="+9"/>
-        <location line="+378"/>
+        <location line="+379"/>
         <location line="+9"/>
         <location line="+68"/>
         <location line="+9"/>
@@ -5753,14 +5753,15 @@ Would you like to overwrite them?</source>
         <location line="+78"/>
         <location line="+9"/>
         <location line="+187"/>
-        <location line="+907"/>
+        <location line="+168"/>
+        <location line="+786"/>
         <location line="+13"/>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+77"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+495"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+520"/>
         <location line="+11"/>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+247"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+450"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+452"/>
         <location line="+19"/>
         <location line="+11"/>
         <source>Error: %L1!</source>
@@ -5768,8 +5769,8 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location line="-307"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3442"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+427"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3651"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+429"/>
         <location line="+34"/>
         <location line="+48"/>
         <location line="+9"/>
@@ -5783,8 +5784,8 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location line="+31"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2348"/>
-        <location line="+1578"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2406"/>
+        <location line="+1729"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353"/>
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>فایل تصویری به دلیل نامعلومی ذخیره نشد!</translation>
@@ -5823,12 +5824,12 @@ Would you like to overwrite them?</source>
         <translation>تغییر نام فایل به دلیل نامعلومی انجام نشد!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5245"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5654"/>
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>فایل &quot;%1&quot; در &quot;%2&quot; کپی نشد.</translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+180"/>
         <source>Invalid argument (%1) for -override_read_timeout</source>
         <translation>آرگومان نامعتبر (%1) برای -override_read_timeout</translation>
     </message>
@@ -5838,7 +5839,7 @@ Would you like to overwrite them?</source>
         <translation>آرگومان برای -override_read_timeout وجود ندارد</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+25"/>
         <source>Invalid argument (%1) for -override_read_stall_timeout</source>
         <translation>آرگومان نامعتبر (%1) برای -override_read_stall_timeout</translation>
     </message>
@@ -5848,15 +5849,15 @@ Would you like to overwrite them?</source>
         <translation>آرگومان برای -override_read_stall_timeout وجود ندارد</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+99"/>
         <source>Missing argument for -serial_number_filter</source>
         <translation>آرگومان موجود برای -serial_number_filter</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+120"/>
         <location line="+11"/>
         <location line="+19"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3982"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4120"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -5875,21 +5876,62 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>آستانه LAB را با ویرایشگر آستانه ویرایش کنید</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+143"/>
         <source>Missing argument for -form_key</source>
         <translation>آرگومان برای -form_key وجود ندارد</translation>
     </message>
     <message>
-        <source>OpenMV IDE</source>
-        <translation type="vanished">OpenMV IDE</translation>
+        <location line="+811"/>
+        <source>About OpenMV Viewer...</source>
+        <translation>درباره OpenMV Viewer...</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+5"/>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;درباره %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;توسط: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;مجوز عمومی GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;کپی رایت (C) %L2 %L3&lt;/p&gt;&lt;p&gt;این برنامه به این امید توزیع می شود که مفید باشد، اما بدون هیچ گونه ضمانتی؛ حتی بدون ضمانت ضمنی قابلیت خرید و فروش یا تناسب اندام برای یک هدف خاص. برای جزئیات بیشتر به &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; مراجعه کنید.&lt;/p&gt;&lt;p&gt;&lt;b&gt;سوال یا نظر؟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;با ما در &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt; تماس بگیرید.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>OpenMV IDE</source>
+        <translation>OpenMV IDE</translation>
+    </message>
+    <message>
+        <location line="-780"/>
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="-827"/>
+        <source>Invalid argument (%1) for -override_per_command_wait</source>
+        <translation>آرگومان نامعتبر (1%) برای -override_per_command_wait</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Missing argument for -override_per_command_wait</source>
+        <translation>آرگومان گمشده برای -override_per_command_wait</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Invalid argument (%1) for -auto_update</source>
+        <translation>آرگومان نامعتبر (1%) برای -auto_update</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Missing argument for -auto_update</source>
+        <translation>آرگومان از دست رفته برای -auto_update</translation>
+    </message>
+    <message>
+        <location line="+689"/>
+        <source>Form Key</source>
+        <translation>کلید فرم</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Please enter the form key</source>
+        <translation>لطفا کلید فرم را وارد کنید</translation>
+    </message>
+    <message>
+        <location line="+68"/>
         <location line="+7"/>
         <location line="+7"/>
         <source>New File</source>
@@ -5918,7 +5960,17 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>مثال ها</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+11"/>
+        <source>No examples found for your board</source>
+        <translation>هیچ نمونه ای برای هیئت مدیره شما یافت نشد</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Connect to your board first to see examples</source>
+        <translation>برای دیدن نمونه ها ابتدا به تابلوی خود متصل شوید</translation>
+    </message>
+    <message>
+        <location line="+21"/>
         <source>Run Bootloader (Load Firmware)</source>
         <translation>اجرای بوت لودر (بارگذاری سیستم عامل)</translation>
     </message>
@@ -5954,7 +6006,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>وقتی اتصال مجدد خودکار فعال باشد، OpenMV IDE به طور خودکار در صورت شناسایی مجدد به OpenMV شما متصل می شود.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Stop Script on Connect/Disconnect</source>
         <translation>Stop Script در Connect/Disconnect</translation>
     </message>
@@ -5964,7 +6016,27 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>اسکریپت را در Connect یا Disconnect متوقف کنید (توجه داشته باشید که IDE در صورت اتصال قطع می شود).</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
+        <source>Sync Imports between OpenMV Cam and Documents Folder</source>
+        <translation>همگام سازی واردات بین OpenMV Cam و پوشه اسناد</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Syncs libraries between your OpenMV Cam and Documents Folder automatically.</source>
+        <translation>کتابخانه ها را به طور خودکار بین OpenMV Cam و Documents Folder همگام سازی می کند.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Filter examples by board and sensor type</source>
+        <translation>نمونه های فیلتر بر اساس برد و نوع سنسور</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Only show examples that are relevant for your board and sensor type.</source>
+        <translation>فقط نمونه هایی را نشان دهید که مربوط به برد و نوع سنسور شما هستند.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Open OpenMV Cam Drive folder</source>
         <translation>پوشه OpenMV Cam Drive را باز کنید</translation>
     </message>
@@ -5990,33 +6062,33 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
     </message>
     <message>
         <location line="+9"/>
-        <location line="+3620"/>
+        <location line="+3829"/>
         <location line="+59"/>
         <source>Open Terminal</source>
         <translation>ترمینال را باز کنید</translation>
     </message>
     <message>
-        <location line="-3674"/>
+        <location line="-3883"/>
         <source>Machine Vision</source>
         <translation>ماشین بینایی</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+3701"/>
+        <location line="+3910"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>ویرایشگر آستانه</translation>
     </message>
     <message>
-        <location line="-3772"/>
-        <location line="+3850"/>
+        <location line="-3981"/>
+        <location line="+4059"/>
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+186"/>
         <source>Keypoints Editor</source>
         <translation>ویرایشگر نقاط کلیدی</translation>
     </message>
     <message>
-        <location line="-3843"/>
-        <location line="+4009"/>
+        <location line="-4052"/>
+        <location line="+4218"/>
         <location line="+98"/>
         <location line="+24"/>
         <location line="+11"/>
@@ -6025,7 +6097,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>آوریل تگ ژنراتور</translation>
     </message>
     <message>
-        <location line="-4157"/>
+        <location line="-4366"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>خانواده TAG16H5 (30 برچسب)</translation>
     </message>
@@ -6063,15 +6135,15 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <location line="+10"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location line="+413"/>
+        <location line="+409"/>
         <location line="+14"/>
         <location line="+31"/>
-        <location line="+793"/>
+        <location line="+806"/>
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>باز نشد: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1275"/>
+        <location line="-1284"/>
         <source>DataMatrix Generator</source>
         <translation>مولد DataMatrix</translation>
     </message>
@@ -6104,20 +6176,20 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
     </message>
     <message>
         <location line="+1"/>
-        <location line="+255"/>
-        <location line="+2186"/>
+        <location line="+249"/>
+        <location line="+2250"/>
         <location line="+47"/>
         <location line="+69"/>
-        <location line="+1306"/>
+        <location line="+1457"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382"/>
         <location line="+364"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+848"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+856"/>
         <location line="+208"/>
         <source>Please add a file extension!</source>
         <translation>لطفا یک پسوند فایل اضافه کنید!</translation>
     </message>
     <message>
-        <location line="-3843"/>
+        <location line="-4052"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268"/>
         <location line="+13"/>
@@ -6154,13 +6226,13 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <location line="+18"/>
         <location line="+15"/>
         <location line="+6"/>
-        <location line="+52"/>
+        <location line="+46"/>
         <location line="+19"/>
         <source>New Dataset</source>
         <translation>مجموعه داده جدید</translation>
     </message>
     <message>
-        <location line="-102"/>
+        <location line="-96"/>
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>ویرایشگر مجموعه داده - پوشه ای را برای ساخت مجموعه داده انتخاب کنید</translation>
     </message>
@@ -6171,7 +6243,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
     </message>
     <message>
         <location line="+15"/>
-        <location line="+213"/>
+        <location line="+207"/>
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209"/>
         <location line="+34"/>
         <location line="+48"/>
@@ -6225,13 +6297,13 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1233"/>
+        <location line="+1273"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
         <location line="+240"/>
-        <location line="+761"/>
+        <location line="+936"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
@@ -6239,23 +6311,23 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <location line="+118"/>
         <location line="+433"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-34"/>
-        <location line="+222"/>
-        <location line="+175"/>
-        <location line="+626"/>
-        <location line="+398"/>
+        <location line="+223"/>
+        <location line="+201"/>
+        <location line="+680"/>
+        <location line="+407"/>
         <location line="+156"/>
         <location line="+138"/>
         <location line="+67"/>
         <location line="+238"/>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1272"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1282"/>
         <location line="+78"/>
-        <location line="+547"/>
+        <location line="+557"/>
         <source>Cancel</source>
         <translation>لغو کنید</translation>
     </message>
     <message>
-        <location line="-3634"/>
+        <location line="-3849"/>
         <source>Upload to Edge Impulse Project</source>
         <translation>در Edge Impulse Project آپلود کنید</translation>
     </message>
@@ -6287,7 +6359,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>مجموعه داده را ببندید</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>OpenMV Docs</source>
         <translation>اسناد OpenMV</translation>
     </message>
@@ -6317,10 +6389,16 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>درباره OpenMV Cam %1...</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+5"/>
+        <location line="+18"/>
+        <location line="+6"/>
         <source>About OpenMV IDE</source>
         <translation>درباره OpenMV IDE</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <location line="+6"/>
+        <source>About OpenMV Viewer</source>
+        <translation>درباره OpenMV Viewer</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -6328,44 +6406,46 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>درباره OpenMV IDE...</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;درباره OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;توسط: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;حق نشر (C) %L2 %L3&lt;/p&gt;&lt;p&gt;این برنامه به امید مفید بودن توزیع شده است، اما بدون هیچ گونه ضمانت. حتی بدون ضمانت ضمنی تجارت یا تناسب برای یک هدف خاص. برای جزئیات بیشتر به &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;مجوز عمومی عمومی گنو&lt;/a&gt; مراجعه کنید.&lt;/p&gt;&lt;p. &gt;&lt;b&gt;سؤالات یا نظراتی دارید؟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;با ما در &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt; تماس بگیرید.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;درباره OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;توسط: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;حق نشر (C) %L2 %L3&lt;/p&gt;&lt;p&gt;این برنامه به امید مفید بودن توزیع شده است، اما بدون هیچ گونه ضمانت. حتی بدون ضمانت ضمنی تجارت یا تناسب برای یک هدف خاص. برای جزئیات بیشتر به &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;مجوز عمومی عمومی گنو&lt;/a&gt; مراجعه کنید.&lt;/p&gt;&lt;p. &gt;&lt;b&gt;سؤالات یا نظراتی دارید؟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;با ما در &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt; تماس بگیرید.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;اعتبارها&lt;/b&gt;&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;اعتبارها&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>&lt;p&gt;OpenMV IDE English translation by Kwabena W. Agyeman.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;ترجمه انگلیسی OpenMV IDE توسط Kwabena W. Agyeman.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;ترجمه انگلیسی OpenMV IDE توسط Kwabena W. Agyeman.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+13"/>
         <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;شرکاء&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
+        <location line="+0"/>
+        <source>OpenMV Viewer</source>
+        <translation>نمایشگر OpenMV</translation>
+    </message>
+    <message>
         <location line="+13"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1716"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1805"/>
         <location line="+6"/>
         <location line="+26"/>
-        <location line="+98"/>
+        <location line="+124"/>
         <location line="+8"/>
         <location line="+33"/>
-        <location line="+152"/>
-        <location line="+72"/>
+        <location line="+181"/>
+        <location line="+82"/>
         <location line="+35"/>
-        <location line="+50"/>
-        <location line="+10"/>
-        <location line="+22"/>
+        <location line="+52"/>
+        <location line="+12"/>
+        <location line="+24"/>
         <location line="+19"/>
         <location line="+36"/>
-        <location line="+81"/>
+        <location line="+88"/>
         <location line="+9"/>
-        <location line="+29"/>
+        <location line="+31"/>
         <location line="+9"/>
         <location line="+63"/>
         <location line="+6"/>
@@ -6373,8 +6453,8 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <location line="+4"/>
         <location line="+4"/>
         <location line="+52"/>
-        <location line="+88"/>
-        <location line="+59"/>
+        <location line="+90"/>
+        <location line="+66"/>
         <location line="+9"/>
         <location line="+113"/>
         <location line="+4"/>
@@ -6394,7 +6474,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <location line="+4"/>
         <location line="+7"/>
         <location line="+9"/>
-        <location line="+18"/>
+        <location line="+19"/>
         <location line="+26"/>
         <location line="+19"/>
         <location line="+83"/>
@@ -6437,25 +6517,25 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <location line="+14"/>
         <location line="+92"/>
         <location line="+9"/>
-        <location line="+159"/>
+        <location line="+197"/>
         <location line="+33"/>
-        <location line="+168"/>
-        <location line="+27"/>
+        <location line="+157"/>
+        <location line="+38"/>
         <source>Connect</source>
         <translation>اتصال</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1496"/>
+        <location line="+14"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1535"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+170"/>
+        <location line="+171"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1319"/>
+        <location line="+1357"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Disconnect</source>
         <translation>قطع شدن</translation>
     </message>
@@ -6489,7 +6569,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
     </message>
     <message>
         <location line="+5"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+255"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+246"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5"/>
         <source>Stop</source>
         <translation>متوقف کردن</translation>
@@ -6526,21 +6606,21 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
     <message>
         <location line="+17"/>
         <location line="+22"/>
-        <location line="+1727"/>
+        <location line="+1782"/>
         <location line="+55"/>
         <location line="+112"/>
         <location line="+69"/>
-        <location line="+181"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-431"/>
-        <location line="+177"/>
+        <location line="+246"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-424"/>
+        <location line="+179"/>
         <location line="+124"/>
-        <location line="+131"/>
-        <location line="+99"/>
+        <location line="+122"/>
+        <location line="+115"/>
         <source>Busy... please wait...</source>
         <translation>مشغول ... لطفا صبر کنید ...</translation>
     </message>
     <message>
-        <location line="-2160"/>
+        <location line="-2280"/>
         <location line="+15"/>
         <source>Disable</source>
         <translation>غیر فعال کردن</translation>
@@ -6606,22 +6686,30 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>Res - بدون تصویر</translation>
     </message>
     <message>
-        <location line="-14"/>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-14"/>
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)</source>
-        <translation>Res (w:%1، h:%2) - ROI (x:%3، y:%4، w:%5، h:%6) - پیکسل‌ها (%7)</translation>
+        <translation type="vanished">Res (w:%1، h:%2) - ROI (x:%3، y:%4، w:%5، h:%6) - پیکسل‌ها (%7)</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4"/>
+        <location line="-10"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-10"/>
         <source>Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
         <translation>پاسخ (w:%1، h:%2) - نقطه (x:%3، y:%4)</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5"/>
         <source>Res (w:%1, h:%2)</source>
-        <translation>پاسخ (w:%1، h:%2)</translation>
+        <translation type="vanished">پاسخ (w:%1، h:%2)</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4"/>
+        <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
+        <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - پیکسل ها (7%) - فوکوس (8%)</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+9"/>
+        <source>Res (w:%1, h:%2) - Focus (%3)</source>
+        <translation>Res (w:%1, h:%2) - فوکوس (3%)</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -6650,7 +6738,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
     </message>
     <message>
         <location line="+65"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-377"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-384"/>
         <source>Board:</source>
         <translation>هیئت مدیره:</translation>
     </message>
@@ -6682,7 +6770,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>نسخه سیستم عامل دوربین</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
         <source>Serial Port:</source>
         <translation>درگاه سریال:</translation>
@@ -6694,19 +6782,19 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
     </message>
     <message>
         <location line="+6"/>
-        <location line="+1787"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-249"/>
-        <location line="+251"/>
+        <location line="+1908"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-251"/>
+        <location line="+253"/>
         <source>Drive:</source>
         <translation>راندن:</translation>
     </message>
     <message>
-        <location line="-1786"/>
+        <location line="-1907"/>
         <source>Drive associated with port</source>
         <translation>درایو مرتبط با پورت</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
         <source>FPS:</source>
         <translation>FPS:</translation>
@@ -6717,8 +6805,8 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>ممکن است با FPS دوربین متفاوت باشد</translation>
     </message>
     <message>
-        <location line="+212"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3666"/>
+        <location line="+218"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3797"/>
         <source>Update Available</source>
         <translation>به روز رسانی در دسترس است</translation>
     </message>
@@ -6733,7 +6821,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>دانلود</translation>
     </message>
     <message>
-        <location line="+175"/>
+        <location line="+172"/>
         <source>WiFi Programming Disabled!</source>
         <translation>برنامه نویسی وای فای غیرفعال شد!</translation>
     </message>
@@ -6743,7 +6831,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>برنامه دیگر استفاده از پورت کشف پخش OpenMV Cam است. لطفاً آن برنامه را ببندید و OpenMV IDE را مجدداً راه اندازی کنید تا برنامه نویسی WiFi فعال شود.</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>Documents Folder Error</source>
         <translation>خطای پوشه اسناد</translation>
     </message>
@@ -6753,7 +6841,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>پوشه اسناد ایجاد نشد!</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+20"/>
         <source>OpenMV Cam LED Colors</source>
         <translation>OpenMV Cam LED Colors</translation>
     </message>
@@ -6803,18 +6891,18 @@ OpenMV Cam شما اسکریپت پیش فرض main.py را اجرا می کند
 </translation>
     </message>
     <message>
-        <location line="+77"/>
-        <location line="+1386"/>
+        <location line="+94"/>
+        <location line="+1561"/>
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>پورت سریال - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1354"/>
+        <location line="-1529"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
-        <location line="+1001"/>
+        <location line="+1176"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
@@ -6824,7 +6912,7 @@ OpenMV Cam شما اسکریپت پیش فرض main.py را اجرا می کند
         <translation>در حال اتصال... (تایم ۳۰ ثانیه ای)</translation>
     </message>
     <message>
-        <location line="-1993"/>
+        <location line="-2168"/>
         <source>
 
 Try doing:
@@ -6877,12 +6965,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+1443"/>
+        <location line="+1618"/>
         <source>UDP Server Connection - %1</source>
         <translation>اتصال سرور UDP - %1</translation>
     </message>
     <message>
-        <location line="-1369"/>
+        <location line="-1544"/>
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>آرگومان پورت نامعتبر (%1) برای -open_udp_server_terminal</translation>
     </message>
@@ -6913,12 +7001,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+1489"/>
+        <location line="+1664"/>
         <source>TCP Server Connection - %1</source>
         <translation>اتصال سرور TCP - %1</translation>
     </message>
     <message>
-        <location line="-1415"/>
+        <location line="-1590"/>
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>آرگومان پورت (%1) برای -open_tcp_server_terminal نامعتبر است</translation>
     </message>
@@ -6945,6 +7033,10 @@ sudo adduser %L1 dialout
         <location line="+6"/>
         <location line="+8"/>
         <location line="+7"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3355"/>
+        <location line="+9"/>
+        <location line="+8"/>
+        <location line="+19"/>
         <source>Register OpenMV Cam</source>
         <translation>ثبت OpenMV Cam</translation>
     </message>
@@ -6985,18 +7077,21 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
     <message>
         <location line="+8"/>
         <location line="+182"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-35"/>
         <source>Database Error!</source>
         <translation>خطای پایگاه داده!</translation>
     </message>
     <message>
         <location line="-165"/>
         <location line="+178"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17"/>
         <source>GET Network error!</source>
         <translation>دریافت خطای شبکه!</translation>
     </message>
     <message>
         <location line="-169"/>
         <location line="+177"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19"/>
         <source>GET network error!</source>
         <translation>دریافت خطای شبکه!</translation>
     </message>
@@ -7075,15 +7170,15 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>کلید هیئت مدیره با فرمت نامعتبر!</translation>
     </message>
     <message>
-        <location line="+45"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3415"/>
-        <location line="+375"/>
+        <location line="+64"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+152"/>
+        <location line="+377"/>
         <location line="+110"/>
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+86"/>
         <source>Configure Settings</source>
         <translation>تنظیمات را پیکربندی کنید</translation>
     </message>
@@ -7112,13 +7207,13 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-23"/>
-        <location line="+1233"/>
+        <location line="+1384"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>فایل های تصویری (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1188"/>
+        <location line="-1339"/>
         <location line="+7"/>
         <location line="+17"/>
         <location line="+15"/>
@@ -7154,14 +7249,14 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-48"/>
-        <location line="+1205"/>
+        <location line="+1356"/>
         <location line="+80"/>
         <location line="+21"/>
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>فایل های نقاط کلیدی (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1197"/>
+        <location line="-1291"/>
         <location line="+7"/>
         <location line="+6"/>
         <location line="+7"/>
@@ -7189,7 +7284,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>نمی توان فایل مثال &quot;%L1&quot; را باز کرد!</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+61"/>
         <location line="+11"/>
         <location line="+15"/>
         <location line="+27"/>
@@ -7217,7 +7312,47 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>درایو: %L1</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+36"/>
+        <source>Debug Protocol Settings</source>
+        <translation>تنظیمات پروتکل اشکال زدایی</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Combined Polling</source>
+        <translation>نظرسنجی ترکیبی</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Polling (ms)</source>
+        <translation>نظرسنجی (میلی ثانیه)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Split Polling</source>
+        <translation>تقسیم نظرسنجی</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polling Settings</source>
+        <translation>تنظیمات نظرسنجی</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Frame Buffer Polling (ms)</source>
+        <translation>نظرسنجی بافر فریم (میلی ثانیه)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Script State Polling (ms)</source>
+        <translation>نظرسنجی ایالتی اسکریپت (MS)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Text Buffer Polling (ms)</source>
+        <translation>نظرسنجی بافر متن (میلی ثانیه)</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <location line="+13"/>
         <location line="+31"/>
         <location line="+9"/>
@@ -7264,7 +7399,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+31"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3055"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3114"/>
         <source>Please select a serial port</source>
         <translation>لطفاً یک پورت سریال انتخاب کنید</translation>
     </message>
@@ -7275,7 +7410,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+94"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+234"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+243"/>
         <source>Try doing:
 
 </source>
@@ -7501,7 +7636,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>نسل کامل شد!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1079"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1160"/>
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>منابع OpenMV IDE جدید در دسترس هستند (به عنوان مثال، سیستم عامل، اسناد و غیره).</translation>
     </message>
@@ -7512,27 +7647,27 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+7"/>
-        <location line="+222"/>
-        <location line="+175"/>
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+100"/>
+        <location line="+223"/>
+        <location line="+201"/>
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+102"/>
         <location line="+51"/>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+169"/>
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+173"/>
         <location line="+46"/>
         <location line="+75"/>
         <location line="+46"/>
         <location line="+74"/>
         <location line="+46"/>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+344"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+352"/>
         <location line="+50"/>
-        <location line="+703"/>
+        <location line="+705"/>
         <location line="+50"/>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+177"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+187"/>
         <location line="+51"/>
         <source>Downloading...</source>
         <translation>در حال دانلود...</translation>
     </message>
     <message>
-        <location line="-383"/>
+        <location line="-410"/>
         <source>Installing...</source>
         <translation>در حال نصب...</translation>
     </message>
@@ -7555,53 +7690,53 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-25"/>
-        <location line="+233"/>
-        <location line="+132"/>
+        <location line="+234"/>
+        <location line="+158"/>
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>فایل منابع &quot;%L1&quot; باز نمی شود!</translation>
     </message>
     <message>
-        <location line="-339"/>
-        <location line="+233"/>
-        <location line="+139"/>
+        <location line="-366"/>
+        <location line="+234"/>
+        <location line="+165"/>
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>درخواست شبکه &quot;%L1&quot; ناموفق بود!</translation>
     </message>
     <message>
-        <location line="-348"/>
-        <location line="+78"/>
+        <location line="-375"/>
+        <location line="+79"/>
         <location line="+45"/>
         <source>Bootloader</source>
         <translation>بوت لودر</translation>
     </message>
     <message>
-        <location line="-114"/>
-        <location line="+3"/>
+        <location line="-115"/>
+        <location line="+4"/>
         <source>Firmware Path</source>
         <translation>مسیر سیستم عامل</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-3"/>
         <source>Firmware Binary (*.bin *.dfu)</source>
         <translation>باینری میان‌افزار (*.bin *.dfu)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <location line="+6"/>
         <location line="+115"/>
-        <location line="+378"/>
+        <location line="+433"/>
         <source>Erase internal file system</source>
         <translation>پاک کردن فایل سیستم داخلی</translation>
     </message>
     <message>
-        <location line="-495"/>
+        <location line="-550"/>
         <location line="+120"/>
-        <location line="+379"/>
+        <location line="+434"/>
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>اگر این گزینه را فعال کنید، تمام فایل‌های موجود در درایو فلش داخلی OpenMV Cam شما حذف خواهند شد. این فایل ها را روی هیچ کارت SD قابل جابجایی (در صورت قرار دادن) پاک نمی کند.</translation>
     </message>
     <message>
-        <location line="-494"/>
+        <location line="-549"/>
         <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation>بارگیری سیستم عامل از طریق DFU همیشه درایو فلش داخلی OpenMV Cam شما را پاک می کند. این فایل ها را روی هیچ کارت SD قابل جابجایی (در صورت قرار دادن) پاک نمی کند.</translation>
     </message>
@@ -7617,7 +7752,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>&quot;%L1&quot; یک فایل نیست!</translation>
     </message>
     <message>
-        <location line="+207"/>
+        <location line="+233"/>
         <source>Extracting...</source>
         <translation>استخراج ...</translation>
     </message>
@@ -7627,7 +7762,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>نمی توان فریمور را استخراج کرد!</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+238"/>
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>یک برد در حالت DFU شناسایی شد. دوست دارید چه کار کنید؟</translation>
     </message>
@@ -7647,7 +7782,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>فقط فایل سیستم داخلی را پاک کنید</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+73"/>
         <source>No OpenMV Cams found!</source>
         <translation>هیچ دوربین OpenMV پیدا نشد!</translation>
     </message>
@@ -7657,21 +7792,21 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>آیا دوربین OpenMV متصل دارید و آیا آجری است؟</translation>
     </message>
     <message>
-        <location line="+49"/>
-        <location line="+505"/>
-        <location line="+616"/>
+        <location line="+51"/>
+        <location line="+520"/>
+        <location line="+623"/>
         <source>Please select the board type</source>
         <translation>لطفا نوع تابلو را انتخاب کنید</translation>
     </message>
     <message>
-        <location line="-1110"/>
-        <location line="+3161"/>
+        <location line="-1130"/>
+        <location line="+3229"/>
         <location line="+28"/>
         <source>Erase the internal file system?</source>
         <translation>فایل سیستم داخلی پاک شود؟</translation>
     </message>
     <message>
-        <location line="-3167"/>
+        <location line="-3233"/>
         <source>No released firmware available for the attached board!</source>
         <translation>هیچ سیستم عامل منتشر شده ای برای برد پیوست شده موجود نیست!</translation>
     </message>
@@ -7681,14 +7816,14 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>لطفاً یک دستگاه DFU انتخاب کنید</translation>
     </message>
     <message>
-        <location line="+82"/>
-        <location line="+38"/>
+        <location line="+89"/>
+        <location line="+40"/>
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>لطفاً بوت لودر را به آخرین نسخه به روز کنید و SoftDevice را برای فلش کردن سیستم عامل OpenMV نصب کنید. اطلاعات بیشتر را می‌توانید در &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; پیدا کنید.</translation>
     </message>
     <message>
-        <location line="-29"/>
-        <location line="+38"/>
+        <location line="-31"/>
+        <location line="+40"/>
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>لطفاً REC را به GND کوتاه کرده و برد خود را بازنشانی کنید. اطلاعات بیشتر را می‌توانید در &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; پیدا کنید.</translation>
     </message>
@@ -7718,8 +7853,8 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+52"/>
-        <location line="+156"/>
-        <location line="+1906"/>
+        <location line="+165"/>
+        <location line="+1945"/>
         <source>Timeout error while getting board architecture!</source>
         <translation>خطای تایم اوت هنگام دریافت معماری برد!</translation>
     </message>
@@ -7728,7 +7863,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">معماری برد پشتیبانی نشده!</translation>
     </message>
     <message>
-        <location line="-1844"/>
+        <location line="-1883"/>
         <location line="+600"/>
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>دوربین OpenMV خود را جدا کرده و دوباره وصل کنید...</translation>
@@ -7741,6 +7876,11 @@ Hit cancel to skip to DFU reprogramming.</source>
         <translation>
 
 برای رفتن به برنامه ریزی مجدد DFU، روی لغو ضربه بزنید.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Reconnect your OpenMV Cam...</source>
+        <translation>دوربین OpenMV خود را دوباره وصل کنید...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7776,10 +7916,10 @@ Continue?</source>
         <location line="+56"/>
         <location line="+63"/>
         <location line="+77"/>
-        <location line="+628"/>
+        <location line="+629"/>
         <location line="+447"/>
         <location line="+22"/>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-651"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-653"/>
         <location line="+38"/>
         <location line="+48"/>
         <location line="+41"/>
@@ -7793,7 +7933,7 @@ Continue?</source>
         <location line="+39"/>
         <location line="+40"/>
         <location line="+37"/>
-        <location line="+195"/>
+        <location line="+197"/>
         <location line="+46"/>
         <location line="+39"/>
         <location line="+38"/>
@@ -7801,14 +7941,14 @@ Continue?</source>
         <translation>خطای تایم اوت!</translation>
     </message>
     <message>
-        <location line="-1155"/>
+        <location line="-1156"/>
         <location line="+67"/>
         <source>Programming...</source>
         <translation>برنامه نويسي...</translation>
     </message>
     <message>
         <location line="+22"/>
-        <location line="+299"/>
+        <location line="+300"/>
         <location line="+45"/>
         <location line="+273"/>
         <location line="+466"/>
@@ -7820,8 +7960,8 @@ Continue?</source>
 </translation>
     </message>
     <message>
-        <location line="-1083"/>
-        <location line="+299"/>
+        <location line="-1084"/>
+        <location line="+300"/>
         <location line="+45"/>
         <source>Firmware Upgrade complete!
 
@@ -7831,8 +7971,8 @@ Continue?</source>
 </translation>
     </message>
     <message>
-        <location line="-343"/>
-        <location line="+299"/>
+        <location line="-344"/>
+        <location line="+300"/>
         <location line="+45"/>
         <location line="+273"/>
         <location line="+466"/>
@@ -7844,8 +7984,8 @@ Continue?</source>
 </translation>
     </message>
     <message>
-        <location line="-1082"/>
-        <location line="+299"/>
+        <location line="-1083"/>
+        <location line="+300"/>
         <location line="+45"/>
         <location line="+273"/>
         <location line="+466"/>
@@ -7853,8 +7993,8 @@ Continue?</source>
         <translation>هنگامی که LED RGB OpenMV Cam شروع به چشمک زدن آبی رنگ کرد - تأیید را کلیک کنید - که نشان می دهد خودآزمایی کامل شده است.</translation>
     </message>
     <message>
-        <location line="-1082"/>
-        <location line="+280"/>
+        <location line="-1083"/>
+        <location line="+281"/>
         <location line="+19"/>
         <location line="+25"/>
         <location line="+20"/>
@@ -7875,7 +8015,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
 در این حالت، وقتی پایه فلش داخلی OpenMV Cam خود را مشاهده کردید، روی OK کلیک کنید (یک پنجره ممکن است باز شود یا باز نشود).</translation>
     </message>
     <message>
-        <location line="-1095"/>
+        <location line="-1096"/>
         <source>The firmware file is empty!</source>
         <translation>فایل فریمور خالی است!</translation>
     </message>
@@ -7893,17 +8033,17 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+35"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+170"/>
+        <location line="+171"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1319"/>
+        <location line="+1357"/>
         <location line="+12"/>
         <location line="+7"/>
         <source>Failed to eject &quot;%L1&quot;!</source>
         <translation>&quot;%L1&quot; خارج نشد!</translation>
     </message>
     <message>
-        <location line="-1522"/>
+        <location line="-1561"/>
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
@@ -7931,7 +8071,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location line="+9"/>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Firmware update complete!
 
 </source>
@@ -7940,7 +8080,16 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
 </translation>
     </message>
     <message>
-        <location line="-43"/>
+        <location line="-44"/>
+        <source>Disconnect your OpenMV Cam from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
+
+</source>
+        <translation>OpenMV Cam خود را از رایانه خود جدا کنید ، سیم جامپر را بین پایه های SBL و 3.3V بردارید و سپس OpenMV Cam خود را دوباره به رایانه خود وصل کنید.
+
+</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <location line="+44"/>
         <location line="+358"/>
         <location line="+222"/>
@@ -7975,8 +8124,8 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <location line="+23"/>
         <location line="+222"/>
         <location line="+216"/>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1050"/>
-        <location line="+765"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1052"/>
+        <location line="+767"/>
         <source>Flashing Firmware</source>
         <translation>نرم افزار فلش</translation>
     </message>
@@ -8100,8 +8249,12 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
     </message>
     <message>
         <location line="+1"/>
+        <source>Leave your OpenMV Cam unconnected until instructed to reconnect it.</source>
+        <translation>OpenMV Cam خود را بدون اتصال بگذارید تا زمانی که به شما دستور اتصال مجدد داده شود.</translation>
+    </message>
+    <message>
         <source>OpenMV IDE will now try to update your OpenMV Cam again.</source>
-        <translation>OpenMV IDE اکنون دوباره سعی می کند OpenMV Cam شما را به روز کند.</translation>
+        <translation type="vanished">OpenMV IDE اکنون دوباره سعی می کند OpenMV Cam شما را به روز کند.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -8125,17 +8278,17 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
     <message>
         <location line="+26"/>
         <location line="+18"/>
-        <location line="+43"/>
+        <location line="+45"/>
         <source>Unknown</source>
         <translation>ناشناخته</translation>
     </message>
     <message>
-        <location line="-46"/>
+        <location line="-48"/>
         <source>Timeout error while getting sensor type!</source>
         <translation>خطای تایم اوت هنگام دریافت نوع سنسور!</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+230"/>
         <source>Timeout error while learning MTU!</source>
         <translation>خطای Timeout هنگام یادگیری MTU!</translation>
     </message>
@@ -8160,7 +8313,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>پورت سریال: %L1</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+48"/>
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ قدیمی - برای ارتقا اینجا را کلیک کنید ]</translation>
     </message>
@@ -8175,7 +8328,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation> - [ آخرین ]</translation>
     </message>
     <message>
-        <location line="+191"/>
+        <location line="+204"/>
         <source>Reset</source>
         <translation>بازنشانی کنید</translation>
     </message>
@@ -8185,7 +8338,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>شروع کنید</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+131"/>
         <source>More Examples</source>
         <translation>نمونه های بیشتر</translation>
     </message>
@@ -8199,7 +8352,7 @@ In particular, checkout the Color-Tracking examples.</source>
 به طور خاص، نمونه های Color-Tracking را بررسی کنید.</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+32"/>
         <location line="+6"/>
         <location line="+18"/>
         <location line="+4"/>
@@ -8233,18 +8386,18 @@ In particular, checkout the Color-Tracking examples.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="-55"/>
-        <location line="+114"/>
+        <location line="+110"/>
         <source>No Image</source>
         <translation>بدون تصویر</translation>
     </message>
     <message>
-        <location line="-67"/>
+        <location line="-63"/>
         <location line="+7"/>
         <source>Video Record</source>
         <translation>ضبط ویدیو</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+112"/>
         <location line="+10"/>
         <location line="+10"/>
         <location line="+10"/>
@@ -8262,7 +8415,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>قاب نوشتن ناموفق بود!</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+54"/>
         <source>Save Image selection to PC</source>
         <translation>انتخاب تصویر را در کامپیوتر ذخیره کنید</translation>
     </message>
@@ -8282,7 +8435,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>ذخیره الگو در دوربین</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+5"/>
         <source>Save Descriptor selection to Cam</source>
         <translation>انتخاب توصیفگر را در Cam ذخیره کنید</translation>
     </message>
@@ -8413,21 +8566,21 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-351"/>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-142"/>
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-357"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150"/>
         <source>Get Devices</source>
         <translation>دریافت دستگاه ها</translation>
     </message>
     <message>
         <location line="+0"/>
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-245"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-253"/>
         <location line="+79"/>
         <source>Query failed!</source>
         <translation>پرس و جو ناموفق بود!</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+43"/>
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -8456,7 +8609,8 @@ OpenMV توصیه می کند این را در تقسیم 80/20٪ پیش فرض 
         <location line="+3"/>
         <source>Please choose how to split the data to upload.
 OpenMV recommends leaving this at the default 80/20% split.</source>
-        <translation type="unfinished"></translation>
+        <translation>لطفا نحوه تقسیم داده ها را برای آپلود انتخاب کنید.
+OpenMV توصیه می کند این را در تقسیم پیش فرض 80/20٪ بگذارید.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -8607,8 +8761,8 @@ Open a data set to upload it.</source>
         <translation>لطفاً یک کلید Edge Impluse Project API وارد کنید</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-836"/>
-        <location line="+71"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-842"/>
+        <location line="+75"/>
         <location line="+140"/>
         <location line="+26"/>
         <location line="+30"/>
@@ -8625,7 +8779,7 @@ Open a data set to upload it.</source>
         <location line="+39"/>
         <location line="+40"/>
         <location line="+37"/>
-        <location line="+33"/>
+        <location line="+35"/>
         <location line="+124"/>
         <location line="+38"/>
         <location line="+46"/>
@@ -8635,17 +8789,17 @@ Open a data set to upload it.</source>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-1120"/>
-        <location line="+211"/>
+        <location line="-1126"/>
+        <location line="+215"/>
         <location line="+26"/>
-        <location line="+723"/>
+        <location line="+725"/>
         <source>This feature is not supported on this machine!</source>
         <translation>این ویژگی در این دستگاه پشتیبانی نمی شود!</translation>
     </message>
     <message>
-        <location line="-345"/>
+        <location line="-347"/>
         <location line="+46"/>
-        <location line="+311"/>
+        <location line="+313"/>
         <location line="+46"/>
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>اجرای این دستور کمی طول می کشد. لطفا صبور باشید.</translation>
@@ -8666,7 +8820,7 @@ Open a data set to upload it.</source>
         <translation>انجام شده</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+59"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67"/>
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -8766,7 +8920,7 @@ Open a data set to upload it.</source>
         <translation>آستانه بالا را قبل از بسته شدن کپی کنید.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-459"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-461"/>
         <source>Reading File...</source>
         <translation>خواندن فایل...</translation>
     </message>
@@ -8798,12 +8952,12 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="-70"/>
-        <location line="+547"/>
+        <location line="+557"/>
         <source>Transcoding File...</source>
         <translation>رمزگذاری فایل...</translation>
     </message>
     <message>
-        <location line="-536"/>
+        <location line="-546"/>
         <location line="+34"/>
         <location line="+11"/>
         <location line="+13"/>
@@ -8825,7 +8979,7 @@ Open a data set to upload it.</source>
         <translation>نوشتن ناموفق بود!</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+64"/>
         <location line="+7"/>
         <location line="+8"/>
         <location line="+7"/>
@@ -8864,8 +9018,8 @@ Open a data set to upload it.</source>
         <translation>دریافت فرمت های ورودی</translation>
     </message>
     <message>
-        <location line="+37"/>
-        <location line="+102"/>
+        <location line="+44"/>
+        <location line="+103"/>
         <location line="+59"/>
         <location line="+15"/>
         <location line="+372"/>
@@ -11825,7 +11979,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="-40"/>
         <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;&lt;a href=&quot;font zoom&quot;&gt; font فاصله خطوط&lt;/a&gt; را روی 100٪ تنظیم کنید تا گزینه بسته بندی متن فعال شود.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -11997,7 +12151,8 @@ A value less than 100%can result in overlapping and misaligned graphics.</source
         <location line="+6"/>
         <source>A line spacing value other than 100% disables text wrapping.
 A value less than 100% can result in overlapping and misaligned graphics.</source>
-        <translation type="unfinished"></translation>
+        <translation>مقدار فاصله خطوط غیر از 100٪ بسته بندی متن را غیرفعال می کند.
+مقدار کمتر از 100٪ می تواند منجر به همپوشانی و ناهماهنگی گرافیک شود.</translation>
     </message>
     <message>
         <location line="+19"/>

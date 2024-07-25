@@ -1656,7 +1656,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+10"/>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+864"/>
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+887"/>
         <location line="+13"/>
         <location line="+11"/>
         <source>Save Log</source>
@@ -4207,7 +4207,7 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
         <translation>Suaktyvinti %1 rodinį</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-599"/>
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-619"/>
         <source>Zoom: %1%</source>
         <translation>Mastelio keitimas: %1%</translation>
     </message>
@@ -4228,7 +4228,7 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
 </translation>
     </message>
     <message>
-        <location line="+278"/>
+        <location line="+298"/>
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Tekstiniai failai (*.txt);;Visi failai (*)</translation>
     </message>
@@ -5708,8 +5708,8 @@ Ar norėtumėte juos perrašyti?</translation>
         <location line="+11"/>
         <location line="+130"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358"/>
-        <location line="+781"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1573"/>
+        <location line="+784"/>
         <source>Dataset Editor</source>
         <translation>Duomenų rinkinio redaktorius</translation>
     </message>
@@ -5725,36 +5725,36 @@ Ar norėtumėte juos perrašyti?</translation>
         <location line="+107"/>
         <location line="+130"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-685"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-694"/>
         <location line="+19"/>
         <location line="+115"/>
-        <location line="+1234"/>
+        <location line="+1274"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
         <location line="+106"/>
         <location line="+180"/>
-        <location line="+180"/>
+        <location line="+204"/>
         <location line="+14"/>
-        <location line="+258"/>
+        <location line="+315"/>
         <location line="+13"/>
-        <location line="+252"/>
+        <location line="+346"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
         <location line="+114"/>
         <location line="+118"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+155"/>
-        <location line="+233"/>
-        <location line="+130"/>
-        <location line="+628"/>
-        <location line="+286"/>
+        <location line="+234"/>
+        <location line="+156"/>
+        <location line="+682"/>
+        <location line="+295"/>
         <location line="+468"/>
         <location line="+31"/>
         <location line="+122"/>
         <location line="+9"/>
-        <location line="+378"/>
+        <location line="+379"/>
         <location line="+9"/>
         <location line="+68"/>
         <location line="+9"/>
@@ -5765,14 +5765,15 @@ Ar norėtumėte juos perrašyti?</translation>
         <location line="+78"/>
         <location line="+9"/>
         <location line="+187"/>
-        <location line="+907"/>
+        <location line="+168"/>
+        <location line="+786"/>
         <location line="+13"/>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+77"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+495"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+520"/>
         <location line="+11"/>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+247"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+450"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+452"/>
         <location line="+19"/>
         <location line="+11"/>
         <source>Error: %L1!</source>
@@ -5780,8 +5781,8 @@ Ar norėtumėte juos perrašyti?</translation>
     </message>
     <message>
         <location line="-307"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3442"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+427"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3651"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+429"/>
         <location line="+34"/>
         <location line="+48"/>
         <location line="+9"/>
@@ -5795,8 +5796,8 @@ Ar norėtumėte juos perrašyti?</translation>
     </message>
     <message>
         <location line="+31"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2348"/>
-        <location line="+1578"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2406"/>
+        <location line="+1729"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353"/>
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Nepavyko išsaugoti vaizdo failo dėl nežinomos priežasties!</translation>
@@ -5835,12 +5836,12 @@ Ar norėtumėte juos perrašyti?</translation>
         <translation>Nepavyko pervardyti failo dėl nežinomos priežasties!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5245"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5654"/>
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Nepavyko nukopijuoti failo „%1“ į „%2“.</translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+180"/>
         <source>Invalid argument (%1) for -override_read_timeout</source>
         <translation>Neteisingas argumentas (%1), skirtas -override_read_timeout</translation>
     </message>
@@ -5850,7 +5851,7 @@ Ar norėtumėte juos perrašyti?</translation>
         <translation>Trūksta -override_read_timeout argumento</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+25"/>
         <source>Invalid argument (%1) for -override_read_stall_timeout</source>
         <translation>Neteisingas argumentas (%1), skirtas -override_read_stall_timeout</translation>
     </message>
@@ -5860,15 +5861,15 @@ Ar norėtumėte juos perrašyti?</translation>
         <translation>Trūksta -override_read_stall_timeout argumento</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+99"/>
         <source>Missing argument for -serial_number_filter</source>
         <translation>Trūksta -serijos_numerio_filtro argumento</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+120"/>
         <location line="+11"/>
         <location line="+19"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3982"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4120"/>
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
@@ -5887,21 +5888,62 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Redaguokite LAB slenkstį naudodami slenksčio rengyklę</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+143"/>
         <source>Missing argument for -form_key</source>
         <translation>Trūksta -form_key argumento</translation>
     </message>
     <message>
-        <source>OpenMV IDE</source>
-        <translation type="vanished">OpenMV IDE</translation>
+        <location line="+811"/>
+        <source>About OpenMV Viewer...</source>
+        <translation>Apie OpenMV Viewer...</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+5"/>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Apie %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autorius: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU BENDROJI VIEŠOJI LICENCIJA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autorių teisės (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ši programa platinama tikintis, kad ji bus naudinga, bet BE JOKIŲ GARANTIJŲ; be net numanomos PERKAMUMO ar TINKAMUMO KONKREČIAM TIKSLUI GARANTIJOS. Daugiau informacijos rasite &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU bendroji viešoji licencija&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Turite klausimų ar komentarų?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Susisiekite su mumis &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>OpenMV IDE</source>
+        <translation>OpenMV IDE</translation>
+    </message>
+    <message>
+        <location line="-780"/>
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="-827"/>
+        <source>Invalid argument (%1) for -override_per_command_wait</source>
+        <translation>Neteisingas argumentas (%1), skirtas -override_per_command_wait</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Missing argument for -override_per_command_wait</source>
+        <translation>Trūksta argumento už -override_per_command_wait</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Invalid argument (%1) for -auto_update</source>
+        <translation>Neteisingas argumentas (%1), skirtas -auto_update</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Missing argument for -auto_update</source>
+        <translation>Trūksta argumento už -auto_update</translation>
+    </message>
+    <message>
+        <location line="+689"/>
+        <source>Form Key</source>
+        <translation>Formos raktas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Please enter the form key</source>
+        <translation>Įveskite formos raktą</translation>
+    </message>
+    <message>
+        <location line="+68"/>
         <location line="+7"/>
         <location line="+7"/>
         <source>New File</source>
@@ -5930,7 +5972,17 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Pavyzdžiai</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+11"/>
+        <source>No examples found for your board</source>
+        <translation>Nerasta jūsų lentos pavyzdžių</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Connect to your board first to see examples</source>
+        <translation>Pirmiausia prisijunkite prie lentos, kad pamatytumėte pavyzdžius</translation>
+    </message>
+    <message>
+        <location line="+21"/>
         <source>Run Bootloader (Load Firmware)</source>
         <translation>Paleiskite „Bootloader“ (įkelkite programinę-aparatinę įrangą)</translation>
     </message>
@@ -5966,7 +6018,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Kai įjungtas automatinis pakartotinis prisijungimas, OpenMV IDE automatiškai vėl prisijungs prie jūsų OpenMV, jei bus aptiktas.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Stop Script on Connect/Disconnect</source>
         <translation>Sustabdyti scenarijų prisijungus/atsijungti</translation>
     </message>
@@ -5976,7 +6028,27 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Sustabdykite scenarijų prisijungdami arba atsijungdami (atminkite, kad IDE atsijungia uždarius, jei prijungtas).</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
+        <source>Sync Imports between OpenMV Cam and Documents Folder</source>
+        <translation>Sinchronizuoti importavimą tarp OpenMV Cam ir dokumentų aplanko</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Syncs libraries between your OpenMV Cam and Documents Folder automatically.</source>
+        <translation>Automatiškai sinchronizuoja bibliotekas tarp OpenMV kameros ir dokumentų aplanko.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Filter examples by board and sensor type</source>
+        <translation>Filtruokite pavyzdžius pagal plokštę ir jutiklio tipą</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Only show examples that are relevant for your board and sensor type.</source>
+        <translation>Rodykite tik tuos pavyzdžius, kurie yra susiję su jūsų lentos ir jutiklio tipu.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Open OpenMV Cam Drive folder</source>
         <translation>Atidarykite OpenMV Cam Drive aplanką</translation>
     </message>
@@ -6002,33 +6074,33 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
     </message>
     <message>
         <location line="+9"/>
-        <location line="+3620"/>
+        <location line="+3829"/>
         <location line="+59"/>
         <source>Open Terminal</source>
         <translation>Atidarykite terminalą</translation>
     </message>
     <message>
-        <location line="-3674"/>
+        <location line="-3883"/>
         <source>Machine Vision</source>
         <translation>Mašinos vizija</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+3701"/>
+        <location line="+3910"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>Slenksčio redaktorius</translation>
     </message>
     <message>
-        <location line="-3772"/>
-        <location line="+3850"/>
+        <location line="-3981"/>
+        <location line="+4059"/>
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+186"/>
         <source>Keypoints Editor</source>
         <translation>Pagrindinių taškų redaktorius</translation>
     </message>
     <message>
-        <location line="-3843"/>
-        <location line="+4009"/>
+        <location line="-4052"/>
+        <location line="+4218"/>
         <location line="+98"/>
         <location line="+24"/>
         <location line="+11"/>
@@ -6037,7 +6109,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>AprilTag generatorius</translation>
     </message>
     <message>
-        <location line="-4157"/>
+        <location line="-4366"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 šeima (30 žymų)</translation>
     </message>
@@ -6075,15 +6147,15 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <location line="+10"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location line="+413"/>
+        <location line="+409"/>
         <location line="+14"/>
         <location line="+31"/>
-        <location line="+793"/>
+        <location line="+806"/>
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Nepavyko atidaryti: „%L1“</translation>
     </message>
     <message>
-        <location line="-1275"/>
+        <location line="-1284"/>
         <source>DataMatrix Generator</source>
         <translation>DataMatrix generatorius</translation>
     </message>
@@ -6116,20 +6188,20 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
     </message>
     <message>
         <location line="+1"/>
-        <location line="+255"/>
-        <location line="+2186"/>
+        <location line="+249"/>
+        <location line="+2250"/>
         <location line="+47"/>
         <location line="+69"/>
-        <location line="+1306"/>
+        <location line="+1457"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382"/>
         <location line="+364"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+848"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+856"/>
         <location line="+208"/>
         <source>Please add a file extension!</source>
         <translation>Pridėkite failo plėtinį!</translation>
     </message>
     <message>
-        <location line="-3843"/>
+        <location line="-4052"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268"/>
         <location line="+13"/>
@@ -6166,13 +6238,13 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <location line="+18"/>
         <location line="+15"/>
         <location line="+6"/>
-        <location line="+52"/>
+        <location line="+46"/>
         <location line="+19"/>
         <source>New Dataset</source>
         <translation>Naujas duomenų rinkinys</translation>
     </message>
     <message>
-        <location line="-102"/>
+        <location line="-96"/>
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>Duomenų rinkinio rengyklė – pasirinkite aplanką, kuriame norite sukurti duomenų rinkinį</translation>
     </message>
@@ -6183,7 +6255,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
     </message>
     <message>
         <location line="+15"/>
-        <location line="+213"/>
+        <location line="+207"/>
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209"/>
         <location line="+34"/>
         <location line="+48"/>
@@ -6237,13 +6309,13 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1233"/>
+        <location line="+1273"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
         <location line="+240"/>
-        <location line="+761"/>
+        <location line="+936"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
@@ -6251,23 +6323,23 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <location line="+118"/>
         <location line="+433"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-34"/>
-        <location line="+222"/>
-        <location line="+175"/>
-        <location line="+626"/>
-        <location line="+398"/>
+        <location line="+223"/>
+        <location line="+201"/>
+        <location line="+680"/>
+        <location line="+407"/>
         <location line="+156"/>
         <location line="+138"/>
         <location line="+67"/>
         <location line="+238"/>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1272"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1282"/>
         <location line="+78"/>
-        <location line="+547"/>
+        <location line="+557"/>
         <source>Cancel</source>
         <translation>Atšaukti</translation>
     </message>
     <message>
-        <location line="-3634"/>
+        <location line="-3849"/>
         <source>Upload to Edge Impulse Project</source>
         <translation>Įkelkite į Edge Impulse projektą</translation>
     </message>
@@ -6299,7 +6371,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Uždaryti duomenų rinkinį</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>OpenMV Docs</source>
         <translation>OpenMV dokumentai</translation>
     </message>
@@ -6329,10 +6401,16 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Apie OpenMV Cam % 1...</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+5"/>
+        <location line="+18"/>
+        <location line="+6"/>
         <source>About OpenMV IDE</source>
         <translation>Apie OpenMV IDE</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <location line="+6"/>
+        <source>About OpenMV Viewer</source>
+        <translation>Apie &quot;OpenMV Viewer&quot;</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -6340,44 +6418,46 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Apie OpenMV IDE...</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Apie OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autorius: Ibrahimas Abdelkaderis ir Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU BENDROJI VIEŠOJI LICENCIJA&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Autorių teisės (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ši programa platinama tikintis, kad ji bus naudinga, bet BE JOKIOS GARANTIJOS; net be numanomos TINKAMUMO PARDUOTI ar TINKAMUMO TAM TAM TIKSLUI garantijos. Norėdami gauti daugiau informacijos, žr. &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU bendrąją viešąją licenciją&lt;/a&gt;.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Turite klausimų ar komentarų?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Susisiekite su mumis adresu &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Apie OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autorius: Ibrahimas Abdelkaderis ir Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU BENDROJI VIEŠOJI LICENCIJA&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Autorių teisės (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ši programa platinama tikintis, kad ji bus naudinga, bet BE JOKIOS GARANTIJOS; net be numanomos TINKAMUMO PARDUOTI ar TINKAMUMO TAM TAM TIKSLUI garantijos. Norėdami gauti daugiau informacijos, žr. &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU bendrąją viešąją licenciją&lt;/a&gt;.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Turite klausimų ar komentarų?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Susisiekite su mumis adresu &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Kreditai&lt;/b&gt;&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Kreditai&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>&lt;p&gt;OpenMV IDE English translation by Kwabena W. Agyeman.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;OpenMV IDE vertimas į anglų kalbą, Kwabena W. Agyeman.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;OpenMV IDE vertimas į anglų kalbą, Kwabena W. Agyeman.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+13"/>
         <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Partneriai&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
+        <location line="+0"/>
+        <source>OpenMV Viewer</source>
+        <translation>OpenMV peržiūros programa</translation>
+    </message>
+    <message>
         <location line="+13"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1716"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1805"/>
         <location line="+6"/>
         <location line="+26"/>
-        <location line="+98"/>
+        <location line="+124"/>
         <location line="+8"/>
         <location line="+33"/>
-        <location line="+152"/>
-        <location line="+72"/>
+        <location line="+181"/>
+        <location line="+82"/>
         <location line="+35"/>
-        <location line="+50"/>
-        <location line="+10"/>
-        <location line="+22"/>
+        <location line="+52"/>
+        <location line="+12"/>
+        <location line="+24"/>
         <location line="+19"/>
         <location line="+36"/>
-        <location line="+81"/>
+        <location line="+88"/>
         <location line="+9"/>
-        <location line="+29"/>
+        <location line="+31"/>
         <location line="+9"/>
         <location line="+63"/>
         <location line="+6"/>
@@ -6385,8 +6465,8 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <location line="+4"/>
         <location line="+4"/>
         <location line="+52"/>
-        <location line="+88"/>
-        <location line="+59"/>
+        <location line="+90"/>
+        <location line="+66"/>
         <location line="+9"/>
         <location line="+113"/>
         <location line="+4"/>
@@ -6406,7 +6486,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <location line="+4"/>
         <location line="+7"/>
         <location line="+9"/>
-        <location line="+18"/>
+        <location line="+19"/>
         <location line="+26"/>
         <location line="+19"/>
         <location line="+83"/>
@@ -6449,25 +6529,25 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <location line="+14"/>
         <location line="+92"/>
         <location line="+9"/>
-        <location line="+159"/>
+        <location line="+197"/>
         <location line="+33"/>
-        <location line="+168"/>
-        <location line="+27"/>
+        <location line="+157"/>
+        <location line="+38"/>
         <source>Connect</source>
         <translation>Prisijungti</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1496"/>
+        <location line="+14"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1535"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+170"/>
+        <location line="+171"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1319"/>
+        <location line="+1357"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Disconnect</source>
         <translation>Atsijungti</translation>
     </message>
@@ -6501,7 +6581,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
     </message>
     <message>
         <location line="+5"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+255"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+246"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5"/>
         <source>Stop</source>
         <translation>Sustabdyti</translation>
@@ -6538,21 +6618,21 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
     <message>
         <location line="+17"/>
         <location line="+22"/>
-        <location line="+1727"/>
+        <location line="+1782"/>
         <location line="+55"/>
         <location line="+112"/>
         <location line="+69"/>
-        <location line="+181"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-431"/>
-        <location line="+177"/>
+        <location line="+246"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-424"/>
+        <location line="+179"/>
         <location line="+124"/>
-        <location line="+131"/>
-        <location line="+99"/>
+        <location line="+122"/>
+        <location line="+115"/>
         <source>Busy... please wait...</source>
         <translation>Užimta... prašau palaukti...</translation>
     </message>
     <message>
-        <location line="-2160"/>
+        <location line="-2280"/>
         <location line="+15"/>
         <source>Disable</source>
         <translation>Išjungti</translation>
@@ -6618,22 +6698,30 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Res – be vaizdo</translation>
     </message>
     <message>
-        <location line="-14"/>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-14"/>
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)</source>
-        <translation>Res (w:%1, h:%2) - IG (x:%3, y:%4, w:%5, h:%6) - Pikseliai (%7)</translation>
+        <translation type="vanished">Res (w:%1, h:%2) - IG (x:%3, y:%4, w:%5, h:%6) - Pikseliai (%7)</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4"/>
+        <location line="-10"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-10"/>
         <source>Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
         <translation>Res (w:%1, h:%2) – taškas (x:%3, y:%4)</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5"/>
         <source>Res (w:%1, h:%2)</source>
-        <translation>Res (w:%1, h:%2)</translation>
+        <translation type="vanished">Res (w:%1, h:%2)</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4"/>
+        <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
+        <translation>Res (w:%1, h:%2) - IG (x:%3, y:%4, w:%5, h:%6) - pikseliai (%7) - fokusavimas (%8)</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+9"/>
+        <source>Res (w:%1, h:%2) - Focus (%3)</source>
+        <translation>Res (w:%1, h:%2) – fokusas (%3)</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -6662,7 +6750,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
     </message>
     <message>
         <location line="+65"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-377"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-384"/>
         <source>Board:</source>
         <translation>Lenta:</translation>
     </message>
@@ -6694,7 +6782,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Kameros programinės įrangos versija</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
         <source>Serial Port:</source>
         <translation>Nuoseklusis prievadas:</translation>
@@ -6706,19 +6794,19 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
     </message>
     <message>
         <location line="+6"/>
-        <location line="+1787"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-249"/>
-        <location line="+251"/>
+        <location line="+1908"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-251"/>
+        <location line="+253"/>
         <source>Drive:</source>
         <translation>Vairuoti:</translation>
     </message>
     <message>
-        <location line="-1786"/>
+        <location line="-1907"/>
         <source>Drive associated with port</source>
         <translation>Su prievadu susietas diskas</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
         <source>FPS:</source>
         <translation>FPS:</translation>
@@ -6729,8 +6817,8 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Gali skirtis nuo fotoaparato FPS</translation>
     </message>
     <message>
-        <location line="+212"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3666"/>
+        <location line="+218"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3797"/>
         <source>Update Available</source>
         <translation>Galimas atnaujinimas</translation>
     </message>
@@ -6745,7 +6833,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>parsisiųsti</translation>
     </message>
     <message>
-        <location line="+175"/>
+        <location line="+172"/>
         <source>WiFi Programming Disabled!</source>
         <translation>„WiFi“ programavimas išjungtas!</translation>
     </message>
@@ -6755,7 +6843,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Kita programa naudoja „OpenMV Cam“ transliacijos aptikimo prievadą. Uždarykite programą ir iš naujo paleiskite „OpenMV IDE“, kad įgalintumėte „WiFi“ programavimą.</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>Documents Folder Error</source>
         <translation>Dokumentų aplanko klaida</translation>
     </message>
@@ -6765,7 +6853,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Nepavyko sukurti dokumentų aplanko!</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+20"/>
         <source>OpenMV Cam LED Colors</source>
         <translation>OpenMV Cam LED spalvos</translation>
     </message>
@@ -6815,18 +6903,18 @@ Jūsų OpenMV Cam programinė įranga panikuoja dėl aparatinės įrangos gedimo
 </translation>
     </message>
     <message>
-        <location line="+77"/>
-        <location line="+1386"/>
+        <location line="+94"/>
+        <location line="+1561"/>
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Nuoseklus prievadas – %L1 – %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1354"/>
+        <location line="-1529"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
-        <location line="+1001"/>
+        <location line="+1176"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
@@ -6836,7 +6924,7 @@ Jūsų OpenMV Cam programinė įranga panikuoja dėl aparatinės įrangos gedimo
         <translation>Jungiamasi... (30 sekundžių skirtasis laikas)</translation>
     </message>
     <message>
-        <location line="-1993"/>
+        <location line="-2168"/>
         <source>
 
 Try doing:
@@ -6889,12 +6977,12 @@ sudo adduser %L1 skambutis
     </message>
     <message>
         <location line="+17"/>
-        <location line="+1443"/>
+        <location line="+1618"/>
         <source>UDP Server Connection - %1</source>
         <translation>UDP serverio ryšys – %1</translation>
     </message>
     <message>
-        <location line="-1369"/>
+        <location line="-1544"/>
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Neteisingas prievado argumentas (%1), skirtas -open_udp_server_terminal</translation>
     </message>
@@ -6925,12 +7013,12 @@ sudo adduser %L1 skambutis
     </message>
     <message>
         <location line="+17"/>
-        <location line="+1489"/>
+        <location line="+1664"/>
         <source>TCP Server Connection - %1</source>
         <translation>TCP serverio ryšys – %1</translation>
     </message>
     <message>
-        <location line="-1415"/>
+        <location line="-1590"/>
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Neteisingas prievado argumentas (%1), skirtas -open_tcp_server_terminal</translation>
     </message>
@@ -6957,6 +7045,10 @@ sudo adduser %L1 skambutis
         <location line="+6"/>
         <location line="+8"/>
         <location line="+7"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3355"/>
+        <location line="+9"/>
+        <location line="+8"/>
+        <location line="+19"/>
         <source>Register OpenMV Cam</source>
         <translation>Užsiregistruokite „OpenMV Cam“.</translation>
     </message>
@@ -6997,18 +7089,21 @@ Paleiskite Pavyzdžiai-&gt;HelloWorld-&gt;helloworld.py, kad patikrintumėte reg
     <message>
         <location line="+8"/>
         <location line="+182"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-35"/>
         <source>Database Error!</source>
         <translation>Duomenų bazės klaida!</translation>
     </message>
     <message>
         <location line="-165"/>
         <location line="+178"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17"/>
         <source>GET Network error!</source>
         <translation>GAUTI tinklo klaidą!</translation>
     </message>
     <message>
         <location line="-169"/>
         <location line="+177"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19"/>
         <source>GET network error!</source>
         <translation>GAUTI tinklo klaidą!</translation>
     </message>
@@ -7087,15 +7182,15 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Neteisingai suformatuotas lentos raktas!</translation>
     </message>
     <message>
-        <location line="+45"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3415"/>
-        <location line="+375"/>
+        <location line="+64"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+152"/>
+        <location line="+377"/>
         <location line="+110"/>
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+86"/>
         <source>Configure Settings</source>
         <translation>Konfigūruoti nustatymus</translation>
     </message>
@@ -7124,13 +7219,13 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     </message>
     <message>
         <location line="-23"/>
-        <location line="+1233"/>
+        <location line="+1384"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Vaizdo failai (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1188"/>
+        <location line="-1339"/>
         <location line="+7"/>
         <location line="+17"/>
         <location line="+15"/>
@@ -7166,14 +7261,14 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     </message>
     <message>
         <location line="-48"/>
-        <location line="+1205"/>
+        <location line="+1356"/>
         <location line="+80"/>
         <location line="+21"/>
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>Keypoints failai (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1197"/>
+        <location line="-1291"/>
         <location line="+7"/>
         <location line="+6"/>
         <location line="+7"/>
@@ -7201,7 +7296,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Nepavyko atidaryti pavyzdinio failo „%L1“!</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+61"/>
         <location line="+11"/>
         <location line="+15"/>
         <location line="+27"/>
@@ -7229,7 +7324,47 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Diskas: %L1</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+36"/>
+        <source>Debug Protocol Settings</source>
+        <translation>Derinimo protokolo nustatymai</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Combined Polling</source>
+        <translation>Kombinuota apklausa</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Polling (ms)</source>
+        <translation>Apklausa (ms)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Split Polling</source>
+        <translation>Splito apklausa</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polling Settings</source>
+        <translation>Apklausos nustatymai</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Frame Buffer Polling (ms)</source>
+        <translation>Kadro buferio apklausa (ms)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Script State Polling (ms)</source>
+        <translation>Scenarijaus valstijos apklausa (ms)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Text Buffer Polling (ms)</source>
+        <translation>Teksto buferio apklausa (ms)</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <location line="+13"/>
         <location line="+31"/>
         <location line="+9"/>
@@ -7276,7 +7411,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     </message>
     <message>
         <location line="+31"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3055"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3114"/>
         <source>Please select a serial port</source>
         <translation>Pasirinkite nuoseklųjį prievadą</translation>
     </message>
@@ -7287,7 +7422,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     </message>
     <message>
         <location line="+94"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+234"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+243"/>
         <source>Try doing:
 
 </source>
@@ -7515,7 +7650,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Karta baigta!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1079"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1160"/>
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Galimi nauji OpenMV IDE ištekliai (pvz., pavyzdžiai, programinė įranga, dokumentacija ir kt.).</translation>
     </message>
@@ -7526,27 +7661,27 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     </message>
     <message>
         <location line="+7"/>
-        <location line="+222"/>
-        <location line="+175"/>
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+100"/>
+        <location line="+223"/>
+        <location line="+201"/>
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+102"/>
         <location line="+51"/>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+169"/>
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+173"/>
         <location line="+46"/>
         <location line="+75"/>
         <location line="+46"/>
         <location line="+74"/>
         <location line="+46"/>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+344"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+352"/>
         <location line="+50"/>
-        <location line="+703"/>
+        <location line="+705"/>
         <location line="+50"/>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+177"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+187"/>
         <location line="+51"/>
         <source>Downloading...</source>
         <translation>Atsisiunčiama...</translation>
     </message>
     <message>
-        <location line="-383"/>
+        <location line="-410"/>
         <source>Installing...</source>
         <translation>Diegiama...</translation>
     </message>
@@ -7569,53 +7704,53 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     </message>
     <message>
         <location line="-25"/>
-        <location line="+233"/>
-        <location line="+132"/>
+        <location line="+234"/>
+        <location line="+158"/>
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>Nepavyko atidaryti išteklių failo „%L1“!</translation>
     </message>
     <message>
-        <location line="-339"/>
-        <location line="+233"/>
-        <location line="+139"/>
+        <location line="-366"/>
+        <location line="+234"/>
+        <location line="+165"/>
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Tinklo užklausa nepavyko „%L1“!</translation>
     </message>
     <message>
-        <location line="-348"/>
-        <location line="+78"/>
+        <location line="-375"/>
+        <location line="+79"/>
         <location line="+45"/>
         <source>Bootloader</source>
         <translation>Bootloader</translation>
     </message>
     <message>
-        <location line="-114"/>
-        <location line="+3"/>
+        <location line="-115"/>
+        <location line="+4"/>
         <source>Firmware Path</source>
         <translation>Programinės įrangos kelias</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-3"/>
         <source>Firmware Binary (*.bin *.dfu)</source>
         <translation>Dvejetainė programinė įranga (*.bin *.dfu)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <location line="+6"/>
         <location line="+115"/>
-        <location line="+378"/>
+        <location line="+433"/>
         <source>Erase internal file system</source>
         <translation>Ištrinkite vidinę failų sistemą</translation>
     </message>
     <message>
-        <location line="-495"/>
+        <location line="-550"/>
         <location line="+120"/>
-        <location line="+379"/>
+        <location line="+434"/>
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Jei įjungsite šią parinktį, visi failai jūsų OpenMV Cam vidinėje „flash“ atmintinėje bus ištrinti. Taip neištrinami failai iš jokios išimamos SD kortelės (jei ji įdėta).</translation>
     </message>
     <message>
-        <location line="-494"/>
+        <location line="-549"/>
         <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Įkeliant programinę-aparatinę įrangą per DFU, visada ištrinama „OpenMV Cam“ vidinė „flash drive“. Taip neištrinami failai iš jokios išimamos SD kortelės (jei ji įdėta).</translation>
     </message>
@@ -7631,7 +7766,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>„%L1“ nėra failas!</translation>
     </message>
     <message>
-        <location line="+207"/>
+        <location line="+233"/>
         <source>Extracting...</source>
         <translation>Ištraukiama...</translation>
     </message>
@@ -7641,7 +7776,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Nepavyko išskleisti programinės įrangos!</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+238"/>
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Aptikta DFU režimu veikianti plokštė. Ką tu norėtum veikti?</translation>
     </message>
@@ -7661,7 +7796,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Tiesiog ištrinkite vidinę failų sistemą</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+73"/>
         <source>No OpenMV Cams found!</source>
         <translation>Nerasta jokių OpenMV kamerų!</translation>
     </message>
@@ -7671,21 +7806,21 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Ar turite prijungtą „OpenMV Cam“ ir ar ji užblokuota?</translation>
     </message>
     <message>
-        <location line="+49"/>
-        <location line="+505"/>
-        <location line="+616"/>
+        <location line="+51"/>
+        <location line="+520"/>
+        <location line="+623"/>
         <source>Please select the board type</source>
         <translation>Pasirinkite lentos tipą</translation>
     </message>
     <message>
-        <location line="-1110"/>
-        <location line="+3161"/>
+        <location line="-1130"/>
+        <location line="+3229"/>
         <location line="+28"/>
         <source>Erase the internal file system?</source>
         <translation>Ištrinti vidinę failų sistemą?</translation>
     </message>
     <message>
-        <location line="-3167"/>
+        <location line="-3233"/>
         <source>No released firmware available for the attached board!</source>
         <translation>Pridėtai plokštei nėra išleistos programinės įrangos!</translation>
     </message>
@@ -7695,14 +7830,14 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Pasirinkite DFU įrenginį</translation>
     </message>
     <message>
-        <location line="+82"/>
-        <location line="+38"/>
+        <location line="+89"/>
+        <location line="+40"/>
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Atnaujinkite įkrovos įkroviklį į naujausią versiją ir įdiekite „SoftDevice“, kad suaktyvintumėte OpenMV programinę-aparatinę įrangą. Daugiau informacijos rasite adresu &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-29"/>
-        <location line="+38"/>
+        <location line="-31"/>
+        <location line="+40"/>
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Sutrumpinkite REC iki GND ir iš naujo nustatykite plokštę. Daugiau informacijos rasite adresu &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
@@ -7732,8 +7867,8 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     </message>
     <message>
         <location line="+52"/>
-        <location line="+156"/>
-        <location line="+1906"/>
+        <location line="+165"/>
+        <location line="+1945"/>
         <source>Timeout error while getting board architecture!</source>
         <translation>Laiko pabaigos klaida gaunant plokštės architektūrą!</translation>
     </message>
@@ -7742,7 +7877,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation type="vanished">Nepalaikoma plokštės architektūra!</translation>
     </message>
     <message>
-        <location line="-1844"/>
+        <location line="-1883"/>
         <location line="+600"/>
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Atjunkite „OpenMV Cam“ ir vėl prijunkite...</translation>
@@ -7755,6 +7890,11 @@ Hit cancel to skip to DFU reprogramming.</source>
         <translation>
 
 Norėdami pereiti prie DFU perprogramavimo, paspauskite atšaukti.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Reconnect your OpenMV Cam...</source>
+        <translation>Iš naujo prijunkite OpenMV kamerą...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7790,10 +7930,10 @@ Tęsti?</translation>
         <location line="+56"/>
         <location line="+63"/>
         <location line="+77"/>
-        <location line="+628"/>
+        <location line="+629"/>
         <location line="+447"/>
         <location line="+22"/>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-651"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-653"/>
         <location line="+38"/>
         <location line="+48"/>
         <location line="+41"/>
@@ -7807,7 +7947,7 @@ Tęsti?</translation>
         <location line="+39"/>
         <location line="+40"/>
         <location line="+37"/>
-        <location line="+195"/>
+        <location line="+197"/>
         <location line="+46"/>
         <location line="+39"/>
         <location line="+38"/>
@@ -7815,14 +7955,14 @@ Tęsti?</translation>
         <translation>Laiko pabaigos klaida!</translation>
     </message>
     <message>
-        <location line="-1155"/>
+        <location line="-1156"/>
         <location line="+67"/>
         <source>Programming...</source>
         <translation>Programavimas...</translation>
     </message>
     <message>
         <location line="+22"/>
-        <location line="+299"/>
+        <location line="+300"/>
         <location line="+45"/>
         <location line="+273"/>
         <location line="+466"/>
@@ -7834,8 +7974,8 @@ Tęsti?</translation>
 </translation>
     </message>
     <message>
-        <location line="-1083"/>
-        <location line="+299"/>
+        <location line="-1084"/>
+        <location line="+300"/>
         <location line="+45"/>
         <source>Firmware Upgrade complete!
 
@@ -7845,8 +7985,8 @@ Tęsti?</translation>
 </translation>
     </message>
     <message>
-        <location line="-343"/>
-        <location line="+299"/>
+        <location line="-344"/>
+        <location line="+300"/>
         <location line="+45"/>
         <location line="+273"/>
         <location line="+466"/>
@@ -7858,8 +7998,8 @@ Tęsti?</translation>
 </translation>
     </message>
     <message>
-        <location line="-1082"/>
-        <location line="+299"/>
+        <location line="-1083"/>
+        <location line="+300"/>
         <location line="+45"/>
         <location line="+273"/>
         <location line="+466"/>
@@ -7867,8 +8007,8 @@ Tęsti?</translation>
         <translation>Spustelėkite Gerai, kai „OpenMV Cam“ RGB šviesos diodas pradės mirksėti mėlynai – tai reiškia, kad savitikra baigta.</translation>
     </message>
     <message>
-        <location line="-1082"/>
-        <location line="+280"/>
+        <location line="-1083"/>
+        <location line="+281"/>
         <location line="+19"/>
         <location line="+25"/>
         <location line="+20"/>
@@ -7889,7 +8029,7 @@ Jei perrašėte main.py savo „OpenMV Cam“ ir neištrynėte disko, „OpenMV 
 Tokiu atveju spustelėkite Gerai, kai pamatysite „OpenMV Cam“ vidinį „flash drive“ laikiklį (langas gali atsidaryti arba neatsidaryti).</translation>
     </message>
     <message>
-        <location line="-1095"/>
+        <location line="-1096"/>
         <source>The firmware file is empty!</source>
         <translation>Programinės įrangos failas tuščias!</translation>
     </message>
@@ -7907,17 +8047,17 @@ Tokiu atveju spustelėkite Gerai, kai pamatysite „OpenMV Cam“ vidinį „fla
         <location line="+35"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+170"/>
+        <location line="+171"/>
         <location line="+12"/>
         <location line="+7"/>
-        <location line="+1319"/>
+        <location line="+1357"/>
         <location line="+12"/>
         <location line="+7"/>
         <source>Failed to eject &quot;%L1&quot;!</source>
         <translation>Nepavyko išstumti „%L1“!</translation>
     </message>
     <message>
-        <location line="-1522"/>
+        <location line="-1561"/>
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
@@ -7945,7 +8085,7 @@ Spustelėkite mygtuką Gerai, kai išvardija „OpenMV Cam“ SBL įkrovos progr
     </message>
     <message>
         <location line="+9"/>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Firmware update complete!
 
 </source>
@@ -7954,7 +8094,16 @@ Spustelėkite mygtuką Gerai, kai išvardija „OpenMV Cam“ SBL įkrovos progr
 </translation>
     </message>
     <message>
-        <location line="-43"/>
+        <location line="-44"/>
+        <source>Disconnect your OpenMV Cam from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
+
+</source>
+        <translation>Atjunkite OpenMV kamerą nuo kompiuterio, nuimkite trumpiklio laidą tarp SBL ir 3,3 V kaiščių ir vėl prijunkite OpenMV kamerą prie kompiuterio.
+
+</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <location line="+44"/>
         <location line="+358"/>
         <location line="+222"/>
@@ -7989,8 +8138,8 @@ Spustelėkite mygtuką Gerai, kai išvardija „OpenMV Cam“ SBL įkrovos progr
         <location line="+23"/>
         <location line="+222"/>
         <location line="+216"/>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1050"/>
-        <location line="+765"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1052"/>
+        <location line="+767"/>
         <source>Flashing Firmware</source>
         <translation>Mirksi programinė įranga</translation>
     </message>
@@ -8114,8 +8263,12 @@ Spustelėkite mygtuką Gerai, kai išvardijo „OpenMV Cam“ DFU įkrovos progr
     </message>
     <message>
         <location line="+1"/>
+        <source>Leave your OpenMV Cam unconnected until instructed to reconnect it.</source>
+        <translation>Palikite OpenMV kamerą neprijungtą, kol bus nurodyta ją vėl prijungti.</translation>
+    </message>
+    <message>
         <source>OpenMV IDE will now try to update your OpenMV Cam again.</source>
-        <translation>Dabar „OpenMV IDE“ vėl bandys atnaujinti jūsų „OpenMV Cam“.</translation>
+        <translation type="vanished">Dabar „OpenMV IDE“ vėl bandys atnaujinti jūsų „OpenMV Cam“.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -8139,17 +8292,17 @@ Spustelėkite mygtuką Gerai, kai išvardijo „OpenMV Cam“ DFU įkrovos progr
     <message>
         <location line="+26"/>
         <location line="+18"/>
-        <location line="+43"/>
+        <location line="+45"/>
         <source>Unknown</source>
         <translation>Nežinoma</translation>
     </message>
     <message>
-        <location line="-46"/>
+        <location line="-48"/>
         <source>Timeout error while getting sensor type!</source>
         <translation>Gaunant jutiklio tipą baigėsi skirtojo laiko klaida!</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+230"/>
         <source>Timeout error while learning MTU!</source>
         <translation>Laiko pabaigos klaida mokantis MTU!</translation>
     </message>
@@ -8174,7 +8327,7 @@ Spustelėkite mygtuką Gerai, kai išvardijo „OpenMV Cam“ DFU įkrovos progr
         <translation>Serijos prievadas: %L1</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+48"/>
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ pasenusi – spustelėkite čia norėdami atnaujinti ]</translation>
     </message>
@@ -8189,7 +8342,7 @@ Spustelėkite mygtuką Gerai, kai išvardijo „OpenMV Cam“ DFU įkrovos progr
         <translation> - [ naujausias ]</translation>
     </message>
     <message>
-        <location line="+191"/>
+        <location line="+204"/>
         <source>Reset</source>
         <translation>Nustatyti iš naujo</translation>
     </message>
@@ -8199,7 +8352,7 @@ Spustelėkite mygtuką Gerai, kai išvardijo „OpenMV Cam“ DFU įkrovos progr
         <translation>Pradėti</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+131"/>
         <source>More Examples</source>
         <translation>Daugiau pavyzdžių</translation>
     </message>
@@ -8213,7 +8366,7 @@ In particular, checkout the Color-Tracking examples.</source>
 Visų pirma peržiūrėkite spalvų sekimo pavyzdžius.</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+32"/>
         <location line="+6"/>
         <location line="+18"/>
         <location line="+4"/>
@@ -8247,18 +8400,18 @@ Visų pirma peržiūrėkite spalvų sekimo pavyzdžius.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="-55"/>
-        <location line="+114"/>
+        <location line="+110"/>
         <source>No Image</source>
         <translation>Nėra paveiksliuko</translation>
     </message>
     <message>
-        <location line="-67"/>
+        <location line="-63"/>
         <location line="+7"/>
         <source>Video Record</source>
         <translation>Vaizdo įrašas</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+112"/>
         <location line="+10"/>
         <location line="+10"/>
         <location line="+10"/>
@@ -8276,7 +8429,7 @@ Visų pirma peržiūrėkite spalvų sekimo pavyzdžius.</translation>
         <translation>Nepavyko parašyti rėmelio!</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+54"/>
         <source>Save Image selection to PC</source>
         <translation>Išsaugokite vaizdo pasirinkimą kompiuteryje</translation>
     </message>
@@ -8296,7 +8449,7 @@ Visų pirma peržiūrėkite spalvų sekimo pavyzdžius.</translation>
         <translation>Išsaugoti šabloną kameroje</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+5"/>
         <source>Save Descriptor selection to Cam</source>
         <translation>Išsaugokite deskriptoriaus pasirinkimą kameroje</translation>
     </message>
@@ -8427,21 +8580,21 @@ Ar norėtumėte, kad „OpenMV IDE“ nukopijuotų jį į jūsų „OpenMV Cam�
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-351"/>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-142"/>
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-357"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150"/>
         <source>Get Devices</source>
         <translation>Gaukite įrenginius</translation>
     </message>
     <message>
         <location line="+0"/>
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-245"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-253"/>
         <location line="+79"/>
         <source>Query failed!</source>
         <translation>Užklausa nepavyko!</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+43"/>
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -8616,8 +8769,8 @@ Atidarykite duomenų rinkinį, kad jį įkeltumėte.</translation>
         <translation>Įveskite Edge Impluse Project API raktą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-836"/>
-        <location line="+71"/>
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-842"/>
+        <location line="+75"/>
         <location line="+140"/>
         <location line="+26"/>
         <location line="+30"/>
@@ -8634,7 +8787,7 @@ Atidarykite duomenų rinkinį, kad jį įkeltumėte.</translation>
         <location line="+39"/>
         <location line="+40"/>
         <location line="+37"/>
-        <location line="+33"/>
+        <location line="+35"/>
         <location line="+124"/>
         <location line="+38"/>
         <location line="+46"/>
@@ -8644,17 +8797,17 @@ Atidarykite duomenų rinkinį, kad jį įkeltumėte.</translation>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-1120"/>
-        <location line="+211"/>
+        <location line="-1126"/>
+        <location line="+215"/>
         <location line="+26"/>
-        <location line="+723"/>
+        <location line="+725"/>
         <source>This feature is not supported on this machine!</source>
         <translation>Ši funkcija šiame įrenginyje nepalaikoma!</translation>
     </message>
     <message>
-        <location line="-345"/>
+        <location line="-347"/>
         <location line="+46"/>
-        <location line="+311"/>
+        <location line="+313"/>
         <location line="+46"/>
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Šios komandos vykdymas užtrunka šiek tiek laiko. Būkite kantrūs.</translation>
@@ -8675,7 +8828,7 @@ Atidarykite duomenų rinkinį, kad jį įkeltumėte.</translation>
         <translation>padaryta</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+59"/>
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67"/>
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -8775,7 +8928,7 @@ Atidarykite duomenų rinkinį, kad jį įkeltumėte.</translation>
         <translation>Prieš uždarydami nukopijuokite aukščiau nurodytą slenkstį.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-459"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-461"/>
         <source>Reading File...</source>
         <translation>Skaitomas failas...</translation>
     </message>
@@ -8807,12 +8960,12 @@ Atidarykite duomenų rinkinį, kad jį įkeltumėte.</translation>
     </message>
     <message>
         <location line="-70"/>
-        <location line="+547"/>
+        <location line="+557"/>
         <source>Transcoding File...</source>
         <translation>Perkoduojamas failas...</translation>
     </message>
     <message>
-        <location line="-536"/>
+        <location line="-546"/>
         <location line="+34"/>
         <location line="+11"/>
         <location line="+13"/>
@@ -8834,7 +8987,7 @@ Atidarykite duomenų rinkinį, kad jį įkeltumėte.</translation>
         <translation>Nepavyko parašyti!</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+64"/>
         <location line="+7"/>
         <location line="+8"/>
         <location line="+7"/>
@@ -8873,8 +9026,8 @@ Atidarykite duomenų rinkinį, kad jį įkeltumėte.</translation>
         <translation>Gaukite įvesties formatus</translation>
     </message>
     <message>
-        <location line="+37"/>
-        <location line="+102"/>
+        <location line="+44"/>
+        <location line="+103"/>
         <location line="+59"/>
         <location line="+15"/>
         <location line="+372"/>
