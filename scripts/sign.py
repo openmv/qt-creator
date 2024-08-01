@@ -130,7 +130,7 @@ def main():
     else:
 
         if sys.platform.startswith("win"):
-            extensions = ["*.[eE][xX][eE]", "*.[dD][lL][lL]"]
+            extensions = ["*.[eE][xX][eE]"] # "*.[dD][lL][lL]"
             excludeNames = ["dpinst_x86.exe", "dpinst_amd64.exe",
                             "dpinst-x86.exe", "dpinst-amd64.exe",
                             "vcredist_x86.exe", "vcredist_x64.exe"]
