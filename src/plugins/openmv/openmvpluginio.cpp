@@ -538,6 +538,12 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     {
                         doFrameSizeCpl(w, h, bpp);
                     }
+                    else
+                    {
+                        emit frameBufferEmpty(true);
+                    }
+
+                    emit getStateDone();
 
                     break;
                 }
@@ -810,6 +816,8 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                         }
 
                         emit printEmpty(true);
+
+                        emit getStateDone();
 
                         break;
                     }

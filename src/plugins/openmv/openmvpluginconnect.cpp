@@ -3516,52 +3516,85 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         if(m_stopOnConnectDiconnectionAction->isChecked()) m_iodevice->scriptStop();
 
-        // Drain text buffer
+        if((!m_useGetState)
+        || (m_major < OPENMV_ADD_GET_STATE_MAJOR)
+        || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
+        || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)))
         {
-            bool empty = bool();
-            bool *emptyPtr = &empty;
+            // Drain text buffer
+            {
+                bool empty = bool();
+                bool *emptyPtr = &empty;
+
+                QEventLoop loop2;
+
+                QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                    this, [emptyPtr] (bool ok) {
+                    *emptyPtr = ok;
+                });
+
+                connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                        &loop2, &QEventLoop::quit);
+
+                while(!empty)
+                {
+                    m_iodevice->getTxBuffer();
+                    loop2.exec();
+                }
+
+                disconnect(conn2);
+            }
+
+            // Drain image buffer
+            {
+                bool empty = bool();
+                bool *emptyPtr = &empty;
+
+                QEventLoop loop2;
+
+                QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                    this, [emptyPtr] (bool ok) {
+                    *emptyPtr = ok;
+                });
+
+                connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                        &loop2, &QEventLoop::quit);
+
+                while(!empty)
+                {
+                    m_iodevice->frameSizeDump();
+                    loop2.exec();
+                }
+
+                disconnect(conn2);
+            }
+        } else {
+            bool printEmpty = bool(), frameBufferEmpty = bool();
+            bool *printEmptyPtr = &printEmpty, *frameBufferEmptyPtr = &frameBufferEmpty;
 
             QEventLoop loop2;
 
             QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                this, [emptyPtr] (bool ok) {
-                *emptyPtr = ok;
+                this, [printEmptyPtr] (bool ok) {
+                *printEmptyPtr = ok;
             });
 
-            connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+            QMetaObject::Connection conn3 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                this, [frameBufferEmptyPtr] (bool ok) {
+                *frameBufferEmptyPtr = ok;
+            });
+
+            connect(m_iodevice, &OpenMVPluginIO::getStateDone,
                     &loop2, &QEventLoop::quit);
 
-            while(!empty)
+            while((!printEmpty) || (!frameBufferEmpty))
             {
-                m_iodevice->getTxBuffer();
+                m_iodevice->getState();
                 loop2.exec();
             }
 
             disconnect(conn2);
-        }
-
-        // Drain image buffer
-        {
-            bool empty = bool();
-            bool *emptyPtr = &empty;
-
-            QEventLoop loop2;
-
-            QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                this, [emptyPtr] (bool ok) {
-                *emptyPtr = ok;
-            });
-
-            connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                    &loop2, &QEventLoop::quit);
-
-            while(!empty)
-            {
-                m_iodevice->frameSizeDump();
-                loop2.exec();
-            }
-
-            disconnect(conn2);
+            disconnect(conn3);
         }
 
         m_iodevice->jpegEnable(m_jpgCompress->isChecked());
@@ -3762,52 +3795,85 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                 {
                     if(m_stopOnConnectDiconnectionAction->isChecked()) m_iodevice->scriptStop();
 
-                    // Drain text buffer
+                    if((!m_useGetState)
+                    || (m_major < OPENMV_ADD_GET_STATE_MAJOR)
+                    || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
+                    || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)))
                     {
-                        bool empty = bool();
-                        bool *emptyPtr = &empty;
+                        // Drain text buffer
+                        {
+                            bool empty = bool();
+                            bool *emptyPtr = &empty;
+
+                            QEventLoop loop2;
+
+                            QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                                this, [emptyPtr] (bool ok) {
+                                *emptyPtr = ok;
+                            });
+
+                            connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                                    &loop2, &QEventLoop::quit);
+
+                            while(!empty)
+                            {
+                                m_iodevice->getTxBuffer();
+                                loop2.exec();
+                            }
+
+                            disconnect(conn2);
+                        }
+
+                        // Drain image buffer
+                        {
+                            bool empty = bool();
+                            bool *emptyPtr = &empty;
+
+                            QEventLoop loop2;
+
+                            QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                                this, [emptyPtr] (bool ok) {
+                                *emptyPtr = ok;
+                            });
+
+                            connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                                    &loop2, &QEventLoop::quit);
+
+                            while(!empty)
+                            {
+                                m_iodevice->frameSizeDump();
+                                loop2.exec();
+                            }
+
+                            disconnect(conn2);
+                        }
+                    } else {
+                        bool printEmpty = bool(), frameBufferEmpty = bool();
+                        bool *printEmptyPtr = &printEmpty, *frameBufferEmptyPtr = &frameBufferEmpty;
 
                         QEventLoop loop2;
 
                         QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                            this, [emptyPtr] (bool ok) {
-                            *emptyPtr = ok;
+                            this, [printEmptyPtr] (bool ok) {
+                            *printEmptyPtr = ok;
                         });
 
-                        connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                        QMetaObject::Connection conn3 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                            this, [frameBufferEmptyPtr] (bool ok) {
+                            *frameBufferEmptyPtr = ok;
+                        });
+
+                        connect(m_iodevice, &OpenMVPluginIO::getStateDone,
                                 &loop2, &QEventLoop::quit);
 
-                        while(!empty)
+                        while((!printEmpty) || (!frameBufferEmpty))
                         {
-                            m_iodevice->getTxBuffer();
+                            m_iodevice->getState();
                             loop2.exec();
                         }
 
                         disconnect(conn2);
-                    }
-
-                    // Drain image buffer
-                    {
-                        bool empty = bool();
-                        bool *emptyPtr = &empty;
-
-                        QEventLoop loop2;
-
-                        QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                            this, [emptyPtr] (bool ok) {
-                            *emptyPtr = ok;
-                        });
-
-                        connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                                &loop2, &QEventLoop::quit);
-
-                        while(!empty)
-                        {
-                            m_iodevice->frameSizeDump();
-                            loop2.exec();
-                        }
-
-                        disconnect(conn2);
+                        disconnect(conn3);
                     }
                 }
 
@@ -3918,7 +3984,17 @@ void OpenMVPlugin::startClicked()
             connect(m_iodevice, &OpenMVPluginIO::scriptRunning,
                     &loop, &QEventLoop::quit);
 
-            m_iodevice->getScriptRunning();
+            if((!m_useGetState)
+            || (m_major < OPENMV_ADD_GET_STATE_MAJOR)
+            || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
+            || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)))
+            {
+                m_iodevice->getScriptRunning();
+            }
+            else
+            {
+                m_iodevice->getState();
+            }
 
             loop.exec(); // sync with camera
 
@@ -3928,52 +4004,85 @@ void OpenMVPlugin::startClicked()
             {
                 m_iodevice->scriptStop();
 
-                // Drain text buffer
+                if((!m_useGetState)
+                || (m_major < OPENMV_ADD_GET_STATE_MAJOR)
+                || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
+                || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)))
                 {
-                    bool empty = bool();
-                    bool *emptyPtr = &empty;
+                    // Drain text buffer
+                    {
+                        bool empty = bool();
+                        bool *emptyPtr = &empty;
+
+                        QEventLoop loop2;
+
+                        QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                            this, [emptyPtr] (bool ok) {
+                            *emptyPtr = ok;
+                        });
+
+                        connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                                &loop2, &QEventLoop::quit);
+
+                        while(!empty)
+                        {
+                            m_iodevice->getTxBuffer();
+                            loop2.exec();
+                        }
+
+                        disconnect(conn2);
+                    }
+
+                    // Drain image buffer
+                    {
+                        bool empty = bool();
+                        bool *emptyPtr = &empty;
+
+                        QEventLoop loop2;
+
+                        QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                            this, [emptyPtr] (bool ok) {
+                            *emptyPtr = ok;
+                        });
+
+                        connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                                &loop2, &QEventLoop::quit);
+
+                        while(!empty)
+                        {
+                            m_iodevice->frameSizeDump();
+                            loop2.exec();
+                        }
+
+                        disconnect(conn2);
+                    }
+                } else {
+                    bool printEmpty = bool(), frameBufferEmpty = bool();
+                    bool *printEmptyPtr = &printEmpty, *frameBufferEmptyPtr = &frameBufferEmpty;
 
                     QEventLoop loop2;
 
                     QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                        this, [emptyPtr] (bool ok) {
-                        *emptyPtr = ok;
+                        this, [printEmptyPtr] (bool ok) {
+                        *printEmptyPtr = ok;
                     });
 
-                    connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                    QMetaObject::Connection conn3 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                        this, [frameBufferEmptyPtr] (bool ok) {
+                        *frameBufferEmptyPtr = ok;
+                    });
+
+                    connect(m_iodevice, &OpenMVPluginIO::getStateDone,
                             &loop2, &QEventLoop::quit);
 
-                    while(!empty)
+                    while((!printEmpty) || (!frameBufferEmpty))
                     {
-                        m_iodevice->getTxBuffer();
+                        m_iodevice->getState();
                         loop2.exec();
                     }
 
                     disconnect(conn2);
-                }
-
-                // Drain image buffer
-                {
-                    bool empty = bool();
-                    bool *emptyPtr = &empty;
-
-                    QEventLoop loop2;
-
-                    QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                        this, [emptyPtr] (bool ok) {
-                        *emptyPtr = ok;
-                    });
-
-                    connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                            &loop2, &QEventLoop::quit);
-
-                    while(!empty)
-                    {
-                        m_iodevice->frameSizeDump();
-                        loop2.exec();
-                    }
-
-                    disconnect(conn2);
+                    disconnect(conn3);
                 }
             }
         }
@@ -4039,7 +4148,17 @@ void OpenMVPlugin::stopClicked()
             connect(m_iodevice, &OpenMVPluginIO::scriptRunning,
                     &loop, &QEventLoop::quit);
 
-            m_iodevice->getScriptRunning();
+            if((!m_useGetState)
+            || (m_major < OPENMV_ADD_GET_STATE_MAJOR)
+            || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
+            || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)))
+            {
+                m_iodevice->getScriptRunning();
+            }
+            else
+            {
+                m_iodevice->getState();
+            }
 
             loop.exec(); // sync with camera
 
@@ -4049,52 +4168,85 @@ void OpenMVPlugin::stopClicked()
             {
                 m_iodevice->scriptStop();
 
-                // Drain text buffer
+                if((!m_useGetState)
+                || (m_major < OPENMV_ADD_GET_STATE_MAJOR)
+                || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
+                || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)))
                 {
-                    bool empty = bool();
-                    bool *emptyPtr = &empty;
+                    // Drain text buffer
+                    {
+                        bool empty = bool();
+                        bool *emptyPtr = &empty;
+
+                        QEventLoop loop2;
+
+                        QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                            this, [emptyPtr] (bool ok) {
+                            *emptyPtr = ok;
+                        });
+
+                        connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                                &loop2, &QEventLoop::quit);
+
+                        while(!empty)
+                        {
+                            m_iodevice->getTxBuffer();
+                            loop2.exec();
+                        }
+
+                        disconnect(conn2);
+                    }
+
+                    // Drain image buffer
+                    {
+                        bool empty = bool();
+                        bool *emptyPtr = &empty;
+
+                        QEventLoop loop2;
+
+                        QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                            this, [emptyPtr] (bool ok) {
+                            *emptyPtr = ok;
+                        });
+
+                        connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                                &loop2, &QEventLoop::quit);
+
+                        while(!empty)
+                        {
+                            m_iodevice->frameSizeDump();
+                            loop2.exec();
+                        }
+
+                        disconnect(conn2);
+                    }
+                } else {
+                    bool printEmpty = bool(), frameBufferEmpty = bool();
+                    bool *printEmptyPtr = &printEmpty, *frameBufferEmptyPtr = &frameBufferEmpty;
 
                     QEventLoop loop2;
 
                     QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::printEmpty,
-                        this, [emptyPtr] (bool ok) {
-                        *emptyPtr = ok;
+                        this, [printEmptyPtr] (bool ok) {
+                        *printEmptyPtr = ok;
                     });
 
-                    connect(m_iodevice, &OpenMVPluginIO::printEmpty,
+                    QMetaObject::Connection conn3 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
+                        this, [frameBufferEmptyPtr] (bool ok) {
+                        *frameBufferEmptyPtr = ok;
+                    });
+
+                    connect(m_iodevice, &OpenMVPluginIO::getStateDone,
                             &loop2, &QEventLoop::quit);
 
-                    while(!empty)
+                    while((!printEmpty) || (!frameBufferEmpty))
                     {
-                        m_iodevice->getTxBuffer();
+                        m_iodevice->getState();
                         loop2.exec();
                     }
 
                     disconnect(conn2);
-                }
-
-                // Drain image buffer
-                {
-                    bool empty = bool();
-                    bool *emptyPtr = &empty;
-
-                    QEventLoop loop2;
-
-                    QMetaObject::Connection conn2 = connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                        this, [emptyPtr] (bool ok) {
-                        *emptyPtr = ok;
-                    });
-
-                    connect(m_iodevice, &OpenMVPluginIO::frameBufferEmpty,
-                            &loop2, &QEventLoop::quit);
-
-                    while(!empty)
-                    {
-                        m_iodevice->frameSizeDump();
-                        loop2.exec();
-                    }
-
-                    disconnect(conn2);
+                    disconnect(conn3);
                 }
             }
         }

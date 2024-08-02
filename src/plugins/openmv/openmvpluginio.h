@@ -213,6 +213,7 @@ signals:
     void printData(const QByteArray &data);
     void printEmpty(bool ok);
     void sensorIdDone(int id);
+    void getStateDone();
     void gotBootloaderStart(bool ok, int version);
     void bootloaderResetDone(bool ok);
     void flashEraseDone(bool ok);
