@@ -11,7 +11,7 @@
 namespace OpenMV {
 namespace Internal {
 
-OpenMVPluginFB::OpenMVPluginFB(QWidget *parent) : QGraphicsView(parent), m_enableSaveTemplate(false), m_enableSaveDescriptor(false), m_enableInteraction(true)
+OpenMVPluginFB::OpenMVPluginFB(QWidget *parent) : QGraphicsView(parent), m_enableSaveTemplate(false), m_enableSaveDescriptor(false), m_enableInteraction(true), m_focusMetric(0)
 {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -389,59 +389,13 @@ void OpenMVPluginFB::myFitInView(QGraphicsPixmapItem *item)
     if(item) centerOn(item);
 }
 
-int start_of_scan_offset(const QByteArray &jpeg) {
-    for (uint8_t *pstart = ((uint8_t *) jpeg.data()), *p = pstart, *pend = pstart + jpeg.length(); p < pend; ) {
-        uint16_t header = (p[0] << 8) | p[1];
-        p += sizeof(uint16_t);
-
-        if ((0xFFD0 <= header) && (header <= 0xFFD9)) {
-            continue;
-        } else if (0xFFDA == header) {
-            // Start-of-Scan (no more jpeg headers left).
-            return p - pstart;
-        } else if (((0xFFC0 <= header) && (header <= 0xFFCF))
-                   || ((0xFFDB <= header) && (header <= 0xFFDF))
-                   || ((0xFFE0 <= header) && (header <= 0xFFEF))
-                   || ((0xFFF0 <= header) && (header <= 0xFFFE))) {
-            uint16_t size = (p[0] << 8) | p[1];
-            p += sizeof(uint16_t);
-
-            if (((0xFFC1 <= header) && (header <= 0xFFC3))
-                || ((0xFFC5 <= header) && (header <= 0xFFC7))
-                || ((0xFFC9 <= header) && (header <= 0xFFCB))
-                || ((0xFFCD <= header) && (header <= 0xFFCF))) {
-                // Non-baseline jpeg.
-                return 0;
-            } else {
-                p += size - sizeof(uint16_t);
-            }
-        } else {
-            // Invalid JPEG
-            return 0;
-        }
-    }
-
-    return 0;
-}
-
 void OpenMVPluginFB::broadcastUpdate()
 {
-    // Broadcast the new pixmap
     emit pixmapUpdate(getPixmap());
 
     if(m_pixmap)
     {
-        QRect rect = getROI();
-
-        QBuffer buffer;
-        QImageWriter writer(&buffer, "jpg");
-        QPixmap temp = m_pixmap->pixmap();//.copy(rect); // new
-        writer.write(temp.toImage());
-        int focusMetric = ((buffer.size() - start_of_scan_offset(buffer.data())) * 100 * 8) /
-                          (temp.rect().width() * temp.rect().height());
-        temp = QPixmap(); // free
-
-        emit resolutionAndROIUpdate(m_pixmap->pixmap().size(), rect, focusMetric);
+        emit resolutionAndROIUpdate(m_pixmap->pixmap().size(), getROI(), m_focusMetric);
     }
     else
     {
