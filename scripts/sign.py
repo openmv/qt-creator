@@ -2,7 +2,7 @@
 
 # by: Kwabena W. Agyeman - kwagyeman@openmv.io
 
-import argparse, fnmatch, os, sys
+import argparse, fnmatch, os, sys, subprocess
 
 def try_which(program):
     if os.path.dirname(program):
@@ -115,6 +115,19 @@ def try_signFile(file):
             # Don't die...
             pass
 
+def get_latest_commit():
+    result = subprocess.run(['git', 'rev-parse', 'HEAD'], stdout=subprocess.PIPE)
+    return result.stdout.decode('utf-8').strip()
+
+def get_latest_tag_commit():
+    result = subprocess.run(['git', 'rev-list', '-n', '1', '--tags', '--max-count=1'], stdout=subprocess.PIPE)
+    return result.stdout.decode('utf-8').strip()
+
+def is_latest_commit_equal_to_tag():
+    latest_commit = get_latest_commit()
+    latest_tag_commit = get_latest_tag_commit()
+    return latest_commit == latest_tag_commit
+
 def main():
     parser = argparse.ArgumentParser(description = "Sign Script")
     parser.add_argument("target", help = "File or Directory")
@@ -129,7 +142,8 @@ def main():
     if os.path.isfile(target): try_signFile(target)
     else:
 
-        if sys.platform.startswith("win"):
+        # Only digitally sign all files on windows during a release...
+        if is_latest_commit_equal_to_tag() and sys.platform.startswith("win"):
             extensions = ["*.[eE][xX][eE]"] # "*.[dD][lL][lL]"
             excludeNames = ["dpinst_x86.exe", "dpinst_amd64.exe",
                             "dpinst-x86.exe", "dpinst-amd64.exe",
