@@ -34,6 +34,10 @@ public slots:
     void colorSpaceChanged(int colorSpace);
     void pixmapUpdate(const QPixmap &data);
 
+signals:
+
+    void focusMetric(int metric);
+
 protected:
 
     bool eventFilter(QObject *watched, QEvent *event);

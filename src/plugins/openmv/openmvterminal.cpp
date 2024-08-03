@@ -954,7 +954,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, QSettings *settings, 
     m_colorSpace->setCurrentIndex(m_settings->value(QStringLiteral(HISTOGRAM_COLOR_SPACE_STATE), RGB_COLOR_SPACE).toInt());
 
     connect(frameBuffer, &OpenMVPluginFB::pixmapUpdate, histogram, &OpenMVPluginHistogram::pixmapUpdate);
-
+    connect(histogram, &OpenMVPluginHistogram::focusMetric, frameBuffer, &OpenMVPluginFB::focusMetric);
     connect(frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [resLabel] (const QSize &res, const QRect &roi, int focus) {
         if(res.isValid())
         {

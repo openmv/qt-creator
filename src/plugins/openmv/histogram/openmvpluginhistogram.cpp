@@ -585,7 +585,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0Plot->yAxis->setLabel(Tr::tr("R"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
-            m_ui->C0Plot->replot();
+            m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel1, RGB_COLOR_SPACE_G);
             m_ui->C1MeanValue->setNum(m_mean);
@@ -601,7 +601,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1Plot->yAxis->setLabel(Tr::tr("G"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
-            m_ui->C1Plot->replot();
+            m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel2, RGB_COLOR_SPACE_B);
             m_ui->C2MeanValue->setNum(m_mean);
@@ -617,7 +617,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2Plot->yAxis->setLabel(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
-            m_ui->C2Plot->replot();
+            m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
             m_ui->C1Plot->show();
             m_ui->C1Stats->show();
@@ -642,7 +642,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0Plot->yAxis->setLabel(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
-            m_ui->C0Plot->replot();
+            m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
             m_ui->C1Plot->hide();
             m_ui->C1Stats->hide();
@@ -667,7 +667,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0Plot->yAxis->setLabel(Tr::tr("L"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
-            m_ui->C0Plot->replot();
+            m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel1, LAB_COLOR_SPACE_A);
             m_ui->C1MeanValue->setNum(m_mean);
@@ -683,7 +683,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1Plot->yAxis->setLabel(Tr::tr("A"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
-            m_ui->C1Plot->replot();
+            m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel2, LAB_COLOR_SPACE_B);
             m_ui->C2MeanValue->setNum(m_mean);
@@ -699,7 +699,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2Plot->yAxis->setLabel(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
-            m_ui->C2Plot->replot();
+            m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
             m_ui->C1Plot->show();
             m_ui->C1Stats->show();
@@ -724,7 +724,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0Plot->yAxis->setLabel(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
-            m_ui->C0Plot->replot();
+            m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel1, YUV_COLOR_SPACE_U);
             m_ui->C1MeanValue->setNum(m_mean);
@@ -740,7 +740,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1Plot->yAxis->setLabel(Tr::tr("U"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
-            m_ui->C1Plot->replot();
+            m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel2, YUV_COLOR_SPACE_V);
             m_ui->C2MeanValue->setNum(m_mean);
@@ -756,7 +756,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2Plot->yAxis->setLabel(Tr::tr("V"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
-            m_ui->C2Plot->replot();
+            m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
             m_ui->C1Plot->show();
             m_ui->C1Stats->show();
@@ -768,9 +768,44 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
     }
 }
 
+int start_of_scan_offset(const QByteArray &jpeg) {
+    for (uint8_t *pstart = ((uint8_t *) jpeg.data()), *p = pstart, *pend = pstart + jpeg.length(); p < pend; ) {
+        uint16_t header = (p[0] << 8) | p[1];
+        p += sizeof(uint16_t);
+
+        if ((0xFFD0 <= header) && (header <= 0xFFD9)) {
+            continue;
+        } else if (0xFFDA == header) {
+            // Start-of-Scan (no more jpeg headers left).
+            return p - pstart;
+        } else if (((0xFFC0 <= header) && (header <= 0xFFCF))
+                   || ((0xFFDB <= header) && (header <= 0xFFDF))
+                   || ((0xFFE0 <= header) && (header <= 0xFFEF))
+                   || ((0xFFF0 <= header) && (header <= 0xFFFE))) {
+            uint16_t size = (p[0] << 8) | p[1];
+            p += sizeof(uint16_t);
+
+            if (((0xFFC1 <= header) && (header <= 0xFFC3))
+                || ((0xFFC5 <= header) && (header <= 0xFFC7))
+                || ((0xFFC9 <= header) && (header <= 0xFFCB))
+                || ((0xFFCD <= header) && (header <= 0xFFCF))) {
+                // Non-baseline jpeg.
+                return 0;
+            } else {
+                p += size - sizeof(uint16_t);
+            }
+        } else {
+            // Invalid JPEG
+            return 0;
+        }
+    }
+
+    return 0;
+}
+
 void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
 {
-    m_pixmap = data;
+    m_pixmap = data.scaledToWidth(160, Qt::SmoothTransformation);
 
     switch(m_colorSpace)
     {
@@ -790,7 +825,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0Plot->yAxis->setLabel(Tr::tr("R"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
-            m_ui->C0Plot->replot();
+            m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel1, RGB_COLOR_SPACE_G);
             m_ui->C1MeanValue->setNum(m_mean);
@@ -806,7 +841,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1Plot->yAxis->setLabel(Tr::tr("G"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
-            m_ui->C1Plot->replot();
+            m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel2, RGB_COLOR_SPACE_B);
             m_ui->C2MeanValue->setNum(m_mean);
@@ -822,7 +857,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2Plot->yAxis->setLabel(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
-            m_ui->C2Plot->replot();
+            m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
             break;
         }
@@ -842,7 +877,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0Plot->yAxis->setLabel(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
-            m_ui->C0Plot->replot();
+            m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
             break;
         }
@@ -862,7 +897,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0Plot->yAxis->setLabel(Tr::tr("L"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
-            m_ui->C0Plot->replot();
+            m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel1, LAB_COLOR_SPACE_A);
             m_ui->C1MeanValue->setNum(m_mean);
@@ -878,7 +913,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1Plot->yAxis->setLabel(Tr::tr("A"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
-            m_ui->C1Plot->replot();
+            m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel2, LAB_COLOR_SPACE_B);
             m_ui->C2MeanValue->setNum(m_mean);
@@ -894,7 +929,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2Plot->yAxis->setLabel(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
-            m_ui->C2Plot->replot();
+            m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
             break;
         }
@@ -914,7 +949,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0Plot->yAxis->setLabel(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
-            m_ui->C0Plot->replot();
+            m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel1, YUV_COLOR_SPACE_U);
             m_ui->C1MeanValue->setNum(m_mean);
@@ -930,7 +965,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1Plot->yAxis->setLabel(Tr::tr("U"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
-            m_ui->C1Plot->replot();
+            m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
             updatePlot(m_channel2, YUV_COLOR_SPACE_V);
             m_ui->C2MeanValue->setNum(m_mean);
@@ -946,11 +981,16 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2Plot->yAxis->setLabel(Tr::tr("V"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
-            m_ui->C2Plot->replot();
+            m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
             break;
         }
     }
+
+    QBuffer buffer;
+    QImageWriter writer(&buffer, "jpg");
+    writer.write(m_pixmap.toImage());
+    emit focusMetric(((buffer.size() - start_of_scan_offset(buffer.data())) * 100 * 8) / (m_pixmap.rect().width() * m_pixmap.rect().height()));
 }
 
 } // namespace Internal

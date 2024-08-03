@@ -2249,7 +2249,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     connect(colorSpace, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), m_histogram, &OpenMVPluginHistogram::colorSpaceChanged);
     connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, m_histogram, &OpenMVPluginHistogram::pixmapUpdate);
-
+    connect(m_histogram, &OpenMVPluginHistogram::focusMetric, m_frameBuffer, &OpenMVPluginFB::focusMetric);
     connect(m_frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [resLabel] (const QSize &res, const QRect &roi, int focus) {
         if(res.isValid())
         {

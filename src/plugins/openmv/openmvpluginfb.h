@@ -27,6 +27,7 @@ public slots:
     void frameBufferData(const QPixmap &data);
     void enableSaveTemplate(bool enable) { m_enableSaveTemplate = enable; }
     void enableSaveDescriptor(bool enable) { m_enableSaveDescriptor = enable; }
+    void focusMetric(int metric) { m_focusMetric = metric; }
     void private_timerCallBack();
 
 signals:
@@ -58,6 +59,7 @@ private:
     bool m_enableSaveTemplate;
     bool m_enableSaveDescriptor;
     bool m_enableInteraction;
+    int m_focusMetric;
 
     bool m_unlocked;
     QPoint m_origin;
