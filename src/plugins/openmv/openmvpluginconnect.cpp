@@ -3517,9 +3517,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
         if(m_stopOnConnectDiconnectionAction->isChecked()) m_iodevice->scriptStop();
 
         if((!m_useGetState)
-        || (m_major < OPENMV_ADD_GET_STATE_MAJOR)
-        || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
-        || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)))
+        || (major2 < OPENMV_ADD_GET_STATE_MAJOR)
+        || ((major2 == OPENMV_ADD_GET_STATE_MAJOR) && (minor2 < OPENMV_ADD_GET_STATE_MINOR))
+        || ((major2 == OPENMV_ADD_GET_STATE_MAJOR) && (minor2 == OPENMV_ADD_GET_STATE_MINOR) && (patch2 < OPENMV_ADD_GET_STATE_PATCH)))
         {
             // Drain text buffer
             {
