@@ -77,7 +77,7 @@ int getImageSize(int w, int h, int bpp, bool newPixformat, int pixformat)
         {
             case PIXFORMAT_BINARY:
             {
-                return ((w + 31) / 32) * h;
+                return ((w + 31) / 32) * 4 * h;
             }
             case PIXFORMAT_GRAYSCALE:
             case PIXFORMAT_BAYER_ANY: // re-use
@@ -91,7 +91,25 @@ int getImageSize(int w, int h, int bpp, bool newPixformat, int pixformat)
             }
             case PIXFORMAT_COMPRESSED_ANY:
             {
-                return bpp;
+                switch(bpp)
+                {
+                    case PIXFORMAT_BPP_BINARY:
+                    {
+                        return ((w + 31) / 32) * 4 * h;
+                    }
+                    case PIXFORMAT_BPP_GRAY8:
+                    {
+                        return w * h * 1;
+                    }
+                    case PIXFORMAT_BPP_RGB565:
+                    {
+                        return w * h * 2;
+                    }
+                    default:
+                    {
+                        return bpp;
+                    }
+                }
             }
             default:
             {
@@ -104,7 +122,7 @@ int getImageSize(int w, int h, int bpp, bool newPixformat, int pixformat)
         return OLD_IS_JPG(bpp) ? bpp :
             (OLD_IS_BAYER(bpp) ? (w * h) :
                 ((OLD_IS_RGB(bpp) || OLD_IS_GS(bpp)) ? (w * h * bpp) :
-                    (OLD_IS_BINARY(bpp) ? (((w + 31) / 32) * h) : int())));
+                    (OLD_IS_BINARY(bpp) ? (((w + 31) / 32) * 4 * h) : int())));
     }
 }
 
@@ -118,7 +136,7 @@ QPixmap getImageFromData(QByteArray data, int w, int h, int bpp, bool rgb565Byte
         {
             case PIXFORMAT_BINARY:
             {
-                pixmap = QPixmap::fromImage(QImage(reinterpret_cast<const uchar *>(data.constData()), w, h, (w + 31) / 32, QImage::Format_MonoLSB));
+                pixmap = QPixmap::fromImage(QImage(reinterpret_cast<const uchar *>(data.constData()), w, h, ((w + 31) / 32) * 4, QImage::Format_MonoLSB));
                 break;
             }
             case PIXFORMAT_GRAYSCALE:
@@ -133,8 +151,29 @@ QPixmap getImageFromData(QByteArray data, int w, int h, int bpp, bool rgb565Byte
             }
             case PIXFORMAT_COMPRESSED_ANY:
             {
-                pixmap = QPixmap::fromImage(QImage::fromData(data));
-                break;
+                switch(bpp)
+                {
+                    case PIXFORMAT_BPP_BINARY:
+                    {
+                        pixmap = QPixmap::fromImage(QImage(reinterpret_cast<const uchar *>(data.constData()), w, h, ((w + 31) / 32) * 4, QImage::Format_MonoLSB));
+                        break;
+                    }
+                    case PIXFORMAT_BPP_GRAY8:
+                    {
+                        pixmap = QPixmap::fromImage(QImage(reinterpret_cast<const uchar *>(data.constData()), w, h, w * 1, QImage::Format_Grayscale8));
+                        break;
+                    }
+                    case PIXFORMAT_BPP_RGB565:
+                    {
+                        pixmap = QPixmap::fromImage(QImage(reinterpret_cast<const uchar *>(byteSwap(data, rgb565ByteReversed).constData()), w, h, w * 2, QImage::Format_RGB16));
+                        break;
+                    }
+                    default:
+                    {
+                        pixmap = QPixmap::fromImage(QImage::fromData(data));
+                        break;
+                    }
+                }
             }
             default:
             {
@@ -147,7 +186,7 @@ QPixmap getImageFromData(QByteArray data, int w, int h, int bpp, bool rgb565Byte
         pixmap = getImageSize(w, h, bpp, false, 0) ? (QPixmap::fromImage(OLD_IS_JPG(bpp)
             ? QImage::fromData(data)
             : QImage(reinterpret_cast<const uchar *>(byteSwap(data,
-                rgb565ByteReversed && OLD_IS_RGB(bpp)).constData()), w, h, OLD_IS_BINARY(bpp) ? ((w + 31) / 32) : (w * bpp),
+                rgb565ByteReversed && OLD_IS_RGB(bpp)).constData()), w, h, OLD_IS_BINARY(bpp) ? (((w + 31) / 32) * 4) : (w * bpp),
                 OLD_IS_RGB(bpp) ? QImage::Format_RGB16 : (OLD_IS_GS(bpp) ? QImage::Format_Grayscale8 : (OLD_IS_BINARY(bpp) ? QImage::Format_MonoLSB : QImage::Format_Invalid)))))
         : QPixmap();
     }
