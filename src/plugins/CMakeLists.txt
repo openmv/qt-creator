@@ -50,6 +50,8 @@ add_subdirectory(resourceeditor)
 # add_subdirectory(terminal)
 # add_subdirectory(vcpkg)
 # OPENMV-DIFF #
+add_subdirectory(tabbededitor)
+# OPENMV-DIFF #
 
 # Level 4: (only depends on Level 3 and below)
 # OPENMV-DIFF #
