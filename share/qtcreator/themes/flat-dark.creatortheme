@@ -2,7 +2,11 @@
 Includes=dark.figmatokens
 ThemeName=Flat Dark
 PreferredStyles=
-DefaultTextEditorColorScheme=creator-dark.xml
+;OPENMV-DIFF;
+;DefaultTextEditorColorScheme=creator-dark.xml
+;OPENMV-DIFF;
+DefaultTextEditorColorScheme=flat-dark.xml
+;OPENMV-DIFF;
 
 [Palette]
 shadowBackground=ff404142
@@ -20,7 +24,11 @@ normalBackground=ff2E2F30
 alternateBackground=ff353637
 error=ffdf4f4f
 warning=ffecbc1c
-splitter=ff06080A
+;OPENMV-DIFF;
+;splitter=ff06080A
+;OPENMV-DIFF;
+splitter=ff323334
+;OPENMV-DIFF;
 textColorLink=ff007af4
 textColorLinkVisited=ffa57aff
 backgroundColorDisabled=ff444444
@@ -463,11 +471,15 @@ PaletteBrightText=ffff3333
 PaletteText=text
 PaletteButtonText=text
 PaletteButtonTextDisabled=textDisabled
-PaletteToolTipBase=shadowBackground
+;OPENMV-DIFF;
+;PaletteToolTipBase=shadowBackground
+;OPENMV-DIFF;
 PaletteHighlight=selectedBackgroundText
 PaletteDark=shadowBackground
 PaletteHighlightedText=textHighlighted
-PaletteToolTipText=text
+;OPENMV-DIFF;
+;PaletteToolTipText=text
+;OPENMV-DIFF;
 PaletteLink=textColorLink
 PaletteLinkVisited=textColorLinkVisited
 PaletteWindowDisabled=backgroundColorDisabled
@@ -505,7 +517,11 @@ DrawIndicatorBranch=true
 DrawSearchResultWidgetFrame=false
 DrawTargetSelectorBottom=false
 DrawToolBarHighlights=false
-DrawToolBarBorders=false
+;OPENMV-DIFF;
+;DrawToolBarBorders=false
+;OPENMV-DIFF;
+DrawToolBarBorders=true
+;OPENMV-DIFF;
 FlatToolBars=true
 FlatSideBarIcons=true
 FlatProjectsMode=true

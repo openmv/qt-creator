@@ -114,7 +114,9 @@ find_package(Qt6 OPTIONAL_COMPONENTS Quick QuickWidgets Designer DesignerCompone
                                      Help SerialPort Svg Tools LinguistTools QUIET)
 
 find_package(Threads)
-find_package(Clang QUIET)
+# OPENMV-DIFF #
+# find_package(Clang QUIET)
+# OPENMV-DIFF #
 
 # Crashpad
 set(CRASHPAD_BACKEND_URL "" CACHE STRING "Crashpad backend URL")
@@ -170,15 +172,19 @@ endif()
 
 add_subdirectory(src)
 add_subdirectory(share)
-if (NOT BUILD_DESIGNSTUDIO)
-    add_subdirectory(dist)
-endif()
+# OPENMV-DIFF #
+# if (NOT BUILD_DESIGNSTUDIO)
+#     add_subdirectory(dist)
+# endif()
+# OPENMV-DIFF #
 
 if (WITH_TESTS)
   add_subdirectory(tests)
 endif()
 
-add_subdirectory(doc)
+# OPENMV-DIFF #
+# add_subdirectory(doc)
+# OPENMV-DIFF #
 
 setup_dependencies_component()
 
@@ -187,8 +193,10 @@ feature_summary(INCLUDE_QUIET_PACKAGES WHAT
   ENABLED_FEATURES DISABLED_FEATURES
 )
 
-if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR
-    AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE.GPL3-EXCEPT")
-  # Only for opensource, non-super-repo builds
-  add_subdirectory(packaging)
-endif()
+# OPENMV-DIFF #
+# if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR
+#     AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE.GPL3-EXCEPT")
+#   # Only for opensource, non-super-repo builds
+#   add_subdirectory(packaging)
+# endif()
+# OPENMV-DIFF #

@@ -1,0 +1,8 @@
+[
+    {
+        "boardType" : "PICO",
+        "vidpid" : "28ea:0003",
+        "eraseCommands" : ["-o 0x10800000 -t bin"],
+        "binProgramCommand" : "-x"
+    }
+]

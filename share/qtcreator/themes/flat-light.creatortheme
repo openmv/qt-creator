@@ -2,6 +2,9 @@
 Includes=light.figmatokens, light-palette.inc
 ThemeName=Flat Light
 PreferredStyles=
+;OPENMV-DIFF;
+DefaultTextEditorColorScheme=flat-light.xml
+;OPENMV-DIFF;
 
 [Palette]
 shadowBackground=PaletteDark
@@ -11,7 +14,11 @@ toolBarItem=a0010508
 toolBarItemDisabled=38000000
 fancyBarsNormalTextColor=ff000000
 fancyBarsBoldTextColor=a0010508
-hoverBackground=1a000000
+;OPENMV-DIFF;
+;hoverBackground=1a000000
+;OPENMV-DIFF;
+hoverBackground=28000000
+;OPENMV-DIFF;
 selectedBackground=a8ffffff
 normalBackground=PaletteWindow
 alternateBackground=PaletteAlternateBase

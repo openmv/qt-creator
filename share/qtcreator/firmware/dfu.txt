@@ -1,0 +1,56 @@
+[
+    {
+        "boardType" : "H7",
+        "vidpid" : "2341:035b",
+        "appvidpid" : ["2341:005b", "2341:045b", "2341:035b"],
+        "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
+        "extraProgramCommands" : [
+                {
+                    "addr" : "-a 1 -s 0x90F00000",
+                    "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                },
+                {
+                    "addr" : "-a 1 -s 0x90FC0000",
+                    "path" : "CYW4343/cyw4343_btfw.bin"
+                }
+            ],
+        "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+        "dfuProgramCommand" : "-a 0 -s :leave"
+    },
+    {
+        "boardType" : "H7",
+        "vidpid" : "2341:0366",
+        "appvidpid" : ["2341:0466", "2341:0366"],
+        "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
+        "extraProgramCommands" : [
+                {
+                    "addr" : "-a 1 -s 0x90F00000",
+                    "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                },
+                {
+                    "addr" : "-a 1 -s 0x90FC0000",
+                    "path" : "CYW4343/cyw4343_btfw.bin"
+                }
+            ],
+        "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+        "dfuProgramCommand" : "-a 0 -s :leave"
+    },
+    {
+        "boardType" : "NICLAV",
+        "vidpid" : "2341:035f",
+        "appvidpid" : ["2341:045f", "2341:035f"],
+        "eraseCommands" : ["-a 1 -s 0x90000000"],
+        "extraProgramCommands" : [
+                {
+                    "addr" : "-a 1 -s 0x90F00000",
+                    "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                },
+                {
+                    "addr" : "-a 1 -s 0x90FC0000",
+                    "path" : "CYW4343/cyw4343_btfw.bin"
+                }
+            ],
+        "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+        "dfuProgramCommand" : "-a 0 -s :leave"
+    }
+]

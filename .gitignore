@@ -49,7 +49,9 @@ CMakeUserPresets.json
 *.qbs.user*
 *.qmlproject.user*
 CMakeLists.txt.user*
-/share/qtcreator/examples/
+# OPENMV-DIFF #
+# /share/qtcreator/examples/
+# OPENMV-DIFF #
 /share/qtcreator/externaltools/
 /share/qtcreator/fonts/
 /share/qtcreator/generic-highlighter/
@@ -145,8 +147,10 @@ tmp/
 
 # Binaries
 # --------
-*.dll
-*.exe
+# OPENMV-DIFF #
+# *.dll
+# *.exe
+# OPENMV-DIFF #
 /bin/buildoutputparser
 /bin/clangbackend
 /bin/cpaster
