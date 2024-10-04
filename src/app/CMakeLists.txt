@@ -76,7 +76,11 @@ if (WIN32)
   set(RC_APPLICATION_NAME "${IDE_DISPLAY_NAME}")
   set(RC_VERSION "${IDE_VERSION}.0")
   set(RC_VERSION_STRING "${IDE_VERSION_DISPLAY}")
-  set(RC_COPYRIGHT "2008-${IDE_COPYRIGHT_YEAR} The Qt Company Ltd")
+  # OPENMV-DIFF #
+  # set(RC_COPYRIGHT "2008-${IDE_COPYRIGHT_YEAR} The Qt Company Ltd")
+  # OPENMV-DIFF #
+  set(RC_COPYRIGHT "${IDE_COPYRIGHT_YEAR_FOUNDED}-${IDE_COPYRIGHT_YEAR} ${IDE_AUTHOR}")
+  # OPENMV-DIFF #
 
   string(REPLACE " " "\\x20" RC_APPLICATION_NAME "${RC_APPLICATION_NAME}")
   string(REPLACE " " "\\x20" RC_COPYRIGHT "${RC_COPYRIGHT}")
@@ -98,36 +102,53 @@ if (APPLE)
     set(MACOSX_DEPLOYMENT_TARGET ${CMAKE_OSX_DEPLOYMENT_TARGET})
   endif()
   set_target_properties(qtcreator PROPERTIES
-      MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/app-Info.plist"
+      # OPENMV-DIFF #
+      # MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/app-Info.plist"
+      # OPENMV-DIFF #
+      MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/openmvide-Info.plist"
+      # OPENMV-DIFF #
   )
-  # icon
-  add_custom_command(
-    OUTPUT qtcreator.icns qtcreator-project.icns
-    COMMAND
-      xcrun actool --app-icon qtcreator --output-partial-info-plist "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.Info.plist"
-      --platform macosx --minimum-deployment-target 10.7 --compile "${CMAKE_CURRENT_BINARY_DIR}"
-      "${IDE_ICON_PATH}/qtcreator.xcassets"
-      > /dev/null
-    BYPRODUCTS qtcreator.Info.plist
-    VERBATIM
-  )
-  target_sources(qtcreator
-    PRIVATE
-      "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns"
-      "${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns"
-  )
+  # OPENMV-DIFF #
+  # # icon
+  # add_custom_command(
+  #   OUTPUT qtcreator.icns qtcreator-project.icns
+  #   COMMAND
+  #     xcrun actool --app-icon qtcreator --output-partial-info-plist "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.Info.plist"
+  #     --platform macosx --minimum-deployment-target 10.7 --compile "${CMAKE_CURRENT_BINARY_DIR}"
+  #     "${IDE_ICON_PATH}/qtcreator.xcassets"
+  #     > /dev/null
+  #   BYPRODUCTS qtcreator.Info.plist
+  #   VERBATIM
+  # )
+  # target_sources(qtcreator
+  #   PRIVATE
+  #     "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns"
+  #     "${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns"
+  # )
+  # qtc_copy_to_builddir(copy_icns
+  #   DESTINATION ${IDE_DATA_PATH}
+  #   FILES
+  #     ${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns
+  #     ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+  # )
+  # install(
+  #   FILES
+  #     ${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns
+  #     ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+  #   DESTINATION ${IDE_DATA_PATH}
+  # )
+  # OPENMV-DIFF #
   qtc_copy_to_builddir(copy_icns
     DESTINATION ${IDE_DATA_PATH}
     FILES
-      ${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns
-      ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+      ${CMAKE_BINARY_DIR}/../openmv-media/icons/openmv-icon/openmv.icns
   )
   install(
     FILES
-      ${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns
-      ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+      ${CMAKE_BINARY_DIR}/../openmv-media/icons/openmv-icon/openmv.icns
     DESTINATION ${IDE_DATA_PATH}
   )
+  # OPENMV-DIFF #
 endif()
 
 option(QTC_FORCE_XCB "Enables that Qt Creator forces XCB on Linux if QT_QPA_PLATFORM is not set." OFF)
@@ -156,7 +177,11 @@ if ((NOT WIN32) AND (NOT APPLE))
   # install logo
   foreach(size 16 24 32 48 64 128 256 512)
     install(
-      FILES ${IDE_LOGO_PATH}/images/logo/${size}/QtProject-qtcreator.png
+      # OPENMV-DIFF #
+      # FILES ${IDE_LOGO_PATH}/images/logo/${size}/QtProject-qtcreator.png
+      # OPENMV-DIFF #
+      FILES ${IDE_LOGO_PATH}/images/logo/${size}/OpenMV-openmvide.png
+      # OPENMV-DIFF #
       DESTINATION share/icons/hicolor/${size}x${size}/apps
     )
   endforeach()

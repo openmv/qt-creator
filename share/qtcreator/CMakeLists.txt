@@ -1,62 +1,77 @@
 set(resource_directories
-  android
-  cplusplus
-  glsl
-  indexer_preincludes
-  jsonschemas
+  # OPENMV-DIFF #
+  # android
+  # cplusplus
+  # glsl
+  # indexer_preincludes
+  # jsonschemas
+  # OPENMV-DIFF #
   lua-plugins
-  modeleditor
-  qmldesigner
-  qmlicons
-  qml-type-descriptions
-  schemes
-  snippets
-  styles
-  templates
-  themes
+  # OPENMV-DIFF #
+  # modeleditor
+  # qmldesigner
+  # qmlicons
+  # qml-type-descriptions
+  # schemes
+  # snippets
+  # styles
+  # templates
+  # themes
+  # OPENMV-DIFF #
 )
 
 set(resource_files
-  debugger/.pylintrc
-  debugger/boosttypes.py
-  debugger/cdbbridge.py
-  debugger/cdbext.pyi
-  debugger/creatortypes.py
-  debugger/dumper.py
-  debugger/gdbbridge.py
-  debugger/gdbtracepoint.py
-  debugger/LICENSE.GPL3-EXCEPT
-  debugger/lldbbridge.py
-  debugger/misctypes.py
-  debugger/opencvtypes.py
-  debugger/pdbbridge.py
-  debugger/personaltypes.py
-  debugger/qttypes.py
-  debugger/README.txt
-  debugger/setup.cfg
-  debugger/android_stdtypes.py
-  debugger/libcpp_stdtypes.py
-  debugger/stdtypes.py
-  debugger/utils.py
-  debugger/loadorder.txt
+  # OPENMV-DIFF #
+  # debugger/.pylintrc
+  # debugger/boosttypes.py
+  # debugger/cdbbridge.py
+  # debugger/cdbext.pyi
+  # debugger/creatortypes.py
+  # debugger/dumper.py
+  # debugger/gdbbridge.py
+  # debugger/gdbtracepoint.py
+  # debugger/LICENSE.GPL3-EXCEPT
+  # debugger/lldbbridge.py
+  # debugger/misctypes.py
+  # debugger/opencvtypes.py
+  # debugger/pdbbridge.py
+  # debugger/personaltypes.py
+  # debugger/qttypes.py
+  # debugger/README.txt
+  # debugger/setup.cfg
+  # debugger/android_stdtypes.py
+  # debugger/libcpp_stdtypes.py
+  # debugger/stdtypes.py
+  # debugger/utils.py
+  # debugger/loadorder.txt
+  # OPENMV-DIFF #
 
-  debugger-with-python2/qttypes.py
-  debugger-with-python2/personaltypes.py
-  debugger-with-python2/android_stdtypes.py
-  debugger-with-python2/README.txt
-  debugger-with-python2/gdbbridge.py
-  debugger-with-python2/cdbbridge.py
-  debugger-with-python2/lldbbridge.py
-  debugger-with-python2/misctypes.py
-  debugger-with-python2/opencvtypes.py
-  debugger-with-python2/libcpp_stdtypes.py
-  debugger-with-python2/creatortypes.py
-  debugger-with-python2/stdtypes.py
-  debugger-with-python2/gdbtracepoint.py
-  debugger-with-python2/utils.py
-  debugger-with-python2/boosttypes.py
-  debugger-with-python2/dumper.py
-  debugger-with-python2/pdbbridge.py
+  # OPENMV-DIFF #
+  # debugger-with-python2/qttypes.py
+  # debugger-with-python2/personaltypes.py
+  # debugger-with-python2/android_stdtypes.py
+  # debugger-with-python2/README.txt
+  # debugger-with-python2/gdbbridge.py
+  # debugger-with-python2/cdbbridge.py
+  # debugger-with-python2/lldbbridge.py
+  # debugger-with-python2/misctypes.py
+  # debugger-with-python2/opencvtypes.py
+  # debugger-with-python2/libcpp_stdtypes.py
+  # debugger-with-python2/creatortypes.py
+  # debugger-with-python2/stdtypes.py
+  # debugger-with-python2/gdbtracepoint.py
+  # debugger-with-python2/utils.py
+  # debugger-with-python2/boosttypes.py
+  # debugger-with-python2/dumper.py
+  # debugger-with-python2/pdbbridge.py
+  # OPENMV-DIFF #
+
+  # OPENMV-DIFF #
+  # styles/flat-dark.xml
+  # styles/flat-light.xml
+  themes/flat-dark.creatortheme
+  themes/flat-light.creatortheme
+  # OPENMV-DIFF #
 )
 
 # copy resource directories during build
