@@ -590,7 +590,9 @@ void ManhattanStyle::drawPrimitive(PrimitiveElement element, const QStyleOption 
     } else {
         const bool tweakDarkTheme =
                 (element == PE_Frame
-                 || element == PE_FrameLineEdit
+                 // OPENMV-DIFF //
+                 // || element == PE_FrameLineEdit
+                 // OPENMV-DIFF //
                  || element == PE_FrameGroupBox
                  || element == PE_IndicatorRadioButton
                  || element == PE_IndicatorCheckBox
@@ -775,7 +777,11 @@ void ManhattanStyle::drawPrimitiveForPanelWidget(PrimitiveElement element,
                 painter->setPen(StyleHelper::borderColor().darker(110)); //TODO: make themable
                 painter->drawLine(borderRect.topLeft(), borderRect.topRight());
             }
-            if (creatorTheme()->flag(Theme::DrawToolBarBorders)) {
+            // OPENMV-DIFF //
+            // if (creatorTheme()->flag(Theme::DrawToolBarBorders)) {
+            // OPENMV-DIFF //
+            if (creatorTheme()->flag(Theme::DrawToolBarBorders) && (!widget->property("NoDrawToolBarBorders").toBool())) {
+            // OPENMV-DIFF //
                 painter->setPen(StyleHelper::toolBarBorderColor());
                 painter->drawLine(borderRect.topLeft(), borderRect.topRight());
             }

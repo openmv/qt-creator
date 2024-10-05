@@ -122,6 +122,11 @@ public:
         MainWindowClosing,
     };
 
+    // OPENMV-DIFF //
+    static void disableShow(bool disable);
+    static bool isShowDisabled();
+    // OPENMV-DIFF //
+
 public slots:
     static void openFileWith();
     static void exit();
@@ -135,6 +140,10 @@ signals:
     void contextAboutToChange(const QList<Core::IContext *> &context);
     void contextChanged(const Core::Context &context);
     void systemEnvironmentChanged();
+    // OPENMV-DIFF //
+    //TODO//void showEventSignal();
+    //TODO//void hideEventSignal();
+    // OPENMV-DIFF //
 
 public:
     /* internal use */

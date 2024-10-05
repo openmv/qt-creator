@@ -243,6 +243,62 @@ private:
     void closeEvent(QCloseEvent *event) override;
     void keyPressEvent(QKeyEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
+
+    // OPENMV-DIFF //
+    void updateWindowIcon()
+    {
+    // This is all needed to work around a bug in QApplication::setWindowIcon() which will always create a 16x16 icon
+    // for the window title bar and a 32x32 icon for the task bar... for regular and high-dpi screens...
+#ifdef Q_OS_WIN
+        HWND hwnd = (HWND) winId();
+
+        if (hwnd)
+        {
+            qreal ratio = devicePixelRatioF();
+            if (!qFuzzyCompare(ratio, m_devicePixelRatio)) {
+                m_devicePixelRatio = ratio;
+
+                if (m_iconBig) {
+                    DestroyIcon(m_iconBig);
+                    m_iconBig = nullptr;
+                }
+
+                if (m_iconSmall) {
+                    DestroyIcon(m_iconSmall);
+                    m_iconSmall = nullptr;
+                }
+
+                // QIcon small(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv16x16.png"));
+                // QPixmap smallP = small.pixmap(QSize(GetSystemMetrics(SM_CXSMICON), GetSystemMetrics(SM_CYSMICON)), ratio);
+                // m_iconSmall = smallP.toImage().toHICON();
+
+                // QIcon big(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv32x32.png"));
+                // QPixmap bigP = big.pixmap(QSize(GetSystemMetrics(SM_CXICON), GetSystemMetrics(SM_CYICON)), ratio);
+                // m_iconBig = bigP.toImage().toHICON();
+
+                // It turns out that if you have a desktop with multiple screens with different dpi levels that it will look bad
+                // to display anything but the highest dpi icon. So, just display the highest dpi instead of dynamically updating.
+                m_iconSmall = QPixmap(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv16x16@2x.png")).toImage().toHICON();
+                m_iconBig = QPixmap(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv32x32@2x.png")).toImage().toHICON();
+
+                SendMessage(hwnd, WM_SETICON, ICON_SMALL, LPARAM(m_iconSmall));
+                SendMessage(hwnd, WM_SETICON, ICON_BIG, LPARAM(m_iconBig));
+            }
+        }
+#endif
+    }
+
+    void showEvent(QShowEvent *event) override { AppMainWindow::showEvent(event); updateWindowIcon(); }
+    void hideEvent(QHideEvent *event) override { AppMainWindow::hideEvent(event); updateWindowIcon(); }
+    void moveEvent(QMoveEvent *event) override { AppMainWindow::moveEvent(event); updateWindowIcon(); }
+    void resizeEvent(QResizeEvent *event) override { AppMainWindow::resizeEvent(event); updateWindowIcon(); }
+
+#ifdef Q_OS_WIN
+    qreal m_devicePixelRatio = 0;
+    HICON m_iconSmall = nullptr;
+    HICON m_iconBig = nullptr;
+#endif
+    // OPENMV-DIFF //
 };
 
 static QColor s_overrideColor;
@@ -331,6 +387,9 @@ public:
     QToolButton *m_toggleLeftSideBarButton = nullptr;
     QToolButton *m_toggleRightSideBarButton = nullptr;
     QList<std::function<bool()>> m_preCloseListeners;
+    // OPENMV-DIFF //
+    bool m_disableShow;
+    // OPENMV-DIFF //
 };
 
 static QMenuBar *globalMenuBar()
@@ -1155,6 +1214,16 @@ void ICore::restart()
     exit();
 }
 
+void ICore::disableShow(bool disable)
+{
+    d->m_disableShow = disable;
+}
+
+bool ICore::isShowDisabled()
+{
+    return d->m_disableShow;
+}
+
 /*!
     \internal
 */
@@ -1197,8 +1266,10 @@ void ICore::saveSettings(SaveSettingsReason reason)
     DocumentManager::saveSettings();
     ActionManager::saveSettings();
     EditorManagerPrivate::saveSettings();
-    d->m_leftNavigationWidget->saveSettings(settings);
-    d->m_rightNavigationWidget->saveSettings(settings);
+    // OPENMV-DIFF //
+    // d->m_leftNavigationWidget->saveSettings(settings);
+    // d->m_rightNavigationWidget->saveSettings(settings);
+    // OPENMV-DIFF //
 
     // TODO Remove some time after Qt Creator 11
     // Work around Qt Creator <= 10 writing the default terminal to the settings.
@@ -1351,6 +1422,9 @@ void ICorePrivate::init()
     m_systemEditor = new SystemEditor;
     m_toggleLeftSideBarButton = new QToolButton;
     m_toggleRightSideBarButton = new QToolButton;
+    // OPENMV-DIFF //
+    m_disableShow = false;
+    // OPENMV-DIFF //
 
     (void) new DocumentManager(this);
 
@@ -1405,11 +1479,17 @@ void ICorePrivate::init()
 
     // Add small Toolbuttons for toggling the navigation widgets
     StatusBarManager::addStatusBarWidget(m_toggleLeftSideBarButton, StatusBarManager::First);
-    int childsCount = m_modeStack->statusBar()
-                          ->findChildren<QWidget *>(QString(), Qt::FindDirectChildrenOnly)
-                          .count();
-    m_modeStack->statusBar()->insertPermanentWidget(childsCount - 1,
-                                                    m_toggleRightSideBarButton); // before QSizeGrip
+    // OPENMV-DIFF //
+    // int childsCount = m_modeStack->statusBar()
+    //                       ->findChildren<QWidget *>(QString(), Qt::FindDirectChildrenOnly)
+    //                       .count();
+    // m_modeStack->statusBar()->insertPermanentWidget(childsCount - 1,
+    //                                                 m_toggleRightSideBarButton); // before QSizeGrip
+    // OPENMV-DIFF //
+    m_modeStack->statusBar()->addPermanentWidget(m_toggleRightSideBarButton);
+    m_toggleLeftSideBarButton->hide();
+    m_toggleRightSideBarButton->hide();
+    // OPENMV-DIFF //
 
     //    setUnifiedTitleAndToolBarOnMac(true);
     //if (HostOsInfo::isAnyUnixHost())
@@ -1442,7 +1522,12 @@ NavigationWidget *ICorePrivate::navigationWidget(Side side) const
 
 void ICorePrivate::setSidebarVisible(bool visible, Side side)
 {
-    navigationWidget(side)->setShown(visible);
+    // OPENMV-DIFF //
+    // navigationWidget(side)->setShown(visible);
+    // OPENMV-DIFF //
+    Q_UNUSED(visible)
+    Q_UNUSED(side)
+    // OPENMV-DIFF //
 }
 
 ICorePrivate::~ICorePrivate()
@@ -1506,8 +1591,10 @@ void ICore::extensionsInitialized()
     d->m_windowSupport->setCloseActionEnabled(false);
     OutputPaneManager::initialize();
     VcsManager::extensionsInitialized();
-    d->m_leftNavigationWidget->setFactories(INavigationWidgetFactory::allNavigationFactories());
-    d->m_rightNavigationWidget->setFactories(INavigationWidgetFactory::allNavigationFactories());
+    // OPENMV-DIFF //
+    // d->m_leftNavigationWidget->setFactories(INavigationWidgetFactory::allNavigationFactories());
+    // d->m_rightNavigationWidget->setFactories(INavigationWidgetFactory::allNavigationFactories());
+    // OPENMV-DIFF //
 
     ModeManager::extensionsInitialized();
 
@@ -1584,8 +1671,10 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
     d->saveWindowSettings();
 
-    d->m_leftNavigationWidget->closeSubWidgets();
-    d->m_rightNavigationWidget->closeSubWidgets();
+    // OPENMV-DIFF //
+    // d->m_leftNavigationWidget->closeSubWidgets();
+    // d->m_rightNavigationWidget->closeSubWidgets();
+    // OPENMV-DIFF //
 
     event->accept();
     alreadyClosed = true;
@@ -1652,7 +1741,9 @@ void ICorePrivate::registerDefaultContainers()
     medit->appendGroup(Constants::G_EDIT_OTHER);
 
     ActionContainer *mview = ActionManager::createMenu(Constants::M_VIEW);
-    menubar->addMenu(mview, Constants::G_VIEW);
+    // OPENMV-DIFF //
+    // menubar->addMenu(mview, Constants::G_VIEW);
+    // OPENMV-DIFF //
     mview->menu()->setTitle(Tr::tr("&View"));
     mview->appendGroup(Constants::G_VIEW_VIEWS);
     mview->appendGroup(Constants::G_VIEW_PANES);
@@ -1700,12 +1791,17 @@ void ICorePrivate::registerDefaultActions()
 {
     ActionContainer *mfile = ActionManager::actionContainer(Constants::M_FILE);
     ActionContainer *medit = ActionManager::actionContainer(Constants::M_EDIT);
-    ActionContainer *mview = ActionManager::actionContainer(Constants::M_VIEW);
+    // OPENMV-DIFF //
+    // ActionContainer *mview = ActionManager::actionContainer(Constants::M_VIEW);
+    // OPENMV-DIFF //
     ActionContainer *mtools = ActionManager::actionContainer(Constants::M_TOOLS);
     ActionContainer *mwindow = ActionManager::actionContainer(Constants::M_WINDOW);
     ActionContainer *mhelp = ActionManager::actionContainer(Constants::M_HELP);
 
     // File menu separators
+    // OPENMV-DIFF //
+    mfile->addSeparator(Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
     mfile->addSeparator(Constants::G_FILE_SAVE);
     mfile->addSeparator(Constants::G_FILE_EXPORT);
     mfile->addSeparator(Constants::G_FILE_PRINT);
@@ -1728,8 +1824,10 @@ void ICorePrivate::registerDefaultActions()
     ActionBuilder newProjectAction(this, Constants::NEW);
     newProjectAction.setText(Tr::tr("&New Project..."));
     newProjectAction.setIcon(Icon::fromTheme("document-new"));
-    newProjectAction.setDefaultKeySequence(QKeySequence("Ctrl+Shift+N"));
-    newProjectAction.addToContainer(Constants::M_FILE, Constants::G_FILE_NEW);
+    // OPENMV-DIFF //
+    // newProjectAction.setDefaultKeySequence(QKeySequence("Ctrl+Shift+N"));
+    // newProjectAction.addToContainer(Constants::M_FILE, Constants::G_FILE_NEW);
+    // OPENMV-DIFF //
     newProjectAction.addOnTriggered(this, [] {
         if (!ICore::isNewItemDialogRunning()) {
             ICore::showNewItemDialog(
@@ -1745,42 +1843,60 @@ void ICorePrivate::registerDefaultActions()
 
     // New File Action
     ActionBuilder newFileAction(this, Constants::NEW_FILE);
-    newFileAction.setText(Tr::tr("New File..."));
+    // OPENMV-DIFF //
+    // newFileAction.setText(Tr::tr("New File..."));
+    // OPENMV-DIFF //
+    newFileAction.setText(Tr::tr("&New File..."));
+    // OPENMV-DIFF //
     newFileAction.setIcon(Icon::fromTheme("document-new"));
     newFileAction.setDefaultKeySequence(QKeySequence::New);
     newFileAction.addToContainer(Constants::M_FILE, Constants::G_FILE_NEW);
-    newFileAction.addOnTriggered(this, [] {
-        if (!ICore::isNewItemDialogRunning()) {
-            ICore::showNewItemDialog(
-                Tr::tr("New File", "Title of dialog"),
-                Utils::filtered(Core::IWizardFactory::allWizardFactories(),
-                                Utils::equal(&Core::IWizardFactory::kind,
-                                             Core::IWizardFactory::FileWizard)),
-                FilePath());
-        } else {
-            ICore::raiseWindow(ICore::newItemDialog());
-        }
-    });
+    // OPENMV-DIFF //
+    // newFileAction.addOnTriggered(this, [] {
+    //     if (!ICore::isNewItemDialogRunning()) {
+    //         ICore::showNewItemDialog(
+    //             Tr::tr("New File", "Title of dialog"),
+    //             Utils::filtered(Core::IWizardFactory::allWizardFactories(),
+    //                             Utils::equal(&Core::IWizardFactory::kind,
+    //                                          Core::IWizardFactory::FileWizard)),
+    //             FilePath());
+    //     } else {
+    //         ICore::raiseWindow(ICore::newItemDialog());
+    //     }
+    // });
+    // OPENMV-DIFF //
 
     // Open Action
     ActionBuilder openAction(this, Constants::OPEN);
-    openAction.setText(Tr::tr("&Open File or Project..."));
+    // OPENMV-DIFF //
+    // openAction.setText(Tr::tr("&Open File or Project..."));
+    // OPENMV-DIFF //
+    openAction.setText(Tr::tr("&Open File..."));
+    // OPENMV-DIFF //
     openAction.setIcon(Icon::fromTheme("document-open"));
     openAction.setDefaultKeySequence(QKeySequence::Open);
-    openAction.addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
+    // openAction.addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
+    openAction.addToContainer(Constants::M_FILE, Constants::G_FILE_NEW);
+    // OPENMV-DIFF //
     openAction.addOnTriggered(this, [] { openFile(); });
 
     // Open With Action
     ActionBuilder openWithAction(this, Constants::OPEN_WITH);
     openWithAction.setText(Tr::tr("Open File &With..."));
-    openWithAction.addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
+    // openWithAction.addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
     openWithAction.addOnTriggered(this, &ICore::openFileWith);
 
     if (FSEngine::isAvailable()) {
         // Open From Device Action
         ActionBuilder openFromDeviceAction(this, Constants::OPEN_FROM_DEVICE);
         openFromDeviceAction.setText(Tr::tr("Open From Device..."));
-        openFromDeviceAction.addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN);
+        // OPENMV-DIFF //
+        // openFromDeviceAction.addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN);
+        // OPENMV-DIFF //
         openFromDeviceAction.addOnTriggered(this, [this] { openFileFromDevice(); });
     }
 
@@ -1915,14 +2031,18 @@ void ICorePrivate::registerDefaultActions()
     zoomOriginalAction.setEnabled(false);
 
     // Debug Qt Creator menu
-    mtools->appendGroup(Constants::G_TOOLS_DEBUG);
-    ActionContainer *mtoolsdebug = ActionManager::createMenu(Constants::M_TOOLS_DEBUG);
-    mtoolsdebug->menu()->setTitle(Tr::tr("Debug %1").arg(QGuiApplication::applicationDisplayName()));
-    mtools->addMenu(mtoolsdebug, Constants::G_TOOLS_DEBUG);
+    // OPENMV-DIFF //
+    // mtools->appendGroup(Constants::G_TOOLS_DEBUG);
+    // ActionContainer *mtoolsdebug = ActionManager::createMenu(Constants::M_TOOLS_DEBUG);
+    // mtoolsdebug->menu()->setTitle(Tr::tr("Debug %1").arg(QGuiApplication::applicationDisplayName()));
+    // mtools->addMenu(mtoolsdebug, Constants::G_TOOLS_DEBUG);
+    // OPENMV-DIFF //
 
     ActionBuilder loggerAction(this, Constants::LOGGER);
     loggerAction.setText(Tr::tr("Show Logs..."));
-    loggerAction.addToContainer(Constants::M_TOOLS_DEBUG);
+    // OPENMV-DIFF //
+    // loggerAction.addToContainer(Constants::M_TOOLS_DEBUG);
+    // OPENMV-DIFF //
     loggerAction.addOnTriggered(this, &LoggingViewer::showLoggingView);
 
     // Options Action
@@ -1933,7 +2053,13 @@ void ICorePrivate::registerDefaultActions()
     optionsAction.setText(Tr::tr("Pr&eferences..."));
     optionsAction.setMenuRole(QAction::PreferencesRole);
     optionsAction.setDefaultKeySequence(QKeySequence::Preferences);
-    optionsAction.addToContainer(Constants::M_EDIT, Constants::G_EDIT_PREFERENCES);
+    // OPENMV-DIFF //
+    // optionsAction.addToContainer(Constants::M_EDIT, Constants::G_EDIT_PREFERENCES);
+    // OPENMV-DIFF //
+    mtools->appendGroup(Constants::G_TOOLS_DEBUG);
+    mtools->addSeparator(Constants::G_TOOLS_DEBUG);
+    optionsAction.addToContainer(Constants::M_TOOLS, Constants::G_TOOLS_DEBUG);
+    // OPENMV-DIFF //
     optionsAction.addOnTriggered(this, [] { ICore::showOptionsDialog(Id()); });
 
     mwindow->addSeparator(Constants::G_WINDOW_LIST);
@@ -1967,8 +2093,10 @@ void ICorePrivate::registerDefaultActions()
         ActionBuilder closeAction(this, Constants::CLOSE_WINDOW);
         closeAction.setText(Tr::tr("Close Window"));
         closeAction.setEnabled(false);
-        closeAction.setDefaultKeySequence(Tr::tr("Ctrl+Meta+W"));
-        closeAction.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SIZE);
+        // OPENMV-DIFF //
+        // closeAction.setDefaultKeySequence(Tr::tr("Ctrl+Meta+W"));
+        // closeAction.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SIZE);
+        // OPENMV-DIFF //
 
         mwindow->addSeparator(Constants::G_WINDOW_SIZE);
     }
@@ -1979,8 +2107,10 @@ void ICorePrivate::registerDefaultActions()
     toggleLeftSideBarAction.setText(Tr::tr(Constants::TR_SHOW_LEFT_SIDEBAR));
     toggleLeftSideBarAction.setCheckable(true);
     toggleLeftSideBarAction.setCommandAttribute(Command::CA_UpdateText);
-    toggleLeftSideBarAction.setDefaultKeySequence(Tr::tr("Ctrl+0"), Tr::tr("Alt+0"));
-    toggleLeftSideBarAction.addToContainer(Constants::M_VIEW, Constants::G_VIEW_VIEWS);
+    // OPENMV-DIFF //
+    // toggleLeftSideBarAction.setDefaultKeySequence(Tr::tr("Ctrl+0"), Tr::tr("Alt+0"));
+    // toggleLeftSideBarAction.addToContainer(Constants::M_VIEW, Constants::G_VIEW_VIEWS);
+    // OPENMV-DIFF //
     toggleLeftSideBarAction.addOnTriggered(this,
         [this](bool visible) { setSidebarVisible(visible, Side::Left); });
 
@@ -1995,8 +2125,10 @@ void ICorePrivate::registerDefaultActions()
     toggleRightSideBarAction.setText(Tr::tr(Constants::TR_SHOW_RIGHT_SIDEBAR));
     toggleRightSideBarAction.setCheckable(true);
     toggleRightSideBarAction.setCommandAttribute(Command::CA_UpdateText);
-    toggleRightSideBarAction.setDefaultKeySequence(Tr::tr("Ctrl+Shift+0"), Tr::tr("Alt+Shift+0"));
-    toggleRightSideBarAction.addToContainer(Constants::M_VIEW, Constants::G_VIEW_VIEWS);
+    // OPENMV-DIFF //
+    // toggleRightSideBarAction.setDefaultKeySequence(Tr::tr("Ctrl+Shift+0"), Tr::tr("Alt+Shift+0"));
+    // toggleRightSideBarAction.addToContainer(Constants::M_VIEW, Constants::G_VIEW_VIEWS);
+    // OPENMV-DIFF //
     toggleRightSideBarAction.setEnabled(false);
     toggleRightSideBarAction.addOnTriggered(this,
         [this](bool visible) { setSidebarVisible(visible, Side::Right); });
@@ -2050,7 +2182,9 @@ void ICorePrivate::registerDefaultActions()
 
     // Window->Views
     ActionContainer *mviews = ActionManager::createMenu(Constants::M_VIEW_VIEWS);
-    mview->addMenu(mviews, Constants::G_VIEW_VIEWS);
+    // OPENMV-DIFF //
+    // mview->addMenu(mviews, Constants::G_VIEW_VIEWS);
+    // OPENMV-DIFF //
     mviews->menu()->setTitle(Tr::tr("&Views"));
 
     // "Help" separators
@@ -2065,7 +2199,9 @@ void ICorePrivate::registerDefaultActions()
       (HostOsInfo::isMacHost() ? Tr::tr("About &%1") : Tr::tr("About &%1..."))
           .arg(QGuiApplication::applicationDisplayName()));
     aboutIdeAction.setMenuRole(QAction::AboutRole);
-    aboutIdeAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
+    // aboutIdeAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
     aboutIdeAction.setEnabled(true);
     aboutIdeAction.addOnTriggered(this, [this] { aboutQtCreator(); });
 
@@ -2073,7 +2209,9 @@ void ICorePrivate::registerDefaultActions()
     ActionBuilder aboutPluginsAction(this, Constants::ABOUT_PLUGINS);
     aboutPluginsAction.setText(Tr::tr("About &Plugins..."));
     aboutPluginsAction.setMenuRole(QAction::ApplicationSpecificRole);
-    aboutPluginsAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
+    // aboutPluginsAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
     aboutPluginsAction.setEnabled(true);
     aboutPluginsAction.addOnTriggered(this, [this] { aboutPlugins(); });
 
@@ -2081,14 +2219,18 @@ void ICorePrivate::registerDefaultActions()
     ActionBuilder changeLogAction(this, Constants::CHANGE_LOG);
     changeLogAction.setText(Tr::tr("Change Log..."));
     changeLogAction.setMenuRole(QAction::ApplicationSpecificRole);
-    changeLogAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
+    // changeLogAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
     changeLogAction.setEnabled(true);
     changeLogAction.addOnTriggered(this, [this] { changeLog(); });
 
     // Contact
     ActionBuilder contactAction(this, "QtCreator.Contact");
     contactAction.setText(Tr::tr("Contact..."));
-    contactAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
+    // contactAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
     contactAction.setEnabled(true);
     contactAction.addOnTriggered(this, [this] { contact(); });
 
@@ -2102,7 +2244,9 @@ void ICorePrivate::registerDefaultActions()
 
 void ICorePrivate::registerModeSelectorStyleActions()
 {
-    ActionContainer *mview = ActionManager::actionContainer(Constants::M_VIEW);
+    // OPENMV-DIFF //
+    // ActionContainer *mview = ActionManager::actionContainer(Constants::M_VIEW);
+    // OPENMV-DIFF //
 
     // Cycle Mode Selector Styles
     ActionBuilder(this, Constants::CYCLE_MODE_SELECTOR_STYLE)
@@ -2114,7 +2258,9 @@ void ICorePrivate::registerModeSelectorStyleActions()
 
     // Mode Selector Styles
     ActionContainer *mmodeLayouts = ActionManager::createMenu(Constants::M_VIEW_MODESTYLES);
-    mview->addMenu(mmodeLayouts, Constants::G_VIEW_VIEWS);
+    // OPENMV-DIFF //
+    // mview->addMenu(mmodeLayouts, Constants::G_VIEW_VIEWS);
+    // OPENMV-DIFF //
     QMenu *styleMenu = mmodeLayouts->menu();
     styleMenu->setTitle(Tr::tr("Mode Selector Style"));
     auto *stylesGroup = new QActionGroup(styleMenu);
@@ -2417,8 +2563,10 @@ void ICorePrivate::readSettings()
     settings->endGroup();
 
     EditorManagerPrivate::readSettings();
-    m_leftNavigationWidget->restoreSettings(settings);
-    m_rightNavigationWidget->restoreSettings(settings);
+    // OPENMV-DIFF //
+    // m_leftNavigationWidget->restoreSettings(settings);
+    // m_rightNavigationWidget->restoreSettings(settings);
+    // OPENMV-DIFF //
     m_rightPaneWidget->readSettings(settings);
 }
 
@@ -2688,8 +2836,27 @@ void ICorePrivate::restoreWindowState()
         m_mainwindow->resize(1260, 700); // size without window decoration
     m_mainwindow->restoreState(settings->value(windowStateKey).toByteArray());
     settings->endGroup();
-    m_mainwindow->show();
+    // OPENMV-DIFF //
+    // m_mainwindow->show();
+    // OPENMV-DIFF //
+    if (!m_disableShow) m_mainwindow->show();
+    // OPENMV-DIFF //
     StatusBarManager::restoreSettings();
+    // OPENMV-DIFF //
+    Core::IEditor *editor = Core::EditorManager::currentEditor();
+
+    if(!editor)
+    {
+        QList<Core::IEditor *> editors = Core::EditorManager::visibleEditors();
+
+        if(!editors.isEmpty())
+        {
+            editor = editors.first();
+        }
+    }
+
+    EditorManager::activateEditor(editor);
+    // OPENMV-DIFF //
 }
 
 } // Internal

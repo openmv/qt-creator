@@ -540,6 +540,9 @@ void LocatorSettingsWidget::removeCustomFilter()
 // LocatorSettingsPage
 
 LocatorSettingsPage::LocatorSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
 {
     setId(Constants::FILTER_OPTIONS_PAGE);
     setDisplayName(Tr::tr(Constants::FILTER_OPTIONS_PAGE));

@@ -67,6 +67,9 @@ FindToolBar::FindToolBar(CurrentDocumentFind *currentDocumentFind)
     m_findEdit->setObjectName("findEdit");
     m_findEdit->setMinimumWidth(100);
     m_findEdit->setAttribute(Qt::WA_MacShowFocusRect, false);
+    // OPENMV-DIFF //
+    m_findEdit->setButtonToolTip(FancyLineEdit::Left, Tr::tr("Find Flags"));
+    // OPENMV-DIFF //
 
     m_findPreviousButton = new QToolButton;
 
@@ -438,6 +441,9 @@ FindToolBar::FindToolBar(CurrentDocumentFind *currentDocumentFind)
     connect(&m_findStepTimer, &QTimer::timeout, this, &FindToolBar::invokeFindStep);
 
     setLightColoredIcon(isLightColored());
+    // OPENMV-DIFF //
+    m_close->setToolTip(Tr::tr("Close"));
+    // OPENMV-DIFF //
 
     QWidget::setTabOrder(m_findEdit->button(FancyLineEdit::Left), m_findEdit);
     QWidget::setTabOrder(m_findEdit, m_replaceEdit);

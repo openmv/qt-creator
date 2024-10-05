@@ -6,6 +6,10 @@
 #include "core_global.h"
 #include "icontext.h"
 
+// OPENMV-DIFF //
+#include <utils/ansiescapecodehandler.h>
+//TODO//#include "openmvpluginescapecodeparser.h"
+// OPENMV-DIFF //
 #include <utils/storekey.h>
 #include <utils/outputformat.h>
 
@@ -67,10 +71,20 @@ public:
             bool regexp,
             bool isInverted);
 
+    // OPENMV-DIFF //
+    void appendText(const QString &text);
+    void save();
+    void setTabSettings(int tabWidth);
+    //TODO//OpenMVPluginEscapeCodeParser *getParser() { return m_parser; }
+    // OPENMV-DIFF //
+
     void setOutputFileNameHint(const QString &fileName);
 
 signals:
     void wheelZoom();
+    // OPENMV-DIFF //
+    void writeBytes(const QByteArray &data);
+    // OPENMV-DIFF //
 
 public slots:
     void setWordWrapEnabled(bool wrap);
@@ -78,6 +92,10 @@ public slots:
 protected:
     virtual void handleLink(const QPoint &pos);
     virtual void adaptContextMenu(QMenu *menu, const QPoint &pos);
+
+    // OPENMV-DIFF //
+    bool isScrollbarAtBottom() const;
+    // OPENMV-DIFF //
 
 private:
     QMimeData *createMimeDataFromSelection() const override;
@@ -96,6 +114,13 @@ private:
     void handleNextOutputChunk();
     void handleOutputChunk(const QString &output, Utils::OutputFormat format);
     void updateAutoScroll();
+
+    // OPENMV-DIFF //
+    QString doNewlineEnforcement(const QString &out);
+
+    Utils::AnsiEscapeCodeHandler m_handler;
+    //TODO//OpenMVPluginEscapeCodeParser *m_parser;
+    // OPENMV-DIFF //
 
     Internal::OutputWindowPrivate *d = nullptr;
 };

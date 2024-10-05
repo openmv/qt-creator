@@ -13,6 +13,12 @@
 #include <QFont>
 #include <QToolButton>
 
+// OPENMV-DIFF //
+#include <coreplugin/coreicons.h>
+#include <coreplugin/actionmanager/actionmanager.h>
+#include <coreplugin/actionmanager/command.h>
+// OPENMV-DIFF //
+
 namespace Core {
 namespace Internal {
 
@@ -21,8 +27,13 @@ const char zoomSettingsKey[] = "Core/MessageOutput/Zoom";
 MessageOutputWindow::MessageOutputWindow()
 {
     setId("GeneralMessages");
-    setDisplayName(Tr::tr("General Messages"));
-    setPriorityInStatusBar(-100);
+    // OPENMV-DIFF //
+    // setDisplayName(Tr::tr("General Messages"));
+    // setPriorityInStatusBar(-100);
+    // OPENMV-DIFF //
+    setDisplayName(Tr::tr("Serial Terminal"));
+    setPriorityInStatusBar(1);
+    // OPENMV-DIFF //
 
     m_widget = new OutputWindow(Context(Constants::C_GENERAL_OUTPUT_PANE), zoomSettingsKey);
     m_widget->setReadOnly(true);
@@ -36,6 +47,19 @@ MessageOutputWindow::MessageOutputWindow()
     setupFilterUi("MessageOutputPane.Filter");
     setFilteringEnabled(true);
     setupContext(Constants::C_GENERAL_OUTPUT_PANE, m_widget);
+
+    // OPENMV-DIFF //
+    m_widget->setMaximumBlockCount(100000);
+    m_widget->setWordWrapEnabled(false);
+    m_saveButton = new QToolButton(m_widget);
+    m_saveButton->setAutoRaise(true);
+    m_saveAction = new QAction(Tr::tr("Save"), this);
+    m_saveAction->setIcon(Utils::Icons::SAVEFILE_TOOLBAR.icon());
+    Command *cmd = ActionManager::registerAction(m_saveAction, "Core.MessageOutputWindow.Save");
+    cmd->setAttribute(Command::CA_UpdateText);
+    m_saveButton->setDefaultAction(cmd->action());
+    connect(m_saveAction, &QAction::triggered, m_widget, &OutputWindow::save);
+    // OPENMV-DIFF //
 }
 
 MessageOutputWindow::~MessageOutputWindow()
@@ -104,6 +128,13 @@ void MessageOutputWindow::updateFilter()
     m_widget->updateFilterProperties(filterText(), filterCaseSensitivity(), filterUsesRegexp(),
                                      filterIsInverted());
 }
+
+// OPENMV-DIFF //
+QList<QWidget*> MessageOutputWindow::toolBarWidgets() const
+{
+    return QList<QWidget*>() << m_saveButton;
+}
+// OPENMV-DIFF //
 
 } // namespace Internal
 } // namespace Core

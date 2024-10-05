@@ -47,6 +47,10 @@
 
 #include <optional>
 
+// OPENMV-DIFF //
+#include <app/app_version.h>
+// OPENMV-DIFF //
+
 static const bool kUseProjectsDirectoryDefault = true;
 static Q_LOGGING_CATEGORY(log, "qtc.core.documentmanager", QtWarningMsg)
 
@@ -107,6 +111,9 @@ static const char editorsKeyC[] = "EditorIds";
 static const char directoryGroupC[] = "Directories";
 static const char projectDirectoryKeyC[] = "Projects";
 static const char useProjectDirectoryKeyC[] = "UseProjectsDirectory";
+// OPENMV-DIFF //
+static const char lastVisitedDirectoryC[] = "lastVisitedDirectory";
+// OPENMV-DIFF //
 
 using namespace Utils;
 
@@ -161,7 +168,11 @@ public:
 
     QFileSystemWatcher *m_fileWatcher = nullptr; // Delayed creation.
     QFileSystemWatcher *m_linkWatcher = nullptr; // Delayed creation (only UNIX/if a link is seen).
-    FilePath m_lastVisitedDirectory = FilePath::fromString(QDir::currentPath());
+    // OPENMV-DIFF //
+    // FilePath m_lastVisitedDirectory = FilePath::fromString(QDir::currentPath());
+    // OPENMV-DIFF //
+    FilePath m_lastVisitedDirectory = FilePath::fromString(QString());
+    // OPENMV-DIFF //
     FilePath m_defaultLocationForNewFiles;
     FilePath m_projectsDirectory;
     // When we are calling into an IDocument
@@ -621,6 +632,12 @@ static bool saveModifiedFilesHelper(const QList<IDocument *> &documents,
             QString name = document->filePath().toString();
             if (name.isEmpty())
                 name = document->fallbackSaveAsFileName();
+            // OPENMV-DIFF //
+            if (name.isEmpty())
+                name = document->displayName();
+            if (name.isEmpty())
+                name = document->property("diffFilePath").toString();
+            // OPENMV-DIFF //
 
             // There can be several IDocuments pointing to the same file
             // Prefer one that is not readonly
@@ -768,7 +785,11 @@ QString DocumentManager::allDocumentFactoryFiltersString(QString *allFilesFilter
     if (allFilesFilter)
         *allFilesFilter = allFiles;
     filters.prepend(allFiles);
-    return filters.join(QLatin1String(";;"));
+    // OPENMV-DIFF //
+    // return filters.join(QLatin1String(";;"));
+    // OPENMV-DIFF //
+    return allFiles;
+    // OPENMV-DIFF //
 }
 
 FilePath DocumentManager::getSaveFileName(const QString &title, const FilePath &pathIn,
@@ -841,7 +862,11 @@ FilePath DocumentManager::getSaveAsFileName(const IDocument *document)
     if (!filePath.isEmpty()) {
         selectedFilter = Utils::mimeTypeForFile(filePath).filterString();
     } else {
-        const QString suggestedName = document->fallbackSaveAsFileName();
+        // OPENMV-DIFF //
+        // const QString suggestedName = document->fallbackSaveAsFileName();
+        // OPENMV-DIFF //
+        QString suggestedName = document->fallbackSaveAsFileName();
+        // OPENMV-DIFF //
         if (!suggestedName.isEmpty()) {
             const QList<MimeType> types = Utils::mimeTypesForFileName(suggestedName);
             if (!types.isEmpty())
@@ -855,8 +880,12 @@ FilePath DocumentManager::getSaveAsFileName(const IDocument *document)
         else if (!defaultPath.isEmpty())
             fileDialogPath = defaultPath;
     }
-    if (selectedFilter.isEmpty())
-        selectedFilter = Utils::mimeTypeForName(document->mimeType()).filterString();
+    // OPENMV-DIFF //
+    // if (selectedFilter.isEmpty())
+    //     selectedFilter = Utils::mimeTypeForName(document->mimeType()).filterString();
+    // OPENMV-DIFF //
+    selectedFilter = QString();
+    // OPENMV-DIFF //
 
     if (!filter.contains(selectedFilter))
         filter.prepend(selectedFilter + QLatin1String(";;"));
@@ -1236,8 +1265,16 @@ void DocumentManager::checkForReload()
                         break;
                     }
                 }
-                if (previousReloadAnswer == ReloadNoneAndDiff)
-                    filesToDiff.append(document->filePath().toString());
+                // OPENMV-DIFF //
+                // if (previousReloadAnswer == ReloadNoneAndDiff)
+                //     filesToDiff.append(document->filePath().toString());
+                // OPENMV-DIFF //
+                if (previousReloadAnswer == ReloadNoneAndDiff) {
+                    QString filePath = document->filePath().toString();
+                    if (filePath.isEmpty()) filePath = document->property("diffFilePath").toString();
+                    filesToDiff.append(filePath);
+                }
+                // OPENMV-DIFF //
 
             // IDocument wants us to ask, and it's the TypeRemoved case
             } else {
@@ -1362,6 +1399,9 @@ void DocumentManager::saveSettings()
     s->setValueWithDefault(useProjectDirectoryKeyC,
                            d->m_useProjectsDirectory,
                            kUseProjectsDirectoryDefault);
+    // OPENMV-DIFF //
+    s->setValue(lastVisitedDirectoryC, d->m_lastVisitedDirectory.toSettings());
+    // OPENMV-DIFF //
     s->endGroup();
 }
 
@@ -1394,10 +1434,18 @@ void readSettings()
     s->beginGroup(directoryGroupC);
 
     d->m_projectsDirectory = FilePath::fromSettings(
-        s->value(projectDirectoryKeyC, PathChooser::homePath().toSettings()));
+        // OPENMV-DIFF //
+        // s->value(projectDirectoryKeyC, PathChooser::homePath().toSettings()));
+        // OPENMV-DIFF //
+        s->value(projectDirectoryKeyC, PathChooser::homePath().pathAppended(QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR)).toSettings()));
+        // OPENMV-DIFF //
 
     d->m_useProjectsDirectory
         = s->value(useProjectDirectoryKeyC, kUseProjectsDirectoryDefault).toBool();
+
+    // OPENMV-DIFF //
+    if (s->contains(lastVisitedDirectoryC)) d->m_lastVisitedDirectory = FilePath::fromSettings(s->value(lastVisitedDirectoryC));
+    // OPENMV-DIFF //
 
     s->endGroup();
 }
@@ -1532,13 +1580,15 @@ void DocumentManager::setFileDialogFilter(const QString &filter)
 
 void DocumentManager::registerSaveAllAction()
 {
-    ActionBuilder saveAll(d, Constants::SAVEALL);
-    saveAll.setText(Tr::tr("Save A&ll"));
-    saveAll.bindContextAction(&d->m_saveAllAction);
-    saveAll.addToContainer(Constants::M_FILE, Constants::G_FILE_SAVE);
-    saveAll.setDefaultKeySequence(QString(), Tr::tr("Ctrl+Shift+S"));
-    saveAll.setEnabled(false);
-    saveAll.addOnTriggered([] { DocumentManager::saveAllModifiedDocumentsSilently(); });
+    // OPENMV-DIFF //
+    // ActionBuilder saveAll(d, Constants::SAVEALL);
+    // saveAll.setText(Tr::tr("Save A&ll"));
+    // saveAll.bindContextAction(&d->m_saveAllAction);
+    // saveAll.addToContainer(Constants::M_FILE, Constants::G_FILE_SAVE);
+    // saveAll.setDefaultKeySequence(QString(), Tr::tr("Ctrl+Shift+S"));
+    // saveAll.setEnabled(false);
+    // saveAll.addOnTriggered([] { DocumentManager::saveAllModifiedDocumentsSilently(); });
+    // OPENMV-DIFF //
 }
 
 // -------------- FileChangeBlocker

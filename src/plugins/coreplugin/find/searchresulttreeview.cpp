@@ -13,6 +13,10 @@
 #include <QKeyEvent>
 #include <QVBoxLayout>
 
+// OPENMV-DIFF //
+#include <utils/theme/theme.h>
+// OPENMV-DIFF //
+
 using namespace Utils;
 
 namespace Core {
@@ -51,6 +55,19 @@ SearchResultTreeView::SearchResultTreeView(QWidget *parent)
 
     connect(this, &SearchResultTreeView::activated,
             this, &SearchResultTreeView::emitJumpToSearchResult);
+
+    // OPENMV-DIFF //
+#ifndef Q_OS_MAC
+    m_styleSheet = QStringLiteral( // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
+    "QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-closed-%1.png);}"
+    "QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{border-image:none;image:url(:/core/images/branch-open-%1.png);}"
+    ).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light"));
+#endif
+
+    m_highDPIStyleSheet = QString(m_styleSheet).replace(QStringLiteral(".png"), QStringLiteral("_2x.png"));
+
+    m_devicePixelRatio = 0;
+    // OPENMV-DIFF //
 }
 
 void SearchResultTreeView::setAutoExpandResults(bool expand)
@@ -149,6 +166,22 @@ SearchResultFilterModel *SearchResultTreeView::model() const
 {
     return m_model;
 }
+
+// OPENMV-DIFF //
+// We have to do this because Qt does not update the icons when switching between
+// a non-high dpi screen and a high-dpi screen.
+void SearchResultTreeView::paintEvent(QPaintEvent *event)
+{
+    qreal ratio = devicePixelRatioF();
+    if (!qFuzzyCompare(ratio, m_devicePixelRatio))
+    {
+        m_devicePixelRatio = ratio;
+        setStyleSheet(qFuzzyCompare(1.0, ratio) ? m_styleSheet : m_highDPIStyleSheet); // reload icons
+    }
+
+    Utils::TreeView::paintEvent(event);
+}
+// OPENMV-DIFF //
 
 } // namespace Internal
 } // namespace Core

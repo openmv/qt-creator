@@ -295,10 +295,12 @@ const char outputPaneIdKeyC[] = "id";
 const char outputPaneVisibleKeyC[] = "visible";
 const int buttonBorderWidth = 3;
 
-static int numberAreaWidth()
-{
-    return creatorTheme()->flag(Theme::FlatToolBars) ? 15 : 19;
-}
+// OPENMV-DIFF //
+// static int numberAreaWidth()
+// {
+//     return creatorTheme()->flag(Theme::FlatToolBars) ? 15 : 19;
+// }
+// OPENMV-DIFF //
 
 ////
 // OutputPaneManager
@@ -348,14 +350,16 @@ void OutputPaneManager::updateMaximizeButton(bool maximized)
 }
 
 // Return shortcut as Alt+<number> or Cmd+<number> if number is a non-zero digit
-static QKeySequence paneShortCut(int number)
-{
-    if (number < 1 || number > 9)
-        return QKeySequence();
-
-    const int modifier = HostOsInfo::isMacHost() ? Qt::CTRL : Qt::ALT;
-    return QKeySequence(modifier | (Qt::Key_0 + number));
-}
+// OPENMV-DIFF //
+// static QKeySequence paneShortCut(int number)
+// {
+//     if (number < 1 || number > 9)
+//         return QKeySequence();
+//
+//     const int modifier = HostOsInfo::isMacHost() ? Qt::CTRL : Qt::ALT;
+//     return QKeySequence(modifier | (Qt::Key_0 + number));
+// }
+// OPENMV-DIFF //
 
 OutputPaneManager::OutputPaneManager(QWidget *parent) :
     QWidget(parent),
@@ -388,6 +392,9 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) :
     auto closeButton = new QToolButton;
     closeButton->setIcon(Icons::CLOSE_SPLIT_BOTTOM.icon());
     connect(closeButton, &QAbstractButton::clicked, this, &OutputPaneManager::slotHide);
+    // OPENMV-DIFF //
+    closeButton->setToolTip(Tr::tr("Close"));
+    // OPENMV-DIFF //
 
     connect(ICore::instance(), &ICore::saveSettingsRequested, this, &OutputPaneManager::saveSettings);
 
@@ -421,16 +428,24 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) :
     }.attachTo(this);
 
     Row {
-        spacing(creatorTheme()->flag(Theme::FlatToolBars) ? 9 : 4), customMargins(5, 0, 0, 0),
+        // OPENMV-DIFF //
+        // spacing(creatorTheme()->flag(Theme::FlatToolBars) ? 9 : 4), customMargins(5, 0, 0, 0),
+        // OPENMV-DIFF //
+        spacing(creatorTheme()->flag(Theme::FlatToolBars) ? 9 : 4), customMargins(1, 0, 0, 0),
+        // OPENMV-DIFF //
     }.attachTo(m_buttonsWidget);
 
     StatusBarManager::addStatusBarWidget(m_buttonsWidget, StatusBarManager::Second);
 
-    ActionContainer *mview = ActionManager::actionContainer(Constants::M_VIEW);
+    // OPENMV-DIFF //
+    // ActionContainer *mview = ActionManager::actionContainer(Constants::M_VIEW);
+    // OPENMV-DIFF //
 
     // Window->Output Panes
     ActionContainer *mpanes = ActionManager::createMenu(Constants::M_VIEW_PANES);
-    mview->addMenu(mpanes, Constants::G_VIEW_PANES);
+    // OPENMV-DIFF //
+    // mview->addMenu(mpanes, Constants::G_VIEW_PANES);
+    // OPENMV-DIFF //
     mpanes->menu()->setTitle(Tr::tr("Out&put"));
     mpanes->appendGroup("Coreplugin.OutputPane.ActionsGroup");
     mpanes->appendGroup("Coreplugin.OutputPane.PanesGroup");
@@ -443,7 +458,9 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) :
     mpanes->addAction(cmd, "Coreplugin.OutputPane.ActionsGroup");
 
     cmd = ActionManager::registerAction(m_prevAction, "Coreplugin.OutputPane.previtem");
-    cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Shift+F6")));
+    // OPENMV-DIFF //
+    // cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Shift+F6")));
+    // OPENMV-DIFF //
     prevToolButton->setDefaultAction(
         ProxyAction::proxyActionWithIcon(m_prevAction, Utils::Icons::ARROW_UP_TOOLBAR.icon()));
     mpanes->addAction(cmd, "Coreplugin.OutputPane.ActionsGroup");
@@ -451,11 +468,15 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) :
     cmd = ActionManager::registerAction(m_nextAction, "Coreplugin.OutputPane.nextitem");
     nextToolButton->setDefaultAction(
         ProxyAction::proxyActionWithIcon(m_nextAction, Utils::Icons::ARROW_DOWN_TOOLBAR.icon()));
-    cmd->setDefaultKeySequence(QKeySequence(Tr::tr("F6")));
+    // OPENMV-DIFF //
+    // cmd->setDefaultKeySequence(QKeySequence(Tr::tr("F6")));
+    // OPENMV-DIFF //
     mpanes->addAction(cmd, "Coreplugin.OutputPane.ActionsGroup");
 
     cmd = ActionManager::registerAction(m_minMaxAction, "Coreplugin.OutputPane.minmax");
-    cmd->setDefaultKeySequence(QKeySequence(useMacShortcuts ? Tr::tr("Ctrl+Shift+9") : Tr::tr("Alt+Shift+9")));
+    // OPENMV-DIFF //
+    // cmd->setDefaultKeySequence(QKeySequence(useMacShortcuts ? Tr::tr("Ctrl+Shift+9") : Tr::tr("Alt+Shift+9")));
+    // OPENMV-DIFF //
     cmd->setAttribute(Command::CA_UpdateText);
     cmd->setAttribute(Command::CA_UpdateIcon);
     mpanes->addAction(cmd, "Coreplugin.OutputPane.ActionsGroup");
@@ -520,7 +541,9 @@ void OutputPaneManager::initialize()
 
         mpanes->addAction(cmd, "Coreplugin.OutputPane.PanesGroup");
 
-        cmd->setDefaultKeySequence(paneShortCut(shortcutNumber));
+        // OPENMV-DIFF //
+        // cmd->setDefaultKeySequence(paneShortCut(shortcutNumber));
+        // OPENMV-DIFF //
         auto button = new OutputPaneToggleButton(shortcutNumber,
                                                  outPane->displayName(),
                                                  cmd->action());
@@ -555,7 +578,9 @@ void OutputPaneManager::initialize()
     const int currentIdx = m_instance->currentIndex();
     if (QTC_GUARD(currentIdx >= 0 && currentIdx < g_outputPanes.size()))
         m_instance->m_titleLabel->setText(g_outputPanes[currentIdx].pane->displayName());
-    m_instance->m_buttonsWidget->layout()->addWidget(m_instance->m_manageButton);
+    // OPENMV-DIFF //
+    // m_instance->m_buttonsWidget->layout()->addWidget(m_instance->m_manageButton);
+    // OPENMV-DIFF //
     connect(m_instance->m_manageButton,
             &OutputPaneManageButton::menuRequested,
             m_instance,
@@ -659,6 +684,10 @@ void OutputPaneManager::updateActions(IOutputPane *pane)
                                          && pane->canPrevious());
     m_instance->m_nextAction->setEnabled(enabledForMode && pane && pane->canNavigate()
                                          && pane->canNext());
+    // OPENMV-DIFF //
+    m_instance->m_prevAction->setVisible(pane->canNavigate());
+    m_instance->m_nextAction->setVisible(pane->canNavigate());
+    // OPENMV-DIFF //
     for (const OutputPaneData &d : std::as_const(g_outputPanes))
         d.action->setEnabled(enabledForMode);
 }
@@ -904,7 +933,11 @@ QSize OutputPaneToggleButton::sizeHint() const
     QSize s = fontMetrics().size(Qt::TextSingleLine, m_text);
 
     // Expand to account for border image
-    s.rwidth() += numberAreaWidth() + 1 + buttonBorderWidth + buttonBorderWidth;
+    // OPENMV-DIFF //
+    // s.rwidth() += numberAreaWidth() + 1 + buttonBorderWidth + buttonBorderWidth;
+    // OPENMV-DIFF //
+    s.rwidth() += 1 + buttonBorderWidth + buttonBorderWidth;
+    // OPENMV-DIFF //
 
     if (!m_badgeNumberLabel.text().isNull())
         s.rwidth() += m_badgeNumberLabel.sizeHint().width() + 1;
@@ -922,8 +955,12 @@ static QRect bgRect(const QRect &widgetRect)
 void OutputPaneToggleButton::paintEvent(QPaintEvent*)
 {
     const QFontMetrics fm = fontMetrics();
-    const int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
-    const int numberWidth = fm.horizontalAdvance(m_number);
+    // OPENMV-DIFF //
+    // const int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
+    // const int numberWidth = fm.horizontalAdvance(m_number);
+    // OPENMV-DIFF //
+    int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
+    // OPENMV-DIFF //
 
     QPainter p(this);
 
@@ -969,7 +1006,11 @@ void OutputPaneToggleButton::paintEvent(QPaintEvent*)
             }
         }
         if (image)
-            StyleHelper::drawCornerImage(*image, &p, rect(), numberAreaWidth(), buttonBorderWidth, buttonBorderWidth, buttonBorderWidth);
+            // OPENMV-DIFF //
+            // StyleHelper::drawCornerImage(*image, &p, rect(), numberAreaWidth(), buttonBorderWidth, buttonBorderWidth, buttonBorderWidth);
+            // OPENMV-DIFF //
+            StyleHelper::drawCornerImage(*image, &p, rect(), buttonBorderWidth, buttonBorderWidth, buttonBorderWidth, buttonBorderWidth);
+            // OPENMV-DIFF //
     }
 
     if (m_flashTimer->state() == QTimeLine::Running)
@@ -979,21 +1020,36 @@ void OutputPaneToggleButton::paintEvent(QPaintEvent*)
         if (creatorTheme()->flag(Theme::FlatToolBars))
             StyleHelper::drawPanelBgRect(&p, bgRect(rect()), c);
         else
-            p.fillRect(rect().adjusted(numberAreaWidth(), 1, -1, -1), c);
+            // OPENMV-DIFF //
+            // p.fillRect(rect().adjusted(numberAreaWidth(), 1, -1, -1), c);
+            // OPENMV-DIFF //
+            p.fillRect(rect().adjusted(1, 1, -1, -1), c);
+            // OPENMV-DIFF //
     }
 
     p.setFont(font());
     p.setPen(creatorColor(Theme::OutputPaneToggleButtonTextColorChecked));
-    p.drawText((numberAreaWidth() - numberWidth) / 2, baseLine, m_number);
+    // OPENMV-DIFF //
+    // p.drawText((numberAreaWidth() - numberWidth) / 2, baseLine, m_number);
+    // OPENMV-DIFF //
     if (!isChecked())
         p.setPen(creatorColor(Theme::OutputPaneToggleButtonTextColorUnchecked));
-    int leftPart = numberAreaWidth() + buttonBorderWidth;
+    // OPENMV-DIFF //
+    // int leftPart = numberAreaWidth() + buttonBorderWidth;
+    // OPENMV-DIFF //
+    int leftPart = 1 + buttonBorderWidth;
+    // OPENMV-DIFF //
     int labelWidth = 0;
     if (!m_badgeNumberLabel.text().isEmpty()) {
         const QSize labelSize = m_badgeNumberLabel.sizeHint();
         labelWidth = labelSize.width() + 3;
         m_badgeNumberLabel.paint(&p, width() - labelWidth, (height() - labelSize.height()) / 2, isChecked());
     }
+    // OPENMV-DIFF //
+#ifndef Q_OS_LINUX
+    baseLine = baseLine - 1;
+#endif
+    // OPENMV-DIFF //
     p.drawText(leftPart, baseLine, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
 }
 

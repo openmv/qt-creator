@@ -129,11 +129,15 @@ GeneralSettingsWidget::GeneralSettingsWidget()
     m_colorButton->setMinimumSize(QSize(64, 0));
     m_colorButton->setProperty("alphaAllowed", QVariant(false));
 
-    m_resetWarningsButton->setText(Tr::tr("Reset Warnings", "Button text"));
-    m_resetWarningsButton->setToolTip(
-        Tr::tr("Re-enable warnings that were suppressed by selecting \"Do Not "
-           "Show Again\" (for example, missing highlighter).",
-           nullptr));
+    // OPENMV-DIFF //
+    // m_resetWarningsButton->setText(Tr::tr("Reset Warnings", "Button text"));
+    // m_resetWarningsButton->setToolTip(
+    //     Tr::tr("Re-enable warnings that were suppressed by selecting \"Do Not "
+    //        "Show Again\" (for example, missing highlighter).",
+    //        nullptr));
+    // OPENMV-DIFF //
+    m_resetWarningsButton->setText(Tr::tr("Reset Do Not Ask/Show Again Dialogs"));
+    // OPENMV-DIFF //
 
     m_toolbarStyleBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
 
@@ -141,7 +145,9 @@ GeneralSettingsWidget::GeneralSettingsWidget()
     resetColorButton->setToolTip(Tr::tr("Reset to default.", "Color"));
 
     Form form;
-    form.addRow({Tr::tr("Color:"), m_colorButton, resetColorButton, st});
+    // OPENMV-DIFF //
+    // form.addRow({Tr::tr("Color:"), m_colorButton, resetColorButton, st});
+    // OPENMV-DIFF //
     form.addRow({Tr::tr("Theme:"), m_themeChooser});
     form.addRow({Tr::tr("Toolbar style:"), m_toolbarStyleBox, st});
     form.addRow({Tr::tr("Language:"), m_languageBox, st});
@@ -186,10 +192,14 @@ GeneralSettingsWidget::GeneralSettingsWidget()
         }
     }
 
-    form.addRow({empty, generalSettings().showShortcutsInContextMenus});
+    // OPENMV-DIFF //
+    // form.addRow({empty, generalSettings().showShortcutsInContextMenus});
+    // OPENMV-DIFF //
     form.addRow({empty, generalSettings().provideSplitterCursors});
     form.addRow({Row{m_resetWarningsButton, st}});
-    form.addRow({Tr::tr("Text codec for tools:"), m_codecBox, st});
+    // OPENMV-DIFF //
+    // form.addRow({Tr::tr("Text codec for tools:"), m_codecBox, st});
+    // OPENMV-DIFF //
     Column{Group{title(Tr::tr("User Interface")), form}}.attachTo(this);
 
     fillLanguageBox();
@@ -207,6 +217,17 @@ GeneralSettingsWidget::GeneralSettingsWidget()
             &QAbstractButton::clicked,
             this,
             &GeneralSettingsWidget::resetWarnings);
+
+    // OPENMV-DIFF //
+    m_colorButton->setParent(this);
+    m_colorButton->hide();
+    resetColorButton->setParent(this);
+    resetColorButton->hide();
+    generalSettings().showShortcutsInContextMenus.action()->setParent(this);
+    generalSettings().showShortcutsInContextMenus.action()->setVisible(false);
+    m_codecBox->setParent(this);
+    m_codecBox->hide();
+    // OPENMV-DIFF //
 }
 
 static bool hasQmFilesForLocale(const QString &locale, const QString &creatorTrPath)

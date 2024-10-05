@@ -419,7 +419,9 @@ void EditorManagerPrivate::init()
     revertToSaved.bindContextAction(&m_revertToSavedAction);
     revertToSaved.setCommandAttribute(Command::CA_UpdateText);
     revertToSaved.setCommandDescription(::Core::Tr::tr("Revert File to Saved"));
-    revertToSaved.addToContainer(Constants::M_FILE, Constants::G_FILE_SAVE);
+    // OPENMV-DIFF //
+    // revertToSaved.addToContainer(Constants::M_FILE, Constants::G_FILE_SAVE);
+    // OPENMV-DIFF //
     revertToSaved.addOnTriggered(this, &EditorManager::revertToSaved);
 
     // Save Action
@@ -449,7 +451,11 @@ void EditorManagerPrivate::init()
     closeCurrentEditor.setDefaultKeySequence(::Core::Tr::tr("Ctrl+W"));
     closeCurrentEditor.setCommandAttribute(Command::CA_UpdateText);
     closeCurrentEditor.setCommandDescription(m_closeCurrentEditorAction->text());
-    closeCurrentEditor.addToContainer(Constants::M_FILE, Constants::G_FILE_CLOSE);
+    // OPENMV-DIFF //
+    // closeCurrentEditor.addToContainer(Constants::M_FILE, Constants::G_FILE_CLOSE);
+    // OPENMV-DIFF //
+    closeCurrentEditor.addToContainer(Constants::M_FILE, Constants::G_FILE_SAVE);
+    // OPENMV-DIFF //
     closeCurrentEditor.addOnTriggered(this,  &EditorManager::slotCloseCurrentEditorOrDocument);
 
     if (HostOsInfo::isWindowsHost()) {
@@ -468,7 +474,9 @@ void EditorManagerPrivate::init()
     closeAll.setScriptable(true);
     closeAll.bindContextAction(&m_closeAllEditorsAction);
     closeAll.setDefaultKeySequence(::Core::Tr::tr("Ctrl+Shift+W"));
-    closeAll.addToContainer(Constants::M_FILE, Constants::G_FILE_CLOSE);
+    // OPENMV-DIFF //
+    // closeAll.addToContainer(Constants::M_FILE, Constants::G_FILE_CLOSE);
+    // OPENMV-DIFF //
     closeAll.addOnTriggered(this, &EditorManager::closeAllDocuments);
 
     // Close All Others Action
@@ -477,7 +485,9 @@ void EditorManagerPrivate::init()
     closeOthers.bindContextAction(&m_closeOtherDocumentsAction);
     closeOthers.setContext(editManagerContext);
     closeOthers.setScriptable(true);
-    closeOthers.addToContainer(Constants::M_FILE, Constants::G_FILE_CLOSE);
+    // OPENMV-DIFF //
+    // closeOthers.addToContainer(Constants::M_FILE, Constants::G_FILE_CLOSE);
+    // OPENMV-DIFF //
     closeOthers.setCommandAttribute(Command::CA_UpdateText);
     closeOthers.addOnTriggered(this, [] { EditorManager::closeOtherDocuments(); });
 
@@ -487,7 +497,9 @@ void EditorManagerPrivate::init()
     closeAllExceptVisible.bindContextAction(&m_closeAllEditorsExceptVisibleAction);
     closeAllExceptVisible.setContext(editManagerContext);
     closeAllExceptVisible.setScriptable(true);
-    closeAllExceptVisible.addToContainer(Constants::M_FILE, Constants::G_FILE_CLOSE);
+    // OPENMV-DIFF //
+    // closeAllExceptVisible.addToContainer(Constants::M_FILE, Constants::G_FILE_CLOSE);
+    // OPENMV-DIFF //
     closeAllExceptVisible.addOnTriggered(this, &EditorManagerPrivate::closeAllEditorsExceptVisible);
 
     ActionBuilder openGraphicalShell(this, Constants::SHOWINGRAPHICALSHELL);
@@ -563,8 +575,10 @@ void EditorManagerPrivate::init()
     gotoPrevInHistory.setText(::Core::Tr::tr("Previous Open Document in History"));
     gotoPrevInHistory.bindContextAction(&m_gotoPreviousDocHistoryAction);
     gotoPrevInHistory.setContext(editDesignContext);
-    gotoPrevInHistory.setDefaultKeySequence(::Core::Tr::tr("Alt+Tab"), ::Core::Tr::tr("Ctrl+Tab"));
-    gotoPrevInHistory.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // gotoPrevInHistory.setDefaultKeySequence(::Core::Tr::tr("Alt+Tab"), ::Core::Tr::tr("Ctrl+Tab"));
+    // gotoPrevInHistory.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     gotoPrevInHistory.addOnTriggered(this, &EditorManagerPrivate::gotoPreviousDocHistory);
 
     // Goto Next In History Action
@@ -572,8 +586,10 @@ void EditorManagerPrivate::init()
     gotoNextInHistory.setText(::Core::Tr::tr("Next Open Document in History"));
     gotoNextInHistory.bindContextAction(&m_gotoNextDocHistoryAction);
     gotoNextInHistory.setContext(editDesignContext);
-    gotoNextInHistory.setDefaultKeySequence(::Core::Tr::tr("Alt+Shift+Tab"), ::Core::Tr::tr("Ctrl+Shift+Tab"));
-    gotoNextInHistory.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // gotoNextInHistory.setDefaultKeySequence(::Core::Tr::tr("Alt+Shift+Tab"), ::Core::Tr::tr("Ctrl+Shift+Tab"));
+    // gotoNextInHistory.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     gotoNextInHistory.addOnTriggered(this, &EditorManagerPrivate::gotoNextDocHistory);
 
     // Go back in navigation history
@@ -582,8 +598,10 @@ void EditorManagerPrivate::init()
     goBack.setText(::Core::Tr::tr("Go Back"));
     goBack.bindContextAction(&m_goBackAction);
     goBack.setContext(editDesignContext);
-    goBack.setDefaultKeySequence(::Core::Tr::tr("Ctrl+Alt+Left"), ::Core::Tr::tr("Alt+Left"));
-    goBack.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // goBack.setDefaultKeySequence(::Core::Tr::tr("Ctrl+Alt+Left"), ::Core::Tr::tr("Alt+Left"));
+    // goBack.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     goBack.addOnTriggered(this, &EditorManager::goBackInNavigationHistory);
 
     // Go forward in navigation history
@@ -592,8 +610,10 @@ void EditorManagerPrivate::init()
     goForward.setText(::Core::Tr::tr("Go Forward"));
     goForward.bindContextAction(&m_goForwardAction);
     goForward.setContext(editDesignContext);
-    goForward.setDefaultKeySequence(::Core::Tr::tr("Ctrl+Alt+Right"), ::Core::Tr::tr("Alt+Right"));
-    goForward.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // goForward.setDefaultKeySequence(::Core::Tr::tr("Ctrl+Alt+Right"), ::Core::Tr::tr("Alt+Right"));
+    // goForward.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     goForward.addOnTriggered(this, &EditorManager::goForwardInNavigationHistory);
 
     // Reopen last closed document
@@ -601,7 +621,9 @@ void EditorManagerPrivate::init()
     reopenLastClosedDocument.setText(::Core::Tr::tr("Reopen Last Closed Document"));
     reopenLastClosedDocument.bindContextAction(&m_reopenLastClosedDocumenAction);
     reopenLastClosedDocument.setContext(editDesignContext);
-    reopenLastClosedDocument.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // reopenLastClosedDocument.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     reopenLastClosedDocument.addOnTriggered(this, &EditorManagerPrivate::reopenLastClosedDocument);
 
     // Go to last edit
@@ -609,7 +631,9 @@ void EditorManagerPrivate::init()
     gotoLastEdit.setText(::Core::Tr::tr("Go to Last Edit"));
     gotoLastEdit.bindContextAction(&m_gotoLastEditAction);
     gotoLastEdit.setContext(editDesignContext);
-    gotoLastEdit.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // gotoLastEdit.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     gotoLastEdit.addOnTriggered(this, &EditorManagerPrivate::gotoLastEditLocation);
 
     ActionBuilder split(this, Constants::SPLIT);
@@ -617,8 +641,10 @@ void EditorManagerPrivate::init()
     split.setIcon(Utils::Icons::SPLIT_HORIZONTAL.icon());
     split.bindContextAction(&m_splitAction);
     split.setContext(editManagerContext);
-    split.setDefaultKeySequence(::Core::Tr::tr("Meta+E,2"), ::Core::Tr::tr("Ctrl+E,2"));
-    split.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
+    // split.setDefaultKeySequence(::Core::Tr::tr("Meta+E,2"), ::Core::Tr::tr("Ctrl+E,2"));
+    // split.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
     split.addOnTriggered(this, [this] { this->split(Qt::Vertical); });
 
     ActionBuilder splitSideBySide(this, Constants::SPLIT_SIDE_BY_SIDE);
@@ -626,48 +652,60 @@ void EditorManagerPrivate::init()
     splitSideBySide.setText(::Core::Tr::tr("Split Side by Side"));
     splitSideBySide.bindContextAction(&m_splitSideBySideAction);
     splitSideBySide.setContext(editManagerContext);
-    splitSideBySide.setDefaultKeySequence(::Core::Tr::tr("Meta+E,3"), ::Core::Tr::tr("Ctrl+E,3"));
-    splitSideBySide.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
+    // splitSideBySide.setDefaultKeySequence(::Core::Tr::tr("Meta+E,3"), ::Core::Tr::tr("Ctrl+E,3"));
+    // splitSideBySide.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
     splitSideBySide.addOnTriggered(this, &EditorManager::splitSideBySide);
 
     ActionBuilder splitNewWindow(this, Constants::SPLIT_NEW_WINDOW);
     splitNewWindow.setText(::Core::Tr::tr("Open in New Window"));
     splitNewWindow.bindContextAction(&m_splitNewWindowAction);
     splitNewWindow.setContext(editManagerContext);
-    splitNewWindow.setDefaultKeySequence(::Core::Tr::tr("Meta+E,4"), ::Core::Tr::tr("Ctrl+E,4"));
-    splitNewWindow.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
+    // splitNewWindow.setDefaultKeySequence(::Core::Tr::tr("Meta+E,4"), ::Core::Tr::tr("Ctrl+E,4"));
+    // splitNewWindow.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
     splitNewWindow.addOnTriggered(this, [this] { this->splitNewWindow(currentEditorView()); });
 
     ActionBuilder removeCurrentSplit(this, Constants::REMOVE_CURRENT_SPLIT);
     removeCurrentSplit.setText(::Core::Tr::tr("Remove Current Split"));
     removeCurrentSplit.bindContextAction(&m_removeCurrentSplitAction);
     removeCurrentSplit.setContext(editManagerContext);
-    removeCurrentSplit.setDefaultKeySequence(::Core::Tr::tr("Meta+E,0"), ::Core::Tr::tr("Ctrl+E,0"));
-    removeCurrentSplit.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
+    // removeCurrentSplit.setDefaultKeySequence(::Core::Tr::tr("Meta+E,0"), ::Core::Tr::tr("Ctrl+E,0"));
+    // removeCurrentSplit.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
     removeCurrentSplit.addOnTriggered(this, &EditorManagerPrivate::removeCurrentSplit);
 
     ActionBuilder removeAllSplits(this, Constants::REMOVE_ALL_SPLITS);
     removeAllSplits.setText(::Core::Tr::tr("Remove All Splits"));
     removeAllSplits.bindContextAction(&m_removeAllSplitsAction);
     removeAllSplits.setContext(editManagerContext);
-    removeAllSplits.setDefaultKeySequence(::Core::Tr::tr("Meta+E,1"), ::Core::Tr::tr("Ctrl+E,1"));
-    removeAllSplits.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
+    // removeAllSplits.setDefaultKeySequence(::Core::Tr::tr("Meta+E,1"), ::Core::Tr::tr("Ctrl+E,1"));
+    // removeAllSplits.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
     removeAllSplits.addOnTriggered(this, &EditorManagerPrivate::removeAllSplits);
 
     ActionBuilder gotoPreviousSplit(this, Constants::GOTO_PREV_SPLIT);
     gotoPreviousSplit.setText(::Core::Tr::tr("Go to Previous Split or Window"));
     gotoPreviousSplit.bindContextAction(&m_gotoPreviousSplitAction);
     gotoPreviousSplit.setContext(editManagerContext);
-    gotoPreviousSplit.setDefaultKeySequence(::Core::Tr::tr("Meta+E,i"), ::Core::Tr::tr("Ctrl+E,i"));
-    gotoPreviousSplit.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
+    // gotoPreviousSplit.setDefaultKeySequence(::Core::Tr::tr("Meta+E,i"), ::Core::Tr::tr("Ctrl+E,i"));
+    // gotoPreviousSplit.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
     gotoPreviousSplit.addOnTriggered(this, &EditorManagerPrivate::gotoPreviousSplit);
 
     ActionBuilder gotoNextSplit(this, Constants::GOTO_NEXT_SPLIT);
     gotoNextSplit.setText(::Core::Tr::tr("Go to Next Split or Window"));
     gotoNextSplit.bindContextAction(&m_gotoNextSplitAction);
     gotoNextSplit.setContext(editManagerContext);
-    gotoNextSplit.setDefaultKeySequence(QKeySequence(useMacShortcuts ? ::Core::Tr::tr("Meta+E,o") : ::Core::Tr::tr("Ctrl+E,o")));
-    gotoNextSplit.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
+    // gotoNextSplit.setDefaultKeySequence(QKeySequence(useMacShortcuts ? ::Core::Tr::tr("Meta+E,o") : ::Core::Tr::tr("Ctrl+E,o")));
+    // gotoNextSplit.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SPLIT);
+    // OPENMV-DIFF //
     gotoNextSplit.addOnTriggered(this, &EditorManagerPrivate::gotoNextSplit);
 
     ActionContainer *medit = ActionManager::actionContainer(Constants::M_EDIT);
@@ -2568,7 +2606,13 @@ void EditorManagerPrivate::revertToSaved(IDocument *document)
 {
     if (!document)
         return;
-    const QString fileName =  document->filePath().toString();
+    // OPENMV-DIFF //
+    // const QString fileName =  document->filePath().toString();
+    // OPENMV-DIFF //
+    QString fileName =  document->filePath().toString();
+    if (fileName.isEmpty())
+        fileName = document->property("diffFilePath").toString();
+    // OPENMV-DIFF //
     if (fileName.isEmpty())
         return;
     if (document->isModified()) {
@@ -2877,10 +2921,14 @@ void EditorManager::addSaveAndCloseEditorActions(QMenu *contextMenu, DocumentMod
 
     contextMenu->addAction(d->m_saveCurrentEditorContextAction);
     contextMenu->addAction(d->m_saveAsCurrentEditorContextAction);
-    contextMenu->addAction(ActionManager::command(Constants::SAVEALL)->action());
-    contextMenu->addAction(d->m_revertToSavedCurrentEditorContextAction);
+    // OPENMV-DIFF //
+    // contextMenu->addAction(ActionManager::command(Constants::SAVEALL)->action());
+    // contextMenu->addAction(d->m_revertToSavedCurrentEditorContextAction);
+    // OPENMV-DIFF //
 
-    contextMenu->addSeparator();
+    // OPENMV-DIFF //
+    // contextMenu->addSeparator();
+    // OPENMV-DIFF //
 
     const QString quotedDisplayName = entry ? Utils::quoteAmpersands(entry->displayName()) : QString();
     d->m_closeCurrentEditorContextAction->setText(entry
@@ -2895,9 +2943,11 @@ void EditorManager::addSaveAndCloseEditorActions(QMenu *contextMenu, DocumentMod
     d->m_closeAllEditorsExceptVisibleContextAction->setEnabled(
                 EditorManagerPrivate::visibleDocumentsCount() < DocumentModel::entries().count());
     contextMenu->addAction(d->m_closeCurrentEditorContextAction);
-    contextMenu->addAction(d->m_closeAllEditorsContextAction);
-    contextMenu->addAction(d->m_closeOtherDocumentsContextAction);
-    contextMenu->addAction(d->m_closeAllEditorsExceptVisibleContextAction);
+    // OPENMV-DIFF //
+    // contextMenu->addAction(d->m_closeAllEditorsContextAction);
+    // contextMenu->addAction(d->m_closeOtherDocumentsContextAction);
+    // contextMenu->addAction(d->m_closeAllEditorsExceptVisibleContextAction);
+    // OPENMV-DIFF //
 }
 
 /*!
@@ -2938,10 +2988,16 @@ void EditorManager::addNativeDirAndOpenWithActions(QMenu *contextMenu, DocumentM
     contextMenu->addAction(d->m_openTerminalAction);
     contextMenu->addAction(d->m_findInDirectoryAction);
     contextMenu->addAction(d->m_filePropertiesAction);
-    QMenu *openWith = contextMenu->addMenu(::Core::Tr::tr("Open With"));
-    openWith->setEnabled(enabled);
-    if (enabled)
-        populateOpenWithMenu(openWith, entry->filePath());
+    // OPENMV-DIFF //
+    // QMenu *openWith = contextMenu->addMenu(::Core::Tr::tr("Open With"));
+    // openWith->setEnabled(enabled);
+    // if (enabled)
+    //     populateOpenWithMenu(openWith, entry->filePath());
+    // OPENMV-DIFF //
+    d->m_showInFileSystemViewContextAction->setVisible(false);
+    d->m_openTerminalAction->setVisible(false);
+    d->m_filePropertiesAction->setVisible(false);
+    // OPENMV-DIFF //
 }
 
 /*!
@@ -3021,7 +3077,14 @@ void EditorManager::setReloadSetting(IDocument::ReloadSetting behavior)
 */
 void EditorManager::saveDocument()
 {
-    EditorManagerPrivate::saveDocument(currentDocument());
+    // OPENMV-DIFF //
+    // EditorManagerPrivate::saveDocument(currentDocument());
+    // OPENMV-DIFF //
+    if (currentDocument()->filePath().isEmpty())
+        EditorManagerPrivate::saveDocumentAs(currentDocument());
+    else
+        EditorManagerPrivate::saveDocument(currentDocument());
+    // OPENMV-DIFF //
 }
 
 /*!
@@ -3311,7 +3374,11 @@ static QString makeTitleUnique(QString *titlePattern)
                     name = entry->displayName();
                 else
                     name = QFileInfo(name).completeBaseName();
-                docnames << name;
+                // OPENMV-DIFF //
+                // docnames << name;
+                // OPENMV-DIFF //
+                docnames << entry->displayName();
+                // OPENMV-DIFF //
             }
 
             do {
@@ -3369,6 +3436,9 @@ IEditor *EditorManager::openEditorWithContents(Id editorId,
                 if (!title.isEmpty())
                     edt->document()->setPreferredDisplayName(title);
 
+                // OPENMV-DIFF //
+                edt->gotoLine(1);
+                // OPENMV-DIFF //
                 activateEditor(edt, flags);
                 return edt;
             }
@@ -3395,6 +3465,9 @@ IEditor *EditorManager::openEditorWithContents(Id editorId,
         edt->document()->setPreferredDisplayName(title);
 
     EditorManagerPrivate::addEditor(edt);
+    // OPENMV-DIFF //
+    edt->gotoLine(1);
+    // OPENMV-DIFF //
     activateEditor(edt, flags);
     return edt;
 }

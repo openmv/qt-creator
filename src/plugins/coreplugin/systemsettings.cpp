@@ -486,6 +486,9 @@ class SystemSettingsPage final : public IOptionsPage
 {
 public:
     SystemSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
     {
         setId(Constants::SETTINGS_ID_SYSTEM);
         setDisplayName(Tr::tr("System"));

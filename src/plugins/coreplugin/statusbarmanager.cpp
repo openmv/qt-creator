@@ -52,16 +52,26 @@ static void createStatusBarManager()
     QStatusBar *bar = ICore::statusBar();
 
     m_splitter = new NonResizingSplitter(bar);
-    bar->insertPermanentWidget(0, m_splitter, 10);
+    // OPENMV-DIFF //
+    // bar->insertPermanentWidget(0, m_splitter, 10);
+    // OPENMV-DIFF //
     m_splitter->setChildrenCollapsible(false);
     // first
     QWidget *w = createWidget(m_splitter);
     w->layout()->setContentsMargins(0, 0, 3, 0);
     m_splitter->addWidget(w);
     m_statusBarWidgets.append(w);
+    // OPENMV-DIFF //
+    m_splitter->hide();
+    // OPENMV-DIFF //
 
-    QWidget *w2 = createWidget(m_splitter);
-    m_splitter->addWidget(w2);
+    // OPENMV-DIFF //
+    // QWidget *w2 = createWidget(m_splitter);
+    // m_splitter->addWidget(w2);
+    // OPENMV-DIFF //
+    QWidget *w2 = createWidget(bar);
+    bar->insertPermanentWidget(0, w2, 1);
+    // OPENMV-DIFF //
     // second
     w = createWidget(w2);
     w2->layout()->addWidget(w);
@@ -70,12 +80,18 @@ static void createStatusBarManager()
     w = createWidget(w2);
     w2->layout()->addWidget(w);
     m_statusBarWidgets.append(w);
+    // OPENMV-DIFF //
+    w->hide();
+    // OPENMV-DIFF //
 
     static_cast<QBoxLayout *>(w2->layout())->addStretch(1);
 
     QWidget *rightCornerWidget = createWidget(bar);
     bar->insertPermanentWidget(1, rightCornerWidget);
     m_statusBarWidgets.append(rightCornerWidget);
+    // OPENMV-DIFF //
+    rightCornerWidget->hide();
+    // OPENMV-DIFF //
 
     auto statusContext = new StatusBarContext(bar);
     statusContext->setWidget(bar);

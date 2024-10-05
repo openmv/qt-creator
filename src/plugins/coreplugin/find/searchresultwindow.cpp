@@ -147,6 +147,9 @@ namespace Internal {
         m_filterButton->setText(Tr::tr("Filter Results"));
         m_filterButton->setIcon(Utils::Icons::FILTER.icon());
         m_filterButton->setEnabled(false);
+        // OPENMV-DIFF //
+        m_filterButton->hide();
+        // OPENMV-DIFF //
 
         QAction *newSearchAction = new QAction(Tr::tr("New Search"), this);
         newSearchAction->setIcon(Utils::Icons::NEWSEARCH_TOOLBAR.icon());
@@ -654,7 +657,11 @@ QList<QWidget *> SearchResultWindowPrivate::toolBarWidgets()
         m_historyLabel = new QLabel(Tr::tr("History:"));
     if (!m_recentSearchesBox) {
         m_recentSearchesBox = new QComboBox;
-        m_recentSearchesBox->setProperty(Utils::StyleHelper::C_DRAW_LEFT_BORDER, true);
+        // OPENMV-DIFF //
+        // m_recentSearchesBox->setProperty(Utils::StyleHelper::C_DRAW_LEFT_BORDER, true);
+        // OPENMV-DIFF //
+        m_recentSearchesBox->setProperty(Utils::StyleHelper::C_HIDE_BORDER, true);
+        // OPENMV-DIFF //
         m_recentSearchesBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
         m_recentSearchesBox->addItem(Tr::tr("New Search"));
         connect(m_recentSearchesBox, &QComboBox::activated,

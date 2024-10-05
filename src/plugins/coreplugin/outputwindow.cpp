@@ -31,6 +31,17 @@
 #include <QTextBlock>
 #include <QTimer>
 
+// OPENMV-DIFF //
+#include <utils/fadingindicator.h>
+#include <utils/fileutils.h>
+#include <extensionsystem/pluginmanager.h>
+#include <QApplication>
+#include <QRegularExpression>
+#include <QSettings>
+#include <QFileDialog>
+#include <QMessageBox>
+// OPENMV-DIFF //
+
 #ifdef WITH_TESTS
 #include <QtTest>
 #endif
@@ -77,6 +88,10 @@ public:
     QHash<unsigned int, QPair<int, int>> taskPositions;
     //: default file name suggested for saving text from output views
     QString outputFileNameHint{::Core::Tr::tr("output.txt")};
+    // OPENMV-DIFF //
+    bool enforceNewline = false;
+    int tabWidth = 4;
+    // OPENMV-DIFF //
 };
 
 } // namespace Internal
@@ -180,6 +195,9 @@ OutputWindow::OutputWindow(Context context, const Key &settingsKey, QWidget *par
     auto agg = new Aggregation::Aggregate;
     agg->add(this);
     agg->add(new BaseTextFind(this));
+    // OPENMV-DIFF //
+    //TODO//m_parser = new OpenMVPluginEscapeCodeParser(this);
+    // OPENMV-DIFF //
 }
 
 OutputWindow::~OutputWindow()
@@ -278,6 +296,9 @@ void OutputWindow::wheelEvent(QWheelEvent *e)
 
             zoomInF(delta);
             emit wheelZoom();
+            // OPENMV-DIFF //
+            Utils::FadingIndicator::showText(this, Tr::tr("Zoom: %1%").arg(int(100 * (font().pointSizeF() / d->originalFontSize))), Utils::FadingIndicator::SmallText);
+            // OPENMV-DIFF //
             return;
         }
     }
@@ -624,6 +645,12 @@ void OutputWindow::scrollToBottom()
 
 void OutputWindow::grayOutOldContent()
 {
+    // OPENMV-DIFF //
+    if(document()->isEmpty())
+        return;
+    d->enforceNewline = true;
+    const bool atBottom = isScrollbarAtBottom();
+    // OPENMV-DIFF //
     if (!d->cursor.atEnd())
         d->cursor.movePosition(QTextCursor::End);
     QTextCharFormat endFormat = d->cursor.charFormat();
@@ -643,6 +670,10 @@ void OutputWindow::grayOutOldContent()
     d->cursor.movePosition(QTextCursor::End);
     d->cursor.setCharFormat(endFormat);
     d->cursor.insertBlock(QTextBlockFormat());
+    // OPENMV-DIFF //
+    if (atBottom)
+        scrollToBottom();
+    // OPENMV-DIFF //
 }
 
 void OutputWindow::enableUndoRedo()
@@ -658,6 +689,278 @@ void OutputWindow::setWordWrapEnabled(bool wrap)
     else
         setWordWrapMode(QTextOption::NoWrap);
 }
+
+// OPENMV-DIFF //
+QString OutputWindow::doNewlineEnforcement(const QString &out)
+{
+    d->scrollToBottom = true;
+    QString s = out;
+    if (d->enforceNewline) {
+        s.prepend(QLatin1Char('\n'));
+        d->enforceNewline = false;
+    }
+
+    if (s.endsWith(QLatin1Char('\n'))) {
+        d->enforceNewline = true; // make appendOutputInline put in a newline next time
+        s.chop(1);
+    }
+
+    return s;
+}
+
+void OutputWindow::appendText(const QString &textIn)
+{
+    for(const Utils::FormattedText &parsedText : m_handler.parseText(Utils::FormattedText(textIn)))
+    {
+        if(parsedText.text.isEmpty())
+        {
+            //TODO//m_parser->parseEscapeCodes(m_handler.getEscapeCodes());
+        }
+
+        QTextCharFormat format = parsedText.format;
+        QString text = QString(parsedText.text).replace(QLatin1String("\r\n"), QLatin1String("\n"));
+        int index = text.indexOf(QStringLiteral("Traceback (most recent call last):\n"));
+
+        if(index != -1)
+        {
+            m_handler.endFormatScope();
+            //TODO//m_parser->resetParser();
+            appendText(text.left(index));
+            grayOutOldContent();
+            format = QTextCharFormat();
+            text = text.mid(index);
+        }
+
+        text = text.replace(QStringLiteral("MPY: soft reboot\n"), QStringLiteral(""));
+        text = text.replace(QStringLiteral("Exception: IDE interrupt\n"), QStringLiteral(""));
+        text = text.replace(QStringLiteral("KeyboardInterrupt: \n"), QStringLiteral(""));
+
+        QChar lastChar = QChar();
+        QString string;
+        int column = 0;
+
+        for(int i = 0, j = text.size(); i < j; i++)
+        {
+            switch(text.at(i).unicode())
+            {
+                case 15:
+                case 17: // XON
+                case 19: // XOFF
+                case 23:
+                case 24:
+                case 25:
+                case 26:
+                case 27: // Escape - AnsiEscapeCodeHandler
+                case 28:
+                case 29:
+                case 30:
+                case 31:
+                {
+                    break;
+                }
+
+                case 0: // Null
+                {
+                    break;
+                }
+
+                case 1: // Home Cursor
+                {
+                    break;
+                }
+
+                case 2: // Move Cursor Left
+                {
+                    break;
+                }
+
+                case 3: // Clear Screen
+                {
+                    break;
+                }
+
+                case 4:
+                case 127: // Delete
+                {
+                    break;
+                }
+
+                case 5: // End Cursor
+                {
+                    break;
+                }
+
+                case 6: // Move Cursor Right
+                {
+                    break;
+                }
+
+                case 7: // Beep Speaker
+                {
+                    QApplication::beep();
+                    break;
+                }
+
+                case 8: // Backspace
+                {
+                    break;
+                }
+
+                case 9: // Tab
+                {
+                    for(int k = d->tabWidth - (column % d->tabWidth); k > 0; k--)
+                    {
+                        string.append(QLatin1Char(' '));
+                        column += 1;
+                    }
+
+                    break;
+                }
+
+                case 10: // Line Feed
+                {
+                    if(lastChar.unicode() != '\r')
+                    {
+                        string.append(QLatin1Char('\n'));
+                        column = 0;
+                    }
+
+                    break;
+                }
+
+                case 11: // Clear to end of line.
+                {
+                    break;
+                }
+
+                case 12: // Clear lines below.
+                {
+                    break;
+                }
+
+                case 13: // Carriage Return
+                {
+                    string.append(QLatin1Char('\n'));
+                    column = 0;
+                    break;
+                }
+
+                case 14: // Move Cursor Down
+                {
+                    break;
+                }
+
+                case 16: // Move Cursor Up
+                {
+                    break;
+                }
+
+                case 18: // Move to start of line.
+                {
+                    break;
+                }
+
+                case 20: // Move to end of line.
+                {
+                    break;
+                }
+
+                case 21: // Clear to start of line.
+                {
+                    break;
+                }
+
+                case 22: // Clear lines above.
+                {
+                    break;
+                }
+
+                default:
+                {
+                    string.append(text.at(i));
+                    column += 1;
+                    break;
+                }
+            }
+
+            lastChar = text.at(i);
+        }
+
+        if(d->cursor.document()->isEmpty())
+        {
+            string.remove(QRegularExpression(QStringLiteral("^\\s+")));
+        }
+
+        //TODO//text = m_parser->parseText(string);
+
+        if(text.isEmpty())
+        {
+            continue;
+        }
+
+        const bool atBottom = isScrollbarAtBottom();
+        if (!d->cursor.atEnd())
+            d->cursor.movePosition(QTextCursor::End);
+        d->cursor.beginEditBlock();
+        d->cursor.insertText(doNewlineEnforcement(text), format);
+
+        d->cursor.endEditBlock();
+        if (atBottom)
+            scrollToBottom();
+    }
+}
+
+bool OutputWindow::isScrollbarAtBottom() const
+{
+    return verticalScrollBar()->value() == verticalScrollBar()->maximum();
+}
+
+static const char settingsGroup[] = "OutputWindow";
+static const char saveLogFilePath[] = "SaveLogFilePath";
+
+void OutputWindow::save()
+{
+    QtcSettings *settings = ICore::settings();
+    settings->beginGroup(settingsGroup);
+
+    QString path =
+        QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Log"),
+            settings->value(saveLogFilePath, QDir::homePath()).toString(),
+            Tr::tr("Text Files (*.txt);;All files (*)"));
+
+    if(!path.isEmpty())
+    {
+        Utils::FileSaver file(Utils::FilePath::fromString(path));
+
+        if(!file.hasError())
+        {
+            if((!file.write(toPlainText().toUtf8())) || (!file.finalize()))
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    Tr::tr("Save Log"),
+                    Tr::tr("Error: %L1!").arg(file.errorString()));
+            }
+            else
+            {
+                settings->setValue(saveLogFilePath, path);
+            }
+        }
+        else
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                Tr::tr("Save Log"),
+                Tr::tr("Error: %L1!").arg(file.errorString()));
+        }
+    }
+
+    settings->endGroup();
+}
+
+void OutputWindow::setTabSettings(int tabWidth)
+{
+    d->tabWidth = tabWidth;
+}
+// OPENMV-DIFF //
 
 #ifdef WITH_TESTS
 

@@ -431,8 +431,10 @@ public:
             && !creatorTheme()->flag(Theme::DrawToolBarBorders)) {
             QPainter p(this);
             p.setPen(StyleHelper::toolBarBorderColor());
-            const QRectF innerRect = QRectF(rect()).adjusted(0.5, 0.5, -0.5, -0.5);
-            p.drawLine(innerRect.bottomLeft(), innerRect.bottomRight());
+            // OPENMV-DIFF //
+            // const QRectF innerRect = QRectF(rect()).adjusted(0.5, 0.5, -0.5, -0.5);
+            // p.drawLine(innerRect.bottomLeft(), innerRect.bottomRight());
+            // OPENMV-DIFF //
         }
     }
 
@@ -448,11 +450,19 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     : QWidget(parent)
 {
     m_tabBar = new FancyTabBar(this);
+    // OPENMV-DIFF //
+    m_tabBar->hide();
+    // OPENMV-DIFF //
     m_tabBar->setObjectName("ModeSelector"); // used for UI introduction
 
     auto bar = new StyledBar;
+    // OPENMV-DIFF //
+    bar->setProperty("NoDrawToolBarBorders", true);
+    // OPENMV-DIFF //
     auto fancyButton = new FancyColorButton;
-    connect(fancyButton, &FancyColorButton::clicked, this, &FancyTabWidget::topAreaClicked);
+    // OPENMV-DIFF //
+    // connect(fancyButton, &FancyColorButton::clicked, this, &FancyTabWidget::topAreaClicked);
+    // OPENMV-DIFF //
 
     m_modesStack = new QStackedLayout;
     m_statusBar = new QStatusBar;
@@ -468,17 +478,123 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
             Column {
                 bar,
                 m_tabBar,
-                st,
+                // OPENMV-DIFF //
+                // st,
+                // OPENMV-DIFF //
                 Widget {
                     bindTo(&m_cornerWidgetContainer),
-                    Column { st, spacing(0), noMargin },
+                    // OPENMV-DIFF //
+                    // Column { st, spacing(0), noMargin },
+                    // OPENMV-DIFF //
+                    Column { spacing(0), noMargin },
+                    // OPENMV-DIFF //
                 },
                 spacing(0), noMargin,
             },
         },
-        Column { bindTo(&vlayout), m_modesStack, m_statusBar, spacing(0) },
+        // OPENMV-DIFF //
+        // Column { bindTo(&vlayout), m_modesStack, m_statusBar, spacing(0) },
+        // OPENMV-DIFF //
+        Column { bindTo(&vlayout), m_statusBar, spacing(0) },
+        // OPENMV-DIFF //
         spacing(1), noMargin,
     }.attachTo(this);
+
+    // OPENMV-DIFF //
+    {
+        m_msplitter = new MiniSplitter;
+        m_hsplitter = new MiniSplitter;
+        m_vsplitter = new MiniSplitter(Qt::Vertical);
+
+        QWidget *tempWidget = new QWidget;
+        tempWidget->setLayout(m_modesStack);
+        m_hsplitter->insertWidget(0, tempWidget);
+
+        QWidget *tempWidget2 = new QWidget;
+        QVBoxLayout *tempLayout2 = new QVBoxLayout;
+        tempLayout2->setContentsMargins(0, 0, 0, 0);
+        tempLayout2->setSpacing(0);
+
+        Utils::StyledBar *topBar = new Utils::StyledBar;
+        topBar->setSingleRow(true);
+        topBar->setProperty("NoDrawToolBarBorders", false);
+        QHBoxLayout *topBarLayout = new QHBoxLayout;
+        topBarLayout->setContentsMargins(0, 0, 0, 0);
+        topBarLayout->setSpacing(0);
+        m_topDrawer = new QToolButton;
+        m_topDrawer->setArrowType(Qt::DownArrow);
+        m_topDrawer->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
+        topBarLayout->addWidget(m_topDrawer);
+        topBar->setLayout(topBarLayout);
+        tempLayout2->addWidget(topBar);
+
+        tempLayout2->addWidget(m_vsplitter);
+
+        Utils::StyledBar *bottomBar = new Utils::StyledBar;
+        bottomBar->setSingleRow(true);
+        bottomBar->setProperty("NoDrawToolBarBorders", true);
+        QHBoxLayout *bottomBarLayout = new QHBoxLayout;
+        bottomBarLayout->setContentsMargins(0, 0, 0, 0);
+        bottomBarLayout->setSpacing(0);
+        m_bottomDrawer = new QToolButton;
+        m_bottomDrawer->setArrowType(Qt::UpArrow);
+        m_bottomDrawer->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
+        bottomBarLayout->addWidget(m_bottomDrawer);
+        bottomBar->setLayout(bottomBarLayout);
+        tempLayout2->addWidget(bottomBar);
+
+        tempWidget2->setLayout(tempLayout2);
+        m_hsplitter->insertWidget(1, tempWidget2);
+
+        m_hsplitter->setStretchFactor(0, 1);
+        m_hsplitter->setStretchFactor(1, 0);
+        m_hsplitter->setCollapsible(0, true);
+        m_hsplitter->setCollapsible(1, true);
+
+        QWidget *tempWidget3 = new QWidget;
+        QHBoxLayout *tempLayout3 = new QHBoxLayout;
+        tempLayout3->setContentsMargins(0, 0, 0, 0);
+        tempLayout3->setSpacing(0);
+
+        Utils::StyledBar *leftBar = new Utils::StyledBar;
+        leftBar->setSingleRow(false);
+        leftBar->setProperty("NoDrawToolBarBorders", true);
+        QVBoxLayout *leftBarLayout = new QVBoxLayout;
+        leftBarLayout->setContentsMargins(0, 0, 0, 0);
+        leftBarLayout->setSpacing(0);
+        m_leftDrawer = new QToolButton;
+        m_leftDrawer->setArrowType(Qt::RightArrow);
+        m_leftDrawer->setMinimumHeight(160);
+        leftBarLayout->addSpacing(22);
+        leftBarLayout->addWidget(m_leftDrawer);
+        leftBarLayout->addSpacing(160);
+        leftBar->setLayout(leftBarLayout);
+        tempLayout3->addWidget(leftBar);
+
+        tempLayout3->addWidget(m_hsplitter);
+
+        Utils::StyledBar *rightBar = new Utils::StyledBar;
+        rightBar->setSingleRow(false);
+        rightBar->setProperty("NoDrawToolBarBorders", true);
+        QVBoxLayout *rightBarLayout = new QVBoxLayout;
+        rightBarLayout->setContentsMargins(0, 0, 0, 0);
+        rightBarLayout->setSpacing(0);
+        m_rightDrawer = new QToolButton;
+        m_rightDrawer->setArrowType(Qt::LeftArrow);
+        m_rightDrawer->setMinimumHeight(160);
+        rightBarLayout->addSpacing(22);
+        rightBarLayout->addWidget(m_rightDrawer);
+        rightBarLayout->addSpacing(160);
+        rightBar->setLayout(rightBarLayout);
+        tempLayout3->addWidget(rightBar);
+
+        tempWidget3->setLayout(tempLayout3);
+        m_msplitter->insertWidget(0, tempWidget3);
+        m_msplitter->setStretchFactor(0, 1);
+        m_msplitter->setCollapsible(0, false);
+        vlayout->insertWidget(0, m_msplitter);
+    }
+    // OPENMV-DIFF //
 
     m_selectionWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
 
@@ -491,6 +607,46 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     connect(m_tabBar, &FancyTabBar::currentAboutToChange, this, &FancyTabWidget::currentAboutToShow);
     connect(m_tabBar, &FancyTabBar::currentChanged, this, &FancyTabWidget::showWidget);
     connect(m_tabBar, &FancyTabBar::menuTriggered, this, &FancyTabWidget::menuTriggered);
+
+    // OPENMV-DIFF //
+#ifndef Q_OS_MAC
+    m_styleSheet = QString(QStringLiteral(
+    "QAbstractScrollArea::corner{background-color:%1;}"
+    "QScrollBar:vertical{margin-top:17px;margin-right:0px;margin-bottom:17px;margin-left:0px;min-width:14px;background-color:%1;}"
+    "QScrollBar::sub-line:vertical{subcontrol-origin:margin;subcontrol-position:top;height:17px;background-color:%1;}"
+    "QScrollBar::add-line:vertical{subcontrol-origin:margin;subcontrol-position:bottom;height:17px;background-color:%1;}"
+    "QScrollBar::up-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowup-%5.png);}"
+    "QScrollBar::down-arrow:vertical{margin-left:1px;margin-right:1px;border-image:url(:/core/images/scroll-arrowdown-%5.png);}"
+    "QScrollBar::sub-page:vertical{margin-left:1px;margin-right:1px;background-color:%1;}"
+    "QScrollBar::add-page:vertical{margin-left:1px;margin-right:1px;background-color:%1;}"
+    "QScrollBar::handle:vertical{margin-left:1px;margin-right:1px;min-height:20px;background-color:%2;}"
+    "QScrollBar:horizontal{margin-top:0px;margin-right:17px;margin-bottom:0px;margin-left:17px;min-height:14px;background-color:%1;}"
+    "QScrollBar::sub-line:horizontal{subcontrol-origin:margin;subcontrol-position:left;width:17px;background-color:%1;}"
+    "QScrollBar::add-line:horizontal{subcontrol-origin:margin;subcontrol-position:right;width:17px;background-color:%1;}"
+    "QScrollBar::left-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowleft-%5.png);}"
+    "QScrollBar::right-arrow:horizontal{margin-top:1px;margin-bottom:1px;border-image:url(:/core/images/scroll-arrowright-%5.png);}"
+    "QScrollBar::sub-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%1;}"
+    "QScrollBar::add-page:horizontal{margin-top:1px;margin-bottom:1px;background-color:%1;}"
+    "QScrollBar::handle:horizontal{margin-top:1px;margin-bottom:1px;min-width:20px;background-color:%2;}"
+    "QScrollBar::up-arrow:hover,QScrollBar::right-arrow:hover,QScrollBar::down-arrow:hover,QScrollBar::left-arrow:hover,QScrollBar::handle:hover{background-color:%3;}"
+    "QScrollBar::up-arrow:pressed,QScrollBar::right-arrow:pressed,QScrollBar::down-arrow:pressed,QScrollBar::left-arrow:pressed,QScrollBar::handle:pressed{background-color:%4;}"
+    )).
+    arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorDark).name(QColor::HexArgb)).
+    arg(Utils::creatorTheme()->color(Utils::Theme::SplitterColor).name(QColor::HexArgb)).
+    arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorHover).name(QColor::HexArgb)).
+    arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name(QColor::HexArgb)).
+    arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light"));
+#endif
+
+    m_highDPIStyleSheet = QString(m_styleSheet).replace(QStringLiteral(".png"), QStringLiteral("_2x.png"));
+
+    QPalette pal = palette();
+    pal.setColor(QPalette::Base, Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
+    setAutoFillBackground(true);
+    setPalette(pal);
+
+    m_devicePixelRatio = 0;
+    // OPENMV-DIFF //
 }
 
 void FancyTabWidget::setSelectionWidgetVisible(bool visible)
@@ -525,6 +681,17 @@ void FancyTabWidget::setBackgroundBrush(const QBrush &brush)
 
 void FancyTabWidget::paintEvent(QPaintEvent *event)
 {
+    // OPENMV-DIFF //
+    // We have to do this because Qt does not update the icons when switching between
+    // a non-high dpi screen and a high-dpi screen.
+    qreal ratio = devicePixelRatioF();
+    if (!qFuzzyCompare(ratio, m_devicePixelRatio))
+    {
+        m_devicePixelRatio = ratio;
+        setStyleSheet(qFuzzyCompare(1.0, ratio) ? m_styleSheet : m_highDPIStyleSheet); // reload icons
+    }
+    // OPENMV-DIFF //
+
     Q_UNUSED(event)
     if (m_selectionWidget->isVisible()) {
         QPainter painter(this);
@@ -542,9 +709,11 @@ void FancyTabWidget::paintEvent(QPaintEvent *event)
             painter.setPen(StyleHelper::borderColor());
             painter.drawLine(boderRect.topRight(), boderRect.bottomRight());
 
-            const QColor light = StyleHelper::sidebarHighlight();
-            painter.setPen(light);
-            painter.drawLine(boderRect.bottomLeft(), boderRect.bottomRight());
+            // OPENMV-DIFF //
+            // const QColor light = StyleHelper::sidebarHighlight();
+            // painter.setPen(light);
+            // painter.drawLine(boderRect.bottomLeft(), boderRect.bottomRight());
+            // OPENMV-DIFF //
         }
     }
 }

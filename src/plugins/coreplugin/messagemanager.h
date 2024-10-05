@@ -7,6 +7,10 @@
 
 #include <QStringList>
 
+// OPENMV-DIFF //
+#include "messageoutputwindow.h"
+// OPENMV-DIFF //
+
 QT_BEGIN_NAMESPACE
 class QFont;
 QT_END_NAMESPACE
@@ -26,5 +30,13 @@ CORE_EXPORT void writeDisrupting(const QStringList &messages);
 
 void init();
 void destroy();
+
+// OPENMV-DIFF //
+CORE_EXPORT OutputWindow *outputWindow();
+CORE_EXPORT void printData(const QByteArray &data);
+CORE_EXPORT void grayOutOldContent();
+CORE_EXPORT void popup();
+CORE_EXPORT void flash();
+// OPENMV-DIFF //
 
 } // namespace Core::MessageManager

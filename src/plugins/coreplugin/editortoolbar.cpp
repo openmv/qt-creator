@@ -146,10 +146,15 @@ EditorToolBar::EditorToolBar(QWidget *parent) :
     d->m_editorList->setModel(DocumentModel::model());
     d->m_editorList->setMaxVisibleItems(40);
     d->m_editorList->setContextMenuPolicy(Qt::CustomContextMenu);
+    // OPENMV-DIFF //
+    d->m_editorList->setProperty("hideborder", true);
+    // OPENMV-DIFF //
 
     d->m_closeEditorButton->setIcon(Utils::Icons::CLOSE_TOOLBAR.icon());
     d->m_closeEditorButton->setEnabled(false);
-    d->m_closeEditorButton->setProperty(Utils::StyleHelper::C_SHOW_BORDER, true);
+    // OPENMV-DIFF //
+    // d->m_closeEditorButton->setProperty(Utils::StyleHelper::C_SHOW_BORDER, true);
+    // OPENMV-DIFF //
 
     d->m_toolBarPlaceholder->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 
@@ -181,6 +186,14 @@ EditorToolBar::EditorToolBar(QWidget *parent) :
     toplayout->addWidget(d->m_toolBarPlaceholder, 1); // Custom toolbar stretches
     toplayout->addWidget(d->m_splitButton);
     toplayout->addWidget(d->m_closeSplitButton);
+    // OPENMV-DIFF //
+    d->m_backButton->hide();
+    d->m_forwardButton->hide();
+    d->m_lockButton->hide();
+    d->m_dragHandle->hide();
+    d->m_splitButton->hide();
+    d->m_closeSplitButton->hide();
+    // OPENMV-DIFF //
 
     setLayout(toplayout);
 
@@ -188,6 +201,9 @@ EditorToolBar::EditorToolBar(QWidget *parent) :
     // a private slot connection
     connect(d->m_editorList, &QComboBox::activated, this, &EditorToolBar::listSelectionActivated);
     connect(d->m_editorList, &QComboBox::customContextMenuRequested, this, [this](QPoint p) {
+       // OPENMV-DIFF //
+       if(!EditorManager::currentEditor()) return;
+       // OPENMV-DIFF //
        QMenu menu;
        fillListContextMenu(&menu);
        menu.exec(d->m_editorList->mapToGlobal(p));
