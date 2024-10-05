@@ -230,6 +230,12 @@ namespace Internal {
 
 class MainWindow : public AppMainWindow
 {
+    // OPENMV-DIFF //
+    Q_OBJECT
+signals:
+    void showEventSignal();
+    void hideEventSignal();
+    // OPENMV-DIFF //
 public:
     MainWindow()
     {
@@ -288,8 +294,8 @@ private:
 #endif
     }
 
-    void showEvent(QShowEvent *event) override { AppMainWindow::showEvent(event); updateWindowIcon(); }
-    void hideEvent(QHideEvent *event) override { AppMainWindow::hideEvent(event); updateWindowIcon(); }
+    void showEvent(QShowEvent *event) override { emit showEventSignal(); AppMainWindow::showEvent(event); updateWindowIcon(); }
+    void hideEvent(QHideEvent *event) override { emit hideEventSignal(); AppMainWindow::hideEvent(event); updateWindowIcon(); }
     void moveEvent(QMoveEvent *event) override { AppMainWindow::moveEvent(event); updateWindowIcon(); }
     void resizeEvent(QResizeEvent *event) override { AppMainWindow::resizeEvent(event); updateWindowIcon(); }
 
@@ -441,6 +447,10 @@ ICore::ICore()
 
     d = new ICorePrivate;
     d->init(); // Separation needed for now as the call triggers other MainWindow calls.
+    // OPENMV-DIFF //
+    connect(d->m_mainwindow, &MainWindow::showEventSignal, this, &ICore::showEventSignal);
+    connect(d->m_mainwindow, &MainWindow::hideEventSignal, this, &ICore::hideEventSignal);
+    // OPENMV-DIFF //
 
     connect(PluginManager::instance(), &PluginManager::testsFinished,
             this, [this](int failedTests) {
@@ -2867,3 +2877,7 @@ void ICore::setOverrideColor(const QColor &color)
 }
 
 } // namespace Core
+
+// OPENMV-DIFF //
+#include "icore.moc"
+// OPENMV-DIFF //

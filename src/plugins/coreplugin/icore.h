@@ -141,8 +141,8 @@ signals:
     void contextChanged(const Core::Context &context);
     void systemEnvironmentChanged();
     // OPENMV-DIFF //
-    //TODO//void showEventSignal();
-    //TODO//void hideEventSignal();
+    void showEventSignal();
+    void hideEventSignal();
     // OPENMV-DIFF //
 
 public:
