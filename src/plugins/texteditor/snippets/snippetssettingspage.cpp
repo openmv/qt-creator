@@ -535,6 +535,9 @@ void SnippetsSettingsWidget::decorateEditors(const TextEditor::FontSettings &fon
 // SnippetsSettingsPage
 
 SnippetsSettingsPage::SnippetsSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
 {
     setId(Constants::TEXT_EDITOR_SNIPPETS_SETTINGS);
     setDisplayName(Tr::tr("Snippets"));

@@ -65,7 +65,12 @@ Definitions definitionsForDocument(const TextEditor::TextDocument *document)
     // If we check the MIME type first and then skip the pattern, the definition for "*.rb.xml" is
     // never considered.
     // The KSyntaxHighlighting CLI also completely ignores MIME types.
-    const FilePath &filePath = document->filePath();
+    // OPENMV-DIFF //
+    // const FilePath &filePath = document->filePath();
+    // OPENMV-DIFF //
+    FilePath filePath = document->filePath();
+    if (filePath.isEmpty()) filePath = FilePath::fromString(document->displayName());
+    // OPENMV-DIFF //
     Definitions definitions = definitionsForFileName(filePath);
     if (definitions.isEmpty()) {
         // check for *.in filename since those are usually used for

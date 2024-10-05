@@ -155,6 +155,18 @@ public:
 
         using namespace Layouting;
 
+        // OPENMV-DIFF //
+        Group g =
+        Group {
+            title(Tr::tr("Color Scheme for Theme \"%1\"")
+                .arg(Utils::creatorTheme()->displayName())),
+            Column {
+                Row { m_schemeComboBox, m_copyButton, m_deleteButton, importButton, exportButton },
+                m_schemeEdit
+            }
+        };
+        // OPENMV-DIFF //
+
         Column {
             Group {
                 title(Tr::tr("Font")),
@@ -168,14 +180,19 @@ public:
                     m_antialias
                 }
             },
-            Group {
-                title(Tr::tr("Color Scheme for Theme \"%1\"")
-                    .arg(Utils::creatorTheme()->displayName())),
-                Column {
-                    Row { m_schemeComboBox, m_copyButton, m_deleteButton, importButton, exportButton },
-                    m_schemeEdit
-                }
-            }
+            // OPENMV-DIFF //
+            // Group {
+            //     title(Tr::tr("Color Scheme for Theme \"%1\"")
+            //         .arg(Utils::creatorTheme()->displayName())),
+            //     Column {
+            //         Row { m_schemeComboBox, m_copyButton, m_deleteButton, importButton, exportButton },
+            //         m_schemeEdit
+            //     }
+            // }
+            // OPENMV-DIFF //
+            g,
+            st
+            // OPENMV-DIFF //
 
         }.attachTo(this);
 
@@ -206,6 +223,10 @@ public:
 
         updatePointSizes();
         refreshColorSchemeList();
+        // OPENMV-DIFF //
+        m_antialias->hide();
+        g.emerge()->hide();
+        // OPENMV-DIFF //
     }
 
     void apply() final;
@@ -773,7 +794,11 @@ FontSettingsPage::FontSettingsPage(FontSettings *fontSettings, const FormatDescr
        fontSettings->loadColorScheme(FontSettings::defaultSchemeFileName(), fd);
 
     setId(Constants::TEXT_EDITOR_FONT_SETTINGS);
-    setDisplayName(Tr::tr("Font && Colors"));
+    // OPENMV-DIFF //
+    // setDisplayName(Tr::tr("Font && Colors"));
+    // OPENMV-DIFF //
+    setDisplayName(Tr::tr("Font"));
+    // OPENMV-DIFF //
     setCategory(TextEditor::Constants::TEXT_EDITOR_SETTINGS_CATEGORY);
     setDisplayCategory(Tr::tr("Text Editor"));
     setCategoryIconPath(TextEditor::Constants::TEXT_EDITOR_SETTINGS_CATEGORY_ICON_PATH);

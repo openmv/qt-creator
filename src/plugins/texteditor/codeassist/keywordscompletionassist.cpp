@@ -19,17 +19,40 @@
 #include <utils/algorithm.h>
 #include <utils/utilsicons.h>
 
+// OPENMV-DIFF //
+#include <QRegularExpression>
+#include <QStack>
+// OPENMV-DIFF //
+
 namespace TextEditor {
 
 // --------------------------
 // Keywords
 // --------------------------
 // Note: variables and functions must be sorted
-Keywords::Keywords(const QStringList &variables, const QStringList &functions, const QMap<QString, QStringList> &functionArgs)
+// OPENMV-DIFF //
+// Keywords::Keywords(const QStringList &variables, const QStringList &functions, const QMap<QString, QStringList> &functionArgs)
+// OPENMV-DIFF //
+Keywords::Keywords(const QStringList &variables,
+                   const QStringList &classes, const QMap<QString, QStringList> &classArgs,
+                   const QStringList &functions, const QMap<QString, QStringList> &functionArgs,
+                   const QStringList &methods, const QMap<QString, QStringList> &methodArgs)
+// OPENMV-DIFF //
     : m_variables(Utils::sorted(variables)),
+      // OPENMV-DIFF //
+      m_classes(Utils::sorted(classes)),
+      m_classArgs(classArgs),
+      m_methods(Utils::sorted(methods)),
+      m_methodArgs(methodArgs),
+      // OPENMV-DIFF //
       m_functions(Utils::sorted(functions)),
       m_functionArgs(functionArgs)
 {
+    // OPENMV-DIFF //
+    publicRegex = QRegularExpression("^[^_].+$");
+    protectedRegex = QRegularExpression("^_[^_].+$");
+    privateRegex = QRegularExpression("^__[^_].+$");
+    // OPENMV-DIFF //
 }
 
 bool Keywords::isVariable(const QString &word) const
@@ -42,13 +65,31 @@ bool Keywords::isFunction(const QString &word) const
     return std::binary_search(m_functions.constBegin(), m_functions.constEnd(), word);
 }
 
-QStringList Keywords::variables() const
+// OPENMV-DIFF //
+// QStringList Keywords::variables() const
+// OPENMV-DIFF //
+QStringList Keywords::variables(KeywordsScope_t scope) const
+// OPENMV-DIFF //
 {
+    // OPENMV-DIFF //
+    if (scope == KEYWORDS_SCOPE_PUBLIC) return m_variables.filter(publicRegex);
+    if (scope == KEYWORDS_SCOPE_PROTECTED) return m_variables.filter(protectedRegex);
+    if (scope == KEYWORDS_SCOPE_PRIVATE) return m_variables.filter(privateRegex);
+    // OPENMV-DIFF //
     return m_variables;
 }
 
-QStringList Keywords::functions() const
+// OPENMV-DIFF //
+// QStringList Keywords::functions() const
+// OPENMV-DIFF //
+QStringList Keywords::functions(KeywordsScope_t scope) const
+// OPENMV-DIFF //
 {
+    // OPENMV-DIFF //
+    if (scope == KEYWORDS_SCOPE_PUBLIC) return m_functions.filter(publicRegex);
+    if (scope == KEYWORDS_SCOPE_PROTECTED) return m_functions.filter(protectedRegex);
+    if (scope == KEYWORDS_SCOPE_PRIVATE) return m_functions.filter(privateRegex);
+    // OPENMV-DIFF //
     return m_functions;
 }
 
@@ -57,6 +98,43 @@ QStringList Keywords::argsForFunction(const QString &function) const
     return m_functionArgs.value(function);
 }
 
+// OPENMV-DIFF //
+bool Keywords::isClass(const QString &word) const
+{
+    return std::binary_search(m_classes.constBegin(), m_classes.constEnd(), word);
+}
+
+bool Keywords::isMethod(const QString &word) const
+{
+    return std::binary_search(m_methods.constBegin(), m_methods.constEnd(), word);
+}
+
+QStringList Keywords::classes(KeywordsScope_t scope) const
+{
+    if (scope == KEYWORDS_SCOPE_PUBLIC) return m_classes.filter(publicRegex);
+    if (scope == KEYWORDS_SCOPE_PROTECTED) return m_classes.filter(protectedRegex);
+    if (scope == KEYWORDS_SCOPE_PRIVATE) return m_classes.filter(privateRegex);
+    return m_classes;
+}
+
+QStringList Keywords::argsForClass(const QString &className) const
+{
+    return m_classArgs.value(className);
+}
+
+QStringList Keywords::methods(KeywordsScope_t scope) const
+{
+    if (scope == KEYWORDS_SCOPE_PUBLIC) return m_methods.filter(publicRegex);
+    if (scope == KEYWORDS_SCOPE_PROTECTED) return m_methods.filter(protectedRegex);
+    if (scope == KEYWORDS_SCOPE_PRIVATE) return m_methods.filter(privateRegex);
+    return m_methods;
+}
+
+QStringList Keywords::argsForMethod(const QString &methodName) const
+{
+    return m_methodArgs.value(methodName);
+}
+// OPENMV-DIFF //
 
 // --------------------------
 // KeywordsAssistProposalItem
@@ -136,6 +214,81 @@ QString KeywordsFunctionHintModel::text(int index) const
 
 int KeywordsFunctionHintModel::activeArgument(const QString &prefix) const
 {
+    // OPENMV-DIFF //
+    {
+        QString prefix2 = QString(prefix).replace(QChar::ParagraphSeparator, QLatin1Char('\n'));
+
+        if(!prefix2.isEmpty())
+        {
+            enum
+            {
+                IN_PUSH_0, // (
+                IN_PUSH_1, // [
+                IN_PUSH_2, // {
+                IN_COMMA
+            };
+
+            QStack<int> in_stack;
+
+            enum
+            {
+                IN_NONE,
+                IN_COMMENT,
+                IN_STRING_0,
+                IN_STRING_1
+            }
+            in_state = IN_NONE;
+
+            for(int i = 0; i < prefix2.size(); i++)
+            {
+                switch(in_state)
+                {
+                    case IN_NONE:
+                    {
+                        if((prefix2.at(i) == QLatin1Char('#')) && ((!i) || (prefix2.at(i-1) != QLatin1Char('\\')))) in_state = IN_COMMENT;
+                        if((prefix2.at(i) == QLatin1Char('\'')) && ((!i) || (prefix2.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_0;
+                        if((prefix2.at(i) == QLatin1Char('\"')) && ((!i) || (prefix2.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_1;
+                        if(prefix2.at(i) == QLatin1Char('(')) in_stack.push(IN_PUSH_0);
+                        if(prefix2.at(i) == QLatin1Char('[')) in_stack.push(IN_PUSH_1);
+                        if(prefix2.at(i) == QLatin1Char('{')) in_stack.push(IN_PUSH_2);
+                        if(prefix2.at(i) == QLatin1Char(')')) while(in_stack.size() && (in_stack.pop() != IN_PUSH_0));
+                        if(prefix2.at(i) == QLatin1Char(']')) while(in_stack.size() && (in_stack.pop() != IN_PUSH_1));
+                        if(prefix2.at(i) == QLatin1Char('}')) while(in_stack.size() && (in_stack.pop() != IN_PUSH_2));
+                        if(prefix2.at(i) == QLatin1Char(',')) in_stack.push(IN_COMMA);
+                        break;
+                    }
+                    case IN_COMMENT:
+                    {
+                        if((prefix2.at(i) == QLatin1Char('\n')) && (prefix2.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                        break;
+                    }
+                    case IN_STRING_0:
+                    {
+                        if((prefix2.at(i) == QLatin1Char('\'')) && (prefix2.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                        break;
+                    }
+                    case IN_STRING_1:
+                    {
+                        if((prefix2.at(i) == QLatin1Char('\"')) && (prefix2.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                        break;
+                    }
+                }
+            }
+
+            if(in_state != IN_NONE) return -1;
+
+            int commaCount = 0;
+
+            while(in_stack.size() && (in_stack.top() == IN_COMMA))
+            {
+                commaCount += 1;
+                in_stack.pop();
+            }
+
+            return ((in_stack.size() == 1) && (in_stack.top() == IN_PUSH_0) && (commaCount < m_functionSymbols.size())) ? commaCount : -1;
+        }
+    }
+    // OPENMV-DIFF //
     Q_UNUSED(prefix)
     return 1;
 }
@@ -145,13 +298,201 @@ int KeywordsFunctionHintModel::activeArgument(const QString &prefix) const
 // ---------------------------------
 KeywordsCompletionAssistProcessor::KeywordsCompletionAssistProcessor(const Keywords &keywords)
     : m_snippetCollector(QString(), QIcon(":/texteditor/images/snippet.png"))
-    , m_variableIcon(QLatin1String(":/codemodel/images/keyword.png"))
-    , m_functionIcon(QLatin1String(":/codemodel/images/member.png"))
+    // OPENMV-DIFF //
+    // , m_variableIcon(QLatin1String(":/codemodel/images/keyword.png"))
+    // , m_functionIcon(QLatin1String(":/codemodel/images/member.png"))
+    // OPENMV-DIFF //
+    , m_variableIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::VarPublic))
+    , m_functionIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncPublicStatic))
+    , m_variableProtectedIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::VarProtected))
+    , m_variablePrivateIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::VarPrivate))
+    , m_functionProtectedIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncProtectedStatic))
+    , m_functionPrivateIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncPrivateStatic))
+    , m_classIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::Class))
+    , m_methodPublicIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncPublic))
+    , m_methodProtectedIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncProtected))
+    , m_methodPrivateIcon(Utils::CodeModelIcon::iconForType(Utils::CodeModelIcon::FuncPrivate))
+    // OPENMV-DIFF //
     , m_keywords(keywords)
 {}
 
 IAssistProposal *KeywordsCompletionAssistProcessor::performAsync()
 {
+    // OPENMV-DIFF //
+    {
+        QTextCursor cursor(interface()->textDocument());
+        cursor.setPosition(interface()->position());
+        cursor.movePosition(QTextCursor::Start, QTextCursor::KeepAnchor);
+        QString text = cursor.selectedText().replace(QChar::ParagraphSeparator, QLatin1Char('\n'));
+
+        if(!text.isEmpty())
+        {
+            enum
+            {
+                IN_PUSH_0, // (
+                IN_PUSH_1, // [
+                IN_PUSH_2, // {
+                IN_COMMA
+            };
+
+            QStack< QPair<int, int> > in_stack;
+
+            enum
+            {
+                IN_NONE,
+                IN_COMMENT,
+                IN_STRING_0,
+                IN_STRING_1
+            }
+            in_state = IN_NONE;
+
+            for(int i = 0; i < text.size(); i++)
+            {
+                switch(in_state)
+                {
+                    case IN_NONE:
+                    {
+                        if((text.at(i) == QLatin1Char('#')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_COMMENT;
+                        if((text.at(i) == QLatin1Char('\'')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_0;
+                        if((text.at(i) == QLatin1Char('\"')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_1;
+                        if(text.at(i) == QLatin1Char('(')) in_stack.push(QPair<int, int>(IN_PUSH_0, i));
+                        if(text.at(i) == QLatin1Char('[')) in_stack.push(QPair<int, int>(IN_PUSH_1, i));
+                        if(text.at(i) == QLatin1Char('{')) in_stack.push(QPair<int, int>(IN_PUSH_2, i));
+                        if(text.at(i) == QLatin1Char(')')) while(in_stack.size() && (in_stack.pop().first != IN_PUSH_0));
+                        if(text.at(i) == QLatin1Char(']')) while(in_stack.size() && (in_stack.pop().first != IN_PUSH_1));
+                        if(text.at(i) == QLatin1Char('}')) while(in_stack.size() && (in_stack.pop().first != IN_PUSH_2));
+                        if(text.at(i) == QLatin1Char(',')) in_stack.push(QPair<int, int>(IN_COMMA, i));
+                        break;
+                    }
+                    case IN_COMMENT:
+                    {
+                        if((text.at(i) == QLatin1Char('\n')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                        break;
+                    }
+                    case IN_STRING_0:
+                    {
+                        if((text.at(i) == QLatin1Char('\'')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                        break;
+                    }
+                    case IN_STRING_1:
+                    {
+                        if((text.at(i) == QLatin1Char('\"')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                        break;
+                    }
+                }
+            }
+
+            if(in_state != IN_NONE) return 0;
+
+            while(in_stack.size() && (in_stack.top().first == IN_COMMA))
+            {
+                in_stack.pop();
+            }
+
+            int pos = interface()->position();
+            QChar chr;
+
+            if(!pos) return 0;
+            chr = interface()->characterAt(pos - 1);
+
+            if(interface()->reason() == ExplicitlyInvoked)
+            {
+                forever
+                {
+                    if (chr.isSpace()) pos--;
+                    else break;
+                    if(!pos) return 0;
+                    chr = interface()->characterAt(pos - 1);
+                }
+            }
+
+            if(chr == QLatin1Char('.'))
+            {
+                if(!(pos - 1)) return 0;
+                QChar chr2 = interface()->characterAt(pos - 2);
+                bool chr2IsBracket = (chr2 == QLatin1Char(')')) || (chr2 == QLatin1Char(']')) || (chr2 == QLatin1Char('}'));
+                cursor.setPosition(pos - 2);
+                cursor.select(QTextCursor::WordUnderCursor);
+                if((!chr2IsBracket) && (cursor.selectedText().isEmpty())) return 0;
+                if((!chr2IsBracket) && (!cursor.selectedText().contains(QRegularExpression(QStringLiteral("[a-zA-Z_][a-zA-Z_0-9]*"))))) return 0;
+                int startPosition = pos;
+
+                QList<AssistProposalItemInterface *> items;
+                items.append(generateProposalList(m_keywords.classes(), m_classIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PUBLIC), m_functionIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PROTECTED), m_functionProtectedIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PRIVATE), m_functionPrivateIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PUBLIC), m_methodPublicIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PROTECTED), m_methodProtectedIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PRIVATE), m_methodPrivateIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PUBLIC), m_variableIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PROTECTED), m_variableProtectedIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PRIVATE), m_variablePrivateIcon));
+                return new GenericProposal(startPosition, items);
+            }
+            else if(chr == QLatin1Char('('))
+            {
+                if(!(pos - 1)) return 0;
+                cursor.setPosition(pos - 2);
+                cursor.select(QTextCursor::WordUnderCursor);
+                if((!m_keywords.isClass(cursor.selectedText()))
+                && (!m_keywords.isFunction(cursor.selectedText()))
+                && (!m_keywords.isMethod(cursor.selectedText()))) return 0;
+                int startPosition = pos - cursor.selectedText().size() - 1;
+
+                QString word = cursor.selectedText();
+                QStringList keywords;
+                if (m_keywords.isClass(word)) keywords = m_keywords.argsForClass(word);
+                else if (m_keywords.isFunction(word)) keywords = m_keywords.argsForFunction(word);
+                else if (m_keywords.isMethod(word)) keywords = m_keywords.argsForMethod(word);
+                if(keywords.isEmpty()) return 0;
+                return new FunctionHintProposal(startPosition, FunctionHintProposalModelPtr(new KeywordsFunctionHintModel(keywords)));
+            }
+            else if((chr == QLatin1Char(',')) && (in_stack.size() >= 1) && (in_stack.top().first == IN_PUSH_0))
+            {
+                if(!in_stack.top().second) return 0;
+                cursor.setPosition(in_stack.top().second - 1);
+                cursor.select(QTextCursor::WordUnderCursor);
+                if((!m_keywords.isClass(cursor.selectedText()))
+                && (!m_keywords.isFunction(cursor.selectedText()))
+                && (!m_keywords.isMethod(cursor.selectedText()))) return 0;
+                int startPosition = in_stack.top().second - cursor.selectedText().size();
+
+                QString word = cursor.selectedText();
+                QStringList keywords;
+                if (m_keywords.isClass(word)) keywords = m_keywords.argsForClass(word);
+                else if (m_keywords.isFunction(word)) keywords = m_keywords.argsForFunction(word);
+                else if (m_keywords.isMethod(word)) keywords = m_keywords.argsForMethod(word);
+                if(keywords.isEmpty()) return 0;
+                return new FunctionHintProposal(startPosition, FunctionHintProposalModelPtr(new KeywordsFunctionHintModel(keywords)));
+            }
+            else if(chr.isLetterOrNumber() || (chr == QLatin1Char('_')))
+            {
+                cursor.setPosition(pos - 1);
+                cursor.select(QTextCursor::WordUnderCursor);
+                if(cursor.selectedText().isEmpty()) return 0;
+                if(!cursor.selectedText().contains(QRegularExpression(QStringLiteral("[a-zA-Z_][a-zA-Z_0-9]*")))) return 0;
+                int startPosition = pos - cursor.selectedText().size();
+
+                QList<AssistProposalItemInterface *> items;
+                items.append(generateProposalList(m_keywords.classes(), m_classIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PUBLIC), m_functionIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PROTECTED), m_functionProtectedIcon));
+                items.append(generateProposalList(m_keywords.functions(KEYWORDS_SCOPE_PRIVATE), m_functionPrivateIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PUBLIC), m_methodPublicIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PROTECTED), m_methodProtectedIcon));
+                items.append(generateProposalList(m_keywords.methods(KEYWORDS_SCOPE_PRIVATE), m_methodPrivateIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PUBLIC), m_variableIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PROTECTED), m_variableProtectedIcon));
+                items.append(generateProposalList(m_keywords.variables(KEYWORDS_SCOPE_PRIVATE), m_variablePrivateIcon));
+                return new GenericProposal(startPosition, items);
+            }
+        }
+
+        return 0;
+    }
+    // OPENMV-DIFF //
+
     if (isInComment(interface()))
         return nullptr;
 
@@ -237,7 +578,11 @@ QList<AssistProposalItemInterface *>
 KeywordsCompletionAssistProcessor::generateProposalList(const QStringList &words, const QIcon &icon)
 {
     return Utils::transform(words, [this, &icon](const QString &word) -> AssistProposalItemInterface * {
-        AssistProposalItem *item = new KeywordsAssistProposalItem(m_keywords.isFunction(word));
+        // OPENMV-DIFF //
+        // AssistProposalItem *item = new KeywordsAssistProposalItem(m_keywords.isFunction(word));
+        // OPENMV-DIFF //
+        AssistProposalItem *item = new KeywordsAssistProposalItem(m_keywords.isClass(word) || m_keywords.isFunction(word) || m_keywords.isMethod(word));
+        // OPENMV-DIFF //
         item->setText(word);
         item->setIcon(icon);
         return item;

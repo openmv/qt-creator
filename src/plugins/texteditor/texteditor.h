@@ -537,6 +537,9 @@ signals:
     void requestRename(const QTextCursor &cursor);
     void requestCallHierarchy(const QTextCursor &cursor);
     void toolbarOutlineChanged(QWidget *newOutline);
+    // OPENMV-DIFF //
+    void contextMenuEventCB(QMenu *menu, QString text);
+    // OPENMV-DIFF //
 
     // used by the IEditor
     void saveCurrentStateForNavigationHistory();

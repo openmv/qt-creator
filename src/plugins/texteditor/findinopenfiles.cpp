@@ -12,6 +12,10 @@
 
 #include <utils/qtcsettings.h>
 
+// OPENMV-DIFF //
+#include <QLabel>
+// OPENMV-DIFF //
+
 using namespace Utils;
 
 namespace TextEditor::Internal {
@@ -24,6 +28,9 @@ public:
 private:
     QString id() const final;
     QString displayName() const final;
+    // OPENMV-DIFF //
+    QWidget *createConfigWidget() override;
+    // OPENMV-DIFF //
     bool isEnabled() const final;
     Utils::Store save() const final;
     void restore(const Utils::Store &s) final;
@@ -33,6 +40,10 @@ private:
 
     FileContainerProvider fileContainerProvider() const final;
     void updateEnabledState() { emit enabledChanged(isEnabled()); }
+
+    // OPENMV-DIFF //
+    QPointer<QWidget> m_configWidget = nullptr;
+    // OPENMV-DIFF //
 
     // deprecated
     QByteArray settingsKey() const final;
@@ -88,9 +99,32 @@ QString FindInOpenFiles::toolTip() const
     return Tr::tr("Open Documents\n%1");
 }
 
+// OPENMV-DIFF //
+QWidget *FindInOpenFiles::createConfigWidget()
+{
+    if (!m_configWidget) {
+        QLabel *label = new QLabel(Tr::tr("Please note that this only searches files that have been saved to disk."));
+        label->setAlignment(Qt::AlignRight);
+        m_configWidget = label;
+    }
+    return m_configWidget;
+}
+// OPENMV-DIFF //
+
 bool FindInOpenFiles::isEnabled() const
 {
-    return Core::DocumentModel::entryCount() > 0;
+    // OPENMV-DIFF //
+    // return Core::DocumentModel::entryCount() > 0;
+    // OPENMV-DIFF //
+    const QList<Core::DocumentModel::Entry *> entries = Core::DocumentModel::entries();
+    for (Core::DocumentModel::Entry *entry : entries) {
+        const Utils::FilePath fileName = entry->filePath();
+        if (!fileName.isEmpty()) {
+            return true;
+        }
+    }
+    return false;
+    // OPENMV-DIFF //
 }
 
 const char kDefaultInclusion[] = "*";

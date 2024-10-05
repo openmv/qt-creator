@@ -82,9 +82,22 @@ TabSettingsWidget::TabSettingsWidget(QWidget *parent) :
     m_continuationAlignBehavior->addItem(Tr::tr("With Spaces"));
     m_continuationAlignBehavior->addItem(Tr::tr("With Regular Indent"));
     m_continuationAlignBehavior->setToolTip(continuationTooltip());
+    // OPENMV-DIFF //
+    m_continuationAlignBehavior->hide();
+    // OPENMV-DIFF //
+
+    // OPENMV-DIFF //
+    auto serialTerminalTabSizeLabel = new QLabel(Tr::tr("Serial Terminal Tab size:"));
+
+    m_serialTerminalTabSize = new QSpinBox(this);
+    m_serialTerminalTabSize->setRange(1, 20);
+    // OPENMV-DIFF //
 
     tabSizeLabel->setBuddy(m_tabSize);
     indentSizeLabel->setBuddy(m_indentSize);
+    // OPENMV-DIFF //
+    serialTerminalTabSizeLabel->setBuddy(m_serialTerminalTabSize);
+    // OPENMV-DIFF //
 
     using namespace Layouting;
     const auto indent = [](QWidget *inner) { return Row { Space(30), inner }; };
@@ -94,8 +107,13 @@ TabSettingsWidget::TabSettingsWidget(QWidget *parent) :
         Tr::tr("Tab policy:"),
         indent(m_tabPolicy),
         Row { tabSizeLabel, m_tabSize, indentSizeLabel, m_indentSize, st },
-        Tr::tr("Align continuation lines:"),
+        // OPENMV-DIFF //
+        // Tr::tr("Align continuation lines:"),
+        // OPENMV-DIFF //
         indent(m_continuationAlignBehavior)
+        // OPENMV-DIFF //
+        , Row { serialTerminalTabSizeLabel, m_serialTerminalTabSize, st }
+        // OPENMV-DIFF //
     }.attachTo(this);
 
     connect(m_codingStyleWarning, &QLabel::linkActivated,
@@ -108,6 +126,10 @@ TabSettingsWidget::TabSettingsWidget(QWidget *parent) :
             this, &TabSettingsWidget::slotSettingsChanged);
     connect(m_continuationAlignBehavior, &QComboBox::currentIndexChanged,
             this, &TabSettingsWidget::slotSettingsChanged);
+    // OPENMV-DIFF //
+    connect(m_serialTerminalTabSize, &QSpinBox::valueChanged,
+            this, &TabSettingsWidget::slotSettingsChanged);
+    // OPENMV-DIFF //
 }
 
 TabSettingsWidget::~TabSettingsWidget() = default;
@@ -119,6 +141,9 @@ void TabSettingsWidget::setTabSettings(const TabSettings &s)
     m_tabSize->setValue(s.m_tabSize);
     m_indentSize->setValue(s.m_indentSize);
     m_continuationAlignBehavior->setCurrentIndex(s.m_continuationAlignBehavior);
+    // OPENMV-DIFF //
+    m_serialTerminalTabSize->setValue(s.m_serialTerminalTabSize);
+    // OPENMV-DIFF //
 }
 
 TabSettings TabSettingsWidget::tabSettings() const
@@ -130,6 +155,9 @@ TabSettings TabSettingsWidget::tabSettings() const
     set.m_indentSize = m_indentSize->value();
     set.m_continuationAlignBehavior =
         TabSettings::ContinuationAlignBehavior(m_continuationAlignBehavior->currentIndex());
+    // OPENMV-DIFF //
+    set.m_serialTerminalTabSize = m_serialTerminalTabSize->value();
+    // OPENMV-DIFF //
 
     return set;
 }

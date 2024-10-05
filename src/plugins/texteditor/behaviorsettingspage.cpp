@@ -84,7 +84,9 @@ public:
         d->m_behaviorWidget->setCodeStyle(d->m_pageCodeStyle);
 
         TabSettingsWidget *tabSettingsWidget = d->m_behaviorWidget->tabSettingsWidget();
-        tabSettingsWidget->setCodingStyleWarningVisible(true);
+        // OPENMV-DIFF //
+        // tabSettingsWidget->setCodingStyleWarningVisible(true);
+        // OPENMV-DIFF //
         connect(tabSettingsWidget, &TabSettingsWidget::codingStyleLinkClicked,
                 this, [] (TabSettingsWidget::CodingStyleLink link) {
             switch (link) {

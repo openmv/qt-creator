@@ -38,18 +38,30 @@ public:
     bool m_textWrapping = false;
     bool m_visualizeWhitespace = false;
     bool m_visualizeIndent = true;
-    bool m_displayFoldingMarkers = true;
+    // OPENMV-DIFF //
+    // bool m_displayFoldingMarkers = true;
+    // OPENMV-DIFF //
+    bool m_displayFoldingMarkers = false;
+    // OPENMV-DIFF //
     bool m_highlightCurrentLine = false;
     bool m_highlightBlocks = false;
     bool m_animateMatchingParentheses = true;
     bool m_highlightMatchingParentheses = true;
     bool m_markTextChanges = true ;
-    bool m_autoFoldFirstComment = true;
+    // OPENMV-DIFF //
+    // bool m_autoFoldFirstComment = true;
+    // OPENMV-DIFF //
+    bool m_autoFoldFirstComment = false;
+    // OPENMV-DIFF //
     bool m_centerCursorOnScroll = false;
     bool m_openLinksInNextSplit = false;
     bool m_forceOpenLinksInNextSplit = false;
     bool m_displayFileEncoding = false;
-    bool m_displayFileLineEnding = true;
+    // OPENMV-DIFF //
+    // bool m_displayFileLineEnding = true;
+    // OPENMV-DIFF //
+    bool m_displayFileLineEnding = false;
+    // OPENMV-DIFF //
     bool m_scrollBarHighlights = true;
     bool m_animateNavigationWithinFile = false;
     bool m_highlightSelection = true;

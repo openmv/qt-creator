@@ -67,7 +67,9 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
     , d(new BehaviorSettingsWidgetPrivate)
 {
     d->tabPreferencesWidget = new SimpleCodeStylePreferencesWidget(this);
-    d->tabPreferencesWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed); // FIXME: Desirable?
+    // OPENMV-DIFF //
+    // d->tabPreferencesWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed); // FIXME: Desirable?
+    // OPENMV-DIFF //
 
     d->tabKeyBehavior = new QComboBox;
     d->tabKeyBehavior->addItem(Tr::tr("Never"));
@@ -96,6 +98,9 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
     d->autoIndent = new QCheckBox(Tr::tr("Enable automatic &indentation"));
 
     d->preferSingleLineComments = new QCheckBox(Tr::tr("Prefer single line comments"));
+    // OPENMV-DIFF //
+    d->preferSingleLineComments->hide();
+    // OPENMV-DIFF //
     d->commentPosition = new QComboBox;
     const QString automaticText = Tr::tr("Automatic");
     d->commentPosition->addItem(automaticText);
@@ -143,11 +148,17 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
     d->skipTrailingWhitespace->setToolTip(Tr::tr("For the file patterns listed, do not trim trailing whitespace."));
     d->skipTrailingWhitespace->setEnabled(false);
     d->skipTrailingWhitespace->setChecked(false);
+    // OPENMV-DIFF //
+    d->skipTrailingWhitespace->hide();
+    // OPENMV-DIFF //
 
     d->ignoreFileTypes = new QLineEdit;
     d->ignoreFileTypes->setEnabled(false);
     d->ignoreFileTypes->setAcceptDrops(false);
     d->ignoreFileTypes->setToolTip(Tr::tr("List of wildcard-aware file patterns, separated by commas or semicolons."));
+    // OPENMV-DIFF //
+    d->ignoreFileTypes->hide();
+    // OPENMV-DIFF //
 
     d->addFinalNewLine = new QCheckBox(Tr::tr("&Ensure newline at end of file"));
     d->addFinalNewLine->setToolTip(Tr::tr("Always writes a newline character at the end of the file."));
@@ -214,7 +225,9 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
         d->autoIndent,
         Tr::tr("Backspace indentation:"),
             indent(d->smartBackspaceBehavior),
-        Tr::tr("Tab key performs auto-indent:"),
+        // OPENMV-DIFF //
+        // Tr::tr("Tab key performs auto-indent:"),
+        // OPENMV-DIFF //
             indent(d->tabKeyBehavior),
         d->preferSingleLineComments,
         commentPositionLabel,
@@ -249,8 +262,12 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
     }.attachTo(d->groupBoxMouse);
 
     Row {
-        Column { d->tabPreferencesWidget, d->groupBoxTyping, st },
-        Column { d->groupBoxStorageSettings, d->groupBoxEncodings, d->groupBoxMouse, st },
+        // OPENMV-DIFF //
+        // Column { d->tabPreferencesWidget, d->groupBoxTyping, st },
+        // Column { d->groupBoxStorageSettings, d->groupBoxEncodings, d->groupBoxMouse, st }
+        // OPENMV-DIFF //
+        Column { d->tabPreferencesWidget, d->groupBoxTyping, d->groupBoxStorageSettings, st },
+        // OPENMV-DIFF //
         noMargin,
     }.attachTo(this);
 
@@ -296,6 +313,13 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
             this, &BehaviorSettingsWidget::slotBehaviorSettingsChanged);
     connect(d->smartSelectionChanging, &QAbstractButton::clicked,
             this, &BehaviorSettingsWidget::slotBehaviorSettingsChanged);
+    // OPENMV-DIFF //
+    d->tabKeyBehavior->hide();
+    d->groupBoxMouse->hide();
+    d->groupBoxMouse->setParent(this);
+    d->groupBoxEncodings->hide();
+    d->groupBoxEncodings->setParent(this);
+    // OPENMV-DIFF //
 
     d->mouseHiding->setVisible(!Utils::HostOsInfo::isMacHost());
 }

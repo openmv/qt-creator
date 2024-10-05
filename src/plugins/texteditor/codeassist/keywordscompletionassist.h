@@ -15,23 +15,66 @@ namespace TextEditor {
 
 class AssistInterface;
 
+// OPENMV-DIFF //
+typedef enum KeywordsScope {
+    KEYWORDS_SCOPE_ALL,
+    KEYWORDS_SCOPE_PUBLIC,
+    KEYWORDS_SCOPE_PROTECTED,
+    KEYWORDS_SCOPE_PRIVATE,
+} KeywordsScope_t;
+// OPENMV-DIFF //
+
 class TEXTEDITOR_EXPORT Keywords
 {
 public:
     Keywords() = default;
-    Keywords(const QStringList &variables, const QStringList &functions = QStringList(),
-             const QMap<QString, QStringList> &functionArgs = QMap<QString, QStringList>());
+    // OPENMV-DIFF //
+    // Keywords(const QStringList &variables, const QStringList &functions = QStringList(),
+    //          const QMap<QString, QStringList> &functionArgs = QMap<QString, QStringList>());
+    // OPENMV-DIFF //
+    Keywords(const QStringList &variables,
+             const QStringList &classes = QStringList(),
+             const QMap<QString, QStringList> &classArgs = QMap<QString, QStringList>(),
+             const QStringList &functions = QStringList(),
+             const QMap<QString, QStringList> &functionArgs = QMap<QString, QStringList>(),
+             const QStringList &methods = QStringList(),
+             const QMap<QString, QStringList> &methodArgs = QMap<QString, QStringList>());
+    // OPENMV-DIFF //
     bool isVariable(const QString &word) const;
     bool isFunction(const QString &word) const;
+    // OPENMV-DIFF //
+    bool isClass(const QString &word) const;
+    bool isMethod(const QString &word) const;
+    // OPENMV-DIFF //
 
-    QStringList variables() const;
-    QStringList functions() const;
+    // OPENMV-DIFF //
+    // QStringList variables() const;
+    // QStringList functions() const;
+    // OPENMV-DIFF //
+    QStringList variables(KeywordsScope_t scope = KEYWORDS_SCOPE_ALL) const;
+    QStringList functions(KeywordsScope_t scope = KEYWORDS_SCOPE_ALL) const;
+    // OPENMV-DIFF //
     QStringList argsForFunction(const QString &function) const;
+    // OPENMV-DIFF //
+    QStringList classes(KeywordsScope_t scope = KEYWORDS_SCOPE_ALL) const;
+    QStringList argsForClass(const QString &className) const;
+    QStringList methods(KeywordsScope_t scope = KEYWORDS_SCOPE_ALL) const;
+    QStringList argsForMethod(const QString &methodName) const;
+    // OPENMV-DIFF //
 
 private:
     QStringList m_variables;
+    // OPENMV-DIFF //
+    QStringList m_classes;
+    QMap<QString, QStringList> m_classArgs;
+    QStringList m_methods;
+    QMap<QString, QStringList> m_methodArgs;
+    // OPENMV-DIFF //
     QStringList m_functions;
     QMap<QString, QStringList> m_functionArgs;
+    // OPENMV-DIFF //
+    QRegularExpression publicRegex, protectedRegex, privateRegex;
+    // OPENMV-DIFF //
 };
 
 class TEXTEDITOR_EXPORT KeywordsAssistProposalItem : public AssistProposalItem
@@ -101,6 +144,16 @@ private:
     TextEditor::SnippetAssistCollector m_snippetCollector;
     const QIcon m_variableIcon;
     const QIcon m_functionIcon;
+    // OPENMV-DIFF //
+    const QIcon m_variableProtectedIcon;
+    const QIcon m_variablePrivateIcon;
+    const QIcon m_functionProtectedIcon;
+    const QIcon m_functionPrivateIcon;
+    const QIcon m_classIcon;
+    const QIcon m_methodPublicIcon;
+    const QIcon m_methodProtectedIcon;
+    const QIcon m_methodPrivateIcon;
+    // OPENMV-DIFF //
     Keywords m_keywords;
     DynamicCompletionFunction m_dynamicCompletionFunction;
 };
