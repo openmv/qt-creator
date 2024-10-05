@@ -406,6 +406,9 @@ private:
     friend class DefinitionData;
     friend class DefinitionRef;
     KSYNTAXHIGHLIGHTING_NO_EXPORT explicit Definition(std::shared_ptr<DefinitionData> &&dd);
+// OPENMV-DIFF //
+public:
+// OPENMV-DIFF //
     std::shared_ptr<DefinitionData> d;
 };
 

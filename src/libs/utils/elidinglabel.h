@@ -7,6 +7,10 @@
 
 #include <QLabel>
 
+// OPENMV-DIFF //
+#include <QToolButton>
+// OPENMV-DIFF //
+
 namespace Utils {
 
 class  QTCREATOR_UTILS_EXPORT ElidingLabel : public QLabel
@@ -38,5 +42,24 @@ private:
     QString m_additionalToolTip;
     QString m_additionalToolTipSeparator{"\n\n"};
 };
+
+// OPENMV-DIFF //
+class QTCREATOR_UTILS_EXPORT ElidingToolButton : public QToolButton
+{
+    Q_OBJECT
+    Q_PROPERTY(Qt::TextElideMode elideMode READ elideMode WRITE setElideMode DESIGNABLE true)
+
+public:
+    explicit ElidingToolButton(QWidget *parent = nullptr) : QToolButton(parent), m_elideMode(Qt::ElideRight) { }
+    Qt::TextElideMode elideMode() const { return m_elideMode; }
+    void setElideMode(const Qt::TextElideMode &elideMode) { m_elideMode = elideMode; update(); }
+
+protected:
+    void paintEvent(QPaintEvent *event);
+
+private:
+    Qt::TextElideMode m_elideMode;
+};
+// OPENMV-DIFF //
 
 } // namespace Utils

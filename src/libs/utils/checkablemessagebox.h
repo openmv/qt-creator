@@ -39,7 +39,12 @@ public:
         QMessageBox::StandardButton defaultButton = QMessageBox::No,
         QMessageBox::StandardButton acceptButton = QMessageBox::Yes,
         QMap<QMessageBox::StandardButton, QString> buttonTextOverrides = {},
-        const QString &msg = {});
+        // OPENMV-DIFF //
+        // const QString &msg = {});
+        // OPENMV-DIFF //
+        const QString &msg = {},
+        QMessageBox::StandardButton acceptButton2 = QMessageBox::NoButton);
+        // OPENMV-DIFF //
 
     static void question_async(
         QWidget *parent,

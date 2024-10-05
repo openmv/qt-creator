@@ -650,6 +650,9 @@ private:
 
 static ProcessImpl defaultProcessImplHelper()
 {
+    // OPENMV-DIFF //
+    return ProcessImpl::QProcess;
+    // OPENMV-DIFF //
     const QString value = qtcEnvironmentVariable("QTC_USE_QPROCESS", "TRUE").toUpper();
     if (value != "FALSE" && value != "0")
         return ProcessImpl::QProcess;
@@ -1900,7 +1903,11 @@ void Process::setWriteData(const QByteArray &writeData)
     d->m_setup.m_writeData = writeData;
 }
 
-void Process::runBlocking(seconds timeout, EventLoopMode eventLoopMode)
+// OPENMV-DIFF //
+// void QtcProcess::runBlocking(std::chrono::seconds timeout, EventLoopMode eventLoopMode)
+// OPENMV-DIFF //
+void Process::runBlocking(std::chrono::seconds timeout, EventLoopMode eventLoopMode, QEventLoop::ProcessEventsFlag flag)
+// OPENMV-DIFF //
 {
     QDateTime startTime;
     static const int blockingThresholdMs = qtcEnvironmentVariableIntValue("QTC_PROCESS_THRESHOLD");
@@ -1926,8 +1933,13 @@ void Process::runBlocking(seconds timeout, EventLoopMode eventLoopMode)
 
     if (eventLoopMode == EventLoopMode::On) {
 #ifdef QT_GUI_LIB
-        if (isGuiEnabled())
-            QGuiApplication::setOverrideCursor(Qt::WaitCursor);
+        // OPENMV-DIFF //
+        // if (isGuiEnabled())
+        //     QGuiApplication::setOverrideCursor(Qt::WaitCursor);
+        // OPENMV-DIFF //
+        if (isGuiEnabled() && (flag == QEventLoop::ExcludeUserInputEvents))
+            QApplication::setOverrideCursor(Qt::WaitCursor);
+        // OPENMV-DIFF //
 #endif
         QEventLoop eventLoop(this);
 
@@ -1949,10 +1961,19 @@ void Process::runBlocking(seconds timeout, EventLoopMode eventLoopMode)
 
         connect(this, &Process::done, &eventLoop, [&eventLoop] { eventLoop.quit(); });
 
-        eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
+        // OPENMV-DIFF //
+        // eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
+        // OPENMV-DIFF //
+        eventLoop.exec(flag);
+        // OPENMV-DIFF //
 #ifdef QT_GUI_LIB
-        if (isGuiEnabled())
-            QGuiApplication::restoreOverrideCursor();
+        // OPENMV-DIFF //
+        // if (isGuiEnabled())
+        //     QGuiApplication::restoreOverrideCursor();
+        // OPENMV-DIFF //
+        if (isGuiEnabled() && (flag == QEventLoop::ExcludeUserInputEvents))
+            QApplication::restoreOverrideCursor();
+        // OPENMV-DIFF //
 #endif
     } else {
         handleStart();
@@ -2006,6 +2027,9 @@ void Process::setTextChannelMode(Channel channel, TextChannelMode mode)
     };
     const TextChannelCallback callback = (channel == Channel::Output) ? outputCb : errorCb;
     ChannelBuffer *buffer = channel == Channel::Output ? &d->m_stdOut : &d->m_stdErr;
+    // OPENMV-DIFF //
+    if (buffer->m_textChannelMode == mode) return;
+    // OPENMV-DIFF //
     QTC_ASSERT(buffer->m_textChannelMode == TextChannelMode::Off, qWarning()
                << "Process::setTextChannelMode(): Changing text channel mode for"
                << (channel == Channel::Output ? "Output": "Error")

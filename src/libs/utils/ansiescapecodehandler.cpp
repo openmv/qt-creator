@@ -4,6 +4,9 @@
 #include "ansiescapecodehandler.h"
 
 #include "qtcassert.h"
+// OPENMV-DIFF //
+#include "theme/theme.h"
+// OPENMV-DIFF //
 
 namespace Utils {
 
@@ -35,10 +38,27 @@ static QColor ansiColor(uint code)
 {
     QTC_ASSERT(code < 8, return QColor());
 
-    const int red   = code & 1 ? 170 : 0;
-    const int green = code & 2 ? 170 : 0;
-    const int blue  = code & 4 ? 170 : 0;
-    return QColor(red, green, blue);
+    // OPENMV-DIFF //
+    // const int red   = code & 1 ? 170 : 0;
+    // const int green = code & 2 ? 170 : 0;
+    // const int blue  = code & 4 ? 170 : 0;
+    // return QColor(red, green, blue);
+    // OPENMV-DIFF //
+    if (Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface))
+    {
+        const int red   = code & 1 ? 255 : 64;
+        const int green = code & 2 ? 255 : 64;
+        const int blue  = code & 4 ? 255 : 64;
+        return QColor(red, green, blue);
+    }
+    else
+    {
+        const int red   = code & 1 ? 170 : 0;
+        const int green = code & 2 ? 170 : 0;
+        const int blue  = code & 4 ? 170 : 0;
+        return QColor(red, green, blue);
+    }
+    // OPENMV-DIFF //
 }
 
 QList<FormattedText> AnsiEscapeCodeHandler::parseText(const FormattedText &input)
@@ -160,6 +180,25 @@ QList<FormattedText> AnsiEscapeCodeHandler::parseText(const FormattedText &input
             if (strippedText.isEmpty())
                 break;
 
+            // OPENMV-DIFF //
+            if (strippedText.startsWith(QLatin1Char('D'))) {
+                m_pendingText.clear();
+                outputData << FormattedText(QString(QLatin1Char('\b')).repeated(strNumber.toInt()), charFormat);
+                strippedText.remove(0, 1);
+                break;
+            }
+
+            if (strippedText.startsWith(QLatin1Char('O'))) {
+                m_pendingText.clear();
+                m_escapeCodes.append(numbers);
+                outputData << FormattedText(QString(), charFormat);
+                strippedText.remove(0, 1);
+                if(strippedText.startsWith("\r\n")) strippedText.remove(0, 2);
+                if(strippedText.startsWith("\r")) strippedText.remove(0, 1);
+                if(strippedText.startsWith("\n")) strippedText.remove(0, 1);
+                break;
+            }
+            // OPENMV-DIFF //
             // remove terminating char
             if (!strippedText.startsWith(colorTerminator)) {
                 m_pendingText.clear();
