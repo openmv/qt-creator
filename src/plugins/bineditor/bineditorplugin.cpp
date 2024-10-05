@@ -333,6 +333,9 @@ public:
         setWidget(widget);
         m_file = new BinEditorDocument(widget);
         m_addressEdit = new QLineEdit;
+        // OPENMV-DIFF //
+        m_addressEdit->setToolTip(Tr::tr("Byte Address"));
+        // OPENMV-DIFF //
         auto addressValidator = new QRegularExpressionValidator(QRegularExpression("[0-9a-fA-F]{1,16}"), m_addressEdit);
         m_addressEdit->setValidator(addressValidator);
         m_codecChooser = new CodecChooser(CodecChooser::Filter::SingleByte);
@@ -340,11 +343,18 @@ public:
 
         auto l = new QHBoxLayout;
         auto w = new QWidget;
-        l->setContentsMargins(0, 0, 5, 0);
+        // OPENMV-DIFF //
+        // l->setContentsMargins(0, 0, 5, 0);
+        // OPENMV-DIFF //
+        l->setContentsMargins(0, 0, 0, 0);
+        // OPENMV-DIFF //
         l->addStretch(1);
         l->addWidget(m_codecChooser);
         l->addWidget(m_addressEdit);
         w->setLayout(l);
+        // OPENMV-DIFF //
+        m_codecChooser->hide();
+        // OPENMV-DIFF //
 
         m_toolBar = new QToolBar;
         m_toolBar->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);

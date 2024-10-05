@@ -207,22 +207,44 @@ void ImageViewer::ctor()
 
     m_labelImageSize = new QLabel;
     m_labelInfo = new QLabel;
+    // OPENMV-DIFF //
+    m_labelImageSize->setToolTip(Tr::tr("Resolution"));
+    m_labelInfo->setToolTip(Tr::tr("Zoom"));
+    // OPENMV-DIFF //
 
     auto bar = new QToolBar;
     bar->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Minimum);
 
-    bar->addWidget(m_shareButton);
+    // OPENMV-DIFF //
+    // bar->addWidget(m_shareButton);
+    // OPENMV-DIFF //
+    m_shareButton->setParent(bar);
+    // OPENMV-DIFF //
     bar->addSeparator();
     bar->addAction(m_actionOriginalSize);
     bar->addAction(m_actionZoomIn);
     bar->addAction(m_actionZoomOut);
-    bar->addAction(m_actionPlayPause);
-    bar->addAction(m_actionPlayPause);
+    // OPENMV-DIFF //
+    bar->addAction(m_actionFitToScreen);
     bar->addSeparator();
+    // OPENMV-DIFF //
+    bar->addAction(m_actionPlayPause);
+    bar->addAction(m_actionPlayPause);
+    // OPENMV-DIFF //
+    // bar->addSeparator();
+    // OPENMV-DIFF //
     bar->addAction(m_actionBackground);
     bar->addAction(m_actionOutline);
-    bar->addAction(m_actionFitToScreen);
+    // OPENMV-DIFF //
+    // bar->addAction(m_actionFitToScreen);
+    // OPENMV-DIFF //
     bar->addAction(setAsDefault);
+    // OPENMV-DIFF //
+    m_shareButton->setVisible(false);
+    m_actionBackground->setVisible(false);
+    m_actionOutline->setVisible(false);
+    setAsDefault->setVisible(false);
+    // OPENMV-DIFF //
 
     auto horizontalLayout = new QHBoxLayout(m_toolbar);
     horizontalLayout->setSpacing(0);
@@ -230,7 +252,9 @@ void ImageViewer::ctor()
     horizontalLayout->addWidget(bar);
     horizontalLayout->addItem(
         new QSpacerItem(315, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
-    horizontalLayout->addWidget(new StyledSeparator);
+    // OPENMV-DIFF //
+    // horizontalLayout->addWidget(new StyledSeparator);
+    // OPENMV-DIFF //
     horizontalLayout->addWidget(m_labelImageSize);
     horizontalLayout->addWidget(new StyledSeparator);
     horizontalLayout->addWidget(m_labelInfo);
@@ -331,7 +355,11 @@ void ImageViewer::imageSizeUpdated(const QSize &size)
 
 void ImageViewer::scaleFactorUpdate(qreal factor)
 {
-    const QString info = QString::number(factor * 100, 'f', 2) + QLatin1Char('%');
+    // OPENMV-DIFF //
+    // const QString info = QString::number(factor * 100, 'f', 2) + QLatin1Char('%');
+    // OPENMV-DIFF //
+    QString info = QString::number(factor * 100, 'f', 2) + QLatin1Char('%') + QLatin1Char(' ');
+    // OPENMV-DIFF //
     m_labelInfo->setText(info);
 }
 

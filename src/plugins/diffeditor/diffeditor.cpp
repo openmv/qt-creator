@@ -185,12 +185,21 @@ DiffEditor::DiffEditor()
     m_entriesComboBox->setSizePolicy(policy);
     connect(m_entriesComboBox, &QComboBox::currentIndexChanged,
             this, &DiffEditor::currentIndexChanged);
+    // OPENMV-DIFF //
+    m_entriesComboBox->hide();
+    QLabel *spacer = new QLabel();
+    spacer->setSizePolicy(QSizePolicy::Expanding, spacer->sizePolicy().verticalPolicy());
+    m_toolBar->addWidget(spacer);
+    // OPENMV-DIFF //
     m_toolBar->addWidget(m_entriesComboBox);
 
     QLabel *contextLabel = new QLabel(m_toolBar);
     contextLabel->setText(Tr::tr("Context lines:"));
     contextLabel->setContentsMargins(6, 0, 6, 0);
     m_contextLabelAction = m_toolBar->addWidget(contextLabel);
+    // OPENMV-DIFF //
+    m_toolBar->addWidget(new QLabel());
+    // OPENMV-DIFF //
 
     m_contextSpinBox = new QSpinBox(m_toolBar);
     m_contextSpinBox->setRange(1, 100);
