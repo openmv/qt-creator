@@ -196,7 +196,7 @@ OutputWindow::OutputWindow(Context context, const Key &settingsKey, QWidget *par
     agg->add(this);
     agg->add(new BaseTextFind(this));
     // OPENMV-DIFF //
-    //TODO//m_parser = new OpenMVPluginEscapeCodeParser(this);
+    m_parser = new OpenMVPluginEscapeCodeParser(this);
     // OPENMV-DIFF //
 }
 
@@ -714,7 +714,7 @@ void OutputWindow::appendText(const QString &textIn)
     {
         if(parsedText.text.isEmpty())
         {
-            //TODO//m_parser->parseEscapeCodes(m_handler.getEscapeCodes());
+            m_parser->parseEscapeCodes(m_handler.getEscapeCodes());
         }
 
         QTextCharFormat format = parsedText.format;
@@ -724,7 +724,7 @@ void OutputWindow::appendText(const QString &textIn)
         if(index != -1)
         {
             m_handler.endFormatScope();
-            //TODO//m_parser->resetParser();
+            m_parser->resetParser();
             appendText(text.left(index));
             grayOutOldContent();
             format = QTextCharFormat();
@@ -891,7 +891,7 @@ void OutputWindow::appendText(const QString &textIn)
             string.remove(QRegularExpression(QStringLiteral("^\\s+")));
         }
 
-        //TODO//text = m_parser->parseText(string);
+        text = m_parser->parseText(string);
 
         if(text.isEmpty())
         {

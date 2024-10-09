@@ -28,6 +28,9 @@ public:
     using QSettings::childGroups;
     using QSettings::status;
     using QSettings::clear;
+    // OPENMV-DIFF //
+    using QSettings::format;
+    // OPENMV-DIFF //
 
     void beginGroup(const Key &prefix);
 

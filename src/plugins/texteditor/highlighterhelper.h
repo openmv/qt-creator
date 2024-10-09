@@ -7,6 +7,10 @@
 
 #include <KSyntaxHighlighting/Definition>
 
+// OPENMV-DIFF //
+#include "texteditor_global.h"
+// OPENMV-DIFF //
+
 namespace TextEditor {
 class TextDocument;
 
@@ -15,7 +19,11 @@ namespace HighlighterHelper {
 using Definition = KSyntaxHighlighting::Definition;
 using Definitions = QList<Definition>;
 
-Definition definitionForName(const QString &name);
+// OPENMV-DIFF //
+// Definition definitionForName(const QString &name);
+// OPENMV-DIFF //
+TEXTEDITOR_EXPORT Definition definitionForName(const QString &name);
+// OPENMV-DIFF //
 
 Definitions definitionsForDocument(const TextDocument *document);
 Definitions definitionsForMimeType(const QString &mimeType);

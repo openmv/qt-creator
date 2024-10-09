@@ -20,6 +20,9 @@ add_subdirectory(imageviewer)
 # OPENMV-DIFF #
 
 # Level 2: (only depends on Level 1 and below)
+# OPENMV-DIFF #
+add_subdirectory(openmv)
+# OPENMV-DIFF #
 add_subdirectory(bineditor)
 # OPENMV-DIFF #
 # add_subdirectory(cpaster)

@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OpenMVPluginHistogram</class>
+ <widget class="QWidget" name="OpenMVPluginHistogram">
+  <layout class="QVBoxLayout" name="layout" stretch="1,0,1,0,1,0">
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <property name="sizeConstraint">
+    <enum>QLayout::SetMinimumSize</enum>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>6</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="QCustomPlot" name="C0Plot" native="true"/>
+   </item>
+   <item>
+    <widget class="QWidget" name="C0Stats" native="true">
+     <layout class="QGridLayout" name="C0StatsLayout">
+      <property name="leftMargin">
+       <number>6</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>6</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item row="1" column="1">
+       <widget class="QLabel" name="C0MinValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="C0MaxLabel">
+        <property name="text">
+         <string>Max</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="C0MedianLabel">
+        <property name="text">
+         <string>Median</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="C0MaxValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="C0MedianValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="C0ModeLabel">
+        <property name="text">
+         <string>Mode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLabel" name="C0ModeValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QLabel" name="C0LQValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="C0LQLabel">
+        <property name="text">
+         <string>LQ</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QLabel" name="C0UQLabel">
+        <property name="text">
+         <string>UQ</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLabel" name="C0StDevLabel">
+        <property name="text">
+         <string>StDev</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="C0MinLabel">
+        <property name="text">
+         <string>Min</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="C0MeanValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="C0MeanLabel">
+        <property name="text">
+         <string>Mean</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QLabel" name="C0StDevValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7">
+       <widget class="QLabel" name="C0UQValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCustomPlot" name="C1Plot" native="true"/>
+   </item>
+   <item>
+    <widget class="QWidget" name="C1Stats" native="true">
+     <layout class="QGridLayout" name="C1StatsLayout">
+      <property name="leftMargin">
+       <number>6</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>6</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item row="1" column="1">
+       <widget class="QLabel" name="C1MinValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="C1MaxLabel">
+        <property name="text">
+         <string>Max</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="C1MedianLabel">
+        <property name="text">
+         <string>Median</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="C1MaxValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="C1MedianValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="C1ModeLabel">
+        <property name="text">
+         <string>Mode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLabel" name="C1ModeValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QLabel" name="C1LQValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="C1LQLabel">
+        <property name="text">
+         <string>LQ</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QLabel" name="C1UQLabel">
+        <property name="text">
+         <string>UQ</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLabel" name="C1StDevLabel">
+        <property name="text">
+         <string>StDev</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="C1MinLabel">
+        <property name="text">
+         <string>Min</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="C1MeanValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="C1MeanLabel">
+        <property name="text">
+         <string>Mean</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QLabel" name="C1StDevValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7">
+       <widget class="QLabel" name="C1UQValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCustomPlot" name="C2Plot" native="true"/>
+   </item>
+   <item>
+    <widget class="QWidget" name="C2Stats" native="true">
+     <layout class="QGridLayout" name="C2StatsLayout">
+      <property name="leftMargin">
+       <number>6</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>6</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item row="1" column="1">
+       <widget class="QLabel" name="C2MinValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="C2MaxLabel">
+        <property name="text">
+         <string>Max</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="C2MedianLabel">
+        <property name="text">
+         <string>Median</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="C2MaxValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="C2MedianValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="C2ModeLabel">
+        <property name="text">
+         <string>Mode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLabel" name="C2ModeValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QLabel" name="C2LQValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="C2LQLabel">
+        <property name="text">
+         <string>LQ</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QLabel" name="C2UQLabel">
+        <property name="text">
+         <string>UQ</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLabel" name="C2StDevLabel">
+        <property name="text">
+         <string>StDev</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="C2MinLabel">
+        <property name="text">
+         <string>Min</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="C2MeanValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="C2MeanLabel">
+        <property name="text">
+         <string>Mean</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QLabel" name="C2StDevValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7">
+       <widget class="QLabel" name="C2UQValue">
+        <property name="text">
+         <string>000</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>openmv/qcustomplot/qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

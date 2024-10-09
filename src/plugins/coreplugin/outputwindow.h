@@ -8,7 +8,7 @@
 
 // OPENMV-DIFF //
 #include <utils/ansiescapecodehandler.h>
-//TODO//#include "openmvpluginescapecodeparser.h"
+#include "openmvpluginescapecodeparser.h"
 // OPENMV-DIFF //
 #include <utils/storekey.h>
 #include <utils/outputformat.h>
@@ -75,7 +75,7 @@ public:
     void appendText(const QString &text);
     void save();
     void setTabSettings(int tabWidth);
-    //TODO//OpenMVPluginEscapeCodeParser *getParser() { return m_parser; }
+    OpenMVPluginEscapeCodeParser *getParser() { return m_parser; }
     // OPENMV-DIFF //
 
     void setOutputFileNameHint(const QString &fileName);
@@ -119,7 +119,7 @@ private:
     QString doNewlineEnforcement(const QString &out);
 
     Utils::AnsiEscapeCodeHandler m_handler;
-    //TODO//OpenMVPluginEscapeCodeParser *m_parser;
+    OpenMVPluginEscapeCodeParser *m_parser;
     // OPENMV-DIFF //
 
     Internal::OutputWindowPrivate *d = nullptr;
