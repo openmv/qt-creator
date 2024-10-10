@@ -1093,7 +1093,11 @@ void ManhattanStyle::drawControl(
                     painter->drawLine(borderRect.topRight(), borderRect.bottomRight());
                 }
             }
-            if (creatorTheme()->flag(Theme::DrawToolBarBorders)) {
+            // OPENMV-DIFF //
+            // if (creatorTheme()->flag(Theme::DrawToolBarBorders)) {
+            // OPENMV-DIFF //
+            if (creatorTheme()->flag(Theme::DrawToolBarBorders) && (!widget->property("NoDrawToolBarBorders").toBool())) {
+            // OPENMV-DIFF //
                 painter->setPen(StyleHelper::toolBarBorderColor());
                 if (widget && widget->property(StyleHelper::C_TOP_BORDER).toBool())
                     painter->drawLine(borderRect.topLeft(), borderRect.topRight());
