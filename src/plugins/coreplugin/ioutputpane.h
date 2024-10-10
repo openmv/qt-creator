@@ -18,7 +18,11 @@ class CORE_EXPORT IOutputPane : public QObject
     Q_OBJECT
 
 public:
-    IOutputPane(QObject *parent = nullptr);
+    // OPENMV-DIFF //
+    // IOutputPane(QObject *parent = nullptr);
+    // OPENMV-DIFF //
+    IOutputPane(bool hidden = false, QObject *parent = nullptr);
+    // OPENMV-DIFF //
     ~IOutputPane() override;
 
     virtual QWidget *outputWidget(QWidget *parent) = 0;

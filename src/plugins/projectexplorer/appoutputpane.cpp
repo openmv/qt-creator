@@ -137,6 +137,9 @@ AppOutputPane::RunControlTab::RunControlTab(RunControl *runControl, Core::Output
 }
 
 AppOutputPane::AppOutputPane() :
+    // OPENMV-DIFF //
+    IOutputPane(true),
+    // OPENMV-DIFF //
     m_tabWidget(new TabWidget),
     m_stopAction(new QAction(Tr::tr("Stop"), this)),
     m_closeCurrentTabAction(new QAction(Tr::tr("Close Tab"), this)),
@@ -885,6 +888,9 @@ private:
 };
 
 AppOutputSettingsPage::AppOutputSettingsPage()
+// OPENMV-DIFF //
+: Core::IOptionsPage(false)
+// OPENMV-DIFF //
 {
     setId(OPTIONS_PAGE_ID);
     setDisplayName(Tr::tr("Application Output"));

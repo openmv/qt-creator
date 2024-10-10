@@ -53,6 +53,9 @@ private:
 };
 
 SshSettingsPage::SshSettingsPage()
+// OPENMV-DIFF //
+: Core::IOptionsPage(false)
+// OPENMV-DIFF //
 {
     setId(Constants::SSH_SETTINGS_PAGE_ID);
     setDisplayName(Tr::tr("SSH"));

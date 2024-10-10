@@ -73,6 +73,9 @@ class CodeGenSettingsPage final : public Core::IOptionsPage
 {
 public:
     CodeGenSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
     {
         setId(Constants::CODEGEN_SETTINGS_PAGE_ID);
         setDisplayName(Tr::tr("Qt Class Generation"));

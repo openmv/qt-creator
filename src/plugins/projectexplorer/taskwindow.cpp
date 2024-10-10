@@ -166,7 +166,11 @@ static QToolButton *createFilterButton(const QIcon &icon, const QString &toolTip
     return button;
 }
 
-TaskWindow::TaskWindow() : d(std::make_unique<TaskWindowPrivate>())
+// OPENMV-DIFF //
+// TaskWindow::TaskWindow() : d(std::make_unique<TaskWindowPrivate>())
+// OPENMV-DIFF //
+TaskWindow::TaskWindow() : IOutputPane(true), d(std::make_unique<TaskWindowPrivate>())
+// OPENMV-DIFF //
 {
     setId("Issues");
     setDisplayName(Tr::tr("Issues"));

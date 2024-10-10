@@ -165,6 +165,9 @@ void CommentsSettingsWidget::initFromSettings(const CommentsSettings::Data &sett
 namespace Internal {
 
 CommentsSettingsPage::CommentsSettingsPage()
+// OPENMV-DIFF //
+: Core::IOptionsPage(false)
+// OPENMV-DIFF //
 {
     setId(Constants::TEXT_EDITOR_COMMENTS_SETTINGS);
     setDisplayName(Tr::tr("Documentation Comments"));

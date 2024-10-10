@@ -140,7 +140,9 @@ QByteArray CurrentProjectFind::settingsKey() const
 
 void setupCurrentProjectFind()
 {
-    static CurrentProjectFind theCurrentProjectFind;
+    // OPENMV-DIFF //
+    // static CurrentProjectFind theCurrentProjectFind;
+    // OPENMV-DIFF //
 }
 
 } // ProjectExplorer::Internal

@@ -65,12 +65,20 @@ static bool g_managerConstructed = false; // For debugging reasons.
 
 // OutputPane
 
-IOutputPane::IOutputPane(QObject *parent)
+// OPENMV-DIFF //
+// IOutputPane::IOutputPane(QObject *parent)
+// OPENMV-DIFF //
+IOutputPane::IOutputPane(bool hidden, QObject *parent)
+// OPENMV-DIFF //
     : QObject(parent)
 {
     // We need all pages first. Ignore latecomers and shout.
     QTC_ASSERT(!g_managerConstructed, return);
-    g_outputPanes.append(OutputPaneData(this));
+    // OPENMV-DIFF //
+    // g_outputPanes.append(OutputPaneData(this));
+    // OPENMV-DIFF //
+    if (!hidden) g_outputPanes.append(OutputPaneData(this));
+    // OPENMV-DIFF //
 
     m_zoomInButton = Command::createToolButtonWithShortcutToolTip(Constants::ZOOM_IN);
     m_zoomInButton->setIcon(Utils::Icons::PLUS_TOOLBAR.icon());
@@ -84,9 +92,17 @@ IOutputPane::IOutputPane(QObject *parent)
 IOutputPane::~IOutputPane()
 {
     const int i = Utils::indexOf(g_outputPanes, Utils::equal(&OutputPaneData::pane, this));
-    QTC_ASSERT(i >= 0, return);
-    delete g_outputPanes.at(i).button;
-    g_outputPanes.removeAt(i);
+    // OPENMV-DIFF //
+    // QTC_ASSERT(i >= 0, return);
+    //
+    // g_outputPanes.removeAt(i);
+    // OPENMV-DIFF //
+    if (i >= 0)
+    {
+        delete g_outputPanes.at(i).button;
+        g_outputPanes.removeAt(i);
+    }
+    // OPENMV-DIFF //
 
     delete m_zoomInButton;
     delete m_zoomOutButton;

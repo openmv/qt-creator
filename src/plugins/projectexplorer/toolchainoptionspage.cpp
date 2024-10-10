@@ -569,6 +569,9 @@ ToolChainTreeItem *ToolChainOptionsWidget::currentTreeItem()
 // --------------------------------------------------------------------------
 
 ToolChainOptionsPage::ToolChainOptionsPage()
+// OPENMV-DIFF //
+: Core::IOptionsPage(false)
+// OPENMV-DIFF //
 {
     setId(Constants::TOOLCHAIN_SETTINGS_PAGE_ID);
     setDisplayName(Tr::tr("Compilers"));

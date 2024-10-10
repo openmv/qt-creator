@@ -90,7 +90,11 @@ public:
     static QString sessionTitle(const FilePath &filePath);
 
     QString m_sessionName = "default";
-    bool m_isAutoRestoreLastSession = false;
+    // OPENMV-DIFF //
+    // bool m_isAutoRestoreLastSession = false;
+    // OPENMV-DIFF //
+    bool m_isAutoRestoreLastSession = true;
+    // OPENMV-DIFF //
     bool m_virginSession = true;
     bool m_loadingSession = false;
 
@@ -144,7 +148,9 @@ SessionManager::SessionManager()
     ActionContainer *msession = ActionManager::createMenu(M_SESSION);
     msession->menu()->setTitle(PE::Tr::tr("S&essions"));
     msession->setOnAllDisabledBehavior(ActionContainer::Show);
-    mfile->addMenu(msession, Core::Constants::G_FILE_SESSION);
+    // OPENMV-DIFF //
+    // mfile->addMenu(msession, Core::Constants::G_FILE_SESSION);
+    // OPENMV-DIFF //
     d->m_sessionMenu = msession->menu();
     connect(mfile->menu(), &QMenu::aboutToShow, this, [] { d->updateSessionMenu(); });
 

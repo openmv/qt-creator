@@ -1062,6 +1062,9 @@ class QtSettingsPage final : public IOptionsPage
 {
 public:
     QtSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
     {
         setId(Constants::QTVERSION_SETTINGS_PAGE_ID);
         setDisplayName(Tr::tr("Qt Versions"));

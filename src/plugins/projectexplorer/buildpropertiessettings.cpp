@@ -87,6 +87,9 @@ class BuildPropertiesSettingsPage final : public Core::IOptionsPage
 {
 public:
     BuildPropertiesSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
     {
         setId("AB.ProjectExplorer.BuildPropertiesSettingsPage");
         setDisplayName(Tr::tr("Default Build Properties"));

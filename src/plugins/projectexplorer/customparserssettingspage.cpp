@@ -115,6 +115,9 @@ private:
 };
 
 CustomParsersSettingsPage::CustomParsersSettingsPage()
+// OPENMV-DIFF //
+: Core::IOptionsPage(false)
+// OPENMV-DIFF //
 {
     setId(Constants::CUSTOM_PARSERS_SETTINGS_PAGE_ID);
     setDisplayName(Tr::tr("Custom Output Parsers"));

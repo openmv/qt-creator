@@ -335,7 +335,9 @@ BookmarkManager::BookmarkManager(QObject *parent)
 
     MenuBuilder bookmarkMenu(bookmarkMenuId);
     bookmarkMenu.setTitle(Tr::tr("&Bookmarks"));
-    bookmarkMenu.addToContainer(Core::Constants::M_TOOLS);
+    // OPENMV-DIFF //
+    // bookmarkMenu.addToContainer(Core::Constants::M_TOOLS);
+    // OPENMV-DIFF //
 
     connect(&m_editBookmarkAction, &QAction::triggered, this, [this] {
             editByFileAndLine(m_marginActionFileName, m_marginActionLineNumber);
@@ -348,7 +350,9 @@ BookmarkManager::BookmarkManager(QObject *parent)
     ActionBuilder toggleAction(this, "Bookmarks.Toggle");
     toggleAction.setContext(editorManagerContext);
     toggleAction.setText(Tr::tr("Toggle Bookmark"));
-    toggleAction.setDefaultKeySequence(Tr::tr("Meta+M"), Tr::tr("Ctrl+M"));
+    // OPENMV-DIFF //
+    // toggleAction.setDefaultKeySequence(Tr::tr("Meta+M"), Tr::tr("Ctrl+M"));
+    // OPENMV-DIFF //
     toggleAction.setTouchBarIcon(Icons::MACOS_TOUCHBAR_BOOKMARK.icon());
     toggleAction.addToContainer(bookmarkMenuId);
     toggleAction.bindContextAction(&m_toggleAction);
@@ -362,7 +366,9 @@ BookmarkManager::BookmarkManager(QObject *parent)
     ActionBuilder editAction(this, "Bookmarks.Edit");
     editAction.setContext(editorManagerContext);
     editAction.setText(Tr::tr("Edit Bookmark"));
-    editAction.setDefaultKeySequence(Tr::tr("Meta+Shift+M"), Tr::tr("Ctrl+Shift+M"));
+    // OPENMV-DIFF //
+    // editAction.setDefaultKeySequence(Tr::tr("Meta+Shift+M"), Tr::tr("Ctrl+Shift+M"));
+    // OPENMV-DIFF //
     editAction.addToContainer(bookmarkMenuId);
     editAction.bindContextAction(&m_editAction);
     editAction.addOnTriggered(this, [this] {
@@ -382,7 +388,9 @@ BookmarkManager::BookmarkManager(QObject *parent)
     ActionBuilder prevAction(this, Constants::BOOKMARKS_PREV_ACTION);
     prevAction.setContext(editorManagerContext);
     prevAction.setText(Tr::tr("Previous Bookmark"));
-    prevAction.setDefaultKeySequence(Tr::tr("Meta+,"), Tr::tr("Ctrl+,"));
+    // OPENMV-DIFF //
+    // prevAction.setDefaultKeySequence(Tr::tr("Meta+,"), Tr::tr("Ctrl+,"));
+    // OPENMV-DIFF //
     prevAction.addToContainer(bookmarkMenuId);
     prevAction.setIcon(Icons::PREV_TOOLBAR.icon());
     prevAction.setIconVisibleInMenu(false);
@@ -394,7 +402,9 @@ BookmarkManager::BookmarkManager(QObject *parent)
     nextAction.setText(Tr::tr("Next Bookmark"));
     nextAction.setIcon(Icons::NEXT_TOOLBAR.icon());
     nextAction.setIconVisibleInMenu(false);
-    nextAction.setDefaultKeySequence(Tr::tr("Meta+."), Tr::tr("Ctrl+."));
+    // OPENMV-DIFF //
+    // nextAction.setDefaultKeySequence(Tr::tr("Meta+."), Tr::tr("Ctrl+."));
+    // OPENMV-DIFF //
     nextAction.addToContainer(bookmarkMenuId);
     nextAction.bindContextAction(&m_nextAction);
     nextAction.addOnTriggered(this, [this] { next(); });
@@ -1019,7 +1029,9 @@ public:
         setDisplayName(Tr::tr("Bookmarks"));
         setPriority(300);
         setId("Bookmarks");
-        setActivationSequence(QKeySequence(useMacShortcuts ? Tr::tr("Alt+Meta+M") : Tr::tr("Alt+M")));
+        // OPENMV-DIFF //
+        // setActivationSequence(QKeySequence(useMacShortcuts ? Tr::tr("Alt+Meta+M") : Tr::tr("Alt+M")));
+        // OPENMV-DIFF //
     }
 
 private:

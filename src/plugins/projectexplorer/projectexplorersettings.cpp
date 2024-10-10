@@ -543,6 +543,9 @@ class ProjectExplorerSettingsPage final : public IOptionsPage
 {
 public:
     ProjectExplorerSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
     {
         setId(ProjectExplorer::Constants::BUILD_AND_RUN_SETTINGS_PAGE_ID);
         setDisplayName(Tr::tr("General"));

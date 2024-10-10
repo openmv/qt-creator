@@ -151,6 +151,9 @@ const char kLinkWithQtInstallationSetting[] = "LinkWithQtInstallation";
 
 static void askAboutQtInstallation()
 {
+    // OPENMV-DIFF //
+    return;
+    // OPENMV-DIFF //
     // if the install settings exist, the Qt Creator installation is (probably) already linked to
     // a Qt installation, so don't ask
     if (!LinkWithQtSupport::canLinkWithQt() || LinkWithQtSupport::isLinkedWithQt()
