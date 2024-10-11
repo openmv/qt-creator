@@ -428,8 +428,10 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) :
         m_titleLabel,
         new StyledSeparator,
         clearButton,
-        prevToolButton,
-        nextToolButton,
+        // OPENMV-DIFF //
+        // prevToolButton,
+        // nextToolButton,
+        // OPENMV-DIFF //
         m_opToolBarWidgets,
         minMaxButton,
         closeButton,

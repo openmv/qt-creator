@@ -142,6 +142,9 @@ namespace Internal {
             .bindContextAction(&m_relativePathsAction)
             .setCommandAttribute(Command::CA_UpdateText);
         m_relativePathsButton->setDefaultAction(m_relativePathsAction);
+        // OPENMV-DIFF //
+        m_relativePathsButton->hide();
+        // OPENMV-DIFF //
 
         m_filterButton = new QToolButton(m_widget);
         m_filterButton->setText(Tr::tr("Filter Results"));
