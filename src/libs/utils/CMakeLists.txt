@@ -283,11 +283,13 @@ extend_qtc_library(Utils
   DEPENDS Nanotrace
 )
 
-if (WIN32)
-  add_qtc_executable(qtcreator_ctrlc_stub
-    DEPENDS user32 shell32
-    DEFINES _UNICODE UNICODE _CRT_SECURE_NO_WARNINGS
-    SOURCES
-      process_ctrlc_stub.cpp
-  )
-endif()
+# OPENMV-DIFF #
+# if (WIN32)
+#   add_qtc_executable(qtcreator_ctrlc_stub
+#     DEPENDS user32 shell32
+#     DEFINES _UNICODE UNICODE _CRT_SECURE_NO_WARNINGS
+#     SOURCES
+#       process_ctrlc_stub.cpp
+#   )
+# endif()
+# OPENMV-DIFF #

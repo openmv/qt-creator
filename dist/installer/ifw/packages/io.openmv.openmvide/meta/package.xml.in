@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Package>
+  <DisplayName>OpenMV IDE</DisplayName>
+  <Description>Installs OpenMV IDE.</Description>
+  <Version>{version}</Version>
+  <ReleaseDate>{date}</ReleaseDate>
+  <Name>io.openmv.openmvide</Name>
+</Package>

@@ -1,6 +1,8 @@
 set(resource_directories
   fonts
-  package-manager
+  # OPENMV-DIFF #
+  # package-manager
+  # OPENMV-DIFF #
 )
 
 # create install rule for resource directories

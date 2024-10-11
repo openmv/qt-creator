@@ -15,7 +15,14 @@ from glob import glob
 import common
 
 debug_build = False
-encoding = locale.getdefaultlocale()[1]
+# OPENMV-DIFF #
+# encoding = locale.getdefaultlocale()[1]
+# OPENMV-DIFF #
+try:
+  encoding = locale.getencoding()
+except:
+  encoding = locale.getdefaultlocale()[1]
+# OPENMV-DIFF #
 
 def get_args():
     parser = argparse.ArgumentParser(description='Deploy Qt Creator dependencies for packaging')
@@ -92,6 +99,9 @@ def is_debug(fpath):
 
 def is_ignored_windows_file(use_debug, basepath, filename):
     ignore_patterns = ['.lib', '.pdb', '.exp', '.ilk']
+    # OPENMV-DIFF #
+    ignore_patterns.append(".debug")
+    # OPENMV-DIFF #
     if use_debug:
         ignore_patterns.extend(['libEGL.dll', 'libGLESv2.dll'])
     else:
@@ -498,7 +508,9 @@ def main():
 
     deploy_binary('qtdiag', qtcreator_binary_path, qt_install)
     deploy_binary('qtplugininfo', qtcreator_binary_path, qt_install)
-    deploy_binary('qsb', qtcreator_binary_path, qt_install)
+    # OPENMV-DIFF #
+    # deploy_binary('qsb', qtcreator_binary_path, qt_install)
+    # OPENMV-DIFF #
     deploy_plugins(qtcreator_binary_path, qt_install)
     deploy_imports(qtcreator_binary_path, qt_install)
     deploy_translations(qtcreator_binary_path, qt_install)

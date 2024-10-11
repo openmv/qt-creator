@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Installer>
+    <Name>OpenMV IDE</Name>
+    <Version>{version}</Version>
+    <Title>OpenMV IDE {display_version}</Title>
+    <Publisher>OpenMV, LLC</Publisher>
+    <ProductUrl>https://openmv.io</ProductUrl>
+
+    <MaintenanceToolName>OpenMVIDEUninst</MaintenanceToolName>
+    <TargetDir>@ApplicationsDir@/OpenMV IDE</TargetDir>
+    <StartMenuDir>OpenMV IDE</StartMenuDir>
+    <ControlScript>controlscript.qs</ControlScript>
+</Installer>
