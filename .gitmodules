@@ -1,13 +1,11 @@
-# OPENMV-DIFF #
-# [submodule "qbs"]
-# 	path = src/shared/qbs
-# 	url = ../../qbs/qbs.git
-# 	ignore = dirty
-# [submodule "perfparser"]
-# 	path = src/tools/perfparser
-# 	url = ../perfparser.git
-# 	ignore = dirty
-# OPENMV-DIFF #
+[submodule "qbs"]
+	path = src/shared/qbs
+	url = ../../qbs/qbs.git
+	ignore = dirty
+[submodule "perfparser"]
+	path = src/tools/perfparser
+	url = ../../perfparser.git
+	ignore = dirty
 [submodule "src/libs/qlitehtml"]
 	path = src/libs/qlitehtml
 	url = https://code.qt.io/playground/qlitehtml.git
