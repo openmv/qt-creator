@@ -144,7 +144,7 @@ QStringList imxGetAllDevices(bool spd_host, bool bl_host)
         {
             QRegularExpression regex(QStringLiteral("ID ([0-9a-zA-Z]+):([0-9a-zA-Z]+)"));
 
-            for(const QString s : process.stdOut().split(QRegularExpression(QStringLiteral("\n|\r\n|\r")), Qt::SkipEmptyParts))
+            for(const QString &s : process.stdOut().split(QRegularExpression(QStringLiteral("\n|\r\n|\r")), Qt::SkipEmptyParts))
             {
                 QRegularExpressionMatch match = regex.match(s);
 
