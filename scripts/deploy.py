@@ -271,8 +271,10 @@ def deploy_qt_conf_files(qtc_binary_path):
     if common.is_mac_platform():
         qt_prefix_path = os.path.join(qtc_binary_path, 'Contents')
         qtc_resources_path = os.path.join(qtc_binary_path, 'Contents', 'Resources')
-        add_qt_conf(os.path.join(qtc_resources_path, 'libexec'), qt_prefix_path)
-        add_qt_conf(os.path.join(qtc_resources_path, 'libexec', 'ios'), qt_prefix_path)
+        # OPENMV-DIFF #
+        # add_qt_conf(os.path.join(qtc_resources_path, 'libexec'), qt_prefix_path)
+        # add_qt_conf(os.path.join(qtc_resources_path, 'libexec', 'ios'), qt_prefix_path)
+        # OPENMV-DIFF #
         # The Prefix path for a qt.conf in Contents/Resources/ is handled specially/funny by Qt,
         # relative paths are resolved relative to Contents/, so we must enforces Prefix=.
         add_qt_conf(qtc_resources_path, qtc_resources_path) # QtC itself
