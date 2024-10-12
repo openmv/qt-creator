@@ -4,6 +4,7 @@
 #include <QtConcurrent>
 #include <QtCore>
 #include <QtGui>
+#include <QtCore>
 #include "qzip/qzipreader.h"
 #include "qzip/qzipwriter.h"
 #include <QtNetwork>

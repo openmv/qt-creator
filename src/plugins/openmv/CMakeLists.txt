@@ -1,5 +1,5 @@
 add_qtc_plugin(OpenMV
-  DEPENDS Qt::PrintSupport Qt::SerialPort Qt::ZlibPrivate
+  DEPENDS Qt::PrintSupport Qt::SerialPort
   PLUGIN_DEPENDS Core TextEditor
   SOURCES
     openmvplugin.cpp openmvplugin.h openmvtr.h
@@ -40,3 +40,7 @@ add_qtc_plugin(OpenMV
 )
 
 target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::GuiPrivate)
+
+if (WIN32)
+    target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::ZlibPrivate)
+endif()

@@ -71,14 +71,15 @@ MyQSerialPortInfo::MyQSerialPortInfo(const QSerialPortInfo &info)
 
     if(m_hasVendorIdentifier && m_hasProductIdentifier)
     {
-        Utils::QtcProcess process;
+        Utils::Process process;
+        std::chrono::seconds timeout(10);
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("lsusb")), QStringList()
                                               << QStringLiteral("-v")
                                               << QStringLiteral("-d")
                                               << QString(QStringLiteral("%1:%2")).arg(m_vendorIdentifier, 4, 16, QLatin1Char('0')).arg(m_productIdentifier, 4, 16, QLatin1Char('0'))));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(timeout, Utils::EventLoopMode::On);
 
         if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
         {

@@ -2169,10 +2169,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 Tr::tr("Failed to eject \"%L1\"!").arg(m_portPath));
                         }
     #elif defined(Q_OS_LINUX)
-                        Utils::QtcProcess process;
+                        Utils::Process process;
+                        std::chrono::seconds timeout(10);
                         process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("umount")),
                                            QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath))));
-                        process.runBlocking(Utils::EventLoopMode::On);
+                        process.runBlocking(timeout, Utils::EventLoopMode::On);
 
                         if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
                         {
@@ -2359,10 +2360,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 Tr::tr("Failed to eject \"%L1\"!").arg(m_portPath));
                         }
 #elif defined(Q_OS_LINUX)
-                        Utils::QtcProcess process;
+                        Utils::Process process;
+                        std::chrono::seconds timeout(10);
                         process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("umount")),
                                                               QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath))));
-                        process.runBlocking(Utils::EventLoopMode::On);
+                        process.runBlocking(timeout, Utils::EventLoopMode::On);
 
                         if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
                         {
@@ -3767,10 +3769,11 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                                 Tr::tr("Failed to eject \"%L1\"!").arg(m_portPath));
                         }
 #elif defined(Q_OS_LINUX)
-                        Utils::QtcProcess process;
+                        Utils::Process process;
+                        std::chrono::seconds timeout(10);
                         process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("umount")),
                                                               QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath))));
-                        process.runBlocking(Utils::EventLoopMode::On);
+                        process.runBlocking(timeout, Utils::EventLoopMode::On);
 
                         if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
                         {

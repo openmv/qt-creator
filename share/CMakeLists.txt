@@ -26,6 +26,7 @@ if (NOT APPLE AND NOT WIN32)
     # OPENMV-DIFF #
   )
   install(
+    FILES
     # OPENMV-DIFF #
     # ${CMAKE_CURRENT_BINARY_DIR}/metainfo/org.qt-project.qtcreator.appdata.xml
     # OPENMV-DIFF #
