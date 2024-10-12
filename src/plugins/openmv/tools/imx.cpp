@@ -169,7 +169,8 @@ QStringList imxGetAllDevices(bool spd_host, bool bl_host)
             }
         }
 #elif defined(Q_OS_MAC)
-        Utils::QtcProcess process;
+        Utils::Process process;
+        std::chrono::seconds timeout(10);
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("ioreg")), QStringList()
@@ -177,7 +178,7 @@ QStringList imxGetAllDevices(bool spd_host, bool bl_host)
                                               << QStringLiteral("IOUSB")
                                               << QStringLiteral("-w0")
                                               << QStringLiteral("-l")));
-        process.runBlocking(Utils::EventLoopMode::On);
+        process.runBlocking(timeout, Utils::EventLoopMode::On);
 
         if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
         {

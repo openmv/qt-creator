@@ -43,4 +43,34 @@ target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::GuiPrivate)
 
 if (WIN32)
     target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::ZlibPrivate)
+else()
+    extend_qtc_plugin(OpenMV
+      SOURCES
+        zlib/zconf.h
+        zlib/zlib.h
+        zlib/crc32.h
+        zlib/deflate.h
+        zlib/gzguts.h
+        zlib/inffast.h
+        zlib/inffixed.h
+        zlib/inflate.h
+        zlib/inftrees.h
+        zlib/trees.h
+        zlib/zutil.h
+        zlib/adler32.c
+        zlib/compress.c
+        zlib/crc32.c
+        zlib/deflate.c
+        zlib/gzclose.c
+        zlib/gzlib.c
+        zlib/gzread.c
+        zlib/gzwrite.c
+        zlib/inflate.c
+        zlib/infback.c
+        zlib/inftrees.c
+        zlib/inffast.c
+        zlib/trees.c
+        zlib/uncompr.c
+        zlib/zutil.c
+    )
 endif()
