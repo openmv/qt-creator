@@ -259,7 +259,11 @@ def add_qt_conf(target_path, qt_prefix_path):
 def deploy_qt_conf_files(qtc_binary_path):
     if common.is_linux_platform():
         qt_prefix_path = os.path.join(qtc_binary_path, '..', 'lib', 'Qt')
-        add_qt_conf(os.path.join(qtc_binary_path, '..', 'libexec', 'qtcreator'), qt_prefix_path)
+        # OPENMV-DIFF #
+        # add_qt_conf(os.path.join(qtc_binary_path, '..', 'libexec', 'qtcreator'), qt_prefix_path)
+        # OPENMV-DIFF #
+        add_qt_conf(os.path.join(qtc_binary_path, '..', 'lib', 'qtcreator'), qt_prefix_path)
+        # OPENMV-DIFF #
         add_qt_conf(os.path.join(qtc_binary_path, '..', 'lib', 'Qt', 'bin'), qt_prefix_path) # qtdiag etc
         add_qt_conf(qtc_binary_path, qt_prefix_path) # QtC itself
     if common.is_windows_platform():
