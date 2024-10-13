@@ -88,6 +88,7 @@ if (WIN32)
     dfu-util/windows
     bossac/windows
     picotool/windows
+    python/windows
     blhost/win
     sdphost/win)
 endif()
