@@ -4,4 +4,5 @@ dist/clang/patches/*.patch -diff -merge -text
 .gitignore              export-ignore
 # OPENMV-DIFF #
 *.inf                   binary
+share/qtcreator/node/** binary
 # OPENMV-DIFF #
