@@ -789,6 +789,14 @@ PythonSettings::PythonSettings()
         m_defaultInterpreterId = idForPythonFromPath(m_interpreters);
 
     writeToSettings(Core::ICore::settings());
+    // OPENMV-DIFF //
+    if (Utils::HostOsInfo::isWindowsHost())
+    {
+        const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/windows/pythonw.exe")), {});
+        if (!alreadyRegistered(interpreter))
+            settingsInstance->addInterpreter(interpreter, true);
+    }
+    // OPENMV-DIFF //
 
     interpreterOptionsPage();
     pylspOptionsPage();

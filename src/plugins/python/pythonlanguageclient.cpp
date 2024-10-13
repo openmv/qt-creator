@@ -79,6 +79,12 @@ static FilePath pyLspPath(const FilePath &python)
 
 static PythonLanguageServerState checkPythonLanguageServer(const FilePath &python)
 {
+    // OPENMV-DIFF //
+    if (Utils::HostOsInfo::isWindowsHost())
+    {
+        return {PythonLanguageServerState::Installed, FilePath(python).pathAppended("Scripts").pathAppended("pylsp")};
+    }
+    // OPENMV-DIFF //
     using namespace LanguageClient;
     auto lspPath = pyLspPath(python);
     if (lspPath.isEmpty())
