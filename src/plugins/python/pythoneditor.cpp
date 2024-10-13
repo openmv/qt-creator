@@ -105,7 +105,11 @@ PythonEditorWidget::PythonEditorWidget(QWidget *parent) : TextEditorWidget(paren
     menu->addAction(Core::ActionManager::command(Constants::PYTHON_OPEN_REPL_IMPORT)->action());
     menu->addAction(
         Core::ActionManager::command(Constants::PYTHON_OPEN_REPL_IMPORT_TOPLEVEL)->action());
-    insertExtraToolBarWidget(TextEditorWidget::Left, replButton);
+    // OPENMV-DIFF //
+    // insertExtraToolBarWidget(TextEditorWidget::Left, replButton);
+    // OPENMV-DIFF //
+    replButton->hide();
+    // OPENMV-DIFF //
 }
 
 void PythonEditorWidget::finalizeInitialization()
@@ -127,7 +131,11 @@ void PythonEditorWidget::updateInterpretersSelector()
 {
     if (!m_interpreters) {
         m_interpreters = new QToolButton(this);
-        insertExtraToolBarWidget(TextEditorWidget::Left, m_interpreters);
+        // OPENMV-DIFF //
+        // insertExtraToolBarWidget(TextEditorWidget::Left, m_interpreters);
+        // OPENMV-DIFF //
+        m_interpreters->hide();
+        // OPENMV-DIFF //
         m_interpreters->setMenu(new QMenu(m_interpreters));
         m_interpreters->setPopupMode(QToolButton::InstantPopup);
         m_interpreters->setToolButtonStyle(Qt::ToolButtonTextOnly);

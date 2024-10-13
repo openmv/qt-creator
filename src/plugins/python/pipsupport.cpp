@@ -106,9 +106,11 @@ void PipInstallTask::run()
     m_process.start();
 
     Core::ProgressManager::addTask(m_future.future(), operation, pipInstallTaskId);
-    Core::MessageManager::writeSilently(
-        Tr::tr("Running \"%1\" to install %2.")
-            .arg(m_process.commandLine().toUserOutput(), packagesDisplayName()));
+    // OPENMV-DIFF //
+    // Core::MessageManager::writeSilently(
+    //     Tr::tr("Running \"%1\" to install %2.")
+    //         .arg(m_process.commandLine().toUserOutput(), packagesDisplayName()));
+    // OPENMV-DIFF //
 
     m_killTimer.setSingleShot(true);
     m_killTimer.start(5 /*minutes*/ * 60 * 1000);
@@ -140,8 +142,10 @@ void PipInstallTask::handleDone()
 void PipInstallTask::handleOutput()
 {
     const QString &stdOut = QString::fromLocal8Bit(m_process.readAllRawStandardOutput().trimmed());
-    if (!stdOut.isEmpty())
-        Core::MessageManager::writeSilently(stdOut);
+    // OPENMV-DIFF //
+    // if (!stdOut.isEmpty())
+    //     Core::MessageManager::writeSilently(stdOut);
+    // OPENMV-DIFF //
 }
 
 void PipInstallTask::handleError()

@@ -343,6 +343,9 @@ class InterpreterOptionsPage : public Core::IOptionsPage
 {
 public:
     InterpreterOptionsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
     {
         setId(Constants::C_PYTHONOPTIONS_PAGE_ID);
         setDisplayName(Tr::tr("Interpreters"));
@@ -463,11 +466,19 @@ public:
         advanced->setChecked(false);
         mainGroupLayout->addWidget(advanced);
 
-        m_mainGroup->setLayout(mainGroupLayout);
+        // OPENMV-DIFF //
+        // m_mainGroup->setLayout(mainGroupLayout);
+        // OPENMV-DIFF //
+        m_mainGroup->hide();
+        // OPENMV-DIFF //
 
-        QVBoxLayout *mainLayout = new QVBoxLayout;
-        mainLayout->addWidget(m_mainGroup);
-        setLayout(mainLayout);
+        // OPENMV-DIFF //
+        // QVBoxLayout *mainLayout = new QVBoxLayout;
+        // mainLayout->addWidget(m_mainGroup);
+        // setLayout(mainLayout);
+        // OPENMV-DIFF //
+        setLayout(mainGroupLayout);
+        // OPENMV-DIFF //
 
         m_editor->textDocument()->setPlainText(PythonSettings::pylsConfiguration());
         m_mainGroup->setChecked(PythonSettings::pylsEnabled());
@@ -553,6 +564,10 @@ public:
         setDisplayName(Tr::tr("Language Server Configuration"));
         setCategory(Constants::C_PYTHON_SETTINGS_CATEGORY);
         setWidgetCreator([]() {return new PyLSConfigureWidget();});
+        // OPENMV-DIFF //
+        setDisplayCategory(Tr::tr("Python"));
+        setCategoryIconPath(":/python/images/settingscategory_python.png");
+        // OPENMV-DIFF //
     }
 };
 
@@ -792,7 +807,7 @@ PythonSettings::PythonSettings()
     // OPENMV-DIFF //
     if (Utils::HostOsInfo::isWindowsHost())
     {
-        const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/windows/pythonw.exe")), {});
+        const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/windows/python.exe")), {});
         if (!alreadyRegistered(interpreter))
             settingsInstance->addInterpreter(interpreter, true);
     }
@@ -1091,7 +1106,11 @@ void PythonSettings::initFromSettings(QtcSettings *settings)
 
     m_defaultInterpreterId = settings->value(defaultKey).toString();
 
-    QVariant pylsEnabled = settings->value(pylsEnabledKey);
+    // OPENMV-DIFF //
+    // QVariant pylsEnabled = settings->value(pylsEnabledKey);
+    // OPENMV-DIFF //
+    QVariant pylsEnabled = true;
+    // OPENMV-DIFF //
     if (pylsEnabled.isNull())
         disableOutdatedPyls();
     else

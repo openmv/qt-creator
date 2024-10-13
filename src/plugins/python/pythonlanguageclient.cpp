@@ -79,12 +79,6 @@ static FilePath pyLspPath(const FilePath &python)
 
 static PythonLanguageServerState checkPythonLanguageServer(const FilePath &python)
 {
-    // OPENMV-DIFF //
-    if (Utils::HostOsInfo::isWindowsHost())
-    {
-        return {PythonLanguageServerState::Installed, FilePath(python).pathAppended("Scripts").pathAppended("pylsp")};
-    }
-    // OPENMV-DIFF //
     using namespace LanguageClient;
     auto lspPath = pyLspPath(python);
     if (lspPath.isEmpty())
@@ -333,6 +327,9 @@ void PyLSConfigureAssistant::installPythonLanguageServer(const FilePath &python,
     install->setTargetPath(pylsPath);
     install->setPackages({PipPackage{"python-lsp-server[all]", "Python Language Server"}});
     install->setUpgrade(upgrade);
+    // OPENMV-DIFF //
+    silent = true;
+    // OPENMV-DIFF //
     install->setSilent(silent);
     install->run();
 }
@@ -383,6 +380,10 @@ void PyLSConfigureAssistant::handlePyLSState(const FilePath &python,
     InfoBar *infoBar = document->infoBar();
     if (state.state == PythonLanguageServerState::Installable
         && infoBar->canInfoBeAdded(installPylsInfoBarId)) {
+        // OPENMV-DIFF //
+        installPythonLanguageServer(python, document, state.pylsModulePath, false, false);
+        return;
+        // OPENMV-DIFF //
         auto message = Tr::tr("Install Python language server (PyLS) for %1 (%2). "
                               "The language server provides Python specific completion and annotation.")
                            .arg(pythonName(python), python.toUserOutput());
@@ -394,6 +395,10 @@ void PyLSConfigureAssistant::handlePyLSState(const FilePath &python,
         m_infoBarEntries[python] << document;
     } else if (state.state == PythonLanguageServerState::Updatable) {
         if (infoBar->canInfoBeAdded(updatePylsInfoBarId)) {
+            // OPENMV-DIFF //
+            installPythonLanguageServer(python, document, state.pylsModulePath, false, true);
+            return;
+            // OPENMV-DIFF //
             auto message = Tr::tr("Update Python language server (PyLS) for %1 (%2).")
                                .arg(pythonName(python), python.toUserOutput());
             InfoBarEntry info(updatePylsInfoBarId, message);
