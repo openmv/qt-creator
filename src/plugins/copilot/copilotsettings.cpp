@@ -8,6 +8,9 @@
 #include "copilottr.h"
 
 #include <coreplugin/dialogs/ioptionspage.h>
+// OPENMV-DIFF //
+#include <coreplugin/icore.h>
+// OPENMV-DIFF //
 
 #include <projectexplorer/project.h>
 
@@ -28,7 +31,11 @@ static void initEnableAspect(BoolAspect &enableCopilot)
     enableCopilot.setDisplayName(Tr::tr("Enable Copilot"));
     enableCopilot.setLabelText(Tr::tr("Enable Copilot"));
     enableCopilot.setToolTip(Tr::tr("Enables the Copilot integration."));
-    enableCopilot.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // enableCopilot.setDefaultValue(false);
+    // OPENMV-DIFF //
+    enableCopilot.setDefaultValue(true);
+    // OPENMV-DIFF //
 }
 
 CopilotSettings &settings()
@@ -43,12 +50,23 @@ CopilotSettings::CopilotSettings()
 {
     setAutoApply(false);
 
-    const FilePath nodeFromPath = FilePath("node").searchInPath();
+    // OPENMV-DIFF //
+    // const FilePath nodeFromPath = FilePath("node").searchInPath();
+    // OPENMV-DIFF //
+    FilePath nodeFromPath;
+    if (Utils::HostOsInfo::isWindowsHost())
+    {
+        nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/windows/node.exe"));
+    }
+    // OPENMV-DIFF //
 
     // clang-format off
 
     // From: https://github.com/github/copilot.vim/blob/release/README.md#getting-started
     const FilePaths searchDirs = {
+        // OPENMV-DIFF //
+        Core::ICore::resourcePath(QStringLiteral("copilot.vim/dist/language-server.js")),
+        // OPENMV-DIFF //
         // Vim, Linux/macOS:
         FilePath::fromUserInput("~/.vim/pack/github/start/copilot.vim/dist/agent.js"),
         FilePath::fromUserInput("~/.vim/pack/github/start/copilot.vim/copilot/dist/agent.js"),
@@ -216,16 +234,20 @@ CopilotSettings::CopilotSettings()
                 title(Tr::tr("Note")),
                 Column {
                     warningLabel, br,
-                    helpLabel, br,
+                    // OPENVM-DIFF //
+                    // helpLabel, br,
+                    // OPENVM-DIFF //
                 }
             },
             Form {
                 new AuthWidget, br,
-                enableCopilot, br,
-                nodeJsPath, br,
-                distPath, br,
-                autoComplete, br,
-                hr, br,
+                // OPENVM-DIFF //
+                // enableCopilot, br,
+                // nodeJsPath, br,
+                // distPath, br,
+                // autoComplete, br,
+                // hr, br,
+                // OPENVM-DIFF //
                 useProxy, br,
                 proxyHost, br,
                 proxyPort, br,

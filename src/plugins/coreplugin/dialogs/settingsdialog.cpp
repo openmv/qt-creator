@@ -610,6 +610,9 @@ void SettingsDialog::createGui()
     mainGridLayout->addLayout(headerHLayout,    0, 1, 1, 1);
     mainGridLayout->addWidget(m_categoryList,   1, 0, 1, 1);
     mainGridLayout->addWidget(m_sortCheckBox,   2, 0, 1, 1);
+    // OPENMV-DIFF //
+    m_sortCheckBox->hide();
+    // OPENMV-DIFF //
     mainGridLayout->addLayout(m_stackedLayout,  1, 1, 2, 1);
     mainGridLayout->addWidget(buttonBox,        3, 0, 1, 2);
     mainGridLayout->setColumnStretch(1, 4);

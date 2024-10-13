@@ -17,6 +17,7 @@ set(resource_directories
   # themes
   # OPENMV-DIFF #
   examples
+  copilot.vim
   firmware
   html
   models
@@ -87,6 +88,7 @@ if (WIN32)
     ffmpeg/windows
     dfu-util/windows
     bossac/windows
+    node/windows
     picotool/windows
     python/windows
     blhost/win

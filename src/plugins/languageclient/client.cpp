@@ -1757,7 +1757,9 @@ void Client::log(const QString &message) const
 {
     switch (d->m_logTarget) {
     case LogTarget::Ui:
-        Core::MessageManager::writeFlashing(QString("LanguageClient %1: %2").arg(name(), message));
+        // OPENMV-DIFF //
+        // Core::MessageManager::writeFlashing(QString("LanguageClient %1: %2").arg(name(), message));
+        // OPENMV-DIFF //
         break;
     case LogTarget::Console:
         qCDebug(LOGLSPCLIENT) << message;
