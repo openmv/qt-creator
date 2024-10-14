@@ -2133,7 +2133,9 @@ void ProjectExplorerPlugin::extensionsInitialized()
     // OPENMV-DIFF //
 
     // Load devices immediately, as other plugins might want to use them
-    DeviceManager::instance()->load();
+    // OPENMV-DIFF //
+    // DeviceManager::instance()->load();
+    // OPENMV-DIFF //
 
     Core::ICore::instance()->setRelativePathToProjectFunction([=](const FilePath& path) -> FilePath
     {
@@ -2151,8 +2153,10 @@ bool ProjectExplorerPlugin::delayedInitialize()
 {
     NANOTRACE_SCOPE("ProjectExplorer", "ProjectExplorerPlugin::delayedInitialize");
     ExtraAbi::load(); // Load this before Toolchains!
-    ToolchainManager::restoreToolchains();
-    KitManager::restoreKits();
+    // OPENMV-DIFF //
+    // ToolchainManager::restoreToolchains();
+    // KitManager::restoreKits();
+    // OPENMV-DIFF //
     return true;
 }
 
