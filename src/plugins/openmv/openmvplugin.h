@@ -111,6 +111,7 @@
 #define DISABLE_FRAME_BUFFER_STATE "DisableFrameBufferState"
 #define HISTOGRAM_COLOR_SPACE_STATE "HistogramColorSpace"
 #define DONT_SHOW_EXAMPLES_AGAIN "DontShowExamplesAgain"
+#define DONT_SHOW_COPILOT_AGAIN "DontShowCopilotAgain"
 #define DONT_SHOW_LED_STATES_AGAIN "DontShowLEDStatesAgain"
 #define DONT_SHOW_UPGRADE_FW_AGAIN "DontShowUpgradeFWAgain"
 #define LAST_FORM_KEY "LastFormKey"
@@ -362,6 +363,7 @@ public slots: // private
     void openKeypointsEditor();
     void openAprilTagGenerator(apriltag_family_t *family);
 
+    void showCopilotDialog();
     void showLEDStatesDialog();
     void showExamplesDialog();
 

@@ -2901,6 +2901,8 @@ bool OpenMVPlugin::delayedInitialize()
                         Tr::tr("Failed to create the documents folder!"));
         }
 
+        QTimer::singleShot(2000, this, &OpenMVPlugin::showCopilotDialog);
+
         if(Core::EditorManager::currentEditor()
             ? Core::EditorManager::currentEditor()->document()
                 ? Core::EditorManager::currentEditor()->document()->displayName() == QStringLiteral("helloworld_1.py")
@@ -2912,6 +2914,23 @@ bool OpenMVPlugin::delayedInitialize()
     }
 
     return true;
+}
+
+void OpenMVPlugin::showCopilotDialog()
+{
+    if (!QApplication::activeModalWidget()) {
+        if (Utils::CheckableMessageBox::question(Core::ICore::dialogParent(),
+            Tr::tr("GitHub Copilot"),
+            Tr::tr("Would you like to enable GitHub Copilot?"),
+            Utils::CheckableDecider(DONT_SHOW_COPILOT_AGAIN),
+            QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel,
+            QMessageBox::Yes, QMessageBox::No, {}, {}, QMessageBox::Yes) == QMessageBox::Yes)
+        {
+            Core::ICore::showOptionsDialog("Copilot.General");
+        }
+    } else {
+        QTimer::singleShot(2000, this, &OpenMVPlugin::showCopilotDialog); // try again
+    }
 }
 
 void OpenMVPlugin::showLEDStatesDialog()
