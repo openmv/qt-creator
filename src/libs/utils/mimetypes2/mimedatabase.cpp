@@ -912,7 +912,11 @@ void MimeDatabasePrivate::checkInitPhase(const QString &info)
 {
     QReadLocker locker(&m_initMutex);
     if (m_startupPhase <= int(MimeStartupPhase::PluginsInitializing)) {
-        qWarning("Accessing MimeDatabase for %s before plugins are initialized", qPrintable(info));
+        // OPENMV-DIFF //
+        // qWarning("Accessing MimeDatabase for %s before plugins are initialized", qPrintable(info));
+        // OPENMV-DIFF //
+        Q_UNUSED(info);
+        // OPENMV-DIFF //
         return;
     }
     // run initialization functions and ensure providers are loaded

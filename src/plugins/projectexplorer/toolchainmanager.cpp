@@ -115,6 +115,9 @@ void ToolchainManager::restoreToolchains()
 
 void ToolchainManager::saveToolchains()
 {
+    // OPENMV-DIFF //
+    if (!d->m_accessor) return;
+    // OPENMV-DIFF //
     QTC_ASSERT(d->m_accessor, return);
 
     d->m_accessor->saveToolchains(d->m_toolChains, Core::ICore::dialogParent());
