@@ -332,7 +332,11 @@ public:
         setDocumentCreator([]() { return new PythonDocument; });
         setEditorWidgetCreator([]() { return new PythonEditorWidget; });
         setIndenterCreator(&createPythonIndenter);
-        setSyntaxHighlighterCreator(&createPythonHighlighter);
+        // OPENMV-DIFF //
+        // setSyntaxHighlighterCreator(&createPythonHighlighter);
+        // OPENMV-DIFF //
+        setUseGenericHighlighter(true);
+        // OPENMV-DIFF //
         setCommentDefinition(CommentDefinition::HashStyle);
         setParenthesesMatchingEnabled(true);
         setCodeFoldingSupported(true);

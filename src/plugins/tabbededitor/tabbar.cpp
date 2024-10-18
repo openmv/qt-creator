@@ -143,7 +143,7 @@ void TabBar::addEditorTab(Core::IEditor *editor)
     // setTabIcon(index, Core::FileIconProvider::icon(document->filePath().toFileInfo()));
     // setTabToolTip(index, document->filePath().toString());
     // OPENMV-DIFF //
-    QString path = document->filePath().toString();
+    QString path = !document->isTemporary() ? document->filePath().toString() : QString();
 
     if(path.isEmpty())
     {
@@ -172,6 +172,30 @@ void TabBar::addEditorTab(Core::IEditor *editor)
             tabText += QLatin1Char('*');
         setTabText(index, tabText);
     });
+
+    // OPENMV-DIFF //
+    connect(document, &Core::IDocument::filePathChanged, [this, editor, document]() {
+        const int index = m_editors.indexOf(editor);
+        if (index == -1)
+            return;
+        QString path = !document->isTemporary() ? document->filePath().toString() : QString();
+
+        if(path.isEmpty())
+        {
+#ifndef Q_OS_MAC
+            setTabIcon(index, Utils::FileIconProvider::icon(Core::ICore::userResourcePath().pathAppended(QStringLiteral("/examples/OpenMV/01-Basics/helloworld.py"))));
+#endif
+            setTabToolTip(index, document->displayName());
+        }
+        else
+        {
+#ifndef Q_OS_MAC
+            setTabIcon(index, Utils::FileIconProvider::icon(document->filePath()));
+#endif
+            setTabToolTip(index, document->filePath().toString());
+        }
+    });
+    // OPENMV-DIFF //
 }
 
 void TabBar::removeEditorTabs(QList<Core::IEditor *> editors)

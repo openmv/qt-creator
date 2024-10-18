@@ -630,6 +630,10 @@ static bool saveModifiedFilesHelper(const QList<IDocument *> &documents,
     for (IDocument *document : documents) {
         if (document && document->isModified() && !document->isTemporary()) {
             QString name = document->filePath().toString();
+            // OPENMV-DIFF //
+            if (document->isTemporary())
+                name = QString();
+            // OPENMV-DIFF //
             if (name.isEmpty())
                 name = document->fallbackSaveAsFileName();
             // OPENMV-DIFF //
@@ -711,7 +715,11 @@ bool DocumentManager::saveDocument(IDocument *document,
                                    bool *isReadOnly)
 {
     bool ret = true;
-    const Utils::FilePath &savePath = filePath.isEmpty() ? document->filePath() : filePath;
+    // OPENMV-DIFF //
+    // const Utils::FilePath &savePath = filePath.isEmpty() ? document->filePath() : filePath;
+    // OPENMV-DIFF //
+    const Utils::FilePath &savePath = filePath.isEmpty() ? (!document->isTemporary() ? document->filePath() : FilePath()) : filePath;
+    // OPENMV-DIFF //
     expectFileChange(savePath); // This only matters to other IDocuments which refer to this file
     bool addWatcher = removeDocument(document); // So that our own IDocument gets no notification at all
 
@@ -856,17 +864,17 @@ FilePath DocumentManager::getSaveAsFileName(const IDocument *document)
 {
     QTC_ASSERT(document, return {});
     QString filter = allDocumentFactoryFiltersString();
-    const FilePath filePath = document->filePath();
+    // OPENMV-DIFF //
+    // const FilePath filePath = document->filePath();
+    // OPENMV-DIFF //
+    const FilePath filePath = !document->isTemporary() ? document->filePath() : FilePath();
+    // OPENMV-DIFF //
     QString selectedFilter;
     FilePath fileDialogPath = filePath;
     if (!filePath.isEmpty()) {
         selectedFilter = Utils::mimeTypeForFile(filePath).filterString();
     } else {
-        // OPENMV-DIFF //
-        // const QString suggestedName = document->fallbackSaveAsFileName();
-        // OPENMV-DIFF //
-        QString suggestedName = document->fallbackSaveAsFileName();
-        // OPENMV-DIFF //
+        const QString suggestedName = document->fallbackSaveAsFileName();
         if (!suggestedName.isEmpty()) {
             const QList<MimeType> types = Utils::mimeTypesForFileName(suggestedName);
             if (!types.isEmpty())
@@ -1580,15 +1588,15 @@ void DocumentManager::setFileDialogFilter(const QString &filter)
 
 void DocumentManager::registerSaveAllAction()
 {
+    ActionBuilder saveAll(d, Constants::SAVEALL);
+    saveAll.setText(Tr::tr("Save A&ll"));
+    saveAll.bindContextAction(&d->m_saveAllAction);
     // OPENMV-DIFF //
-    // ActionBuilder saveAll(d, Constants::SAVEALL);
-    // saveAll.setText(Tr::tr("Save A&ll"));
-    // saveAll.bindContextAction(&d->m_saveAllAction);
     // saveAll.addToContainer(Constants::M_FILE, Constants::G_FILE_SAVE);
     // saveAll.setDefaultKeySequence(QString(), Tr::tr("Ctrl+Shift+S"));
-    // saveAll.setEnabled(false);
-    // saveAll.addOnTriggered([] { DocumentManager::saveAllModifiedDocumentsSilently(); });
     // OPENMV-DIFF //
+    saveAll.setEnabled(false);
+    saveAll.addOnTriggered([] { DocumentManager::saveAllModifiedDocumentsSilently(); });
 }
 
 // -------------- FileChangeBlocker

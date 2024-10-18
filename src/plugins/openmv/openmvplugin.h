@@ -384,6 +384,8 @@ private:
     bool m_autoRun;
     bool m_disableStop;
 
+    QTemporaryDir m_tempDir;
+
     OpenMVPluginSerialPort *m_ioport;
     OpenMVPluginIO *m_iodevice;
 
@@ -471,6 +473,8 @@ private:
     QList<documentation_t> m_functions;
     QList<documentation_t> m_methods;
     QSet<QString> m_arguments;
+    QMap<QStringList, QStringList> m_argumentsByHierarchy;
+    QMap<QStringList, QString> m_returnTypesByHierarchy;
     QList<wifiPort_t> m_availableWifiPorts;
 
     typedef struct openTerminalMenuData
@@ -504,19 +508,26 @@ private:
 
     QRegularExpression m_emRegEx;
     QRegularExpression m_spanRegEx;
+    QRegularExpression m_anchorRegEx;
     QRegularExpression m_linkRegEx;
     QRegularExpression m_classRegEx;
     QRegularExpression m_cdfmRegExInside;
     QRegularExpression m_argumentRegEx;
+    QRegularExpression m_returnTypeRegEx;
+    QRegularExpression m_dataReturnTypeRexEx;
     QRegularExpression m_tupleRegEx;
     QRegularExpression m_listRegEx;
     QRegularExpression m_dictionaryRegEx;
+    QRegularExpression m_splitRegEx;
+    QRegularExpression m_typeHintRegEx;
 
     void processDocumentationMatch(const QRegularExpressionMatch &match,
                                    QStringList &providerVariables,
                                    QStringList &providerClasses, QMap<QString, QStringList> &providerClassArgs,
                                    QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs,
                                    QStringList &providerMethods, QMap<QString, QStringList> &providerMethodArgs);
+    void loadDocs();
+
     void parseImports(const QString &fileText, const QString &moduleFolder, const QStringList &builtInModules, importDataList_t &targetModules, QStringList &errorModules);
     bool importHelper(const QByteArray &text);
 
@@ -537,6 +548,8 @@ private:
     bool matchExample(const QString &filePath, QString *flattenRegex);
 
     QByteArray fixScriptForSensor(QByteArray data, bool notExamples = false);
+
+    QString tempFileForPythonEditor(const QByteArray &data, const QString &titlePattern);
 };
 
 } // namespace Internal

@@ -5,6 +5,7 @@ add_qtc_plugin(OpenMV
     openmvplugin.cpp openmvplugin.h openmvtr.h
     openmvpluginconnect.cpp
     openmvpluginparse.cpp
+    openmvplugindoc.cpp
     openmveject.cpp openmveject.h
     openmvpluginserialport.cpp openmvpluginserialport.h
     openmvpluginio.cpp openmvpluginio.h

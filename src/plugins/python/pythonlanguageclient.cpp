@@ -220,6 +220,19 @@ void PyLSClient::openDocument(TextEditor::TextDocument *document)
                 sendMessage(change);
                 m_extraWorkspaceDirs.append(workspacePath);
             }
+            // OPENMV-DIFF //
+            const FilePath workspacePath2 = Core::ICore::userResourcePath(QStringLiteral("micropython-headers"));
+            if (!m_extraWorkspaceDirs.contains(workspacePath2)) {
+                WorkspaceFoldersChangeEvent event;
+                event.setAdded({WorkSpaceFolder(hostPathToServerUri(workspacePath2),
+                                                workspacePath2.fileName())});
+                DidChangeWorkspaceFoldersParams params;
+                params.setEvent(event);
+                DidChangeWorkspaceFoldersNotification change(params);
+                sendMessage(change);
+                m_extraWorkspaceDirs.append(workspacePath2);
+            }
+            // OPENMV-DIFF //
         }
     }
     Client::openDocument(document);

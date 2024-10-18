@@ -2555,14 +2555,22 @@ bool EditorManagerPrivate::saveDocumentAs(IDocument *document)
     if (!document)
         return false;
 
-    const FilePath originalFilePath = document->filePath();
+    // OPENMV-DIFF //
+    // const FilePath originalFilePath = document->filePath();
+    // OPENMV-DIFF //
+    const FilePath originalFilePath = !document->isTemporary() ? document->filePath() : FilePath();
+    // OPENMV-DIFF //
 
     const FilePath absoluteFilePath = DocumentManager::getSaveAsFileName(document);
     if (absoluteFilePath.isEmpty())
         return false;
 
     if (DocumentManager::filePathKey(absoluteFilePath, DocumentManager::ResolveLinks)
-        != DocumentManager::filePathKey(document->filePath(), DocumentManager::ResolveLinks)) {
+        // OPENMV-DIFF //
+        // != DocumentManager::filePathKey(document->filePath(), DocumentManager::ResolveLinks)) {
+        // OPENMV-DIFF //
+        != DocumentManager::filePathKey(!document->isTemporary() ? document->filePath() : FilePath(), DocumentManager::ResolveLinks)) {
+        // OPENMV-DIFF //
         // close existing editors for the new file name
         IDocument *otherDocument = DocumentModel::documentForFilePath(absoluteFilePath);
         if (otherDocument)
@@ -2583,7 +2591,11 @@ bool EditorManagerPrivate::saveDocumentAs(IDocument *document)
 
     updateActions();
 
-    handleFileRenamed(originalFilePath, document->filePath(), document->id());
+    // OPENMV-DIFF //
+    // handleFileRenamed(originalFilePath, document->filePath(), document->id());
+    // OPENMV-DIFF //
+    handleFileRenamed(originalFilePath, !document->isTemporary() ? document->filePath() : FilePath(), document->id());
+    // OPENMV-DIFF //
     return success;
 }
 
@@ -2894,7 +2906,11 @@ void EditorManager::addSaveAndCloseEditorActions(QMenu *contextMenu, DocumentMod
     d->m_contextMenuEditor = editor;
 
     const FilePath filePath = entry ? entry->filePath() : FilePath();
-    const bool copyActionsEnabled = !filePath.isEmpty();
+    // OPENMV-DIFF //
+    // const bool copyActionsEnabled = !filePath.isEmpty();
+    // OPENMV-DIFF //
+    const bool copyActionsEnabled = !filePath.isEmpty() && !entry->document->isTemporary();
+    // OPENMV-DIFF //
     d->m_copyFilePathContextAction->setEnabled(copyActionsEnabled);
     d->m_copyLocationContextAction->setEnabled(copyActionsEnabled);
     d->m_copyFileNameContextAction->setEnabled(copyActionsEnabled);
@@ -2978,6 +2994,9 @@ void EditorManager::addNativeDirAndOpenWithActions(QMenu *contextMenu, DocumentM
     d->m_contextMenuEntry = entry;
     d->m_contextMenuDocument = entry ? entry->document : nullptr;
     bool enabled = entry && !entry->filePath().isEmpty();
+    // OPENMV-DIFF //
+    enabled = entry && !entry->document->isTemporary();
+    // OPENMV-DIFF //
     d->m_openGraphicalShellContextAction->setEnabled(enabled);
     d->m_showInFileSystemViewContextAction->setEnabled(enabled);
     d->m_openTerminalAction->setEnabled(enabled);

@@ -2646,7 +2646,11 @@ void ICorePrivate::aboutToShowRecentFiles()
         const QString actionText = ActionManager::withNumberAccelerator(filePath, i + 1);
         QAction *action = menu->addAction(actionText);
         connect(action, &QAction::triggered, this, [file] {
-            EditorManager::openEditor(file.first, file.second);
+            // OPENMV-DIFF //
+            // EditorManager::openEditor(file.first, file.second);
+            // OPENMV-DIFF //
+            EditorManager::openEditor(file.first);
+            // OPENMV-DIFF //
         });
     }
 
