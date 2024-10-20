@@ -119,7 +119,7 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
 
         if ((type == QStringLiteral("class")) || (type == QStringLiteral("exception")))
         {
-            d.className = d.name;
+            d.className = QString();
             d.moduleName = (idList.size() > 1) ? idList.mid(0, idList.size() - 1).join('.') : QString();
 
             // Remove duplicate module names in path (bug fix for documentation issues)...
@@ -674,6 +674,16 @@ void OpenMVPlugin::loadDocs()
                                 }
 
                                 Utils::ToolTip::show(globalPos, QStringLiteral("<table>") + string + QStringLiteral("</table>"), widget);
+                                return;
+                            }
+                            else if(!originalToolTip.isEmpty())
+                            {
+                                QString cleanedToolTip = QString(originalToolTip).remove(QStringLiteral("\\")).simplified().trimmed();
+                                cleanedToolTip.replace(QRegularExpression("```\\s*(.+?)\\s*```"), QStringLiteral("<pre>\\1</pre>"));
+                                cleanedToolTip.replace(QStringLiteral("</pre> <pre>"), QStringLiteral("</pre><pre>"));
+                                cleanedToolTip.replace(QStringLiteral("</pre> "), QStringLiteral("</pre><p>"));
+                                cleanedToolTip.replace(QStringLiteral(" <pre>"), QStringLiteral("</p><pre>"));
+                                Utils::ToolTip::show(globalPos, QStringLiteral("<table><tr><td style=\"padding:6px;\">") + cleanedToolTip + QStringLiteral("</td></tr></table>"), widget);
                                 return;
                             }
                         }

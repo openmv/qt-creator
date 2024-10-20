@@ -1282,7 +1282,9 @@ void TextEditorWidgetPrivate::showTextMarksToolTip(const QPoint &pos,
 
     layout->addWidget(DisplaySettings::createAnnotationSettingsLink(),
                       layout->rowCount(), 0, 1, -1, Qt::AlignRight);
-    ToolTip::show(pos, layout, q);
+    // OPENMV-DIFF //
+    // ToolTip::show(pos, layout, q);
+    // OPENMV-DIFF //
 }
 
 } // namespace Internal
@@ -7231,7 +7233,9 @@ void TextEditorWidget::extraAreaMouseEvent(QMouseEvent *e)
             QGuiApplication::changeOverrideCursor(inMarkArea ? d->m_markDragCursor
                                                              : QCursor(Qt::ForbiddenCursor));
         } else if (inMarkArea != (d->m_extraArea->cursor().shape() == Qt::PointingHandCursor)) {
-            d->m_extraArea->setCursor(inMarkArea ? Qt::PointingHandCursor : Qt::ArrowCursor);
+            // OPENMV-DIFF //
+            // d->m_extraArea->setCursor(inMarkArea ? Qt::PointingHandCursor : Qt::ArrowCursor);
+            // OPENMV-DIFF //
         }
     }
 
