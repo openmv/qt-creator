@@ -92,6 +92,38 @@ void LanguageClientCompletionItem::apply(TextDocumentManipulatorInterface &manip
         manipulator.insertCodeSnippet(manipulator.currentPosition(),
                                       m_triggeredCommitCharacter,
                                       &Snippet::parse);
+
+    // OPENMV-DIFF //
+    const int kind = m_item.kind().value_or(CompletionItemKind::Text);
+    switch (kind) {
+    case CompletionItemKind::Method:
+    case CompletionItemKind::Function:
+    case CompletionItemKind::Constructor: {
+        int replaceLength = manipulator.currentPosition();
+        QString toInsert;
+        int cursorOffset = 0;
+        const QChar characterAtCurrentPosition = manipulator.characterAt(manipulator.currentPosition());
+        bool setAutoCompleteSkipPosition = false;
+
+        if (characterAtCurrentPosition == QLatin1Char('(')) {
+            cursorOffset = 1;
+        } else {
+            toInsert += QLatin1String("()");
+            cursorOffset = -1;
+            setAutoCompleteSkipPosition = true;
+        }
+
+        manipulator.replace(replaceLength, replaceLength, toInsert);
+        if (cursorOffset)
+            manipulator.setCursorPosition(manipulator.currentPosition() + cursorOffset);
+        if (setAutoCompleteSkipPosition)
+            manipulator.setAutoCompleteSkipPosition(manipulator.currentPosition());
+        break;
+    }
+    default:
+        break;
+    }
+    // OPENMV-DIFF //
 }
 
 QIcon LanguageClientCompletionItem::icon() const

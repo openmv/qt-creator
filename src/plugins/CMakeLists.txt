@@ -20,9 +20,6 @@ add_subdirectory(imageviewer)
 # OPENMV-DIFF #
 
 # Level 2: (only depends on Level 1 and below)
-# OPENMV-DIFF #
-add_subdirectory(openmv)
-# OPENMV-DIFF #
 add_subdirectory(bineditor)
 # OPENMV-DIFF #
 # add_subdirectory(cpaster)
@@ -114,6 +111,8 @@ add_subdirectory(python)
 # OPENMV-DIFF #
 # add_subdirectory(clangformat)
 # add_subdirectory(cmakeprojectmanager)
+# OPENMV-DIFF #
+add_subdirectory(openmv)
 # OPENMV-DIFF #
 
 # Level 7:

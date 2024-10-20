@@ -4636,7 +4636,16 @@ void TextEditorWidgetPrivate::processTooltipRequest(const QTextCursor &c)
         return;
     }
 
-    const auto callback = [toolTipPoint](TextEditorWidget *widget, BaseHoverHandler *handler, int) {
+    // OPENMV-DIFF //
+    // const auto callback = [toolTipPoint](TextEditorWidget *widget, BaseHoverHandler *handler, int) {
+    // OPENMV-DIFF //
+    const auto callback = [this, c, toolTipPoint](TextEditorWidget *widget, BaseHoverHandler *handler, int) {
+    // OPENMV-DIFF //
+        bool handled = false;
+        emit q->lateTooltipOverrideRequested(q, toolTipPoint, c.position(), &handled, handler->m_toolTip);
+        if (handled)
+            return;
+        // OPENMV-DIFF //
         handler->showToolTip(widget, toolTipPoint);
     };
     m_hoverHandlerRunner.startChecking(c, callback);

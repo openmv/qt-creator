@@ -663,6 +663,10 @@ signals:
         int line, QMenu *menu);
     void tooltipOverrideRequested(TextEditor::TextEditorWidget *widget,
         const QPoint &globalPos, int position, bool *handled);
+    // OPENMV-DIFF //
+    void lateTooltipOverrideRequested(TextEditor::TextEditorWidget *widget,
+        const QPoint &globalPos, int position, bool *handled, const QString &originalToolTip);
+    // OPENMV-DIFF //
     void tooltipRequested(const QPoint &globalPos, int position);
     void activateEditor(Core::EditorManager::OpenEditorFlags flags = {});
 

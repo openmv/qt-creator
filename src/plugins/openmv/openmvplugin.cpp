@@ -3931,6 +3931,8 @@ void OpenMVPlugin::setPortPath(bool silent)
 
         m_frameBuffer->enableSaveTemplate(!m_portPath.isEmpty());
         m_frameBuffer->enableSaveDescriptor(!m_portPath.isEmpty());
+
+        Python::Internal::PyLSClient::setPortPath(Utils::FilePath::fromUserInput(m_portPath));
     }
     else
     {

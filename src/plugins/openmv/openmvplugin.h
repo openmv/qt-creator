@@ -34,6 +34,7 @@
 #include <extensionsystem/iplugin.h>
 #include <extensionsystem/pluginmanager.h>
 #include <extensionsystem/pluginspec.h>
+#include <python/pythonlanguageclient.h>
 #include <utils/appmainwindow.h>
 #include <utils/checkablemessagebox.h>
 #include <utils/elidinglabel.h>
@@ -509,18 +510,19 @@ private:
     QRegularExpression m_emRegEx;
     QRegularExpression m_spanRegEx;
     QRegularExpression m_anchorRegEx;
-    QRegularExpression m_linkRegEx;
+    QRegularExpression m_preRexEx;
     QRegularExpression m_classRegEx;
     QRegularExpression m_cdfmRegExInside;
+    QRegularExpression m_cdfmRegExShared;
     QRegularExpression m_argumentRegEx;
     QRegularExpression m_returnTypeRegEx;
     QRegularExpression m_dataReturnTypeRexEx;
     QRegularExpression m_tupleRegEx;
     QRegularExpression m_listRegEx;
     QRegularExpression m_dictionaryRegEx;
-    QRegularExpression m_splitRegEx;
     QRegularExpression m_typeHintRegEx;
 
+    QStringList processArgumentSplitting(const QString &args);
     void processDocumentationMatch(const QRegularExpressionMatch &match,
                                    QStringList &providerVariables,
                                    QStringList &providerClasses, QMap<QString, QStringList> &providerClassArgs,

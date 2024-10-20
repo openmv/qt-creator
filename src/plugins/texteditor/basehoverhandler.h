@@ -65,6 +65,9 @@ protected:
 private:
     void process(TextEditorWidget *widget, int pos, ReportPriority report);
 
+// OPENMV-DIFF //
+public:
+// OPENMV-DIFF //
     QString m_toolTip;
     Qt::TextFormat m_textFormat = Qt::PlainText;
     Core::HelpItem m_lastHelpItemIdentified;

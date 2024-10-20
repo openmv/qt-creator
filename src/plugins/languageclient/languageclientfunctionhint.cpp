@@ -20,15 +20,26 @@ namespace LanguageClient {
 QString FunctionHintProposalModel::text(int index) const
 {
     using Parameters = QList<ParameterInformation>;
-    if (index < 0 || m_sigis.signatures().size() <= index)
+    // OPENMV-DIFF //
+    // if (index < 0 || m_sigis.signatures().size() <= index)
+    //     return {};
+    // const SignatureInformation signature = m_sigis.signatures().at(index);
+    // OPENMV-DIFF //
+    if (m_sigis.signatures().size() < 1)
         return {};
-    const SignatureInformation signature = m_sigis.signatures().at(index);
+    SignatureInformation signature = m_sigis.signatures().at(0);
+    // OPENMV-DIFF //
     int parametersIndex = signature.activeParameter().value_or(-1);
     if (parametersIndex < 0) {
         if (index == m_sigis.activeSignature().value_or(-1))
             parametersIndex = m_sigis.activeParameter().value_or(-1);
     }
     QString label = signature.label();
+    // OPENMV-DIFF //
+    parametersIndex = index;
+    if (parametersIndex > signature.parameters().value_or(Parameters()).size())
+        parametersIndex = -1;
+    // OPENMV-DIFF //
     if (parametersIndex < 0)
         return label;
 

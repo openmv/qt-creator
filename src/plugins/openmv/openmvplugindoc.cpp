@@ -5,6 +5,47 @@
 namespace OpenMV {
 namespace Internal {
 
+QStringList OpenMVPlugin::processArgumentSplitting(const QString &args)
+{
+    enum
+    {
+        IN_PUSH_0, // (
+        IN_PUSH_1, // [
+        IN_PUSH_2 // {
+    };
+
+    QStack<int> in_stack;
+
+    QList<int> splits;
+    splits << 0;
+
+    for(int i = 0; i < args.size(); i++)
+    {
+        if(args.at(i) == QLatin1Char('(')) in_stack.push(IN_PUSH_0);
+        if(args.at(i) == QLatin1Char('[')) in_stack.push(IN_PUSH_1);
+        if(args.at(i) == QLatin1Char('{')) in_stack.push(IN_PUSH_2);
+        if(args.at(i) == QLatin1Char(')')) while(in_stack.size() && (in_stack.pop() != IN_PUSH_0));
+        if(args.at(i) == QLatin1Char(']')) while(in_stack.size() && (in_stack.pop() != IN_PUSH_1));
+        if(args.at(i) == QLatin1Char('}')) while(in_stack.size() && (in_stack.pop() != IN_PUSH_2));
+        if(args.at(i) == QLatin1Char(',') && in_stack.isEmpty()) {
+            splits.append(i);
+        }
+    }
+
+    splits.append(args.size());
+
+    QStringList list;
+
+    for(int i = 1; i < splits.size(); i++)
+    {
+        QString s = args.mid(splits[i-1], splits[i] - splits[i-1]);
+        if(s.startsWith(',')) s.removeAt(0);
+        if(!s.isEmpty()) list.append(s);
+    }
+
+    return list;
+}
+
 void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &match,
                                              QStringList &providerVariables,
                                              QStringList &providerClasses, QMap<QString, QStringList> &providerClassArgs,
@@ -54,16 +95,62 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
             body.remove(m_cdfmRegExInside);
         }
 
+        QRegularExpressionMatchIterator cdfmRegExSharedMatch = m_cdfmRegExShared.globalMatch(QString(head) + QStringLiteral("</dt>"));
+
+        while(cdfmRegExSharedMatch.hasNext())
+        {
+            QRegularExpressionMatch match2 = cdfmRegExSharedMatch.next();
+            QString temp = QStringLiteral("<dl class=\"py %1\"><dt class=\"sig sig-object py\" id=\"%2\">%3</dt><dd>%4").arg(type).arg(match2.captured(1)).arg(match2.captured(2)).arg(body);
+            QRegularExpressionMatch cdfmRegExInsideMatch = m_cdfmRegExInside.match(temp);
+
+            if(cdfmRegExInsideMatch.hasMatch())
+            {
+                processDocumentationMatch(cdfmRegExInsideMatch,
+                                          providerVariables,
+                                          providerClasses, providerClassArgs,
+                                          providerFunctions, providerFunctionArgs,
+                                          providerMethods, providerMethodArgs);
+            }
+        }
+
         documentation_t d;
-        d.moduleName = (idList.size() > 1) ? idList.at(0) : QString();
-        if(idList.size() > 1) idList.removeAll(d.moduleName);
-        d.className = (idList.size() > 1) ? idList.at(0) : QString();
-        d.name = (idList.size() > 0) ? idList.last() : d.moduleName;
+
+        d.name = (idList.size() > 0) ? idList.at(idList.size() - 1) : QString();
+
+        if ((type == QStringLiteral("class")) || (type == QStringLiteral("exception")))
+        {
+            d.className = d.name;
+            d.moduleName = (idList.size() > 1) ? idList.mid(0, idList.size() - 1).join('.') : QString();
+
+            // Remove duplicate module names in path (bug fix for documentation issues)...
+            QStringList test = d.moduleName.split('.');
+            if ((test.size() >= 2) && (test.at(test.size() - 1) == test.at(test.size() - 2))) {
+                test.removeLast();
+                d.moduleName = test.join('.');
+            }
+        }
+        else if ((type == QStringLiteral("method")) || (type == QStringLiteral("attribute")))
+        {
+            d.className = (idList.size() > 1) ? idList.at(idList.size() - 2) : QString();
+            d.moduleName = (idList.size() > 2) ? idList.mid(0, idList.size() - 2).join('.') : QString();
+
+            // Remove duplicate module names in path (bug fix for documentation issues)...
+            QStringList test = d.moduleName.split('.');
+            if ((test.size() >= 2) && (test.at(test.size() - 1) == test.at(test.size() - 2))) {
+                test.removeLast();
+                d.moduleName = test.join('.');
+            }
+        }
+        else
+        {
+            d.moduleName = (idList.size() > 1) ? idList.mid(0, idList.size() - 1).join('.') : QString();
+        }
+
         d.text = QString(QStringLiteral("<h3>%1%2</h3>%3")).arg(d.moduleName.isEmpty() ? d.name : (d.moduleName + QStringLiteral(" - ") + (d.className.isEmpty() ? d.name : (d.className + QLatin1Char('.') + d.name)))).arg(argumentString).arg(body).
                  remove(QStringLiteral("\u00B6")).
                  remove(m_spanRegEx).
                  remove(QStringLiteral("</span>")).
-                 remove(m_linkRegEx).
+                 remove(m_anchorRegEx).
                  remove(QStringLiteral("</a>")).
                  remove(m_classRegEx).
                  replace(QStringLiteral("<li><p>"), QStringLiteral("<li>")).
@@ -78,6 +165,12 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
 
         if((type == QStringLiteral("class")) || (type == QStringLiteral("exception")))
         {
+            // Get rid of backup class objects created to handle lack of class defination...
+            if (m_classes.size() && (m_classes.last().name == d.name))
+            {
+                m_classes.removeLast();
+            }
+
             m_classes.append(d);
             providerClasses.append(d.name);
         }
@@ -93,6 +186,27 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
         }
         else if(type == QStringLiteral("method"))
         {
+            bool missing = true;
+
+            for(const documentation_t &m : m_classes)
+            {
+                if(m.name == d.className)
+                {
+                    missing = false;
+                    break;
+                }
+            }
+
+            if(missing)
+            {
+                documentation_t d2;
+                d2.moduleName = d.moduleName;
+                d2.className = d.className;
+                d2.name = d.className;
+                d2.text = QStringLiteral("<h3>%1</h3>").arg(d2.moduleName.isEmpty() ? d2.name : (d2.moduleName + QStringLiteral(" - ") + (d2.className.isEmpty() ? d2.name : (d2.className + QLatin1Char('.') + d2.name))));
+                m_classes.append(d2);
+            }
+
             m_methods.append(d);
             providerMethods.append(d.name);
         }
@@ -101,17 +215,27 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
 
         if(returnMatch.hasMatch())
         {
+            QString returnString = returnMatch.captured(1).remove(QStringLiteral("<span class=\"w\"> </span>")).
+                    remove(m_spanRegEx).
+                    remove(QStringLiteral("</span>")).
+                    remove(m_anchorRegEx).
+                    remove(QStringLiteral("</a>")).
+                    remove(m_preRexEx).
+                    remove(QStringLiteral("</pre>")).
+                    remove(m_emRegEx).
+                    remove(QLatin1String("</em>"));
+
             if(type == QStringLiteral("class"))
             {
-                m_returnTypesByHierarchy.insert(QStringList() << d.moduleName << d.name, returnMatch.captured(1));
+                m_returnTypesByHierarchy.insert(QStringList() << d.moduleName << d.name, returnString);
             }
             else if(type == QStringLiteral("function"))
             {
-                m_returnTypesByHierarchy.insert(QStringList() << d.moduleName << d.name, returnMatch.captured(1));
+                m_returnTypesByHierarchy.insert(QStringList() << d.moduleName << d.name, returnString);
             }
             else if(type == QStringLiteral("method"))
             {
-                m_returnTypesByHierarchy.insert(QStringList() << d.moduleName << d.className << d.name, returnMatch.captured(1));
+                m_returnTypesByHierarchy.insert(QStringList() << d.moduleName << d.className << d.name, returnString);
             }
         }
 
@@ -119,14 +243,24 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
 
         if(returnMatch2.hasMatch())
         {
+            QString returnString = returnMatch2.captured(1).remove(QStringLiteral("<span class=\"w\"> </span>")).
+                    remove(m_spanRegEx).
+                    remove(QStringLiteral("</span>")).
+                    remove(m_anchorRegEx).
+                    remove(QStringLiteral("</a>")).
+                    remove(m_preRexEx).
+                    remove(QStringLiteral("</pre>")).
+                    remove(m_emRegEx).
+                    remove(QLatin1String("</em>"));
+
             if(type == QStringLiteral("data"))
             {
-                m_returnTypesByHierarchy.insert(QStringList() << d.moduleName << d.name, returnMatch2.captured(1));
+                m_returnTypesByHierarchy.insert(QStringList() << d.moduleName << d.name, returnString);
             }
 
             if(type == QStringLiteral("attribute"))
             {
-                m_returnTypesByHierarchy.insert(QStringList() << d.moduleName << d.className << d.name, returnMatch2.captured(1));
+                m_returnTypesByHierarchy.insert(QStringList() << d.moduleName << d.className << d.name, returnString);
             }
         }
 
@@ -134,7 +268,7 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
         {
             QStringList list, listWithTypesAndDefaults;
 
-            for(const QString &arg : QString(args.captured(1)).
+            for(const QString &arg : processArgumentSplitting(QString(args.captured(1)).
                                         remove(QLatin1String("<span class=\"optional\">[</span>")).
                                         remove(QLatin1String("<span class=\"optional\">]</span>")).
                                         remove(m_emRegEx).
@@ -143,37 +277,15 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
                                         remove(QLatin1String("</em>")).
                                         remove(QLatin1String("</span>")).
                                         remove(QLatin1String("</a>")).
-                                        remove(QLatin1Char(' ')).
-                                        // NOT NEEDED ANYMORE // remove(QLatin1Char('[')).
-                                        // NOT NEEDED ANYMORE // remove(QLatin1Char(']')).
-                                        // NOT NEEDED ANYMORE // remove(m_tupleRegEx).
-                                        // NOT NEEDED ANYMORE // remove(m_listRegEx).
-                                        // NOT NEEDED ANYMORE // remove(m_dictionaryRegEx).
-                                        split(m_splitRegEx, Qt::SkipEmptyParts))
+                                        remove(QLatin1Char(' '))))
             {
                 int equals = arg.indexOf(QLatin1Char('='));
                 QString temp = (equals != -1) ? arg.left(equals) : arg;
                 temp = QString(temp).remove(m_typeHintRegEx);
 
-                if(temp.contains(QLatin1Char(','))) // simple argument without type hints
-                {
-                    for(const QString &arg2 : temp.split(QLatin1Char(','), Qt::SkipEmptyParts))
-                    {
-                        int equals2 = arg2.indexOf(QLatin1Char('='));
-                        QString temp2 = (equals2 != -1) ? arg2.left(equals2) : arg2;
-                        temp2 = QString(temp2).remove(m_typeHintRegEx);
-
-                        m_arguments.insert(temp2);
-                        list.append(temp2);
-                        listWithTypesAndDefaults.append(arg2);
-                    }
-                }
-                else // complex argument with type hints
-                {
-                    m_arguments.insert(temp);
-                    list.append(temp);
-                    listWithTypesAndDefaults.append(arg);
-                }
+                m_arguments.insert(temp);
+                list.append(temp);
+                listWithTypesAndDefaults.append(arg);
             }
 
             if(type == QStringLiteral("class"))
@@ -210,17 +322,17 @@ void OpenMVPlugin::loadDocs()
     m_emRegEx = QRegularExpression(QLatin1String("<em.*?>"), QRegularExpression::DotMatchesEverythingOption);
     m_spanRegEx = QRegularExpression(QStringLiteral("<span.*?>"), QRegularExpression::DotMatchesEverythingOption);
     m_anchorRegEx = QRegularExpression(QStringLiteral("<a.*?>"), QRegularExpression::DotMatchesEverythingOption);
-    m_linkRegEx = QRegularExpression(QStringLiteral("<a.*?>"), QRegularExpression::DotMatchesEverythingOption);
+    m_preRexEx = QRegularExpression(QStringLiteral("<pre.*?>"), QRegularExpression::DotMatchesEverythingOption);
     m_classRegEx = QRegularExpression(QStringLiteral(" class=\".*?\""), QRegularExpression::DotMatchesEverythingOption);
     QRegularExpression cdfmRegEx(QStringLiteral("<dl class=\"py (class|data|exception|function|method|attribute)\">\\s*<dt class=\".+?\" id=\"(.+?)\">(.*?)</dt>\\s*<dd>(.*?)(?:<section|</dd>\\s*</dl>)"), QRegularExpression::DotMatchesEverythingOption);
     m_cdfmRegExInside = QRegularExpression(QStringLiteral("<dl class=\"py (class|data|exception|function|method|attribute)\">\\s*<dt class=\".+?\" id=\"(.+?)\">(.*?)</dt>\\s*<dd>(.*)"), QRegularExpression::DotMatchesEverythingOption);
+    m_cdfmRegExShared = QRegularExpression(QStringLiteral("<dt class=\".+?\" id=\"(.+?)\">(.*?)</dt>"), QRegularExpression::DotMatchesEverythingOption);
     m_argumentRegEx = QRegularExpression(QStringLiteral("<span class=\"sig-paren\">\\(</span>(.*?)<span class=\"sig-paren\">\\)</span>"), QRegularExpression::DotMatchesEverythingOption);
-    m_returnTypeRegEx = QRegularExpression(QStringLiteral("<span class=\"sig-return-typehint\">.*?<span class=\"pre\">(.+?)</span>"), QRegularExpression::DotMatchesEverythingOption);
-    m_dataReturnTypeRexEx = QRegularExpression(QStringLiteral("<a class=\"reference internal\".+?<span class=\"pre\">(.+?)</span>"), QRegularExpression::DotMatchesEverythingOption);
+    m_returnTypeRegEx = QRegularExpression(QStringLiteral("<span class=\"sig-return-typehint\">(.+?)<a class=\"headerlink\""), QRegularExpression::DotMatchesEverythingOption);
+    m_dataReturnTypeRexEx = QRegularExpression(QStringLiteral("<span class=\"pre\">:(.+?)<a class=\"headerlink\""), QRegularExpression::DotMatchesEverythingOption);
     m_tupleRegEx = QRegularExpression(QStringLiteral("\\(.*?\\)"), QRegularExpression::DotMatchesEverythingOption);
     m_listRegEx = QRegularExpression(QStringLiteral("\\[.*?\\]"), QRegularExpression::DotMatchesEverythingOption);
     m_dictionaryRegEx = QRegularExpression(QStringLiteral("\\{.*?\\}"), QRegularExpression::DotMatchesEverythingOption);
-    m_splitRegEx = QRegularExpression(QStringLiteral(",\\s*(?=.+?:)"), QRegularExpression::DotMatchesEverythingOption);
     m_typeHintRegEx = QRegularExpression(QStringLiteral("(:\\s*[^:]+)"), QRegularExpression::DotMatchesEverythingOption);
     QRegularExpression sectionRegEx(QStringLiteral("<section.*"), QRegularExpression::DotMatchesEverythingOption);
 
@@ -249,7 +361,7 @@ void OpenMVPlugin::loadDocs()
                                    remove(QStringLiteral("\u00B6")).
                                    remove(m_spanRegEx).
                                    remove(QStringLiteral("</span>")).
-                                   remove(m_linkRegEx).
+                                   remove(m_anchorRegEx).
                                    remove(QStringLiteral("</a>")).
                                    remove(m_classRegEx).
                                    replace(QStringLiteral("<h1>"), QStringLiteral("<h3>")).
@@ -393,7 +505,8 @@ void OpenMVPlugin::loadDocs()
         if(textEditor && filePath.toString().endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
         {
             textEditor->textDocument()->setCompletionAssistProvider(provider);
-            connect(textEditor->editorWidget(), &TextEditor::TextEditorWidget::tooltipOverrideRequested, this, [this] (TextEditor::TextEditorWidget *widget, const QPoint &globalPos, int position, bool *handled) {
+            connect(textEditor->editorWidget(), &TextEditor::TextEditorWidget::lateTooltipOverrideRequested, this,
+                [this] (TextEditor::TextEditorWidget *widget, const QPoint &globalPos, int position, bool *handled, const QString &originalToolTip) {
 
                 if(handled)
                 {
@@ -526,6 +639,15 @@ void OpenMVPlugin::loadDocs()
 
                             if(!list.isEmpty())
                             {
+                                int index = originalToolTip.indexOf(QStringLiteral("<h3>"));
+                                QString cleanedToolTip = originalToolTip;
+
+                                if (index != -1)
+                                {
+                                    cleanedToolTip = originalToolTip.mid(index).remove(QStringLiteral("\\"));
+                                    list = QStringList() << cleanedToolTip;
+                                }
+
                                 QString string;
                                 int i = 0;
 
@@ -639,33 +761,41 @@ void OpenMVPlugin::loadDocs()
         {
             QTextStream stream(&file);
 
+            stream << "from typing import List, Tuple, Union, Any\n";
+
+            if (modules.name != QStringLiteral("image"))
+            {
+                stream << "import image\n";
+            }
+
             for (const documentation_t &classes : m_classes)
             {
                 if (classes.moduleName == modules.name)
                 {
                     QStringList hierarchy = QStringList() << classes.moduleName << classes.name;
-                    stream << "class " << classes.name;
+                    stream << "class " << classes.name << ":\n";
+                    stream << "\tdef __init__(self";
+
                     if (m_argumentsByHierarchy.contains(hierarchy))
                     {
-                        stream << "(" << m_argumentsByHierarchy.value(hierarchy).join(", ");
+                        stream << ", " << m_argumentsByHierarchy.value(hierarchy).join(", ");
                         if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ") -> " << m_returnTypesByHierarchy.value(hierarchy) << ":\n";
                         else stream << "):\n";
                     }
                     else
                     {
-                        stream << ":\n";
+                        stream << "):\n";
                     }
-                    stream << "\t\"\"\"\n";
-                    stream << "\t" << classes.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
-                    stream << "\t\"\"\"\n";
 
-                    bool empty = true;
+                    stream << "\t\t\"\"\"\n";
+                    stream << "\t\t" << classes.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
+                    stream << "\t\t\"\"\"\n";
+                    stream << "\t\tpass\n";
 
                     for (const documentation_t &methods : m_methods)
                     {
                         if (methods.moduleName == modules.name && methods.className == classes.name)
                         {
-                            empty = false;
                             QStringList hierarchy = QStringList() << methods.moduleName << methods.className << methods.name;
                             stream << "\tdef " << methods.name << "(";
                             stream << (QStringList() << "self" << m_argumentsByHierarchy.value(hierarchy)).join(", ");
@@ -682,7 +812,6 @@ void OpenMVPlugin::loadDocs()
                     {
                         if (datas.moduleName == modules.name && datas.className == classes.name)
                         {
-                            empty = false;
                             QStringList hierarchy = QStringList() << datas.moduleName << datas.className << datas.name;
                             stream << "\t" << datas.name;
                             if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ": " << m_returnTypesByHierarchy.value(hierarchy);
@@ -692,8 +821,6 @@ void OpenMVPlugin::loadDocs()
                             stream << "\t\"\"\"\n";
                         }
                     }
-
-                    if (empty) stream << "\tpass\n";
                 }
             }
 
@@ -715,15 +842,15 @@ void OpenMVPlugin::loadDocs()
 
             for (const documentation_t &datas : m_datas)
             {
-                if (datas.moduleName == modules.name)
+                if ((datas.moduleName == modules.name) && datas.className.isEmpty())
                 {
                     QStringList hierarchy = QStringList() << datas.moduleName << datas.name;
-                    stream << datas.name;
-                    if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ": " << m_returnTypesByHierarchy.value(hierarchy);
-                    stream << " = None\n";
                     stream << "\"\"\"\n";
                     stream << "" << datas.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
                     stream << "\"\"\"\n";
+                    stream << datas.name;
+                    if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ": " << m_returnTypesByHierarchy.value(hierarchy);
+                    stream << " = None\n";
                 }
             }
 

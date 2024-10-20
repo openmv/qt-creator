@@ -9,6 +9,16 @@
 #include <languageclient/client.h>
 #include <languageclient/languageclientsettings.h>
 
+// OPENMV-DIFF //
+#if defined(PYTHON_LIBRARY)
+#  define PYTHON_EXPORT Q_DECL_EXPORT
+#elif defined(PYTHON_STATIC_LIBRARY)
+#  define PYTHON_EXPORT
+#else
+#  define PYTHON_EXPORT Q_DECL_IMPORT
+#endif
+// OPENMV-DIFF //
+
 namespace Core { class IDocument; }
 namespace ProjectExplorer { class ExtraCompiler; }
 namespace TextEditor { class TextDocument; }
@@ -19,7 +29,11 @@ class PySideUicExtraCompiler;
 class PythonLanguageServerState;
 class PyLSInterface;
 
-class PyLSClient : public LanguageClient::Client
+// OPENMV-DIFF //
+// class PyLSClient : public LanguageClient::Client
+// OPENMV-DIFF //
+class PYTHON_EXPORT PyLSClient : public LanguageClient::Client
+// OPENMV-DIFF //
 {
     Q_OBJECT
 public:
@@ -34,6 +48,10 @@ public:
 
     static PyLSClient *clientForPython(const Utils::FilePath &python);
     void updateConfiguration();
+
+    // OPENMV-DIFF //
+    static void setPortPath(const Utils::FilePath &portPath);
+    // OPENMV-DIFF //
 
 private:
     void updateExtraCompilerContents(ProjectExplorer::ExtraCompiler *compiler,
