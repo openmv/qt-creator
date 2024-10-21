@@ -2132,9 +2132,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     QElapsedTimer elaspedTimer;
                     elaspedTimer.start();
 
-                    while(!elaspedTimer.hasExpired(100))
+                    while(!elaspedTimer.hasExpired(1000))
                     {
                         QApplication::processEvents();
+                        qDebug() << getDevices();
                     }
                 }
 
@@ -2369,7 +2370,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         if(obj.value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("imx"))
                         {
                             QString a = val.toObject().value(QStringLiteral("boardDisplayName")).toString();
-                            QStringList vidpid = val.toObject().value(QStringLiteral("boardVidPid")).toString().split(QStringLiteral(":"));
+                            QStringList vidpid = val.toObject().value(QStringLiteral("bootloaderVidPid")).toString().split(QStringLiteral(":"));
 
                             if(vidpidlist.contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16))))
                             {

@@ -1,0 +1,17 @@
+1. Install the Windows SDK and Windows WDK.
+2. Put the .inf in a folder by itself since inf2cat only handles folders.
+3. Run:
+
+.\Inf2Cat /driver:<PATH> /os:10_X64
+
+4. Install SafeNet Authentication Client for EV Token.
+5. Import Cert from EV Token.
+6. Run:
+
+.\signtool.exe sign /fd sha256 /tr http://timestamp.sectigo.com/?td=sha256 /td sha256 /as /q
+
+7. Note the sha1 of the Cert you installed.
+8. Run:
+
+.\signtool.exe sign /fd sha1 /t http://timestamp.comodoca.com /q /sha <>
+.\signtool.exe sign /fd sha256 /tr http://timestamp.sectigo.com/?td=sha256 /td sha256 /as /q /sha <>
