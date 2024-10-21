@@ -302,7 +302,10 @@ public:
     }
 };
 
-QPair<QStringList, QStringList> filterPorts(const QString &serialNumberFilter,
+bool validPort(const QJsonDocument &settings, const QString &serialNumberFilter, const MyQSerialPortInfo &port);
+
+QPair<QStringList, QStringList> filterPorts(const QJsonDocument &settings,
+                                            const QString &serialNumberFilter,
                                             bool forceBootloader,
                                             const QList<wifiPort_t> &availableWifiPorts);
 
@@ -310,10 +313,14 @@ class ScanSerialPortsThread: public QObject
 {
     Q_OBJECT
 
-    public: explicit ScanSerialPortsThread(const QString &serialNumberFilter) { m_serialNumberFilter = serialNumberFilter; }
-    public slots: void scanSerialPortsSlot() { emit serialPorts(filterPorts(m_serialNumberFilter, true, QList<wifiPort_t>())); }
+    public: explicit ScanSerialPortsThread(const QJsonDocument &settings, const QString &serialNumberFilter) {
+        m_firmwareSettings = settings; m_serialNumberFilter = serialNumberFilter;
+    }
+    public slots: void scanSerialPortsSlot() {
+        emit serialPorts(filterPorts(m_firmwareSettings, m_serialNumberFilter, true, QList<wifiPort_t>()));
+    }
     signals: void serialPorts(const QPair<QStringList, QStringList> &output);
-    private: QString m_serialNumberFilter;
+    private: QJsonDocument m_firmwareSettings; QString m_serialNumberFilter;
 };
 
 class OpenMVPlugin : public ExtensionSystem::IPlugin
@@ -376,6 +383,8 @@ signals:
 private:
 
     bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path);
+
+    QJsonDocument m_firmwareSettings;
 
     bool m_viewerMode;
 

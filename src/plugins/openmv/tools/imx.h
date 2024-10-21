@@ -8,9 +8,9 @@
 namespace OpenMV {
 namespace Internal {
 
-QList<QPair<int, int> > imxVidPidList(bool spd_host = true, bool bl_host = true);
+QList<QPair<int, int> > imxVidPidList(const QJsonDocument &settings, bool spd_host = true, bool bl_host = true);
 // Returns PID/VID of SPD and BL bootloaders on the system.
-QStringList imxGetAllDevices(bool spd_host = true, bool bl_host = true);
+QStringList imxGetAllDevices(const QJsonDocument &settings, bool spd_host = true, bool bl_host = true);
 // Returns true if the BL bootloader is present.
 bool imxGetDeviceSupported();
 bool imxGetDevice(QJsonObject &obj);

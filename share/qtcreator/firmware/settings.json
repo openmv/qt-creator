@@ -1,0 +1,416 @@
+{
+    "firmware_version": "4.5.9",
+    "boards" : [
+        {
+            "boardType" : "M4",
+            "boardArchString" : "OMV2 F4 256 JPEG",
+            "boardDisplayName" : "OpenMV Cam M4 (STM32F427)",
+            "boardFirmwareFolder" : "OPENMV2",
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "eraseAllSectorStart" : 1,
+                "eraseAllSectorEnd" : 11,
+                "eraseSectorStart" : 4,
+                "eraseSectorEnd" : 11
+            }
+        },
+        {
+            "boardType" : "M7",
+            "boardArchString" : "OMV3 F7 512",
+            "boardDisplayName" : "OpenMV Cam M7 (STM32F765/67)",
+            "boardFirmwareFolder" : "OPENMV3",
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "eraseAllSectorStart" : 1,
+                "eraseAllSectorEnd" : 11,
+                "eraseSectorStart" : 4,
+                "eraseSectorEnd" : 11
+            }
+        },
+        {
+            "boardType" : "H7",
+            "boardArchString" : "OMV4 H7 1024",
+            "boardDisplayName" : "OpenMV Cam H7 (STM32H743)",
+            "boardFirmwareFolder" : "OPENMV4",
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "eraseAllSectorStart" : 1,
+                "eraseAllSectorEnd" : 15,
+                "eraseSectorStart" : 2,
+                "eraseSectorEnd" : 15
+            }
+        },
+        {
+            "boardType" : "H7",
+            "boardArchString" : "OMV4P H7 32768 SDRAM",
+            "boardDisplayName" : "OpenMV Cam H7 Plus (STM32H743 w/ SDRAM)",
+            "boardFirmwareFolder" : "OPENMV4P",
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "eraseAllSectorStart" : 1,
+                "eraseAllSectorEnd" : 15,
+                "eraseSectorStart" : 2,
+                "eraseSectorEnd" : 15
+            }
+        },
+        {
+            "boardType" : "H7",
+            "boardArchString" : "OPENMVPT 65536 SDRAM",
+            "boardDisplayName" : "OpenMV Pure Thermal (STM32H743 w/ SDRAM)",
+            "boardFirmwareFolder" : "OPENMVPT",
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "eraseAllSectorStart" : 1,
+                "eraseAllSectorEnd" : 15,
+                "eraseSectorStart" : 2,
+                "eraseSectorEnd" : 15
+            }
+        },
+        {
+            "boardType" : "IMXRT1060",
+            "boardArchString" : "OMVRT1060 32768 SDRAM",
+            "boardDisplayName" : "OpenMV Cam RT1062",
+            "boardFirmwareFolder" : "OPENMV_RT1060",
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "bootloaderVidPid" : "15a2:0073",
+            "bootloaderType" : "imx",
+            "bootloaderSettings" : {
+                "sdphost_pidvid" : "0x1FC9,0x0135",
+                "sdphost_flash_loader_address" : "0x20001C00",
+                "sdphost_flash_loader_path" : "sdphost_flash_loader.bin",
+                "blhost_pidvid" : "0x15A2,0x0073",
+                "blhost_memory_configuration_address" : "0x2000",
+                "blhost_memory_configuration_spi" : "0xC0000008",
+                "blhost_memory_configuration_fcb" : "0xF000000F",
+                "blhost_memory_configuration_type" : "9",
+                "blhost_secure_bootloader_erase_address" : "0x60000000",
+                "blhost_secure_bootloader_write_address" : "0x60001000",
+                "blhost_secure_bootloader_path" : "blhost_flash_loader.bin",
+                "blhost_firmware_address" : "0x60040000",
+                "blhost_disk_address" : "0x60400000",
+                "blhost_disk_size" : "0x00400000",
+                "blhost_efuse_burn_address" : "0x06",
+                "blhost_efuse_burn_data" : "00000010"
+            }
+        },
+        {
+            "boardType" : "IMXRT1060",
+            "boardArchString" : "OMVRT1060 32768 SDRAM",
+            "boardDisplayName" : "OpenMV Cam RT1062 SBL",
+            "boardFirmwareFolder" : "OPENMV_RT1060",
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "bootloaderVidPid" : "1fc9:0135",
+            "bootloaderType" : "imx",
+            "bootloaderSettings" : {
+                "sdphost_pidvid" : "0x1FC9,0x0135",
+                "sdphost_flash_loader_address" : "0x20001C00",
+                "sdphost_flash_loader_path" : "sdphost_flash_loader.bin",
+                "blhost_pidvid" : "0x15A2,0x0073",
+                "blhost_memory_configuration_address" : "0x2000",
+                "blhost_memory_configuration_spi" : "0xC0000008",
+                "blhost_memory_configuration_fcb" : "0xF000000F",
+                "blhost_memory_configuration_type" : "9",
+                "blhost_secure_bootloader_erase_address" : "0x60000000",
+                "blhost_secure_bootloader_write_address" : "0x60001000",
+                "blhost_secure_bootloader_path" : "blhost_flash_loader.bin",
+                "blhost_firmware_address" : "0x60040000",
+                "blhost_disk_address" : "0x60400000",
+                "blhost_disk_size" : "0x00400000",
+                "blhost_efuse_burn_address" : "0x06",
+                "blhost_efuse_burn_data" : "00000010"
+            }
+        },
+        {
+            "boardType" : "AE3",
+            "boardArchString" : "OPENMV AE3",
+            "boardDisplayName" : "OpenMV Cam AE3",
+            "boardFirmwareFolder" : "OPENMV_AE3",
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "bootloaderVidPid" : "1209:ABD1",
+            "bootloaderType" : "openmv_dfu",
+            "bootloaderSettings" : {
+                "eraseCommands" : [
+                    {
+                        "cmd" : "-a 4",
+                        "path" : "512k_zeros.bin"
+                    }
+                ],
+                "programCommands" : [
+                    {
+                        "cmd" : "-a 1",
+                        "path" : "images/firmware_M55_HP.bin"
+                    },
+                    {
+                        "cmd" : "-a 2",
+                        "path" : "images/firmware_M55_HE.bin"
+                    },
+                    {
+                        "cmd" : "-a 3",
+                        "path" : "images/firmware.toc"
+                    },
+                    {
+                        "cmd" : "--reset",
+                        "path" : ""
+                    }
+                ],
+                "romfsCommands" : [
+                    {
+                        "cmd" : "-a 5",
+                        "path" : "romfs.bin"
+                    }
+                ]
+            }
+        },
+        {
+            "boardType" : "H7",
+            "boardArchString" : "PORTENTA H7 8192 SDRAM",
+            "boardDisplayName" : "Arduino Portenta (STM32H747)",
+            "boardFirmwareFolder" : "ARDUINO_PORTENTA_H7",
+            "boardVidPid" : "2341:005b",
+            "boardPidMask" : "0x00FF",
+            "boardSerialNumberFilter" : [],
+            "bootloaderVidPid" : "2341:035b",
+            "bootloaderType" : "arduino_dfu",
+            "bootloaderSettings" : {
+                "appvidpid" : ["2341:005b", "2341:045b", "2341:035b"],
+                "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
+                "extraProgramCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90F00000",
+                        "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                    },
+                    {
+                        "addr" : "-a 1 -s 0x90FC0000",
+                        "path" : "CYW4343/cyw4343_btfw.bin"
+                    }
+                ],
+                "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+                "dfuProgramCommand" : "-a 0 -s :leave"
+            }
+        },
+        {
+            "boardType" : "H7",
+            "boardArchString" : "GIGA H7 8192 SDRAM",
+            "boardDisplayName" : "Arduino Giga (STM32H747)",
+            "boardFirmwareFolder" : "ARDUINO_GIGA",
+            "boardVidPid" : "2341:0066",
+            "boardPidMask" : "0x00FF",
+            "boardSerialNumberFilter" : [],
+            "bootloaderVidPid" : "2341:0366",
+            "bootloaderType" : "arduino_dfu",
+            "bootloaderSettings" : {
+                "appvidpid" : ["2341:0466", "2341:0366"],
+                "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
+                "extraProgramCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90F00000",
+                        "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                    },
+                    {
+                        "addr" : "-a 1 -s 0x90FC0000",
+                        "path" : "CYW4343/cyw4343_btfw.bin"
+                    }
+                ],
+                "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+                "dfuProgramCommand" : "-a 0 -s :leave"
+            }
+        },
+        {
+            "boardType" : "NICLAV",
+            "boardArchString" : "NICLAV H7 1024",
+            "boardDisplayName" : "Arduino Nicla Vision",
+            "boardFirmwareFolder" : "ARDUINO_NICLA_VISION",
+            "boardVidPid" : "2341:005f",
+            "boardPidMask" : "0x00FF",
+            "boardSerialNumberFilter" : [],
+            "bootloaderVidPid" : "2341:035f",
+            "bootloaderType" : "arduino_dfu",
+            "bootloaderSettings" : {
+                "appvidpid" : ["2341:045f", "2341:035f"],
+                "eraseCommands" : ["-a 1 -s 0x90000000"],
+                "extraProgramCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90F00000",
+                        "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                    },
+                    {
+                        "addr" : "-a 1 -s 0x90FC0000",
+                        "path" : "CYW4343/cyw4343_btfw.bin"
+                    }
+                ],
+                "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+                "dfuProgramCommand" : "-a 0 -s :leave"
+            }
+        },
+        {
+            "boardType" : "NANO33",
+            "boardArchString" : "NANO33 M4",
+            "boardDisplayName" : "Nano33 BLE (nRF52840)",
+            "boardFirmwareFolder" : "ARDUINO_NANO_33_BLE_SENSE",
+            "boardVidPid" : "2341:005a",
+            "boardPidMask" : "0x00FF",
+            "boardSerialNumberFilter" : [],
+            "bootloaderVidPid" : "2341:005a",
+            "bootloaderType" : "bossac",
+            "bootloaderSettings" : {
+                "altvidpid" : "2341:805a",
+                "binProgramCommand" : "--offset=0x16000"
+            }
+        },
+        {
+            "boardType" : "PICO",
+            "boardArchString" : "PICO M0",
+            "boardDisplayName" : "Arduino Nano RP2040 Connect (RP2040)",
+            "boardFirmwareFolder" : "ARDUINO_NANO_RP2040_CONNECT",
+            "boardVidPid" : "2341:005e",
+            "boardPidMask" : "0x00FF",
+            "boardSerialNumberFilter" : [],
+            "bootloaderVidPid" : "28ea:0003",
+            "bootloaderType" : "picotool",
+            "bootloaderSettings" : {
+                "altvidpid" : "2341:805e",
+                "eraseCommands" : ["-o 0x10800000 -t bin"],
+                "binProgramCommand" : "-x"
+            }
+        },
+        {
+            "boardType" : "PICO",
+            "boardArchString" : "PICO M0",
+            "boardDisplayName" : "Arduino Nano RP2040 Connect (RP2040)",
+            "boardFirmwareFolder" : "ARDUINO_NANO_RP2040_CONNECT",
+            "boardVidPid" : "28ea:0003",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberFilter" : [],
+            "bootloaderVidPid" : "0000:0000",
+            "bootloaderType" : ""
+        }
+    ],
+    "sensors" : [
+        {
+            "name" : "OV2640",
+            "id" : "0x26"
+        },
+        {
+            "name" : "OV5640",
+            "id" : "0x56"
+        },
+        {
+            "name" : "OV7690",
+            "id" : "0x76"
+        },
+        {
+            "name" : "OV7725",
+            "id" : "0x77"
+        },
+        {
+            "name" : "OV9650",
+            "id" : "0x96"
+        },
+        {
+            "name" : "MT9V0X2",
+            "id" : "0x1313"
+        },
+        {
+            "name" : "MT9V0X2-C",
+            "id" : "0x1413"
+        },
+        {
+            "name" : "MT9V0X4",
+            "id" : "0x1324"
+        },
+        {
+            "name" : "MT9V0X4-C",
+            "id" : "0x1424"
+        },
+        {
+            "name" : "MT9M114",
+            "id" : "0x2481"
+        },
+        {
+            "name" : "LEPTON",
+            "id" : "0x54"
+        },
+        {
+            "name" : "LEPTON-1.5",
+            "id" : "0x5415"
+        },
+        {
+            "name" : "LEPTON-1.6",
+            "id" : "0x5416"
+        },
+        {
+            "name" : "LEPTON-2.0",
+            "id" : "0x5420"
+        },
+        {
+            "name" : "LEPTON-2.5",
+            "id" : "0x5425"
+        },
+        {
+            "name" : "LEPTON-3.0",
+            "id" : "0x5430"
+        },
+        {
+            "name" : "LEPTON-3.5",
+            "id" : "0x5435"
+        },
+        {
+            "name" : "HM01B0",
+            "id" : "0xB0"
+        },
+        {
+            "name" : "HM0360",
+            "id" : "0x60"
+        },
+        {
+            "name" : "GC2145",
+            "id" : "0x21"
+        },
+        {
+            "name" : "PAG7920",
+            "id" : "0x7920"
+        },
+        {
+            "name" : "PAJ6100",
+            "id" : "0x6100"
+        },
+        {
+            "name" : "FROGEYE2020",
+            "id" : "0x2020"
+        },
+        {
+            "name" : "GENX320-S",
+            "id" : "0x30501C01"
+        },
+        {
+            "name" : "GENX320",
+            "id" : "0xB0602003"
+        }
+    ]
+}

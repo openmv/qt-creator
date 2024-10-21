@@ -21,61 +21,55 @@ namespace Internal {
 
 QMutex imx_working;
 
-QList<QPair<int, int> > imxVidPidList(bool spd_host, bool bl_host)
+QList<QPair<int, int> > imxVidPidList(const QJsonDocument &settings, bool spd_host, bool bl_host)
 {
     QList<QPair<int, int> > pidvidlist;
 
-    QFile imxSettings(Core::ICore::userResourcePath(QStringLiteral("firmware/imx.txt")).toString());
-
-    if(imxSettings.open(QIODevice::ReadOnly))
+    for(const QJsonValue &val : settings.object().value(QStringLiteral("boards")).toArray())
     {
-        QJsonParseError error;
-        QJsonDocument doc = QJsonDocument::fromJson(imxSettings.readAll(), &error);
+        QJsonObject obj = val.toObject();
 
-        if(error.error == QJsonParseError::NoError)
+        if(obj.value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("imx"))
         {
-            for(const QJsonValue &val : doc.array())
+            QJsonObject bootloaderSettings = obj.value(QStringLiteral("bootloaderSettings")).toObject();
+
+            if(spd_host)
             {
-                QJsonObject obj = val.toObject();
+                QStringList pidvid = bootloaderSettings.value(QStringLiteral("sdphost_pidvid")).toString().split(QChar(','));
 
-                if(spd_host)
+                if(pidvid.size() == 2)
                 {
-                    QStringList pidvid = obj.value(QStringLiteral("sdphost_pidvid")).toString().split(QChar(','));
+                    bool okay_pid; int pid = pidvid.at(0).toInt(&okay_pid, 16);
+                    bool okay_vid; int vid = pidvid.at(1).toInt(&okay_vid, 16);
 
-                    if(pidvid.size() == 2)
+                    if(okay_pid && okay_vid)
                     {
-                        bool okay_pid; int pid = pidvid.at(0).toInt(&okay_pid, 16);
-                        bool okay_vid; int vid = pidvid.at(1).toInt(&okay_vid, 16);
+                        QPair<int, int> entry(pid, vid);
 
-                        if(okay_pid && okay_vid)
+                        if(!pidvidlist.contains(entry))
                         {
-                            QPair<int, int> entry(pid, vid);
-
-                            if(!pidvidlist.contains(entry))
-                            {
-                                pidvidlist.append(entry);
-                            }
+                            pidvidlist.append(entry);
                         }
                     }
                 }
+            }
 
-                if(bl_host)
+            if(bl_host)
+            {
+                QStringList pidvid = bootloaderSettings.value(QStringLiteral("blhost_pidvid")).toString().split(QChar(','));
+
+                if(pidvid.size() == 2)
                 {
-                    QStringList pidvid = obj.value(QStringLiteral("blhost_pidvid")).toString().split(QChar(','));
+                    bool okay_pid; int pid = pidvid.at(0).toInt(&okay_pid, 16);
+                    bool okay_vid; int vid = pidvid.at(1).toInt(&okay_vid, 16);
 
-                    if(pidvid.size() == 2)
+                    if(okay_pid && okay_vid)
                     {
-                        bool okay_pid; int pid = pidvid.at(0).toInt(&okay_pid, 16);
-                        bool okay_vid; int vid = pidvid.at(1).toInt(&okay_vid, 16);
+                        QPair<int, int> entry(pid, vid);
 
-                        if(okay_pid && okay_vid)
+                        if(!pidvidlist.contains(entry))
                         {
-                            QPair<int, int> entry(pid, vid);
-
-                            if(!pidvidlist.contains(entry))
-                            {
-                                pidvidlist.append(entry);
-                            }
+                            pidvidlist.append(entry);
                         }
                     }
                 }
@@ -86,9 +80,9 @@ QList<QPair<int, int> > imxVidPidList(bool spd_host, bool bl_host)
     return pidvidlist;
 }
 
-QStringList imxGetAllDevices(bool spd_host, bool bl_host)
+QStringList imxGetAllDevices(const QJsonDocument &settings, bool spd_host, bool bl_host)
 {
-    QList<QPair<int, int> > pidvidlist = imxVidPidList(spd_host, bl_host);
+    QList<QPair<int, int> > pidvidlist = imxVidPidList(settings, spd_host, bl_host);
 
     if(!imx_working.tryLock()) return QStringList();
 

@@ -228,13 +228,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         {
             MyQSerialPortInfo port(raw_port);
 
-            if(port.hasVendorIdentifier() && port.hasProductIdentifier() && (((port.vendorIdentifier() == OPENMVCAM_VID) && (port.productIdentifier() == OPENMVCAM_PID) && (port.serialNumber() != QStringLiteral("000000000010")) && (port.serialNumber() != QStringLiteral("000000000011")))
-            || ((port.vendorIdentifier() == ARDUINOCAM_VID) && (((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_PH7_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NRF_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_RPI_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_NCL_PID) ||
-                                                                ((port.productIdentifier() & ARDUINOCAM_PID_MASK) == ARDUINOCAM_GH7_PID)))
-            || ((port.vendorIdentifier() == RPI2040_VID) && (port.productIdentifier() == RPI2040_PID))))
+            if(validPort(m_firmwareSettings, QString(), port))
             {
                 stringList.append(port.portName());
             }
@@ -453,6 +447,34 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     }
 
     settings->endGroup();
+
+    ///////////////////////////////////////////////////////////////////////////
+
+    QFile firmwareSettings(Core::ICore::userResourcePath(QStringLiteral("firmware/settings.json")).toString());
+
+    if(firmwareSettings.open(QIODevice::ReadOnly))
+    {
+        QJsonParseError error;
+
+        m_firmwareSettings = QJsonDocument::fromJson(firmwareSettings.readAll(), &error);
+
+        if(error.error == QJsonParseError::NoError)
+        {
+
+        }
+        else
+        {
+            QMessageBox::critical(Q_NULLPTR, QString(),
+                Tr::tr("Error reading firmware settings - %L1!").arg(error.errorString()));
+            exit(-1);
+        }
+    }
+    else
+    {
+        QMessageBox::critical(Q_NULLPTR, QString(),
+            Tr::tr("Error reading firmware settings: %L1").arg(firmwareSettings.errorString()));
+        exit(-1);
+    }
 
     ///////////////////////////////////////////////////////////////////////////
 
@@ -2302,7 +2324,7 @@ bool OpenMVPlugin::delayedInitialize()
     // Scan Serial Ports
     {
         QThread *thread = new QThread;
-        ScanSerialPortsThread *scanSerialPortsThread = new ScanSerialPortsThread(m_serialNumberFilter);
+        ScanSerialPortsThread *scanSerialPortsThread = new ScanSerialPortsThread(m_firmwareSettings, m_serialNumberFilter);
         scanSerialPortsThread->moveToThread(thread);
         QTimer *timer = new QTimer(this);
 
