@@ -9,6 +9,7 @@
 namespace OpenMV {
 namespace Internal {
 
+QList<QPair<int, int> > dfuVidPidList(const QJsonDocument &settings);
 QList<QString> getDevices();
 void downloadFirmware(const QString &details,
                       QString &command, Utils::Process &process,

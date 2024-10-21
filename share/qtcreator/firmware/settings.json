@@ -155,12 +155,7 @@
             "bootloaderVidPid" : "1209:ABD1",
             "bootloaderType" : "openmv_dfu",
             "bootloaderSettings" : {
-                "eraseCommands" : [
-                    {
-                        "cmd" : "-a 4",
-                        "path" : "512k_zeros.bin"
-                    }
-                ],
+                "eraseCommands" : ["-a 4"],
                 "programCommands" : [
                     {
                         "cmd" : "-a 1",
@@ -173,10 +168,6 @@
                     {
                         "cmd" : "-a 3",
                         "path" : "images/firmware.toc"
-                    },
-                    {
-                        "cmd" : "--reset",
-                        "path" : ""
                     }
                 ],
                 "romfsCommands" : [

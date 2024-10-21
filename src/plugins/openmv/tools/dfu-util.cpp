@@ -17,6 +17,39 @@ namespace Internal {
 
 QMutex dfu_util_working;
 
+QList<QPair<int, int> > dfuVidPidList(const QJsonDocument &settings)
+{
+    QList<QPair<int, int> > pidvidlist;
+
+    for(const QJsonValue &val : settings.object().value(QStringLiteral("boards")).toArray())
+    {
+        QJsonObject obj = val.toObject();
+
+        if(obj.value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("openmv_dfu"))
+        {
+            QStringList pidvid = obj.value(QStringLiteral("bootloaderVidPid")).toString().split(QChar(':'));
+
+            if(pidvid.size() == 2)
+            {
+                bool okay_pid; int pid = pidvid.at(0).toInt(&okay_pid, 16);
+                bool okay_vid; int vid = pidvid.at(1).toInt(&okay_vid, 16);
+
+                if(okay_pid && okay_vid)
+                {
+                    QPair<int, int> entry(pid, vid);
+
+                    if(!pidvidlist.contains(entry))
+                    {
+                        pidvidlist.append(entry);
+                    }
+                }
+            }
+        }
+    }
+
+    return pidvidlist;
+}
+
 QList<QString> getDevices()
 {
     if(!dfu_util_working.tryLock()) return QList<QString>();
