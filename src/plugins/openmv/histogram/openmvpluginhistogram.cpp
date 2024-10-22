@@ -805,6 +805,11 @@ int start_of_scan_offset(const QByteArray &jpeg) {
 
 void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
 {
+    if (data.isNull())
+    {
+        return;
+    }
+
     m_pixmap = data.scaledToWidth(160, Qt::SmoothTransformation);
 
     switch(m_colorSpace)
