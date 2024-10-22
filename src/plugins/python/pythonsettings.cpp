@@ -731,11 +731,36 @@ static void pythonsFromPath(QPromise<QList<Interpreter>> &promise)
                 const FilePath executable = FilePath::fromUserInput(fi.canonicalFilePath());
                 if (!used.contains(executable) && executable.exists()) {
                     used.insert(executable);
-                    pythons << createInterpreter(executable, "Python from Path");
+                    // OPENMV-DIFF //
+                    // pythons << createInterpreter(executable, "Python from Path");
+                    // OPENMV-DIFF //
+                    Interpreter i = createInterpreter(executable, "Python from Path");
+                    if (i.name.contains(QRegularExpression("Python 3"))) {
+                        if (pythons.isEmpty()) pythons << i;
+                        else {
+                            // Insertion sort.
+                            bool inserted = false;
+                            for (int j = 0; j < pythons.size(); ++j) {
+                                if (i.name > pythons[j].name) {
+                                    pythons.insert(j, i);
+                                    inserted = true;
+                                    break;
+                                }
+                            }
+                            if (!inserted) {
+                                pythons.append(i);
+                            }
+                        }
+                    }
+                    // OPENMV-DIFF //
                 }
             }
         }
     }
+    // OPENMV-DIFF //
+    if (pythons.size() > 1)
+        pythons = QList<Interpreter>() << pythons.takeFirst();
+    // OPENMV-DIFF //
     promise.addResult(pythons);
 }
 
@@ -788,7 +813,11 @@ PythonSettings::PythonSettings()
         const auto interpreters = task.result();
         for (const Interpreter &interpreter : interpreters) {
             if (!alreadyRegistered(interpreter))
-                settingsInstance->addInterpreter(interpreter);
+                // OPENMV-DIFF //
+                // settingsInstance->addInterpreter(interpreter);
+                // OPENMV-DIFF //
+                settingsInstance->addInterpreter(interpreter, true);
+                // OPENMV-DIFF //
         }
     };
 
@@ -798,12 +827,8 @@ PythonSettings::PythonSettings()
             ? AsyncTask<QList<Interpreter>>(onRegistrySetup, onTaskDone) : Tasking::nullItem,
         AsyncTask<QList<Interpreter>>(onPathSetup, onTaskDone)
     };
-    m_taskTreeRunner.start(recipe);
-
-    if (m_defaultInterpreterId.isEmpty())
-        m_defaultInterpreterId = idForPythonFromPath(m_interpreters);
-
-    writeToSettings(Core::ICore::settings());
+    // OPENMV-DIFF //
+    // m_taskTreeRunner.start(recipe);
     // OPENMV-DIFF //
     if (Utils::HostOsInfo::isWindowsHost())
     {
@@ -811,7 +836,16 @@ PythonSettings::PythonSettings()
         if (!alreadyRegistered(interpreter))
             settingsInstance->addInterpreter(interpreter, true);
     }
+    else
+    {
+        m_taskTreeRunner.start(recipe);
+    }
     // OPENMV-DIFF //
+
+    if (m_defaultInterpreterId.isEmpty())
+        m_defaultInterpreterId = idForPythonFromPath(m_interpreters);
+
+    writeToSettings(Core::ICore::settings());
 
     interpreterOptionsPage();
     pylspOptionsPage();
