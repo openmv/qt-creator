@@ -373,6 +373,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     int minor = settings->value(RESOURCES_MINOR, 0).toInt();
     int patch = settings->value(RESOURCES_PATCH, 0).toInt();
 
+    bool resources_updated = false;
+
     #ifdef FORCE_UPDATE_RESOURCES
     if(true
     #else
@@ -437,6 +439,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             settings->setValue(RESOURCES_MINOR, IDE_VERSION_MINOR);
             settings->setValue(RESOURCES_PATCH, IDE_VERSION_RELEASE);
             settings->sync();
+
+            resources_updated = true;
         }
         else
         {
@@ -478,7 +482,10 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     ///////////////////////////////////////////////////////////////////////////
 
-    loadDocs();
+    if(!loadDocs(resources_updated, true))
+    {
+        exit(-1);
+    }
 
     ///////////////////////////////////////////////////////////////////////////
 

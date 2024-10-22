@@ -537,7 +537,7 @@ private:
                                    QStringList &providerClasses, QMap<QString, QStringList> &providerClassArgs,
                                    QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs,
                                    QStringList &providerMethods, QMap<QString, QStringList> &providerMethodArgs);
-    void loadDocs();
+    bool loadDocs(bool update_resoruces, bool update_editors);
 
     void parseImports(const QString &fileText, const QString &moduleFolder, const QStringList &builtInModules, importDataList_t &targetModules, QStringList &errorModules);
     bool importHelper(const QByteArray &text);

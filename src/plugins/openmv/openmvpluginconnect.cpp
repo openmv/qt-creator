@@ -89,7 +89,7 @@ void OpenMVPlugin::packageUpdate()
 
                         QNetworkAccessManager *manager2 = new QNetworkAccessManager(this);
 
-                        connect(manager2, &QNetworkAccessManager::finished, this, [manager2, new_major, new_minor, new_patch, dialog] (QNetworkReply *reply2) {
+                        connect(manager2, &QNetworkAccessManager::finished, this, [this, manager2, new_major, new_minor, new_patch, dialog] (QNetworkReply *reply2) {
                             QByteArray data2 = reply2->error() == QNetworkReply::NoError ? reply2->readAll() : QByteArray();
 
                             if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
@@ -139,11 +139,18 @@ void OpenMVPlugin::packageUpdate()
                                     settings2->setValue(RESOURCES_PATCH, new_patch);
                                     settings2->sync();
 
-                                    QMessageBox::information(Core::ICore::dialogParent(),
-                                        QString(),
-                                        Tr::tr("Installation Sucessful! Please restart OpenMV IDE."));
+                                    if (loadDocs(true, false))
+                                    {
+                                        QMessageBox::information(Core::ICore::dialogParent(),
+                                            QString(),
+                                            Tr::tr("Installation Sucessful! Please restart OpenMV IDE."));
 
-                                    Core::ICore::restart();
+                                        Core::ICore::restart();
+                                    }
+                                    else
+                                    {
+                                        QApplication::quit();
+                                    }
                                 }
 
                                 settings2->endGroup();

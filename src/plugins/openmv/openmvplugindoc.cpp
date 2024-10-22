@@ -307,8 +307,17 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
     }
 }
 
-void OpenMVPlugin::loadDocs()
+bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 {
+    m_modules = QList<documentation_t>();
+    m_classes = QList<documentation_t>();
+    m_datas = QList<documentation_t>();
+    m_functions = QList<documentation_t>();
+    m_methods = QList<documentation_t>();
+    m_arguments = QSet<QString>();
+    m_argumentsByHierarchy = QMap<QStringList, QStringList>();
+    m_returnTypesByHierarchy = QMap<QStringList, QString>();
+
     QStringList providerVariables;
     QStringList providerClasses;
     QMap<QString, QStringList> providerClassArgs;
@@ -398,218 +407,213 @@ void OpenMVPlugin::loadDocs()
 
     ///////////////////////////////////////////////////////////////////////////
 
-    KSyntaxHighlighting::Definition id = TextEditor::HighlighterHelper::definitionForName(QStringLiteral("Python"));
-
-    if(id.isValid())
+    if (update_editors)
     {
-        if(id.d && id.d->load())
+        KSyntaxHighlighting::Definition id = TextEditor::HighlighterHelper::definitionForName(QStringLiteral("Python"));
+
+        if(id.isValid())
         {
-            KSyntaxHighlighting::KeywordList *modulesList = id.d->keywordList(QStringLiteral("listOpenMVModules"));
-            KSyntaxHighlighting::KeywordList *classesList = id.d->keywordList(QStringLiteral("listOpenMVClasses"));
-            KSyntaxHighlighting::KeywordList *datasList = id.d->keywordList(QStringLiteral("listOpenMVDatas"));
-            KSyntaxHighlighting::KeywordList *functionsList = id.d->keywordList(QStringLiteral("listOpenMVFunctions"));
-            KSyntaxHighlighting::KeywordList *methodsList = id.d->keywordList(QStringLiteral("listOpenMVMethods"));
-            KSyntaxHighlighting::KeywordList *argumentsList = id.d->keywordList(QStringLiteral("listOpenMVArguments"));
-
-            if(modulesList)
+            if(id.d && id.d->load())
             {
-                QStringList list = modulesList->keywords();
-                list.removeAll(QStringLiteral("OpenMVVModulesPlaceHolderKeyword"));
+                KSyntaxHighlighting::KeywordList *modulesList = id.d->keywordList(QStringLiteral("listOpenMVModules"));
+                KSyntaxHighlighting::KeywordList *classesList = id.d->keywordList(QStringLiteral("listOpenMVClasses"));
+                KSyntaxHighlighting::KeywordList *datasList = id.d->keywordList(QStringLiteral("listOpenMVDatas"));
+                KSyntaxHighlighting::KeywordList *functionsList = id.d->keywordList(QStringLiteral("listOpenMVFunctions"));
+                KSyntaxHighlighting::KeywordList *methodsList = id.d->keywordList(QStringLiteral("listOpenMVMethods"));
+                KSyntaxHighlighting::KeywordList *argumentsList = id.d->keywordList(QStringLiteral("listOpenMVArguments"));
 
-                for(const documentation_t &d : m_modules)
+                if(modulesList)
                 {
-                    list.append(d.name);
+                    QStringList list = modulesList->keywords();
+                    list.removeAll(QStringLiteral("OpenMVVModulesPlaceHolderKeyword"));
+
+                    for(const documentation_t &d : m_modules)
+                    {
+                        list.append(d.name);
+                    }
+
+                    modulesList->setKeywordList(list);
                 }
 
-                modulesList->setKeywordList(list);
-            }
-
-            if(classesList)
-            {
-                QStringList list = classesList->keywords();
-                list.removeAll(QStringLiteral("OpenMVClassesPlaceHolderKeyword"));
-
-                for(const documentation_t &d : m_classes)
+                if(classesList)
                 {
-                    list.append(d.name);
+                    QStringList list = classesList->keywords();
+                    list.removeAll(QStringLiteral("OpenMVClassesPlaceHolderKeyword"));
+
+                    for(const documentation_t &d : m_classes)
+                    {
+                        list.append(d.name);
+                    }
+
+                    classesList->setKeywordList(list);
                 }
 
-                classesList->setKeywordList(list);
-            }
-
-            if(datasList)
-            {
-                QStringList list = datasList->keywords();
-                list.removeAll(QStringLiteral("OpenMVDatasPlaceHolderKeyword"));
-
-                for(const documentation_t &d : m_datas)
+                if(datasList)
                 {
-                    list.append(d.name);
+                    QStringList list = datasList->keywords();
+                    list.removeAll(QStringLiteral("OpenMVDatasPlaceHolderKeyword"));
+
+                    for(const documentation_t &d : m_datas)
+                    {
+                        list.append(d.name);
+                    }
+
+                    datasList->setKeywordList(list);
                 }
 
-                datasList->setKeywordList(list);
-            }
-
-            if(functionsList)
-            {
-                QStringList list = functionsList->keywords();
-                list.removeAll(QStringLiteral("OpenMVFunctionsPlaceHolderKeyword"));
-
-                for(const documentation_t &d : m_functions)
+                if(functionsList)
                 {
-                    list.append(d.name);
+                    QStringList list = functionsList->keywords();
+                    list.removeAll(QStringLiteral("OpenMVFunctionsPlaceHolderKeyword"));
+
+                    for(const documentation_t &d : m_functions)
+                    {
+                        list.append(d.name);
+                    }
+
+                    functionsList->setKeywordList(list);
                 }
 
-                functionsList->setKeywordList(list);
-            }
-
-            if(methodsList)
-            {
-                QStringList list = methodsList->keywords();
-                list.removeAll(QStringLiteral("OpenMVMethodsPlaceHolderKeyword"));
-
-                for(const documentation_t &d : m_methods)
+                if(methodsList)
                 {
-                    list.append(d.name);
+                    QStringList list = methodsList->keywords();
+                    list.removeAll(QStringLiteral("OpenMVMethodsPlaceHolderKeyword"));
+
+                    for(const documentation_t &d : m_methods)
+                    {
+                        list.append(d.name);
+                    }
+
+                    methodsList->setKeywordList(list);
                 }
 
-                methodsList->setKeywordList(list);
-            }
-
-            if(argumentsList)
-            {
-                QStringList list = argumentsList->keywords();
-                list.removeAll(QStringLiteral("OpenMVArgumentsPlaceHolderKeyword"));
-
-                for(const QString &d : m_arguments.values())
+                if(argumentsList)
                 {
-                    list.append(d);
-                }
+                    QStringList list = argumentsList->keywords();
+                    list.removeAll(QStringLiteral("OpenMVArgumentsPlaceHolderKeyword"));
 
-                argumentsList->setKeywordList(list);
+                    for(const QString &d : m_arguments.values())
+                    {
+                        list.append(d);
+                    }
+
+                    argumentsList->setKeywordList(list);
+                }
             }
         }
     }
 
     ///////////////////////////////////////////////////////////////////////////
 
-    OpenMVPluginCompletionAssistProvider *provider = new OpenMVPluginCompletionAssistProvider(providerVariables,
-                                                                                              providerClasses, providerClassArgs,
-                                                                                              providerFunctions, providerFunctionArgs,
-                                                                                              providerMethods, providerMethodArgs,
-                                                                                              this);
+    if (update_editors)
+    {
+        OpenMVPluginCompletionAssistProvider *provider = new OpenMVPluginCompletionAssistProvider(providerVariables,
+                                                                                                  providerClasses, providerClassArgs,
+                                                                                                  providerFunctions, providerFunctionArgs,
+                                                                                                  providerMethods, providerMethodArgs,
+                                                                                                  this);
 
-    connect(Core::EditorManager::instance(), &Core::EditorManager::editorCreated, this, [this, provider] (Core::IEditor *editor, const Utils::FilePath &filePath) {
-        TextEditor::BaseTextEditor *textEditor = qobject_cast<TextEditor::BaseTextEditor *>(editor);
+        connect(Core::EditorManager::instance(), &Core::EditorManager::editorCreated, this, [this, provider] (Core::IEditor *editor, const Utils::FilePath &filePath) {
+            TextEditor::BaseTextEditor *textEditor = qobject_cast<TextEditor::BaseTextEditor *>(editor);
 
-        if(textEditor && filePath.toString().endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
-        {
-            textEditor->textDocument()->setCompletionAssistProvider(provider);
-            connect(textEditor->editorWidget(), &TextEditor::TextEditorWidget::lateTooltipOverrideRequested, this,
-                [this] (TextEditor::TextEditorWidget *widget, const QPoint &globalPos, int position, bool *handled, const QString &originalToolTip) {
+            if(textEditor && filePath.toString().endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
+            {
+                textEditor->textDocument()->setCompletionAssistProvider(provider);
+                connect(textEditor->editorWidget(), &TextEditor::TextEditorWidget::lateTooltipOverrideRequested, this,
+                    [this] (TextEditor::TextEditorWidget *widget, const QPoint &globalPos, int position, bool *handled, const QString &originalToolTip) {
 
-                if(handled)
-                {
-                    *handled = true;
-                }
-
-                QTextCursor cursor(widget->textDocument()->document());
-                cursor.setPosition(position);
-                cursor.movePosition(QTextCursor::Start, QTextCursor::KeepAnchor);
-                QString text = cursor.selectedText().replace(QChar::ParagraphSeparator, QLatin1Char('\n'));
-
-                if(!text.isEmpty())
-                {
-                    enum
+                    if(handled)
                     {
-                        IN_NONE,
-                        IN_COMMENT,
-                        IN_STRING_0,
-                        IN_STRING_1
+                        *handled = true;
                     }
-                    in_state = IN_NONE;
 
-                    for(int i = 0; i < text.size(); i++)
+                    QTextCursor cursor(widget->textDocument()->document());
+                    cursor.setPosition(position);
+                    cursor.movePosition(QTextCursor::Start, QTextCursor::KeepAnchor);
+                    QString text = cursor.selectedText().replace(QChar::ParagraphSeparator, QLatin1Char('\n'));
+
+                    if(!text.isEmpty())
                     {
-                        switch(in_state)
+                        enum
                         {
-                            case IN_NONE:
+                            IN_NONE,
+                            IN_COMMENT,
+                            IN_STRING_0,
+                            IN_STRING_1
+                        }
+                        in_state = IN_NONE;
+
+                        for(int i = 0; i < text.size(); i++)
+                        {
+                            switch(in_state)
                             {
-                                if((text.at(i) == QLatin1Char('#')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_COMMENT;
-                                if((text.at(i) == QLatin1Char('\'')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_0;
-                                if((text.at(i) == QLatin1Char('\"')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_1;
-                                break;
-                            }
-                            case IN_COMMENT:
-                            {
-                                if((text.at(i) == QLatin1Char('\n')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
-                                break;
-                            }
-                            case IN_STRING_0:
-                            {
-                                if((text.at(i) == QLatin1Char('\'')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
-                                break;
-                            }
-                            case IN_STRING_1:
-                            {
-                                if((text.at(i) == QLatin1Char('\"')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
-                                break;
+                                case IN_NONE:
+                                {
+                                    if((text.at(i) == QLatin1Char('#')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_COMMENT;
+                                    if((text.at(i) == QLatin1Char('\'')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_0;
+                                    if((text.at(i) == QLatin1Char('\"')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_1;
+                                    break;
+                                }
+                                case IN_COMMENT:
+                                {
+                                    if((text.at(i) == QLatin1Char('\n')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                                    break;
+                                }
+                                case IN_STRING_0:
+                                {
+                                    if((text.at(i) == QLatin1Char('\'')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                                    break;
+                                }
+                                case IN_STRING_1:
+                                {
+                                    if((text.at(i) == QLatin1Char('\"')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                                    break;
+                                }
                             }
                         }
-                    }
 
-                    if(in_state == IN_NONE)
-                    {
-                        cursor.setPosition(position);
-                        cursor.select(QTextCursor::WordUnderCursor);
-                        text = cursor.selectedText();
-
-                        QTextCursor newCursor(cursor);
-                        QString maybeModuleName;
-                        bool moduleFilter = false;
-
-                        // 1. Move the cursor to break selection, 2. Move the cursor to '.', 3. Move the cursor onto the word behind '.'.
-                        if(newCursor.movePosition(QTextCursor::PreviousWord, QTextCursor::MoveAnchor, 3))
+                        if(in_state == IN_NONE)
                         {
-                            newCursor.select(QTextCursor::WordUnderCursor);
-                            maybeModuleName = newCursor.selectedText();
+                            cursor.setPosition(position);
+                            cursor.select(QTextCursor::WordUnderCursor);
+                            text = cursor.selectedText();
 
-                            if(!maybeModuleName.isEmpty())
+                            QTextCursor newCursor(cursor);
+                            QString maybeModuleName;
+                            bool moduleFilter = false;
+
+                            // 1. Move the cursor to break selection, 2. Move the cursor to '.', 3. Move the cursor onto the word behind '.'.
+                            if(newCursor.movePosition(QTextCursor::PreviousWord, QTextCursor::MoveAnchor, 3))
                             {
+                                newCursor.select(QTextCursor::WordUnderCursor);
+                                maybeModuleName = newCursor.selectedText();
+
+                                if(!maybeModuleName.isEmpty())
+                                {
+                                    for(const documentation_t &d : m_modules)
+                                    {
+                                        if(d.name == maybeModuleName)
+                                        {
+                                            moduleFilter = true;
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+
+                            if(!text.isEmpty())
+                            {
+                                QStringList list;
+
                                 for(const documentation_t &d : m_modules)
                                 {
-                                    if(d.name == maybeModuleName)
+                                    if(d.name == text)
                                     {
-                                        moduleFilter = true;
-                                        break;
+                                        list.append(d.text);
                                     }
                                 }
-                            }
-                        }
 
-                        if(!text.isEmpty())
-                        {
-                            QStringList list;
-
-                            for(const documentation_t &d : m_modules)
-                            {
-                                if(d.name == text)
-                                {
-                                    list.append(d.text);
-                                }
-                            }
-
-                            for(const documentation_t &d : m_datas)
-                            {
-                                if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
-                                {
-                                    list.append(d.text);
-                                }
-                            }
-
-                            if(widget->textDocument()->document()->characterAt(qMax(cursor.position(), cursor.anchor())) == QLatin1Char('('))
-                            {
-                                for(const documentation_t &d : m_classes)
+                                for(const documentation_t &d : m_datas)
                                 {
                                     if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
                                     {
@@ -617,47 +621,65 @@ void OpenMVPlugin::loadDocs()
                                     }
                                 }
 
-                                for(const documentation_t &d : m_functions)
+                                if(widget->textDocument()->document()->characterAt(qMax(cursor.position(), cursor.anchor())) == QLatin1Char('('))
                                 {
-                                    if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
-                                    {
-                                        list.append(d.text);
-                                    }
-                                }
-
-                                if(qMin(cursor.position(), cursor.anchor()) && (widget->textDocument()->document()->characterAt(qMin(cursor.position(), cursor.anchor()) - 1) == QLatin1Char('.')))
-                                {
-                                    for(const documentation_t &d : m_methods)
+                                    for(const documentation_t &d : m_classes)
                                     {
                                         if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
                                         {
                                             list.append(d.text);
                                         }
                                     }
-                                }
-                            }
 
-                            if(!list.isEmpty())
-                            {
-                                int index = originalToolTip.indexOf(QStringLiteral("<h3>"));
-                                QString cleanedToolTip = originalToolTip;
-
-                                if (index != -1)
-                                {
-                                    cleanedToolTip = originalToolTip.mid(index).remove(QStringLiteral("\\"));
-                                    list = QStringList() << cleanedToolTip;
-                                }
-
-                                QString string;
-                                int i = 0;
-
-                                for(int j = 0, k = qCeil(qSqrt(list.size())); j < k; j++)
-                                {
-                                    string.append(QStringLiteral("<tr>"));
-
-                                    for(int l = 0; l < k; l++)
+                                    for(const documentation_t &d : m_functions)
                                     {
-                                        string.append(QStringLiteral("<td style=\"padding:6px;\">") + list.at(i++) + QStringLiteral("</td>"));
+                                        if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
+                                        {
+                                            list.append(d.text);
+                                        }
+                                    }
+
+                                    if(qMin(cursor.position(), cursor.anchor()) && (widget->textDocument()->document()->characterAt(qMin(cursor.position(), cursor.anchor()) - 1) == QLatin1Char('.')))
+                                    {
+                                        for(const documentation_t &d : m_methods)
+                                        {
+                                            if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
+                                            {
+                                                list.append(d.text);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                if(!list.isEmpty())
+                                {
+                                    int index = originalToolTip.indexOf(QStringLiteral("<h3>"));
+                                    QString cleanedToolTip = originalToolTip;
+
+                                    if (index != -1)
+                                    {
+                                        cleanedToolTip = originalToolTip.mid(index).remove(QStringLiteral("\\"));
+                                        list = QStringList() << cleanedToolTip;
+                                    }
+
+                                    QString string;
+                                    int i = 0;
+
+                                    for(int j = 0, k = qCeil(qSqrt(list.size())); j < k; j++)
+                                    {
+                                        string.append(QStringLiteral("<tr>"));
+
+                                        for(int l = 0; l < k; l++)
+                                        {
+                                            string.append(QStringLiteral("<td style=\"padding:6px;\">") + list.at(i++) + QStringLiteral("</td>"));
+
+                                            if(i >= list.size())
+                                            {
+                                                break;
+                                            }
+                                        }
+
+                                        string.append(QStringLiteral("</tr>"));
 
                                         if(i >= list.size())
                                         {
@@ -665,208 +687,214 @@ void OpenMVPlugin::loadDocs()
                                         }
                                     }
 
-                                    string.append(QStringLiteral("</tr>"));
-
-                                    if(i >= list.size())
-                                    {
-                                        break;
-                                    }
+                                    Utils::ToolTip::show(globalPos, QStringLiteral("<table>") + string + QStringLiteral("</table>"), widget);
+                                    return;
                                 }
-
-                                Utils::ToolTip::show(globalPos, QStringLiteral("<table>") + string + QStringLiteral("</table>"), widget);
-                                return;
-                            }
-                            else if(!originalToolTip.isEmpty())
-                            {
-                                QString cleanedToolTip = QString(originalToolTip).remove(QStringLiteral("\\")).simplified().trimmed();
-                                cleanedToolTip.replace(QRegularExpression("```\\s*(.+?)\\s*```"), QStringLiteral("<pre>\\1</pre>"));
-                                cleanedToolTip.replace(QStringLiteral("</pre> <pre>"), QStringLiteral("</pre><pre>"));
-                                cleanedToolTip.replace(QStringLiteral("</pre> "), QStringLiteral("</pre><p>"));
-                                cleanedToolTip.replace(QStringLiteral(" <pre>"), QStringLiteral("</p><pre>"));
-                                Utils::ToolTip::show(globalPos, QStringLiteral("<table><tr><td style=\"padding:6px;\">") + cleanedToolTip + QStringLiteral("</td></tr></table>"), widget);
-                                return;
+                                else if(!originalToolTip.isEmpty())
+                                {
+                                    QString cleanedToolTip = QString(originalToolTip).remove(QStringLiteral("\\")).simplified().trimmed();
+                                    cleanedToolTip.replace(QRegularExpression("```\\s*(.+?)\\s*```"), QStringLiteral("<pre>\\1</pre>"));
+                                    cleanedToolTip.replace(QStringLiteral("</pre> <pre>"), QStringLiteral("</pre><pre>"));
+                                    cleanedToolTip.replace(QStringLiteral("</pre> "), QStringLiteral("</pre><p>"));
+                                    cleanedToolTip.replace(QStringLiteral(" <pre>"), QStringLiteral("</p><pre>"));
+                                    Utils::ToolTip::show(globalPos, QStringLiteral("<table><tr><td style=\"padding:6px;\">") + cleanedToolTip + QStringLiteral("</td></tr></table>"), widget);
+                                    return;
+                                }
                             }
                         }
                     }
-                }
 
-                Utils::ToolTip::hide();
-            });
+                    Utils::ToolTip::hide();
+                });
 
-            connect(textEditor->editorWidget(), &TextEditor::TextEditorWidget::contextMenuEventCB, this, [this, textEditor] (QMenu *menu, QString text) {
+                connect(textEditor->editorWidget(), &TextEditor::TextEditorWidget::contextMenuEventCB, this, [this, textEditor] (QMenu *menu, QString text) {
 
-                QRegularExpressionMatch grayscaleMatch = QRegularExpression(QStringLiteral("^\\s*\\(\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*\\)\\s*$")).match(text);
+                    QRegularExpressionMatch grayscaleMatch = QRegularExpression(QStringLiteral("^\\s*\\(\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*\\)\\s*$")).match(text);
 
-                if(grayscaleMatch.hasMatch())
-                {
-                    menu->addSeparator();
-                    QAction *action = new QAction(Tr::tr("Edit Grayscale threshold with Threshold Editor"), menu);
-                    connect(action, &QAction::triggered, this, [this, textEditor, grayscaleMatch] {
-                        QList<int> list = openThresholdEditor(QList<QVariant>()
-                            << grayscaleMatch.captured(1).toInt()
-                            << grayscaleMatch.captured(2).toInt()
-                        );
+                    if(grayscaleMatch.hasMatch())
+                    {
+                        menu->addSeparator();
+                        QAction *action = new QAction(Tr::tr("Edit Grayscale threshold with Threshold Editor"), menu);
+                        connect(action, &QAction::triggered, this, [this, textEditor, grayscaleMatch] {
+                            QList<int> list = openThresholdEditor(QList<QVariant>()
+                                << grayscaleMatch.captured(1).toInt()
+                                << grayscaleMatch.captured(2).toInt()
+                            );
 
-                        if(!list.isEmpty())
-                        {
-                            textEditor->textCursor().removeSelectedText();
-                            textEditor->textCursor().insertText(QString(QStringLiteral("(%1, %2)")).arg(list.at(0), 3) // can't use takeFirst() here
-                                                                                                   .arg(list.at(1), 3)); // can't use takeFirst() here
-                        }
-                    });
+                            if(!list.isEmpty())
+                            {
+                                textEditor->textCursor().removeSelectedText();
+                                textEditor->textCursor().insertText(QString(QStringLiteral("(%1, %2)")).arg(list.at(0), 3) // can't use takeFirst() here
+                                                                                                       .arg(list.at(1), 3)); // can't use takeFirst() here
+                            }
+                        });
 
-                    menu->addAction(action);
-                }
+                        menu->addAction(action);
+                    }
 
-                QRegularExpressionMatch labMatch = QRegularExpression(QStringLiteral("^\\s*\\(\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*\\)\\s*$")).match(text);
+                    QRegularExpressionMatch labMatch = QRegularExpression(QStringLiteral("^\\s*\\(\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*\\)\\s*$")).match(text);
 
-                if(labMatch.hasMatch())
-                {
-                    menu->addSeparator();
-                    QAction *action = new QAction(Tr::tr("Edit LAB threshold with Threshold Editor"), menu);
-                    connect(action, &QAction::triggered, this, [this, textEditor, labMatch] {
-                        QList<int> list = openThresholdEditor(QList<QVariant>()
-                            << labMatch.captured(1).toInt()
-                            << labMatch.captured(2).toInt()
-                            << labMatch.captured(3).toInt()
-                            << labMatch.captured(4).toInt()
-                            << labMatch.captured(5).toInt()
-                            << labMatch.captured(6).toInt()
-                        );
+                    if(labMatch.hasMatch())
+                    {
+                        menu->addSeparator();
+                        QAction *action = new QAction(Tr::tr("Edit LAB threshold with Threshold Editor"), menu);
+                        connect(action, &QAction::triggered, this, [this, textEditor, labMatch] {
+                            QList<int> list = openThresholdEditor(QList<QVariant>()
+                                << labMatch.captured(1).toInt()
+                                << labMatch.captured(2).toInt()
+                                << labMatch.captured(3).toInt()
+                                << labMatch.captured(4).toInt()
+                                << labMatch.captured(5).toInt()
+                                << labMatch.captured(6).toInt()
+                            );
 
-                        if(!list.isEmpty())
-                        {
-                            textEditor->textCursor().removeSelectedText();
-                            textEditor->textCursor().insertText(QString(QStringLiteral("(%1, %2, %3, %4, %5, %6)")).arg(list.at(2), 3) // can't use takeFirst() here
-                                                                                                                   .arg(list.at(3), 3) // can't use takeFirst() here
-                                                                                                                   .arg(list.at(4), 4) // can't use takeFirst() here
-                                                                                                                   .arg(list.at(5), 4) // can't use takeFirst() here
-                                                                                                                   .arg(list.at(6), 4) // can't use takeFirst() here
-                                                                                                                   .arg(list.at(7), 4)); // can't use takeFirst() here
-                        }
-                    });
+                            if(!list.isEmpty())
+                            {
+                                textEditor->textCursor().removeSelectedText();
+                                textEditor->textCursor().insertText(QString(QStringLiteral("(%1, %2, %3, %4, %5, %6)")).arg(list.at(2), 3) // can't use takeFirst() here
+                                                                                                                       .arg(list.at(3), 3) // can't use takeFirst() here
+                                                                                                                       .arg(list.at(4), 4) // can't use takeFirst() here
+                                                                                                                       .arg(list.at(5), 4) // can't use takeFirst() here
+                                                                                                                       .arg(list.at(6), 4) // can't use takeFirst() here
+                                                                                                                       .arg(list.at(7), 4)); // can't use takeFirst() here
+                            }
+                        });
 
-                    menu->addAction(action);
-                }
-            });
-        }
-    });
+                        menu->addAction(action);
+                    }
+                });
+            }
+        });
+    }
 
     ///////////////////////////////////////////////////////////////////////////
 
-    const Utils::FilePath &headers = Core::ICore::userResourcePath(QStringLiteral("micropython-headers"));
-
-    if (!QDir(headers.toString()).exists())
+    if (update_resoruces)
     {
-        QDir().mkdir(headers.toString());
-    }
+        const Utils::FilePath &headers = Core::ICore::userResourcePath(QStringLiteral("micropython-headers"));
 
-    for (const documentation_t &modules : m_modules)
-    {
-        Utils::FilePath path = headers;
-        path = path.pathAppended(modules.name + QStringLiteral(".py"));
-        QFile file(path.toString());
-
-        if(file.open(QIODevice::WriteOnly))
+        if(headers.exists())
         {
-            QTextStream stream(&file);
+            QString error;
 
-            stream << "from typing import List, Tuple, Union, Any\n";
-
-            if (modules.name != QStringLiteral("image"))
+            if(!headers.removeRecursively(&error))
             {
-                stream << "import image\n";
+                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                return false;
             }
+        }
 
-            for (const documentation_t &classes : m_classes)
+        QDir().mkdir(headers.toString());
+
+        for (const documentation_t &modules : m_modules)
+        {
+            Utils::FilePath path = headers;
+            path = path.pathAppended(modules.name + QStringLiteral(".py"));
+            QFile file(path.toString());
+
+            if(file.open(QIODevice::WriteOnly))
             {
-                if (classes.moduleName == modules.name)
+                QTextStream stream(&file);
+
+                stream << "from typing import List, Tuple, Union, Any\n";
+
+                if (modules.name != QStringLiteral("image"))
                 {
-                    QStringList hierarchy = QStringList() << classes.moduleName << classes.name;
-                    stream << "class " << classes.name << ":\n";
-                    stream << "\tdef __init__(self";
+                    stream << "import image\n";
+                }
 
-                    if (m_argumentsByHierarchy.contains(hierarchy))
+                for (const documentation_t &classes : m_classes)
+                {
+                    if (classes.moduleName == modules.name)
                     {
-                        stream << ", " << m_argumentsByHierarchy.value(hierarchy).join(", ");
-                        if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ") -> " << m_returnTypesByHierarchy.value(hierarchy) << ":\n";
-                        else stream << "):\n";
-                    }
-                    else
-                    {
-                        stream << "):\n";
-                    }
+                        QStringList hierarchy = QStringList() << classes.moduleName << classes.name;
+                        stream << "class " << classes.name << ":\n";
+                        stream << "\tdef __init__(self";
 
-                    stream << "\t\t\"\"\"\n";
-                    stream << "\t\t" << classes.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
-                    stream << "\t\t\"\"\"\n";
-                    stream << "\t\tpass\n";
-
-                    for (const documentation_t &methods : m_methods)
-                    {
-                        if (methods.moduleName == modules.name && methods.className == classes.name)
+                        if (m_argumentsByHierarchy.contains(hierarchy))
                         {
-                            QStringList hierarchy = QStringList() << methods.moduleName << methods.className << methods.name;
-                            stream << "\tdef " << methods.name << "(";
-                            stream << (QStringList() << "self" << m_argumentsByHierarchy.value(hierarchy)).join(", ");
+                            stream << ", " << m_argumentsByHierarchy.value(hierarchy).join(", ");
                             if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ") -> " << m_returnTypesByHierarchy.value(hierarchy) << ":\n";
                             else stream << "):\n";
-                            stream << "\t\t\"\"\"\n";
-                            stream << "\t\t" << methods.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
-                            stream << "\t\t\"\"\"\n";
-                            stream << "\t\tpass\n";
                         }
-                    }
-
-                    for (const documentation_t &datas : m_datas)
-                    {
-                        if (datas.moduleName == modules.name && datas.className == classes.name)
+                        else
                         {
-                            QStringList hierarchy = QStringList() << datas.moduleName << datas.className << datas.name;
-                            stream << "\t" << datas.name;
-                            if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ": " << m_returnTypesByHierarchy.value(hierarchy);
-                            stream << " = None\n";
-                            stream << "\t\"\"\"\n";
-                            stream << "\t" << datas.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
-                            stream << "\t\"\"\"\n";
+                            stream << "):\n";
+                        }
+
+                        stream << "\t\t\"\"\"\n";
+                        stream << "\t\t" << classes.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
+                        stream << "\t\t\"\"\"\n";
+                        stream << "\t\tpass\n";
+
+                        for (const documentation_t &methods : m_methods)
+                        {
+                            if (methods.moduleName == modules.name && methods.className == classes.name)
+                            {
+                                QStringList hierarchy = QStringList() << methods.moduleName << methods.className << methods.name;
+                                stream << "\tdef " << methods.name << "(";
+                                stream << (QStringList() << "self" << m_argumentsByHierarchy.value(hierarchy)).join(", ");
+                                if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ") -> " << m_returnTypesByHierarchy.value(hierarchy) << ":\n";
+                                else stream << "):\n";
+                                stream << "\t\t\"\"\"\n";
+                                stream << "\t\t" << methods.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
+                                stream << "\t\t\"\"\"\n";
+                                stream << "\t\tpass\n";
+                            }
+                        }
+
+                        for (const documentation_t &datas : m_datas)
+                        {
+                            if (datas.moduleName == modules.name && datas.className == classes.name)
+                            {
+                                QStringList hierarchy = QStringList() << datas.moduleName << datas.className << datas.name;
+                                stream << "\t" << datas.name;
+                                if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ": " << m_returnTypesByHierarchy.value(hierarchy);
+                                stream << " = None\n";
+                                stream << "\t\"\"\"\n";
+                                stream << "\t" << datas.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
+                                stream << "\t\"\"\"\n";
+                            }
                         }
                     }
                 }
-            }
 
-            for (const documentation_t &function : m_functions)
-            {
-                if (function.moduleName == modules.name)
+                for (const documentation_t &function : m_functions)
                 {
-                    QStringList hierarchy = QStringList() << function.moduleName << function.name;
-                    stream << "def " << function.name << "(";
-                    stream << m_argumentsByHierarchy.value(hierarchy).join(", ");
-                    if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ") -> " << m_returnTypesByHierarchy.value(hierarchy) << ":\n";
-                    else stream << "):\n";
-                    stream << "\t\"\"\"\n";
-                    stream << "\t" << function.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
-                    stream << "\t\"\"\"\n";
-                    stream << "\tpass\n";
+                    if (function.moduleName == modules.name)
+                    {
+                        QStringList hierarchy = QStringList() << function.moduleName << function.name;
+                        stream << "def " << function.name << "(";
+                        stream << m_argumentsByHierarchy.value(hierarchy).join(", ");
+                        if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ") -> " << m_returnTypesByHierarchy.value(hierarchy) << ":\n";
+                        else stream << "):\n";
+                        stream << "\t\"\"\"\n";
+                        stream << "\t" << function.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
+                        stream << "\t\"\"\"\n";
+                        stream << "\tpass\n";
+                    }
                 }
-            }
 
-            for (const documentation_t &datas : m_datas)
-            {
-                if ((datas.moduleName == modules.name) && datas.className.isEmpty())
+                for (const documentation_t &datas : m_datas)
                 {
-                    QStringList hierarchy = QStringList() << datas.moduleName << datas.name;
-                    stream << "\"\"\"\n";
-                    stream << "" << datas.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
-                    stream << "\"\"\"\n";
-                    stream << datas.name;
-                    if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ": " << m_returnTypesByHierarchy.value(hierarchy);
-                    stream << " = None\n";
+                    if ((datas.moduleName == modules.name) && datas.className.isEmpty())
+                    {
+                        QStringList hierarchy = QStringList() << datas.moduleName << datas.name;
+                        stream << "\"\"\"\n";
+                        stream << "" << datas.text.simplified().trimmed().replace(QStringLiteral("> <"), QStringLiteral("><")) << "\n";
+                        stream << "\"\"\"\n";
+                        stream << datas.name;
+                        if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ": " << m_returnTypesByHierarchy.value(hierarchy);
+                        stream << " = None\n";
+                    }
                 }
-            }
 
-            file.close();
+                file.close();
+            }
         }
     }
+
+    return true;
 }
 
 } // namespace Internal
