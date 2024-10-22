@@ -3746,9 +3746,14 @@ bool EditorManager::restoreState(const QByteArray &state)
                 if (IEditor *editor = openEditor(filePath, id, DoNotMakeVisible))
                     DocumentModelPrivate::setPinned(DocumentModel::entryForDocument(editor->document()), pinned);
             } else {
-                 if (DocumentModel::Entry *entry = DocumentModelPrivate::addSuspendedDocument(
-                        filePath, displayName, id))
-                     DocumentModelPrivate::setPinned(entry, pinned);
+                // OPENMV-DIFF //
+                //  if (DocumentModel::Entry *entry = DocumentModelPrivate::addSuspendedDocument(
+                //         filePath, displayName, id))
+                //      DocumentModelPrivate::setPinned(entry, pinned);
+                // OPENMV-DIFF //
+                if (IEditor *editor = openEditor(filePath, id, DoNotMakeVisible))
+                    DocumentModelPrivate::setPinned(DocumentModel::entryForDocument(editor->document()), pinned);
+                // OPENMV-DIFF //
             }
         }
     }

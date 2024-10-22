@@ -1469,11 +1469,13 @@ void readSettings()
 
 FilePath DocumentManager::fileDialogInitialDirectory()
 {
-    IDocument *doc = EditorManager::currentDocument();
-    if (doc && !doc->isTemporary() && !doc->filePath().isEmpty())
-        return doc->filePath().absolutePath();
-    if (!d->m_defaultLocationForNewFiles.isEmpty())
-        return d->m_defaultLocationForNewFiles;
+    // OPENMV-DIFF //
+    // IDocument *doc = EditorManager::currentDocument();
+    // if (doc && !doc->isTemporary() && !doc->filePath().isEmpty())
+    //     return doc->filePath().absolutePath();
+    // if (!d->m_defaultLocationForNewFiles.isEmpty())
+    //     return d->m_defaultLocationForNewFiles;
+    // OPENMV-DIFF //
     return d->m_lastVisitedDirectory;
 }
 
