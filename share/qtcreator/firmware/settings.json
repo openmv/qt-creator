@@ -170,10 +170,23 @@
                         "path" : "OPENMV_AE3/AppTocPackage.bin"
                     }
                 ],
+                "binProgamCommands" : [
+                    {
+                        "cmd": "-a 1",
+                        "name": "firmware_M55_HP.bin"
+                    },
+                    {
+                        "cmd": "-a 2",
+                        "name": "firmware_M55_HE.bin"
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "AppTocPackage.bin"
+                    }
+                ],
                 "romfsCommands" : [
                     {
-                        "cmd" : "-a 5",
-                        "path" : "romfs.bin"
+                        "cmd" : "-a 5"
                     }
                 ]
             }
