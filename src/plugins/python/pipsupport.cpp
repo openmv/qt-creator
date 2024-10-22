@@ -146,6 +146,8 @@ void PipInstallTask::handleOutput()
     // if (!stdOut.isEmpty())
     //     Core::MessageManager::writeSilently(stdOut);
     // OPENMV-DIFF //
+    Q_UNUSED(stdOut)
+    // OPENMV-DIFF //
 }
 
 void PipInstallTask::handleError()

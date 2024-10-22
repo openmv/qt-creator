@@ -2324,7 +2324,7 @@ bool OpenMVPlugin::delayedInitialize()
     // Scan Serial Ports
     {
         QThread *thread = new QThread;
-        ScanSerialPortsThread *scanSerialPortsThread = new ScanSerialPortsThread(m_firmwareSettings, m_serialNumberFilter);
+        ScanSerialPortsThread *scanSerialPortsThread = new ScanSerialPortsThread(QJsonDocument(m_firmwareSettings), QString(m_serialNumberFilter));
         scanSerialPortsThread->moveToThread(thread);
         QTimer *timer = new QTimer(this);
 
