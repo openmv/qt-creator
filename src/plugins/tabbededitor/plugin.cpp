@@ -12,6 +12,10 @@
 #include <QFile>
 #include <QMainWindow>
 
+// OPENMV-DIFF //
+#include <extensionsystem/pluginmanager.h>
+// OPENMV-DIFF //
+
 using namespace TabbedEditor::Internal;
 
 TabbedEditorPlugin::TabbedEditorPlugin() :
@@ -126,6 +130,42 @@ void TabbedEditorPlugin::updateStyleToBaseColor()
     // OPENMV-DIFF //
 
     m_tabBar->setStyleSheet(stylesheetPattern);
+
+    // OPENMV-DIFF //
+    connect(Core::ICore::instance(), &Core::ICore::saveSettingsRequested, this, [this] {
+        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+        settings->beginGroup("TabbedEditor");
+        QStringList positions;
+        for (Core::IEditor *editor : m_tabBar->editors()) {
+            if (!editor->document()->isTemporary())
+            {
+                positions << editor->document()->filePath().toString();
+            }
+        }
+        settings->setValue("TabPositions", positions);
+        settings->endGroup();
+    });
+
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->beginGroup("TabbedEditor");
+    QStringList positions = settings->value("TabPositions").toStringList();
+
+    for (int i = 0; i < positions.size(); i++) {
+        int from = -1;
+        for (int j = 0; j < m_tabBar->editors().size(); j++) {
+            Core::IEditor *editor = m_tabBar->editors().at(j);
+            if (!editor->document()->isTemporary() && editor->document()->filePath().toString() == positions[i]) {
+                from = j;
+                break;
+            }
+        }
+        if (from != -1) {
+            m_tabBar->moveTab(from, i);
+        }
+    }
+
+    settings->endGroup();
+    // OPENMV-DIFF //
 }
 
 void TabbedEditorPlugin::showTabBar()

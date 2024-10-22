@@ -19,6 +19,9 @@ class TabBar : public QTabBar
     Q_OBJECT
 public:
     explicit TabBar(QWidget *parent = 0);
+    // OPENMV-DIFF //
+    QList<Core::IEditor *> editors() { return m_editors; }
+    // OPENMV-DIFF //
 
 private slots:
     void activateEditor(int index);
