@@ -100,6 +100,7 @@ if (APPLE)
     ffmpeg/mac
     dfu-util/osx
     bossac/osx
+    node/mac
     picotool/osx
     blhost/mac
     sdphost/mac)
@@ -113,6 +114,7 @@ if(UNIX AND NOT APPLE)
         ffmpeg/linux-arm64
         dfu-util/aarch64
         bossac/aarch64
+        node/linux-arm64
         picotool/aarch64
         pydfu)
     else()
@@ -120,6 +122,7 @@ if(UNIX AND NOT APPLE)
         ffmpeg/linux-x86_64
         dfu-util/linux64
         bossac/linux64
+        node/linux-x64
         picotool/linux64
         blhost/linux/amd64
         sdphost/linux/amd64
@@ -131,6 +134,7 @@ if(UNIX AND NOT APPLE)
         ffmpeg/linux-armhf
         dfu-util/arm
         bossac/arm
+        node/linux-armv7
         picotool/arm
         pydfu)
     else()

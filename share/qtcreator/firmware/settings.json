@@ -152,7 +152,7 @@
             "boardVidPid" : "37C5:AFE3",
             "boardPidMask" : "0xFFFF",
             "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
-            "bootloaderVidPid" : "37C5:AFE3",
+            "bootloaderVidPid" : "1209:abd1",
             "bootloaderType" : "openmv_dfu",
             "bootloaderSettings" : {
                 "eraseCommands" : ["-a 4"],
@@ -167,7 +167,7 @@
                     },
                     {
                         "cmd" : "-a 3",
-                        "path" : "OPENMV_AE3/images/firmware.toc"
+                        "path" : "OPENMV_AE3/AppTocPackage.bin"
                     }
                 ],
                 "romfsCommands" : [

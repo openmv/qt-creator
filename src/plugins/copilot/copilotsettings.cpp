@@ -54,9 +54,29 @@ CopilotSettings::CopilotSettings()
     // const FilePath nodeFromPath = FilePath("node").searchInPath();
     // OPENMV-DIFF //
     FilePath nodeFromPath;
-    if (Utils::HostOsInfo::isWindowsHost())
+
+    if(Utils::HostOsInfo::isWindowsHost())
     {
         nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/windows/node.exe"));
+    }
+    else if(Utils::HostOsInfo::isMacHost())
+    {
+        nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/mac/bin/node"));
+    }
+    else if(Utils::HostOsInfo::isLinuxHost())
+    {
+        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
+        {
+            nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/linux-x64/bin/node"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
+        {
+            nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/linux-armv7/bin/node"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/linux-arm64/bin/node"));
+        }
     }
     // OPENMV-DIFF //
 
@@ -234,20 +254,20 @@ CopilotSettings::CopilotSettings()
                 title(Tr::tr("Note")),
                 Column {
                     warningLabel, br,
-                    // OPENVM-DIFF //
+                    // OPENMV-DIFF //
                     // helpLabel, br,
-                    // OPENVM-DIFF //
+                    // OPENMV-DIFF //
                 }
             },
             Form {
                 new AuthWidget, br,
-                // OPENVM-DIFF //
-                // enableCopilot, br,
+                enableCopilot, br,
+                // OPENMV-DIFF //
                 // nodeJsPath, br,
                 // distPath, br,
                 // autoComplete, br,
                 // hr, br,
-                // OPENVM-DIFF //
+                // OPENMV-DIFF //
                 useProxy, br,
                 proxyHost, br,
                 proxyPort, br,

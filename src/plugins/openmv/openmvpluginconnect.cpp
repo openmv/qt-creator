@@ -2135,7 +2135,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     while(!elaspedTimer.hasExpired(1000))
                     {
                         QApplication::processEvents();
-                        qDebug() << getDevices();
                     }
                 }
 
@@ -2237,6 +2236,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                 }
 
                 QString dfuDeviceVidPid = selectedDfuDevice.isEmpty() ? boardTypeToDfuDeviceVidPid : selectedDfuDeviceVidPid;
+                QString dfuDeviceSerial = QString(QStringLiteral(" -S %1")).arg(selectedDfuDevice.isEmpty()
+                    ? QStringLiteral("0123456789ABCDEF")
+                    : selectedDfuDeviceSerialNumber);
+
+                if(dfuDeviceSerial == QStringLiteral(" -S NULL"))
+                {
+                    dfuDeviceSerial = QString();
+                }
 
                 // Erase Flash //////////////////////////////////////
 
@@ -2259,9 +2266,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                                 downloadFirmware(Tr::tr("Erasing Disk"), command, process,
                                                  QFileInfo(file).canonicalFilePath(),
                                                  dfuDeviceVidPid, eraseCommands.at(i) +
-                                                 ((justEraseFlashFs && ((i + 1) == j)) ? QStringLiteral(" --reset") : QStringLiteral("")));
+                                                 ((justEraseFlashFs && ((i + 1) == j)) ? QStringLiteral(" --reset") : QStringLiteral("")) + dfuDeviceSerial);
 
-                                if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+                                if(((i + 1) != j) && (process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                                 {
                                     QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
                                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -2321,9 +2328,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     downloadFirmware(Tr::tr("Flashing Firmware"), command, process,
                                      Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(programCommandsPath.at(i)).toString(),
                                      dfuDeviceVidPid, programCommandsCmd.at(i) +
-                                     (((i + 1) == j) ? QStringLiteral(" --reset") : QStringLiteral("")));
+                                     (((i + 1) == j) ? QStringLiteral(" --reset") : QStringLiteral("")) + dfuDeviceSerial);
 
-                    if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+                    if(((i + 1) != j) && (process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                     {
                         QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |

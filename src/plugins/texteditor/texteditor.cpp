@@ -1285,6 +1285,8 @@ void TextEditorWidgetPrivate::showTextMarksToolTip(const QPoint &pos,
     // OPENMV-DIFF //
     // ToolTip::show(pos, layout, q);
     // OPENMV-DIFF //
+    Q_UNUSED(pos)
+    // OPENMV-DIFF //
 }
 
 } // namespace Internal
