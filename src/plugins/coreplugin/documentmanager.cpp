@@ -258,8 +258,10 @@ DocumentManager::DocumentManager(QObject *parent)
 
     readSettings();
 
-    if (d->m_useProjectsDirectory)
-        setFileDialogLastVisitedDirectory(d->m_projectsDirectory);
+    // OPENMV-DIFF //
+    // if (d->m_useProjectsDirectory)
+    //     setFileDialogLastVisitedDirectory(d->m_projectsDirectory);
+    // OPENMV-DIFF //
 }
 
 DocumentManager::~DocumentManager()
@@ -1364,6 +1366,13 @@ void DocumentManager::addToRecentFiles(const FilePath &filePath, Id editorId)
     if (filePath.isEmpty())
         return;
     const FilePath fileKey = filePathKey(filePath, KeepLinks);
+    // OPENMV-DIFF //
+    for (const RecentFile &file : d->m_recentFiles) {
+        if (fileKey == filePathKey(file.first, DocumentManager::KeepLinks)) {
+            return;
+        }
+    }
+    // OPENMV-DIFF //
     Utils::erase(d->m_recentFiles, [fileKey](const RecentFile &file) {
         return fileKey == filePathKey(file.first, DocumentManager::KeepLinks);
     });
@@ -1457,6 +1466,7 @@ void readSettings()
 
     // OPENMV-DIFF //
     if (s->contains(lastVisitedDirectoryC)) d->m_lastVisitedDirectory = FilePath::fromSettings(s->value(lastVisitedDirectoryC));
+    else if (d->m_useProjectsDirectory) d->m_lastVisitedDirectory = d->m_projectsDirectory;
     // OPENMV-DIFF //
 
     s->endGroup();
