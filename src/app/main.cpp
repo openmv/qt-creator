@@ -545,12 +545,15 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
     QByteArray localMsg = msg.toLocal8Bit();
     switch (type) {
     case QtDebugMsg:
+        if(msg.contains(QLatin1String("QML Debugger: Waiting for connection on port"))) break;
         fprintf(stdout, "%s\n", localMsg.constData()); fflush(stdout);
         break;
     case QtInfoMsg:
         fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
         break;
     case QtWarningMsg:
+        if(msg.compare(QLatin1String("QML Debugger: Another client is already connected.")) == 0) break;
+        if(msg.compare(QLatin1String("QWaitCondition: Destroyed while threads are still waiting")) == 0) break;
         if(msg.compare(QLatin1String("QMutex: destroying locked mutex")) == 0) break;
         if(msg.compare(QLatin1String("JIT is disabled for QML. Property bindings and animations will be "
                                      "very slow. Visit https://wiki.qt.io/V4 to learn about possible "
@@ -899,16 +902,16 @@ int main(int argc, char **argv)
         return 1;
     }
     if (!openmvplugin) {
-        // QString nativePaths = QDir::toNativeSeparators(pluginPaths.join(QLatin1Char(',')));
-        // const QString reason = QCoreApplication::translate("Application", "Could not find OpenMV plugin in %1").arg(nativePaths);
-        // displayError(msgCoreLoadFailure(reason));
-        // return 1;
+        QString nativePaths = QDir::toNativeSeparators(pluginPaths.join(QLatin1Char(',')));
+        const QString reason = QCoreApplication::translate("Application", "Could not find OpenMV plugin in %1").arg(nativePaths);
+        displayError(msgCoreLoadFailure(reason));
+        return 1;
     }
     if (!tabbededitor) {
-        // QString nativePaths = QDir::toNativeSeparators(pluginPaths.join(QLatin1Char(',')));
-        // const QString reason = QCoreApplication::translate("Application", "Could not find TabbedEditor plugin in %1").arg(nativePaths);
-        // displayError(msgCoreLoadFailure(reason));
-        // return 1;
+        QString nativePaths = QDir::toNativeSeparators(pluginPaths.join(QLatin1Char(',')));
+        const QString reason = QCoreApplication::translate("Application", "Could not find TabbedEditor plugin in %1").arg(nativePaths);
+        displayError(msgCoreLoadFailure(reason));
+        return 1;
     }
     // OPENMV-DIFF //
     if (!coreplugin->isEffectivelyEnabled()) {
@@ -922,16 +925,16 @@ int main(int argc, char **argv)
         displayError(msgCoreLoadFailure(reason));
         return 1;
     }
-    // if (!openmvplugin->isEffectivelyEnabled()) {
-    //     const QString reason = QCoreApplication::translate("Application", "OpenMV plugin is disabled.");
-    //     displayError(msgCoreLoadFailure(reason));
-    //     return 1;
-    // }
-    // if (!tabbededitor->isEffectivelyEnabled()) {
-    //     const QString reason = QCoreApplication::translate("Application", "TabbedEditor plugin is disabled.");
-    //     displayError(msgCoreLoadFailure(reason));
-    //     return 1;
-    // }
+    if (!openmvplugin->isEffectivelyEnabled()) {
+        const QString reason = QCoreApplication::translate("Application", "OpenMV plugin is disabled.");
+        displayError(msgCoreLoadFailure(reason));
+        return 1;
+    }
+    if (!tabbededitor->isEffectivelyEnabled()) {
+        const QString reason = QCoreApplication::translate("Application", "TabbedEditor plugin is disabled.");
+        displayError(msgCoreLoadFailure(reason));
+        return 1;
+    }
     // OPENMV-DIFF //
     if (coreplugin->hasError()) {
         displayError(msgCoreLoadFailure(coreplugin->errorString()));
@@ -942,14 +945,14 @@ int main(int argc, char **argv)
         displayError(msgCoreLoadFailure(texteditorplugin->errorString()));
         return 1;
     }
-    // if (openmvplugin->hasError()) {
-    //     displayError(msgCoreLoadFailure(openmvplugin->errorString()));
-    //     return 1;
-    // }
-    // if (tabbededitor->hasError()) {
-    //     displayError(msgCoreLoadFailure(tabbededitor->errorString()));
-    //     return 1;
-    // }
+    if (openmvplugin->hasError()) {
+        displayError(msgCoreLoadFailure(openmvplugin->errorString()));
+        return 1;
+    }
+    if (tabbededitor->hasError()) {
+        displayError(msgCoreLoadFailure(tabbededitor->errorString()));
+        return 1;
+    }
     // OPENMV-DIFF //
     if (foundAppOptions.contains(QLatin1String(VERSION_OPTION))
             || foundAppOptions.contains(QLatin1String(VERSION_OPTION2))) {

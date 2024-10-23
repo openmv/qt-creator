@@ -229,9 +229,11 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
         // Tr::tr("Tab key performs auto-indent:"),
         // OPENMV-DIFF //
             indent(d->tabKeyBehavior),
-        d->preferSingleLineComments,
-        commentPositionLabel,
-            indent(d->commentPosition)
+        // OPENMV-DIFF //
+        // d->preferSingleLineComments,
+        // commentPositionLabel,
+        //     indent(d->commentPosition)
+        // OPENMV-DIFF //
     }.attachTo(d->groupBoxTyping);
 
     Column {
@@ -319,6 +321,12 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(QWidget *parent)
     d->groupBoxMouse->setParent(this);
     d->groupBoxEncodings->hide();
     d->groupBoxEncodings->setParent(this);
+    d->preferSingleLineComments->hide();
+    d->preferSingleLineComments->setParent(this);
+    commentPositionLabel->hide();
+    commentPositionLabel->setParent(this);
+    d->commentPosition->hide();
+    d->commentPosition->setParent(this);
     // OPENMV-DIFF //
 
     d->mouseHiding->setVisible(!Utils::HostOsInfo::isMacHost());

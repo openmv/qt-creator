@@ -174,6 +174,7 @@ public:
         centerOnScroll->hide();
         autoFoldFirstComment->hide();
         animateNavigationWithinFile->hide();
+        highlightSelection->hide();
         highlightBlocks->hide();
         openLinksInNextSplit->hide();
         displayFileEncoding->hide();
