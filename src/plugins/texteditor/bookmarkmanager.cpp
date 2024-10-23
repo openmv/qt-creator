@@ -352,8 +352,8 @@ BookmarkManager::BookmarkManager(QObject *parent)
     toggleAction.setText(Tr::tr("Toggle Bookmark"));
     // OPENMV-DIFF //
     // toggleAction.setDefaultKeySequence(Tr::tr("Meta+M"), Tr::tr("Ctrl+M"));
+    // toggleAction.setTouchBarIcon(Icons::MACOS_TOUCHBAR_BOOKMARK.icon());
     // OPENMV-DIFF //
-    toggleAction.setTouchBarIcon(Icons::MACOS_TOUCHBAR_BOOKMARK.icon());
     toggleAction.addToContainer(bookmarkMenuId);
     toggleAction.bindContextAction(&m_toggleAction);
     toggleAction.addOnTriggered(this, [this] {

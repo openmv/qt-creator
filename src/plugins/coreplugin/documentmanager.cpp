@@ -628,7 +628,11 @@ static bool saveModifiedFilesHelper(const QList<IDocument *> &documents,
     QList<IDocument *> modifiedDocuments;
 
     for (IDocument *document : documents) {
-        if (document && document->isModified() && !document->isTemporary()) {
+        // OPENMV-DIFF //
+        // if (document && document->isModified() && !document->isTemporary()) {
+        // OPENMV-DIFF //
+        if (document && document->isModified()) {
+        // OPENMV-DIFF //
             QString name = document->filePath().toString();
             // OPENMV-DIFF //
             if (document->isTemporary())

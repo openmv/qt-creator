@@ -2404,6 +2404,9 @@ void EditorManagerPrivate::autoSave()
         const FilePath saveName = autoSaveName(document->filePath());
         const FilePath savePath = saveName.absolutePath();
         if (document->filePath().isEmpty()
+            // OPENMV-DIFF //
+            || document->isTemporary()
+            // OPENMV-DIFF //
                 || !savePath.isWritableDir()) // FIXME: save them to a dedicated directory
             continue;
         QString errorString;
@@ -2520,7 +2523,11 @@ bool EditorManagerPrivate::saveDocument(IDocument *document)
 
     document->checkPermissions();
 
-    if (document->filePath().isEmpty())
+    // OPENMV-DIFF //
+    // if (document->filePath().isEmpty())
+    // OPENMV-DIFF //
+    if (document->filePath().isEmpty() || document->isTemporary())
+    // OPENMV-DIFF //
         return saveDocumentAs(document);
 
     bool success = false;
@@ -3099,7 +3106,7 @@ void EditorManager::saveDocument()
     // OPENMV-DIFF //
     // EditorManagerPrivate::saveDocument(currentDocument());
     // OPENMV-DIFF //
-    if (currentDocument()->filePath().isEmpty())
+    if (currentDocument()->filePath().isEmpty() || currentDocument()->isTemporary())
         EditorManagerPrivate::saveDocumentAs(currentDocument());
     else
         EditorManagerPrivate::saveDocument(currentDocument());
