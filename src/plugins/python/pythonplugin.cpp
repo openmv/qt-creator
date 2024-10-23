@@ -46,7 +46,9 @@ class PythonPlugin final : public ExtensionSystem::IPlugin
 
         setupPythonRunConfiguration();
         setupPythonRunWorker();
-        setupPythonDebugWorker();
+        // OPENMV-DIFF //
+        // setupPythonDebugWorker();
+        // OPENMV-DIFF //
         setupPythonOutputParser();
 
         setupPythonSettings(this);

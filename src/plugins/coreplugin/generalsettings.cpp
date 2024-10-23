@@ -149,7 +149,9 @@ GeneralSettingsWidget::GeneralSettingsWidget()
     // form.addRow({Tr::tr("Color:"), m_colorButton, resetColorButton, st});
     // OPENMV-DIFF //
     form.addRow({Tr::tr("Theme:"), m_themeChooser});
-    form.addRow({Tr::tr("Toolbar style:"), m_toolbarStyleBox, st});
+    // OPENMV-DIFF //
+    // form.addRow({Tr::tr("Toolbar style:"), m_toolbarStyleBox, st});
+    // OPENMV-DIFF //
     form.addRow({Tr::tr("Language:"), m_languageBox, st});
 
     if (StyleHelper::defaultHighDpiScaleFactorRoundingPolicy()
@@ -194,8 +196,8 @@ GeneralSettingsWidget::GeneralSettingsWidget()
 
     // OPENMV-DIFF //
     // form.addRow({empty, generalSettings().showShortcutsInContextMenus});
+    // form.addRow({empty, generalSettings().provideSplitterCursors});
     // OPENMV-DIFF //
-    form.addRow({empty, generalSettings().provideSplitterCursors});
     form.addRow({Row{m_resetWarningsButton, st}});
     // OPENMV-DIFF //
     // form.addRow({Tr::tr("Text codec for tools:"), m_codecBox, st});
@@ -227,6 +229,8 @@ GeneralSettingsWidget::GeneralSettingsWidget()
     generalSettings().showShortcutsInContextMenus.action()->setVisible(false);
     m_codecBox->setParent(this);
     m_codecBox->hide();
+    m_toolbarStyleBox->setParent(this);
+    m_toolbarStyleBox->hide();
     // OPENMV-DIFF //
 }
 

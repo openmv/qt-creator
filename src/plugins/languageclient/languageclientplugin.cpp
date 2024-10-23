@@ -59,7 +59,9 @@ void LanguageClientPlugin::initialize()
 
     ActionBuilder inspectAction(this, "LanguageClient.InspectLanguageClients");
     inspectAction.setText(Tr::tr("Inspect Language Clients..."));
-    inspectAction.addToContainer(Core::Constants::M_TOOLS_DEBUG);
+    // OPENMV-DIFF //
+    // inspectAction.addToContainer(Core::Constants::M_TOOLS_DEBUG);
+    // OPENMV-DIFF //
     inspectAction.addOnTriggered(this, &LanguageClientManager::showInspector);
 
     ProjectExplorer::TaskHub::addCategory(

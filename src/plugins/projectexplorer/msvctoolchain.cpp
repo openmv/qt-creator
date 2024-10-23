@@ -1622,8 +1622,10 @@ static Toolchains detectClangClToolChainInPath(const FilePath &clangClPath,
     const MsvcToolchain *toolChain = selectMsvcToolChain(displayedVarsBat, clangClPath);
 
     if (!toolChain) {
-        qWarning("Unable to find a suitable MSVC version for \"%s\".",
-                 qPrintable(clangClPath.toUserOutput()));
+        // OPENMV-DIFF //
+        // qWarning("Unable to find a suitable MSVC version for \"%s\".",
+        //          qPrintable(clangClPath.toUserOutput()));
+        // OPENMV-DIFF //
         return res;
     }
 
