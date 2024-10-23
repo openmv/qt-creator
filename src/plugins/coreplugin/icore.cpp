@@ -2869,7 +2869,9 @@ void ICorePrivate::restoreWindowState()
         }
     }
 
-    EditorManager::activateEditor(editor);
+    if (editor) {
+        EditorManager::activateEditor(editor);
+    }
     // OPENMV-DIFF //
 }
 
