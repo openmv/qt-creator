@@ -11,6 +11,9 @@
 #include "pythonsettings.h"
 #include "pythontr.h"
 #include "pythonwizardpage.h"
+// OPENMV-DIFF //
+#include "pythonlanguageclient.h"
+// OPENMV-DIFF //
 
 #include <debugger/debuggerruncontrol.h>
 
@@ -41,18 +44,22 @@ class PythonPlugin final : public ExtensionSystem::IPlugin
     {
         setupPythonEditorFactory(this);
 
-        setupPySideBuildStep();
-        setupPythonBuildConfiguration();
+        // OPENMV-DIFF //
+        // setupPySideBuildStep();
+        // setupPythonBuildConfiguration();
+        // OPENMV-DIFF //
 
-        setupPythonRunConfiguration();
-        setupPythonRunWorker();
         // OPENMV-DIFF //
+        // setupPythonRunConfiguration();
+        // setupPythonRunWorker();
         // setupPythonDebugWorker();
+        // setupPythonOutputParser();
         // OPENMV-DIFF //
-        setupPythonOutputParser();
 
         setupPythonSettings(this);
-        setupPythonWizard();
+        // OPENMV-DIFF //
+        // setupPythonWizard();
+        // OPENMV-DIFF //
 
         setupPipSupport(this);
 
@@ -75,6 +82,21 @@ class PythonPlugin final : public ExtensionSystem::IPlugin
                               Tr::tr("Issues parsed from Python runtime output."),
                               true});
     }
+
+    // OPENMV-DIFF //
+    ExtensionSystem::IPlugin::ShutdownFlag aboutToShutdown()
+    {
+        if (runningChecksDone())
+        {
+            return ExtensionSystem::IPlugin::SynchronousShutdown;
+        }
+        else
+        {
+            connect(pyLSConfigureAssistant(), &PyLSConfigureAssistant::runningChecksDone, this, &PythonPlugin::asynchronousShutdownFinished);
+            return ExtensionSystem::IPlugin::AsynchronousShutdown;
+        }
+    }
+    // OPENMV-DIFF //
 };
 
 } // Python::Internal

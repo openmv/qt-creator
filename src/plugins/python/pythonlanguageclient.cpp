@@ -314,24 +314,26 @@ PyLSClient *PyLSClient::clientForPython(const FilePath &python)
     return pythonClients()[python];
 }
 
-class PyLSConfigureAssistant : public QObject
-{
-public:
-    PyLSConfigureAssistant();
+// OPENMV-DIFF //
+// class PyLSConfigureAssistant : public QObject
+// {
+// public:
+//     PyLSConfigureAssistant();
 
-    void handlePyLSState(const FilePath &python,
-                         const PythonLanguageServerState &state,
-                         TextEditor::TextDocument *document);
-    void resetEditorInfoBar(TextEditor::TextDocument *document);
-    void installPythonLanguageServer(const FilePath &python,
-                                     QPointer<TextEditor::TextDocument> document,
-                                     const FilePath &pylsPath, bool silent, bool upgrade);
-    void openDocument(const FilePath &python, TextEditor::TextDocument *document);
+//     void handlePyLSState(const FilePath &python,
+//                          const PythonLanguageServerState &state,
+//                          TextEditor::TextDocument *document);
+//     void resetEditorInfoBar(TextEditor::TextDocument *document);
+//     void installPythonLanguageServer(const FilePath &python,
+//                                      QPointer<TextEditor::TextDocument> document,
+//                                      const FilePath &pylsPath, bool silent, bool upgrade);
+//     void openDocument(const FilePath &python, TextEditor::TextDocument *document);
 
-    QHash<FilePath, QList<TextEditor::TextDocument *>> m_infoBarEntries;
-    QHash<TextEditor::TextDocument *, QPointer<QFutureWatcher<PythonLanguageServerState>>>
-        m_runningChecks;
-};
+//     QHash<FilePath, QList<TextEditor::TextDocument *>> m_infoBarEntries;
+//     QHash<TextEditor::TextDocument *, QPointer<QFutureWatcher<PythonLanguageServerState>>>
+//         m_runningChecks;
+// };
+// OPENMV-DIFF //
 
 void PyLSConfigureAssistant::installPythonLanguageServer(const FilePath &python,
                                                          QPointer<TextEditor::TextDocument> document,
@@ -403,6 +405,10 @@ void PyLSConfigureAssistant::openDocument(const FilePath &python, TextEditor::Te
     connect(watcher, &CheckPylsWatcher::finished, watcher, &CheckPylsWatcher::deleteLater);
     connect(watcher, &CheckPylsWatcher::finished, this, [this, document] {
         m_runningChecks.remove(document);
+        // OPENMV-DIFF //
+        if (m_runningChecks.isEmpty())
+            emit runningChecksDone();
+        // OPENMV-DIFF //
     });
     watcher->setFuture(Utils::asyncRun(&checkPythonLanguageServer, python));
     m_runningChecks[document] = watcher;
@@ -496,15 +502,29 @@ PyLSConfigureAssistant::PyLSConfigureAssistant()
             });
 }
 
-static PyLSConfigureAssistant &pyLSConfigureAssistant()
+// OPENMV-DIFF //
+// static PyLSConfigureAssistant *pyLSConfigureAssistant()
+// OPENMV-DIFF //
+PyLSConfigureAssistant *pyLSConfigureAssistant()
+// OPENMV-DIFF //
 {
     static PyLSConfigureAssistant thePyLSConfigureAssistant;
-    return thePyLSConfigureAssistant;
+    return &thePyLSConfigureAssistant;
 }
 
 void openDocumentWithPython(const FilePath &python, TextEditor::TextDocument *document)
 {
-    pyLSConfigureAssistant().openDocument(python, document);
+    // OPENMV-DIFF //
+    // pyLSConfigureAssistant().openDocument(python, document);
+    // OPENMV-DIFF //
+    pyLSConfigureAssistant()->openDocument(python, document);
+    // OPENMV-DIFF //
 }
+
+// OPENMV-DIFF //
+bool runningChecksDone() {
+    return pyLSConfigureAssistant()->m_runningChecks.isEmpty();
+}
+// OPENMV-DIFF //
 
 } // Python::Internal

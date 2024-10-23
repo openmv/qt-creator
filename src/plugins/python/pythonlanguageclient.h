@@ -30,6 +30,30 @@ class PythonLanguageServerState;
 class PyLSInterface;
 
 // OPENMV-DIFF //
+class PyLSConfigureAssistant : public QObject
+{
+    Q_OBJECT
+public:
+    PyLSConfigureAssistant();
+
+    void handlePyLSState(const Utils::FilePath &python,
+                         const PythonLanguageServerState &state,
+                         TextEditor::TextDocument *document);
+    void resetEditorInfoBar(TextEditor::TextDocument *document);
+    void installPythonLanguageServer(const Utils::FilePath &python,
+                                     QPointer<TextEditor::TextDocument> document,
+                                     const Utils::FilePath &pylsPath, bool silent, bool upgrade);
+    void openDocument(const Utils::FilePath &python, TextEditor::TextDocument *document);
+
+    QHash<Utils::FilePath, QList<TextEditor::TextDocument *>> m_infoBarEntries;
+    QHash<TextEditor::TextDocument *, QPointer<QFutureWatcher<PythonLanguageServerState>>>
+        m_runningChecks;
+signals:
+    void runningChecksDone();
+};
+// OPENMV-DIFF //
+
+// OPENMV-DIFF //
 // class PyLSClient : public LanguageClient::Client
 // OPENMV-DIFF //
 class PYTHON_EXPORT PyLSClient : public LanguageClient::Client
@@ -66,5 +90,10 @@ private:
 };
 
 void openDocumentWithPython(const Utils::FilePath &python, TextEditor::TextDocument *document);
+
+// OPENMV-DIFF //
+PyLSConfigureAssistant *pyLSConfigureAssistant();
+bool runningChecksDone();
+// OPENMV-DIFF //
 
 } // Python::Internal
