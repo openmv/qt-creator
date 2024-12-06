@@ -884,7 +884,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("-t") <<
-                               QStringLiteral("60000") <<
+                               QStringLiteral("120000") <<
                                QStringLiteral("--") <<
                                QStringLiteral("flash-erase-region") <<
                                obj.value(QStringLiteral("blhost_disk_address")).toString() <<
@@ -930,7 +930,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("-t") <<
-                               QStringLiteral("60000") <<
+                               QStringLiteral("120000") <<
                                QStringLiteral("--") <<
                                QStringLiteral("flash-erase-region") <<
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
@@ -1243,7 +1243,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("-t") <<
-                               QStringLiteral("60000") <<
+                               QStringLiteral("120000") <<
                                QStringLiteral("--") <<
                                QStringLiteral("flash-erase-region") <<
                                obj.value(QStringLiteral("blhost_disk_address")).toString() <<
@@ -1289,7 +1289,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("-t") <<
-                               QStringLiteral("60000") <<
+                               QStringLiteral("120000") <<
                                QStringLiteral("--") <<
                                QStringLiteral("flash-erase-region") <<
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
