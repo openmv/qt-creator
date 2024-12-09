@@ -701,6 +701,14 @@
             "id" : "0xAE64"
         },
         {
+            "name" : "BOSON-320+",
+            "id" : "0xAE321"
+        },
+        {
+            "name" : "BOSON-640+",
+            "id" : "0xAE641"
+        },
+        {
             "name" : "LEPTON",
             "id" : "0x54"
         },
