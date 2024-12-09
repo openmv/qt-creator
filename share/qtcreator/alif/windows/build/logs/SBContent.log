@@ -1,6 +1,24 @@
-2024-08-30 19:18:05,856 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
-2024-08-30 19:18:06,132 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
-2024-08-30 19:18:06,132 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
-2024-08-30 19:18:06,407 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
-2024-08-30 19:18:06,407 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
-2024-08-30 19:18:06,407 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2024-10-04 17:19:41,960 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2024-10-04 17:19:41,961 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2024-10-04 17:19:41,963 - **** Creating Content Certificate ****
+2024-10-04 17:19:42,232 - **** Certificate file creation has been completed successfully ****
+2024-10-04 17:19:42,243 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2024-10-04 17:19:42,243 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2024-10-04 17:19:42,244 - Parsing config file: cfg/OEMSBContent_lvs_2.cfg
+2024-10-04 17:19:42,244 - Parsing config file: cfg/OEMSBContent_lvs_2.cfg
+2024-10-04 17:19:42,246 - **** Creating Content Certificate ****
+2024-10-04 17:19:42,246 - **** Creating Content Certificate ****
+2024-10-04 17:19:42,501 - **** Certificate file creation has been completed successfully ****
+2024-10-04 17:19:42,501 - **** Certificate file creation has been completed successfully ****
+2024-10-04 17:19:42,535 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2024-10-04 17:19:42,535 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2024-10-04 17:19:42,535 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2024-10-04 17:19:42,537 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2024-10-04 17:19:42,537 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2024-10-04 17:19:42,537 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2024-10-04 17:19:42,538 - **** Creating Content Certificate ****
+2024-10-04 17:19:42,538 - **** Creating Content Certificate ****
+2024-10-04 17:19:42,538 - **** Creating Content Certificate ****
+2024-10-04 17:19:42,791 - **** Certificate file creation has been completed successfully ****
+2024-10-04 17:19:42,791 - **** Certificate file creation has been completed successfully ****
+2024-10-04 17:19:42,791 - **** Certificate file creation has been completed successfully ****
