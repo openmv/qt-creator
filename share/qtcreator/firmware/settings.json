@@ -689,6 +689,18 @@
             "id" : "0x2481"
         },
         {
+            "name" : "BOSON",
+            "id" : "0xAE"
+        },
+        {
+            "name" : "BOSON-320",
+            "id" : "0xAE32"
+        },
+        {
+            "name" : "BOSON-640",
+            "id" : "0xAE64"
+        },
+        {
             "name" : "LEPTON",
             "id" : "0x54"
         },
