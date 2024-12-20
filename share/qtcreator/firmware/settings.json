@@ -446,7 +446,7 @@
         {
             "hidden" : true,
             "boardType" : "AE3",
-            "boardArchString" : "OPENMV AE3",
+            "boardArchString" : "OPENMV AE3 SBL",
             "boardDisplayName" : "OpenMV Cam AE3 SBL",
             "boardFirmwareFolder" : "OPENMV_AE3",
             "highSpeed" : true,
