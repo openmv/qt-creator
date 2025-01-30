@@ -23,7 +23,6 @@
 
 import sensor
 import time
-import display
 
 # Color Tracking Thresholds (Grayscale Min, Grayscale Max)
 threshold_list = [(200, 255)]
@@ -35,9 +34,9 @@ max_temp_in_celsius = 35.0
 print("Resetting Lepton...")
 # These settings are applied on reset
 sensor.reset()
-sensor.ioctl(sensor.IOCTL_LEPTON_SET_MEASUREMENT_MODE, True)
+sensor.ioctl(sensor.IOCTL_LEPTON_SET_MODE, True)
 sensor.ioctl(
-    sensor.IOCTL_LEPTON_SET_MEASUREMENT_RANGE, min_temp_in_celsius, max_temp_in_celsius
+    sensor.IOCTL_LEPTON_SET_RANGE, min_temp_in_celsius, max_temp_in_celsius
 )
 print(
     "Lepton Res (%dx%d)"
@@ -52,10 +51,9 @@ print(
 )
 
 sensor.set_pixformat(sensor.GRAYSCALE)
-sensor.set_framesize(sensor.LCD)
+sensor.set_framesize(sensor.QQVGA)
 sensor.skip_frames(time=5000)
 clock = time.clock()
-lcd = display.SPIDisplay()
 
 # Only blobs that with more pixels than "pixel_threshold" and more area than "area_threshold" are
 # returned by "find_blobs" below. Change "pixels_threshold" and "area_threshold" if you change the
@@ -83,8 +81,7 @@ while True:
             "%.2f C" % map_g_to_temp(stats.mean()),
             mono_space=False,
         )
-    lcd.write(img)
     print(
         "FPS %f - Lepton Temp: %f C"
-        % (clock.fps(), sensor.ioctl(sensor.IOCTL_LEPTON_GET_FPA_TEMPERATURE))
+        % (clock.fps(), sensor.ioctl(sensor.IOCTL_LEPTON_GET_FPA_TEMP))
     )

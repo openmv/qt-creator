@@ -2,7 +2,7 @@
 # Copyright (c) 2013-2023 OpenMV LLC. All rights reserved.
 # https://github.com/openmv/openmv/blob/master/LICENSE
 #
-# Lepton Get Object High Temp Example
+# Lepton Get Object Temp Example
 #
 # This example shows off how to get an object's temperature using color tracking.
 
@@ -23,23 +23,22 @@
 
 import sensor
 import time
+import display
+import image
 
 # Color Tracking Thresholds (Grayscale Min, Grayscale Max)
-threshold_list = [(100, 255)]  # track very hot objects
+threshold_list = [(200, 255)]
 
 # Set the target temp range here
-# 500C is the maximum the Lepton 3.5 sensor can measure
-# At room temperature it's max is ~380C
-min_temp_in_celsius = 0.0
-max_temp_in_celsius = 400.0
+min_temp_in_celsius = 20.0
+max_temp_in_celsius = 35.0
 
 print("Resetting Lepton...")
 # These settings are applied on reset
 sensor.reset()
-# Enable measurement mode with high temp
-sensor.ioctl(sensor.IOCTL_LEPTON_SET_MEASUREMENT_MODE, True, True)
+sensor.ioctl(sensor.IOCTL_LEPTON_SET_MODE, True)
 sensor.ioctl(
-    sensor.IOCTL_LEPTON_SET_MEASUREMENT_RANGE, min_temp_in_celsius, max_temp_in_celsius
+    sensor.IOCTL_LEPTON_SET_RANGE, min_temp_in_celsius, max_temp_in_celsius
 )
 print(
     "Lepton Res (%dx%d)"
@@ -54,9 +53,10 @@ print(
 )
 
 sensor.set_pixformat(sensor.GRAYSCALE)
-sensor.set_framesize(sensor.QQVGA)
+sensor.set_framesize(sensor.LCD)
 sensor.skip_frames(time=5000)
 clock = time.clock()
+lcd = display.SPIDisplay()
 
 # Only blobs that with more pixels than "pixel_threshold" and more area than "area_threshold" are
 # returned by "find_blobs" below. Change "pixels_threshold" and "area_threshold" if you change the
@@ -72,19 +72,34 @@ def map_g_to_temp(g):
 while True:
     clock.tick()
     img = sensor.snapshot()
-    for blob in img.find_blobs(
+    blob_stats = []
+    blobs = img.find_blobs(
         threshold_list, pixels_threshold=200, area_threshold=200, merge=True
-    ):
-        stats = img.get_statistics(thresholds=threshold_list, roi=blob.rect())
+    )
+    # Collect stats into a list of tuples
+    for blob in blobs:
+        blob_stats.append(
+            (
+                blob.x(),
+                blob.y(),
+                map_g_to_temp(
+                    img.get_statistics(
+                        thresholds=threshold_list, roi=blob.rect()
+                    ).mean()
+                ),
+            )
+        )
+    img.to_rainbow(color_palette=image.PALETTE_IRONBOW)  # color it
+    # Draw stuff on the colored image
+    for blob in blobs:
         img.draw_rectangle(blob.rect())
         img.draw_cross(blob.cx(), blob.cy())
+    for blob_stat in blob_stats:
         img.draw_string(
-            blob.x(),
-            blob.y() - 10,
-            "%.2f C" % map_g_to_temp(stats.mean()),
-            mono_space=False,
+            blob_stat[0], blob_stat[1] - 10, "%.2f C" % blob_stat[2], mono_space=False
         )
+    lcd.write(img)
     print(
         "FPS %f - Lepton Temp: %f C"
-        % (clock.fps(), sensor.ioctl(sensor.IOCTL_LEPTON_GET_FPA_TEMPERATURE))
+        % (clock.fps(), sensor.ioctl(sensor.IOCTL_LEPTON_GET_FPA_TEMP))
     )

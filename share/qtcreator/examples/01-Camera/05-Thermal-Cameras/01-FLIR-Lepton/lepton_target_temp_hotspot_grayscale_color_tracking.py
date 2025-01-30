@@ -2,9 +2,9 @@
 # Copyright (c) 2013-2023 OpenMV LLC. All rights reserved.
 # https://github.com/openmv/openmv/blob/master/LICENSE
 #
-# Lepton Get Object Temp Example
+# Single Color Grayscale Blob Tracking Example
 #
-# This example shows off how to get an object's temperature using color tracking.
+# This example shows off single color grayscale tracking using the OpenMV Cam using the FLIR LEPTON.
 
 # By turning the AGC off and setting a max and min temperature range you can make the lepton into
 # a great sensor for seeing objects of a particular temperature. That said, the FLIR lepton is a
@@ -23,21 +23,20 @@
 
 import sensor
 import time
-import image
 
 # Color Tracking Thresholds (Grayscale Min, Grayscale Max)
-threshold_list = [(200, 255)]
+threshold_list = [(220, 255)]
 
 # Set the target temp range here
-min_temp_in_celsius = 20.0
-max_temp_in_celsius = 35.0
+min_temp_in_celsius = 20
+max_temp_in_celsius = 32
 
 print("Resetting Lepton...")
 # These settings are applied on reset
 sensor.reset()
-sensor.ioctl(sensor.IOCTL_LEPTON_SET_MEASUREMENT_MODE, True)
+sensor.ioctl(sensor.IOCTL_LEPTON_SET_MODE, True)
 sensor.ioctl(
-    sensor.IOCTL_LEPTON_SET_MEASUREMENT_RANGE, min_temp_in_celsius, max_temp_in_celsius
+    sensor.IOCTL_LEPTON_SET_RANGE, min_temp_in_celsius, max_temp_in_celsius
 )
 print(
     "Lepton Res (%dx%d)"
@@ -60,43 +59,15 @@ clock = time.clock()
 # returned by "find_blobs" below. Change "pixels_threshold" and "area_threshold" if you change the
 # camera resolution. "merge=True" merges all overlapping blobs in the image.
 
-
-def map_g_to_temp(g):
-    return (
-        (g * (max_temp_in_celsius - min_temp_in_celsius)) / 255.0
-    ) + min_temp_in_celsius
-
-
 while True:
     clock.tick()
     img = sensor.snapshot()
-    blob_stats = []
-    blobs = img.find_blobs(
+    for blob in img.find_blobs(
         threshold_list, pixels_threshold=200, area_threshold=200, merge=True
-    )
-    # Collect stats into a list of tuples
-    for blob in blobs:
-        blob_stats.append(
-            (
-                blob.x(),
-                blob.y(),
-                map_g_to_temp(
-                    img.get_statistics(
-                        thresholds=threshold_list, roi=blob.rect()
-                    ).mean()
-                ),
-            )
-        )
-    img.to_rainbow(color_palette=image.PALETTE_IRONBOW)  # color it
-    # Draw stuff on the colored image
-    for blob in blobs:
-        img.draw_rectangle(blob.rect())
-        img.draw_cross(blob.cx(), blob.cy())
-    for blob_stat in blob_stats:
-        img.draw_string(
-            blob_stat[0], blob_stat[1] - 10, "%.2f C" % blob_stat[2], mono_space=False
-        )
+    ):
+        img.draw_rectangle(blob.rect(), color=127)
+        img.draw_cross(blob.cx(), blob.cy(), color=127)
     print(
         "FPS %f - Lepton Temp: %f C"
-        % (clock.fps(), sensor.ioctl(sensor.IOCTL_LEPTON_GET_FPA_TEMPERATURE))
+        % (clock.fps(), sensor.ioctl(sensor.IOCTL_LEPTON_GET_FPA_TEMP))
     )

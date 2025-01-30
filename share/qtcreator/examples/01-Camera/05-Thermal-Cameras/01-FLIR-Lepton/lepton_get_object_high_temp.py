@@ -2,7 +2,7 @@
 # Copyright (c) 2013-2023 OpenMV LLC. All rights reserved.
 # https://github.com/openmv/openmv/blob/master/LICENSE
 #
-# Lepton Get Object Temp Example
+# Lepton Get Object High Temp Example
 #
 # This example shows off how to get an object's temperature using color tracking.
 
@@ -25,18 +25,21 @@ import sensor
 import time
 
 # Color Tracking Thresholds (Grayscale Min, Grayscale Max)
-threshold_list = [(200, 255)]
+threshold_list = [(100, 255)]  # track very hot objects
 
 # Set the target temp range here
-min_temp_in_celsius = 20.0
-max_temp_in_celsius = 35.0
+# 500C is the maximum the Lepton 3.5 sensor can measure
+# At room temperature it's max is ~380C
+min_temp_in_celsius = 0.0
+max_temp_in_celsius = 400.0
 
 print("Resetting Lepton...")
 # These settings are applied on reset
 sensor.reset()
-sensor.ioctl(sensor.IOCTL_LEPTON_SET_MEASUREMENT_MODE, True)
+# Enable measurement mode with high temp
+sensor.ioctl(sensor.IOCTL_LEPTON_SET_MODE, True, True)
 sensor.ioctl(
-    sensor.IOCTL_LEPTON_SET_MEASUREMENT_RANGE, min_temp_in_celsius, max_temp_in_celsius
+    sensor.IOCTL_LEPTON_SET_RANGE, min_temp_in_celsius, max_temp_in_celsius
 )
 print(
     "Lepton Res (%dx%d)"
@@ -83,5 +86,5 @@ while True:
         )
     print(
         "FPS %f - Lepton Temp: %f C"
-        % (clock.fps(), sensor.ioctl(sensor.IOCTL_LEPTON_GET_FPA_TEMPERATURE))
+        % (clock.fps(), sensor.ioctl(sensor.IOCTL_LEPTON_GET_FPA_TEMP))
     )
