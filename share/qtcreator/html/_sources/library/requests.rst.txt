@@ -1,7 +1,7 @@
-:mod:`urequests` --- Related functions of HTTP client
+:mod:`requests` --- Related functions of HTTP client
 =====================================================
 
-.. module:: urequests
+.. module:: requests
    :synopsis: Relevant functional functions of the HTTP client, providing various HTTP request methods
 
 Relevant functional functions of the HTTP client, providing various HTTP request methods
