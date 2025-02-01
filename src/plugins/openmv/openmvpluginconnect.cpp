@@ -2133,13 +2133,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
             m_iodevice->mainTerminalInputEnable(true);
         }
 
-        if (0)
+        if((major2 < OPENMV_ADD_GET_STATE_VARAIBLE_SIZE_MAJOR)
+        || ((major2 == OPENMV_ADD_GET_STATE_VARAIBLE_SIZE_MAJOR) && (minor2 < OPENMV_ADD_GET_STATE_VARAIBLE_SIZE_MINOR))
+        || ((major2 == OPENMV_ADD_GET_STATE_VARAIBLE_SIZE_MAJOR) && (minor2 == OPENMV_ADD_GET_STATE_VARAIBLE_SIZE_MINOR) && (patch2 < OPENMV_ADD_GET_STATE_VARAIBLE_SIZE_PATCH)))
         {
-            m_iodevice->setGetStateVariableSize(true);
+            m_iodevice->setGetStateVariableSize(false);
         }
         else
         {
-            m_iodevice->setGetStateVariableSize(false);
+            m_iodevice->setGetStateVariableSize(true);
         }
 
         m_boardTypeFolder = QString();
