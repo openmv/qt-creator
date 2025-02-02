@@ -189,6 +189,9 @@
 #define LAST_GET_SCRIPT_RUNNING_SPACING "LastGetScriptRunningSpacing"
 #define LAST_GET_TX_BUFFER_SPACING "LastGetTxBufferSpacing"
 #define LAST_GET_STATE_SPACING "LastGetStateSpacing"
+#define LAST_ROMFS_DIALOG_GEOMETRY "LastROMFSDialogGeometry"
+#define LAST_ROMFS_DIALOG_OPEN_FILE_PATH "LastROMFSDialogFilePath"
+#define LAST_ROMFS_DIALOG_NEW_FOLDER_NAME "LastROMFSDialogNewFolderName"
 #define RESOURCES_MAJOR "ResourcesMajor"
 #define RESOURCES_MINOR "ResourcesMinor"
 #define RESOURCES_PATCH "ResourcesPatch"
@@ -410,6 +413,7 @@ public slots: // private
     bool registerOpenMVCamDialog(const QString board, const QString id);
     void packageUpdate();
     void bootloaderClicked();
+    void romfsClicked();
     void installTheLatestDevelopmentRelease();
     void connectClicked(bool forceBootloader = false,
                         QString forceFirmwarePath = QString(),
@@ -559,6 +563,7 @@ private:
     int m_getStateSpacing;
 
     QAction *m_bootloaderAction;
+    QAction *m_romfsAction;
     QAction *m_eraseAction;
     QAction *m_autoReconnectAction;
     QAction *m_stopOnConnectDiconnectionAction;

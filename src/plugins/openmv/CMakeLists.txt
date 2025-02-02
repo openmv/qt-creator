@@ -4,6 +4,7 @@ add_qtc_plugin(OpenMV
   SOURCES
     openmvplugin.cpp openmvplugin.h openmvtr.h
     openmvpluginconnect.cpp openmvpluginconnect.h
+    openmvromfs.cpp openmvromfs.h
     bootloaders/openmvpluginbootloader.cpp
     bootloaders/openmvplugindfubootloader.cpp
     bootloaders/openmvpluginimxbootloader.cpp
@@ -34,6 +35,7 @@ add_qtc_plugin(OpenMV
     tools/imx.cpp tools/imx.h
     tools/keypointseditor.cpp tools/keypointseditor.h
     tools/picotool.cpp tools/picotool.h
+    tools/romfs.cpp tools/romfs.h
     tools/tag16h5.c tools/tag16h5.h
     tools/tag25h7.c tools/tag25h7.h
     tools/tag25h9.c tools/tag25h9.h
@@ -47,6 +49,10 @@ add_qtc_plugin(OpenMV
     openmv.qrc
     openmvcamerasettings.ui
     histogram/openmvpluginhistogram.ui
+)
+
+target_sources(OpenMV
+  PRIVATE
 )
 
 target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::GuiPrivate)
