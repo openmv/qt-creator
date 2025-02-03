@@ -187,7 +187,7 @@ QByteArray VfsRomWriter::pad(const QByteArray &data)
     return data;
 }
 
-QByteArray VfsRomWriter::pack(const QByteArray &header, const QByteArray &payload)
+QByteArray VfsRomWriter::pack(const QByteArray &header, const QByteArray &payload, bool padpayload)
 {
     QByteArray payloadSizeBytes = encodeuint(payload.size());
     qsizetype size = header.size() + payloadSizeBytes.size();
@@ -196,7 +196,7 @@ QByteArray VfsRomWriter::pack(const QByteArray &header, const QByteArray &payloa
         payloadSizeBytes.prepend(QByteArray(m_alignment - (size % m_alignment), '\x80'));
     }
 
-    return header + payloadSizeBytes + payload;
+    return header + payloadSizeBytes + (padpayload ? pad(payload) : payload);
 }
 
 void VfsRomWriter::extend(const QByteArray &data)
@@ -256,15 +256,15 @@ void VfsRomWriter::closedir()
 void VfsRomWriter::mkfile(const QString &filename, const QByteArray &filedata)
 {
     QByteArray bfilename = toAscii(filename);
-    QByteArray payload = pack(encodeuint(bfilename.size()) + bfilename + encodeuint(ROMFS_RECORD_KIND_DATA_VERBATIM), pad(filedata));
+    QByteArray payload = pack(encodeuint(bfilename.size()) + bfilename + encodeuint(ROMFS_RECORD_KIND_DATA_VERBATIM), filedata, true);
     extend(pack(encodeuint(ROMFS_RECORD_KIND_FILE), payload));
 }
 
-void VfsRomWriter::mkfile(const QString &filename, quint64 filedata[2])
+void VfsRomWriter::mkfile(const QString &filename, quint64 filesize, quint64 fileoffset)
 {
     QByteArray bfilename = toAscii(filename);
-    QByteArray subpayload = encodeuint(filedata[0]) + encodeuint(filedata[1]);
-    QByteArray payload = pack(encodeuint(bfilename.size()) + bfilename + encodeuint(ROMFS_RECORD_KIND_DATA_POINTER), pad(subpayload));
+    QByteArray subpayload = encodeuint(filesize) + encodeuint(fileoffset);
+    QByteArray payload = pack(encodeuint(bfilename.size()) + bfilename + encodeuint(ROMFS_RECORD_KIND_DATA_POINTER), subpayload, true);
     extend(pack(encodeuint(ROMFS_RECORD_KIND_FILE), payload));
 }
 

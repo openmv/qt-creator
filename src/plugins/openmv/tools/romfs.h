@@ -63,12 +63,12 @@ public:
     void opendir(const QString &dirname);
     void closedir();
     void mkfile(const QString &filename, const QByteArray &filedata);
-    void mkfile(const QString &filename, quint64 filedata[2]);
+    void mkfile(const QString &filename, quint64 filesize, quint64 fileoffset);
 
 private:
     QByteArray encodeuint(quint64 value);
     QByteArray pad(const QByteArray &data);
-    QByteArray pack(const QByteArray &header, const QByteArray &payload);
+    QByteArray pack(const QByteArray &header, const QByteArray &payload, bool padpayload = false);
     void extend(const QByteArray &data);
 
     QList<QPair<QString, QByteArray> > m_dirstack;
