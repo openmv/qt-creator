@@ -34,6 +34,7 @@
 
 #include "tools/romfs.h"
 #include "openmvromfs.h"
+#include "openmvmodelzoo.h"
 
 #define ROMFS_FILE_ALIGNMENT    (32)
 
@@ -110,6 +111,69 @@ void OpenMVROMFSEditor::calculateFileSystemSize()
     VfsRomWriter writer(ROMFS_FILE_ALIGNMENT);
     createRomfs(&writer, m_model, m_model->index(m_model->rootPath()));
     emit fileSystemSize(QString(QStringLiteral("ROMFS Size: %1")).arg(humanReadableSize(writer.finalize().size())));
+}
+
+void OpenMVROMFSEditor::addModel()
+{
+    QModelIndex index = currentIndex();
+
+    if (!index.isValid()) {
+        index = m_model->index(m_model->rootPath());
+    }
+
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    // already in the settings group
+
+    OpenMVModelZooBrowser dialog(settings, this);
+
+    if (dialog.exec() == QDialog::Accepted)
+    {
+        QString file = dialog.selectedModel();
+
+        QString path = m_model->isDir(index) ? m_model->filePath(index) : QFileInfo(m_model->filePath(index)).path();
+        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(file).fileName()));
+
+        if (QFileInfo(newFilePath).exists())
+        {
+            if (QFileInfo(newFilePath).isDir())
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    Tr::tr("Edit ROMFS"),
+                    Tr::tr("A folder with the same name already exists!"));
+                return;
+            }
+
+            if (QMessageBox::question(Core::ICore::dialogParent(),
+                Tr::tr("Edit ROMFS"),
+                Tr::tr("File already exists! Overwrite?"),
+                QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)
+            == QMessageBox::Yes)
+            {
+                if (!QFile::remove(newFilePath))
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Edit ROMFS"),
+                        Tr::tr("Failed to remove file!"));
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        if (QFile::copy(file, newFilePath))
+        {
+            setCurrentIndex(m_model->index(newFilePath));
+        }
+        else
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                Tr::tr("Edit ROMFS"),
+                Tr::tr("Failed to copy file!"));
+        }
+    }
 }
 
 void OpenMVROMFSEditor::addFile()
@@ -247,6 +311,7 @@ void OpenMVROMFSEditor::contextMenuEvent(QContextMenuEvent *event)
     {
         QMenu menu;
         connect(menu.addAction(Tr::tr("Add File")), &QAction::triggered, this, &OpenMVROMFSEditor::addFile);
+        connect(menu.addAction(Tr::tr("Add Model")), &QAction::triggered, this, &OpenMVROMFSEditor::addModel);
         connect(menu.addAction(Tr::tr("New Folder")), &QAction::triggered, this, &OpenMVROMFSEditor::newFolder);
         connect(menu.addAction(Tr::tr("Delete")), &QAction::triggered, this, &OpenMVROMFSEditor::remove);
         menu.exec(event->globalPos());
@@ -320,6 +385,8 @@ void OpenMVPlugin::romfsClicked()
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
     QPushButton *addFile = new QPushButton(Tr::tr("Add File"));
     box->addButton(addFile, QDialogButtonBox::ActionRole);
+    QPushButton *addModel = new QPushButton(Tr::tr("Add Model"));
+    box->addButton(addModel, QDialogButtonBox::ActionRole);
     QPushButton *newFolder = new QPushButton(Tr::tr("New Folder"));
     box->addButton(newFolder, QDialogButtonBox::ActionRole);
     QPushButton *remove = new QPushButton(Tr::tr("Delete"));
@@ -327,6 +394,7 @@ void OpenMVPlugin::romfsClicked()
     QPushButton *commit = new QPushButton(Tr::tr("Commit ROMFS"));
     box->addButton(commit, QDialogButtonBox::AcceptRole);
     connect(addFile, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::addFile);
+    connect(addModel, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::addModel);
     connect(newFolder, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::newFolder);
     connect(remove, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::remove);
     connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);

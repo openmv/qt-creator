@@ -1,4 +1,4 @@
-/* Copyright (C) 2023-2024 OpenMV, LLC.
+/* Copyright (C) 2023-2025 OpenMV, LLC.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -44,12 +44,12 @@ class OpenMVROMFSEditor : public QTreeView
 public:
 
     explicit OpenMVROMFSEditor(QWidget *parent = Q_NULLPTR, const QString &path = QString());
-    void calculateFileSystemSize();
     QFileSystemModel *model() { return m_model; }
 
 public slots:
 
     void addFile();
+    void addModel();
     void newFolder();
     void remove();
 
@@ -64,6 +64,8 @@ protected:
     void paintEvent(QPaintEvent *event) override;
 
 private:
+
+    void calculateFileSystemSize();
 
     QFileSystemModel *m_model;
 
