@@ -40,40 +40,6 @@
 namespace OpenMV {
 namespace Internal {
 
-static quint64 calculateTotalSize(const QFileSystemModel *model, const QModelIndex &index) {
-    quint64 totalSize = 0;
-
-    for (int i = 0; i < model->rowCount(index); i++)
-    {
-        QModelIndex childIndex = model->index(i, 0, index);
-
-        if (model->isDir(childIndex))
-        {
-            totalSize += calculateTotalSize(model, childIndex);
-        }
-        else
-        {
-            totalSize += model->fileInfo(childIndex).size();
-        }
-    }
-
-    return totalSize;
-}
-
-static QString humanReadableSize(quint64 bytes) {
-    const QStringList units = {"B", "KB", "MB", "GB", "TB"};
-    int unitIndex = 0;
-    double size = bytes;
-
-    while ((size >= 1024) && (unitIndex < units.size() - 1))
-    {
-        size /= 1024;
-        ++unitIndex;
-    }
-
-    return QString("%1 %2").arg(QString::number(size, 'f', 2)).arg(units[unitIndex]);
-}
-
 static void createRomfs(VfsRomWriter *writer, const QFileSystemModel *model, const QModelIndex &index) {
     for (int i = 0; i < model->rowCount(index); i++)
     {
@@ -91,10 +57,24 @@ static void createRomfs(VfsRomWriter *writer, const QFileSystemModel *model, con
 
             if (file.open(QIODevice::ReadOnly))
             {
-                writer->mkfile(model->fileName(childIndex), file.readAll(), ROMFS_FILE_ALIGNMENT);
+                writer->mkfile(model->fileName(childIndex), file.readAll());
             }
         }
     }
+}
+
+static QString humanReadableSize(quint64 bytes) {
+    const QStringList units = {"B", "KB", "MB", "GB", "TB"};
+    int unitIndex = 0;
+    double size = bytes;
+
+    while ((size >= 1024) && (unitIndex < units.size() - 1))
+    {
+        size /= 1024;
+        ++unitIndex;
+    }
+
+    return QString("%1 %2").arg(QString::number(size, 'f', 2)).arg(units[unitIndex]);
 }
 
 OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path) : QTreeView(parent), m_model(new QFileSystemModel(this))
@@ -127,7 +107,9 @@ OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path) : QTr
 
 void OpenMVROMFSEditor::calculateFileSystemSize()
 {
-    emit fileSystemSize(QString(QStringLiteral("ROMFS Size: %1")).arg(humanReadableSize(calculateTotalSize(m_model, m_model->index(m_model->rootPath())))));
+    VfsRomWriter writer(ROMFS_FILE_ALIGNMENT);
+    createRomfs(&writer, m_model, m_model->index(m_model->rootPath()));
+    emit fileSystemSize(QString(QStringLiteral("ROMFS Size: %1")).arg(humanReadableSize(writer.finalize().size())));
 }
 
 void OpenMVROMFSEditor::addFile()
@@ -147,7 +129,7 @@ void OpenMVROMFSEditor::addFile()
     if (!file.isEmpty())
     {
         QString path = m_model->isDir(index) ? m_model->filePath(index) : QFileInfo(m_model->filePath(index)).path();
-        QString newFilePath = path + QDir::separator() + QFileInfo(file).fileName();
+        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(file).fileName()));
 
         if (QFileInfo(newFilePath).exists())
         {
@@ -205,11 +187,11 @@ void OpenMVROMFSEditor::newFolder()
     // already in the settings group
 
     bool ok;
-    QString name = QInputDialog::getText(Core::ICore::dialogParent(),
-                                         Tr::tr("Edit ROMFS"), Tr::tr("Folder Name"),
-                                         QLineEdit::Normal, settings->value(LAST_ROMFS_DIALOG_NEW_FOLDER_NAME).toString(), &ok,
-                                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    QString name = QString::fromLatin1(toAscii(QInputDialog::getText(Core::ICore::dialogParent(),
+        Tr::tr("Edit ROMFS"), Tr::tr("Folder Name"),
+        QLineEdit::Normal, settings->value(LAST_ROMFS_DIALOG_NEW_FOLDER_NAME).toString(), &ok,
+        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint))));
 
     if (ok && (!name.isEmpty()))
     {
@@ -371,10 +353,20 @@ void OpenMVPlugin::romfsClicked()
 
         if (romfsFile.open())
         {
-            VfsRomWriter writer;
+            VfsRomWriter writer(ROMFS_FILE_ALIGNMENT);
             createRomfs(&writer, romfsEditor->model(), romfsEditor->model()->index(romfsEditor->model()->rootPath()));
             romfsFile.write(writer.finalize());
             romfsFile.close();
+
+            // QString file = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save ROMFS"));
+            // QFile::remove(file);
+            // QFile::copy(romfsFile.fileName(), file);
+
+            // QString folder = QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("Extract ROMFS"));
+            // QFile f(file);
+            // f.open(QFile::ReadOnly);
+            // VfsRomReader reader(f.readAll());
+            // reader.unpack(folder);
         }
         else
         {

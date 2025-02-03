@@ -36,24 +36,43 @@
 namespace OpenMV {
 namespace Internal {
 
+QByteArray toAscii(const QString &str);
+
+class VfsRomReader
+{
+
+public:
+    VfsRomReader(const QByteArray &data);
+    bool unpack(const QString &path);
+
+private:
+    quint64 decodeuint(const uint8_t **ptr);
+    quint64 extractrecord(const uint8_t **fs, const uint8_t **fsnext);
+    void unpackrecursive(const QString &path, const uint8_t *fs, const uint8_t *fstop);
+
+    const uint8_t *filesystem;
+    const uint8_t *filesystem_end;
+};
+
 class VfsRomWriter
 {
 
 public:
-    VfsRomWriter();
+    VfsRomWriter(qsizetype alignment = 2);
     QByteArray finalize();
     void opendir(const QString &dirname);
     void closedir();
-    void mkfile(const QString &filename, const QByteArray &filedata, quint64 alignment = 1);
+    void mkfile(const QString &filename, const QByteArray &filedata);
     void mkfile(const QString &filename, quint64 filedata[2]);
 
 private:
     QByteArray encodeuint(quint64 value);
-    QByteArray pack(quint64 kind, const QByteArray &payload);
-    quint64 extend(const QByteArray &data);
+    QByteArray pad(const QByteArray &data);
+    QByteArray pack(const QByteArray &header, const QByteArray &payload);
+    void extend(const QByteArray &data);
 
-    QList<QPair<QString, QByteArray> > dirstack;
-    quint64 offset;
+    QList<QPair<QString, QByteArray> > m_dirstack;
+    qsizetype m_alignment;
 };
 
 } // namespace Internal
