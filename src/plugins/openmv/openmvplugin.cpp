@@ -856,11 +856,6 @@ void OpenMVPlugin::extensionsInitialized()
     toolsMenu->addAction(bootloaderCommand);
     connect(m_bootloaderAction, &QAction::triggered, this, &OpenMVPlugin::bootloaderClicked);
 
-    m_romfsAction = new QAction(Tr::tr("Edit ROM File System"), this);
-    Core::Command *romfsCommand = Core::ActionManager::registerAction(m_romfsAction, Utils::Id("OpenMV.ROMFS"));
-    toolsMenu->addAction(romfsCommand);
-    connect(m_romfsAction, &QAction::triggered, this, &OpenMVPlugin::romfsClicked);
-
     m_eraseAction = new QAction(Tr::tr("Erase Onboard Data Flash"), this);
     Core::Command *eraseCommand = Core::ActionManager::registerAction(m_eraseAction, Utils::Id("OpenMV.Erase"));
     toolsMenu->addAction(eraseCommand);
@@ -871,6 +866,13 @@ void OpenMVPlugin::extensionsInitialized()
             QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
         == QMessageBox::Yes) connectClicked(true, QString(), true, true);
     });
+
+    m_romfsAction = new QAction(Tr::tr("Edit ROM File System"), this);
+    Core::Command *romfsCommand = Core::ActionManager::registerAction(m_romfsAction, Utils::Id("OpenMV.ROMFS"));
+    toolsMenu->addAction(romfsCommand);
+    connect(m_romfsAction, &QAction::triggered, this, &OpenMVPlugin::romfsClicked);
+    // DISABLED
+    m_romfsAction->setVisible(false);
 
     toolsMenu->addSeparator();
 

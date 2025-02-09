@@ -985,8 +985,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     QComboBox *combo = new QComboBox();
                     combo->addItem(Tr::tr("Install the lastest release firmware (v%L1.%L2.%L3)").arg(match.captured(1).toInt()).arg(match.captured(2).toInt()).arg(match.captured(3).toInt()));
                     combo->addItem(Tr::tr("Load a specific firmware"));
-                    combo->addItem(Tr::tr("Edit the ROM file system"));
                     combo->addItem(Tr::tr("Just erase the interal file system"));
+                    // DISABLED
+                    // combo->addItem(Tr::tr("Edit the ROM file system"));
                     combo->setCurrentIndex(settings->value(LAST_DFU_ACTION, 0).toInt());
                     layout->addWidget(combo);
                     layout->addItem(new QSpacerItem(0, 6));
@@ -1042,12 +1043,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         }
                         else if(combo->currentIndex() == 2)
                         {
-                            QTimer::singleShot(0, m_romfsAction, &QAction::trigger);
-                        }
-                        else if(combo->currentIndex() == 3)
-                        {
                             QTimer::singleShot(0, m_eraseAction, &QAction::trigger);
                         }
+                        // DISABLED
+                        // else if(combo->currentIndex() == 3)
+                        // {
+                        //     QTimer::singleShot(0, m_romfsAction, &QAction::trigger);
+                        // }
                     }
 
                     delete dialog;
