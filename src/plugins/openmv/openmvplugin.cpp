@@ -5429,10 +5429,46 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples)
       ((m_sensorType == QStringLiteral("HM01B0")) ||
        (m_sensorType == QStringLiteral("HM0360")) ||
        (m_sensorType == QStringLiteral("MT9V0X2")) ||
-       (m_sensorType == QStringLiteral("MT9V0X4"))))
+       (m_sensorType == QStringLiteral("MT9V0X4")) ||
+       (m_sensorType == QStringLiteral("BOSON")) ||
+       (m_sensorType == QStringLiteral("BOSON-320")) ||
+       (m_sensorType == QStringLiteral("BOSON-640")) ||
+       (m_sensorType == QStringLiteral("BOSON-320+")) ||
+       (m_sensorType == QStringLiteral("BOSON-640+")) ||
+       (m_sensorType == QStringLiteral("PAG7920")) ||
+       (m_sensorType == QStringLiteral("PAJ6100")) ||
+       (m_sensorType == QStringLiteral("FROGEYE2020")) ||
+       (m_sensorType == QStringLiteral("GENX320-S")) ||
+       (m_sensorType == QStringLiteral("GENX320"))))
     {
         data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
-        if(m_sensorType == QStringLiteral("HM01B0")) data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+
+        if(m_sensorType == QStringLiteral("HM01B0"))
+        {
+            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+        }
+
+        if((m_sensorType == QStringLiteral("BOSON-320")) ||
+           (m_sensorType == QStringLiteral("BOSON-320+")) ||
+           (m_sensorType == QStringLiteral("PAG7920")) ||
+           (m_sensorType == QStringLiteral("PAJ6100")) ||
+           (m_sensorType == QStringLiteral("FROGEYE2020")))
+        {
+            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+        }
+
+        if((m_sensorType == QStringLiteral("BOSON-640")) ||
+           (m_sensorType == QStringLiteral("BOSON-640+")))
+        {
+            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
+        }
+
+        if((m_sensorType == QStringLiteral("GENX320-S")) ||
+           (m_sensorType == QStringLiteral("GENX320")))
+        {
+            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
+            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
+        }
     }
 
     return data;
