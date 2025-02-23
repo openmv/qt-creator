@@ -94,6 +94,7 @@ if (WIN32)
     picotool/windows
     python/win
     pylsp/windows
+    vela/windows
     blhost/win
     sdphost/win)
 endif()
