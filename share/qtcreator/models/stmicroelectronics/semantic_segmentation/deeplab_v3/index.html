@@ -8,7 +8,6 @@
 <h2><a href="https://github.com/STMicroelectronics/stm32ai-modelzoo/tree/main/semantic_segmentation/deeplab_v3">DeepLab v3</a></h2>
 <p>DeepLabv3 was specified in "Rethinking Atrous Convolution for Semantic Image Segmentation" paper by Google. It is composed by a backbone (encoder) that can be a Mobilenet V2 (width parameter alpha) or a ResNet-50 or 101 for example followed by an ASPP (Atrous Spatial Pyramid Pooling) as described in the paper.</p>
 <p>ASPP applies on encoder outputs several parallel dilated convolutions with various dilation rates. This technique helps capturing longer range context without increasing too much the number of parameters. The multi-scale design of the ASPP has proved to be receptive at the same time to details and greater contextual information.</p>
-<p>So far, we have only considered Mobilenet V2 encoder.</p>
 <h2>License</h2>
 <pre>This software component is provided to you as part of a software package and
 applicable license terms are in the Package_license file. If you received this
