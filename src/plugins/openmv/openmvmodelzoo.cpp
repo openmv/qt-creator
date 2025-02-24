@@ -37,6 +37,7 @@
 #define LAST_MODEL_ZOO_DIALOG_GEOMETRY "OpenMVModelZooDialogGeometry"
 #define LAST_MODEL_ZOO_DIALOG_SPLITTER_STATE "OpenMVModelZooDialogSplitterState"
 #define LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE "OpenMVModelZooDialogExpandedState"
+#define LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX "OpenMVModelZooDialogSelectedIndex"
 
 namespace OpenMV {
 namespace Internal {
@@ -92,6 +93,14 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidg
         connect(m_model, &QFileSystemModel::directoryLoaded, this, [this]() {
             QStringList list = m_settings->value(LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE).toStringList();
             restoreExpandedState(QString(), list, m_treeView->rootIndex());
+
+            if ((!m_initialized) && m_settings->contains(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX))
+            {
+                QModelIndex index = m_filter->mapFromSource(m_model->index(m_settings->value(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX).toString()));
+                m_treeView->setCurrentIndex(index);
+                m_treeView->scrollTo(index, QTreeView::PositionAtCenter);
+                m_initialized = true;
+            }
         });
     }
     else
@@ -101,6 +110,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidg
     }
 
     m_selectedModel = QString();
+    m_initialized = false;
 
 #ifndef Q_OS_MAC
     m_styleSheet = QStringLiteral( // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
@@ -110,11 +120,18 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidg
 #endif
 
     m_highDPIStyleSheet = QString(m_styleSheet).replace(QStringLiteral(".png"), QStringLiteral("_2x.png"));
-
     m_devicePixelRatio = 0;
 
-    connect(m_treeView, &QTreeView::clicked, this, [this, ok, textBrowser](const QModelIndex &index) {
-        QString path = m_model->filePath(m_filter->mapToSource(index));
+    connect(m_treeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this, ok, textBrowser](const QItemSelection &selected, const QItemSelection &deselected) {
+        QModelIndexList indexes = selected.indexes();
+        Q_UNUSED(deselected)
+
+        if (indexes.isEmpty())
+        {
+            return;
+        }
+
+        QString path = m_model->filePath(m_filter->mapToSource(indexes.first()));
 
         if (QFileInfo(path).isDir())
         {
@@ -253,6 +270,15 @@ OpenMVModelZooBrowser::~OpenMVModelZooBrowser()
     QStringList list;
     saveExpandedState(QString(), list, m_treeView->rootIndex());
     m_settings->setValue(LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE, list);
+
+    if (m_treeView->selectionModel()->hasSelection())
+    {
+        m_settings->setValue(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX, m_model->filePath(m_filter->mapToSource(m_treeView->currentIndex())));
+    }
+    else
+    {
+        m_settings->remove(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX);
+    }
 }
 
 // We have to do this because Qt does not update the icons when switching between

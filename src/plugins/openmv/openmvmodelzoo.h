@@ -126,7 +126,7 @@ private:
     Core::MiniSplitter *m_splitter;
     OpenMVModelZooBrowserFilter *m_filter;
     QString m_selectedModel;
-
+    bool m_initialized;
     QString m_styleSheet, m_highDPIStyleSheet;
     qreal m_devicePixelRatio;
 };

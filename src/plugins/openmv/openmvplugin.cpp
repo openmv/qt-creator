@@ -871,8 +871,6 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Command *romfsCommand = Core::ActionManager::registerAction(m_romfsAction, Utils::Id("OpenMV.ROMFS"));
     toolsMenu->addAction(romfsCommand);
     connect(m_romfsAction, &QAction::triggered, this, &OpenMVPlugin::romfsClicked);
-    // DISABLED
-    m_romfsAction->setVisible(false);
 
     toolsMenu->addSeparator();
 

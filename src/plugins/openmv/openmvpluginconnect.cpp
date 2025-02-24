@@ -1045,11 +1045,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         {
                             QTimer::singleShot(0, m_eraseAction, &QAction::trigger);
                         }
-                        // DISABLED
-                        // else if(combo->currentIndex() == 3)
-                        // {
-                        //     QTimer::singleShot(0, m_romfsAction, &QAction::trigger);
-                        // }
+                        else if(combo->currentIndex() == 3)
+                        {
+                            QTimer::singleShot(0, m_romfsAction, &QAction::trigger);
+                        }
                     }
 
                     delete dialog;
