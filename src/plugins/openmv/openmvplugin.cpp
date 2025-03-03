@@ -853,11 +853,13 @@ void OpenMVPlugin::extensionsInitialized()
 
     m_bootloaderAction = new QAction(Tr::tr("Run Bootloader (Load Firmware)"), this);
     Core::Command *bootloaderCommand = Core::ActionManager::registerAction(m_bootloaderAction, Utils::Id("OpenMV.Bootloader"));
+    bootloaderCommand->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+L")));
     toolsMenu->addAction(bootloaderCommand);
     connect(m_bootloaderAction, &QAction::triggered, this, &OpenMVPlugin::bootloaderClicked);
 
     m_eraseAction = new QAction(Tr::tr("Erase Onboard Data Flash"), this);
     Core::Command *eraseCommand = Core::ActionManager::registerAction(m_eraseAction, Utils::Id("OpenMV.Erase"));
+    eraseCommand->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+E")));
     toolsMenu->addAction(eraseCommand);
     connect(m_eraseAction, &QAction::triggered, this, [this] {
         if(QMessageBox::warning(Core::ICore::dialogParent(),
@@ -866,6 +868,8 @@ void OpenMVPlugin::extensionsInitialized()
             QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
         == QMessageBox::Yes) connectClicked(true, QString(), true, true);
     });
+
+    toolsMenu->addSeparator();
 
     m_romfsAction = new QAction(Tr::tr("Edit ROM File System"), this);
     Core::Command *romfsCommand = Core::ActionManager::registerAction(m_romfsAction, Utils::Id("OpenMV.ROMFS"));
