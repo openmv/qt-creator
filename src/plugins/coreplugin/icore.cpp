@@ -2041,8 +2041,8 @@ void ICorePrivate::registerDefaultActions()
     zoomOriginalAction.setEnabled(false);
 
     // Debug Qt Creator menu
+    mtools->appendGroup(Constants::G_TOOLS_DEBUG);
     // OPENMV-DIFF //
-    // mtools->appendGroup(Constants::G_TOOLS_DEBUG);
     // ActionContainer *mtoolsdebug = ActionManager::createMenu(Constants::M_TOOLS_DEBUG);
     // mtoolsdebug->menu()->setTitle(Tr::tr("Debug %1").arg(QGuiApplication::applicationDisplayName()));
     // mtools->addMenu(mtoolsdebug, Constants::G_TOOLS_DEBUG);
@@ -2063,13 +2063,7 @@ void ICorePrivate::registerDefaultActions()
     optionsAction.setText(Tr::tr("Pr&eferences..."));
     optionsAction.setMenuRole(QAction::PreferencesRole);
     optionsAction.setDefaultKeySequence(QKeySequence::Preferences);
-    // OPENMV-DIFF //
-    // optionsAction.addToContainer(Constants::M_EDIT, Constants::G_EDIT_PREFERENCES);
-    // OPENMV-DIFF //
-    mtools->appendGroup(Constants::G_TOOLS_DEBUG);
-    mtools->addSeparator(Constants::G_TOOLS_DEBUG);
-    optionsAction.addToContainer(Constants::M_TOOLS, Constants::G_TOOLS_DEBUG);
-    // OPENMV-DIFF //
+    optionsAction.addToContainer(Constants::M_EDIT, Constants::G_EDIT_PREFERENCES);
     optionsAction.addOnTriggered(this, [] { ICore::showOptionsDialog(Id()); });
 
     mwindow->addSeparator(Constants::G_WINDOW_LIST);
