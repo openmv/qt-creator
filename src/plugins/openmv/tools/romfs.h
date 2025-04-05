@@ -50,8 +50,8 @@ private:
     quint64 extractrecord(const uint8_t **fs, const uint8_t **fsnext);
     void unpackrecursive(const QString &path, const uint8_t *fs, const uint8_t *fstop);
 
-    const uint8_t *filesystem;
-    const uint8_t *filesystem_end;
+    QByteArray m_data;
+    const uint8_t *filesystem, *filesystem_end;
 };
 
 class VfsRomWriter

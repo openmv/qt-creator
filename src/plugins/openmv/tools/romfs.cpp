@@ -140,9 +140,10 @@ void VfsRomReader::unpackrecursive(const QString &path, const uint8_t *fs, const
 
 VfsRomReader::VfsRomReader(const QByteArray &data)
 {
-    filesystem_end = filesystem = reinterpret_cast<const uint8_t *>(data.constData());
+    m_data = data;
+    filesystem_end = filesystem = reinterpret_cast<const uint8_t *>(m_data.constData());
 
-    if (data.size() < ROMFS_SIZE_MIN) {
+    if (m_data.size() < ROMFS_SIZE_MIN) {
         return;
     }
 
@@ -270,4 +271,3 @@ void VfsRomWriter::mkfile(const QString &filename, quint64 filesize, quint64 fil
 
 } // namespace Internal
 } // namespace OpenMV
-

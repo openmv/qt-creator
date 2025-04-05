@@ -349,7 +349,7 @@ void OpenMVPlugin::bootloaderClicked()
     QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    dialog->setWindowTitle(Tr::tr("Bootloader"));
+    dialog->setWindowTitle(Tr::tr("Load Custom Firmware"));
     QFormLayout *layout = new QFormLayout(dialog);
     layout->setVerticalSpacing(0);
 
@@ -370,17 +370,17 @@ void OpenMVPlugin::bootloaderClicked()
     QWidget *widget = new QWidget;
     widget->setLayout(layout2);
 
-    QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal file system"));
+    QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
     checkBox->setChecked(settings->value(LAST_FLASH_FS_ERASE_STATE, false).toBool());
     layout2->addWidget(checkBox);
     checkBox->setVisible(!pathChooser->filePath().toString().endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive));
-    checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. "
-                            "This does not erase files on any removable SD card (if inserted)."));
-    QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Erase internal file system"));
+    checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
+                                "This does not erase files on any removable SD card (if inserted)."));
+    QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Erase internal FAT file system"));
     checkBox2->setChecked(true);
     checkBox2->setEnabled(false);
-    checkBox2->setToolTip(Tr::tr("Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. "
-                             "This does not erase files on any removable SD card (if inserted)."));
+    checkBox2->setToolTip(Tr::tr("Loading firmware via DFU always erases your OpenMV Cam's internal FAT file system. "
+                                 "This does not erase files on any removable SD card (if inserted)."));
     layout2->addWidget(checkBox2);
     checkBox2->setVisible(pathChooser->filePath().toString().endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive));
 
@@ -491,11 +491,11 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
             QWidget *widget = new QWidget;
             widget->setLayout(layout2);
 
-            QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal file system"));
+            QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
             checkBox->setChecked(settings->value(LAST_FLASH_FS_ERASE_STATE, false).toBool());
             layout2->addWidget(checkBox);
-            checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. "
-                                    "This does not erase files on any removable SD card (if inserted)."));
+            checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
+                                        "This does not erase files on any removable SD card (if inserted)."));
 
             QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
             QPushButton *run = new QPushButton(Tr::tr("Run"));
@@ -897,7 +897,14 @@ QPair<QStringList, QStringList> filterPorts(const QJsonDocument &settings,
     return QPair<QStringList, QStringList>(stringList, dfuDevices);
 }
 
-void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePath, bool forceFlashFSErase, bool justEraseFlashFs, bool installTheLatestDevelopmentFirmware, bool waitForCamera, QString previousMapping)
+void OpenMVPlugin::connectClicked(bool forceBootloader,
+                                  QString forceFirmwarePath,
+                                  bool forceFlashFSErase,
+                                  bool justEraseFlashFs,
+                                  bool installTheLatestDevelopmentFirmware,
+                                  bool waitForCamera,
+                                  QString previousMapping,
+                                  OpenMVROMFSAccess romfsAccess)
 {
     if(!m_working)
     {
@@ -908,8 +915,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
 
         if(m_connected)
         {
-            m_connect_disconnect = connect(this, &OpenMVPlugin::disconnectDone, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping] {
-                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping] {connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping);});
+            m_connect_disconnect = connect(this, &OpenMVPlugin::disconnectDone, this,
+                [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess] {
+                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess] {
+                    connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess);
+                });
             });
 
             QTimer::singleShot(0, this, [this] {disconnectClicked();});
@@ -985,9 +995,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     QComboBox *combo = new QComboBox();
                     combo->addItem(Tr::tr("Install the lastest release firmware (v%L1.%L2.%L3)").arg(match.captured(1).toInt()).arg(match.captured(2).toInt()).arg(match.captured(3).toInt()));
                     combo->addItem(Tr::tr("Load a specific firmware"));
-                    combo->addItem(Tr::tr("Just erase the interal file system"));
-                    // DISABLED
-                    // combo->addItem(Tr::tr("Edit the ROM file system"));
+                    combo->addItem(Tr::tr("Just erase the internal FAT file system"));
+                    combo->addItem(Tr::tr("Edit the ROM file system"));
                     combo->setCurrentIndex(settings->value(LAST_DFU_ACTION, 0).toInt());
                     layout->addWidget(combo);
                     layout->addItem(new QSpacerItem(0, 6));
@@ -997,12 +1006,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                     QWidget *widget = new QWidget;
                     widget->setLayout(layout2);
 
-                    QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal file system"));
+                    QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
                     checkBox->setChecked(settings->value(LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
                     layout2->addWidget(checkBox);
                     checkBox->setVisible(combo->currentIndex() == 0);
-                    checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. "
-                                            "This does not erase files on any removable SD card (if inserted)."));
+                    checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
+                                                "This does not erase files on any removable SD card (if inserted)."));
 
                     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
                     layout2->addSpacing(160);
@@ -1047,7 +1056,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader, QString forceFirmwarePat
                         }
                         else if(combo->currentIndex() == 3)
                         {
-                            QTimer::singleShot(0, m_romfsAction, &QAction::trigger);
+                            QTimer::singleShot(0, this, [this] { editRomfsClicked(true); });
                         }
                     }
 
@@ -3147,7 +3156,7 @@ void OpenMVPlugin::updateCam(bool forceYes)
             {
                 int answer = QMessageBox::question(Core::ICore::dialogParent(),
                     Tr::tr("Firmware Update"),
-                    Tr::tr("Erase the internal file system?"),
+                    Tr::tr("Erase the internal FAT file system?"),
                     QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
 
                 if((answer == QMessageBox::Yes) || (answer == QMessageBox::No))
@@ -3175,7 +3184,7 @@ void OpenMVPlugin::updateCam(bool forceYes)
             {
                 int answer = QMessageBox::question(Core::ICore::dialogParent(),
                     Tr::tr("Firmware Update"),
-                    Tr::tr("Erase the internal file system?"),
+                    Tr::tr("Erase the internal FAT file system?"),
                     QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
 
                 if((answer == QMessageBox::Yes) || (answer == QMessageBox::No))

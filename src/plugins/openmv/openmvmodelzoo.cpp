@@ -42,7 +42,7 @@
 namespace OpenMV {
 namespace Internal {
 
-OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidget *parent) :
+OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidget *parent, bool saveDialog) :
     QDialog(parent), m_settings(settings), m_model(new QFileSystemModel(this))
 {
     setWindowFlags(windowFlags() | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -78,7 +78,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidg
     vlayout->addWidget(m_splitter);
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
-    QPushButton *ok = new QPushButton(Tr::tr("OK"));
+    QPushButton *ok = new QPushButton(saveDialog ? Tr::tr("Save") : Tr::tr("OK"));
     box->addButton(ok, QDialogButtonBox::AcceptRole);
     ok->setEnabled(false);
     connect(box, &QDialogButtonBox::accepted, this, &OpenMVModelZooBrowser::accept);

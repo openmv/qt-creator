@@ -181,6 +181,8 @@
 #define LAST_APRILTAG_RANGE_MAX "LastAprilTagRangeMax"
 #define LAST_APRILTAG_INCLUDE "LastAprilTagInclude"
 #define LAST_APRILTAG_PATH "LastAprilTagPath"
+#define LAST_MODEL_NO_CAM_PATH "LastModelNoCamPath"
+#define LAST_MODEL_WITH_CAM_PATH "LastModelWithCamPath"
 #define LAST_DATASET_EDITOR_PATH "LastDatasetEditorPath"
 #define LAST_DATASET_EDITOR_LOADED "LastDatasetEditorLoaded"
 #define LAST_DATASET_EDITOR_EXPORT_PATH "LastDatasetEditorExportPath"
@@ -192,6 +194,11 @@
 #define LAST_ROMFS_DIALOG_GEOMETRY "LastROMFSDialogGeometry"
 #define LAST_ROMFS_DIALOG_OPEN_FILE_PATH "LastROMFSDialogFilePath"
 #define LAST_ROMFS_DIALOG_NEW_FOLDER_NAME "LastROMFSDialogNewFolderName"
+#define LAST_ROMFS_DIALOG_SAVE_AS_PATH "LastROMFSDialogSaveAsPath"
+#define LAST_ROMFS_DIALOG_SAVE_PATH "LastROMFSDialogSavePath"
+#define LAST_ROMFS_DIALOG_OPEN_PATH "LastROMFSDialogOpenPath"
+#define LAST_ROMFS_DIALOG_ACTION "LastROMFSDialogAction"
+#define LAST_ROMFS_DIALOG_FLASH_FS_ERASE_STATE "LastROMFSDialogFlashFSEraseState"
 #define RESOURCES_MAJOR "ResourcesMajor"
 #define RESOURCES_MINOR "ResourcesMinor"
 #define RESOURCES_PATCH "ResourcesPatch"
@@ -392,6 +399,14 @@ class ScanDriveThread: public QObject
     signals: void driveScanned(const QList<QPair<QString, QString> > &output);
 };
 
+enum OpenMVROMFSAccess
+{
+    OPENMV_ROMFS_NONE,
+    OPENMV_ROMFS_READ,
+    OPENMV_ROMFS_WRITE,
+    OPENMV_ROMFS_RESET
+};
+
 class OpenMVPlugin : public ExtensionSystem::IPlugin
 {
     Q_OBJECT
@@ -413,7 +428,8 @@ public slots: // private
     bool registerOpenMVCamDialog(const QString board, const QString id);
     void packageUpdate();
     void bootloaderClicked();
-    void romfsClicked();
+    void editRomfsClicked(bool fromConnect = false, bool newRomfs = false);
+    void resetRomfsClicked();
     void installTheLatestDevelopmentRelease();
     void connectClicked(bool forceBootloader = false,
                         QString forceFirmwarePath = QString(),
@@ -421,7 +437,8 @@ public slots: // private
                         bool justEraseFlashFs = false,
                         bool installTheLatestDevelopmentFirmware = false,
                         bool waitForCamera = false,
-                        QString previousMapping = QString());
+                        QString previousMapping = QString(),
+                        OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
     void disconnectClicked(bool reset = false);
     void startClicked();
     void stopClicked();
@@ -563,7 +580,6 @@ private:
     int m_getStateSpacing;
 
     QAction *m_bootloaderAction;
-    QAction *m_romfsAction;
     QAction *m_eraseAction;
     QAction *m_autoReconnectAction;
     QAction *m_stopOnConnectDiconnectionAction;

@@ -104,6 +104,19 @@ OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path) : QTr
     calculateFileSystemSize();
     connect(m_model, &QFileSystemModel::directoryLoaded, this, &OpenMVROMFSEditor::calculateFileSystemSize);
     connect(m_model, &QFileSystemModel::dataChanged, this, &OpenMVROMFSEditor::calculateFileSystemSize);
+    connect(m_model, &QFileSystemModel::directoryLoaded, this, [this, path] (){
+        preloadDirectories(m_model->index(path));
+    });
+}
+
+void OpenMVROMFSEditor::preloadDirectories(const QModelIndex &index)
+{
+    for (int row = 0; row < m_model->rowCount(index); row++)
+    {
+        QModelIndex child = m_model->index(row, 0, index);
+        setExpanded(child, true);
+        preloadDirectories(child);
+    }
 }
 
 void OpenMVROMFSEditor::calculateFileSystemSize()
@@ -303,6 +316,48 @@ void OpenMVROMFSEditor::remove()
     }
 }
 
+void OpenMVROMFSEditor::saveAs()
+{
+    QModelIndex index = currentIndex();
+
+    if (!index.isValid()) {
+        QMessageBox::information(Core::ICore::dialogParent(),
+            Tr::tr("Edit ROMFS"),
+            Tr::tr("No file or folder selected."));
+        return;
+    }
+
+    if (m_model->isDir(index))
+    {
+        QMessageBox::critical(Core::ICore::dialogParent(),
+            Tr::tr("Edit ROMFS"),
+            Tr::tr("Cannot save a folder!"));
+        return;
+    }
+
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    // already in the settings group
+
+    QString path = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save As"),
+        settings->value(LAST_ROMFS_DIALOG_SAVE_AS_PATH, QDir::homePath()).toString() + QDir::separator() + m_model->fileName(index));
+
+    if(!path.isEmpty())
+    {
+        QFile file(m_model->filePath(index));
+
+        if (file.copy(path))
+        {
+            settings->setValue(LAST_ROMFS_DIALOG_SAVE_AS_PATH, QFileInfo(path).path());
+        }
+        else
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                Tr::tr("Save As"),
+                file.errorString());
+        }
+    }
+}
+
 void OpenMVROMFSEditor::contextMenuEvent(QContextMenuEvent *event)
 {
     QModelIndex index = indexAt(event->pos());
@@ -314,6 +369,7 @@ void OpenMVROMFSEditor::contextMenuEvent(QContextMenuEvent *event)
         connect(menu.addAction(Tr::tr("Add Model")), &QAction::triggered, this, &OpenMVROMFSEditor::addModel);
         connect(menu.addAction(Tr::tr("New Folder")), &QAction::triggered, this, &OpenMVROMFSEditor::newFolder);
         connect(menu.addAction(Tr::tr("Delete")), &QAction::triggered, this, &OpenMVROMFSEditor::remove);
+        connect(menu.addAction(Tr::tr("Save As")), &QAction::triggered, this, &OpenMVROMFSEditor::saveAs);
         menu.exec(event->globalPos());
     }
 
@@ -352,18 +408,8 @@ void OpenMVROMFSEditor::paintEvent(QPaintEvent *event)
     QTreeView::paintEvent(event);
 }
 
-void OpenMVPlugin::romfsClicked()
+void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 {
-    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
-        Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    dialog->setWindowTitle(Tr::tr("Edit ROMFS"));
-    dialog->setMinimumSize(QSize(320, 240));
-    QVBoxLayout *layout = new QVBoxLayout(dialog);
-
-    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(SETTINGS_GROUP);
-
     QTemporaryDir tempDir;
 
     if(!tempDir.isValid())
@@ -371,8 +417,112 @@ void OpenMVPlugin::romfsClicked()
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("Edit ROMFS"),
             tempDir.errorString());
+
         return;
     }
+
+    if (!newRomfs)
+    {
+        if (fromConnect)
+        {
+            QTemporaryFile romfsFile;
+            romfsFile.setFileTemplate(QStringLiteral("XXXXXX.img"));
+
+            if (romfsFile.open())
+            {
+                romfsFile.close();
+
+                connectClicked(true, QFileInfo(romfsFile).filePath(), false, false, false, false, QString(), OPENMV_ROMFS_READ);
+
+                if (romfsFile.open())
+                {
+                    VfsRomReader reader(romfsFile.readAll());
+                    bool ok = reader.unpack(tempDir.path());
+                    romfsFile.close();
+
+                    if (!ok)
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            Tr::tr("Edit ROMFS"), Tr::tr("Failed to unpack ROMFS!"));
+
+                        return;
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Edit ROMFS"),
+                        romfsFile.errorString());
+
+                    return;
+                }
+            }
+            else
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    Tr::tr("Edit ROMFS"),
+                    romfsFile.errorString());
+
+                return;
+            }
+        }
+        else
+        {
+            Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+            settings->beginGroup(SETTINGS_GROUP);
+
+            QString path = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("OpenMV ROMFS"),
+                settings->value(LAST_ROMFS_DIALOG_OPEN_PATH, QDir::homePath()).toString(),
+                Tr::tr("ROMFS Images (*.img)"));
+
+            if (!path.isEmpty())
+            {
+                QFile romfsFile(path);
+
+                if (romfsFile.open(QIODevice::ReadOnly))
+                {
+                    VfsRomReader reader(romfsFile.readAll());
+                    bool ok = reader.unpack(tempDir.path());
+                    romfsFile.close();
+
+                    settings->setValue(LAST_ROMFS_DIALOG_OPEN_PATH, path);
+                    settings->endGroup();
+
+                    if (!ok)
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            Tr::tr("Edit ROMFS"), Tr::tr("Failed to unpack ROMFS!"));
+
+                        return;
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("OpenMV ROMFS"),
+                        romfsFile.errorString());
+
+                    settings->endGroup();
+                    return;
+                }
+            }
+            else
+            {
+                settings->endGroup();
+                return;
+            }
+        }
+    }
+
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->beginGroup(SETTINGS_GROUP);
+
+    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
+        Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    dialog->setWindowTitle(Tr::tr("Edit ROMFS"));
+    dialog->setMinimumSize(QSize(320, 240));
+    QVBoxLayout *layout = new QVBoxLayout(dialog);
 
     OpenMVROMFSEditor *romfsEditor = new OpenMVROMFSEditor(dialog, tempDir.path());
     layout->addWidget(romfsEditor);
@@ -391,12 +541,15 @@ void OpenMVPlugin::romfsClicked()
     box->addButton(newFolder, QDialogButtonBox::ActionRole);
     QPushButton *remove = new QPushButton(Tr::tr("Delete"));
     box->addButton(remove, QDialogButtonBox::ActionRole);
-    QPushButton *commit = new QPushButton(Tr::tr("Commit ROMFS"));
+    QPushButton *saveAs = new QPushButton(Tr::tr("Save As"));
+    box->addButton(saveAs, QDialogButtonBox::ActionRole);
+    QPushButton *commit = new QPushButton(Tr::tr("Commit"));
     box->addButton(commit, QDialogButtonBox::AcceptRole);
     connect(addFile, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::addFile);
     connect(addModel, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::addModel);
     connect(newFolder, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::newFolder);
     connect(remove, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::remove);
+    connect(saveAs, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::saveAs);
     connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
     layout->addWidget(box);
@@ -413,38 +566,129 @@ void OpenMVPlugin::romfsClicked()
     bool ok = dialog->exec() == QDialog::Accepted;
 
     settings->setValue(LAST_ROMFS_DIALOG_GEOMETRY, dialog->saveGeometry());
-    settings->endGroup();
 
     if (ok)
     {
-        QTemporaryFile romfsFile;
+        QDialog *dialog2 = new QDialog(Core::ICore::dialogParent(),
+            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+        dialog2->setWindowTitle(Tr::tr("Edit ROMFS"));
+        QFormLayout *layout2 = new QFormLayout(dialog2);
+        layout2->setVerticalSpacing(0);
 
-        if (romfsFile.open())
+        layout2->addWidget(new QLabel(Tr::tr("What would you like to do?")));
+        layout2->addItem(new QSpacerItem(0, 6));
+
+        QComboBox *combo2 = new QComboBox();
+        combo2->addItem(Tr::tr("Commit ROMFS to OpenMV Cam"));
+        combo2->addItem(Tr::tr("Save ROMFS to File"));
+        combo2->setCurrentIndex(settings->value(LAST_ROMFS_DIALOG_ACTION, 0).toInt());
+        layout2->addWidget(combo2);
+        layout2->addItem(new QSpacerItem(0, 6));
+
+        QHBoxLayout *layout3 = new QHBoxLayout;
+        layout3->setContentsMargins(0, 0, 0, 0);
+        QWidget *widget2 = new QWidget;
+        widget2->setLayout(layout3);
+
+        QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Erase internal FAT file system"));
+        checkBox2->setChecked(settings->value(LAST_ROMFS_DIALOG_FLASH_FS_ERASE_STATE, false).toBool());
+        layout3->addWidget(checkBox2);
+        checkBox2->setVisible(combo2->currentIndex() == 0);
+        checkBox2->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
+                                     "This does not erase files on any removable SD card (if inserted)."));
+
+        QDialogButtonBox *box2 = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+        layout3->addSpacing(160);
+        layout3->addWidget(box2);
+        layout2->addRow(widget2);
+
+        connect(box2, &QDialogButtonBox::accepted, dialog2, &QDialog::accept);
+        connect(box2, &QDialogButtonBox::rejected, dialog2, &QDialog::reject);
+        connect(combo2, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [this, dialog2, checkBox2] (int index) {
+            checkBox2->setVisible(index == 0);
+            QTimer::singleShot(0, this, [dialog2] { dialog2->adjustSize(); });
+        });
+
+        if (dialog2->exec() == QDialog::Accepted)
         {
-            VfsRomWriter writer(ROMFS_FILE_ALIGNMENT);
-            createRomfs(&writer, romfsEditor->model(), romfsEditor->model()->index(romfsEditor->model()->rootPath()));
-            romfsFile.write(writer.finalize());
-            romfsFile.close();
+            settings->setValue(LAST_ROMFS_DIALOG_ACTION, combo2->currentIndex());
+            settings->setValue(LAST_ROMFS_DIALOG_FLASH_FS_ERASE_STATE, checkBox2->isChecked());
+            settings->endGroup();
 
-            // QString file = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save ROMFS"));
-            // QFile::remove(file);
-            // QFile::copy(romfsFile.fileName(), file);
+            if(combo2->currentIndex() == 0)
+            {
+                QTemporaryFile romfsFile;
+                romfsFile.setFileTemplate(QStringLiteral("XXXXXX.img"));
 
-            // QString folder = QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("Extract ROMFS"));
-            // QFile f(file);
-            // f.open(QFile::ReadOnly);
-            // VfsRomReader reader(f.readAll());
-            // reader.unpack(folder);
+                if (romfsFile.open())
+                {
+                    VfsRomWriter writer(ROMFS_FILE_ALIGNMENT);
+                    createRomfs(&writer, romfsEditor->model(), romfsEditor->model()->index(romfsEditor->model()->rootPath()));
+                    romfsFile.write(writer.finalize());
+                    romfsFile.close();
+
+                    connectClicked(true, QFileInfo(romfsFile).filePath(), checkBox2->isChecked(), false, false, false, QString(), OPENMV_ROMFS_WRITE);
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Edit ROMFS"),
+                        romfsFile.errorString());
+                }
+            }
+            else if(combo2->currentIndex() == 1)
+            {
+                QString path = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Edit ROMFS"),
+                    settings->value(LAST_ROMFS_DIALOG_SAVE_PATH, QDir::homePath()).toString(),
+                    Tr::tr("ROMFS Images (*.img)"));
+
+                if(!path.isEmpty())
+                {
+                    QFile romfsFile(path);
+
+                    if (romfsFile.open(QIODevice::WriteOnly))
+                    {
+                        VfsRomWriter writer(ROMFS_FILE_ALIGNMENT);
+                        createRomfs(&writer, romfsEditor->model(), romfsEditor->model()->index(romfsEditor->model()->rootPath()));
+                        romfsFile.write(writer.finalize());
+                        romfsFile.close();
+
+                        settings->setValue(LAST_ROMFS_DIALOG_SAVE_PATH, path);
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            Tr::tr("Edit ROMFS"),
+                            romfsFile.errorString());
+                    }
+                }
+            }
         }
         else
         {
-            QMessageBox::critical(Core::ICore::dialogParent(),
-                Tr::tr("Edit ROMFS"),
-                romfsFile.errorString());
+            settings->endGroup();
         }
+
+        delete dialog2;
+    }
+    else
+    {
+        settings->endGroup();
     }
 
     delete dialog;
+}
+
+void OpenMVPlugin::resetRomfsClicked()
+{
+    if(QMessageBox::warning(Core::ICore::dialogParent(),
+        Tr::tr("Reset ROMFS on OpenMV Cam"),
+        Tr::tr("Are you sure you want to reset your OpenMV Cam's ROM file system?"),
+        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
+    == QMessageBox::Yes) {
+        connectClicked(true, QString(), false, false, false, false, QString(), OPENMV_ROMFS_RESET);
+    }
 }
 
 } // namespace Internal

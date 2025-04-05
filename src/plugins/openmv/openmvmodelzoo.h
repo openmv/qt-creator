@@ -103,7 +103,7 @@ class OpenMVModelZooBrowser : public QDialog
 
 public:
 
-    explicit OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidget *parent = Q_NULLPTR);
+    explicit OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidget *parent = Q_NULLPTR, bool saveDialog = false);
     ~OpenMVModelZooBrowser();
     QString selectedModel() const { return m_selectedModel; }
 

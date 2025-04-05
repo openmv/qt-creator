@@ -33,6 +33,7 @@
 #include "app/app_version.h"
 
 #include "openmvtr.h"
+#include "openmvmodelzoo.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -851,31 +852,51 @@ void OpenMVPlugin::extensionsInitialized()
     Core::ActionContainer *toolsMenu = Core::ActionManager::actionContainer(Core::Constants::M_TOOLS);
     Core::ActionContainer *helpMenu = Core::ActionManager::actionContainer(Core::Constants::M_HELP);
 
-    m_bootloaderAction = new QAction(Tr::tr("Run Bootloader (Load Firmware)"), this);
+    m_bootloaderAction = new QAction(Tr::tr("Load Custom Firmware"), this);
     Core::Command *bootloaderCommand = Core::ActionManager::registerAction(m_bootloaderAction, Utils::Id("OpenMV.Bootloader"));
     bootloaderCommand->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+L")));
     toolsMenu->addAction(bootloaderCommand);
     connect(m_bootloaderAction, &QAction::triggered, this, &OpenMVPlugin::bootloaderClicked);
 
-    m_eraseAction = new QAction(Tr::tr("Erase Onboard Data Flash"), this);
+    m_eraseAction = new QAction(Tr::tr("Erase Internal FAT File System"), this);
     Core::Command *eraseCommand = Core::ActionManager::registerAction(m_eraseAction, Utils::Id("OpenMV.Erase"));
     eraseCommand->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+E")));
     toolsMenu->addAction(eraseCommand);
     connect(m_eraseAction, &QAction::triggered, this, [this] {
         if(QMessageBox::warning(Core::ICore::dialogParent(),
-            Tr::tr("Erase Onboard Data Flash"),
-            Tr::tr("Are you sure you want to erase your OpenMV Cam's onboard flash drive?"),
+            Tr::tr("Erase Internal FAT File System"),
+            Tr::tr("Are you sure you want to erase your OpenMV Cam's internal FAT file system?"),
             QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
         == QMessageBox::Yes) connectClicked(true, QString(), true, true);
     });
 
     toolsMenu->addSeparator();
 
-    m_romfsAction = new QAction(Tr::tr("Edit ROM File System"), this);
-    Core::Command *romfsCommand = Core::ActionManager::registerAction(m_romfsAction, Utils::Id("OpenMV.ROMFS"));
-    toolsMenu->addAction(romfsCommand);
-    connect(m_romfsAction, &QAction::triggered, this, &OpenMVPlugin::romfsClicked);
-    m_romfsAction->setVisible(false);
+    Core::ActionContainer *romFsSubmenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.ROMFSMenu"));
+    romFsSubmenu->menu()->setTitle(Tr::tr("ROM File System"));
+    toolsMenu->addMenu(romFsSubmenu);
+
+    QAction *newRomfsAction = new QAction(Tr::tr("New ROMFS File"), this);
+    Core::Command *newRomfsCommand = Core::ActionManager::registerAction(newRomfsAction, Utils::Id("OpenMV.NewROMFS"));
+    romFsSubmenu->addAction(newRomfsCommand);
+    connect(newRomfsAction, &QAction::triggered, this,  [this] { OpenMVPlugin::editRomfsClicked(false, true); });
+
+    QAction *openRomfsAction = new QAction(Tr::tr("Open ROMFS File"), this);
+    Core::Command *openRomfsCommand = Core::ActionManager::registerAction(openRomfsAction, Utils::Id("OpenMV.OpenROMFS"));
+    romFsSubmenu->addAction(openRomfsCommand);
+    connect(openRomfsAction, &QAction::triggered, this,  [this] { OpenMVPlugin::editRomfsClicked(); });
+
+    romFsSubmenu->addSeparator();
+
+    QAction *editRomfsAction = new QAction(Tr::tr("Edit ROMFS on OpenMV Cam"), this);
+    Core::Command *editRomfsCommand = Core::ActionManager::registerAction(editRomfsAction, Utils::Id("OpenMV.EditROMFS"));
+    romFsSubmenu->addAction(editRomfsCommand);
+    connect(editRomfsAction, &QAction::triggered, this, [this] { OpenMVPlugin::editRomfsClicked(true); });
+
+    QAction *resetRomfsAction = new QAction(Tr::tr("Reset ROMFS on OpenMV Cam"), this);
+    Core::Command *resetRomfsCommand = Core::ActionManager::registerAction(resetRomfsAction, Utils::Id("OpenMV.ResetROMFS"));
+    romFsSubmenu->addAction(resetRomfsCommand);
+    connect(resetRomfsAction, &QAction::triggered, this, [this] { OpenMVPlugin::resetRomfsClicked(); });
 
     toolsMenu->addSeparator();
 
@@ -1042,6 +1063,53 @@ void OpenMVPlugin::extensionsInitialized()
                                   QString(),
                                   Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
         }
+    });
+
+    machineVisionToolsMenu->addSeparator();
+
+    QAction *openmvModelZooAction = new QAction(Tr::tr("Open Model Zoo"), this);
+    Core::Command *openmvModelZooCommand = Core::ActionManager::registerAction(openmvModelZooAction, Utils::Id("OpenMV.OpenModelZoo"));
+    machineVisionToolsMenu->addAction(openmvModelZooCommand);
+    connect(openmvModelZooAction, &QAction::triggered, this, [this] {
+        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+        settings->beginGroup(SETTINGS_GROUP);
+
+        OpenMVModelZooBrowser dialog(settings, Core::ICore::dialogParent(), true);
+
+        if (dialog.exec() == QDialog::Accepted)
+        {
+            QString src = dialog.selectedModel();
+            QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Model Zoo"),
+                m_portPath.isEmpty()
+                ? settings->value(LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath() + QDir::separator() + QFileInfo(src).fileName())).toString()
+                : settings->value(LAST_MODEL_WITH_CAM_PATH, QString(m_portPath + QDir::separator() + QFileInfo(src).fileName())).toString());
+
+            if(!dst.isEmpty())
+            {
+                if((!QFile(dst).exists()) || QFile::remove(dst))
+                {
+                    if(QFile::copy(src, dst))
+                    {
+                        if (m_portPath.isEmpty()) settings->setValue(LAST_MODEL_NO_CAM_PATH, dst);
+                        if (!m_portPath.isEmpty()) settings->setValue(LAST_MODEL_WITH_CAM_PATH, dst);
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            Tr::tr("Model Zoo"),
+                            QObject::tr("Unable to overwrite output file!"));
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Model Zoo"),
+                        QObject::tr("Unable to overwrite output file!"));
+                }
+            }
+        }
+
+        settings->endGroup();
     });
 
     Core::ActionContainer *videoToolsMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.VideoTools"));

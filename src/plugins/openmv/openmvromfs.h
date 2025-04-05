@@ -52,6 +52,7 @@ public slots:
     void addModel();
     void newFolder();
     void remove();
+    void saveAs();
 
 signals:
 
@@ -65,6 +66,7 @@ protected:
 
 private:
 
+    void preloadDirectories(const QModelIndex &index);
     void calculateFileSystemSize();
 
     QFileSystemModel *m_model;
