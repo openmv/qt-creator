@@ -125,7 +125,11 @@ LoaderDialog::LoaderDialog(const QString &title,
 
     layout->addStretch(1);
 
-    QObject::connect(this, &LoaderDialog::rejected, [&process] { process.kill(); });
+    m_wasRejected = false;
+    QObject::connect(this, &LoaderDialog::rejected, [this, &process] {
+        process.kill();
+        m_wasRejected = true;
+    });
 
     if(m_settings->contains(m_settingsName))
     {

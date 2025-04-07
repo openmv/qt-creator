@@ -42,6 +42,35 @@
 namespace OpenMV {
 namespace Internal {
 
+QJsonObject getNPUAcceleratorConfig(const QString &title,
+                                    const QJsonObject &boardSettings,
+                                    Utils::QtcSettings *settings)
+{
+    QMap<QString, QJsonObject> mappings;
+
+    for (const QJsonValue &val : boardSettings.value(QStringLiteral("npuAcceleratorConfig")).toArray())
+    {
+        mappings.insert(val.toObject().value(QStringLiteral("name")).toString(), val.toObject());
+    }
+
+    int index = mappings.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE_NPU).toString());
+
+    bool ok = mappings.size() == 1;
+    QString temp = (mappings.size() == 1) ? mappings.keys().first() : QInputDialog::getItem(Core::ICore::dialogParent(),
+        title, Tr::tr("Please select the NPU"),
+        mappings.keys(), (index != -1) ? index : 0, false, &ok,
+        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+
+    if(ok)
+    {
+        settings->setValue(LAST_BOARD_TYPE_STATE_NPU, temp);
+        return mappings.value(temp);
+    }
+
+    return QJsonObject();
+}
+
 QString convertModel(const QJsonObject &boardSettings,
                      const QString &model,
                      Utils::QtcSettings *settings)
@@ -51,12 +80,10 @@ QString convertModel(const QJsonObject &boardSettings,
         if (boardSettings.contains(QStringLiteral("npuAcceleratorConfig")))
         {
             QJsonObject npuAcceleratorConfig = boardSettings.value(QStringLiteral("npuAcceleratorConfig")).toObject();
-            QString npuAcceleratorConfigType = npuAcceleratorConfig.value(QStringLiteral("type")).toString();
-            QJsonObject npuAcceleratorConfigSettings = npuAcceleratorConfig.value(QStringLiteral("settings")).toObject();
 
-            if (npuAcceleratorConfigType == "vela")
+            if (npuAcceleratorConfig.value(QStringLiteral("type")).toString() == "vela")
             {
-                return velaCompile(model, npuAcceleratorConfigSettings, settings);
+                return velaCompile(model, npuAcceleratorConfig, settings);
             }
         }
     }
@@ -459,6 +486,30 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         return;
     }
 
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->beginGroup(SETTINGS_GROUP);
+
+    QJsonObject boardSettings = getBoardSettings(Tr::tr("Edit ROMFS"), settings);
+
+    if (boardSettings.isEmpty())
+    {
+        settings->endGroup();
+        return;
+    }
+
+    if (boardSettings.contains(QStringLiteral("npuAcceleratorConfig")))
+    {
+        QJsonObject acceleratorConfigSettings = getNPUAcceleratorConfig(Tr::tr("Edit ROMFS"), boardSettings, settings);
+
+        if (acceleratorConfigSettings.isEmpty())
+        {
+            settings->endGroup();
+            return;
+        }
+
+        boardSettings[QStringLiteral("npuAcceleratorConfig")] = acceleratorConfigSettings;
+    }
+
     if (!newRomfs)
     {
         if (fromConnect)
@@ -483,6 +534,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                         QMessageBox::critical(Core::ICore::dialogParent(),
                             Tr::tr("Edit ROMFS"), Tr::tr("Failed to unpack ROMFS!"));
 
+                        settings->endGroup();
                         return;
                     }
                 }
@@ -492,6 +544,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                         Tr::tr("Edit ROMFS"),
                         romfsFile.errorString());
 
+                    settings->endGroup();
                     return;
                 }
             }
@@ -501,14 +554,12 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                     Tr::tr("Edit ROMFS"),
                     romfsFile.errorString());
 
+                settings->endGroup();
                 return;
             }
         }
         else
         {
-            Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-            settings->beginGroup(SETTINGS_GROUP);
-
             QString path = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("OpenMV ROMFS"),
                 settings->value(LAST_ROMFS_DIALOG_OPEN_PATH, QDir::homePath()).toString(),
                 Tr::tr("ROMFS Images (*.img)"));
@@ -524,13 +575,13 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                     romfsFile.close();
 
                     settings->setValue(LAST_ROMFS_DIALOG_OPEN_PATH, path);
-                    settings->endGroup();
 
                     if (!ok)
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
                             Tr::tr("Edit ROMFS"), Tr::tr("Failed to unpack ROMFS!"));
 
+                        settings->endGroup();
                         return;
                     }
                 }
@@ -550,17 +601,6 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                 return;
             }
         }
-    }
-
-    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(SETTINGS_GROUP);
-
-    QJsonObject boardSettings = getBoardSettings(Tr::tr("Edit ROMFS"), settings);
-
-    if (boardSettings.isEmpty())
-    {
-        settings->endGroup();
-        return;
     }
 
     QDialog *dialog = new QDialog(Core::ICore::dialogParent(),

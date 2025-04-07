@@ -158,6 +158,7 @@
 #define LAST_BOARD_TYPE_STATE "LastBoardTypeState"
 #define LAST_BOARD_TYPE_STATE_2 "LastBoardTypeState2"
 #define LAST_BOARD_TYPE_STATE_GET "LastBoardTypeStateGet"
+#define LAST_BOARD_TYPE_STATE_NPU "LastBoardTypeStateNPU"
 #define LAST_BOARD_TYPE_STATE_IMX "LastBoardTypeStateIMX"
 #define LAST_BOARD_TYPE_STATE_ALIF "LastBoardTypeStateAlif"
 #define LAST_SERIAL_PORT_STATE "LastSerialPortState"

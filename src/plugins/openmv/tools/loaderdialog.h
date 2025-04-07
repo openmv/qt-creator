@@ -70,6 +70,7 @@ public:
     void setTextCursor(const QTextCursor &cursor) { m_plainTextEdit->setTextCursor(cursor); }
     void setOkayButtonVisible(bool enable) { m_okayButton->setVisible(enable); }
     void enableOkayButton(bool enable) { m_okayButton->setEnabled(enable); }
+    bool wasRejected() const { return m_wasRejected; }
 
 private:
 
@@ -82,6 +83,7 @@ private:
     QPlainTextEdit *m_plainTextEdit;
     QPushButton *m_okayButton;
     int m_maxHeight;
+    bool m_wasRejected;
 };
 
 } // namespace Internal

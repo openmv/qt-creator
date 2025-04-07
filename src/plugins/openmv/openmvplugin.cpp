@@ -992,6 +992,19 @@ void OpenMVPlugin::extensionsInitialized()
             return;
         }
 
+        if (boardSettings.contains(QStringLiteral("npuAcceleratorConfig")))
+        {
+            QJsonObject acceleratorConfigSettings = getNPUAcceleratorConfig(Tr::tr("Model Zoo"), boardSettings, settings);
+
+            if (acceleratorConfigSettings.isEmpty())
+            {
+                settings->endGroup();
+                return;
+            }
+
+            boardSettings[QStringLiteral("npuAcceleratorConfig")] = acceleratorConfigSettings;
+        }
+
         OpenMVModelZooBrowser dialog(settings, Core::ICore::dialogParent(), true);
 
         if (dialog.exec() == QDialog::Accepted)

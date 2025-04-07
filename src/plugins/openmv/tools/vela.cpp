@@ -37,11 +37,16 @@
 #include <texteditor/texteditorsettings.h>
 #include <utils/environment.h>
 #include <utils/hostosinfo.h>
+#include <utils/fancylineedit.h>
 #include <utils/qtcprocess.h>
 #include <utils/theme/theme.h>
 
 #include "loaderdialog.h"
 #include "openmvtr.h"
+
+#define LAST_VELA_COMPILIER_OPTIMIZE_STATE "LastVelaCompilierOptimizeState"
+#define LAST_VELA_COMPILIER_ADVANCED_STATE "LastVelaCompilierAdvancedState"
+#define LAST_VELA_COMPILIER_OPTIONS_STRING "LastVelaCompilierOptionsString"
 
 namespace OpenMV {
 namespace Internal {
@@ -59,7 +64,91 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
         return QString();
     }
 
+    QDialog *dialog2 = new QDialog(Core::ICore::dialogParent(),
+        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    dialog2->setWindowTitle(Tr::tr("Vela Compilier"));
+    QFormLayout *layout2 = new QFormLayout(dialog2);
+    layout2->setVerticalSpacing(0);
+
+    layout2->addRow(new QLabel(Tr::tr("Please specify the compiler settings:")));
+    layout2->addItem(new QSpacerItem(0, 6));
+
+    QComboBox *combo2 = new QComboBox();
+    combo2->addItem(Tr::tr("Optimize for Performance"));
+    combo2->addItem(Tr::tr("Optimize for Size"));
+    combo2->setCurrentIndex(settings->value(LAST_VELA_COMPILIER_OPTIMIZE_STATE, 0).toInt());
+    layout2->addRow(combo2);
+    layout2->addItem(new QSpacerItem(0, 6));
+
+    Utils::FancyLineEdit *lineEdit = new Utils::FancyLineEdit();
+    lineEdit->setPlaceholderText(Tr::tr("--verbose-progress"));
+    lineEdit->setHistoryCompleter(LAST_VELA_COMPILIER_OPTIONS_STRING, true);
+    lineEdit->setVisible(settings->value(LAST_VELA_COMPILIER_ADVANCED_STATE, false).toBool());
+    QLabel *label = new QLabel(Tr::tr("<a href=\"https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md\">Vela Compilier CLI Options</a>"));
+    label->setTextFormat(Qt::RichText);
+    label->setTextInteractionFlags(Qt::TextBrowserInteraction);
+    label->setOpenExternalLinks(true);
+    label->setVisible(settings->value(LAST_VELA_COMPILIER_ADVANCED_STATE, false).toBool());
+    layout2->addRow(label);
+    layout2->addItem(new QSpacerItem(0, 6));
+    layout2->addRow(lineEdit);
+    layout2->addItem(new QSpacerItem(0, 6));
+
+    QHBoxLayout *layout3 = new QHBoxLayout;
+    layout3->setContentsMargins(0, 0, 0, 0);
+    QWidget *widget2 = new QWidget;
+    widget2->setLayout(layout3);
+
+    QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Advanced"));
+    checkBox2->setChecked(settings->value(LAST_VELA_COMPILIER_ADVANCED_STATE, false).toBool());
+    layout3->addWidget(checkBox2);
+
+    QDialogButtonBox *box2 = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    layout3->addSpacing(160);
+    layout3->addWidget(box2);
+    layout2->addRow(widget2);
+
+    QObject::connect(box2, &QDialogButtonBox::accepted, dialog2, &QDialog::accept);
+    QObject::connect(box2, &QDialogButtonBox::rejected, dialog2, &QDialog::reject);
+    QObject::connect(checkBox2, &QCheckBox::toggled, dialog2, [dialog2, lineEdit, label] (bool checked) {
+        lineEdit->setVisible(checked);
+        label->setVisible(checked);
+        QTimer::singleShot(0, dialog2, [dialog2] { dialog2->adjustSize(); });
+    });
+
+    bool ok = dialog2->exec() == QDialog::Accepted;
+
+    if (!ok)
+    {
+        return QString();
+    }
+
+    settings->setValue(LAST_VELA_COMPILIER_OPTIMIZE_STATE, combo2->currentIndex());
+    settings->setValue(LAST_VELA_COMPILIER_ADVANCED_STATE, checkBox2->isChecked());
+    settings->setValue(LAST_VELA_COMPILIER_OPTIONS_STRING, lineEdit->text());
+
+    QStringList velaArgs;
+
+    if (combo2->currentIndex() == 0)
+    {
+        velaArgs << QString(QStringLiteral("--optimise Performance")).split(QLatin1Char(' '), Qt::SkipEmptyParts);
+    }
+    else
+    {
+        velaArgs << QString(QStringLiteral("--optimise Size")).split(QLatin1Char(' '), Qt::SkipEmptyParts);
+    }
+
+    if (checkBox2->isChecked())
+    {
+        velaArgs << lineEdit->text().split(QLatin1Char(' '), Qt::SkipEmptyParts);
+    }
+
+    delete dialog2;
     tempDir.setAutoRemove(false);
+
+    bool finishedOk = false;
+    bool *finishedOkPtr = &finishedOk;
 
     QString command;
     Utils::Process process;
@@ -67,14 +156,13 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
                                             Core::ICore::dialogParent());
     dialog->disableTextWrapping();
     dialog->setOkayButtonVisible(true);
-    dialog->enableOkayButton(true);
 
     QString stdOutBuffer = QString();
     QString *stdOutBufferPtr = &stdOutBuffer;
     bool stdOutFirstTime = true;
     bool *stdOutFirstTimePtr = &stdOutFirstTime;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr, finishedOkPtr] (const QString &text) {
         stdOutBufferPtr->append(text);
         QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -89,6 +177,11 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
             dialog->appendPlainText(out);
             dialog->moveScrollToLeft();
             dialog->moveScrollToBottom();
+
+            if (out.contains(QStringLiteral("Batch Inference time")))
+            {
+                *finishedOkPtr = true;
+            }
         }
     });
 
@@ -114,8 +207,6 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
             dialog->moveScrollToBottom();
         }
     });
-
-    QStringList velaArgs;
 
     for (const QString &arg : velaSettings.value(QStringLiteral("args")).toVariant().toStringList())
     {
@@ -183,14 +274,27 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     env.appendOrSet("PYTHONPATH", binaryPath.path());
     process.setEnvironment(env);
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
-    dialog->appendColoredText(Tr::tr("Finished - Press Ok to close the window"), true);
+
+    QString result;
+
+    if (finishedOk)
+    {
+        dialog->appendColoredText(Tr::tr("Success - Press Ok to close the window"), true);
+        dialog->enableOkayButton(true);
+        result = tempDir.path() + QDir::separator() + QFileInfo(model).baseName() + QStringLiteral("_vela.tflite");
+    }
+    else
+    {
+        dialog->appendColoredText(Tr::tr("Failure - Press Cancel to close the window"), true);
+    }
+
     dialog->moveScrollToLeft();
     dialog->moveScrollToBottom();
 
-    dialog->exec();
+    if (!dialog->wasRejected()) dialog->exec();
     delete dialog;
 
-    return tempDir.path() + QDir::separator() + QFileInfo(model).baseName() + QStringLiteral("_vela.tflite");
+    return result;
 }
 
 } // namespace Internal

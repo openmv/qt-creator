@@ -3218,7 +3218,8 @@ QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSetti
 
         for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
         {
-            if ((value.toObject().value(QStringLiteral("boardArchString")).toString() == temp)
+            if ((!value.toObject().value(QStringLiteral("hidden")).toBool())
+            && (value.toObject().value(QStringLiteral("boardArchString")).toString() == temp)
             && matchVidPid(value.toObject(), QString(), tempPort))
             {
                 return value.toObject();
@@ -3237,7 +3238,10 @@ QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSetti
 
         for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
         {
-            mappingsHumanReadable.insert(value.toObject().value(QStringLiteral("boardDisplayName")).toString(), value.toObject());
+            if (!value.toObject().value(QStringLiteral("hidden")).toBool())
+            {
+                mappingsHumanReadable.insert(value.toObject().value(QStringLiteral("boardDisplayName")).toString(), value.toObject());
+            }
         }
 
         int index = mappingsHumanReadable.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE_GET).toString());
