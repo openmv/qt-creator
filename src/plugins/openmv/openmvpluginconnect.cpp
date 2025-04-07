@@ -1775,7 +1775,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             int index = mappingsHumanReadable.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE_2).toString());
 
                             bool ok = mappingsHumanReadable.size() == 1;
-                            temp = (mappingsHumanReadable.size() == 1) ? mappingsHumanReadable.first() : QInputDialog::getItem(Core::ICore::dialogParent(),
+                            temp = (mappingsHumanReadable.size() == 1) ? mappingsHumanReadable.keys().first() : QInputDialog::getItem(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"), Tr::tr("Please select the board type"),
                                 mappingsHumanReadable.keys(), (index != -1) ? index : 0, false, &ok,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -3204,6 +3204,58 @@ void OpenMVPlugin::updateCam(bool forceYes)
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("Firmware Update"),
             Tr::tr("Busy... please wait..."));
+    }
+}
+
+QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSettings *settings)
+{
+    if (m_connected)
+    {
+        QSerialPortInfo raw_tempPort = QSerialPortInfo(m_portName);
+        MyQSerialPortInfo tempPort(raw_tempPort);
+
+        QString temp = QString(m_fullBoardType).simplified();
+
+        for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+        {
+            if ((value.toObject().value(QStringLiteral("boardArchString")).toString() == temp)
+            && matchVidPid(value.toObject(), QString(), tempPort))
+            {
+                return value.toObject();
+            }
+        }
+
+        QMessageBox::critical(Core::ICore::dialogParent(),
+            title,
+            Tr::tr("No board settings for the connected board found!"));
+
+        return QJsonObject();
+    }
+    else
+    {
+        QMap<QString, QJsonObject> mappingsHumanReadable;
+
+        for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+        {
+            mappingsHumanReadable.insert(value.toObject().value(QStringLiteral("boardDisplayName")).toString(), value.toObject());
+        }
+
+        int index = mappingsHumanReadable.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE_GET).toString());
+
+        bool ok = mappingsHumanReadable.size() == 1;
+        QString temp = (mappingsHumanReadable.size() == 1) ? mappingsHumanReadable.keys().first() : QInputDialog::getItem(Core::ICore::dialogParent(),
+            title, Tr::tr("Please select the board type"),
+            mappingsHumanReadable.keys(), (index != -1) ? index : 0, false, &ok,
+            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+
+        if(ok)
+        {
+            settings->setValue(LAST_BOARD_TYPE_STATE_GET, temp);
+            return mappingsHumanReadable.value(temp); // Get mappings key.
+        }
+
+        return QJsonObject();
     }
 }
 

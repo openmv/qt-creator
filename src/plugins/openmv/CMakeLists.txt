@@ -45,6 +45,7 @@ add_qtc_plugin(OpenMV
     tools/tag36artoolkit.c tools/tag36artoolkit.h
     tools/thresholdeditor.cpp  tools/thresholdeditor.h
     tools/videotools.cpp tools/videotools.h
+    tools/vela.cpp tools/vela.h
     qcustomplot/qcustomplot.cpp qcustomplot/qcustomplot.h
     qzip/qzip.cpp qzip/qzipreader.h qzip/qzipwriter.h
     openmv.qrc

@@ -33,6 +33,7 @@
 #include "openmvpluginconnect.h"
 
 #include "tools/romfs.h"
+#include "tools/vela.h"
 #include "openmvromfs.h"
 #include "openmvmodelzoo.h"
 
@@ -40,6 +41,28 @@
 
 namespace OpenMV {
 namespace Internal {
+
+QString convertModel(const QJsonObject &boardSettings,
+                     const QString &model,
+                     Utils::QtcSettings *settings)
+{
+    if (model.endsWith(".tflite"))
+    {
+        if (boardSettings.contains(QStringLiteral("npuAcceleratorConfig")))
+        {
+            QJsonObject npuAcceleratorConfig = boardSettings.value(QStringLiteral("npuAcceleratorConfig")).toObject();
+            QString npuAcceleratorConfigType = npuAcceleratorConfig.value(QStringLiteral("type")).toString();
+            QJsonObject npuAcceleratorConfigSettings = npuAcceleratorConfig.value(QStringLiteral("settings")).toObject();
+
+            if (npuAcceleratorConfigType == "vela")
+            {
+                return velaCompile(model, npuAcceleratorConfigSettings, settings);
+            }
+        }
+    }
+
+    return model;
+}
 
 static void createRomfs(VfsRomWriter *writer, const QFileSystemModel *model, const QModelIndex &index) {
     for (int i = 0; i < model->rowCount(index); i++)
@@ -78,7 +101,7 @@ static QString humanReadableSize(quint64 bytes) {
     return QString("%1 %2").arg(QString::number(size, 'f', 2)).arg(units[unitIndex]);
 }
 
-OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path) : QTreeView(parent), m_model(new QFileSystemModel(this))
+OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path, const QJsonObject &boardSettings) : QTreeView(parent), m_model(new QFileSystemModel(this))
 {
     setContextMenuPolicy(Qt::DefaultContextMenu);
     m_model->setReadOnly(false);
@@ -89,6 +112,8 @@ OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path) : QTr
     header()->setSectionResizeMode(0, QHeaderView::Stretch);
     setColumnHidden(2, true); // Type
     setColumnHidden(3, true); // DateModified
+
+    m_boardSettings = boardSettings;
 
 #ifndef Q_OS_MAC
     m_styleSheet = QStringLiteral( // https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
@@ -141,10 +166,16 @@ void OpenMVROMFSEditor::addModel()
 
     if (dialog.exec() == QDialog::Accepted)
     {
-        QString file = dialog.selectedModel();
+        QString src = dialog.selectedModel();
+        QString convertedSrc = convertModel(m_boardSettings, src, settings);
+
+        if (convertedSrc.isEmpty())
+        {
+            return;
+        }
 
         QString path = m_model->isDir(index) ? m_model->filePath(index) : QFileInfo(m_model->filePath(index)).path();
-        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(file).fileName()));
+        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(src).fileName()));
 
         if (QFileInfo(newFilePath).exists())
         {
@@ -176,7 +207,7 @@ void OpenMVROMFSEditor::addModel()
             }
         }
 
-        if (QFile::copy(file, newFilePath))
+        if (QFile::copy(convertedSrc, newFilePath))
         {
             setCurrentIndex(m_model->index(newFilePath));
         }
@@ -205,6 +236,13 @@ void OpenMVROMFSEditor::addFile()
 
     if (!file.isEmpty())
     {
+        QString convertedSrc = convertModel(m_boardSettings, file, settings);
+
+        if (convertedSrc.isEmpty())
+        {
+            return;
+        }
+
         QString path = m_model->isDir(index) ? m_model->filePath(index) : QFileInfo(m_model->filePath(index)).path();
         QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(file).fileName()));
 
@@ -238,10 +276,10 @@ void OpenMVROMFSEditor::addFile()
             }
         }
 
-        if (QFile::copy(file, newFilePath))
+        if (QFile::copy(convertedSrc, newFilePath))
         {
             setCurrentIndex(m_model->index(newFilePath));
-            settings->setValue(LAST_ROMFS_DIALOG_OPEN_FILE_PATH, file);
+            settings->setValue(LAST_ROMFS_DIALOG_OPEN_FILE_PATH, convertedSrc);
         }
         else
         {
@@ -517,6 +555,14 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(SETTINGS_GROUP);
 
+    QJsonObject boardSettings = getBoardSettings(Tr::tr("Edit ROMFS"), settings);
+
+    if (boardSettings.isEmpty())
+    {
+        settings->endGroup();
+        return;
+    }
+
     QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
         Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -524,7 +570,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
     dialog->setMinimumSize(QSize(320, 240));
     QVBoxLayout *layout = new QVBoxLayout(dialog);
 
-    OpenMVROMFSEditor *romfsEditor = new OpenMVROMFSEditor(dialog, tempDir.path());
+    OpenMVROMFSEditor *romfsEditor = new OpenMVROMFSEditor(dialog, tempDir.path(), boardSettings);
     layout->addWidget(romfsEditor);
 
     QLabel *romfsSize = new QLabel();

@@ -28,62 +28,20 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef OPENMVROMFS_H
-#define OPENMVROMFS_H
+#ifndef VELA_H
+#define VELA_H
 
-#include <QtCore>
-#include <QtWidgets>
+#include <QJsonObject>
+#include <QString>
 
 #include <utils/qtcsettings.h>
 
 namespace OpenMV {
 namespace Internal {
 
-QString convertModel(const QJsonObject &boardSettings,
-                     const QString &model,
-                     Utils::QtcSettings *settings);
-
-class OpenMVROMFSEditor : public QTreeView
-{
-    Q_OBJECT
-
-public:
-
-    explicit OpenMVROMFSEditor(QWidget *parent = Q_NULLPTR,
-                               const QString &path = QString(),
-                               const QJsonObject &boardSettings = QJsonObject());
-    QFileSystemModel *model() { return m_model; }
-
-public slots:
-
-    void addFile();
-    void addModel();
-    void newFolder();
-    void remove();
-    void saveAs();
-
-signals:
-
-    void fileSystemSize(const QString &sizeString);
-
-protected:
-
-    void contextMenuEvent(QContextMenuEvent *event) override;
-    void keyPressEvent(QKeyEvent *event) override;
-    void paintEvent(QPaintEvent *event) override;
-
-private:
-
-    void preloadDirectories(const QModelIndex &index);
-    void calculateFileSystemSize();
-
-    QFileSystemModel *m_model;
-    QJsonObject m_boardSettings;
-    QString m_styleSheet, m_highDPIStyleSheet;
-    qreal m_devicePixelRatio;
-};
+QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils::QtcSettings *settings);
 
 } // namespace Internal
 } // namespace OpenMV
 
-#endif // OPENMVROMFS_H
+#endif // VELA_H

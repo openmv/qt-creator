@@ -87,12 +87,14 @@
     #include <unistd.h>
 #endif
 
+#include "openmvcamerasettings.h"
+#include "openmvdataseteditor.h"
+#include "openmvmodelzoo.h"
 #include "openmvpluginserialport.h"
 #include "openmvpluginio.h"
 #include "openmvpluginfb.h"
+#include "openmvromfs.h"
 #include "openmvterminal.h"
-#include "openmvcamerasettings.h"
-#include "openmvdataseteditor.h"
 #include "histogram/openmvpluginhistogram.h"
 #include "tools/alif.h"
 #include "tools/bossac.h"
@@ -155,6 +157,7 @@
 #define LAST_DFU_FLASH_FS_ERASE_STATE "LastDFUFlashFSEraseState"
 #define LAST_BOARD_TYPE_STATE "LastBoardTypeState"
 #define LAST_BOARD_TYPE_STATE_2 "LastBoardTypeState2"
+#define LAST_BOARD_TYPE_STATE_GET "LastBoardTypeStateGet"
 #define LAST_BOARD_TYPE_STATE_IMX "LastBoardTypeStateIMX"
 #define LAST_BOARD_TYPE_STATE_ALIF "LastBoardTypeStateAlif"
 #define LAST_SERIAL_PORT_STATE "LastSerialPortState"
@@ -704,8 +707,8 @@ private:
     bool matchExample(const QString &filePath, QString *flattenRegex);
 
     QByteArray fixScriptForSensor(QByteArray data, bool notExamples = false);
-
     QString tempFileForPythonEditor(const QByteArray &data, const QString &titlePattern);
+    QJsonObject getBoardSettings(const QString &title, Utils::QtcSettings *settings);
 };
 
 } // namespace Internal

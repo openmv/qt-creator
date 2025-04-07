@@ -62,8 +62,14 @@ public:
     void setProgressBarValue(int val) { m_progressBar->setValue(val); }
     void appendPlainText(const QString &text) { m_plainTextEdit->appendPlainText(text); }
     void appendColoredText(const QString &text, bool warning = false);
+    void enableTextWrapping() { m_plainTextEdit->setLineWrapMode(QPlainTextEdit::WidgetWidth); }
+    void disableTextWrapping() { m_plainTextEdit->setLineWrapMode(QPlainTextEdit::NoWrap); }
+    void moveScrollToLeft() { m_plainTextEdit->horizontalScrollBar()->setValue(m_plainTextEdit->horizontalScrollBar()->minimum()); }
+    void moveScrollToBottom() { m_plainTextEdit->verticalScrollBar()->setValue(m_plainTextEdit->verticalScrollBar()->maximum()); }
     QTextCursor textCursor() const { return m_plainTextEdit->textCursor(); }
     void setTextCursor(const QTextCursor &cursor) { m_plainTextEdit->setTextCursor(cursor); }
+    void setOkayButtonVisible(bool enable) { m_okayButton->setVisible(enable); }
+    void enableOkayButton(bool enable) { m_okayButton->setEnabled(enable); }
 
 private:
 
@@ -74,6 +80,7 @@ private:
     QPushButton *m_detailsButton;
     QLabel *m_warningLabel;
     QPlainTextEdit *m_plainTextEdit;
+    QPushButton *m_okayButton;
     int m_maxHeight;
 };
 

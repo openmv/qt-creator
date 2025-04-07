@@ -78,7 +78,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidg
     vlayout->addWidget(m_splitter);
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
-    QPushButton *ok = new QPushButton(saveDialog ? Tr::tr("Save") : Tr::tr("OK"));
+    QPushButton *ok = new QPushButton(saveDialog ? Tr::tr("Copy") : Tr::tr("OK"));
     box->addButton(ok, QDialogButtonBox::AcceptRole);
     ok->setEnabled(false);
     connect(box, &QDialogButtonBox::accepted, this, &OpenMVModelZooBrowser::accept);

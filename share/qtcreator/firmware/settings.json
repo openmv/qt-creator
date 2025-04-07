@@ -441,6 +441,17 @@
                         "name": "AppTocPackage.bin"
                     }
                 ]
+            },
+            "npuAcceleratorConfig" : {
+                "type" : "vela",
+                "settings" : {
+                    "args" : [
+                        "--system-config RTSS_HP_DTCM_MRAM",
+                        "--accelerator-config ethos-u55-256",
+                        "--memory-mode Shared_Sram"
+                    ],
+                    "iniFilePath" : "OPENMV_AE3/vela.ini"
+                }
             }
         },
         {
@@ -469,6 +480,17 @@
                 "dfuBootloaderProgramCommand" : {
                     "images": "../build/images/bootloader.bin 0x80000000 ../build/AppTocPackage.bin 0x8057f060",
                     "bootloaderVidPid": "37C5:96E3"
+                }
+            },
+            "npuAcceleratorConfig" : {
+                "type" : "vela",
+                "settings" : {
+                    "args" : [
+                        "--system-config RTSS_HP_DTCM_MRAM",
+                        "--accelerator-config ethos-u55-256",
+                        "--memory-mode Shared_Sram"
+                    ],
+                    "iniFilePath" : "OPENMV_AE3/vela.ini"
                 }
             }
         },

@@ -33,7 +33,6 @@
 #include "app/app_version.h"
 
 #include "openmvtr.h"
-#include "openmvmodelzoo.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -978,6 +977,69 @@ void OpenMVPlugin::extensionsInitialized()
     machineVisionToolsMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     toolsMenu->addMenu(machineVisionToolsMenu);
 
+    QAction *openmvModelZooAction = new QAction(Tr::tr("Open Model Zoo"), this);
+    Core::Command *openmvModelZooCommand = Core::ActionManager::registerAction(openmvModelZooAction, Utils::Id("OpenMV.OpenModelZoo"));
+    machineVisionToolsMenu->addAction(openmvModelZooCommand);
+    connect(openmvModelZooAction, &QAction::triggered, this, [this] {
+        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+        settings->beginGroup(SETTINGS_GROUP);
+
+        QJsonObject boardSettings = getBoardSettings(Tr::tr("Model Zoo"), settings);
+
+        if (boardSettings.isEmpty())
+        {
+            settings->endGroup();
+            return;
+        }
+
+        OpenMVModelZooBrowser dialog(settings, Core::ICore::dialogParent(), true);
+
+        if (dialog.exec() == QDialog::Accepted)
+        {
+            QString src = dialog.selectedModel();
+            QString convertedSrc = convertModel(boardSettings, src, settings);
+
+            if (convertedSrc.isEmpty())
+            {
+                settings->endGroup();
+                return;
+            }
+
+            QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Model Zoo"),
+                m_portPath.isEmpty()
+                ? settings->value(LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath() + QDir::separator() + QFileInfo(src).fileName())).toString()
+                : settings->value(LAST_MODEL_WITH_CAM_PATH, QString(m_portPath + QDir::separator() + QFileInfo(src).fileName())).toString());
+
+            if(!dst.isEmpty())
+            {
+                if((!QFile(dst).exists()) || QFile::remove(dst))
+                {
+                    if(QFile::copy(convertedSrc, dst))
+                    {
+                        if (m_portPath.isEmpty()) settings->setValue(LAST_MODEL_NO_CAM_PATH, dst);
+                        if (!m_portPath.isEmpty()) settings->setValue(LAST_MODEL_WITH_CAM_PATH, dst);
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            Tr::tr("Model Zoo"),
+                            QObject::tr("Unable to overwrite output file!"));
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Model Zoo"),
+                        QObject::tr("Unable to overwrite output file!"));
+                }
+            }
+        }
+
+        settings->endGroup();
+    });
+
+    machineVisionToolsMenu->addSeparator();
+
     QAction *thresholdEditorAction = new QAction(Tr::tr("Threshold Editor"), this);
     Core::Command *thresholdEditorCommand = Core::ActionManager::registerAction(thresholdEditorAction, Utils::Id("OpenMV.ThresholdEditor"));
     machineVisionToolsMenu->addAction(thresholdEditorCommand);
@@ -1063,53 +1125,6 @@ void OpenMVPlugin::extensionsInitialized()
                                   QString(),
                                   Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
         }
-    });
-
-    machineVisionToolsMenu->addSeparator();
-
-    QAction *openmvModelZooAction = new QAction(Tr::tr("Open Model Zoo"), this);
-    Core::Command *openmvModelZooCommand = Core::ActionManager::registerAction(openmvModelZooAction, Utils::Id("OpenMV.OpenModelZoo"));
-    machineVisionToolsMenu->addAction(openmvModelZooCommand);
-    connect(openmvModelZooAction, &QAction::triggered, this, [this] {
-        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
-
-        OpenMVModelZooBrowser dialog(settings, Core::ICore::dialogParent(), true);
-
-        if (dialog.exec() == QDialog::Accepted)
-        {
-            QString src = dialog.selectedModel();
-            QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Model Zoo"),
-                m_portPath.isEmpty()
-                ? settings->value(LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath() + QDir::separator() + QFileInfo(src).fileName())).toString()
-                : settings->value(LAST_MODEL_WITH_CAM_PATH, QString(m_portPath + QDir::separator() + QFileInfo(src).fileName())).toString());
-
-            if(!dst.isEmpty())
-            {
-                if((!QFile(dst).exists()) || QFile::remove(dst))
-                {
-                    if(QFile::copy(src, dst))
-                    {
-                        if (m_portPath.isEmpty()) settings->setValue(LAST_MODEL_NO_CAM_PATH, dst);
-                        if (!m_portPath.isEmpty()) settings->setValue(LAST_MODEL_WITH_CAM_PATH, dst);
-                    }
-                    else
-                    {
-                        QMessageBox::critical(Core::ICore::dialogParent(),
-                            Tr::tr("Model Zoo"),
-                            QObject::tr("Unable to overwrite output file!"));
-                    }
-                }
-                else
-                {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                        Tr::tr("Model Zoo"),
-                        QObject::tr("Unable to overwrite output file!"));
-                }
-            }
-        }
-
-        settings->endGroup();
     });
 
     Core::ActionContainer *videoToolsMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.VideoTools"));

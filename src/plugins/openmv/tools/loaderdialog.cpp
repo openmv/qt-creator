@@ -113,8 +113,14 @@ LoaderDialog::LoaderDialog(const QString &title,
     });
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
+
+    m_okayButton = box->addButton(QDialogButtonBox::Ok);
+    m_okayButton->setVisible(false);
+    m_okayButton->setEnabled(false);
+
     connect(box, &QDialogButtonBox::accepted, this, &LoaderDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &LoaderDialog::reject);
+
     layout->addWidget(box);
 
     layout->addStretch(1);
