@@ -42,29 +42,29 @@
 namespace OpenMV {
 namespace Internal {
 
-QJsonObject getNPUAcceleratorConfig(const QString &title,
-                                    const QJsonObject &boardSettings,
-                                    Utils::QtcSettings *settings)
+QJsonObject getROMFSConfig(const QString &title,
+                           const QJsonObject &boardSettings,
+                           Utils::QtcSettings *settings)
 {
     QMap<QString, QJsonObject> mappings;
 
-    for (const QJsonValue &val : boardSettings.value(QStringLiteral("npuAcceleratorConfig")).toArray())
+    for (const QJsonValue &val : boardSettings.value(QStringLiteral("romfsConfig")).toArray())
     {
         mappings.insert(val.toObject().value(QStringLiteral("name")).toString(), val.toObject());
     }
 
-    int index = mappings.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE_NPU).toString());
+    int index = mappings.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE_ROMFS).toString());
 
     bool ok = mappings.size() == 1;
     QString temp = (mappings.size() == 1) ? mappings.keys().first() : QInputDialog::getItem(Core::ICore::dialogParent(),
-        title, Tr::tr("Please select the NPU"),
+        title, Tr::tr("Please select the target"),
         mappings.keys(), (index != -1) ? index : 0, false, &ok,
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
     if(ok)
     {
-        settings->setValue(LAST_BOARD_TYPE_STATE_NPU, temp);
+        settings->setValue(LAST_BOARD_TYPE_STATE_ROMFS, temp);
         return mappings.value(temp);
     }
 
@@ -77,13 +77,18 @@ QString convertModel(const QJsonObject &boardSettings,
 {
     if (model.endsWith(".tflite"))
     {
-        if (boardSettings.contains(QStringLiteral("npuAcceleratorConfig")))
+        if (boardSettings.contains(QStringLiteral("romfsConfig")))
         {
-            QJsonObject npuAcceleratorConfig = boardSettings.value(QStringLiteral("npuAcceleratorConfig")).toObject();
+            QJsonObject romfsConfig = boardSettings.value(QStringLiteral("romfsConfig")).toObject();
 
-            if (npuAcceleratorConfig.value(QStringLiteral("type")).toString() == "vela")
+            if (romfsConfig.contains(QStringLiteral("npuAcceleratorConfig")))
             {
-                return velaCompile(model, npuAcceleratorConfig, settings);
+                QJsonObject npuAcceleratorConfig = romfsConfig.value(QStringLiteral("npuAcceleratorConfig")).toObject();
+
+                if (npuAcceleratorConfig.value(QStringLiteral("type")).toString() == "vela")
+                {
+                    return velaCompile(model, npuAcceleratorConfig, settings);
+                }
             }
         }
     }
@@ -175,7 +180,27 @@ void OpenMVROMFSEditor::calculateFileSystemSize()
 {
     VfsRomWriter writer(ROMFS_FILE_ALIGNMENT);
     createRomfs(&writer, m_model, m_model->index(m_model->rootPath()));
-    emit fileSystemSize(QString(QStringLiteral("ROMFS Size: %1")).arg(humanReadableSize(writer.finalize().size())));
+
+    size_t sizeLimit = SIZE_MAX;
+
+    if (m_boardSettings.contains(QStringLiteral("romfsConfig")))
+    {
+        QJsonObject romfsConfig = m_boardSettings.value(QStringLiteral("romfsConfig")).toObject();
+        sizeLimit = romfsConfig.value(QStringLiteral("size")).toInt();
+    }
+
+    size_t size = writer.finalize().size();
+
+    if (size <= sizeLimit)
+    {
+        emit fileSystemSize(QString(QStringLiteral("ROMFS Size: %1 / %2")).arg(humanReadableSize(size)).arg(humanReadableSize(sizeLimit)));
+        emit commitEnabled(true);
+    }
+    else
+    {
+        emit fileSystemSize(QString(QStringLiteral("<font color='red'>ROMFS Size: %1 / %2</font>")).arg(humanReadableSize(size)).arg(humanReadableSize(sizeLimit)));
+        emit commitEnabled(false);
+    }
 }
 
 void OpenMVROMFSEditor::addModel()
@@ -497,17 +522,17 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         return;
     }
 
-    if (boardSettings.contains(QStringLiteral("npuAcceleratorConfig")))
+    if (boardSettings.contains(QStringLiteral("romfsConfig")))
     {
-        QJsonObject acceleratorConfigSettings = getNPUAcceleratorConfig(Tr::tr("Edit ROMFS"), boardSettings, settings);
+        QJsonObject romfsConfigSettings = getROMFSConfig(Tr::tr("Edit ROMFS"), boardSettings, settings);
 
-        if (acceleratorConfigSettings.isEmpty())
+        if (romfsConfigSettings.isEmpty())
         {
             settings->endGroup();
             return;
         }
 
-        boardSettings[QStringLiteral("npuAcceleratorConfig")] = acceleratorConfigSettings;
+        boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
     }
 
     if (!newRomfs)
@@ -631,6 +656,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
     box->addButton(saveAs, QDialogButtonBox::ActionRole);
     QPushButton *commit = new QPushButton(Tr::tr("Commit"));
     box->addButton(commit, QDialogButtonBox::AcceptRole);
+    connect(romfsEditor, &OpenMVROMFSEditor::commitEnabled, commit, &QPushButton::setEnabled);
     connect(addFile, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::addFile);
     connect(addModel, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::addModel);
     connect(newFolder, &QPushButton::clicked, romfsEditor, &OpenMVROMFSEditor::newFolder);

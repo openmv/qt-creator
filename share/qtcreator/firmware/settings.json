@@ -22,7 +22,17 @@
                     "vidpid" : "37C5:9202",
                     "type" : "openmv_dfu"
                 }
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 131072,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 3"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -60,7 +70,17 @@
                         "eraseSectorEnd" : 11
                     }
                 }
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 131072,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 3"
+                    }
+                }
+            ]
         },
         {
             "hidden" : true,
@@ -83,7 +103,17 @@
                     "vidpid" : "37C5:9203",
                     "type" : "openmv_dfu"
                 }
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 262144,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 3"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -121,7 +151,17 @@
                         "eraseSectorEnd" : 11
                     }
                 }
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 262144,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 3"
+                    }
+                }
+            ]
         },
         {
             "hidden" : true,
@@ -144,7 +184,17 @@
                     "vidpid" : "37C5:9204",
                     "type" : "openmv_dfu"
                 }
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 131072,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 3"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -182,7 +232,17 @@
                         "eraseSectorEnd" : 15
                     }
                 }
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 131072,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 3"
+                    }
+                }
+            ]
         },
         {
             "hidden" : true,
@@ -205,7 +265,17 @@
                     "vidpid" : "37C5:924A",
                     "type" : "openmv_dfu"
                 }
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 4"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -243,7 +313,17 @@
                         "eraseSectorEnd" : 15
                     }
                 }
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 4"
+                    }
+                }
+            ]
         },
         {
             "hidden" : true,
@@ -266,7 +346,17 @@
                     "vidpid" : "37C5:9205",
                     "type" : "openmv_dfu"
                 }
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 4"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -304,7 +394,17 @@
                         "eraseSectorEnd" : 15
                     }
                 }
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 4"
+                    }
+                }
+            ]
         },
         {
             "hidden" : true,
@@ -335,7 +435,17 @@
                 "blhost_disk_size" : "0x00400000",
                 "blhost_efuse_burn_address" : "0x06",
                 "blhost_efuse_burn_data" : "00000010"
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "loaderConfig": {
+                        "type" : "imx",
+                        "address" : "0x60800000"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -366,7 +476,17 @@
                 "blhost_disk_size" : "0x00400000",
                 "blhost_efuse_burn_address" : "0x06",
                 "blhost_efuse_burn_data" : "00000010"
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "loaderConfig": {
+                        "type" : "imx",
+                        "address" : "0x60800000"
+                    }
+                }
+            ]
         },
         {
             "hidden" : true,
@@ -397,7 +517,17 @@
                 "blhost_disk_size" : "0x00400000",
                 "blhost_efuse_burn_address" : "0x06",
                 "blhost_efuse_burn_data" : "00000010"
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "loaderConfig": {
+                        "type" : "imx",
+                        "address" : "0x60800000"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -442,26 +572,40 @@
                     }
                 ]
             },
-            "npuAcceleratorConfig" : [
+            "romfsConfig" : [
                 {
-                    "name" : "High Performance NPU",
-                    "type" : "vela",
-                    "args" : [
-                        "--system-config RTSS_HP_DTCM_MRAM",
-                        "--accelerator-config ethos-u55-256",
-                        "--memory-mode Shared_Sram"
-                    ],
-                    "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    "name" : "High Performance Core",
+                    "size" : 16777216,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 6"
+                    },
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HP_SRAM_OSPI",
+                            "--accelerator-config ethos-u55-256",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
                 },
                 {
-                    "name" : "Low Power NPU",
-                    "type" : "vela",
-                    "args" : [
-                        "--system-config RTSS_HE_SRAM_MRAM",
-                        "--accelerator-config ethos-u55-128",
-                        "--memory-mode Shared_Sram"
-                    ],
-                    "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    "name" : "High Efficiency Core",
+                    "size" : 1048576,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 3"
+                    },
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HE_SRAM_MRAM",
+                            "--accelerator-config ethos-u55-128",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
                 }
             ]
         },
@@ -492,7 +636,43 @@
                     "images": "../build/images/bootloader.bin 0x80000000 ../build/AppTocPackage.bin 0x8057f060",
                     "bootloaderVidPid": "37C5:96E3"
                 }
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "High Performance Core",
+                    "size" : 16777216,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 6"
+                    },
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HP_SRAM_OSPI",
+                            "--accelerator-config ethos-u55-256",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
+                },
+                {
+                    "name" : "High Efficiency Core",
+                    "size" : 1048576,
+                    "loaderConfig": {
+                        "type" : "dfu",
+                        "cmd" : "-a 3"
+                    },
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HE_SRAM_MRAM",
+                            "--accelerator-config ethos-u55-128",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -520,7 +700,16 @@
                         "name": "firmware.bin"
                     }
                 ]
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 16777216,
+                    "npuAcceleratorConfig": {
+                        "type" : "stai"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -550,7 +739,17 @@
                 ],
                 "binProgramCommand" : "-a 0 -s 0x08040000:leave",
                 "dfuProgramCommand" : "-a 0 -s :leave"
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 4194304,
+                    "loaderConfig": {
+                        "type" : "arduino_dfu",
+                        "address" : "0x90B00000"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -580,7 +779,17 @@
                 ],
                 "binProgramCommand" : "-a 0 -s 0x08040000:leave",
                 "dfuProgramCommand" : "-a 0 -s :leave"
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 4194304,
+                    "loaderConfig": {
+                        "type" : "arduino_dfu",
+                        "address" : "0x90B00000"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -610,7 +819,17 @@
                 ],
                 "binProgramCommand" : "-a 0 -s 0x08040000:leave",
                 "dfuProgramCommand" : "-a 0 -s :leave"
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 4194304,
+                    "loaderConfig": {
+                        "type" : "arduino_dfu",
+                        "address" : "0x90B00000"
+                    }
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -628,7 +847,13 @@
                 "altvidpidDisplayName" : "Nano33 BLE (nRF52840) Legacy",
                 "altvidpid" : "2341:805a",
                 "binProgramCommand" : "--offset=0x16000"
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 0
+                }
+            ]
         },
         {
             "hidden" : false,
@@ -647,7 +872,13 @@
                 "altvidpid" : "2341:805e",
                 "eraseCommands" : ["-o 0x10200000 -t bin"],
                 "binProgramCommand" : "-x"
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 0
+                }
+            ]
         },
         {
             "hidden" : true,
@@ -666,7 +897,13 @@
                 "altvidpid" : "2341:805e",
                 "eraseCommands" : ["-o 0x10200000 -t bin"],
                 "binProgramCommand" : "-x"
-            }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 0
+                }
+            ]
         }
     ],
     "sensors" : [

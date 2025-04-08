@@ -992,17 +992,17 @@ void OpenMVPlugin::extensionsInitialized()
             return;
         }
 
-        if (boardSettings.contains(QStringLiteral("npuAcceleratorConfig")))
+        if (boardSettings.contains(QStringLiteral("romfsConfig")))
         {
-            QJsonObject acceleratorConfigSettings = getNPUAcceleratorConfig(Tr::tr("Model Zoo"), boardSettings, settings);
+            QJsonObject romfsConfigSettings = getROMFSConfig(Tr::tr("Model Zoo"), boardSettings, settings);
 
-            if (acceleratorConfigSettings.isEmpty())
+            if (romfsConfigSettings.isEmpty())
             {
                 settings->endGroup();
                 return;
             }
 
-            boardSettings[QStringLiteral("npuAcceleratorConfig")] = acceleratorConfigSettings;
+            boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
         }
 
         OpenMVModelZooBrowser dialog(settings, Core::ICore::dialogParent(), true);

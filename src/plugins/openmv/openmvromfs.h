@@ -39,9 +39,9 @@
 namespace OpenMV {
 namespace Internal {
 
-QJsonObject getNPUAcceleratorConfig(const QString &title,
-                                    const QJsonObject &boardSettings,
-                                    Utils::QtcSettings *settings);
+QJsonObject getROMFSConfig(const QString &title,
+                           const QJsonObject &boardSettings,
+                           Utils::QtcSettings *settings);
 
 QString convertModel(const QJsonObject &boardSettings,
                      const QString &model,
@@ -56,6 +56,7 @@ public:
     explicit OpenMVROMFSEditor(QWidget *parent = Q_NULLPTR,
                                const QString &path = QString(),
                                const QJsonObject &boardSettings = QJsonObject());
+
     QFileSystemModel *model() { return m_model; }
 
 public slots:
@@ -69,6 +70,7 @@ public slots:
 signals:
 
     void fileSystemSize(const QString &sizeString);
+    void commitEnabled(bool enabled);
 
 protected:
 
