@@ -285,7 +285,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     {
         dialog->appendColoredText(Tr::tr("Success - Press Ok to close the window"), true);
         dialog->enableOkayButton(true);
-        result = tempDir.path() + QDir::separator() + QFileInfo(model).baseName() + QStringLiteral("_vela.tflite");
+        result = tempDir.path() + QDir::separator() + QFileInfo(model).completeBaseName() + QStringLiteral("_vela.tflite");
     }
     else
     {
