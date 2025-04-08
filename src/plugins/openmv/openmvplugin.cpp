@@ -1020,8 +1020,8 @@ void OpenMVPlugin::extensionsInitialized()
 
             QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Model Zoo"),
                 m_portPath.isEmpty()
-                ? settings->value(LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath() + QDir::separator() + QFileInfo(src).fileName())).toString()
-                : settings->value(LAST_MODEL_WITH_CAM_PATH, QString(m_portPath + QDir::separator() + QFileInfo(src).fileName())).toString());
+                ? (settings->value(LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).fileName())
+                : (settings->value(LAST_MODEL_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).fileName()));
 
             if(!dst.isEmpty())
             {
@@ -1029,8 +1029,8 @@ void OpenMVPlugin::extensionsInitialized()
                 {
                     if(QFile::copy(convertedSrc, dst))
                     {
-                        if (m_portPath.isEmpty()) settings->setValue(LAST_MODEL_NO_CAM_PATH, dst);
-                        if (!m_portPath.isEmpty()) settings->setValue(LAST_MODEL_WITH_CAM_PATH, dst);
+                        if (m_portPath.isEmpty()) settings->setValue(LAST_MODEL_NO_CAM_PATH, QFileInfo(dst).path());
+                        if (!m_portPath.isEmpty()) settings->setValue(LAST_MODEL_WITH_CAM_PATH, QFileInfo(dst).path());
                     }
                     else
                     {
