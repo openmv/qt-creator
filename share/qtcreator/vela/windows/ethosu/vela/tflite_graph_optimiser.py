@@ -2516,7 +2516,7 @@ def convert_mean_to_depthwise_conv(op, arch, nng):
         shift = round_down_log2(num_elements_in_axis)
         shift = min(shift, 32)
         shift = min(shift, 31 + output_shift)
-        output_multiplier = (output_multiplier << shift) // num_elements_in_axis
+        output_multiplier = int((np.int64(output_multiplier) << np.int64(shift)) // np.int64(num_elements_in_axis))
         output_shift = output_shift - shift
 
         # Convert to vela representation shift
