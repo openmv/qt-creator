@@ -81,19 +81,24 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     layout2->addRow(combo2);
     layout2->addItem(new QSpacerItem(0, 6));
 
+    QVBoxLayout *layout = new QVBoxLayout();
+    layout->setContentsMargins(0, 0, 0, 0);
+    QWidget *widget = new QWidget;
+    widget->setLayout(layout);
+    widget->setVisible(settings->value(LAST_VELA_COMPILIER_ADVANCED_STATE, false).toBool());
+
     Utils::FancyLineEdit *lineEdit = new Utils::FancyLineEdit();
     lineEdit->setPlaceholderText(Tr::tr("--verbose-progress"));
     lineEdit->setHistoryCompleter(LAST_VELA_COMPILIER_OPTIONS_STRING, true);
-    lineEdit->setVisible(settings->value(LAST_VELA_COMPILIER_ADVANCED_STATE, false).toBool());
     QLabel *label = new QLabel(Tr::tr("<a href=\"https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md\">Vela Compilier CLI Options</a>"));
     label->setTextFormat(Qt::RichText);
     label->setTextInteractionFlags(Qt::TextBrowserInteraction);
     label->setOpenExternalLinks(true);
-    label->setVisible(settings->value(LAST_VELA_COMPILIER_ADVANCED_STATE, false).toBool());
-    layout2->addRow(label);
-    layout2->addItem(new QSpacerItem(0, 6));
-    layout2->addRow(lineEdit);
-    layout2->addItem(new QSpacerItem(0, 6));
+    layout->addWidget(label);
+    layout->addItem(new QSpacerItem(0, 6));
+    layout->addWidget(lineEdit);
+    layout->addItem(new QSpacerItem(0, 6));
+    layout2->addRow(widget);
 
     QHBoxLayout *layout3 = new QHBoxLayout;
     layout3->setContentsMargins(0, 0, 0, 0);
@@ -111,9 +116,8 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     QObject::connect(box2, &QDialogButtonBox::accepted, dialog2, &QDialog::accept);
     QObject::connect(box2, &QDialogButtonBox::rejected, dialog2, &QDialog::reject);
-    QObject::connect(checkBox2, &QCheckBox::toggled, dialog2, [dialog2, lineEdit, label] (bool checked) {
-        lineEdit->setVisible(checked);
-        label->setVisible(checked);
+    QObject::connect(checkBox2, &QCheckBox::toggled, dialog2, [dialog2, widget] (bool checked) {
+        widget->setVisible(checked);
         QTimer::singleShot(0, dialog2, [dialog2] { dialog2->adjustSize(); });
     });
 
