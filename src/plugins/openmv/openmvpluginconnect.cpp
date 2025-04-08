@@ -1364,7 +1364,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                 isPortenta = (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && ((arduinoPort.productIdentifier() == PORTENTA_APP_O_PID) ||
                                                                                    (arduinoPort.productIdentifier() == PORTENTA_APP_N_PID));
-                isNiclav = (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && (arduinoPort.productIdentifier() == NICLA_APP_PID);
+                isNiclav = (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && ((arduinoPort.productIdentifier() == NICLA_APP_O_PID) ||
+                                                                                  (arduinoPort.productIdentifier() == NICLA_APP_N_PID));
                 isGiga = (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && (arduinoPort.productIdentifier() == GIGA_APP_PID);
                 isNRF = (arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && (arduinoPort.productIdentifier() == NRF_APP_PID);
                 isRPIPico = ((arduinoPort.vendorIdentifier() == ARDUINOCAM_VID) && (arduinoPort.productIdentifier() == RPI_APP_PID)) ||
