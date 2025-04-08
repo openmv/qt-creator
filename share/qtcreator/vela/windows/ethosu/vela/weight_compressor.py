@@ -56,8 +56,8 @@ except RuntimeError as ex:
                 "\nThis is a known issue most likely caused by a change in the API "
                 "version in NumPy after installing ethos-u-vela.\nYou can find more "
                 "information about the issue and possible solutions in the "
-                "'Known Issues' section at https://review.mlplatform.org/"
-                "plugins/gitiles/ml/ethos-u/ethos-u-vela/+/refs/heads/main/"
+                "'Known Issues' section at https://gitlab.arm.com/"
+                "artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/"
                 "README.md#known-issues"
             )
     raise

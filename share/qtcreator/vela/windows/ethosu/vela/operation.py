@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2020-2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -752,9 +752,8 @@ class Operation:
             assert len(self.inputs) == self.attrs["values_count"]
         else:
             assert len(axis_tensor.ops) == 1 and axis_tensor.ops[0].type == Op.Const
-            axis = int(axis_tensor.values)
-
-        return inputs, axis
+            axis = axis_tensor.values
+        return inputs, int(axis)
 
     def get_dilation_h_w(self):
         _, dilation_h, dilation_w, _ = self.attrs.get("dilation", (1, 1, 1, 1))
@@ -835,6 +834,10 @@ class Operation:
         else:
             assert False
 
+        # Cast to Python int
+        axis = int(axis) if axis is not None else None
+        offset_start = [int(e) for e in offset_start] if offset_start else None
+        offset_end = [int(e) for e in offset_end] if offset_end else None
         return input_tens, outputs, axis, offset_start, offset_end, strides_tens
 
     def set_activation_lut(self, lut_tensor):

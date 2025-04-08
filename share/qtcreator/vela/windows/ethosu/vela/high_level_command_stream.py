@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2020-2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2023, 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -99,7 +99,9 @@ class Box:
                     new_start_coord[-2] = max(new_start_coord[-2] * stride - skirt[1], 0)
                     new_end_coord[-2] = min(new_end_coord[-2] * stride + skirt[3], ifm_shape.width)
                 else:
-                    new_start_coord[-2] = max(new_start_coord[-2] * stride - skirt[1], split_offset[-2])
+                    new_start_coord[-2] = max(
+                        new_start_coord[-2] * stride - (skirt[1] + split_offset[-2]), split_offset[-2]
+                    )
                     new_end_coord[-2] = min(new_end_coord[-2] * stride + skirt[3], split_offset[-2] + split_shape[-2])
 
             if len(new_start_coord) >= 3:
@@ -107,7 +109,15 @@ class Box:
                 skirt_top_remainder = skirt[0] % upscaling_factor
 
                 total_stride = stride * (new_end_coord[-3] - new_start_coord[-3] - 1)
-                new_start_coord[-3] = new_start_coord[-3] * stride - skirt[0] + skirt_top_remainder
+                valid_ifm_height = ifm_shape.height
+                if split_offset is None:
+                    new_start_coord[-3] = new_start_coord[-3] * stride - skirt[0] + skirt_top_remainder
+                else:
+                    new_start_coord[-3] = max(
+                        new_start_coord[-3] * stride - (skirt[0] + split_offset[-3]) + skirt_top_remainder,
+                        split_offset[-3],
+                    )
+                    valid_ifm_height = min(valid_ifm_height, split_offset[-3] + split_shape[-3])
 
                 pad_top = max(0, 0 - new_start_coord[-3]) + skirt_top_remainder
                 new_start_coord[-3] = max(new_start_coord[-3], 0)
@@ -127,7 +137,7 @@ class Box:
                 # Adjust for upscaling
                 new_start_coord[-3] = max(new_start_coord[-3] // upscaling_factor, 0)
                 new_end_coord[-3] = new_end_coord[-3] * stride + skirt[2] + (skirt[2] % upscaling_factor)
-                new_end_coord[-3] = max(min(new_end_coord[-3] // upscaling_factor, ifm_shape.height), 1)
+                new_end_coord[-3] = max(min(new_end_coord[-3] // upscaling_factor, valid_ifm_height), 1)
 
         # Wrap the IFMs of broadcasted binary elementwise ops
         # at the limits of the non-broadcasted volumes
@@ -179,7 +189,7 @@ class Box:
         return Block.from_shape(self.get_size_shape())
 
     def __str__(self):
-        return "<Box %s - %s>" % (self.start_coord, self.end_coord)
+        return "<Box %s - %s>" % ([int(x) for x in self.start_coord], [int(x) for x in self.end_coord])
 
     __repr__ = __str__
 

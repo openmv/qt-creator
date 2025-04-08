@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# SPDX-FileCopyrightText: Copyright 2020-2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -19,9 +19,11 @@
 """Compile a neural network model for Arm Ethos-U NPUs."""
 import argparse
 import glob
+import mmap
 import os
 import sys
 import time
+from configparser import ConfigParser
 from typing import List
 from typing import Optional
 
@@ -58,7 +60,9 @@ TFLITE_MAGIC = 0x334C4654
 TOSA_MAGIC = 0x41534F54
 
 
-def process(input_name, enable_debug_db, arch, model_reader_options, compiler_options, scheduler_options):
+def process(
+    input_name, enable_debug_db, arch, model_reader_options, compiler_options, scheduler_options, output_format
+):
     if compiler_options.timing:
         start = time.time()
 
@@ -93,10 +97,12 @@ def process(input_name, enable_debug_db, arch, model_reader_options, compiler_op
     )
 
     output_tfl_filename = output_basename + "_vela.tflite"
-    if input_name.endswith(".tflite"):
+    if output_format == "tflite":
         tflite_writer.write_tflite(nng, output_tfl_filename)
-    if input_name.endswith(".tosa"):
+    elif output_format == "raw":
         rawdata_writer.write_rawdata_output(nng, arch, output_basename)
+    else:
+        assert False, f"Unsupported output_format = {output_format}"
 
     if enable_debug_db:
         file_offsets = calculate_operator_file_offsets(output_tfl_filename)
@@ -122,6 +128,7 @@ def process_regor(
     options,
     enable_debug_db,
     output_dir,
+    output_format,
     verbose_weights=False,
     verbose_cycle_estimate=False,
     show_cpu_operations=False,
@@ -130,21 +137,24 @@ def process_regor(
     os.makedirs(output_dir, exist_ok=True)
 
     with open(input_name, "rb") as f:
-        network = f.read()
-    fmt = get_format(network)
-
-    compiled_model = regor.compile(accelerator, network, fmt, system_config, options=options, verbose=True)
+        with mmap.mmap(f.fileno(), length=0, access=mmap.ACCESS_READ) as network:
+            fmt = get_format(network)
+            compiled_model = regor.compile(accelerator, network, fmt, system_config, options=options, verbose=True)
 
     model_name = os.path.splitext(os.path.basename(input_name))[0]
 
     output_basename = os.path.join(output_dir, model_name)
 
-    if isinstance(compiled_model, regor.CompiledTFLiteModel):
+    if output_format == "tflite":
+        assert isinstance(compiled_model, regor.CompiledTFLiteModel)
         output_name = output_basename + "_vela.tflite"
         with open(output_name, "wb") as f:
             f.write(compiled_model.model)
-    elif isinstance(compiled_model, regor.CompiledRawModel):
-        rawdata_writer.write_rawdata_output_from_model(output_basename + "_vela.npz", compiled_model)
+    elif output_format == "raw":
+        assert isinstance(compiled_model, regor.CompiledRawModel)
+        rawdata_writer.write_rawdata_output_from_model(output_basename, compiled_model)
+    else:
+        assert False, f"Unsupported output_format = {output_format}"
 
     summary_csv_file = "{0}_summary_{1}.csv".format(output_basename, arch.system_config)
 
@@ -248,7 +258,7 @@ def generate_supported_ops():
     # Add license for supported ops
     lines = [
         "<!--",
-        "SPDX-FileCopyrightText: Copyright 2020-2024 Arm Limited and/or its affiliates <open-source-office@arm.com>",
+        "SPDX-FileCopyrightText: Copyright 2020-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>",
         "",
         "SPDX-License-Identifier: Apache-2.0",
         "",
@@ -377,6 +387,7 @@ Please check the supported operator list for your chosen runtime for further inf
 | MAX_POOL_2D | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-max_pool_2d-constraints) |
 | MEAN | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-mean-constraints) |
 | MINIMUM | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-minimum-constraints) |
+| MIRROR_PAD | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-mirror_pad-constraints) |
 | MUL | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-mul-constraints) |
 | PACK | [Generic](#tflite-generic-constraints) |
 | PAD | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-pad-constraints) |
@@ -391,6 +402,8 @@ Please check the supported operator list for your chosen runtime for further inf
 [Specific](#ethos-u85-tflite-resize_nearest_neighbor-constraints) |
 | RSQRT | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-rsqrt-constraints) |
 | SCATTER | [Generic](#tflite-generic-constraints) | [Specific](#ethos-u85-tflite-scatter-constraints) |
+| SELECT | [Generic](#tflite-generic-constraints) |
+| SELECT_V2 | [Generic](#tflite-generic-constraints) |
 | SHAPE | [Generic](#tflite-generic-constraints) |
 | SLICE | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-slice-constraints) |
 | SOFTMAX | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-softmax-constraints) |
@@ -810,6 +823,8 @@ def get_compiler_config(
     disable_fwd: bool,
     disable_cascading: bool,
     disable_buffering: bool,
+    cop_format: str,
+    separate_io_regions: bool,
 ) -> str:
     """Build compiler config file."""
     config = "\n[compiler]\n"
@@ -823,6 +838,7 @@ def get_compiler_config(
         config += "output_format=Raw\n"
     else:
         config += "output_format=TFLite\n"
+    config += f"cop_format={cop_format}\n"
 
     config += "\n[scheduler]\n"
     config += f"optimize={optimize}\n"
@@ -841,6 +857,8 @@ def get_compiler_config(
     if disable_buffering:
         config += "WeightBuffering|"
     config = config.rstrip("|") + "\n"
+    if separate_io_regions:
+        config += "separate_io_regions=true\n"
 
     config += "\n[graph]\n"
     if verbose_graph:
@@ -851,10 +869,10 @@ def get_compiler_config(
     return config
 
 
-def get_format(in_data: bytes) -> str:
+def get_format(in_data: mmap.mmap) -> str:
     """Infere format based on input file."""
     ret = "UNDEFINED"
-    if len(in_data) < 8:
+    if in_data.size() < 8:
         return ret
     second_word = int.from_bytes(in_data[4:8], "little")
     if second_word == TFLITE_MAGIC:
@@ -869,6 +887,23 @@ def list_config_files():
     path_length = len(architecture_features.CONFIG_FILES_PATH + os.path.sep)
     for config in glob.glob(os.path.join(architecture_features.CONFIG_FILES_PATH, "*", "*.ini")):
         print(config[path_length:])
+
+
+def list_configs(config_filename):
+    vela_config_filename = config_filename
+    if not os.path.isfile(vela_config_filename):
+        vela_config_filename = os.path.join(architecture_features.CONFIG_FILES_PATH, config_filename)
+        if not os.path.isfile(vela_config_filename):
+            assert False, f"Cannot find config file {config_filename}"
+
+    if os.path.splitext(vela_config_filename)[1] != ".ini":
+        assert False, f"Specified file {config_filename} is not a Vela config file"
+
+    print(f"Configurations defined in {vela_config_filename}:")
+    vela_config = ConfigParser()
+    vela_config.read(vela_config_filename)
+    for section in vela_config.sections():
+        print(f"   {section}")
 
 
 def main(argv: Optional[List[str]] = None) -> int:
@@ -894,6 +929,11 @@ def main(argv: Optional[List[str]] = None) -> int:
             "Display all available configurations in the `config_files` folder and exit. To select config file, "
             "use the --config argument with one of the listed config files (For example: --config Arm/vela.ini )"
         ),
+    )
+    parser.add_argument(
+        "--list-configs",
+        type=str,
+        help=("Display all configurations defined in the specified config file"),
     )
 
     # set network nargs to be optional to allow the support-ops-report CLI option to be used standalone
@@ -1039,6 +1079,16 @@ def main(argv: Optional[List[str]] = None) -> int:
         default=HillClimbAllocator.MAX_ITERATIONS,
         help="Set the maximum number of iterations the Hill Climb tensor allocator will run (default: %(default)s)",
     )
+    parser.add_argument(
+        "--cop-format",
+        choices=["COP1", "COP2"],
+        default="COP1",
+    )
+    parser.add_argument(
+        "--separate-io-regions",
+        action="store_true",
+        help="Use separate regions for input and output tensors (implies COP2 driver actions format)",
+    )
 
     # debug options
     parser.add_argument("--debug-force-regor", action="store_true", help="Debug: Force the use of the regor")
@@ -1058,14 +1108,21 @@ def main(argv: Optional[List[str]] = None) -> int:
         list_config_files()
         return 0
 
+    if args.list_configs:
+        list_configs(args.list_configs)
+        return 0
+
     if args.network is None:
         parser.error("the following argument is required: NETWORK")
+
+    if args.cop_format == "COP1" and args.separate_io_regions:
+        parser.error("Driver actions format 'COP2' is required for --separate-io-regions")
 
     def _parse_config(config):
         # Make sure the correct separator is used depending on OS
         config = os.path.normpath(config)
 
-        if not config.endswith(".ini"):
+        if os.path.splitext(config)[1] != ".ini":
             raise InputFileError(config, "Configuration files must use the .ini extension")
 
         if (
@@ -1125,9 +1182,10 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     model_reader_options = model_reader.ModelReaderOptions()
 
-    # The default behaviour is to use Vela for Ethos-U55/U65 and Regor for Ethos-U85. However, developers can override
-    # this by using the --debug-force-regor option
-    if arch.is_ethos_u85_system or args.debug_force_regor:
+    # The default behaviour to compile TFLite networks on Ethos-U55/U65 is to use Vela's Python compiler core (no name).
+    # However, this can be overridden to use Vela's C++ compiler core (Regor) by using the --debug-force-regor option.
+    # All Ethos-U85 or all TOSA network compilations use Vela's C++ compiler core (Regor).
+    if arch.is_ethos_u85_system or args.network.lower().endswith(".tosa") or args.debug_force_regor:
         system_config = "[architecture]\n"
         system_config += f"macs={arch.num_macs_per_cycle}\n"
         system_config += f"cores={arch.ncores}\n"
@@ -1168,6 +1226,8 @@ def main(argv: Optional[List[str]] = None) -> int:
             args.disable_fwd,
             args.disable_cascading,
             args.disable_buffering,
+            args.cop_format,
+            args.separate_io_regions,
         )
 
         process_regor(
@@ -1178,6 +1238,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             options,
             args.enable_debug_db,
             args.output_dir,
+            args.output_format,
             args.verbose_weights,
             args.verbose_cycle_estimate,
             args.show_cpu_operations,
@@ -1217,7 +1278,13 @@ def main(argv: Optional[List[str]] = None) -> int:
 
         try:
             nng = process(
-                args.network, args.enable_debug_db, arch, model_reader_options, compiler_options, scheduler_options
+                args.network,
+                args.enable_debug_db,
+                arch,
+                model_reader_options,
+                compiler_options,
+                scheduler_options,
+                args.output_format,
             )
 
         except VelaError as e:

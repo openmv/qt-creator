@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2020-2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -84,7 +84,7 @@ class TFLiteSubgraph:
 
     def parse_tensor(self, tens_data):
         np_shape = tens_data.ShapeAsNumpy()
-        shape = list(np_shape) if isinstance(np_shape, np.ndarray) else []
+        shape = [int(i) for i in np_shape] if isinstance(np_shape, (list, np.ndarray)) else []
         name = decode_str(tens_data.Name())
         tens_dtype = tens_data.Type()
         dtype = datatype_map[tens_dtype]
@@ -207,19 +207,32 @@ class TFLiteSubgraph:
                     op.attrs["out_data_type"] = outputs[0].dtype
 
             if "stride_w" in op.attrs:
+                assert isinstance(op.attrs["stride_h"], (int, np.integer)), "Height stride must be an integer"
+                assert isinstance(op.attrs["stride_w"], (int, np.integer)), "Width stride must be an integer"
+                op.attrs["stride_h"] = int(op.attrs["stride_h"])
+                op.attrs["stride_w"] = int(op.attrs["stride_w"])
                 op.attrs["strides"] = (1, op.attrs["stride_h"], op.attrs["stride_w"], 1)
             if "filter_width" in op.attrs:
+                assert isinstance(op.attrs["filter_height"], (int, np.integer)), "Filter height must be an integer"
+                assert isinstance(op.attrs["filter_width"], (int, np.integer)), "Filter width must be an integer"
+                op.attrs["filter_height"] = int(op.attrs["filter_height"])
+                op.attrs["filter_width"] = int(op.attrs["filter_width"])
                 op.attrs["ksize"] = (1, op.attrs["filter_height"], op.attrs["filter_width"], 1)
             if "dilation_w_factor" in op.attrs:
+                assert isinstance(op.attrs["dilation_h_factor"], (int, np.integer)), "Height dilation must be an integer"
+                assert isinstance(op.attrs["dilation_w_factor"], (int, np.integer)), "Width dilation must be an integer"
+                op.attrs["dilation_h_factor"] = int(op.attrs["dilation_h_factor"])
+                op.attrs["dilation_w_factor"] = int(op.attrs["dilation_w_factor"])
                 op.attrs["dilation"] = (1, op.attrs["dilation_h_factor"], op.attrs["dilation_w_factor"], 1)
             if "depth_multiplier" in op.attrs:
+                op.attrs["depth_multiplier"] = int(op.attrs["depth_multiplier"])
                 op.attrs["channel_multiplier"] = op.attrs["depth_multiplier"]
 
             if op_type == Op.DepthwiseConv2DBias and op.attrs["depth_multiplier"] == 0:
                 # The depth multiplier is implicit and is calculated as weight channels / ifm channels
                 # Note however that the weights have been reshaped above.
                 # The original value is cached above in channel_multiplier
-                op.attrs["depth_multiplier"] = op.weights.shape[2] // op.ifm.shape[-1]
+                op.attrs["depth_multiplier"] = int(op.weights.shape[2] // op.ifm.shape[-1])
 
             # The fused_activation_function attribute needs to be retained so that the
             # tflite_writer can correctly pass through operators that run on the CPU.

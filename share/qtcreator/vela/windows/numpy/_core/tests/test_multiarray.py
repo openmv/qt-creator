@@ -30,7 +30,7 @@ from numpy.testing import (
     assert_array_equal, assert_raises_regex, assert_array_almost_equal,
     assert_allclose, IS_PYPY, IS_WASM, IS_PYSTON, HAS_REFCOUNT,
     assert_array_less, runstring, temppath, suppress_warnings, break_cycles,
-    check_support_sve, assert_array_compare,
+    check_support_sve, assert_array_compare, IS_64BIT
     )
 from numpy.testing._private.utils import requires_memory, _no_tracing
 from numpy._core.tests._locales import CommaDecimalPointLocale
@@ -983,7 +983,7 @@ class TestCreation:
         assert_raises(ValueError, np.zeros, shape, dtype=np.int8)
         assert_raises(ValueError, np.ones, shape, dtype=np.int8)
 
-    @pytest.mark.skipif(np.dtype(np.intp).itemsize != 8,
+    @pytest.mark.skipif(not IS_64BIT,
                         reason="malloc may not fail on 32 bit systems")
     def test_malloc_fails(self):
         # This test is guaranteed to fail due to a too large allocation
@@ -10358,3 +10358,24 @@ class TestDevice:
             r"The stream argument in to_device\(\) is not supported"
         ):
             arr.to_device("cpu", stream=1)
+
+def test_array_interface_excess_dimensions_raises():
+    """Regression test for gh-27949: ensure too many dims raises ValueError instead of segfault."""
+    
+    # Dummy object to hold a custom __array_interface__
+    class DummyArray:
+        def __init__(self, interface):
+            # Attach the array interface dict to mimic an array
+            self.__array_interface__ = interface
+
+    # Create a base array (scalar) and copy its interface
+    base = np.array(42)  # base can be any scalar or array
+    interface = dict(base.__array_interface__)
+
+    # Modify the shape to exceed NumPy's dimension limit (NPY_MAXDIMS, typically 64)
+    interface['shape'] = tuple([1] * 136)  # match the original bug report 
+
+    dummy = DummyArray(interface)
+    # Now, using np.asanyarray on this dummy should trigger a ValueError (not segfault)
+    with pytest.raises(ValueError, match="dimensions must be within"):
+        np.asanyarray(dummy)

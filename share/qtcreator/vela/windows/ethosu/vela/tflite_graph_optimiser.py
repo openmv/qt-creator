@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2020-2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -152,8 +152,10 @@ def rewrite_split_ops(tens, arch, nng):
         else:
             # The read shape is relative to each start offset
             # Limit read shape to the size of the IFM - offset is not necessarily limited
-            ifm_dims = split_op.ifm_shapes[0].as_list()
-            read_shape = Shape4D([min(oe, ifm_dim) - os for oe, os, ifm_dim in zip(offset_end, offset_start, ifm_dims)])
+            ifm_dims_4D = split_op.ifm_shapes[0].as_list()
+            offset_end_4D = Shape4D(offset_end).as_list()
+            offset_start_4D = Shape4D(offset_start).as_list()
+            read_shape = Shape4D([min(oe, ifm_dim) - os for oe, os, ifm_dim in zip(offset_end_4D, offset_start_4D, ifm_dims_4D)])
 
         # For Split the offset cannot be extracted from the tensor so it has to
         # be calculated from the index of the output tensor
@@ -333,7 +335,7 @@ def convert_resize_1x1_to_add(op):
 # Convert ResizeNearestNeighbor with align corners to a depthwise convolution. The IFM will already have been upscaled
 # apart from the final x2 scaling which will be done as part of this operation. The kernel contains a single coefficient
 # to select the appropriate nearest neighbor value
-def convert_resizenn_ac_to_depthwise_conv(op, upscale_factor):
+def convert_resizenn_ac_to_depthwise_conv(op, upscale_factor_h, upscale_factor_w):
     ifm = op.ifm
     ofm = op.ofm
     output_depth = ofm.shape[-1]
@@ -373,7 +375,7 @@ def convert_resizenn_ac_to_depthwise_conv(op, upscale_factor):
         weight_quant.quant_min = -(1 << (ofm_dtype.bits - 1))
         weight_quant.quant_max = (1 << (ofm_dtype.bits - 1)) - 1
 
-    weight_shape = [upscale_factor, upscale_factor, output_depth, output_depth]  # HWIO
+    weight_shape = [upscale_factor_h, upscale_factor_w, output_depth, output_depth]  # HWIO
 
     # the single non-zero coefficient used to select the desired value needs to be placed in the 'centre value', which
     # is calculated by finding the 'centre position' ('*' in the diagram below) and then choosing the 'value' that is
@@ -383,17 +385,15 @@ def convert_resizenn_ac_to_depthwise_conv(op, upscale_factor):
     # 1---*---+
     # | C | D |
     # 2---+---+
-    weight_values = [0] * (upscale_factor * upscale_factor)
-    centre_coeff = (upscale_factor // 2) * upscale_factor + (upscale_factor // 2)
-    weight_values[centre_coeff] = 1
-
+    weight_values = np.zeros(shape=weight_shape)
+    weight_values[upscale_factor_h // 2, upscale_factor_w // 2, :, :] = 1
     # add weight tensor, this will discard the size tensor of the resize op
     op.set_input_tensor(
         create_const_tensor(
             "weights",
             weight_shape,
             ofm_dtype,
-            np.array(weight_values).reshape(weight_shape),
+            weight_values,
             quantization=weight_quant,
         ),
         1,  # inputs tensor weight index
@@ -418,6 +418,7 @@ def convert_resizenn_ac_to_depthwise_conv(op, upscale_factor):
 def convert_resize_to_upscale_and_average_pool(op):
     pre_op = op
     outputs = op.outputs
+    orig_ofm_shape = op.ofm_shapes[0]
     dtype = op.ifm.dtype
 
     op.attrs.update({"strides": (1, 1, 1, 1), "ksize": (1, 1, 1, 1)})
@@ -428,6 +429,12 @@ def convert_resize_to_upscale_and_average_pool(op):
 
     # Get upscale factor that was calculated in the supported operators check
     upscale_factor = op.attrs["upscale_factor"]
+
+    # Upscale factor can be 1 for one of the dimensions only if the dimension size is 1
+    ifm_h, ifm_w = op.ifm_shapes[0].get_hw_as_list()
+    ofm_h, ofm_w = op.ofm_shapes[0].get_hw_as_list()
+    upscale_factor_h = 1 if ofm_h == ifm_h == 1 else upscale_factor
+    upscale_factor_w = 1 if ofm_w == ifm_w == 1 else upscale_factor
 
     # Calculate how many times 2x2 upscaling needs to be performed
     # Force the result of round to be an integer. This is because the behaviour of rounding numpy.float64 values changed
@@ -442,12 +449,16 @@ def convert_resize_to_upscale_and_average_pool(op):
             scaled_op.inputs[0] = pre_op.outputs[0]
 
         # Nearest neighbor x2 upscaling
-        upscaled_shape = upscaled_shape * 2
+        upscaled_shape[0] *= 2 if upscale_factor_h != 1 else 1
+        upscaled_shape[1] *= 2 if upscale_factor_w != 1 else 1
         shape = op.ofm_shapes[0].as_list()
         shape[1:3] = upscaled_shape
         out_tens = Tensor(shape, dtype, f"{op.outputs[0].name}_{count}")
         out_tens.quantization = op.outputs[0].quantization.clone()
         scaled_op.set_output_tensor(out_tens)
+        # Discard unused data from the 2x2 upscaling when upscaling is 1 in one of the dimensions
+        scaled_op.write_shape = Shape4D(shape)
+        scaled_op.write_offset = Shape4D([0, 0, 0, 0])
         pre_op = scaled_op
 
         scaled_op.set_ifm_ofm_shapes()
@@ -465,19 +476,23 @@ def convert_resize_to_upscale_and_average_pool(op):
         else:
             # padding to the right and bottom (limits average pool to 8x8 kernel)
             scaled_op.attrs["padding"] = Padding.EXPLICIT
-            scaled_op.attrs["explicit_padding"] = [0, 0, upscale_factor - 1, upscale_factor - 1]
+            scaled_op.attrs["explicit_padding"] = [0, 0, upscale_factor_h - 1, upscale_factor_w - 1]
 
         # kernal size dependent on the upscaling factor
-        scaled_op.attrs.update({"ksize": (1, upscale_factor, upscale_factor, 1)})
+        scaled_op.attrs.update({"ksize": (1, upscale_factor_h, upscale_factor_w, 1)})
     else:  # Op.ResizeNearestNeighbor
         if scaled_op.attrs["align_corners"]:
             # use depthwise conv to select the correct value
-            scaled_op = convert_resizenn_ac_to_depthwise_conv(scaled_op, upscale_factor)
+            scaled_op = convert_resizenn_ac_to_depthwise_conv(scaled_op, upscale_factor_h, upscale_factor_w)
         else:
             # Keep 1x1 kernel and average pool, this applies both when
             # half-pixel-centers is True and False. Calculations are the
             # same in the reference.
             pass
+
+    # Set write_shape to OFM size to discard unused data from the 2x2 upscaling when upscaling is 1 in one dimension
+    scaled_op.write_shape = orig_ofm_shape
+    scaled_op.write_offset = Shape4D([0, 0, 0, 0])
 
     scaled_op.outputs = outputs
     scaled_op.outputs[0].ops = [scaled_op]
@@ -578,7 +593,7 @@ def convert_argmax_to_depthwise_conv_and_max_pool(op: Operation, arch, nng) -> O
         # To extract 7 least significant bits and swap reverse index back to real index using a LUT activation, we set
         # the base value to c-1 and slope to -128. The 16-bit LUT uses a table of 32-bit values where the top 16 bits
         # represent the slope and bottom 16 bits the base which are used to interpolate the activation value.
-        slope = (-128 & 0xFFFF) << 16  # Top 16 bits of 32 bit LUT table value
+        slope = np.uint32((-128 & 0xFFFF) << 16)  # Top 16 bits of 32 bit LUT table value
         base = c - 1  # Bottom 16 bits of the LUT table value
         lut_tensor = create_const_tensor(
             "maxpool_LUT_extract_7_LSB",
@@ -1273,7 +1288,11 @@ def fixup_relus_with_differing_ifm_ofm_scaling(op: Operation, arch, nng) -> Oper
 
             relu_fused_op.add_input_tensor(ifm)
             relu_fused_op.set_output_tensor(ofm)
-            relu_fused_op.set_ifm_ofm_shapes()
+
+            # Original shape should be used in case modifications has been done to the
+            # actual tensor (bypass_memory_only_ops)
+            relu_fused_op.ifm_shapes.append(op.ifm_shapes[0])
+            relu_fused_op.ofm_shapes.append(op.ofm_shapes[0])
             op = relu_fused_op
     return op
 
@@ -1916,15 +1935,15 @@ def convert_mirror_pad(op: Operation, arch, nng):
     if op.type != Op.MirrorPad or not op.run_on_npu:
         return op
 
-    _, (top, bot), (left, right), _ = op.ifm2.values
+    top, left, bot, right, _, _ = get_pad_values_from_input(op.ifm2.values)
     mode = op.attrs["mode"]  # 0 = reflect, 1 = symmetric
 
     ifm = op.ifm
     ofm = op.ofm
     ofm.ops = []
     elem_size = 2 if ofm.dtype == DataType.int16 else 1
-    n, h, w, c = ifm.shape
-    _, oh, ow, _ = ofm.shape
+    n, h, w, c = Shape4D(ifm.shape)
+    _, oh, ow, _ = Shape4D(ofm.shape)
     # Force linear format on OFM to allow negative stride multipliers
     ofm.force_linear_format = True
 
@@ -2516,7 +2535,7 @@ def convert_mean_to_depthwise_conv(op, arch, nng):
         shift = round_down_log2(num_elements_in_axis)
         shift = min(shift, 32)
         shift = min(shift, 31 + output_shift)
-        output_multiplier = int((np.int64(output_multiplier) << np.int64(shift)) // np.int64(num_elements_in_axis))
+        output_multiplier = np.int32((np.int64(output_multiplier) << shift) // num_elements_in_axis)
         output_shift = output_shift - shift
 
         # Convert to vela representation shift

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2021, 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2021, 2024-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -50,17 +50,17 @@ def write_rawdata_output(nng, arch, filename):
             scratch_region = get_region(scratch_tensor.mem_type, arch)
             scratch_fast_region = get_region(scratch_fast_tensor.mem_type, arch)
             for ifm in custom_op.inputs[4:]:
-                ifm_shapes.append(ifm.shape)
+                ifm_shapes.append(ifm.get_full_shape())
                 ifm_regions.append(get_region(ifm.mem_type, arch))
                 ifm_offsets.append(ifm.address)
                 ifm_elem_sizes.append(ifm.element_size())
             for ofm in custom_op.outputs:
-                ofm_shapes.append(ofm.shape)
+                ofm_shapes.append(ofm.get_full_shape())
                 ofm_regions.append(get_region(ofm.mem_type, arch))
                 ofm_offsets.append(ofm.address)
                 ofm_elem_sizes.append(ofm.element_size())
 
-            filename_sg = f"{filename}_sg{sg_idx}_vela.npz"
+            filename_sg = f"{filename}_vela_sg{sg_idx}.npz"
             np.savez(
                 filename_sg,
                 cmd_data=cmd_stream_tensor.values,
@@ -68,8 +68,10 @@ def write_rawdata_output(nng, arch, filename):
                 weight_region=weight_region,
                 scratch_shape=scratch_tensor.shape,
                 scratch_region=scratch_region,
+                scratch_size=int(scratch_tensor.shape[0]),
                 scratch_fast_shape=scratch_fast_tensor.shape,
                 scratch_fast_region=scratch_fast_region,
+                scratch_fast_size=int(scratch_fast_tensor.shape[0]),
                 input_shape=ifm_shapes,
                 input_elem_size=ifm_elem_sizes,
                 input_region=ifm_regions,
@@ -78,13 +80,18 @@ def write_rawdata_output(nng, arch, filename):
                 output_elem_size=ofm_elem_sizes,
                 output_region=ofm_regions,
                 output_offset=ofm_offsets,
+                variable_shape=[],
+                variable_elem_size=[],
+                variable_region=[],
+                variable_offset=[],
             )
 
 
 # Write out a CompiledRawModel to a numpy raw file.
 def write_rawdata_output_from_model(filename, model):
+    filename_sg = f"{filename}_vela.npz"
     np.savez(
-        filename,
+        filename_sg,
         cmd_data=model.command_stream,
         weight_data=model.read_only.data,
         weight_region=model.read_only.region,
@@ -102,4 +109,8 @@ def write_rawdata_output_from_model(filename, model):
         output_elem_size=[t.element_size for t in model.outputs],
         output_region=[t.region for t in model.outputs],
         output_offset=[t.address for t in model.outputs],
+        variable_shape=[t.shape for t in model.variables],
+        variable_elem_size=[t.element_size for t in model.variables],
+        variable_region=[t.region for t in model.variables],
+        variable_offset=[t.address for t in model.variables],
     )

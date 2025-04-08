@@ -511,7 +511,7 @@ def pack_into_passes(nng, arch, verbose_packing=False):
                     ifm2 = ps.ops[0].weights
 
             if ps.placement == PassPlacement.Cpu and (
-                ps.ops[0].ifm in sg.input_tensors
+                all(ifm in sg.input_tensors for ifm in ps.ops[0].inputs)
                 and (ifm2 in sg.input_tensors or ifm2 is None)
                 or (ps.ops[0].type in (Op.VarHandle, Op.ReadVariable, Op.CallOnce))
             ):

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2020-2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -735,8 +735,8 @@ class TFLiteSupportedOperators:
         """The width and height of the IFM and OFM must match one of the following criteria:
         IFM W and H must both be 1
         IFM must match OFM
-        W and H scaling must be equal and OFM W-1 and H-1 must be 2x/4x/8x IFM W-1 and H-1, if align_corners is True
-        W and H scaling must be equal and OFM W and H must be 2x/4x/8x IFM W and H, if align_corners is False"""
+        W and H scaling must be either 1 or equal and OFM W-1 and H-1 must be 1x/2x/4x/8x IFM W-1 and H-1, if align_corners is True
+        W and H scaling must be either 1 or equal and OFM W and H must be 1x/2x/4x/8x IFM W and H, if align_corners is False"""
         # Easier to start with False condition as very few cases result in a supported resize
         valid = False
         ifm_shape = op.ifm.shape
@@ -752,18 +752,23 @@ class TFLiteSupportedOperators:
             if ((ifm_shape_h == 1) and (ifm_shape_w == 1)) or (ifm_shape == ofm_shape):
                 valid = True
             else:
-                # Valid if OFM is 2/4/8x IFM (-1 for align corners)
                 if align_corners:
-                    h_upscale_factor = (ofm_shape_h - 1) / (ifm_shape_h - 1)
-                    w_upscale_factor = (ofm_shape_w - 1) / (ifm_shape_w - 1)
+                    # Valid if OFM is 1/2/4/8x IFM (-1 for align corners)
+                    h_upscale_factor = (ofm_shape_h - 1) / (ifm_shape_h - 1) if ifm_shape_h != 1 else 1
+                    w_upscale_factor = (ofm_shape_w - 1) / (ifm_shape_w - 1) if ifm_shape_w != 1 else 1
                 else:
                     h_upscale_factor = ofm_shape_h / ifm_shape_h
                     w_upscale_factor = ofm_shape_w / ifm_shape_w
 
-                # could use either height or width. save as int because it is more usable later in graph optimiser
-                op.attrs["upscale_factor"] = int(h_upscale_factor)
-                valid = h_upscale_factor == w_upscale_factor and h_upscale_factor in (2.0, 4.0, 8.0)
-
+                # Save as int because it is more usable later in graph optimiser
+                op.attrs["upscale_factor"] = int(max(w_upscale_factor, h_upscale_factor))
+                if h_upscale_factor in (1.0, 2.0, 4.0, 8.0) and w_upscale_factor in (1.0, 2.0, 4.0, 8.0):
+                    if (ofm_shape_h != 1) and (ofm_shape_w != 1):
+                        # If neither OFM height or width is 1, upscale factor must be equal
+                        valid = h_upscale_factor == w_upscale_factor
+                    else:
+                        # If one of IFM height or width is 1, allow 1x upscaling in that dimension
+                        valid = (h_upscale_factor == ifm_shape_h == 1) or (w_upscale_factor == ifm_shape_w == 1)
         return valid, f"Op has ifm_shape={ifm_shape}, ofm_shape={ofm_shape} and align_corners={align_corners}"
 
     @staticmethod
