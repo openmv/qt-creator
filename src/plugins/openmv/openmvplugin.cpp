@@ -1003,6 +1003,16 @@ void OpenMVPlugin::extensionsInitialized()
             }
 
             boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
+
+            if (!romfsConfigSettings.value(QStringLiteral("size")).toInt())
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    Tr::tr("Edit ROMFS"),
+                    Tr::tr("ROMFS is not supported on this board!"));
+
+                settings->endGroup();
+                return;
+            }
         }
 
         OpenMVModelZooBrowser dialog(settings, Core::ICore::dialogParent(), true);

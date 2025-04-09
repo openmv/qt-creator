@@ -156,7 +156,8 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     QString command;
     Utils::Process process;
-    LoaderDialog *dialog = new LoaderDialog(Tr::tr("Vela"), Tr::tr("Compiling"), process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
+    LoaderDialog *dialog = new LoaderDialog(Tr::tr("Vela"), Tr::tr("Compiling"), process, settings,
+                                            QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
     dialog->disableTextWrapping();
     dialog->setOkayButtonVisible(true);
@@ -166,7 +167,13 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     bool stdOutFirstTime = true;
     bool *stdOutFirstTimePtr = &stdOutFirstTime;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr, finishedOkPtr] (const QString &text) {
+    QRegularExpression ramRegex(QStringLiteral("Total SRAM used\\s+([\\d.]+)\\s+(TiB|GiB|MiB|KiB|B)"));
+    int ramSize = 0, *ramSizePtr = &ramSize;
+    QString ramString = QString(), *ramStringPtr = &ramString;
+
+    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog,
+                     [dialog, stdOutBufferPtr, stdOutFirstTimePtr, velaSettings, ramRegex, finishedOkPtr, ramSizePtr, ramStringPtr]
+                     (const QString &text) {
         stdOutBufferPtr->append(text);
         QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -184,7 +191,52 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
             if (out.contains(QStringLiteral("Batch Inference time")))
             {
-                *finishedOkPtr = true;
+                int heapSize = velaSettings.value(QStringLiteral("heapSize")).toInt();
+                float heapUsed = ((float)(*ramSizePtr) / (float)(heapSize)) * 100;
+
+                if (heapUsed > 100.0f)
+                {
+                    *ramStringPtr = QString(QStringLiteral("ERROR: Total Heap Required: %1%!!!")).arg(heapUsed, 0, 'f', 2);
+                }
+                else if (heapUsed > 90.f)
+                {
+                    *ramStringPtr = QString(QStringLiteral("WARNING: Total Heap Required: %1%")).arg(heapUsed, 0, 'f', 2);
+                    *finishedOkPtr = true;
+                }
+                else
+                {
+                    *ramStringPtr = QString(QStringLiteral("Total Heap Required: %1%")).arg(heapUsed, 0, 'f', 2);
+                    *finishedOkPtr = true;
+                }
+            }
+
+            QRegularExpressionMatch match = ramRegex.match(out);
+
+            if (match.hasMatch())
+            {
+                int ram = qRound(match.captured(1).toFloat());
+                QString unit = match.captured(2);
+
+                if (unit == QStringLiteral("TiB"))
+                {
+                    *ramSizePtr = ram * 1024 * 1024 * 1024 * 1024;
+                }
+                else if (unit == QStringLiteral("GiB"))
+                {
+                    *ramSizePtr = ram * 1024 * 1024 * 1024;
+                }
+                else if (unit == QStringLiteral("MiB"))
+                {
+                    *ramSizePtr = ram * 1024 * 1024;
+                }
+                else if (unit == QStringLiteral("KiB"))
+                {
+                    *ramSizePtr = ram * 1024;
+                }
+                else
+                {
+                    *ramSizePtr = ram;
+                }
             }
         }
     });
@@ -281,6 +333,8 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     QString result;
 
+    dialog->appendColoredText(*ramStringPtr);
+
     if (finishedOk)
     {
         dialog->appendColoredText(Tr::tr("Success - Press Ok to close the window"), true);
@@ -298,7 +352,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     if (!dialog->wasRejected()) dialog->exec();
     delete dialog;
 
-    return result;
+    return dialog->wasRejected() ? QString() : result;
 }
 
 } // namespace Internal

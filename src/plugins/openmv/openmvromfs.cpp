@@ -155,7 +155,6 @@ OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path, const
 #endif
 
     m_highDPIStyleSheet = QString(m_styleSheet).replace(QStringLiteral(".png"), QStringLiteral("_2x.png"));
-
     m_devicePixelRatio = 0;
 
     calculateFileSystemSize();
@@ -198,7 +197,12 @@ void OpenMVROMFSEditor::calculateFileSystemSize()
     }
     else
     {
-        emit fileSystemSize(QString(QStringLiteral("<font color='red'>ROMFS Size: %1 / %2</font>")).arg(humanReadableSize(size)).arg(humanReadableSize(sizeLimit)));
+        emit fileSystemSize(QString(QStringLiteral("<p style=\"color:%1\">ROMFS Size: %2 / %3</p>"))
+                            .arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)
+                                ? QStringLiteral("lightcoral")
+                                : QStringLiteral("coral"))
+                            .arg(humanReadableSize(size))
+                            .arg(humanReadableSize(sizeLimit)));
         emit commitEnabled(false);
     }
 }
@@ -331,7 +335,7 @@ void OpenMVROMFSEditor::addFile()
         if (QFile::copy(convertedSrc, newFilePath))
         {
             setCurrentIndex(m_model->index(newFilePath));
-            settings->setValue(LAST_ROMFS_DIALOG_OPEN_FILE_PATH, convertedSrc);
+            settings->setValue(LAST_ROMFS_DIALOG_OPEN_FILE_PATH, QFileInfo(file).path());
         }
         else
         {
@@ -533,6 +537,16 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         }
 
         boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
+
+        if (!romfsConfigSettings.value(QStringLiteral("size")).toInt())
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                Tr::tr("Edit ROMFS"),
+                Tr::tr("ROMFS is not supported on this board!"));
+
+            settings->endGroup();
+            return;
+        }
     }
 
     if (!newRomfs)

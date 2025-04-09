@@ -997,6 +997,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     combo->addItem(Tr::tr("Load a specific firmware"));
                     combo->addItem(Tr::tr("Just erase the internal FAT file system"));
                     combo->addItem(Tr::tr("Edit the ROM file system"));
+                    combo->addItem(Tr::tr("Reset the ROM file system"));
                     combo->setCurrentIndex(settings->value(LAST_DFU_ACTION, 0).toInt());
                     layout->addWidget(combo);
                     layout->addItem(new QSpacerItem(0, 6));
@@ -1057,6 +1058,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         else if(combo->currentIndex() == 3)
                         {
                             QTimer::singleShot(0, this, [this] { editRomfsClicked(true); });
+                        }
+                        else if(combo->currentIndex() == 3)
+                        {
+                            QTimer::singleShot(0, this, [this] { resetRomfsClicked(); });
                         }
                     }
 
