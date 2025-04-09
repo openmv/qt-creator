@@ -308,11 +308,12 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     if(binaryPath.isEmpty() || binary.isEmpty())
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        QMessageBox::warning(Core::ICore::dialogParent(),
             Tr::tr("Vela Compilier"),
             Tr::tr("The Vela Compilier is not supported on this platform."));
 
-        return QString();
+        delete dialog;
+        return model;
     }
 
     command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
@@ -350,6 +351,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     if (!dialog->wasRejected()) dialog->exec();
     delete dialog;
+
     return dialog->wasRejected() ? QString() : result;
 }
 
