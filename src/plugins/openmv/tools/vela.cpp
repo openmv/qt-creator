@@ -294,19 +294,9 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
-        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
-        {
-            binaryPath = Core::ICore::resourcePath(QStringLiteral("vela/linux32"));
-            binary = binaryPath.pathAppended(QStringLiteral("bin/vela"));
-        }
-        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
+        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
             binaryPath = Core::ICore::resourcePath(QStringLiteral("vela/linux64"));
-            binary = binaryPath.pathAppended(QStringLiteral("bin/vela"));
-        }
-        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
-        {
-            binaryPath = Core::ICore::resourcePath(QStringLiteral("vela/arm"));
             binary = binaryPath.pathAppended(QStringLiteral("bin/vela"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
@@ -314,6 +304,15 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
             binaryPath = Core::ICore::resourcePath(QStringLiteral("vela/aarch64"));
             binary = binaryPath.pathAppended(QStringLiteral("bin/vela"));
         }
+    }
+
+    if(binaryPath.isEmpty() || binary.isEmpty())
+    {
+        QMessageBox::critical(Core::ICore::dialogParent(),
+            Tr::tr("Vela Compilier"),
+            Tr::tr("The Vela Compilier is not supported on this platform."));
+
+        return QString();
     }
 
     command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
@@ -351,7 +350,6 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     if (!dialog->wasRejected()) dialog->exec();
     delete dialog;
-
     return dialog->wasRejected() ? QString() : result;
 }
 
