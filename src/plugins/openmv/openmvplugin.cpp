@@ -1003,16 +1003,6 @@ void OpenMVPlugin::extensionsInitialized()
             }
 
             boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
-
-            if (!romfsConfigSettings.value(QStringLiteral("size")).toInt())
-            {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    Tr::tr("Edit ROMFS"),
-                    Tr::tr("ROMFS is not supported on this board!"));
-
-                settings->endGroup();
-                return;
-            }
         }
 
         OpenMVModelZooBrowser dialog(settings, Core::ICore::dialogParent(), true);
@@ -1053,6 +1043,91 @@ void OpenMVPlugin::extensionsInitialized()
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         Tr::tr("Model Zoo"),
+                        QObject::tr("Unable to overwrite output file!"));
+                }
+            }
+        }
+
+        settings->endGroup();
+    });
+
+    QAction *convertModelAction = new QAction(Tr::tr("Convert Model for NPU"), this);
+    Core::Command *convertModelCommand = Core::ActionManager::registerAction(convertModelAction, Utils::Id("OpenMV.ConvertModel"));
+    machineVisionToolsMenu->addAction(convertModelCommand);
+    connect(convertModelAction, &QAction::triggered, this, [this] {
+        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+        settings->beginGroup(SETTINGS_GROUP);
+
+        QJsonObject boardSettings = getBoardSettings(Tr::tr("Convert Model"), settings);
+
+        if (boardSettings.isEmpty())
+        {
+            settings->endGroup();
+            return;
+        }
+
+        if (boardSettings.contains(QStringLiteral("romfsConfig")))
+        {
+            QJsonObject romfsConfigSettings = getROMFSConfig(Tr::tr("Convert Model"), boardSettings, settings);
+
+            if (romfsConfigSettings.isEmpty())
+            {
+                settings->endGroup();
+                return;
+            }
+
+            boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
+
+            if (!romfsConfigSettings.contains(QStringLiteral("npuAcceleratorConfig")))
+            {
+                QMessageBox::information(Core::ICore::dialogParent(),
+                    Tr::tr("Convert Model"),
+                    QObject::tr("Model conversion is unnecessary for this board, as it lacks an NPU accelerator."));
+
+                settings->endGroup();
+                return;
+            }
+        }
+
+        QString src = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Convert Model"),
+                                                   settings->value(LAST_MODEL_CONVERT_OPEN_PATH, QDir::homePath()).toString());
+
+        if (!src.isEmpty())
+        {
+            QString convertedSrc = convertModel(boardSettings, src, settings);
+
+            if (convertedSrc.isEmpty())
+            {
+                settings->endGroup();
+                return;
+            }
+
+            QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Convert Model"),
+                m_portPath.isEmpty()
+                ? (settings->value(LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).fileName())
+                : (settings->value(LAST_MODEL_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).fileName()));
+
+            if(!dst.isEmpty())
+            {
+                if((!QFile(dst).exists()) || QFile::remove(dst))
+                {
+                    if(QFile::copy(convertedSrc, dst))
+                    {
+                        settings->setValue(LAST_MODEL_CONVERT_OPEN_PATH, QFileInfo(src).path());
+                        if (m_portPath.isEmpty()) settings->setValue(LAST_MODEL_NO_CAM_PATH, QFileInfo(dst).path());
+                        if (!m_portPath.isEmpty()) settings->setValue(LAST_MODEL_WITH_CAM_PATH, QFileInfo(dst).path());
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            Tr::tr("Convert Model"),
+                            QObject::tr("Unable to overwrite output file!"));
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Convert Model"),
                         QObject::tr("Unable to overwrite output file!"));
                 }
             }
