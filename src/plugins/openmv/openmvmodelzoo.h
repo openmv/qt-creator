@@ -81,6 +81,7 @@ public:
 
 signals:
     void selectionCleared();
+    void paintEventSignal();
 
 protected:
 
@@ -88,12 +89,19 @@ protected:
     {
         QModelIndex index = indexAt(event->pos());
 
-        if (!index.isValid()) {
+        if (!index.isValid())
+        {
             clearSelection();
             emit selectionCleared();
         }
 
         QTreeView::mousePressEvent(event);
+    }
+
+    void paintEvent(QPaintEvent *event) override
+    {
+        QTreeView::paintEvent(event);
+        emit paintEventSignal();
     }
 };
 
@@ -105,11 +113,8 @@ public:
 
     explicit OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidget *parent = Q_NULLPTR, bool saveDialog = false);
     ~OpenMVModelZooBrowser();
+
     QString selectedModel() const { return m_selectedModel; }
-
-public slots:
-
-signals:
 
 protected:
 
@@ -118,13 +123,14 @@ protected:
 private:
 
     void saveExpandedState(const QString &path, QStringList &list, const QModelIndex &index);
-    void restoreExpandedState(const QString &path, QStringList &list, const QModelIndex &index);
+    void restoreExpandedState(const QString &path, const QModelIndex &index);
 
     Utils::QtcSettings *m_settings;
     QFileSystemModel *m_model;
     OpenMVModelZooBrowserTreeView *m_treeView;
     Core::MiniSplitter *m_splitter;
     OpenMVModelZooBrowserFilter *m_filter;
+    QStringList m_listToExpand;
     QString m_selectedModel;
     bool m_initialized;
     QString m_styleSheet, m_highDPIStyleSheet;

@@ -1005,15 +1005,16 @@ void OpenMVPlugin::extensionsInitialized()
             boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
         }
 
-        OpenMVModelZooBrowser dialog(settings, Core::ICore::dialogParent(), true);
+        OpenMVModelZooBrowser *dialog = new OpenMVModelZooBrowser(settings, Core::ICore::dialogParent(), true);
 
-        if (dialog.exec() == QDialog::Accepted)
+        if (dialog->exec() == QDialog::Accepted)
         {
-            QString src = dialog.selectedModel();
+            QString src = dialog->selectedModel();
             QString convertedSrc = convertModel(boardSettings, src, settings);
 
             if (convertedSrc.isEmpty())
             {
+                delete dialog;
                 settings->endGroup();
                 return;
             }
@@ -1048,6 +1049,7 @@ void OpenMVPlugin::extensionsInitialized()
             }
         }
 
+        delete dialog;
         settings->endGroup();
     });
 

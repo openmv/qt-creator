@@ -560,7 +560,10 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
             {
                 romfsFile.close();
 
+                settings->endGroup();
                 connectClicked(true, QFileInfo(romfsFile).filePath(), false, false, false, false, QString(), OPENMV_ROMFS_READ);
+                Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+                settings->beginGroup(SETTINGS_GROUP);
 
                 if (romfsFile.open())
                 {
@@ -740,7 +743,6 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         {
             settings->setValue(LAST_ROMFS_DIALOG_ACTION, combo2->currentIndex());
             settings->setValue(LAST_ROMFS_DIALOG_FLASH_FS_ERASE_STATE, checkBox2->isChecked());
-            settings->endGroup();
 
             if(combo2->currentIndex() == 0)
             {
@@ -754,7 +756,10 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                     romfsFile.write(writer.finalize());
                     romfsFile.close();
 
+                    settings->endGroup();
                     connectClicked(true, QFileInfo(romfsFile).filePath(), checkBox2->isChecked(), false, false, false, QString(), OPENMV_ROMFS_WRITE);
+                    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+                    settings->beginGroup(SETTINGS_GROUP);
                 }
                 else
                 {
@@ -791,18 +796,11 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                 }
             }
         }
-        else
-        {
-            settings->endGroup();
-        }
 
         delete dialog2;
     }
-    else
-    {
-        settings->endGroup();
-    }
 
+    settings->endGroup();
     delete dialog;
 }
 

@@ -90,15 +90,24 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidg
         restoreGeometry(m_settings->value(LAST_MODEL_ZOO_DIALOG_GEOMETRY).toByteArray());
         m_splitter->restoreState(m_settings->value(LAST_MODEL_ZOO_DIALOG_SPLITTER_STATE).toByteArray());
 
-        connect(m_model, &QFileSystemModel::directoryLoaded, this, [this]() {
-            QStringList list = m_settings->value(LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE).toStringList();
-            restoreExpandedState(QString(), list, m_treeView->rootIndex());
+        m_listToExpand = m_settings->value(LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE).toStringList();
 
-            if ((!m_initialized) && m_settings->contains(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX))
+        connect(m_model, &QFileSystemModel::directoryLoaded, this, [this] () {
+            if (!m_listToExpand.isEmpty())
             {
-                QModelIndex index = m_filter->mapFromSource(m_model->index(m_settings->value(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX).toString()));
-                m_treeView->setCurrentIndex(index);
-                m_treeView->scrollTo(index, QTreeView::PositionAtCenter);
+                restoreExpandedState(QString(), m_treeView->rootIndex());
+            }
+        });
+
+        connect(m_treeView, &OpenMVModelZooBrowserTreeView::paintEventSignal, this, [this] () {
+            if (m_listToExpand.isEmpty() && (!m_initialized) && m_settings->contains(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX))
+            {
+                QTimer::singleShot(1, this, [this] () {
+                    QModelIndex index = m_filter->mapFromSource(m_model->index(m_settings->value(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX).toString()));
+                    m_treeView->setCurrentIndex(index);
+                    m_treeView->scrollTo(index, QTreeView::PositionAtCenter);
+                });
+
                 m_initialized = true;
             }
         });
@@ -246,19 +255,20 @@ void OpenMVModelZooBrowser::saveExpandedState(const QString &path, QStringList &
     }
 }
 
-void OpenMVModelZooBrowser::restoreExpandedState(const QString &path, QStringList &list, const QModelIndex &index)
+void OpenMVModelZooBrowser::restoreExpandedState(const QString &path, const QModelIndex &index)
 {
     for (int row = 0; row < m_filter->rowCount(index); row++)
     {
         QModelIndex child = m_filter->index(row, 0, index);
         QString childPath = path + QDir::separator() + child.data().toString();
 
-        if (list.contains(childPath))
+        if (m_listToExpand.contains(childPath))
         {
             m_treeView->setExpanded(child, true);
+            m_listToExpand.removeOne(childPath);
         }
 
-        restoreExpandedState(childPath, list, child);
+        restoreExpandedState(childPath, child);
     }
 }
 

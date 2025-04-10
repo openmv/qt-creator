@@ -125,6 +125,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     if (!ok)
     {
+        delete dialog2;
         return QString();
     }
 
@@ -349,10 +350,15 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     dialog->moveScrollToLeft();
     dialog->moveScrollToBottom();
 
-    if (!dialog->wasRejected()) dialog->exec();
-    delete dialog;
+    bool rejected = dialog->wasRejected();
 
-    return dialog->wasRejected() ? QString() : result;
+    if (!rejected)
+    {
+        rejected = dialog->exec() == QDialog::Rejected;
+    }
+
+    delete dialog;
+    return rejected ? QString() : result;
 }
 
 } // namespace Internal
