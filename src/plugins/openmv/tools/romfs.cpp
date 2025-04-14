@@ -67,6 +67,10 @@ quint64 VfsRomReader::decodeuint(const uint8_t **ptr)
 
     do
     {
+        if (p >= filesystem_end_2) {
+            return 0;
+        }
+
         val = *p++;
         unum = (unum << 7) | (val & 0x7f);
     }
@@ -91,6 +95,10 @@ void VfsRomReader::unpackrecursive(const QString &path, const uint8_t *fs, const
 
     while (fs < fstop)
     {
+        if (fs >= filesystem_end_2) {
+            return;
+        }
+
         const uint8_t *fsnext;
         quint64 recordkind = extractrecord(&fs, &fsnext);
 
@@ -142,6 +150,7 @@ VfsRomReader::VfsRomReader(const QByteArray &data)
 {
     m_data = data;
     filesystem_end = filesystem = reinterpret_cast<const uint8_t *>(m_data.constData());
+    filesystem_end_2 = filesystem_end + m_data.size();
 
     if (m_data.size() < ROMFS_SIZE_MIN) {
         return;
@@ -157,7 +166,7 @@ VfsRomReader::VfsRomReader(const QByteArray &data)
 bool VfsRomReader::unpack(const QString &path)
 {
     if (filesystem == filesystem_end) {
-        return false;
+        return true;
     }
 
     unpackrecursive(path, filesystem, filesystem_end);

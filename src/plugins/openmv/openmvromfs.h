@@ -65,7 +65,7 @@ public slots:
     void addModel();
     void newFolder();
     void remove();
-    void saveAs();
+    void extractFile();
 
 signals:
 

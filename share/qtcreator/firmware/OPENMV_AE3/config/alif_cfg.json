@@ -1,7 +1,7 @@
 {
   "DEVICE": {
     "disabled" : false,
-    "binary": "app-device-config.json",
+    "binary": "app-device-config-ae3.json",
     "version" : "0.5.00",
     "signed": false
   },
@@ -26,7 +26,7 @@
   "HE_APP": {
     "disabled" : false,
     "binary": "firmware_M55_HE.bin",
-    "mramAddress": "0x80420000",
+    "mramAddress": "0x80320000",
     "version": "1.0.0",
     "cpu_id": "M55_HE",
     "flags": ["deferred"],

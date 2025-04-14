@@ -188,7 +188,7 @@ QList<QString> getDevices()
 
 void downloadFirmware(const QString &details,
                       QString &command, Utils::Process &process,
-                      const QString &path, const QString &device, const QString &moreArgs)
+                      const QString &path, const QString &device, const QString &moreArgs, bool uploadInstead)
 {
     QStringList list;
 
@@ -204,7 +204,7 @@ void downloadFirmware(const QString &details,
 
     QMutexLocker locker(&dfu_util_working);
 
-    if(!list.isEmpty())
+    if((!uploadInstead) && (!list.isEmpty()))
     {
         // DfuSe/PyDfu do not offer a way to actually target the correct DFU device. So, if there's anything in the list
         // we are just going to run blindly and hope the user only hooked up one device.
@@ -462,7 +462,7 @@ void downloadFirmware(const QString &details,
     bool stdOutFirstTime = true;
     bool *stdOutFirstTimePtr = &stdOutFirstTime;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, uploadInstead, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
         stdOutBufferPtr->append(text);
         QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -475,13 +475,13 @@ void downloadFirmware(const QString &details,
         {
             QString out = list.takeFirst();
 
-            if(out.startsWith(QStringLiteral("Erase")) || out.startsWith(QStringLiteral("Download")))
+            if(out.startsWith(QStringLiteral("Erase")) || out.startsWith(QStringLiteral("Download")) || out.startsWith(QStringLiteral("Upload")))
             {
                 QRegularExpressionMatch m = QRegularExpression(QStringLiteral("(\\w+)\\s+\\[=*\\s*\\]\\s+(\\d+)%\\s+(\\d+)\\s+bytes")).match(out);
 
                 if(m.hasMatch())
                 {
-                    dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : Tr::tr("Downloading..."));
+                    dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : (uploadInstead ? Tr::tr("Uploading...") : Tr::tr("Downloading...")));
                     int p = m.captured(2).toInt();
                     dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
@@ -508,7 +508,7 @@ void downloadFirmware(const QString &details,
     bool stdErrFirstTime = true;
     bool *stdErrFirstTimePtr = &stdErrFirstTime;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, uploadInstead, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
         stdErrBufferPtr->append(text);
         QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -521,13 +521,13 @@ void downloadFirmware(const QString &details,
         {
             QString out = list.takeFirst();
 
-            if(out.startsWith(QStringLiteral("Erase")) || out.startsWith(QStringLiteral("Download")))
+            if(out.startsWith(QStringLiteral("Erase")) || out.startsWith(QStringLiteral("Download")) || out.startsWith(QStringLiteral("Upload")))
             {
                 QRegularExpressionMatch m = QRegularExpression(QStringLiteral("(\\w+)\\s+\\[=*\\s*\\]\\s+(\\d+)%\\s+(\\d+)\\s+bytes")).match(out);
 
                 if(m.hasMatch())
                 {
-                    dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : Tr::tr("Downloading..."));
+                    dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : (uploadInstead ? Tr::tr("Uploading...") : Tr::tr("Downloading...")));
                     int p = m.captured(2).toInt();
                     dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
@@ -555,7 +555,7 @@ void downloadFirmware(const QString &details,
                        QStringLiteral("-d") <<
                        QString(QStringLiteral(",%1")).arg(device) <<
                        moreArgs.split(QLatin1Char(' ')) <<
-                       QStringLiteral("-D") <<
+                       (uploadInstead ? QStringLiteral("-U") : QStringLiteral("-D")) <<
                        QDir::toNativeSeparators(QDir::cleanPath(path));
 
     if(Utils::HostOsInfo::isWindowsHost())
@@ -586,11 +586,37 @@ void downloadFirmware(const QString &details,
         }
     }
 
+    std::chrono::seconds timeout(300); // 5 minutes...
+
+    if (QFileInfo(path).size() > (2 * 1024 * 1024))
+    {
+        timeout *= (QFileInfo(path).size() / (4 * 1024 * 1024));
+
+        switch (QRandomGenerator::global()->bounded(4) % 4)
+        {
+            case 0: {
+                dialog->appendColoredText(Tr::tr("This may take a while, coffee break?"), true);
+                break;
+            }
+            case 1: {
+                dialog->appendColoredText(Tr::tr("This may take a while, snack break?"), true);
+                break;
+            }
+            case 2: {
+                dialog->appendColoredText(Tr::tr("This may take a while, stretch time?"), true);
+                break;
+            }
+            case 3: {
+                dialog->appendColoredText(Tr::tr("This may take a while, water break?"), true);
+                break;
+            }
+        }
+    }
+
     command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
     dialog->show();
-    std::chrono::seconds timeout(300); // 5 minutes...
     process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
     process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));

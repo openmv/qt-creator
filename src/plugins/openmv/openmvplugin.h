@@ -203,7 +203,6 @@
 #define LAST_ROMFS_DIALOG_SAVE_PATH "LastROMFSDialogSavePath"
 #define LAST_ROMFS_DIALOG_OPEN_PATH "LastROMFSDialogOpenPath"
 #define LAST_ROMFS_DIALOG_ACTION "LastROMFSDialogAction"
-#define LAST_ROMFS_DIALOG_FLASH_FS_ERASE_STATE "LastROMFSDialogFlashFSEraseState"
 #define RESOURCES_MAJOR "ResourcesMajor"
 #define RESOURCES_MINOR "ResourcesMinor"
 #define RESOURCES_PATCH "ResourcesPatch"
@@ -408,8 +407,7 @@ enum OpenMVROMFSAccess
 {
     OPENMV_ROMFS_NONE,
     OPENMV_ROMFS_READ,
-    OPENMV_ROMFS_WRITE,
-    OPENMV_ROMFS_RESET
+    OPENMV_ROMFS_WRITE
 };
 
 class OpenMVPlugin : public ExtensionSystem::IPlugin
@@ -474,7 +472,7 @@ signals:
 
 private:
 
-    bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path);
+    bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder);
     QList<QPair<QString, QString> > querySerialPorts(const QStringList &portList);
 
     void openmvInternalBootloader(const QString &forceFirmwarePath,
@@ -491,7 +489,8 @@ private:
                                   int originalEraseFlashSectorAllEnd,
                                   const QJsonObject &originalFallbackBootloaderSettings,
                                   const QString &originalDfuVidPid,
-                                  bool dfuNoDialogs);
+                                  bool dfuNoDialogs,
+                                  OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
     void openmvRepairingBootloader(bool forceFlashFSErase,
                                    const QString &previousMapping,
                                    const QString &originalDfuVidPid,
@@ -501,7 +500,8 @@ private:
     void openmvDFUBootloader(bool forceFlashFSErase,
                              bool justEraseFlashFs,
                              const QString &firmwarePath,
-                             const QString &selectedDfuDevice);
+                             const QString &selectedDfuDevice,
+                             OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
     void openmvIMXBootloader(const QString &forceFirmwarePath,
                              bool forceFlashFSErase,
                              bool justEraseFlashFs,

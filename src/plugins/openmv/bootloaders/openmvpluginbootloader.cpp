@@ -49,7 +49,8 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                             int originalEraseFlashSectorAllEnd,
                                             const QJsonObject &originalFallbackBootloaderSettings,
                                             const QString &originalDfuVidPid,
-                                            bool dfuNoDialogs)
+                                            bool dfuNoDialogs,
+                                            OpenMVROMFSAccess romfsAccess)
 {
     QStringList fallbackVidPid = originalFallbackBootloaderSettings.value(QStringLiteral("vidpid")).toString().split(QStringLiteral(":"));
     int fallbackVid = 0, fallbackPid = 0;
@@ -60,17 +61,19 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
         fallbackPid = fallbackVidPid.at(1).toInt(nullptr, 16);
     }
 
+    bool skipStuff = justEraseFlashFs || (romfsAccess != OPENMV_ROMFS_NONE);
+
     for (bool tryFastMode = true;; )
     {
         QFile file(firmwarePath);
 
-        if(justEraseFlashFs || file.open(QIODevice::ReadOnly))
+        if(skipStuff || file.open(QIODevice::ReadOnly))
         {
-            QByteArray data = justEraseFlashFs ? QByteArray() : file.readAll();
+            QByteArray data = skipStuff ? QByteArray() : file.readAll();
 
-            if(justEraseFlashFs || ((file.error() == QFile::NoError) && (!data.isEmpty())))
+            if(skipStuff || ((file.error() == QFile::NoError) && (!data.isEmpty())))
             {
-                if(!justEraseFlashFs) file.close();
+                if(!skipStuff) file.close();
 
                 int qspif_start_block = int();
                 int qspif_max_block = int();
@@ -158,7 +161,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                     disconnect(conn2);
                                     QApplication::restoreOverrideCursor();
 
-                                    openmvDFUBootloader(forceFlashFSErase, justEraseFlashFs, firmwarePath, device);
+                                    openmvDFUBootloader(forceFlashFSErase, justEraseFlashFs, firmwarePath, device, romfsAccess);
                                     return;
                                 }
                             }

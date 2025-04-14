@@ -564,7 +564,7 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
 }
 
 
-bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString *path)
+bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder)
 {
     QProgressDialog *dialog = new QProgressDialog(Tr::tr("Downloading..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
@@ -578,7 +578,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     bool ok = true;
     bool *okPtr = &ok;
 
-    connect(manager2, &QNetworkAccessManager::finished, this, [manager2, dialog, okPtr, path] (QNetworkReply *reply2) {
+    connect(manager2, &QNetworkAccessManager::finished, this, [manager2, dialog, okPtr, path, firmwareFileName, originalFirmwareFolder] (QNetworkReply *reply2) {
         QByteArray data2 = reply2->error() == QNetworkReply::NoError ? reply2->readAll() : QByteArray();
 
         if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
@@ -597,7 +597,15 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
             }
             else
             {
-                *path = QDir::cleanPath(QDir::fromNativeSeparators(QDir::tempPath() + QStringLiteral("/firmware.bin")));
+                *path = QDir::cleanPath(QDir::fromNativeSeparators(QDir::tempPath() + QDir::separator() + firmwareFileName));
+
+                if (firmwareFileName.endsWith(QStringLiteral("lst")))
+                {
+                    QFile(Core::ICore::userResourcePath(QStringLiteral("firmware"))
+                        .pathAppended(originalFirmwareFolder)
+                        .pathAppended(firmwareFileName).toString())
+                    .copy(QDir::cleanPath(QDir::fromNativeSeparators(QDir::tempPath() + QDir::separator() + firmwareFileName)));
+                }
             }
         }
         else if((reply2->error() != QNetworkReply::NoError) && (reply2->error() != QNetworkReply::OperationCanceledError))
@@ -1083,6 +1091,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 QMap<QString, QPair<int, int> > eraseAllMappings;
                 QMap<QString, QJsonObject> fallbackBootloaderMappings;
                 QMap<QString, QString> vidpidMappings;
+                QMap<QString, QString> defaultFirmwareNameMappings;
 
                 for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
                 {
@@ -1091,6 +1100,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         QString a = value.toObject().value(QStringLiteral("boardDisplayName")).toString();
                         mappings.insert(a, value.toObject().value(QStringLiteral("boardFirmwareFolder")).toString());
                         vidpidMappings.insert(a, value.toObject().value(QStringLiteral("bootloaderVidPid")).toString());
+                        defaultFirmwareNameMappings.insert(a, value.toObject().value(QStringLiteral("defaultFirmwareName")).toString());
 
                         if (value.toObject().value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("internal"))
                         {
@@ -1141,12 +1151,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                     QJsonObject bootloaderSettings = object.value(QStringLiteral("bootloaderSettings")).toObject();
                                     QString altvidpidDisplayName = bootloaderSettings.value(QStringLiteral("altvidpidDisplayName")).toString();
                                     QString altvidpid = bootloaderSettings.value(QStringLiteral("altvidpid")).toString();
+                                    QString defaultFirmwareName = object.value(QStringLiteral("defaultFirmwareName")).toString();
 
                                     mappings.insert(altvidpidDisplayName, boardFirmwareFolder);
                                     eraseMappings.insert(altvidpidDisplayName, QPair<int, int>(0, 0));
                                     eraseAllMappings.insert(altvidpidDisplayName, QPair<int, int>(0, 0));
                                     fallbackBootloaderMappings.insert(altvidpidDisplayName, QJsonObject());
                                     vidpidMappings.insert(altvidpidDisplayName, altvidpid);
+                                    defaultFirmwareNameMappings.insert(altvidpidDisplayName, defaultFirmwareName);
                                 }
                             }
 
@@ -1169,6 +1181,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                     eraseAllMappings.remove(it.key());
                                     fallbackBootloaderMappings.remove(it.key());
                                     vidpidMappings.remove(it.key());
+                                    defaultFirmwareNameMappings.remove(it.key());
                                     it = mappings.erase(it);
                                 }
                                 else
@@ -1206,7 +1219,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 {
                                     previousMapping = temp;
                                     originalFirmwareFolder = mappings.value(temp);
-                                    firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(QStringLiteral("firmware.bin")).toString();
+                                    firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware"))
+                                        .pathAppended(originalFirmwareFolder)
+                                        .pathAppended(defaultFirmwareNameMappings.value(temp)).toString();
                                     if (forceBootloader && (!forceFirmwarePath.isEmpty())) firmwarePath = forceFirmwarePath;
                                     forceBootloader = true;
                                     forceFlashFSErase = answer == QMessageBox::Yes;
@@ -1696,11 +1711,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 || ((major2 == OLD_API_MAJOR) && (minor2 < OLD_API_MINOR))
                 || ((major2 == OLD_API_MAJOR) && (minor2 == OLD_API_MINOR) && (patch2 < OLD_API_PATCH)))
                 {
-                    if(firmwarePath.isEmpty()) firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(QStringLiteral(OLD_API_BOARD)).pathAppended(QStringLiteral("firmware.bin")).toString();
+                    if(firmwarePath.isEmpty()) firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware"))
+                        .pathAppended(QStringLiteral(OLD_API_BOARD))
+                        .pathAppended(QStringLiteral("firmware.bin")).toString();
 
                     if(installTheLatestDevelopmentFirmware)
                     {
-                        if(!getTheLatestDevelopmentFirmware(QStringLiteral(OLD_API_BOARD), &firmwarePath))
+                        if(!getTheLatestDevelopmentFirmware(QStringLiteral(OLD_API_BOARD), &firmwarePath, QStringLiteral("firmware"), OLD_API_BOARD))
                         {
                             CLOSE_CONNECT_END();
                         }
@@ -1735,6 +1752,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         QMap<QString, QPair<int, int> > eraseAllMappings;
                         QMap<QString, QJsonObject> fallbackBootloaderMappings;
                         QMap<QString, QString> vidpidMappings;
+                        QMap<QString, QString> defaultFirmwareNameMapping;
 
                         MyQSerialPortInfo tempInfo = createInfo(selectedPort);
 
@@ -1746,6 +1764,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 mappings.insert(a, value.toObject().value(QStringLiteral("boardFirmwareFolder")).toString());
                                 mappingsHumanReadable.insert(value.toObject().value(QStringLiteral("boardDisplayName")).toString(), a);
                                 vidpidMappings.insert(a, value.toObject().value(QStringLiteral("bootloaderVidPid")).toString());
+                                defaultFirmwareNameMapping.insert(a, value.toObject().value(QStringLiteral("defaultFirmwareName")).toString());
 
                                 if (value.toObject().value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("internal"))
                                 {
@@ -1802,7 +1821,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         if(firmwarePath.isEmpty())
                         {
                             originalFirmwareFolder = mappings.value(temp);
-                            firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder).pathAppended(QStringLiteral("firmware.bin")).toString();
+                            firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware"))
+                                .pathAppended(originalFirmwareFolder)
+                                .pathAppended(defaultFirmwareNameMapping.value(temp)).toString();
                             if (forceBootloader && (!forceFirmwarePath.isEmpty())) firmwarePath = forceFirmwarePath;
                             originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                             originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
@@ -1812,7 +1833,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                             if(installTheLatestDevelopmentFirmware)
                             {
-                                if(!getTheLatestDevelopmentFirmware(mappings.value(temp), &firmwarePath))
+                                if(!getTheLatestDevelopmentFirmware(mappings.value(temp), &firmwarePath, defaultFirmwareNameMapping.value(temp), originalFirmwareFolder))
                                 {
                                     CLOSE_CONNECT_END();
                                 }
@@ -1948,14 +1969,16 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                              fallbackSettings.value(QStringLiteral("eraseSectorEnd")).toInt(),
                                              dfuFallbackSettings,
                                              fallbackSettings.value(QStringLiteral("vidpid")).toString(),
-                                             dfuNoDialogs);
+                                             dfuNoDialogs,
+                                             romfsAccess);
                 }
                 else
                 {
                     openmvDFUBootloader(forceFlashFSErase,
                                         justEraseFlashFs,
                                         firmwarePath,
-                                        selectedDfuDevice);
+                                        selectedDfuDevice,
+                                        romfsAccess);
                 }
 
                 return;

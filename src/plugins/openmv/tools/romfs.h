@@ -51,7 +51,9 @@ private:
     void unpackrecursive(const QString &path, const uint8_t *fs, const uint8_t *fstop);
 
     QByteArray m_data;
-    const uint8_t *filesystem, *filesystem_end;
+    const uint8_t *filesystem;
+    const uint8_t *filesystem_end;
+    const uint8_t *filesystem_end_2;
 };
 
 class VfsRomWriter
