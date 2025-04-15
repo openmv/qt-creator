@@ -42,6 +42,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                             const QString &selectedPort,
                                             bool forceBootloaderBricked,
                                             bool previousMappingSet,
+                                            const QString &originalFirmwareFolder,
                                             const QString &firmwarePath,
                                             int originalEraseFlashSectorStart,
                                             int originalEraseFlashSectorEnd,
@@ -147,8 +148,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
 
                                 if(vidpid.at(0).toInt(nullptr, 16) == fallbackVid && vidpid.at(1).toInt(nullptr, 16) == fallbackPid)
                                 {
-                                    emit m_ioport->bootloaderStop();
-                                    dialog.close();
+                                    dialog.close(); // emits stop
 
                                     if(!done22)
                                     {
@@ -166,6 +166,53 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                 }
                             }
                         }
+                    }
+
+                    if (romfsAccess != OPENMV_ROMFS_NONE)
+                    {
+                        dialog.close(); // emits stop
+
+                        if(!done22)
+                        {
+                            loop0.exec();
+                        }
+
+                        m_ioport->bootloaderReset();
+                        loop1.exec();
+                        disconnect(conn);
+                        disconnect(conn2);
+
+                        QEventLoop loop2;
+
+                        connect(m_iodevice, &OpenMVPluginIO::closeResponse,
+                                &loop2, &QEventLoop::quit);
+
+                        m_iodevice->bootloaderReset();
+                        m_iodevice->close();
+
+                        loop2.exec();
+                        QApplication::restoreOverrideCursor();
+
+                        if(QMessageBox::question(Core::ICore::dialogParent(),
+                            Tr::tr("Connect"),
+                            Tr::tr("OpenMV IDE needs to update your bootloader to support ROMFS.\n\n"
+                                   "The internal FAT filesystem will be erased!\n\n"
+                                   "Continue?"),
+                            QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
+                        == QMessageBox::Ok)
+                        {
+                            openmvRepairingBootloader(true,
+                                                      previousMapping,
+                                                      originalDfuVidPid,
+                                                      dfuNoDialogs,
+                                                      Core::ICore::userResourcePath(QStringLiteral("firmware"))
+                                                        .pathAppended(originalFirmwareFolder)
+                                                        .pathAppended(QStringLiteral("bootloader.dfu")).toString(),
+                                                      true);
+                            return;
+                        }
+
+                        CONNECT_END();
                     }
 
                     dialog.close();
@@ -198,7 +245,9 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                                       previousMapping,
                                                       originalDfuVidPid,
                                                       dfuNoDialogs,
-                                                      QFileInfo(firmwarePath).path() + QStringLiteral("/bootloader.dfu"),
+                                                      Core::ICore::userResourcePath(QStringLiteral("firmware"))
+                                                        .pathAppended(originalFirmwareFolder)
+                                                        .pathAppended(QStringLiteral("bootloader.dfu")).toString(),
                                                       true);
                             return;
                         }
@@ -581,7 +630,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
 }
 
 void OpenMVPlugin::openmvRepairingBootloader(bool forceFlashFSErase,
-                                             const QString &previousMapping,
+                                             QString previousMapping,
                                              const QString &originalDfuVidPid,
                                              bool dfuNoDialogs,
                                              const QString &firmwarePath,
@@ -609,23 +658,41 @@ void OpenMVPlugin::openmvRepairingBootloader(bool forceFlashFSErase,
             {
                 if(repairingBootloader)
                 {
-                    QMessageBox::information(Core::ICore::dialogParent(),
+                    if (QMessageBox::information(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("DFU bootloader reset complete!\n\n") +
                         Tr::tr("Disconnect your OpenMV Cam from your computer and remove the jumper wire between the BOOT and RST pins.\n\n") +
-                        Tr::tr("Leave your OpenMV Cam unconnected until instructed to reconnect it."));
+                        Tr::tr("Leave your OpenMV Cam unconnected until instructed to reconnect it."), QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
+                    == QMessageBox::Ok)
+                    {
+                        for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+                        {
+                            QJsonObject object = value.toObject();
 
-                    RECONNECT_AND_FORCEBOOTLOADER_END();
+                            if ((!object.value(QStringLiteral("hidden")).toBool())
+                            && (previousMapping == object.value(QStringLiteral("boardArchString")).toString()))
+                            {
+                                previousMapping = object.value(QStringLiteral("boardDisplayName")).toString();
+                                break;
+                            }
+                        }
+
+                        // Force repair of ROMFS...
+                        OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_RESET;
+                        RECONNECT_AND_FORCEBOOTLOADER_END(forceFlashFSErase, previousMapping, romfsAccess);
+                    }
                 }
                 else
                 {
-                    QMessageBox::information(Core::ICore::dialogParent(),
+                    if (QMessageBox::information(Core::ICore::dialogParent(),
                                              Tr::tr("Connect"),
                                              Tr::tr("DFU firmware update complete!\n\n") +
                                              (Utils::HostOsInfo::isWindowsHost() ? Tr::tr("Disconnect your OpenMV Cam from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.\n\n") : QString()) +
-                                             Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while)."));
-
-                    RECONNECT_END();
+                                             Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while)."), QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
+                    == QMessageBox::Ok)
+                    {
+                        RECONNECT_END();
+                    }
                 }
             }
             else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)

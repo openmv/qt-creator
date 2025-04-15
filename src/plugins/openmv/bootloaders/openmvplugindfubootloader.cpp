@@ -102,6 +102,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
     QString boardTypeToDfuDeviceVidPid;
     QStringList eraseCommands, programCommandsCmd, programCommandsPath;
+    QStringList resetROMFSCommandsCmd, resetROMFSCommandsPath;
     QStringList binProgramCommands, binProgramPaths;
 
     QString firmwarePathFileName = QFileInfo(firmwarePath).fileName();
@@ -138,6 +139,14 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                         QJsonObject obj2 = command.toObject();
                         programCommandsCmd.append(obj2.value(QStringLiteral("cmd")).toString());
                         programCommandsPath.append(obj2.value(QStringLiteral("path")).toString());
+                    }
+
+                    QJsonArray resetROMFSCommandsArray = bootloaderSettings.value(QStringLiteral("resetROMFSCommands")).toArray();
+                    for(const QJsonValue &command : resetROMFSCommandsArray)
+                    {
+                        QJsonObject obj2 = command.toObject();
+                        resetROMFSCommandsCmd.append(obj2.value(QStringLiteral("cmd")).toString());
+                        resetROMFSCommandsPath.append(obj2.value(QStringLiteral("path")).toString());
                     }
 
                     if (firmwarePathFileName.endsWith(QStringLiteral("lst")))
@@ -225,6 +234,14 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                     QJsonObject obj2 = command.toObject();
                     programCommandsCmd.append(obj2.value(QStringLiteral("cmd")).toString());
                     programCommandsPath.append(obj2.value(QStringLiteral("path")).toString());
+                }
+
+                QJsonArray resetROMFSCommandsArray = bootloaderSettings.value(QStringLiteral("resetROMFSCommands")).toArray();
+                for(const QJsonValue &command : resetROMFSCommandsArray)
+                {
+                    QJsonObject obj2 = command.toObject();
+                    resetROMFSCommandsCmd.append(obj2.value(QStringLiteral("cmd")).toString());
+                    resetROMFSCommandsPath.append(obj2.value(QStringLiteral("path")).toString());
                 }
 
                 if (firmwarePathFileName.endsWith(QStringLiteral("lst")))
@@ -416,6 +433,33 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
         }
         else
         {
+            if (romfsAccess == OPENMV_ROMFS_RESET)
+            {
+                for(int i = 0, j = resetROMFSCommandsCmd.size(); i < j; i++)
+                {
+                    downloadFirmware(Tr::tr("Flashing Firmware"), command, process,
+                                     Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(resetROMFSCommandsPath.at(i)).toString(),
+                                     dfuDeviceVidPid, resetROMFSCommandsCmd.at(i) + dfuDeviceSerial);
+
+                    if(((i + 1) != j) && (process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+                    {
+                        QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                        box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                        box.setDefaultButton(QMessageBox::Ok);
+                        box.setEscapeButton(QMessageBox::Cancel);
+                        box.exec();
+
+                        CONNECT_END();
+                    }
+                    else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+                    {
+                        CONNECT_END();
+                    }
+                }
+            }
+
             for(int i = 0, j = binProgramCommands.size(); i < j; i++)
             {
                 downloadFirmware(Tr::tr("Flashing Firmware"), command, process,

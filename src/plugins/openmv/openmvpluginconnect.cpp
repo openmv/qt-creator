@@ -1820,6 +1820,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                         if(firmwarePath.isEmpty())
                         {
+                            previousMapping = temp;
                             originalFirmwareFolder = mappings.value(temp);
                             firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware"))
                                 .pathAppended(originalFirmwareFolder)
@@ -1841,6 +1842,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         }
                         else
                         {
+                            previousMapping = temp;
+                            originalFirmwareFolder = mappings.value(temp);
                             originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                             originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                             originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
@@ -1912,7 +1915,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             && (!isArduinoDFU)
             && (!isBossac)
             && (!isPicotool)
-            && (justEraseFlashFs || firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)))
+            && (justEraseFlashFs ||
+                firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ||
+                firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive)))
             {
                 QStringList vidpid = QString(selectedDfuDevice).split(QStringLiteral(",")).first().split(QStringLiteral(":"));
 
@@ -1935,6 +1940,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                          selectedPort,
                                          forceBootloaderBricked,
                                          previousMappingSet,
+                                         originalFirmwareFolder,
                                          firmwarePath,
                                          originalEraseFlashSectorStart,
                                          originalEraseFlashSectorEnd,
@@ -1942,7 +1948,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                          originalEraseFlashSectorAllEnd,
                                          originalFallbackBootloaderSettings,
                                          originalDfuVidPid,
-                                         dfuNoDialogs);
+                                         dfuNoDialogs,
+                                         romfsAccess);
                 return;
             }
 
@@ -1962,6 +1969,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                              selectedPort,
                                              forceBootloaderBricked,
                                              previousMappingSet,
+                                             originalFirmwareFolder,
                                              firmwarePath,
                                              fallbackSettings.value(QStringLiteral("eraseAllSectorStart")).toInt(),
                                              fallbackSettings.value(QStringLiteral("eraseAllSectorEnd")).toInt(),
@@ -3177,25 +3185,62 @@ void OpenMVPlugin::updateCam(bool forceYes)
         || ((m_major == match.captured(1).toInt()) && (m_minor < match.captured(2).toInt()))
         || ((m_major == match.captured(1).toInt()) && (m_minor == match.captured(2).toInt()) && (m_patch < match.captured(3).toInt())))
         {
-            if(forceYes || (QMessageBox::warning(Core::ICore::dialogParent(),
-                Tr::tr("Firmware Update"),
-                Tr::tr("Update your OpenMV Cam's firmware to the latest version?"),
-                QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
-            == QMessageBox::Ok))
+            Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+            settings->beginGroup(SETTINGS_GROUP);
+
+            QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
+                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+            dialog->setWindowTitle(Tr::tr("Firmware Update"));
+            QFormLayout *layout = new QFormLayout(dialog);
+            layout->setVerticalSpacing(0);
+
+            layout->addWidget(new QLabel(forceYes ? Tr::tr("Upgrade options:") : Tr::tr("Update your OpenMV Cam's firmware to the latest version?")));
+            layout->addItem(new QSpacerItem(0, 6));
+
+            QHBoxLayout *layout2 = new QHBoxLayout;
+            layout2->setContentsMargins(6, 0, 0, 0);
+            QWidget *widget = new QWidget;
+            widget->setLayout(layout2);
+
+            QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
+            checkBox->setChecked(settings->value(LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
+            layout2->addWidget(checkBox);
+            checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
+                                        "This does not erase files on any removable SD card (if inserted)."));
+
+            QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Reset ROMFS file system"));
+            checkBox2->setChecked(settings->value(LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
+            layout2->addWidget(checkBox2);
+            checkBox->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
+
+            layout->addRow(widget);
+            layout->addItem(new QSpacerItem(0, 6));
+
+            QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Cancel);
+            layout->addWidget(box);
+
+            connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+            connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+
+            bool ok = dialog->exec() == QDialog::Accepted;
+
+            if(ok)
             {
-                int answer = QMessageBox::question(Core::ICore::dialogParent(),
-                    Tr::tr("Firmware Update"),
-                    Tr::tr("Erase the internal FAT file system?"),
-                    QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
+                settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
+                settings->setValue(LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
+            }
 
-                if((answer == QMessageBox::Yes) || (answer == QMessageBox::No))
+            settings->endGroup();
+
+            if(ok)
+            {
+                disconnectClicked();
+
+                if(ExtensionSystem::PluginManager::specForPlugin(this)->state() != ExtensionSystem::PluginSpec::Stopped)
                 {
-                    disconnectClicked();
-
-                    if(ExtensionSystem::PluginManager::specForPlugin(this)->state() != ExtensionSystem::PluginSpec::Stopped)
-                    {
-                        connectClicked(true, QString(), answer == QMessageBox::Yes);
-                    }
+                    connectClicked(true, QString(), checkBox->isChecked(), false, false, false, QString(),
+                                   checkBox2->isChecked() ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE);
                 }
             }
         }
@@ -3205,25 +3250,62 @@ void OpenMVPlugin::updateCam(bool forceYes)
                 Tr::tr("Firmware Update"),
                 Tr::tr("Your OpenMV Cam's firmware is up to date."));
 
-            if(QMessageBox::question(Core::ICore::dialogParent(),
-                Tr::tr("Firmware Update"),
-                Tr::tr("Need to reset your OpenMV Cam's firmware to the release version?"),
-                QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
-            == QMessageBox::Yes)
+            Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+            settings->beginGroup(SETTINGS_GROUP);
+
+            QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
+                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+            dialog->setWindowTitle(Tr::tr("Firmware Update"));
+            QFormLayout *layout = new QFormLayout(dialog);
+            layout->setVerticalSpacing(0);
+
+            layout->addWidget(new QLabel(Tr::tr("Need to reset your OpenMV Cam's firmware to the release version?")));
+            layout->addItem(new QSpacerItem(0, 6));
+
+            QHBoxLayout *layout2 = new QHBoxLayout;
+            layout2->setContentsMargins(6, 0, 0, 0);
+            QWidget *widget = new QWidget;
+            widget->setLayout(layout2);
+
+            QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
+            checkBox->setChecked(settings->value(LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
+            layout2->addWidget(checkBox);
+            checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
+                                        "This does not erase files on any removable SD card (if inserted)."));
+
+            QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Reset ROMFS file system"));
+            checkBox2->setChecked(settings->value(LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
+            layout2->addWidget(checkBox2);
+            checkBox->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
+
+            layout->addRow(widget);
+            layout->addItem(new QSpacerItem(0, 6));
+
+            QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Cancel);
+            layout->addWidget(box);
+
+            connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+            connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+
+            bool ok = dialog->exec() == QDialog::Accepted;
+
+            if(ok)
             {
-                int answer = QMessageBox::question(Core::ICore::dialogParent(),
-                    Tr::tr("Firmware Update"),
-                    Tr::tr("Erase the internal FAT file system?"),
-                    QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
+                settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
+                settings->setValue(LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
+            }
 
-                if((answer == QMessageBox::Yes) || (answer == QMessageBox::No))
+            settings->endGroup();
+
+            if(ok)
+            {
+                disconnectClicked();
+
+                if(ExtensionSystem::PluginManager::specForPlugin(this)->state() != ExtensionSystem::PluginSpec::Stopped)
                 {
-                    disconnectClicked();
-
-                    if(ExtensionSystem::PluginManager::specForPlugin(this)->state() != ExtensionSystem::PluginSpec::Stopped)
-                    {
-                        connectClicked(true, QString(), answer == QMessageBox::Yes);
-                    }
+                    connectClicked(true, QString(), checkBox->isChecked(), false, false, false, QString(),
+                                   checkBox2->isChecked() ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE);
                 }
             }
         }
@@ -3247,8 +3329,8 @@ QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSetti
 
         for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
         {
-            if ((!value.toObject().value(QStringLiteral("hidden")).toBool())
-            && (value.toObject().value(QStringLiteral("boardArchString")).toString() == temp)
+             // Don't ignore "hidden" here.
+            if ((value.toObject().value(QStringLiteral("boardArchString")).toString() == temp)
             && matchVidPid(value.toObject(), QString(), tempPort))
             {
                 return value.toObject();

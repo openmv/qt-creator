@@ -57,6 +57,12 @@
                         "path": "OPENMV2/romfs0.img"
                     }
                 ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 3",
+                        "path": "OPENMV2/romfs0.img"
+                    }
+                ],
                 "binProgamCommands" : [
                     {
                         "cmd": "-a 2",
@@ -141,6 +147,12 @@
                         "cmd" : "-a 2",
                         "path" : "OPENMV3/firmware.bin"
                     },
+                    {
+                        "cmd": "-a 3",
+                        "path": "OPENMV3/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
                     {
                         "cmd": "-a 3",
                         "path": "OPENMV3/romfs0.img"
@@ -235,6 +247,12 @@
                         "path": "OPENMV4/romfs0.img"
                     }
                 ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 3",
+                        "path": "OPENMV4/romfs0.img"
+                    }
+                ],
                 "binProgamCommands" : [
                     {
                         "cmd": "-a 2",
@@ -324,6 +342,12 @@
                         "path": "OPENMV4P/romfs0.img"
                     }
                 ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 4",
+                        "path": "OPENMV4P/romfs0.img"
+                    }
+                ],
                 "binProgamCommands" : [
                     {
                         "cmd": "-a 2",
@@ -408,6 +432,12 @@
                         "cmd" : "-a 2",
                         "path" : "OPENMVPT/firmware.bin"
                     },
+                    {
+                        "cmd": "-a 4",
+                        "path": "OPENMVPT/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
                     {
                         "cmd": "-a 4",
                         "path": "OPENMVPT/romfs0.img"
@@ -599,6 +629,16 @@
                         "path" : "OPENMV_AE3/romfs0.img"
                     }
                 ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 3",
+                        "path" : "OPENMV_AE3/romfs1.img"
+                    },
+                    {
+                        "cmd": "-a 6",
+                        "path" : "OPENMV_AE3/romfs0.img"
+                    }
+                ],
                 "binProgamCommands" : [
                     {
                         "cmd": "-a 1",
@@ -733,6 +773,12 @@
                         "cmd" : "-a 1",
                         "path" : "OPENMV_N6/firmware.bin"
                     },
+                    {
+                        "cmd": "-a 2",
+                        "path" : "OPENMV_N6/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
                     {
                         "cmd": "-a 2",
                         "path" : "OPENMV_N6/romfs0.img"

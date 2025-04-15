@@ -592,7 +592,7 @@ void downloadFirmware(const QString &details,
     {
         timeout *= (QFileInfo(path).size() / (4 * 1024 * 1024));
 
-        switch (QRandomGenerator::global()->bounded(4) % 4)
+        switch (QDateTime::currentDateTime().toSecsSinceEpoch() % 4)
         {
             case 0: {
                 dialog->appendColoredText(Tr::tr("This may take a while, coffee break?"), true);

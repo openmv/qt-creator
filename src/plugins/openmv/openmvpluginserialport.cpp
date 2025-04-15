@@ -807,6 +807,8 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
 void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort)
 {
+    m_bootloaderStop = false;
+
     if(m_port)
     {
         int command = __USBDBG_SYS_RESET;

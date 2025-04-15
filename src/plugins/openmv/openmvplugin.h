@@ -155,6 +155,7 @@
 #define LAST_FLASH_FS_ERASE_STATE "LastFlashFSEraseState"
 #define LAST_DFU_ACTION "LastDFUAction"
 #define LAST_DFU_FLASH_FS_ERASE_STATE "LastDFUFlashFSEraseState"
+#define LAST_DFU_RESET_ROM_FS_STATE "LastDFUResetROMFSState"
 #define LAST_BOARD_TYPE_STATE "LastBoardTypeState"
 #define LAST_BOARD_TYPE_STATE_2 "LastBoardTypeState2"
 #define LAST_BOARD_TYPE_STATE_GET "LastBoardTypeStateGet"
@@ -407,7 +408,8 @@ enum OpenMVROMFSAccess
 {
     OPENMV_ROMFS_NONE,
     OPENMV_ROMFS_READ,
-    OPENMV_ROMFS_WRITE
+    OPENMV_ROMFS_WRITE,
+    OPENMV_ROMFS_RESET
 };
 
 class OpenMVPlugin : public ExtensionSystem::IPlugin
@@ -482,6 +484,7 @@ private:
                                   const QString &selectedPort,
                                   bool forceBootloaderBricked,
                                   bool previousMappingSet,
+                                  const QString &originalFirmwareFolder,
                                   const QString &firmwarePath,
                                   int originalEraseFlashSectorStart,
                                   int originalEraseFlashSectorEnd,
@@ -492,7 +495,7 @@ private:
                                   bool dfuNoDialogs,
                                   OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
     void openmvRepairingBootloader(bool forceFlashFSErase,
-                                   const QString &previousMapping,
+                                   QString previousMapping,
                                    const QString &originalDfuVidPid,
                                    bool dfuNoDialogs,
                                    const QString &firmwarePath,

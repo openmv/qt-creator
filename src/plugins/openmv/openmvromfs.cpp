@@ -618,10 +618,6 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                 }
                 else
                 {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                        Tr::tr("Edit ROMFS"),
-                        romfsFile.errorString());
-
                     settings->endGroup();
                     if (wasConnected) connectClicked(false, QString(), false, false, false, true);
                     return;
