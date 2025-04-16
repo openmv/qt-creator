@@ -143,7 +143,8 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
 
             if (!dfuBootloaderProgramCommand.isEmpty())
             {
-                openmvDFUBootloader(forceFlashFSErase, justEraseFlashFs, QString(), dfuBootloaderProgramCommand.value(QStringLiteral("bootloaderVidPid")).toString() + QStringLiteral(",NULL"));
+                openmvDFUBootloader(forceFlashFSErase, justEraseFlashFs, false, QString(),
+                                    dfuBootloaderProgramCommand.value(QStringLiteral("bootloaderVidPid")).toString() + QStringLiteral(",NULL"));
             }
             else
             {

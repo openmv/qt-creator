@@ -71,6 +71,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_timer.start();
     m_queue = QQueue<qint64>();
 
+    m_boardPresent = false;
     m_working = false;
     m_connected = false;
     m_running = false;
@@ -2554,9 +2555,10 @@ bool OpenMVPlugin::delayedInitialize()
                 }
             }
 
-            bool ok = (!output.first.isEmpty()) || (!output.second.isEmpty()), dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
+            m_boardPresent = (!output.first.isEmpty()) || (!output.second.isEmpty());
+            bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
 
-            if(!ok) {
+            if(!m_boardPresent) {
                 if(!m_availableWifiPorts.isEmpty()) {
                     m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_WIFI_DARK_PATH) : QStringLiteral(CONNECT_WIFI_LIGHT_PATH)));
                 } else {
@@ -2570,7 +2572,7 @@ bool OpenMVPlugin::delayedInitialize()
                 }
             }
 
-            if(ok && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected))
+            if(m_boardPresent && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected))
             {
                 QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected)) emit m_connectAction->triggered(); });
             }

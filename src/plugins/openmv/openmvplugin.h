@@ -152,10 +152,10 @@
 #define LAST_FORM_KEY "LastFormKey"
 #define LAST_FIRMWARE_PATH "LastFirmwarePath"
 #define LAST_FIRMWARE_HISTORY "LastFirmwareHistory"
-#define LAST_FLASH_FS_ERASE_STATE "LastFlashFSEraseState"
 #define LAST_DFU_ACTION "LastDFUAction"
 #define LAST_DFU_FLASH_FS_ERASE_STATE "LastDFUFlashFSEraseState"
 #define LAST_DFU_RESET_ROM_FS_STATE "LastDFUResetROMFSState"
+#define LAST_DFU_UPDATE_ROM_FS_STATE "LastDFUUpdateROMFSState"
 #define LAST_BOARD_TYPE_STATE "LastBoardTypeState"
 #define LAST_BOARD_TYPE_STATE_2 "LastBoardTypeState2"
 #define LAST_BOARD_TYPE_STATE_GET "LastBoardTypeStateGet"
@@ -480,6 +480,7 @@ private:
     void openmvInternalBootloader(const QString &forceFirmwarePath,
                                   bool forceFlashFSErase,
                                   bool justEraseFlashFs,
+                                  bool installTheLatestDevelopmentFirmware,
                                   const QString &previousMapping,
                                   const QString &selectedPort,
                                   bool forceBootloaderBricked,
@@ -502,6 +503,7 @@ private:
                                    bool repairingBootloader);
     void openmvDFUBootloader(bool forceFlashFSErase,
                              bool justEraseFlashFs,
+                             bool installTheLatestDevelopmentFirmware,
                              const QString &firmwarePath,
                              const QString &selectedDfuDevice,
                              OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
@@ -558,6 +560,7 @@ private:
     QElapsedTimer m_timer;
     QQueue<qint64> m_queue;
 
+    bool m_boardPresent;
     bool m_working;
     bool m_connected;
     bool m_running;
@@ -713,7 +716,7 @@ private:
 
     QByteArray fixScriptForSensor(QByteArray data, bool notExamples = false);
     QString tempFileForPythonEditor(const QByteArray &data, const QString &titlePattern);
-    QJsonObject getBoardSettings(const QString &title, Utils::QtcSettings *settings);
+    QJsonObject getBoardSettings(const QString &title, Utils::QtcSettings *settings, bool autoConnectToBoard = false);
 };
 
 } // namespace Internal

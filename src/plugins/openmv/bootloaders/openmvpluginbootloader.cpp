@@ -38,6 +38,7 @@ namespace Internal {
 void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                             bool forceFlashFSErase,
                                             bool justEraseFlashFs,
+                                            bool installTheLatestDevelopmentFirmware,
                                             const QString &previousMapping,
                                             const QString &selectedPort,
                                             bool forceBootloaderBricked,
@@ -105,9 +106,9 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                     QProgressDialog dialog(((!tryFastMode) || forceBootloaderBricked)
                             ? QString(QStringLiteral("%1%2")).arg(previousMappingSet
                                 ? Tr::tr("Reconnect your OpenMV Cam...")
-                                : Tr::tr("Disconnect your OpenMV Cam and then reconnect it...")).arg((previousMappingSet || justEraseFlashFs)
+                                : Tr::tr("Disconnect your OpenMV Cam and then reconnect it...")).arg((previousMappingSet || justEraseFlashFs || (!forceFirmwarePath.isEmpty()))
                                     ? QString()
-                                    : Tr::tr("\n\nHit cancel to skip to DFU reprogramming."))
+                                    : Tr::tr("\n\nHit cancel to skip to bootloader recovery reprogramming."))
                             : Tr::tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                         (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
@@ -161,14 +162,19 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                     disconnect(conn2);
                                     QApplication::restoreOverrideCursor();
 
-                                    openmvDFUBootloader(forceFlashFSErase, justEraseFlashFs, firmwarePath, device, romfsAccess);
+                                    openmvDFUBootloader(forceFlashFSErase,
+                                                        justEraseFlashFs,
+                                                        installTheLatestDevelopmentFirmware,
+                                                        firmwarePath,
+                                                        device,
+                                                        romfsAccess);
                                     return;
                                 }
                             }
                         }
                     }
 
-                    if (romfsAccess != OPENMV_ROMFS_NONE)
+                    if ((!loopExit) && (romfsAccess != OPENMV_ROMFS_NONE))
                     {
                         dialog.close(); // emits stop
 
@@ -230,10 +236,6 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
 
                     if(!done2)
                     {
-                        QMessageBox::critical(Core::ICore::dialogParent(),
-                            Tr::tr("Connect"),
-                            Tr::tr("Unable to connect to your OpenMV Cam's normal bootloader!"));
-
                         if((!previousMappingSet) && (!justEraseFlashFs) && forceFirmwarePath.isEmpty() && QMessageBox::question(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
                             Tr::tr("OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.\n\n"

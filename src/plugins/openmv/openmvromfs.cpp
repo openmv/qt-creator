@@ -527,7 +527,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(SETTINGS_GROUP);
 
-    QJsonObject boardSettings = getBoardSettings(Tr::tr("Edit ROMFS"), settings);
+    QJsonObject boardSettings = getBoardSettings(Tr::tr("Edit ROMFS"), settings, (!newRomfs) && fromConnect);
 
     if (boardSettings.isEmpty())
     {
@@ -590,8 +590,10 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
                 QString path = QFileInfo(romfsFile).filePath();
 
-                QTimer::singleShot(0, this, [this, path] {
-                    connectClicked(true, path, false, false, false, false, QString(), OPENMV_ROMFS_READ);
+                QTimer::singleShot(0, this, [this, path, boardSettings] {
+                    connectClicked(true, path, false, false, false, false,
+                                   boardSettings.value(QStringLiteral("boardDisplayName")).toString(),
+                                   OPENMV_ROMFS_READ);
                 });
 
                 loop.exec();
@@ -786,8 +788,10 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
                     QString path = QFileInfo(romfsFile).filePath();
 
-                    QTimer::singleShot(0, this, [this, path] {
-                        connectClicked(true, path, false, false, false, false, QString(), OPENMV_ROMFS_WRITE);
+                    QTimer::singleShot(0, this, [this, path, boardSettings] {
+                        connectClicked(true, path, false, false, false, false,
+                                       boardSettings.value(QStringLiteral("boardDisplayName")).toString(),
+                                       OPENMV_ROMFS_WRITE);
                     });
 
                     loop.exec();
@@ -860,7 +864,7 @@ void OpenMVPlugin::resetRomfsClicked()
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(SETTINGS_GROUP);
 
-        QJsonObject boardSettings = getBoardSettings(Tr::tr("Reset ROMFS"), settings);
+        QJsonObject boardSettings = getBoardSettings(Tr::tr("Reset ROMFS"), settings, true);
 
         if (boardSettings.isEmpty())
         {
@@ -915,8 +919,10 @@ void OpenMVPlugin::resetRomfsClicked()
                 pathAppended(boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString()).
                 pathAppended(QString(QStringLiteral("romfs%1.img").arg(romfsIndex))).toString();
 
-        QTimer::singleShot(0, this, [this, path] {
-            connectClicked(true, path, false, false, false, false, QString(), OPENMV_ROMFS_WRITE);
+        QTimer::singleShot(0, this, [this, path, boardSettings] {
+            connectClicked(true, path, false, false, false, false,
+                           boardSettings.value(QStringLiteral("boardDisplayName")).toString(),
+                           OPENMV_ROMFS_WRITE);
         });
 
         loop.exec();

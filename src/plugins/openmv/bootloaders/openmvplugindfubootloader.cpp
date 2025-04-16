@@ -37,6 +37,7 @@ namespace Internal {
 
 void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                                        bool justEraseFlashFs,
+                                       bool installTheLatestDevelopmentFirmware,
                                        const QString &firmwarePath,
                                        const QString &selectedDfuDevice,
                                        OpenMVROMFSAccess romfsAccess)
@@ -437,8 +438,15 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
             {
                 for(int i = 0, j = resetROMFSCommandsCmd.size(); i < j; i++)
                 {
+                    QString path = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(resetROMFSCommandsPath.at(i)).toString();
+
+                    if (installTheLatestDevelopmentFirmware)
+                    {
+                        path = QFileInfo(firmwarePath).path() + QDir::separator() + QFileInfo(path).fileName();
+                    }
+
                     downloadFirmware(Tr::tr("Flashing Firmware"), command, process,
-                                     Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(resetROMFSCommandsPath.at(i)).toString(),
+                                     path,
                                      dfuDeviceVidPid, resetROMFSCommandsCmd.at(i) + dfuDeviceSerial);
 
                     if(((i + 1) != j) && (process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
