@@ -588,7 +588,7 @@ void downloadFirmware(const QString &details,
 
     std::chrono::seconds timeout(300); // 5 minutes...
 
-    if (QFileInfo(path).size() > (2 * 1024 * 1024))
+    if (QFileInfo(path).size() > (4 * 1024 * 1024))
     {
         timeout *= (QFileInfo(path).size() / (4 * 1024 * 1024));
 

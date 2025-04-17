@@ -359,7 +359,7 @@ void OpenMVPlugin::bootloaderClicked()
     Utils::PathChooser *pathChooser = new Utils::PathChooser();
     pathChooser->setExpectedKind(Utils::PathChooser::File);
     pathChooser->setPromptDialogTitle(Tr::tr("Firmware Path"));
-    pathChooser->setPromptDialogFilter(Tr::tr("Firmware Binary (*.bin *.dfu)"));
+    pathChooser->setPromptDialogFilter(Tr::tr("Firmware Binary (*.bin *.dfu *.img)"));
     pathChooser->setFilePath(Utils::FilePath::fromVariant(settings->value(LAST_FIRMWARE_PATH, QDir::homePath())));
     pathChooser->setHistoryCompleter(LAST_FIRMWARE_HISTORY, false);
     layout->addRow(Tr::tr("Firmware Path"), pathChooser);
@@ -373,21 +373,14 @@ void OpenMVPlugin::bootloaderClicked()
     QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
     checkBox->setChecked(settings->value(LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
     layout2->addWidget(checkBox);
-    checkBox->setVisible(!pathChooser->filePath().toString().endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive));
     checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
                                 "This does not erase files on any removable SD card (if inserted)."));
-    QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Erase internal FAT file system"));
-    checkBox2->setChecked(true);
-    checkBox2->setEnabled(false);
-    checkBox2->setToolTip(Tr::tr("Loading firmware via DFU always erases your OpenMV Cam's internal FAT file system. "
-                                 "This does not erase files on any removable SD card (if inserted)."));
-    layout2->addWidget(checkBox2);
-    checkBox2->setVisible(pathChooser->filePath().toString().endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive));
 
-    QCheckBox *checkBox3 = new QCheckBox(Tr::tr("Reset ROMFS file system"));
-    checkBox3->setChecked(settings->value(LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
-    layout2->addWidget(checkBox3);
-    checkBox3->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
+    QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Reset ROMFS file system"));
+    checkBox2->setChecked(settings->value(LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
+    layout2->addWidget(checkBox2);
+    checkBox2->setEnabled(!pathChooser->filePath().toString().endsWith(QStringLiteral(".img"), Qt::CaseInsensitive));
+    checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
     QPushButton *run = new QPushButton(Tr::tr("Run"));
@@ -400,16 +393,14 @@ void OpenMVPlugin::bootloaderClicked()
     connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
     connect(pathChooser, &Utils::PathChooser::validChanged, run, &QPushButton::setEnabled);
-    connect(pathChooser, &Utils::PathChooser::rawPathChanged, this, [this, dialog, pathChooser, checkBox, checkBox2] () {
-        if(pathChooser->filePath().toString().endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive))
+    connect(pathChooser, &Utils::PathChooser::rawPathChanged, this, [this, dialog, pathChooser, checkBox2] () {
+        if(pathChooser->filePath().toString().endsWith(QStringLiteral(".img"), Qt::CaseInsensitive))
         {
-            checkBox->setVisible(false);
-            checkBox2->setVisible(true);
+            checkBox2->setEnabled(false);
         }
         else
         {
-            checkBox->setVisible(true);
-            checkBox2->setVisible(false);
+            checkBox2->setEnabled(true);
         }
 
         QTimer::singleShot(0, this, [dialog] { dialog->adjustSize(); });
@@ -419,7 +410,7 @@ void OpenMVPlugin::bootloaderClicked()
     {
         QString forceFirmwarePath = pathChooser->filePath().toString();
         bool flashFSErase = checkBox->isChecked();
-        bool resetROMFS = checkBox3->isChecked();
+        bool resetROMFS = checkBox2->isEnabled() ? checkBox2->isChecked() : false;
 
         if(QFileInfo(forceFirmwarePath).exists() && QFileInfo(forceFirmwarePath).isFile())
         {
@@ -429,7 +420,7 @@ void OpenMVPlugin::bootloaderClicked()
             settings->endGroup();
             delete dialog;
 
-            connectClicked(true, forceFirmwarePath, (flashFSErase || forceFirmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive)),
+            connectClicked(true, forceFirmwarePath, flashFSErase,
                            false, false, false, QString(), resetROMFS ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE);
         }
         else
@@ -2020,6 +2011,16 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if(isOpenMVDfu)
             {
+                if ((!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
+                && (!firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive)))
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Connect"),
+                        Tr::tr("Only loading *.bin and *.img files are supported for the internal bootloader!"));
+
+                    CONNECT_END();
+                }
+
                 if (originalFallbackBootloaderSettings.value(QStringLiteral("type")) == QStringLiteral("internal"))
                 {
                     QJsonObject fallbackSettings = originalFallbackBootloaderSettings.value(QStringLiteral("settings")).toObject();
@@ -2061,6 +2062,16 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if(isIMX)
             {
+                if ((!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
+                && (!firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive)))
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Connect"),
+                        Tr::tr("Only loading *.bin and *.img files are supported for the IMX bootloader!"));
+
+                    CONNECT_END();
+                }
+
                 openmvIMXBootloader(forceFirmwarePath,
                                     forceFlashFSErase,
                                     justEraseFlashFs,
@@ -2087,6 +2098,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if (isArduinoDFU)
             {
+                if ((!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
+                && (!firmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive))
+                && (!firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive)))
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Connect"),
+                        Tr::tr("Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!"));
+
+                    CONNECT_END();
+                }
+
                 openmvArduinoDFUBootloader(forceFlashFSErase,
                                            justEraseFlashFs,
                                            installTheLatestDevelopmentFirmware,
@@ -2098,6 +2120,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if (isBossac)
             {
+                if (!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Connect"),
+                        Tr::tr("Only loading *.bin files is supported for the Bossac bootloader!"));
+
+                    CONNECT_END();
+                }
+
                 openmvBossacBootloader(forceFlashFSErase,
                                        justEraseFlashFs,
                                        firmwarePath,
@@ -2108,6 +2139,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if (isPicotool)
             {
+                if (!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Connect"),
+                        Tr::tr("Only loading *.bin files is supported for the Picotool bootloader!"));
+
+                    CONNECT_END();
+                }
+
                 openmvPictotoolBootloader(forceFlashFSErase,
                                           justEraseFlashFs,
                                           firmwarePath,
@@ -2144,6 +2184,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                           repairingBootloader);
                 return;
             }
+
+            CONNECT_END();
         }
 
         // Check ID ///////////////////////////////////////////////////////////

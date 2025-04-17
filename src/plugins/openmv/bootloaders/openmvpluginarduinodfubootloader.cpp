@@ -430,7 +430,9 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
         QString command;
         Utils::Process process;
         downloadFirmware(Tr::tr("Flashing Firmware"), command, process, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), dfuDeviceVidPid,
-                         (firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? binProgramCommand : dfuProgramCommand) + dfuDeviceSerial);
+                         (firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? binProgramCommand :
+                          (firmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive) ? dfuProgramCommand :
+                                                                                                 romfsProgramCommand)) + dfuDeviceSerial);
 
         if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
         {

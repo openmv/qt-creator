@@ -1594,7 +1594,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         }
     }
 
-    if((!justEraseFlashFs)
+    if((!justEraseFlashFs)    
     && (romfsAccess != OPENMV_ROMFS_READ) && (romfsAccess != OPENMV_ROMFS_WRITE))
     {
         dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);

@@ -134,6 +134,12 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
                 outObj.insert(QStringLiteral("blhost_romfs_path"), romfsPath);
                 outObj.insert(QStringLiteral("blhost_romfs_length"),
                         QString::number(QFileInfo(romfsPath).size(), 16).prepend(QStringLiteral("0x")));
+
+                if (firmwarePath.endsWith(".img"))
+                {
+                    outObj.insert(QStringLiteral("blhost_firmware_address"), bootloaderSettings.value(QStringLiteral("blhost_romfs_address")));
+                }
+
                 foundMatch = true;
                 break;
             }

@@ -63,7 +63,7 @@ do { \
     if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QTimer::singleShot(0, this, [this, forceFlashFSErase, previousMapping, romfsAccess] {connectClicked(true, QString(), forceFlashFSErase, false, false, false, previousMapping, romfsAccess);}); \
     else if(m_autoUpdate == QStringLiteral("release")) QTimer::singleShot(0, this, [this, forceFlashFSErase, previousMapping, romfsAccess] {connectClicked(true, QString(), m_autoErase || forceFlashFSErase, false, false, false, previousMapping, romfsAccess);}); \
     else if(m_autoUpdate == QStringLiteral("developement")) QTimer::singleShot(0, this, [this, forceFlashFSErase, previousMapping, romfsAccess] {connectClicked(true, QString(), m_autoErase || forceFlashFSErase, false, true, false, previousMapping, romfsAccess);}); \
-    else if(QFileInfo(m_autoUpdate).isFile()) QTimer::singleShot(0, this, [this, forceFlashFSErase, previousMapping, romfsAccess] {connectClicked(true, m_autoUpdate, (m_autoErase || m_autoUpdate.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive) || forceFlashFSErase), false, false, false, previousMapping, romfsAccess);}); \
+    else if(QFileInfo(m_autoUpdate).isFile()) QTimer::singleShot(0, this, [this, forceFlashFSErase, previousMapping, romfsAccess] {connectClicked(true, m_autoUpdate, m_autoErase || forceFlashFSErase, false, false, false, previousMapping, romfsAccess);}); \
     else if(m_autoErase) QTimer::singleShot(0, this, [this, previousMapping, romfsAccess] {connectClicked(true, QString(), true, true, false, false, previousMapping, romfsAccess);}); \
     return; \
 } while(0)
@@ -111,7 +111,7 @@ do { \
     if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QTimer::singleShot(0, this, [this, forceFlashFSErase, previousMapping, romfsAccess] {connectClicked(true, QString(), forceFlashFSErase, false, false, false, previousMapping, romfsAccess);}); \
     else if(m_autoUpdate == QStringLiteral("release")) QTimer::singleShot(0, this, [this, forceFlashFSErase, previousMapping, romfsAccess] {connectClicked(true, QString(), m_autoErase || forceFlashFSErase, false, false, false, previousMapping, romfsAccess);}); \
     else if(m_autoUpdate == QStringLiteral("developement")) QTimer::singleShot(0, this, [this, forceFlashFSErase, previousMapping, romfsAccess] {connectClicked(true, QString(), m_autoErase || forceFlashFSErase, false, true, false, previousMapping, romfsAccess);}); \
-    else if(QFileInfo(m_autoUpdate).isFile()) QTimer::singleShot(0, this, [this, forceFlashFSErase, previousMapping, romfsAccess] {connectClicked(true, m_autoUpdate, (m_autoErase || m_autoUpdate.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive) || forceFlashFSErase), false, false, false, previousMapping, romfsAccess);}); \
+    else if(QFileInfo(m_autoUpdate).isFile()) QTimer::singleShot(0, this, [this, forceFlashFSErase, previousMapping, romfsAccess] {connectClicked(true, m_autoUpdate, m_autoErase || forceFlashFSErase, false, false, false, previousMapping, romfsAccess);}); \
     else if(m_autoErase) QTimer::singleShot(0, this, [this, previousMapping, romfsAccess] {connectClicked(true, QString(), true, true, false, false, previousMapping, romfsAccess);}); \
     return; \
 } while(0)

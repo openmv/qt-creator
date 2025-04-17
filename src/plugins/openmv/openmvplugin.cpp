@@ -1655,7 +1655,7 @@ void OpenMVPlugin::extensionsInitialized()
         if((m_autoUpdate.isEmpty()) && (!m_autoErase)) connectClicked();
         else if(m_autoUpdate == QStringLiteral("release")) connectClicked(true, QString(), m_autoErase);
         else if(m_autoUpdate == QStringLiteral("developement")) connectClicked(true, QString(), m_autoErase, false, true);
-        else if(QFileInfo(m_autoUpdate).isFile()) connectClicked(true, m_autoUpdate, (m_autoErase || m_autoUpdate.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive)));
+        else if(QFileInfo(m_autoUpdate).isFile()) connectClicked(true, m_autoUpdate, m_autoErase);
         else if(m_autoErase) connectClicked(true, QString(), true, true);
     });
 
