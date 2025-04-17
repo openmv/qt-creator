@@ -66,8 +66,8 @@
 #define RPI_LDR_PID             0x005E
 #define RPI2040_VID             0x28EA
 #define RPI2040_PID             0x0003
-#define NICLA_APP_O_PID         0x045F
-#define NICLA_APP_N_PID         0x055F
+#define NICLA_APP_O_PID         0x045F // old
+#define NICLA_APP_N_PID         0x055F // new
 #define NICLA_TTR_1_PID         0x025F
 #define NICLA_TTR_2_PID         0x805F
 #define NICLA_LDR_PID           0x035F

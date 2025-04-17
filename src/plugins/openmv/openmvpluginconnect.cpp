@@ -906,7 +906,7 @@ QPair<QStringList, QStringList> filterPorts(const QJsonDocument &settings,
                 }
             }
 
-            if(vidpidMatch || altvidpidMatch)
+            if(vidpidMatch || altvidpidMatch || info.isNull())
             {
                 it = stringList.erase(it);
             }
@@ -1037,15 +1037,22 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
                                                 "This does not erase files on any removable SD card (if inserted)."));
 
+                    QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Reset ROMFS file system"));
+                    checkBox2->setChecked(settings->value(LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
+                    layout2->addWidget(checkBox2);
+                    checkBox2->setVisible(combo->currentIndex() == 0);
+                    checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
+
                     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-                    layout2->addSpacing(160);
+                    layout2->addSpacing(80);
                     layout2->addWidget(box);
                     layout->addRow(widget);
 
                     connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
                     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
-                    connect(combo, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [this, dialog, checkBox] (int index) {
+                    connect(combo, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [this, dialog, checkBox, checkBox2] (int index) {
                         checkBox->setVisible(index == 0);
+                        checkBox2->setVisible(index == 0);
                         QTimer::singleShot(0, this, [dialog] { dialog->adjustSize(); });
                     });
 
@@ -1063,12 +1070,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     {
                         settings->setValue(LAST_DFU_ACTION, combo->currentIndex());
                         settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
+                        settings->setValue(LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
 
                         if(combo->currentIndex() == 0)
                         {
                             dfuDeviceResetToRelease = true;
                             dfuDeviceEraseFlash = checkBox->isChecked();
                             dfuNoDialogs = true;
+                            romfsAccess = checkBox2->isChecked() ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE;
                         }
                         else if(combo->currentIndex() == 1)
                         {
@@ -1263,7 +1272,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 bool forceFlashFSEraseTemp = justEraseFlashFs ||
                                     ((forceBootloader && previousMappingSet) ? forceFlashFSErase : (dfuDeviceResetToRelease ? dfuDeviceEraseFlash : checkBox->isChecked()));
                                 OpenMVROMFSAccess romfsAccessTemp = justEraseFlashFs ? OPENMV_ROMFS_NONE :
-                                    ((forceBootloader && previousMappingSet) ? romfsAccess : (checkBox2->isChecked() ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE));
+                                    ((forceBootloader && previousMappingSet) ? romfsAccess : (dfuDeviceResetToRelease ? romfsAccess : (checkBox2->isChecked() ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE)));
 
                                 if (ok)
                                 {
@@ -2055,11 +2064,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 openmvIMXBootloader(forceFirmwarePath,
                                     forceFlashFSErase,
                                     justEraseFlashFs,
+                                    installTheLatestDevelopmentFirmware,
                                     firmwarePath,
                                     settings,
                                     forceBootloaderBricked,
                                     originalFirmwareFolder,
-                                    selectedDfuDevice);
+                                    selectedDfuDevice,
+                                    romfsAccess);
                 return;
             }
 
@@ -2078,8 +2089,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             {
                 openmvArduinoDFUBootloader(forceFlashFSErase,
                                            justEraseFlashFs,
+                                           installTheLatestDevelopmentFirmware,
                                            firmwarePath,
-                                           selectedDfuDevice);
+                                           selectedDfuDevice,
+                                           romfsAccess);
                 return;
             }
 
@@ -2088,7 +2101,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 openmvBossacBootloader(forceFlashFSErase,
                                        justEraseFlashFs,
                                        firmwarePath,
-                                       selectedDfuDevice);
+                                       selectedDfuDevice,
+                                       romfsAccess);
                 return;
             }
 
@@ -2097,7 +2111,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 openmvPictotoolBootloader(forceFlashFSErase,
                                           justEraseFlashFs,
                                           firmwarePath,
-                                          selectedDfuDevice);
+                                          selectedDfuDevice,
+                                          romfsAccess);
                 return;
             }
 

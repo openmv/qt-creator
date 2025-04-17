@@ -4150,9 +4150,11 @@ void OpenMVPlugin::setPortPath(bool silent)
         {
             if(m_portPath == drives.first())
             {
-                QMessageBox::information(Core::ICore::dialogParent(),
-                    Tr::tr("Select Drive"),
-                    Tr::tr("\"%L1\" is the only drive available so it must be your OpenMV Cam's drive.").arg(drives.first()));
+                QTimer::singleShot(0, this, [this] {
+                    Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(),
+                        Utils::FilePath::fromString(m_portPath).pathAppended(Utils::HostOsInfo::isWindowsHost()
+                            ? QStringLiteral("") : QStringLiteral(".openmv_disk")));
+                });
             }
             else
             {

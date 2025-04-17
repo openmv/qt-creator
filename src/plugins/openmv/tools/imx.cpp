@@ -44,7 +44,9 @@
 #endif
 
 #include "loaderdialog.h"
+
 #include "openmvtr.h"
+#include "openmvromfs.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -322,7 +324,7 @@ bool imxGetDevice(QJsonObject &obj)
     }
 }
 
-bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs)
+bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs, OpenMVROMFSAccess romfsAccess)
 {
     QMutexLocker locker(&imx_working);
 
@@ -920,6 +922,93 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
         }
     }
 
+    if ((romfsAccess == OPENMV_ROMFS_RESET)
+    && (obj.value(QStringLiteral("blhost_romfs_address")).toString().toInt(nullptr, 16) != 0)
+    && (obj.value(QStringLiteral("blhost_romfs_size")).toString().toInt(nullptr, 16) > 0))
+    {
+        dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);
+
+        // Erase Memory
+        {
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("-t") <<
+                               QStringLiteral("120000") <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("flash-erase-region") <<
+                               obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
+                               obj.value(QStringLiteral("blhost_romfs_size")).toString();
+
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            dialog->appendColoredText(command);
+
+            std::chrono::seconds timeout(900); // 15 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+            if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
+        }
+
+        // Write Image
+        {
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("write-memory") <<
+                               obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
+                               QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
+
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            dialog->appendColoredText(command);
+
+            std::chrono::seconds timeout(900); // 15 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+            if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
+        }
+    }
+
     if(!justEraseFlashFs)
     {
         dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);
@@ -1089,7 +1178,7 @@ cleanup:
     return result;
 }
 
-bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs)
+bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs, OpenMVROMFSAccess romfsAccess)
 {
     QMutexLocker locker(&imx_working);
 
@@ -1098,7 +1187,10 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
-    LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), Tr::tr("Flashing Firmware"), process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
+    LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), ((romfsAccess == OPENMV_ROMFS_READ) ? Tr::tr("Read ROMFS") :
+                                                                    ((romfsAccess == OPENMV_ROMFS_WRITE) ? Tr::tr("Write ROMFS") :
+                                                                        Tr::tr("Flashing Firmware"))),
+                                            process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
     QString stdOutBuffer = QString();
@@ -1106,7 +1198,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
     bool stdOutFirstTime = true;
     bool *stdOutFirstTimePtr = &stdOutFirstTime;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr, romfsAccess] (const QString &text) {
         stdOutBufferPtr->append(text);
         QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -1130,7 +1222,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
                 if(m.hasMatch())
                 {
-                    dialog->setProgressBarLabel(Tr::tr("Downloading..."));
+                    dialog->setProgressBarLabel((romfsAccess == OPENMV_ROMFS_READ) ? Tr::tr("Uploading...") : Tr::tr("Downloading..."));
                     dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(m.captured(1).toInt());
                 }
@@ -1156,7 +1248,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
     bool stdErrFirstTime = true;
     bool *stdErrFirstTimePtr = &stdErrFirstTime;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, stdErrBufferPtr, stdErrFirstTimePtr, romfsAccess] (const QString &text) {
         stdErrBufferPtr->append(text);
         QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -1180,7 +1272,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
                 if(m.hasMatch())
                 {
-                    dialog->setProgressBarLabel(Tr::tr("Downloading..."));
+                    dialog->setProgressBarLabel((romfsAccess == OPENMV_ROMFS_READ) ? Tr::tr("Uploading...") : Tr::tr("Downloading..."));
                     dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(m.captured(1).toInt());
                 }
@@ -1233,7 +1325,8 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
     if(forceFlashFSErase
     && (obj.value(QStringLiteral("blhost_disk_address")).toString().toInt(nullptr, 16) != 0)
-    && (obj.value(QStringLiteral("blhost_disk_size")).toString().toInt(nullptr, 16) > 0))
+    && (obj.value(QStringLiteral("blhost_disk_size")).toString().toInt(nullptr, 16) > 0)
+    && (romfsAccess != OPENMV_ROMFS_READ) && (romfsAccess != OPENMV_ROMFS_WRITE))
     {
         dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);
 
@@ -1279,7 +1372,230 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         }
     }
 
-    if(!justEraseFlashFs)
+    if ((romfsAccess == OPENMV_ROMFS_READ)
+    && (obj.value(QStringLiteral("blhost_romfs_address")).toString().toInt(nullptr, 16) != 0)
+    && (obj.value(QStringLiteral("blhost_romfs_size")).toString().toInt(nullptr, 16) > 0))
+    {
+        dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);
+
+        // Read Image
+        {
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("read-memory") <<
+                               obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
+                               obj.value(QStringLiteral("blhost_romfs_size")).toString() <<
+                               QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
+
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            dialog->appendColoredText(command);
+
+            std::chrono::seconds timeout(900); // 15 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+            if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
+        }
+    }
+
+    if ((romfsAccess == OPENMV_ROMFS_WRITE)
+    && (obj.value(QStringLiteral("blhost_romfs_address")).toString().toInt(nullptr, 16) != 0)
+    && (obj.value(QStringLiteral("blhost_romfs_size")).toString().toInt(nullptr, 16) > 0))
+    {
+        dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);
+
+        // Erase Memory
+        {
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("-t") <<
+                               QStringLiteral("120000") <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("flash-erase-region") <<
+                               obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
+                               obj.value(QStringLiteral("blhost_romfs_size")).toString();
+
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            dialog->appendColoredText(command);
+
+            std::chrono::seconds timeout(900); // 15 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+            if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
+        }
+
+        // Write Image
+        {
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("write-memory") <<
+                               obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
+                               QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
+
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            dialog->appendColoredText(command);
+
+            std::chrono::seconds timeout(900); // 15 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+            if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
+        }
+    }
+
+    if ((romfsAccess == OPENMV_ROMFS_RESET)
+    && (obj.value(QStringLiteral("blhost_romfs_address")).toString().toInt(nullptr, 16) != 0)
+    && (obj.value(QStringLiteral("blhost_romfs_size")).toString().toInt(nullptr, 16) > 0)
+    && (romfsAccess != OPENMV_ROMFS_READ) && (romfsAccess != OPENMV_ROMFS_WRITE))
+    {
+        dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);
+
+        // Erase Memory
+        {
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("-t") <<
+                               QStringLiteral("120000") <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("flash-erase-region") <<
+                               obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
+                               obj.value(QStringLiteral("blhost_romfs_size")).toString();
+
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            dialog->appendColoredText(command);
+
+            std::chrono::seconds timeout(900); // 15 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+            if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
+        }
+
+        // Write Image
+        {
+            QStringList args = QStringList() <<
+                               QStringLiteral("-u") <<
+                               obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                               QStringLiteral("--") <<
+                               QStringLiteral("write-memory") <<
+                               obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
+                               QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
+
+            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            dialog->appendColoredText(command);
+
+            std::chrono::seconds timeout(900); // 15 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+            if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
+        }
+    }
+
+    if((!justEraseFlashFs)
+    && (romfsAccess != OPENMV_ROMFS_READ) && (romfsAccess != OPENMV_ROMFS_WRITE))
     {
         dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);
 

@@ -35,6 +35,8 @@
 #include <QJsonObject>
 #include <QPair>
 
+#include "openmvromfs.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -44,8 +46,8 @@ QStringList imxGetAllDevices(const QJsonDocument &settings, bool spd_host = true
 // Returns true if the BL bootloader is present.
 bool imxGetDeviceSupported();
 bool imxGetDevice(QJsonObject &obj);
-bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs);
-bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs);
+bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs, OpenMVROMFSAccess romfsAccess);
+bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs, OpenMVROMFSAccess romfsAccess);
 
 } // namespace Internal
 } // namespace OpenMV

@@ -37,8 +37,10 @@ namespace Internal {
 
 void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
                                               bool justEraseFlashFs,
+                                              bool installTheLatestDevelopmentFirmware,
                                               const QString &firmwarePath,
-                                              const QString &selectedDfuDevice)
+                                              const QString &selectedDfuDevice,
+                                              OpenMVROMFSAccess romfsAccess)
 {
     // Stopping ///////////////////////////////////////////////////////
 
@@ -118,7 +120,8 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
     QString boardTypeToDfuDeviceVidPid;
     QStringList eraseCommands, extraProgramAddrCommands, extraProgramPathCommands;
-    QString binProgramCommand, dfuProgramCommand;
+    QStringList resetROMFSAddrCommands, resetROMFSPathCommands;
+    QString binProgramCommand, dfuProgramCommand, romfsProgramCommand;
 
     if(selectedDfuDevice.isEmpty())
     {
@@ -167,8 +170,17 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
                         extraProgramPathCommands.append(obj2.value(QStringLiteral("path")).toString());
                     }
 
+                    QJsonArray resetROMFSCommandsArray = bootloaderSettings.value(QStringLiteral("resetROMFSCommands")).toArray();
+                    for(const QJsonValue &command : resetROMFSCommandsArray)
+                    {
+                        QJsonObject obj2 = command.toObject();
+                        resetROMFSAddrCommands.append(obj2.value(QStringLiteral("addr")).toString());
+                        resetROMFSPathCommands.append(obj2.value(QStringLiteral("path")).toString());
+                    }
+
                     binProgramCommand = bootloaderSettings.value(QStringLiteral("binProgramCommand")).toString();
                     dfuProgramCommand = bootloaderSettings.value(QStringLiteral("dfuProgramCommand")).toString();
+                    romfsProgramCommand = bootloaderSettings.value(QStringLiteral("romfsProgramCommand")).toString();
                     foundMatch = true;
                     break;
                 }
@@ -211,8 +223,17 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
                     extraProgramPathCommands.append(obj2.value(QStringLiteral("path")).toString());
                 }
 
+                QJsonArray resetROMFSCommandsArray = bootloaderSettings.value(QStringLiteral("resetROMFSCommands")).toArray();
+                for(const QJsonValue &command : resetROMFSCommandsArray)
+                {
+                    QJsonObject obj2 = command.toObject();
+                    resetROMFSAddrCommands.append(obj2.value(QStringLiteral("addr")).toString());
+                    resetROMFSPathCommands.append(obj2.value(QStringLiteral("path")).toString());
+                }
+
                 binProgramCommand = bootloaderSettings.value(QStringLiteral("binProgramCommand")).toString();
                 dfuProgramCommand = bootloaderSettings.value(QStringLiteral("dfuProgramCommand")).toString();
+                romfsProgramCommand = bootloaderSettings.value(QStringLiteral("romfsProgramCommand")).toString();
                 foundMatch = true;
                 break;
             }
@@ -310,6 +331,73 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
     // Program Flash //////////////////////////////////////
     {
+        if (romfsAccess == OPENMV_ROMFS_READ)
+        {
+            QString command;
+            Utils::Process process;
+
+            downloadFirmware(Tr::tr("Read ROMFS"), command, process,
+                             QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)),
+                             dfuDeviceVidPid, romfsProgramCommand + dfuDeviceSerial, true);
+
+            if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+            {
+                CONNECT_END();
+            }
+
+            CONNECT_END();
+        }
+        else if (romfsAccess == OPENMV_ROMFS_WRITE)
+        {
+            QString command;
+            Utils::Process process;
+
+            downloadFirmware(Tr::tr("Write ROMFS"), command, process,
+                             QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)),
+                             dfuDeviceVidPid, romfsProgramCommand + dfuDeviceSerial);
+
+            if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+            {
+                CONNECT_END();
+            }
+
+            CONNECT_END();
+        }
+        else if (romfsAccess == OPENMV_ROMFS_RESET)
+        {
+            QString command;
+            Utils::Process process;
+
+            for(int i = 0, j = resetROMFSAddrCommands.size(); i < j; i++)
+            {
+                QString path = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(resetROMFSPathCommands.at(i)).toString();
+
+                if (installTheLatestDevelopmentFirmware)
+                {
+                    path = QFileInfo(firmwarePath).path() + QDir::separator() + QFileInfo(path).fileName();
+                }
+
+                downloadFirmware(Tr::tr("Flashing Firmware"), command, process, path, dfuDeviceVidPid, resetROMFSAddrCommands.at(i) + dfuDeviceSerial);
+
+                if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+                {
+                    QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                    box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                    box.setDefaultButton(QMessageBox::Ok);
+                    box.setEscapeButton(QMessageBox::Cancel);
+                    box.exec();
+
+                    CONNECT_END();
+                }
+                else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+                {
+                    CONNECT_END();
+                }
+            }
+        }
+
         // Extra Program Flash ////////////////////////////////
         {
             QString command;
@@ -317,7 +405,8 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
             for(int i = 0, j = extraProgramAddrCommands.size(); i < j; i++)
             {
-                downloadFirmware(Tr::tr("Flashing Firmware"), command, process, Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(extraProgramPathCommands.at(i)).toString(), dfuDeviceVidPid, extraProgramAddrCommands.at(i) + dfuDeviceSerial);
+                downloadFirmware(Tr::tr("Flashing Firmware"), command, process, Core::ICore::userResourcePath(QStringLiteral("firmware")).
+                                 pathAppended(extraProgramPathCommands.at(i)).toString(), dfuDeviceVidPid, extraProgramAddrCommands.at(i) + dfuDeviceSerial);
 
                 if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                 {
@@ -340,7 +429,8 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
         QString command;
         Utils::Process process;
-        downloadFirmware(Tr::tr("Flashing Firmware"), command, process, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), dfuDeviceVidPid, (firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? binProgramCommand : dfuProgramCommand) + dfuDeviceSerial);
+        downloadFirmware(Tr::tr("Flashing Firmware"), command, process, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), dfuDeviceVidPid,
+                         (firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? binProgramCommand : dfuProgramCommand) + dfuDeviceSerial);
 
         if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
         {

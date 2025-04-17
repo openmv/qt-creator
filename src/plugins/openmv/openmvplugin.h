@@ -404,14 +404,6 @@ class ScanDriveThread: public QObject
     signals: void driveScanned(const QList<QPair<QString, QString> > &output);
 };
 
-enum OpenMVROMFSAccess
-{
-    OPENMV_ROMFS_NONE,
-    OPENMV_ROMFS_READ,
-    OPENMV_ROMFS_WRITE,
-    OPENMV_ROMFS_RESET
-};
-
 class OpenMVPlugin : public ExtensionSystem::IPlugin
 {
     Q_OBJECT
@@ -510,11 +502,13 @@ private:
     void openmvIMXBootloader(const QString &forceFirmwarePath,
                              bool forceFlashFSErase,
                              bool justEraseFlashFs,
+                             bool installTheLatestDevelopmentFirmware,
                              const QString &firmwarePath,
                              Utils::QtcSettings *settings,
                              bool forceBootloaderBricked,
                              QString originalFirmwareFolder,
-                             const QString &selectedDfuDevice);
+                             const QString &selectedDfuDevice,
+                             OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
     void openmvAlifBootloader(const QString &forceFirmwarePath,
                               bool forceFlashFSErase,
                               bool justEraseFlashFs,
@@ -523,16 +517,20 @@ private:
                               const QString &selectedDfuDevice);
     void openmvArduinoDFUBootloader(bool forceFlashFSErase,
                                     bool justEraseFlashFs,
+                                    bool installTheLatestDevelopmentFirmware,
                                     const QString &firmwarePath,
-                                    const QString &selectedDfuDevice);
+                                    const QString &selectedDfuDevice,
+                                    OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
     void openmvBossacBootloader(bool forceFlashFSErase,
                                 bool justEraseFlashFs,
                                 const QString &firmwarePath,
-                                const QString &selectedDfuDevice);
+                                const QString &selectedDfuDevice,
+                                OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
     void openmvPictotoolBootloader(bool forceFlashFSErase,
                                    bool justEraseFlashFs,
                                    const QString &firmwarePath,
-                                   const QString &selectedDfuDevice);
+                                   const QString &selectedDfuDevice,
+                                   OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
 
     QStringList m_resourceFoldersToCopy;
     QStringList m_resourceFoldersToDelete;

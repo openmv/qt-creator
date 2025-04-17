@@ -38,7 +38,8 @@ namespace Internal {
 void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
                                              bool justEraseFlashFs,
                                              const QString &firmwarePath,
-                                             const QString &selectedDfuDevice)
+                                             const QString &selectedDfuDevice,
+                                             OpenMVROMFSAccess romfsAccess)
 {
     // Stopping ///////////////////////////////////////////////////////
 
@@ -103,7 +104,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
     QString selectedDfuDeviceVidPid = selectedDfuDevice.isEmpty() ? QString() : selectedDfuDevice.split(QStringLiteral(",")).first();
 
     QStringList eraseCommands;
-    QString binProgramCommand;
+    QString binProgramCommand, boardDisplayName;
 
     if(selectedDfuDevice.isEmpty())
     {
@@ -125,6 +126,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
                 }
 
                 binProgramCommand = bootloaderSettings.value(QStringLiteral("binProgramCommand")).toString();
+                boardDisplayName = obj.value(QStringLiteral("boardDisplayName")).toString();
                 foundMatch = true;
                 break;
             }
@@ -159,6 +161,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
                 }
 
                 binProgramCommand = bootloaderSettings.value(QStringLiteral("binProgramCommand")).toString();
+                boardDisplayName = obj.value(QStringLiteral("boardDisplayName")).toString();
                 foundMatch = true;
                 break;
             }
@@ -171,6 +174,27 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
                 Tr::tr("No PicoTool settings for the selected device!"));
 
             CONNECT_END();
+        }
+    }
+
+    if (romfsAccess != OPENMV_ROMFS_NONE)
+    {
+        QString command;
+        Utils::Process process;
+        picotoolReset(command, process);
+
+        if(m_autoUpdate.isEmpty()) QMessageBox::information(Core::ICore::dialogParent(),
+            Tr::tr("Connect"),
+            QString(QStringLiteral("%1"))
+            .arg(Tr::tr("Your %1 doesn't have an ROM file system.").arg(boardDisplayName)));
+
+        if(selectedDfuDevice.isEmpty())
+        {
+            RECONNECT_WAIT_END();
+        }
+        else
+        {
+            RECONNECT_END();
         }
     }
 

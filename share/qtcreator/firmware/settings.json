@@ -506,7 +506,9 @@
                 "blhost_disk_size" : "0x00400000",
                 "blhost_efuse_burn_address" : "0x06",
                 "blhost_efuse_burn_data" : "00000010",
-                "blhost_romfs_address" : "0x60800000"
+                "blhost_romfs_address" : "0x60800000",
+                "blhost_romfs_size" : "0x00800000",
+                "blhost_romfs_path" : "romfs0.img"
             },
             "romfsConfig" : [
                 {
@@ -546,7 +548,9 @@
                 "blhost_disk_size" : "0x00400000",
                 "blhost_efuse_burn_address" : "0x06",
                 "blhost_efuse_burn_data" : "00000010",
-                "blhost_romfs_address" : "0x60800000"
+                "blhost_romfs_address" : "0x60800000",
+                "blhost_romfs_size" : "0x00800000",
+                "blhost_romfs_path" : "romfs0.img"
             },
             "romfsConfig" : [
                 {
@@ -586,7 +590,9 @@
                 "blhost_disk_size" : "0x00400000",
                 "blhost_efuse_burn_address" : "0x06",
                 "blhost_efuse_burn_data" : "00000010",
-                "blhost_romfs_address" : "0x60800000"
+                "blhost_romfs_address" : "0x60800000",
+                "blhost_romfs_size" : "0x00800000",
+                "blhost_romfs_path" : "romfs0.img"
             },
             "romfsConfig" : [
                 {
@@ -837,18 +843,21 @@
                         "path" : "CYW4343/cyw4343_btfw.bin"
                     }
                 ],
+                "resetROMFSCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90B00000",
+                        "path" : "ARDUINO_PORTENTA_H7/romfs0.img"
+                    }
+                ],
                 "binProgramCommand" : "-a 0 -s 0x08040000:leave",
-                "dfuProgramCommand" : "-a 0 -s :leave"
+                "dfuProgramCommand" : "-a 0 -s :leave",
+                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave"
             },
             "romfsConfig" : [
                 {
                     "name" : "ROMFS",
                     "size" : 4194304,
-                    "index" : 0,
-                    "loaderConfig": {
-                        "type" : "arduino_dfu",
-                        "address" : "0x90B00000"
-                    }
+                    "index" : 0
                 }
             ]
         },
@@ -879,18 +888,21 @@
                         "path" : "CYW4343/cyw4343_btfw.bin"
                     }
                 ],
+                "resetROMFSCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90B00000",
+                        "path" : "ARDUINO_GIGA/romfs0.img"
+                    }
+                ],
                 "binProgramCommand" : "-a 0 -s 0x08040000:leave",
-                "dfuProgramCommand" : "-a 0 -s :leave"
+                "dfuProgramCommand" : "-a 0 -s :leave",
+                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave"
             },
             "romfsConfig" : [
                 {
                     "name" : "ROMFS",
                     "size" : 4194304,
-                    "index" : 0,
-                    "loaderConfig": {
-                        "type" : "arduino_dfu",
-                        "address" : "0x90B00000"
-                    }
+                    "index" : 0
                 }
             ]
         },
@@ -909,7 +921,7 @@
             "bootloaderType" : "arduino_dfu",
             "bootloaderSettings" : {
                 "touchToResetPids" : ["025f", "805f"],
-                "appvidpid" : ["2341:045f", "2341:035f"],
+                "appvidpid" : ["2341:045f", "2341:055f", "2341:035f"],
                 "eraseCommands" : ["-a 1 -s 0x90000000"],
                 "extraProgramCommands" : [
                     {
@@ -921,18 +933,21 @@
                         "path" : "CYW4343/cyw4343_btfw.bin"
                     }
                 ],
+                "resetROMFSCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90B00000",
+                        "path" : "ARDUINO_NICLA_VISION/romfs0.img"
+                    }
+                ],
                 "binProgramCommand" : "-a 0 -s 0x08040000:leave",
-                "dfuProgramCommand" : "-a 0 -s :leave"
+                "dfuProgramCommand" : "-a 0 -s :leave",
+                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave"
             },
             "romfsConfig" : [
                 {
                     "name" : "ROMFS",
                     "size" : 4194304,
-                    "index" : 0,
-                    "loaderConfig": {
-                        "type" : "arduino_dfu",
-                        "address" : "0x90B00000"
-                    }
+                    "index" : 0
                 }
             ]
         },
@@ -940,7 +955,7 @@
             "hidden" : false,
             "boardType" : "NANO33",
             "boardArchString" : "NANO33 M4",
-            "boardDisplayName" : "Nano33 BLE (nRF52840)",
+            "boardDisplayName" : "Arduino Nano33 BLE (nRF52840)",
             "boardFirmwareFolder" : "ARDUINO_NANO_33_BLE_SENSE",
             "highSpeed" : false,
             "boardVidPid" : "2341:005a",
@@ -950,7 +965,7 @@
             "bootloaderVidPid" : "2341:005a",
             "bootloaderType" : "bossac",
             "bootloaderSettings" : {
-                "altvidpidDisplayName" : "Nano33 BLE (nRF52840) Legacy",
+                "altvidpidDisplayName" : "Arduino Nano33 BLE (nRF52840) Legacy",
                 "altvidpid" : "2341:805a",
                 "binProgramCommand" : "--offset=0x16000"
             },

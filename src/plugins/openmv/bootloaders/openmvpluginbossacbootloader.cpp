@@ -38,7 +38,8 @@ namespace Internal {
 void OpenMVPlugin::openmvBossacBootloader(bool forceFlashFSErase,
                                           bool justEraseFlashFs,
                                           const QString &firmwarePath,
-                                          const QString &selectedDfuDevice)
+                                          const QString &selectedDfuDevice,
+                                          OpenMVROMFSAccess romfsAccess)
 {
     // Stopping ///////////////////////////////////////////////////////
 
@@ -207,8 +208,7 @@ void OpenMVPlugin::openmvBossacBootloader(bool forceFlashFSErase,
         }
     }
 
-    QString boardTypeToDfuDeviceVidPid;
-    QString binProgramCommand;
+    QString boardTypeToDfuDeviceVidPid, binProgramCommand, boardDisplayName;
 
     if(selectedDfuDevice.isEmpty())
     {
@@ -224,6 +224,7 @@ void OpenMVPlugin::openmvBossacBootloader(bool forceFlashFSErase,
                 boardTypeToDfuDeviceVidPid = obj.value(QStringLiteral("bootloaderVidPid")).toString();
                 QJsonObject bootloaderSettings = obj.value(QStringLiteral("bootloaderSettings")).toObject();
                 binProgramCommand = bootloaderSettings.value(QStringLiteral("binProgramCommand")).toString();
+                boardDisplayName = obj.value(QStringLiteral("boardDisplayName")).toString();
                 foundMatch = true;
                 break;
             }
@@ -251,6 +252,7 @@ void OpenMVPlugin::openmvBossacBootloader(bool forceFlashFSErase,
             {
                 QJsonObject bootloaderSettings = obj.value(QStringLiteral("bootloaderSettings")).toObject();
                 binProgramCommand = bootloaderSettings.value(QStringLiteral("binProgramCommand")).toString();
+                boardDisplayName = obj.value(QStringLiteral("boardDisplayName")).toString();
                 foundMatch = true;
                 break;
             }
@@ -268,10 +270,33 @@ void OpenMVPlugin::openmvBossacBootloader(bool forceFlashFSErase,
 
     if(forceFlashFSErase && justEraseFlashFs)
     {
+        Utils::Process process;
+        bossacReset(process, dfuDevicePort);
+
         if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
             QString(QStringLiteral("%1"))
-            .arg(Tr::tr("Your Nano 33 BLE doesn't have an onboard data flash disk.")));
+            .arg(Tr::tr("Your %1 doesn't have an internal FAT file system.").arg(boardDisplayName)));
+
+        if(selectedDfuDevice.isEmpty())
+        {
+            RECONNECT_WAIT_END();
+        }
+        else
+        {
+            RECONNECT_END();
+        }
+    }
+
+    if (romfsAccess != OPENMV_ROMFS_NONE)
+    {
+        Utils::Process process;
+        bossacReset(process, dfuDevicePort);
+
+        if(m_autoUpdate.isEmpty()) QMessageBox::information(Core::ICore::dialogParent(),
+            Tr::tr("Connect"),
+            QString(QStringLiteral("%1"))
+            .arg(Tr::tr("Your %1 doesn't have an ROM file system.").arg(boardDisplayName)));
 
         if(selectedDfuDevice.isEmpty())
         {

@@ -91,6 +91,50 @@ void bossacRunBootloader(Utils::Process &process, const QString &device)
     process.runBlocking(timeout, Utils::EventLoopMode::On);
 }
 
+void bossacReset(Utils::Process &process, const QString &device)
+{
+    QMutexLocker locker(&bossac_working);
+
+    Utils::FilePath binary;
+    QStringList args = QStringList() <<
+                       QString(QStringLiteral("--port=%1")).arg(device) <<
+                       QStringLiteral("-R");
+
+    if(Utils::HostOsInfo::isWindowsHost())
+    {
+        binary = Core::ICore::resourcePath(QStringLiteral("bossac/windows/bossac.exe"));
+    }
+    else if(Utils::HostOsInfo::isMacHost())
+    {
+        binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx/bossac"));
+    }
+    else if(Utils::HostOsInfo::isLinuxHost())
+    {
+        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/linux32/bossac"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/linux64/bossac"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/arm/bossac"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/aarch64/bossac"));
+        }
+    }
+
+    std::chrono::seconds timeout(300); // 5 minutes...
+    process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+    process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+    process.setCommand(Utils::CommandLine(binary, args));
+    process.runBlocking(timeout, Utils::EventLoopMode::On);
+}
+
 void bossacDownloadFirmware(const QString &details, QString &command, Utils::Process &process, const QString &path, const QString &device, const QString &moreArgs)
 {
     QMutexLocker locker(&bossac_working);

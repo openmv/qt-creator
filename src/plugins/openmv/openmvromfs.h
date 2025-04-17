@@ -36,6 +36,14 @@
 
 #include <utils/qtcsettings.h>
 
+enum OpenMVROMFSAccess
+{
+    OPENMV_ROMFS_NONE,
+    OPENMV_ROMFS_READ,
+    OPENMV_ROMFS_WRITE,
+    OPENMV_ROMFS_RESET
+};
+
 namespace OpenMV {
 namespace Internal {
 

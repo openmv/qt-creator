@@ -38,11 +38,13 @@ namespace Internal {
 void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
                                        bool forceFlashFSErase,
                                        bool justEraseFlashFs,
+                                       bool installTheLatestDevelopmentFirmware,
                                        const QString &firmwarePath,
                                        Utils::QtcSettings *settings,
                                        bool forceBootloaderBricked,
                                        QString originalFirmwareFolder,
-                                       const QString &selectedDfuDevice)
+                                       const QString &selectedDfuDevice,
+                                       OpenMVROMFSAccess romfsAccess)
 {
     QJsonObject outObj;
 
@@ -108,6 +110,19 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
                 QString bootloaderPath = Core::ICore::userResourcePath(QStringLiteral("firmware")).
                         pathAppended(originalFirmwareFolder).
                         pathAppended(bootloaderSettings.value(QStringLiteral("blhost_secure_bootloader_path")).toString()).toString();
+                QString romfsPath = Core::ICore::userResourcePath(QStringLiteral("firmware")).
+                        pathAppended(originalFirmwareFolder).
+                        pathAppended(bootloaderSettings.value(QStringLiteral("blhost_romfs_path")).toString()).toString();
+
+                if ((romfsAccess == OPENMV_ROMFS_READ) || (romfsAccess == OPENMV_ROMFS_WRITE))
+                {
+                    romfsPath = firmwarePath;
+                }
+                else if (installTheLatestDevelopmentFirmware)
+                {
+                    romfsPath = QFileInfo(firmwarePath).path() + QDir::separator() + QFileInfo(romfsPath).fileName();
+                }
+
                 outObj = bootloaderSettings;
                 outObj.insert(QStringLiteral("sdphost_flash_loader_path"), secureBootloaderPath);
                 outObj.insert(QStringLiteral("blhost_secure_bootloader_path"), bootloaderPath);
@@ -116,6 +131,9 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
                 outObj.insert(QStringLiteral("blhost_firmware_path"), firmwarePath);
                 outObj.insert(QStringLiteral("blhost_firmware_length"),
                         QString::number(QFileInfo(firmwarePath).size(), 16).prepend(QStringLiteral("0x")));
+                outObj.insert(QStringLiteral("blhost_romfs_path"), romfsPath);
+                outObj.insert(QStringLiteral("blhost_romfs_length"),
+                        QString::number(QFileInfo(romfsPath).size(), 16).prepend(QStringLiteral("0x")));
                 foundMatch = true;
                 break;
             }
@@ -237,7 +255,7 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
                     QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
                 == QMessageBox::Ok)
                 {
-                    if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
+                    if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))
                     {
                         if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
@@ -256,7 +274,12 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
         }
         else
         {
-            if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
+            if ((romfsAccess == OPENMV_ROMFS_READ) || (romfsAccess == OPENMV_ROMFS_WRITE))
+            {
+                imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess);
+                CONNECT_END();
+            }
+            else if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))
             {
                 if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
@@ -282,7 +305,7 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
         // SPD Mode (SBL)
         if(imxVidPidList(m_firmwareSettings, true, false).contains(entry))
         {
-            if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
+            if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))
             {
                 if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
@@ -303,7 +326,12 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
         // BL Mode
         else if(imxVidPidList(m_firmwareSettings, false, true).contains(entry))
         {
-            if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs))
+            if ((romfsAccess == OPENMV_ROMFS_READ) || (romfsAccess == OPENMV_ROMFS_WRITE))
+            {
+                imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess);
+                CONNECT_END();
+            }
+            else if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))
             {
                 if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
