@@ -1086,7 +1086,7 @@ void OpenMVPluginIO::getFirmwareVersion()
     serializeByte(buffer, __USBDBG_CMD);
     serializeByte(buffer, __USBDBG_FW_VERSION);
     serializeLong(buffer, FW_VERSION_RESPONSE_LEN);
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, FW_VERSION_RESPONSE_LEN, FW_VERSION_START_DELAY, FW_VERSION_END_DELAY));
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, FW_VERSION_RESPONSE_LEN, FW_VERSION_START_DELAY, FW_VERSION_END_DELAY, true, false, true));
     m_completionQueue.enqueue(USBDBG_FW_VERSION_CPL);
     command();
 }

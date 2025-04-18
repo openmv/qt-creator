@@ -41,6 +41,7 @@
 
 #define WRITE_LOOPS 1 // disabled
 #define WRITE_DELAY 0 // disabled
+#define FLUSH_TIMEOUT 100
 #define WRITE_TIMEOUT 3000
 #define SERIAL_READ_TIMEOUT 5000
 #define WIFI_READ_TIMEOUT 5000
@@ -625,6 +626,23 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
     }
     else if(m_port)
     {
+        if (command.m_readFlushBeforeCommnad)
+        {
+            QElapsedTimer elaspedTimer;
+            elaspedTimer.start();
+
+            do
+            {
+                m_port->waitForReadyRead(0);
+
+                if(!m_port->readAll().isEmpty())
+                {
+                    elaspedTimer.restart();
+                }
+            }
+            while(!elaspedTimer.hasExpired(FLUSH_TIMEOUT));
+        }
+
         write(command.m_data, command.m_startWait, command.m_endWait, WRITE_TIMEOUT);
 
         if((!m_port) || (!command.m_responseLen))
