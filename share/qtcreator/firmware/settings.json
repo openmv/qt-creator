@@ -722,7 +722,7 @@
                     }
                 },
                 "dfuBootloaderProgramCommand" : {
-                    "images": "../build/images/bootloader.bin 0x80000000 ../build/AppTocPackage.bin 0x8057f060",
+                    "images": "../build/bootloader.bin 0x80000000 ../build/firmware_pad.toc 0x8057E000",
                     "bootloaderVidPid": "37C5:96E3"
                 }
             },

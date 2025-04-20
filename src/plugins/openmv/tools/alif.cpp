@@ -297,13 +297,29 @@ static bool alifUpdateBuild(const QString &originalFirmwareFolder)
         if(!Core::ICore::userResourcePath(QStringLiteral("alif/build")).removeRecursively(&error))
         {
             return false;
-
         }
     }
 
-    if(!Utils::FileUtils::copyRecursively(Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder), Core::ICore::userResourcePath(QStringLiteral("alif/build")), &error, copyOperator))
+    if(!Utils::FileUtils::copyRecursively(Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder),
+                                          Core::ICore::userResourcePath(QStringLiteral("alif/build")), &error, copyOperator))
     {
         return false;
+    }
+
+    QDir buildDir(Core::ICore::userResourcePath(QStringLiteral("alif/build")).toString());
+
+    if (!buildDir.mkpath(QStringLiteral("images")))
+    {
+        return false;
+    }
+
+
+    for (const QFileInfo &info : buildDir.entryInfoList(QStringList() << QStringLiteral("*.bin") << QStringLiteral("*.sign"), QDir::Files | QDir::NoDotAndDotDot))
+    {
+        if (!QFile::copy(info.absoluteFilePath(), buildDir.filePath(QStringLiteral("images")).append(QDir::separator()).append(info.fileName())))
+        {
+            return false;
+        }
     }
 
     return true;
@@ -322,6 +338,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
     if (file.open(QFile::ReadOnly))
     {
         QJsonDocument doc = QJsonDocument::fromJson(file.readAll());
+
         current_version_major = doc.object().value(QStringLiteral("version_major")).toInt();
         current_version_minor = doc.object().value(QStringLiteral("version_minor")).toInt();
         current_version_patch = doc.object().value(QStringLiteral("version_patch")).toInt();
@@ -821,41 +838,6 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
         }
     }
 
-    // App Gen Toc
-    {
-        QStringList args = QStringList() << QStringLiteral("-f") << QStringLiteral("build/config/alif_cfg.json");
-
-        QString command = QString(QStringLiteral("%1 %2")).arg(appGenToc.toString()).arg(args.join(QLatin1Char(' ')));
-        dialog->appendColoredText(command);
-
-        std::chrono::seconds timeout(300); // 5 minutes...
-        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
-        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setProcessMode(Utils::ProcessMode::Writer);
-        process.setWorkingDirectory(appGenToc.parentDir());
-        process.setCommand(Utils::CommandLine(appGenToc, args));
-        process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
-
-        if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
-        {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
-
-            result = false;
-            goto cleanup;
-        }
-        else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
-        {
-            result = false;
-            goto cleanup;
-        }
-    }
-
     if (!dfuBootloaderProgramCommand.isEmpty())
     {
         // Write Bootloader
@@ -896,6 +878,41 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
     }
     else
     {
+        // App Gen Toc
+        {
+            QStringList args = QStringList() << QStringLiteral("-f") << QStringLiteral("build/config/alif_cfg.json");
+
+            QString command = QString(QStringLiteral("%1 %2")).arg(appGenToc.toString()).arg(args.join(QLatin1Char(' ')));
+            dialog->appendColoredText(command);
+
+            std::chrono::seconds timeout(300); // 5 minutes...
+            process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+            process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+            process.setProcessMode(Utils::ProcessMode::Writer);
+            process.setWorkingDirectory(appGenToc.parentDir());
+            process.setCommand(Utils::CommandLine(appGenToc, args));
+            process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+            if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+            {
+                QMessageBox box(QMessageBox::Critical, Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                box.setDefaultButton(QMessageBox::Ok);
+                box.setEscapeButton(QMessageBox::Cancel);
+                box.exec();
+
+                result = false;
+                goto cleanup;
+            }
+            else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+            {
+                result = false;
+                goto cleanup;
+            }
+        }
+
         // App Write Mram
         {
             QStringList args = QStringList();

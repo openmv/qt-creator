@@ -2012,7 +2012,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             if(isOpenMVDfu)
             {
                 if ((!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
-                && (!firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive)))
+                && (!firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive))
+                && (!firmwarePath.endsWith(QStringLiteral(".lst"), Qt::CaseInsensitive))
+                && (!firmwarePath.isEmpty()))
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
@@ -2063,7 +2065,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             if(isIMX)
             {
                 if ((!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
-                && (!firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive)))
+                && (!firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive))
+                && (!firmwarePath.isEmpty()))
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
@@ -2100,7 +2103,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             {
                 if ((!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
                 && (!firmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive))
-                && (!firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive)))
+                && (!firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive))
+                && (!firmwarePath.isEmpty()))
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
@@ -2120,7 +2124,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if (isBossac)
             {
-                if (!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
+                if (!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)
+                && (!firmwarePath.isEmpty()))
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
@@ -2139,7 +2144,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if (isPicotool)
             {
-                if (!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
+                if (!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)
+                && (!firmwarePath.isEmpty()))
                 {
                     QMessageBox::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
