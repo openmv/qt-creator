@@ -65,10 +65,14 @@ public:
                                const QString &path = QString(),
                                const QJsonObject &boardSettings = QJsonObject());
 
-    QFileSystemModel *model() { return m_model; }
+    QFileSystemModel *model()
+    {
+        return m_model;
+    }
 
 public slots:
 
+    void viewEdit();
     void addFile();
     void addModel();
     void newFolder();

@@ -207,6 +207,24 @@ void OpenMVROMFSEditor::calculateFileSystemSize()
     }
 }
 
+void OpenMVROMFSEditor::viewEdit()
+{
+    QModelIndex index = currentIndex();
+
+    if (!index.isValid()) {
+        index = m_model->index(m_model->rootPath());
+    }
+
+    QUrl url = QUrl::fromLocalFile(m_model->filePath(index));
+
+    if(!QDesktopServices::openUrl(url))
+    {
+        QMessageBox::critical(Core::ICore::dialogParent(),
+                              Tr::tr("Edit ROMFS"),
+                              Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
+    }
+}
+
 void OpenMVROMFSEditor::addModel()
 {
     QModelIndex index = currentIndex();
@@ -218,7 +236,7 @@ void OpenMVROMFSEditor::addModel()
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     // already in the settings group
 
-    OpenMVModelZooBrowser dialog(settings, this);
+    OpenMVModelZooBrowser dialog(m_boardSettings, settings, this);
 
     if (dialog.exec() == QDialog::Accepted)
     {
@@ -266,6 +284,20 @@ void OpenMVROMFSEditor::addModel()
         if (QFile::copy(convertedSrc, newFilePath))
         {
             setCurrentIndex(m_model->index(newFilePath));
+
+            // Copy labels over too if they exist.
+            QString labels = dialog.selectedModelLabels();
+
+            if (!labels.isEmpty())
+            {
+                QFileInfo fileInfo(newFilePath);
+                QString path = fileInfo.absolutePath() + QDir::separator() + fileInfo.baseName() + ".txt";
+
+                if ((!QFile(path).exists()) || QFile::remove(path))
+                {
+                    QFile::copy(labels, path);
+                }
+            }
         }
         else
         {
@@ -459,6 +491,8 @@ void OpenMVROMFSEditor::contextMenuEvent(QContextMenuEvent *event)
     if(index.isValid())
     {
         QMenu menu;
+        connect(menu.addAction(Tr::tr("View/Edit")), &QAction::triggered, this, &OpenMVROMFSEditor::viewEdit);
+        menu.addSeparator();
         connect(menu.addAction(Tr::tr("Add File")), &QAction::triggered, this, &OpenMVROMFSEditor::addFile);
         connect(menu.addAction(Tr::tr("Add Model")), &QAction::triggered, this, &OpenMVROMFSEditor::addModel);
         connect(menu.addAction(Tr::tr("New Folder")), &QAction::triggered, this, &OpenMVROMFSEditor::newFolder);

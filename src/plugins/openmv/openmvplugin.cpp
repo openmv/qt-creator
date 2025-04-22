@@ -1006,7 +1006,7 @@ void OpenMVPlugin::extensionsInitialized()
             boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
         }
 
-        OpenMVModelZooBrowser *dialog = new OpenMVModelZooBrowser(settings, Core::ICore::dialogParent(), true);
+        OpenMVModelZooBrowser *dialog = new OpenMVModelZooBrowser(boardSettings, settings, Core::ICore::dialogParent(), true);
 
         if (dialog->exec() == QDialog::Accepted)
         {
@@ -1033,6 +1033,20 @@ void OpenMVPlugin::extensionsInitialized()
                     {
                         if (m_portPath.isEmpty()) settings->setValue(LAST_MODEL_NO_CAM_PATH, QFileInfo(dst).path());
                         if (!m_portPath.isEmpty()) settings->setValue(LAST_MODEL_WITH_CAM_PATH, QFileInfo(dst).path());
+
+                        // Copy labels over too if they exist.
+                        QString labels = dialog->selectedModelLabels();
+
+                        if (!labels.isEmpty())
+                        {
+                            QFileInfo fileInfo(dst);
+                            QString path = fileInfo.absolutePath() + QDir::separator() + fileInfo.baseName() + ".txt";
+
+                            if ((!QFile(path).exists()) || QFile::remove(path))
+                            {
+                                QFile::copy(labels, path);
+                            }
+                        }
                     }
                     else
                     {

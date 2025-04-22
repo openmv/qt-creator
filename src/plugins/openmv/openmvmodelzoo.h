@@ -40,46 +40,42 @@
 namespace OpenMV {
 namespace Internal {
 
-class OpenMVModelZooBrowserFilter : public QSortFilterProxyModel {
+typedef struct modelFilter
+{
+    QRegularExpression path;
+    QRegularExpression boardType;
+}
+modelFilter_t;
+
+class OpenMVModelZooBrowserFilter : public QSortFilterProxyModel
+{
     Q_OBJECT
 
 public:
-    OpenMVModelZooBrowserFilter(QObject *parent = Q_NULLPTR) : QSortFilterProxyModel(parent) {}
+
+    OpenMVModelZooBrowserFilter(const QJsonObject &boardSettings, QCheckBox *checkBox, QObject *parent = Q_NULLPTR);
 
 protected:
-    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override
-    {
-        QModelIndex index = sourceModel()->index(sourceRow, 0, sourceParent);
-        QFileSystemModel *fileModel = qobject_cast<QFileSystemModel *>(sourceModel());
 
-        if (!fileModel)
-        {
-            return false;
-        }
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 
-        if (fileModel->isDir(index))
-        {
-            return true;
-        }
+private:
 
-        QString fileName = fileModel->fileName(index);
-
-        if (fileName.endsWith(".tflite"))
-        {
-            return true;
-        }
-
-        return false;
-    }
+    QJsonObject m_boardSettings;
+    QCheckBox *m_filterCheckBox;
+    QList<modelFilter_t> m_modelFilters;
 };
 
-class OpenMVModelZooBrowserTreeView : public QTreeView {
+class OpenMVModelZooBrowserTreeView : public QTreeView
+{
     Q_OBJECT
 
 public:
+
     OpenMVModelZooBrowserTreeView(QWidget *parent = Q_NULLPTR) : QTreeView(parent) {}
 
 signals:
+
     void selectionCleared();
     void paintEventSignal();
 
@@ -111,10 +107,26 @@ class OpenMVModelZooBrowser : public QDialog
 
 public:
 
-    explicit OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidget *parent = Q_NULLPTR, bool saveDialog = false);
+    explicit OpenMVModelZooBrowser(const QJsonObject &boardSettings, Utils::QtcSettings *settings, QWidget *parent = Q_NULLPTR, bool saveDialog = false);
     ~OpenMVModelZooBrowser();
 
     QString selectedModel() const { return m_selectedModel; }
+
+    QString selectedModelLabels() const
+    {
+        if (!m_selectedModel.isEmpty())
+        {
+            QFileInfo fileInfo(m_selectedModel);
+            QString path = fileInfo.absolutePath() + QDir::separator() + fileInfo.baseName() + ".txt";
+
+            if (QFileInfo(path).exists())
+            {
+                return path;
+            }
+        }
+
+        return QString();
+    }
 
 protected:
 
@@ -125,11 +137,13 @@ private:
     void saveExpandedState(const QString &path, QStringList &list, const QModelIndex &index);
     void restoreExpandedState(const QString &path, const QModelIndex &index);
 
+    QJsonObject m_boardSettings;
     Utils::QtcSettings *m_settings;
     QFileSystemModel *m_model;
     OpenMVModelZooBrowserTreeView *m_treeView;
     Core::MiniSplitter *m_splitter;
     OpenMVModelZooBrowserFilter *m_filter;
+    QCheckBox *m_filterCheckBox;
     QStringList m_listToExpand;
     QString m_selectedModel;
     bool m_initialized;

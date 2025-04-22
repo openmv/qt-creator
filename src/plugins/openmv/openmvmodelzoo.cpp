@@ -38,12 +38,109 @@
 #define LAST_MODEL_ZOO_DIALOG_SPLITTER_STATE "OpenMVModelZooDialogSplitterState"
 #define LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE "OpenMVModelZooDialogExpandedState"
 #define LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX "OpenMVModelZooDialogSelectedIndex"
+#define LAST_MODEL_ZOO_DIALOG_FILTER_MODELS "OpenMVModelZooDialogFilterModels"
 
 namespace OpenMV {
 namespace Internal {
 
-OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidget *parent, bool saveDialog) :
-    QDialog(parent), m_settings(settings), m_model(new QFileSystemModel(this))
+OpenMVModelZooBrowserFilter::OpenMVModelZooBrowserFilter(const QJsonObject &boardSettings, QCheckBox *checkBox, QObject *parent) :
+    QSortFilterProxyModel(parent),
+    m_boardSettings(boardSettings), m_filterCheckBox(checkBox)
+{
+    m_modelFilters = QList<modelFilter_t>();
+
+    QFile filters(Core::ICore::userResourcePath(QStringLiteral("models/index.csv")).toString());
+
+    if(filters.open(QIODevice::ReadOnly))
+    {
+        forever
+        {
+            QByteArray data = filters.readLine();
+
+            if((filters.error() == QFile::NoError) && (!data.isEmpty()))
+            {
+                if (QRegularExpression(QStringLiteral("^\\s*#")).match(QString::fromUtf8(data)).hasMatch()) continue;
+                QRegularExpressionMatch regexes = QRegularExpression(QStringLiteral("\"(.*?)\"\\s*,\\s*\"(.*?)\"")).match(QString::fromUtf8(data));
+
+                modelFilter_t filter;
+                filter.path = QRegularExpression(regexes.captured(1));
+                filter.path.optimize();
+                filter.boardType = QRegularExpression(regexes.captured(2));
+                filter.boardType.optimize();
+                filter.boardType.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
+
+                m_modelFilters.append(filter);
+            }
+            else
+            {
+                filters.close();
+                break;
+            }
+        }
+    }
+}
+
+bool OpenMVModelZooBrowserFilter::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
+{
+    QModelIndex index = sourceModel()->index(sourceRow, 0, sourceParent);
+    QFileSystemModel *fileModel = qobject_cast<QFileSystemModel *>(sourceModel());
+
+    if (!fileModel)
+    {
+        return false;
+    }
+
+    QString filePath = QDir::cleanPath(QDir::fromNativeSeparators(fileModel->filePath(index)));
+
+    // No Filtering if there are no filters...
+    if ((!m_filterCheckBox->isChecked()) || m_modelFilters.isEmpty())
+    {
+        if (fileModel->isDir(index))
+        {
+            return true;
+        }
+
+        if (filePath.endsWith(".tflite"))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    for(const modelFilter_t &filter : m_modelFilters)
+    {
+        if(filter.path.match(filePath).hasMatch())
+        {
+            if((!filter.boardType.pattern().isEmpty())
+            && filter.boardType.match(m_boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString()).hasMatch())
+            {
+                if (fileModel->isDir(index))
+                {
+                    return true;
+                }
+
+                if (filePath.endsWith(".tflite"))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    }
+
+    // We need to return true for directories that don't match any filter.
+    if (fileModel->isDir(index))
+    {
+        return true;
+    }
+
+    return false;
+}
+
+OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, Utils::QtcSettings *settings, QWidget *parent, bool saveDialog) :
+    QDialog(parent), m_boardSettings(boardSettings), m_settings(settings), m_model(new QFileSystemModel(this))
 {
     setWindowFlags(windowFlags() | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -52,7 +149,10 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidg
 
     m_splitter = new Core::MiniSplitter(Qt::Horizontal, this);
 
-    m_filter = new OpenMVModelZooBrowserFilter(this);
+    m_filterCheckBox = new QCheckBox(Tr::tr("Filter models by board type"));
+    m_filterCheckBox->setChecked(m_settings->value(LAST_MODEL_ZOO_DIALOG_FILTER_MODELS, true).toBool());
+
+    m_filter = new OpenMVModelZooBrowserFilter(m_boardSettings, m_filterCheckBox, this);
     m_filter->setSourceModel(m_model);
 
     m_treeView = new OpenMVModelZooBrowserTreeView(this);
@@ -74,8 +174,17 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidg
     m_splitter->setStretchFactor(0, 1);
     m_splitter->setStretchFactor(1, 0);
 
+    m_splitter->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+
     QVBoxLayout *vlayout = new QVBoxLayout(this);
     vlayout->addWidget(m_splitter);
+
+    QHBoxLayout *layout2 = new QHBoxLayout;
+    layout2->setContentsMargins(0, 0, 0, 0);
+    QWidget *widget = new QWidget;
+    widget->setLayout(layout2);
+
+    layout2->addWidget(m_filterCheckBox);
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
     QPushButton *ok = new QPushButton(saveDialog ? Tr::tr("Copy") : Tr::tr("OK"));
@@ -83,14 +192,22 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(Utils::QtcSettings *settings, QWidg
     ok->setEnabled(false);
     connect(box, &QDialogButtonBox::accepted, this, &OpenMVModelZooBrowser::accept);
     connect(box, &QDialogButtonBox::rejected, this, &OpenMVModelZooBrowser::reject);
-    vlayout->addWidget(box);
+    layout2->addSpacing(160);
+    layout2->addWidget(box);
+    vlayout->addWidget(widget);
+
+    connect(m_filterCheckBox, &QCheckBox::toggled, this, [this] () {
+        m_filter->invalidate();
+    });
 
     if(m_settings->contains(LAST_MODEL_ZOO_DIALOG_GEOMETRY))
     {
         restoreGeometry(m_settings->value(LAST_MODEL_ZOO_DIALOG_GEOMETRY).toByteArray());
         m_splitter->restoreState(m_settings->value(LAST_MODEL_ZOO_DIALOG_SPLITTER_STATE).toByteArray());
 
+        m_settings->beginGroup(m_boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString().toUtf8());
         m_listToExpand = m_settings->value(LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE).toStringList();
+        m_settings->endGroup();
 
         connect(m_model, &QFileSystemModel::directoryLoaded, this, [this] () {
             if (!m_listToExpand.isEmpty())
@@ -276,10 +393,13 @@ OpenMVModelZooBrowser::~OpenMVModelZooBrowser()
 {
     m_settings->setValue(LAST_MODEL_ZOO_DIALOG_GEOMETRY, saveGeometry());
     m_settings->setValue(LAST_MODEL_ZOO_DIALOG_SPLITTER_STATE, m_splitter->saveState());
+    m_settings->setValue(LAST_MODEL_ZOO_DIALOG_FILTER_MODELS, m_filterCheckBox->isChecked());
 
     QStringList list;
     saveExpandedState(QString(), list, m_treeView->rootIndex());
+    m_settings->beginGroup(m_boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString().toUtf8());
     m_settings->setValue(LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE, list);
+    m_settings->endGroup();
 
     if (m_treeView->selectionModel()->hasSelection())
     {
