@@ -109,6 +109,7 @@ if (APPLE)
     picotool/osx
     python/mac
     pylsp/mac
+    vela/osx
     blhost/mac
     sdphost/mac)
   set(resource_files ${resource_files} pydfu/pydfu.py)
@@ -124,6 +125,7 @@ if(UNIX AND NOT APPLE)
         node/linux-arm64
         picotool/aarch64
         python/linux-arm64
+        vela/aarch64
         pydfu)
     else()
       set(resource_directories ${resource_directories}
@@ -135,6 +137,7 @@ if(UNIX AND NOT APPLE)
         picotool/linux64
         python/linux-x86_64
         pylsp/linux-x86_64
+        vela/linux64
         blhost/linux/amd64
         sdphost/linux/amd64
         pydfu)
