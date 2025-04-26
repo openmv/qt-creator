@@ -86,7 +86,26 @@ QString convertModel(const QJsonObject &boardSettings,
             {
                 if (model.endsWith(".tflite"))
                 {
-                    return velaCompile(model, npuAcceleratorConfig, settings);
+                    QFile file(model);
+
+                    if (file.open(QIODevice::ReadOnly))
+                    {
+                        bool needs_conversion = !file.readAll().contains(QStringLiteral("ethos-u").toUtf8());
+
+                        file.close();
+
+                        if (needs_conversion)
+                        {
+                            return velaCompile(model, npuAcceleratorConfig, settings);
+                        }
+                        else
+                        {
+                            QMessageBox::information(Core::ICore::dialogParent(),
+                                Tr::tr("Convert Model"),
+                                Tr::tr("The model has already been converted for the Ethos-U NPU."
+                                       "\n\nOpenMV IDE will just copy the model as is."));
+                        }
+                    }
                 }
             }
 
@@ -517,8 +536,8 @@ void OpenMVROMFSEditor::contextMenuEvent(QContextMenuEvent *event)
         QMenu menu;
         connect(menu.addAction(Tr::tr("View/Edit")), &QAction::triggered, this, &OpenMVROMFSEditor::viewEdit);
         menu.addSeparator();
+        connect(menu.addAction(Tr::tr("Model Zoo")), &QAction::triggered, this, &OpenMVROMFSEditor::addModel);
         connect(menu.addAction(Tr::tr("Add File")), &QAction::triggered, this, &OpenMVROMFSEditor::addFile);
-        connect(menu.addAction(Tr::tr("Add Model")), &QAction::triggered, this, &OpenMVROMFSEditor::addModel);
         connect(menu.addAction(Tr::tr("New Folder")), &QAction::triggered, this, &OpenMVROMFSEditor::newFolder);
         connect(menu.addAction(Tr::tr("Delete")), &QAction::triggered, this, &OpenMVROMFSEditor::remove);
         connect(menu.addAction(Tr::tr("Extract File")), &QAction::triggered, this, &OpenMVROMFSEditor::extractFile);
@@ -756,10 +775,10 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
     layout->addWidget(romfsSize);
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
+    QPushButton *addModel = new QPushButton(Tr::tr("Model Zoo"));
+    box->addButton(addModel, QDialogButtonBox::ActionRole);
     QPushButton *addFile = new QPushButton(Tr::tr("Add File"));
     box->addButton(addFile, QDialogButtonBox::ActionRole);
-    QPushButton *addModel = new QPushButton(Tr::tr("Add Model"));
-    box->addButton(addModel, QDialogButtonBox::ActionRole);
     QPushButton *newFolder = new QPushButton(Tr::tr("New Folder"));
     box->addButton(newFolder, QDialogButtonBox::ActionRole);
     QPushButton *remove = new QPushButton(Tr::tr("Delete"));
