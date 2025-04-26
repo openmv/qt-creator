@@ -28,7 +28,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 131072,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -92,7 +98,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 131072,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -123,7 +135,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 262144,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -187,7 +205,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 262144,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -218,7 +242,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 131072,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -282,7 +312,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 131072,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -313,7 +349,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 8388608,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -377,7 +419,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 8388608,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -408,7 +456,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 8388608,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -472,7 +526,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 8388608,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -514,7 +574,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 8388608,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -556,7 +622,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 8388608,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -598,7 +670,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 8388608,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -669,6 +747,12 @@
                     "name" : "High Performance Core",
                     "size" : 16777216,
                     "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ],
                     "npuAcceleratorConfig": {
                         "type" : "vela",
                         "args" : [
@@ -684,6 +768,12 @@
                     "name" : "High Efficiency Core",
                     "size" : 1048576,
                     "index" : 1,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ],
                     "npuAcceleratorConfig": {
                         "type" : "vela",
                         "args" : [
@@ -731,6 +821,12 @@
                     "name" : "High Performance Core",
                     "size" : 16777216,
                     "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ],
                     "npuAcceleratorConfig": {
                         "type" : "vela",
                         "args" : [
@@ -746,6 +842,12 @@
                     "name" : "High Efficiency Core",
                     "size" : 1048576,
                     "index" : 1,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ],
                     "npuAcceleratorConfig": {
                         "type" : "vela",
                         "args" : [
@@ -810,6 +912,12 @@
                     "name" : "ROMFS",
                     "size" : 16777216,
                     "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ],
                     "npuAcceleratorConfig": {
                         "type" : "stedgeai"
                     }
@@ -857,7 +965,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 4194304,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -902,7 +1016,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 4194304,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -947,7 +1067,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 4194304,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -973,7 +1099,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 0,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -1000,7 +1132,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 0,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         },
@@ -1027,7 +1165,13 @@
                 {
                     "name" : "ROMFS",
                     "size" : 0,
-                    "index" : 0
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        }
+                    ]
                 }
             ]
         }

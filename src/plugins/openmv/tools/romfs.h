@@ -60,21 +60,21 @@ class VfsRomWriter
 {
 
 public:
-    VfsRomWriter(qsizetype alignment = 2);
+    VfsRomWriter(const QJsonArray &alignmentRules);
     QByteArray finalize();
     void opendir(const QString &dirname);
     void closedir();
     void mkfile(const QString &filename, const QByteArray &filedata);
-    void mkfile(const QString &filename, quint64 filesize, quint64 fileoffset);
 
 private:
     QByteArray encodeuint(quint64 value);
-    QByteArray pad(const QByteArray &data);
-    QByteArray pack(const QByteArray &header, const QByteArray &payload, bool padpayload = false);
-    void extend(const QByteArray &data);
+    QByteArray encoderecord(quint64 kind, const QByteArray &payload, int alignment = 0, int offset = 0, int padding = 0);
+    QByteArray encodefile(const QString &filename, const QByteArray &payload, int alignment, int offset);
 
     QList<QPair<QString, QByteArray> > m_dirstack;
-    qsizetype m_alignment;
+    QList<int> m_offsetstack;
+    QJsonArray m_alignmentRules;
+    int m_maxAlignment;
 };
 
 } // namespace Internal

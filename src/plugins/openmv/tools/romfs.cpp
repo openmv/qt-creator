@@ -39,12 +39,20 @@ namespace Internal {
 #define ROMFS_HEADER_BYTE1              (0x80 | 'M')
 #define ROMFS_HEADER_BYTE2              (0x00 | '1')
 
+#define ROMSF_HEADER_KIND               (((ROMFS_HEADER_BYTE0 & 0x7F) << 14) | \
+                                        ((ROMFS_HEADER_BYTE1 & 0x7F) << 7) | \
+                                        (ROMFS_HEADER_BYTE2 & 0x7F))
+
 #define ROMFS_RECORD_KIND_UNUSED        (0)
 #define ROMFS_RECORD_KIND_PADDING       (1)
 #define ROMFS_RECORD_KIND_DATA_VERBATIM (2)
 #define ROMFS_RECORD_KIND_DATA_POINTER  (3)
 #define ROMFS_RECORD_KIND_DIRECTORY     (4)
 #define ROMFS_RECORD_KIND_FILE          (5)
+
+#define ROMFS_MIN_ALIGNMENT             (4)
+#define ROMFS_FILEREC_ALIGNMENT         (8)
+#define ROMFS_HEADER_ALIGNMENT          (16)
 
 QByteArray toAscii(const QString &str)
 {
@@ -111,6 +119,10 @@ void VfsRomReader::unpackrecursive(const QString &path, const uint8_t *fs, const
             if (recordkind == ROMFS_RECORD_KIND_DIRECTORY)
             {
                 dir.mkpath(name);
+
+                // Required to make sure creation timestamps are different on unpacked files.
+                QThread::msleep(1);
+
                 unpackrecursive(path + QDir::separator() + name, fs, fsnext);
             }
             else
@@ -128,6 +140,9 @@ void VfsRomReader::unpackrecursive(const QString &path, const uint8_t *fs, const
                         file.write(filedata);
                         file.close();
                     }
+
+                    // Required to make sure creation timestamps are different on unpacked files.
+                    QThread::msleep(1);
                 }
                 else if ((datakind == ROMFS_RECORD_KIND_DATA_POINTER) && (payloadlen >= 8))
                 {
@@ -137,7 +152,11 @@ void VfsRomReader::unpackrecursive(const QString &path, const uint8_t *fs, const
 
                     if (file.open(QIODevice::WriteOnly)) {
                         file.write(reinterpret_cast<const char *>(filesystem + dp_data), dp_size);
+                        file.close();
                     }
+
+                    // Required to make sure creation timestamps are different on unpacked files.
+                    QThread::msleep(1);
                 }
             }
         }
@@ -188,57 +207,51 @@ QByteArray VfsRomWriter::encodeuint(quint64 value)
     return encoded;
 }
 
-QByteArray VfsRomWriter::pad(const QByteArray &data)
+QByteArray VfsRomWriter::encoderecord(quint64 kind, const QByteArray &payload, int alignment, int offset, int padding)
 {
-    if (data.size() % m_alignment) {
-        return data + QByteArray(m_alignment - (data.size() % m_alignment), '\x00');
+    if (alignment)
+    {
+        // Calculate what the offset will be after kind and payload size.
+        offset += QByteArray(encodeuint(kind) + encodeuint(payload.size())).size();
+        padding = ((offset + (alignment - 1)) & (~(alignment - 1))) - offset;
     }
 
-    return data;
+    QByteArray kindb = kind ? encodeuint(kind) : QByteArray();
+    return kindb + QByteArray(padding, '\x80') + encodeuint(payload.size()) + payload;
 }
 
-QByteArray VfsRomWriter::pack(const QByteArray &header, const QByteArray &payload, bool padpayload)
+QByteArray VfsRomWriter::encodefile(const QString &filename, const QByteArray &payload, int alignment, int offset)
 {
-    QByteArray payloadSizeBytes = encodeuint(payload.size());
-    qsizetype size = header.size() + payloadSizeBytes.size();
+    QByteArray bfilename = toAscii(filename);
+    QByteArray nameRecord = encoderecord(0, bfilename);
 
-    if (size % m_alignment) {
-        payloadSizeBytes.prepend(QByteArray(m_alignment - (size % m_alignment), '\x80'));
-    }
+    // Calculate what the offset will be after filekind and nameRecord.
+    offset += 1 + (ROMFS_FILEREC_ALIGNMENT - 1) + nameRecord.size();
 
-    return header + payloadSizeBytes + (padpayload ? pad(payload) : payload);
+    QByteArray bpayload = encoderecord(ROMFS_RECORD_KIND_DATA_VERBATIM, payload, alignment, offset);
+
+    return encoderecord(ROMFS_RECORD_KIND_FILE, nameRecord + bpayload, ROMFS_FILEREC_ALIGNMENT);
 }
 
-void VfsRomWriter::extend(const QByteArray &data)
-{
-    m_dirstack.last().second.append(data);
-}
-
-VfsRomWriter::VfsRomWriter(qsizetype alignment)
+VfsRomWriter::VfsRomWriter(const QJsonArray &alignmentRules)
 {
     QPair<QString, QByteArray> pair;
     pair.first = QString();
     pair.second = QByteArray();
     m_dirstack = QList<QPair<QString, QByteArray> >() << pair;
-    m_alignment = alignment;
+    m_offsetstack = QList<int>() << ROMFS_HEADER_ALIGNMENT;
+    m_alignmentRules = alignmentRules;
+    m_maxAlignment = ROMFS_MIN_ALIGNMENT;
+
+    for (const QJsonValue &rule : m_alignmentRules)
+    {
+        m_maxAlignment = qMax(m_maxAlignment, rule.toObject().value(QStringLiteral("alignment")).toInt());
+    }
 }
 
 QByteArray VfsRomWriter::finalize()
 {
-    char header[3] = {};
-    header[0] = ROMFS_HEADER_BYTE0;
-    header[1] = ROMFS_HEADER_BYTE1;
-    header[2] = ROMFS_HEADER_BYTE2;
-    QPair<QString, QByteArray> pair = m_dirstack.takeLast();
-    QByteArray encodedkind = QByteArray(header);
-    QByteArray encodedlen = encodeuint(pair.second.size());
-    qsizetype size = encodedkind.size() + encodedlen.size();
-
-    if (size % m_alignment) {
-        encodedlen.prepend(QByteArray(m_alignment - (size % m_alignment), '\x80'));
-    }
-
-    return encodedkind + encodedlen + pair.second;
+    return encoderecord(ROMSF_HEADER_KIND, m_dirstack.takeLast().second, ROMFS_HEADER_ALIGNMENT);
 }
 
 void VfsRomWriter::opendir(const QString &dirname)
@@ -247,35 +260,41 @@ void VfsRomWriter::opendir(const QString &dirname)
     pair.first = dirname;
     pair.second = QByteArray();
     m_dirstack.append(pair);
+    m_offsetstack.append(0);
 }
 
 void VfsRomWriter::closedir()
 {
     QPair<QString, QByteArray> pair = m_dirstack.takeLast();
+    m_offsetstack.takeLast();
+
     QByteArray bdirname = toAscii(pair.first);
-    QByteArray bdirnamesize = encodeuint(bdirname.size());
-    qsizetype size = bdirnamesize.size() + bdirname.size();
+    QByteArray nameRecord = encoderecord(0, bdirname);
 
-    if (size % m_alignment) {
-        bdirnamesize.prepend(QByteArray(m_alignment - (size % m_alignment), '\x80'));
-    }
-
-    extend(pack(encodeuint(ROMFS_RECORD_KIND_DIRECTORY), bdirnamesize + bdirname + pair.second));
+    QByteArray record = encoderecord(ROMFS_RECORD_KIND_DIRECTORY, nameRecord + pair.second, m_maxAlignment, m_offsetstack.last());
+    m_offsetstack.last() += record.size();
+    m_dirstack.last().second.append(record);
 }
 
 void VfsRomWriter::mkfile(const QString &filename, const QByteArray &filedata)
 {
-    QByteArray bfilename = toAscii(filename);
-    QByteArray payload = pack(encodeuint(bfilename.size()) + bfilename + encodeuint(ROMFS_RECORD_KIND_DATA_VERBATIM), filedata, true);
-    extend(pack(encodeuint(ROMFS_RECORD_KIND_FILE), payload));
-}
+    QString completeSuffix = QFileInfo(filename).completeSuffix().toLower();
+    int minAlignment = ROMFS_MIN_ALIGNMENT;
 
-void VfsRomWriter::mkfile(const QString &filename, quint64 filesize, quint64 fileoffset)
-{
-    QByteArray bfilename = toAscii(filename);
-    QByteArray subpayload = encodeuint(filesize) + encodeuint(fileoffset);
-    QByteArray payload = pack(encodeuint(bfilename.size()) + bfilename + encodeuint(ROMFS_RECORD_KIND_DATA_POINTER), subpayload, true);
-    extend(pack(encodeuint(ROMFS_RECORD_KIND_FILE), payload));
+    for (const QJsonValue &rule : m_alignmentRules)
+    {
+        QJsonObject obj = rule.toObject();
+
+        if (completeSuffix == obj.value(QStringLiteral("extension")).toString().toLower())
+        {
+            minAlignment = obj.value(QStringLiteral("alignment")).toInt();
+            break;
+        }
+    }
+
+    QByteArray record = encodefile(filename, filedata, minAlignment, m_offsetstack.last());
+    m_offsetstack.last() += record.size();
+    m_dirstack.last().second.append(record);
 }
 
 } // namespace Internal

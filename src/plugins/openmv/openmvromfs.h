@@ -34,6 +34,8 @@
 #include <QtCore>
 #include <QtWidgets>
 
+#include "tools/romfs.h"
+
 #include <utils/qtcsettings.h>
 
 enum OpenMVROMFSAccess
@@ -55,6 +57,35 @@ QString convertModel(const QJsonObject &boardSettings,
                      const QString &model,
                      Utils::QtcSettings *settings);
 
+class OpenMVROMFSEditorFilter : public QSortFilterProxyModel
+{
+    Q_OBJECT
+
+public:
+
+    OpenMVROMFSEditorFilter(QObject *parent = Q_NULLPTR) : QSortFilterProxyModel(parent) {}
+
+protected:
+
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override
+    {
+        QFileSystemModel *fsModel = qobject_cast<QFileSystemModel *>(sourceModel());
+
+        if (!fsModel)
+        {
+            return false;
+        }
+
+        QFileInfo leftInfo(fsModel->filePath(left));
+        QFileInfo rightInfo(fsModel->filePath(right));
+
+        QDateTime leftTime = leftInfo.birthTime();
+        QDateTime rightTime = rightInfo.birthTime();
+
+        return leftTime < rightTime; // Sort by creation timestamp
+    }
+};
+
 class OpenMVROMFSEditor : public QTreeView
 {
     Q_OBJECT
@@ -65,10 +96,10 @@ public:
                                const QString &path = QString(),
                                const QJsonObject &boardSettings = QJsonObject());
 
-    QFileSystemModel *model()
-    {
-        return m_model;
-    }
+    OpenMVROMFSEditorFilter *filter() { return m_filter; }
+    QFileSystemModel *model() { return m_model; }
+
+    void createRomfs(VfsRomWriter *writer, const QModelIndex &index);
 
 public slots:
 
@@ -95,6 +126,7 @@ private:
     void preloadDirectories(const QModelIndex &index);
     void calculateFileSystemSize();
 
+    OpenMVROMFSEditorFilter *m_filter;
     QFileSystemModel *m_model;
     QJsonObject m_boardSettings;
     QString m_styleSheet, m_highDPIStyleSheet;

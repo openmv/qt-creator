@@ -37,8 +37,6 @@
 #include "openmvromfs.h"
 #include "openmvmodelzoo.h"
 
-#define ROMFS_FILE_ALIGNMENT    (32)
-
 namespace OpenMV {
 namespace Internal {
 
@@ -105,30 +103,33 @@ QString convertModel(const QJsonObject &boardSettings,
     return model;
 }
 
-static void createRomfs(VfsRomWriter *writer, const QFileSystemModel *model, const QModelIndex &index) {
-    for (int i = 0; i < model->rowCount(index); i++)
+void OpenMVROMFSEditor::createRomfs(VfsRomWriter *writer, const QModelIndex &index)
+{
+    for (int i = 0; i < m_filter->rowCount(index); i++)
     {
-        QModelIndex childIndex = model->index(i, 0, index);
+        QModelIndex filterIndex = m_filter->index(i, 0, index);
+        QModelIndex childIndex = m_filter->mapToSource(filterIndex);
 
-        if (model->isDir(childIndex))
+        if (m_model->isDir(childIndex))
         {
-            writer->opendir(model->fileName(childIndex));
-            createRomfs(writer, model, childIndex);
+            writer->opendir(m_model->fileName(childIndex));
+            createRomfs(writer, filterIndex);
             writer->closedir();
         }
         else
         {
-            QFile file(model->filePath(childIndex));
+            QFile file(m_model->filePath(childIndex));
 
             if (file.open(QIODevice::ReadOnly))
             {
-                writer->mkfile(model->fileName(childIndex), file.readAll());
+                writer->mkfile(m_model->fileName(childIndex), file.readAll());
             }
         }
     }
 }
 
-static QString humanReadableSize(quint64 bytes) {
+static QString humanReadableSize(quint64 bytes)
+{
     const QStringList units = {"B", "KB", "MB", "GB", "TB"};
     int unitIndex = 0;
     double size = bytes;
@@ -145,10 +146,15 @@ static QString humanReadableSize(quint64 bytes) {
 OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path, const QJsonObject &boardSettings) : QTreeView(parent), m_model(new QFileSystemModel(this))
 {
     setContextMenuPolicy(Qt::DefaultContextMenu);
+    setSortingEnabled(true);
+    sortByColumn(0, Qt::AscendingOrder);
+    m_filter = new OpenMVROMFSEditorFilter(this);
+    m_filter->setSourceModel(m_model);
+    m_filter->setDynamicSortFilter(true);
     m_model->setReadOnly(false);
     m_model->setRootPath(path);
-    setModel(m_model);
-    setRootIndex(m_model->index(path));
+    setModel(m_filter);
+    setRootIndex(m_filter->mapFromSource(m_model->index(path)));
     header()->setStretchLastSection(false);
     header()->setSectionResizeMode(0, QHeaderView::Stretch);
     setColumnHidden(2, true); // Type
@@ -170,15 +176,15 @@ OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path, const
     connect(m_model, &QFileSystemModel::directoryLoaded, this, &OpenMVROMFSEditor::calculateFileSystemSize);
     connect(m_model, &QFileSystemModel::dataChanged, this, &OpenMVROMFSEditor::calculateFileSystemSize);
     connect(m_model, &QFileSystemModel::directoryLoaded, this, [this, path] (){
-        preloadDirectories(m_model->index(path));
+        preloadDirectories(m_filter->mapFromSource(m_model->index(path)));
     });
 }
 
 void OpenMVROMFSEditor::preloadDirectories(const QModelIndex &index)
 {
-    for (int row = 0; row < m_model->rowCount(index); row++)
+    for (int row = 0; row < m_filter->rowCount(index); row++)
     {
-        QModelIndex child = m_model->index(row, 0, index);
+        QModelIndex child = m_filter->index(row, 0, index);
         setExpanded(child, true);
         preloadDirectories(child);
     }
@@ -186,17 +192,18 @@ void OpenMVROMFSEditor::preloadDirectories(const QModelIndex &index)
 
 void OpenMVROMFSEditor::calculateFileSystemSize()
 {
-    VfsRomWriter writer(ROMFS_FILE_ALIGNMENT);
-    createRomfs(&writer, m_model, m_model->index(m_model->rootPath()));
-
     size_t sizeLimit = SIZE_MAX;
+    QJsonArray alignmentRules;
 
     if (m_boardSettings.contains(QStringLiteral("romfsConfig")))
     {
         QJsonObject romfsConfig = m_boardSettings.value(QStringLiteral("romfsConfig")).toObject();
         sizeLimit = romfsConfig.value(QStringLiteral("size")).toInt();
+        alignmentRules = romfsConfig.value(QStringLiteral("alignmentRules")).toArray();
     }
 
+    VfsRomWriter writer(alignmentRules);
+    createRomfs(&writer, m_filter->mapFromSource(m_model->index(m_model->rootPath())));
     size_t size = writer.finalize().size();
 
     if (size <= sizeLimit)
@@ -218,7 +225,7 @@ void OpenMVROMFSEditor::calculateFileSystemSize()
 
 void OpenMVROMFSEditor::viewEdit()
 {
-    QModelIndex index = currentIndex();
+    QModelIndex index = m_filter->mapToSource(currentIndex());
 
     if (!index.isValid()) {
         index = m_model->index(m_model->rootPath());
@@ -236,7 +243,7 @@ void OpenMVROMFSEditor::viewEdit()
 
 void OpenMVROMFSEditor::addModel()
 {
-    QModelIndex index = currentIndex();
+    QModelIndex index = m_filter->mapToSource(currentIndex());
 
     if (!index.isValid()) {
         index = m_model->index(m_model->rootPath());
@@ -292,7 +299,7 @@ void OpenMVROMFSEditor::addModel()
 
         if (QFile::copy(convertedSrc, newFilePath))
         {
-            setCurrentIndex(m_model->index(newFilePath));
+            setCurrentIndex(m_filter->mapFromSource(m_model->index(newFilePath)));
 
             // Copy labels over too if they exist.
             QString labels = dialog.selectedModelLabels();
@@ -307,6 +314,8 @@ void OpenMVROMFSEditor::addModel()
                     QFile::copy(labels, path);
                 }
             }
+
+            m_filter->invalidate();
         }
         else
         {
@@ -319,7 +328,7 @@ void OpenMVROMFSEditor::addModel()
 
 void OpenMVROMFSEditor::addFile()
 {
-    QModelIndex index = currentIndex();
+    QModelIndex index = m_filter->mapToSource(currentIndex());
 
     if (!index.isValid()) {
         index = m_model->index(m_model->rootPath());
@@ -375,8 +384,10 @@ void OpenMVROMFSEditor::addFile()
 
         if (QFile::copy(convertedSrc, newFilePath))
         {
-            setCurrentIndex(m_model->index(newFilePath));
+            setCurrentIndex(m_filter->mapFromSource(m_model->index(newFilePath)));
             settings->setValue(LAST_ROMFS_DIALOG_OPEN_FILE_PATH, QFileInfo(file).path());
+
+            m_filter->invalidate();
         }
         else
         {
@@ -389,7 +400,7 @@ void OpenMVROMFSEditor::addFile()
 
 void OpenMVROMFSEditor::newFolder()
 {
-    QModelIndex index = currentIndex();
+    QModelIndex index = m_filter->mapToSource(currentIndex());
 
     if (!index.isValid()) {
         index = m_model->index(m_model->rootPath());
@@ -412,8 +423,10 @@ void OpenMVROMFSEditor::newFolder()
 
         if (QDir().mkdir(newFilePath))
         {
-            setCurrentIndex(m_model->index(newFilePath));
+            setCurrentIndex(m_filter->mapFromSource(m_model->index(newFilePath)));
             settings->setValue(LAST_ROMFS_DIALOG_NEW_FOLDER_NAME, name);
+
+            m_filter->invalidate();
         }
         else
         {
@@ -426,7 +439,7 @@ void OpenMVROMFSEditor::newFolder()
 
 void OpenMVROMFSEditor::remove()
 {
-    QModelIndex index = currentIndex();
+    QModelIndex index = m_filter->mapToSource(currentIndex());
 
     if (!index.isValid()) {
         QMessageBox::information(Core::ICore::dialogParent(),
@@ -448,12 +461,14 @@ void OpenMVROMFSEditor::remove()
                 Tr::tr("Failed to remove file or folder!"));
             return;
         }
+
+        m_filter->invalidate();
     }
 }
 
 void OpenMVROMFSEditor::extractFile()
 {
-    QModelIndex index = currentIndex();
+    QModelIndex index = m_filter->mapToSource(currentIndex());
 
     if (!index.isValid()) {
         QMessageBox::information(Core::ICore::dialogParent(),
@@ -580,6 +595,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
     int romfsIndex = 0;
     int romfsImageSize = 0;
+    QJsonArray alignmentRules;
 
     if (boardSettings.contains(QStringLiteral("romfsConfig")))
     {
@@ -605,6 +621,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
         romfsIndex = romfsConfigSettings.value(QStringLiteral("index")).toInt();
         romfsImageSize = romfsConfigSettings.value(QStringLiteral("size")).toInt();
+        alignmentRules = romfsConfigSettings.value(QStringLiteral("alignmentRules")).toArray();
     }
     else
     {
@@ -819,8 +836,9 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
                 if (romfsFile.open(QIODevice::WriteOnly | QIODevice::Truncate))
                 {
-                    VfsRomWriter writer(ROMFS_FILE_ALIGNMENT);
-                    createRomfs(&writer, romfsEditor->model(), romfsEditor->model()->index(romfsEditor->model()->rootPath()));
+                    VfsRomWriter writer(alignmentRules);
+                    romfsEditor->createRomfs(&writer,
+                        romfsEditor->filter()->mapFromSource(romfsEditor->model()->index(romfsEditor->model()->rootPath())));
                     romfsFile.write(writer.finalize());
                     romfsFile.close();
 
@@ -861,8 +879,9 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
                     if (romfsFile.open(QIODevice::WriteOnly))
                     {
-                        VfsRomWriter writer(ROMFS_FILE_ALIGNMENT);
-                        createRomfs(&writer, romfsEditor->model(), romfsEditor->model()->index(romfsEditor->model()->rootPath()));
+                        VfsRomWriter writer(alignmentRules);
+                        romfsEditor->createRomfs(&writer,
+                            romfsEditor->filter()->mapFromSource(romfsEditor->model()->index(romfsEditor->model()->rootPath())));
                         romfsFile.write(writer.finalize());
                         romfsFile.close();
 
