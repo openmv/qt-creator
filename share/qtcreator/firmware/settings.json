@@ -811,7 +811,7 @@
                     "size" : 16777216,
                     "index" : 0,
                     "npuAcceleratorConfig": {
-                        "type" : "stai"
+                        "type" : "stedgeai"
                     }
                 }
             ]

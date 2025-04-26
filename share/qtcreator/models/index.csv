@@ -28,7 +28,7 @@
 "stmicroelectronics/object_detection/ssd_mobilenet_v2_fpnlite", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/object_detection/st_mobilenet_v1", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/object_detection/st_yolo_lc_v1", "(OPENMV_AE3|OPENMV_N6)"
-"stmicroelectronics/object_detection/st_yolo_x", "(OPENMV_AE3|OPENMV_N6)"
+"stmicroelectronics/object_detection/st_yolo_x", "(OPENMV_RT1060|OPENMV4P|ARDUINO_GIGA|ARDUINO_PORTENTA_H7|ARDUINO_NICLA_VISION|OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/object_detection/tiny_yolo_v2", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/object_detection/yolov8n", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/object_detection", "(OPENMV_AE3|OPENMV_N6)"

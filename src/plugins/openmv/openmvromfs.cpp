@@ -75,19 +75,28 @@ QString convertModel(const QJsonObject &boardSettings,
                      const QString &model,
                      Utils::QtcSettings *settings)
 {
-    if (model.endsWith(".tflite"))
+    if (boardSettings.contains(QStringLiteral("romfsConfig")))
     {
-        if (boardSettings.contains(QStringLiteral("romfsConfig")))
+        QJsonObject romfsConfig = boardSettings.value(QStringLiteral("romfsConfig")).toObject();
+
+        if (romfsConfig.contains(QStringLiteral("npuAcceleratorConfig")))
         {
-            QJsonObject romfsConfig = boardSettings.value(QStringLiteral("romfsConfig")).toObject();
+            QJsonObject npuAcceleratorConfig = romfsConfig.value(QStringLiteral("npuAcceleratorConfig")).toObject();
+            QString npuAcceleratorType = npuAcceleratorConfig.value(QStringLiteral("type")).toString();
 
-            if (romfsConfig.contains(QStringLiteral("npuAcceleratorConfig")))
+            if (npuAcceleratorType == "vela")
             {
-                QJsonObject npuAcceleratorConfig = romfsConfig.value(QStringLiteral("npuAcceleratorConfig")).toObject();
-
-                if (npuAcceleratorConfig.value(QStringLiteral("type")).toString() == "vela")
+                if (model.endsWith(".tflite"))
                 {
                     return velaCompile(model, npuAcceleratorConfig, settings);
+                }
+            }
+
+            if (npuAcceleratorType == "stedgeai")
+            {
+                if (model.endsWith(".tflite") || model.endsWith(".onnx"))
+                {
+
                 }
             }
         }
