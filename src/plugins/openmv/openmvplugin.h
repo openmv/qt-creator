@@ -558,6 +558,8 @@ private:
     QElapsedTimer m_timer;
     QQueue<qint64> m_queue;
 
+    ScanDriveThread *m_scanDriveThread;
+
     bool m_boardPresent;
     bool m_working;
     bool m_connected;

@@ -2709,6 +2709,22 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         ///////////////////////////////////////////////////////////////////////
 
+        // Try to kickoff scanning drives one last time before connecting.
+        if(m_availableDrives.isEmpty())
+        {
+            QTimer::singleShot(1000, this, [this] {
+                if(m_availableDrives.isEmpty()) m_scanDriveThread->scanDrivesSlot();
+            });
+
+            QTimer::singleShot(2000, this, [this] {
+                if(m_availableDrives.isEmpty()) m_scanDriveThread->scanDrivesSlot();
+            });
+
+            QTimer::singleShot(3000, this, [this] {
+                if(m_availableDrives.isEmpty()) m_scanDriveThread->scanDrivesSlot();
+            });
+        }
+
         m_working = false;
 
         OpenMVPlugin::setPortPath(true);

@@ -2609,24 +2609,24 @@ bool OpenMVPlugin::delayedInitialize()
     // Scan Drives
     {
         QThread *thread = new QThread;
-        ScanDriveThread *scanDrivesThread = new ScanDriveThread();
-        scanDrivesThread->moveToThread(thread);
+        m_scanDriveThread = new ScanDriveThread();
+        m_scanDriveThread->moveToThread(thread);
         QTimer *timer = new QTimer(this);
 
-        connect(timer, &QTimer::timeout, scanDrivesThread, [this, scanDrivesThread] () {
+        connect(timer, &QTimer::timeout, m_scanDriveThread, [this] () {
             if (!m_connected) {
-                scanDrivesThread->scanDrivesSlot();
+                m_scanDriveThread->scanDrivesSlot();
             }
         });
 
-        connect(scanDrivesThread, &ScanDriveThread::driveScanned, this, [this] (const QList<QPair<QString, QString> > &output) {
+        connect(m_scanDriveThread, &ScanDriveThread::driveScanned, this, [this] (const QList<QPair<QString, QString> > &output) {
             m_availableDrives = output;
         });
 
         connect(this, &OpenMVPlugin::destroyed,
-                scanDrivesThread, &ScanDriveThread::deleteLater);
+                m_scanDriveThread, &ScanDriveThread::deleteLater);
 
-        connect(scanDrivesThread, &ScanDriveThread::destroyed,
+        connect(m_scanDriveThread, &ScanDriveThread::destroyed,
                 thread, &QThread::quit);
 
         connect(thread, &QThread::finished,
@@ -2634,7 +2634,7 @@ bool OpenMVPlugin::delayedInitialize()
 
         thread->start();
         timer->start(1000);
-        QTimer::singleShot(0, scanDrivesThread, &ScanDriveThread::scanDrivesSlot);
+        QTimer::singleShot(0, m_scanDriveThread, &ScanDriveThread::scanDrivesSlot);
     }
 
     if(!socket->bind(OPENMVCAM_BROADCAST_PORT))
