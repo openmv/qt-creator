@@ -1,24 +1,24 @@
-2025-02-08 01:13:47,567 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
-2025-02-08 01:13:47,568 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
-2025-02-08 01:13:47,569 - **** Creating Content Certificate ****
-2025-02-08 01:13:47,854 - **** Certificate file creation has been completed successfully ****
-2025-02-08 01:13:47,866 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
-2025-02-08 01:13:47,866 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
-2025-02-08 01:13:47,867 - Parsing config file: cfg/OEMSBContent_lvs_2.cfg
-2025-02-08 01:13:47,867 - Parsing config file: cfg/OEMSBContent_lvs_2.cfg
-2025-02-08 01:13:47,869 - **** Creating Content Certificate ****
-2025-02-08 01:13:47,869 - **** Creating Content Certificate ****
-2025-02-08 01:13:48,146 - **** Certificate file creation has been completed successfully ****
-2025-02-08 01:13:48,146 - **** Certificate file creation has been completed successfully ****
-2025-02-08 01:13:48,184 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
-2025-02-08 01:13:48,184 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
-2025-02-08 01:13:48,184 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
-2025-02-08 01:13:48,186 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
-2025-02-08 01:13:48,186 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
-2025-02-08 01:13:48,186 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
-2025-02-08 01:13:48,186 - **** Creating Content Certificate ****
-2025-02-08 01:13:48,186 - **** Creating Content Certificate ****
-2025-02-08 01:13:48,186 - **** Creating Content Certificate ****
-2025-02-08 01:13:48,448 - **** Certificate file creation has been completed successfully ****
-2025-02-08 01:13:48,448 - **** Certificate file creation has been completed successfully ****
-2025-02-08 01:13:48,448 - **** Certificate file creation has been completed successfully ****
+2025-02-19 19:12:29,886 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:29,887 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2025-02-19 19:12:29,889 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,165 - **** Certificate file creation has been completed successfully ****
+2025-02-19 19:12:30,177 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:30,177 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:30,178 - Parsing config file: cfg/OEMSBContent_lvs_2.cfg
+2025-02-19 19:12:30,178 - Parsing config file: cfg/OEMSBContent_lvs_2.cfg
+2025-02-19 19:12:30,179 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,179 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,436 - **** Certificate file creation has been completed successfully ****
+2025-02-19 19:12:30,436 - **** Certificate file creation has been completed successfully ****
+2025-02-19 19:12:30,471 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:30,471 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:30,471 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:30,473 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2025-02-19 19:12:30,473 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2025-02-19 19:12:30,473 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2025-02-19 19:12:30,474 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,474 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,474 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,739 - **** Certificate file creation has been completed successfully ****
+2025-02-19 19:12:30,739 - **** Certificate file creation has been completed successfully ****
+2025-02-19 19:12:30,739 - **** Certificate file creation has been completed successfully ****
