@@ -8,10 +8,10 @@
 5. Import Cert from EV Token.
 6. Run:
 
-.\signtool.exe sign /fd sha256 /tr http://timestamp.sectigo.com/?td=sha256 /td sha256 /as /q
+.\signtool.exe sign /fd sha256 /tr http://timestamp.sectigo.com/?td=sha256 /td sha256 /as /q <path>
 
 7. Note the sha1 of the Cert you installed.
 8. Run:
 
-.\signtool.exe sign /fd sha1 /t http://timestamp.comodoca.com /q /sha1 <>
-.\signtool.exe sign /fd sha256 /tr http://timestamp.sectigo.com/?td=sha256 /td sha256 /as /q /sha1 <>
+.\signtool.exe sign /fd sha1 /t http://timestamp.comodoca.com /q /sha1 <sha1> <path>
+.\signtool.exe sign /fd sha256 /tr http://timestamp.sectigo.com/?td=sha256 /td sha256 /as /q /sha1 <sha1> <path>
