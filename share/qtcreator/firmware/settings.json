@@ -864,7 +864,7 @@
         {
             "hidden" : false,
             "boardType" : "N6",
-            "boardArchString" : "OPENMV N6",
+            "boardArchString" : "OpenMV N6",
             "boardDisplayName" : "OpenMV N6",
             "boardFirmwareFolder" : "OPENMV_N6",
             "highSpeed" : true,

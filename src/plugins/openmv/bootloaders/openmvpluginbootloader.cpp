@@ -672,7 +672,7 @@ void OpenMVPlugin::openmvRepairingBootloader(bool forceFlashFSErase,
                             QJsonObject object = value.toObject();
 
                             if ((!object.value(QStringLiteral("hidden")).toBool())
-                            && (previousMapping == object.value(QStringLiteral("boardArchString")).toString()))
+                            && (previousMapping.toLower() == object.value(QStringLiteral("boardArchString")).toString().toLower()))
                             {
                                 previousMapping = object.value(QStringLiteral("boardDisplayName")).toString();
                                 break;

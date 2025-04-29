@@ -767,7 +767,7 @@ QList<QPair<QString, QString> > OpenMVPlugin::querySerialPorts(const QStringList
 
                     for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
                     {
-                        if((value.toObject().value(QStringLiteral("boardArchString")).toString() == temp)
+                        if((value.toObject().value(QStringLiteral("boardArchString")).toString().toLower() == temp.toLower())
                         && matchVidPid(value.toObject(), QString(), tempInfo))
                         {
                             results.append(QPair<QString, QString>(port, value.toObject().value(QStringLiteral("boardDisplayName")).toString()));
@@ -1723,7 +1723,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                     for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
                     {
-                        if((value.toObject().value(QStringLiteral("boardArchString")).toString() == temp)
+                        if((value.toObject().value(QStringLiteral("boardArchString")).toString().toLower() == temp.toLower())
                         && matchVidPid(value.toObject(), QString(), tempInfo))
                         {
                             m_iodevice->setHighSpeed(value.toObject().value(QStringLiteral("highSpeed")).toBool());
@@ -2373,7 +2373,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                     for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
                     {
-                        if ((value.toObject().value(QStringLiteral("boardArchString")).toString() == temp)
+                        if ((value.toObject().value(QStringLiteral("boardArchString")).toString().toLower() == temp.toLower())
                         && matchVidPid(value.toObject(), QString(), tempPort))
                         {
                             boardTypeLabel = value.toObject().value(QStringLiteral("boardDisplayName")).toString();
@@ -3479,7 +3479,7 @@ QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSetti
         for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
         {
             // Don't ignore "hidden" here.
-            if ((value.toObject().value(QStringLiteral("boardArchString")).toString() == temp)
+            if ((value.toObject().value(QStringLiteral("boardArchString")).toString().toLower() == temp.toLower())
             && matchVidPid(value.toObject(), QString(), tempPort))
             {
                 return value.toObject();
