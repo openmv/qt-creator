@@ -32,6 +32,8 @@
 #include "openmvtr.h"
 #include "openmvpluginconnect.h"
 
+#include "app/app_version.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -196,7 +198,7 @@ void OpenMVPlugin::packageUpdate()
                 int old_patch = 0;
                 QJsonObject resourcesSettings;
 
-                QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../OpenMVIDE.json")).toString());
+                QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../%1.json").arg(Core::Constants::IDE_CASED_ID)).toString());
 
                 if (resourcesSettingsFile.open(QFile::ReadOnly))
                 {
@@ -242,7 +244,7 @@ void OpenMVPlugin::packageUpdate()
 
                                 QJsonObject resourcesSettings;
 
-                                QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../OpenMVIDE.json")).toString());
+                                QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../%1.json").arg(Core::Constants::IDE_CASED_ID)).toString());
 
                                 if (resourcesSettingsFile.open(QFile::ReadOnly))
                                 {
