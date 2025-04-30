@@ -270,8 +270,36 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
         velaArgs.append(arg.split(QLatin1Char(' '), Qt::SkipEmptyParts));
     }
 
-    Utils::FilePath binaryPath, binary;
+    Utils::FilePath pythonPath, binary;
+
+    if(Utils::HostOsInfo::isWindowsHost())
+    {
+        pythonPath = Core::ICore::resourcePath(QStringLiteral("vela/windows"));
+        binary = Core::ICore::resourcePath(QStringLiteral("python/win/python.exe"));
+    }
+    else if(Utils::HostOsInfo::isMacHost())
+    {
+        pythonPath = Core::ICore::resourcePath(QStringLiteral("vela/osx"));
+        binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+    }
+    else if(Utils::HostOsInfo::isLinuxHost())
+    {
+        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("vela/linux64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("vela/aarch64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python"));
+        }
+    }
+
     QStringList args = QStringList() <<
+                       QStringLiteral("-u") <<
+                       QStringLiteral("-m") <<
+                       QStringLiteral("ethosu.vela") <<
                        velaArgs <<
                        QStringLiteral("--config") <<
                        QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::allUsersResourcePath().
@@ -283,31 +311,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
                        QDir::toNativeSeparators(QDir::cleanPath(tempDir.path())) <<
                        QDir::toNativeSeparators(QDir::cleanPath(model));
 
-    if(Utils::HostOsInfo::isWindowsHost())
-    {
-        binaryPath = Core::ICore::resourcePath(QStringLiteral("vela/windows"));
-        binary = binaryPath.pathAppended(QStringLiteral("bin/vela.exe"));
-    }
-    else if(Utils::HostOsInfo::isMacHost())
-    {
-        binaryPath = Core::ICore::resourcePath(QStringLiteral("vela/osx"));
-        binary = binaryPath.pathAppended(QStringLiteral("bin/vela"));
-    }
-    else if(Utils::HostOsInfo::isLinuxHost())
-    {
-        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
-        {
-            binaryPath = Core::ICore::resourcePath(QStringLiteral("vela/linux64"));
-            binary = binaryPath.pathAppended(QStringLiteral("bin/vela"));
-        }
-        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
-        {
-            binaryPath = Core::ICore::resourcePath(QStringLiteral("vela/aarch64"));
-            binary = binaryPath.pathAppended(QStringLiteral("bin/vela"));
-        }
-    }
-
-    if(binaryPath.isEmpty() || binary.isEmpty())
+    if(pythonPath.isEmpty() || binary.isEmpty())
     {
         QMessageBox::warning(Core::ICore::dialogParent(),
             Tr::tr("Vela Compilier"),
@@ -328,7 +332,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
     Utils::Environment env = process.environment();
-    env.appendOrSet("PYTHONPATH", binaryPath.path());
+    env.appendOrSet("PYTHONPATH", pythonPath.path());
     process.setEnvironment(env);
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
