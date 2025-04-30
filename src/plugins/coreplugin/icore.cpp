@@ -720,6 +720,33 @@ FilePath ICore::userResourcePath(const QString &rel)
     return FilePath::fromString(urp + pathHelper(rel));
 }
 
+// OPENMV-DIFF //
+FilePath ICore::allUsersResourcePath(const QString &rel)
+{
+    QStringList list = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation);
+
+    while (list.size()) {
+        QString path = list.takeFirst();
+
+        if (path.toLower().contains(Utils::Environment::systemEnvironment().toDictionary().userName().toLower())) {
+            continue;
+        }
+
+        path = QFileInfo(path).path() + '/' + appInfo().id;
+
+        if (!QFileInfo::exists(path + QLatin1Char('/'))) {
+            QDir dir;
+            if (!dir.mkpath(path))
+                qWarning() << "could not create" << path;
+        }
+
+        return FilePath::fromString(path + pathHelper(rel));
+    }
+
+    return userResourcePath(rel);
+}
+// OPENMV-DIFF //
+
 /*!
     Returns a writable path for the relative path \a rel that can be used for persistent cache files.
 */

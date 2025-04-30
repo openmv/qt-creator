@@ -191,14 +191,22 @@ void OpenMVPlugin::packageUpdate()
                 int new_minor = match.captured(2).toInt();
                 int new_patch = match.captured(3).toInt();
 
-                Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-                settings->beginGroup(SETTINGS_GROUP);
+                int old_major = 0;
+                int old_minor = 0;
+                int old_patch = 0;
+                QJsonObject resourcesSettings;
 
-                int old_major = settings->value(RESOURCES_MAJOR).toInt();
-                int old_minor = settings->value(RESOURCES_MINOR).toInt();
-                int old_patch = settings->value(RESOURCES_PATCH).toInt();
+                QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../OpenMVIDE.json")).toString());
 
-                settings->endGroup();
+                if (resourcesSettingsFile.open(QFile::ReadOnly))
+                {
+                    resourcesSettings = QJsonDocument::fromJson(resourcesSettingsFile.readAll()).object();
+                    resourcesSettingsFile.close();
+
+                    old_major = resourcesSettings.value(QStringLiteral(RESOURCES_MAJOR)).toInt();
+                    old_minor = resourcesSettings.value(QStringLiteral(RESOURCES_MINOR)).toInt();
+                    old_patch = resourcesSettings.value(QStringLiteral(RESOURCES_PATCH)).toInt();
+                }
 
                 if((old_major < new_major)
                 || ((old_major == new_major) && (old_minor < new_minor))
@@ -232,62 +240,120 @@ void OpenMVPlugin::packageUpdate()
                                 dialog->setRange(0, 0);
                                 dialog->setCancelButton(Q_NULLPTR);
 
-                                Utils::QtcSettings *settings2 = ExtensionSystem::PluginManager::settings();
-                                settings2->beginGroup(SETTINGS_GROUP);
+                                QJsonObject resourcesSettings;
 
-                                settings2->setValue(RESOURCES_MAJOR, 0);
-                                settings2->setValue(RESOURCES_MINOR, 0);
-                                settings2->setValue(RESOURCES_PATCH, 0);
-                                settings2->sync();
+                                QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../OpenMVIDE.json")).toString());
+
+                                if (resourcesSettingsFile.open(QFile::ReadOnly))
+                                {
+                                    resourcesSettings = QJsonDocument::fromJson(resourcesSettingsFile.readAll()).object();
+                                    resourcesSettingsFile.close();
+                                }
+
+                                resourcesSettings[QStringLiteral(RESOURCES_MAJOR)] = 0;
+                                resourcesSettings[QStringLiteral(RESOURCES_MINOR)] = 0;
+                                resourcesSettings[QStringLiteral(RESOURCES_PATCH)] = 0;
 
                                 bool ok = true;
 
-                                QString error;
-
-                                if(!removeRecursivelyWrapper(Core::ICore::userResourcePath(), m_resourceFoldersToDelete, &error))
+                                if (resourcesSettingsFile.open(QFile::WriteOnly))
                                 {
-                                    QMessageBox::critical(Core::ICore::dialogParent(),
-                                        QString(),
-                                        error + Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                    QByteArray data = QJsonDocument(resourcesSettings).toJson();
 
-                                    QApplication::quit();
-                                    ok = false;
+                                    if (resourcesSettingsFile.write(data) != data.size())
+                                    {
+                                        QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                        QApplication::quit();
+                                        ok = false;
+                                    }
+
+                                    resourcesSettingsFile.close();
                                 }
                                 else
                                 {
-                                    if(!extractAllWrapper(&data2, Core::ICore::userResourcePath().toString()))
+                                    QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                    QApplication::quit();
+                                    ok = false;
+                                }
+
+                                if (ok)
+                                {
+                                    QString error;
+
+                                    if(!removeRecursivelyWrapper(Core::ICore::allUsersResourcePath(), m_resourceFoldersToDelete, &error))
                                     {
                                         QMessageBox::critical(Core::ICore::dialogParent(),
                                             QString(),
-                                            Tr::tr("Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                            error + Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
 
                                         QApplication::quit();
                                         ok = false;
                                     }
-                                }
-
-                                if(ok)
-                                {
-                                    settings2->setValue(RESOURCES_MAJOR, new_major);
-                                    settings2->setValue(RESOURCES_MINOR, new_minor);
-                                    settings2->setValue(RESOURCES_PATCH, new_patch);
-                                    settings2->sync();
-
-                                    if (loadDocs(true, false))
-                                    {
-                                        QMessageBox::information(Core::ICore::dialogParent(),
-                                            QString(),
-                                            Tr::tr("Installation Sucessful! Please restart OpenMV IDE."));
-
-                                        Core::ICore::restart();
-                                    }
                                     else
                                     {
-                                        QApplication::quit();
+                                        if(!extractAllWrapper(&data2, Core::ICore::allUsersResourcePath().toString()))
+                                        {
+                                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                                QString(),
+                                                Tr::tr("Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+
+                                            QApplication::quit();
+                                            ok = false;
+                                        }
+                                    }
+
+                                    if(ok)
+                                    {
+                                        resourcesSettings[QStringLiteral(RESOURCES_MAJOR)] = new_major;
+                                        resourcesSettings[QStringLiteral(RESOURCES_MINOR)] = new_minor;
+                                        resourcesSettings[QStringLiteral(RESOURCES_PATCH)] = new_patch;
+
+                                        if (resourcesSettingsFile.open(QFile::WriteOnly))
+                                        {
+                                            QByteArray data = QJsonDocument(resourcesSettings).toJson();
+
+                                            if (resourcesSettingsFile.write(data) == data.size())
+                                            {
+                                                resourcesSettingsFile.close();
+
+                                                Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+
+                                                // Keep backwards compatibility with old versions of OpenMV IDE.
+                                                settings->beginGroup(SETTINGS_GROUP);
+                                                settings->setValue(RESOURCES_MAJOR, resourcesSettings.value(QStringLiteral(RESOURCES_MAJOR)).toInt());
+                                                settings->setValue(RESOURCES_MINOR, resourcesSettings.value(QStringLiteral(RESOURCES_MINOR)).toInt());
+                                                settings->setValue(RESOURCES_PATCH, resourcesSettings.value(QStringLiteral(RESOURCES_PATCH)).toInt());
+                                                settings->sync();
+                                                settings->endGroup();
+
+                                                if (loadDocs(true, false))
+                                                {
+                                                    QMessageBox::information(Core::ICore::dialogParent(),
+                                                        QString(),
+                                                        Tr::tr("Installation Sucessful! Please restart OpenMV IDE."));
+
+                                                    Core::ICore::restart();
+                                                }
+                                                else
+                                                {
+                                                    QApplication::quit();
+                                                }
+                                            }
+                                            else
+                                            {
+                                                resourcesSettingsFile.close();
+
+                                                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                                QApplication::quit();
+                                            }
+                                        }
+                                        else
+                                        {
+                                            QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                            QApplication::quit();
+                                        }
                                     }
                                 }
-
-                                settings2->endGroup();
                             }
                             else if((reply2->error() != QNetworkReply::NoError) && (reply2->error() != QNetworkReply::OperationCanceledError))
                             {
@@ -607,7 +673,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
 
                 if (firmwareFileName.endsWith(QStringLiteral("lst")))
                 {
-                    QFile(Core::ICore::userResourcePath(QStringLiteral("firmware"))
+                    QFile(Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
                         .pathAppended(originalFirmwareFolder)
                         .pathAppended(firmwareFileName).toString())
                     .copy(QDir::cleanPath(QDir::fromNativeSeparators(QDir::tempPath() + QDir::separator() + firmwareFileName)));
@@ -1271,7 +1337,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                     settings->setValue(LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
                                     previousMapping = temp;
                                     originalFirmwareFolder = mappings.value(temp);
-                                    firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware"))
+                                    firmwarePath = Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
                                         .pathAppended(originalFirmwareFolder)
                                         .pathAppended(defaultFirmwareNameMappings.value(temp)).toString();
                                     if (forceBootloader && (!forceFirmwarePath.isEmpty())) firmwarePath = forceFirmwarePath;
@@ -1766,7 +1832,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 || ((major2 == OLD_API_MAJOR) && (minor2 < OLD_API_MINOR))
                 || ((major2 == OLD_API_MAJOR) && (minor2 == OLD_API_MINOR) && (patch2 < OLD_API_PATCH)))
                 {
-                    if(firmwarePath.isEmpty()) firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware"))
+                    if(firmwarePath.isEmpty()) firmwarePath = Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
                         .pathAppended(QStringLiteral(OLD_API_BOARD))
                         .pathAppended(QStringLiteral("firmware.bin")).toString();
 
@@ -1877,7 +1943,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         {
                             previousMapping = temp;
                             originalFirmwareFolder = mappings.value(temp);
-                            firmwarePath = Core::ICore::userResourcePath(QStringLiteral("firmware"))
+                            firmwarePath = Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
                                 .pathAppended(originalFirmwareFolder)
                                 .pathAppended(defaultFirmwareNameMapping.value(temp)).toString();
                             if (forceBootloader && (!forceFirmwarePath.isEmpty())) firmwarePath = forceFirmwarePath;
@@ -2646,7 +2712,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if(document && document->displayName() == QStringLiteral("helloworld_1.py") && (!document->isModified()))
             {
-                QString filePath = Core::ICore::userResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toString();
+                QString filePath = Core::ICore::allUsersResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toString();
 
                 QFile file(filePath);
 

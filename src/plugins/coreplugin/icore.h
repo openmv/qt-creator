@@ -71,6 +71,9 @@ public:
 
     static Utils::FilePath resourcePath(const QString &rel = {});
     static Utils::FilePath userResourcePath(const QString &rel = {});
+    // OPENMV-DIFF //
+    static Utils::FilePath allUsersResourcePath(const QString &rel = {});
+    // OPENMV-DIFF //
     static Utils::FilePath cacheResourcePath(const QString &rel = {});
     static Utils::FilePath installerResourcePath(const QString &rel = {});
     static Utils::FilePath libexecPath(const QString &rel = {});

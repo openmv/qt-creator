@@ -92,11 +92,11 @@ bool alifSyncTools()
         return true;
     }
 
-    if (!Core::ICore::userResourcePath(QStringLiteral("alif")).exists())
+    if (!Core::ICore::allUsersResourcePath(QStringLiteral("alif")).exists())
     {
         QString error;
 
-        if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::userResourcePath(QStringLiteral("alif")), &error, copyOperator))
+        if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::allUsersResourcePath(QStringLiteral("alif")), &error, copyOperator))
         {
             QMessageBox::critical(Q_NULLPTR, QString(),
                                   Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
@@ -105,7 +105,7 @@ bool alifSyncTools()
     }
     else
     {
-        QFile file(Core::ICore::userResourcePath(QStringLiteral("alif/version.json")).toString());
+        QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/version.json")).toString());
 
         if (file.open(QFile::ReadOnly))
         {
@@ -133,13 +133,13 @@ bool alifSyncTools()
                 {
                     QString error;
 
-                    if(!Core::ICore::userResourcePath(QStringLiteral("alif")).removeRecursively(&error))
+                    if(!Core::ICore::allUsersResourcePath(QStringLiteral("alif")).removeRecursively(&error))
                     {
                         QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
                         return false;
                     }
 
-                    if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::userResourcePath(QStringLiteral("alif")), &error, copyOperator))
+                    if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::allUsersResourcePath(QStringLiteral("alif")), &error, copyOperator))
                     {
                         QMessageBox::critical(Q_NULLPTR, QString(),
                                               Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
@@ -158,13 +158,13 @@ bool alifSyncTools()
         {
             QString error;
 
-            if(!Core::ICore::userResourcePath(QStringLiteral("alif")).removeRecursively(&error))
+            if(!Core::ICore::allUsersResourcePath(QStringLiteral("alif")).removeRecursively(&error))
             {
                 QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
                 return false;
             }
 
-            if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::userResourcePath(QStringLiteral("alif")), &error, copyOperator))
+            if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::allUsersResourcePath(QStringLiteral("alif")), &error, copyOperator))
             {
                 QMessageBox::critical(Q_NULLPTR, QString(),
                                       Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
@@ -248,7 +248,7 @@ QList<QString> alifGetDevices(const QJsonDocument &settings)
 
 static bool alifSelectPort(const QString &port)
 {
-    QFile file(Core::ICore::userResourcePath(QStringLiteral("alif/isp_config_data.cfg")).toString());
+    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/isp_config_data.cfg")).toString());
 
     if (file.open(QFile::WriteOnly))
     {
@@ -271,7 +271,7 @@ static bool alifSelectPort(const QString &port)
 
 static bool alifWriteGlobalCFG(const QJsonObject &obj)
 {
-    QFile file(Core::ICore::userResourcePath(QStringLiteral("alif/utils/global-cfg.db")).toString());
+    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/utils/global-cfg.db")).toString());
 
     if (file.open(QFile::WriteOnly))
     {
@@ -292,21 +292,21 @@ static bool alifUpdateBuild(const QString &originalFirmwareFolder)
 {
     QString error;
 
-    if (Core::ICore::userResourcePath(QStringLiteral("alif/build")).exists())
+    if (Core::ICore::allUsersResourcePath(QStringLiteral("alif/build")).exists())
     {
-        if(!Core::ICore::userResourcePath(QStringLiteral("alif/build")).removeRecursively(&error))
+        if(!Core::ICore::allUsersResourcePath(QStringLiteral("alif/build")).removeRecursively(&error))
         {
             return false;
         }
     }
 
-    if(!Utils::FileUtils::copyRecursively(Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder),
-                                          Core::ICore::userResourcePath(QStringLiteral("alif/build")), &error, copyOperator))
+    if(!Utils::FileUtils::copyRecursively(Core::ICore::allUsersResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder),
+                                          Core::ICore::allUsersResourcePath(QStringLiteral("alif/build")), &error, copyOperator))
     {
         return false;
     }
 
-    QDir buildDir(Core::ICore::userResourcePath(QStringLiteral("alif/build")).toString());
+    QDir buildDir(Core::ICore::allUsersResourcePath(QStringLiteral("alif/build")).toString());
 
     if (!buildDir.mkpath(QStringLiteral("images")))
     {
@@ -329,7 +329,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 {
     QMutexLocker locker(&alif_tools_working);
 
-    QFile file(Core::ICore::userResourcePath(QStringLiteral("alif/version.json")).toString());
+    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/version.json")).toString());
 
     int current_version_major = 0;
     int current_version_minor = 0;
@@ -595,26 +595,26 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        maintenanceBinary = Core::ICore::userResourcePath(QStringLiteral("alif/maintenance.exe"));
-        updateSystemPackageBinary = Core::ICore::userResourcePath(QStringLiteral("alif/updateSystemPackage.exe"));
-        appGenToc = Core::ICore::userResourcePath(QStringLiteral("alif/app-gen-toc.exe"));
-        appWriteMramBinary = Core::ICore::userResourcePath(QStringLiteral("alif/app-write-mram.exe"));
+        maintenanceBinary = Core::ICore::allUsersResourcePath(QStringLiteral("alif/maintenance.exe"));
+        updateSystemPackageBinary = Core::ICore::allUsersResourcePath(QStringLiteral("alif/updateSystemPackage.exe"));
+        appGenToc = Core::ICore::allUsersResourcePath(QStringLiteral("alif/app-gen-toc.exe"));
+        appWriteMramBinary = Core::ICore::allUsersResourcePath(QStringLiteral("alif/app-write-mram.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        maintenanceBinary = Core::ICore::userResourcePath(QStringLiteral("alif/maintenance"));
-        updateSystemPackageBinary = Core::ICore::userResourcePath(QStringLiteral("alif/updateSystemPackage"));
-        appGenToc = Core::ICore::userResourcePath(QStringLiteral("alif/app-gen-toc"));
-        appWriteMramBinary = Core::ICore::userResourcePath(QStringLiteral("alif/app-write-mram"));
+        maintenanceBinary = Core::ICore::allUsersResourcePath(QStringLiteral("alif/maintenance"));
+        updateSystemPackageBinary = Core::ICore::allUsersResourcePath(QStringLiteral("alif/updateSystemPackage"));
+        appGenToc = Core::ICore::allUsersResourcePath(QStringLiteral("alif/app-gen-toc"));
+        appWriteMramBinary = Core::ICore::allUsersResourcePath(QStringLiteral("alif/app-write-mram"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            maintenanceBinary = Core::ICore::userResourcePath(QStringLiteral("alif/maintenance"));
-            updateSystemPackageBinary = Core::ICore::userResourcePath(QStringLiteral("alif/updateSystemPackage"));
-            appGenToc = Core::ICore::userResourcePath(QStringLiteral("alif/app-gen-toc"));
-            appWriteMramBinary = Core::ICore::userResourcePath(QStringLiteral("alif/app-write-mram"));
+            maintenanceBinary = Core::ICore::allUsersResourcePath(QStringLiteral("alif/maintenance"));
+            updateSystemPackageBinary = Core::ICore::allUsersResourcePath(QStringLiteral("alif/updateSystemPackage"));
+            appGenToc = Core::ICore::allUsersResourcePath(QStringLiteral("alif/app-gen-toc"));
+            appWriteMramBinary = Core::ICore::allUsersResourcePath(QStringLiteral("alif/app-write-mram"));
         }
     }
 

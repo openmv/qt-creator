@@ -274,7 +274,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     QStringList args = QStringList() <<
                        velaArgs <<
                        QStringLiteral("--config") <<
-                       QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::userResourcePath().
+                       QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::allUsersResourcePath().
                             pathAppended(QStringLiteral("firmware")).
                             pathAppended(velaSettings.value(QStringLiteral("iniFilePath")).toString()).toString())) <<
                        QStringLiteral("--verbose-performance") <<

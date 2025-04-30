@@ -393,7 +393,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
     m_typeHintRegEx = QRegularExpression(QStringLiteral("(:\\s*[^:]+)"), QRegularExpression::DotMatchesEverythingOption);
     QRegularExpression sectionRegEx(QStringLiteral("<section.*"), QRegularExpression::DotMatchesEverythingOption);
 
-    QDirIterator it(Core::ICore::userResourcePath(QStringLiteral("html/library")).toString(), QDir::Files);
+    QDirIterator it(Core::ICore::allUsersResourcePath(QStringLiteral("html/library")).toString(), QDir::Files);
 
     while(it.hasNext())
     {
@@ -819,7 +819,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
     if (update_resoruces)
     {
-        const Utils::FilePath &headers = Core::ICore::userResourcePath(QStringLiteral("micropython-headers"));
+        const Utils::FilePath &headers = Core::ICore::allUsersResourcePath(QStringLiteral("micropython-headers"));
 
         if(headers.exists())
         {

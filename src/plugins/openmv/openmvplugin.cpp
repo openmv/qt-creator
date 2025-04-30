@@ -378,11 +378,22 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     ///////////////////////////////////////////////////////////////////////////
 
-    settings->beginGroup(SETTINGS_GROUP);
+    int major = 0;
+    int minor = 0;
+    int patch = 0;
+    QJsonObject resourcesSettings;
 
-    int major = settings->value(RESOURCES_MAJOR, 0).toInt();
-    int minor = settings->value(RESOURCES_MINOR, 0).toInt();
-    int patch = settings->value(RESOURCES_PATCH, 0).toInt();
+    QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../OpenMVIDE.json")).toString());
+
+    if (resourcesSettingsFile.open(QFile::ReadOnly))
+    {
+        resourcesSettings = QJsonDocument::fromJson(resourcesSettingsFile.readAll()).object();
+        resourcesSettingsFile.close();
+
+        major = resourcesSettings.value(QStringLiteral(RESOURCES_MAJOR)).toInt();
+        minor = resourcesSettings.value(QStringLiteral(RESOURCES_MINOR)).toInt();
+        patch = resourcesSettings.value(QStringLiteral(RESOURCES_PATCH)).toInt();
+    }
 
     bool resources_updated = false;
 
@@ -395,16 +406,35 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     || ((major == IDE_VERSION_MAJOR) && (minor < IDE_VERSION_MINOR))
     || ((major == IDE_VERSION_MAJOR) && (minor == IDE_VERSION_MINOR) && (patch < IDE_VERSION_RELEASE)))
     {
-        settings->setValue(RESOURCES_MAJOR, 0);
-        settings->setValue(RESOURCES_MINOR, 0);
-        settings->setValue(RESOURCES_PATCH, 0);
-        settings->sync();
+        resourcesSettings[QStringLiteral(RESOURCES_MAJOR)] = 0;
+        resourcesSettings[QStringLiteral(RESOURCES_MINOR)] = 0;
+        resourcesSettings[QStringLiteral(RESOURCES_PATCH)] = 0;
+
+        if (resourcesSettingsFile.open(QFile::WriteOnly))
+        {
+            QByteArray data = QJsonDocument(resourcesSettings).toJson();
+
+            if (resourcesSettingsFile.write(data) != data.size())
+            {
+                resourcesSettingsFile.close();
+
+                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                exit(-1);
+            }
+
+            resourcesSettingsFile.close();
+        }
+        else
+        {
+            QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+            exit(-1);
+        }
 
         bool ok = true;
 
         QString error;
 
-        if(!removeRecursively(Core::ICore::userResourcePath(), m_resourceFoldersToDelete, &error))
+        if(!removeRecursively(Core::ICore::allUsersResourcePath(), m_resourceFoldersToDelete, &error))
         {
             QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
             ok = false;
@@ -422,6 +452,17 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                 }
             }
 
+            Utils::FilePath oldUserResourcesPath2 = Core::ICore::userResourcePath();
+
+            if(oldUserResourcesPath2.exists())
+            {
+                if(!oldUserResourcesPath2.removeRecursively(&error))
+                {
+                    QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                    ok = false;
+                }
+            }
+
             if(ok)
             {
                 for(const QString &dir : m_resourceFoldersToCopy)
@@ -429,7 +470,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                     QString error;
 
                     if(!Utils::FileUtils::copyRecursively(Core::ICore::resourcePath(dir),
-                                                          Core::ICore::userResourcePath(dir),
+                                                          Core::ICore::allUsersResourcePath(dir),
                                                           &error,
                                                           copyOperator))
 
@@ -444,21 +485,46 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
         if(ok)
         {
-            settings->setValue(RESOURCES_MAJOR, IDE_VERSION_MAJOR);
-            settings->setValue(RESOURCES_MINOR, IDE_VERSION_MINOR);
-            settings->setValue(RESOURCES_PATCH, IDE_VERSION_RELEASE);
-            settings->sync();
+            resourcesSettings[QStringLiteral(RESOURCES_MAJOR)] = IDE_VERSION_MAJOR;
+            resourcesSettings[QStringLiteral(RESOURCES_MINOR)] = IDE_VERSION_MINOR;
+            resourcesSettings[QStringLiteral(RESOURCES_PATCH)] = IDE_VERSION_RELEASE;
 
-            resources_updated = true;
+            if (resourcesSettingsFile.open(QFile::WriteOnly))
+            {
+                QByteArray data = QJsonDocument(resourcesSettings).toJson();
+
+                if (resourcesSettingsFile.write(data) == data.size())
+                {
+                    resourcesSettingsFile.close();
+
+                    resources_updated = true;
+                }
+                else
+                {
+                    resourcesSettingsFile.close();
+
+                    QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                    exit(-1);
+                }
+            }
+            else
+            {
+                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                exit(-1);
+            }
         }
         else
         {
-            settings->endGroup();
-
             exit(-1);
         }
     }
 
+    // Keep backwards compatibility with old versions of OpenMV IDE.
+    settings->beginGroup(SETTINGS_GROUP);
+    settings->setValue(RESOURCES_MAJOR, resourcesSettings.value(QStringLiteral(RESOURCES_MAJOR)).toInt());
+    settings->setValue(RESOURCES_MINOR, resourcesSettings.value(QStringLiteral(RESOURCES_MINOR)).toInt());
+    settings->setValue(RESOURCES_PATCH, resourcesSettings.value(QStringLiteral(RESOURCES_PATCH)).toInt());
+    settings->sync();
     settings->endGroup();
 
     ///////////////////////////////////////////////////////////////////////////
@@ -475,7 +541,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     ///////////////////////////////////////////////////////////////////////////
 
-    QFile firmwareSettings(Core::ICore::userResourcePath(QStringLiteral("firmware/settings.json")).toString());
+    QFile firmwareSettings(Core::ICore::allUsersResourcePath(QStringLiteral("firmware/settings.json")).toString());
 
     if(firmwareSettings.open(QIODevice::ReadOnly))
     {
@@ -559,7 +625,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     m_exampleFilters = QList<exampleFilter_t>();
 
-    QFile filters(Core::ICore::userResourcePath(QStringLiteral("examples/index.csv")).toString());
+    QFile filters(Core::ICore::allUsersResourcePath(QStringLiteral("examples/index.csv")).toString());
 
     if(filters.open(QIODevice::ReadOnly))
     {
@@ -600,7 +666,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     // Scan examples.
     {
         QThread *thread = new QThread;
-        LoadFolderThread *loadFolderThread = new LoadFolderThread(Core::ICore::userResourcePath(QStringLiteral("examples")).toString(), true);
+        LoadFolderThread *loadFolderThread = new LoadFolderThread(Core::ICore::allUsersResourcePath(QStringLiteral("examples")).toString(), true);
         loadFolderThread->moveToThread(thread);
         QTimer *timer = new QTimer(this);
 
@@ -816,7 +882,7 @@ void OpenMVPlugin::extensionsInitialized()
 
             if((!m_enableFilteringExamplesAction->isChecked()) || m_connected)
             {
-                QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::userResourcePath(QStringLiteral("examples")).toString(), examplesMenu->menu());
+                QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::allUsersResourcePath(QStringLiteral("examples")).toString(), examplesMenu->menu());
 
                 if(actions.isEmpty())
                 {
@@ -1575,7 +1641,7 @@ void OpenMVPlugin::extensionsInitialized()
         Core::Command *docsCommand = Core::ActionManager::registerAction(docsAction, Utils::Id("OpenMV.Docs"));
         helpMenu->addAction(docsCommand, Core::Constants::G_HELP_SUPPORT);
         connect(docsAction, &QAction::triggered, this, [] {
-            QUrl url = QUrl::fromLocalFile(Core::ICore::userResourcePath(QStringLiteral("html/index.html")).toString());
+            QUrl url = QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(QStringLiteral("html/index.html")).toString());
 
             if(!QDesktopServices::openUrl(url))
             {
@@ -1620,7 +1686,7 @@ void OpenMVPlugin::extensionsInitialized()
             Core::Command *pinoutCommand = Core::ActionManager::registerAction(pinout, Utils::Id(QString(QStringLiteral("OpenMV.Pinout.%1")).arg(cam.second).toUtf8().constData()));
             pinoutMenu->addAction(pinoutCommand);
             connect(pinout, &QAction::triggered, this, [cam] {
-                QUrl url = QUrl::fromLocalFile(Core::ICore::userResourcePath(QString(QStringLiteral("/html/_images/pinout-openmv-%1.png")).arg(cam.second)).toString());
+                QUrl url = QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(QString(QStringLiteral("/html/_images/pinout-openmv-%1.png")).arg(cam.second)).toString());
 
                 if(!QDesktopServices::openUrl(url))
                 {
@@ -2367,7 +2433,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     if(editor ? (editor->document() ? editor->document()->contents().isEmpty() : true) : true)
     {
-        QString filePath = Core::ICore::userResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toString();
+        QString filePath = Core::ICore::allUsersResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toString();
 
         QFile file(filePath);
 

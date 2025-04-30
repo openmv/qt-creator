@@ -514,7 +514,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                 {
                     QString targetPath = map.value(targetModule.moduleName).first.modulePath;
 
-                    if(Utils::FilePath::fromString(targetPath).isChildOf(Core::ICore::userResourcePath(QStringLiteral("examples"))))
+                    if(Utils::FilePath::fromString(targetPath).isChildOf(Core::ICore::allUsersResourcePath(QStringLiteral("examples"))))
                     {
                         targetPath = QDir::cleanPath(QDir::fromNativeSeparators(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV/") + (QFileInfo(targetPath).isDir() ? QDir(targetPath).dirName() : QFileInfo(targetPath).fileName())));
                     }

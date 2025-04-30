@@ -370,7 +370,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
             for(int i = 0, j = resetROMFSAddrCommands.size(); i < j; i++)
             {
-                QString path = Core::ICore::userResourcePath(QStringLiteral("firmware")).pathAppended(resetROMFSPathCommands.at(i)).toString();
+                QString path = Core::ICore::allUsersResourcePath(QStringLiteral("firmware")).pathAppended(resetROMFSPathCommands.at(i)).toString();
 
                 if (installTheLatestDevelopmentFirmware)
                 {
@@ -405,7 +405,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
             for(int i = 0, j = extraProgramAddrCommands.size(); i < j; i++)
             {
-                downloadFirmware(Tr::tr("Flashing Firmware"), command, process, Core::ICore::userResourcePath(QStringLiteral("firmware")).
+                downloadFirmware(Tr::tr("Flashing Firmware"), command, process, Core::ICore::allUsersResourcePath(QStringLiteral("firmware")).
                                  pathAppended(extraProgramPathCommands.at(i)).toString(), dfuDeviceVidPid, extraProgramAddrCommands.at(i) + dfuDeviceSerial);
 
                 if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))

@@ -49,7 +49,7 @@ OpenMVModelZooBrowserFilter::OpenMVModelZooBrowserFilter(const QJsonObject &boar
 {
     m_modelFilters = QList<modelFilter_t>();
 
-    QFile filters(Core::ICore::userResourcePath(QStringLiteral("models/index.csv")).toString());
+    QFile filters(Core::ICore::allUsersResourcePath(QStringLiteral("models/index.csv")).toString());
 
     if(filters.open(QIODevice::ReadOnly))
     {
@@ -156,7 +156,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
     m_filter->setSourceModel(m_model);
 
     m_treeView = new OpenMVModelZooBrowserTreeView(this);
-    Utils::FilePath path = Core::ICore::userResourcePath(QStringLiteral("models"));
+    Utils::FilePath path = Core::ICore::allUsersResourcePath(QStringLiteral("models"));
     m_model->setRootPath(path.toString());
     m_treeView->setModel(m_filter);
     m_treeView->setRootIndex(m_filter->mapFromSource(m_model->index(path.toString())));
@@ -284,7 +284,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
 
                 path = QFileInfo(path).path();
             }
-            while (Utils::FilePath::fromString(path).isChildOf(Core::ICore::userResourcePath(QStringLiteral("models"))));
+            while (Utils::FilePath::fromString(path).isChildOf(Core::ICore::allUsersResourcePath(QStringLiteral("models"))));
         }
         else
         {
@@ -311,7 +311,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
                     break;
                 }
             }
-            while (Utils::FilePath::fromString(path).isChildOf(Core::ICore::userResourcePath(QStringLiteral("models"))));
+            while (Utils::FilePath::fromString(path).isChildOf(Core::ICore::allUsersResourcePath(QStringLiteral("models"))));
         }
     });
 

@@ -218,8 +218,10 @@ static std::optional<VisualStudioInstallation> installationFromPathAndVersion(
 
     const QString vcVarsAllPath = vcVarsPath + QStringLiteral("/vcvarsall.bat");
     if (!QFileInfo(vcVarsAllPath).isFile()) {
-        qWarning().noquote() << "Unable to find MSVC setup script "
-                             << QDir::toNativeSeparators(vcVarsPath) << " in version " << version;
+        // OPENMV-DIFF //
+        // qWarning().noquote() << "Unable to find MSVC setup script "
+        //                      << QDir::toNativeSeparators(vcVarsPath) << " in version " << version;
+        // OPENMV-DIFF //
         return std::nullopt;
     }
 
