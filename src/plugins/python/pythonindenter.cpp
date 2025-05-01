@@ -83,11 +83,17 @@ int PythonIndenter::indentFor(const QTextBlock &block,
     if (isElectricLine(previousLine))
         indentation += tabSettings.m_indentSize;
     else
+    // OPENMV-DIFF //
+    {
+    // OPENMV-DIFF //
         indentation = qMax<int>(0, indentation + getIndentDiff(previousLine, tabSettings));
 
+        // OPENMV-DIFF //
+        if (previousIndentation < indentation)
+            indentation = previousIndentation;
+        // OPENMV-DIFF //
     // OPENMV-DIFF //
-    if (previousIndentation < indentation)
-        indentation = previousIndentation;
+    }
     // OPENMV-DIFF //
 
     return indentation;
