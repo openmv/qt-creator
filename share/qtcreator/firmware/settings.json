@@ -72,15 +72,18 @@
                 "binProgamCommands" : [
                     {
                         "cmd": "-a 2",
-                        "name": "firmware.bin"
+                        "name": "firmware.bin",
+                        "size" : 851968
                     },
                     {
                         "cmd": "-a 3",
-                        "name": "romfs.img"
+                        "name": "romfs.img",
+                        "size" : 131072
                     },
                     {
                         "cmd": "-a 3",
-                        "name": "romfs0.img"
+                        "name": "romfs0.img",
+                        "size" : 131072
                     }
                 ],
                 "fallbackBootloader" : {
@@ -179,15 +182,18 @@
                 "binProgamCommands" : [
                     {
                         "cmd": "-a 2",
-                        "name": "firmware.bin"
+                        "name": "firmware.bin",
+                        "size" : 1703936
                     },
                     {
                         "cmd": "-a 3",
-                        "name": "romfs.img"
+                        "name": "romfs.img",
+                        "size" : 262144
                     },
                     {
                         "cmd": "-a 3",
-                        "name": "romfs0.img"
+                        "name": "romfs0.img",
+                        "size" : 262144
                     }
                 ],
                 "fallbackBootloader" : {
@@ -286,15 +292,18 @@
                 "binProgamCommands" : [
                     {
                         "cmd": "-a 2",
-                        "name": "firmware.bin"
+                        "name": "firmware.bin",
+                        "size" : 1703936
                     },
                     {
                         "cmd": "-a 3",
-                        "name": "romfs.img"
+                        "name": "romfs.img",
+                        "size" : 131072
                     },
                     {
                         "cmd": "-a 3",
-                        "name": "romfs0.img"
+                        "name": "romfs0.img",
+                        "size" : 131072
                     }
                 ],
                 "fallbackBootloader" : {
@@ -393,15 +402,18 @@
                 "binProgamCommands" : [
                     {
                         "cmd": "-a 2",
-                        "name": "firmware.bin"
+                        "name": "firmware.bin",
+                        "size" : 1835008
                     },
                     {
                         "cmd": "-a 4",
-                        "name": "romfs.img"
+                        "name": "romfs.img",
+                        "size" : 8388608
                     },
                     {
                         "cmd": "-a 4",
-                        "name": "romfs0.img"
+                        "name": "romfs0.img",
+                        "size" : 8388608
                     }
                 ],
                 "fallbackBootloader" : {
@@ -500,15 +512,18 @@
                 "binProgamCommands" : [
                     {
                         "cmd": "-a 2",
-                        "name": "firmware.bin"
+                        "name": "firmware.bin",
+                        "size" : 1835008
                     },
                     {
                         "cmd": "-a 4",
-                        "name": "romfs.img"
+                        "name": "romfs.img",
+                        "size" : 8388608
                     },
                     {
                         "cmd": "-a 4",
-                        "name": "romfs0.img"
+                        "name": "romfs0.img",
+                        "size" : 8388608
                     }
                 ],
                 "fallbackBootloader" : {
@@ -726,19 +741,23 @@
                 "binProgamCommands" : [
                     {
                         "cmd": "-a 1",
-                        "name": "firmware_M55_HP.bin"
+                        "name": "firmware_M55_HP.bin",
+                        "size" : 3145728
                     },
                     {
                         "cmd": "-a 2",
-                        "name": "firmware_M55_HE.bin"
+                        "name": "firmware_M55_HE.bin",
+                        "size" : 1433600
                     },
                     {
                         "cmd": "-a 3",
-                        "name": "romfs1.img"
+                        "name": "romfs1.img",
+                        "size" : 1048576
                     },
                     {
                         "cmd": "-a 6",
-                        "name": "romfs0.img"
+                        "name": "romfs0.img",
+                        "size" : 16777216
                     }
                 ]
             },
@@ -895,15 +914,18 @@
                 "binProgamCommands" : [
                     {
                         "cmd": "-a 1",
-                        "name": "firmware.bin"
+                        "name": "firmware.bin",
+                        "size" : 3670016
                     },
                     {
                         "cmd": "-a 2",
-                        "name": "romfs.img"
+                        "name": "romfs.img",
+                        "size" : 16777216
                     },
                     {
                         "cmd": "-a 2",
-                        "name": "romfs0.img"
+                        "name": "romfs0.img",
+                        "size" : 16777216
                     }
                 ]
             },
@@ -916,15 +938,20 @@
                         {
                             "extension" : "tflite",
                             "alignment" : 32
+                        },
+                        {
+                            "extension" : "onnx",
+                            "alignment" : 32
                         }
                     ],
                     "npuAcceleratorConfig": {
                         "type" : "stedgeai",
                         "args" : [
-                            "--target stm32n6"
+                            "--target stm32n6",
+                            "--st-neural-art default@neuralart.json"
                         ],
-                        "heapSize" : 4194304,
-                        "jsonFilePath" : "OPENMV_N6/neuralart.json"
+                        "jsonFilePath" : "OPENMV_N6/neuralart.json",
+                        "mpoolFilePath" : "OPENMV_N6/stm32n6.mpool"
                     }
                 }
             ]
@@ -963,8 +990,11 @@
                     }
                 ],
                 "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+                "binProgramSize" : 1835008,
                 "dfuProgramCommand" : "-a 0 -s :leave",
-                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave"
+                "dfuProgramSize" : 1835008,
+                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave",
+                "romfsProgramSize" : 4194304
             },
             "romfsConfig" : [
                 {
@@ -1014,8 +1044,11 @@
                     }
                 ],
                 "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+                "binProgramSize" : 1835008,
                 "dfuProgramCommand" : "-a 0 -s :leave",
-                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave"
+                "dfuProgramSize" : 1835008,
+                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave",
+                "romfsProgramSize" : 4194304
             },
             "romfsConfig" : [
                 {
@@ -1065,8 +1098,11 @@
                     }
                 ],
                 "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+                "binProgramSize" : 1835008,
                 "dfuProgramCommand" : "-a 0 -s :leave",
-                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave"
+                "dfuProgramSize" : 1835008,
+                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave",
+                "romfsProgramSize" : 4194304
             },
             "romfsConfig" : [
                 {
@@ -1098,7 +1134,8 @@
             "bootloaderSettings" : {
                 "altvidpidDisplayName" : "Arduino Nano33 BLE (nRF52840) Legacy",
                 "altvidpid" : "2341:805a",
-                "binProgramCommand" : "--offset=0x16000"
+                "binProgramCommand" : "--offset=0x16000",
+                "binProgramSize" : 696320
             },
             "romfsConfig" : [
                 {
@@ -1131,7 +1168,8 @@
                 "altvidpidDisplayName" : "Arduino Nano RP2040 Connect (RP2040) Legacy",
                 "altvidpid" : "2341:805e",
                 "eraseCommands" : ["-o 0x10200000 -t bin"],
-                "binProgramCommand" : "-x"
+                "binProgramCommand" : "-x",
+                "binProgramSize" : 2097152
             },
             "romfsConfig" : [
                 {
@@ -1164,7 +1202,8 @@
                 "altvidpidDisplayName" : "Arduino Nano RP2040 Connect (RP2040) Legacy",
                 "altvidpid" : "2341:805e",
                 "eraseCommands" : ["-o 0x10200000 -t bin"],
-                "binProgramCommand" : "-x"
+                "binProgramCommand" : "-x",
+                "binProgramSize" : 2097152
             },
             "romfsConfig" : [
                 {

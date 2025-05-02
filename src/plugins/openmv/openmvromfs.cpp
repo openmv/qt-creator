@@ -33,6 +33,7 @@
 #include "openmvpluginconnect.h"
 
 #include "tools/romfs.h"
+#include "tools/stedgeai.h"
 #include "tools/vela.h"
 #include "openmvromfs.h"
 #include "openmvmodelzoo.h"
@@ -113,7 +114,26 @@ QString convertModel(const QJsonObject &boardSettings,
             {
                 if (model.endsWith(".tflite") || model.endsWith(".onnx"))
                 {
+                    QFile file(model);
 
+                    if (file.open(QIODevice::ReadOnly))
+                    {
+                        bool needs_conversion = !file.readAll().startsWith(QStringLiteral("NBIN").toUtf8());
+
+                        file.close();
+
+                        if (needs_conversion)
+                        {
+                            return stedgeaiCompile(model, npuAcceleratorConfig, settings);
+                        }
+                        else
+                        {
+                            QMessageBox::information(Core::ICore::dialogParent(),
+                                Tr::tr("Convert Model"),
+                                Tr::tr("The model has already been converted for the Neural-ART NPU."
+                                       "\n\nOpenMV IDE will just copy the model as is."));
+                        }
+                    }
                 }
             }
         }

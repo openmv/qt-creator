@@ -1,4 +1,4 @@
-/* Copyright (C) 2023-2024 OpenMV, LLC.
+/* Copyright (C) 2023-2025 OpenMV, LLC.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -28,24 +28,20 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef DFU_UTIL_H
-#define DFU_UTIL_H
+#ifndef STEDGEAI_H
+#define STEDGEAI_H
 
-#include <QList>
+#include <QJsonObject>
 #include <QString>
 
-#include <utils/qtcprocess.h>
+#include <utils/qtcsettings.h>
 
 namespace OpenMV {
 namespace Internal {
 
-QList<QPair<int, int> > dfuVidPidList(const QJsonDocument &settings);
-QList<QString> getDevices();
-void downloadFirmware(const QString &details,
-                      QString &command, Utils::Process &process,
-                      const QString &path, const QString &device, const QString &moreArgs = QString(), bool uploadInstead = false, int uploadSize = 0);
+QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSettings, Utils::QtcSettings *settings);
 
 } // namespace Internal
 } // namespace OpenMV
 
-#endif // DFU_UTIL_H
+#endif // STEDGEAI_H

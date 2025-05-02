@@ -99,6 +99,8 @@ if (WIN32)
     sdphost/win)
   set(donwloaded_resource_directories
     https://upload.openmv.io/stedgeai/stedgeai-win-2.1.0.tar.gz)
+  set(donwloaded_resource_directories
+    https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-mingw-w64-x86_64-arm-none-eabi.zip)
 endif()
 
 if (APPLE)
@@ -115,6 +117,8 @@ if (APPLE)
     blhost/mac
     sdphost/mac)
   set(resource_files ${resource_files} pydfu/pydfu.py)
+  set(donwloaded_resource_directories
+    https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-darwin-x86_64-arm-none-eabi.tar.xz)
 endif()
 
 if(UNIX AND NOT APPLE)
@@ -129,6 +133,8 @@ if(UNIX AND NOT APPLE)
         python/linux-arm64
         vela/aarch64
         pydfu)
+      set(donwloaded_resource_directories
+        https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-aarch64-arm-none-eabi.tar.xz)
     else()
       set(resource_directories ${resource_directories}
         alif/linux-x86_64
@@ -143,6 +149,8 @@ if(UNIX AND NOT APPLE)
         blhost/linux/amd64
         sdphost/linux/amd64
         pydfu)
+      set(donwloaded_resource_directories
+        https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi.tar.xz)
     endif()
   else()
     if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm*")

@@ -122,6 +122,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
     QStringList eraseCommands, extraProgramAddrCommands, extraProgramPathCommands;
     QStringList resetROMFSAddrCommands, resetROMFSPathCommands;
     QString binProgramCommand, dfuProgramCommand, romfsProgramCommand;
+    int romfsProgramSize = 0;
 
     if(selectedDfuDevice.isEmpty())
     {
@@ -181,6 +182,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
                     binProgramCommand = bootloaderSettings.value(QStringLiteral("binProgramCommand")).toString();
                     dfuProgramCommand = bootloaderSettings.value(QStringLiteral("dfuProgramCommand")).toString();
                     romfsProgramCommand = bootloaderSettings.value(QStringLiteral("romfsProgramCommand")).toString();
+                    romfsProgramSize = bootloaderSettings.value(QStringLiteral("romfsProgramSize")).toInt();
                     foundMatch = true;
                     break;
                 }
@@ -234,6 +236,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
                 binProgramCommand = bootloaderSettings.value(QStringLiteral("binProgramCommand")).toString();
                 dfuProgramCommand = bootloaderSettings.value(QStringLiteral("dfuProgramCommand")).toString();
                 romfsProgramCommand = bootloaderSettings.value(QStringLiteral("romfsProgramCommand")).toString();
+                romfsProgramSize = bootloaderSettings.value(QStringLiteral("romfsProgramSize")).toInt();
                 foundMatch = true;
                 break;
             }
@@ -338,7 +341,10 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
             downloadFirmware(Tr::tr("Read ROMFS"), command, process,
                              QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)),
-                             dfuDeviceVidPid, romfsProgramCommand + dfuDeviceSerial, true);
+                             dfuDeviceVidPid, romfsProgramCommand + dfuDeviceSerial,
+                             true, 0); // romfsProgramSize);
+            // Arduino DFU Bootloader reports upload percentage correctly and doesn't need help.
+            Q_UNUSED(romfsProgramSize)
 
             if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
             {

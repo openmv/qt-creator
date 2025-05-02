@@ -105,6 +105,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
     QStringList eraseCommands, programCommandsCmd, programCommandsPath;
     QStringList resetROMFSCommandsCmd, resetROMFSCommandsPath;
     QStringList binProgramCommands, binProgramPaths;
+    QList<int> binProgramSizes;
 
     QString firmwarePathFileName = QFileInfo(firmwarePath).fileName();
 
@@ -169,6 +170,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                                     {
                                         binProgramCommands.append(cmd.toObject().value(QStringLiteral("cmd")).toString());
                                         binProgramPaths.append(QFileInfo(firmwarePath).path() + QDir::separator() + line);
+                                        binProgramSizes.append(cmd.toObject().value(QStringLiteral("size")).toInt());
                                     }
                                 }
                             }
@@ -182,6 +184,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                             {
                                 binProgramCommands.append(cmd.toObject().value(QStringLiteral("cmd")).toString());
                                 binProgramPaths.append(firmwarePath);
+                                binProgramSizes.append(cmd.toObject().value(QStringLiteral("size")).toInt());
                             }
                         }
                     }
@@ -264,6 +267,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                                 {
                                     binProgramCommands.append(cmd.toObject().value(QStringLiteral("cmd")).toString());
                                     binProgramPaths.append(QFileInfo(firmwarePath).path() + QDir::separator() + line);
+                                    binProgramSizes.append(cmd.toObject().value(QStringLiteral("size")).toInt());
                                 }
                             }
                         }
@@ -277,6 +281,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                         {
                             binProgramCommands.append(cmd.toObject().value(QStringLiteral("cmd")).toString());
                             binProgramPaths.append(firmwarePath);
+                            binProgramSizes.append(cmd.toObject().value(QStringLiteral("size")).toInt());
                         }
                     }
                 }
@@ -403,7 +408,8 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
         {
             downloadFirmware(Tr::tr("Read ROMFS"), command, process,
                              QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)),
-                             dfuDeviceVidPid, binProgramCommands.first() + QStringLiteral(" --reset") + dfuDeviceSerial, true);
+                             dfuDeviceVidPid, binProgramCommands.first() + QStringLiteral(" --reset") + dfuDeviceSerial,
+                             true, binProgramSizes.first());
 
             if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
             {

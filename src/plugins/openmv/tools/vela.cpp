@@ -336,15 +336,15 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     process.setEnvironment(env);
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
-    QString result;
+    QString result, outputPath = tempDir.path() + QDir::separator() + QFileInfo(model).completeBaseName() + QStringLiteral("_vela.tflite");
 
     dialog->appendColoredText(*ramStringPtr);
 
-    if (finishedOk)
+    if (finishedOk && QFileInfo(outputPath).exists())
     {
         dialog->appendColoredText(Tr::tr("Success - Press Ok to close the window"), true);
         dialog->enableOkayButton(true);
-        result = tempDir.path() + QDir::separator() + QFileInfo(model).completeBaseName() + QStringLiteral("_vela.tflite");
+        result = outputPath;
     }
     else
     {

@@ -954,7 +954,11 @@ function(finalize_qtc_gtest test_name)
 endfunction()
 
 function(qtc_copy_to_builddir custom_target_name)
-  cmake_parse_arguments(_arg "CREATE_SUBDIRS" "DESTINATION" "FILES;DIRECTORIES" ${ARGN})
+  # OPENMV-DIFF #
+  # cmake_parse_arguments(_arg "CREATE_SUBDIRS" "DESTINATION" "FILES;DIRECTORIES" ${ARGN})
+  # OPENMV-DIFF #
+  cmake_parse_arguments(_arg "CREATE_SUBDIRS" "DESTINATION" "FILES;DIRECTORIES;URLS" ${ARGN})
+  # OPENMV-DIFF #
   set(timestampFiles)
 
   qtc_output_binary_dir(_output_binary_dir)
@@ -1003,6 +1007,35 @@ function(qtc_copy_to_builddir custom_target_name)
       VERBATIM
     )
   endforeach()
+
+  # OPENMV-DIFF #
+  foreach(url ${_arg_URLS})
+    get_filename_component(fileName "${url}" NAME)
+    string(REGEX MATCH "^[^-]+" folderName "${fileName}")
+
+    set(downloadPath "${CMAKE_CURRENT_BINARY_DIR}/${fileName}")
+
+    string(MAKE_C_IDENTIFIER "${folderName}" destinationTimestampFilePart)
+    set(destinationTimestampFileName "${CMAKE_CURRENT_BINARY_DIR}/.${destinationTimestampFilePart}_timestamp")
+    list(APPEND timestampFiles "${destinationTimestampFileName}")
+    set(destinationDirectory "${_output_binary_dir}/${_arg_DESTINATION}/${folderName}")
+
+    set(scriptFile "${CMAKE_CURRENT_BINARY_DIR}/${folderName}_download_and_extract.cmake")
+    set(scriptContent "file(DOWNLOAD \"${url}\" \"${downloadPath}\" SHOW_PROGRESS)\n")
+    string(APPEND scriptContent "file(MAKE_DIRECTORY \"${destinationDirectory}\")\n")
+    string(APPEND scriptContent "execute_process(COMMAND \"${CMAKE_COMMAND}\" -E tar xzvf \"${downloadPath}\" WORKING_DIRECTORY \"${destinationDirectory}\")\n")
+    file(WRITE "${scriptFile}" "${scriptContent}")
+
+    add_custom_command(OUTPUT "${destinationTimestampFileName}"
+      COMMAND "${CMAKE_COMMAND}" -E echo "Executing download script ${scriptFile}"
+      COMMAND "${CMAKE_COMMAND}" -P "${scriptFile}"
+      COMMAND "${CMAKE_COMMAND}" -E touch "${destinationTimestampFileName}"
+      WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+      COMMENT "Download and extract ${fileName} into ${destinationDirectory}"
+      VERBATIM
+    )
+  endforeach()
+  # OPENMV-DIFF #
 
   add_custom_target("${custom_target_name}" ALL DEPENDS ${timestampFiles}
     SOURCES ${allFiles})

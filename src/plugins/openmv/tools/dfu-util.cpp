@@ -188,7 +188,8 @@ QList<QString> getDevices()
 
 void downloadFirmware(const QString &details,
                       QString &command, Utils::Process &process,
-                      const QString &path, const QString &device, const QString &moreArgs, bool uploadInstead)
+                      const QString &path, const QString &device, const QString &moreArgs,
+                      bool uploadInstead, int uploadSize)
 {
     QStringList list;
 
@@ -462,7 +463,7 @@ void downloadFirmware(const QString &details,
     bool stdOutFirstTime = true;
     bool *stdOutFirstTimePtr = &stdOutFirstTime;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, uploadInstead, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, uploadInstead, uploadSize, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
         stdOutBufferPtr->append(text);
         QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -483,6 +484,7 @@ void downloadFirmware(const QString &details,
                 {
                     dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : (uploadInstead ? Tr::tr("Uploading...") : Tr::tr("Downloading...")));
                     int p = m.captured(2).toInt();
+                    if (uploadInstead && uploadSize) p = (m.captured(3).toInt() * 100) / uploadSize;
                     dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
                 }
@@ -508,7 +510,7 @@ void downloadFirmware(const QString &details,
     bool stdErrFirstTime = true;
     bool *stdErrFirstTimePtr = &stdErrFirstTime;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, uploadInstead, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, uploadInstead, uploadSize, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
         stdErrBufferPtr->append(text);
         QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -529,6 +531,7 @@ void downloadFirmware(const QString &details,
                 {
                     dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : (uploadInstead ? Tr::tr("Uploading...") : Tr::tr("Downloading...")));
                     int p = m.captured(2).toInt();
+                    if (uploadInstead && uploadSize) p = (m.captured(3).toInt() * 100) / uploadSize;
                     dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
                 }
