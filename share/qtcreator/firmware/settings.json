@@ -915,11 +915,16 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
-                            "alignment" : 16
+                            "alignment" : 32
                         }
                     ],
                     "npuAcceleratorConfig": {
-                        "type" : "stedgeai"
+                        "type" : "stedgeai",
+                        "args" : [
+                            "--target stm32n6"
+                        ],
+                        "heapSize" : 4194304,
+                        "jsonFilePath" : "OPENMV_N6/neuralart.json"
                     }
                 }
             ]

@@ -97,6 +97,8 @@ if (WIN32)
     vela/windows
     blhost/win
     sdphost/win)
+  set(donwloaded_resource_directories
+    https://upload.openmv.io/stedgeai/stedgeai-win-2.1.0.tar.gz)
 endif()
 
 if (APPLE)
@@ -177,6 +179,13 @@ qtc_copy_to_builddir(copy_share_files_to_builddir
   FILES ${resource_files}
   DESTINATION ${IDE_DATA_PATH}
 )
+
+# OPENMV-DIFF #
+qtc_copy_to_builddir(copy_donwloaded_share_to_builddir
+  URLS ${donwloaded_resource_directories}
+  DESTINATION ${IDE_DATA_PATH}
+)
+# OPENMV-DIFF #
 
 # create install rule for resource directories
 # OPENMV-DIFF #
