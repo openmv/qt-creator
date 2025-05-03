@@ -59,6 +59,7 @@
 #define READ_BUFFER_SIZE (64 * 1024 * 1024)
 #define WRITE_BUFFER_SIZE (64 * 1024 * 1024)
 
+#define DYNAMIC_READ_STALL_ENABLE 0
 #define DYNAMIC_READ_STALL_BUFFER_SIZE 20
 #define DYNAMIC_READ_STALL_THRESHOLD 10
 
@@ -677,14 +678,18 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
             int responseLen = command.m_responseLen;
             QElapsedTimer elaspedTimer;
             elaspedTimer.start();
+            #if DYNAMIC_READ_STALL_ENABLE
             qint64 lastReadWait = 0;
+            #endif
 
             bool readStallHappened = false;
 
             do
             {
                 m_port->waitForReadyRead(0);
+                #if DYNAMIC_READ_STALL_ENABLE
                 lastReadWait = elaspedTimer.elapsed();
+                #endif
 
                 QByteArray data = m_port->readAll();
                 response.append(data);
@@ -698,7 +703,7 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                 //
                 // This happens on windows machines generally.
 
-                // EXPERIMENTAL DYNAMIC READ STALL DETECTION
+                #if DYNAMIC_READ_STALL_ENABLE
                 if ((m_override_read_stall_timeout <= 0) && command.m_commandAbortOkay)
                 {
                     char cmd = command.m_data[1];
@@ -710,6 +715,7 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                         break;
                     }
                 }
+                #endif
 
                 if((response.size() < responseLen) && elaspedTimer.hasExpired(read_stall_timeout) && command.m_commandAbortOkay)
                 {
@@ -809,6 +815,7 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
             }
             while((response.size() < responseLen) && (!elaspedTimer.hasExpired(read_timeout)));
 
+            #if DYNAMIC_READ_STALL_ENABLE
             if (command.m_commandAbortOkay && (!readStallHappened))
             {
                 char cmd = command.m_data[1];
@@ -829,6 +836,7 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
                 m_readstallAverage[cmd] = average / m_readstallQueue[cmd].size();
             }
+            #endif
 
             if((response.size() >= responseLen) || readStallHappened)
             {
