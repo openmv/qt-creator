@@ -32,6 +32,7 @@
 #include "openmvtr.h"
 #include "openmvpluginconnect.h"
 
+#include "tools/mpy-cross.h"
 #include "tools/romfs.h"
 #include "tools/stedgeai.h"
 #include "tools/vela.h"
@@ -68,6 +69,18 @@ QJsonObject getROMFSConfig(const QString &title,
     }
 
     return QJsonObject();
+}
+
+QString convertScript(const QJsonObject &boardSettings,
+                      const QString &script,
+                      Utils::QtcSettings *settings)
+{
+    if (script.endsWith(".py"))
+    {
+        return mpyCompile(script, boardSettings.value(QStringLiteral("mpyConfig")).toObject(), settings);
+    }
+
+    return script;
 }
 
 QString convertModel(const QJsonObject &boardSettings,
@@ -304,7 +317,7 @@ void OpenMVROMFSEditor::addModel()
         }
 
         QString path = m_model->isDir(index) ? m_model->filePath(index) : QFileInfo(m_model->filePath(index)).path();
-        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(src).fileName()));
+        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).completeSuffix()));
 
         if (QFileInfo(newFilePath).exists())
         {
@@ -387,7 +400,7 @@ void OpenMVROMFSEditor::addFile()
 
     if (!file.isEmpty())
     {
-        QString convertedSrc = convertModel(m_boardSettings, file, settings);
+        QString convertedSrc = convertModel(m_boardSettings, convertScript(m_boardSettings, file, settings), settings);
 
         if (convertedSrc.isEmpty())
         {
@@ -395,7 +408,7 @@ void OpenMVROMFSEditor::addFile()
         }
 
         QString path = m_model->isDir(index) ? m_model->filePath(index) : QFileInfo(m_model->filePath(index)).path();
-        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(file).fileName()));
+        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(file).baseName() + QChar('.') + QFileInfo(convertedSrc).completeSuffix()));
 
         if (QFileInfo(newFilePath).exists())
         {

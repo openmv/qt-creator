@@ -326,7 +326,7 @@ importData_t;
 
 typedef QList<importData_t> importDataList_t;
 
-QByteArray loadFilter(const QByteArray &data);
+QByteArray loadFilter(const QByteArray &data, bool stripComments = true);
 importDataList_t loadFolder(const QString &rootPath, const QString &path, bool flat);
 
 class LoadFolderThread: public QObject

@@ -53,6 +53,10 @@ QJsonObject getROMFSConfig(const QString &title,
                            const QJsonObject &boardSettings,
                            Utils::QtcSettings *settings);
 
+QString convertScript(const QJsonObject &boardSettings,
+                      const QString &script,
+                      Utils::QtcSettings *settings);
+
 QString convertModel(const QJsonObject &boardSettings,
                      const QString &model,
                      Utils::QtcSettings *settings);

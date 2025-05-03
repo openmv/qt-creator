@@ -94,6 +94,7 @@ if (WIN32)
     picotool/windows
     python/win
     pylsp/windows
+    mpy-cross/windows
     vela/windows
     blhost/win
     sdphost/win)

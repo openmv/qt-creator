@@ -36,7 +36,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emsp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -109,7 +114,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emsp"
+                ]
+            }
         },
         {
             "hidden" : true,
@@ -146,7 +156,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -219,7 +234,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : true,
@@ -256,7 +276,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -329,7 +354,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : true,
@@ -366,7 +396,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -439,7 +474,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : true,
@@ -476,7 +516,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -549,7 +594,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : true,
@@ -597,7 +647,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -645,7 +700,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : true,
@@ -693,7 +753,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -804,7 +869,12 @@
                         "iniFilePath" : "OPENMV_AE3/vela.ini"
                     }
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : true,
@@ -878,7 +948,12 @@
                         "iniFilePath" : "OPENMV_AE3/vela.ini"
                     }
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -954,7 +1029,12 @@
                         "mpoolFilePath" : "OPENMV_N6/stm32n6.mpool"
                     }
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -1008,7 +1088,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -1062,7 +1147,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -1116,7 +1206,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -1149,7 +1244,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emsp"
+                ]
+            }
         },
         {
             "hidden" : false,
@@ -1183,7 +1283,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv6m"
+                ]
+            }
         },
         {
             "hidden" : true,
@@ -1217,7 +1322,12 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv6m"
+                ]
+            }
         }
     ],
     "sensors" : [

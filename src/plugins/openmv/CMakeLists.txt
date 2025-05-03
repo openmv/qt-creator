@@ -35,6 +35,7 @@ add_qtc_plugin(OpenMV
     tools/edgeimpulse.cpp tools/edgeimpulse.h
     tools/imx.cpp tools/imx.h
     tools/keypointseditor.cpp tools/keypointseditor.h
+    tools/mpy-cross.cpp tools/mpy-cross.h
     tools/picotool.cpp tools/picotool.h
     tools/romfs.cpp tools/romfs.h
     tools/stedgeai.cpp tools/stedgeai.h
