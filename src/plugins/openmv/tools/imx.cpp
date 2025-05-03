@@ -31,10 +31,13 @@
 #include <QtCore>
 #include <QtWidgets>
 
+#include <QTextCodec>
+
 #include <coreplugin/icore.h>
 #include <extensionsystem/pluginmanager.h>
 #include <texteditor/fontsettings.h>
 #include <texteditor/texteditorsettings.h>
+#include <utils/environment.h>
 #include <utils/hostosinfo.h>
 #include <utils/qtcprocess.h>
 #include <utils/theme/theme.h>
@@ -44,7 +47,6 @@
 #endif
 
 #include "loaderdialog.h"
-
 #include "openmvtr.h"
 #include "openmvromfs.h"
 
@@ -269,40 +271,56 @@ bool imxGetDevice(QJsonObject &obj)
     QMutexLocker locker(&imx_working);
 
     Utils::Process process;
+    Utils::Environment env = process.environment();
+
     std::chrono::seconds timeout(10);
     process.setProcessChannelMode(QProcess::MergedChannels);
 
-    Utils::FilePath blhost_binary;
+    Utils::FilePath pythonPath, binary;
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/win/blhost.exe"));
+        pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/windows"));
+        binary = Core::ICore::resourcePath(QStringLiteral("python/win/python.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/mac/blhost"));
+        pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
+        binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/linux/amd64/blhost"));
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/linux64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/aarch64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python"));
         }
     }
 
-    if(blhost_binary.isEmpty())
+    if(pythonPath.isEmpty() || binary.isEmpty())
     {
         return false;
     }
 
+    env.appendOrSet("PYTHONPATH", pythonPath.path());
+    process.setEnvironment(env);
+
     QStringList args = QStringList() <<
+                       QStringLiteral("-u") <<
+                       QStringLiteral("-m") <<
+                       QStringLiteral("spsdk.apps.blhost") <<
                        QStringLiteral("-u") <<
                        obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                        QStringLiteral("--") <<
                        QStringLiteral("get-property") <<
                        QStringLiteral("1");
 
-    process.setCommand(Utils::CommandLine(blhost_binary, args));
+    process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
     if((process.result() == Utils::ProcessResult::FinishedWithSuccess) || (process.result() == Utils::ProcessResult::FinishedWithError))
@@ -330,6 +348,10 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
     bool result = true;
     Utils::Process process;
+    process.setStdOutCodec(QTextCodec::codecForName("UTF-8"));
+    process.setStdErrCodec(QTextCodec::codecForName("UTF-8"));
+    Utils::Environment env = process.environment();
+    env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
@@ -448,55 +470,33 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
         }
     });
 
-    Utils::FilePath sdphost_binary, blhost_binary;
+    Utils::FilePath pythonPath, binary;
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        sdphost_binary = Core::ICore::resourcePath(QStringLiteral("sdphost/win/sdphost.exe"));
+        pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/windows"));
+        binary = Core::ICore::resourcePath(QStringLiteral("python/win/python.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        sdphost_binary = Core::ICore::resourcePath(QStringLiteral("sdphost/mac/sdphost"));
-    }
-    else if(Utils::HostOsInfo::isLinuxHost())
-    {
-        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
-        {
-            sdphost_binary = Core::ICore::resourcePath(QStringLiteral("sdphost/linux/i386/sdphost"));
-        }
-        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
-        {
-            sdphost_binary = Core::ICore::resourcePath(QStringLiteral("sdphost/linux/amd64/sdphost"));
-        }
-    }
-
-    if(sdphost_binary.isEmpty())
-    {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("NXP IMX"),
-            Tr::tr("This feature is not supported on this machine!"));
-
-        result = false;
-        goto cleanup;
-    }
-
-    if(Utils::HostOsInfo::isWindowsHost())
-    {
-        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/win/blhost.exe"));
-    }
-    else if(Utils::HostOsInfo::isMacHost())
-    {
-        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/mac/blhost"));
+        pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
+        binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/linux/amd64/blhost"));
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/linux64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/aarch64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python"));
         }
     }
 
-    if(blhost_binary.isEmpty())
+    if(pythonPath.isEmpty() || binary.isEmpty())
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("NXP IMX"),
@@ -505,6 +505,9 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
         result = false;
         goto cleanup;
     }
+
+    env.appendOrSet("PYTHONPATH", pythonPath.path());
+    process.setEnvironment(env);
 
     dialog->show();
 
@@ -512,19 +515,22 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.sdphost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("sdphost_pidvid")).toString() <<
                            QStringLiteral("--") <<
                            QStringLiteral("write-file") <<
                            obj.value(QStringLiteral("sdphost_flash_loader_address")).toString() <<
                            QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("sdphost_flash_loader_path")).toString()));
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(sdphost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(sdphost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -551,18 +557,21 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.sdphost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("sdphost_pidvid")).toString() <<
                            QStringLiteral("--") <<
                            QStringLiteral("jump-address") <<
                            obj.value(QStringLiteral("sdphost_flash_loader_address")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(sdphost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(sdphost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -599,18 +608,21 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.blhost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                            QStringLiteral("--") <<
                            QStringLiteral("get-property") <<
                            QStringLiteral("1");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(blhost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -637,6 +649,9 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.blhost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                            QStringLiteral("--") <<
                            QStringLiteral("fill-memory") <<
@@ -645,13 +660,13 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_spi")).toString() <<
                            QStringLiteral("word");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(blhost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -678,19 +693,22 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.blhost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                            QStringLiteral("--") <<
                            QStringLiteral("configure-memory") <<
                            obj.value(QStringLiteral("blhost_memory_configuration_type")).toString() <<
                            obj.value(QStringLiteral("blhost_memory_configuration_address")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(blhost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -717,22 +735,24 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.blhost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                            QStringLiteral("-t") <<
-                           QStringLiteral("100000") <<
+                           QStringLiteral("120000") <<
                            QStringLiteral("--") <<
                            QStringLiteral("flash-erase-region") <<
-                           obj.value(QStringLiteral("blhost_secure_bootloader_erase_address")).toString() <<
-                           obj.value(QStringLiteral("blhost_secure_bootloader_length")).toString() <<
-                           obj.value(QStringLiteral("blhost_memory_configuration_type")).toString();
+                           obj.value(QStringLiteral("blhost_secure_bootloader_fcb_address")).toString() <<
+                           obj.value(QStringLiteral("blhost_secure_bootloader_fcb_length")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(blhost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -759,6 +779,9 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.blhost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                            QStringLiteral("--") <<
                            QStringLiteral("fill-memory") <<
@@ -767,13 +790,13 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_fcb")).toString() <<
                            QStringLiteral("word");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(blhost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -800,19 +823,66 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.blhost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                            QStringLiteral("--") <<
                            QStringLiteral("configure-memory") <<
                            obj.value(QStringLiteral("blhost_memory_configuration_type")).toString() <<
                            obj.value(QStringLiteral("blhost_memory_configuration_address")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(blhost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
+        process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+        if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+        {
+            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            box.setDefaultButton(QMessageBox::Ok);
+            box.setEscapeButton(QMessageBox::Cancel);
+            box.exec();
+
+            result = false;
+            goto cleanup;
+        }
+        else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+        {
+            result = false;
+            goto cleanup;
+        }
+    }
+
+    // Erase Memory
+    {
+        QStringList args = QStringList() <<
+                           QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.blhost") <<
+                           QStringLiteral("-u") <<
+                           obj.value(QStringLiteral("blhost_pidvid")).toString() <<
+                           QStringLiteral("-t") <<
+                           QStringLiteral("120000") <<
+                           QStringLiteral("--") <<
+                           QStringLiteral("flash-erase-region") <<
+                           obj.value(QStringLiteral("blhost_secure_bootloader_address")).toString() <<
+                           obj.value(QStringLiteral("blhost_secure_bootloader_length")).toString();
+
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        dialog->appendColoredText(command);
+
+        std::chrono::seconds timeout(300); // 5 minutes...
+        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -839,19 +909,22 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.blhost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                            QStringLiteral("--") <<
                            QStringLiteral("write-memory") <<
-                           obj.value(QStringLiteral("blhost_secure_bootloader_write_address")).toString() <<
+                           obj.value(QStringLiteral("blhost_secure_bootloader_address")).toString() <<
                            QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_secure_bootloader_path")).toString()));
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(blhost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -876,7 +949,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
     if(forceFlashFSErase
     && (obj.value(QStringLiteral("blhost_disk_address")).toString().toInt(nullptr, 16) != 0)
-    && (obj.value(QStringLiteral("blhost_disk_size")).toString().toInt(nullptr, 16) > 0))
+    && (obj.value(QStringLiteral("blhost_disk_size_mbr")).toString().toInt(nullptr, 16) > 0))
     {
         dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);
 
@@ -884,21 +957,24 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("-t") <<
                                QStringLiteral("120000") <<
                                QStringLiteral("--") <<
                                QStringLiteral("flash-erase-region") <<
                                obj.value(QStringLiteral("blhost_disk_address")).toString() <<
-                               obj.value(QStringLiteral("blhost_disk_size")).toString();
+                               obj.value(QStringLiteral("blhost_disk_size_mbr")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -932,21 +1008,24 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("-t") <<
                                QStringLiteral("120000") <<
                                QStringLiteral("--") <<
                                QStringLiteral("flash-erase-region") <<
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
-                               obj.value(QStringLiteral("blhost_romfs_size")).toString();
+                               obj.value(QStringLiteral("blhost_romfs_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -973,19 +1052,22 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("--") <<
                                QStringLiteral("write-memory") <<
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1017,6 +1099,9 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("-t") <<
                                QStringLiteral("120000") <<
@@ -1025,13 +1110,13 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                obj.value(QStringLiteral("blhost_firmware_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1058,19 +1143,22 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("--") <<
                                QStringLiteral("write-memory") <<
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_firmware_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1098,19 +1186,22 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.blhost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                            QStringLiteral("--") <<
                            QStringLiteral("efuse-program-once") <<
                            obj.value(QStringLiteral("blhost_efuse_burn_address")).toString() <<
                            obj.value(QStringLiteral("blhost_efuse_burn_data")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(blhost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1137,17 +1228,20 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.blhost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                            QStringLiteral("--") <<
                            QStringLiteral("reset");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(blhost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1184,6 +1278,10 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
     bool result = true;
     Utils::Process process;
+    process.setStdOutCodec(QTextCodec::codecForName("UTF-8"));
+    process.setStdErrCodec(QTextCodec::codecForName("UTF-8"));
+    Utils::Environment env = process.environment();
+    env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
@@ -1293,25 +1391,33 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         }
     });
 
-    Utils::FilePath blhost_binary;
+    Utils::FilePath pythonPath, binary;
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/win/blhost.exe"));
+        pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/windows"));
+        binary = Core::ICore::resourcePath(QStringLiteral("python/win/python.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/mac/blhost"));
+        pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
+        binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            blhost_binary = Core::ICore::resourcePath(QStringLiteral("blhost/linux/amd64/blhost"));
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/linux64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/aarch64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python"));
         }
     }
 
-    if(blhost_binary.isEmpty())
+    if(pythonPath.isEmpty() || binary.isEmpty())
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("NXP IMX"),
@@ -1321,11 +1427,14 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         goto cleanup;
     }
 
+    env.appendOrSet("PYTHONPATH", pythonPath.path());
+    process.setEnvironment(env);
+
     dialog->show();
 
     if(forceFlashFSErase
     && (obj.value(QStringLiteral("blhost_disk_address")).toString().toInt(nullptr, 16) != 0)
-    && (obj.value(QStringLiteral("blhost_disk_size")).toString().toInt(nullptr, 16) > 0)
+    && (obj.value(QStringLiteral("blhost_disk_size_mbr")).toString().toInt(nullptr, 16) > 0)
     && (romfsAccess != OPENMV_ROMFS_READ) && (romfsAccess != OPENMV_ROMFS_WRITE))
     {
         dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);
@@ -1334,21 +1443,24 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("-t") <<
                                QStringLiteral("120000") <<
                                QStringLiteral("--") <<
                                QStringLiteral("flash-erase-region") <<
                                obj.value(QStringLiteral("blhost_disk_address")).toString() <<
-                               obj.value(QStringLiteral("blhost_disk_size")).toString();
+                               obj.value(QStringLiteral("blhost_disk_size_mbr")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1382,6 +1494,9 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("--") <<
                                QStringLiteral("read-memory") <<
@@ -1389,13 +1504,13 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_romfs_size")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1429,21 +1544,24 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("-t") <<
                                QStringLiteral("120000") <<
                                QStringLiteral("--") <<
                                QStringLiteral("flash-erase-region") <<
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
-                               obj.value(QStringLiteral("blhost_romfs_size")).toString();
+                               obj.value(QStringLiteral("blhost_romfs_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1470,19 +1588,22 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("--") <<
                                QStringLiteral("write-memory") <<
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1517,21 +1638,24 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("-t") <<
                                QStringLiteral("120000") <<
                                QStringLiteral("--") <<
                                QStringLiteral("flash-erase-region") <<
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
-                               obj.value(QStringLiteral("blhost_romfs_size")).toString();
+                               obj.value(QStringLiteral("blhost_romfs_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1558,19 +1682,22 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("--") <<
                                QStringLiteral("write-memory") <<
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1603,6 +1730,9 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("-t") <<
                                QStringLiteral("120000") <<
@@ -1611,13 +1741,13 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                obj.value(QStringLiteral("blhost_firmware_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1644,19 +1774,22 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         {
             QStringList args = QStringList() <<
                                QStringLiteral("-u") <<
+                               QStringLiteral("-m") <<
+                               QStringLiteral("spsdk.apps.blhost") <<
+                               QStringLiteral("-u") <<
                                obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                                QStringLiteral("--") <<
                                QStringLiteral("write-memory") <<
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_firmware_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
             process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
             process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-            process.setCommand(Utils::CommandLine(blhost_binary, args));
+            process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
@@ -1684,17 +1817,20 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
+                           QStringLiteral("-m") <<
+                           QStringLiteral("spsdk.apps.blhost") <<
+                           QStringLiteral("-u") <<
                            obj.value(QStringLiteral("blhost_pidvid")).toString() <<
                            QStringLiteral("--") <<
                            QStringLiteral("reset");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(blhost_binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setCommand(Utils::CommandLine(blhost_binary, args));
+        process.setCommand(Utils::CommandLine(binary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))

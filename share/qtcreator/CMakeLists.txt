@@ -96,6 +96,7 @@ if (WIN32)
     pylsp/windows
     mpy-cross/windows
     vela/windows
+    spsdk/windows
     blhost/win
     sdphost/win)
   set(donwloaded_resource_directories

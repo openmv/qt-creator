@@ -1,0 +1,25 @@
+# Copyright 2024-2025 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+alias: mcxc141
+
+# General MCU information
+info:
+  memory_map: # Memory map basic info
+    internal-flash0:
+      start_int: 0x0
+      size_int: 0xFFFF
+      external: false
+    internal-flash1:
+      start_int: 0x1_0000
+      size_int: 0xFFFF
+      external: false
+    sram-l:
+      start_int: 0x1FFF_F000
+      size_int: 0xFFF
+      external: false
+    sram-u:
+      start_int: 0x2000_0000
+      size_int: 0x2FFF
+      external: false

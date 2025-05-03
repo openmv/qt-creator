@@ -1,0 +1,17 @@
+libusb_package-1.0.26.3.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+libusb_package-1.0.26.3.dist-info/METADATA,sha256=CiYK9GJtNkB0qRNO3R85IJn_tcx788M3_mKt9hsSXDo,6398
+libusb_package-1.0.26.3.dist-info/RECORD,,
+libusb_package-1.0.26.3.dist-info/WHEEL,sha256=6WoW_bHwIgUwfRGomr3tsp2x5B1WboZF1vodYe1_93Y,101
+libusb_package-1.0.26.3.dist-info/entry_points.txt,sha256=QazvaNcE3QqyO9sNJgXuWUsY-nwvAbDE1rNvSdm4x8k,71
+libusb_package-1.0.26.3.dist-info/licenses/LICENSE,sha256=bR2Wj7Il7KNny38LiDGrASo12StUfpReF--OewXD5cw,10349
+libusb_package-1.0.26.3.dist-info/top_level.txt,sha256=0g5vFMKF2nURPAQ9_q2TljIDMYQfvru8jzMZWes-PW4,16
+libusb_package/__init__.py,sha256=bdUwoonmHVm09ih7Mym5oZI0LhIXxJJZTBMN2U_msts,3870
+libusb_package/__pycache__/__init__.cpython-313.pyc,,
+libusb_package/__pycache__/_version.cpython-313.pyc,,
+libusb_package/__pyinstaller/__init__.py,sha256=_Sx_8oLLpLtUhWR3dAY_DGPGr5VrVGaGLGyw0b7JHis,714
+libusb_package/__pyinstaller/__pycache__/__init__.cpython-313.pyc,,
+libusb_package/__pyinstaller/__pycache__/hook-libusb_package.cpython-313.pyc,,
+libusb_package/__pyinstaller/hook-libusb_package.py,sha256=58sFn9OuTvB-nrEDZaUybjjncTrKroc7GHnGQHQ7OVA,827
+libusb_package/_version.py,sha256=6H82sndTERzCB1zGKhwZYE6n7VfugZS2Mg5-0bbFvZQ,539
+libusb_package/libusb-1.0.dll,sha256=URCEMHGorjGa4891CezLWJhkgwJhTluTDI0OVo_LPTc,173056
+libusb_package/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0

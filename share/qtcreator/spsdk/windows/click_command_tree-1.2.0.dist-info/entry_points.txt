@@ -1,0 +1,2 @@
+[click_command_tree]
+tree = click_command_tree:tree
