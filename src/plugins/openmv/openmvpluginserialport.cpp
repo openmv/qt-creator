@@ -59,6 +59,9 @@
 #define READ_BUFFER_SIZE (64 * 1024 * 1024)
 #define WRITE_BUFFER_SIZE (64 * 1024 * 1024)
 
+#define DYNAMIC_READ_STALL_BUFFER_SIZE 20
+#define DYNAMIC_READ_STALL_THRESHOLD 10
+
 namespace OpenMV {
 namespace Internal {
 
@@ -415,10 +418,15 @@ OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(int override_read
     m_override_per_command_wait = override_per_command_wait;
     m_firmwareSettings = settings;
     m_unstuckWithGetState = false;
+    m_readstallQueue = QHash<char, QQueue<qint64> >();
+    m_readstallAverage = QHash<char, qint64 >();
 }
 
 void OpenMVPluginSerialPort_private::open(const QString &portName)
-{
+{    
+    m_readstallQueue = QHash<char, QQueue<qint64> >();
+    m_readstallAverage = QHash<char, qint64 >();
+
     if(m_port)
     {
         delete m_port;
@@ -669,12 +677,14 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
             int responseLen = command.m_responseLen;
             QElapsedTimer elaspedTimer;
             elaspedTimer.start();
+            qint64 lastReadWait = 0;
 
             bool readStallHappened = false;
 
             do
             {
                 m_port->waitForReadyRead(0);
+                lastReadWait = elaspedTimer.elapsed();
 
                 QByteArray data = m_port->readAll();
                 response.append(data);
@@ -687,6 +697,19 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                 // This code helps clear out read stalls where the OS received the data but then doesn't return it to the application.
                 //
                 // This happens on windows machines generally.
+
+                // EXPERIMENTAL DYNAMIC READ STALL DETECTION
+                if ((m_override_read_stall_timeout <= 0) && command.m_commandAbortOkay)
+                {
+                    char cmd = command.m_data[1];
+
+                    if ((m_readstallQueue[cmd].size() == DYNAMIC_READ_STALL_BUFFER_SIZE) &&
+                        (lastReadWait > (m_readstallAverage[cmd] * DYNAMIC_READ_STALL_THRESHOLD)))
+                    {
+                        readStallHappened = true;
+                        break;
+                    }
+                }
 
                 if((response.size() < responseLen) && elaspedTimer.hasExpired(read_stall_timeout) && command.m_commandAbortOkay)
                 {
@@ -785,6 +808,27 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                 // DISABLED - NOT REQUIRED - FIXING ZLP OVERLAP WAS WHY THINGS STALL - REMOVE AFTER TRIAL PERIOD
             }
             while((response.size() < responseLen) && (!elaspedTimer.hasExpired(read_timeout)));
+
+            if (command.m_commandAbortOkay && (!readStallHappened))
+            {
+                char cmd = command.m_data[1];
+
+                m_readstallQueue[cmd].push_back(lastReadWait);
+
+                if(m_readstallQueue[cmd].size() > DYNAMIC_READ_STALL_BUFFER_SIZE)
+                {
+                    m_readstallQueue[cmd].pop_front();
+                }
+
+                qint64 average = 0;
+
+                for(int i = 0; i < m_readstallQueue[cmd].size(); i++)
+                {
+                    average += m_readstallQueue[cmd].at(i);
+                }
+
+                m_readstallAverage[cmd] = average / m_readstallQueue[cmd].size();
+            }
 
             if((response.size() >= responseLen) || readStallHappened)
             {

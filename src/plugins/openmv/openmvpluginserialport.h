@@ -382,6 +382,8 @@ private:
     int m_override_per_command_wait;
     QJsonDocument m_firmwareSettings;
     bool m_unstuckWithGetState;
+    QHash<char, QQueue<qint64> > m_readstallQueue;
+    QHash<char, qint64 > m_readstallAverage;
 };
 
 class OpenMVPluginSerialPort : public QObject
