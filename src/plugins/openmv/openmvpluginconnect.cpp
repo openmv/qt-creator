@@ -2781,15 +2781,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         if(m_availableDrives.isEmpty())
         {
             QTimer::singleShot(1000, this, [this] {
-                if(m_availableDrives.isEmpty()) m_scanDriveThread->scanDrivesSlot();
+                if(m_availableDrives.isEmpty()) QTimer::singleShot(0, m_scanDriveThread, &ScanDriveThread::scanDrivesSlot);
             });
 
             QTimer::singleShot(2000, this, [this] {
-                if(m_availableDrives.isEmpty()) m_scanDriveThread->scanDrivesSlot();
+                if(m_availableDrives.isEmpty()) QTimer::singleShot(0, m_scanDriveThread, &ScanDriveThread::scanDrivesSlot);
             });
 
             QTimer::singleShot(3000, this, [this] {
-                if(m_availableDrives.isEmpty()) m_scanDriveThread->scanDrivesSlot();
+                if(m_availableDrives.isEmpty()) QTimer::singleShot(0, m_scanDriveThread, &ScanDriveThread::scanDrivesSlot);
             });
         }
 
