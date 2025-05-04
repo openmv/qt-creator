@@ -723,40 +723,42 @@ FilePath ICore::userResourcePath(const QString &rel)
 // OPENMV-DIFF //
 FilePath ICore::allUsersResourcePath(const QString &rel)
 {
-    QStringList list = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation), list2 = list;
+    if (Utils::HostOsInfo::isWindowsHost()) {
+        QStringList list = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation), list2 = list;
 
-    // Filter out paths that contain the current user name.
-    while (list.size()) {
-        QString path = list.takeFirst();
+        // Filter out paths that contain the current user name.
+        while (list.size()) {
+            QString path = list.takeFirst();
 
-        if (path.toLower().contains(Utils::Environment::systemEnvironment().toDictionary().userName().toLower())) {
-            continue;
+            if (path.toLower().contains(Utils::Environment::systemEnvironment().toDictionary().userName().toLower())) {
+                continue;
+            }
+
+            path = QFileInfo(path).path() + '/' + appInfo().id;
+
+            if (!QFileInfo::exists(path + QLatin1Char('/'))) {
+                QDir dir;
+                if (!dir.mkpath(path))
+                    qWarning() << "could not create" << path;
+            }
+
+            return FilePath::fromString(path + pathHelper(rel));
         }
 
-        path = QFileInfo(path).path() + '/' + appInfo().id;
+        // Fallback to guessing it's the second location if username filtering returns no results (username == openmv).
+        if (list2.size() > 1) {
+            QString path = list2.at(1);
 
-        if (!QFileInfo::exists(path + QLatin1Char('/'))) {
-            QDir dir;
-            if (!dir.mkpath(path))
-                qWarning() << "could not create" << path;
+            path = QFileInfo(path).path() + '/' + appInfo().id;
+
+            if (!QFileInfo::exists(path + QLatin1Char('/'))) {
+                QDir dir;
+                if (!dir.mkpath(path))
+                    qWarning() << "could not create" << path;
+            }
+
+            return FilePath::fromString(path + pathHelper(rel));
         }
-
-        return FilePath::fromString(path + pathHelper(rel));
-    }
-
-    // Fallback to guessing it's the second location if username filtering returns no results (username == openmv).
-    if (list2.size() > 1) {
-        QString path = list2.at(1);
-
-        path = QFileInfo(path).path() + '/' + appInfo().id;
-
-        if (!QFileInfo::exists(path + QLatin1Char('/'))) {
-            QDir dir;
-            if (!dir.mkpath(path))
-                qWarning() << "could not create" << path;
-        }
-
-        return FilePath::fromString(path + pathHelper(rel));
     }
 
     return userResourcePath(rel);

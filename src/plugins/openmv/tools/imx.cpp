@@ -292,7 +292,7 @@ bool imxGetDevice(QJsonObject &obj)
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/linux64"));
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/linux-x86_64"));
             binary = Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
@@ -486,7 +486,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/linux64"));
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/linux-x86_64"));
             binary = Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
@@ -1407,7 +1407,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/linux64"));
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/linux-x86_64"));
             binary = Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))

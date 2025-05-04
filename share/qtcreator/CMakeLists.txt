@@ -96,12 +96,9 @@ if (WIN32)
     pylsp/windows
     mpy-cross/windows
     vela/windows
-    spsdk/windows
-    blhost/win
-    sdphost/win)
+    spsdk/windows)
   set(donwloaded_resource_directories
-    https://upload.openmv.io/stedgeai/stedgeai-win-2.1.0.tar.gz)
-  set(donwloaded_resource_directories
+    https://upload.openmv.io/stedgeai/stedgeai-win-2.1.0.tar.gz
     https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-mingw-w64-x86_64-arm-none-eabi.zip)
 endif()
 
@@ -147,11 +144,12 @@ if(UNIX AND NOT APPLE)
         picotool/linux64
         python/linux-x86_64
         pylsp/linux-x86_64
+        mpy-cross/linux-x86_64
         vela/linux64
-        blhost/linux/amd64
-        sdphost/linux/amd64
+        spsdk/linux-x86_64
         pydfu)
       set(donwloaded_resource_directories
+        https://upload.openmv.io/stedgeai/stedgeai-linux64-2.1.0.tar.gz
         https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi.tar.xz)
     endif()
   else()

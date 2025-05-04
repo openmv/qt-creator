@@ -1,0 +1,27 @@
+# Copyright 2021-2024 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+tz:
+  type: object
+  properties:
+    tzpOutputFile:
+      type: string
+      title: Optional name of output file for TZ binary
+      description: The name of output binary file with Trust Zone data.
+      format: file_name
+      template_value: my_tz_file.bin
+
+    trustZonePreset:
+      type: object
+      title: Customization of standard preset values
+      description: Trust Zone preset dictionary, with trust zone configuration.
+      patternProperties:
+        ^.*$:
+          type: [string, number]
+          title: TrustZone value with key
+          description: Modified TrustZone value for specified field.
+          format: number
+          template_value: 0x12345678
+
+  required: [tzpOutputFile, trustZonePreset]

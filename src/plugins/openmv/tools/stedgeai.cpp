@@ -346,6 +346,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
         binary = stedgeai_core_dir.pathAppended(QStringLiteral("stedgeai"));
         python = stedgeai_core_dir.pathAppended(QStringLiteral("python"));
         env.appendOrSet("HOME", Utils::Environment::systemEnvironment().value(QStringLiteral("HOME")));
+        env.appendOrSet("PATH", Utils::Environment::systemEnvironment().value(QStringLiteral("PATH")));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
@@ -355,6 +356,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
             binary = stedgeai_core_dir.pathAppended(QStringLiteral("stedgeai"));
             python = stedgeai_core_dir.pathAppended(QStringLiteral("python"));
             env.appendOrSet("HOME", Utils::Environment::systemEnvironment().value(QStringLiteral("HOME")));
+            env.appendOrSet("PATH", Utils::Environment::systemEnvironment().value(QStringLiteral("PATH")));
         }
     }
 
@@ -365,7 +367,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
                        QStringLiteral("--relocatable") <<
                        stedgeaiArgs;
 
-    if(stedgeai_core_dir.isEmpty() || binary.isEmpty() || python.isEmpty() || gccPath.isEmpty())
+    if(stedgeai_core_dir.isEmpty() || binary.isEmpty() || python.isEmpty())
     {
         QMessageBox::warning(Core::ICore::dialogParent(),
             Tr::tr("STEdgeAI Compilier"),
@@ -389,7 +391,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     process.setCommand(Utils::CommandLine(binary, args));
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
     env.prependOrSet("PATH", stedgeai_core_dir.path());
-    env.prependOrSet("PATH", gccPath.path());
+    if (!gccPath.isEmpty()) env.prependOrSet("PATH", gccPath.path());
     env.prependOrSet("PATH", Core::ICore::resourcePath(QStringLiteral("arm/bin")).toString());
     env.prependOrSet("STEDGEAI_CORE_DIR", Core::ICore::resourcePath(QStringLiteral("stedgeai")).toString());
     process.setEnvironment(env);

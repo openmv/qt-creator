@@ -291,7 +291,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
-            pythonPath = Core::ICore::resourcePath(QStringLiteral("mpy-cross/aarch64"));
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("mpy-cross/linux-aarch64"));
             binary = Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python"));
         }
     }
