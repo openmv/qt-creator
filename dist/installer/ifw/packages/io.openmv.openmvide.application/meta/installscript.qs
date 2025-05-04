@@ -127,6 +127,7 @@ Component.prototype.createOperations = function()
                                                 "libusb-1.0",
                                                 "python3",
                                                 "python3-pip",
+                                                "python3-usb",
                                                 "libfontconfig1",
                                                 "libfreetype6",
                                                 "libxcb1",
@@ -140,8 +141,8 @@ Component.prototype.createOperations = function()
                                                 "libxcb-randr0",
                                                 "libxcb-render-util0",
                                                 "libxcb-xinerama0",
+                                                "build-essential",
                                                 );
-                component.addElevatedOperation( "Execute", "{0}", "pip3", "install", "pyusb" );
             }
             if (widget.udevRulesCheck.checked) {
                 udevRulesCheck = true;
@@ -171,16 +172,14 @@ Component.prototype.createOperations = function()
         } else if (installLibrariesCheck && (!udevRulesCheck)) {
             component.addOperation( "AppendFile", "@TargetDir@/setup.sh",
                                     "#! /bin/sh\n\n" +
-                                    "sudo apt-get install -y libfontconfig1 libfreetype6 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-xfixes0 libxcb-shape0 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0\n" +
-                                    "sudo apt-get install -y libpng16-16 libusb-1.0 python3 python3-pip\n" +
-                                    "sudo pip install pyusb\n" );
+                                    "sudo apt-get install -y libfontconfig1 libfreetype6 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-xfixes0 libxcb-shape0 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 build-essential\n" +
+                                    "sudo apt-get install -y libpng16-16 libusb-1.0 python3 python3-pip python3-usb\n" );
         } else if ((!installLibrariesCheck) && (!udevRulesCheck)) {
             component.addOperation( "AppendFile", "@TargetDir@/setup.sh",
                                     "#! /bin/sh\n\n" +
                                     "DIR=\"$(dirname \"$(readlink -f \"$0\")\")\"\n\n" +
-                                    "sudo apt-get install -y libfontconfig1 libfreetype6 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-xfixes0 libxcb-shape0 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0\n" +
-                                    "sudo apt-get install -y libpng16-16 libusb-1.0 python3 python3-pip\n" +
-                                    "sudo pip install pyusb\n\n" +
+                                    "sudo apt-get install -y libfontconfig1 libfreetype6 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-xfixes0 libxcb-shape0 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 build-essential\n" +
+                                    "sudo apt-get install -y libpng16-16 libusb-1.0 python3 python3-pip python3-usb\n" +
                                     "sudo cp $DIR/share/qtcreator/pydfu/*.rules /etc/udev/rules.d/\n" +
                                     "sudo udevadm trigger\n" +
                                     "sudo udevadm control --reload-rules\n" );
