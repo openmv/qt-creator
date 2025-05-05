@@ -165,15 +165,13 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     QString stdOutBuffer = QString();
     QString *stdOutBufferPtr = &stdOutBuffer;
-    bool stdOutFirstTime = true;
-    bool *stdOutFirstTimePtr = &stdOutFirstTime;
 
     QRegularExpression ramRegex(QStringLiteral("Total SRAM used\\s+([\\d.]+)\\s+(TiB|GiB|MiB|KiB|B)"));
     int ramSize = 0, *ramSizePtr = &ramSize;
     QString ramString = QString(), *ramStringPtr = &ramString;
 
     QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog,
-                     [dialog, stdOutBufferPtr, stdOutFirstTimePtr, velaSettings, ramRegex, finishedOkPtr, ramSizePtr, ramStringPtr]
+                     [dialog, stdOutBufferPtr, velaSettings, ramRegex, finishedOkPtr, ramSizePtr, ramStringPtr]
                      (const QString &text) {
         stdOutBufferPtr->append(text);
         QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
@@ -244,10 +242,8 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     QString stdErrBuffer = QString();
     QString *stdErrBufferPtr = &stdErrBuffer;
-    bool stdErrFirstTime = true;
-    bool *stdErrFirstTimePtr = &stdErrFirstTime;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, stdErrBufferPtr] (const QString &text) {
         stdErrBufferPtr->append(text);
         QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -279,8 +275,12 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        pythonPath = Core::ICore::resourcePath(QStringLiteral("vela/osx"));
-        binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+        // x86 macs are not supported for this tool.
+        if (Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("vela/mac-aarch64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/mac-aarch64/bin/python"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {

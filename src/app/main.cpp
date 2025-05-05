@@ -88,16 +88,18 @@ const char VERSION_OPTION2[] = "--version";
 const char CLIENT_OPTION[] = "-client";
 const char SETTINGS_OPTION[] = "-settingspath";
 const char INSTALL_SETTINGS_OPTION[] = "-installsettingspath";
-const char TEST_OPTION[] = "-test";
-const char TEMPORARY_CLEAN_SETTINGS1[] = "-temporarycleansettings";
-const char TEMPORARY_CLEAN_SETTINGS2[] = "-tcs";
 // OPENMV-DIFF //
+// const char TEST_OPTION[] = "-test";
+// const char TEMPORARY_CLEAN_SETTINGS1[] = "-temporarycleansettings";
+// const char TEMPORARY_CLEAN_SETTINGS2[] = "-tcs";
 // const char PID_OPTION[] = "-pid";
 // const char BLOCK_OPTION[] = "-block";
+// const char PLUGINPATH_OPTION[] = "-pluginpath";
 // OPENMV-DIFF //
-const char PLUGINPATH_OPTION[] = "-pluginpath";
 const char LANGUAGE_OPTION[] = "-language";
-const char USER_LIBRARY_PATH_OPTION[] = "-user-library-path"; // hidden option for qtcreator.sh
+// OPENMV-DIFF //
+// const char USER_LIBRARY_PATH_OPTION[] = "-user-library-path"; // hidden option for qtcreator.sh
+// OPENMV-DIFF //
 
 // Helpers for displaying messages. Note that there is no console on Windows.
 

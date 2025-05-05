@@ -202,10 +202,8 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
     QString stdOutBuffer = QString();
     QString *stdOutBufferPtr = &stdOutBuffer;
-    bool stdOutFirstTime = true;
-    bool *stdOutFirstTimePtr = &stdOutFirstTime;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr] (const QString &text) {
         stdOutBufferPtr->append(text);
         QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -232,10 +230,8 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
     QString stdErrBuffer = QString();
     QString *stdErrBufferPtr = &stdErrBuffer;
-    bool stdErrFirstTime = true;
-    bool *stdErrFirstTimePtr = &stdErrFirstTime;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, stdErrBufferPtr] (const QString &text) {
         stdErrBufferPtr->append(text);
         QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 

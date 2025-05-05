@@ -329,7 +329,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
         }
     }
 
-    connect(m_treeView, &OpenMVModelZooBrowserTreeView::selectionCleared, this, [this, path, textBrowser]() {
+    connect(m_treeView, &OpenMVModelZooBrowserTreeView::selectionCleared, this, [path, textBrowser]() {
         QString indexPath = path.toString() + QDir::separator() + QStringLiteral("index.html");
 
         if (QFileInfo(indexPath).exists())

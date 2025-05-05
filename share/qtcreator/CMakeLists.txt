@@ -111,13 +111,15 @@ if (APPLE)
     node/mac
     picotool/osx
     python/mac
+    python/mac-aarch64
     pylsp/mac
-    vela/osx
-    blhost/mac
-    sdphost/mac)
+    mpy-cross/mac
+    vela/mac-aarch64
+    spsdk/mac)
   set(resource_files ${resource_files} pydfu/pydfu.py)
   set(donwloaded_resource_directories
-    https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-darwin-x86_64-arm-none-eabi.tar.xz)
+    https://upload.openmv.io/stedgeai/stedgeai-macarm-2.1.0.tar.gz
+    https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi.tar.xz)
 endif()
 
 if(UNIX AND NOT APPLE)
@@ -168,7 +170,6 @@ if(UNIX AND NOT APPLE)
         dfu-util/linux32
         bossac/linux32
         picotool/linux32
-        sdphost/linux/i386
         pydfu)
     endif()
   endif()
