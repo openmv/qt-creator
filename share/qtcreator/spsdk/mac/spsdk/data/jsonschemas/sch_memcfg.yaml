@@ -1,0 +1,31 @@
+# Copyright 2021-2024 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+base:
+  type: object
+  required: [peripheral]
+  properties:
+    peripheral:
+      type: string
+      title: Peripheral name
+      # enum: []
+      description: Name of the external memory support peripheral
+      template_value: spi_nor
+
+    interface:
+      type: string
+      title: Interface name
+      # enum: []
+      description: Interface name of some other details about connection
+      template_value: quad_spi
+
+settings:
+  type: object
+  required: [settings]
+  properties:
+    settings:
+      type: object
+      title: Option words settings
+      description: The The option word settings
+      properties: {}
