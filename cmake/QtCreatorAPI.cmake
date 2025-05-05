@@ -1012,7 +1012,6 @@ function(qtc_copy_to_builddir custom_target_name)
   foreach(url ${_arg_URLS})
     get_filename_component(fileName "${url}" NAME)
     string(REGEX MATCH "^[^-]+" folderName "${fileName}")
-
     get_filename_component(wrapperFolder "${url}" NAME_WLE)
     string(REGEX REPLACE "\\.tar$" "" wrapperFolder "${wrapperFolder}")
 
@@ -1024,13 +1023,14 @@ function(qtc_copy_to_builddir custom_target_name)
     set(destinationDirectory "${_output_binary_dir}/${_arg_DESTINATION}/${folderName}")
 
     set(scriptFile "${CMAKE_CURRENT_BINARY_DIR}/${folderName}_download_and_extract.cmake")
-    set(scriptContent "file(DOWNLOAD \"${url}\" \"${downloadPath}\" SHOW_PROGRESS)\n")
+    set(scriptContent "file(DOWNLOAD \"${url}\"  SHOW_PROGRESS)\n")
     string(APPEND scriptContent "file(MAKE_DIRECTORY \"${destinationDirectory}\")\n")
     string(APPEND scriptContent "execute_process(COMMAND \"${CMAKE_COMMAND}\" -E tar xzvf \"${downloadPath}\" WORKING_DIRECTORY \"${destinationDirectory}\")\n")
     string(APPEND scriptContent "if(EXISTS \"${destinationDirectory}/${wrapperFolder}\")\n")
     string(APPEND scriptContent "  execute_process(COMMAND \"${CMAKE_COMMAND}\" -E copy_directory \"${destinationDirectory}/${wrapperFolder}\" \"${destinationDirectory}\")\n")
     string(APPEND scriptContent "  execute_process(COMMAND \"${CMAKE_COMMAND}\" -E remove_directory \"${destinationDirectory}/${wrapperFolder}\")\n")
     string(APPEND scriptContent "endif()\n")
+    string(APPEND scriptContent "file(REMOVE \"${downloadPath}\")")
     file(WRITE "${scriptFile}" "${scriptContent}")
 
     add_custom_command(OUTPUT "${destinationTimestampFileName}"
