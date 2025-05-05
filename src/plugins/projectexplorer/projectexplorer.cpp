@@ -815,10 +815,12 @@ bool ProjectExplorerPlugin::initialize(const QStringList &arguments, QString *er
     addTestCreator(createOutputParserTest);
 #endif
 
-    setupGccToolchains();
-    setupMsvcToolchain();
-    setupClangClToolchain();
-    setupCustomToolchain();
+    // OPENMV-DIFF //
+    // setupGccToolchains();
+    // setupMsvcToolchain();
+    // setupClangClToolchain();
+    // setupCustomToolchain();
+    // OPENMV-DIFF //
 
     setupProjectTreeWidgetFactory();
 
