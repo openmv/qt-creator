@@ -65,9 +65,23 @@ function isUbuntu()
 {
     if (installer.value("os") == "x11")
     {
-        var id = installer.execute("lsb_release", new Array("-d"))[0];
+        var id = installer.execute("cat", new Array("/etc/os-release"))[0];
         id = id.replace(/(\r\n|\n|\r)/gm,"");
-        if (id.includes("Ubuntu"))
+        if (id.includes("ID=ubuntu"))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+function isArch()
+{
+    if (installer.value("os") == "x11")
+    {
+        var id = installer.execute("cat", new Array("/etc/os-release"))[0];
+        id = id.replace(/(\r\n|\n|\r)/gm,"");
+        if (id.includes("ID=arch"))
         {
             return true;
         }
