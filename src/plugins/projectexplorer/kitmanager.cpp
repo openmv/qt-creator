@@ -506,18 +506,22 @@ const QList<Kit *> KitManager::sortedKits()
     // calling executables to find version information, etc.) to call that
     // method!
     // Avoid lots of potentially expensive calls to Kit::displayName():
-    std::vector<QPair<QString, Kit *>> sortList =
-        Utils::transform(d->m_kitList, [](const std::unique_ptr<Kit> &k) {
-        return qMakePair(k->displayName(), k.get());
-    });
-    Utils::sort(sortList,
-                [](const QPair<QString, Kit *> &a, const QPair<QString, Kit *> &b) -> bool {
-                    const int nameResult = Utils::caseFriendlyCompare(a.first, b.first);
-                    if (nameResult != 0)
-                        return nameResult < 0;
-                    return a.second < b.second;
-                });
-    return Utils::transform<QList>(sortList, &QPair<QString, Kit *>::second);
+    // OPENMVD-DIFF //
+    // std::vector<QPair<QString, Kit *>> sortList =
+    //     Utils::transform(d->m_kitList, [](const std::unique_ptr<Kit> &k) {
+    //     return qMakePair(k->displayName(), k.get());
+    // });
+    // Utils::sort(sortList,
+    //             [](const QPair<QString, Kit *> &a, const QPair<QString, Kit *> &b) -> bool {
+    //                 const int nameResult = Utils::caseFriendlyCompare(a.first, b.first);
+    //                 if (nameResult != 0)
+    //                     return nameResult < 0;
+    //                 return a.second < b.second;
+    //             });
+    // return Utils::transform<QList>(sortList, &QPair<QString, Kit *>::second);
+    // OPENMV-DIFF //
+    return  {};
+    // OPENMV-DIFF //
 }
 
 static KitList restoreKitsHelper(const FilePath &fileName)

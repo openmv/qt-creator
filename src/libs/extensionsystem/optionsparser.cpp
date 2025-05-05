@@ -100,6 +100,9 @@ bool OptionsParser::checkForEndOfOptions()
     return true;
 }
 
+// OPENMV-DIFF //
+#ifdef EXTENSIONSYSTEM_WITH_TESTOPTION
+// OPENMV-DIFF //
 bool OptionsParser::checkForTestOptions()
 {
     if (m_currentArg == QLatin1String(TEST_OPTION)) {
@@ -148,6 +151,9 @@ bool OptionsParser::checkForTestOptions()
     }
     return false;
 }
+// OPENMV-DIFF //
+#endif
+// OPENMV-DIFF //
 
 bool OptionsParser::checkForScenarioOption()
 {

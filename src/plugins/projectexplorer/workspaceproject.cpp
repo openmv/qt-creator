@@ -64,26 +64,28 @@ public:
     WorkspaceBuildSystem(Target *t)
         :BuildSystem(t)
     {
-        connect(&m_scanner, &TreeScanner::finished, this, [this] {
-            auto root = std::make_unique<ProjectNode>(projectDirectory());
-            root->setDisplayName(target()->project()->displayName());
-            std::vector<std::unique_ptr<FileNode>> nodePtrs
-                = Utils::transform<std::vector>(m_scanner.release().allFiles, [this](FileNode *fn) {
-                      fn->setEnabled(!Utils::anyOf(
-                          m_filters, [path = fn->path().path()](const QRegularExpression &filter) {
-                              return filter.match(path).hasMatch();
-                          }));
-                      return std::unique_ptr<FileNode>(fn);
-                  });
-            root->addNestedNodes(std::move(nodePtrs));
-            root->forEachFolderNode(&checkEnabled);
-            setRootProjectNode(std::move(root));
-
-            m_parseGuard.markAsSuccess();
-            m_parseGuard = {};
-
-            emitBuildSystemUpdated();
-        });
+        // OPENMV-DIFF //
+        // connect(&m_scanner, &TreeScanner::finished, this, [this] {
+        //     auto root = std::make_unique<ProjectNode>(projectDirectory());
+        //     root->setDisplayName(target()->project()->displayName());
+        //     std::vector<std::unique_ptr<FileNode>> nodePtrs
+        //         = Utils::transform<std::vector>(m_scanner.release().allFiles, [this](FileNode *fn) {
+        //               fn->setEnabled(!Utils::anyOf(
+        //                   m_filters, [path = fn->path().path()](const QRegularExpression &filter) {
+        //                       return filter.match(path).hasMatch();
+        //                   }));
+        //               return std::unique_ptr<FileNode>(fn);
+        //           });
+        //     root->addNestedNodes(std::move(nodePtrs));
+        //     root->forEachFolderNode(&checkEnabled);
+        //     setRootProjectNode(std::move(root));
+        //
+        //     m_parseGuard.markAsSuccess();
+        //     m_parseGuard = {};
+        //
+        //     emitBuildSystemUpdated();
+        // });
+        // OPENMV-DIFF //
         m_scanner.setDirFilter(QDir::AllEntries | QDir::NoDotAndDotDot | QDir::Hidden);
 
         connect(target()->project(),
