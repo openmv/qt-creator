@@ -566,7 +566,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     {
         QMessageBox::critical(Q_NULLPTR, QString(),
             Tr::tr("Error reading <user_resources>/openmvide/firmware/settings.json: %L1."
-                   "\\n\\nOpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.").
+                   "\n\nOpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.").
                    arg(firmwareSettings.errorString()));
         exit(-1);
     }
