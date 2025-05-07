@@ -71,7 +71,7 @@ def getCERFile():
 CERFile = getCERFile()
 
 def checkMach(file):
-    result = subprocess.run(["otool", "-hv", file], capture_output=True, text=True, error="replace")
+    result = subprocess.run(["otool", "-hv", file], capture_output=True, text=True, errors="replace")
     return ("is not an object file" not in result.stdout) and ("is not an object file" not in result.stderr)
 
 def signFile(file):
