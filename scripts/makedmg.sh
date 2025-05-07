@@ -37,7 +37,7 @@ title="OpenMV IDE"
 #OPENMV-DIFF#
 
 echo Preparing image artifacts...
-cp -a "${sourceApp}" "${intermediateFolder}"
+mv "${sourceApp}" "${intermediateFolder}"
 ln -s /Applications "${intermediateFolder}"
 cp "$(dirname "${BASH_SOURCE[0]}")/../LICENSE.GPL3-EXCEPT" "${intermediateFolder}/LICENSE.GPL3-EXCEPT.txt"
 echo Creating image...
@@ -49,7 +49,7 @@ hdiutil_success=0
 
 while [ $hdiutil_success -ne 1 -a $try_count -lt 8 ]; do
     # Create temporary rw image
-    if hdiutil create -srcfolder "${intermediateFolder}" -volname "${title}" -format UDBZ "${finalDMGName}" -ov -scrub -size 2g -verbose
+    if hdiutil create -srcfolder "${intermediateFolder}" -volname "${title}" -format UDBZ "${finalDMGName}" -ov -scrub -size 4g -verbose
     then
         hdiutil_success=1
         break
@@ -68,7 +68,7 @@ if [ $hdiutil_success -ne 1 -a -n "${GITHUB_RUN_ID}" ]; then
     sudo pkill -9 XProtect >/dev/null || true;
     sleep 3
 
-    if hdiutil create -srcfolder "${intermediateFolder}" -volname "${title}" -format UDBZ "${finalDMGName}" -ov -scrub -size 2g -verbose
+    if hdiutil create -srcfolder "${intermediateFolder}" -volname "${title}" -format UDBZ "${finalDMGName}" -ov -scrub -size 4g -verbose
     then
         hdiutil_success=1
     fi
