@@ -1033,6 +1033,70 @@ void OpenMVPlugin::extensionsInitialized()
     connect(m_developmentReleaseAction, &QAction::triggered, this, &OpenMVPlugin::installTheLatestDevelopmentRelease);
 
     toolsMenu->addSeparator();
+
+    QAction *copyScriptAction = new QAction(Tr::tr("Copy/Convert Python File"), this);
+    Core::Command *copyScriptCommand = Core::ActionManager::registerAction(copyScriptAction, Utils::Id("OpenMV.CopyScript"));
+    toolsMenu->addAction(copyScriptCommand);
+    connect(copyScriptAction, &QAction::triggered, this, [this] {
+        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+        settings->beginGroup(SETTINGS_GROUP);
+
+        QJsonObject boardSettings = getBoardSettings(Tr::tr("Copy/Convert Python File"), settings);
+
+        if (boardSettings.isEmpty())
+        {
+            settings->endGroup();
+            return;
+        }
+
+        QString src = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Copy/Convert Python File"),
+                                                   settings->value(LAST_COPY_SCRIPT_OPEN_PATH, QDir::homePath()).toString());
+
+        if (!src.isEmpty())
+        {
+            QString convertedSrc = convertScript(boardSettings, src, settings);
+
+            if (convertedSrc.isEmpty())
+            {
+                settings->endGroup();
+                return;
+            }
+
+            QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Copy/Convert Python File"),
+                m_portPath.isEmpty()
+                ? (settings->value(LAST_COPY_SCRIPT_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).completeSuffix())
+                : (settings->value(LAST_COPY_SCRIPT_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).completeSuffix()));
+
+            if(!dst.isEmpty())
+            {
+                if((!QFile(dst).exists()) || QFile::remove(dst))
+                {
+                    if(QFile::copy(convertedSrc, dst))
+                    {
+                        settings->setValue(LAST_COPY_SCRIPT_OPEN_PATH, QFileInfo(src).path());
+                        if (m_portPath.isEmpty()) settings->setValue(LAST_COPY_SCRIPT_NO_CAM_PATH, QFileInfo(dst).path());
+                        if (!m_portPath.isEmpty()) settings->setValue(LAST_COPY_SCRIPT_WITH_CAM_PATH, QFileInfo(dst).path());
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            Tr::tr("Copy/Convert Python File"),
+                            QObject::tr("Unable to overwrite output file!"));
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Copy/Convert Python File"),
+                        QObject::tr("Unable to overwrite output file!"));
+                }
+            }
+        }
+
+        settings->endGroup();
+    });
+
+    toolsMenu->addSeparator();
     m_openTerminalMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.OpenTermnial"));
     m_openTerminalMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     m_openTerminalMenu->menu()->setTitle(Tr::tr("Open Terminal"));

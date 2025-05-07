@@ -60,7 +60,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
     if(!tempDir.isValid())
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Copy Script"),
+            Tr::tr("Copy/Convert Python File"),
             tempDir.errorString());
 
         return QString();
@@ -69,7 +69,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
     QDialog *dialog2 = new QDialog(Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    dialog2->setWindowTitle(Tr::tr("Copy Script"));
+    dialog2->setWindowTitle(Tr::tr("Copy/Convert Python File"));
     QFormLayout *layout2 = new QFormLayout(dialog2);
     layout2->setVerticalSpacing(0);
 
@@ -155,7 +155,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
         if (!file.open(QIODevice::ReadOnly))
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                Tr::tr("Copy Script"),
+                Tr::tr("Copy/Convert Python File"),
                 file.errorString());
 
             delete dialog2;
@@ -170,7 +170,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
         if((!outFile.open(QIODevice::WriteOnly)) || (outFile.write(scriptData) != scriptData.size()))
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
-                Tr::tr("Copy Script"),
+                Tr::tr("Copy/Convert Python File"),
                 outFile.errorString());
 
             delete dialog2;
