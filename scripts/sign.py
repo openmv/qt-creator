@@ -70,6 +70,11 @@ def getCERFile():
     return None if not os.path.isfile(file) else file
 CERFile = getCERFile()
 
+
+def checkMach(file):
+    result = subprocess.run(["otool", "-hv", file], capture_output=True, text=True)
+    return ("is not an object file" not in result.stdout) and ("is not an object file" not in result.stderr)
+
 def signFile(file):
     if sys.platform.startswith("win"):
         if kSignCMDAvailable and PFXFile and PFXPass:
@@ -190,17 +195,11 @@ def main():
                             try_signFile(os.path.join(dirpath, path))
 
         elif sys.platform == "darwin":
-            files = ["ffmpeg", "ffserver", "ffprobe", "ffplay", "bossac",
-                     "dfu-util", "dfu-prefix", "dfu-suffix",
-                     "elf2uf2", "picotool", "rp2040load", "blhost", "sdphost",
-                     "tools-config", "updateSystemPackage", "app-assets-gen",
-                     "app-gen-rot", "app-gen-toc", "app-write-mram", "app-sign-image",
-                     "maintenance", "app-provision", "app-secure-debug", "python3",
-                     "python", "python3.13"]
             for dirpath, dirnames, filenames in os.walk(target):
-                for file in files:
-                    for filename in fnmatch.filter(filenames, file):
-                        try_signFile(os.path.join(dirpath, filename))
+                for filename in filenames:
+                    path = os.path.join(dirpath, filename)
+                    if checkMach(path):
+                        try_signFile(path)
 
 if __name__ == "__main__":
     main()
