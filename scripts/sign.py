@@ -70,9 +70,8 @@ def getCERFile():
     return None if not os.path.isfile(file) else file
 CERFile = getCERFile()
 
-
 def checkMach(file):
-    result = subprocess.run(["otool", "-hv", file], capture_output=True, text=True)
+    result = subprocess.run(["otool", "-hv", file], capture_output=True, text=True, error="replace")
     return ("is not an object file" not in result.stdout) and ("is not an object file" not in result.stderr)
 
 def signFile(file):
@@ -198,8 +197,7 @@ def main():
             for dirpath, dirnames, filenames in os.walk(target):
                 for filename in filenames:
                     path = os.path.join(dirpath, filename)
-                    if checkMach(path):
-                        try_signFile(path)
+                    if checkMach(path): try_signFile(path)
 
 if __name__ == "__main__":
     main()
