@@ -43,7 +43,9 @@ QList<QPair<int, int> > dfuVidPidList(const QJsonDocument &settings);
 QList<QString> getDevices();
 void downloadFirmware(const QString &details,
                       QString &command, Utils::Process &process,
-                      const QString &path, const QString &device, const QString &moreArgs = QString(), bool uploadInstead = false, int uploadSize = 0);
+                      const QString &path, const QString &device, const QString &moreArgs = QString(),
+                      bool uploadInstead = false, int uploadSize = 0,
+                      const QString &extraMessage = QString());
 
 } // namespace Internal
 } // namespace OpenMV

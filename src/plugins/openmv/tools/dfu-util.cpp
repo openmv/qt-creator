@@ -189,7 +189,8 @@ QList<QString> getDevices()
 void downloadFirmware(const QString &details,
                       QString &command, Utils::Process &process,
                       const QString &path, const QString &device, const QString &moreArgs,
-                      bool uploadInstead, int uploadSize)
+                      bool uploadInstead, int uploadSize,
+                      const QString &extraMessage)
 {
     QStringList list;
 
@@ -614,6 +615,11 @@ void downloadFirmware(const QString &details,
                 break;
             }
         }
+    }
+
+    if (!extraMessage.isEmpty())
+    {
+        dialog->appendColoredText(extraMessage, true);
     }
 
     command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));

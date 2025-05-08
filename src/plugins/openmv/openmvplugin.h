@@ -501,7 +501,8 @@ private:
                              bool installTheLatestDevelopmentFirmware,
                              const QString &firmwarePath,
                              const QString &selectedDfuDevice,
-                             OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
+                             OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE,
+                             const QString &extraMessage = QString());
     void openmvIMXBootloader(const QString &forceFirmwarePath,
                              bool forceFlashFSErase,
                              bool justEraseFlashFs,

@@ -40,7 +40,8 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                                        bool installTheLatestDevelopmentFirmware,
                                        const QString &firmwarePath,
                                        const QString &selectedDfuDevice,
-                                       OpenMVROMFSAccess romfsAccess)
+                                       OpenMVROMFSAccess romfsAccess,
+                                       const QString &extraMessage)
 {
     if(selectedDfuDevice.isEmpty())
     {
@@ -519,7 +520,8 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
             downloadFirmware(Tr::tr("Flashing Firmware"), command, process,
                              Core::ICore::allUsersResourcePath(QStringLiteral("firmware")).pathAppended(programCommandsPath.at(i)).toString(),
                              dfuDeviceVidPid, programCommandsCmd.at(i) +
-                             (((i + 1) == j) ? QStringLiteral(" --reset") : QStringLiteral("")) + dfuDeviceSerial);
+                             (((i + 1) == j) ? QStringLiteral(" --reset") : QStringLiteral("")) + dfuDeviceSerial, 
+                             false, 0, (i == 0) ? extraMessage : QString());
 
             if(((i + 1) != j) && (process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
