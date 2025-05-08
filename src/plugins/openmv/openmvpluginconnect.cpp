@@ -2250,6 +2250,18 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     }
                 }
 
+                for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+                {
+                    QJsonObject object = value.toObject();
+
+                    if (object.value(QStringLiteral("hidden")).toBool()
+                    && (previousMapping.toLower() == object.value(QStringLiteral("boardDisplayName")).toString().toLower()))
+                    {
+                        previousMapping = object.value(QStringLiteral("boardArchString")).toString();
+                        break;
+                    }
+                }
+
                 openmvRepairingBootloader(forceFlashFSErase,
                                           previousMapping,
                                           originalDfuVidPid,
