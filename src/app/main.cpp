@@ -570,6 +570,7 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
                                      "solutions for your platform.")) == 0) break;
         if(msg.startsWith(QLatin1String("DirectWrite: CreateFontFaceFromHDC() failed (Indicates an error "
                                         "in an input file such as a font file.)"))) break;
+        if(msg.startsWith(QLatin1String("requestActivate() called for  QWidgetWindow"))) break;
         fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
         break;
     case QtCriticalMsg:
