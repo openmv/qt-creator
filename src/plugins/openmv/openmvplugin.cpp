@@ -452,16 +452,16 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                 }
             }
 
-            Utils::FilePath oldUserResourcesPath2 = Core::ICore::userResourcePath();
+            // Utils::FilePath oldUserResourcesPath2 = Core::ICore::userResourcePath();
 
-            if(oldUserResourcesPath2.exists())
-            {
-                if(!oldUserResourcesPath2.removeRecursively(&error))
-                {
-                    QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
-                    ok = false;
-                }
-            }
+            // if(oldUserResourcesPath2.exists())
+            // {
+            //     if(!oldUserResourcesPath2.removeRecursively(&error))
+            //     {
+            //         QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+            //         ok = false;
+            //     }
+            // }
 
             if(ok)
             {
