@@ -143,14 +143,8 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
 
             if (!dfuBootloaderProgramCommand.isEmpty())
             {
-                QMessageBox::information(Core::ICore::dialogParent(),
-                            Tr::tr("Connect"),
-                            Tr::tr("Please disconnect your OpenMV Cam from your computer and then press Ok."));
-
                 openmvDFUBootloader(forceFlashFSErase, justEraseFlashFs, false, QString(),
-                                    dfuBootloaderProgramCommand.value(QStringLiteral("bootloaderVidPid")).toString() + QStringLiteral(",NULL"),
-                                    OPENMV_ROMFS_NONE,
-                                    Tr::tr("Reconnect your OpenMV Cam to your computer."));
+                                    dfuBootloaderProgramCommand.value(QStringLiteral("bootloaderVidPid")).toString() + QStringLiteral(",NULL"));
             }
             else
             {

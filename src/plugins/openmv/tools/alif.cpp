@@ -253,6 +253,7 @@ static bool alifSelectPort(const QString &port)
     if (file.open(QFile::WriteOnly))
     {
         QTextStream stream(&file);
+
         stream << "comport " << port << "\n";
         stream << "timeout tx 2\n";
         stream << "timeout rx 0\n";
@@ -260,7 +261,9 @@ static bool alifSelectPort(const QString &port)
         stream << "bytesize 8\n";
         stream << "rtscts 0\n";
         stream << "xonxoff 0\n";
+
         file.close();
+
         return true;
     }
     else
@@ -836,6 +839,11 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
                 goto cleanup;
             }
         }
+
+        QMessageBox::information(Core::ICore::dialogParent(),
+                    Tr::tr("Connect"),
+                    Tr::tr("Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.\n\n"
+                           "The camera must be power cycled after a system package update."));
     }
 
     if (!dfuBootloaderProgramCommand.isEmpty())
