@@ -266,12 +266,12 @@ void VfsRomWriter::opendir(const QString &dirname)
 void VfsRomWriter::closedir()
 {
     QPair<QString, QByteArray> pair = m_dirstack.takeLast();
-    m_offsetstack.takeLast();
+    m_offsetstack.takeLast(); // ending offset of stuff inside the folder...
 
     QByteArray bdirname = toAscii(pair.first);
     QByteArray nameRecord = encoderecord(0, bdirname);
 
-    QByteArray record = encoderecord(ROMFS_RECORD_KIND_DIRECTORY, nameRecord + pair.second, m_maxAlignment, m_offsetstack.last());
+    QByteArray record = encoderecord(ROMFS_RECORD_KIND_DIRECTORY, nameRecord + pair.second, m_maxAlignment, m_offsetstack.last() + nameRecord.size());
     m_offsetstack.last() += record.size();
     m_dirstack.last().second.append(record);
 }
