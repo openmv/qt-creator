@@ -47,6 +47,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
         << QStringLiteral("firmware")
         << QStringLiteral("html")
         << QStringLiteral("models");
+
     m_resourceFoldersToDelete = QStringList(m_resourceFoldersToCopy)
         << QStringLiteral("micropython-headers");
 
@@ -1034,9 +1035,13 @@ void OpenMVPlugin::extensionsInitialized()
 
     toolsMenu->addSeparator();
 
+    Core::ActionContainer *microPythonToolsMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.MicroPythonMenu"));
+    microPythonToolsMenu->menu()->setTitle(Tr::tr("MicroPython Tools"));
+    toolsMenu->addMenu(microPythonToolsMenu);
+
     QAction *copyScriptAction = new QAction(Tr::tr("Copy/Convert Python File"), this);
     Core::Command *copyScriptCommand = Core::ActionManager::registerAction(copyScriptAction, Utils::Id("OpenMV.CopyScript"));
-    toolsMenu->addAction(copyScriptCommand);
+    microPythonToolsMenu->addAction(copyScriptCommand);
     connect(copyScriptAction, &QAction::triggered, this, [this] {
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(SETTINGS_GROUP);
