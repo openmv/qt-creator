@@ -174,7 +174,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                         }
                     }
 
-                    if ((!loopExit) && (romfsAccess != OPENMV_ROMFS_NONE))
+                    if (romfsAccess != OPENMV_ROMFS_NONE)
                     {
                         dialog.close(); // emits stop
 
