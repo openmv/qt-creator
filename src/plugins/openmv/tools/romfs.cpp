@@ -121,7 +121,7 @@ void VfsRomReader::unpackrecursive(const QString &path, const uint8_t *fs, const
                 dir.mkpath(name);
 
                 // Required to make sure creation timestamps are different on unpacked files.
-                QThread::msleep(1);
+                QThread::msleep(10);
 
                 unpackrecursive(path + QDir::separator() + name, fs, fsnext);
             }
@@ -142,7 +142,7 @@ void VfsRomReader::unpackrecursive(const QString &path, const uint8_t *fs, const
                     }
 
                     // Required to make sure creation timestamps are different on unpacked files.
-                    QThread::msleep(1);
+                    QThread::msleep(10);
                 }
                 else if ((datakind == ROMFS_RECORD_KIND_DATA_POINTER) && (payloadlen >= 8))
                 {
@@ -156,7 +156,7 @@ void VfsRomReader::unpackrecursive(const QString &path, const uint8_t *fs, const
                     }
 
                     // Required to make sure creation timestamps are different on unpacked files.
-                    QThread::msleep(1);
+                    QThread::msleep(10);
                 }
             }
         }

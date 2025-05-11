@@ -352,7 +352,7 @@ void OpenMVROMFSEditor::addModel()
         if (QFile::copy(convertedSrc, newFilePath))
         {
             // Required to make sure creation timestamps are different on created files.
-            QThread::msleep(1);
+            QThread::msleep(10);
 
             setCurrentIndex(m_filter->mapFromSource(m_model->index(newFilePath)));
 
@@ -369,7 +369,7 @@ void OpenMVROMFSEditor::addModel()
                     QFile::copy(labels, path);
 
                     // Required to make sure creation timestamps are different on created files.
-                    QThread::msleep(1);
+                    QThread::msleep(10);
                 }
             }
 
