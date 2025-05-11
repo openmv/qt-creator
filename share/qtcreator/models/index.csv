@@ -1,5 +1,4 @@
 # "Relative Path Regex", "Board Type Regex"
-"degirum", ""
 "edgeimpulse", ".+"
 "google/mobilenet_v1", ""
 "google/micro_speech", "(ARDUINO_GIGA|ARDUINO_PORTENTA_H7|ARDUINO_NICLA_VISION|OPENMV_AE3|OPENMV_N6)"
