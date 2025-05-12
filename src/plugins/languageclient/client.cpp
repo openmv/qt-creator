@@ -559,7 +559,7 @@ void Client::initialize()
     // if (d->m_project)
     //     params.setRootUri(hostPathToServerUri(d->m_project->projectDirectory()));
     // OPENMV-DIFF //
-    params.setRootUri(hostPathToServerUri(Core::ICore::userResourcePath(QStringLiteral("micropython-headers"))));
+    params.setRootUri(hostPathToServerUri(Core::ICore::allUsersResourcePath(QStringLiteral("micropython-headers"))));
     // OPENMV-DIFF //
 
     auto projectFilter = [this](Project *project) { return canOpenProject(project); };
