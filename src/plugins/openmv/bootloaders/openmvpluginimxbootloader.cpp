@@ -200,6 +200,11 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
 #endif
         }
 
+        QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
+
+        // Create the pycache for blhost before running during the time limited process.
+        imxGetDevice(outObj);
+
         QProgressDialog dialog(forceBootloaderBricked ? QString(QStringLiteral("%1%2")).arg(Tr::tr("Disconnect your OpenMV Cam and then reconnect it...")).arg(justEraseFlashFs ? QString() : Tr::tr("\n\nHit cancel to skip to SBL reprogramming.")) : Tr::tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
             (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
@@ -223,13 +228,6 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
         m_iodevice->close();
 
         loop.exec();
-
-        if(!imxGetDeviceSupported())
-        {
-            CONNECT_END();
-        }
-
-        QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 
         while((!imxGetDevice(outObj)) && (!canceled))
         {

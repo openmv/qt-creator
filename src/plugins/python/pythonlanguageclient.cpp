@@ -201,7 +201,8 @@ protected:
 
         if (path.pathAppended("bin").pathAppended("pylsp").withExecutableSuffix().exists())
         {
-            env.appendOrSet("PYTHONPATH", path.path());
+            env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+            env.prependOrSet("PYTHONPATH", path.path());
         }
         // OPENMV-DIFF //
         const FilePath lspPath = pyLspPath(python);

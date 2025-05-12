@@ -241,37 +241,17 @@ QStringList imxGetAllDevices(const QJsonDocument &settings, bool spd_host, bool 
     return devices;
 }
 
-bool imxGetDeviceSupported()
-{
-    if(Utils::HostOsInfo::isWindowsHost())
-    {
-        return true;
-    }
-    else if(Utils::HostOsInfo::isMacHost())
-    {
-        return true;
-    }
-    else if(Utils::HostOsInfo::isLinuxHost())
-    {
-        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
-        {
-            return true;
-        }
-    }
-
-    QMessageBox::critical(Core::ICore::dialogParent(),
-        Tr::tr("NXP IMX"),
-        Tr::tr("This feature is not supported on this machine!"));
-
-    return false;
-}
-
 bool imxGetDevice(QJsonObject &obj)
 {
     QMutexLocker locker(&imx_working);
 
     Utils::Process process;
+    process.setStdOutCodec(QTextCodec::codecForName("UTF-8"));
+    process.setStdErrCodec(QTextCodec::codecForName("UTF-8"));
+
     Utils::Environment env = process.environment();
+    env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
 
     std::chrono::seconds timeout(10);
     process.setProcessChannelMode(QProcess::MergedChannels);
@@ -307,8 +287,16 @@ bool imxGetDevice(QJsonObject &obj)
         return false;
     }
 
-    env.appendOrSet("PYTHONPATH", pythonPath.path());
+    env.prependOrSet("PYTHONPATH", pythonPath.path());
     process.setEnvironment(env);
+
+    int responseStatus = -1;
+    int responseWord = 0;
+    QString currentVersion;
+
+    QRegularExpression statusRegex("Response status = (\\d+)");
+    QRegularExpression wordRegex("Response word 1 = (\\d+)");
+    QRegularExpression versionRegex("Current Version = ([^\\s]+)");
 
     QStringList args = QStringList() <<
                        QStringLiteral("-u") <<
@@ -327,14 +315,23 @@ bool imxGetDevice(QJsonObject &obj)
     {
         QStringList in = process.stdOut().split(QRegularExpression(QStringLiteral("\n|\r\n|\r")), Qt::SkipEmptyParts);
 
-        if((in.size() == 1) && (in.at(0).contains(QStringLiteral("cannot open USB HID device"))))
+        for (const QString &line : in)
         {
-            return false;
+            if (statusRegex.match(line).hasMatch())
+            {
+                responseStatus = statusRegex.match(line).captured(1).toInt();
+            }
+            else if (wordRegex.match(line).hasMatch())
+            {
+                responseWord = wordRegex.match(line).captured(1).toInt();
+            }
+            else if (versionRegex.match(line).hasMatch())
+            {
+                currentVersion = versionRegex.match(line).captured(1);
+            }
         }
-        else
-        {
-            return true;
-        }
+
+        return ((responseStatus == 0) && (responseWord == 1258424320) && (currentVersion == QStringLiteral("K2.8.0")));
     }
     else
     {
@@ -350,8 +347,10 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     Utils::Process process;
     process.setStdOutCodec(QTextCodec::codecForName("UTF-8"));
     process.setStdErrCodec(QTextCodec::codecForName("UTF-8"));
+
     Utils::Environment env = process.environment();
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
@@ -506,7 +505,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
         goto cleanup;
     }
 
-    env.appendOrSet("PYTHONPATH", pythonPath.path());
+    env.prependOrSet("PYTHONPATH", pythonPath.path());
     process.setEnvironment(env);
 
     dialog->show();
@@ -1280,8 +1279,10 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
     Utils::Process process;
     process.setStdOutCodec(QTextCodec::codecForName("UTF-8"));
     process.setStdErrCodec(QTextCodec::codecForName("UTF-8"));
+
     Utils::Environment env = process.environment();
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
@@ -1427,7 +1428,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
         goto cleanup;
     }
 
-    env.appendOrSet("PYTHONPATH", pythonPath.path());
+    env.prependOrSet("PYTHONPATH", pythonPath.path());
     process.setEnvironment(env);
 
     dialog->show();

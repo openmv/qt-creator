@@ -338,7 +338,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
         binary = stedgeai_core_dir.pathAppended(QStringLiteral("stedgeai.exe"));
         python = stedgeai_core_dir.pathAppended(QStringLiteral("python.exe"));
         gccPath = stedgeai_core_dir.pathAppended(QStringLiteral("mingw64/bin"));
-        env.appendOrSet("USERPROFILE", Utils::Environment::systemEnvironment().value(QStringLiteral("USERPROFILE")));
+        env.prependOrSet("USERPROFILE", Utils::Environment::systemEnvironment().value(QStringLiteral("USERPROFILE")));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
@@ -348,8 +348,8 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
             stedgeai_core_dir = Core::ICore::resourcePath(QStringLiteral("stedgeai/Utilities/macarm"));
             binary = stedgeai_core_dir.pathAppended(QStringLiteral("stedgeai"));
             python = stedgeai_core_dir.pathAppended(QStringLiteral("python"));
-            env.appendOrSet("HOME", Utils::Environment::systemEnvironment().value(QStringLiteral("HOME")));
-            env.appendOrSet("PATH", Utils::Environment::systemEnvironment().value(QStringLiteral("PATH")));
+            env.prependOrSet("HOME", Utils::Environment::systemEnvironment().value(QStringLiteral("HOME")));
+            env.prependOrSet("PATH", Utils::Environment::systemEnvironment().value(QStringLiteral("PATH")));
         }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
@@ -359,8 +359,8 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
             stedgeai_core_dir = Core::ICore::resourcePath(QStringLiteral("stedgeai/Utilities/linux"));
             binary = stedgeai_core_dir.pathAppended(QStringLiteral("stedgeai"));
             python = stedgeai_core_dir.pathAppended(QStringLiteral("python"));
-            env.appendOrSet("HOME", Utils::Environment::systemEnvironment().value(QStringLiteral("HOME")));
-            env.appendOrSet("PATH", Utils::Environment::systemEnvironment().value(QStringLiteral("PATH")));
+            env.prependOrSet("HOME", Utils::Environment::systemEnvironment().value(QStringLiteral("HOME")));
+            env.prependOrSet("PATH", Utils::Environment::systemEnvironment().value(QStringLiteral("PATH")));
         }
     }
 
@@ -384,6 +384,14 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+    env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
+    env.prependOrSet("PATH", stedgeai_core_dir.path());
+    env.prependOrSet("PATH", Core::ICore::resourcePath(QStringLiteral("arm/bin")).toString());
+    env.prependOrSet("STEDGEAI_CORE_DIR", Core::ICore::resourcePath(QStringLiteral("stedgeai")).toString());
+    if (!gccPath.isEmpty()) env.prependOrSet("PATH", gccPath.path());
+    process.setEnvironment(env);
+
     dialog->show();
     dialog->moveScrollToLeft();
     dialog->moveScrollToBottom();
@@ -393,12 +401,6 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
     process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
-    env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
-    env.prependOrSet("PATH", stedgeai_core_dir.path());
-    if (!gccPath.isEmpty()) env.prependOrSet("PATH", gccPath.path());
-    env.prependOrSet("PATH", Core::ICore::resourcePath(QStringLiteral("arm/bin")).toString());
-    env.prependOrSet("STEDGEAI_CORE_DIR", Core::ICore::resourcePath(QStringLiteral("stedgeai")).toString());
-    process.setEnvironment(env);
     process.setWorkingDirectory(Utils::FilePath::fromString(tempDir.path()));
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 

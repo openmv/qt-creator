@@ -324,6 +324,11 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
+    Utils::Environment env = process.environment();
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+    env.prependOrSet("PYTHONPATH", pythonPath.path());
+    process.setEnvironment(env);
+
     dialog->show();
     dialog->moveScrollToLeft();
     dialog->moveScrollToBottom();
@@ -331,9 +336,6 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
     process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
-    Utils::Environment env = process.environment();
-    env.appendOrSet("PYTHONPATH", pythonPath.path());
-    process.setEnvironment(env);
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
     QString result, outputPath = tempDir.path() + QDir::separator() + QFileInfo(model).completeBaseName() + QStringLiteral("_vela.tflite");
