@@ -343,7 +343,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     else if(Utils::HostOsInfo::isMacHost())
     {
         // x86 macs are not supported for this tool.
-        if (Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64) || Utils::HostOsInfo::isRunningUnderRosetta())
         {
             stedgeai_core_dir = Core::ICore::resourcePath(QStringLiteral("stedgeai/Utilities/macarm"));
             binary = stedgeai_core_dir.pathAppended(QStringLiteral("stedgeai"));

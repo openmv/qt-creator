@@ -276,7 +276,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     else if(Utils::HostOsInfo::isMacHost())
     {
         // x86 macs are not supported for this tool.
-        if (Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64) || Utils::HostOsInfo::isRunningUnderRosetta())
         {
             pythonPath = Core::ICore::resourcePath(QStringLiteral("vela/mac-aarch64"));
             binary = Core::ICore::resourcePath(QStringLiteral("python/mac-aarch64/bin/python"));
