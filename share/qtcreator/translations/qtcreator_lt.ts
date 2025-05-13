@@ -193,12 +193,12 @@
     <message>
         <location line="+14"/>
         <source>Downloading new syntax definition for &apos;%1&apos;...</source>
-        <translation>Atsisiunčiamas naujas &apos;% 1&apos; sintaksės apibrėžimas...</translation>
+        <translation>Atsisiunčiamas naujas &apos;%1&apos; sintaksės apibrėžimas...</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
-        <translation>Atnaujinamas &apos;% 1&apos; sintaksės apibrėžimas į % 2 versiją...</translation>
+        <translation>Atnaujinamas &apos;%1&apos; sintaksės apibrėžimas į %2 versiją...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1070"/>
@@ -881,7 +881,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171"/>
         <source>Failed to open an editor for &quot;%1&quot;.</source>
-        <translation>Nepavyko atidaryti &quot;% 1&quot; redaktoriaus.</translation>
+        <translation>Nepavyko atidaryti &quot;%1&quot; redaktoriaus.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -902,7 +902,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <location line="+40"/>
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
-        <translation>Projekto kataloge % 1 yra failų, kurių negalima perrašyti:
+        <translation>Projekto kataloge %1 yra failų, kurių negalima perrašyti:
 %2.</translation>
     </message>
     <message>
@@ -1030,7 +1030,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+53"/>
         <source>Open with VCS (%1)</source>
-        <translation>Atidaryti naudojant VCS (% 1)</translation>
+        <translation>Atidaryti naudojant VCS (%1)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-588"/>
@@ -1255,17 +1255,17 @@ Tęsti?</translation>
     <message>
         <location line="+308"/>
         <source>Close &quot;%1&quot;</source>
-        <translation>Uždaryti &quot;% 1&quot;</translation>
+        <translation>Uždaryti &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Unpin &quot;%1&quot;</source>
-        <translation>Atsegti „% 1“</translation>
+        <translation>Atsegti „%1“</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pin &quot;%1&quot;</source>
-        <translation>Prisegti „% 1“</translation>
+        <translation>Prisegti „%1“</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2064,7 +2064,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     <message>
         <location line="+2"/>
         <source>Close All Except &quot;%1&quot;</source>
-        <translation>Uždaryti viską, išskyrus &quot;% 1&quot;</translation>
+        <translation>Uždaryti viską, išskyrus &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2280,7 +2280,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     <message>
         <location line="+45"/>
         <source>Failed to write preset file &quot;%1&quot;.</source>
-        <translation>Nepavyko įrašyti iš anksto nustatyto failo „% 1“.</translation>
+        <translation>Nepavyko įrašyti iš anksto nustatyto failo „%1“.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2855,7 +2855,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     <message>
         <location line="+8"/>
         <source>Open file &quot;%1&quot; with:</source>
-        <translation>Atidaryti failą „% 1“ su:</translation>
+        <translation>Atidaryti failą „%1“ su:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455"/>
@@ -2892,7 +2892,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     <message>
         <location line="-18"/>
         <source>Open &quot;%1&quot;</source>
-        <translation>Atidaryti &quot;% 1&quot;</translation>
+        <translation>Atidaryti &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3127,7 +3127,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     <message>
         <location line="+2"/>
         <source>%1 Spaces</source>
-        <translation>% 1 tarpai</translation>
+        <translation>%1 tarpai</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3395,7 +3395,7 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
     </message>
     <message>
         <source>Create and Open &quot;%1&quot;</source>
-        <translation type="vanished">Sukurti ir atidaryti &quot;% 1&quot;</translation>
+        <translation type="vanished">Sukurti ir atidaryti &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-46"/>
@@ -3470,7 +3470,7 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
     <message>
         <location line="+89"/>
         <source>Type to locate (%1)</source>
-        <translation>Įveskite norėdami rasti (% 1)</translation>
+        <translation>Įveskite norėdami rasti (%1)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+67"/>
@@ -4018,7 +4018,7 @@ Tikėtina, kad naudodami šį %3 egzempliorių susidursite su daugiau problemų.
     <message>
         <location line="+3"/>
         <source>%1 security policy</source>
-        <translation>% 1 saugos politika</translation>
+        <translation>%1 saugos politika</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+88"/>
@@ -4028,12 +4028,12 @@ Tikėtina, kad naudodami šį %3 egzempliorių susidursite su daugiau problemų.
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49"/>
         <source>Add the file to version control (%1)</source>
-        <translation>Pridėti failą prie versijos valdymo (% 1)</translation>
+        <translation>Pridėti failą prie versijos valdymo (%1)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Add the files to version control (%1)</source>
-        <translation>Pridėkite failus prie versijos valdymo (% 1)</translation>
+        <translation>Pridėkite failus prie versijos valdymo (%1)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+68"/>
@@ -4089,7 +4089,7 @@ Tikėtina, kad naudodami šį %3 egzempliorių susidursite su daugiau problemų.
     <message>
         <location line="+4"/>
         <source>%1 Templates</source>
-        <translation>% 1 šablonai</translation>
+        <translation>%1 šablonai</translation>
     </message>
     <message>
         <location line="+146"/>
@@ -4267,12 +4267,12 @@ Ar norite juos patikrinti dabar?</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590"/>
         <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
-        <translation>Nepavyko rasti vykdomojo failo „% 1“ (išplėstas „% 2“)</translation>
+        <translation>Nepavyko rasti vykdomojo failo „%1“ (išplėstas „%2“)</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Starting external tool &quot;%1&quot;</source>
-        <translation>Paleidžiamas išorinis įrankis &quot;% 1&quot;</translation>
+        <translation>Paleidžiamas išorinis įrankis &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -4399,7 +4399,7 @@ Ar norite juos patikrinti dabar?</translation>
     <message>
         <location line="+40"/>
         <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
-        <translation>Nepavyko pervardyti įtraukimo apsaugos faile &quot;% 1&quot;.</translation>
+        <translation>Nepavyko pervardyti įtraukimo apsaugos faile &quot;%1&quot;.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131"/>
@@ -4538,7 +4538,7 @@ Ar norite juos patikrinti dabar?</translation>
     </message>
     <message>
         <source> (%1)</source>
-        <translation type="vanished"> (% 1)</translation>
+        <translation type="vanished"> (%1)</translation>
     </message>
     <message>
         <source>%1 %2%3</source>
@@ -4547,7 +4547,7 @@ Ar norite juos patikrinti dabar?</translation>
     <message>
         <location line="+804"/>
         <source>Based on Qt %1 (%2, %3)</source>
-        <translation>Remiantis Qt % 1 (% 2, % 3)</translation>
+        <translation>Remiantis Qt %1 (%2, %3)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+672"/>
@@ -4957,7 +4957,7 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
     </message>
     <message>
         <source>A timeout occurred running &quot;%1&quot;</source>
-        <translation type="vanished">Paleidus &quot;% 1&quot; įvyko skirtasis laikas</translation>
+        <translation type="vanished">Paleidus &quot;%1&quot; įvyko skirtasis laikas</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -5061,7 +5061,7 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
     <message>
         <location line="+10"/>
         <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
-        <translation>„% 1“ bus įdiegta į „% 2“.</translation>
+        <translation>„%1“ bus įdiegta į „%2“.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -5086,7 +5086,7 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
     <message>
         <location line="+1"/>
         <source>Failed to write file &quot;%1&quot;.</source>
-        <translation>Nepavyko įrašyti failo „% 1“.</translation>
+        <translation>Nepavyko įrašyti failo „%1“.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5178,14 +5178,14 @@ to version control (%2)
 </source>
         <translation>Nepavyko pridėti failo
 %1
-versijos valdymui (% 2)
+versijos valdymui (%2)
 </translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Could not add the following files to version control (%1)
 %2</source>
-        <translation>Nepavyko pridėti šių failų prie versijos valdymo (% 1)
+        <translation>Nepavyko pridėti šių failų prie versijos valdymo (%1)
 %2</translation>
     </message>
     <message>
@@ -5386,7 +5386,7 @@ versijos valdymui (% 2)
     <message>
         <location line="+52"/>
         <source>Diff &quot;%1&quot;</source>
-        <translation>Skirtumas &quot;% 1&quot;</translation>
+        <translation>Skirtumas &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -5401,7 +5401,7 @@ versijos valdymui (% 2)
     <message>
         <location line="+15"/>
         <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
-        <translation>Skirtumas „% 1“, „% 2“</translation>
+        <translation>Skirtumas „%1“, „%2“</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228"/>
@@ -5583,7 +5583,7 @@ versijos valdymui (% 2)
     <message>
         <location line="+1"/>
         <source>%1 (current: &quot;%2&quot;)</source>
-        <translation>% 1 (dabartinis: &quot;%2&quot;)</translation>
+        <translation>%1 (dabartinis: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -5650,7 +5650,7 @@ versijos valdymui (% 2)
         <location line="+3"/>
         <source>%1 (experimental)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>% 1 (eksperimentinis)</translation>
+        <translation>%1 (eksperimentinis)</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5824,13 +5824,13 @@ taip pat išjungs šiuos papildinius:
     <message>
         <location line="+3"/>
         <source>%1 (%2)</source>
-        <translation>% 1 (% 2)</translation>
+        <translation>%1 (%2)</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Cannot load plugin because dependency failed to load: %1 (%2)
 Reason: %3</source>
-        <translation>Nepavyko įkelti papildinio, nes nepavyko įkelti priklausomybės: % 1 (% 2)
+        <translation>Nepavyko įkelti papildinio, nes nepavyko įkelti priklausomybės: %1 (%2)
 Priežastis: %3</translation>
     </message>
     <message>
@@ -5875,7 +5875,7 @@ Priežastis: %3</translation>
         <location line="+73"/>
         <source>Cannot load plugin because dependency failed to load: %1(%2)
 Reason: %3</source>
-        <translation>Nepavyko įkelti papildinio, nes nepavyko įkelti priklausomybės: % 1(% 2)
+        <translation>Nepavyko įkelti papildinio, nes nepavyko įkelti priklausomybės: %1(%2)
 Priežastis: %3</translation>
     </message>
     <message>
@@ -5919,7 +5919,7 @@ Priežastis: %3</translation>
     <message>
         <location line="+11"/>
         <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
-        <translation>Nepavyko išspręsti priklausomybės &apos;% 1(% 2)&apos;</translation>
+        <translation>Nepavyko išspręsti priklausomybės &apos;%1(%2)&apos;</translation>
     </message>
     <message>
         <location line="+61"/>
@@ -6133,7 +6133,7 @@ Priežastis: %3</translation>
     </message>
     <message>
         <source>Choose a topic for &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation type="vanished">Pasirinkite temą &lt;b&gt;% 1&lt;/b&gt;:</translation>
+        <translation type="vanished">Pasirinkite temą &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
         <source>Choose Topic</source>
@@ -6190,7 +6190,7 @@ Ar norėtumėte jį perrašyti?</translation>
     <message>
         <location line="+15"/>
         <source>Export a Series of Images from %1 (%2x%3)</source>
-        <translation>Eksportuoti vaizdų seriją iš % 1 (% 2x% 3)</translation>
+        <translation>Eksportuoti vaizdų seriją iš %1 (%2x%3)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageviewer.cpp" line="-365"/>
@@ -7748,7 +7748,7 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+0"/>
         <source>About OpenMV Cam %1...</source>
-        <translation>Apie OpenMV Cam % 1...</translation>
+        <translation>Apie OpenMV Cam %1...</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -9103,12 +9103,12 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     <message>
         <location line="+17"/>
         <source>Min (%1)</source>
-        <translation>Min (% 1)</translation>
+        <translation>Min (%1)</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Max (%1)</source>
-        <translation>Maks. (% 1)</translation>
+        <translation>Maks. (%1)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -20887,7 +20887,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
     <message>
         <location line="+16"/>
         <source>Color Scheme for Theme &quot;%1&quot;</source>
-        <translation>Temos &quot;% 1&quot; spalvų schema</translation>
+        <translation>Temos &quot;%1&quot; spalvų schema</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -20908,7 +20908,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
     <message>
         <location line="-91"/>
         <source>%1 (copy)</source>
-        <translation>% 1 (kopijuoti)</translation>
+        <translation>%1 (kopijuoti)</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -20975,7 +20975,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
     <message>
         <location line="+2"/>
         <source>%1 (Copy)</source>
-        <translation>% 1 (kopijuoti)</translation>
+        <translation>%1 (kopijuoti)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -21024,7 +21024,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
     <message>
         <location line="+2"/>
         <source>%1 [built-in]</source>
-        <translation>% 1 [įmontuotas]</translation>
+        <translation>%1 [įmontuotas]</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -21054,7 +21054,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
     <message>
         <location line="+16"/>
         <source>File &quot;%1&quot;:</source>
-        <translation>Failas &quot;% 1&quot;:</translation>
+        <translation>Failas &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -23027,7 +23027,7 @@ Nebus taikomas tarpams komentaruose ir eilutėse.</translation>
     <message>
         <location line="+25"/>
         <source>Folder &quot;%2&quot;:</source>
-        <translation>Aplankas &quot;% 2&quot;:</translation>
+        <translation>Aplankas &quot;%2&quot;:</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -23516,7 +23516,7 @@ Išskyrus: %3
     </message>
     <message>
         <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
-        <translation type="vanished">Nepavyko paleisti terminalo emuliatoriaus „%1“, pakeiskite parametrą aplinkos nuostatose. (% 2)</translation>
+        <translation type="vanished">Nepavyko paleisti terminalo emuliatoriaus „%1“, pakeiskite parametrą aplinkos nuostatose. (%2)</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -23693,7 +23693,7 @@ Išskyrus: %3
     </message>
     <message>
         <source>Full path: &quot;%1&quot;</source>
-        <translation type="vanished">Visas kelias: &quot;% 1&quot;</translation>
+        <translation type="vanished">Visas kelias: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58"/>
@@ -23851,7 +23851,7 @@ Išskyrus: %3
     </message>
     <message>
         <source>Delete workspace %1?</source>
-        <translation type="vanished">Ištrinti darbo sritį % 1?</translation>
+        <translation type="vanished">Ištrinti darbo sritį %1?</translation>
     </message>
     <message>
         <source>Delete these workspaces?
@@ -23996,7 +23996,7 @@ in &quot;%2&quot;.
     </message>
     <message>
         <source>copyFile is not implemented for &quot;%1&quot;</source>
-        <translation type="vanished">copyFile neįdiegtas &quot;% 1&quot;</translation>
+        <translation type="vanished">copyFile neįdiegtas &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
@@ -24009,24 +24009,24 @@ in &quot;%2&quot;.
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255"/>
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
-        <translation>Nepavyko rekursyviai nukopijuoti iš &quot;% 1&quot; į &quot;% 2&quot; bandant sukurti tar archyvą iš šaltinio: % 3</translation>
+        <translation>Nepavyko rekursyviai nukopijuoti iš &quot;%1&quot; į &quot;%2&quot; bandant sukurti tar archyvą iš šaltinio: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
-        <translation>Nepavyko rekursyviai nukopijuoti iš &quot;% 1&quot; į &quot;% 2&quot; bandant išgauti tar archyvą į tikslą: % 3</translation>
+        <translation>Nepavyko rekursyviai nukopijuoti iš &quot;%1&quot; į &quot;%2&quot; bandant išgauti tar archyvą į tikslą: %3</translation>
     </message>
     <message>
         <source>fileContents is not implemented for &quot;%1&quot;</source>
-        <translation type="vanished">failo turinys neįdiegtas „% 1“</translation>
+        <translation type="vanished">failo turinys neįdiegtas „%1“</translation>
     </message>
     <message>
         <source>writeFileContents is not implemented for &quot;%1&quot;</source>
-        <translation type="vanished">writeFileContents neįdiegtas &quot;% 1&quot;</translation>
+        <translation type="vanished">writeFileContents neįdiegtas &quot;%1&quot;</translation>
     </message>
     <message>
         <source>createTempFile is not implemented for &quot;%1&quot;</source>
-        <translation type="vanished">CreateTempFile neįdiegtas &quot;% 1&quot;</translation>
+        <translation type="vanished">CreateTempFile neįdiegtas &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-139"/>
@@ -24109,7 +24109,7 @@ in &quot;%2&quot;.
     </message>
     <message>
         <source>Could not open File &quot;%1&quot;</source>
-        <translation type="vanished">Nepavyko atidaryti failo &quot;% 1&quot;</translation>
+        <translation type="vanished">Nepavyko atidaryti failo &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -24122,11 +24122,11 @@ in &quot;%2&quot;.
     </message>
     <message>
         <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
-        <translation type="vanished">Nepavyko įrašyti į failą &quot;% 1&quot; (parašyta tik % 2 iš % 3 baitų)</translation>
+        <translation type="vanished">Nepavyko įrašyti į failą &quot;%1&quot; (parašyta tik %2 iš %3 baitų)</translation>
     </message>
     <message>
         <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
-        <translation type="vanished">Nepavyko sukurti laikinojo failo &quot;% 1&quot; (% 2)</translation>
+        <translation type="vanished">Nepavyko sukurti laikinojo failo &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="-87"/>
@@ -24185,7 +24185,7 @@ in &quot;%2&quot;.
     </message>
     <message>
         <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
-        <translation type="vanished">Nepavyko sukurti laikinojo failo „% 1“ (per daug bandymų)</translation>
+        <translation type="vanished">Nepavyko sukurti laikinojo failo „%1“ (per daug bandymų)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922"/>
@@ -24205,12 +24205,12 @@ in &quot;%2&quot;.
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130"/>
         <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
-        <translation>&quot;% 1&quot; yra netinkamas ELF objektas (% 2)</translation>
+        <translation>&quot;%1&quot; yra netinkamas ELF objektas (%2)</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&quot;%1&quot; is not an ELF object (file too small)</source>
-        <translation>&quot;% 1&quot; nėra ELF objektas (failas per mažas)</translation>
+        <translation>&quot;%1&quot; nėra ELF objektas (failas per mažas)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -24331,18 +24331,18 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
     <message>
         <location line="+35"/>
         <source>File extension %1 is required:</source>
-        <translation>Reikalingas failo plėtinys % 1:</translation>
+        <translation>Reikalingas failo plėtinys %1:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>File extensions %1 are required:</source>
-        <translation>Reikalingi failo plėtiniai % 1:</translation>
+        <translation>Reikalingi failo plėtiniai %1:</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filepath.cpp" line="+1098"/>
         <source>%1 on %2</source>
         <comment>File on device</comment>
-        <translation>% 1 % 2</translation>
+        <translation>%1 %2</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -24363,7 +24363,7 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
     <message>
         <location line="+5"/>
         <source>Could not set permissions on &quot;%1&quot;</source>
-        <translation>Nepavyko nustatyti leidimų &quot;% 1&quot;</translation>
+        <translation>Nepavyko nustatyti leidimų &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+250"/>
@@ -24451,7 +24451,7 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
     <message>
         <location line="+1"/>
         <source>Overwrite existing file &quot;%1&quot;?</source>
-        <translation>Perrašyti esamą failą &quot;% 1&quot;?</translation>
+        <translation>Perrašyti esamą failą &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -24914,7 +24914,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <location line="+3"/>
         <location line="+7"/>
         <source>Insert &quot;%1&quot;</source>
-        <translation>Įterpti &quot;% 1&quot;</translation>
+        <translation>Įterpti &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3"/>

@@ -193,12 +193,12 @@
     <message>
         <location line="+14"/>
         <source>Downloading new syntax definition for &apos;%1&apos;...</source>
-        <translation>מוריד הגדרת תחביר חדשה עבור &apos;% 1&apos;...</translation>
+        <translation>מוריד הגדרת תחביר חדשה עבור &apos;%1&apos;...</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
-        <translation>מעדכן את הגדרת התחביר עבור &apos;% 1&apos; לגרסה% 2...</translation>
+        <translation>מעדכן את הגדרת התחביר עבור &apos;%1&apos; לגרסה%2...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1070"/>
@@ -873,12 +873,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142"/>
         <source>Unable to create the directory %1.</source>
-        <translation>לא ניתן ליצור את הספרייה % 1.</translation>
+        <translation>לא ניתן ליצור את הספרייה %1.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171"/>
         <source>Failed to open an editor for &quot;%1&quot;.</source>
-        <translation>פתיחת עורך עבור &quot;% 1&quot; נכשלה.</translation>
+        <translation>פתיחת עורך עבור &quot;%1&quot; נכשלה.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -899,7 +899,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <location line="+40"/>
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
-        <translation>ספריית הפרויקט % 1 מכילה קבצים שלא ניתן לדרוס:
+        <translation>ספריית הפרויקט %1 מכילה קבצים שלא ניתן לדרוס:
 %2.</translation>
     </message>
     <message>
@@ -1022,12 +1022,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+258"/>
         <source>Cannot reload %1</source>
-        <translation>לא ניתן לטעון מחדש% 1</translation>
+        <translation>לא ניתן לטעון מחדש%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+53"/>
         <source>Open with VCS (%1)</source>
-        <translation>פתח עם VCS (% 1)</translation>
+        <translation>פתח עם VCS (%1)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-588"/>
@@ -1157,7 +1157,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
-        <translation>קובץ הטקסט &quot;% 1&quot; הוא בגודל %2MB והוא עשוי לקחת יותר זיכרון כדי לפתוח ולעבד מהזמין.
+        <translation>קובץ הטקסט &quot;%1&quot; הוא בגודל %2MB והוא עשוי לקחת יותר זיכרון כדי לפתוח ולעבד מהזמין.
 
 לְהַמשִׁיך?</translation>
     </message>
@@ -1169,12 +1169,12 @@ Continue?</source>
     <message>
         <location line="+39"/>
         <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>לא ניתן היה לפתוח את &quot;% 1&quot; לקריאה. או שהקובץ לא קיים או שאין לך הרשאות לפתוח אותו.</translation>
+        <translation>לא ניתן היה לפתוח את &quot;%1&quot; לקריאה. או שהקובץ לא קיים או שאין לך הרשאות לפתוח אותו.</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Could not open &quot;%1&quot;: Unknown error.</source>
-        <translation>לא ניתן היה לפתוח את &quot;% 1&quot;: שגיאה לא ידועה.</translation>
+        <translation>לא ניתן היה לפתוח את &quot;%1&quot;: שגיאה לא ידועה.</translation>
     </message>
     <message>
         <location line="+1130"/>
@@ -1189,12 +1189,12 @@ Continue?</source>
     <message>
         <location line="+25"/>
         <source>&amp;Save %1</source>
-        <translation>&amp;שמור% 1</translation>
+        <translation>&amp;שמור%1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Save %1 &amp;As...</source>
-        <translation>שמור% 1 &amp;כ...</translation>
+        <translation>שמור%1 &amp;כ...</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1204,12 +1204,12 @@ Continue?</source>
     <message>
         <location line="+1"/>
         <source>Reload %1</source>
-        <translation>טען מחדש% 1</translation>
+        <translation>טען מחדש%1</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Close %1</source>
-        <translation>סגור את% 1</translation>
+        <translation>סגור את%1</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1252,17 +1252,17 @@ Continue?</source>
     <message>
         <location line="+308"/>
         <source>Close &quot;%1&quot;</source>
-        <translation>סגור &quot;% 1&quot;</translation>
+        <translation>סגור &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Unpin &quot;%1&quot;</source>
-        <translation>בטל את ההצמדה &quot;% 1&quot;</translation>
+        <translation>בטל את ההצמדה &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pin &quot;%1&quot;</source>
-        <translation>הצמד &quot;% 1&quot;</translation>
+        <translation>הצמד &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1564,7 +1564,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+105"/>
         <source>Command line arguments used for &quot;%1&quot;.</source>
-        <translation>ארגומנטים של שורת הפקודה בשימוש עבור &quot;% 1&quot;.</translation>
+        <translation>ארגומנטים של שורת הפקודה בשימוש עבור &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -1734,7 +1734,7 @@ provided they were unmodified before the refactoring.</source>
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-279"/>
         <location line="+1"/>
         <source>Exit %1?</source>
-        <translation>לצאת% 1?</translation>
+        <translation>לצאת%1?</translation>
     </message>
     <message>
         <location line="+101"/>
@@ -1946,7 +1946,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+0"/>
         <source>About &amp;%1...</source>
-        <translation>אודות &amp;% 1...</translation>
+        <translation>אודות &amp;%1...</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2060,7 +2060,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+2"/>
         <source>Close All Except &quot;%1&quot;</source>
-        <translation>סגור הכל מלבד &quot;% 1&quot;</translation>
+        <translation>סגור הכל מלבד &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2262,12 +2262,12 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+16"/>
         <source>Failed to write logs to &quot;%1&quot;.</source>
-        <translation>כתיבת יומנים ל&quot;% 1&quot; נכשלה.</translation>
+        <translation>כתיבת יומנים ל&quot;%1&quot; נכשלה.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Failed to open file &quot;%1&quot; for writing logs.</source>
-        <translation>נכשל פתיחת הקובץ &quot;% 1&quot; לכתיבת יומנים.</translation>
+        <translation>נכשל פתיחת הקובץ &quot;%1&quot; לכתיבת יומנים.</translation>
     </message>
     <message>
         <source>Save Enabled Categories As</source>
@@ -2276,7 +2276,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+45"/>
         <source>Failed to write preset file &quot;%1&quot;.</source>
-        <translation>כתיבת הקובץ הקבוע מראש &quot;% 1&quot; נכשלה.</translation>
+        <translation>כתיבת הקובץ הקבוע מראש &quot;%1&quot; נכשלה.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2285,7 +2285,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <source>Failed to open preset file &quot;%1&quot; for reading</source>
-        <translation type="vanished">פתיחת הקובץ הקבוע מראש &quot;% 1&quot; נכשל לקריאה</translation>
+        <translation type="vanished">פתיחת הקובץ הקבוע מראש &quot;%1&quot; נכשל לקריאה</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2803,7 +2803,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="-173"/>
         <source>%1 %2</source>
-        <translation>% 1 % 2</translation>
+        <translation>%1 %2</translation>
     </message>
     <message>
         <location line="+126"/>
@@ -2851,7 +2851,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+8"/>
         <source>Open file &quot;%1&quot; with:</source>
-        <translation>פתח את הקובץ &quot;% 1&quot; עם:</translation>
+        <translation>פתח את הקובץ &quot;%1&quot; עם:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455"/>
@@ -2888,7 +2888,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="-18"/>
         <source>Open &quot;%1&quot;</source>
-        <translation>פתח את &quot;% 1&quot;</translation>
+        <translation>פתח את &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3390,7 +3390,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <source>Create and Open &quot;%1&quot;</source>
-        <translation type="vanished">צור ופתח את &quot;% 1&quot;</translation>
+        <translation type="vanished">צור ופתח את &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-46"/>
@@ -3400,7 +3400,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="-13"/>
         <source>Create &quot;%1&quot;?</source>
-        <translation>האם ליצור את &quot;% 1&quot;?</translation>
+        <translation>האם ליצור את &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3465,7 +3465,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+89"/>
         <source>Type to locate (%1)</source>
-        <translation>הקלד לאיתור (% 1)</translation>
+        <translation>הקלד לאיתור (%1)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+67"/>
@@ -3939,7 +3939,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+50"/>
         <source>%1 &gt; %2 Preferences...</source>
-        <translation>% 1 &gt; % 2 העדפות...</translation>
+        <translation>%1 &gt; %2 העדפות...</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -3955,8 +3955,8 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <location line="+12"/>
         <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
-        <translation>קובץ ההגדרות &quot;% 1&quot; אינו בר כתיבה.
-לא תוכל לאחסן הגדרות % 2.</translation>
+        <translation>קובץ ההגדרות &quot;%1&quot; אינו בר כתיבה.
+לא תוכל לאחסן הגדרות %2.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4023,12 +4023,12 @@ You will likely experience further problems using this instance of %3.</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49"/>
         <source>Add the file to version control (%1)</source>
-        <translation>הוסף את הקובץ לבקרת גרסה (% 1)</translation>
+        <translation>הוסף את הקובץ לבקרת גרסה (%1)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Add the files to version control (%1)</source>
-        <translation>הוסף את הקבצים לבקרת גרסה (% 1)</translation>
+        <translation>הוסף את הקבצים לבקרת גרסה (%1)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+68"/>
@@ -4084,7 +4084,7 @@ You will likely experience further problems using this instance of %3.</source>
     <message>
         <location line="+4"/>
         <source>%1 Templates</source>
-        <translation>% 1 תבניות</translation>
+        <translation>%1 תבניות</translation>
     </message>
     <message>
         <location line="+146"/>
@@ -4138,7 +4138,7 @@ Would you like to overwrite them?</source>
     <message>
         <location line="+1"/>
         <source>%1 file %2 from version control system %3 failed.</source>
-        <translation>קובץ %1% 2 ממערכת בקרת גרסאות %3 נכשל.</translation>
+        <translation>קובץ %1%2 ממערכת בקרת גרסאות %3 נכשל.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4149,7 +4149,7 @@ Would you like to overwrite them?</source>
         <location line="+1"/>
         <source>Cannot open file %1 from version control system.
 No version control system found.</source>
-        <translation>לא ניתן לפתוח את הקובץ % 1 ממערכת בקרת גרסה.
+        <translation>לא ניתן לפתוח את הקובץ %1 ממערכת בקרת גרסה.
 לא נמצאה מערכת בקרת גרסאות.</translation>
     </message>
     <message>
@@ -4170,7 +4170,7 @@ No version control system found.</source>
     <message>
         <location line="+1"/>
         <source>Cannot save file %1</source>
-        <translation>לא ניתן לשמור את הקובץ% 1</translation>
+        <translation>לא ניתן לשמור את הקובץ%1</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4262,22 +4262,22 @@ Do you want to check them out now?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590"/>
         <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
-        <translation>לא ניתן למצוא קובץ הפעלה עבור &quot;% 1&quot; (המורחב &quot;%2&quot;)</translation>
+        <translation>לא ניתן למצוא קובץ הפעלה עבור &quot;%1&quot; (המורחב &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Starting external tool &quot;%1&quot;</source>
-        <translation>הפעלת הכלי החיצוני &quot;% 1&quot;</translation>
+        <translation>הפעלת הכלי החיצוני &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>&quot;%1&quot; finished</source>
-        <translation>&quot;% 1&quot; הסתיים</translation>
+        <translation>&quot;%1&quot; הסתיים</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&quot;%1&quot; finished with error</source>
-        <translation>&quot;% 1&quot; הסתיים עם שגיאה</translation>
+        <translation>&quot;%1&quot; הסתיים עם שגיאה</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59"/>
@@ -4287,12 +4287,12 @@ Do you want to check them out now?</source>
     <message>
         <location line="+52"/>
         <source>Error while parsing external tool %1: %2</source>
-        <translation>שגיאה בעת ניתוח הכלי החיצוני% 1:% 2</translation>
+        <translation>שגיאה בעת ניתוח הכלי החיצוני%1:%2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Error: External tool in %1 has duplicate id</source>
-        <translation>שגיאה: לכלי חיצוני ב-% 1 יש מזהה כפול</translation>
+        <translation>שגיאה: לכלי חיצוני ב-%1 יש מזהה כפול</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+60"/>
@@ -4317,7 +4317,7 @@ Do you want to check them out now?</source>
         <source>&quot;%1&quot; returned the following error:
 
 %2</source>
-        <translation>&quot;% 1&quot; החזיר את השגיאה הבאה:
+        <translation>&quot;%1&quot; החזיר את השגיאה הבאה:
 
 %2</translation>
     </message>
@@ -4389,12 +4389,12 @@ Do you want to check them out now?</source>
     <message>
         <location line="+19"/>
         <source>Failed to remove file &quot;%1&quot;.</source>
-        <translation>הסרת הקובץ &quot;% 1&quot; נכשלה.</translation>
+        <translation>הסרת הקובץ &quot;%1&quot; נכשלה.</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
-        <translation>שינוי שם ה-include guard בקובץ &quot;% 1&quot; נכשל.</translation>
+        <translation>שינוי שם ה-include guard בקובץ &quot;%1&quot; נכשל.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131"/>
@@ -4530,7 +4530,7 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <source> (%1)</source>
-        <translation type="vanished"> (% 1)</translation>
+        <translation type="vanished"> (%1)</translation>
     </message>
     <message>
         <source>%1 %2%3</source>
@@ -4564,7 +4564,7 @@ Do you want to check them out now?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49"/>
         <source>Error in &quot;%1&quot;: %2</source>
-        <translation>שגיאה ב&quot;% 1&quot;: %2</translation>
+        <translation>שגיאה ב&quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -4606,7 +4606,7 @@ Do you want to kill it?</source>
     <message>
         <location line="+6"/>
         <source>Starting command &quot;%1&quot;.</source>
-        <translation>הפעלת הפקודה &quot;% 1&quot;.</translation>
+        <translation>הפעלת הפקודה &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21"/>
@@ -4662,7 +4662,7 @@ Do you want to kill it?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74"/>
         <source>Locator: Error occurred when running &quot;%1&quot;.</source>
-        <translation>מאתר: אירעה שגיאה בעת הפעלת &quot;% 1&quot;.</translation>
+        <translation>מאתר: אירעה שגיאה בעת הפעלת &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4944,11 +4944,11 @@ Double-click to edit item.</source>
     <message>
         <location line="-11"/>
         <source>Unable to launch &quot;%1&quot;: %2</source>
-        <translation>לא ניתן להפעיל את &quot;% 1&quot;: %2</translation>
+        <translation>לא ניתן להפעיל את &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <source>A timeout occurred running &quot;%1&quot;</source>
-        <translation type="vanished">אירע פסק זמן בהפעלת &quot;% 1&quot;</translation>
+        <translation type="vanished">אירע פסק זמן בהפעלת &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -5042,7 +5042,7 @@ Double-click to edit item.</source>
     <message>
         <location line="+2"/>
         <source>The plugin will be available only to this %1 installation, but for all users that can access it.</source>
-        <translation>הפלאגין יהיה זמין רק להתקנה של% 1 זו, אך לכל המשתמשים שיכולים לגשת אליו.</translation>
+        <translation>הפלאגין יהיה זמין רק להתקנה של%1 זו, אך לכל המשתמשים שיכולים לגשת אליו.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5062,7 +5062,7 @@ Double-click to edit item.</source>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; exists. Overwrite?</source>
-        <translation>הקובץ &quot;% 1&quot; קיים. להחליף?</translation>
+        <translation>הקובץ &quot;%1&quot; קיים. להחליף?</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5077,7 +5077,7 @@ Double-click to edit item.</source>
     <message>
         <location line="+1"/>
         <source>Failed to write file &quot;%1&quot;.</source>
-        <translation>כתיבת הקובץ &quot;% 1&quot; נכשלה.</translation>
+        <translation>כתיבת הקובץ &quot;%1&quot; נכשלה.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5169,14 +5169,14 @@ to version control (%2)
 </source>
         <translation>לא ניתן להוסיף את הקובץ
 %1
-לבקרת גרסה (% 2)
+לבקרת גרסה (%2)
 </translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Could not add the following files to version control (%1)
 %2</source>
-        <translation>לא ניתן להוסיף את הקבצים הבאים לבקרת גרסה (% 1)
+        <translation>לא ניתן להוסיף את הקבצים הבאים לבקרת גרסה (%1)
 %2</translation>
     </message>
     <message>
@@ -5297,7 +5297,7 @@ to version control (%2)
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300"/>
         <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
-        <translation>לא ניתן לנתח את קובץ התיקון &quot;% 1&quot;. התוכן אינו בפורמט הבדל מאוחד.</translation>
+        <translation>לא ניתן לנתח את קובץ התיקון &quot;%1&quot;. התוכן אינו בפורמט הבדל מאוחד.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21"/>
@@ -5377,7 +5377,7 @@ to version control (%2)
     <message>
         <location line="+52"/>
         <source>Diff &quot;%1&quot;</source>
-        <translation>הבדל &quot;% 1&quot;</translation>
+        <translation>הבדל &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -5392,7 +5392,7 @@ to version control (%2)
     <message>
         <location line="+15"/>
         <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
-        <translation>הבדל &quot;% 1&quot;, &quot;% 2&quot;</translation>
+        <translation>הבדל &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228"/>
@@ -5640,7 +5640,7 @@ to version control (%2)
         <location line="+3"/>
         <source>%1 (experimental)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>% 1 (ניסיוני)</translation>
+        <translation>%1 (ניסיוני)</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5814,7 +5814,7 @@ will also disable the following plugins:
     <message>
         <location line="+3"/>
         <source>%1 (%2)</source>
-        <translation>% 1 (% 2)</translation>
+        <translation>%1 (%2)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -5849,7 +5849,7 @@ Reason: %3</source>
     <message>
         <location line="+3"/>
         <source>Disable plugins permanently in %1.</source>
-        <translation>השבת תוספים לצמיתות ב-% 1.</translation>
+        <translation>השבת תוספים לצמיתות ב-%1.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5884,22 +5884,22 @@ Reason: %3</source>
     <message>
         <location line="-79"/>
         <source>The plugin &quot;%1&quot; is not tested.</source>
-        <translation>הפלאגין &quot;% 1&quot; לא נבדק.</translation>
+        <translation>הפלאגין &quot;%1&quot; לא נבדק.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
-        <translation>לא ניתן לבקש תרחיש &quot;% 1&quot; מכיוון שהוא כבר התבקש.</translation>
+        <translation>לא ניתן לבקש תרחיש &quot;%1&quot; מכיוון שהוא כבר התבקש.</translation>
     </message>
     <message>
         <location line="+130"/>
         <source>Unknown option %1</source>
-        <translation>אפשרות לא ידועה% 1</translation>
+        <translation>אפשרות לא ידועה%1</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>The option %1 requires an argument.</source>
-        <translation>האפשרות % 1 דורשת ארגומנט.</translation>
+        <translation>האפשרות %1 דורשת ארגומנט.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1071"/>
@@ -5924,7 +5924,7 @@ Reason: %3</source>
     <message>
         <location line="-416"/>
         <source>&quot;%1&quot; is missing</source>
-        <translation>&quot;% 1&quot; חסר</translation>
+        <translation>&quot;%1&quot; חסר</translation>
     </message>
     <message>
         <location line="-24"/>
@@ -6001,7 +6001,7 @@ Reason: %3</source>
     <message>
         <location line="-13"/>
         <source>Argument: &quot;%1&quot; is empty</source>
-        <translation>ארגומנט: &quot;% 1&quot; ריק</translation>
+        <translation>ארגומנט: &quot;%1&quot; ריק</translation>
     </message>
     <message>
         <location line="+182"/>
@@ -6123,7 +6123,7 @@ Reason: %3</source>
     </message>
     <message>
         <source>Choose a topic for &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation type="vanished">בחר נושא עבור &lt;b&gt;% 1&lt;/b&gt;:</translation>
+        <translation type="vanished">בחר נושא עבור &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
         <source>Choose Topic</source>
@@ -6164,7 +6164,7 @@ Would you like to overwrite it?</source>
     <message>
         <location line="+6"/>
         <source>Could not write file &quot;%1&quot;.</source>
-        <translation>לא ניתן היה לכתוב את הקובץ &quot;% 1&quot;.</translation>
+        <translation>לא ניתן היה לכתוב את הקובץ &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6175,7 +6175,7 @@ Would you like to overwrite it?</source>
     <message>
         <location line="+30"/>
         <source>Export %1</source>
-        <translation>ייצא% 1</translation>
+        <translation>ייצא%1</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -6369,7 +6369,7 @@ Would you like to overwrite it?</source>
         <location line="+2"/>
         <source>The files %1 already exist.
 Would you like to overwrite them?</source>
-        <translation>הקבצים% 1 כבר קיימים.
+        <translation>הקבצים%1 כבר קיימים.
 האם תרצה להחליף אותם?</translation>
     </message>
 </context>
@@ -7722,12 +7722,12 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+16"/>
         <source>About OpenMV Cam %1</source>
-        <translation>אודות OpenMV Cam% 1</translation>
+        <translation>אודות OpenMV Cam%1</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>About OpenMV Cam %1...</source>
-        <translation>אודות מצלמת OpenMV% 1...</translation>
+        <translation>אודות מצלמת OpenMV%1...</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -9082,12 +9082,12 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+17"/>
         <source>Min (%1)</source>
-        <translation>מינימום (% 1)</translation>
+        <translation>מינימום (%1)</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Max (%1)</source>
-        <translation>מקסימום (% 1)</translation>
+        <translation>מקסימום (%1)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -16004,7 +16004,7 @@ to project &quot;%2&quot;.</source>
         <location line="+12"/>
         <location line="+46"/>
         <source>Failed to open an editor for &quot;%1&quot;.</source>
-        <translation type="unfinished">פתיחת עורך עבור &quot;% 1&quot; נכשלה.</translation>
+        <translation type="unfinished">פתיחת עורך עבור &quot;%1&quot; נכשלה.</translation>
     </message>
     <message>
         <location line="-27"/>
@@ -18454,7 +18454,7 @@ What should %1 do now?</source>
         <location line="+10"/>
         <source>%1 (%2)</source>
         <extracomment>vanished target display role: vanished target name (device type name)</extracomment>
-        <translation type="unfinished">% 1 (% 2)</translation>
+        <translation type="unfinished">%1 (%2)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -20822,7 +20822,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+16"/>
         <source>Color Scheme for Theme &quot;%1&quot;</source>
-        <translation>ערכת צבעים עבור ערכת הנושא &quot;% 1&quot;</translation>
+        <translation>ערכת צבעים עבור ערכת הנושא &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -20843,7 +20843,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="-91"/>
         <source>%1 (copy)</source>
-        <translation>% 1 (העתק)</translation>
+        <translation>%1 (העתק)</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -20910,7 +20910,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+2"/>
         <source>%1 (Copy)</source>
-        <translation>% 1 (העתק)</translation>
+        <translation>%1 (העתק)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -20944,7 +20944,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="-12"/>
         <source>Cannot import code style from &quot;%1&quot;.</source>
-        <translation>לא ניתן לייבא סגנון קוד מ&quot;% 1&quot;.</translation>
+        <translation>לא ניתן לייבא סגנון קוד מ&quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -20954,12 +20954,12 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+68"/>
         <source>%1 [proxy: %2]</source>
-        <translation>% 1 [פרוקסי: %2]</translation>
+        <translation>%1 [פרוקסי: %2]</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 [built-in]</source>
-        <translation>% 1 [מובנה]</translation>
+        <translation>%1 [מובנה]</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -20974,7 +20974,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+1"/>
         <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
-        <translation>ערכת הצבעים &quot;% 1&quot; שונתה, האם ברצונך לשמור את השינויים?</translation>
+        <translation>ערכת הצבעים &quot;%1&quot; שונתה, האם ברצונך לשמור את השינויים?</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -20989,7 +20989,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+16"/>
         <source>File &quot;%1&quot;:</source>
-        <translation>הקובץ &quot;% 1&quot;:</translation>
+        <translation>הקובץ &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -21158,7 +21158,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+28"/>
         <source>Line %1, Column %2</source>
-        <translation>שורה % 1, עמודה % 2</translation>
+        <translation>שורה %1, עמודה %2</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -21168,7 +21168,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+2"/>
         <source>Column %1</source>
-        <translation>עמודה% 1</translation>
+        <translation>עמודה%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-239"/>
@@ -22960,7 +22960,7 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+25"/>
         <source>Folder &quot;%2&quot;:</source>
-        <translation>תיקיה &quot;% 2&quot;:</translation>
+        <translation>תיקיה &quot;%2&quot;:</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -23024,12 +23024,12 @@ Excluding: %3
     <message>
         <location line="+21"/>
         <source>Cannot read file &quot;%1&quot;: %2.</source>
-        <translation>לא ניתן לקרוא את הקובץ &quot;% 1&quot;: %2.</translation>
+        <translation>לא ניתן לקרוא את הקובץ &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
-        <translation>לא ניתן להתקשר ל% 1 או שאירעה שגיאה אחרת. הזמן הקצוב הגיע בזמן עיצוב הקובץ %2.</translation>
+        <translation>לא ניתן להתקשר ל%1 או שאירעה שגיאה אחרת. הזמן הקצוב הגיע בזמן עיצוב הקובץ %2.</translation>
     </message>
     <message>
         <source>TextEditor</source>
@@ -23054,7 +23054,7 @@ Excluding: %3
     <message>
         <location line="+5"/>
         <source>File %1 was closed.</source>
-        <translation>הקובץ % 1 נסגר.</translation>
+        <translation>הקובץ %1 נסגר.</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -23415,7 +23415,7 @@ Excluding: %3
     <message>
         <location line="+5"/>
         <source>Cannot execute &quot;%1&quot;: %2</source>
-        <translation>לא ניתן להפעיל את &quot;% 1&quot;: %2</translation>
+        <translation>לא ניתן להפעיל את &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+109"/>
@@ -23429,7 +23429,7 @@ Excluding: %3
     </message>
     <message>
         <source>The process &quot;%1&quot; could not be started: %2</source>
-        <translation type="vanished">לא ניתן היה להתחיל את התהליך &quot;% 1&quot;: %2</translation>
+        <translation type="vanished">לא ניתן היה להתחיל את התהליך &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <source>Quoting error in command.</source>
@@ -23588,24 +23588,24 @@ Excluding: %3
         <location line="+10"/>
         <location line="+20"/>
         <source>The path &quot;%1&quot; does not exist.</source>
-        <translation>הנתיב &quot;% 1&quot; אינו קיים.</translation>
+        <translation>הנתיב &quot;%1&quot; אינו קיים.</translation>
     </message>
     <message>
         <location line="-26"/>
         <location line="+36"/>
         <source>The path &quot;%1&quot; is not a directory.</source>
-        <translation>הנתיב &quot;% 1&quot; אינו ספרייה.</translation>
+        <translation>הנתיב &quot;%1&quot; אינו ספרייה.</translation>
     </message>
     <message>
         <location line="-26"/>
         <location line="+10"/>
         <source>The path &quot;%1&quot; is not a file.</source>
-        <translation>הנתיב &quot;% 1&quot; אינו קובץ.</translation>
+        <translation>הנתיב &quot;%1&quot; אינו קובץ.</translation>
     </message>
     <message>
         <location line="-4"/>
         <source>The directory &quot;%1&quot; does not exist.</source>
-        <translation>הספרייה &quot;% 1&quot; אינה קיימת.</translation>
+        <translation>הספרייה &quot;%1&quot; אינה קיימת.</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -23620,11 +23620,11 @@ Excluding: %3
     <message>
         <location line="+5"/>
         <source>Cannot execute &quot;%1&quot;.</source>
-        <translation>לא ניתן להפעיל את &quot;% 1&quot;.</translation>
+        <translation>לא ניתן להפעיל את &quot;%1&quot;.</translation>
     </message>
     <message>
         <source>Full path: &quot;%1&quot;</source>
-        <translation type="vanished">נתיב מלא: &quot;% 1&quot;</translation>
+        <translation type="vanished">נתיב מלא: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58"/>
@@ -23665,7 +23665,7 @@ Excluding: %3
     <message>
         <location line="+121"/>
         <source>Directory &quot;%1&quot; will be created.</source>
-        <translation>תיווצר ספרייה &quot;% 1&quot;.</translation>
+        <translation>תיווצר ספרייה &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -23770,7 +23770,7 @@ Excluding: %3
     </message>
     <message>
         <source>Could not save workspace to file %1</source>
-        <translation type="vanished">לא ניתן לשמור סביבת עבודה בקובץ% 1</translation>
+        <translation type="vanished">לא ניתן לשמור סביבת עבודה בקובץ%1</translation>
     </message>
     <message>
         <source>Delete Workspace</source>
@@ -23782,7 +23782,7 @@ Excluding: %3
     </message>
     <message>
         <source>Delete workspace %1?</source>
-        <translation type="vanished">למחוק את סביבת העבודה% 1?</translation>
+        <translation type="vanished">למחוק את סביבת העבודה%1?</translation>
     </message>
     <message>
         <source>Delete these workspaces?
@@ -23803,7 +23803,7 @@ Excluding: %3
     </message>
     <message>
         <source>Could not restore workspace %1</source>
-        <translation type="vanished">לא ניתן לשחזר את סביבת העבודה% 1</translation>
+        <translation type="vanished">לא ניתן לשחזר את סביבת העבודה%1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/unarchiver.cpp" line="+112"/>
@@ -23849,8 +23849,8 @@ in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>פועל% 1
-ב&quot;% 2&quot;.
+        <translation>פועל%1
+ב&quot;%2&quot;.
 
 </translation>
     </message>
@@ -23881,7 +23881,7 @@ in &quot;%2&quot;.
     <message>
         <location filename="../../../src/libs/utils/basetreeview.cpp" line="+542"/>
         <source>Show %1 Column</source>
-        <translation>הצג % 1 עמודה</translation>
+        <translation>הצג %1 עמודה</translation>
     </message>
     <message>
         <source>Do not ask again</source>
@@ -23927,11 +23927,11 @@ in &quot;%2&quot;.
     </message>
     <message>
         <source>copyFile is not implemented for &quot;%1&quot;</source>
-        <translation type="vanished">copyFile אינו מיושם עבור &quot;% 1&quot;</translation>
+        <translation type="vanished">copyFile אינו מיושם עבור &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
-        <translation type="vanished">לא ניתן להעתיק מ% 1, זו לא ספריה.</translation>
+        <translation type="vanished">לא ניתן להעתיק מ%1, זו לא ספריה.</translation>
     </message>
     <message>
         <source>Cannot copy %1 to %2, it is not a writable directory.</source>
@@ -23940,24 +23940,24 @@ in &quot;%2&quot;.
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255"/>
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
-        <translation>כשל בהעתקה רקורסיבית מ&quot;% 1&quot; ל&quot;% 2&quot; בעת ניסיון ליצור ארכיון tar מהמקור:% 3</translation>
+        <translation>כשל בהעתקה רקורסיבית מ&quot;%1&quot; ל&quot;%2&quot; בעת ניסיון ליצור ארכיון tar מהמקור:%3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
-        <translation>כשל בהעתקה רקורסיבית מ&quot;% 1&quot; ל&quot;% 2&quot; בעת ניסיון לחלץ את ארכיון tar למטרה: % 3</translation>
+        <translation>כשל בהעתקה רקורסיבית מ&quot;%1&quot; ל&quot;%2&quot; בעת ניסיון לחלץ את ארכיון tar למטרה: %3</translation>
     </message>
     <message>
         <source>fileContents is not implemented for &quot;%1&quot;</source>
-        <translation type="vanished">fileContents אינו מיושם עבור &quot;% 1&quot;</translation>
+        <translation type="vanished">fileContents אינו מיושם עבור &quot;%1&quot;</translation>
     </message>
     <message>
         <source>writeFileContents is not implemented for &quot;%1&quot;</source>
-        <translation type="vanished">writeFileContents אינו מיושם עבור &quot;% 1&quot;</translation>
+        <translation type="vanished">writeFileContents אינו מיושם עבור &quot;%1&quot;</translation>
     </message>
     <message>
         <source>createTempFile is not implemented for &quot;%1&quot;</source>
-        <translation type="vanished">createTempFile אינו מיושם עבור &quot;% 1&quot;</translation>
+        <translation type="vanished">createTempFile אינו מיושם עבור &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-139"/>
@@ -24018,12 +24018,12 @@ in &quot;%2&quot;.
     <message>
         <location line="+37"/>
         <source>Failed to remove directory &quot;%1&quot;.</source>
-        <translation>הסרת הספרייה &quot;% 1&quot; נכשלה.</translation>
+        <translation>הסרת הספרייה &quot;%1&quot; נכשלה.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Failed to remove file &quot;%1&quot;.</source>
-        <translation>הסרת הקובץ &quot;% 1&quot; נכשלה.</translation>
+        <translation>הסרת הקובץ &quot;%1&quot; נכשלה.</translation>
     </message>
     <message>
         <location line="+551"/>
@@ -24036,28 +24036,28 @@ in &quot;%2&quot;.
     </message>
     <message>
         <source>File &quot;%1&quot; does not exist</source>
-        <translation type="vanished">הקובץ &quot;% 1&quot; אינו קיים</translation>
+        <translation type="vanished">הקובץ &quot;%1&quot; אינו קיים</translation>
     </message>
     <message>
         <source>Could not open File &quot;%1&quot;</source>
-        <translation type="vanished">לא ניתן לפתוח את הקובץ &quot;% 1&quot;</translation>
+        <translation type="vanished">לא ניתן לפתוח את הקובץ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-449"/>
         <source>Cannot read &quot;%1&quot;: %2</source>
-        <translation>לא ניתן לקרוא את &quot;% 1&quot;: %2</translation>
+        <translation>לא ניתן לקרוא את &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <source>Could not open file &quot;%1&quot; for writing</source>
-        <translation type="vanished">לא ניתן היה לפתוח את הקובץ &quot;% 1&quot; לכתיבה</translation>
+        <translation type="vanished">לא ניתן היה לפתוח את הקובץ &quot;%1&quot; לכתיבה</translation>
     </message>
     <message>
         <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
-        <translation type="vanished">לא ניתן היה לכתוב לקובץ &quot;% 1&quot; (רק %2 מתוך %3 בתים נכתב)</translation>
+        <translation type="vanished">לא ניתן היה לכתוב לקובץ &quot;%1&quot; (רק %2 מתוך %3 בתים נכתב)</translation>
     </message>
     <message>
         <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
-        <translation type="vanished">לא ניתן ליצור קובץ זמני ב&quot;% 1&quot; (% 2)</translation>
+        <translation type="vanished">לא ניתן ליצור קובץ זמני ב&quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="-87"/>
@@ -24115,7 +24115,7 @@ in &quot;%2&quot;.
     </message>
     <message>
         <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
-        <translation type="vanished">נכשלה יצירת הקובץ הזמני &quot;% 1&quot; (יותר מדי ניסיונות)</translation>
+        <translation type="vanished">נכשלה יצירת הקובץ הזמני &quot;%1&quot; (יותר מדי ניסיונות)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922"/>
@@ -24140,7 +24140,7 @@ in &quot;%2&quot;.
     <message>
         <location line="+18"/>
         <source>&quot;%1&quot; is not an ELF object (file too small)</source>
-        <translation>&quot;% 1&quot; אינו אובייקט ELF (קובץ קטן מדי)</translation>
+        <translation>&quot;%1&quot; אינו אובייקט ELF (קובץ קטן מדי)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -24260,24 +24260,24 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
     <message>
         <location line="+35"/>
         <source>File extension %1 is required:</source>
-        <translation>נדרשת סיומת קובץ% 1:</translation>
+        <translation>נדרשת סיומת קובץ%1:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>File extensions %1 are required:</source>
-        <translation>נדרשות סיומות קבצים% 1:</translation>
+        <translation>נדרשות סיומות קבצים%1:</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filepath.cpp" line="+1098"/>
         <source>%1 on %2</source>
         <comment>File on device</comment>
-        <translation>% 1 על % 2</translation>
+        <translation>%1 על %2</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>%1 %2 on %3</source>
         <comment>File and args on device</comment>
-        <translation>% 1 % 2 על % 3</translation>
+        <translation>%1 %2 על %3</translation>
     </message>
     <message>
         <location line="+869"/>
@@ -24292,7 +24292,7 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
     <message>
         <location line="+5"/>
         <source>Could not set permissions on &quot;%1&quot;</source>
-        <translation>לא ניתן להגדיר הרשאות ב&quot;% 1&quot;</translation>
+        <translation>לא ניתן להגדיר הרשאות ב&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+250"/>
@@ -24339,12 +24339,12 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
     <message>
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+23"/>
         <source>Cannot write file %1: %2</source>
-        <translation>אין אפשרות לכתוב את הקובץ% 1:% 2</translation>
+        <translation>אין אפשרות לכתוב את הקובץ%1:%2</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cannot write file %1. Disk full?</source>
-        <translation>אין אפשרות לכתוב את הקובץ% 1. כונן מלא?</translation>
+        <translation>אין אפשרות לכתוב את הקובץ%1. כונן מלא?</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -24380,7 +24380,7 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
     <message>
         <location line="+1"/>
         <source>Overwrite existing file &quot;%1&quot;?</source>
-        <translation>להחליף את הקובץ הקיים &quot;% 1&quot;?</translation>
+        <translation>להחליף את הקובץ הקיים &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -24392,7 +24392,7 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <location line="+409"/>
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+366"/>
         <source>Failed to create directory &quot;%1&quot;.</source>
-        <translation>יצירת הספרייה &quot;% 1&quot; נכשלה.</translation>
+        <translation>יצירת הספרייה &quot;%1&quot; נכשלה.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84"/>
@@ -24628,7 +24628,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location line="+1"/>
         <source>The process &quot;%1&quot; is not responding.</source>
-        <translation>התהליך &quot;% 1&quot; אינו מגיב.</translation>
+        <translation>התהליך &quot;%1&quot; אינו מגיב.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -24638,7 +24638,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location line="+233"/>
         <source>The command &quot;%1&quot; finished successfully.</source>
-        <translation>הפקודה &quot;% 1&quot; הסתיימה בהצלחה.</translation>
+        <translation>הפקודה &quot;%1&quot; הסתיימה בהצלחה.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -24653,7 +24653,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location line="+2"/>
         <source>The command &quot;%1&quot; could not be started.</source>
-        <translation>לא ניתן היה להפעיל את הפקודה &quot;% 1&quot;.</translation>
+        <translation>לא ניתן היה להפעיל את הפקודה &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -24702,7 +24702,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location line="+1"/>
         <source>Could not open &quot;%1&quot;.</source>
-        <translation>לא ניתן היה לפתוח את &quot;% 1&quot;.</translation>
+        <translation>לא ניתן היה לפתוח את &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -24724,7 +24724,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location line="-264"/>
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;לא נמצא קובץ הגדרות חוקי.&lt;/p&gt;&lt;p&gt;כל קבצי ההגדרות שנמצאו בספרייה &quot;%1&quot; לא היו מתאימים לגרסה הנוכחית של %2, למשל בגלל שהם נכתבו על ידי גרסה לא תואמת של % 2, או בגלל שנעשה שימוש בנתיב הגדרות אחר.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;לא נמצא קובץ הגדרות חוקי.&lt;/p&gt;&lt;p&gt;כל קבצי ההגדרות שנמצאו בספרייה &quot;%1&quot; לא היו מתאימים לגרסה הנוכחית של %2, למשל בגלל שהם נכתבו על ידי גרסה לא תואמת של %2, או בגלל שנעשה שימוש בנתיב הגדרות אחר.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+265"/>
@@ -24744,7 +24744,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location line="+15"/>
         <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
-        <translation>קובץ הגדרות עבור &quot;% 1&quot; מסביבה אחרת?</translation>
+        <translation>קובץ הגדרות עבור &quot;%1&quot; מסביבה אחרת?</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -24759,7 +24759,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location line="+1"/>
         <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
-        <translation>&quot;% 1&quot; אינו נתמך על ידי %2. האם אתה רוצה לנסות לטעון אותו בכל זאת?</translation>
+        <translation>&quot;%1&quot; אינו נתמך על ידי %2. האם אתה רוצה לנסות לטעון אותו בכל זאת?</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/aspects.cpp" line="+92"/>
@@ -24835,7 +24835,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <location line="+3"/>
         <location line="+7"/>
         <source>Insert &quot;%1&quot;</source>
-        <translation>הוסף &quot;% 1&quot;</translation>
+        <translation>הוסף &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3"/>

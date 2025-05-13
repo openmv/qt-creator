@@ -899,7 +899,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <location line="+40"/>
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
-        <translation>Prosjektkatalogen % 1 inneholder filer som ikke kan overskrives:
+        <translation>Prosjektkatalogen %1 inneholder filer som ikke kan overskrives:
 %2.</translation>
     </message>
     <message>
@@ -1252,17 +1252,17 @@ Fortsette?</translation>
     <message>
         <location line="+308"/>
         <source>Close &quot;%1&quot;</source>
-        <translation>Lukk «% 1»</translation>
+        <translation>Lukk «%1»</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Unpin &quot;%1&quot;</source>
-        <translation>Løsne &quot;% 1&quot;</translation>
+        <translation>Løsne &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pin &quot;%1&quot;</source>
-        <translation>Fest «% 1»</translation>
+        <translation>Fest «%1»</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1946,7 +1946,7 @@ forutsatt at de var umodifisert før refaktoriseringen.</translation>
     <message>
         <location line="+0"/>
         <source>About &amp;%1...</source>
-        <translation>Om &amp;% 1...</translation>
+        <translation>Om &amp;%1...</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2060,7 +2060,7 @@ forutsatt at de var umodifisert før refaktoriseringen.</translation>
     <message>
         <location line="+2"/>
         <source>Close All Except &quot;%1&quot;</source>
-        <translation>Lukk alle unntatt &quot;% 1&quot;</translation>
+        <translation>Lukk alle unntatt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2888,7 +2888,7 @@ forutsatt at de var umodifisert før refaktoriseringen.</translation>
     <message>
         <location line="-18"/>
         <source>Open &quot;%1&quot;</source>
-        <translation>Åpne «% 1»</translation>
+        <translation>Åpne «%1»</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3390,7 +3390,7 @@ For å gjøre dette, skriver du inn denne snarveien og et mellomrom i oppføring
     </message>
     <message>
         <source>Create and Open &quot;%1&quot;</source>
-        <translation type="vanished">Opprett og åpne «% 1»</translation>
+        <translation type="vanished">Opprett og åpne «%1»</translation>
     </message>
     <message>
         <location line="-46"/>
@@ -4267,7 +4267,7 @@ Vil du sjekke dem ut nå?</translation>
     <message>
         <location line="+50"/>
         <source>Starting external tool &quot;%1&quot;</source>
-        <translation>Starter eksternt verktøy &quot;% 1&quot;</translation>
+        <translation>Starter eksternt verktøy &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -4948,7 +4948,7 @@ Dobbeltklikk for å redigere elementet.</translation>
     </message>
     <message>
         <source>A timeout occurred running &quot;%1&quot;</source>
-        <translation type="vanished">Det oppsto et tidsavbrudd som kjører «% 1»</translation>
+        <translation type="vanished">Det oppsto et tidsavbrudd som kjører «%1»</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -5377,7 +5377,7 @@ til versjonskontroll (%2)
     <message>
         <location line="+52"/>
         <source>Diff &quot;%1&quot;</source>
-        <translation>Forskjellen &quot;% 1&quot;</translation>
+        <translation>Forskjellen &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -5640,7 +5640,7 @@ til versjonskontroll (%2)
         <location line="+3"/>
         <source>%1 (experimental)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>% 1 (eksperimentell)</translation>
+        <translation>%1 (eksperimentell)</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7727,7 +7727,7 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+0"/>
         <source>About OpenMV Cam %1...</source>
-        <translation>Om OpenMV Cam % 1...</translation>
+        <translation>Om OpenMV Cam %1...</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -20822,7 +20822,7 @@ En verdi mindre enn 100 % kan føre til overlappende og feiljustert grafikk.</tr
     <message>
         <location line="+16"/>
         <source>Color Scheme for Theme &quot;%1&quot;</source>
-        <translation>Fargeskjema for tema «% 1»</translation>
+        <translation>Fargeskjema for tema «%1»</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -20843,7 +20843,7 @@ En verdi mindre enn 100 % kan føre til overlappende og feiljustert grafikk.</tr
     <message>
         <location line="-91"/>
         <source>%1 (copy)</source>
-        <translation>% 1 (kopi)</translation>
+        <translation>%1 (kopi)</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -20910,7 +20910,7 @@ En verdi mindre enn 100 % kan føre til overlappende og feiljustert grafikk.</tr
     <message>
         <location line="+2"/>
         <source>%1 (Copy)</source>
-        <translation>% 1 (Kopi)</translation>
+        <translation>%1 (Kopi)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -20989,7 +20989,7 @@ En verdi mindre enn 100 % kan føre til overlappende og feiljustert grafikk.</tr
     <message>
         <location line="+16"/>
         <source>File &quot;%1&quot;:</source>
-        <translation>Fil &quot;% 1&quot;:</translation>
+        <translation>Fil &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -23624,7 +23624,7 @@ Ekskluderer: %3
     </message>
     <message>
         <source>Full path: &quot;%1&quot;</source>
-        <translation type="vanished">Full bane: &quot;% 1&quot;</translation>
+        <translation type="vanished">Full bane: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58"/>
@@ -23927,7 +23927,7 @@ i «%2».
     </message>
     <message>
         <source>copyFile is not implemented for &quot;%1&quot;</source>
-        <translation type="vanished">copyFile er ikke implementert for &quot;% 1&quot;</translation>
+        <translation type="vanished">copyFile er ikke implementert for &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
@@ -24040,7 +24040,7 @@ i «%2».
     </message>
     <message>
         <source>Could not open File &quot;%1&quot;</source>
-        <translation type="vanished">Kunne ikke åpne filen &quot;% 1&quot;</translation>
+        <translation type="vanished">Kunne ikke åpne filen &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -24140,7 +24140,7 @@ i «%2».
     <message>
         <location line="+18"/>
         <source>&quot;%1&quot; is not an ELF object (file too small)</source>
-        <translation>&quot;% 1&quot; er ikke et ELF-objekt (filen er for liten)</translation>
+        <translation>&quot;%1&quot; er ikke et ELF-objekt (filen er for liten)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -24260,12 +24260,12 @@ For å deaktivere en variabel, prefiks linjen med &quot;#&quot;.</translation>
     <message>
         <location line="+35"/>
         <source>File extension %1 is required:</source>
-        <translation>Filtypen % 1 kreves:</translation>
+        <translation>Filtypen %1 kreves:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>File extensions %1 are required:</source>
-        <translation>Filtypene % 1 kreves:</translation>
+        <translation>Filtypene %1 kreves:</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filepath.cpp" line="+1098"/>
@@ -24724,7 +24724,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location line="-264"/>
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Ingen gyldig innstillingsfil ble funnet.&lt;/p&gt;&lt;p&gt;Alle innstillingsfiler som ble funnet i katalogen &quot;%1&quot; var uegnet for gjeldende versjon av %2, for eksempel fordi de ble skrevet av en inkompatibel versjon av % 2, eller fordi en annen innstillingsbane ble brukt.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Ingen gyldig innstillingsfil ble funnet.&lt;/p&gt;&lt;p&gt;Alle innstillingsfiler som ble funnet i katalogen &quot;%1&quot; var uegnet for gjeldende versjon av %2, for eksempel fordi de ble skrevet av en inkompatibel versjon av %2, eller fordi en annen innstillingsbane ble brukt.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+265"/>
@@ -24835,7 +24835,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <location line="+3"/>
         <location line="+7"/>
         <source>Insert &quot;%1&quot;</source>
-        <translation>Sett inn &quot;% 1&quot;</translation>
+        <translation>Sett inn &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3"/>

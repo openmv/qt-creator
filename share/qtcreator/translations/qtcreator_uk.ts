@@ -24743,7 +24743,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location line="-264"/>
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Не вдалося знайти дійсний файл налаштувань.&lt;/p&gt;&lt;p&gt;Усі файли налаштувань, знайдені в каталозі &quot;%1&quot;, були непридатними для поточної версії %2, наприклад, тому що вони були написані несумісною версією % 2 або тому, що було використано інший шлях налаштувань.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Не вдалося знайти дійсний файл налаштувань.&lt;/p&gt;&lt;p&gt;Усі файли налаштувань, знайдені в каталозі &quot;%1&quot;, були непридатними для поточної версії %2, наприклад, тому що вони були написані несумісною версією %2 або тому, що було використано інший шлях налаштувань.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+265"/>
