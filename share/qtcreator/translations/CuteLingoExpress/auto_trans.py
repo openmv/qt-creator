@@ -72,7 +72,11 @@ def transform_ts_file(ts_file_path, _language, target_language):
             unfinished_translation = message.find('translation')
             if unfinished_translation is not None and \
                     unfinished_translation.attrib.get('type') == 'unfinished':
-                translated_text = translate_string(source_text, _language, target_language)
+                try:
+                    translated_text = translate_string(source_text, _language, target_language)
+                except TypeError as e:
+                    print(e)
+                    continue
                 for num_form in unfinished_translation.findall('numerusform'):
                     unfinished_translation.remove(num_form)  # Remove existing empty numerusforms
                 for _ in range(2):  # assuming two forms, singular and plural
@@ -84,7 +88,11 @@ def transform_ts_file(ts_file_path, _language, target_language):
             translation = message.find('translation')
             if translation is not None and translation.attrib.get('type') == 'unfinished':
                 source_text = message.find('source').text
-                translated_text = translate_string(source_text, _language, target_language)
+                try:
+                    translated_text = translate_string(source_text, _language, target_language)
+                except TypeError as e:
+                    print(e)
+                    continue
                 translation.text = translated_text
                 del translation.attrib['type']
 
