@@ -392,6 +392,8 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     if (!gccPath.isEmpty()) env.prependOrSet("PATH", gccPath.path());
     process.setEnvironment(env);
 
+    dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);
+
     dialog->show();
     dialog->moveScrollToLeft();
     dialog->moveScrollToBottom();

@@ -329,6 +329,8 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     env.prependOrSet("PYTHONPATH", pythonPath.path());
     process.setEnvironment(env);
 
+    dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);
+
     dialog->show();
     dialog->moveScrollToLeft();
     dialog->moveScrollToBottom();
