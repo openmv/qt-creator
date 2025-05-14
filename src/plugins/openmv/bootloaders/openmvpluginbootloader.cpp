@@ -336,11 +336,11 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                     dataChunks.last().append(QByteArray(4 - (dataChunks.last().size() % 4), (char) 255));
                 }
 
+                int flash_start = forceFlashFSErase ? originalEraseFlashSectorAllStart : originalEraseFlashSectorStart;
+                int flash_end = forceFlashFSErase ? originalEraseFlashSectorAllEnd : originalEraseFlashSectorEnd;
+
                 // Erase Flash ////////////////////////////////////////
                 {
-                    int flash_start = forceFlashFSErase ? originalEraseFlashSectorAllStart : originalEraseFlashSectorStart;
-                    int flash_end = forceFlashFSErase ? originalEraseFlashSectorAllEnd : originalEraseFlashSectorEnd;
-
                     if(justEraseFlashFs)
                     {
                         flash_end = originalEraseFlashSectorStart - 1;
@@ -417,64 +417,67 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                         *ok2Ptr = *ok2Ptr && ok;
                     });
 
-                    for(int i = flash_start; i <= flash_end; i++)
+                    if ((flash_start > 0) && (flash_end > 0))
                     {
-                        QEventLoop loop0, loop1;
-
-                        if(tryFastMode)
+                        for(int i = flash_start; i <= flash_end; i++)
                         {
-                            connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
-                                    &loop0, &QEventLoop::quit);
-                        }
-                        else
-                        {
-                            connect(m_iodevice, &OpenMVPluginIO::flashEraseDone,
-                                    &loop0, &QEventLoop::quit);
+                            QEventLoop loop0, loop1;
+
+                            if(tryFastMode)
+                            {
+                                connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
+                                        &loop0, &QEventLoop::quit);
+                            }
+                            else
+                            {
+                                connect(m_iodevice, &OpenMVPluginIO::flashEraseDone,
+                                        &loop0, &QEventLoop::quit);
+                            }
+
+                            m_iodevice->flashErase(i);
+
+                            loop0.exec();
+
+                            if(!ok2)
+                            {
+                                break;
+                            }
+
+                            if(!tryFastMode)
+                            {
+                                QTimer::singleShot(SAFE_FLASH_ERASE_DELAY, &loop1, &QEventLoop::quit);
+                                loop1.exec();
+                            }
+
+                            dialog.setValue(i);
                         }
 
-                        m_iodevice->flashErase(i);
+                        dialog.close();
 
-                        loop0.exec();
+                        disconnect(conn2);
 
                         if(!ok2)
                         {
-                            break;
-                        }
+                            if(tryFastMode)
+                            {
+                                tryFastMode = false;
+                                continue;
+                            }
+                            else
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                    Tr::tr("Connect"),
+                                    Tr::tr("Timeout Error!"));
 
-                        if(!tryFastMode)
-                        {
-                            QTimer::singleShot(SAFE_FLASH_ERASE_DELAY, &loop1, &QEventLoop::quit);
-                            loop1.exec();
-                        }
-
-                        dialog.setValue(i);
-                    }
-
-                    dialog.close();
-
-                    disconnect(conn2);
-
-                    if(!ok2)
-                    {
-                        if(tryFastMode)
-                        {
-                            tryFastMode = false;
-                            continue;
-                        }
-                        else
-                        {
-                            QMessageBox::critical(Core::ICore::dialogParent(),
-                                Tr::tr("Connect"),
-                                Tr::tr("Timeout Error!"));
-
-                            CLOSE_CONNECT_END();
+                                CLOSE_CONNECT_END();
+                            }
                         }
                     }
                 }
 
                 // Program Flash //////////////////////////////////////
 
-                if(!justEraseFlashFs)
+                if(((flash_start > 0) && (flash_end > 0)) && (!justEraseFlashFs))
                 {
                     bool ok2 = true;
                     bool *ok2Ptr = &ok2;
@@ -571,13 +574,22 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                     dialog.close();
                     QApplication::processEvents();
 
-                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
-                        Tr::tr("Connect"),
-                        QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? Tr::tr("Onboard Data Flash Erased!\n\n") : Tr::tr("Firmware Upgrade complete!\n\n")))
-                        .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
-                        .arg(Tr::tr("Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete."))
-                        .arg(Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
-                                "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
+                    if ((flash_start > 0) && (flash_end > 0))
+                    {
+                        if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
+                            Tr::tr("Connect"),
+                            QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? Tr::tr("Onboard Data Flash Erased!\n\n") : Tr::tr("Firmware Upgrade complete!\n\n")))
+                            .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
+                            .arg(Tr::tr("Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete."))
+                            .arg(Tr::tr("\n\nIf you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py."
+                                    "\n\nIn this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).")));
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            Tr::tr("Connect"),
+                            Tr::tr("Invalid flash sector configuration settings!"));
+                    }
 
                     RECONNECT_WAIT_END();
                 }

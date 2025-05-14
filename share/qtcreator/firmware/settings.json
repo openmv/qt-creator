@@ -610,7 +610,7 @@
             "highSpeed" : true,
             "boardVidPid" : "1209:ABD1",
             "boardPidMask" : "0xFFFF",
-            "boardSerialNumberInverseFilters" : [],
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
             "defaultFirmwareName" : "firmware.bin",
             "bootloaderVidPid" : "15a2:0073",
             "bootloaderType" : "imx",
