@@ -1289,7 +1289,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                             if(ok)
                             {
-                                settings->setValue(LAST_BOARD_TYPE_STATE, temp);
+                                if (!previousMappingAvailable) settings->setValue(LAST_BOARD_TYPE_STATE, temp);
 
                                 QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
