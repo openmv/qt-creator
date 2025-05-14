@@ -123,7 +123,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     lineEdit->setPlaceholderText(Tr::tr("--verbosity 2"));
     lineEdit->setHistoryCompleter(LAST_STEDGEAI_COMPILIER_OPTIONS_STRING, true);
     QLabel *label = new QLabel(Tr::tr("<a href=\"%1\">STEdgeAI Core CLI Options</a>").
-        arg(Core::ICore::resourcePath(QStringLiteral("stedgeai/Documentation/command_line_interface.html")).toString()));
+        arg(QUrl::fromLocalFile(Core::ICore::resourcePath(QStringLiteral("stedgeai/Documentation/command_line_interface.html")).toString()).toString()));
     label->setTextFormat(Qt::RichText);
     label->setTextInteractionFlags(Qt::TextBrowserInteraction);
     label->setOpenExternalLinks(true);
@@ -135,7 +135,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     lineEdit2->setPlaceholderText(Tr::tr("--mapping-recap"));
     lineEdit2->setHistoryCompleter(LAST_STEDGEAI_COMPILIER_OPTIONS_STRING_ATONN, true);
     QLabel *label2 = new QLabel(Tr::tr("<a href=\"%1\">STEdgeAI Neural-ART CLI Options</a>").
-        arg(Core::ICore::resourcePath(QStringLiteral("stedgeai/Documentation/stneuralart_neural_art_compiler.html")).toString()));
+        arg(QUrl::fromLocalFile(Core::ICore::resourcePath(QStringLiteral("stedgeai/Documentation/stneuralart_neural_art_compiler.html")).toString()).toString()));
     label2->setTextFormat(Qt::RichText);
     label2->setTextInteractionFlags(Qt::TextBrowserInteraction);
     label2->setOpenExternalLinks(true);
@@ -147,7 +147,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     lineEdit3->setPlaceholderText(Tr::tr("--verbosity 2"));
     lineEdit3->setHistoryCompleter(LAST_STEDGEAI_COMPILIER_OPTIONS_STRING_RELOC, true);
     QLabel *label3 = new QLabel(Tr::tr("<a href=\"%1\">STEdgeAI Relocation CLI Options</a>").
-        arg(Core::ICore::resourcePath(QStringLiteral("stedgeai/scripts/N6_reloc/README.md")).toString()));
+        arg(QUrl::fromLocalFile(Core::ICore::resourcePath(QStringLiteral("stedgeai/scripts/N6_reloc/README.md")).toString()).toString()));
     label3->setTextFormat(Qt::RichText);
     label3->setTextInteractionFlags(Qt::TextBrowserInteraction);
     label3->setOpenExternalLinks(true);
