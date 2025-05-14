@@ -126,7 +126,7 @@ def signFile(file, args):
     elif sys.platform == "darwin":
         if codsignAvailable:
             if not os.system("codesign" + \
-            " -s Application --force --options=runtime --timestamp " + args + file.replace(" ", "\\ ")):
+            " -s Application --options=runtime --timestamp " + args + file.replace(" ", "\\ ")):
                 print("Success")
             else:
                 print("Failure")
