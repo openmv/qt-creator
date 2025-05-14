@@ -74,7 +74,7 @@ def checkMach(file):
     result = subprocess.run(["otool", "-hv", file], capture_output=True, text=True, errors="replace")
     return ("is not an object file" not in result.stdout) and ("is not an object file" not in result.stderr)
 
-def signFile(file):
+def signFile(file, args):
     if sys.platform.startswith("win"):
         if kSignCMDAvailable and PFXFile and PFXPass:
             if not os.system("kSignCMD" + \
@@ -126,7 +126,7 @@ def signFile(file):
     elif sys.platform == "darwin":
         if codsignAvailable:
             if not os.system("codesign" + \
-            " -s Application --force --options=runtime --timestamp " + file.replace(" ", "\\ ")):
+            " -s Application --force --options=runtime --timestamp " + args + file.replace(" ", "\\ ")):
                 print("Success")
             else:
                 print("Failure")
@@ -135,12 +135,12 @@ def signFile(file):
         return
     print("Success")
 
-def try_signFile(file):
+def try_signFile(file, args=""):
     print("Signing %s... " % file, end='')
-    try: signFile(file)
+    try: signFile(file, args)
     except:
         print("Trying again... ", end='')
-        try: signFile(file)
+        try: signFile(file, args)
         except:
             print("Failed to sign %s." % file)
             # Don't die...
@@ -197,7 +197,11 @@ def main():
             for dirpath, dirnames, filenames in os.walk(target):
                 for filename in filenames:
                     path = os.path.join(dirpath, filename)
-                    if checkMach(path): try_signFile(path)
+                    if filename == "libuuu.dylib":
+                        libuuu_plist = os.path.join(dirpath, "libuuu.plist").replace(" ", "\\ ")
+                        try_signFile(path, args=("--entitlements " + libuuu_plist + " "))
+                    else:
+                        if checkMach(path): try_signFile(path)
 
 if __name__ == "__main__":
     main()
