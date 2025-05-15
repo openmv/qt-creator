@@ -317,7 +317,7 @@ void OpenMVROMFSEditor::addModel()
         }
 
         QString path = m_model->isDir(index) ? m_model->filePath(index) : QFileInfo(m_model->filePath(index)).path();
-        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).completeSuffix()));
+        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
 
         if (QFileInfo(newFilePath).exists())
         {
@@ -408,7 +408,7 @@ void OpenMVROMFSEditor::addFile()
         }
 
         QString path = m_model->isDir(index) ? m_model->filePath(index) : QFileInfo(m_model->filePath(index)).path();
-        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(file).baseName() + QChar('.') + QFileInfo(convertedSrc).completeSuffix()));
+        QString newFilePath = path + QDir::separator() + QString::fromLatin1(toAscii(QFileInfo(file).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
 
         if (QFileInfo(newFilePath).exists())
         {
