@@ -204,7 +204,7 @@ def main():
                     path = os.path.join(dirpath, filename)
                     plist_name = os.path.splitext(filename)[0]
                     plist_path = os.path.join(dirpath, plist_name + ".plist").replace(" ", "\\ ")
-                    if os.path.exits(plist_path):
+                    if os.path.exists(plist_path):
                         try_signFile(path, args=("--entitlements " + plist_path + " "))
                     elif checkMach(path):
                         try_signFile(path)
