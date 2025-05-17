@@ -200,11 +200,12 @@ def main():
             for dirpath, dirnames, filenames in os.walk(target):
                 for filename in filenames:
                     path = os.path.join(dirpath, filename)
-                    if filename == "libuuu.dylib":
-                        libuuu_plist = os.path.join(dirpath, "libuuu.plist").replace(" ", "\\ ")
-                        try_signFile(path, args=("--entitlements " + libuuu_plist + " "))
-                    else:
-                        if checkMach(path): try_signFile(path)
+                    plist_name = os.path.splitext(filename)[0]
+                    plist_path = os.path.join(dirpath, plist_name + ".plist").replace(" ", "\\ ")
+                    if os.path.exits(plist_path):
+                        try_signFile(path, args=("--entitlements " + plist_path + " "))
+                    elif checkMach(path):
+                        try_signFile(path)
 
 if __name__ == "__main__":
     main()
