@@ -203,9 +203,9 @@ def main():
                 for filename in filenames:
                     path = os.path.join(dirpath, filename)
                     plist_name = os.path.splitext(filename)[0]
-                    plist_path = os.path.join(dirpath, plist_name + ".plist").replace(" ", "\\ ")
-                    if os.path.exists(plist_path):
-                        try_signFile(path, args=("--entitlements " + plist_path + " "))
+                    plist_path = os.path.join(dirpath, plist_name + ".plist")
+                    if os.path.isfile(plist_path) and checkMach(path):
+                        try_signFile(path, args=("--entitlements " + plist_path.replace(" ", "\\ ") + " "))
                     elif checkMach(path):
                         try_signFile(path)
 
