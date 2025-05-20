@@ -485,7 +485,7 @@ void downloadFirmware(const QString &details,
                 {
                     dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : (uploadInstead ? Tr::tr("Uploading...") : Tr::tr("Downloading...")));
                     int p = m.captured(2).toInt();
-                    if (uploadInstead && uploadSize) p = (m.captured(3).toInt() * 100) / uploadSize;
+                    if (uploadInstead && uploadSize) p = (m.captured(3).toLongLong() * 100) / uploadSize;
                     dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
                 }
@@ -532,7 +532,7 @@ void downloadFirmware(const QString &details,
                 {
                     dialog->setProgressBarLabel(m.captured(1) == QStringLiteral("Erase") ? Tr::tr("Erasing...") : (uploadInstead ? Tr::tr("Uploading...") : Tr::tr("Downloading...")));
                     int p = m.captured(2).toInt();
-                    if (uploadInstead && uploadSize) p = (m.captured(3).toInt() * 100) / uploadSize;
+                    if (uploadInstead && uploadSize) p = (m.captured(3).toLongLong() * 100) / uploadSize;
                     dialog->setProgressBarRange(0, 100);
                     dialog->setProgressBarValue(p);
                 }
