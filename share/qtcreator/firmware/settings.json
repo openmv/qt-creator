@@ -33,6 +33,10 @@
                         {
                             "extension" : "tflite",
                             "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
                         }
                     ]
                 }
@@ -111,6 +115,10 @@
                         {
                             "extension" : "tflite",
                             "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
                         }
                     ]
                 }
@@ -152,6 +160,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ]
@@ -231,6 +243,10 @@
                         {
                             "extension" : "tflite",
                             "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
                         }
                     ]
                 }
@@ -272,6 +288,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ]
@@ -351,6 +371,10 @@
                         {
                             "extension" : "tflite",
                             "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
                         }
                     ]
                 }
@@ -392,6 +416,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ]
@@ -471,6 +499,10 @@
                         {
                             "extension" : "tflite",
                             "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
                         }
                     ]
                 }
@@ -512,6 +544,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ]
@@ -591,6 +627,10 @@
                         {
                             "extension" : "tflite",
                             "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
                         }
                     ]
                 }
@@ -645,6 +685,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ]
@@ -701,6 +745,10 @@
                         {
                             "extension" : "tflite",
                             "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
                         }
                     ]
                 }
@@ -755,6 +803,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ]
@@ -828,18 +880,22 @@
                     {
                         "cmd": "-a 6",
                         "name": "romfs0.img",
-                        "size" : 16777216
+                        "size" : 25165824
                     }
                 ]
             },
             "romfsConfig" : [
                 {
                     "name" : "High Performance Core",
-                    "size" : 16777216,
+                    "size" : 25165824,
                     "index" : 0,
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ],
@@ -861,6 +917,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ],
@@ -914,11 +974,15 @@
             "romfsConfig" : [
                 {
                     "name" : "High Performance Core",
-                    "size" : 16777216,
+                    "size" : 25165824,
                     "index" : 0,
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ],
@@ -940,6 +1004,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ],
@@ -1023,6 +1091,10 @@
                         {
                             "extension" : "onnx",
                             "alignment" : 32
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 32
                         }
                     ],
                     "npuAcceleratorConfig": {
@@ -1091,6 +1163,10 @@
                         {
                             "extension" : "tflite",
                             "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
                         }
                     ]
                 }
@@ -1149,6 +1225,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ]
@@ -1209,6 +1289,10 @@
                         {
                             "extension" : "tflite",
                             "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
                         }
                     ]
                 }
@@ -1246,6 +1330,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ]
@@ -1286,6 +1374,10 @@
                         {
                             "extension" : "tflite",
                             "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
                         }
                     ]
                 }
@@ -1324,6 +1416,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
                             "alignment" : 16
                         }
                     ]
