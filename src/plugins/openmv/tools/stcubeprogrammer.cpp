@@ -31,10 +31,14 @@
 #include <QtCore>
 #include <QtWidgets>
 
+#include <QTextCodec>
+
 #include <coreplugin/icore.h>
 #include <extensionsystem/pluginmanager.h>
 #include <texteditor/fontsettings.h>
 #include <texteditor/texteditorsettings.h>
+#include <utils/ansiescapecodehandler.h>
+#include <utils/environment.h>
 #include <utils/hostosinfo.h>
 #include <utils/qtcprocess.h>
 #include <utils/theme/theme.h>
@@ -60,8 +64,10 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
     QString *stdOutBufferPtr = &stdOutBuffer;
     bool stdOutFirstTime = true;
     bool *stdOutFirstTimePtr = &stdOutFirstTime;
+    Utils::AnsiEscapeCodeHandler stdOutHandler;
+    Utils::AnsiEscapeCodeHandler *stdOutHandlerPtr = &stdOutHandler;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr, stdOutFirstTimePtr, stdOutHandlerPtr] (const QString &text) {
         stdOutBufferPtr->append(text);
         QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -72,14 +78,43 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
 
         while(list.size())
         {
-            QString out = list.takeFirst();
+            QList<Utils::FormattedText> outList = stdOutHandlerPtr->parseText(Utils::FormattedText(list.takeFirst()));
 
-            if(out.isEmpty() || out.startsWith(QStringLiteral("±")) || out.startsWith(QStringLiteral("Û")))
+            while(outList.size())
             {
-                continue;
-            }
+                QString txt = outList.takeFirst().text;
 
-            dialog->appendPlainText(out);
+                if(txt.startsWith(QStringLiteral("±")) || txt.startsWith(QStringLiteral("Û")))
+                {
+                    continue;
+                }
+
+                if(txt.startsWith(QStringLiteral("[")))
+                {
+                    QRegularExpressionMatch m = QRegularExpression(QStringLiteral("[=*\\s*]\\s+(\\d+)%")).match(txt);
+
+                    if(m.hasMatch())
+                    {
+                        dialog->setProgressBarLabel(Tr::tr("Downloading..."));
+                        int p = m.captured(1).toInt();
+                        dialog->setProgressBarRange(0, 100);
+                        dialog->setProgressBarValue(p);
+                    }
+
+                    if(!*stdOutFirstTimePtr)
+                    {
+                        QTextCursor cursor = dialog->textCursor();
+                        cursor.movePosition(QTextCursor::End);
+                        cursor.select(QTextCursor::BlockUnderCursor);
+                        cursor.removeSelectedText();
+                        dialog->setTextCursor(cursor);
+                    }
+
+                    *stdOutFirstTimePtr = false;
+                }
+
+                dialog->appendPlainText(txt);
+            }
         }
     });
 
@@ -87,8 +122,10 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
     QString *stdErrBufferPtr = &stdErrBuffer;
     bool stdErrFirstTime = true;
     bool *stdErrFirstTimePtr = &stdErrFirstTime;
+    Utils::AnsiEscapeCodeHandler stdErrHandler;
+    Utils::AnsiEscapeCodeHandler *stdErrHandlerPtr = &stdErrHandler;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, stdErrBufferPtr, stdErrFirstTimePtr] (const QString &text) {
+    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, stdErrBufferPtr, stdErrFirstTimePtr, stdErrHandlerPtr] (const QString &text) {
         stdErrBufferPtr->append(text);
         QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -99,14 +136,43 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
 
         while(list.size())
         {
-            QString out = list.takeFirst();
+            QList<Utils::FormattedText> outList = stdErrHandlerPtr->parseText(Utils::FormattedText(list.takeFirst()));
 
-            if(out.isEmpty() || out.startsWith(QStringLiteral("±")) || out.startsWith(QStringLiteral("Û")))
+            while(outList.size())
             {
-                continue;
-            }
+                QString txt = outList.takeFirst().text;
 
-            dialog->appendColoredText(out);
+                if(txt.startsWith(QStringLiteral("±")) || txt.startsWith(QStringLiteral("Û")))
+                {
+                    continue;
+                }
+
+                if(txt.startsWith(QStringLiteral("[")))
+                {
+                    QRegularExpressionMatch m = QRegularExpression(QStringLiteral("[=*\\s*]\\s+(\\d+)%")).match(txt);
+
+                    if(m.hasMatch())
+                    {
+                        dialog->setProgressBarLabel(Tr::tr("Downloading..."));
+                        int p = m.captured(1).toInt();
+                        dialog->setProgressBarRange(0, 100);
+                        dialog->setProgressBarValue(p);
+                    }
+
+                    if(!*stdErrFirstTimePtr)
+                    {
+                        QTextCursor cursor = dialog->textCursor();
+                        cursor.movePosition(QTextCursor::End);
+                        cursor.select(QTextCursor::BlockUnderCursor);
+                        cursor.removeSelectedText();
+                        dialog->setTextCursor(cursor);
+                    }
+
+                    *stdErrFirstTimePtr = false;
+                }
+
+                dialog->appendPlainText(txt);
+            }
         }
     });
 
@@ -123,19 +189,23 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/mac/STM32_Programmer_CLI"));
+        binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/mac/bin/STM32_Programmer_CLI"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/linux64/STM32_Programmer_CLI"));
+            binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/linux64/bin/STM32_Programmer_CLI"));
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
-            binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/aarch64/STM32_Programmer_CLI"));
+            binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/aarch64/bin/STM32_Programmer_CLI"));
         }
     }
+
+    Utils::Environment env = process.environment();
+    env.prependOrSet("STM32_PRG_PATH", QFileInfo(binary.toString()).path());
+    process.setEnvironment(env);
 
     if(binary.isEmpty())
     {
@@ -153,6 +223,8 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
 
         dialog->show();
         std::chrono::seconds timeout(300); // 5 minutes...
+        process.setStdOutCodec(QTextCodec::codecForName("UTF-8"));
+        process.setStdErrCodec(QTextCodec::codecForName("UTF-8"));
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(binary, args));

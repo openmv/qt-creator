@@ -150,6 +150,7 @@ if(UNIX AND NOT APPLE)
         mpy-cross/linux-x86_64
         vela/linux64
         spsdk/linux-x86_64
+        stcubeprogrammer/linux64
         pydfu)
       set(donwloaded_resource_directories
         https://upload.openmv.io/stedgeai/stedgeai-linux64-2.1.0.tar.gz
