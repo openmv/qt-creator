@@ -91,7 +91,7 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
 
                 if(txt.startsWith(QStringLiteral("[")))
                 {
-                    QRegularExpressionMatch m = QRegularExpression(QStringLiteral("[=*\\s*]\\s+(\\d+)%")).match(txt);
+                    QRegularExpressionMatch m = QRegularExpression(QStringLiteral("(\\d+)%")).match(txt);
 
                     if(m.hasMatch())
                     {
@@ -112,7 +112,6 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
 
                     *stdOutFirstTimePtr = false;
                 }
-
                 dialog->appendPlainText(txt);
             }
         }
@@ -149,7 +148,7 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
 
                 if(txt.startsWith(QStringLiteral("[")))
                 {
-                    QRegularExpressionMatch m = QRegularExpression(QStringLiteral("[=*\\s*]\\s+(\\d+)%")).match(txt);
+                    QRegularExpressionMatch m = QRegularExpression(QStringLiteral("(\\d+)%")).match(txt);
 
                     if(m.hasMatch())
                     {
@@ -205,7 +204,6 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
 
     Utils::Environment env = process.environment();
     env.prependOrSet("STM32_PRG_PATH", QFileInfo(binary.toString()).path());
-    process.setEnvironment(env);
 
     if(binary.isEmpty())
     {
@@ -221,10 +219,10 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
         command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
+        process.setEnvironment(env);
+
         dialog->show();
         std::chrono::seconds timeout(300); // 5 minutes...
-        process.setStdOutCodec(QTextCodec::codecForName("UTF-8"));
-        process.setStdErrCodec(QTextCodec::codecForName("UTF-8"));
         process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
         process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
         process.setCommand(Utils::CommandLine(binary, args));
