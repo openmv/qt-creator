@@ -196,10 +196,10 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
         {
             binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/linux64/bin/STM32_Programmer_CLI"));
         }
-        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
-        {
-            binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/aarch64/bin/STM32_Programmer_CLI"));
-        }
+        // else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        // {
+        //     binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/aarch64/bin/STM32_Programmer_CLI"));
+        // }
     }
 
     Utils::Environment env = process.environment();

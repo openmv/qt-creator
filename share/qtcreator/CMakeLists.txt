@@ -116,7 +116,8 @@ if (APPLE)
     pylsp/mac
     mpy-cross/mac
     vela/mac-aarch64
-    spsdk/mac)
+    spsdk/mac
+    stcubeprogrammer/mac)
   set(resource_files ${resource_files} pydfu/pydfu.py)
   set(donwloaded_resource_directories
     https://upload.openmv.io/stedgeai/stedgeai-macarm-2.1.0.tar.gz
