@@ -296,6 +296,12 @@ const Icon MACOS_TOUCHBAR_BOOKMARK(
         ":/utils/images/macos_touchbar_bookmark.png");
 const Icon MACOS_TOUCHBAR_CLEAR(
         ":/utils/images/macos_touchbar_clear.png");
+// OPENMV-DIFF //
+const Icon WRAP({
+        {":/utils/images/wrap.png", Theme::PanelTextColorMid}}, Icon::Tint);
+const Icon WRAP_TOOLBAR({
+        {":/utils/images/wrap.png", Theme::IconsBaseColor}});
+// OPENMV-DIFF //
 
 } // namespace Icons
 

@@ -252,6 +252,10 @@
         <file>images/help.png</file>
         <file alias="mimetypes/freedesktop.org.xml" compression-algorithm="best">../3rdparty/xdg/freedesktop.org.xml</file>
         <file>scripts/deviceshell.sh</file>
+        <!-- OPENMV-DIFF -->
+        <file>images/wrap.png</file>
+        <file>images/wrap@2x.png</file>
+        <!-- OPENMV-DIFF -->
     </qresource>
     <qresource prefix="/codemodel">
         <file>images/enum.png</file>

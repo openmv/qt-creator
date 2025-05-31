@@ -45,6 +45,7 @@
 #define LAST_SAVE_IMAGE_PATH "LastSaveImagePath"
 #define HISTOGRAM_COLOR_SPACE_STATE "HistogramColorSpace"
 #define LAST_SAVE_LOG_PATH "LastSaveLogPath"
+#define TEXT_WRAP_STATE "TextWrapState"
 
 namespace OpenMV {
 namespace Internal {
@@ -1033,6 +1034,12 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, Utils::QtcSettings *s
     saveButton->setToolTip(Tr::tr("Save"));
     styledBar2Layout->addWidget(saveButton);
 
+    m_wrapButton = new QToolButton;
+    m_wrapButton->setIcon(Utils::Icons::WRAP_TOOLBAR.icon());
+    m_wrapButton->setToolTip(Tr::tr("Wrap Text"));
+    m_wrapButton->setCheckable(true);
+    styledBar2Layout->addWidget(m_wrapButton);
+
     QToolButton *executeButton = new QToolButton;
     executeButton->setIcon(Utils::Icons::RUN_SMALL_TOOLBAR.icon());
     executeButton->setToolTip(stand_alone ? Tr::tr("Run \"/main.py\"") : Tr::tr("Run current script in editor window"));
@@ -1062,6 +1069,10 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, Utils::QtcSettings *s
     connect(m_edit, &MyPlainTextEdit::frameBufferData, frameBuffer, &OpenMVPluginFB::frameBufferData);
     connect(clearButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::clear);
     connect(saveButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::save);
+    connect(m_wrapButton, &QToolButton::toggled, m_edit, [this] (bool checked) {
+        m_edit->setWordWrapMode(checked ? QTextOption::WrapAtWordBoundaryOrAnywhere : QTextOption::NoWrap);
+    });
+    m_wrapButton->setChecked(m_settings->value(TEXT_WRAP_STATE).toBool());
     connect(executeButton, &QToolButton::clicked, this, [this, stand_alone] { m_edit->execute(stand_alone); });
     connect(interruptButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::interrupt);
     connect(reloadButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::reload);
@@ -1299,6 +1310,7 @@ void OpenMVTerminal::closeEvent(QCloseEvent *event)
     m_settings->setValue(HSPLITTER_STATE, m_hsplitter->saveState());
     m_settings->setValue(VSPLITTER_STATE, m_vsplitter->saveState());
     m_settings->setValue(ZOOM_STATE, m_zoomButton->isChecked());
+    m_settings->setValue(TEXT_WRAP_STATE, m_wrapButton->isChecked());
     m_settings->setValue(FONT_ZOOM_STATE, m_edit->font().pointSizeF());
     m_settings->setValue(HISTOGRAM_COLOR_SPACE_STATE, m_colorSpace->currentIndex());
 

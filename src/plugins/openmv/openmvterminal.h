@@ -163,6 +163,7 @@ private:
     QToolButton *m_rightDrawer;
     QToolButton *m_zoomButton;
     QComboBox *m_colorSpace;
+    QToolButton *m_wrapButton;
     MyPlainTextEdit *m_edit;
     Core::IContext *m_context;
     QString m_styleSheet, m_highDPIStyleSheet;

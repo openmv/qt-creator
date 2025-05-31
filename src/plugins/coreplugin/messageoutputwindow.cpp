@@ -65,7 +65,7 @@ MessageOutputWindow::MessageOutputWindow()
     m_wrapButton->setAutoRaise(true);
     m_wrapAction = new QAction(Tr::tr("Wrap Text"), this);
     m_wrapAction->setCheckable(true);
-    m_wrapAction->setIcon(Utils::Icons::RESET_TOOLBAR.icon());
+    m_wrapAction->setIcon(Utils::Icons::WRAP_TOOLBAR.icon());
     cmd = ActionManager::registerAction(m_wrapAction, "Core.MessageOutputWindow.Wrap");
     cmd->setAttribute(Command::CA_UpdateText);
     m_wrapButton->setDefaultAction(cmd->action());
