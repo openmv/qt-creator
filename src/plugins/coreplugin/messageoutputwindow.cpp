@@ -14,6 +14,7 @@
 #include <QToolButton>
 
 // OPENMV-DIFF //
+#include <coreplugin/icore.h>
 #include <coreplugin/coreicons.h>
 #include <coreplugin/actionmanager/actionmanager.h>
 #include <coreplugin/actionmanager/command.h>
@@ -22,6 +23,7 @@
 namespace Core {
 namespace Internal {
 
+const char wrapSettingsKey[] = "Core/MessageOutput/WrapText";
 const char zoomSettingsKey[] = "Core/MessageOutput/Zoom";
 
 MessageOutputWindow::MessageOutputWindow()
@@ -59,6 +61,19 @@ MessageOutputWindow::MessageOutputWindow()
     cmd->setAttribute(Command::CA_UpdateText);
     m_saveButton->setDefaultAction(cmd->action());
     connect(m_saveAction, &QAction::triggered, m_widget, &OutputWindow::save);
+    m_wrapButton = new QToolButton(m_widget);
+    m_wrapButton->setAutoRaise(true);
+    m_wrapAction = new QAction(Tr::tr("Wrap Text"), this);
+    m_wrapAction->setCheckable(true);
+    m_wrapAction->setIcon(Utils::Icons::RESET_TOOLBAR.icon());
+    cmd = ActionManager::registerAction(m_wrapAction, "Core.MessageOutputWindow.Wrap");
+    cmd->setAttribute(Command::CA_UpdateText);
+    m_wrapButton->setDefaultAction(cmd->action());
+    connect(m_wrapAction, &QAction::toggled, [this] (bool checked) {
+        m_widget->setWordWrapEnabled(checked);
+        ICore::settings()->setValue(wrapSettingsKey, checked);
+    });
+    m_wrapAction->setChecked(ICore::settings()->value(wrapSettingsKey).toBool());
     // OPENMV-DIFF //
 }
 
@@ -136,7 +151,7 @@ void MessageOutputWindow::updateFilter()
 // OPENMV-DIFF //
 QList<QWidget*> MessageOutputWindow::toolBarWidgets() const
 {
-    return QList<QWidget*>() << m_saveButton;
+    return QList<QWidget*>() << m_saveButton << m_wrapButton;
 }
 // OPENMV-DIFF //
 

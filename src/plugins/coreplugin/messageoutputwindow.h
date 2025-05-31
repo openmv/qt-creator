@@ -43,6 +43,8 @@ public:
     OutputWindow *m_widget;
     QToolButton *m_saveButton;
     QAction *m_saveAction;
+    QToolButton *m_wrapButton;
+    QAction *m_wrapAction;
     // OPENMV-DIFF //
 
 private:
