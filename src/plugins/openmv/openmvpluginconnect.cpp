@@ -2268,7 +2268,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                           originalDfuVidPid,
                                           dfuNoDialogs,
                                           firmwarePath,
-                                          repairingBootloader);
+                                          repairingBootloader,
+                                          originalFallbackBootloaderSettings.value(QStringLiteral("useSTCubeProgrammer")).toBool());
                 return;
             }
 

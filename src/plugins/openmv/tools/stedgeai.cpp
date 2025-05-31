@@ -373,7 +373,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
 
     if(stedgeai_core_dir.isEmpty() || binary.isEmpty() || python.isEmpty())
     {
-        QMessageBox::warning(Core::ICore::dialogParent(),
+        QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("STEdgeAI Compilier"),
             Tr::tr("The STEdgeAI Compilier is not supported on this platform."));
 

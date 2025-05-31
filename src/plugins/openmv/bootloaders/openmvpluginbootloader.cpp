@@ -648,7 +648,8 @@ void OpenMVPlugin::openmvRepairingBootloader(bool forceFlashFSErase,
                                              const QString &originalDfuVidPid,
                                              bool dfuNoDialogs,
                                              const QString &firmwarePath,
-                                             bool repairingBootloader)
+                                             bool repairingBootloader,
+                                             bool useSTCubeProgrammer)
 {
     if(dfuNoDialogs || forceFlashFSErase || repairingBootloader || (QMessageBox::warning(Core::ICore::dialogParent(),
         Tr::tr("Connect"),
@@ -666,7 +667,16 @@ void OpenMVPlugin::openmvRepairingBootloader(bool forceFlashFSErase,
         {
             QString command;
             Utils::Process process;
-            downloadFirmware(Tr::tr("Flashing Bootloader"), command, process, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), originalDfuVidPid, QStringLiteral("-a 0 -s :leave"));
+
+            if(useSTCubeProgrammer)
+            {
+                QString path = QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)).replace(QStringLiteral("bootloader.dfu"), QStringLiteral("FlashLayout.tsv"));
+                stCubeProgrammerDownloadFirmware(Tr::tr("Flashing Bootloader"), command, process, path);
+            }
+            else
+            {
+                downloadFirmware(Tr::tr("Flashing Bootloader"), command, process, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), originalDfuVidPid, QStringLiteral("-a 0 -s :leave"));
+            }
 
             if((process.result() == Utils::ProcessResult::FinishedWithSuccess) || (command.contains(QStringLiteral("dfu-util")) && (process.result() == Utils::ProcessResult::FinishedWithError)))
             {

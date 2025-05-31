@@ -305,7 +305,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
     if(pythonPath.isEmpty() || binary.isEmpty())
     {
-        QMessageBox::warning(Core::ICore::dialogParent(),
+        QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("MPY Cross Compilier"),
             Tr::tr("The MPY Cross Compilier is not supported on this platform."));
 

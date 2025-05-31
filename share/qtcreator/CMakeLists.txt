@@ -96,7 +96,8 @@ if (WIN32)
     pylsp/windows
     mpy-cross/windows
     vela/windows
-    spsdk/windows)
+    spsdk/windows
+    stcubeprogrammer/windows)
   set(donwloaded_resource_directories
     https://upload.openmv.io/stedgeai/stedgeai-win-2.1.0.tar.gz
     https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-mingw-w64-x86_64-arm-none-eabi.zip)

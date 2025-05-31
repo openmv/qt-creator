@@ -105,6 +105,7 @@
 #include "tools/keypointseditor.h"
 #include "tools/myqserialportinfo.h"
 #include "tools/picotool.h"
+#include "tools/stcubeprogrammer.h"
 #include "tools/tag16h5.h"
 #include "tools/tag25h7.h"
 #include "tools/tag25h9.h"
@@ -495,7 +496,8 @@ private:
                                    const QString &originalDfuVidPid,
                                    bool dfuNoDialogs,
                                    const QString &firmwarePath,
-                                   bool repairingBootloader);
+                                   bool repairingBootloader,
+                                   bool useSTCubeProgrammer = false);
     void openmvDFUBootloader(bool forceFlashFSErase,
                              bool justEraseFlashFs,
                              bool installTheLatestDevelopmentFirmware,

@@ -313,7 +313,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     if(pythonPath.isEmpty() || binary.isEmpty())
     {
-        QMessageBox::warning(Core::ICore::dialogParent(),
+        QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("Vela Compilier"),
             Tr::tr("The Vela Compilier is not supported on this platform."));
 
