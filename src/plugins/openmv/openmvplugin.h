@@ -720,7 +720,7 @@ private:
     bool matchFlatten(const QString &filePath, const QSet<QString> &flattenSet);
     bool matchExample(const QString &filePath, QString *flattenRegex);
 
-    QByteArray fixScriptForSensor(QByteArray data, bool notExamples = false);
+    QByteArray fixScriptForSensor(QByteArray data, bool notExamples = false, bool increaseResolution = false);
     QString tempFileForPythonEditor(const QByteArray &data, const QString &titlePattern);
     QJsonObject getBoardSettings(const QString &title, Utils::QtcSettings *settings, bool autoConnectToBoard = false);
 };

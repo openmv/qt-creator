@@ -801,7 +801,7 @@ void OpenMVPlugin::extensionsInitialized()
                            "    print(clock.fps())\n").arg(Utils::Environment::systemEnvironment().toDictionary().userName()).arg(QDate::currentDate().toString()).toUtf8();
 
             TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(
-                Core::EditorManager::openEditorWithContents("PythonEditor.PythonEditor", &titlePattern, fixScriptForSensor(data)));
+                Core::EditorManager::openEditorWithContents("PythonEditor.PythonEditor", &titlePattern, fixScriptForSensor(data, false, true)));
 
             if(editor)
             {
@@ -1495,7 +1495,7 @@ void OpenMVPlugin::extensionsInitialized()
 
                 if(!file.hasError())
                 {
-                    if((!file.write(fixScriptForSensor(contents))) || (!file.finalize()))
+                    if((!file.write(fixScriptForSensor(contents, false, true))) || (!file.finalize()))
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
                             Tr::tr("New Dataset"),
@@ -2517,7 +2517,7 @@ void OpenMVPlugin::extensionsInitialized()
                 Core::EditorManager::addCurrentPositionToNavigationHistory();
 
                 QString titlePattern = QFileInfo(filePath).baseName().simplified() + QStringLiteral("_$.") + QFileInfo(filePath).completeSuffix();
-                data = fixScriptForSensor(data);
+                data = fixScriptForSensor(data, false, true);
 
                 TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(
                     Core::EditorManager::openEditorWithContents("PythonEditor.PythonEditor", &titlePattern, data));
@@ -5763,7 +5763,7 @@ bool OpenMVPlugin::matchExample(const QString &filePath, QString *flattenRegex)
     return match;
 }
 
-QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples)
+QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, bool increaseResolution)
 {
     if((!notExamples) &&
       ((m_sensorType == QStringLiteral("HM01B0")) ||
@@ -5809,6 +5809,14 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples)
             data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
             data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
         }
+    }
+
+    if ((!notExamples) &&
+        increaseResolution &&
+        ((m_sensorType == QStringLiteral("PAG7936")) ||
+         (m_sensorType == QStringLiteral("PS5520"))))
+    {
+        data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
     }
 
     return data;

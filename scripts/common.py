@@ -186,12 +186,11 @@ def fix_rpaths(path, qt_deploy_path, qt_install_info, chrpath=None):
         return os.path.basename(filepath).find('.so') != -1 and not os.path.islink(filepath)
 
     for dirpath, dirnames, filenames in os.walk(path):
+        # OPENMV-DIFF #
+        dirnames[:] = [d for d in dirnames if d not in ("share", "Resources")]
+        # OPENMV-DIFF #
         for filename in filenames:
             filepath = os.path.join(dirpath, filename)
-            # OPENMV-DIFF #
-            if filepath == os.path.join(path, 'share') or filepath == os.path.join(path, 'Resources'):
-                continue
-            # OPENMV-DIFF #
             if is_unix_executable(filepath) or is_unix_library(filepath):
                 fix_rpaths_helper(filepath)
 
