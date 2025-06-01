@@ -188,6 +188,10 @@ def fix_rpaths(path, qt_deploy_path, qt_install_info, chrpath=None):
     for dirpath, dirnames, filenames in os.walk(path):
         for filename in filenames:
             filepath = os.path.join(dirpath, filename)
+            # OPENMV-DIFF #
+            if filepath == os.path.join(path, 'share') or filepath == os.path.join(path, 'Resources'):
+                continue
+            # OPENMV-DIFF #
             if is_unix_executable(filepath) or is_unix_library(filepath):
                 fix_rpaths_helper(filepath)
 
