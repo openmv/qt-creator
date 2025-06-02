@@ -1052,7 +1052,7 @@
             "romfsConfig" : [
                 {
                     "name" : "ROMFS",
-                    "size" : 16777216,
+                    "size" : 25165824,
                     "index" : 0,
                     "alignmentRules" : [
                         {
@@ -1125,19 +1125,19 @@
                     {
                         "cmd": "-a 2",
                         "name": "romfs.img",
-                        "size" : 16777216
+                        "size" : 25165824
                     },
                     {
                         "cmd": "-a 2",
                         "name": "romfs0.img",
-                        "size" : 16777216
+                        "size" : 25165824
                     }
                 ]
             },
             "romfsConfig" : [
                 {
                     "name" : "ROMFS",
-                    "size" : 16777216,
+                    "size" : 25165824,
                     "index" : 0,
                     "alignmentRules" : [
                         {
