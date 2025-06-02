@@ -568,6 +568,18 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
             layout2->addWidget(checkBox2);
             checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be updated to the latest development release."));
 
+            if((m_major < OPENMV_FORCE_ROMFS_UPGRADE_MAJOR)
+            || ((m_major == OPENMV_FORCE_ROMFS_UPGRADE_MAJOR) && (m_minor < OPENMV_FORCE_ROMFS_UPGRADE_MINOR))
+            || ((m_major == OPENMV_FORCE_ROMFS_UPGRADE_MAJOR) && (m_minor == OPENMV_FORCE_ROMFS_UPGRADE_MINOR) && (m_patch < OPENMV_FORCE_ROMFS_UPGRADE_PATCH)))
+            {
+                checkBox->setChecked(true);
+                checkBox->setEnabled(false);
+                checkBox2->setChecked(true);
+                checkBox2->setEnabled(false);
+
+                layout->addRow(new QLabel(Tr::tr("Warning: Upgrading to the new firmware version requires the FAT file system to be erased.")));
+            }
+
             QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
             QPushButton *run = new QPushButton(Tr::tr("Run"));
             box->addButton(run, QDialogButtonBox::AcceptRole);
@@ -583,8 +595,8 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
                 bool flashFSErase = checkBox->isChecked();
                 bool updateROMFS = checkBox2->isChecked();
 
-                settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, flashFSErase);
-                settings->setValue(LAST_DFU_UPDATE_ROM_FS_STATE, updateROMFS);
+                if (checkBox->isEnabled()) settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, flashFSErase);
+                if (checkBox2->isEnabled()) settings->setValue(LAST_DFU_UPDATE_ROM_FS_STATE, updateROMFS);
                 settings->endGroup();
                 delete newDialog;
 
@@ -3412,10 +3424,8 @@ void OpenMVPlugin::updateCam(bool forceYes)
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
             dialog->setWindowTitle(Tr::tr("Firmware Update"));
             QFormLayout *layout = new QFormLayout(dialog);
-            layout->setVerticalSpacing(0);
 
             layout->addWidget(new QLabel(forceYes ? Tr::tr("Upgrade options:") : Tr::tr("Update your OpenMV Cam's firmware to the latest version?")));
-            layout->addItem(new QSpacerItem(0, 6));
 
             QHBoxLayout *layout2 = new QHBoxLayout;
             layout2->setContentsMargins(6, 0, 0, 0);
@@ -3434,10 +3444,23 @@ void OpenMVPlugin::updateCam(bool forceYes)
             checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
 
             layout->addRow(widget);
-            layout->addItem(new QSpacerItem(0, 6));
+
+            if((m_major < OPENMV_FORCE_ROMFS_UPGRADE_MAJOR)
+            || ((m_major == OPENMV_FORCE_ROMFS_UPGRADE_MAJOR) && (m_minor < OPENMV_FORCE_ROMFS_UPGRADE_MINOR))
+            || ((m_major == OPENMV_FORCE_ROMFS_UPGRADE_MAJOR) && (m_minor == OPENMV_FORCE_ROMFS_UPGRADE_MINOR) && (m_patch < OPENMV_FORCE_ROMFS_UPGRADE_PATCH)))
+            {
+                checkBox->setChecked(true);
+                checkBox->setEnabled(false);
+                checkBox2->setChecked(true);
+                checkBox2->setEnabled(false);
+
+                layout->addWidget(new QLabel(Tr::tr("Warning: Upgrading to the new firmware version requires the FAT file system to be erased.")));
+            }
 
             QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-            layout->addWidget(box);
+            layout2->addSpacing(80);
+            layout2->addWidget(box);
+            layout->addRow(widget);
 
             connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
             connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
@@ -3446,8 +3469,8 @@ void OpenMVPlugin::updateCam(bool forceYes)
 
             if(ok)
             {
-                settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
-                settings->setValue(LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
+                if (checkBox->isEnabled()) settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
+                if (checkBox2->isEnabled()) settings->setValue(LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
             }
 
             settings->endGroup();
@@ -3479,10 +3502,8 @@ void OpenMVPlugin::updateCam(bool forceYes)
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
             dialog->setWindowTitle(Tr::tr("Firmware Update"));
             QFormLayout *layout = new QFormLayout(dialog);
-            layout->setVerticalSpacing(0);
 
             layout->addWidget(new QLabel(Tr::tr("Need to reset your OpenMV Cam's firmware to the release version?")));
-            layout->addItem(new QSpacerItem(0, 6));
 
             QHBoxLayout *layout2 = new QHBoxLayout;
             layout2->setContentsMargins(6, 0, 0, 0);
@@ -3501,10 +3522,11 @@ void OpenMVPlugin::updateCam(bool forceYes)
             checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
 
             layout->addRow(widget);
-            layout->addItem(new QSpacerItem(0, 6));
 
             QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-            layout->addWidget(box);
+            layout2->addSpacing(80);
+            layout2->addWidget(box);
+            layout->addRow(widget);
 
             connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
             connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
