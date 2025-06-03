@@ -1106,13 +1106,13 @@
                         "path" : "OPENMV_N6/firmware.bin"
                     },
                     {
-                        "cmd": "-a 2",
+                        "cmd": "-a 3",
                         "path" : "OPENMV_N6/romfs0.img"
                     }
                 ],
                 "resetROMFSCommands" : [
                     {
-                        "cmd": "-a 2",
+                        "cmd": "-a 3",
                         "path" : "OPENMV_N6/romfs0.img"
                     }
                 ],
@@ -1123,12 +1123,12 @@
                         "size" : 3670016
                     },
                     {
-                        "cmd": "-a 2",
+                        "cmd": "-a 3",
                         "name": "romfs.img",
                         "size" : 25165824
                     },
                     {
-                        "cmd": "-a 2",
+                        "cmd": "-a 3",
                         "name": "romfs0.img",
                         "size" : 25165824
                     }
