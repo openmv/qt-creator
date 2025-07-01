@@ -1,21 +1,21 @@
 ; Copyright 2025 OpenMV, LLC.
 
 [Strings]
-DriverPackageDisplayName="OpenMV Cam USB Driver"
+DriverPackageDisplayName="OpenMV N6 USB Driver"
 ManufacturerName="OpenMV, LLC (http://www.openmv.io)"
 ServiceName="USB RS-232 Emulation Driver"
-description="OpenMV Cam USB COM Port"
+description="OpenMV N6 USB COM Port"
 
 [DefaultInstall]
-CopyINF=openmv.inf
+CopyINF=openmv-n6.inf
 
 [Version]
 Class=Ports
-ClassGuid={DB23D83D-E995-4EAC-8EC2-FA65E7AFD83D}
+ClassGuid={CBA6F1A0-B7A8-42F6-B6D7-989CAAB9445B}
 Signature="$Windows NT$"
 Provider=%ManufacturerName%
 DriverPackageDisplayName=%DriverPackageDisplayName%
-CatalogFile=openmv.cat
+CatalogFile=openmv-n6.cat
 DriverVer=09/09/2016,1.1.1.0
 
 [Manufacturer]
@@ -26,16 +26,16 @@ FakeModemCopyFileSection=12
 DefaultDestDir=12
 
 [DeviceList]
-%description%=DriverInstall,USB\VID_1209&PID_abd1&MI_00,USB\VID_1209&PID_abd1&MI_01
+%description%=DriverInstall,USB\VID_37C5&PID_1206&MI_00,USB\VID_37C5&PID_1206&MI_01
 
 [DeviceList.NTamd64]
-%description%=DriverInstall,USB\VID_1209&PID_abd1&MI_00,USB\VID_1209&PID_abd1&MI_01
+%description%=DriverInstall,USB\VID_37C5&PID_1206&MI_00,USB\VID_37C5&PID_1206&MI_01
 
 [DeviceList.NTia64]
-%description%=DriverInstall,USB\VID_1209&PID_abd1&MI_00,USB\VID_1209&PID_abd1&MI_01
+%description%=DriverInstall,USB\VID_37C5&PID_1206&MI_00,USB\VID_37C5&PID_1206&MI_01
 
 [DeviceList.NTarm64]
-%description%=DriverInstall,USB\VID_1209&PID_abd1&MI_00,USB\VID_1209&PID_abd1&MI_01
+%description%=DriverInstall,USB\VID_37C5&PID_1206&MI_00,USB\VID_37C5&PID_1206&MI_01
 
 [DriverInstall]
 include=mdmcpq.inf,usb.inf
