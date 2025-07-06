@@ -38,6 +38,7 @@ enum {
     ESCAPE_CODE_FUNCTION_DIALOG_WARNING = 33, // no args
     ESCAPE_CODE_FUNCTION_DIALOG_ERROR = 34, // no args
     ESCAPE_CODE_FUNCTION_DIALOG_QUESTION = 35, // no args
+    ESCAPE_CODE_FUNCTION_FB_MESSAGE = 36, // no args
 
     ESCAPE_CODE_FUNCTION_DATASET_EDITOR_SAVE_IMAGE = 64, // no args
 };
@@ -56,6 +57,7 @@ public:
     QString parseText(const QString &text);
 
 signals:
+    void fbMessage(const QString &text);
     void dataSetEditorSaveImage();
 
 private:

@@ -149,6 +149,25 @@ void OpenMVPluginFB::enableFitInView(bool enable)
     }
 }
 
+void OpenMVPluginFB::fbMessage(const QString &message)
+{
+    delete scene();
+    setScene(new QGraphicsScene(this));
+
+    m_pixmap = Q_NULLPTR;
+    QGraphicsTextItem *item = new QGraphicsTextItem;
+    item->setHtml(QString(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
+    "<p align=\"center\" style=\"font-size:20px\">%2</p>"
+    "</body></html>")).arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name()).arg(message));
+    scene()->addItem(item);
+
+    item->document()->setTextWidth(360);
+
+    myFitInView(m_pixmap);
+
+    broadcastUpdate();
+}
+
 void OpenMVPluginFB::frameBufferData(const QPixmap &data)
 {
     delete scene();

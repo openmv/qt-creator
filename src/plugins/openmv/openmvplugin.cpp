@@ -2398,6 +2398,8 @@ void OpenMVPlugin::extensionsInitialized()
 
     connect(Core::MessageManager::outputWindow(), &Core::OutputWindow::writeBytes, m_iodevice, &OpenMVPluginIO::mainTerminalInput);
     connect(Core::MessageManager::outputWindow()->getParser(), &Core::OpenMVPluginEscapeCodeParser::dataSetEditorSaveImage, datasetEditorSnapshotAction, &QAction::trigger);
+    connect(Core::MessageManager::outputWindow()->getParser(), &Core::OpenMVPluginEscapeCodeParser::fbMessage,
+            m_frameBuffer, &OpenMVPluginFB::fbMessage);
 
     connect(Core::ICore::instance(), &Core::ICore::showEventSignal, this, [this, widget, settings, msplitter, hsplitter, vsplitter] {
         settings->beginGroup(SETTINGS_GROUP);

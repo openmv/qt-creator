@@ -54,6 +54,7 @@ public:
 public slots:
 
     void enableFitInView(bool enable);
+    void fbMessage(const QString &message);
     void frameBufferData(const QPixmap &data);
     void enableSaveTemplate(bool enable) { m_enableSaveTemplate = enable; }
     void enableSaveDescriptor(bool enable) { m_enableSaveDescriptor = enable; }
