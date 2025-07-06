@@ -1,10 +1,10 @@
 ; Copyright 2025 OpenMV, LLC.
 
 [Strings]
-DriverPackageDisplayName="Python Board USB Driver"
+DriverPackageDisplayName="OpenMV Cam M4 USB Driver"
 ManufacturerName="OpenMV, LLC (http://www.openmv.io)"
 ServiceName="USB RS-232 Emulation Driver"
-description="Python Board USB COM Port"
+description="OpenMV Cam M4 USB COM Port"
 
 [DefaultInstall]
 CopyINF=openmv.inf
@@ -15,7 +15,7 @@ ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
 Signature="$Windows NT$"
 Provider=%ManufacturerName%
 DriverPackageDisplayName=%DriverPackageDisplayName%
-CatalogFile=pybcdc.cat
+CatalogFile=openmv-m4.cat
 DriverVer=07/05/2025,1.1.1.1
 
 [Manufacturer]
@@ -25,13 +25,13 @@ DriverVer=07/05/2025,1.1.1.1
 ; No CopyFiles needed, so this can remain empty or be omitted
 
 [DeviceList]
-%description%=DriverInstall,USB\VID_f055&PID_9800&MI_01
+%description%=DriverInstall,USB\VID_37C5&PID_1202&MI_01
 
 [DeviceList.NTamd64]
-%description%=DriverInstall,USB\VID_f055&PID_9800&MI_01
+%description%=DriverInstall,USB\VID_37C5&PID_1202&MI_01
 
 [DeviceList.NTia64]
-%description%=DriverInstall,USB\VID_f055&PID_9800&MI_01
+%description%=DriverInstall,USB\VID_37C5&PID_1202&MI_01
 
 [DriverInstall]
 Include=usb.inf
