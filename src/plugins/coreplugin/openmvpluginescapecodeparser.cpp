@@ -83,6 +83,11 @@ void OpenMVPluginEscapeCodeParser::parseEscapeCodes(const QStringList &escapeCod
                 resetParser();
                 break;
             }
+            case ESCAPE_CODE_FUNCTION_FB_BUFFER_ERROR:
+            {
+                emit fbBufferError();
+                break;
+            }
             case ESCAPE_CODE_FUNCTION_DATASET_EDITOR_SAVE_IMAGE:
             {
                 emit dataSetEditorSaveImage();

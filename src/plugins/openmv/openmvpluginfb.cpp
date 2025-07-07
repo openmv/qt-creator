@@ -168,6 +168,27 @@ void OpenMVPluginFB::fbMessage(const QString &message)
     broadcastUpdate();
 }
 
+void OpenMVPluginFB::fbBufferError()
+{
+    delete scene();
+    setScene(new QGraphicsScene(this));
+
+    m_pixmap = Q_NULLPTR;
+    QGraphicsTextItem *item = new QGraphicsTextItem;
+    item->setHtml(QString(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
+    "<p align=\"center\" style=\"font-size:20px\">%2</p>"
+    "</body></html>")).
+        arg(Utils::creatorTheme()->color(((QTime::currentTime().msec() / 500) % 2) ? Utils::Theme::TextColorError : Utils::Theme::TextColorDisabled).name()).
+        arg(Tr::tr("Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!")));
+    scene()->addItem(item);
+
+    item->document()->setTextWidth(360);
+
+    myFitInView(m_pixmap);
+
+    broadcastUpdate();
+}
+
 void OpenMVPluginFB::frameBufferData(const QPixmap &data)
 {
     delete scene();
