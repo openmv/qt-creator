@@ -2299,7 +2299,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+29" />
         <source>Unexpected preset file format.</source>
-        <translation>意外的预设文件格式。</translation>
+        <translation>非预期的预设文件格式。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-190" />
@@ -3114,7 +3114,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+2" />
         <source>Mac (CR)</source>
-        <translation>马克（CR）</translation>
+        <translation>Mac（CR）</translation>
     </message>
     <message>
         <location line="+47" />
@@ -3181,7 +3181,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+1" />
         <source>This tool prints a line of useful text</source>
-        <translation>此工具可以打印一行有用的文本</translation>
+        <translation>此工具会输出一行有用的文本信息</translation>
     </message>
     <message>
         <location line="+2" />
@@ -3304,7 +3304,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+1" />
         <source>Text to pass to the executable via standard input. Leave empty if the executable should not receive any input.</source>
-        <translation>通过标准输入传递给可执行文件的文本，如果可执行档不应收到任何输入则此项留白。</translation>
+        <translation>通过标准输入传递给可执行文件的文本内容。若无需输入，请留空此字段。</translation>
     </message>
     <message>
         <location line="+18" />
@@ -3731,23 +3731,23 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+1" />
         <source>Release Translations (lrelease)</source>
-        <translation>发布翻译 (lrelease)</translation>
+        <translation>发布翻译文件 (lrelease)</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+5" />
         <source>Linguist</source>
-        <translation>语言学家</translation>
+        <translation>翻译工具</translation>
     </message>
     <message>
         <location line="-2" />
         <source>Synchronizes translator's ts files with the program code</source>
-        <translation>将翻译器的 ts 文件与程序代码同步</translation>
+        <translation>将翻译文件(.ts)与程序代码同步</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Update Translations (lupdate)</source>
-        <translation>更新翻译 (lupdate)</translation>
+        <translation>更新翻译文件 (lupdate)</translation>
     </message>
     <message>
         <location line="+4" />
@@ -3769,12 +3769,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="-17" />
         <source>Runs the current QML file with QML utility.</source>
-        <translation>使用 QML 实用程序运行当前的 QML 文件。</translation>
+        <translation>使用 QML 实用程序运行当前 QML 文件。</translation>
     </message>
     <message>
         <location line="+1" />
         <source>QML utility</source>
-        <translation>QML 实用程序</translation>
+        <translation>QML工具</translation>
     </message>
     <message>
         <location line="+1" />
@@ -3807,7 +3807,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+50" />
         <source>Global Actions &amp; Actions from the Menu</source>
-        <translation>全局操作和菜单中的操作</translation>
+        <translation>全局操作和菜单操作</translation>
     </message>
     <message>
         <location line="+1" />
@@ -4092,7 +4092,7 @@ You will likely experience further problems using this instance of %3.</source>
     <message>
         <location line="+146" />
         <source>Platform independent</source>
-        <translation>与平台无关</translation>
+        <translation>跨平台</translation>
     </message>
     <message>
         <location line="+2" />
@@ -4141,7 +4141,7 @@ Would you like to overwrite them?</source>
     <message>
         <location line="+1" />
         <source>%1 file %2 from version control system %3 failed.</source>
-        <translation>从版本控制系统%3中%1文件%2失败。</translation>
+        <translation>从%3版本控制系统中%1文件%2失败。</translation>
     </message>
     <message>
         <location line="+7" />
@@ -4397,7 +4397,7 @@ Do you want to check them out now?</source>
     <message>
         <location line="+40" />
         <source>Failed to rename the include guard in file "%1".</source>
-        <translation>无法重命名文件“%1”中的包含保护。</translation>
+        <translation>无法重命名文件"%1"中的包含保护宏。</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
@@ -4454,7 +4454,7 @@ Do you want to check them out now?</source>
     <message>
         <location line="+5" />
         <source>Repla&amp;ce with:</source>
-        <translation>用。。。来代替：</translation>
+        <translation>替换为：</translation>
     </message>
     <message>
         <location line="+6" />
@@ -4549,7 +4549,7 @@ Do you want to check them out now?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
         <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>id="%1"的工厂已经注册。正在删除。</translation>
+        <translation>ID为"%1"的工厂已注册。正在删除该工厂。</translation>
     </message>
     <message>
         <location line="+230" />
@@ -5201,7 +5201,7 @@ to version control (%2)
     <message>
         <location line="+7" />
         <source>&lt;br/&gt;Built on %1 %2&lt;br/&gt;</source>
-        <translation>&lt;br/&gt;建立在%1 %2&lt;br/&gt;</translation>
+        <translation>&lt;br/&gt;构建在%1 %2&lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+9" />
@@ -5418,11 +5418,11 @@ to version control (%2)
         <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
         <translation>&lt;b&gt;错误：&lt;/b&gt;无法使用“%2”编码解码“%1”。</translation>
     </message>
-    <message>
-        <location line="+3" />
-        <source>Select Encoding</source>
-        <translation>选择编码</translation>
-    </message>
+        <message>
+            <location line="+3" />
+            <source>Select Encoding</source>
+            <translation>选择编码</translation>
+        </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+76" />
         <source>Switch to Unified Diff Editor</source>
@@ -14217,7 +14217,7 @@ Excluding: %2
         <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+130" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1653" />
         <source>Build Environment</source>
-        <translation>建立环境</translation>
+        <translation>构建环境</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14448,7 +14448,7 @@ Display name of the deploy build step list. Used as part of the labels in the pr
         <extracomment>Displayed name for a normal build step
 ----------
 Display name of the build build step list. Used as part of the labels in the project window.</extracomment>
-        <translation>建造</translation>
+        <translation>构建</translation>
     </message>
     <message>
         <location line="+41" />
@@ -16560,7 +16560,7 @@ to project "%2".</source>
     <message>
         <location line="+26" />
         <source>Build host address</source>
-        <translation>建立主机地址</translation>
+        <translation>构建主机地址</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17209,7 +17209,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+7" />
         <source>&amp;Build</source>
-        <translation>＆建造</translation>
+        <translation>＆构建</translation>
     </message>
     <message>
         <location line="+7" />
@@ -17291,7 +17291,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+10" />
         <source>Build All Projects</source>
-        <translation>建立所有项目</translation>
+        <translation>构建所有项目</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17734,7 +17734,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+1" />
         <source>A project is currently being built.</source>
-        <translation>当前正在建立一个项目。</translation>
+        <translation>当前正在构建一个项目。</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18066,12 +18066,12 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+4" />
         <source>Do Not Build Anything</source>
-        <translation>不要建造任何东西</translation>
+        <translation>不要构建任何东西</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Build the Whole Project</source>
-        <translation>建立整个项目</translation>
+        <translation>构建整个项目</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18156,12 +18156,12 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+14" />
         <source>Build before deploying:</source>
-        <translation>部署前建造：</translation>
+        <translation>部署前构建：</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Stop applications before building:</source>
-        <translation>在建造之前停止申请：</translation>
+        <translation>在构建之前停止申请：</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19302,7 +19302,7 @@ These files are preserved.</source>
     <message>
         <location line="+21" />
         <source>Build Issue</source>
-        <translation>建立问题</translation>
+        <translation>构建问题</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+176" />
@@ -23465,7 +23465,7 @@ Excluding: %3
     <message>
         <location filename="../../../src/libs/utils/terminalinterface.cpp" line="+23" />
         <source>Cannot set up communication channel: %1</source>
-        <translation>无法建立通信通道: %1</translation>
+        <translation>无法构建通信通道: %1</translation>
     </message>
     <message>
         <location line="+5" />
