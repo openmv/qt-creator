@@ -1636,7 +1636,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="-423" />
         <source>Command used for reverting diff chunks.</source>
-        <translation>用于恢复差异块的命令。</translation>
+        <translation>用于还原代码修改块的命令。</translation>
     </message>
     <message>
         <location line="+7" />
@@ -5330,7 +5330,7 @@ to version control (%2)
     <message>
         <location line="+96" />
         <source>Diff Files</source>
-        <translation>差异文件</translation>
+        <translation>比较文件</translation>
     </message>
     <message>
         <location line="+7" />
@@ -5386,17 +5386,17 @@ to version control (%2)
     <message>
         <location line="+27" />
         <source>Select First File for Diff</source>
-        <translation>选择第一个文件进行差异</translation>
+        <translation>选择第一个文件进行比较</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Select Second File for Diff</source>
-        <translation>选择第二个文件进行差异</translation>
+        <translation>选择第二个文件进行比较</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Diff "%1", "%2"</source>
-        <translation>差异“%1”、“%2”</translation>
+        <translation>比较“%1”、“%2”</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
@@ -5488,7 +5488,7 @@ to version control (%2)
         <location line="+152" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+75" />
         <source>Rendering diff</source>
-        <translation>渲染差异</translation>
+        <translation>渲染比较</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-487" />
@@ -5561,7 +5561,7 @@ to version control (%2)
     <message>
         <location line="+1" />
         <source>Loadable without restart:</source>
-        <translation>无重新启动的可加载：</translation>
+        <translation>支持免重启加载：</translation>
     </message>
     <message>
         <location line="+71" />
