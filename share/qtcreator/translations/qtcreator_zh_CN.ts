@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?> 
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location />
         <source>Turn on WiFi Shield on startup</source>
-        <translation>启动时打开WiFi屏蔽</translation>
+        <translation>启动时打开WiFi拓展板</translation>
     </message>
     <message>
         <location />
@@ -94,7 +94,7 @@
     <message>
         <location />
         <source>Duplicate REPL on the UART on startup</source>
-        <translation>启动时在UART上复制REPL</translation>
+        <translation>​​启动时通过 UART 复用 REPL​</translation>
     </message>
 </context>
 <context>
@@ -107,7 +107,7 @@
     <message>
         <location />
         <source>Max</source>
-        <translation>最大</translation>
+        <translation>最大数</translation>
     </message>
     <message>
         <location />
@@ -137,7 +137,7 @@
     <message>
         <location />
         <source>Min</source>
-        <translation>最小</translation>
+        <translation>最小数</translation>
     </message>
     <message>
         <location />
@@ -165,7 +165,7 @@
     <message>
         <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+219" />
         <source>Float</source>
-        <translation>浮动</translation>
+        <translation>浮点数</translation>
     </message>
     <message>
         <location line="+1" />
@@ -218,7 +218,7 @@
     <message>
         <location line="-125" />
         <source>Model Zoo</source>
-        <translation>模型动物园</translation>
+        <translation>模型库</translation>
     </message>
     <message>
         <location line="+79" />
@@ -388,7 +388,7 @@
     <message>
         <location line="-14" />
         <source>The Binary Editor cannot open empty files.</source>
-        <translation>二进制编辑无法打开空文件。</translation>
+        <translation>二进制编辑器无法打开空文件。</translation>
     </message>
     <message>
         <location line="+10" />
@@ -582,7 +582,7 @@ The code has been copied to your clipboard.</source>
         <location filename="../../../src/plugins/copilot/copilotclient.cpp" line="+336" />
         <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+66" />
         <source>Copilot</source>
-        <translation>副驾驶</translation>
+        <translation>Copilot</translation>
     </message>
     <message>
         <location line="+1" />
@@ -592,17 +592,17 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+1" />
         <source>Do not ask again. This will disable Copilot for now.</source>
-        <translation>不要再问。 现在将禁用副驾驶。</translation>
+        <translation>不要询问。 现在将禁用Copilot。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/copilot/copilothoverhandler.cpp" line="+40" />
         <source>Select Previous Copilot Suggestion</source>
-        <translation>选择以前的副作用建议</translation>
+        <translation>选择以前的Copilot建议</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Select Next Copilot Suggestion</source>
-        <translation>选择下一个副作用建议</translation>
+        <translation>选择下一个Copilot建议</translation>
     </message>
     <message>
         <location line="+3" />
@@ -622,7 +622,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+65" />
         <source>Request Copilot Suggestion</source>
-        <translation>请求副驾驶建议</translation>
+        <translation>请求Copilot建议</translation>
     </message>
     <message>
         <location line="+1" />
@@ -632,51 +632,51 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+10" />
         <source>Show Next Copilot Suggestion</source>
-        <translation>显示下一个副作用建议</translation>
+        <translation>显示下一个Copilot建议</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Cycles through the received Copilot Suggestions showing the next available Suggestion.</source>
-        <translation>通过收到的副驾驶建议循环，显示了下一个可用的建议。</translation>
+        <translation>通过收到的Copilot建议循环，显示了下一个可用的建议。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Show Previous Copilot Suggestion</source>
-        <translation>显示以前的副作用建议</translation>
+        <translation>显示以前的Copilot建议</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Cycles through the received Copilot Suggestions showing the previous available Suggestion.</source>
-        <translation>通过收到的副驾驶建议循环，显示了先前的可用建议。</translation>
+        <translation>通过收到的Copilot建议循环，显示了先前的可用建议。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Disable Copilot</source>
-        <translation>禁用副驾驶</translation>
+        <translation>禁用Copilot</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+28" />
         <source>Disable Copilot.</source>
-        <translation>禁用副驾驶。</translation>
+        <translation>禁用Copilot。</translation>
     </message>
     <message>
         <location line="-21" />
         <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+31" />
         <location line="+1" />
         <source>Enable Copilot</source>
-        <translation>启用副驾驶</translation>
+        <translation>启用Copilot</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+20" />
         <source>Enable Copilot.</source>
-        <translation>启用副驾驶。</translation>
+        <translation>启用Copilot。</translation>
     </message>
     <message>
         <location line="-13" />
         <source>Toggle Copilot</source>
-        <translation>切换副词</translation>
+        <translation>切换Copilot</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+1" />
@@ -750,12 +750,12 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+2" />
         <source>Proxy Host</source>
-        <translation>代理主持人</translation>
+        <translation>代理主机</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Proxy host:</source>
-        <translation>代理主持人：</translation>
+        <translation>代理主机：</translation>
     </message>
     <message>
         <location line="+2" />
@@ -825,12 +825,12 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+2" />
         <source>Reject Unauthorized</source>
-        <translation>拒绝未经授权</translation>
+        <translation>拒绝未授权连接​</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Reject unauthorized</source>
-        <translation>拒绝未经授权</translation>
+        <translation>拒绝未授权连接​</translation>
     </message>
     <message>
         <location line="+2" />
@@ -871,7 +871,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-59" />
         <source>Existing files</source>
-        <translation>已存在的文件</translation>
+        <translation>现有文件</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142" />
@@ -940,7 +940,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-1708" />
         <source>Revert File to Saved</source>
-        <translation>恢复文件到已保存的状态</translation>
+        <translation>还原文件至已保存状态</translation>
     </message>
     <message>
         <location line="+30" />
@@ -1040,7 +1040,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-1490" />
         <source>Next Open Document in History</source>
-        <translation>历史中下个打开的文件</translation>
+        <translation>​​历史记录中的下一文档​</translation>
     </message>
     <message>
         <location line="-11" />
@@ -1083,17 +1083,17 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+1" />
         <source>Copy File Name</source>
-        <translation>复制文件名称</translation>
+        <translation>复制文件名</translation>
     </message>
     <message>
         <location line="+12" />
         <source>Properties...</source>
-        <translation>特性...</translation>
+        <translation>属性...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Pin</source>
-        <translation>别针</translation>
+        <translation>固定</translation>
     </message>
     <message>
         <source>Alternative Close</source>
@@ -1153,7 +1153,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+49" />
         <source>Continue Opening Huge Text File?</source>
-        <translation>继续打开巨大文本文件？</translation>
+        <translation>是否继续打开大型文本文件？​</translation>
     </message>
     <message>
         <location line="+1" />
@@ -1172,7 +1172,7 @@ Continue?</source>
     <message>
         <location line="+39" />
         <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>无法打开"%1"进行读取。文件不存在或者您没有打开它的权限。</translation>
+        <translation>无法打开"%1"。文件不存在或者您没有打开它的权限。</translation>
     </message>
     <message>
         <location line="+20" />
@@ -1227,7 +1227,7 @@ Continue?</source>
     <message>
         <location line="+1" />
         <source>Cannot open the file for editing with VCS.</source>
-        <translation>无法打开文件以使用VCS进行编辑。</translation>
+        <translation>​​无法通过版本控制系统(VCS)编辑打开此文件。</translation>
     </message>
     <message>
         <location line="+301" />
@@ -1290,7 +1290,7 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
         <source>Drag to drag documents between splits</source>
-        <translation>拖动以在拆分之间拖动文档</translation>
+        <translation>在分屏区域间拖拽文档</translation>
     </message>
     <message>
         <location line="+270" />
@@ -1349,17 +1349,17 @@ Continue?</source>
     <message>
         <location line="+1" />
         <source>on</source>
-        <translation>在</translation>
+        <translation>开</translation>
     </message>
     <message>
         <location line="+0" />
         <source>off</source>
-        <translation>离开</translation>
+        <translation>关</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Override cursors for views</source>
-        <translation>覆盖视图的光标</translation>
+        <translation>覆盖视图光标</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1376,12 +1376,12 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+1" />
         <source>Always Round Up</source>
-        <translation>总是圆满</translation>
+        <translation>始终向上取整​</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Always Round Down</source>
-        <translation>总是下来</translation>
+        <translation>始终向下取整​</translation>
     </message>
     <message>
         <location line="+1" />
@@ -1391,12 +1391,12 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+2" />
         <source>Don't Round</source>
-        <translation>不要绕过</translation>
+        <translation>不执行舍入</translation>
     </message>
     <message>
         <location line="+10" />
         <source>DPI rounding policy:</source>
-        <translation>DPI圆形政策：</translation>
+        <translation>DPI舍入策略：</translation>
     </message>
     <message>
         <location line="+6" />
@@ -1406,7 +1406,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+7" />
         <source>Environment influences UI scaling behavior.</source>
-        <translation>环境会影响UI扩展行为。</translation>
+        <translation>环境因素将影响界面缩放效果</translation>
     </message>
     <message>
         <location line="+60" />
@@ -1421,12 +1421,12 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+45" />
         <source>Compact</source>
-        <translation>袖珍的</translation>
+        <translation>紧凑</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Relaxed</source>
-        <translation>轻松</translation>
+        <translation>宽松</translation>
     </message>
     <message>
         <location line="+14" />
@@ -7730,12 +7730,12 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+16" />
         <source>About OpenMV Cam %1</source>
-        <translation>关于 OpenMV 凸轮 %1</translation>
+        <translation>关于 OpenMV Cam %1</translation>
     </message>
     <message>
         <location line="+0" />
         <source>About OpenMV Cam %1...</source>
-        <translation>关于 OpenMV 凸轮 %1...</translation>
+        <translation>关于 OpenMV Cam %1...</translation>
     </message>
     <message>
         <location line="+18" />
@@ -8120,7 +8120,7 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
     <message>
         <location line="+1" />
         <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
-        <translation>您确定要删除OpenMV凸轮的内部脂肪文件系统吗？</translation>
+        <translation>您确定要删除OpenMV Cam的内部脂肪文件系统吗？</translation>
     </message>
     <message>
         <location line="+8" />
@@ -8140,12 +8140,12 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
     <message>
         <location line="+7" />
         <source>Edit ROMFS on OpenMV Cam</source>
-        <translation>在OpenMV凸轮上编辑romfs</translation>
+        <translation>在OpenMV Cam上编辑romfs</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Reset ROMFS on OpenMV Cam</source>
-        <translation>在OpenMV凸轮上重置romfs</translation>
+        <translation>在OpenMV Cam上重置romfs</translation>
     </message>
     <message>
         <location line="+76" />
@@ -8168,7 +8168,7 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
     <message>
         <location line="+21" />
         <source>Open Model Zoo</source>
-        <translation>开放模型动物园</translation>
+        <translation>开放模型库</translation>
     </message>
     <message>
         <location line="+90" />
@@ -8341,7 +8341,7 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
     <message>
         <location line="+16" />
         <source>OpenMV Cam LED Colors</source>
-        <translation>OpenMV凸轮LED颜色</translation>
+        <translation>OpenMV CamLED颜色</translation>
     </message>
     <message>
         <location line="+1" />
@@ -9243,7 +9243,7 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+2114" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
-        <translation>如果启用此选项，则OpenMV凸轮上的ROM文件系统将重置为默认值。</translation>
+        <translation>如果启用此选项，则OpenMV Cam上的ROM文件系统将重置为默认值。</translation>
     </message>
     <message>
         <location line="-3025" />
@@ -9292,7 +9292,7 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+3" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be updated to the latest development release.</source>
-        <translation>如果启用此选项，则将在OpenMV凸轮上的ROM文件系统更新到最新的开发版本。</translation>
+        <translation>如果启用此选项，则将在OpenMV Cam上的ROM文件系统更新到最新的开发版本。</translation>
     </message>
     <message>
         <location line="+103" />
@@ -9734,7 +9734,7 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
         <source>If you are forcing SBL mode, disconnect your OpenMV Cam from your computer and remove the SBL wire jumper. Then reconnect your OpenMV Cam to your computer.
 
 </source>
-        <translation>如果您强迫SBL模式，请从计算机上断开OpenMV凸轮的连接，然后卸下SBL线跳线。 然后将OpenMV凸轮重新连接到计算机。</translation>
+        <translation>如果您强迫SBL模式，请从计算机上断开OpenMV Cam的连接，然后卸下SBL线跳线。 然后将OpenMV Cam重新连接到计算机。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-2" />
@@ -10196,7 +10196,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>OpenMV凸轮上的模块"%L1"与计算机上的副本不同。
+        <translation>OpenMV Cam上的模块"%L1"与计算机上的副本不同。
 
 您是否希望OpenMV IDE更新OpenMV Cam上的模块？</translation>
     </message>
@@ -10241,7 +10241,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-283" />
         <location line="+239" />
         <source>Model Zoo</source>
-        <translation>模型动物园</translation>
+        <translation>模型库</translation>
     </message>
     <message>
         <location line="+5" />
@@ -10585,7 +10585,7 @@ Open a data set to upload it.</source>
     <message>
         <location line="-551" />
         <source>Please turn on the hard maintenance mode switch, it not enabled, and then press the user button on your OpenMV Cam.</source>
-        <translation>请打开硬维护模式开关，未启用，然后按OpenMV凸轮上的用户按钮。</translation>
+        <translation>请打开硬维护模式开关，未启用，然后按OpenMV Cam上的用户按钮。</translation>
     </message>
     <message>
         <location line="+238" />
@@ -10597,14 +10597,14 @@ Open a data set to upload it.</source>
     <message>
         <location line="+166" />
         <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled, reconnect your OpenMV Cam to your computer, and then press Ok.</source>
-        <translation>请从计算机上断开OpenMV凸轮连接，请关闭硬维护模式开关，如果启用了，请将OpenMV Cam重新连接到计算机，然后按OK。</translation>
+        <translation>请从计算机上断开OpenMV Cam连接，请关闭硬维护模式开关，如果启用了，请将OpenMV Cam重新连接到计算机，然后按OK。</translation>
     </message>
     <message>
         <location line="+51" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after a system package update.</source>
-        <translation>请断开连接，然后从计算机重新连接OpenMV凸轮，然后按OK。 
+        <translation>请断开连接，然后从计算机重新连接OpenMV Cam，然后按OK。 
 
 在系统软件包更新后，必须循环摄像机。</translation>
     </message>
@@ -11176,7 +11176,7 @@ OpenMV IDE只会按原样复制模型。</translation>
     <message>
         <location line="+38" />
         <source>Commit ROMFS to OpenMV Cam</source>
-        <translation>将ROMFS送往OpenMV凸轮</translation>
+        <translation>将ROMFS送往OpenMV Cam</translation>
     </message>
     <message>
         <location line="+1" />
