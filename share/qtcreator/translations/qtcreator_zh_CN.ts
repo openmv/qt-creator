@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
@@ -1004,7 +1004,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <location line="+22" />
         <source>All Files (*.*)</source>
         <comment>On Windows</comment>
-        <translation>全部文件 (*.*)</translation>
+        <translation>所有文件 (*.*)</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1265,12 +1265,12 @@ Continue?</source>
     <message>
         <location line="+1" />
         <source>Pin "%1"</source>
-        <translation>引脚“%1”</translation>
+        <translation>固定%1”</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Pin Editor</source>
-        <translation>引脚编辑器</translation>
+        <translation>固定编辑器</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-489" />
@@ -1488,7 +1488,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="-26" />
         <source>Warn before opening text files greater than</source>
-        <translation>打开大于此大小的文本文件之前发出警告</translation>
+        <translation>在打开大于此大小的文本文件之前发出警告</translation>
     </message>
     <message>
         <location line="+20" />
@@ -1523,17 +1523,17 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+0" />
         <source>GiB</source>
-        <translation>吉布</translation>
+        <translation>GiB</translation>
     </message>
     <message>
         <location line="+0" />
         <source>TiB</source>
-        <translation>tib</translation>
+        <translation>TiB</translation>
     </message>
     <message>
         <location line="+59" />
         <source>Automatically free resources of old documents that are not visible and not modified. They stay visible in the list of open documents.</source>
-        <translation>自动释放不可见且未修改的旧文档资源。它们在打开的文档列表中保持可见。</translation>
+        <translation>自动释放不可见且未修改的旧文档资源，同时该文档在打开文档列表中保持可见。</translation>
     </message>
     <message>
         <location line="+42" />
@@ -1985,7 +1985,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+4" />
         <source>Hidden</source>
-        <translation>隐</translation>
+        <translation>隐藏</translation>
     </message>
     <message>
         <location line="+460" />
@@ -2000,7 +2000,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+45" />
         <source>Contact</source>
-        <translation>接触</translation>
+        <translation>联系方式</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2076,18 +2076,18 @@ provided they were unmodified before the refactoring.</source>
         <source>*</source>
         <translation>*</translation>
     </message>
-    <message>
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+452" />
-        <location line="+88" />
-        <source>Category</source>
-        <translation>类别</translation>
-    </message>
-    <message>
-        <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+381" />
-        <source>Type</source>
-        <translation>类型</translation>
-    </message>
+        <message>
+            <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+452" />
+            <location line="+88" />
+            <source>Category</source>
+            <translation>类别</translation>
+        </message>
+        <message>
+            <location line="+0" />
+            <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+381" />
+            <source>Type</source>
+            <translation>类型</translation>
+        </message>
     <message>
         <location line="-86" />
         <source>Color</source>
@@ -2146,17 +2146,17 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="-411" />
         <source>Entry is missing a logging category name.</source>
-        <translation>条目缺少记录类别名称。</translation>
+        <translation>该条目缺少日志类别名称。</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Entry is missing data.</source>
-        <translation>输入缺少数据。</translation>
+        <translation>缺少输入数据。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Invalid level: %1</source>
-        <translation>无效水平：％1</translation>
+        <translation>无效级别：％1</translation>
     </message>
     <message>
         <location line="+312" />
@@ -2171,7 +2171,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+2" />
         <source>Critical</source>
-        <translation>批判的</translation>
+        <translation>严重的</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2221,17 +2221,17 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+65" />
         <source>Uncheck All %1</source>
-        <translation>取消选中全％1</translation>
+        <translation>取消全选％1</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Check All %1</source>
-        <translation>检查全％1</translation>
+        <translation>检查全部％1</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Reset All %1</source>
-        <translation>重置全％1</translation>
+        <translation>重置全部％1</translation>
     </message>
     <message>
         <location line="+31" />
@@ -2251,12 +2251,12 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+51" />
         <source>Failed to open preset file "%1" for reading.</source>
-        <translation>无法打开预设文件“％1”进行阅读。</translation>
+        <translation>无法打开预设文件“％1”。</translation>
     </message>
     <message>
         <location line="-172" />
         <source>Uncheck All</source>
-        <translation>取消选中</translation>
+        <translation>取消全选</translation>
     </message>
     <message>
         <location line="+88" />
