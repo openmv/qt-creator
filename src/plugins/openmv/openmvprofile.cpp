@@ -272,7 +272,7 @@ QVariant OpenMVProfileModel::data(const QModelIndex &idx, int role) const
     if (role == Qt::DisplayRole) {
         if (idx.column() >= ColumnCount && idx.column() < (ColumnCount + eventSize_)) {
             int eventIdx = idx.column() - ColumnCount;
-            return r.events.at(eventIdx);
+            return static_cast<qulonglong>(r.events.at(eventIdx));
         }
 
         switch (idx.column()) {
@@ -282,12 +282,12 @@ QVariant OpenMVProfileModel::data(const QModelIndex &idx, int role) const
                 if (!name.isEmpty()) return QStringLiteral("%1").arg(name);
                 return QStringLiteral("0x%1").arg(a, 8, 16, QLatin1Char('0'));
             }
-            case Calls:      return r.call_count;
-            case MinTicks:   return r.min_ticks;
-            case MaxTicks:   return r.max_ticks;
-            case TotalTicks: return r.total_ticks;
-            case AvgTicks:   return r.total_ticks / call_count;
-            case AvgCycles:  return r.total_cycles / call_count;
+            case Calls:      return static_cast<qulonglong>(r.call_count);
+            case MinTicks:   return static_cast<qulonglong>(r.min_ticks);
+            case MaxTicks:   return static_cast<qulonglong>(r.max_ticks);
+            case TotalTicks: return static_cast<qulonglong>(r.total_ticks);
+            case AvgTicks:   return static_cast<qulonglong>(r.total_ticks / call_count);
+            case AvgCycles:  return static_cast<qulonglong>(r.total_cycles / call_count);
             case Percentage: return QString(QStringLiteral("%1%")).arg(percentage, 0, 'f', 2);
             default:         return QVariant();
         }
