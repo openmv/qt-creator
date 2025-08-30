@@ -158,6 +158,17 @@ typedef enum {
         PIXFORMAT_JPEG:                 \
         case PIXFORMAT_PNG
 
+typedef struct profile_record {
+    uint32_t address;
+    uint32_t caller;
+    uint32_t call_count;
+    uint32_t min_ticks;
+    uint32_t max_ticks;
+    uint64_t total_ticks;
+    uint64_t total_cycles;
+    QList<uint64_t> events;
+} profile_record_t;
+
 int getImageSize(int w, int h, int bpp, bool newPixformat, int pixformat);
 QPixmap getImageFromData(QByteArray data, int w, int h, int bpp, bool rgb565ByteReversed, bool newPixformat, int pixformat);
 
@@ -176,6 +187,7 @@ public:
     bool getAttributeQueued() const;
     bool getTxBufferQueued() const;
     bool getStateQueued() const;
+    bool readProfileQueued() const;
 
 public slots:
 
@@ -198,6 +210,10 @@ public slots:
     void mainTerminalInput(const QByteArray &data);
     void timeInput();
     void getState();
+    void readProfile();
+    void setProfileMode(int mode);
+    void setEventCounter(int event_num, int event_type);
+    void profileReset();
     void bootloaderStart();
     void bootloaderReset();
     void flashErase(int sector);
@@ -224,6 +240,7 @@ public slots: // private
     void bootloaderFastMode(bool on) { m_bootloaderFastMode = on; }
     void setHighSpeed(bool on) { m_hsOn = on; }
     void setGetStateVariableSize(bool on) { m_getStateVariableSize = on; }
+    bool getProfileEnabled() const { return m_profileEnabled; }
 
 signals:
 
@@ -246,6 +263,7 @@ signals:
     void printEmpty(bool ok);
     void sensorIdDone(int id);
     void getStateDone();
+    void readProfileDone(const QList<profile_record_t> &records);
     void gotBootloaderStart(bool ok, int version);
     void bootloaderResetDone(bool ok);
     void flashEraseDone(bool ok);
@@ -268,6 +286,7 @@ private:
     QQueue<OpenMVPluginSerialPortCommand> m_postedQueue;
     QQueue<int> m_completionQueue;
     int m_frameSizeW, m_frameSizeH, m_frameSizeBPP, m_mtu;
+    int m_record_count, m_record_size, m_event_count;
     QByteArray m_pixelBuffer, m_lineBuffer;
     bool m_timeout;
     bool m_breakUpGetAttributeCommand;
@@ -281,6 +300,8 @@ private:
     bool m_bootloaderFastMode;
     bool m_hsOn;
     bool m_getStateVariableSize;
+    bool m_profileEnabled;
+    bool m_hasPMU;
 };
 
 } // namespace Internal

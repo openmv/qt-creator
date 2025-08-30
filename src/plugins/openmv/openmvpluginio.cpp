@@ -73,6 +73,13 @@ enum
     USBDBG_TIME_INPUT_CPL_0,
     USBDBG_TIME_INPUT_CPL_1,
     USBDBG_GET_STATE_CPL,
+    USBDBG_PROFILE_SIZE_CPL,
+    USBDBG_PROFILE_DUMP_CPL,
+    USBDBG_SET_PROFILE_MODE_0_CPL,
+    USBDBG_SET_PROFILE_MODE_1_CPL,
+    USBDBG_SET_EVT_CNTR_0_CPL,
+    USBDBG_SET_EVT_CNTR_1_CPL,
+    USBDBG_PROFILE_RESET_CPL,
     BOOTLDR_START_CPL,
     BOOTLDR_RESET_CPL,
     BOOTLDR_ERASE_CPL,
@@ -277,6 +284,9 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
     m_frameSizeW = int();
     m_frameSizeH = int();
     m_frameSizeBPP = int();
+    m_record_count = int();
+    m_record_size = int();
+    m_event_count = int();
     m_mtu = MTU_DEFAULT_SIZE;
     m_pixelBuffer = QByteArray();
     m_lineBuffer = QByteArray();
@@ -292,6 +302,8 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
     m_bootloaderFastMode = bool();
     m_hsOn = bool();
     m_getStateVariableSize = bool();
+    m_profileEnabled = bool();
+    m_hasPMU = bool();
 }
 
 void OpenMVPluginIO::command()
@@ -662,6 +674,9 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                         {
                             emit frameBufferEmpty(true);
                         }
+
+                        m_profileEnabled = !!(flags & __USBDBG_GET_STATE_FLAGS_PROFILE);
+                        m_hasPMU = m_profileEnabled && (flags & __USBDBG_GET_STATE_FLAGS_HAS_PMU);
                     }
                     else if(m_lineBuffer.size())
                     {
@@ -671,6 +686,109 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
 
                     emit getStateDone();
 
+                    break;
+                }
+                case USBDBG_PROFILE_SIZE_CPL:
+                {
+                    m_record_count = deserializeLong(data);
+                    m_record_size = deserializeLong(data);
+                    m_event_count = deserializeLong(data);
+
+                    if(m_record_count)
+                    {
+                        // If we dump a multiple of the bulk packet size (64/512 bytes) this results in a ZLP
+                        // packet being sent from TinyUSB... Which messes up our synchronization with the camera
+                        // as we will issue the next command before the ZLP has been received.
+                        if (!((m_record_count * m_record_size) % (m_hsOn ? HS_EP_SIZE : FS_EP_SIZE)))
+                        {
+                            m_record_count--; // Drop the last record to ensure we don't have ZLP packet issues.
+                        }
+                    }
+
+                    if(m_record_count)
+                    {
+                        QByteArray buffer;
+                        serializeByte(buffer, __USBDBG_CMD);
+                        serializeByte(buffer, __USBDBG_PROFILE_DUMP);
+                        serializeLong(buffer, m_record_count * m_record_size);
+                        m_postedQueue.push_front(OpenMVPluginSerialPortCommand(buffer, m_record_count * m_record_size, PROFILE_DUMP_START_DELAY, PROFILE_DUMP_END_DELAY, true, true));
+                        m_completionQueue.insert(1, USBDBG_PROFILE_DUMP_CPL);
+                    }
+                    else
+                    {
+                        m_record_count = int();
+                        m_record_size = int();
+                        m_event_count = int();
+                        QList<profile_record_t> records;
+                        emit readProfileDone(records);
+                    }
+
+                    break;
+                }
+                case USBDBG_PROFILE_DUMP_CPL:
+                {
+                    typedef struct __attribute__((packed)) profile_record_raw {
+                        uint32_t address;
+                        uint32_t caller;
+                        uint32_t call_count;
+                        uint32_t min_ticks;
+                        uint32_t max_ticks;
+                        uint64_t total_ticks;
+                        uint64_t total_cycles;
+                        uint64_t events[];
+                        // uint32_t spacing
+                    } profile_record_raw_t;
+
+                    QList<profile_record_t> records;
+
+                    int raw_record_size = sizeof(profile_record_raw_t) + (m_event_count * sizeof(uint64_t)) + sizeof(uint32_t);
+                    int max_valid_record_count = data.size() / raw_record_size;
+
+                    for (int i = 0; i < max_valid_record_count; i++)
+                    {
+                        profile_record_raw_t *raw = (profile_record_raw_t *) (data.data() + (i * raw_record_size));
+                        profile_record_t record;
+
+                        record.address = raw->address;
+                        record.caller = raw->caller;
+                        record.call_count = raw->call_count;
+                        record.min_ticks = raw->min_ticks;
+                        record.max_ticks = raw->max_ticks;
+                        record.total_ticks = raw->total_ticks;
+                        record.total_cycles = raw->total_cycles;
+
+                        for (int j = 0; j < m_event_count; j++)
+                        {
+                            record.events.append(raw->events[j]);
+                        }
+
+                        records.append(record);
+                    }
+
+                    m_record_count = int();
+                    m_record_size = int();
+                    m_event_count = int();
+                    emit readProfileDone(records);
+                    break;
+                }
+                case USBDBG_SET_PROFILE_MODE_0_CPL:
+                {
+                    break;
+                }
+                case USBDBG_SET_PROFILE_MODE_1_CPL:
+                {
+                    break;
+                }
+                case USBDBG_SET_EVT_CNTR_0_CPL:
+                {
+                    break;
+                }
+                case USBDBG_SET_EVT_CNTR_1_CPL:
+                {
+                    break;
+                }
+                case USBDBG_PROFILE_RESET_CPL:
+                {
                     break;
                 }
                 case BOOTLDR_START_CPL:
@@ -736,6 +854,8 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                         m_lineBuffer.clear();
                     }
 
+                    m_profileEnabled = false;
+                    m_hasPMU = false;
                     emit closeResponse();
                     break;
                 }
@@ -956,6 +1076,41 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
 
                         break;
                     }
+                    case USBDBG_PROFILE_SIZE_CPL:
+                    {
+                        QList<profile_record_t> records;
+                        emit readProfileDone(records);
+                        break;
+                    }
+                    case USBDBG_PROFILE_DUMP_CPL:
+                    {
+                        m_record_count = int();
+                        m_record_size = int();
+                        m_event_count = int();
+                        QList<profile_record_t> records;
+                        emit readProfileDone(records);
+                        break;
+                    }
+                    case USBDBG_SET_PROFILE_MODE_0_CPL:
+                    {
+                        break;
+                    }
+                    case USBDBG_SET_PROFILE_MODE_1_CPL:
+                    {
+                        break;
+                    }
+                    case USBDBG_SET_EVT_CNTR_0_CPL:
+                    {
+                        break;
+                    }
+                    case USBDBG_SET_EVT_CNTR_1_CPL:
+                    {
+                        break;
+                    }
+                    case USBDBG_PROFILE_RESET_CPL:
+                    {
+                        break;
+                    }
                     case BOOTLDR_START_CPL:
                     {
                         emit gotBootloaderStart(false, int());
@@ -1009,6 +1164,8 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                             m_lineBuffer.clear();
                         }
 
+                        m_profileEnabled = false;
+                        m_hasPMU = false;
                         emit closeResponse();
                         break;
                     }
@@ -1078,6 +1235,12 @@ bool OpenMVPluginIO::getStateQueued() const
     return m_completionQueue.contains(USBDBG_GET_STATE_CPL) ||
            m_completionQueue.contains(USBDBG_FRAME_DUMP_CPL) ||
            m_completionQueue.contains(USBDBG_FRAME_DUMP_UNLOCK_CPL);
+}
+
+bool OpenMVPluginIO::readProfileQueued() const
+{
+    return m_completionQueue.contains(USBDBG_PROFILE_SIZE_CPL) ||
+           m_completionQueue.contains(USBDBG_PROFILE_DUMP_CPL);
 }
 
 void OpenMVPluginIO::getFirmwareVersion()
@@ -1401,6 +1564,61 @@ void OpenMVPluginIO::getState()
     serializeLong(buffer, payload_len);
     m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, payload_len, GET_STATE_START_DELAY, GET_STATE_END_DELAY));
     m_completionQueue.enqueue(USBDBG_GET_STATE_CPL);
+    command();
+}
+
+void OpenMVPluginIO::readProfile()
+{
+    QByteArray buffer;
+    serializeByte(buffer, __USBDBG_CMD);
+    serializeByte(buffer, __USBDBG_PROFILE_SIZE);
+    serializeLong(buffer, PROFILE_SIZE_RESPONSE_LEN);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, PROFILE_SIZE_RESPONSE_LEN, PROFILE_SIZE_START_DELAY, PROFILE_SIZE_END_DELAY));
+    m_completionQueue.enqueue(USBDBG_PROFILE_SIZE_CPL);
+    command();
+}
+
+void OpenMVPluginIO::setProfileMode(int mode)
+{
+    QByteArray buffer;
+    serializeByte(buffer, __USBDBG_CMD);
+    serializeByte(buffer, __USBDBG_SET_PROFILE_MODE);
+    serializeLong(buffer, SET_PROFILE_MODE_PAYLOAD_LEN);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), SET_PROFILE_MODE_0_START_DELAY, SET_PROFILE_MODE_0_END_DELAY));
+    m_completionQueue.enqueue(USBDBG_SET_PROFILE_MODE_0_CPL);
+    command();
+    buffer.clear();
+    serializeLong(buffer, mode);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), SET_PROFILE_MODE_1_START_DELAY, SET_PROFILE_MODE_1_END_DELAY));
+    m_completionQueue.enqueue(USBDBG_SET_PROFILE_MODE_1_CPL);
+    command();
+}
+
+void OpenMVPluginIO::setEventCounter(int event_num, int event_type)
+{
+    QByteArray buffer;
+    serializeByte(buffer, __USBDBG_CMD);
+    serializeByte(buffer, __USBDBG_SET_EVT_CNTR);
+    serializeLong(buffer, SET_EVENT_COUNTER_PAYLOAD_LEN);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), SET_EVT_CNTR_0_START_DELAY, SET_EVT_CNTR_0_END_DELAY));
+    m_completionQueue.enqueue(USBDBG_SET_EVT_CNTR_0_CPL);
+    command();
+    buffer.clear();
+    serializeLong(buffer, event_num);
+    serializeLong(buffer, event_type);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), SET_EVT_CNTR_1_START_DELAY, SET_EVT_CNTR_1_END_DELAY));
+    m_completionQueue.enqueue(USBDBG_SET_EVT_CNTR_1_CPL);
+    command();
+}
+
+void OpenMVPluginIO::profileReset()
+{
+    QByteArray buffer;
+    serializeByte(buffer, __USBDBG_CMD);
+    serializeByte(buffer, __USBDBG_PROFILE_RESET);
+    serializeLong(buffer, PROFILE_RESET_PAYLOAD_LEN);
+    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer, int(), PROFILE_RESET_START_DELAY, PROFILE_RESET_END_DELAY));
+    m_completionQueue.enqueue(USBDBG_PROFILE_RESET_CPL);
     command();
 }
 

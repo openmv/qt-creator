@@ -118,10 +118,17 @@
 #define __USBDBG_TX_INPUT                   0x11
 #define __USBDBG_TIME_INPUT                 0x12
 #define __USBDBG_GET_STATE                  0x93
+#define __USBDBG_PROFILE_SIZE               0x94
+#define __USBDBG_PROFILE_DUMP               0x95
+#define __USBDBG_SET_PROFILE_MODE           0x16
+#define __USBDBG_SET_EVT_CNTR               0x17
+#define __USBDBG_PROFILE_RESET              0x18
 
 #define __USBDBG_GET_STATE_FLAGS_SCRIPT     (1 << 0)
 #define __USBDBG_GET_STATE_FLAGS_TEXT       (1 << 1)
 #define __USBDBG_GET_STATE_FLAGS_FRAME      (1 << 2)
+#define __USBDBG_GET_STATE_FLAGS_PROFILE    (1 << 3)
+#define __USBDBG_GET_STATE_FLAGS_HAS_PMU    (1 << 5)
 
 #define __BOOTLDR_START                     static_cast<int>(0xABCD0001)
 #define __BOOTLDR_RESET                     static_cast<int>(0xABCD0002)
@@ -151,6 +158,10 @@
 #define GET_STATE_PAYLOAD_LEN               64
 #define GET_STATE_PAYLOAD_LEN_FS            63
 #define GET_STATE_PAYLOAD_LEN_HS            511
+#define PROFILE_SIZE_RESPONSE_LEN           12
+#define SET_PROFILE_MODE_PAYLOAD_LEN        4
+#define SET_EVENT_COUNTER_PAYLOAD_LEN       8
+#define PROFILE_RESET_PAYLOAD_LEN           0
 
 #define BOOTLDR_START_RESPONSE_LEN          4
 #define BOOTLDR_QUERY_RESPONSE_LEN          12
@@ -234,6 +245,20 @@
 #define TIME_INPUT_1_END_DELAY              2
 #define GET_STATE_START_DELAY               0
 #define GET_STATE_END_DELAY                 0
+#define PROFILE_SIZE_START_DELAY            0
+#define PROFILE_SIZE_END_DELAY              0
+#define PROFILE_DUMP_START_DELAY            0
+#define PROFILE_DUMP_END_DELAY              0
+#define SET_PROFILE_MODE_0_START_DELAY      50
+#define SET_PROFILE_MODE_0_END_DELAY        25
+#define SET_PROFILE_MODE_1_START_DELAY      25
+#define SET_PROFILE_MODE_1_END_DELAY        50
+#define SET_EVT_CNTR_0_START_DELAY          50
+#define SET_EVT_CNTR_0_END_DELAY            25
+#define SET_EVT_CNTR_1_START_DELAY          25
+#define SET_EVT_CNTR_1_END_DELAY            50
+#define PROFILE_RESET_START_DELAY           50
+#define PROFILE_RESET_END_DELAY             50
 
 #define BOOTLDR_START_START_DELAY           0
 #define BOOTLDR_START_END_DELAY             0

@@ -19,9 +19,11 @@ add_qtc_plugin(OpenMV
     openmvpluginserialport.cpp openmvpluginserialport.h
     openmvpluginio.cpp openmvpluginio.h
     openmvpluginfb.cpp openmvpluginfb.h
+    openmvprofile.cpp openmvprofile.h
     openmvterminal.cpp openmvterminal.h
     openmvcamerasettings.cpp openmvcamerasettings.h
     openmvdataseteditor.cpp openmvdataseteditor.h
+    elfio/elfio/elfio.hpp
     histogram/openmvpluginhistogram.cpp histogram/openmvpluginhistogram.h
     histogram/rgb2rgb_tab.c
     histogram/lab_tab.c

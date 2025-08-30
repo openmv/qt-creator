@@ -68,6 +68,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_getScriptRunningTimer.start();
     m_getTxBufferTimer.start();
     m_getStateTimer.start();
+    m_readProfileTimer.start();
 
     m_timer.start();
     m_queue = QQueue<qint64>();
@@ -102,6 +103,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_getScriptRunningSpacing = GET_SCRIPT_RUNNING_SPACING;
     m_getTxBufferSpacing = GET_TX_BUFFER_SPACING;
     m_getStateSpacing = GET_STATE_SPACING;
+    m_readProfileSpacing = READ_PROFILE_SPACING;
 
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &OpenMVPlugin::processEvents);
@@ -917,6 +919,7 @@ void OpenMVPlugin::extensionsInitialized()
     }
 
     Core::ActionContainer *toolsMenu = Core::ActionManager::actionContainer(Core::Constants::M_TOOLS);
+    Core::ActionContainer *windowMenu = Core::ActionManager::actionContainer(Core::Constants::M_WINDOW);
     Core::ActionContainer *helpMenu = Core::ActionManager::actionContainer(Core::Constants::M_HELP);
 
     m_bootloaderAction = new QAction(Tr::tr("Load Custom Firmware"), this);
@@ -1704,6 +1707,34 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Command *closeDatasetCommand = Core::ActionManager::registerAction(closeDatasetAction, Utils::Id("OpenMV.CloseDataset"));
     datasetEditorMenu->addAction(closeDatasetCommand);
 
+    QAction *showCodeProfilerAction = new QAction(Tr::tr("Show Code Profiler"), this);
+    Core::Command *showCodeProfilerCommand = Core::ActionManager::registerAction(showCodeProfilerAction, Utils::Id("OpenMV.ShowCodeProfiler"));
+    windowMenu->addAction(showCodeProfilerCommand, Core::Constants::G_WINDOW_OTHER);
+    connect(showCodeProfilerAction, &QAction::triggered, this, [this] {
+        if(m_profile && m_profile->isVisible())
+        {
+            return;
+        }
+
+        if(!m_profile)
+        {
+            m_profile = new OpenMVProfileView(ExtensionSystem::PluginManager::settings());
+            m_profile->setAttribute(Qt::WA_DeleteOnClose);
+            connect(m_iodevice, &OpenMVPluginIO::readProfileDone, m_profile, &OpenMVProfileView::setRecords);
+            connect(m_profile, &OpenMVProfileView::setProfileMode, m_iodevice, &OpenMVPluginIO::setProfileMode);
+            connect(m_profile, &OpenMVProfileView::setEventCounter, m_iodevice, &OpenMVPluginIO::setEventCounter);
+            connect(m_profile, &OpenMVProfileView::profileReset, m_iodevice, &OpenMVPluginIO::profileReset);
+        }
+
+        m_profile->show();
+        m_profile->raise();
+        m_profile->activateWindow();
+    });
+
+    connect(windowMenu->menu(), &QMenu::aboutToShow, this, [this, showCodeProfilerAction] {
+        showCodeProfilerAction->setEnabled(m_iodevice->getProfileEnabled());
+    });
+
     if(!m_viewerMode)
     {
         QAction *docsAction = new QAction(Tr::tr("OpenMV Docs"), this);
@@ -2392,6 +2423,7 @@ void OpenMVPlugin::extensionsInitialized()
     m_getScriptRunningSpacing = settings->value(LAST_GET_SCRIPT_RUNNING_SPACING, GET_SCRIPT_RUNNING_SPACING).toInt();
     m_getTxBufferSpacing = settings->value(LAST_GET_TX_BUFFER_SPACING, GET_TX_BUFFER_SPACING).toInt();
     m_getStateSpacing = settings->value(LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
+    m_readProfileSpacing = settings->value(LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
     settings->endGroup();
 
     m_ioport->updateSettings(m_useGetState);
@@ -3749,6 +3781,15 @@ void OpenMVPlugin::processEvents()
                 }
             }
 
+            if(m_iodevice->getProfileEnabled())
+            {
+                if((!m_iodevice->readProfileQueued()) && m_readProfileTimer.hasExpired(m_readProfileSpacing))
+                {
+                    m_readProfileTimer.restart();
+                    m_iodevice->readProfile();
+                }
+            }
+
             if(m_timer.hasExpired(FPS_TIMER_EXPIRATION_TIME))
             {
                 m_fpsButton->setText(Tr::tr("FPS: 0"));
@@ -4366,6 +4407,7 @@ void OpenMVPlugin::setSpacing()
     int getScriptRunningSpacing = settings->value(LAST_GET_SCRIPT_RUNNING_SPACING, GET_SCRIPT_RUNNING_SPACING).toInt();
     int getTxBufferSpacing = settings->value(LAST_GET_TX_BUFFER_SPACING, GET_TX_BUFFER_SPACING).toInt();
     int getStateSpacing = settings->value(LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
+    int readProfileSpacing = settings->value(LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
 
     int useGetStateAvailable = !((m_major < OPENMV_ADD_GET_STATE_MAJOR)
     || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
@@ -4417,6 +4459,16 @@ void OpenMVPlugin::setSpacing()
     getTxBufferSpacingBox->setValue(getTxBufferSpacing);
     oldStateGroupLayout->addRow(Tr::tr("Text Buffer Polling (ms)"), getTxBufferSpacingBox);
 
+    QWidget *readProfileWidget = new QWidget;
+    QFormLayout *readProfileWidgetLayout = new QFormLayout(readProfileWidget);
+    readProfileWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    QSpinBox *readProfileSpacingBox = new QSpinBox;
+    readProfileSpacingBox->setRange(0, 1000);
+    readProfileSpacingBox->setValue(readProfileSpacing);
+    readProfileSpacingBox->setEnabled(m_iodevice->getProfileEnabled());
+    readProfileWidgetLayout->addRow(Tr::tr("Code Profiler Polling (ms)"), readProfileSpacingBox);
+    layout->addWidget(readProfileWidget);
+
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
@@ -4429,11 +4481,13 @@ void OpenMVPlugin::setSpacing()
         settings->setValue(LAST_GET_SCRIPT_RUNNING_SPACING, m_getScriptRunningSpacing = getScriptRunningSpacingBox->value());
         settings->setValue(LAST_GET_TX_BUFFER_SPACING, m_getTxBufferSpacing = getTxBufferSpacingBox->value());
         settings->setValue(LAST_GET_STATE_SPACING, m_getStateSpacing = getStateSpacingBox->value());
+        settings->setValue(LAST_READ_PROFILE_SPACING, m_readProfileSpacing = readProfileSpacingBox->value());
 
         m_frameSizeDumpTimer.restart();
         m_getScriptRunningTimer.restart();
         m_getTxBufferTimer.restart();
         m_getStateTimer.restart();
+        m_readProfileTimer.restart();
         m_timer.restart();
         m_queue.clear();
 

@@ -93,6 +93,7 @@
 #include "openmvpluginserialport.h"
 #include "openmvpluginio.h"
 #include "openmvpluginfb.h"
+#include "openmvprofile.h"
 #include "openmvromfs.h"
 #include "openmvterminal.h"
 #include "histogram/openmvpluginhistogram.h"
@@ -201,6 +202,7 @@
 #define LAST_GET_SCRIPT_RUNNING_SPACING "LastGetScriptRunningSpacing"
 #define LAST_GET_TX_BUFFER_SPACING "LastGetTxBufferSpacing"
 #define LAST_GET_STATE_SPACING "LastGetStateSpacing"
+#define LAST_READ_PROFILE_SPACING "LastReadProfileSpacing"
 #define LAST_ROMFS_DIALOG_GEOMETRY "LastROMFSDialogGeometry"
 #define LAST_ROMFS_DIALOG_OPEN_FILE_PATH "LastROMFSDialogFilePath"
 #define LAST_ROMFS_DIALOG_NEW_FOLDER_NAME "LastROMFSDialogNewFolderName"
@@ -270,6 +272,7 @@
 #define GET_SCRIPT_RUNNING_SPACING  100 // in ms
 #define GET_TX_BUFFER_SPACING       5 // in ms
 #define GET_STATE_SPACING           25 // in ms
+#define READ_PROFILE_SPACING        500 // in ms
 
 #define FPS_AVERAGE_BUFFER_DEPTH    100 // in samples
 #define WIFI_PORT_RETIRE            20 // in seconds
@@ -564,6 +567,7 @@ private:
     QElapsedTimer m_getScriptRunningTimer;
     QElapsedTimer m_getTxBufferTimer;
     QElapsedTimer m_getStateTimer;
+    QElapsedTimer m_readProfileTimer;
 
     QElapsedTimer m_timer;
     QQueue<qint64> m_queue;
@@ -599,6 +603,7 @@ private:
     int m_getScriptRunningSpacing;
     int m_getTxBufferSpacing;
     int m_getStateSpacing;
+    int m_readProfileSpacing;
 
     QAction *m_bootloaderAction;
     QAction *m_eraseAction;
@@ -623,6 +628,7 @@ private:
     OpenMVDatasetEditor *m_datasetEditor;
     OpenMVPluginFB *m_frameBuffer;
     OpenMVPluginHistogram *m_histogram;
+    QPointer<OpenMVProfileView> m_profile;
 
     Utils::ElidingLabel *m_boardLabel;
     Utils::ElidingLabel *m_sensorLabel;
