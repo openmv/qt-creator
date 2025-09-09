@@ -2337,6 +2337,16 @@ void OpenMVPlugin::extensionsInitialized()
     Core::ICore::statusBar()->addPermanentWidget(m_boardLabel);
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
 
+    m_registerButton = new Utils::ElidingToolButton();
+    m_registerButton->setVisible(false);
+    m_registerButtonSpacer = new QLabel();
+    m_registerButtonSpacer->setVisible(false);
+    Core::ICore::statusBar()->addPermanentWidget(m_registerButton);
+    Core::ICore::statusBar()->addPermanentWidget(m_registerButtonSpacer);
+    connect(m_registerButton, &QToolButton::clicked, this, [this] {
+        if (m_connected) registerOpenMVCam(m_boardType, m_boardId);
+    });
+
     m_sensorLabel = new Utils::ElidingLabel(Tr::tr("Sensor:"));
     m_sensorLabel->setToolTip(Tr::tr("Camera sensor module"));
     m_sensorLabel->setDisabled(true);

@@ -153,6 +153,10 @@ void ElidingToolButton::paintEvent(QPaintEvent *event)
 
         if (!isChecked())
             p.setPen(Utils::creatorTheme()->color(Utils::Theme::OutputPaneToggleButtonTextColorUnchecked));
+        // OPENMV-DIFF //
+        const QVariant v = property("statusColor");
+        if (v.isValid() && v.value<QColor>().isValid()) p.setPen(v.value<QColor>());
+        // OPENMV-DIFF //
     }
     else
     {

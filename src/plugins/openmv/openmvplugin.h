@@ -631,6 +631,8 @@ private:
     QPointer<OpenMVProfileView> m_profile;
 
     Utils::ElidingLabel *m_boardLabel;
+    Utils::ElidingToolButton *m_registerButton;
+    QLabel *m_registerButtonSpacer;
     Utils::ElidingLabel *m_sensorLabel;
     Utils::ElidingToolButton *m_versionButton;
     Utils::ElidingLabel *m_portLabel;

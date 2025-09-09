@@ -2488,8 +2488,36 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                             if((reply->error() == QNetworkReply::NoError) && (!data.isEmpty()))
                             {
-                                if(QString::fromUtf8(data).contains(QStringLiteral("<p>No</p>")))
+                                if(QString::fromUtf8(data).contains(QStringLiteral("<p>Yes</p>")))
                                 {
+                                    if (!m_formKey.isEmpty())
+                                    {
+                                        m_registerButton->setProperty("statusColor",
+                                            Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ?
+                                                                        QStringLiteral("lightgreen") :
+                                                                        QStringLiteral("green"));
+                                        m_registerButton->setText(Tr::tr("Registered"));
+                                        m_registerButton->setVisible(true);
+                                        m_registerButtonSpacer->setVisible(true);
+                                    }
+                                    else
+                                    {
+                                        m_registerButton->setText(QString());
+                                        m_registerButton->setVisible(false);
+                                        m_registerButtonSpacer->setVisible(false);
+                                    }
+                                }
+                                else if(QString::fromUtf8(data).contains(QStringLiteral("<p>No</p>")))
+                                {
+                                    m_registerButton->setProperty("statusColor",
+                                        Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ?
+                                                                    QStringLiteral("lightcoral") :
+                                                                    QStringLiteral("coral"));
+                                    m_registerButton->setText(Tr::tr("Unregistered"));
+                                    m_registerButton->update();
+                                    m_registerButton->setVisible(true);
+                                    m_registerButtonSpacer->setVisible(true);
+
                                     QTimer::singleShot(0, this, [this, board, id] { registerOpenMVCam(board, id); });
                                 }
                                 else if((!m_formKey.isEmpty()) && (!QString::fromUtf8(data).contains(QStringLiteral("<p>Yes</p>"))))
@@ -3028,6 +3056,9 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_stopAction->setEnabled((!m_viewerMode) && false);
             m_stopAction->setVisible((!m_viewerMode) && false);
 
+            m_registerButton->setText(QString());
+            m_registerButton->setVisible(false);
+            m_registerButtonSpacer->setVisible(false);
             m_boardLabel->setDisabled(true);
             m_boardLabel->setText(Tr::tr("Board:"));
             m_sensorLabel->setDisabled(true);
