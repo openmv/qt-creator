@@ -27,6 +27,8 @@
 "qualcomm", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/instance_segmentation/yolov8n_seg", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/instance_segmentation", "(OPENMV_AE3|OPENMV_N6)"
+"stmicroelectronics/object_detection/face_detect_front", "(OPENMV_RT1060|OPENMV4P|ARDUINO_GIGA|ARDUINO_PORTENTA_H7|ARDUINO_NICLA_VISION|OPENMV_AE3|OPENMV_N6)"
+"stmicroelectronics/object_detection/palm_detect", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/object_detection/ssd_mobilenet_v2_fpnlite", "(OPENMV_N6)"
 "stmicroelectronics/object_detection/st_mobilenet_v1", "(OPENMV_N6)"
 "stmicroelectronics/object_detection/st_yolo_lc_v1", "(OPENMV_RT1060|OPENMV4P|ARDUINO_GIGA|ARDUINO_PORTENTA_H7|ARDUINO_NICLA_VISION|OPENMV_AE3|OPENMV_N6)"
