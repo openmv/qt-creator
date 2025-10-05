@@ -25,6 +25,8 @@
 "qualcomm/semantic_segmentation/FFNet_40S", "(OPENMV_AE3|OPENMV_N6)"
 "qualcomm/semantic_segmentation", "(OPENMV_AE3|OPENMV_N6)"
 "qualcomm", "(OPENMV_AE3|OPENMV_N6)"
+"stmicroelectronics/depth_estimation/fast_depth", "(OPENMV_AE3|OPENMV_N6)"
+"stmicroelectronics/depth_estimation", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/instance_segmentation/yolov8n_seg", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/instance_segmentation", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/object_detection/face_detect_front", "(OPENMV_RT1060|OPENMV4P|ARDUINO_GIGA|ARDUINO_PORTENTA_H7|ARDUINO_NICLA_VISION|OPENMV_AE3|OPENMV_N6)"
