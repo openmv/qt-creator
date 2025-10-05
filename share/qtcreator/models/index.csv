@@ -37,6 +37,7 @@
 "stmicroelectronics/object_detection/yolov8n", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/object_detection", "(OPENMV_RT1060|OPENMV4P|ARDUINO_GIGA|ARDUINO_PORTENTA_H7|ARDUINO_NICLA_VISION|OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/pose_estimation/hand_landmarks", "(OPENMV_AE3|OPENMV_N6)"
+"stmicroelectronics/pose_estimation/head_landmarks", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/pose_estimation/movenet", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/pose_estimation/yolov8n_pose", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/pose_estimation", "(OPENMV_AE3|OPENMV_N6)"
