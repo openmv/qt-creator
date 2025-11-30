@@ -41,6 +41,8 @@
 
 #include "tools/myqserialportinfo.h"
 
+#include "protocol/omv_port.h"
+
 #define STM32_DFU_VID           0x0483
 #define STM32_DFU_PID           0xDF11
 #define OPENMVCAM_VID           0x1209
@@ -284,6 +286,8 @@
 namespace OpenMV {
 namespace Internal {
 
+using namespace omv;
+
 void serializeByte(QByteArray &buffer, int value); // LittleEndian
 void serializeWord(QByteArray &buffer, int value); // LittleEndian
 void serializeLong(QByteArray &buffer, int value); // LittleEndian
@@ -325,43 +329,6 @@ public:
     QByteArray m_data;
 };
 
-class OpenMVPluginSerialPort_thing : public QObject
-{
-    Q_OBJECT
-
-public:
-
-    explicit OpenMVPluginSerialPort_thing(const QString &name, QObject *parent = Q_NULLPTR);
-    QString portName();
-    bool isSerialPort() { return m_serialPort != Q_NULLPTR; }
-    bool isTCPPort() { return m_tcpSocket != Q_NULLPTR; }
-
-    void setReadBufferSize(qint64 size);
-    bool setBaudRate(qint32 baudRate);
-
-    bool open(QIODevice::OpenMode mode);
-    bool flush();
-
-    QString errorString();
-    void clearError();
-
-    QByteArray readAll();
-    qint64 write(const QByteArray &data);
-
-    qint64 bytesAvailable();
-    qint64 bytesToWrite();
-
-    bool waitForReadyRead(int msecs);
-    bool waitForBytesWritten(int msecs);
-    bool setDataTerminalReady(bool set);
-    bool setRequestToSend(bool set);
-
-private:
-
-    QSerialPort *m_serialPort;
-    QTcpSocket *m_tcpSocket;
-};
-
 class OpenMVPluginSerialPort_private : public QObject
 {
     Q_OBJECT
@@ -400,7 +367,7 @@ private:
 
     void write(const QByteArray &data, int startWait, int stopWait, int timeout);
 
-    OpenMVPluginSerialPort_thing *m_port;
+    OMVPort *m_port;
     bool m_bootloaderStop;
     int m_override_read_timeout;
     int m_override_read_stall_timeout;

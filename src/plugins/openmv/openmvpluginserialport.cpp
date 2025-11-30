@@ -43,10 +43,6 @@
 #define WRITE_DELAY 0 // disabled
 #define FLUSH_TIMEOUT 100
 #define WRITE_TIMEOUT 3000
-#define SERIAL_READ_TIMEOUT 5000
-#define WIFI_READ_TIMEOUT 5000
-#define SERIAL_READ_STALL_TIMEOUT 1000
-#define WIFI_READ_STALL_TIMEOUT 3000
 #define BOOTLOADER_WRITE_TIMEOUT 6
 #define BOOTLOADER_READ_TIMEOUT 10
 #define BOOTLOADER_READ_STALL_TIMEOUT 2
@@ -57,7 +53,6 @@
 #define LEARN_MTU_MIN 64
 
 #define READ_BUFFER_SIZE (64 * 1024 * 1024)
-#define WRITE_BUFFER_SIZE (64 * 1024 * 1024)
 
 #define DYNAMIC_READ_STALL_ENABLE 0
 #define DYNAMIC_READ_STALL_BUFFER_SIZE 20
@@ -141,271 +136,6 @@ bool isTouchToReset(const QJsonDocument &settings, const MyQSerialPortInfo &port
     return match;
 }
 
-OpenMVPluginSerialPort_thing::OpenMVPluginSerialPort_thing(const QString &name, QObject *parent) : QObject(parent)
-{
-    if(!QSerialPortInfo(name).isNull())
-    {
-        m_serialPort = new QSerialPort(name, this);
-        m_tcpSocket = Q_NULLPTR;
-    }
-    else
-    {
-        m_serialPort = Q_NULLPTR;
-        m_tcpSocket = new QTcpSocket(this);
-        m_tcpSocket->setProperty("name", name);
-    }
-}
-
-QString OpenMVPluginSerialPort_thing::portName()
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->portName();
-    }
-
-    if(m_tcpSocket)
-    {
-        return m_tcpSocket->property("name").toString();
-    }
-
-    return QString();
-}
-
-void OpenMVPluginSerialPort_thing::setReadBufferSize(qint64 size)
-{
-    if(m_serialPort)
-    {
-        m_serialPort->setReadBufferSize(size);
-    }
-
-    if(m_tcpSocket)
-    {
-        m_tcpSocket->setReadBufferSize(size);
-    }
-}
-
-bool OpenMVPluginSerialPort_thing::setBaudRate(qint32 baudRate)
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->setBaudRate(baudRate);
-    }
-
-    if(m_tcpSocket)
-    {
-        return true;
-    }
-
-    return bool();
-}
-
-bool OpenMVPluginSerialPort_thing::open(QIODevice::OpenMode mode)
-{
-    if(m_serialPort)
-    {
-        bool ok = m_serialPort->open(mode);
-
-#ifdef Q_OS_WIN
-        void *handle = m_serialPort->handle();
-
-        if(handle)
-        {
-            ok = ok && SetupComm(handle, READ_BUFFER_SIZE, WRITE_BUFFER_SIZE);
-        }
-        else
-        {
-            ok = false;
-        }
-#endif
-
-        return ok;
-    }
-
-    if(m_tcpSocket)
-    {
-        QStringList list = m_tcpSocket->property("name").toString().split(QLatin1Char(':'));
-
-        if(list.size() != 3)
-        {
-            return false;
-        }
-
-        QString hostName = list.at(1);
-        QString port = list.at(2);
-
-        bool portNumberOkay;
-        quint16 portNumber = port.toUInt(&portNumberOkay);
-
-        if(!portNumberOkay)
-        {
-            return false;
-        }
-
-        m_tcpSocket->connectToHost(hostName, portNumber, mode);
-        return m_tcpSocket->waitForConnected(3000);
-    }
-
-    return bool();
-}
-
-bool OpenMVPluginSerialPort_thing::flush()
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->flush();
-    }
-
-    if(m_tcpSocket)
-    {
-        return m_tcpSocket->flush();
-    }
-
-    return bool();
-}
-
-QString OpenMVPluginSerialPort_thing::errorString()
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->errorString();
-    }
-
-    if(m_tcpSocket)
-    {
-        return m_tcpSocket->errorString();
-    }
-
-    return QString();
-}
-
-void OpenMVPluginSerialPort_thing::clearError()
-{
-    if(m_serialPort)
-    {
-        m_serialPort->clearError();
-    }
-}
-
-QByteArray OpenMVPluginSerialPort_thing::readAll()
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->readAll();
-    }
-
-    if(m_tcpSocket)
-    {
-        return m_tcpSocket->readAll();
-    }
-
-    return QByteArray();
-}
-
-qint64 OpenMVPluginSerialPort_thing::write(const QByteArray &data)
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->write(data);
-    }
-
-    if(m_tcpSocket)
-    {
-        return m_tcpSocket->write(data);
-    }
-
-    return qint64();
-}
-
-qint64 OpenMVPluginSerialPort_thing::bytesAvailable()
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->bytesAvailable();
-    }
-
-    if(m_tcpSocket)
-    {
-        return m_tcpSocket->bytesAvailable();
-    }
-
-    return qint64();
-}
-
-qint64 OpenMVPluginSerialPort_thing::bytesToWrite()
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->bytesToWrite();
-    }
-
-    if(m_tcpSocket)
-    {
-        return m_tcpSocket->bytesToWrite();
-    }
-
-    return qint64();
-}
-
-bool OpenMVPluginSerialPort_thing::waitForReadyRead(int msecs)
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->waitForReadyRead(msecs);
-    }
-
-    if(m_tcpSocket)
-    {
-        return m_tcpSocket->waitForReadyRead(msecs);
-    }
-
-    return bool();
-}
-
-bool OpenMVPluginSerialPort_thing::waitForBytesWritten(int msecs)
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->waitForBytesWritten(msecs);
-    }
-
-    if(m_tcpSocket)
-    {
-        return m_tcpSocket->waitForBytesWritten(msecs);
-    }
-
-    return bool();
-}
-
-bool OpenMVPluginSerialPort_thing::setDataTerminalReady(bool set)
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->setDataTerminalReady(set);
-    }
-
-    if(m_tcpSocket)
-    {
-        return true;
-    }
-
-    return bool();
-}
-
-bool OpenMVPluginSerialPort_thing::setRequestToSend(bool set)
-{
-    if(m_serialPort)
-    {
-        return m_serialPort->setRequestToSend(set);
-    }
-
-    if(m_tcpSocket)
-    {
-        return true;
-    }
-
-    return bool();
-}
-
 OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(int override_read_timeout,
                                                                int override_read_stall_timeout,
                                                                int override_per_command_wait,
@@ -424,7 +154,7 @@ OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(int override_read
 }
 
 void OpenMVPluginSerialPort_private::open(const QString &portName)
-{    
+{
     m_readstallQueue = QHash<char, QQueue<qint64> >();
     m_readstallAverage = QHash<char, qint64 >();
 
@@ -433,7 +163,7 @@ void OpenMVPluginSerialPort_private::open(const QString &portName)
         delete m_port;
     }
 
-    m_port = new OpenMVPluginSerialPort_thing(portName, this);
+    m_port = OMVPortFactory::createPort(portName, this);
     // QSerialPort is buggy unless this is set.
     m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
@@ -453,7 +183,7 @@ void OpenMVPluginSerialPort_private::open(const QString &portName)
     || (!m_port->setDataTerminalReady(true)))
     {
         delete m_port;
-        m_port = new OpenMVPluginSerialPort_thing(portName, this);
+        m_port = OMVPortFactory::createPort(portName, this);
         // QSerialPort is buggy unless this is set.
         m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
@@ -483,7 +213,7 @@ void OpenMVPluginSerialPort_private::write(const QByteArray &data, int startWait
         {
             if(!m_port)
             {
-                m_port = new OpenMVPluginSerialPort_thing(portName, this);
+                m_port = OMVPortFactory::createPort(portName, this);
                 // QSerialPort is buggy unless this is set.
                 m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
@@ -492,7 +222,7 @@ void OpenMVPluginSerialPort_private::write(const QByteArray &data, int startWait
                 || (!m_port->setDataTerminalReady(true)))
                 {
                     delete m_port;
-                    m_port = new OpenMVPluginSerialPort_thing(portName, this);
+                    m_port = OMVPortFactory::createPort(portName, this);
                     // QSerialPort is buggy unless this is set.
                     m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
@@ -660,14 +390,14 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
         }
         else
         {
-            int read_timeout = m_port->isSerialPort() ? SERIAL_READ_TIMEOUT : WIFI_READ_TIMEOUT;
+            int read_timeout = m_port->readTimeoutMs();
 
             if(m_override_read_timeout > 0)
             {
                 read_timeout = m_override_read_timeout;
             }
 
-            int read_stall_timeout = m_port->isSerialPort() ? SERIAL_READ_STALL_TIMEOUT : WIFI_READ_STALL_TIMEOUT;
+            int read_stall_timeout = m_port->readStallTimeoutMs();
 
             if(m_override_read_stall_timeout > 0)
             {
@@ -899,7 +629,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
     {
         QStringList stringList;
 
-        for(QSerialPortInfo raw_port : QSerialPortInfo::availablePorts())
+        for(const QSerialPortInfo &raw_port : QSerialPortInfo::availablePorts())
         {
             MyQSerialPortInfo port(raw_port);
 
@@ -926,7 +656,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
                 delete m_port;
             }
 
-            m_port = new OpenMVPluginSerialPort_thing(portName, this);
+            m_port = OMVPortFactory::createPort(portName, this);
             // QSerialPort is buggy unless this is set.
             m_port->setReadBufferSize(READ_BUFFER_SIZE);
 
@@ -935,7 +665,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
             || (!m_port->setDataTerminalReady(true)))
             {
                 delete m_port;
-                m_port = new OpenMVPluginSerialPort_thing(portName, this);
+                m_port = OMVPortFactory::createPort(portName, this);
                 // QSerialPort is buggy unless this is set.
                 m_port->setReadBufferSize(READ_BUFFER_SIZE);
 

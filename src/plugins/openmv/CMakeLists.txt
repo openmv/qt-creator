@@ -58,6 +58,27 @@ add_qtc_plugin(OpenMV
     histogram/openmvpluginhistogram.ui
 )
 
+target_sources(OpenMV
+  PRIVATE
+    openmvpluginio2.cpp
+    openmvpluginio2.h
+    protocol/omv_buffer.cpp
+    protocol/omv_buffer.h
+    protocol/omv_camera.cpp
+    protocol/omv_camera.h
+    protocol/omv_constants.cpp
+    protocol/omv_constants.h
+    protocol/omv_crc.cpp
+    protocol/omv_crc.h
+    protocol/omv_exceptions.h
+    protocol/omv_image.cpp
+    protocol/omv_image.h
+    protocol/omv_port.cpp
+    protocol/omv_port.h
+    protocol/omv_transport.cpp
+    protocol/omv_transport.h
+)
+
 target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::GuiPrivate)
 
 if (WIN32)
