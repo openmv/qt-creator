@@ -36,8 +36,7 @@ public:
     /*
         OpenMV Camera Protocol Implementation
     */
-    OMVCamera(const QString &port,
-              int baudrate      = 921600,
+    OMVCamera(OMVPort *serial_,
               bool crc          = true,
               bool seq          = true,
               bool ack          = true,
@@ -93,6 +92,9 @@ public:
     // Access to cached system info map (Python-like keys)
     const QVariantMap &cachedSystemInfo() const { return sysinfo; }
 
+    bool frameReady() const { return frameEvent; }
+    bool scriptRunning() const { return scriptState; }
+
 private:
     struct ChannelInfo {
         QString name;
@@ -108,8 +110,6 @@ private:
 
     // Connection / protocol state
     OMVPort      *serial;
-    QString      portName;
-    int          baudRate;
     double       timeoutSec;
     int          maxRetry;
     double       dropRate;
@@ -121,6 +121,7 @@ private:
     QVariantMap  sysinfo;
     OMVTransport *transport;
     bool         frameEvent;
+    bool         scriptState;
 
 private:
     // Helper: retry-on-resync (decorator equivalent)

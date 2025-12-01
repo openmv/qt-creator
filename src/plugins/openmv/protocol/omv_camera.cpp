@@ -18,8 +18,7 @@
 
 namespace omv {
 
-OMVCamera::OMVCamera(const QString &port,
-                     int baudrate,
+OMVCamera::OMVCamera(OMVPort *serial_,
                      bool crc,
                      bool seq,
                      bool ack,
@@ -33,15 +32,14 @@ OMVCamera::OMVCamera(const QString &port,
     , caps_ack(ack)
     , caps_events(events)
     , caps_max_payload(uint16_t(max_payload))
-    , serial(nullptr)
-    , portName(port)
-    , baudRate(baudrate)
+    , serial(serial_)
     , timeoutSec(timeout)
     , maxRetry(max_retry)
     , dropRate(drop_rate)
     , pendingChannelEvents(0)
     , transport(nullptr)
     , frameEvent(false)
+    , scriptState(false)
 {
 }
 
@@ -55,18 +53,7 @@ void OMVCamera::connect()
     /*
         Establish connection to the OpenMV camera
     */
-    if (serial) {
-        disconnect();
-    }
-
-    serial = OMVPortFactory::createPort(portName);
-
-    if (!serial->open(QIODevice::ReadWrite)) {
-        QString msg = QStringLiteral("Failed to connect: %1").arg(serial->errorString());
-        delete serial;
-        serial = nullptr;
-        throw OMVPException(msg);
-    }
+    disconnect();
 
     try {
         // Perform resync (also creates transport)
@@ -96,16 +83,12 @@ void OMVCamera::disconnect()
         transport = nullptr;
     }
 
-    if (serial) {
-        delete serial;
-        serial = nullptr;
-    }
-
     channelsById.clear();
     channelsByName.clear();
     sysinfo.clear();
     pendingChannelEvents = 0;
     frameEvent = false;
+    scriptState = false;
 }
 
 bool OMVCamera::isConnected() const
@@ -215,7 +198,8 @@ void OMVCamera::handleEvent(uint8_t channel_id, uint16_t event)
             frameEvent = true;
             event_type = QStringLiteral(" (Frame Ready)");
         } else if (ch.name == QStringLiteral("stdin")) {
-            event_type = (event == 1)
+            scriptState = (event == 1);
+            event_type = scriptState
             ? QStringLiteral(" (Script Started)")
             : QStringLiteral(" (Script Stopped)");
         }
@@ -594,6 +578,7 @@ void OMVCamera::stop()
         uint8_t stdin_id = getChannelId(QStringLiteral("stdin"));
         if (stdin_id) {
             channelIoctl(stdin_id, static_cast<uint32_t>(OMVPChannelIOCTL::STDIN_STOP));
+            scriptState = false;
         }
     });
 }
@@ -618,6 +603,8 @@ void OMVCamera::exec(const QString &script)
 
         // Execute the script
         channelIoctl(stdin_id, static_cast<uint32_t>(OMVPChannelIOCTL::STDIN_EXEC));
+
+        scriptState = true;
     });
 }
 

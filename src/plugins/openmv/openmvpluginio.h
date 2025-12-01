@@ -158,17 +158,6 @@ typedef enum {
         PIXFORMAT_JPEG:                 \
         case PIXFORMAT_PNG
 
-typedef struct profile_record {
-    uint32_t address;
-    uint32_t caller;
-    uint32_t call_count;
-    uint32_t min_ticks;
-    uint32_t max_ticks;
-    uint64_t total_ticks;
-    uint64_t total_cycles;
-    QList<uint64_t> events;
-} profile_record_t;
-
 int getImageSize(int w, int h, int bpp, bool newPixformat, int pixformat);
 QPixmap getImageFromData(QByteArray data, int w, int h, int bpp, bool rgb565ByteReversed, bool newPixformat, int pixformat);
 

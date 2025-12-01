@@ -60,8 +60,8 @@ add_qtc_plugin(OpenMV
 
 target_sources(OpenMV
   PRIVATE
-    openmvpluginio2.cpp
-    openmvpluginio2.h
+
+
     protocol/omv_buffer.cpp
     protocol/omv_buffer.h
     protocol/omv_camera.cpp

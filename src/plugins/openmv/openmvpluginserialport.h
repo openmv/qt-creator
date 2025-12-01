@@ -34,13 +34,11 @@
 #include <QtCore>
 #include <QtNetwork>
 
-#include <QtSerialPort/QSerialPort>
-#include <QtSerialPort/QSerialPortInfo>
-
 #include <utils/hostosinfo.h>
 
 #include "tools/myqserialportinfo.h"
 
+#include "protocol/omv_camera.h"
 #include "protocol/omv_port.h"
 
 #define STM32_DFU_VID           0x0483
@@ -288,6 +286,17 @@ namespace Internal {
 
 using namespace omv;
 
+typedef struct profile_record {
+    uint32_t address;
+    uint32_t caller;
+    uint32_t call_count;
+    uint32_t min_ticks;
+    uint32_t max_ticks;
+    uint64_t total_ticks;
+    uint64_t total_cycles;
+    QList<uint64_t> events;
+} profile_record_t;
+
 void serializeByte(QByteArray &buffer, int value); // LittleEndian
 void serializeWord(QByteArray &buffer, int value); // LittleEndian
 void serializeLong(QByteArray &buffer, int value); // LittleEndian
@@ -340,10 +349,19 @@ public:
                                             int override_per_command_wait = -1,
                                             const QJsonDocument &settings = QJsonDocument(),
                                             QObject *parent = Q_NULLPTR);
+    ~OpenMVPluginSerialPort_private();
 
 public slots:
 
+    // Shared
+
     void open(const QString &portName);
+
+    // V1 protocol
+    //
+    // Serial thread only implements the transport layer of the protocol.
+    // The GUI thread implements the transaction layer.
+
     void command(const OpenMVPluginSerialPortCommand &command);
 
     void bootloaderStart(const QString &selectedPort);
@@ -352,9 +370,37 @@ public slots:
 
     void updateSettings(bool unstuckWithGetState) { m_unstuckWithGetState = unstuckWithGetState; }
 
+    // V2 protocol
+    //
+    // Serial thread implements the transport and transaction layer of the protocol.
+
+    void getFirmwareVersion();
+    void frameSizeDump();
+    void getArchString();
+    void scriptExec(const QByteArray &data);
+    void scriptStop();
+    void getScriptRunning();
+    void sysReset(bool enterBootloader = false);
+    void fbEnable(bool enable);
+    void getTxBuffer();
+    void sensorId();
+    void readProfile();
+    void setProfileMode(int mode);
+    void setEventCounter(int event_num, int event_type);
+    void profileReset();
+    void close();
+
 signals:
 
+    // Shared
+
     void openResult(const QString &errorMessage);
+
+    // V1 protocol
+    //
+    // Serial thread only implements the transport layer of the protocol.
+    // The GUI thread implements the transaction layer.
+
     void commandResult(const OpenMVPluginSerialPortCommandResult &commandResult);
 
     void bootloaderStartResponse(bool ok, int version, int highspeed);
@@ -363,11 +409,32 @@ signals:
 
     void settingsUpdated();
 
+    // V2 protocol
+    //
+    // Serial thread implements the transport and transaction layer of the protocol.
+
+    void firmwareVersion(int major, int minor, int patch);
+    void frameBufferData(const QPixmap &data);
+    void archString(const QString &arch);
+    void scriptExecDone();
+    void scriptStopDone();
+    void scriptRunning(bool running);
+    void sysResetDone();
+    void fbEnableDone();
+    void printData(const QByteArray &data);
+    void sensorIdDone(int id);
+    void readProfileDone(const QList<profile_record_t> &records);
+    void setProfileModeDone();
+    void setEventCounterDone();
+    void profileResetDone();
+    void closeResponse();
+
 private:
 
     void write(const QByteArray &data, int startWait, int stopWait, int timeout);
 
     OMVPort *m_port;
+    OMVCamera *m_camera;
     bool m_bootloaderStop;
     int m_override_read_timeout;
     int m_override_read_stall_timeout;
@@ -394,8 +461,15 @@ public:
 
 signals:
 
+    // Shared
+
     void open(const QString &portName);
     void openResult(const QString &errorMessage);
+
+    // V1 protocol
+    //
+    // Serial thread only implements the transport layer of the protocol.
+    // The GUI thread implements the transaction layer.
 
     void command(const OpenMVPluginSerialPortCommand &command);
     void commandResult(const OpenMVPluginSerialPortCommandResult &commandResult);
@@ -410,6 +484,42 @@ signals:
 
     void updateSettings(bool unstuckWithGetState);
     void settingsUpdated();
+
+    // V2 protocol
+    //
+    // Serial thread implements the transport and transaction layer of the protocol.
+
+    void getFirmwareVersion();
+    void frameSizeDump();
+    void getArchString();
+    void scriptExec(const QByteArray &data);
+    void scriptStop();
+    void getScriptRunning();
+    void sysReset(bool enterBootloader = false);
+    void fbEnable(bool enable);
+    void getTxBuffer();
+    void sensorId();
+    void readProfile();
+    void setProfileMode(int mode);
+    void setEventCounter(int event_num, int event_type);
+    void profileReset();
+    void close();
+
+    void firmwareVersion(int major, int minor, int patch);
+    void frameBufferData(const QPixmap &data);
+    void archString(const QString &arch);
+    void scriptExecDone();
+    void scriptStopDone();
+    void scriptRunning(bool running);
+    void sysResetDone();
+    void fbEnableDone();
+    void printData(const QByteArray &data);
+    void sensorIdDone(int id);
+    void readProfileDone(const QList<profile_record_t> &records);
+    void setProfileModeDone();
+    void setEventCounterDone();
+    void profileResetDone();
+    void closeResponse();
 
 private:
 

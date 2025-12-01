@@ -105,7 +105,7 @@ enum : uint8_t {
     // Stdin channel IOCTLs
     STDIN_STOP  = 0x01, // Stop running script
     STDIN_EXEC  = 0x02, // Execute script
-    STDIN_RESET = 0x03, // Reseet script buffer
+    STDIN_RESET = 0x03, // Reset script buffer
 
     // Stream channel IOCTLs
     STREAM_CTRL     = 0x00, // Enable/disable streaming
