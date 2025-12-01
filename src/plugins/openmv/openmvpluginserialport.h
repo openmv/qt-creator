@@ -355,6 +355,7 @@ public slots:
 
     // Shared
 
+    void enableV2Protocol(bool enable);
     void open(const QString &portName);
 
     // V1 protocol
@@ -375,7 +376,7 @@ public slots:
     // Serial thread implements the transport and transaction layer of the protocol.
 
     void getFirmwareVersion();
-    void frameSizeDump();
+    void frameDump();
     void getArchString();
     void scriptExec(const QByteArray &data);
     void scriptStop();
@@ -384,6 +385,7 @@ public slots:
     void fbEnable(bool enable);
     void getTxBuffer();
     void sensorId();
+    void getState();
     void readProfile();
     void setProfileMode(int mode);
     void setEventCounter(int event_num, int event_type);
@@ -394,6 +396,7 @@ signals:
 
     // Shared
 
+    void enableV2ProtocolResponse();
     void openResult(const QString &errorMessage);
 
     // V1 protocol
@@ -423,6 +426,7 @@ signals:
     void fbEnableDone();
     void printData(const QByteArray &data);
     void sensorIdDone(int id);
+    void getStateDone();
     void readProfileDone(const QList<profile_record_t> &records);
     void setProfileModeDone();
     void setEventCounterDone();
@@ -433,8 +437,10 @@ private:
 
     void write(const QByteArray &data, int startWait, int stopWait, int timeout);
 
+    QTimer *m_idleTimer;
     OMVPort *m_port;
     OMVCamera *m_camera;
+    bool m_v2ProtocolEnabled;
     bool m_bootloaderStop;
     int m_override_read_timeout;
     int m_override_read_stall_timeout;
@@ -463,6 +469,8 @@ signals:
 
     // Shared
 
+    void enableV2Protocol(bool enable);
+    void enableV2ProtocolResponse();
     void open(const QString &portName);
     void openResult(const QString &errorMessage);
 
@@ -490,7 +498,7 @@ signals:
     // Serial thread implements the transport and transaction layer of the protocol.
 
     void getFirmwareVersion();
-    void frameSizeDump();
+    void frameDump();
     void getArchString();
     void scriptExec(const QByteArray &data);
     void scriptStop();
@@ -499,6 +507,7 @@ signals:
     void fbEnable(bool enable);
     void getTxBuffer();
     void sensorId();
+    void getState();
     void readProfile();
     void setProfileMode(int mode);
     void setEventCounter(int event_num, int event_type);
@@ -515,6 +524,7 @@ signals:
     void fbEnableDone();
     void printData(const QByteArray &data);
     void sensorIdDone(int id);
+    void getStateDone();
     void readProfileDone(const QList<profile_record_t> &records);
     void setProfileModeDone();
     void setEventCounterDone();

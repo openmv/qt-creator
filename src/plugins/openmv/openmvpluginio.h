@@ -189,8 +189,8 @@ public slots:
     void getScriptRunning();
     void templateSave(int x, int y, int w, int h, const QByteArray &path);
     void descriptorSave(int x, int y, int w, int h, const QByteArray &path);
-    void getAttribute(int attribute);
-    void setAttribute(int attribute, int value);
+    void getAttribute(int attr);
+    void setAttribute(int attr, int value);
     void sysReset(bool enterBootloader = false);
     void fbEnable(bool enable);
     void jpegEnable(bool enabled);
@@ -253,6 +253,9 @@ signals:
     void sensorIdDone(int id);
     void getStateDone();
     void readProfileDone(const QList<profile_record_t> &records);
+    void setProfileModeDone();
+    void setEventCounterDone();
+    void profileResetDone();
     void gotBootloaderStart(bool ok, int version);
     void bootloaderResetDone(bool ok);
     void flashEraseDone(bool ok);
@@ -291,6 +294,9 @@ private:
     bool m_getStateVariableSize;
     bool m_profileEnabled;
     bool m_hasPMU;
+    // V2 protocol
+    bool m_v2ProtocolEnabled;
+    bool m_v2CommandInProgress;
 };
 
 } // namespace Internal

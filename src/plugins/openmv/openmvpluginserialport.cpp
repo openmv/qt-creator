@@ -144,6 +144,7 @@ OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(int override_read
 {
     m_port = Q_NULLPTR;
     m_camera = Q_NULLPTR;
+    m_v2ProtocolEnabled = false;
     m_bootloaderStop = false;
     m_override_read_timeout = override_read_timeout;
     m_override_read_stall_timeout = override_read_stall_timeout;
@@ -152,9 +153,28 @@ OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(int override_read
     m_unstuckWithGetState = false;
     m_readstallQueue = QHash<char, QQueue<qint64> >();
     m_readstallAverage = QHash<char, qint64 >();
+
+    m_idleTimer = new QTimer(this);
+
+    connect(m_idleTimer, &QTimer::timeout, this, [this]() {
+        if (m_v2ProtocolEnabled && m_camera) {
+            try {
+                if (m_camera->isConnected()) {
+                    m_camera->pollEvents();
+                }
+            } catch (...) {
+                // ignore
+            }
+        }
+    });
 }
 
 OpenMVPluginSerialPort_private::~OpenMVPluginSerialPort_private() {
+    if (m_idleTimer) {
+        delete m_idleTimer;
+        m_idleTimer = Q_NULLPTR;
+    }
+
     if (m_camera) {
         delete m_camera;
         m_camera = Q_NULLPTR;
@@ -164,6 +184,18 @@ OpenMVPluginSerialPort_private::~OpenMVPluginSerialPort_private() {
         delete m_port;
         m_port = Q_NULLPTR;
     }
+}
+
+void OpenMVPluginSerialPort_private::enableV2Protocol(bool enable) {
+    m_v2ProtocolEnabled = enable;
+
+    if (enable) {
+        m_idleTimer->start(1);
+    } else {
+        m_idleTimer->stop();
+    }
+
+    emit enableV2ProtocolResponse();
 }
 
 void OpenMVPluginSerialPort_private::open(const QString &portName) {
@@ -805,7 +837,7 @@ void OpenMVPluginSerialPort_private::getFirmwareVersion() {
     }
 }
 
-void OpenMVPluginSerialPort_private::frameSizeDump() {
+void OpenMVPluginSerialPort_private::frameDump() {
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
@@ -829,14 +861,7 @@ void OpenMVPluginSerialPort_private::getArchString() {
             m_camera->connect();
         }
 
-        QVariantList v = m_camera->cachedSystemInfo().
-                         value(QStringLiteral("firmware_version")).toList();
-
-        if (v.size() == 3) {
-            emit firmwareVersion(v.at(0).toInt(), v.at(1).toInt(), v.at(2).toInt());
-        } else {
-            emit firmwareVersion(0, 0, 0);
-        }
+        emit archString(QString());
     } catch (...) {
         emit archString(QString());
     }
@@ -943,6 +968,18 @@ void OpenMVPluginSerialPort_private::sensorId() {
     }
 }
 
+void OpenMVPluginSerialPort_private::getState() {
+    try {
+        if (!m_camera->isConnected()) {
+            m_camera->connect();
+        }
+
+        emit getStateDone();
+    } catch (...) {
+        emit getStateDone();
+    }
+}
+
 void OpenMVPluginSerialPort_private::readProfile() {
    try {
         if (!m_camera->isConnected()) {
@@ -960,6 +997,7 @@ void OpenMVPluginSerialPort_private::readProfile() {
             r.max_ticks = v.toMap().value(QStringLiteral("max_ticks")).toUInt();
             r.total_ticks = v.toMap().value(QStringLiteral("total_ticks")).toULongLong();
             r.total_cycles = v.toMap().value(QStringLiteral("total_cycles")).toULongLong();
+
             for (const QVariant &v2 : v.toMap().value(QStringLiteral("events")).toList()) {
                 r.events.append(v2.toULongLong());
             }
@@ -1033,6 +1071,12 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout, int ov
 
     // Shared
 
+    connect(this, &OpenMVPluginSerialPort::enableV2Protocol,
+            m_port, &OpenMVPluginSerialPort_private::enableV2Protocol);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::enableV2ProtocolResponse,
+            this, &OpenMVPluginSerialPort::enableV2ProtocolResponse);
+
     connect(this, &OpenMVPluginSerialPort::open,
             m_port, &OpenMVPluginSerialPort_private::open);
 
@@ -1084,8 +1128,8 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout, int ov
     connect(m_port, &OpenMVPluginSerialPort_private::firmwareVersion,
             this, &OpenMVPluginSerialPort::firmwareVersion);
 
-    connect(this, &OpenMVPluginSerialPort::frameSizeDump,
-            m_port, &OpenMVPluginSerialPort_private::frameSizeDump);
+    connect(this, &OpenMVPluginSerialPort::frameDump,
+            m_port, &OpenMVPluginSerialPort_private::frameDump);
 
     connect(m_port, &OpenMVPluginSerialPort_private::frameBufferData,
             this, &OpenMVPluginSerialPort::frameBufferData);
@@ -1137,6 +1181,12 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout, int ov
 
     connect(m_port, &OpenMVPluginSerialPort_private::sensorIdDone,
             this, &OpenMVPluginSerialPort::sensorIdDone);
+
+    connect(this, &OpenMVPluginSerialPort::getState,
+            m_port, &OpenMVPluginSerialPort_private::getState);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::getStateDone,
+            this, &OpenMVPluginSerialPort::getStateDone);
 
     connect(this, &OpenMVPluginSerialPort::readProfile,
             m_port, &OpenMVPluginSerialPort_private::readProfile);
