@@ -571,7 +571,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 {
                     // V1 Protocol response will be 0/1.
                     // V2 Protocol response will be the proto sync.
-                    m_v2ProtocolEnabled = deserializeWord(data) == OMVPOpcode::PROTO_SYNC;
+                    m_v2ProtocolEnabled = deserializeWord(data) == OMVProto::SYNC_WORD;
                     emit protocolVersionDone();
                     break;
                 }
