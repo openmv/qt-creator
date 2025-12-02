@@ -168,7 +168,7 @@ class OpenMVPluginIO : public QObject
 public:
 
     explicit OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent = Q_NULLPTR);
-
+    bool v2ProtocolEnabled() const { return m_v2ProtocolEnabled; }
     bool getTimeout();
     bool queueisEmpty() const;
     bool frameSizeDumpQueued() const;
@@ -180,6 +180,7 @@ public:
 
 public slots:
 
+    void checkProtocolVerison();
     void getFirmwareVersion();
     void frameSizeDump();
     void getArchString();
@@ -233,6 +234,7 @@ public slots: // private
 
 signals:
 
+    void protocolVersionDone();
     void firmwareVersion(int major, int minor, int patch);
     void frameBufferData(const QPixmap &data);
     void frameBufferEmpty(bool ok);
@@ -294,9 +296,9 @@ private:
     bool m_getStateVariableSize;
     bool m_profileEnabled;
     bool m_hasPMU;
+
     // V2 protocol
     bool m_v2ProtocolEnabled;
-    bool m_v2CommandInProgress;
 };
 
 } // namespace Internal

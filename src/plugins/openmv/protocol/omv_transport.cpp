@@ -247,7 +247,33 @@ void OMVTransport::send_packet(uint8_t opcode,
     }
 
     log(seq_to_use, channel, opcode, flags, length, "Send");
-    serial->write(pbuf.constData(), packet_size);
+
+    for (qint64 written = 0;;) {
+        qint64 ret = serial->write(pbuf.constData() + written, packet_size - written);
+
+        if (ret < 0) {
+            throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
+        }
+
+        written += ret;
+
+        if (written >= packet_size) {
+            break;
+        }
+
+        serial->flush(); // ignore return
+
+        QElapsedTimer elaspedTimer;
+        elaspedTimer.start();
+
+        while (serial->bytesToWrite()) {
+            serial->waitForBytesWritten(1);
+            if(serial->bytesToWrite() && elaspedTimer.hasExpired(timeout * 1000.0)) {
+                throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
+            }
+        }
+    }
+
     stats.sent += 1;
 }
 

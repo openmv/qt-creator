@@ -819,6 +819,11 @@ void OpenMVPluginSerialPort_private::bootloaderReset()
 // Serial thread implements the transport and transaction layer of the protocol.
 
 void OpenMVPluginSerialPort_private::getFirmwareVersion() {
+    if (!m_camera) {
+        emit firmwareVersion(true, 0, 0, 0);
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
@@ -828,16 +833,21 @@ void OpenMVPluginSerialPort_private::getFirmwareVersion() {
                          value(QStringLiteral("firmware_version")).toList();
 
         if (v.size() == 3) {
-            emit firmwareVersion(v.at(0).toInt(), v.at(1).toInt(), v.at(2).toInt());
+            emit firmwareVersion(false, v.at(0).toInt(), v.at(1).toInt(), v.at(2).toInt());
         } else {
-            emit firmwareVersion(0, 0, 0);
+            emit firmwareVersion(false, 0, 0, 0);
         }
     } catch (...) {
-        emit firmwareVersion(0, 0, 0);
+        emit firmwareVersion(true, 0, 0, 0);
     }
 }
 
 void OpenMVPluginSerialPort_private::frameDump() {
+    if (!m_camera) {
+        emit frameBufferData(true, QPixmap());
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
@@ -846,66 +856,123 @@ void OpenMVPluginSerialPort_private::frameDump() {
         OMVFrame frame;
 
         if (m_camera->readFrame(frame)) {
-            emit frameBufferData(frame.pixmap);
+            emit frameBufferData(false, frame.pixmap);
         } else {
-            emit frameBufferData(QPixmap());
+            emit frameBufferData(false, QPixmap());
         }
     } catch (...) {
-        emit frameBufferData(QPixmap());
+        emit frameBufferData(true, QPixmap());
     }
 }
 
 void OpenMVPluginSerialPort_private::getArchString() {
+    if (!m_camera || !m_port) {
+        emit archString(true, QString());
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
         }
 
-        emit archString(QString());
+        QString boardArchString;
+        QString boardType;
+
+        if (m_port->hasVIDPID()) {
+            QPair<int, int> vidpid = m_port->getVIDPID();
+
+            for (const QJsonValue &v : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray()) {
+                QJsonObject o = v.toObject();
+                QStringList bVidPid = o.value(QStringLiteral("boardVidPid")).toString().split(QStringLiteral(":"));
+                int vid = bVidPid.at(0).toInt(nullptr, 16);
+                int pid = bVidPid.at(1).toInt(nullptr, 16);
+                int bPidMask = o.value(QStringLiteral("boardPidMask")).toString().toInt(nullptr, 16);
+
+                if ((vid == vidpid.first) && ((pid & bPidMask) == (vidpid.second & bPidMask))) {
+                    boardArchString = o.value(QStringLiteral("boardArchString")).toString();
+                    boardType = o.value(QStringLiteral("boardType")).toString();
+                    break;
+                }
+            }
+        }
+
+        QVariantList v = m_camera->cachedSystemInfo().
+                         value(QStringLiteral("device_id")).toList();
+
+        if (v.size() == 3) {
+            emit archString(false, QString(QStringLiteral("%1 [%2:%3%4%5]")).
+                arg(boardArchString, boardType,
+                    QString::number(v.at(0).toUInt(), 16).rightJustified(8, QChar('0')).toUpper(),
+                    QString::number(v.at(1).toUInt(), 16).rightJustified(8, QChar('0')).toUpper(),
+                    QString::number(v.at(2).toUInt(), 16).rightJustified(8, QChar('0')).toUpper()));
+        } else {
+            emit archString(false, QString());
+        }
     } catch (...) {
-        emit archString(QString());
+        emit archString(true, QString());
     }
 }
 
 void OpenMVPluginSerialPort_private::scriptExec(const QByteArray &data) {
+    if (!m_camera) {
+        emit scriptExecDone(true);
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
         }
 
         m_camera->exec(QString::fromUtf8(data));
-        emit scriptExecDone();
+        emit scriptExecDone(false);
     } catch (...) {
-        emit scriptExecDone();
+        emit scriptExecDone(true);
     }
 }
 
 void OpenMVPluginSerialPort_private::scriptStop() {
+    if (!m_camera) {
+        emit scriptStopDone(true);
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
         }
 
         m_camera->stop();
-        emit scriptStopDone();
+        emit scriptStopDone(false);
     } catch (...) {
-        emit scriptStopDone();
+        emit scriptStopDone(true);
     }
 }
 
 void OpenMVPluginSerialPort_private::getScriptRunning() {
+    if (!m_camera) {
+        emit scriptRunning(true, false);
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
         }
 
-        emit scriptRunning(m_camera->scriptRunning());
+        emit scriptRunning(false, m_camera->scriptRunning());
     } catch (...) {
-        emit scriptRunning(false);
+        emit scriptRunning(true, false);
     }
 }
 
 void OpenMVPluginSerialPort_private::sysReset(bool enterBootloader) {
+    if (!m_camera) {
+        emit sysResetDone(true);
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
@@ -917,39 +984,54 @@ void OpenMVPluginSerialPort_private::sysReset(bool enterBootloader) {
             m_camera->reset();
         }
 
-        emit sysResetDone();
+        emit sysResetDone(false);
     } catch (...) {
-        emit sysResetDone();
+        emit sysResetDone(true);
     }
 }
 
 void OpenMVPluginSerialPort_private::fbEnable(bool enable) {
+    if (!m_camera) {
+        emit fbEnableDone(true);
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
         }
 
         m_camera->streaming(enable);
-        emit fbEnableDone();
+        emit fbEnableDone(false);
     } catch (...) {
-        emit fbEnableDone();
+        emit fbEnableDone(true);
     }
 }
 
 void OpenMVPluginSerialPort_private::getTxBuffer() {
+    if (!m_camera) {
+        emit printData(true, QByteArray());
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
         }
 
         QString s = m_camera->readStdout();
-        emit printData(s.toUtf8());
+        emit printData(false, s.toUtf8());
     } catch (...) {
-        emit printData(QByteArray());
+        emit printData(true, QByteArray());
     }
 }
 
 void OpenMVPluginSerialPort_private::sensorId() {
+    if (!m_camera) {
+        emit sensorIdDone(true, 0);
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
@@ -959,29 +1041,49 @@ void OpenMVPluginSerialPort_private::sensorId() {
                          value(QStringLiteral("sensor_chip_id")).toList();
 
         if (v.size() == 3) {
-            emit sensorIdDone(v.at(0).toInt());
+            emit sensorIdDone(false, v.at(0).toInt());
         } else {
-            emit sensorIdDone(0);
+            emit sensorIdDone(false, 0);
         }
     } catch (...) {
-        emit sensorIdDone(0);
+        emit sensorIdDone(true, 0);
     }
 }
 
 void OpenMVPluginSerialPort_private::getState() {
+    if (!m_camera) {
+        emit getStateDone(true, false, false, false, QByteArray(), QPixmap());
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
         }
 
-        emit getStateDone();
+        bool profileEnabled = m_camera->hasChannel(QStringLiteral("profile"));
+        bool hasPMU = m_camera->cachedSystemInfo().value(QStringLiteral("pmu_present")).toBool();
+        QString s = m_camera->readStdout();
+        OMVFrame frame;
+        bool frameValid = m_camera->frameReady() && m_camera->readFrame(frame);
+        emit getStateDone(false,
+                          m_camera->scriptRunning(),
+                          profileEnabled,
+                          profileEnabled && hasPMU,
+                          s.toUtf8(),
+                          frameValid ? frame.pixmap : QPixmap());
     } catch (...) {
-        emit getStateDone();
+        emit getStateDone(true, false, false, false, QByteArray(), QPixmap());
     }
 }
 
 void OpenMVPluginSerialPort_private::readProfile() {
-   try {
+    if (!m_camera) {
+        emit readProfileDone(true, QList<profile_record_t>());
+        return;
+    }
+
+    try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
         }
@@ -1003,60 +1105,80 @@ void OpenMVPluginSerialPort_private::readProfile() {
             }
         }
 
-        emit readProfileDone(records);
+        emit readProfileDone(false, records);
     } catch (...) {
-        emit readProfileDone(QList<profile_record_t>());
+        emit readProfileDone(true, QList<profile_record_t>());
     }
 }
 
 void OpenMVPluginSerialPort_private::setProfileMode(int mode) {
+    if (!m_camera) {
+        emit setProfileModeDone(true);
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
         }
 
         m_camera->profilerMode(mode);
-        emit setProfileModeDone();
+        emit setProfileModeDone(false);
     } catch (...) {
-        emit setProfileModeDone();
+        emit setProfileModeDone(true);
     }
 }
 
 void OpenMVPluginSerialPort_private::setEventCounter(int event_num, int event_type) {
+    if (!m_camera) {
+        emit setEventCounterDone(true);
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
         }
 
         m_camera->profilerEventType(event_num, event_type);
-        emit setEventCounterDone();
+        emit setEventCounterDone(false);
     } catch (...) {
-        emit setEventCounterDone();
+        emit setEventCounterDone(true);
     }
 }
 
 void OpenMVPluginSerialPort_private::profileReset() {
+    if (!m_camera) {
+        emit profileResetDone(true);
+        return;
+    }
+
     try {
         if (!m_camera->isConnected()) {
             m_camera->connect();
         }
 
         m_camera->profilerReset();
-        emit profileResetDone();
+        emit profileResetDone(false);
     } catch (...) {
-        emit profileResetDone();
+        emit profileResetDone(true);
     }
 }
 
 void OpenMVPluginSerialPort_private::close() {
+    if (!m_camera) {
+        emit closeResponse(true);
+        return;
+    }
+
     try {
         if (m_camera->isConnected()) {
             m_camera->disconnect();
         }
 
-        emit closeResponse();
+        emit closeResponse(false);
     } catch (...) {
-        emit closeResponse();
+        emit closeResponse(true);
     }
 }
 

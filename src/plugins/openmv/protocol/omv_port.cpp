@@ -37,6 +37,18 @@ int OMVSerialPort::readStallTimeoutMs()
     return SERIAL_READ_STALL_TIMEOUT;
 }
 
+bool OMVSerialPort::hasVIDPID()
+{
+    QSerialPortInfo info(*m_serialPort);
+    return info.hasVendorIdentifier() && info.hasProductIdentifier();
+}
+
+QPair<int, int> OMVSerialPort::getVIDPID()
+{
+    QSerialPortInfo info(*m_serialPort);
+    return QPair<int, int>(info.vendorIdentifier(), info.productIdentifier());
+}
+
 void OMVSerialPort::setReadBufferSize(qint64 size)
 {
     m_serialPort->setReadBufferSize(size);

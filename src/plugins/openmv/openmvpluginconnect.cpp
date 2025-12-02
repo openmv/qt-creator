@@ -1705,6 +1705,20 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             RECONNECT_END();
         }
 
+        // V2 Protocol ////////////////////////////////////////////////////////
+
+        if(!forceBootloaderBricked)
+        {
+            QEventLoop loop;
+
+            connect(m_iodevice, &OpenMVPluginIO::protocolVersionDone,
+                    &loop, &QEventLoop::quit);
+
+            m_iodevice->checkProtocolVerison();
+
+            loop.exec();
+        }
+
         // Get Version ////////////////////////////////////////////////////////
 
         int major2 = int();

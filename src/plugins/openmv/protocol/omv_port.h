@@ -30,6 +30,8 @@ public:
     virtual OMVPortType_t portType() = 0;
     virtual int readTimeoutMs() = 0;
     virtual int readStallTimeoutMs() = 0;
+    virtual bool hasVIDPID() { return false; }
+    virtual QPair<int, int> getVIDPID() { return QPair<int, int>(); }
 
     virtual void setReadBufferSize(qint64 size) = 0;
     virtual bool setBaudRate(qint32 baudRate) = 0;
@@ -66,6 +68,8 @@ public:
     OMVPortType_t portType() override { return OMVPortType_Serial; }
     int readTimeoutMs() override;
     int readStallTimeoutMs() override;
+    bool hasVIDPID() override;
+    QPair<int, int> getVIDPID() override;
 
     void setReadBufferSize(qint64 size) override;
     bool setBaudRate(qint32 baudRate) override;

@@ -318,8 +318,14 @@ public:
                                            bool commandAbortOkay = false,
                                            bool readFlushBeforeCommnad = false) :
         m_data(data),
-        m_responseLen(responseLen), m_startWait(startWait), m_endWait(endWait),
-        m_perCommandWait(perCommandWait), m_commandAbortOkay(commandAbortOkay), m_readFlushBeforeCommnad(readFlushBeforeCommnad) { }
+        m_responseLen(responseLen),
+        m_startWait(startWait),
+        m_endWait(endWait),
+        m_perCommandWait(perCommandWait),
+        m_commandAbortOkay(commandAbortOkay),
+        m_readFlushBeforeCommnad(readFlushBeforeCommnad)
+    {
+    }
     QByteArray m_data;
     int m_responseLen;
     int m_startWait; // in ms
@@ -332,8 +338,12 @@ public:
 class OpenMVPluginSerialPortCommandResult
 {
 public:
-    explicit OpenMVPluginSerialPortCommandResult(bool ok = bool(), const QByteArray &data = QByteArray()) :
-        m_ok(ok), m_data(data) { }
+    explicit OpenMVPluginSerialPortCommandResult(bool ok = bool(),
+                                                 const QByteArray &data = QByteArray()) :
+        m_ok(ok),
+        m_data(data)
+    {
+    }
     bool m_ok;
     QByteArray m_data;
 };
@@ -369,7 +379,9 @@ public slots:
     void bootloaderStop();
     void bootloaderReset();
 
-    void updateSettings(bool unstuckWithGetState) { m_unstuckWithGetState = unstuckWithGetState; }
+    void updateSettings(bool unstuckWithGetState) {
+        m_unstuckWithGetState = unstuckWithGetState;
+    }
 
     // V2 protocol
     //
@@ -416,22 +428,23 @@ signals:
     //
     // Serial thread implements the transport and transaction layer of the protocol.
 
-    void firmwareVersion(int major, int minor, int patch);
-    void frameBufferData(const QPixmap &data);
-    void archString(const QString &arch);
-    void scriptExecDone();
-    void scriptStopDone();
-    void scriptRunning(bool running);
-    void sysResetDone();
-    void fbEnableDone();
-    void printData(const QByteArray &data);
-    void sensorIdDone(int id);
-    void getStateDone();
-    void readProfileDone(const QList<profile_record_t> &records);
-    void setProfileModeDone();
-    void setEventCounterDone();
-    void profileResetDone();
-    void closeResponse();
+    void firmwareVersion(bool timeout, int major, int minor, int patch);
+    void frameBufferData(bool timeout, const QPixmap &data);
+    void archString(bool timeout, const QString &arch);
+    void scriptExecDone(bool timeout);
+    void scriptStopDone(bool timeout);
+    void scriptRunning(bool timeout, bool running);
+    void sysResetDone(bool timeout);
+    void fbEnableDone(bool timeout);
+    void printData(bool timeout, const QByteArray &data);
+    void sensorIdDone(bool timeout, int id);
+    void getStateDone(bool timeout, bool running, bool profileEnabled, bool hasPMU,
+                      const QByteArray &data, const QPixmap &img);
+    void readProfileDone(bool timeout, const QList<profile_record_t> &records);
+    void setProfileModeDone(bool timeout);
+    void setEventCounterDone(bool timeout);
+    void profileResetDone(bool timeout);
+    void closeResponse(bool timeout);
 
 private:
 
@@ -514,22 +527,23 @@ signals:
     void profileReset();
     void close();
 
-    void firmwareVersion(int major, int minor, int patch);
-    void frameBufferData(const QPixmap &data);
-    void archString(const QString &arch);
-    void scriptExecDone();
-    void scriptStopDone();
-    void scriptRunning(bool running);
-    void sysResetDone();
-    void fbEnableDone();
-    void printData(const QByteArray &data);
-    void sensorIdDone(int id);
-    void getStateDone();
-    void readProfileDone(const QList<profile_record_t> &records);
-    void setProfileModeDone();
-    void setEventCounterDone();
-    void profileResetDone();
-    void closeResponse();
+    void firmwareVersion(bool timeout, int major, int minor, int patch);
+    void frameBufferData(bool timeout, const QPixmap &data);
+    void archString(bool timeout, const QString &arch);
+    void scriptExecDone(bool timeout);
+    void scriptStopDone(bool timeout);
+    void scriptRunning(bool timeout, bool running);
+    void sysResetDone(bool timeout);
+    void fbEnableDone(bool timeout);
+    void printData(bool timeout, const QByteArray &data);
+    void sensorIdDone(bool timeout, int id);
+    void getStateDone(bool timeout, bool running, bool profileEnabled, bool hasPMU,
+                      const QByteArray &data, const QPixmap &img);
+    void readProfileDone(bool timeout, const QList<profile_record_t> &records);
+    void setProfileModeDone(bool timeout);
+    void setEventCounterDone(bool timeout);
+    void profileResetDone(bool timeout);
+    void closeResponse(bool timeout);
 
 private:
 
