@@ -1497,8 +1497,8 @@ void OpenMVPluginIO::checkProtocolVerison()
 
     m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer,
                                                         SCRIPT_RUNNING_RESPONSE_LEN,
-                                                        FW_VERSION_START_DELAY,
-                                                        FW_VERSION_END_DELAY,
+                                                        SCRIPT_RUNNING_START_DELAY,
+                                                        SCRIPT_RUNNING_END_DELAY,
                                                         true, false, true));
     m_completionQueue.enqueue(CHECK_PROTOCOL_VERSION_CPL);
     command();
