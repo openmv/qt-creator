@@ -331,6 +331,9 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
 
     m_v2ProtocolEnabled = bool();
 
+    connect(m_port, &OpenMVPluginSerialPort::enableV2ProtocolResponse,
+            this, &OpenMVPluginIO::protocolVersionDone);
+
     connect(m_port, &OpenMVPluginSerialPort::firmwareVersion,
             this, [this] (bool timeout, int major, int minor, int patch) {
                 if (timeout) m_timeout = true;
@@ -418,7 +421,6 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                           const QByteArray &data, const QPixmap &img) {
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_GET_STATE_CPL);
-
                 emit scriptRunning(running);
 
                 if (data.size()) {
@@ -572,7 +574,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     // V1 Protocol response will be 0/1.
                     // V2 Protocol response will be the proto sync.
                     m_v2ProtocolEnabled = deserializeWord(data) == OMVProto::SYNC_WORD;
-                    emit protocolVersionDone();
+                    m_port->enableV2Protocol(m_v2ProtocolEnabled);
                     break;
                 }
                 case USBDBG_FW_VERSION_CPL:
@@ -1069,7 +1071,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     case CHECK_PROTOCOL_VERSION_CPL:
                     {
                         m_v2ProtocolEnabled = false;
-                        emit protocolVersionDone();
+                        m_port->enableV2Protocol(m_v2ProtocolEnabled);
                         break;
                     }
                     case USBDBG_FW_VERSION_CPL:

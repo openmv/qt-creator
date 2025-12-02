@@ -115,8 +115,8 @@ private:
     double       dropRate;
 
     // Protocol components
-    QHash<QString, uint8_t> channelsByName;
-    QHash<uint8_t, ChannelInfo> channelsById;
+    QMap<QString, uint8_t> channelsByName;
+    QMap<uint8_t, ChannelInfo> channelsById;
     int          pendingChannelEvents;
     QVariantMap  sysinfo;
     OMVTransport *transport;
@@ -162,7 +162,7 @@ private:
                             const char *fmt = nullptr,
                             const QList<uint32_t> &args = QList<uint32_t>());
 
-    QHash<uint8_t, ChannelInfo> channelList();
+    QMap<uint8_t, ChannelInfo> channelList();
     void updateChannels();
 
     // Helpers: get channel id/name

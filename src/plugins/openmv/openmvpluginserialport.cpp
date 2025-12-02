@@ -187,13 +187,15 @@ OpenMVPluginSerialPort_private::~OpenMVPluginSerialPort_private() {
 }
 
 void OpenMVPluginSerialPort_private::enableV2Protocol(bool enable) {
-    m_v2ProtocolEnabled = enable;
-
-    if (enable) {
-        m_idleTimer->start(1);
-    } else {
-        m_idleTimer->stop();
+    if (m_v2ProtocolEnabled != enable) {
+        if (enable) {
+            m_idleTimer->start(1);
+        } else {
+            m_idleTimer->stop();
+        }
     }
+
+    m_v2ProtocolEnabled = enable;
 
     emit enableV2ProtocolResponse();
 }

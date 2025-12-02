@@ -160,29 +160,13 @@ void OMVTransport::log(int seq,
 
     QString flags_str = _format_flags(uint8_t(flags));
 
-    // Add emoji based on packet type and direction
-    QString emoji;
-    if (qstrcmp(direction, "Drop") == 0) {
-        emoji = QString::fromUtf8("🎲");
-    } else if (qstrcmp(direction, "Rjct") == 0) {
-        emoji = QString::fromUtf8("🚫");
-    } else if (flags & OMVPFlags::ACK) {
-        emoji = QString::fromUtf8("✅");
-    } else if (flags & OMVPFlags::NAK) {
-        emoji = QString::fromUtf8("❌");
-    } else if (qstrcmp(direction, "Send") == 0) {
-        emoji = QString::fromUtf8("➡️");
-    } else {
-        emoji = QString::fromUtf8("⬅️");
-    }
-
-    qDebug().noquote() << emoji
-                       << direction
-                       << ": seq=" << QStringLiteral("%1").arg(seq, 3, 10, QChar('0'))
-                       << ", chan=" << ch
-                       << ", opcode=" << opcode_str
-                       << ", flags=" << flags_str
-                       << ", length=" << length;
+    qDebug().noquote().nospace()
+        << direction
+        << ": seq=" << QStringLiteral("%1").arg(seq, 3, 10, QChar('0'))
+        << ", chan=" << ch
+        << ", opcode=" << opcode_str
+        << ", flags=" << flags_str
+        << ", length=" << length;
 }
 
 void OMVTransport::send_packet(uint8_t opcode,
@@ -293,6 +277,8 @@ QVariant OMVTransport::recv_packet(bool poll_events)
     const qint64 timeout_ms = qint64(timeout * 1000.0);
 
     while (timer.elapsed() < timeout_ms) {
+        serial->waitForReadyRead(0);
+
         if (serial->bytesAvailable() > 0) {
             QByteArray data = serial->readAll();
             buf.extend(data);
