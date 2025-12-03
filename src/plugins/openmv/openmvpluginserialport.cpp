@@ -927,7 +927,11 @@ void OpenMVPluginSerialPort_private::scriptExec(const QByteArray &data) {
             m_camera->connect();
         }
 
+        QThread::msleep(SCRIPT_EXEC_START_DELAY);
         m_camera->exec(QString::fromUtf8(data));
+        QThread::msleep(SCRIPT_EXEC_2_END_DELAY);
+        m_camera->pollEvents();
+
         emit scriptExecDone(false);
     } catch (...) {
         emit scriptExecDone(true);
@@ -945,7 +949,11 @@ void OpenMVPluginSerialPort_private::scriptStop() {
             m_camera->connect();
         }
 
+        QThread::msleep(SCRIPT_STOP_START_DELAY);
         m_camera->stop();
+        QThread::msleep(SCRIPT_STOP_END_DELAY);
+        m_camera->pollEvents();
+
         emit scriptStopDone(false);
     } catch (...) {
         emit scriptStopDone(true);
@@ -1065,9 +1073,11 @@ void OpenMVPluginSerialPort_private::getState() {
 
         bool profileEnabled = m_camera->hasChannel(QStringLiteral("profile"));
         bool hasPMU = m_camera->cachedSystemInfo().value(QStringLiteral("pmu_present")).toBool();
+
         QString s = m_camera->readStdout();
         OMVFrame frame;
         bool frameValid = m_camera->frameReady() && m_camera->readFrame(frame);
+
         emit getStateDone(false,
                           m_camera->scriptRunning(),
                           profileEnabled,

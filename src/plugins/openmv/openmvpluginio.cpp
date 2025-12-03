@@ -339,6 +339,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_FIRMWARE_VERSION_CPL);
                 emit firmwareVersion(major, minor, patch);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::frameBufferData,
@@ -348,6 +349,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 bool null = data.isNull();
                 if (!null) emit frameBufferData(data);
                 emit frameBufferEmpty(null);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::archString,
@@ -355,6 +357,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_ARCH_STRING_CPL);
                 emit archString(arch);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::scriptExecDone,
@@ -362,6 +365,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_SCRIPT_EXEC_CPL);
                 emit scriptExecDone();
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::scriptStopDone,
@@ -369,6 +373,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_SCRIPT_STOP_CPL);
                 emit scriptStopDone();
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::scriptRunning,
@@ -376,6 +381,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_SCRIPT_RUNNING_CPL);
                 emit scriptRunning(running);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::sysResetDone,
@@ -383,6 +389,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_SYSTEM_RESET_CPL);
                 emit sysResetDone();
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::fbEnableDone,
@@ -390,6 +397,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_FRAME_BUFFER_ENABLE_CPL);
                 emit fbEnableDone();
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::printData,
@@ -407,6 +415,8 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 } else {
                     emit printEmpty(true);
                 }
+
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::sensorIdDone,
@@ -414,6 +424,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_SENSOR_ID_CPL);
                 emit sensorIdDone(id);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::getStateDone,
@@ -442,6 +453,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 m_hasPMU = hasPMU;
 
                 emit getStateDone();
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::readProfileDone,
@@ -449,6 +461,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_PROFILE_DATA_CPL);
                 emit readProfileDone(records);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::setProfileModeDone,
@@ -456,6 +469,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_SET_PROFILE_MODE_CPL);
                 emit setProfileModeDone();
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::setEventCounterDone,
@@ -463,6 +477,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_SET_EVENT_COUNTER_CPL);
                 emit setEventCounterDone();
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::profileResetDone,
@@ -470,6 +485,7 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_PROFILE_RESET_CPL);
                 emit profileResetDone();
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
     connect(m_port, &OpenMVPluginSerialPort::closeResponse,
@@ -483,7 +499,9 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 }
 
                 m_v2ProtocolEnabled = false;
+
                 emit closeResponse();
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 }
 

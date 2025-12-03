@@ -27,7 +27,7 @@ static QPixmap _convert_grayscale(const QByteArray &raw_data,
 
     const qsizetype expected = qsizetype(width) * qsizetype(height);
     if (raw_data.size() != expected) {
-        qCritical().noquote()
+        qDebug().noquote()
         << "Grayscale data size mismatch: expected"
         << expected << ", got" << raw_data.size();
         return QPixmap();
@@ -41,7 +41,7 @@ static QPixmap _convert_grayscale(const QByteArray &raw_data,
                 QImage::Format_Grayscale8);
 
     if (gray.isNull()) {
-        qCritical() << "Failed to wrap GRAY image data";
+        qDebug() << "Failed to wrap GRAY image data";
         return QPixmap();
     }
 
@@ -60,7 +60,7 @@ static QPixmap _convert_rgb565(const QByteArray &raw_data,
 
     const qsizetype expected = qsizetype(width) * qsizetype(height) * 2;
     if (raw_data.size() != expected) {
-        qCritical().noquote()
+        qDebug().noquote()
         << "RGB565 data size mismatch: expected"
         << expected << ", got" << raw_data.size();
         return QPixmap();
@@ -74,7 +74,7 @@ static QPixmap _convert_rgb565(const QByteArray &raw_data,
                   QImage::Format_RGB16);
 
     if (rgb565.isNull()) {
-        qCritical() << "Failed to wrap RGB565 image data";
+        qDebug() << "Failed to wrap RGB565 image data";
         return QPixmap();
     }
 
@@ -93,13 +93,13 @@ static QPixmap _convert_jpeg(const QByteArray &raw_data,
 
     QImage img;
     if (!img.loadFromData(raw_data, "JPG") && !img.loadFromData(raw_data, "JPEG")) {
-        qCritical() << "JPEG decode error: QImage::loadFromData failed";
+        qDebug() << "JPEG decode error: QImage::loadFromData failed";
         return QPixmap();
     }
 
     if (width > 0 && height > 0) {
         if (img.width() != width || img.height() != height) {
-            qCritical().noquote()
+            qDebug().noquote()
             << "JPEG decode size mismatch: expected"
             << (width * height * 3)
             << "pixels worth of RGB,"
@@ -133,7 +133,7 @@ QPixmap convert_to_rgb888(const QByteArray &raw_data,
     } else {
         // Unknown format - return raw data and let caller handle it
         fmt = QStringLiteral("0x%1").arg(pixformat, 8, 16, QChar('0')).toUpper();
-        qWarning().noquote() << "Unknown pixel format:" << fmt;
+        qDebug().noquote() << "Unknown pixel format:" << fmt;
         pm = QPixmap(); // null pixmap
     }
 
