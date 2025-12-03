@@ -13,6 +13,7 @@
 #include "omv_crc.h"
 #include "omv_transport.h"
 #include <QtCore/QBuffer>
+#include <QtCore/QDateTime>
 
 namespace omv {
 
@@ -166,7 +167,8 @@ void OMVTransport::log(int seq,
         << ", chan=" << ch
         << ", opcode=" << opcode_str
         << ", flags=" << flags_str
-        << ", length=" << length;
+        << ", length=" << length
+        << ", time=" << (QDateTime::currentMSecsSinceEpoch() % 10000) << "ms";
 }
 
 void OMVTransport::send_packet(uint8_t opcode,

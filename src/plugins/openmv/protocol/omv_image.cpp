@@ -132,8 +132,8 @@ QPixmap convert_to_rgb888(const QByteArray &raw_data,
         pm = _convert_jpeg(raw_data, width, height, &fmt);
     } else {
         // Unknown format - return raw data and let caller handle it
-        fmt = QStringLiteral("0x%1").arg(pixformat, 8, 16, QChar('0')).toUpper();
-        qDebug().noquote() << "Unknown pixel format:" << fmt;
+        fmt = QStringLiteral("%1").arg(pixformat, 8, 16, QChar('0')).toUpper();
+        qDebug().noquote().nospace() << "Unknown pixel format: 0x" << fmt;
         pm = QPixmap(); // null pixmap
     }
 
