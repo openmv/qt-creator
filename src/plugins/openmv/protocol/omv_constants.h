@@ -69,6 +69,7 @@ enum : uint8_t {
     PROTO_GET_CAPS  = 0x01,
     PROTO_SET_CAPS  = 0x02,
     PROTO_STATS     = 0x03,
+    PROTO_VERSION   = 0x04,
 
     // System commands
     SYS_RESET       = 0x10,

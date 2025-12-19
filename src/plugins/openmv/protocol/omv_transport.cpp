@@ -9,13 +9,18 @@
  */
 
 #include "omv_constants.h"
+#include "omv_debug.h"
 #include "omv_exceptions.h"
 #include "omv_crc.h"
 #include "omv_transport.h"
+
 #include <QtCore/QBuffer>
 #include <QtCore/QDateTime>
 
 namespace omv {
+
+static bool logging_enabled = true;
+static bool print_frags = false;
 
 OMVTransport::OMVTransport(OMVPort *serial_,
                            bool crc,
@@ -41,6 +46,16 @@ OMVTransport::OMVTransport(OMVPort *serial_,
     stats.received = 0;
     stats.checksum = 0;
     stats.sequence = 0;
+}
+
+void OMVTransport::setLoggingEnabled(bool enabled)
+{
+    logging_enabled = enabled;
+}
+
+bool OMVTransport::isLoggingEnabled()
+{
+    return logging_enabled;
 }
 
 void OMVTransport::reset_sequence()
@@ -128,6 +143,9 @@ void OMVTransport::log(int seq,
                        int length,
                        const char *direction)
 {
+    if (!logging_enabled) return;
+    if (!print_frags && (flags & OMVPFlags::FRAGMENT)) return;
+
     /*
         Log packet information for debugging
     */
@@ -161,7 +179,7 @@ void OMVTransport::log(int seq,
 
     QString flags_str = _format_flags(uint8_t(flags));
 
-    qDebug().noquote().nospace()
+    omvDebug().noquote().nospace()
         << direction
         << ": seq=" << QStringLiteral("%1").arg(seq, 3, 10, QChar('0'))
         << ", chan=" << ch
@@ -243,7 +261,7 @@ void OMVTransport::send_packet(uint8_t opcode,
 
         written += ret;
 
-        if (written >= packet_size) {
+        if ((written >= packet_size)) {
             break;
         }
 
@@ -279,7 +297,7 @@ QVariant OMVTransport::recv_packet(bool poll_events)
     const qint64 timeout_ms = qint64(timeout * 1000.0);
 
     while (timer.elapsed() < timeout_ms) {
-        serial->waitForReadyRead(0);
+        serial->waitForReadyRead(1);
 
         if (serial->bytesAvailable() > 0) {
             QByteArray data = serial->readAll();
@@ -291,7 +309,7 @@ QVariant OMVTransport::recv_packet(bool poll_events)
             if (poll_events) {
                 return QVariant(); // None
             }
-            QThread::msleep(1);
+            // QThread::msleep(1);
             continue;
         }
 
@@ -343,14 +361,13 @@ QVariant OMVTransport::recv_packet(bool poll_events)
         if (packet.flags & OMVPFlags::FRAGMENT) {
             fragments.append(packet.payload);
 
-            const qsizetype frag_limit =
-                qMax(max_payload * 4, qsizetype(OMVProto::MIN_PAYLOAD_SIZE));
+            const qsizetype frag_limit = 1024 * 1024 * 1024;
 
             if (fragments.size() > frag_limit) {
                 // Treat as overflow / desync.
                 stats.checksum += 1; // closest existing stat; or add stats.overflow
                 log(packet.sequence, packet.channel, packet.opcode,
-                    packet.flags, packet.length, "Rjct");
+                    packet.flags, packet.length, "Rjct1");
 
                 fragments.clear();
                 // reset parser state to hunt for next sync
@@ -370,13 +387,12 @@ QVariant OMVTransport::recv_packet(bool poll_events)
         if (!fragments.isEmpty()) {
             fragments.append(packet.payload);
 
-            const qsizetype frag_limit =
-                qMax(max_payload * 4, qsizetype(OMVProto::MIN_PAYLOAD_SIZE));
+            const qsizetype frag_limit = 1024 * 1024 * 1024;
 
             if (fragments.size() > frag_limit) {
                 stats.checksum += 1;
                 log(packet.sequence, packet.channel, packet.opcode,
-                    packet.flags, packet.length, "Rjct");
+                    packet.flags, packet.length, "Rjct2");
 
                 fragments.clear();
                 state = OMVPState::SYNC;
@@ -472,17 +488,20 @@ bool OMVTransport::_process(Packet &out_packet)
             state = OMVPState::SYNC;
 
             if (length > max_payload) {
-                log(seq, chan, opcode, flags, length, "Rjct");
+                sequence = uint8_t((seq + 1) & 0xFF);
+                log(seq, chan, opcode, flags, length, "Rjct3");
                 buf.consume(1);
             } else if (!_check_seq(seq, sequence, opcode, flags)) {
+                sequence = uint8_t((seq + 1) & 0xFF);
                 stats.sequence += 1;
-                log(seq, chan, opcode, flags, length, "Rjct");
+                log(seq, chan, opcode, flags, length, "Rjct4");
                 buf.consume(1);
             } else if (!_check_crc(crc,
                                    QByteArrayView(header_view.data(), OMVProto::HEADER_SIZE - 2),
                                    16)) {
+                sequence = uint8_t((seq + 1) & 0xFF);
                 stats.checksum += 1;
-                log(seq, chan, opcode, flags, length, "Rjct");
+                log(seq, chan, opcode, flags, length, "Rjct5");
                 buf.consume(1);
             } else {
                 state = OMVPState::PAYLOAD;
@@ -527,8 +546,9 @@ bool OMVTransport::_process(Packet &out_packet)
                             (uint8_t(crc_ptr[3]) << 24));
 
                 if (!_check_crc(payload_crc, payload_view, 32)) {
+                    sequence = uint8_t((seq + 1) & 0xFF);
                     stats.checksum += 1;
-                    log(seq, chan, opcode, flags, length, "Rjct");
+                    log(seq, chan, opcode, flags, length, "Rjct6");
                     buf.consume(1);
                     continue;
                 }
@@ -536,6 +556,16 @@ bool OMVTransport::_process(Packet &out_packet)
                 // Only copy after CRC passes (matches Python returning bytes)
                 payload = QByteArray(payload_ptr, length);
             }
+
+            // Print the payload data nicely with 32 bytes displayed as hex per line
+            // for (qsizetype offset = 0; offset < payload.size(); offset += 32) {
+            //     QByteArray line = payload.mid(offset, 32);
+            //     QStringList hex_parts;
+            //     for (char byte : line) {
+            //         hex_parts << QStringLiteral("%1").arg(uint8_t(byte), 2, 16, QChar('0')).toUpper();
+            //     }
+            //     omvDebug().noquote().nospace() << hex_parts.join(' ');
+            // }
 
             buf.consume(plength);
 
@@ -548,11 +578,56 @@ bool OMVTransport::_process(Packet &out_packet)
             out_packet.header_crc = header_crc;
             out_packet.payload = payload;
 
+            // Anytime we receive a valid packet send a keep alive byte to prevent stalls.
+            // Ensure the keep alive byte is flushed immediately if this is not a fragment.
+            _sendKeepAlive();
+
             return true;
         }
     }
 
     return false;
+}
+
+/*
+    Sends a 0 byte on the serial port to keep the serial connection from stalling.
+ */
+void OMVTransport::_sendKeepAlive()
+{
+// This is only needed on Windows for its serial port drivers. The problem is that
+// the serial port read call will not return any data until a write to the serial
+// port is done. The contents of that write do not that matter, other than one
+// is completed. Afterwhich, the serial port will resume returning data again.
+#ifdef Q_OS_WIN
+    /*
+        Send a packet to the camera
+    */
+    if (!serial || !serial->isOpen()) {
+        throw OMVPTimeoutException(QStringLiteral("Serial connection not open"));
+    }
+
+    qint64 ret = serial->write(QByteArray(1, char(0x00)));
+
+    if (ret < 0) {
+        throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
+    }
+
+    if (ret == 1) {
+        return;
+    }
+
+    serial->flush(); // ignore return
+
+    QElapsedTimer elaspedTimer;
+    elaspedTimer.start();
+
+    while (serial->bytesToWrite()) {
+        serial->waitForBytesWritten(1);
+        if(serial->bytesToWrite() && elaspedTimer.hasExpired(timeout * 1000.0)) {
+            throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
+        }
+    }
+#endif
 }
 
 } // namespace omv

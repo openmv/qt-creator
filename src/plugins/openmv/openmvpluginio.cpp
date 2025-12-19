@@ -102,6 +102,7 @@ enum
     V2_SCRIPT_RUNNING_CPL,
     V2_SYSTEM_RESET_CPL,
     V2_FRAME_BUFFER_ENABLE_CPL,
+    V2_JPEG_ENABLE_CPL,
     V2_PRINT_DATA_CPL,
     V2_SENSOR_ID_CPL,
     V2_GET_STATE_CPL,
@@ -397,6 +398,14 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_FRAME_BUFFER_ENABLE_CPL);
                 emit fbEnableDone();
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
+            });
+
+    connect(m_port, &OpenMVPluginSerialPort::jpegEnableDone,
+            this, [this] (bool timeout) {
+                if (timeout) m_timeout = true;
+                m_completionQueue.removeOne(V2_JPEG_ENABLE_CPL);
+                emit jpegEnableDone();
                 if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
@@ -1066,6 +1075,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
 
                     m_profileEnabled = false;
                     m_hasPMU = false;
+                    m_v2ProtocolEnabled = false;
                     emit closeResponse();
                     break;
                 }
@@ -1385,6 +1395,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
 
                         m_profileEnabled = false;
                         m_hasPMU = false;
+                        m_v2ProtocolEnabled = false;
                         emit closeResponse();
                         break;
                     }
@@ -1883,12 +1894,13 @@ void OpenMVPluginIO::fbEnable(bool enabled)
 
 void OpenMVPluginIO::jpegEnable(bool enabled)
 {
-    Q_UNUSED(enabled)
-
     if (m_v2ProtocolEnabled) {
-        emit jpegEnableDone();
+        m_completionQueue.enqueue(V2_JPEG_ENABLE_CPL);
+        m_port->jpegEnable(enabled);
         return;
     }
+
+    emit jpegEnableDone();
 
 //    if(!m_breakUpJPEGEnable)
 //    {

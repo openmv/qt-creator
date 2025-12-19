@@ -246,7 +246,31 @@ void OpenMVPluginSerialPort_private::open(const QString &portName) {
     }
 
     if (m_port) {
-        m_camera = new OMVCamera(m_port);
+        if (m_port->hasVIDPID()) {
+            QPair<int, int> vidpid = m_port->getVIDPID();
+
+            for (const QJsonValue &v : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray()) {
+                QJsonObject o = v.toObject();
+                QStringList bVidPid = o.value(QStringLiteral("boardVidPid")).toString().split(QStringLiteral(":"));
+                int vid = bVidPid.at(0).toInt(nullptr, 16);
+                int pid = bVidPid.at(1).toInt(nullptr, 16);
+                int bPidMask = o.value(QStringLiteral("boardPidMask")).toString().toInt(nullptr, 16);
+
+                if ((vid == vidpid.first) && ((pid & bPidMask) == (vidpid.second & bPidMask))) {
+                    // We are connected over USB to a valid camera so we do not need ACKs.
+                    m_camera = new OMVCamera(m_port, true, true, false, true);
+                    break;
+                }
+            }
+        }
+
+        if (!m_camera) {
+            bool reliable = m_port->reliableTransport();
+            bool fullDuplex = m_port->fullDuplexTransport();
+            // Only enable ACKs on unreliable transports.
+            m_camera = new OMVCamera(m_port, true, true, !reliable, fullDuplex);
+        }
+
         emit openResult(QString());
     }
 }
@@ -662,17 +686,35 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
 {
     m_bootloaderStop = false;
 
-    if(m_port)
-    {
-        int command = __USBDBG_SYS_RESET;
-        QByteArray buffer;
-        serializeByte(buffer, __USBDBG_CMD);
-        serializeByte(buffer, command);
-        serializeLong(buffer, int());
-        write(buffer, SYS_RESET_START_DELAY, SYS_RESET_END_DELAY, WRITE_TIMEOUT);
+    if(m_port) {
+        if (m_v2ProtocolEnabled) {
+            if (m_camera) {
+                try {
+                    if (!m_camera->isConnected()) {
+                        m_camera->connect();
+                    }
 
-        if(m_port)
-        {
+                    QThread::msleep(SYS_RESET_TO_BL_START_DELAY);
+                    m_camera->boot();
+                    QThread::msleep(SYS_RESET_TO_BL_END_DELAY);
+                } catch (...) {
+                }
+            }
+        } else {
+            int command = __USBDBG_SYS_RESET;
+            QByteArray buffer;
+            serializeByte(buffer, __USBDBG_CMD);
+            serializeByte(buffer, command);
+            serializeLong(buffer, int());
+            write(buffer, SYS_RESET_START_DELAY, SYS_RESET_END_DELAY, WRITE_TIMEOUT);
+        }
+
+        if (m_camera) {
+            delete m_camera;
+            m_camera = Q_NULLPTR;
+        }
+
+        if(m_port) {
             delete m_port;
             m_port = Q_NULLPTR;
         }
@@ -880,8 +922,24 @@ void OpenMVPluginSerialPort_private::getArchString() {
 
         QString boardArchString;
         QString boardType;
+        int usb_vid = m_camera->cachedSystemInfo().value(QStringLiteral("usb_vid")).toUInt();
+        int usb_pid = m_camera->cachedSystemInfo().value(QStringLiteral("usb_pid")).toUInt();
 
-        if (m_port->hasVIDPID()) {
+        for (const QJsonValue &v : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray()) {
+            QJsonObject o = v.toObject();
+            QStringList bVidPid = o.value(QStringLiteral("boardVidPid")).toString().split(QStringLiteral(":"));
+            int vid = bVidPid.at(0).toInt(nullptr, 16);
+            int pid = bVidPid.at(1).toInt(nullptr, 16);
+            int bPidMask = o.value(QStringLiteral("boardPidMask")).toString().toInt(nullptr, 16);
+
+            if ((vid == usb_vid) && ((pid & bPidMask) == (usb_pid & bPidMask))) {
+                boardArchString = o.value(QStringLiteral("boardArchString")).toString();
+                boardType = o.value(QStringLiteral("boardType")).toString();
+                break;
+            }
+        }
+
+        if ((boardArchString.isEmpty() || boardType.isEmpty()) && m_port->hasVIDPID()) {
             QPair<int, int> vidpid = m_port->getVIDPID();
 
             for (const QJsonValue &v : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray()) {
@@ -902,7 +960,7 @@ void OpenMVPluginSerialPort_private::getArchString() {
         QVariantList v = m_camera->cachedSystemInfo().
                          value(QStringLiteral("device_id")).toList();
 
-        if (v.size() == 3) {
+        if ((!boardArchString.isEmpty()) && (!boardType.isEmpty()) && (v.size() == 3)) {
             emit archString(false, QString(QStringLiteral("%1 [%2:%3%4%5]")).
                 arg(boardArchString, boardType,
                     QString::number(v.at(0).toUInt(), 16).rightJustified(8, QChar('0')).toUpper(),
@@ -949,10 +1007,12 @@ void OpenMVPluginSerialPort_private::scriptStop() {
             m_camera->connect();
         }
 
-        QThread::msleep(SCRIPT_STOP_START_DELAY);
-        m_camera->stop();
-        QThread::msleep(SCRIPT_STOP_END_DELAY);
-        m_camera->pollEvents();
+        if (m_camera->scriptRunning(true)) {
+            QThread::msleep(SCRIPT_STOP_START_DELAY);
+            m_camera->stop();
+            QThread::msleep(SCRIPT_STOP_END_DELAY);
+            m_camera->pollEvents();
+        }
 
         emit scriptStopDone(false);
     } catch (...) {
@@ -1011,10 +1071,28 @@ void OpenMVPluginSerialPort_private::fbEnable(bool enable) {
             m_camera->connect();
         }
 
-        m_camera->streaming(enable);
+        m_camera->streaming(enable, m_camera->rawStreamingState(), m_camera->streamingResolution());
         emit fbEnableDone(false);
     } catch (...) {
         emit fbEnableDone(true);
+    }
+}
+
+void OpenMVPluginSerialPort_private::jpegEnable(bool enable) {
+    if (!m_camera) {
+        emit jpegEnableDone(true);
+        return;
+    }
+
+    try {
+        if (!m_camera->isConnected()) {
+            m_camera->connect();
+        }
+
+        m_camera->streaming(m_camera->streamingEnabledState(), !enable, m_camera->streamingResolution());
+        emit jpegEnableDone(false);
+    } catch (...) {
+        emit jpegEnableDone(true);
     }
 }
 
@@ -1075,11 +1153,13 @@ void OpenMVPluginSerialPort_private::getState() {
         bool hasPMU = m_camera->cachedSystemInfo().value(QStringLiteral("pmu_present")).toBool();
 
         QString s = m_camera->readStdout();
+        QPair<bool, bool> status = m_camera->frameReadyAndScriptRunning();
+
         OMVFrame frame;
-        bool frameValid = m_camera->frameReady() && m_camera->readFrame(frame);
+        bool frameValid = status.first && m_camera->readFrame(frame);
 
         emit getStateDone(false,
-                          m_camera->scriptRunning(),
+                          status.second,
                           profileEnabled,
                           profileEnabled && hasPMU,
                           s.toUtf8(),
@@ -1115,6 +1195,8 @@ void OpenMVPluginSerialPort_private::readProfile() {
             for (const QVariant &v2 : v.toMap().value(QStringLiteral("events")).toList()) {
                 r.events.append(v2.toULongLong());
             }
+
+            records.append(r);
         }
 
         emit readProfileDone(false, records);
@@ -1194,7 +1276,11 @@ void OpenMVPluginSerialPort_private::close() {
     }
 }
 
-OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout, int override_read_stall_timeout, int override_per_command_wait, const QJsonDocument &settings, QObject *parent) : QObject(parent)
+OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout,
+                                               int override_read_stall_timeout,
+                                               int override_per_command_wait,
+                                               const QJsonDocument &settings,
+                                               QObject *parent) : QObject(parent)
 {
     m_thread = new QThread;
     m_port = new OpenMVPluginSerialPort_private(override_read_timeout,
@@ -1303,6 +1389,12 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout, int ov
 
     connect(m_port, &OpenMVPluginSerialPort_private::fbEnableDone,
             this, &OpenMVPluginSerialPort::fbEnableDone);
+
+    connect(this, &OpenMVPluginSerialPort::jpegEnable,
+            m_port, &OpenMVPluginSerialPort_private::jpegEnable);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::jpegEnableDone,
+            this, &OpenMVPluginSerialPort::jpegEnableDone);
 
     connect(this, &OpenMVPluginSerialPort::getTxBuffer,
             m_port, &OpenMVPluginSerialPort_private::getTxBuffer);

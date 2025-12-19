@@ -8,10 +8,10 @@
  * Handles conversion from various pixel formats to RGB888 for display purposes.
  */
 
+#include "omv_debug.h"
 #include "omv_image.h"
 
 #include <QtGui/QImage>
-#include <QtCore/QDebug>
 
 namespace omv {
 
@@ -27,7 +27,7 @@ static QPixmap _convert_grayscale(const QByteArray &raw_data,
 
     const qsizetype expected = qsizetype(width) * qsizetype(height);
     if (raw_data.size() != expected) {
-        qDebug().noquote()
+        omvDebug().noquote()
         << "Grayscale data size mismatch: expected"
         << expected << ", got" << raw_data.size();
         return QPixmap();
@@ -41,7 +41,7 @@ static QPixmap _convert_grayscale(const QByteArray &raw_data,
                 QImage::Format_Grayscale8);
 
     if (gray.isNull()) {
-        qDebug() << "Failed to wrap GRAY image data";
+        omvDebug() << "Failed to wrap GRAY image data";
         return QPixmap();
     }
 
@@ -60,7 +60,7 @@ static QPixmap _convert_rgb565(const QByteArray &raw_data,
 
     const qsizetype expected = qsizetype(width) * qsizetype(height) * 2;
     if (raw_data.size() != expected) {
-        qDebug().noquote()
+        omvDebug().noquote()
         << "RGB565 data size mismatch: expected"
         << expected << ", got" << raw_data.size();
         return QPixmap();
@@ -74,7 +74,7 @@ static QPixmap _convert_rgb565(const QByteArray &raw_data,
                   QImage::Format_RGB16);
 
     if (rgb565.isNull()) {
-        qDebug() << "Failed to wrap RGB565 image data";
+        omvDebug() << "Failed to wrap RGB565 image data";
         return QPixmap();
     }
 
@@ -93,13 +93,13 @@ static QPixmap _convert_jpeg(const QByteArray &raw_data,
 
     QImage img;
     if (!img.loadFromData(raw_data, "JPG") && !img.loadFromData(raw_data, "JPEG")) {
-        qDebug() << "JPEG decode error: QImage::loadFromData failed";
+        omvDebug() << "JPEG decode error: QImage::loadFromData failed";
         return QPixmap();
     }
 
     if (width > 0 && height > 0) {
         if (img.width() != width || img.height() != height) {
-            qDebug().noquote()
+            omvDebug().noquote()
             << "JPEG decode size mismatch: expected"
             << (width * height * 3)
             << "pixels worth of RGB,"
@@ -133,7 +133,7 @@ QPixmap convert_to_rgb888(const QByteArray &raw_data,
     } else {
         // Unknown format - return raw data and let caller handle it
         fmt = QStringLiteral("%1").arg(pixformat, 8, 16, QChar('0')).toUpper();
-        qDebug().noquote().nospace() << "Unknown pixel format: 0x" << fmt;
+        omvDebug().noquote().nospace() << "Unknown pixel format: 0x" << fmt;
         pm = QPixmap(); // null pixmap
     }
 

@@ -1975,30 +1975,6 @@ void OpenMVPlugin::extensionsInitialized()
     zoomButton->setChecked(false);
     styledBar0Layout->addWidget(zoomButton);
 
-    m_jpgCompress = new QToolButton;
-    m_jpgCompress->setText(Tr::tr("JPG"));
-    m_jpgCompress->setToolTip(Tr::tr("JPEG compress the Frame Buffer for higher performance"));
-    m_jpgCompress->setCheckable(true);
-    m_jpgCompress->setChecked(true);
-    ///// Disable JPEG Compress /////
-    m_jpgCompress->setVisible(false);
-    styledBar0Layout->addWidget(m_jpgCompress);
-    connect(m_jpgCompress, &QToolButton::clicked, this, [this] {
-        if(m_connected)
-        {
-            if(!m_working)
-            {
-                m_iodevice->jpegEnable(m_jpgCompress->isChecked());
-            }
-            else
-            {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    Tr::tr("JPG"),
-                    Tr::tr("Busy... please wait..."));
-            }
-        }
-    });
-
     m_disableFrameBuffer = new QToolButton;
     m_disableFrameBuffer->setText(Tr::tr("Disable"));
     m_disableFrameBuffer->setToolTip(Tr::tr("Disable the Frame Buffer for maximum performance"));
@@ -2016,6 +1992,30 @@ void OpenMVPlugin::extensionsInitialized()
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
                     Tr::tr("Disable"),
+                    Tr::tr("Busy... please wait..."));
+            }
+        }
+    });
+
+    m_jpgCompress = new QToolButton;
+    m_jpgCompress->setText(Tr::tr("JPG"));
+    m_jpgCompress->setToolTip(Tr::tr("JPEG compress the Frame Buffer for higher performance"));
+    m_jpgCompress->setCheckable(true);
+    m_jpgCompress->setChecked(true);
+    // Only show for V2 Protocol //
+    m_jpgCompress->setVisible(false);
+    styledBar0Layout->addWidget(m_jpgCompress);
+    connect(m_jpgCompress, &QToolButton::clicked, this, [this] {
+        if(m_connected)
+        {
+            if(!m_working)
+            {
+                m_iodevice->jpegEnable(m_jpgCompress->isChecked());
+            }
+            else
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    Tr::tr("JPG"),
                     Tr::tr("Busy... please wait..."));
             }
         }

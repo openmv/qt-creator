@@ -213,7 +213,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                                       dfuNoDialogs,
                                                       Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
                                                         .pathAppended(originalFirmwareFolder)
-                                                        .pathAppended(QStringLiteral("bootloader.dfu")).toString(),
+                                                        .pathAppended(QStringLiteral("bootloader.bin")).toString(),
                                                       true);
                             return;
                         }
@@ -249,7 +249,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                                       dfuNoDialogs,
                                                       Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
                                                         .pathAppended(originalFirmwareFolder)
-                                                        .pathAppended(QStringLiteral("bootloader.dfu")).toString(),
+                                                        .pathAppended(QStringLiteral("bootloader.bin")).toString(),
                                                       true);
                             return;
                         }
@@ -670,12 +670,24 @@ void OpenMVPlugin::openmvRepairingBootloader(bool forceFlashFSErase,
 
             if(useSTCubeProgrammer)
             {
-                QString path = QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)).replace(QStringLiteral("bootloader.dfu"), QStringLiteral("FlashLayout.tsv"));
+                QString path = QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)).replace(QStringLiteral("bootloader.bin"), QStringLiteral("FlashLayout.tsv"));
                 stCubeProgrammerDownloadFirmware(Tr::tr("Flashing Bootloader"), command, process, path);
             }
             else
             {
-                downloadFirmware(Tr::tr("Flashing Bootloader"), command, process, QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)), originalDfuVidPid, QStringLiteral("-a 0 -s :leave"));
+                QString options = QStringLiteral("-a 0 -s :leave");
+
+                if (repairingBootloader)
+                {
+                    options = QStringLiteral("-a 0 -s 0x08000000");
+                }
+
+                downloadFirmware(Tr::tr("Flashing Bootloader"),
+                                 command,
+                                 process,
+                                 QDir::toNativeSeparators(QDir::cleanPath(firmwarePath)),
+                                 originalDfuVidPid,
+                                 options);
             }
 
             if((process.result() == Utils::ProcessResult::FinishedWithSuccess) || (command.contains(QStringLiteral("dfu-util")) && (process.result() == Utils::ProcessResult::FinishedWithError)))

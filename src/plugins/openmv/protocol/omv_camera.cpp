@@ -9,10 +9,10 @@
  */
 
 #include <QtCore/QDataStream>
-#include <QtCore/QDebug>
 
 #include "omv_camera.h"
 #include "omv_constants.h"
+#include "omv_debug.h"
 #include "omv_image.h"
 #include "omv_port.h"
 
@@ -38,8 +38,12 @@ OMVCamera::OMVCamera(OMVPort *serial_,
     , dropRate(drop_rate)
     , pendingChannelEvents(0)
     , transport(nullptr)
+    , resyncPending(false)
     , frameEvent(false)
     , scriptState(false)
+    , streamingEnabled(true)
+    , rawStreaming(false)
+    , streamingRes(QSize(640, 480))
 {
 }
 
@@ -67,6 +71,12 @@ void OMVCamera::connect()
 
         // Print system information
         printSystemInfo();
+
+        // Update camera state variables
+        QVariantMap status = readStatus();
+
+        frameEvent = status.value(QStringLiteral("stream")).toBool();
+        scriptState = status.value(QStringLiteral("stdin")).toBool();
     } catch (...) {
         disconnect();
         throw;
@@ -79,6 +89,23 @@ void OMVCamera::disconnect()
         Close connection to the OpenMV camera
     */
     if (transport) {
+        /*
+            Ensure all data is sent before closing the serial port
+        */
+        if (serial) {
+            serial->flush(); // ignore return
+
+            QElapsedTimer elaspedTimer;
+            elaspedTimer.start();
+
+            while(serial->bytesToWrite()) {
+                serial->waitForBytesWritten(1);
+                if(serial->bytesToWrite() && elaspedTimer.hasExpired(1000)) {
+                    break;
+                }
+            }
+        }
+
         delete transport;
         transport = nullptr;
     }
@@ -87,6 +114,7 @@ void OMVCamera::disconnect()
     channelsByName.clear();
     sysinfo.clear();
     pendingChannelEvents = 0;
+    resyncPending = false;
     frameEvent = false;
     scriptState = false;
 }
@@ -131,6 +159,12 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
         throw OMVPException(QStringLiteral("Not connected"));
     }
 
+    if (resyncPending) {
+        // Clear pending first as resync calls updateCapabilities which calls sendCmdWaitResp.
+        resyncPending = false;
+        resync();
+    }
+
     // Special handling for reset commands - they never return
     if (opcode == OMVPOpcode::SYS_RESET || opcode == OMVPOpcode::SYS_BOOT) {
         transport->send_packet(opcode, channel, 0, data);
@@ -141,6 +175,11 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
     try {
         transport->send_packet(opcode, channel, 0, data);
         QVariant resp = transport->recv_packet();
+
+        if ((opcode == OMVPOpcode::CHANNEL_LOCK || opcode == OMVPOpcode::CHANNEL_UNLOCK) &&
+            resp.canConvert<bool>()) {
+            return QByteArray(1, resp.toBool());
+        }
 
         if (!resp.isValid()) {
             return QByteArray();
@@ -157,13 +196,17 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
 
         return QByteArray();
     } catch (const OMVPException &) {
+        // Gracefully handle channel size requests during disconnect.
+        if (opcode == OMVPOpcode::CHANNEL_SIZE) {
+            return QByteArray(4, 0);
+        }
         resync();
         throw OMVPResyncException(QStringLiteral("Resync requested"));
     } catch (const std::exception &e) {
-        qDebug() << "sendCmdWaitResp exception:" << e.what();
+        omvDebug() << "sendCmdWaitResp exception:" << e.what();
         throw OMVPException(QString::fromUtf8(e.what()));
     } catch (...) {
-        qDebug() << "sendCmdWaitResp unknown exception";
+        omvDebug() << "sendCmdWaitResp unknown exception";
         throw OMVPException(QStringLiteral("Unknown error in sendCmdWaitResp"));
     }
 }
@@ -182,10 +225,12 @@ void OMVCamera::handleEvent(uint8_t channel_id, uint16_t event)
             event_name = QStringLiteral("0x%1").arg(event, 4, 16, QChar('0')).toUpper();
         }
 
-        qDebug().noquote() << "System Event: channel=system, event=" << event_name;
+        omvDebug().noquote() << "System Event: channel=system, event=" << event_name;
 
         if (event == static_cast<uint16_t>(OMVPEventType::SOFT_REBOOT)) {
-            qDebug() << "Soft Reboot triggered";
+            omvDebug() << "Soft Reboot triggered";
+            resyncPending = true;
+            // Reset here to handle any in-flight packets.
             transport->reset_sequence();
         } else if (event == static_cast<uint16_t>(OMVPEventType::CHANNEL_REGISTERED)) {
             pendingChannelEvents += 1;
@@ -198,20 +243,24 @@ void OMVCamera::handleEvent(uint8_t channel_id, uint16_t event)
         if (ch.name == QStringLiteral("stream")) {
             frameEvent = true;
             event_type = QStringLiteral(" (Frame Ready)");
+            lastFrameReady.restart();
+            lastframeReadyAndScriptRunning.restart();
         } else if (ch.name == QStringLiteral("stdin")) {
             scriptState = (event == 1);
             event_type = scriptState
             ? QStringLiteral(" (Script Started)")
             : QStringLiteral(" (Script Stopped)");
+            lastScriptRunning.restart();
+            lastframeReadyAndScriptRunning.restart();
         }
 
-        qDebug().noquote().nospace()
+        omvDebug().noquote().nospace()
             << "Channel Event: channel=" << ch.name
             << ", event=0x" << QString::number(event, 16).rightJustified(4, QChar('0')).toUpper()
             << event_type;
     } else {
-        qDebug().noquote().nospace()
-        << "️Unknown Event: channel=" << channel_id
+        omvDebug().noquote().nospace()
+        << "Unknown Event: channel=" << channel_id
         << ", event=0x"
         << QString::number(event, 16).rightJustified(4, QChar('0')).toUpper();
     }
@@ -219,7 +268,7 @@ void OMVCamera::handleEvent(uint8_t channel_id, uint16_t event)
 
 void OMVCamera::resync()
 {
-    qDebug() << "Resynchronizing";
+    omvDebug() << "Resynchronizing";
 
     if (!serial || !serial->isOpen()) {
         throw OMVPTimeoutException(QStringLiteral("Serial not open for resync"));
@@ -253,11 +302,11 @@ void OMVCamera::resync()
             }
         } catch (const OMVPException &e) {
             if (attempt < maxRetry - 1) {
-                qDebug().noquote() << e.what() << "-"
+                omvDebug().noquote() << e.what() << "-"
                 << "Sync attempt" << (attempt + 1) << "failed, retrying...";
                 continue;
             } else {
-                qDebug() << "Failed to resync after maximum attempts";
+                omvDebug() << "Failed to resync after maximum attempts";
                 throw OMVPTimeoutException(
                     QStringLiteral("Resync failed - unable to synchronize with device"));
             }
@@ -278,20 +327,17 @@ bool OMVCamera::channelLock(uint8_t channel_id)
     /*
         Lock a data channel
     */
-    QByteArray resp = sendCmdWaitResp(OMVPOpcode::CHANNEL_LOCK, channel_id);
-    Q_UNUSED(resp);
-    // If no exception, treat as success
-    return true;
+    QByteArray a = sendCmdWaitResp(OMVPOpcode::CHANNEL_LOCK, channel_id);
+    return (!a.isEmpty()) && a.at(0);
 }
 
 bool OMVCamera::channelUnlock(uint8_t channel_id)
 {
     /*
-        Lock a data channel
+        Unlock a data channel
     */
-    QByteArray resp = sendCmdWaitResp(OMVPOpcode::CHANNEL_UNLOCK, channel_id);
-    Q_UNUSED(resp);
-    return true;
+    QByteArray a = sendCmdWaitResp(OMVPOpcode::CHANNEL_UNLOCK, channel_id);
+    return (!a.isEmpty()) && a.at(0);
 }
 
 uint32_t OMVCamera::channelSizeRaw(uint8_t channel_id)
@@ -444,9 +490,9 @@ void OMVCamera::updateChannels()
         channelsByName.insert(it.value().name, it.key());
     }
 
-    qDebug().nospace() << "Registered channels (" << channelsById.size() << "):";
+    omvDebug().nospace() << "Registered channels (" << channelsById.size() << "):";
     for (auto it = channelsById.cbegin(); it != channelsById.cend(); ++it) {
-        qDebug().noquote().nospace()
+        omvDebug().noquote().nospace()
         << "  ID: " << it.key()
         << ", Flags: 0x"
         << QString::number(it.value().flags, 16).rightJustified(2, QChar('0')).toUpper()
@@ -580,6 +626,8 @@ void OMVCamera::stop()
         if (stdin_id) {
             channelIoctl(stdin_id, static_cast<uint32_t>(OMVPChannelIOCTL::STDIN_STOP));
             scriptState = false;
+            // Anticipate that stopping the script may trigger a resync..
+            if (!caps_events) resyncPending = true;
         }
     });
 }
@@ -646,6 +694,11 @@ void OMVCamera::streaming(bool enable, bool raw, const QSize &res)
                          "I",
                          args);
         }
+
+        // Store streaming state
+        streamingEnabled = enable;
+        rawStreaming     = raw;
+        streamingRes     = res;
     });
 }
 
@@ -691,7 +744,7 @@ void OMVCamera::profilerReset()
             return;
         }
         channelIoctl(profile_id, static_cast<uint32_t>(OMVPChannelIOCTL::PROFILE_RESET));
-        qDebug() << "Profiler reset";
+        omvDebug() << "Profiler reset";
     });
 }
 
@@ -711,8 +764,8 @@ void OMVCamera::profilerMode(bool exclusive)
                      static_cast<uint32_t>(OMVPChannelIOCTL::PROFILE_MODE),
                      "I",
                      args);
-        qDebug() << "Profile mode set to"
-                 << (exclusive ? "exclusive" : "inclusive");
+        omvDebug() << "Profile mode set to"
+                   << (exclusive ? "exclusive" : "inclusive");
     });
 }
 
@@ -732,7 +785,7 @@ void OMVCamera::profilerEventType(uint32_t counter_num, uint32_t event_id)
                      static_cast<uint32_t>(OMVPChannelIOCTL::PROFILE_SET_EVENT),
                      "II",
                      args);
-        qDebug().noquote()
+        omvDebug().noquote()
             << "Event counter" << counter_num
             << "set to event 0x"
             << QString::number(event_id, 16).rightJustified(4, QChar('0')).toUpper();
@@ -770,13 +823,16 @@ QVariantList OMVCamera::readProfile()
         uint32_t record_count = shape[0];
         uint32_t record_size  = shape[1];
         uint32_t profile_size = record_count * record_size;
+        omvDebug().noquote().nospace() << "Profiler records: " << record_count
+                                       << ", record size: " << record_size
+                                       << ", total size: " << profile_size;
         if (profile_size == 0) {
             channelUnlock(profile_id);
             return records;
         }
 
         QByteArray data = channelReadRaw(profile_id, 0, profile_size);
-        if (data.isEmpty()) {
+        if (data.size() != profile_size) {
             channelUnlock(profile_id);
             return records;
         }
@@ -839,6 +895,7 @@ QVariantList OMVCamera::readProfile()
 
                 records.append(rec);
             }
+            omvDebug().noquote().nospace() << "Parsed profiler records: " << record_count;
 
             channelUnlock(profile_id);
             return records;
@@ -866,7 +923,7 @@ QString OMVCamera::readStdout()
         }
 
         QByteArray data = channelReadRaw(stdout_id, 0, size);
-        return QString::fromUtf8(data);
+        return (data.size() == size) ? QString::fromUtf8(data) : QString();
     });
 }
 
@@ -889,13 +946,15 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
 
         try {
             uint32_t size = channelSizeRaw(stream_id);
-            if (size <= 16) {
+            omvDebug() << "Frame Size:" << size;
+            if (size <= 20) {
                 channelUnlock(stream_id);
                 return false;
             }
 
             QByteArray data = channelReadRaw(stream_id, 0, size);
-            if (data.size() < 16) {
+            omvDebug() << "Frame Data Size:" << data.size();
+            if (data.size() != size) {
                 channelUnlock(stream_id);
                 return false;
             }
@@ -906,9 +965,10 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
             uint32_t height = 0;
             uint32_t pixfmt = 0;
             uint32_t depth  = 0;
-            ds >> width >> height >> pixfmt >> depth;
+            uint32_t offset  = 0;
+            ds >> width >> height >> pixfmt >> depth >> offset;
 
-            QByteArray raw_data = data.mid(16);
+            QByteArray raw_data = data.mid(offset);
 
             QString fmt_str;
             QPixmap pm = convert_to_rgb888(raw_data,
@@ -996,14 +1056,98 @@ bool OMVCamera::hasChannel(const QString &channel) const
     return channelsByName.contains(channel);
 }
 
+bool OMVCamera::frameReady()
+{
+    if (caps_events) {
+        if (lastFrameReady.isValid()) {
+            if (lastFrameReady.elapsed() < 1000) {
+                return frameEvent;
+            }
+            // fall through otherwise
+        } else {
+            lastFrameReady.start();
+            return frameEvent;
+        }
+    }
+
+    // Update camera state variables
+    QVariantMap status = readStatus();
+    lastFrameReady.restart();
+    frameEvent = status.value(QStringLiteral("stream")).toBool();
+    return frameEvent;
+}
+
+bool OMVCamera::scriptRunning(bool alwaysPoll)
+{
+    if ((!alwaysPoll) && caps_events) {
+        if (lastScriptRunning.isValid()) {
+            if (lastScriptRunning.elapsed() < 1000) {
+                return scriptState;
+            }
+            // fall through otherwise
+        } else {
+            lastScriptRunning.start();
+            return scriptState;
+        }
+    }
+
+    // Update camera state variables
+    lastScriptRunning.start();
+    QVariantMap status = readStatus();
+    scriptState = status.value(QStringLiteral("stdin")).toBool();
+    return scriptState;
+}
+
+QPair<bool, bool> OMVCamera::frameReadyAndScriptRunning()
+{
+    if (caps_events) {
+        if (lastframeReadyAndScriptRunning.isValid()) {
+            if (lastframeReadyAndScriptRunning.elapsed() < 1000) {
+                return QPair<bool, bool>(frameEvent, scriptState);
+            }
+            // fall through otherwise
+        } else {
+            lastframeReadyAndScriptRunning.start();
+            return QPair<bool, bool>(frameEvent, scriptState);
+        }
+    }
+
+    // Update camera state variables
+    QVariantMap status = readStatus();
+    lastframeReadyAndScriptRunning.restart();
+    frameEvent = status.value(QStringLiteral("stream")).toBool();
+    scriptState = status.value(QStringLiteral("stdin")).toBool();
+    return QPair<bool, bool>(frameEvent, scriptState);
+}
+
 QVariantMap OMVCamera::systemInfo()
 {
     /*
         Get system information
     */
     return retryIfFailed([this]() -> QVariantMap {
+        QByteArray proto_ver(3, Qt::Uninitialized);
+        QByteArray boot_ver(3, Qt::Uninitialized);
+        QByteArray fw_ver(3, Qt::Uninitialized);
+
+        {
+            QByteArray payload = sendCmdWaitResp(OMVPOpcode::PROTO_VERSION);
+            if (payload.size() < 16) {
+                throw OMVPException(
+                    QStringLiteral("Invalid PROTO_VERSION payload size: %1").arg(payload.size()));
+            }
+
+            QDataStream ds(payload);
+            ds.setByteOrder(QDataStream::LittleEndian);
+
+            ds.readRawData(proto_ver.data(), 3);
+            ds.readRawData(boot_ver.data(), 3);
+            ds.readRawData(fw_ver.data(), 3);
+            ds.skipRawData(7);
+        }
+
         QByteArray payload = sendCmdWaitResp(OMVPOpcode::SYS_INFO);
-        if (payload.size() < 80) {
+        if (payload.size() < 76) {
             throw OMVPException(
                 QStringLiteral("Invalid SYS_INFO payload size: %1").arg(payload.size()));
         }
@@ -1014,26 +1158,20 @@ QVariantMap OMVCamera::systemInfo()
         uint32_t cpu_id = 0;
         uint32_t device_id[3] = {};
         uint32_t sensor_chip_id[3] = {};
+        uint32_t usb_id = 0;
         uint32_t id_reserved[2] = {};
         uint32_t hw_caps[2] = {};
-        uint32_t memory[6] = {};
+        uint32_t memory[4] = {};
+        uint32_t memory_reserved[3] = {};
 
         ds >> cpu_id;
         for (int i = 0; i < 3; ++i) ds >> device_id[i];
+        ds >> usb_id;
         for (int i = 0; i < 3; ++i) ds >> sensor_chip_id[i];
         for (int i = 0; i < 2; ++i) ds >> id_reserved[i];
         for (int i = 0; i < 2; ++i) ds >> hw_caps[i];
-        for (int i = 0; i < 6; ++i) ds >> memory[i];
-
-        QByteArray fw_ver(3, Qt::Uninitialized);
-        QByteArray proto_ver(3, Qt::Uninitialized);
-        QByteArray boot_ver(3, Qt::Uninitialized);
-
-        ds.readRawData(fw_ver.data(), 3);
-        ds.readRawData(proto_ver.data(), 3);
-        ds.readRawData(boot_ver.data(), 3);
-        // padding 3x
-        ds.skipRawData(3);
+        for (int i = 0; i < 4; ++i) ds >> memory[i];
+        for (int i = 0; i < 3; ++i) ds >> memory_reserved[i];
 
         uint32_t capabilities  = hw_caps[0];
         uint32_t capabilities2 = hw_caps[1];
@@ -1049,6 +1187,9 @@ QVariantMap OMVCamera::systemInfo()
         QVariantList chip_list;
         for (int i = 0; i < 3; ++i) chip_list << sensor_chip_id[i];
         m.insert(QStringLiteral("sensor_chip_id"), chip_list);
+
+        m.insert(QStringLiteral("usb_vid"), usb_id >> 16 & 0xFFFF);
+        m.insert(QStringLiteral("usb_pid"), usb_id & 0xFFFF);
 
         m.insert(QStringLiteral("gpu_present"),  bool(capabilities & (1u << 0)));
         m.insert(QStringLiteral("npu_present"),  bool(capabilities & (1u << 1)));
@@ -1083,6 +1224,11 @@ QVariantMap OMVCamera::systemInfo()
         boot_v << uint8_t(boot_ver[0]) << uint8_t(boot_ver[1]) << uint8_t(boot_ver[2]);
         m.insert(QStringLiteral("bootloader_version"), boot_v);
 
+        streamingRes = bestFitAspect(memory[3] * 1024, QSize(640, 480));
+        omvDebug().noquote().nospace()
+            << "Calculated max streaming resolution: "
+            << streamingRes.width() << "x" << streamingRes.height();
+
         sysinfo = m; // cache
         return m;
     });
@@ -1093,9 +1239,9 @@ void OMVCamera::printSystemInfo()
     /*
         Print formatted system information
     */
-    qDebug() << "=== OpenMV System Information ===";
+    omvDebug() << "=== OpenMV System Information ===";
 
-    qDebug().noquote().nospace()
+    omvDebug().noquote().nospace()
         << "CPU ID: 0x"
         << QString::number(sysinfo.value(QStringLiteral("cpu_id")).toUInt(),
                            16).rightJustified(8, QChar('0')).toUpper();
@@ -1106,25 +1252,31 @@ void OMVCamera::printSystemInfo()
     for (const QVariant &v : std::as_const(dev_id_list)) {
         dev_id_hex += QString::number(v.toUInt(), 16).rightJustified(8, QChar('0')).toUpper();
     }
-    qDebug().noquote() << "Device ID:" << dev_id_hex;
+    omvDebug().noquote() << "Device ID:" << dev_id_hex;
 
     // Sensor Chip IDs are now an array of 3 words
     QVariantList chip_list = sysinfo.value(QStringLiteral("sensor_chip_id")).toList();
     for (int i = 0; i < chip_list.size(); ++i) {
         uint32_t chip_id = chip_list[i].toUInt();
         if (chip_id != 0) {
-            qDebug().noquote()
+            omvDebug().noquote()
             << QStringLiteral("CSI%1: 0x%2")
                     .arg(i)
                     .arg(QString::number(chip_id, 16).rightJustified(4, QChar('0')).toUpper());
         }
     }
 
+    omvDebug().noquote().nospace() << "USB ID: " <<
+        QString::number(sysinfo.value(QStringLiteral("usb_vid")).toUInt(),
+                        16).rightJustified(4, QChar('0')).toUpper() << ":" <<
+        QString::number(sysinfo.value(QStringLiteral("usb_pid")).toUInt(),
+                        16).rightJustified(4, QChar('0')).toUpper();
+
     // Memory info
     auto print_if_positive = [&](const char *label, const char *key) {
         uint32_t val = sysinfo.value(QString::fromLatin1(key)).toUInt();
         if (val > 0) {
-            qDebug().noquote().nospace()
+            omvDebug().noquote().nospace()
             << label << ": " << val << "KB";
         }
     };
@@ -1135,34 +1287,34 @@ void OMVCamera::printSystemInfo()
     print_if_positive("Stream Buffer", "stream_buffer_size_kb");
 
     // Hardware capabilities
-    qDebug() << "Hardware capabilities:";
+    omvDebug() << "Hardware capabilities:";
     auto yn = [&](const char *key) {
         return sysinfo.value(QString::fromLatin1(key)).toBool() ? "Yes" : "No";
     };
 
-    qDebug().noquote() << "  GPU:" << yn("gpu_present");
-    qDebug().noquote() << "  NPU:" << yn("npu_present");
-    qDebug().noquote() << "  ISP:" << yn("isp_present");
-    qDebug().noquote() << "  Video Encoder:" << yn("venc_present");
-    qDebug().noquote() << "  JPEG Encoder:" << yn("jpeg_present");
-    qDebug().noquote() << "  DRAM:" << yn("dram_present");
-    qDebug().noquote() << "  CRC Hardware:" << yn("crc_present");
-    qDebug().noquote().nospace()
+    omvDebug().noquote() << "  GPU:" << yn("gpu_present");
+    omvDebug().noquote() << "  NPU:" << yn("npu_present");
+    omvDebug().noquote() << "  ISP:" << yn("isp_present");
+    omvDebug().noquote() << "  Video Encoder:" << yn("venc_present");
+    omvDebug().noquote() << "  JPEG Encoder:" << yn("jpeg_present");
+    omvDebug().noquote() << "  DRAM:" << yn("dram_present");
+    omvDebug().noquote() << "  CRC Hardware:" << yn("crc_present");
+    omvDebug().noquote().nospace()
         << "  PMU: "
         << yn("pmu_present")
         << " (" << sysinfo.value(QStringLiteral("pmu_eventcnt")).toUInt()
         << " counters)";
 
-    qDebug().noquote() << "  Multi-core:" << yn("multicore_present");
-    qDebug().noquote() << "  WiFi:" << yn("wifi_present");
-    qDebug().noquote() << "  Bluetooth:" << yn("bt_present");
-    qDebug().noquote() << "  SD Card:" << yn("sd_present");
-    qDebug().noquote() << "  Ethernet:" << yn("eth_present");
-    qDebug().noquote() << "  USB High-Speed:" << yn("usb_highspeed");
+    omvDebug().noquote() << "  Multi-core:" << yn("multicore_present");
+    omvDebug().noquote() << "  WiFi:" << yn("wifi_present");
+    omvDebug().noquote() << "  Bluetooth:" << yn("bt_present");
+    omvDebug().noquote() << "  SD Card:" << yn("sd_present");
+    omvDebug().noquote() << "  Ethernet:" << yn("eth_present");
+    omvDebug().noquote() << "  USB High-Speed:" << yn("usb_highspeed");
 
     // Profiler info
     bool profile_available = channelsByName.contains(QStringLiteral("profile"));
-    qDebug().noquote()
+    omvDebug().noquote()
         << "Profiler:"
         << (profile_available ? "Available" : "Not available");
 
@@ -1170,7 +1322,7 @@ void OMVCamera::printSystemInfo()
     auto print_ver = [&](const char *label, const char *key) {
         QVariantList v = sysinfo.value(QString::fromLatin1(key)).toList();
         if (v.size() == 3) {
-            qDebug().noquote().nospace()
+            omvDebug().noquote().nospace()
             << label << " version: "
             << v[0].toUInt() << "."
             << v[1].toUInt() << "."
@@ -1182,7 +1334,7 @@ void OMVCamera::printSystemInfo()
     print_ver("Protocol", "protocol_version");
     print_ver("Bootloader", "bootloader_version");
 
-    qDebug().noquote().nospace()
+    omvDebug().noquote().nospace()
         << "Protocol capabilities: "
         << "CRC=" << caps_crc
         << ", SEQ=" << caps_seq
@@ -1190,7 +1342,44 @@ void OMVCamera::printSystemInfo()
         << ", EVENTS=" << caps_events
         << ", PAYLOAD=" << caps_max_payload;
 
-    qDebug() << "=================================";
+    omvDebug() << "=================================";
+}
+
+QSize OMVCamera::bestFitAspect(uint32_t maxBytes, QSize ratio)
+{
+    if (!maxBytes || !ratio.width() || !ratio.height()) {
+        return QSize(0, 0);
+    }
+
+    // Reduce aspect ratio (inline gcd).
+    int a = ratio.width();
+    int b = ratio.height();
+
+    while (b) {
+        int t = a % b;
+        a = b;
+        b = t;
+    }
+
+    int aw = ratio.width() / a;
+    int ah = ratio.height() / a;
+    int64_t maxPixels = maxBytes / 2;
+
+    if (!maxPixels) {
+        return QSize(0, 0);
+    }
+
+    // Start with the widest possible width.
+    for (int64_t w = maxPixels & ~1; w >= 2; w -= 2) {
+        // Height from aspect ratio (floor).
+        int64_t h = ((w * ah) / aw) & ~1;
+
+        if ((h >= 2) && ((w * h) <= maxPixels)) {
+            return QSize(w, h);
+        }
+    }
+
+    return QSize(0, 0);
 }
 
 } // namespace omv

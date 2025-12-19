@@ -41,6 +41,12 @@ public:
                  double drop_rate = 0.0);
 
     /*
+        Logging messages per packet send/recv.
+    */
+    static void setLoggingEnabled(bool enabled);
+    static bool isLoggingEnabled();
+
+    /*
         Reset sequence counter to 0
     */
     void reset_sequence();
@@ -130,8 +136,13 @@ private:
     */
     bool _process(Packet &out_packet);
 
+    /*
+        Necessary to prevent serial stall situations
+     */
+    void _sendKeepAlive();
+
 private:
-    OMVPort *serial;
+    QPointer<OMVPort> serial;
     double timeout;
     qsizetype max_payload;
 

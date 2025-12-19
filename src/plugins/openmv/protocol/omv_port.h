@@ -32,6 +32,8 @@ public:
     virtual int readStallTimeoutMs() = 0;
     virtual bool hasVIDPID() { return false; }
     virtual QPair<int, int> getVIDPID() { return QPair<int, int>(); }
+    virtual bool reliableTransport() { return true; }
+    virtual bool fullDuplexTransport() { return true; }
 
     virtual void setReadBufferSize(qint64 size) = 0;
     virtual bool setBaudRate(qint32 baudRate) = 0;
@@ -70,6 +72,8 @@ public:
     int readStallTimeoutMs() override;
     bool hasVIDPID() override;
     QPair<int, int> getVIDPID() override;
+    // A serial port is only reliable if it's VID/PID matches known USB VCP OpenMV Cams.
+    bool reliableTransport() override { return false; }
 
     void setReadBufferSize(qint64 size) override;
     bool setBaudRate(qint32 baudRate) override;

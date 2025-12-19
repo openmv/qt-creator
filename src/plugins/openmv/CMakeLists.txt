@@ -77,6 +77,8 @@ target_sources(OpenMV
     protocol/omv_port.h
     protocol/omv_transport.cpp
     protocol/omv_transport.h
+    protocol/omv_debug.cpp
+    protocol/omv_debug.h
 )
 
 target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::GuiPrivate)

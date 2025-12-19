@@ -395,6 +395,7 @@ public slots:
     void getScriptRunning();
     void sysReset(bool enterBootloader = false);
     void fbEnable(bool enable);
+    void jpegEnable(bool enable);
     void getTxBuffer();
     void sensorId();
     void getState();
@@ -436,6 +437,7 @@ signals:
     void scriptRunning(bool timeout, bool running);
     void sysResetDone(bool timeout);
     void fbEnableDone(bool timeout);
+    void jpegEnableDone(bool timeout);
     void printData(bool timeout, const QByteArray &data);
     void sensorIdDone(bool timeout, int id);
     void getStateDone(bool timeout, bool running, bool profileEnabled, bool hasPMU,
@@ -518,6 +520,7 @@ signals:
     void getScriptRunning();
     void sysReset(bool enterBootloader = false);
     void fbEnable(bool enable);
+    void jpegEnable(bool enable);
     void getTxBuffer();
     void sensorId();
     void getState();
@@ -535,6 +538,7 @@ signals:
     void scriptRunning(bool timeout, bool running);
     void sysResetDone(bool timeout);
     void fbEnableDone(bool timeout);
+    void jpegEnableDone(bool timeout);
     void printData(bool timeout, const QByteArray &data);
     void sensorIdDone(bool timeout, int id);
     void getStateDone(bool timeout, bool running, bool profileEnabled, bool hasPMU,

@@ -1612,7 +1612,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         }
 
         if (dfuNoDialogs && (!isOpenMVDfu) && (!isIMX) && (!isAlif) && (!isArduinoDFU) && (!isBossac) && (!isPicotool)) {
-            firmwarePath = QFileInfo(firmwarePath).path() + QStringLiteral("/bootloader.dfu");
+            firmwarePath = QFileInfo(firmwarePath).path() + QStringLiteral("/bootloader.bin");
             repairingBootloader = true;
         }
 
@@ -2059,7 +2059,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 }
             }
 
-            if ((!isOpenMVDfu)
+            if ((!repairingBootloader)
+            && (!isOpenMVDfu)
             && (!isIMX)
             && (!isAlif)
             && (!isArduinoDFU)
@@ -2257,7 +2258,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 return;
             }
 
-            if(firmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive))
+            if (repairingBootloader ||
+            firmwarePath.endsWith(QStringLiteral(".dfu"), Qt::CaseInsensitive))
             {
                 QStringList vidpid = QString(selectedDfuDevice).split(QStringLiteral(",")).first().split(QStringLiteral(":"));
 
@@ -2709,6 +2711,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             disconnect(conn3);
         }
 
+        m_jpgCompress->setVisible(m_iodevice->v2ProtocolEnabled());
+
         m_iodevice->jpegEnable(m_jpgCompress->isChecked());
         m_iodevice->fbEnable(!m_disableFrameBuffer->isChecked());
 
@@ -3029,6 +3033,8 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                 loop.exec();
             }
 
+            m_jpgCompress->setVisible(false);
+
             ///////////////////////////////////////////////////////////////////
 
             m_iodevice->getTimeout(); // clear
@@ -3247,6 +3253,8 @@ void OpenMVPlugin::startClicked()
         if(importHelper(contents))
         {
             m_iodevice->scriptExec(contents);
+            m_iodevice->jpegEnable(m_jpgCompress->isChecked());
+            m_iodevice->fbEnable(!m_disableFrameBuffer->isChecked());
 
             m_timer.restart();
             m_queue.clear();

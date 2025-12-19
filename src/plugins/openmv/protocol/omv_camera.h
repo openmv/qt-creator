@@ -42,7 +42,7 @@ public:
               bool ack          = true,
               bool events       = true,
               double timeout    = 1.0,
-              int max_retry     = 3,
+              int max_retry     = 1,
               int max_payload   = 4096,
               double drop_rate  = 0.0);
 
@@ -92,8 +92,13 @@ public:
     // Access to cached system info map (Python-like keys)
     const QVariantMap &cachedSystemInfo() const { return sysinfo; }
 
-    bool frameReady() const { return frameEvent; }
-    bool scriptRunning() const { return scriptState; }
+    bool frameReady();
+    bool scriptRunning(bool alwaysPoll = false);
+    QPair<bool, bool> frameReadyAndScriptRunning();
+
+    bool streamingEnabledState() const { return streamingEnabled; }
+    bool rawStreamingState() const { return rawStreaming; }
+    QSize streamingResolution() const { return streamingRes; }
 
 private:
     struct ChannelInfo {
@@ -109,7 +114,7 @@ private:
     uint16_t caps_max_payload;
 
     // Connection / protocol state
-    OMVPort      *serial;
+    QPointer<OMVPort> serial;
     double       timeoutSec;
     int          maxRetry;
     double       dropRate;
@@ -120,8 +125,15 @@ private:
     int          pendingChannelEvents;
     QVariantMap  sysinfo;
     OMVTransport *transport;
+    bool         resyncPending;
     bool         frameEvent;
     bool         scriptState;
+    bool         streamingEnabled;
+    bool         rawStreaming;
+    QSize        streamingRes;
+    QElapsedTimer lastFrameReady;
+    QElapsedTimer lastScriptRunning;
+    QElapsedTimer lastframeReadyAndScriptRunning;
 
 private:
     // Helper: retry-on-resync (decorator equivalent)
@@ -168,6 +180,8 @@ private:
     // Helpers: get channel id/name
     uint8_t getChannelId(const QString &name);
     QString getChannelName(uint8_t channel_id) const;
+
+    QSize bestFitAspect(uint32_t maxBytes, QSize ratio);
 };
 
 } // namespace omv
