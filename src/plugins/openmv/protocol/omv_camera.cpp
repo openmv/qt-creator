@@ -864,16 +864,16 @@ QVariantList OMVCamera::readProfile()
                     >> max_ticks;
 
                 // total_ticks, total_cycles (2 x uint64)
-                uint64_t total_ticks  = 0;
-                uint64_t total_cycles = 0;
+                quint64 total_ticks  = 0;
+                quint64 total_cycles = 0;
                 ds >> total_ticks
-                    >> total_cycles;
+                   >> total_cycles;
 
                 // events: event_count x uint64
                 QList<QVariant> events;
                 events.reserve(int(event_count));
                 for (uint32_t e = 0; e < event_count; ++e) {
-                    uint64_t evv = 0;
+                    quint64 evv = 0;
                     ds >> evv;
                     events.append(QVariant::fromValue(evv));
                 }
