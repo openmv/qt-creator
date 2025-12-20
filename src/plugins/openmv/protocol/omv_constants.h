@@ -55,7 +55,7 @@ enum : uint8_t {
     BUSY     = 0x04,
     CHECKSUM = 0x05,
     SEQUENCE = 0x06,
-    OVERFLOW = 0x07,
+    FIFO_OVERFLOW = 0x07, // OVERFLOW has a namespace conflict
     FRAGMENT = 0x08,
     UNKNOWN  = 0x09,
 };
