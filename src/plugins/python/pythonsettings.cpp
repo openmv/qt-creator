@@ -621,8 +621,15 @@ static QString defaultPylsConfiguration()
         enabled.insert("enabled", true);
         QJsonObject disabled;
         disabled.insert("enabled", false);
+        // OPENMV-DIFF //
+        QJsonObject maxLineLength;
+        maxLineLength.insert("maxLineLength", 120);
+        // OPENMV-DIFF //
         QJsonObject plugins;
         plugins.insert("flake8", disabled);
+        // OPENMV-DIFF //
+        plugins.insert("flake8", maxLineLength);
+        // OPENMV-DIFF //
         plugins.insert("jedi_completion", enabled);
         plugins.insert("jedi_definition", enabled);
         plugins.insert("jedi_hover", enabled);
@@ -631,6 +638,9 @@ static QString defaultPylsConfiguration()
         plugins.insert("jedi_symbols", enabled);
         plugins.insert("mccabe", disabled);
         plugins.insert("pycodestyle", disabled);
+        // OPENMV-DIFF //
+        plugins.insert("pycodestyle", maxLineLength);
+        // OPENMV-DIFF //
         plugins.insert("pydocstyle", disabled);
         plugins.insert("pyflakes", enabled);
         plugins.insert("pylint", disabled);

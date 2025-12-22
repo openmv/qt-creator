@@ -19,7 +19,7 @@
 
 namespace omv {
 
-static bool logging_enabled = true;
+static bool logging_enabled = false;
 static bool print_frags = false;
 
 OMVTransport::OMVTransport(OMVPort *serial_,

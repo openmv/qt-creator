@@ -18,9 +18,12 @@
 namespace omv {
 
 // Pixel format constants
+static constexpr uint32_t PIXFORMAT_BINARY    = 0x08010000;  // 4 bytes per 32 pixels
 static constexpr uint32_t PIXFORMAT_GRAYSCALE = 0x08020001;  // 1 byte per pixel
 static constexpr uint32_t PIXFORMAT_RGB565    = 0x0C030002;  // 2 bytes per pixel
+static constexpr uint32_t PIXFORMAT_ARGB8     = 0x0C080004;  // 4 bytes per pixel
 static constexpr uint32_t PIXFORMAT_JPEG      = 0x06060000;  // Variable size JPEG
+static constexpr uint32_t PIXFORMAT_PNG       = 0x06070000;  // Variable size PNG
 
 /*
     Convert various pixel formats to RGB888.

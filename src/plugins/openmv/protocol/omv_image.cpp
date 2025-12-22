@@ -15,6 +15,39 @@
 
 namespace omv {
 
+static QPixmap _convert_binary(const QByteArray &raw_data,
+                               int width,
+                               int height,
+                               QString *fmt_str)
+{
+    /*
+        Convert grayscale to RGB888
+    */
+    if (fmt_str) *fmt_str = QStringLiteral("BINARY");
+
+    const qsizetype expected = (((qsizetype(width) + 31) / 32) * 4) * qsizetype(height);
+    if (raw_data.size() != expected) {
+        omvDebug().noquote()
+        << "Binary data size mismatch: expected"
+        << expected << ", got" << raw_data.size();
+        return QPixmap();
+    }
+
+    // Wrap raw bytes as Binary without copying.
+    QImage binary(reinterpret_cast<const uchar *>(raw_data.constData()),
+                  width,
+                  height,
+                  ((width + 31) / 32) * 4, // bytesPerLine for Binary
+                  QImage::Format_MonoLSB);
+
+    if (binary.isNull()) {
+        omvDebug() << "Failed to wrap BINARY image data";
+        return QPixmap();
+    }
+
+    return QPixmap::fromImage(binary);
+}
+
 static QPixmap _convert_grayscale(const QByteArray &raw_data,
                                   int width,
                                   int height,
@@ -81,6 +114,39 @@ static QPixmap _convert_rgb565(const QByteArray &raw_data,
     return QPixmap::fromImage(rgb565);
 }
 
+static QPixmap _convert_argb8(const QByteArray &raw_data,
+                              int width,
+                              int height,
+                              QString *fmt_str)
+{
+    /*
+        Convert ARGB8 to RGB888
+    */
+    if (fmt_str) *fmt_str = QStringLiteral("ARGB8");
+
+    const qsizetype expected = qsizetype(width) * qsizetype(height) * 4;
+    if (raw_data.size() != expected) {
+        omvDebug().noquote()
+        << "ARGB8 data size mismatch: expected"
+        << expected << ", got" << raw_data.size();
+        return QPixmap();
+    }
+
+    // Wrap raw bytes as ARGB8 (Qt treats this as ARGB32) without copying.
+    QImage argb8(reinterpret_cast<const uchar *>(raw_data.constData()),
+                  width,
+                  height,
+                  width * 4, // bytesPerLine for ARGB8
+                  QImage::Format_ARGB32);
+
+    if (argb8.isNull()) {
+        omvDebug() << "Failed to wrap ARGB8 image data";
+        return QPixmap();
+    }
+
+    return QPixmap::fromImage(argb8);
+}
+
 static QPixmap _convert_jpeg(const QByteArray &raw_data,
                              int width,
                              int height,
@@ -112,6 +178,37 @@ static QPixmap _convert_jpeg(const QByteArray &raw_data,
     return QPixmap::fromImage(img);
 }
 
+static QPixmap _convert_png(const QByteArray &raw_data,
+                            int width,
+                            int height,
+                            QString *fmt_str)
+{
+    /*
+        Convert PNG to RGB888
+    */
+    if (fmt_str) *fmt_str = QStringLiteral("PNG");
+
+    QImage img;
+    if (!img.loadFromData(raw_data, "PNG")) {
+        omvDebug() << "PNG decode error: QImage::loadFromData failed";
+        return QPixmap();
+    }
+
+    if (width > 0 && height > 0) {
+        if (img.width() != width || img.height() != height) {
+            omvDebug().noquote()
+            << "PNG decode size mismatch: expected"
+            << (width * height * 3)
+            << "pixels worth of RGB,"
+            << "got image"
+            << img.width() << "x" << img.height();
+            return QPixmap();
+        }
+    }
+
+    return QPixmap::fromImage(img);
+}
+
 QPixmap convert_to_rgb888(const QByteArray &raw_data,
                           int width,
                           int height,
@@ -124,12 +221,18 @@ QPixmap convert_to_rgb888(const QByteArray &raw_data,
     QString fmt;
     QPixmap pm;
 
-    if (pixformat == PIXFORMAT_GRAYSCALE) {
+    if (pixformat == PIXFORMAT_BINARY) {
+        pm = _convert_binary(raw_data, width, height, &fmt);
+    } else if (pixformat == PIXFORMAT_GRAYSCALE) {
         pm = _convert_grayscale(raw_data, width, height, &fmt);
     } else if (pixformat == PIXFORMAT_RGB565) {
         pm = _convert_rgb565(raw_data, width, height, &fmt);
+    } else if (pixformat == PIXFORMAT_ARGB8) {
+        pm = _convert_argb8(raw_data, width, height, &fmt);
     } else if (pixformat == PIXFORMAT_JPEG) {
         pm = _convert_jpeg(raw_data, width, height, &fmt);
+    } else if (pixformat == PIXFORMAT_PNG) {
+        pm = _convert_png(raw_data, width, height, &fmt);
     } else {
         // Unknown format - return raw data and let caller handle it
         fmt = QStringLiteral("%1").arg(pixformat, 8, 16, QChar('0')).toUpper();
@@ -149,9 +252,12 @@ QString get_format_string(uint32_t pixformat)
     /*
         Get a human-readable format string from pixel format code
     */
+    if (pixformat == PIXFORMAT_BINARY)    return QStringLiteral("BINARY");
     if (pixformat == PIXFORMAT_GRAYSCALE) return QStringLiteral("GRAY");
     if (pixformat == PIXFORMAT_RGB565)    return QStringLiteral("RGB565");
+    if (pixformat == PIXFORMAT_ARGB8)     return QStringLiteral("ARGB8");
     if (pixformat == PIXFORMAT_JPEG)      return QStringLiteral("JPEG");
+    if (pixformat == PIXFORMAT_PNG)       return QStringLiteral("PNG");
 
     return QStringLiteral("0x%1").arg(pixformat, 8, 16, QChar('0')).toUpper();
 }
