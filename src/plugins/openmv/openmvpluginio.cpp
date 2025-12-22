@@ -430,10 +430,10 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
             });
 
     connect(m_port, &OpenMVPluginSerialPort::sensorIdDone,
-            this, [this] (bool timeout, int id) {
+            this, [this] (bool timeout, QList<int> ids) {
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_SENSOR_ID_CPL);
-                emit sensorIdDone(id);
+                emit sensorIdDone(ids);
                 if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
@@ -839,7 +839,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 }
                 case USBDBG_SENSOR_ID_CPL:
                 {
-                    emit sensorIdDone(deserializeLong(data));
+                    emit sensorIdDone(QList<int>() << deserializeLong(data));
                     break;
                 }
                 case USBDBG_TX_INPUT_CPL_0:
@@ -1274,7 +1274,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     }
                     case USBDBG_SENSOR_ID_CPL:
                     {
-                        emit sensorIdDone(int());
+                        emit sensorIdDone(QList<int>() << int());
                         break;
                     }
                     case USBDBG_TX_INPUT_CPL_0:

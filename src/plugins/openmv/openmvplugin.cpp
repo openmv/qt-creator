@@ -5834,45 +5834,45 @@ bool OpenMVPlugin::matchExample(const QString &filePath, QString *flattenRegex)
 QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, bool increaseResolution)
 {
     if((!notExamples) &&
-      ((m_sensorType == QStringLiteral("HM01B0")) ||
-       (m_sensorType == QStringLiteral("HM0360")) ||
-       (m_sensorType == QStringLiteral("MT9V0X2")) ||
-       (m_sensorType == QStringLiteral("MT9V0X4")) ||
-       (m_sensorType == QStringLiteral("BOSON")) ||
-       (m_sensorType == QStringLiteral("BOSON-320")) ||
-       (m_sensorType == QStringLiteral("BOSON-640")) ||
-       (m_sensorType == QStringLiteral("BOSON-320+")) ||
-       (m_sensorType == QStringLiteral("BOSON-640+")) ||
-       (m_sensorType == QStringLiteral("PAG7920")) ||
-       (m_sensorType == QStringLiteral("PAJ6100")) ||
-       (m_sensorType == QStringLiteral("FROGEYE2020")) ||
-       (m_sensorType == QStringLiteral("GENX320-S")) ||
-       (m_sensorType == QStringLiteral("GENX320"))))
+      ((m_sensorType.startsWith(QStringLiteral("HM01B0"))) ||
+       (m_sensorType.startsWith(QStringLiteral("HM0360"))) ||
+       (m_sensorType.startsWith(QStringLiteral("MT9V0X2"))) ||
+       (m_sensorType.startsWith(QStringLiteral("MT9V0X4"))) ||
+       (m_sensorType.startsWith(QStringLiteral("BOSON"))) ||
+       (m_sensorType.startsWith(QStringLiteral("BOSON-320"))) ||
+       (m_sensorType.startsWith(QStringLiteral("BOSON-640"))) ||
+       (m_sensorType.startsWith(QStringLiteral("BOSON-320+"))) ||
+       (m_sensorType.startsWith(QStringLiteral("BOSON-640+"))) ||
+       (m_sensorType.startsWith(QStringLiteral("PAG7920"))) ||
+       (m_sensorType.startsWith(QStringLiteral("PAJ6100"))) ||
+       (m_sensorType.startsWith(QStringLiteral("FROGEYE2020"))) ||
+       (m_sensorType.startsWith(QStringLiteral("GENX320-S"))) ||
+       (m_sensorType.startsWith(QStringLiteral("GENX320")))))
     {
         data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
 
-        if(m_sensorType == QStringLiteral("HM01B0"))
+        if(m_sensorType.startsWith(QStringLiteral("HM01B0")))
         {
             data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
         }
 
-        if((m_sensorType == QStringLiteral("BOSON-320")) ||
-           (m_sensorType == QStringLiteral("BOSON-320+")) ||
-           (m_sensorType == QStringLiteral("PAG7920")) ||
-           (m_sensorType == QStringLiteral("PAJ6100")) ||
-           (m_sensorType == QStringLiteral("FROGEYE2020")))
+        if((m_sensorType.startsWith(QStringLiteral("BOSON-320"))) ||
+           (m_sensorType.startsWith(QStringLiteral("BOSON-320+"))) ||
+           (m_sensorType.startsWith(QStringLiteral("PAG7920"))) ||
+           (m_sensorType.startsWith(QStringLiteral("PAJ6100"))) ||
+           (m_sensorType.startsWith(QStringLiteral("FROGEYE2020"))))
         {
             data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
         }
 
-        if((m_sensorType == QStringLiteral("BOSON-640")) ||
-           (m_sensorType == QStringLiteral("BOSON-640+")))
+        if((m_sensorType.startsWith(QStringLiteral("BOSON-640"))) ||
+           (m_sensorType.startsWith(QStringLiteral("BOSON-640+"))))
         {
             data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
         }
 
-        if((m_sensorType == QStringLiteral("GENX320-S")) ||
-           (m_sensorType == QStringLiteral("GENX320")))
+        if((m_sensorType.startsWith(QStringLiteral("GENX320-S"))) ||
+           (m_sensorType.startsWith(QStringLiteral("GENX320"))))
         {
             data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
             data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
@@ -5881,8 +5881,8 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, b
 
     if ((!notExamples) &&
         increaseResolution &&
-        ((m_sensorType == QStringLiteral("PAG7936")) ||
-         (m_sensorType == QStringLiteral("PS5520"))))
+        ((m_sensorType.startsWith(QStringLiteral("PAG7936"))) ||
+         (m_sensorType.startsWith(QStringLiteral("PS5520")))))
     {
         data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
     }

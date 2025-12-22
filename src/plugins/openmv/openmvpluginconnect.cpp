@@ -2328,12 +2328,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             // Get Sensor Type
             {
-                int id2 = int();
-                int *id2Ptr = &id2;
+                QList<int> ids2;
+                QList<int> *ids2Ptr = &ids2;
 
                 QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::sensorIdDone,
-                    this, [id2Ptr] (int id) {
-                    *id2Ptr = id;
+                    this, [ids2Ptr] (QList<int> ids) {
+                    *ids2Ptr = ids;
                 });
 
                 QEventLoop loop;
@@ -2347,29 +2347,48 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                 disconnect(conn);
 
-                if(id2 == 0xFF)
+                if(ids2.isEmpty() || ids2.at(0) == 0xFF)
                 {
                     disableLicenseCheck = true;
                     m_sensorType = Tr::tr("None");
                 }
-                else if(id2)
+                else if(ids2.at(0))
                 {
-                    bool found = false;
+                    QStringList sensorTypeList;
 
-                    for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("sensors")).toArray())
+                    for (int id : ids2)
                     {
-                        if (int(value.toObject().value(QStringLiteral("id")).toString().toLongLong(nullptr, 0)) == id2)
+                        QString sensorType;
+                        bool mainSensor = false;
+                        bool found = false;
+
+                        for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("sensors")).toArray())
                         {
-                            m_sensorType = value.toObject().value(QStringLiteral("name")).toString();
-                            found = true;
-                            break;
+                            if (int(value.toObject().value(QStringLiteral("id")).toString().toLongLong(nullptr, 0)) == id)
+                            {
+                                sensorType = value.toObject().value(QStringLiteral("name")).toString();
+                                mainSensor = value.toObject().value(QStringLiteral("main")).toBool();
+                                found = true;
+                                break;
+                            }
                         }
+
+                        if (!found)
+                        {
+                            sensorType = Tr::tr("Unknown");
+                        }
+
+                        if (mainSensor) sensorTypeList.prepend(sensorType);
+                        else sensorTypeList.append(sensorType);
                     }
 
-                    if (!found)
+                    while (sensorTypeList.size() > 1)
                     {
-                        m_sensorType = Tr::tr("Unknown");
+                        if (sensorTypeList.last() == Tr::tr("Unknown")) sensorTypeList.removeLast();
+                        else break;
                     }
+
+                    m_sensorType = sensorTypeList.join(QStringLiteral(", "));
                 }
                 else
                 {
@@ -2756,7 +2775,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_boardLabel->setEnabled(true);
         m_boardLabel->setText(Tr::tr("Board: %L1").arg(boardTypeLabel));
         m_sensorLabel->setEnabled(true);
-        m_sensorLabel->setText(Tr::tr("Sensor: %L1").arg(m_sensorType));
+        m_sensorLabel->setText(m_sensorType.contains(QStringLiteral(","))
+                               ? Tr::tr("Sensors: %L1").arg(m_sensorType)
+                               : Tr::tr("Sensor: %L1").arg(m_sensorType));
         m_versionButton->setEnabled(true);
         m_versionButton->setText(Tr::tr("Firmware Version: %L1.%L2.%L3").arg(major2).arg(minor2).arg(patch2));
         m_portLabel->setEnabled(true);

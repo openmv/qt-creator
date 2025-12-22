@@ -252,7 +252,7 @@ signals:
     void jpegEnableDone();
     void printData(const QByteArray &data);
     void printEmpty(bool ok);
-    void sensorIdDone(int id);
+    void sensorIdDone(QList<int> ids);
     void getStateDone();
     void readProfileDone(const QList<profile_record_t> &records);
     void setProfileModeDone();

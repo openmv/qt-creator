@@ -439,7 +439,7 @@ signals:
     void fbEnableDone(bool timeout);
     void jpegEnableDone(bool timeout);
     void printData(bool timeout, const QByteArray &data);
-    void sensorIdDone(bool timeout, int id);
+    void sensorIdDone(bool timeout, QList<int> ids);
     void getStateDone(bool timeout, bool running, bool profileEnabled, bool hasPMU,
                       const QByteArray &data, const QPixmap &img);
     void readProfileDone(bool timeout, const QList<profile_record_t> &records);
@@ -540,7 +540,7 @@ signals:
     void fbEnableDone(bool timeout);
     void jpegEnableDone(bool timeout);
     void printData(bool timeout, const QByteArray &data);
-    void sensorIdDone(bool timeout, int id);
+    void sensorIdDone(bool timeout, QList<int> ids);
     void getStateDone(bool timeout, bool running, bool profileEnabled, bool hasPMU,
                       const QByteArray &data, const QPixmap &img);
     void readProfileDone(bool timeout, const QList<profile_record_t> &records);

@@ -1116,7 +1116,7 @@ void OpenMVPluginSerialPort_private::getTxBuffer() {
 
 void OpenMVPluginSerialPort_private::sensorId() {
     if (!m_camera) {
-        emit sensorIdDone(true, 0);
+        emit sensorIdDone(true, QList<int>());
         return;
     }
 
@@ -1125,16 +1125,15 @@ void OpenMVPluginSerialPort_private::sensorId() {
             m_camera->connect();
         }
 
-        QVariantList v = m_camera->cachedSystemInfo().
-                         value(QStringLiteral("sensor_chip_id")).toList();
-
-        if (v.size() == 3) {
-            emit sensorIdDone(false, v.at(0).toInt());
-        } else {
-            emit sensorIdDone(false, 0);
+        QList<int> sensorIds;
+        for (const QVariant &item : m_camera->cachedSystemInfo().
+                                    value(QStringLiteral("sensor_chip_id")).toList()) {
+            sensorIds.append(item.toInt());
         }
+
+        emit sensorIdDone(false, sensorIds);
     } catch (...) {
-        emit sensorIdDone(true, 0);
+        emit sensorIdDone(true, QList<int>());
     }
 }
 

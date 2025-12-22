@@ -1491,139 +1491,173 @@
     "sensors" : [
         {
             "name" : "OV2640",
-            "id" : "0x26"
+            "id" : "0x26",
+            "main" : true
         },
         {
             "name" : "OV5640",
-            "id" : "0x56"
+            "id" : "0x56",
+            "main" : true
         },
         {
             "name" : "OV7690",
-            "id" : "0x76"
+            "id" : "0x76",
+            "main" : true
         },
         {
             "name" : "OV7725",
-            "id" : "0x77"
+            "id" : "0x77",
+            "main" : true
         },
         {
             "name" : "OV9650",
-            "id" : "0x96"
+            "id" : "0x96",
+            "main" : true
         },
         {
             "name" : "MT9V0X2",
-            "id" : "0x1311"
+            "id" : "0x1311",
+            "main" : true
         },
         {
             "name" : "MT9V0X2",
-            "id" : "0x1312"
+            "id" : "0x1312",
+            "main" : true
         },
         {
             "name" : "MT9V0X2",
-            "id" : "0x1313"
+            "id" : "0x1313",
+            "main" : true
         },
         {
             "name" : "MT9V0X2-C",
-            "id" : "0x1413"
+            "id" : "0x1413",
+            "main" : true
         },
         {
             "name" : "MT9V0X4",
-            "id" : "0x1324"
+            "id" : "0x1324",
+            "main" : true
         },
         {
             "name" : "MT9V0X4-C",
-            "id" : "0x1424"
+            "id" : "0x1424",
+            "main" : true
         },
         {
             "name" : "MT9M114",
-            "id" : "0x2481"
+            "id" : "0x2481",
+            "main" : true
         },
         {
             "name" : "BOSON",
-            "id" : "0xAE"
+            "id" : "0xAE",
+            "main" : false
         },
         {
             "name" : "BOSON-320",
-            "id" : "0xAE32"
+            "id" : "0xAE32",
+            "main" : false
         },
         {
             "name" : "BOSON-640",
-            "id" : "0xAE64"
+            "id" : "0xAE64",
+            "main" : false
         },
         {
             "name" : "BOSON-320+",
-            "id" : "0xAE321"
+            "id" : "0xAE321",
+            "main" : false
         },
         {
             "name" : "BOSON-640+",
-            "id" : "0xAE641"
+            "id" : "0xAE641",
+            "main" : false
         },
         {
             "name" : "LEPTON",
-            "id" : "0x54"
+            "id" : "0x54",
+            "main" : false
         },
         {
             "name" : "LEPTON-1.5",
-            "id" : "0x5415"
+            "id" : "0x5415",
+            "main" : false
         },
         {
             "name" : "LEPTON-1.6",
-            "id" : "0x5416"
+            "id" : "0x5416",
+            "main" : false
         },
         {
             "name" : "LEPTON-2.0",
-            "id" : "0x5420"
+            "id" : "0x5420",
+            "main" : false
         },
         {
             "name" : "LEPTON-2.5",
-            "id" : "0x5425"
+            "id" : "0x5425",
+            "main" : false
         },
         {
             "name" : "LEPTON-3.0",
-            "id" : "0x5430"
+            "id" : "0x5430",
+            "main" : false
         },
         {
             "name" : "LEPTON-3.5",
-            "id" : "0x5435"
+            "id" : "0x5435",
+            "main" : false
         },
         {
             "name" : "HM01B0",
-            "id" : "0xB0"
+            "id" : "0xB0",
+            "main" : true
         },
         {
             "name" : "HM0360",
-            "id" : "0x60"
+            "id" : "0x60",
+            "main" : true
         },
         {
             "name" : "GC2145",
-            "id" : "0x21"
+            "id" : "0x21",
+            "main" : true
         },
         {
             "name" : "PAG7920",
-            "id" : "0x7920"
+            "id" : "0x7920",
+            "main" : true
         },
         {
             "name" : "PAG7936",
-            "id" : "0x7936"
+            "id" : "0x7936",
+            "main" : true
         },
         {
             "name" : "PAJ6100",
-            "id" : "0x6100"
+            "id" : "0x6100",
+            "main" : true
         },
         {
             "name" : "PS5520",
-            "id" : "0x5520"
+            "id" : "0x5520",
+            "main" : true
         },
         {
             "name" : "FROGEYE2020",
-            "id" : "0x2020"
+            "id" : "0x2020",
+            "main" : false
         },
         {
             "name" : "GENX320-S",
-            "id" : "0x30501C01"
+            "id" : "0x30501C01",
+            "main" : false
         },
         {
             "name" : "GENX320",
-            "id" : "0xB0602003"
+            "id" : "0xB0602003",
+            "main" : false
         }
     ]
 }
