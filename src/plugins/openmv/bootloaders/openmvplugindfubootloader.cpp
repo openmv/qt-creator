@@ -85,7 +85,11 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 #endif
         }
 
-        m_iodevice->sysReset(false);
+        // We want to enter the bootloader here and not have it exit on us by forcing the bootloader.
+        // However, until the V2 protocol, there was a bug in the bootloader that could cause it not
+        // to actually exit after DFU detach. On the V2 protocol we can detect the bootloader verison
+        // and fallback to normal reset if needed.
+        m_iodevice->sysReset(m_iodevice->v2ProtocolEnabled());
         m_iodevice->close();
 
         loop.exec();

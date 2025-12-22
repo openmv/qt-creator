@@ -2382,12 +2382,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         else sensorTypeList.append(sensorType);
                     }
 
-                    while (sensorTypeList.size() > 1)
-                    {
-                        if (sensorTypeList.last() == Tr::tr("Unknown")) sensorTypeList.removeLast();
-                        else break;
-                    }
-
                     m_sensorType = sensorTypeList.join(QStringLiteral(", "));
                 }
                 else

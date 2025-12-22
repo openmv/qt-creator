@@ -1128,7 +1128,7 @@ void OpenMVPluginSerialPort_private::sensorId() {
         QList<int> sensorIds;
         for (const QVariant &item : m_camera->cachedSystemInfo().
                                     value(QStringLiteral("sensor_chip_id")).toList()) {
-            sensorIds.append(item.toInt());
+            if (item.toInt()) sensorIds.append(item.toInt());
         }
 
         emit sensorIdDone(false, sensorIds);

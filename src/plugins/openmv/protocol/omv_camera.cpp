@@ -572,7 +572,17 @@ void OMVCamera::boot()
         Jump to bootloader
     */
     retryIfFailedVoid([this]() {
-        sendCmdWaitResp(OMVPOpcode::SYS_BOOT);
+        int boot_major = boot_v.at(0).toInt();
+        int boot_minor = boot_v.at(1).toInt();
+        int boot_patch = boot_v.at(2).toInt();
+        if((boot_major < 1)
+        || ((boot_major == 1) && (boot_minor < 0))
+        || ((boot_major == 1) && (boot_minor == 0) && (boot_patch < 2))) {
+            // Bootloader can get stuck if forced on older versions.
+            sendCmdWaitResp(OMVPOpcode::SYS_RESET);
+        } else {
+            sendCmdWaitResp(OMVPOpcode::SYS_BOOT);
+        }
     });
 }
 
@@ -1191,40 +1201,38 @@ QVariantMap OMVCamera::systemInfo()
         m.insert(QStringLiteral("usb_vid"), usb_id >> 16 & 0xFFFF);
         m.insert(QStringLiteral("usb_pid"), usb_id & 0xFFFF);
 
-        m.insert(QStringLiteral("gpu_present"),  bool(capabilities & (1u << 0)));
-        m.insert(QStringLiteral("npu_present"),  bool(capabilities & (1u << 1)));
-        m.insert(QStringLiteral("isp_present"),  bool(capabilities & (1u << 2)));
-        m.insert(QStringLiteral("venc_present"), bool(capabilities & (1u << 3)));
-        m.insert(QStringLiteral("jpeg_present"), bool(capabilities & (1u << 4)));
-        m.insert(QStringLiteral("dram_present"), bool(capabilities & (1u << 5)));
-        m.insert(QStringLiteral("crc_present"),  bool(capabilities & (1u << 6)));
-        m.insert(QStringLiteral("pmu_present"),  bool(capabilities & (1u << 7)));
-        m.insert(QStringLiteral("pmu_eventcnt"), (capabilities >> 8) & 0xFFu);
-        m.insert(QStringLiteral("wifi_present"), bool(capabilities & (1u << 16)));
-        m.insert(QStringLiteral("bt_present"),   bool(capabilities & (1u << 17)));
-        m.insert(QStringLiteral("sd_present"),   bool(capabilities & (1u << 18)));
-        m.insert(QStringLiteral("eth_present"),  bool(capabilities & (1u << 19)));
-        m.insert(QStringLiteral("usb_highspeed"), bool(capabilities & (1u << 20)));
+        m.insert(QStringLiteral("gpu_present"),       bool(capabilities & (1u << 0)));
+        m.insert(QStringLiteral("npu_present"),       bool(capabilities & (1u << 1)));
+        m.insert(QStringLiteral("isp_present"),       bool(capabilities & (1u << 2)));
+        m.insert(QStringLiteral("venc_present"),      bool(capabilities & (1u << 3)));
+        m.insert(QStringLiteral("jpeg_present"),      bool(capabilities & (1u << 4)));
+        m.insert(QStringLiteral("dram_present"),      bool(capabilities & (1u << 5)));
+        m.insert(QStringLiteral("crc_present"),       bool(capabilities & (1u << 6)));
+        m.insert(QStringLiteral("pmu_present"),       bool(capabilities & (1u << 7)));
+        m.insert(QStringLiteral("pmu_eventcnt"),      (capabilities >> 8) & 0xFFu);
+        m.insert(QStringLiteral("wifi_present"),      bool(capabilities & (1u << 16)));
+        m.insert(QStringLiteral("bt_present"),        bool(capabilities & (1u << 17)));
+        m.insert(QStringLiteral("sd_present"),        bool(capabilities & (1u << 18)));
+        m.insert(QStringLiteral("eth_present"),       bool(capabilities & (1u << 19)));
+        m.insert(QStringLiteral("usb_highspeed"),     bool(capabilities & (1u << 20)));
         m.insert(QStringLiteral("multicore_present"), bool(capabilities & (1u << 21)));
 
-        m.insert(QStringLiteral("flash_size_kb"),        memory[0]);
-        m.insert(QStringLiteral("ram_size_kb"),          memory[1]);
-        m.insert(QStringLiteral("framebuffer_size_kb"),  memory[2]);
+        stream_buffer_size_kb = memory[3];
+        m.insert(QStringLiteral("flash_size_kb"),         memory[0]);
+        m.insert(QStringLiteral("ram_size_kb"),           memory[1]);
+        m.insert(QStringLiteral("framebuffer_size_kb"),   memory[2]);
         m.insert(QStringLiteral("stream_buffer_size_kb"), memory[3]);
 
-        QVariantList fw_v;
         fw_v << uint8_t(fw_ver[0]) << uint8_t(fw_ver[1]) << uint8_t(fw_ver[2]);
         m.insert(QStringLiteral("firmware_version"), fw_v);
 
-        QVariantList proto_v;
         proto_v << uint8_t(proto_ver[0]) << uint8_t(proto_ver[1]) << uint8_t(proto_ver[2]);
         m.insert(QStringLiteral("protocol_version"), proto_v);
 
-        QVariantList boot_v;
         boot_v << uint8_t(boot_ver[0]) << uint8_t(boot_ver[1]) << uint8_t(boot_ver[2]);
         m.insert(QStringLiteral("bootloader_version"), boot_v);
 
-        streamingRes = bestFitAspect(memory[3] * 1024, QSize(640, 480));
+        streamingRes = bestFitAspect(stream_buffer_size_kb * 1024, QSize(640, 480));
         omvDebug().noquote().nospace()
             << "Calculated max streaming resolution: "
             << streamingRes.width() << "x" << streamingRes.height();

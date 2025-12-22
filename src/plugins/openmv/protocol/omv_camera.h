@@ -131,6 +131,10 @@ private:
     bool         streamingEnabled;
     bool         rawStreaming;
     QSize        streamingRes;
+    int stream_buffer_size_kb;
+    QVariantList fw_v;
+    QVariantList proto_v;
+    QVariantList boot_v;
     QElapsedTimer lastFrameReady;
     QElapsedTimer lastScriptRunning;
     QElapsedTimer lastframeReadyAndScriptRunning;
