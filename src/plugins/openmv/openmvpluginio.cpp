@@ -1537,24 +1537,27 @@ void OpenMVPluginIO::checkProtocolVerison(bool splitCommand)
 
     // On Mac for the RT1062 and AE3, they cannot handle receiving all 4 commands at once.
     // Splitting the command up into UDSBG_LEN sized commands seems to work around this...
+    int len = SCRIPT_RUNNING_RESPONSE_LEN;
+
     if (splitCommand) {
         while (buffer.size() > USBDBG_LEN) {
             QByteArray part = buffer.left(USBDBG_LEN);
             buffer = buffer.mid(USBDBG_LEN);
             m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(part,
-                                                                SCRIPT_RUNNING_RESPONSE_LEN,
+                                                                len,
                                                                 SCRIPT_RUNNING_START_DELAY,
                                                                 SCRIPT_RUNNING_END_DELAY,
-                                                                true, false, true));
+                                                                true, false, len > 0));
             m_completionQueue.enqueue(CHECK_PROTOCOL_VERSION_CPL_SPLIT);
+            len = 0;
         }
     }
 
     m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer,
-                                                        SCRIPT_RUNNING_RESPONSE_LEN,
+                                                        len,
                                                         SCRIPT_RUNNING_START_DELAY,
                                                         SCRIPT_RUNNING_END_DELAY,
-                                                        true, false, true));
+                                                        true, false, len > 0));
     m_completionQueue.enqueue(CHECK_PROTOCOL_VERSION_CPL);
     command();
 }
@@ -1575,7 +1578,7 @@ void OpenMVPluginIO::getFirmwareVersion()
                                                         FW_VERSION_RESPONSE_LEN,
                                                         FW_VERSION_START_DELAY,
                                                         FW_VERSION_END_DELAY,
-                                                        true, false, true));
+                                                        true, true, true));
     m_completionQueue.enqueue(USBDBG_FW_VERSION_CPL);
     command();
 }
