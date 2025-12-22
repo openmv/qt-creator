@@ -185,7 +185,7 @@ private:
     uint8_t getChannelId(const QString &name);
     QString getChannelName(uint8_t channel_id) const;
 
-    QSize bestFitAspect(uint32_t maxBytes, QSize ratio);
+    QSize bestFitAspect(uint32_t maxBytes, int bpp, QSize ratio);
 };
 
 } // namespace omv

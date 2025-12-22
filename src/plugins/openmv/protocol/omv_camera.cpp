@@ -991,6 +991,42 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
                 return false;
             }
 
+            QSize oldStreamingRes = streamingRes;
+
+            if (fmt_str == QStringLiteral("BINARY")) {
+                streamingRes = bestFitAspect(stream_buffer_size_kb * 1024, 0, QSize(640, 480));
+            } else if (fmt_str == QStringLiteral("GRAY")) {
+                streamingRes = bestFitAspect(stream_buffer_size_kb * 1024, 1, QSize(640, 480));
+            } else if (fmt_str == QStringLiteral("RGB565")) {
+                streamingRes = bestFitAspect(stream_buffer_size_kb * 1024, 2, QSize(640, 480));
+            } else if (fmt_str == QStringLiteral("ARGB8")) {
+                streamingRes = bestFitAspect(stream_buffer_size_kb * 1024, 4, QSize(640, 480));
+                // In the event that the raw buffer size is larger than what can actually be held
+                // the openmv cam will return a jpeg instead of the raw data. When this happens we
+                // need to reset the buffer size back to the default.
+            } else if (fmt_str == QStringLiteral("JPEG") && rawStreaming) {
+                streamingRes = bestFitAspect(stream_buffer_size_kb * 1024, 2, QSize(640, 480));
+            } else if (fmt_str == QStringLiteral("PNG") && rawStreaming) {
+                streamingRes = bestFitAspect(stream_buffer_size_kb * 1024, 2, QSize(640, 480));
+            }
+
+            if (streamingRes != oldStreamingRes) {
+                omvDebug() << fmt_str << "format detected, adjusting streaming resolution to"
+                           << streamingRes;
+                QList<uint32_t> args;
+                args << uint32_t(streamingRes.width()) << uint32_t(streamingRes.height());
+                channelIoctl(stream_id,
+                             static_cast<uint32_t>(OMVPChannelIOCTL::STREAM_RAW_CFG),
+                             "II",
+                             args);
+            }
+
+            // And then toss that jpeg...
+            if ((fmt_str == QStringLiteral("JPEG") || fmt_str == QStringLiteral("PNG")) && rawStreaming) {
+                channelUnlock(stream_id);
+                return false;
+            }
+
             outFrame.width   = int(width);
             outFrame.height  = int(height);
             outFrame.format  = pixfmt;
@@ -1232,7 +1268,7 @@ QVariantMap OMVCamera::systemInfo()
         boot_v << uint8_t(boot_ver[0]) << uint8_t(boot_ver[1]) << uint8_t(boot_ver[2]);
         m.insert(QStringLiteral("bootloader_version"), boot_v);
 
-        streamingRes = bestFitAspect(stream_buffer_size_kb * 1024, QSize(640, 480));
+        streamingRes = bestFitAspect(stream_buffer_size_kb * 1024, 2, QSize(640, 480));
         omvDebug().noquote().nospace()
             << "Calculated max streaming resolution: "
             << streamingRes.width() << "x" << streamingRes.height();
@@ -1353,7 +1389,7 @@ void OMVCamera::printSystemInfo()
     omvDebug() << "=================================";
 }
 
-QSize OMVCamera::bestFitAspect(uint32_t maxBytes, QSize ratio)
+QSize OMVCamera::bestFitAspect(uint32_t maxBytes, int bpp, QSize ratio)
 {
     if (!maxBytes || !ratio.width() || !ratio.height()) {
         return QSize(0, 0);
@@ -1371,7 +1407,7 @@ QSize OMVCamera::bestFitAspect(uint32_t maxBytes, QSize ratio)
 
     int aw = ratio.width() / a;
     int ah = ratio.height() / a;
-    int64_t maxPixels = maxBytes / 2;
+    int64_t maxPixels = bpp ? (maxBytes / bpp) : maxBytes;
 
     if (!maxPixels) {
         return QSize(0, 0);
@@ -1382,7 +1418,7 @@ QSize OMVCamera::bestFitAspect(uint32_t maxBytes, QSize ratio)
         // Height from aspect ratio (floor).
         int64_t h = ((w * ah) / aw) & ~1;
 
-        if ((h >= 2) && ((w * h) <= maxPixels)) {
+        if ((h >= 2) && ((bpp ? (w * h) : (((w + 31) / 32) * 4 * h)) <= maxPixels)) {
             return QSize(w, h);
         }
     }
