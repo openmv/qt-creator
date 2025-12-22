@@ -41,6 +41,7 @@ namespace Internal {
 enum
 {
     CHECK_PROTOCOL_VERSION_CPL,
+    CHECK_PROTOCOL_VERSION_CPL_SPLIT,
     USBDBG_FW_VERSION_CPL,
     USBDBG_FRAME_SIZE_CPL,
     USBDBG_FRAME_DUMP_CPL,
@@ -604,6 +605,10 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     m_port->enableV2Protocol(m_v2ProtocolEnabled);
                     break;
                 }
+                case CHECK_PROTOCOL_VERSION_CPL_SPLIT:
+                {
+                    break;
+                }
                 case USBDBG_FW_VERSION_CPL:
                 {
                     // The optimizer will mess up the order if executed in emit.
@@ -1102,6 +1107,10 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                         m_port->enableV2Protocol(m_v2ProtocolEnabled);
                         break;
                     }
+                    case CHECK_PROTOCOL_VERSION_CPL_SPLIT:
+                    {
+                        break;
+                    }
                     case USBDBG_FW_VERSION_CPL:
                     {
                         emit firmwareVersion(int(), int(), int());
@@ -1478,7 +1487,7 @@ bool OpenMVPluginIO::readProfileQueued() const
            m_completionQueue.contains(V2_PROFILE_DATA_CPL);
 }
 
-void OpenMVPluginIO::checkProtocolVerison()
+void OpenMVPluginIO::checkProtocolVerison(bool splitCommand)
 {
     // STM32 USBDBG Behavior:
     // * Entire USB transfer (up to 64 bytes) is treated as one command.
@@ -1524,6 +1533,21 @@ void OpenMVPluginIO::checkProtocolVerison()
 
     for (int i = USBDBG_LEN; i < buffer.size(); i += USBDBG_LEN) {
         Q_ASSERT(buffer.at(i) != __USBDBG_CMD);
+    }
+
+    // On Mac for the RT1062 and AE3, they cannot handle receiving all 4 commands at once.
+    // Splitting the command up into UDSBG_LEN sized commands seems to work around this...
+    if (splitCommand) {
+        while (buffer.size() > USBDBG_LEN) {
+            QByteArray part = buffer.left(USBDBG_LEN);
+            buffer = buffer.mid(USBDBG_LEN);
+            m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(part,
+                                                                SCRIPT_RUNNING_RESPONSE_LEN,
+                                                                SCRIPT_RUNNING_START_DELAY,
+                                                                SCRIPT_RUNNING_END_DELAY,
+                                                                true, false, true));
+            m_completionQueue.enqueue(CHECK_PROTOCOL_VERSION_CPL_SPLIT);
+        }
     }
 
     m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer,

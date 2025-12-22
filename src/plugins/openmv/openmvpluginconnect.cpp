@@ -1714,7 +1714,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             connect(m_iodevice, &OpenMVPluginIO::protocolVersionDone,
                     &loop, &QEventLoop::quit);
 
-            m_iodevice->checkProtocolVerison();
+            m_iodevice->checkProtocolVerison(m_reconnects & 1);
 
             loop.exec();
         }

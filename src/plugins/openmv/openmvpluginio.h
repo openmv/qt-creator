@@ -180,7 +180,7 @@ public:
 
 public slots:
 
-    void checkProtocolVerison();
+    void checkProtocolVerison(bool splitCommand);
     void getFirmwareVersion();
     void frameSizeDump();
     void getArchString();
