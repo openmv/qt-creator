@@ -66,13 +66,14 @@ void OMVTransport::reset_sequence()
     sequence = 0;
 }
 
-void OMVTransport::update_caps(bool crc, bool seq, bool /*ack*/, qsizetype max_payload_)
+void OMVTransport::update_caps(bool crc, bool seq, bool ack, qsizetype max_payload_)
 {
     /*
         Update transport capabilities
     */
     crc_enabled = crc;
     seq_enabled = seq;
+    ack_enabled = ack;
     max_payload = max_payload_;
 
     // Reallocate buffers to accommodate new max_payload
@@ -580,7 +581,9 @@ bool OMVTransport::_process(Packet &out_packet)
 
             // Anytime we receive a valid packet send a keep alive byte to prevent stalls.
             // Ensure the keep alive byte is flushed immediately if this is not a fragment.
-            _sendKeepAlive();
+            #ifdef Q_OS_WIN
+            if ((flags & OMVPFlags::FRAGMENT) && (!ack_enabled)) _sendKeepAlive();
+            #endif
 
             return true;
         }
@@ -592,13 +595,13 @@ bool OMVTransport::_process(Packet &out_packet)
 /*
     Sends a 0 byte on the serial port to keep the serial connection from stalling.
  */
+#ifdef Q_OS_WIN
 void OMVTransport::_sendKeepAlive()
 {
 // This is only needed on Windows for its serial port drivers. The problem is that
 // the serial port read call will not return any data until a write to the serial
 // port is done. The contents of that write do not that matter, other than one
 // is completed. Afterwhich, the serial port will resume returning data again.
-#ifdef Q_OS_WIN
     /*
         Send a packet to the camera
     */
@@ -627,7 +630,7 @@ void OMVTransport::_sendKeepAlive()
             throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
         }
     }
-#endif
 }
+#endif
 
 } // namespace omv

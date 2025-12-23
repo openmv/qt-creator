@@ -139,7 +139,9 @@ private:
     /*
         Necessary to prevent serial stall situations
      */
+    #ifdef Q_OS_WIN
     void _sendKeepAlive();
+    #endif
 
 private:
     QPointer<OMVPort> serial;
@@ -151,6 +153,7 @@ private:
     uint8_t state;
     bool crc_enabled;
     bool seq_enabled;
+    bool ack_enabled;
 
     // Event callback
     std::function<void(uint8_t, uint16_t)> event_callback;

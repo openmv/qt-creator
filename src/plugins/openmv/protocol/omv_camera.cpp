@@ -135,16 +135,22 @@ void OMVCamera::pollEvents()
     transport->recv_packet(true); // poll_events = true
 }
 
-const OMVTransport::stats_t &OMVCamera::hostStats() const
+QVariantMap OMVCamera::hostStats() const
 {
     /*
         Get transport statistics
     */
     if (!transport) {
-        static OMVTransport::stats_t emptyStats = {};
-        return emptyStats;
+        return QVariantMap();
     }
-    return transport->stats;
+
+    QVariantMap m;
+    m.insert(QStringLiteral("sent"), transport->stats.sent);
+    m.insert(QStringLiteral("received"), transport->stats.received);
+    m.insert(QStringLiteral("checksum"), transport->stats.checksum);
+    m.insert(QStringLiteral("sequence"), transport->stats.sequence);
+    return m;
+
 }
 
 // Low-level command send/recv with resync translation
@@ -1278,17 +1284,15 @@ QVariantMap OMVCamera::systemInfo()
     });
 }
 
-void OMVCamera::printSystemInfo()
+QString OMVCamera::systemInfoString()
 {
-    /*
-        Print formatted system information
-    */
-    omvDebug() << "=== OpenMV System Information ===";
+    QString info;
+    QTextStream stream(&info);
 
-    omvDebug().noquote().nospace()
+    stream
         << "CPU ID: 0x"
         << QString::number(sysinfo.value(QStringLiteral("cpu_id")).toUInt(),
-                           16).rightJustified(8, QChar('0')).toUpper();
+                           16).rightJustified(8, QChar('0')).toUpper() << '\n';
 
     // Device ID is now an array of 3 words
     QVariantList dev_id_list = sysinfo.value(QStringLiteral("device_id")).toList();
@@ -1296,32 +1300,32 @@ void OMVCamera::printSystemInfo()
     for (const QVariant &v : std::as_const(dev_id_list)) {
         dev_id_hex += QString::number(v.toUInt(), 16).rightJustified(8, QChar('0')).toUpper();
     }
-    omvDebug().noquote() << "Device ID:" << dev_id_hex;
+    stream << "Device ID: " << dev_id_hex << '\n';
 
     // Sensor Chip IDs are now an array of 3 words
     QVariantList chip_list = sysinfo.value(QStringLiteral("sensor_chip_id")).toList();
     for (int i = 0; i < chip_list.size(); ++i) {
         uint32_t chip_id = chip_list[i].toUInt();
         if (chip_id != 0) {
-            omvDebug().noquote()
-            << QStringLiteral("CSI%1: 0x%2")
-                    .arg(i)
-                    .arg(QString::number(chip_id, 16).rightJustified(4, QChar('0')).toUpper());
+            stream
+                << QStringLiteral("CSI%1: 0x%2")
+                       .arg(i)
+                       .arg(QString::number(chip_id, 16).rightJustified(4, QChar('0')).toUpper()) << '\n';
         }
     }
 
-    omvDebug().noquote().nospace() << "USB ID: " <<
+    stream << "USB ID: " <<
         QString::number(sysinfo.value(QStringLiteral("usb_vid")).toUInt(),
                         16).rightJustified(4, QChar('0')).toUpper() << ":" <<
         QString::number(sysinfo.value(QStringLiteral("usb_pid")).toUInt(),
-                        16).rightJustified(4, QChar('0')).toUpper();
+                        16).rightJustified(4, QChar('0')).toUpper() << '\n';
 
     // Memory info
     auto print_if_positive = [&](const char *label, const char *key) {
         uint32_t val = sysinfo.value(QString::fromLatin1(key)).toUInt();
         if (val > 0) {
-            omvDebug().noquote().nospace()
-            << label << ": " << val << "KB";
+            stream
+                << label << ": " << val << "KB" << '\n';
         }
     };
 
@@ -1331,46 +1335,46 @@ void OMVCamera::printSystemInfo()
     print_if_positive("Stream Buffer", "stream_buffer_size_kb");
 
     // Hardware capabilities
-    omvDebug() << "Hardware capabilities:";
+    stream << "Hardware capabilities:" << '\n';
     auto yn = [&](const char *key) {
         return sysinfo.value(QString::fromLatin1(key)).toBool() ? "Yes" : "No";
     };
 
-    omvDebug().noquote() << "  GPU:" << yn("gpu_present");
-    omvDebug().noquote() << "  NPU:" << yn("npu_present");
-    omvDebug().noquote() << "  ISP:" << yn("isp_present");
-    omvDebug().noquote() << "  Video Encoder:" << yn("venc_present");
-    omvDebug().noquote() << "  JPEG Encoder:" << yn("jpeg_present");
-    omvDebug().noquote() << "  DRAM:" << yn("dram_present");
-    omvDebug().noquote() << "  CRC Hardware:" << yn("crc_present");
-    omvDebug().noquote().nospace()
+    stream << "  GPU: " << yn("gpu_present") << '\n';
+    stream << "  NPU: " << yn("npu_present") << '\n';
+    stream << "  ISP: " << yn("isp_present") << '\n';
+    stream << "  Video Encoder: " << yn("venc_present") << '\n';
+    stream << "  JPEG Encoder: " << yn("jpeg_present") << '\n';
+    stream << "  DRAM: " << yn("dram_present") << '\n';
+    stream << "  CRC Hardware: " << yn("crc_present") << '\n';
+    stream
         << "  PMU: "
         << yn("pmu_present")
         << " (" << sysinfo.value(QStringLiteral("pmu_eventcnt")).toUInt()
-        << " counters)";
+        << " counters)" << '\n';
 
-    omvDebug().noquote() << "  Multi-core:" << yn("multicore_present");
-    omvDebug().noquote() << "  WiFi:" << yn("wifi_present");
-    omvDebug().noquote() << "  Bluetooth:" << yn("bt_present");
-    omvDebug().noquote() << "  SD Card:" << yn("sd_present");
-    omvDebug().noquote() << "  Ethernet:" << yn("eth_present");
-    omvDebug().noquote() << "  USB High-Speed:" << yn("usb_highspeed");
+    stream << "  Multi-core: " << yn("multicore_present") << '\n';
+    stream << "  WiFi: " << yn("wifi_present") << '\n';
+    stream << "  Bluetooth: " << yn("bt_present") << '\n';
+    stream << "  SD Card: " << yn("sd_present") << '\n';
+    stream << "  Ethernet: " << yn("eth_present") << '\n';
+    stream << "  USB High-Speed: " << yn("usb_highspeed") << '\n';
 
     // Profiler info
     bool profile_available = channelsByName.contains(QStringLiteral("profile"));
-    omvDebug().noquote()
-        << "Profiler:"
-        << (profile_available ? "Available" : "Not available");
+    stream
+        << "Profiler: "
+        << (profile_available ? "Available" : "Not available") << '\n';
 
     // Version info
     auto print_ver = [&](const char *label, const char *key) {
         QVariantList v = sysinfo.value(QString::fromLatin1(key)).toList();
         if (v.size() == 3) {
-            omvDebug().noquote().nospace()
-            << label << " version: "
-            << v[0].toUInt() << "."
-            << v[1].toUInt() << "."
-            << v[2].toUInt();
+            stream
+                << label << " version: "
+                << v[0].toUInt() << "."
+                << v[1].toUInt() << "."
+                << v[2].toUInt() << '\n';
         }
     };
 
@@ -1378,7 +1382,7 @@ void OMVCamera::printSystemInfo()
     print_ver("Protocol", "protocol_version");
     print_ver("Bootloader", "bootloader_version");
 
-    omvDebug().noquote().nospace()
+    stream
         << "Protocol capabilities: "
         << "CRC=" << caps_crc
         << ", SEQ=" << caps_seq
@@ -1386,6 +1390,16 @@ void OMVCamera::printSystemInfo()
         << ", EVENTS=" << caps_events
         << ", PAYLOAD=" << caps_max_payload;
 
+    return info;
+}
+
+void OMVCamera::printSystemInfo()
+{
+    /*
+        Print formatted system information
+    */
+    omvDebug() << "=== OpenMV System Information ===";
+    omvDebug().noquote() << systemInfoString();
     omvDebug() << "=================================";
 }
 

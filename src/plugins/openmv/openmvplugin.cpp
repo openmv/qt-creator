@@ -4407,107 +4407,6 @@ void OpenMVPlugin::setPortPath(bool silent)
     }
 }
 
-void OpenMVPlugin::setSpacing()
-{
-    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(SETTINGS_GROUP);
-
-    bool useGetState = settings->value(LAST_USE_GET_STATE, true).toBool();
-    int frameDumpSpacing = settings->value(LAST_FRAME_DUMP_SPACING, FRAME_SIZE_DUMP_SPACING).toInt();
-    int getScriptRunningSpacing = settings->value(LAST_GET_SCRIPT_RUNNING_SPACING, GET_SCRIPT_RUNNING_SPACING).toInt();
-    int getTxBufferSpacing = settings->value(LAST_GET_TX_BUFFER_SPACING, GET_TX_BUFFER_SPACING).toInt();
-    int getStateSpacing = settings->value(LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
-    int readProfileSpacing = settings->value(LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
-
-    int useGetStateAvailable = !((m_major < OPENMV_ADD_GET_STATE_MAJOR)
-    || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
-    || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)));
-
-    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
-        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    dialog->setWindowTitle(Tr::tr("Debug Protocol Settings"));
-    QVBoxLayout *layout = new QVBoxLayout(dialog);
-
-    QGroupBox *getStateGroup = new QGroupBox(Tr::tr("Combined Polling"));
-    getStateGroup->setCheckable(true);
-    getStateGroup->setChecked(useGetState);
-    getStateGroup->setVisible(useGetStateAvailable);
-    layout->addWidget(getStateGroup);
-
-    QFormLayout *getStateGroupLayout = new QFormLayout(getStateGroup);
-
-    QSpinBox *getStateSpacingBox = new QSpinBox(getStateGroup);
-    getStateSpacingBox->setRange(0, 1000);
-    getStateSpacingBox->setValue(getStateSpacing);
-    getStateGroupLayout->addRow(Tr::tr("Polling (ms)"), getStateSpacingBox);
-
-    QGroupBox *oldStateGroup = new QGroupBox(useGetStateAvailable ? Tr::tr("Split Polling") : Tr::tr("Polling Settings"));
-    if(useGetStateAvailable)
-    {
-        oldStateGroup->setDisabled(useGetState);
-        connect(getStateGroup, &QGroupBox::toggled, this, [oldStateGroup] (bool state) {
-            oldStateGroup->setDisabled(state);
-        });
-    }
-    layout->addWidget(oldStateGroup);
-
-    QFormLayout *oldStateGroupLayout = new QFormLayout(oldStateGroup);
-
-    QSpinBox *frameDumpSpacingBox = new QSpinBox(oldStateGroup);
-    frameDumpSpacingBox->setRange(0, 1000);
-    frameDumpSpacingBox->setValue(frameDumpSpacing);
-    oldStateGroupLayout->addRow(Tr::tr("Frame Buffer Polling (ms)"), frameDumpSpacingBox);
-
-    QSpinBox *getScriptRunningSpacingBox = new QSpinBox(oldStateGroup);
-    getScriptRunningSpacingBox->setRange(0, 1000);
-    getScriptRunningSpacingBox->setValue(getScriptRunningSpacing);
-    oldStateGroupLayout->addRow(Tr::tr("Script State Polling (ms)"), getScriptRunningSpacingBox);
-
-    QSpinBox *getTxBufferSpacingBox = new QSpinBox(oldStateGroup);
-    getTxBufferSpacingBox->setRange(0, 1000);
-    getTxBufferSpacingBox->setValue(getTxBufferSpacing);
-    oldStateGroupLayout->addRow(Tr::tr("Text Buffer Polling (ms)"), getTxBufferSpacingBox);
-
-    QWidget *readProfileWidget = new QWidget;
-    QFormLayout *readProfileWidgetLayout = new QFormLayout(readProfileWidget);
-    readProfileWidgetLayout->setContentsMargins(0, 0, 0, 0);
-    QSpinBox *readProfileSpacingBox = new QSpinBox;
-    readProfileSpacingBox->setRange(0, 1000);
-    readProfileSpacingBox->setValue(readProfileSpacing);
-    readProfileSpacingBox->setEnabled(m_iodevice->getProfileEnabled());
-    readProfileWidgetLayout->addRow(Tr::tr("Code Profiler Polling (ms)"), readProfileSpacingBox);
-    layout->addWidget(readProfileWidget);
-
-    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-    connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
-    layout->addWidget(box);
-
-    if(dialog->exec() == QDialog::Accepted)
-    {
-        settings->setValue(LAST_USE_GET_STATE, m_useGetState = getStateGroup->isChecked());
-        settings->setValue(LAST_FRAME_DUMP_SPACING, m_frameSizeDumpSpacing = frameDumpSpacingBox->value());
-        settings->setValue(LAST_GET_SCRIPT_RUNNING_SPACING, m_getScriptRunningSpacing = getScriptRunningSpacingBox->value());
-        settings->setValue(LAST_GET_TX_BUFFER_SPACING, m_getTxBufferSpacing = getTxBufferSpacingBox->value());
-        settings->setValue(LAST_GET_STATE_SPACING, m_getStateSpacing = getStateSpacingBox->value());
-        settings->setValue(LAST_READ_PROFILE_SPACING, m_readProfileSpacing = readProfileSpacingBox->value());
-
-        m_frameSizeDumpTimer.restart();
-        m_getScriptRunningTimer.restart();
-        m_getTxBufferTimer.restart();
-        m_getStateTimer.restart();
-        m_readProfileTimer.restart();
-        m_timer.restart();
-        m_queue.clear();
-
-        m_ioport->updateSettings(m_useGetState);
-    }
-
-    settings->endGroup();
-    delete dialog;
-}
-
 const int connectToSerialPortIndex = 0;
 const int connectToUDPPortIndex = 1;
 const int connectToTCPPortIndex = 2;
@@ -5849,11 +5748,13 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, b
        (m_sensorType.startsWith(QStringLiteral("GENX320-S"))) ||
        (m_sensorType.startsWith(QStringLiteral("GENX320")))))
     {
-        data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"), QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
+        data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"),
+                            QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
 
         if(m_sensorType.startsWith(QStringLiteral("HM01B0")))
         {
-            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"),
+                                QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
         }
 
         if((m_sensorType.startsWith(QStringLiteral("BOSON-320"))) ||
@@ -5862,20 +5763,24 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, b
            (m_sensorType.startsWith(QStringLiteral("PAJ6100"))) ||
            (m_sensorType.startsWith(QStringLiteral("FROGEYE2020"))))
         {
-            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"),
+                                QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
         }
 
         if((m_sensorType.startsWith(QStringLiteral("BOSON-640"))) ||
            (m_sensorType.startsWith(QStringLiteral("BOSON-640+"))))
         {
-            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
+            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"),
+                                QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
         }
 
         if((m_sensorType.startsWith(QStringLiteral("GENX320-S"))) ||
            (m_sensorType.startsWith(QStringLiteral("GENX320"))))
         {
-            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
-            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
+            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"),
+                                QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
+            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"),
+                                QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
         }
     }
 
@@ -5884,7 +5789,8 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, b
         ((m_sensorType.startsWith(QStringLiteral("PAG7936"))) ||
          (m_sensorType.startsWith(QStringLiteral("PS5520")))))
     {
-        data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"), QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
+        data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"),
+                            QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
     }
 
     return data;

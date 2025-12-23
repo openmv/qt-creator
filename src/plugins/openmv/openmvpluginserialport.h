@@ -387,6 +387,9 @@ public slots:
     //
     // Serial thread implements the transport and transaction layer of the protocol.
 
+    void getSystemInfoString();
+    void getHostStatsString();
+    void getDeviceStatsString();
     void getFirmwareVersion();
     void frameDump();
     void getArchString();
@@ -429,6 +432,9 @@ signals:
     //
     // Serial thread implements the transport and transaction layer of the protocol.
 
+    void systemInfoString(bool timeout, const QString &info);
+    void hostStatsString(bool timeout, const QString &stats);
+    void deviceStatsString(bool timeout, const QString &stats);
     void firmwareVersion(bool timeout, int major, int minor, int patch);
     void frameBufferData(bool timeout, const QPixmap &data);
     void archString(bool timeout, const QString &arch);
@@ -512,6 +518,9 @@ signals:
     //
     // Serial thread implements the transport and transaction layer of the protocol.
 
+    void getSystemInfoString();
+    void getHostStatsString();
+    void getDeviceStatsString();
     void getFirmwareVersion();
     void frameDump();
     void getArchString();
@@ -530,6 +539,9 @@ signals:
     void profileReset();
     void close();
 
+    void systemInfoString(bool timeout, const QString &info);
+    void hostStatsString(bool timeout, const QString &stats);
+    void deviceStatsString(bool timeout, const QString &stats);
     void firmwareVersion(bool timeout, int major, int minor, int patch);
     void frameBufferData(bool timeout, const QPixmap &data);
     void archString(bool timeout, const QString &arch);

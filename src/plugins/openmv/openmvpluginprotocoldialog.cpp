@@ -1,0 +1,227 @@
+/* Copyright (C) 2023-2024 OpenMV, LLC.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in
+ *    the documentation and/or other materials provided with the
+ *    distribution.
+ * 3. Any redistribution, use, or modification in source or binary form
+ *    is done solely for personal benefit and not for any commercial
+ *    purpose or for monetary gain. For commercial licensing options,
+ *    please contact openmv@openmv.io
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE LICENSOR AND COPYRIGHT OWNER "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE LICENSOR OR COPYRIGHT
+ * OWNER BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+#include "openmvplugin.h"
+
+#include "openmvtr.h"
+
+namespace OpenMV {
+namespace Internal {
+
+void OpenMVPlugin::setSpacing()
+{
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->beginGroup(SETTINGS_GROUP);
+
+    bool useGetState = settings->value(LAST_USE_GET_STATE, true).toBool();
+    int frameDumpSpacing = settings->value(LAST_FRAME_DUMP_SPACING, FRAME_SIZE_DUMP_SPACING).toInt();
+    int getScriptRunningSpacing = settings->value(LAST_GET_SCRIPT_RUNNING_SPACING, GET_SCRIPT_RUNNING_SPACING).toInt();
+    int getTxBufferSpacing = settings->value(LAST_GET_TX_BUFFER_SPACING, GET_TX_BUFFER_SPACING).toInt();
+    int getStateSpacing = settings->value(LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
+    int readProfileSpacing = settings->value(LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
+
+    int useGetStateAvailable = !((m_major < OPENMV_ADD_GET_STATE_MAJOR)
+    || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) &&
+        (m_minor < OPENMV_ADD_GET_STATE_MINOR))
+    || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) &&
+        (m_minor == OPENMV_ADD_GET_STATE_MINOR) &&
+        (m_patch < OPENMV_ADD_GET_STATE_PATCH)));
+
+    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
+                                  Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                                      (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    dialog->setWindowTitle(Tr::tr("Debug Protocol Settings"));
+    QVBoxLayout *vlayout = new QVBoxLayout(dialog);
+
+    QWidget *mainWidget = new QWidget;
+    QHBoxLayout *hlayout = new QHBoxLayout(mainWidget);
+    hlayout->setContentsMargins(0, 0, 0, 0);
+    vlayout->addWidget(mainWidget);
+
+    QWidget *leftWidget = new QWidget;
+    QVBoxLayout *llayout = new QVBoxLayout(leftWidget);
+    llayout->setContentsMargins(0, 0, 0, 0);
+    hlayout->addWidget(leftWidget);
+
+    QLabel *infoLabelTitle = new QLabel(Tr::tr("System Info:"));
+    infoLabelTitle->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+    llayout->addWidget(infoLabelTitle);
+    QLabel *infoLabel = new QLabel;
+    infoLabel->setAlignment(Qt::AlignLeft | Qt::AlignTop);
+    infoLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
+    infoLabel->setFrameStyle(QFrame::StyledPanel);
+    infoLabel->setMinimumWidth(480);
+    connect(m_iodevice, &OpenMVPluginIO::systemInfoString, infoLabel, &QLabel::setText);
+    m_iodevice->getSystemInfoString();
+    llayout->addWidget(infoLabel);
+
+    QWidget *stats = new QWidget;
+    QHBoxLayout *statsLayout = new QHBoxLayout(stats);
+    statsLayout->setContentsMargins(0, 0, 0, 0);
+    llayout->addWidget(stats);
+
+    QWidget *leftHSWidget = new QWidget;
+    QVBoxLayout *lhslayout = new QVBoxLayout(leftHSWidget);
+    lhslayout->setContentsMargins(0, 0, 0, 0);
+    statsLayout->addWidget(leftHSWidget);
+
+    QLabel *hostStatsTitle = new QLabel(Tr::tr("Host Stats:"));
+    hostStatsTitle->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+    lhslayout->addWidget(hostStatsTitle);
+    QLabel *hostStats = new QLabel;
+    hostStats->setAlignment(Qt::AlignLeft | Qt::AlignTop);
+    hostStats->setTextInteractionFlags(Qt::TextSelectableByMouse);
+    hostStats->setFrameStyle(QFrame::StyledPanel);
+    hostStats->setMinimumWidth(240);
+    connect(m_iodevice, &OpenMVPluginIO::hostStatsString, hostStats, &QLabel::setText);
+    QTimer *hostStatsTimer = new QTimer(dialog);
+    connect(hostStatsTimer, &QTimer::timeout, m_iodevice, &OpenMVPluginIO::getHostStatsString);
+    hostStatsTimer->start(1000);
+    m_iodevice->getHostStatsString();
+    lhslayout->addWidget(hostStats);
+
+    QWidget *rightDSWidget = new QWidget;
+    QVBoxLayout *rdslayout = new QVBoxLayout(rightDSWidget);
+    rdslayout->setContentsMargins(0, 0, 0, 0);
+    statsLayout->addWidget(rightDSWidget);
+
+    QLabel *deviceStatsTitle = new QLabel(Tr::tr("Device Stats:"));
+    deviceStatsTitle->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+    rdslayout->addWidget(deviceStatsTitle);
+    QLabel *deviceStats = new QLabel;
+    deviceStats->setAlignment(Qt::AlignLeft | Qt::AlignTop);
+    deviceStats->setTextInteractionFlags(Qt::TextSelectableByMouse);
+    deviceStats->setFrameStyle(QFrame::StyledPanel);
+    deviceStats->setMinimumWidth(240);
+    connect(m_iodevice, &OpenMVPluginIO::deviceStatsString, deviceStats, &QLabel::setText);
+    QTimer *deviceStatsTimer = new QTimer(dialog);
+    connect(deviceStatsTimer, &QTimer::timeout, m_iodevice, &OpenMVPluginIO::getDeviceStatsString);
+    deviceStatsTimer->start(1000);
+    m_iodevice->getDeviceStatsString();
+    rdslayout->addWidget(deviceStats);
+
+    QWidget *rightWidget = new QWidget;
+    QVBoxLayout *rlayout = new QVBoxLayout(rightWidget);
+    rlayout->setContentsMargins(0, 0, 0, 0);
+    hlayout->addWidget(rightWidget);
+
+    QLabel *protocolControlsTitle = new QLabel(Tr::tr("Protocol Controls:"));
+    protocolControlsTitle->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+    rlayout->addWidget(protocolControlsTitle);
+
+    QGroupBox *getStateGroup = new QGroupBox(Tr::tr("Combined Polling"));
+    getStateGroup->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+    getStateGroup->setCheckable(true);
+    getStateGroup->setChecked(useGetState);
+    getStateGroup->setEnabled(useGetStateAvailable);
+    rlayout->addWidget(getStateGroup);
+
+    QFormLayout *getStateGroupLayout = new QFormLayout(getStateGroup);
+
+    QSpinBox *getStateSpacingBox = new QSpinBox(getStateGroup);
+    getStateSpacingBox->setRange(0, 1000);
+    getStateSpacingBox->setValue(getStateSpacing);
+    getStateGroupLayout->addRow(Tr::tr("Polling (ms)"), getStateSpacingBox);
+
+    QGroupBox *oldStateGroup = new QGroupBox(useGetStateAvailable ? Tr::tr("Split Polling") : Tr::tr("Polling Settings"));
+    oldStateGroup->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+
+    if(useGetStateAvailable)
+    {
+        oldStateGroup->setDisabled(useGetState);
+        connect(getStateGroup, &QGroupBox::toggled, oldStateGroup, &QGroupBox::setDisabled);
+    }
+
+    rlayout->addWidget(oldStateGroup);
+
+    QFormLayout *oldStateGroupLayout = new QFormLayout(oldStateGroup);
+
+    QSpinBox *frameDumpSpacingBox = new QSpinBox;
+    frameDumpSpacingBox->setRange(0, 1000);
+    frameDumpSpacingBox->setValue(frameDumpSpacing);
+    oldStateGroupLayout->addRow(Tr::tr("Frame Buffer Polling (ms)"), frameDumpSpacingBox);
+
+    QSpinBox *getScriptRunningSpacingBox = new QSpinBox;
+    getScriptRunningSpacingBox->setRange(0, 1000);
+    getScriptRunningSpacingBox->setValue(getScriptRunningSpacing);
+    oldStateGroupLayout->addRow(Tr::tr("Script State Polling (ms)"), getScriptRunningSpacingBox);
+
+    QSpinBox *getTxBufferSpacingBox = new QSpinBox;
+    getTxBufferSpacingBox->setRange(0, 1000);
+    getTxBufferSpacingBox->setValue(getTxBufferSpacing);
+    oldStateGroupLayout->addRow(Tr::tr("Text Buffer Polling (ms)"), getTxBufferSpacingBox);
+
+    QWidget *readProfileWidget = new QWidget;
+    QFormLayout *readProfileWidgetLayout = new QFormLayout(readProfileWidget);
+    readProfileWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    QSpinBox *readProfileSpacingBox = new QSpinBox;
+    readProfileSpacingBox->setRange(0, 1000);
+    readProfileSpacingBox->setValue(readProfileSpacing);
+    readProfileSpacingBox->setEnabled(m_iodevice->getProfileEnabled());
+    QLabel *readProfileLabel = new QLabel(Tr::tr("Code Profiler Polling (ms)"));
+    readProfileLabel->setEnabled(m_iodevice->getProfileEnabled());
+    readProfileWidgetLayout->addRow(readProfileLabel, readProfileSpacingBox);
+    rlayout->addWidget(readProfileWidget);
+
+    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+    connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+    vlayout->addWidget(box);
+
+    infoLabel->setFocus();
+
+    connect(m_iodevice, &OpenMVPluginIO::closeResponse, dialog, &QDialog::reject);
+
+    if(dialog->exec() == QDialog::Accepted)
+    {
+        settings->setValue(LAST_USE_GET_STATE, m_useGetState = getStateGroup->isChecked());
+        settings->setValue(LAST_FRAME_DUMP_SPACING, m_frameSizeDumpSpacing = frameDumpSpacingBox->value());
+        settings->setValue(LAST_GET_SCRIPT_RUNNING_SPACING, m_getScriptRunningSpacing = getScriptRunningSpacingBox->value());
+        settings->setValue(LAST_GET_TX_BUFFER_SPACING, m_getTxBufferSpacing = getTxBufferSpacingBox->value());
+        settings->setValue(LAST_GET_STATE_SPACING, m_getStateSpacing = getStateSpacingBox->value());
+        settings->setValue(LAST_READ_PROFILE_SPACING, m_readProfileSpacing = readProfileSpacingBox->value());
+
+        m_frameSizeDumpTimer.restart();
+        m_getScriptRunningTimer.restart();
+        m_getTxBufferTimer.restart();
+        m_getStateTimer.restart();
+        m_readProfileTimer.restart();
+        m_timer.restart();
+        m_queue.clear();
+
+        m_ioport->updateSettings(m_useGetState);
+    }
+
+    settings->endGroup();
+    delete dialog;
+}
+
+} // namespace Internal
+} // namespace OpenMV

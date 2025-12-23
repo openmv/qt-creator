@@ -862,6 +862,79 @@ void OpenMVPluginSerialPort_private::bootloaderReset()
 //
 // Serial thread implements the transport and transaction layer of the protocol.
 
+void OpenMVPluginSerialPort_private::getSystemInfoString() {
+    if (!m_camera) {
+        emit systemInfoString(true, QString());
+        return;
+    }
+
+    try {
+        if (!m_camera->isConnected()) {
+            m_camera->connect();
+        }
+
+        emit systemInfoString(false, m_camera->systemInfoString());
+    } catch (...) {
+        emit systemInfoString(true, QString());
+    }
+}
+
+void OpenMVPluginSerialPort_private::getHostStatsString() {
+    if (!m_camera) {
+        emit hostStatsString(true, QString());
+        return;
+    }
+
+    try {
+        if (!m_camera->isConnected()) {
+            emit hostStatsString(true, QString());
+            return;
+        }
+
+        QString info;
+        QTextStream stream(&info);
+        QVariantMap stats = m_camera->hostStats();
+        stream << "Packets Sent: " << stats.value(QStringLiteral("sent")).toUInt() << "\n";
+        stream << "Packets Received: " << stats.value(QStringLiteral("received")).toUInt() << "\n";
+        stream << "Checksum Errors: " << stats.value(QStringLiteral("checksum")).toUInt() << "\n";
+        stream << "Sequence Errors: " << stats.value(QStringLiteral("sequence")).toUInt();
+
+        emit hostStatsString(false, info);
+    } catch (...) {
+        emit hostStatsString(true, QString());
+    }
+}
+
+void OpenMVPluginSerialPort_private::getDeviceStatsString() {
+    if (!m_camera) {
+        emit deviceStatsString(true, QString());
+        return;
+    }
+
+    try {
+        if (!m_camera->isConnected()) {
+            emit deviceStatsString(true, QString());
+            return;
+        }
+
+        QString info;
+        QTextStream stream(&info);
+        QVariantMap stats = m_camera->deviceStats();
+        stream << "Packets Sent: " << stats.value(QStringLiteral("sent")).toUInt() << "\n";
+        stream << "Packets Received: " << stats.value(QStringLiteral("received")).toUInt() << "\n";
+        stream << "Checksum Errors: " << stats.value(QStringLiteral("checksum")).toUInt() << "\n";
+        stream << "Sequence Errors: " << stats.value(QStringLiteral("sequence")).toUInt() << "\n";
+        stream << "Retransmit Errors: " << stats.value(QStringLiteral("retransmit")).toUInt() << "\n";
+        stream << "Transport Errors: " << stats.value(QStringLiteral("transport")).toUInt() << "\n";
+        stream << "Sent Events: " << stats.value(QStringLiteral("sent_events")).toUInt() << "\n";
+        stream << "Max ACK Queue Depth: " << stats.value(QStringLiteral("max_ack_queue_depth")).toUInt();
+
+        emit deviceStatsString(false, info);
+    } catch (...) {
+        emit deviceStatsString(true, QString());
+    }
+}
+
 void OpenMVPluginSerialPort_private::getFirmwareVersion() {
     if (!m_camera) {
         emit firmwareVersion(true, 0, 0, 0);
@@ -1340,6 +1413,24 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout,
     // V2 protocol
     //
     // Serial thread implements the transport and transaction layer of the protocol.
+
+    connect(this, &OpenMVPluginSerialPort::getSystemInfoString,
+            m_port, &OpenMVPluginSerialPort_private::getSystemInfoString);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::systemInfoString,
+            this, &OpenMVPluginSerialPort::systemInfoString);
+
+    connect(this, &OpenMVPluginSerialPort::getHostStatsString,
+            m_port, &OpenMVPluginSerialPort_private::getHostStatsString);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::hostStatsString,
+            this, &OpenMVPluginSerialPort::hostStatsString);
+
+    connect(this, &OpenMVPluginSerialPort::getDeviceStatsString,
+            m_port, &OpenMVPluginSerialPort_private::getDeviceStatsString);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::deviceStatsString,
+            this, &OpenMVPluginSerialPort::deviceStatsString);
 
     connect(this, &OpenMVPluginSerialPort::getFirmwareVersion,
             m_port, &OpenMVPluginSerialPort_private::getFirmwareVersion);

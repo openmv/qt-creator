@@ -181,6 +181,9 @@ public:
 public slots:
 
     void checkProtocolVerison(bool splitCommand);
+    void getSystemInfoString();
+    void getHostStatsString();
+    void getDeviceStatsString();
     void getFirmwareVersion();
     void frameSizeDump();
     void getArchString();
@@ -235,6 +238,9 @@ public slots: // private
 signals:
 
     void protocolVersionDone();
+    void systemInfoString(const QString &info);
+    void hostStatsString(const QString &stats);
+    void deviceStatsString(const QString &stats);
     void firmwareVersion(int major, int minor, int patch);
     void frameBufferData(const QPixmap &data);
     void frameBufferEmpty(bool ok);
@@ -296,6 +302,12 @@ private:
     bool m_getStateVariableSize;
     bool m_profileEnabled;
     bool m_hasPMU;
+    QString m_archString;
+    int m_firmwareMajor, m_firmwareMinor, m_firmwarePatch;
+    uint m_sensorID;
+    uint m_sentPackets;
+    uint m_receivedPackets;
+    uint m_receivedImages;
 
     // V2 protocol
     bool m_v2ProtocolEnabled;

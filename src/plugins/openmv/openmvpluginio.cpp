@@ -95,6 +95,9 @@ enum
     BOOTLDR_QSPIF_LAYOUT_CPL,
     BOOTLDR_QSPIF_MEMTEST_CPL,
     CLOSE_CPL,
+    V2_SYSTEM_INFO_STRING_CPL,
+    V2_HOST_STATS_STRING_CPL,
+    V2_DEVICE_STATS_STRING_CPL,
     V2_FIRMWARE_VERSION_CPL,
     V2_FRAME_BUFFER_DATA_CPL,
     V2_ARCH_STRING_CPL,
@@ -326,6 +329,14 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
     m_getStateVariableSize = bool();
     m_profileEnabled = bool();
     m_hasPMU = bool();
+    m_archString = QString();
+    m_firmwareMajor = int();
+    m_firmwareMinor = int();
+    m_firmwarePatch = int();
+    m_sensorID = uint();
+    m_sentPackets = uint();
+    m_receivedPackets = uint();
+    m_receivedImages = uint();
 
     //////////////
     // V2 protocol
@@ -335,6 +346,30 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
 
     connect(m_port, &OpenMVPluginSerialPort::enableV2ProtocolResponse,
             this, &OpenMVPluginIO::protocolVersionDone);
+
+    connect(m_port, &OpenMVPluginSerialPort::systemInfoString,
+            this, [this] (bool timeout, const QString &info) {
+                if (timeout) m_timeout = true;
+                m_completionQueue.removeOne(V2_SYSTEM_INFO_STRING_CPL);
+                emit systemInfoString(info);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
+            });
+
+    connect(m_port, &OpenMVPluginSerialPort::hostStatsString,
+            this, [this] (bool timeout, const QString &info) {
+                if (timeout) m_timeout = true;
+                m_completionQueue.removeOne(V2_HOST_STATS_STRING_CPL);
+                emit hostStatsString(info);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
+            });
+
+    connect(m_port, &OpenMVPluginSerialPort::deviceStatsString,
+            this, [this] (bool timeout, const QString &info) {
+                if (timeout) m_timeout = true;
+                m_completionQueue.removeOne(V2_DEVICE_STATS_STRING_CPL);
+                emit deviceStatsString(info);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
+            });
 
     connect(m_port, &OpenMVPluginSerialPort::firmwareVersion,
             this, [this] (bool timeout, int major, int minor, int patch) {
@@ -522,6 +557,7 @@ void OpenMVPluginIO::command()
     && (m_postedQueue.size() == m_completionQueue.size()))
     {
         m_port->command(m_postedQueue.dequeue());
+        m_sentPackets++;
     }
 }
 
@@ -594,6 +630,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
         if(commandResult.m_ok)
         {
             QByteArray data = commandResult.m_data;
+            m_receivedPackets++;
 
             switch(m_completionQueue.head())
             {
@@ -612,10 +649,10 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 case USBDBG_FW_VERSION_CPL:
                 {
                     // The optimizer will mess up the order if executed in emit.
-                    int major = deserializeLong(data);
-                    int minor = deserializeLong(data);
-                    int patch = deserializeLong(data);
-                    emit firmwareVersion(major, minor, patch);
+                    m_firmwareMajor = deserializeLong(data);
+                    m_firmwareMinor = deserializeLong(data);
+                    m_firmwarePatch = deserializeLong(data);
+                    emit firmwareVersion(m_firmwareMajor, m_firmwareMinor, m_firmwarePatch);
                     break;
                 }
                 case USBDBG_FRAME_SIZE_CPL:
@@ -643,6 +680,7 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                         if(!null)
                         {
                             emit frameBufferData(pixmap);
+                            m_receivedImages++;
                         }
 
                         m_frameSizeW = int();
@@ -686,7 +724,8 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 }
                 case USBDBG_ARCH_STR_CPL:
                 {
-                    emit archString(QString::fromUtf8(data.append('\0').split(0).takeFirst()));
+                    m_archString = QString::fromUtf8(data.append('\0').split(0).takeFirst());
+                    emit archString(m_archString);
                     break;
                 }
                 case USBDBG_LEARN_MTU_CPL:
@@ -839,7 +878,8 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 }
                 case USBDBG_SENSOR_ID_CPL:
                 {
-                    emit sensorIdDone(QList<int>() << deserializeLong(data));
+                    m_sensorID = deserializeLong(data);
+                    emit sensorIdDone(QList<int>() << m_sensorID);
                     break;
                 }
                 case USBDBG_TX_INPUT_CPL_0:
@@ -1078,9 +1118,17 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                         m_lineBuffer.clear();
                     }
 
+                    m_v2ProtocolEnabled = false;
                     m_profileEnabled = false;
                     m_hasPMU = false;
-                    m_v2ProtocolEnabled = false;
+                    m_archString = QString();
+                    m_firmwareMajor = int();
+                    m_firmwareMinor = int();
+                    m_firmwarePatch = int();
+                    m_sensorID = uint();
+                    m_sentPackets = uint();
+                    m_receivedPackets = uint();
+                    m_receivedImages = uint();
                     emit closeResponse();
                     break;
                 }
@@ -1402,9 +1450,17 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                             m_lineBuffer.clear();
                         }
 
+                        m_v2ProtocolEnabled = false;
                         m_profileEnabled = false;
                         m_hasPMU = false;
-                        m_v2ProtocolEnabled = false;
+                        m_archString = QString();
+                        m_firmwareMajor = int();
+                        m_firmwareMinor = int();
+                        m_firmwarePatch = int();
+                        m_sensorID = uint();
+                        m_sentPackets = uint();
+                        m_receivedPackets = uint();
+                        m_receivedImages = uint();
                         emit closeResponse();
                         break;
                     }
@@ -1583,6 +1639,75 @@ void OpenMVPluginIO::getFirmwareVersion()
     command();
 }
 
+void OpenMVPluginIO::getSystemInfoString()
+{
+    if (m_v2ProtocolEnabled) {
+        m_completionQueue.enqueue(V2_SYSTEM_INFO_STRING_CPL);
+        m_port->getSystemInfoString();
+        return;
+    }
+
+    QTimer::singleShot(0, this, [this] {
+        QString info;
+        QTextStream stream(&info);
+
+        QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(.+?)\\[(.+?):(.+?)\\]")).match(m_archString);
+
+        if(match.hasMatch())
+        {
+            stream << "CPU ID: " << match.captured(2) << '\n';
+            stream << "Device ID: " << match.captured(3) << '\n';
+        }
+
+        stream << QStringLiteral("CSI0: 0x%2").arg(m_sensorID) << '\n';
+
+        if(match.hasMatch())
+        {
+            stream << "USB ID: " << match.captured(1).trimmed() << '\n';
+        }
+
+        stream << "Hardware capabilities:" << '\n';
+        stream << "  USB High-Speed: " << (m_hsOn ? "Yes" : "No") << '\n';
+        stream << "  PMU: " << (m_hasPMU ? "Yes" : "No") << '\n';
+        stream << "Profiler: " << (m_profileEnabled ? "Available" : "Not available") << '\n';
+        stream << "Firmware version: " << m_firmwareMajor << "." << m_firmwareMinor << "." << m_firmwarePatch;
+        systemInfoString(info);
+    });
+}
+
+void OpenMVPluginIO::getHostStatsString()
+{
+    if (m_v2ProtocolEnabled) {
+        m_completionQueue.enqueue(V2_HOST_STATS_STRING_CPL);
+        m_port->getHostStatsString();
+        return;
+    }
+
+    QTimer::singleShot(0, this, [this] {
+        QString info;
+        QTextStream stream(&info);
+        stream << "Packets Sent: " << m_sentPackets << "\n";
+        stream << "Packets Received: " << m_receivedPackets;
+        hostStatsString(info);
+    });
+}
+
+void OpenMVPluginIO::getDeviceStatsString()
+{
+    if (m_v2ProtocolEnabled) {
+        m_completionQueue.enqueue(V2_DEVICE_STATS_STRING_CPL);
+        m_port->getDeviceStatsString();
+        return;
+    }
+
+    QTimer::singleShot(0, this, [this] {
+        QString info;
+        QTextStream stream(&info);
+        stream << "Sent Images: " << m_receivedImages;
+        deviceStatsString(info);
+    });
+}
+
 void OpenMVPluginIO::frameSizeDump()
 {
     if (m_v2ProtocolEnabled) {
@@ -1626,7 +1751,7 @@ void OpenMVPluginIO::getArchString()
 void OpenMVPluginIO::learnMTU()
 {
     if (m_v2ProtocolEnabled) {
-        emit learnedMTU(true);
+        QTimer::singleShot(0, this, [this] {learnedMTU(true);});
         return;
     }
 
@@ -1707,7 +1832,7 @@ void OpenMVPluginIO::getScriptRunning()
 void OpenMVPluginIO::templateSave(int x, int y, int w, int h, const QByteArray &path)
 {
     if (m_v2ProtocolEnabled) {
-        emit templateSaveDone();
+        QTimer::singleShot(0, this, [this] {templateSaveDone();});
         return;
     }
 
@@ -1737,7 +1862,7 @@ void OpenMVPluginIO::templateSave(int x, int y, int w, int h, const QByteArray &
 void OpenMVPluginIO::descriptorSave(int x, int y, int w, int h, const QByteArray &path)
 {
     if (m_v2ProtocolEnabled) {
-        emit descriptorSaveDone();
+        QTimer::singleShot(0, this, [this] {descriptorSaveDone();});
         return;
     }
 
@@ -1767,7 +1892,7 @@ void OpenMVPluginIO::descriptorSave(int x, int y, int w, int h, const QByteArray
 void OpenMVPluginIO::getAttribute(int attr)
 {
     if (m_v2ProtocolEnabled) {
-        emit attribute(int());
+        QTimer::singleShot(0, this, [this] {attribute(int());});
         return;
     }
 
@@ -1811,7 +1936,7 @@ void OpenMVPluginIO::getAttribute(int attr)
 void OpenMVPluginIO::setAttribute(int attr, int value)
 {
     if (m_v2ProtocolEnabled) {
-        emit setAttrributeDone();
+        QTimer::singleShot(0, this, [this] {setAttrributeDone();});
         return;
     }
 
@@ -1927,7 +2052,7 @@ void OpenMVPluginIO::jpegEnable(bool enabled)
         return;
     }
 
-    emit jpegEnableDone();
+    QTimer::singleShot(0, this, [this] {jpegEnableDone();});
 
 //    if(!m_breakUpJPEGEnable)
 //    {
@@ -2190,7 +2315,7 @@ void OpenMVPluginIO::profileReset()
 void OpenMVPluginIO::bootloaderStart()
 {
     if (m_v2ProtocolEnabled) {
-        emit gotBootloaderStart(false, int());
+        QTimer::singleShot(0, this, [this] {gotBootloaderStart(false, int());});
         return;
     }
 
@@ -2208,7 +2333,7 @@ void OpenMVPluginIO::bootloaderStart()
 void OpenMVPluginIO::bootloaderReset()
 {
     if (m_v2ProtocolEnabled) {
-        emit bootloaderResetDone(false);
+        QTimer::singleShot(0, this, [this] {bootloaderResetDone(false);});
         return;
     }
 
@@ -2226,7 +2351,7 @@ void OpenMVPluginIO::bootloaderReset()
 void OpenMVPluginIO::flashErase(int sector)
 {
     if (m_v2ProtocolEnabled) {
-        emit flashEraseDone(false);
+        QTimer::singleShot(0, this, [this] {flashEraseDone(false);});
         return;
     }
 
@@ -2260,7 +2385,7 @@ void OpenMVPluginIO::flashErase(int sector)
 void OpenMVPluginIO::flashWrite(const QByteArray &data)
 {
     if (m_v2ProtocolEnabled) {
-        emit flashWriteDone(false);
+        QTimer::singleShot(0, this, [this] {flashWriteDone(false);});
         return;
     }
 
@@ -2304,7 +2429,7 @@ void OpenMVPluginIO::flashWrite(const QByteArray &data)
 void OpenMVPluginIO::bootloaderQuery()
 {
     if (m_v2ProtocolEnabled) {
-        emit bootloaderQueryDone(int(), int(), int());
+        QTimer::singleShot(0, this, [this] {bootloaderQueryDone(int(), int(), int());});
         return;
     }
 
@@ -2322,7 +2447,7 @@ void OpenMVPluginIO::bootloaderQuery()
 void OpenMVPluginIO::bootloaderQSPIFErase(int sector)
 {
     if (m_v2ProtocolEnabled) {
-        emit bootloaderQSPIFEraseDone(false);
+        QTimer::singleShot(0, this, [this] {bootloaderQSPIFEraseDone(false);});
         return;
     }
 
@@ -2356,7 +2481,7 @@ void OpenMVPluginIO::bootloaderQSPIFErase(int sector)
 void OpenMVPluginIO::bootloaderQSPIFWrite(const QByteArray &data)
 {
     if (m_v2ProtocolEnabled) {
-        emit bootloaderQSPIFWriteDone(false);
+        QTimer::singleShot(0, this, [this] {bootloaderQSPIFWriteDone(false);});
         return;
     }
 
@@ -2400,7 +2525,7 @@ void OpenMVPluginIO::bootloaderQSPIFWrite(const QByteArray &data)
 void OpenMVPluginIO::bootloaderQSPIFLayout()
 {
     if (m_v2ProtocolEnabled) {
-        emit bootloaderQSPIFLayoutDone(int(), int(), int());
+        QTimer::singleShot(0, this, [this] {bootloaderQSPIFLayoutDone(int(), int(), int());});
         return;
     }
 
@@ -2418,7 +2543,7 @@ void OpenMVPluginIO::bootloaderQSPIFLayout()
 void OpenMVPluginIO::bootloaderQSPIFMemtest()
 {
     if (m_v2ProtocolEnabled) {
-        emit bootloaderQSPIFMemtestDone(false);
+        QTimer::singleShot(0, this, [this] {bootloaderQSPIFMemtestDone(false);});
         return;
     }
 

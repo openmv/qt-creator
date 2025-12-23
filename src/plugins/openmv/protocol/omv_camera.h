@@ -57,12 +57,12 @@ public:
     void pollEvents();
 
     // Host transport stats (from OMVTransport)
-    const OMVTransport::stats_t &hostStats() const;
+    QVariantMap hostStats() const;
 
     // Device/firmware stats & info
     QVariantMap deviceStats();   // PROTO_STATS
     QVariantMap systemInfo();    // SYS_INFO
-
+    QString systemInfoString();
     void printSystemInfo();
 
     // Basic device control
