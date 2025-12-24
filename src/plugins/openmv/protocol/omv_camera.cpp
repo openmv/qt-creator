@@ -162,6 +162,7 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
         Send a command and wait for response (ACK/NAK or data)
     */
     if (!isConnected()) {
+        omvDebug() << "Not connected";
         throw OMVPException(QStringLiteral("Not connected"));
     }
 
@@ -201,7 +202,8 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
         }
 
         return QByteArray();
-    } catch (const OMVPException &) {
+    } catch (const OMVPException &e) {
+        omvDebug() << "sendCmdWaitResp exception:" << e.what();
         // Gracefully handle channel size requests during disconnect.
         if (opcode == OMVPOpcode::CHANNEL_SIZE) {
             return QByteArray(4, 0);
@@ -313,6 +315,10 @@ void OMVCamera::resync()
                 continue;
             } else {
                 omvDebug() << "Failed to resync after maximum attempts";
+                delete transport;
+                transport = nullptr;
+                delete serial;
+                serial = NULL;
                 throw OMVPTimeoutException(
                     QStringLiteral("Resync failed - unable to synchronize with device"));
             }
@@ -916,7 +922,7 @@ QVariantList OMVCamera::readProfile()
             channelUnlock(profile_id);
             return records;
         } catch (...) {
-            channelUnlock(profile_id);
+            // casues issues with disconnect // channelUnlock(profile_id);
             throw;
         }
     });
@@ -1043,7 +1049,7 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
             channelUnlock(stream_id);
             return true;
         } catch (...) {
-            channelUnlock(stream_id);
+            // casues issues with disconnect // channelUnlock(stream_id);
             throw;
         }
     });
@@ -1108,8 +1114,12 @@ bool OMVCamera::hasChannel(const QString &channel) const
     return channelsByName.contains(channel);
 }
 
-bool OMVCamera::frameReady()
+bool OMVCamera::frameReady(bool checkEvent)
 {
+    if (checkEvent) {
+        return caps_events && frameEvent;
+    }
+
     if (caps_events) {
         if (lastFrameReady.isValid()) {
             if (lastFrameReady.elapsed() < 1000) {
@@ -1144,8 +1154,8 @@ bool OMVCamera::scriptRunning(bool alwaysPoll)
     }
 
     // Update camera state variables
-    lastScriptRunning.start();
     QVariantMap status = readStatus();
+    lastScriptRunning.restart();
     scriptState = status.value(QStringLiteral("stdin")).toBool();
     return scriptState;
 }

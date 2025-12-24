@@ -42,7 +42,7 @@ public:
               bool ack          = true,
               bool events       = true,
               double timeout    = 1.0,
-              int max_retry     = 1,
+              int max_retry     = 3,
               int max_payload   = 4096,
               double drop_rate  = 0.0);
 
@@ -92,7 +92,7 @@ public:
     // Access to cached system info map (Python-like keys)
     const QVariantMap &cachedSystemInfo() const { return sysinfo; }
 
-    bool frameReady();
+    bool frameReady(bool checkEvent = false);
     bool scriptRunning(bool alwaysPoll = false);
     QPair<bool, bool> frameReadyAndScriptRunning();
 

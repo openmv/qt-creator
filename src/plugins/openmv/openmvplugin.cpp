@@ -104,6 +104,9 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_getTxBufferSpacing = GET_TX_BUFFER_SPACING;
     m_getStateSpacing = GET_STATE_SPACING;
     m_readProfileSpacing = READ_PROFILE_SPACING;
+    m_dynamicFrameReading = true;
+    m_dynamicFrameReadingLock = false;
+    m_dynamicFrameReadingPending = false;
 
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &OpenMVPlugin::processEvents);
@@ -2434,9 +2437,14 @@ void OpenMVPlugin::extensionsInitialized()
     m_getTxBufferSpacing = settings->value(LAST_GET_TX_BUFFER_SPACING, GET_TX_BUFFER_SPACING).toInt();
     m_getStateSpacing = settings->value(LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
     m_readProfileSpacing = settings->value(LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
+    m_dynamicFrameReading = settings->value(LAST_DYNAMIC_FRAME_READING, true).toBool();
     settings->endGroup();
 
     m_ioport->updateSettings(m_useGetState);
+    connect(m_ioport, &OpenMVPluginSerialPort::frameReady, this, [this] (bool ready) {
+        m_dynamicFrameReadingPending = ready;
+        m_dynamicFrameReadingLock = false;
+    });
 
     connect(Core::MessageManager::outputWindow(), &Core::OutputWindow::writeBytes, m_iodevice, &OpenMVPluginIO::mainTerminalInput);
     connect(Core::MessageManager::outputWindow()->getParser(), &Core::OpenMVPluginEscapeCodeParser::dataSetEditorSaveImage, datasetEditorSnapshotAction, &QAction::trigger);
@@ -3739,75 +3747,6 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
     }
 }
 
-void OpenMVPlugin::processEvents()
-{
-    if((!m_working) && m_connected)
-    {
-        if(m_iodevice->getTimeout())
-        {
-            disconnectClicked();
-        }
-        else
-        {
-            if((!m_useGetState)
-            || (m_major < OPENMV_ADD_GET_STATE_MAJOR)
-            || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
-            || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)))
-            {
-                if((!m_disableFrameBuffer->isChecked()) && (!m_iodevice->frameSizeDumpQueued()) && m_frameSizeDumpTimer.hasExpired(m_frameSizeDumpSpacing))
-                {
-                    m_frameSizeDumpTimer.restart();
-                    m_iodevice->frameSizeDump();
-                }
-
-                if((!m_iodevice->getScriptRunningQueued()) && m_getScriptRunningTimer.hasExpired(m_getScriptRunningSpacing))
-                {
-                    m_getScriptRunningTimer.restart();
-                    m_iodevice->getScriptRunning();
-
-                    if(m_portPath.isEmpty())
-                    {
-                        setPortPath(true);
-                    }
-                }
-
-                if((!m_iodevice->getTxBufferQueued()) && m_getTxBufferTimer.hasExpired(m_getTxBufferSpacing))
-                {
-                    m_getTxBufferTimer.restart();
-                    m_iodevice->getTxBuffer();
-                }
-            }
-            else
-            {
-                if((!m_iodevice->getStateQueued()) && m_getStateTimer.hasExpired(m_getStateSpacing))
-                {
-                    m_getStateTimer.restart();
-                    m_iodevice->getState();
-
-                    if(m_portPath.isEmpty())
-                    {
-                        setPortPath(true);
-                    }
-                }
-            }
-
-            if(m_iodevice->getProfileEnabled())
-            {
-                if((!m_iodevice->readProfileQueued()) && m_readProfileTimer.hasExpired(m_readProfileSpacing))
-                {
-                    m_readProfileTimer.restart();
-                    m_iodevice->readProfile();
-                }
-            }
-
-            if(m_timer.hasExpired(FPS_TIMER_EXPIRATION_TIME))
-            {
-                m_fpsButton->setText(Tr::tr("FPS: 0"));
-            }
-        }
-    }
-}
-
 void OpenMVPlugin::errorFilter(const QByteArray &data)
 {
     m_errorFilterString.append(QString::fromUtf8(data).replace(QStringLiteral("\r\n"), QStringLiteral("\n")));
@@ -3989,144 +3928,6 @@ void OpenMVPlugin::saveImage(const QPixmap &data)
     }
 
     settings->endGroup();
-}
-
-void OpenMVPlugin::saveTemplate(const QRect &rect)
-{
-    if(!m_working)
-    {
-        QString drivePath = QDir::cleanPath(QDir::fromNativeSeparators(m_portPath));
-
-        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
-
-        QString path;
-
-        forever
-        {
-            path =
-            QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Template"),
-                settings->value(LAST_SAVE_TEMPLATE_PATH, drivePath).toString(),
-                Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)"));
-
-            if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
-            {
-                QMessageBox::warning(Core::ICore::dialogParent(),
-                    Tr::tr("Save Template"),
-                    Tr::tr("Please add a file extension!"));
-
-                continue;
-            }
-
-            break;
-        }
-
-        if(!path.isEmpty())
-        {
-            path = QDir::cleanPath(QDir::fromNativeSeparators(path));
-
-            if((!path.startsWith(drivePath))
-            || (!QDir(QFileInfo(path).path()).exists()))
-            {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    Tr::tr("Save Template"),
-                    Tr::tr("Please select a valid path on the OpenMV Cam!"));
-            }
-            else
-            {
-                QByteArray sendPath = QString(path).remove(0, drivePath.size()).prepend(QLatin1Char('/')).toUtf8();
-
-                if(sendPath.size() <= DESCRIPTOR_SAVE_PATH_MAX_LEN)
-                {
-                    m_iodevice->templateSave(rect.x(), rect.y(), rect.width(), rect.height(), sendPath);
-                    settings->setValue(LAST_SAVE_TEMPLATE_PATH, path);
-                }
-                else
-                {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                        Tr::tr("Save Template"),
-                        Tr::tr("\"%L1\" is longer than a max length of %L2 characters!").arg(QString::fromUtf8(sendPath)).arg(DESCRIPTOR_SAVE_PATH_MAX_LEN));
-                }
-            }
-        }
-
-        settings->endGroup();
-    }
-    else
-    {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Save Template"),
-            Tr::tr("Busy... please wait..."));
-    }
-}
-
-void OpenMVPlugin::saveDescriptor(const QRect &rect)
-{
-    if(!m_working)
-    {
-        QString drivePath = QDir::cleanPath(QDir::fromNativeSeparators(m_portPath));
-
-        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
-
-        QString path;
-
-        forever
-        {
-            path =
-            QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Descriptor"),
-                settings->value(LAST_SAVE_DESCRIPTOR_PATH, drivePath).toString(),
-                Tr::tr("Keypoints Files (*.lbp *.orb)"));
-
-            if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
-            {
-                QMessageBox::warning(Core::ICore::dialogParent(),
-                    Tr::tr("Save Descriptor"),
-                    Tr::tr("Please add a file extension!"));
-
-                continue;
-            }
-
-            break;
-        }
-
-        if(!path.isEmpty())
-        {
-            path = QDir::cleanPath(QDir::fromNativeSeparators(path));
-
-            if((!path.startsWith(drivePath))
-            || (!QDir(QFileInfo(path).path()).exists()))
-            {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    Tr::tr("Save Descriptor"),
-                    Tr::tr("Please select a valid path on the OpenMV Cam!"));
-            }
-            else
-            {
-                QByteArray sendPath = QString(path).remove(0, drivePath.size()).prepend(QLatin1Char('/')).toUtf8();
-
-                if(sendPath.size() <= DESCRIPTOR_SAVE_PATH_MAX_LEN)
-                {
-                    m_iodevice->descriptorSave(rect.x(), rect.y(), rect.width(), rect.height(), sendPath);
-                    settings->setValue(LAST_SAVE_DESCRIPTOR_PATH, path);
-                }
-                else
-                {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                        Tr::tr("Save Descriptor"),
-                        Tr::tr("\"%L1\" is longer than a max length of %L2 characters!").arg(QString::fromUtf8(sendPath)).arg(DESCRIPTOR_SAVE_PATH_MAX_LEN));
-                }
-            }
-        }
-
-        settings->endGroup();
-    }
-    else
-    {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Save Descriptor"),
-            Tr::tr("Busy... please wait..."));
-    }
 }
 
 QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const QString &path, QMenu *parent, bool notExamples)
@@ -4314,97 +4115,6 @@ QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const Q
     }
 
     return actions;
-}
-
-void OpenMVPlugin::setPortPath(bool silent)
-{
-    if(!m_working)
-    {
-        QStringList drives;
-
-        for(const QPair<QString, QString> &pair : m_availableDrives)
-        {
-            const QString rootPath = pair.first;
-            const QString serialNumber = pair.second;
-
-            if((((m_major < OPENMV_DISK_ADDED_MAJOR)
-            || ((m_major == OPENMV_DISK_ADDED_MAJOR) && (m_minor < OPENMV_DISK_ADDED_MINOR))
-            || ((m_major == OPENMV_DISK_ADDED_MAJOR) && (m_minor == OPENMV_DISK_ADDED_MINOR) && (m_patch < OPENMV_DISK_ADDED_PATCH)))
-            || QFile::exists(rootPath + QStringLiteral(OPENMV_DISK_ADDED_NAME)))
-            && (serialNumber.toLower() == m_portDriveSerialNumber.toLower()))
-            {
-                drives.append(rootPath);
-            }
-        }
-
-        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SERIAL_PORT_SETTINGS_GROUP);
-
-        if(drives.isEmpty())
-        {
-            if(!silent)
-            {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    Tr::tr("Select Drive"),
-                    Tr::tr("No valid drives were found to associate with your OpenMV Cam!"));
-            }
-
-            m_portPath = QString();
-        }
-        else if(drives.size() == 1)
-        {
-            if(m_portPath == drives.first())
-            {
-                QTimer::singleShot(0, this, [this] {
-                    Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(),
-                        Utils::FilePath::fromString(m_portPath).pathAppended(Utils::HostOsInfo::isWindowsHost()
-                            ? QStringLiteral("") : QStringLiteral(".openmv_disk")));
-                });
-            }
-            else
-            {
-                m_portPath = drives.first();
-                settings->setValue(m_portName.toUtf8(), m_portPath);
-            }
-        }
-        else
-        {
-            int index = drives.indexOf(settings->value(m_portName.toUtf8()).toString());
-
-            bool ok = silent;
-            QString temp = silent ? drives.first() : QInputDialog::getItem(Core::ICore::dialogParent(),
-                Tr::tr("Select Drive"), Tr::tr("Please associate a drive with your OpenMV Cam"),
-                drives, (index != -1) ? index : 0, false, &ok,
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType() : Qt::WindowCloseButtonHint));
-
-            if(ok)
-            {
-                m_portPath = temp;
-                settings->setValue(m_portName.toUtf8(), m_portPath);
-            }
-        }
-
-        settings->endGroup();
-
-        m_pathButton->setText((!m_portPath.isEmpty()) ? Tr::tr("Drive: %L1").arg(m_portPath) : Tr::tr("Drive:"));
-
-        Core::IEditor *editor = Core::EditorManager::currentEditor();
-        m_openDriveFolderAction->setEnabled(!m_portPath.isEmpty());
-        m_configureSettingsAction->setEnabled(!m_portPath.isEmpty());
-        m_saveAction->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
-
-        m_frameBuffer->enableSaveTemplate(!m_portPath.isEmpty());
-        m_frameBuffer->enableSaveDescriptor(!m_portPath.isEmpty());
-
-        Python::Internal::PyLSClient::setPortPath(Utils::FilePath::fromUserInput(m_portPath));
-    }
-    else
-    {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Select Drive"),
-            Tr::tr("Busy... please wait..."));
-    }
 }
 
 const int connectToSerialPortIndex = 0;
@@ -5728,72 +5438,6 @@ bool OpenMVPlugin::matchExample(const QString &filePath, QString *flattenRegex)
     }
 
     return match;
-}
-
-QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, bool increaseResolution)
-{
-    if((!notExamples) &&
-      ((m_sensorType.startsWith(QStringLiteral("HM01B0"))) ||
-       (m_sensorType.startsWith(QStringLiteral("HM0360"))) ||
-       (m_sensorType.startsWith(QStringLiteral("MT9V0X2"))) ||
-       (m_sensorType.startsWith(QStringLiteral("MT9V0X4"))) ||
-       (m_sensorType.startsWith(QStringLiteral("BOSON"))) ||
-       (m_sensorType.startsWith(QStringLiteral("BOSON-320"))) ||
-       (m_sensorType.startsWith(QStringLiteral("BOSON-640"))) ||
-       (m_sensorType.startsWith(QStringLiteral("BOSON-320+"))) ||
-       (m_sensorType.startsWith(QStringLiteral("BOSON-640+"))) ||
-       (m_sensorType.startsWith(QStringLiteral("PAG7920"))) ||
-       (m_sensorType.startsWith(QStringLiteral("PAJ6100"))) ||
-       (m_sensorType.startsWith(QStringLiteral("FROGEYE2020"))) ||
-       (m_sensorType.startsWith(QStringLiteral("GENX320-S"))) ||
-       (m_sensorType.startsWith(QStringLiteral("GENX320")))))
-    {
-        data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"),
-                            QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
-
-        if(m_sensorType.startsWith(QStringLiteral("HM01B0")))
-        {
-            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"),
-                                QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
-        }
-
-        if((m_sensorType.startsWith(QStringLiteral("BOSON-320"))) ||
-           (m_sensorType.startsWith(QStringLiteral("BOSON-320+"))) ||
-           (m_sensorType.startsWith(QStringLiteral("PAG7920"))) ||
-           (m_sensorType.startsWith(QStringLiteral("PAJ6100"))) ||
-           (m_sensorType.startsWith(QStringLiteral("FROGEYE2020"))))
-        {
-            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"),
-                                QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
-        }
-
-        if((m_sensorType.startsWith(QStringLiteral("BOSON-640"))) ||
-           (m_sensorType.startsWith(QStringLiteral("BOSON-640+"))))
-        {
-            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"),
-                                QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
-        }
-
-        if((m_sensorType.startsWith(QStringLiteral("GENX320-S"))) ||
-           (m_sensorType.startsWith(QStringLiteral("GENX320"))))
-        {
-            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"),
-                                QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
-            data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"),
-                                QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
-        }
-    }
-
-    if ((!notExamples) &&
-        increaseResolution &&
-        ((m_sensorType.startsWith(QStringLiteral("PAG7936"))) ||
-         (m_sensorType.startsWith(QStringLiteral("PS5520")))))
-    {
-        data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"),
-                            QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
-    }
-
-    return data;
 }
 
 QString OpenMVPlugin::tempFileForPythonEditor(const QByteArray &data, const QString &titlePattern)

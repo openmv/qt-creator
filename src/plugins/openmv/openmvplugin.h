@@ -203,6 +203,7 @@
 #define LAST_GET_TX_BUFFER_SPACING "LastGetTxBufferSpacing"
 #define LAST_GET_STATE_SPACING "LastGetStateSpacing"
 #define LAST_READ_PROFILE_SPACING "LastReadProfileSpacing"
+#define LAST_DYNAMIC_FRAME_READING "LastDynamicFrameReading"
 #define LAST_ROMFS_DIALOG_GEOMETRY "LastROMFSDialogGeometry"
 #define LAST_ROMFS_DIALOG_OPEN_FILE_PATH "LastROMFSDialogFilePath"
 #define LAST_ROMFS_DIALOG_NEW_FOLDER_NAME "LastROMFSDialogNewFolderName"
@@ -604,6 +605,7 @@ private:
     int m_getTxBufferSpacing;
     int m_getStateSpacing;
     int m_readProfileSpacing;
+    bool m_dynamicFrameReading, m_dynamicFrameReadingLock, m_dynamicFrameReadingPending;
 
     QAction *m_bootloaderAction;
     QAction *m_eraseAction;

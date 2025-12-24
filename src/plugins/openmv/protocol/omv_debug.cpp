@@ -11,7 +11,7 @@
 
 namespace omv {
 
-QAtomicInt OMVDebug::s_enabled(1);
+QAtomicInt OMVDebug::s_enabled(0);
 
 void OMVDebug::setEnabled(bool on)
 {

@@ -3,7 +3,7 @@ add_qtc_plugin(OpenMV
   PLUGIN_DEPENDS Core TextEditor Python Copilot
   SOURCES
     openmvplugin.cpp openmvplugin.h openmvtr.h
-    openmvpluginprotocoldialog.cpp
+    openmvpluginprotocol.cpp
     openmvpluginconnect.cpp openmvpluginconnect.h
     openmvmodelzoo.cpp openmvmodelzoo.h
     openmvromfs.cpp openmvromfs.h

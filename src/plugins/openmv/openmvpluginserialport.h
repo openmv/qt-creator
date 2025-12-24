@@ -379,9 +379,7 @@ public slots:
     void bootloaderStop();
     void bootloaderReset();
 
-    void updateSettings(bool unstuckWithGetState) {
-        m_unstuckWithGetState = unstuckWithGetState;
-    }
+    void updateSettings(bool unstuckWithGetState);
 
     // V2 protocol
     //
@@ -391,6 +389,7 @@ public slots:
     void getHostStatsString();
     void getDeviceStatsString();
     void getFirmwareVersion();
+    void getFrameReady(); // poll event
     void frameDump();
     void getArchString();
     void scriptExec(const QByteArray &data);
@@ -436,6 +435,7 @@ signals:
     void hostStatsString(bool timeout, const QString &stats);
     void deviceStatsString(bool timeout, const QString &stats);
     void firmwareVersion(bool timeout, int major, int minor, int patch);
+    void frameReady(bool ready); // poll event
     void frameBufferData(bool timeout, const QPixmap &data);
     void archString(bool timeout, const QString &arch);
     void scriptExecDone(bool timeout);
@@ -459,7 +459,7 @@ private:
     void write(const QByteArray &data, int startWait, int stopWait, int timeout);
 
     QTimer *m_idleTimer;
-    OMVPort *m_port;
+    QPointer<OMVPort> m_port;
     OMVCamera *m_camera;
     bool m_v2ProtocolEnabled;
     bool m_bootloaderStop;
@@ -522,6 +522,7 @@ signals:
     void getHostStatsString();
     void getDeviceStatsString();
     void getFirmwareVersion();
+    void getFrameReady(); // poll event
     void frameDump();
     void getArchString();
     void scriptExec(const QByteArray &data);
@@ -543,6 +544,7 @@ signals:
     void hostStatsString(bool timeout, const QString &stats);
     void deviceStatsString(bool timeout, const QString &stats);
     void firmwareVersion(bool timeout, int major, int minor, int patch);
+    void frameReady(bool ready); // poll event
     void frameBufferData(bool timeout, const QPixmap &data);
     void archString(bool timeout, const QString &arch);
     void scriptExecDone(bool timeout);
