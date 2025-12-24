@@ -922,7 +922,7 @@ QVariantList OMVCamera::readProfile()
             channelUnlock(profile_id);
             return records;
         } catch (...) {
-            // casues issues with disconnect // channelUnlock(profile_id);
+            channelUnlock(profile_id);
             throw;
         }
     });
@@ -1049,7 +1049,7 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
             channelUnlock(stream_id);
             return true;
         } catch (...) {
-            // casues issues with disconnect // channelUnlock(stream_id);
+            channelUnlock(stream_id);
             throw;
         }
     });
