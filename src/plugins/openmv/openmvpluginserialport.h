@@ -354,10 +354,7 @@ class OpenMVPluginSerialPort_private : public QObject
 
 public:
 
-    explicit OpenMVPluginSerialPort_private(int override_read_timeout = -1,
-                                            int override_read_stall_timeout = -1,
-                                            int override_per_command_wait = -1,
-                                            const QJsonDocument &settings = QJsonDocument(),
+    explicit OpenMVPluginSerialPort_private(const QJsonDocument &settings = QJsonDocument(),
                                             QObject *parent = Q_NULLPTR);
     ~OpenMVPluginSerialPort_private();
 
@@ -378,8 +375,6 @@ public slots:
     void bootloaderStart(const QString &selectedPort);
     void bootloaderStop();
     void bootloaderReset();
-
-    void updateSettings(bool unstuckWithGetState);
 
     // V2 protocol
     //
@@ -425,8 +420,6 @@ signals:
     void bootloaderStopResponse();
     void bootloaderResetResponse();
 
-    void settingsUpdated();
-
     // V2 protocol
     //
     // Serial thread implements the transport and transaction layer of the protocol.
@@ -463,13 +456,7 @@ private:
     OMVCamera *m_camera;
     bool m_v2ProtocolEnabled;
     bool m_bootloaderStop;
-    int m_override_read_timeout;
-    int m_override_read_stall_timeout;
-    int m_override_per_command_wait;
     QJsonDocument m_firmwareSettings;
-    bool m_unstuckWithGetState;
-    QHash<char, QQueue<qint64> > m_readstallQueue;
-    QHash<char, qint64 > m_readstallAverage;
 };
 
 class OpenMVPluginSerialPort : public QObject
@@ -478,10 +465,7 @@ class OpenMVPluginSerialPort : public QObject
 
 public:
 
-    explicit OpenMVPluginSerialPort(int override_read_timeout = -1,
-                                    int override_read_stall_timeout = -1,
-                                    int override_per_command_wait = -1,
-                                    const QJsonDocument &settings = QJsonDocument(),
+    explicit OpenMVPluginSerialPort(const QJsonDocument &settings = QJsonDocument(),
                                     QObject *parent = Q_NULLPTR);
 
     void terminate();

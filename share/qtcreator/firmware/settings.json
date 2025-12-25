@@ -1659,5 +1659,27 @@
             "id" : "0xB0602003",
             "main" : false
         }
-    ]
+    ],
+    "protocol" : {
+        "v1" : {
+            "overrideBootloaderWriteTimeout" : -1,
+            "overrideBootloaderReadTimeout" : -1,
+            "overrideBootloaderReadStallTimeout" : -1,
+            "overrideWriteTimeout" : -1,
+            "overrideReadTimeout" : -1,
+            "overrideReadStallTimeout" : -1,
+            "overridePerCommandWait" : -1,
+            "overrideFlushTimeout": -1
+        },
+        "v2" : {
+            "overrideCRC" : -1,
+            "overrideSEQ" : -1,
+            "overrideACK" : -1,
+            "overrideEvents" : -1,
+            "overrideTimeout" : -1.0,
+            "overrideMaxRetry" : -1,
+            "overrideMaxPayload" : -1,
+            "overrideDropRate" : -1.0
+        }
+    }
 }

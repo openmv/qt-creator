@@ -54,10 +54,6 @@
 
 #define READ_BUFFER_SIZE (64 * 1024 * 1024)
 
-#define DYNAMIC_READ_STALL_ENABLE 0
-#define DYNAMIC_READ_STALL_BUFFER_SIZE 20
-#define DYNAMIC_READ_STALL_THRESHOLD 10
-
 namespace OpenMV {
 namespace Internal {
 
@@ -136,25 +132,15 @@ bool isTouchToReset(const QJsonDocument &settings, const MyQSerialPortInfo &port
     return match;
 }
 
-OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(int override_read_timeout,
-                                                               int override_read_stall_timeout,
-                                                               int override_per_command_wait,
-                                                               const QJsonDocument &settings,
+OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(const QJsonDocument &settings,
                                                                QObject *parent) : QObject(parent)
 {
+    m_idleTimer = new QTimer(this);
     m_port = Q_NULLPTR;
     m_camera = Q_NULLPTR;
     m_v2ProtocolEnabled = false;
     m_bootloaderStop = false;
-    m_override_read_timeout = override_read_timeout;
-    m_override_read_stall_timeout = override_read_stall_timeout;
-    m_override_per_command_wait = override_per_command_wait;
     m_firmwareSettings = settings;
-    m_unstuckWithGetState = false;
-    m_readstallQueue = QHash<char, QQueue<qint64> >();
-    m_readstallAverage = QHash<char, qint64 >();
-
-    m_idleTimer = new QTimer(this);
 
     connect(m_idleTimer, &QTimer::timeout, this, [this]() {
         if (m_v2ProtocolEnabled && m_camera) {
@@ -200,9 +186,6 @@ void OpenMVPluginSerialPort_private::enableV2Protocol(bool enable) {
 }
 
 void OpenMVPluginSerialPort_private::open(const QString &portName) {
-    m_readstallQueue = QHash<char, QQueue<qint64> >();
-    m_readstallAverage = QHash<char, qint64 >();
-
     if (m_camera) {
         delete m_camera;
         m_camera = Q_NULLPTR;
@@ -245,6 +228,41 @@ void OpenMVPluginSerialPort_private::open(const QString &portName) {
     }
 
     if (m_port) {
+        QJsonObject obj = m_firmwareSettings.object().value(QStringLiteral("protocol")).toObject().
+                                                      value(QStringLiteral("v2")).toObject();
+
+        bool crc = true;
+        int override_crc = obj.value(QStringLiteral("overrideCRC")).toInt(-1);
+        if (override_crc >= 0) crc = bool(override_crc);
+
+        bool seq = true;
+        int override_seq = obj.value(QStringLiteral("overrideSEQ")).toInt(-1);
+        if (override_seq >= 0) seq = bool(override_seq);
+
+        bool ack = false;
+        int override_ack = obj.value(QStringLiteral("overrideACK")).toInt(-1);
+        if (override_ack >= 0) ack = bool(override_ack);
+
+        bool events = true;
+        int override_events = obj.value(QStringLiteral("overrideEvents")).toInt(-1);
+        if (override_events >= 0) events = bool(override_events);
+
+        double timeout = 1.0;
+        double override_timeout = obj.value(QStringLiteral("overrideTimeout")).toDouble(-1.0);
+        if (override_timeout >= 0.0) timeout = override_timeout;
+
+        int max_retry = 3;
+        int override_max_retry = obj.value(QStringLiteral("overrideMaxRetry")).toInt(-1);
+        if (override_max_retry >= 0) max_retry = override_max_retry;
+
+        int max_payload = 4096;
+        int override_max_payload = obj.value(QStringLiteral("overrideMaxPayload")).toInt(-1);
+        if (override_max_payload >= 0) max_payload = override_max_payload;
+
+        double drop_rate = 0.0;
+        double override_drop_rate = obj.value(QStringLiteral("overrideDropRate")).toDouble(-1.0);
+        if (override_drop_rate >= 0.0) drop_rate = override_drop_rate;
+
         if (m_port->hasVIDPID()) {
             QPair<int, int> vidpid = m_port->getVIDPID();
 
@@ -257,7 +275,8 @@ void OpenMVPluginSerialPort_private::open(const QString &portName) {
 
                 if ((vid == vidpid.first) && ((pid & bPidMask) == (vidpid.second & bPidMask))) {
                     // We are connected over USB to a valid camera so we do not need ACKs.
-                    m_camera = new OMVCamera(m_port, true, true, false, true);
+                    m_camera = new OMVCamera(m_port, crc, seq, ack, events,
+                                             timeout, max_retry, max_payload, drop_rate);
                     break;
                 }
             }
@@ -267,7 +286,8 @@ void OpenMVPluginSerialPort_private::open(const QString &portName) {
             bool reliable = m_port->reliableTransport();
             bool fullDuplex = m_port->fullDuplexTransport();
             // Only enable ACKs on unreliable transports.
-            m_camera = new OMVCamera(m_port, true, true, !reliable, fullDuplex);
+            m_camera = new OMVCamera(m_port, crc, seq, ack || !reliable, events && fullDuplex,
+                                     timeout, max_retry, max_payload, drop_rate);
         }
 
         emit openResult(QString());
@@ -370,6 +390,9 @@ void OpenMVPluginSerialPort_private::write(const QByteArray &data, int startWait
 
 void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand &command)
 {
+    QJsonObject obj = m_firmwareSettings.object().value(QStringLiteral("protocol")).toObject().
+                                                  value(QStringLiteral("v1")).toObject();
+
     if(command.m_data.isEmpty())
     {
         if(!command.m_responseLen) // close
@@ -443,6 +466,10 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
     {
         if (command.m_readFlushBeforeCommnad)
         {
+            int flush_timeout = FLUSH_TIMEOUT;
+            int override_flush_timeout = obj.value(QStringLiteral("overrideFlushTimeout")).toInt(-1);
+            if (override_flush_timeout >= 0) flush_timeout = override_flush_timeout;
+
             QElapsedTimer elaspedTimer;
             elaspedTimer.start();
 
@@ -455,10 +482,14 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                     elaspedTimer.restart();
                 }
             }
-            while(!elaspedTimer.hasExpired(FLUSH_TIMEOUT));
+            while(!elaspedTimer.hasExpired(flush_timeout));
         }
 
-        write(command.m_data, command.m_startWait, command.m_endWait, WRITE_TIMEOUT);
+        int write_timeout = WRITE_TIMEOUT;
+        int override_write_timeout = obj.value(QStringLiteral("overrideWriteTimeout")).toInt(-1);
+        if (override_write_timeout >= 0) write_timeout = override_write_timeout;
+
+        write(command.m_data, command.m_startWait, command.m_endWait, write_timeout);
 
         if((!m_port) || (!command.m_responseLen))
         {
@@ -467,35 +498,23 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
         else
         {
             int read_timeout = m_port->readTimeoutMs();
-
-            if(m_override_read_timeout > 0)
-            {
-                read_timeout = m_override_read_timeout;
-            }
+            int override_read_timeout = obj.value(QStringLiteral("overrideReadTimeout")).toInt(-1);
+            if (override_read_timeout >= 0) read_timeout = override_read_timeout;
 
             int read_stall_timeout = m_port->readStallTimeoutMs();
-
-            if(m_override_read_stall_timeout > 0)
-            {
-                read_stall_timeout = m_override_read_stall_timeout;
-            }
+            int override_read_stall_timeout = obj.value(QStringLiteral("overrideReadStallTimeout")).toInt(-1);
+            if (override_read_stall_timeout >= 0) read_stall_timeout = override_read_stall_timeout;
 
             QByteArray response;
             int responseLen = command.m_responseLen;
             QElapsedTimer elaspedTimer;
             elaspedTimer.start();
-            #if DYNAMIC_READ_STALL_ENABLE
-            qint64 lastReadWait = 0;
-            #endif
 
             bool readStallHappened = false;
 
             do
             {
                 m_port->waitForReadyRead(0);
-                #if DYNAMIC_READ_STALL_ENABLE
-                lastReadWait = elaspedTimer.elapsed();
-                #endif
 
                 QByteArray data = m_port->readAll();
                 response.append(data);
@@ -509,140 +528,13 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                 //
                 // This happens on windows machines generally.
 
-                #if DYNAMIC_READ_STALL_ENABLE
-                if ((m_override_read_stall_timeout <= 0) && command.m_commandAbortOkay)
-                {
-                    char cmd = command.m_data[1];
-
-                    if ((m_readstallQueue[cmd].size() == DYNAMIC_READ_STALL_BUFFER_SIZE) &&
-                        (lastReadWait > (m_readstallAverage[cmd] * DYNAMIC_READ_STALL_THRESHOLD)))
-                    {
-                        readStallHappened = true;
-                        break;
-                    }
-                }
-                #endif
-
                 if((response.size() < responseLen) && elaspedTimer.hasExpired(read_stall_timeout) && command.m_commandAbortOkay)
                 {
                     readStallHappened = true;
                     break;
                 }
-
-                // DISABLED - NOT REQUIRED - FIXING ZLP OVERLAP WAS WHY THINGS STALL - REMOVE AFTER TRIAL PERIOD
-                //
-                // if(readStallHappened && (response.size() >= readStallAbaddonSize))
-                // {
-                //     // The device responsed to the read stall. So, all the data that is going to come has come.
-                //     // We may or maynot however actually have a complete response from the command...
-                //     response.chop(readStallDiscardSize);
-                //     break;
-                // }
-                //
-                // if(m_port->isSerialPort() && (response.size() < responseLen) && elaspedTimer2.hasExpired(read_stall_timeout))
-                // {
-                //     if(command.m_perCommandWait) // normal mode
-                //     {
-                //         if (m_unstuckWithGetState)
-                //         {
-                //             QByteArray data;
-                //             serializeByte(data, __USBDBG_CMD);
-                //             serializeByte(data, __USBDBG_GET_STATE);
-                //             serializeLong(data, GET_STATE_PAYLOAD_LEN);
-                //             write(data, GET_STATE_START_DELAY, GET_STATE_END_DELAY, WRITE_TIMEOUT);
-                //
-                //             if(m_port)
-                //             {
-                //                 elaspedTimer2.restart();
-                //                 if (!readStallHappened) readStallAbaddonSize = response.size();
-                //                 readStallHappened = true;
-                //                 readStallAbaddonSize += GET_STATE_PAYLOAD_LEN;
-                //                 readStallDiscardSize += GET_STATE_PAYLOAD_LEN;
-                //             }
-                //             else
-                //             {
-                //                 break;
-                //             }
-                //         }
-                //         else
-                //         {
-                //             QByteArray data;
-                //             serializeByte(data, __USBDBG_CMD);
-                //             serializeByte(data, __USBDBG_SCRIPT_RUNNING);
-                //             serializeLong(data, SCRIPT_RUNNING_RESPONSE_LEN);
-                //             write(data, SCRIPT_RUNNING_START_DELAY, SCRIPT_RUNNING_END_DELAY, WRITE_TIMEOUT);
-                //
-                //             if(m_port)
-                //             {
-                //                 elaspedTimer2.restart();
-                //                 if (!readStallHappened) readStallAbaddonSize = response.size();
-                //                 readStallHappened = true;
-                //                 readStallAbaddonSize += SCRIPT_RUNNING_RESPONSE_LEN;
-                //                 readStallDiscardSize += SCRIPT_RUNNING_RESPONSE_LEN;
-                //             }
-                //             else
-                //             {
-                //                 break;
-                //             }
-                //         }
-                //     }
-                //     else // bootloader mode
-                //     {
-                //         QByteArray data;
-                //         serializeLong(data, __BOOTLDR_QUERY);
-                //         write(data, BOOTLDR_QUERY_START_DELAY, BOOTLDR_QUERY_END_DELAY, WRITE_TIMEOUT);
-                //
-                //         if(m_port)
-                //         {
-                //             elaspedTimer2.restart();
-                //             if (!readStallHappened) readStallAbaddonSize = response.size();
-                //             readStallHappened = true;
-                //             readStallAbaddonSize += BOOTLDR_QUERY_RESPONSE_LEN;
-                //             readStallDiscardSize += BOOTLDR_QUERY_RESPONSE_LEN;
-                //         }
-                //         else
-                //         {
-                //             break;
-                //         }
-                //     }
-                // }
-                //
-                // if(m_port->isTCPPort() && (response.size() < responseLen) && elaspedTimer2.hasExpired(read_stall_timeout))
-                // {
-                //     write(command.m_data, 0, 0, WRITE_TIMEOUT);
-                //
-                //     if(!m_port)
-                //     {
-                //         break;
-                //     }
-                // }
-                //
-                // DISABLED - NOT REQUIRED - FIXING ZLP OVERLAP WAS WHY THINGS STALL - REMOVE AFTER TRIAL PERIOD
             }
             while((response.size() < responseLen) && (!elaspedTimer.hasExpired(read_timeout)));
-
-            #if DYNAMIC_READ_STALL_ENABLE
-            if (command.m_commandAbortOkay && (!readStallHappened))
-            {
-                char cmd = command.m_data[1];
-
-                m_readstallQueue[cmd].push_back(lastReadWait);
-
-                if(m_readstallQueue[cmd].size() > DYNAMIC_READ_STALL_BUFFER_SIZE)
-                {
-                    m_readstallQueue[cmd].pop_front();
-                }
-
-                qint64 average = 0;
-
-                for(int i = 0; i < m_readstallQueue[cmd].size(); i++)
-                {
-                    average += m_readstallQueue[cmd].at(i);
-                }
-
-                m_readstallAverage[cmd] = average / m_readstallQueue[cmd].size();
-            }
-            #endif
 
             if((response.size() >= responseLen) || readStallHappened)
             {
@@ -668,11 +560,8 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
     if (command.m_perCommandWait) {
         // Execute commands slowly so as to not overload the OpenMV Cam board.
         int per_command_wait = Utils::HostOsInfo::isMacHost() ? 2 : 1;
-
-        if(m_override_per_command_wait >= 0)
-        {
-            per_command_wait = m_override_per_command_wait;
-        }
+        int override_per_command_wait = obj.value(QStringLiteral("overridePerCommandWait")).toInt();
+        if (override_per_command_wait >= 0) per_command_wait = override_per_command_wait;
 
         if(per_command_wait > 0)
         {
@@ -683,6 +572,9 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
 void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort)
 {
+    QJsonObject obj = m_firmwareSettings.object().value(QStringLiteral("protocol")).toObject().
+                      value(QStringLiteral("v1")).toObject();
+
     m_bootloaderStop = false;
 
     if(m_port) {
@@ -700,12 +592,16 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
                 }
             }
         } else {
+            int write_timeout = WRITE_TIMEOUT;
+            int override_write_timeout = obj.value(QStringLiteral("overrideWriteTimeout")).toInt(-1);
+            if (override_write_timeout >= 0) write_timeout = override_write_timeout;
+
             int command = __USBDBG_SYS_RESET;
             QByteArray buffer;
             serializeByte(buffer, __USBDBG_CMD);
             serializeByte(buffer, command);
             serializeLong(buffer, int());
-            write(buffer, SYS_RESET_START_DELAY, SYS_RESET_END_DELAY, WRITE_TIMEOUT);
+            write(buffer, SYS_RESET_START_DELAY, SYS_RESET_END_DELAY, write_timeout);
         }
 
         if (m_camera) {
@@ -718,6 +614,18 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
             m_port = Q_NULLPTR;
         }
     }
+
+    int bootloader_write_timeout = BOOTLOADER_WRITE_TIMEOUT;
+    int override_bootloader_write_timeout = obj.value(QStringLiteral("overrideBootloaderWriteTimeout")).toInt(-1);
+    if (override_bootloader_write_timeout >= 0) bootloader_write_timeout = override_bootloader_write_timeout;
+
+    int bootloader_read_timeout = BOOTLOADER_READ_TIMEOUT;
+    int override_bootloader_read_timeout = obj.value(QStringLiteral("overrideBootloaderReadTimeout")).toInt(-1);
+    if (override_bootloader_read_timeout >= 0) bootloader_read_timeout = override_bootloader_read_timeout;
+
+    int bootloader_read_stall_timeout = BOOTLOADER_READ_STALL_TIMEOUT;
+    int override_bootloader_read_stall_timeout = obj.value(QStringLiteral("overrideBootloaderReadStallTimeout")).toInt(-1);
+    if (override_bootloader_read_stall_timeout >= 0) bootloader_read_stall_timeout = override_bootloader_read_stall_timeout;
 
     forever
     {
@@ -778,7 +686,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
 
                 QByteArray buffer;
                 serializeLong(buffer, __BOOTLDR_START);
-                write(buffer, BOOTLDR_START_START_DELAY, BOOTLDR_START_END_DELAY, BOOTLOADER_WRITE_TIMEOUT);
+                write(buffer, BOOTLDR_START_START_DELAY, BOOTLDR_START_END_DELAY, bootloader_write_timeout);
 
                 if(m_port)
                 {
@@ -794,11 +702,11 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
                         m_port->waitForReadyRead(1);
                         response.append(m_port->readAll());
 
-                        if((response.size() < responseLen) && elaspedTimer2.hasExpired(BOOTLOADER_READ_STALL_TIMEOUT))
+                        if((response.size() < responseLen) && elaspedTimer2.hasExpired(bootloader_read_stall_timeout))
                         {
                             QByteArray data;
                             serializeLong(data, __BOOTLDR_START);
-                            write(data, BOOTLDR_START_START_DELAY, BOOTLDR_START_END_DELAY, BOOTLOADER_WRITE_TIMEOUT);
+                            write(data, BOOTLDR_START_START_DELAY, BOOTLDR_START_END_DELAY, bootloader_write_timeout);
 
                             if(m_port)
                             {
@@ -811,7 +719,7 @@ void OpenMVPluginSerialPort_private::bootloaderStart(const QString &selectedPort
                             }
                         }
                     }
-                    while((response.size() < responseLen) && (!elaspedTimer.hasExpired(BOOTLOADER_READ_TIMEOUT)));
+                    while((response.size() < responseLen) && (!elaspedTimer.hasExpired(bootloader_read_timeout)));
 
                     if(response.size() >= responseLen)
                     {
@@ -855,12 +763,6 @@ void OpenMVPluginSerialPort_private::bootloaderReset()
 {
     m_bootloaderStop = false;
     emit bootloaderResetResponse();
-}
-
-void OpenMVPluginSerialPort_private::updateSettings(bool unstuckWithGetState)
-{
-    m_unstuckWithGetState = unstuckWithGetState;
-    emit settingsUpdated();
 }
 
 // V2 protocol
@@ -1288,17 +1190,11 @@ void OpenMVPluginSerialPort_private::close() {
     }
 }
 
-OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout,
-                                               int override_read_stall_timeout,
-                                               int override_per_command_wait,
-                                               const QJsonDocument &settings,
+OpenMVPluginSerialPort::OpenMVPluginSerialPort(const QJsonDocument &settings,
                                                QObject *parent) : QObject(parent)
 {
     m_thread = new QThread;
-    m_port = new OpenMVPluginSerialPort_private(override_read_timeout,
-                                                override_read_stall_timeout,
-                                                override_per_command_wait,
-                                                settings);
+    m_port = new OpenMVPluginSerialPort_private(settings);
     m_port->moveToThread(m_thread);
 
     // Shared
@@ -1343,12 +1239,6 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(int override_read_timeout,
 
     connect(m_port, &OpenMVPluginSerialPort_private::bootloaderResetResponse,
             this, &OpenMVPluginSerialPort::bootloaderResetResponse);
-
-    connect(this, &OpenMVPluginSerialPort::updateSettings,
-            m_port, &OpenMVPluginSerialPort_private::updateSettings);
-
-    connect(m_port, &OpenMVPluginSerialPort_private::settingsUpdated,
-            this, &OpenMVPluginSerialPort::settingsUpdated);
 
     // V2 protocol
     //

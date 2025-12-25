@@ -407,8 +407,6 @@ void OpenMVPlugin::setSpacing()
         m_readProfileTimer.restart();
         m_timer.restart();
         m_queue.clear();
-
-        m_ioport->updateSettings(m_useGetState);
     }
 
     settings->endGroup();

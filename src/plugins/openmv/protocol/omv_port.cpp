@@ -11,7 +11,7 @@
 
 #include "omv_port.h"
 
-#define SERIAL_READ_TIMEOUT 5000
+#define SERIAL_READ_TIMEOUT 3000
 #define SERIAL_READ_STALL_TIMEOUT 1000
 
 #define TCP_READ_TIMEOUT 5000

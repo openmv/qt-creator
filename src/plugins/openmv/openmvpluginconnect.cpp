@@ -2526,12 +2526,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                                                         QStringLiteral("lightgreen") :
                                                                         QStringLiteral("green"));
                                         m_registerButton->setText(Tr::tr("Registered"));
+                                        m_registerButton->update();
                                         m_registerButton->setVisible(true);
                                         m_registerButtonSpacer->setVisible(true);
                                     }
                                     else
                                     {
                                         m_registerButton->setText(QString());
+                                        m_registerButton->update();
                                         m_registerButton->setVisible(false);
                                         m_registerButtonSpacer->setVisible(false);
                                     }

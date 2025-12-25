@@ -186,99 +186,6 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     ///////////////////////////////////////////////////////////////////////////
 
-    int override_read_timeout = -1;
-    int index_override_read_timeout = arguments.indexOf(QRegularExpression(QStringLiteral("-override_read_timeout")));
-    #ifdef FORCE_OVERRIDE_READ_TIMEOUT
-    index_override_read_timeout = -1;
-    override_read_timeout = FORCE_OVERRIDE_READ_TIMEOUT;
-    #endif
-
-    if(index_override_read_timeout != -1)
-    {
-        if(arguments.size() > (index_override_read_timeout + 1))
-        {
-            bool ok;
-            int tmp_override_read_timeout = arguments.at(index_override_read_timeout + 1).toInt(&ok);
-
-            if(ok)
-            {
-                override_read_timeout = tmp_override_read_timeout;
-            }
-            else
-            {
-                displayError(Tr::tr("Invalid argument (%1) for -override_read_timeout").arg(arguments.at(index_override_read_timeout + 1)));
-                exit(-1);
-            }
-        }
-        else
-        {
-            displayError(Tr::tr("Missing argument for -override_read_timeout"));
-            exit(-1);
-        }
-    }
-
-    int override_read_stall_timeout = -1;
-    int index_override_read_stall_timeout = arguments.indexOf(QRegularExpression(QStringLiteral("-override_read_stall_timeout")));
-    #ifdef FORCE_OVERRIDE_READ_STALL_TIMEOUT
-    index_override_read_stall_timeout = -1;
-    override_read_stall_timeout = FORCE_OVERRIDE_READ_STALL_TIMEOUT;
-    #endif
-
-    if(index_override_read_stall_timeout != -1)
-    {
-        if(arguments.size() > (index_override_read_stall_timeout + 1))
-        {
-            bool ok;
-            int tmp_override_read_stall_timeout = arguments.at(index_override_read_stall_timeout + 1).toInt(&ok);
-
-            if(ok)
-            {
-                override_read_stall_timeout = tmp_override_read_stall_timeout;
-            }
-            else
-            {
-                displayError(Tr::tr("Invalid argument (%1) for -override_read_stall_timeout").arg(arguments.at(index_override_read_stall_timeout + 1)));
-                exit(-1);
-            }
-        }
-        else
-        {
-            displayError(Tr::tr("Missing argument for -override_read_stall_timeout"));
-            exit(-1);
-        }
-    }
-
-    int override_per_command_wait = -1;
-    int index_override_per_command_wait = arguments.indexOf(QRegularExpression(QStringLiteral("-override_per_command_wait")));
-    #ifdef FORCE_OVERRIDE_PER_COMMAND_WAIT
-    index_override_per_command_wait = -1;
-    override_per_command_wait = FORCE_OVERRIDE_PER_COMMAND_WAIT;
-    #endif
-
-    if(index_override_per_command_wait != -1)
-    {
-        if(arguments.size() > (index_override_per_command_wait + 1))
-        {
-            bool ok;
-            int tmp_override_per_command_wait = arguments.at(index_override_per_command_wait + 1).toInt(&ok);
-
-            if(ok)
-            {
-                override_per_command_wait = tmp_override_per_command_wait;
-            }
-            else
-            {
-                displayError(Tr::tr("Invalid argument (%1) for -override_per_command_wait").arg(arguments.at(index_override_per_command_wait + 1)));
-                exit(-1);
-            }
-        }
-        else
-        {
-            displayError(Tr::tr("Missing argument for -override_per_command_wait"));
-            exit(-1);
-        }
-    }
-
     int index_serial_number_filter = arguments.indexOf(QRegularExpression(QStringLiteral("-serial_number_filter")));
     #ifdef FORCE_SERIAL_NUMBER_FILTER
     index_serial_number_filter = -1;
@@ -620,11 +527,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         exit(0);
     }
 
-    m_ioport = new OpenMVPluginSerialPort(override_read_timeout,
-                                          override_read_stall_timeout,
-                                          override_per_command_wait,
-                                          QJsonDocument(m_firmwareSettings),
-                                          this);
+    m_ioport = new OpenMVPluginSerialPort(QJsonDocument(m_firmwareSettings), this);
     m_iodevice = new OpenMVPluginIO(m_ioport, this);
 
     ///////////////////////////////////////////////////////////////////////////
@@ -1814,6 +1717,10 @@ void OpenMVPlugin::extensionsInitialized()
         QMessageBox::about(Core::ICore::dialogParent(), m_viewerMode ? Tr::tr("About OpenMV Viewer") : Tr::tr("About OpenMV IDE"), Tr::tr(
         "<p><b>About %L4 %L1</b></p>"
         "<p>By: Ibrahim Abdelkader & Kwabena W. Agyeman</p>"
+#ifdef OPENMV_FACTORY_IDE
+        "<p><b>FACTORY VERSION</b></p>"
+        "<p>Meant for licensed manufacturers only.</p>"
+#endif
         "<p><b>GNU GENERAL PUBLIC LICENSE</b></p>"
         "<p>Copyright (C) %L2 %L3</p>"
         "<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href=\"https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT\">GNU General Public License</a> for more details.</p>"
@@ -2440,7 +2347,6 @@ void OpenMVPlugin::extensionsInitialized()
     m_dynamicFrameReading = settings->value(LAST_DYNAMIC_FRAME_READING, true).toBool();
     settings->endGroup();
 
-    m_ioport->updateSettings(m_useGetState);
     connect(m_ioport, &OpenMVPluginSerialPort::frameReady, this, [this] (bool ready) {
         m_dynamicFrameReadingPending = ready;
         m_dynamicFrameReadingLock = false;
@@ -3513,6 +3419,15 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
                         Tr::tr("OpenMV Cam automatically registered!\n\nBoard: %1\nID: %2\n\n%3 Board Keys remaining for registering board type: %1\n\n"
                                "Please run Examples->HelloWorld->helloworld.py to test the vision quality and focus the camera (if applicable).").arg(board).arg(id).arg(match.captured(1)));
 
+                    m_registerButton->setProperty("statusColor",
+                        Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ?
+                                                    QStringLiteral("lightgreen") :
+                                                    QStringLiteral("green"));
+                    m_registerButton->setText(Tr::tr("Registered"));
+                    m_registerButton->update();
+                    m_registerButton->setVisible(true);
+                    m_registerButtonSpacer->setVisible(true);
+
                     return;
                 }
                 else if(text.contains(QStringLiteral("Done")))
@@ -3520,6 +3435,15 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
                     if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
                         Tr::tr("Register OpenMV Cam"),
                         Tr::tr("OpenMV Cam automatically registered!\n\nBoard: %1\nID: %2\n\nPlease run Examples->HelloWorld->helloworld.py to test the vision quality and focus the camera (if applicable).").arg(board).arg(id));
+
+                    m_registerButton->setProperty("statusColor",
+                        Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ?
+                                                    QStringLiteral("lightgreen") :
+                                                    QStringLiteral("green"));
+                    m_registerButton->setText(Tr::tr("Registered"));
+                    m_registerButton->update();
+                    m_registerButton->setVisible(true);
+                    m_registerButtonSpacer->setVisible(true);
 
                     return;
                 }
