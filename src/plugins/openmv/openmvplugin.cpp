@@ -2761,7 +2761,7 @@ bool OpenMVPlugin::delayedInitialize()
         QTimer *timer = new QTimer(this);
 
         connect(timer, &QTimer::timeout, m_scanDriveThread, [this] () {
-            if (!m_connected) {
+            if (!m_connected || m_availableDrives.isEmpty()) {
                 m_scanDriveThread->scanDrivesSlot();
             }
         });
