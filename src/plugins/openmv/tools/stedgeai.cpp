@@ -487,7 +487,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
         rejected = dialog->wasRejected();
     }
 
-    dialog->deleteLater();
+    delete dialog;
     return rejected ? QString() : result;
 }
 

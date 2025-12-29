@@ -211,7 +211,7 @@ void downloadFirmware(const QString &details,
         // DfuSe/PyDfu do not offer a way to actually target the correct DFU device. So, if there's anything in the list
         // we are just going to run blindly and hope the user only hooked up one device.
 
-        if(Utils::HostOsInfo::isWindowsHost())
+        if(Utils::HostOsInfo::isWindowsHost() && path.endsWith("dfu", Qt::CaseInsensitive))
         {
             Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
             settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);

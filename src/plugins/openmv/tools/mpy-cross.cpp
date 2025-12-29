@@ -313,7 +313,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
         return script;
     }
 
-    command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+    command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
     Utils::Environment env = process.environment();
@@ -330,7 +330,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
     process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
-    if (process.result() == Utils::ProcessResult::FinishedWithSuccess && QFileInfo(outputPath).exists())
+    if (process.result() == Utils::ProcessResult::FinishedWithSuccess && QFileInfo::exists(outputPath))
     {
         dialog->appendColoredText(Tr::tr("Success - Press Ok to close the window"), true);
         dialog->enableOkayButton(true);
@@ -355,7 +355,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
         rejected = dialog->wasRejected();
     }
 
-    dialog->deleteLater();
+    delete dialog;
     return rejected ? QString() : result;
 }
 

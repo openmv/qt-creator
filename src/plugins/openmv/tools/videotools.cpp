@@ -41,6 +41,7 @@
 #include <utils/theme/theme.h>
 
 #include "../openmvpluginio.h"
+#include "loaderdialog.h"
 #include "openmvtr.h"
 
 #define VIDEO_SETTINGS_GROUP "OpenMVFFMPEG"
@@ -717,59 +718,79 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     }
 
     float fps, *fpsPtr = &fps;
-    QRegularExpression fpsRegex(QStringLiteral("\\b(\\d+(?:\\.\\d+)?)\\s?fps\\b"));
-
-    Utils::Process process;
+    QRegularExpression fpsRegex(QStringLiteral("Video:.*?,\\s*(\\d+(?:\\.\\d+)?)\\s+fps,"));
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     settings->beginGroup(VIDEO_SETTINGS_GROUP);
 
-    QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
-        Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-        (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
-        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-    dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-    dialog->setWindowTitle(Tr::tr("Convert Video"));
-    dialog->setSizeGripEnabled(true);
+    Utils::Process process;
+    LoaderDialog *dialog = new LoaderDialog(Tr::tr("Convert Video"), Tr::tr("Converting"), process, settings,
+                                            QStringLiteral(LAST_CONVERT_TERMINAL_WINDOW_GEOMETRY),
+                                            Core::ICore::dialogParent());
+    dialog->disableTextWrapping();
+    dialog->setOkayButtonVisible(true);
 
-    if(settings->contains(LAST_CONVERT_TERMINAL_WINDOW_GEOMETRY))
-    {
-        dialog->restoreGeometry(settings->value(LAST_CONVERT_TERMINAL_WINDOW_GEOMETRY).toByteArray());
-    }
-    else
-    {
-        dialog->resize(640, 480);
-    }
+    QString stdOutBuffer = QString();
+    QString *stdOutBufferPtr = &stdOutBuffer;
 
-    QVBoxLayout *layout = new QVBoxLayout(dialog);
+    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, fpsPtr, fpsRegex, stdOutBufferPtr] (const QString &text) {
+        stdOutBufferPtr->append(text);
+        QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
-    QPlainTextEdit *plainTextEdit = new QPlainTextEdit();
-    plainTextEdit->setReadOnly(true);
-    QFont font = TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily();
-    plainTextEdit->setFont(font);
+        if(list.size())
+        {
+            *stdOutBufferPtr = list.takeLast();
+        }
 
-    layout->addWidget(plainTextEdit);
+        while(list.size())
+        {
+            QString out = list.takeFirst();
 
-    QObject::connect(&process, &Utils::Process::textOnStandardError, plainTextEdit, [plainTextEdit, fpsPtr, fpsRegex] (const QString &text) { // stdErr correct
-        QRegularExpressionMatch match = fpsRegex.match(text);
-        if (match.hasMatch()) *fpsPtr = match.captured(1).toFloat();
-        plainTextEdit->appendPlainText(text.trimmed());
+            if (out.trimmed().isEmpty())
+            {
+                continue;
+            }
+
+            dialog->appendColoredText(out); // swapped behavior with stderr for ffmpeg
+
+            dialog->moveScrollToLeft();
+            dialog->moveScrollToBottom();
+
+            QRegularExpressionMatch match = fpsRegex.match(text);
+            if (match.hasMatch()) *fpsPtr = match.captured(1).toFloat();
+        }
     });
 
-    QObject::connect(&process, &Utils::Process::textOnStandardOutput, plainTextEdit, [plainTextEdit, fpsPtr, fpsRegex] (const QString &text) { // stdOut correct
-        QRegularExpressionMatch match = fpsRegex.match(text);
-        if (match.hasMatch()) *fpsPtr = match.captured(1).toFloat();
-        plainTextEdit->appendHtml(QStringLiteral("<p style=\"color:%1\">%2</p>").
-                                  arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightcoral") : QStringLiteral("coral")).
-                                  arg(text.trimmed()));
+    QString stdErrBuffer = QString();
+    QString *stdErrBufferPtr = &stdErrBuffer;
+
+    QObject::connect(&process, &Utils::Process::textOnStandardError, dialog, [dialog, fpsPtr, fpsRegex, stdErrBufferPtr] (const QString &text) {
+        stdErrBufferPtr->append(text);
+        QStringList list = stdErrBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
+
+        if(list.size())
+        {
+            *stdErrBufferPtr = list.takeLast();
+        }
+
+        while(list.size())
+        {
+            QString out = list.takeFirst();
+
+            if (out.trimmed().isEmpty())
+            {
+                continue;
+            }
+
+            dialog->appendPlainText(out); // swapped behavior with stdout for ffmpeg
+
+            dialog->moveScrollToLeft();
+            dialog->moveScrollToBottom();
+
+            QRegularExpressionMatch match = fpsRegex.match(text);
+            if (match.hasMatch()) *fpsPtr = match.captured(1).toFloat();
+        }
     });
-
-    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
-    QObject::connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-    QObject::connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
-    layout->addWidget(box);
-
-    QObject::connect(dialog, &QDialog::rejected, [&process] { process.terminate(); });
 
     Utils::FilePath binary;
     QStringList args = QStringList() <<
@@ -811,35 +832,58 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
         }
     }
 
-    QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
-    plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
-                              arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("lightblue") : QStringLiteral("blue")).
-                              arg(command));
+    if(binary.isEmpty())
+    {
+        QMessageBox::critical(Core::ICore::dialogParent(),
+                              Tr::tr("Convert Video"),
+                              Tr::tr("FFMPEG is not supported on this platform."));
+
+        delete dialog;
+        settings->endGroup();
+        return false;
+    }
+
+    QString command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
+    dialog->appendColoredText(command);
 
     dialog->show();
-
+    dialog->moveScrollToLeft();
+    dialog->moveScrollToBottom();
     std::chrono::seconds timeout(3600); // 60 minutes...
     process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
     process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
-    settings->setValue(LAST_CONVERT_TERMINAL_WINDOW_GEOMETRY, dialog->saveGeometry());
-    settings->endGroup();
-    delete dialog;
-
     bool result = process.result() == Utils::ProcessResult::FinishedWithSuccess;
 
-    if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+    if (process.result() == Utils::ProcessResult::FinishedWithSuccess)
     {
-        QMessageBox box(QMessageBox::Critical, Tr::tr("Convert Video"), Tr::tr("Failed to launch ffmpeg!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-        box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-        box.setDefaultButton(QMessageBox::Ok);
-        box.setEscapeButton(QMessageBox::Cancel);
-        box.exec();
+        dialog->appendColoredText(Tr::tr("Success - Press Ok to close the window"), true);
+        dialog->enableOkayButton(true);
     }
+    else
+    {
+        dialog->appendColoredText(Tr::tr("Failure - Press Cancel to close the window"), true);
+    }
+
+    dialog->moveScrollToLeft();
+    dialog->moveScrollToBottom();
+
+    bool rejected = dialog->wasRejected();
+
+    if (!rejected)
+    {
+        QEventLoop loop;
+        QObject::connect(dialog, &QDialog::finished, &loop, &QEventLoop::quit);
+        loop.exec();
+
+        rejected = dialog->wasRejected();
+    }
+
+    delete dialog;
+    settings->endGroup();
+    result = rejected ? false : result;
 
     {
         QRegularExpressionMatch match = fpsRegex.match(process.readAllStandardOutput());

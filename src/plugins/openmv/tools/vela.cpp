@@ -371,7 +371,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
         rejected = dialog->wasRejected();
     }
 
-    dialog->deleteLater();
+    delete dialog;
     return rejected ? QString() : result;
 }
 
