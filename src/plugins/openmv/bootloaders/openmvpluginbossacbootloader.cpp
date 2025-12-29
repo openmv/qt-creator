@@ -53,10 +53,7 @@ void OpenMVPlugin::openmvBossacBootloader(bool forceFlashFSErase,
         if(!m_portPath.isEmpty())
         {
 #if defined(Q_OS_WIN)
-            wchar_t driveLetter[m_portPath.size()];
-            m_portPath.toWCharArray(driveLetter);
-
-            if(!ejectVolume(driveLetter[0]))
+            if (!ejectVolume(static_cast<wchar_t>(m_portPath.at(0).unicode())))
             {
                 QMessageBox::critical(Core::ICore::dialogParent(),
                     Tr::tr("Disconnect"),

@@ -348,10 +348,14 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
     if (!rejected)
     {
-        rejected = dialog->exec() == QDialog::Rejected;
+        QEventLoop loop;
+        QObject::connect(dialog, &QDialog::finished, &loop, &QEventLoop::quit);
+        loop.exec();
+
+        rejected = dialog->wasRejected();
     }
 
-    delete dialog;
+    dialog->deleteLater();
     return rejected ? QString() : result;
 }
 

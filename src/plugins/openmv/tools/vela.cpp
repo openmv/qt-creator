@@ -321,7 +321,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
         return model;
     }
 
-    command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+    command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
     Utils::Environment env = process.environment();
@@ -340,15 +340,17 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
-    QString result, outputPath = tempDir.path() + QDir::separator() + QFileInfo(model).completeBaseName() + QStringLiteral("_vela.tflite");
+    QString result,
+        outputPath1 = tempDir.path() + QDir::separator() + QFileInfo(model).completeBaseName() + QStringLiteral("_vela.tflite"),
+        outputPath2 = tempDir.path() + QDir::separator() + QFileInfo(model).completeBaseName() + QStringLiteral("_vela.lite");
 
     dialog->appendColoredText(*ramStringPtr);
 
-    if (finishedOk && QFileInfo(outputPath).exists())
+    if (finishedOk && (QFileInfo::exists(outputPath1) || QFileInfo::exists(outputPath2)))
     {
         dialog->appendColoredText(Tr::tr("Success - Press Ok to close the window"), true);
         dialog->enableOkayButton(true);
-        result = outputPath;
+        result = QFileInfo::exists(outputPath1) ? outputPath1 : outputPath2;
     }
     else
     {
@@ -362,10 +364,14 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     if (!rejected)
     {
-        rejected = dialog->exec() == QDialog::Rejected;
+        QEventLoop loop;
+        QObject::connect(dialog, &QDialog::finished, &loop, &QEventLoop::quit);
+        loop.exec();
+
+        rejected = dialog->wasRejected();
     }
 
-    delete dialog;
+    dialog->deleteLater();
     return rejected ? QString() : result;
 }
 

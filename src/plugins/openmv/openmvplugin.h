@@ -575,6 +575,8 @@ private:
 
     ScanDriveThread *m_scanDriveThread;
 
+    QList<bool> m_boardPresentStringListHistory;
+    QList<bool> m_boardPresentDFUDevicesHistory;
     bool m_boardPresent;
     bool m_working;
     bool m_connected;

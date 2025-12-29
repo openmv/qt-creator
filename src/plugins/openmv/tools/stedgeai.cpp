@@ -261,7 +261,15 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     QString stdOutBuffer = QString();
     QString *stdOutBufferPtr = &stdOutBuffer;
 
-    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog, [dialog, stdOutBufferPtr] (const QString &text) {
+    QRegularExpression npuRamRegex(QStringLiteral(R"(^\s*npuRAM[3-6]\b.*?\(\s*([0-9]+(?:\.[0-9]+)?)\s*%\s*used\))"));
+    QRegularExpression hyperRamRegex(QStringLiteral(R"(^\s*hyperRAM\b.*?\(\s*([0-9]+(?:\.[0-9]+)?)\s*%\s*used\))"));
+    float npuRamPercentage = 0.0f, *npuRamPercentagePtr = &npuRamPercentage;
+    float hyperRamPercentage = 0.0f, *hyperRamPercentagePtr = &hyperRamPercentage;
+    QString ramString = QString(), *ramStringPtr = &ramString;
+
+    QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog,
+                     [dialog, stdOutBufferPtr, npuRamRegex, hyperRamRegex, npuRamPercentagePtr, hyperRamPercentagePtr, ramStringPtr]
+                     (const QString &text) {
         stdOutBufferPtr->append(text);
         QStringList list = stdOutBufferPtr->split(QRegularExpression(QStringLiteral("[\r\n]")), Qt::KeepEmptyParts);
 
@@ -285,9 +293,37 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
             }
 
             dialog->appendPlainText(out);
-
             dialog->moveScrollToLeft();
             dialog->moveScrollToBottom();
+
+            if (out.contains(QStringLiteral("<- done - Took")))
+            {
+                float npuRamUsed = *npuRamPercentagePtr / 4;
+                float hyperRamUsed = *hyperRamPercentagePtr;
+
+                if (hyperRamUsed > 0.0f)
+                {
+                    *ramStringPtr = QString(QStringLiteral("WARNING: Total NPU RAM Required: %1%. Overflowing into low performance off-chip RAM: %2% Used!")).arg(npuRamUsed, 0, 'f', 2).arg(hyperRamUsed, 0, 'f', 2);
+                }
+                else
+                {
+                    *ramStringPtr = QString(QStringLiteral("Total NPU RAM Required: %1%")).arg(npuRamUsed, 0, 'f', 2);
+                }
+            }
+
+            QRegularExpressionMatch match0 = npuRamRegex.match(out);
+
+            if (match0.hasMatch())
+            {
+                *npuRamPercentagePtr += match0.captured(1).toFloat();
+            }
+
+            QRegularExpressionMatch match1 = hyperRamRegex.match(out);
+
+            if (match1.hasMatch())
+            {
+                *hyperRamPercentagePtr += match1.captured(1).toFloat();
+            }
         }
     });
 
@@ -381,7 +417,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
         return model;
     }
 
-    command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+    command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
     env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
@@ -413,7 +449,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
                Core::ICore::resourcePath(QStringLiteral("stedgeai")).pathAppended(QStringLiteral("scripts/N6_reloc/npu_driver.py")).toString() <<
                relocArgs;
 
-        command = QString(QStringLiteral("%1 %2")).arg(python.toString()).arg(args.join(QLatin1Char(' ')));
+        command = QStringLiteral("%1 %2").arg(python.toString(), args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         process.setCommand(Utils::CommandLine(python, args));
@@ -422,11 +458,15 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
 
     QString result, outputPath = tempDir.path() + QDir::separator() + QStringLiteral("build/network_rel.bin");
 
-    if (process.result() == Utils::ProcessResult::FinishedWithSuccess && QFileInfo(outputPath).exists())
+    dialog->appendColoredText(*ramStringPtr);
+
+    if (process.result() == Utils::ProcessResult::FinishedWithSuccess && QFileInfo::exists(outputPath))
     {
         dialog->appendColoredText(Tr::tr("Success - Press Ok to close the window"), true);
         dialog->enableOkayButton(true);
         result = outputPath;
+        QString newOutputPath = tempDir.path() + QDir::separator() + QStringLiteral("build/network_rel.%1").arg(QFileInfo(model).suffix());
+        if (QFile::copy(result, newOutputPath)) result = newOutputPath;
     }
     else
     {
@@ -440,10 +480,14 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
 
     if (!rejected)
     {
-        rejected = dialog->exec() == QDialog::Rejected;
+        QEventLoop loop;
+        QObject::connect(dialog, &QDialog::finished, &loop, &QEventLoop::quit);
+        loop.exec();
+
+        rejected = dialog->wasRejected();
     }
 
-    delete dialog;
+    dialog->deleteLater();
     return rejected ? QString() : result;
 }
 

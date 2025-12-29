@@ -1,5 +1,5 @@
 # This work is licensed under the MIT license.
-# Copyright (c) 2013-2023 OpenMV LLC. All rights reserved.
+# Copyright (c) 2013-2025 OpenMV LLC. All rights reserved.
 # https://github.com/openmv/openmv/blob/master/LICENSE
 #
 # Hello World Example
@@ -11,7 +11,7 @@ import time
 
 sensor.reset()  # Reset and initialize the sensor.
 sensor.set_pixformat(sensor.RGB565)  # Set pixel format to RGB565 (or GRAYSCALE)
-sensor.set_framesize(sensor.QVGA)  # Set frame size to QVGA (320x240)
+sensor.set_framesize(sensor.VGA)  # Set frame size to QVGA (320x240)
 sensor.skip_frames(time=2000)  # Wait for settings take effect.
 clock = time.clock()  # Create a clock object to track the FPS.
 

@@ -98,7 +98,7 @@ QString convertModel(const QJsonObject &boardSettings,
 
             if (npuAcceleratorType == "vela")
             {
-                if (model.endsWith(".tflite"))
+                if (model.endsWith(".tflite") || model.endsWith(".lite"))
                 {
                     QFile file(model);
 
@@ -125,7 +125,7 @@ QString convertModel(const QJsonObject &boardSettings,
 
             if (npuAcceleratorType == "stedgeai")
             {
-                if (model.endsWith(".tflite") || model.endsWith(".onnx"))
+                if (model.endsWith(".tflite") || model.endsWith(".lite") || model.endsWith(".onnx"))
                 {
                     QFile file(model);
 

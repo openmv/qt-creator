@@ -693,11 +693,14 @@ void OutputPaneManager::readSettings()
 
     m_outputPaneHeightSetting
         = settings->value("OutputPanePlaceHolder/Height", 0).toInt();
-    const int currentIdx
-        = settings->value("OutputPanePlaceHolder/CurrentIndex", 0).toInt();
     // OPENMV-DIFF //
+    // const int currentIdx
+    //     = settings->value("OutputPanePlaceHolder/CurrentIndex", 0).toInt();
+    // OPENMV-DIFF //
+    const int currentIdx
+        = settings->value("OutputPanePlaceHolder/CurrentIndex", 1).toInt();
     m_outputPaneVisibleOnStartup
-        = settings->value("OutputPanePlaceHolder/Visible", false).toBool();
+        = settings->value("OutputPanePlaceHolder/Visible", true).toBool();
     // OPENMV-DIFF //
     if (QTC_GUARD(currentIdx >= 0 && currentIdx < g_outputPanes.size()))
         setCurrentIndex(currentIdx);

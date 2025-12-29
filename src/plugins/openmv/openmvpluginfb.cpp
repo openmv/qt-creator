@@ -52,14 +52,14 @@ OpenMVPluginFB::OpenMVPluginFB(QWidget *parent) : QGraphicsView(parent), m_enabl
     setScene(new QGraphicsScene(this));
 
     QGraphicsTextItem *item = new QGraphicsTextItem;
-    item->setHtml(QString(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
+    item->setHtml(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
     "<div align=\"center\">"
     "<div style=\"font-size:20px\">%2</div>"
     "</div>"
-    "</body></html>")).arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name()).arg(Tr::tr("No Image")));
+    "</body></html>").arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name(), Tr::tr("No Image")));
     scene()->addItem(item);
 
-    m_enableFitInView = false;
+    m_enableFitInView = true;
     m_pixmap = Q_NULLPTR;
     m_unlocked = false;
     m_origin = QPoint();
@@ -156,9 +156,9 @@ void OpenMVPluginFB::fbMessage(const QString &message)
 
     m_pixmap = Q_NULLPTR;
     QGraphicsTextItem *item = new QGraphicsTextItem;
-    item->setHtml(QString(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
+    item->setHtml(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
     "<p align=\"center\" style=\"font-size:20px\">%2</p>"
-    "</body></html>")).arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name()).arg(message));
+    "</body></html>").arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name(), message));
     scene()->addItem(item);
 
     item->document()->setTextWidth(360);
@@ -175,11 +175,11 @@ void OpenMVPluginFB::fbBufferError()
 
     m_pixmap = Q_NULLPTR;
     QGraphicsTextItem *item = new QGraphicsTextItem;
-    item->setHtml(QString(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
+    item->setHtml(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
     "<p align=\"center\" style=\"font-size:20px\">%2</p>"
-    "</body></html>")).
-        arg(Utils::creatorTheme()->color(((QTime::currentTime().msec() / 500) % 2) ? Utils::Theme::TextColorError : Utils::Theme::TextColorDisabled).name()).
-        arg(Tr::tr("Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!")));
+    "</body></html>").
+        arg(Utils::creatorTheme()->color(((QTime::currentTime().msec() / 500) % 2) ? Utils::Theme::TextColorError : Utils::Theme::TextColorDisabled).name(),
+            Tr::tr("Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!")));
     scene()->addItem(item);
 
     item->document()->setTextWidth(360);
@@ -202,11 +202,11 @@ void OpenMVPluginFB::frameBufferData(const QPixmap &data)
     {
         m_pixmap = Q_NULLPTR;
         QGraphicsTextItem *item = new QGraphicsTextItem;
-        item->setHtml(QString(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
+        item->setHtml(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
         "<div align=\"center\">"
         "<div style=\"font-size:20px\">%2</div>"
         "</div>"
-        "</body></html>")).arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name()).arg(Tr::tr("No Image")));
+        "</body></html>").arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name(), Tr::tr("No Image")));
         scene()->addItem(item);
     }
 

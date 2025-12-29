@@ -100,7 +100,7 @@ bool OpenMVModelZooBrowserFilter::filterAcceptsRow(int sourceRow, const QModelIn
             return true;
         }
 
-        if (filePath.endsWith(".tflite"))
+        if (filePath.endsWith(".tflite") || filePath.endsWith(".lite"))
         {
             return true;
         }
@@ -120,7 +120,7 @@ bool OpenMVModelZooBrowserFilter::filterAcceptsRow(int sourceRow, const QModelIn
                     return true;
                 }
 
-                if (filePath.endsWith(".tflite"))
+                if (filePath.endsWith(".tflite") || filePath.endsWith(".lite"))
                 {
                     return true;
                 }
@@ -162,10 +162,14 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
     m_treeView->setRootIndex(m_filter->mapFromSource(m_model->index(path.toString())));
     m_treeView->setContextMenuPolicy(Qt::DefaultContextMenu);
     m_treeView->setHeaderHidden(true);
-    m_treeView->setColumnHidden(1, true); // Size
     m_treeView->setColumnHidden(2, true); // Type
     m_treeView->setColumnHidden(3, true); // DateModified
     m_splitter->addWidget(m_treeView);
+
+    QHeaderView *header = m_treeView->header();
+    header->setStretchLastSection(false);
+    header->setSectionResizeMode(0, QHeaderView::Stretch);
+    for (int i = 1; i < header->count(); ++i) header->setSectionResizeMode(i, QHeaderView::ResizeToContents);
 
     QTextBrowser *textBrowser = new QTextBrowser(this);
     textBrowser->setOpenExternalLinks(true);
@@ -268,7 +272,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
             {
                 QString indexPath = path + QDir::separator() + QStringLiteral("index.html");
 
-                if (QFileInfo(indexPath).exists())
+                if (QFileInfo::exists(indexPath))
                 {
                     QFile file(indexPath);
 
@@ -297,7 +301,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
 
                 QString indexPath = path + QDir::separator() + QStringLiteral("index.html");
 
-                if (QFileInfo(indexPath).exists())
+                if (QFileInfo::exists(indexPath))
                 {
                     QFile file(indexPath);
 
@@ -317,7 +321,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
 
     QString indexPath = path.toString() + QDir::separator() + QStringLiteral("index.html");
 
-    if (QFileInfo(indexPath).exists())
+    if (QFileInfo::exists(indexPath))
     {
         QFile file(indexPath);
 
@@ -332,7 +336,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
     connect(m_treeView, &OpenMVModelZooBrowserTreeView::selectionCleared, this, [path, textBrowser]() {
         QString indexPath = path.toString() + QDir::separator() + QStringLiteral("index.html");
 
-        if (QFileInfo(indexPath).exists())
+        if (QFileInfo::exists(indexPath))
         {
             QFile file(indexPath);
 

@@ -73,6 +73,8 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_timer.start();
     m_queue = QQueue<qint64>();
 
+    m_boardPresentStringListHistory = QList<bool>();
+    m_boardPresentDFUDevicesHistory = QList<bool>();
     m_boardPresent = false;
     m_working = false;
     m_connected = false;
@@ -693,20 +695,21 @@ void OpenMVPlugin::extensionsInitialized()
             QByteArray data =
             QStringLiteral("# Untitled - By: %1 - %2\n"
                            "\n"
-                           "import sensor\n"
+                           "import csi\n"
                            "import time\n"
                            "\n"
-                           "sensor.reset()\n"
-                           "sensor.set_pixformat(sensor.RGB565)\n"
-                           "sensor.set_framesize(sensor.QVGA)\n"
-                           "sensor.skip_frames(time=2000)\n"
+                           "csi0 = csi.CSI()\n"
+                           "csi0.reset()\n"
+                           "csi0.pixformat(csi.RGB565)\n"
+                           "csi0.framesize(csi.VGA)\n"
+                           "csi0.snapshot(time=2000)\n"
                            "\n"
                            "clock = time.clock()\n"
                            "\n"
                            "while True:\n"
                            "    clock.tick()\n"
-                           "    img = sensor.snapshot()\n"
-                           "    print(clock.fps())\n").arg(Utils::Environment::systemEnvironment().toDictionary().userName()).arg(QDate::currentDate().toString()).toUtf8();
+                           "    img = csi0.snapshot()\n"
+                           "    print(clock.fps())\n").arg(Utils::Environment::systemEnvironment().toDictionary().userName(), QDate::currentDate().toString()).toUtf8();
 
             TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(
                 Core::EditorManager::openEditorWithContents("PythonEditor.PythonEditor", &titlePattern, fixScriptForSensor(data, false, true)));
@@ -1882,7 +1885,7 @@ void OpenMVPlugin::extensionsInitialized()
     zoomButton->setText(Tr::tr("Zoom"));
     zoomButton->setToolTip(Tr::tr("Zoom to fit"));
     zoomButton->setCheckable(true);
-    zoomButton->setChecked(false);
+    zoomButton->setChecked(true);
     styledBar0Layout->addWidget(zoomButton);
 
     m_disableFrameBuffer = new QToolButton;
@@ -2359,17 +2362,43 @@ void OpenMVPlugin::extensionsInitialized()
 
     connect(Core::ICore::instance(), &Core::ICore::showEventSignal, this, [this, widget, settings, msplitter, hsplitter, vsplitter] {
         settings->beginGroup(SETTINGS_GROUP);
+        const bool haveH = settings->contains(HSPLITTER_STATE);
+        const bool haveV = settings->contains(VSPLITTER_STATE);
         if(settings->contains(LAST_DATASET_EDITOR_PATH) && settings->value(LAST_DATASET_EDITOR_LOADED).toBool()) m_datasetEditor->setRootPath(settings->value(LAST_DATASET_EDITOR_PATH).toString());
         if(settings->contains(MSPLITTER_STATE)) msplitter->restoreState(settings->value(MSPLITTER_STATE).toByteArray());
-        if(settings->contains(VSPLITTER_STATE)) vsplitter->restoreState(settings->value(VSPLITTER_STATE).toByteArray()); // restore before HSPLITTER
-        if(settings->contains(HSPLITTER_STATE)) hsplitter->restoreState(settings->value(HSPLITTER_STATE).toByteArray()); // restore after VSPLITTER
-        widget->m_leftDrawer->parentWidget()->setVisible(settings->contains(HSPLITTER_STATE) ? (!hsplitter->sizes().at(0)) : false);
-        widget->m_rightDrawer->parentWidget()->setVisible(settings->contains(HSPLITTER_STATE) ? (!hsplitter->sizes().at(1)) : false);
-        widget->m_topDrawer->parentWidget()->setVisible(settings->contains(VSPLITTER_STATE) ? (!vsplitter->sizes().at(0)) : false);
-        widget->m_bottomDrawer->parentWidget()->setVisible(settings->contains(VSPLITTER_STATE) ? (!vsplitter->sizes().at(1)) : false);
+        if(haveH) vsplitter->restoreState(settings->value(VSPLITTER_STATE).toByteArray()); // restore before HSPLITTER
+        if(haveV) hsplitter->restoreState(settings->value(HSPLITTER_STATE).toByteArray()); // restore after VSPLITTER
         settings->endGroup();
+
+        widget->m_leftDrawer->parentWidget()->setVisible(haveH ? (!hsplitter->sizes().at(0)) : false);
+        widget->m_rightDrawer->parentWidget()->setVisible(haveH ? (!hsplitter->sizes().at(1)) : false);
+        widget->m_topDrawer->parentWidget()->setVisible(haveV ? (!vsplitter->sizes().at(0)) : false);
+        widget->m_bottomDrawer->parentWidget()->setVisible(haveV ? (!vsplitter->sizes().at(1)) : false);
+
         // Handle Special Case to fix 1px Graphical issue.
         vsplitter->setProperty("NoDrawToolBarBorders", widget->m_topDrawer->parentWidget()->isVisible());
+
+        if (!haveH || !haveV) {
+            QTimer::singleShot(0, this, [widget, haveH, haveV, hsplitter, vsplitter] {
+                if (!haveH) {
+                    const int w = qMax(1, hsplitter->width());
+                    hsplitter->setSizes(QList<int>() << (w * 60 / 100) << (w * 40 / 100));
+                }
+
+                if (!haveV) {
+                    const int h = qMax(1, vsplitter->height());
+                    vsplitter->setSizes(QList<int>() << (h * 60 / 100) << (h * 40 / 100));
+                }
+
+                widget->m_leftDrawer->parentWidget()->setVisible(haveH ? (!hsplitter->sizes().at(0)) : false);
+                widget->m_rightDrawer->parentWidget()->setVisible(haveH ? (!hsplitter->sizes().at(1)) : false);
+                widget->m_topDrawer->parentWidget()->setVisible(haveV ? (!vsplitter->sizes().at(0)) : false);
+                widget->m_bottomDrawer->parentWidget()->setVisible(haveV ? (!vsplitter->sizes().at(1)) : false);
+
+                // Handle Special Case to fix 1px Graphical issue.
+                vsplitter->setProperty("NoDrawToolBarBorders", widget->m_topDrawer->parentWidget()->isVisible());
+            });
+        }
     });
 
     connect(Core::ICore::instance(), &Core::ICore::hideEventSignal, this, [this, settings, msplitter, hsplitter, vsplitter] {
@@ -2665,7 +2694,23 @@ bool OpenMVPlugin::delayedInitialize()
                 }
             }
 
-            m_boardPresent = (!output.first.isEmpty()) || (!output.second.isEmpty());
+            m_boardPresentStringListHistory.append(!output.first.isEmpty());
+            while (m_boardPresentStringListHistory.size() > 1) m_boardPresentStringListHistory.removeFirst();
+            int stringListHistoryCount = 0;
+
+            for (const bool present : qAsConst(m_boardPresentStringListHistory)) {
+                if (present) stringListHistoryCount++;
+            }
+
+            m_boardPresentDFUDevicesHistory.append(!output.second.isEmpty());
+            while (m_boardPresentDFUDevicesHistory.size() > 3) m_boardPresentDFUDevicesHistory.removeFirst();
+            int dfuDevicesHistoryCount = 0;
+
+            for (const bool present : qAsConst(m_boardPresentDFUDevicesHistory)) {
+                if (present) dfuDevicesHistoryCount++;
+            }
+
+            m_boardPresent = (stringListHistoryCount >= 1) || (dfuDevicesHistoryCount >= 3);
             bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
 
             if(!m_boardPresent) {

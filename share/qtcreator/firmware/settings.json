@@ -35,6 +35,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -117,6 +121,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -160,6 +168,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 16
                         },
                         {
@@ -245,6 +257,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -288,6 +304,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 16
                         },
                         {
@@ -373,6 +393,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -416,6 +440,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 16
                         },
                         {
@@ -501,6 +529,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -544,6 +576,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 16
                         },
                         {
@@ -629,6 +665,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -685,6 +725,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 16
                         },
                         {
@@ -747,6 +791,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -803,6 +851,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 16
                         },
                         {
@@ -895,6 +947,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -917,6 +973,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 16
                         },
                         {
@@ -982,6 +1042,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -1004,6 +1068,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 16
                         },
                         {
@@ -1057,6 +1125,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 32
                         },
                         {
@@ -1145,6 +1217,10 @@
                             "alignment" : 32
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 32
+                        },
+                        {
                             "extension" : "onnx",
                             "alignment" : 32
                         },
@@ -1221,6 +1297,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -1281,6 +1361,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 16
                         },
                         {
@@ -1347,6 +1431,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -1386,6 +1474,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 16
                         },
                         {
@@ -1432,6 +1524,10 @@
                             "alignment" : 16
                         },
                         {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
                             "extension" : "bin",
                             "alignment" : 16
                         }
@@ -1472,6 +1568,10 @@
                     "alignmentRules" : [
                         {
                             "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
                             "alignment" : 16
                         },
                         {

@@ -157,7 +157,8 @@ Component.prototype.createOperations = function()
                                                 "libxcb-randr0",
                                                 "libxcb-render-util0",
                                                 "libxcb-xinerama0",
-                                                "build-essential",
+												"libxcb-cursor0",
+                                                "build-essential"
                                                 );
             }
             if (widget.udevRulesCheck.checked) {
@@ -181,7 +182,7 @@ Component.prototype.createOperations = function()
         if ((!installLibrariesCheck) && udevRulesCheck) {
             component.addOperation( "AppendFile", "@TargetDir@/setup.sh",
                                     "#! /bin/sh\n\n" +
-                                    "sudo apt-get install -y libfontconfig1 libfreetype6 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-xfixes0 libxcb-shape0 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 build-essential\n" +
+                                    "sudo apt-get install -y libfontconfig1 libfreetype6 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-xfixes0 libxcb-shape0 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 libxcb-cursor0 build-essential\n" +
                                     "sudo apt-get install -y libpng16-16 libusb-1.0 python3 python3-pip python3-usb\n" );
         } else if (installLibrariesCheck && (!udevRulesCheck)) {
             component.addOperation( "AppendFile", "@TargetDir@/setup.sh",
@@ -194,7 +195,7 @@ Component.prototype.createOperations = function()
             component.addOperation( "AppendFile", "@TargetDir@/setup.sh",
                                     "#! /bin/sh\n\n" +
                                     "DIR=\"$(dirname \"$(readlink -f \"$0\")\")\"\n\n" +
-                                    "sudo apt-get install -y libfontconfig1 libfreetype6 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-xfixes0 libxcb-shape0 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 build-essential\n" +
+                                    "sudo apt-get install -y libfontconfig1 libfreetype6 libxcb1 libxcb-glx0 libxcb-keysyms1 libxcb-image0 libxcb-shm0 libxcb-icccm4 libxcb-xfixes0 libxcb-shape0 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 libxcb-cursor0 build-essential\n" +
                                     "sudo apt-get install -y libpng16-16 libusb-1.0 python3 python3-pip python3-usb\n" +
                                     "sudo cp $DIR/share/qtcreator/pydfu/*.rules /etc/udev/rules.d/\n" +
                                     "sudo udevadm trigger\n" +
@@ -223,7 +224,7 @@ function isRoot()
 
 Component.prototype.installationFinishedPageIsShown = function()
 {
-    isroot = isRoot();
+    var isroot = isRoot();
     try {
         if (component.installed && installer.isInstaller() && installer.status == QInstaller.Success && !isroot) {
             installer.addWizardPageItem( component, "LaunchQtCreatorCheckBoxForm", QInstaller.InstallationFinished );
@@ -235,7 +236,7 @@ Component.prototype.installationFinishedPageIsShown = function()
 
 Component.prototype.installationFinished = function()
 {
-    isroot = isRoot();
+    var isroot = isRoot();
     try {
         if (component.installed && installer.isInstaller() && installer.status == QInstaller.Success && !isroot) {
             var isLaunchQtCreatorCheckBoxChecked = component.userInterface("LaunchQtCreatorCheckBoxForm").launchQtCreatorCheckBox.checked;
@@ -268,8 +269,8 @@ Component.prototype.installerLoaded = function()
                 widget.windowTitle = "Root Installs";
                 widget.installLibrariesCheck.setChecked(true);
                 widget.udevRulesCheck.setChecked(true);
-                isUbuntu = isUbuntu();
-                if (!isUbuntu) {
+                var isubuntu = isUbuntu();
+                if (!isubuntu) {
                     widget.installLibrariesCheck.hide();
                     widget.installLibrariesCheck.setChecked(false);
                     widget.installLibrariesLabel.hide();

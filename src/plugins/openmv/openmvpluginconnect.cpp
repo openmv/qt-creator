@@ -54,7 +54,7 @@ static bool removeRecursivelyWrapper(const Utils::FilePath &path, QString *error
 
 static bool removeRecursivelyWrapper(const Utils::FilePath &path, const QList<QString> &subFolders, QString *error)
 {
-    bool ok;
+    bool ok = true;
 
     for (const QString &subFolder : subFolders)
     {
@@ -371,20 +371,22 @@ void OpenMVPlugin::packageUpdate()
                             }
 
                             connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
-
-                            delete dialog;
+                            dialog->close();
+                            dialog->deleteLater();
                         });
 
                         QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv-ide/releases/download/v%1.%2.%3/openmv-ide-resources-%1.%2.%3.zip").arg(new_major).arg(new_minor).arg(new_patch)));
                         QNetworkReply *reply2 = manager2->get(request2);
+                        QPointer<QProgressDialog> dlg = dialog;
 
                         if(reply2)
                         {
                             connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
                             connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-                            connect(reply2, &QNetworkReply::downloadProgress, this, [dialog] (qint64 bytesReceived, qint64 bytesTotal) {
-                                dialog->setMaximum(bytesTotal);
-                                dialog->setValue(bytesReceived);
+                            connect(reply2, &QNetworkReply::downloadProgress, dialog, [dlg] (qint64 bytesReceived, qint64 bytesTotal) {
+                                if (!dlg) return;
+                                dlg->setMaximum((bytesTotal > 0) ? bytesTotal : 0);
+                                dlg->setValue(bytesReceived);
                             });
 
                             dialog->show();
@@ -480,7 +482,7 @@ void OpenMVPlugin::bootloaderClicked()
         bool flashFSErase = checkBox->isChecked();
         bool resetROMFS = checkBox2->isEnabled() ? checkBox2->isChecked() : false;
 
-        if(QFileInfo(forceFirmwarePath).exists() && QFileInfo(forceFirmwarePath).isFile())
+        if(QFileInfo::exists(forceFirmwarePath) && QFileInfo(forceFirmwarePath).isFile())
         {
             settings->setValue(LAST_FIRMWARE_PATH, forceFirmwarePath);
             settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, flashFSErase);
@@ -623,20 +625,22 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
         }
 
         connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
-
-        delete dialog;
+        dialog->close();
+        dialog->deleteLater();
     });
 
     QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv/releases/tag/development")));
     QNetworkReply *reply2 = manager2->get(request2);
+    QPointer<QProgressDialog> dlg = dialog;
 
     if(reply2)
     {
         connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
         connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-        connect(reply2, &QNetworkReply::downloadProgress, this, [dialog] (qint64 bytesReceived, qint64 bytesTotal) {
-            dialog->setMaximum(bytesTotal);
-            dialog->setValue(bytesReceived);
+        connect(reply2, &QNetworkReply::downloadProgress, dialog, [dlg] (qint64 bytesReceived, qint64 bytesTotal) {
+            if (!dlg) return;
+            dlg->setMaximum((bytesTotal > 0) ? bytesTotal : 0);
+            dlg->setValue(bytesReceived);
         });
 
         dialog->exec();
@@ -648,7 +652,6 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
             Tr::tr("Network request failed \"%L1\"!").arg(request2.url().toString()));
     }
 }
-
 
 bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder)
 {
@@ -712,20 +715,22 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
         }
 
         connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
-
-        delete dialog;
+        dialog->close();
+        dialog->deleteLater();
     });
 
     QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv/releases/download/development/firmware_%1.zip").arg(arch)));
     QNetworkReply *reply2 = manager2->get(request2);
+    QPointer<QProgressDialog> dlg = dialog;
 
     if(reply2)
     {
         connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
         connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-        connect(reply2, &QNetworkReply::downloadProgress, this, [dialog] (qint64 bytesReceived, qint64 bytesTotal) {
-            dialog->setMaximum(bytesTotal);
-            dialog->setValue(bytesReceived);
+        connect(reply2, &QNetworkReply::downloadProgress, dialog, [dlg] (qint64 bytesReceived, qint64 bytesTotal) {
+            if (!dlg) return;
+            dlg->setMaximum((bytesTotal > 0) ? bytesTotal : 0);
+            dlg->setValue(bytesReceived);
         });
 
         dialog->exec();
@@ -751,6 +756,25 @@ QList<QPair<QString, QString> > OpenMVPlugin::querySerialPorts(const QStringList
 
     for (const QString &port : portList)
     {
+        MyQSerialPortInfo tempInfo = createInfo(port);
+
+        bool found = false;
+
+        for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+        {
+            if(matchVidPid(value.toObject(), QString(), tempInfo))
+            {
+                results.append(QPair<QString, QString>(port, value.toObject().value(QStringLiteral("boardDisplayName")).toString()));
+                found = true;
+                break;
+            }
+        }
+
+        if (found)
+        {
+            continue;
+        }
+
         QString errorMessage2 = QStringLiteral("Timeout");
         QString *errorMessage2Ptr = &errorMessage2;
 
@@ -766,7 +790,7 @@ QList<QPair<QString, QString> > OpenMVPlugin::querySerialPorts(const QStringList
 
         m_ioport->open(port);
 
-        QTimer::singleShot(50, &loop, &QEventLoop::quit);
+        QTimer::singleShot(100, &loop, &QEventLoop::quit);
 
         loop.exec();
 
@@ -796,7 +820,7 @@ QList<QPair<QString, QString> > OpenMVPlugin::querySerialPorts(const QStringList
 
             m_iodevice->getFirmwareVersion();
 
-            QTimer::singleShot(20, &loop, &QEventLoop::quit);
+            QTimer::singleShot(100, &loop, &QEventLoop::quit);
 
             loop.exec();
 
@@ -832,7 +856,7 @@ QList<QPair<QString, QString> > OpenMVPlugin::querySerialPorts(const QStringList
 
                 m_iodevice->getArchString();
 
-                QTimer::singleShot(20, &loop, &QEventLoop::quit);
+                QTimer::singleShot(100, &loop, &QEventLoop::quit);
 
                 loop.exec();
 
@@ -841,7 +865,6 @@ QList<QPair<QString, QString> > OpenMVPlugin::querySerialPorts(const QStringList
                 if(!arch2.isEmpty())
                 {
                     QString temp = QString(arch2).remove(QRegularExpression(QStringLiteral("\\[(.+?):(.+?)\\]"))).simplified();
-                    MyQSerialPortInfo tempInfo = createInfo(port);
 
                     bool found = false;
 
@@ -875,6 +898,18 @@ QList<QPair<QString, QString> > OpenMVPlugin::querySerialPorts(const QStringList
         {
             results.append(QPair<QString, QString>(port, Tr::tr("Unknown Board")));
         }
+
+        // Cleanup
+        {
+            QEventLoop loop;
+
+            connect(m_iodevice, &OpenMVPluginIO::closeResponse,
+                    &loop, &QEventLoop::quit);
+
+            m_iodevice->close();
+
+            loop.exec();
+        }
     }
 
     return results;
@@ -887,7 +922,7 @@ QPair<QStringList, QStringList> filterPorts(const QJsonDocument &settings,
 {
     QStringList stringList, dfuDevices;
 
-    for(QSerialPortInfo raw_port : QSerialPortInfo::availablePorts())
+    for(const QSerialPortInfo &raw_port : QSerialPortInfo::availablePorts())
     {
         MyQSerialPortInfo port(raw_port);
 
@@ -906,7 +941,7 @@ QPair<QStringList, QStringList> filterPorts(const QJsonDocument &settings,
     {
         for(wifiPort_t port : availableWifiPorts)
         {
-            stringList.append(QString(QStringLiteral("%1:%2")).arg(port.name).arg(port.addressAndPort));
+            stringList.append(QStringLiteral("%1:%2").arg(port.name, port.addressAndPort));
         }
     }
 
@@ -1261,7 +1296,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             {
                                 bool found = false;
 
-                                for(const QString &device : dfuDevices)
+                                for(const QString &device : qAsConst(dfuDevices))
                                 {
                                     if(device.split(QStringLiteral(",")).first().toLower() == vidpidMappings.value(it.key()).toLower())
                                     {
@@ -1374,7 +1409,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         {
                             bool end = false;
 
-                            for(const QString &device : dfuDevices)
+                            for(const QString &device : qAsConst(dfuDevices))
                             {
                                 QStringList vidpid = device.split(QStringLiteral(",")).first().split(QStringLiteral(":"));
 
@@ -1422,13 +1457,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         {
             int index = stringList.indexOf(settings->value(LAST_SERIAL_PORT_STATE).toString());
 
-            QList<QPair<QString, QString> > prettyNames = querySerialPorts(stringList);
+            const QList<QPair<QString, QString> > prettyNames = querySerialPorts(stringList);
 
             QStringList stringList2;
 
             for (const QPair<QString, QString> &pair : prettyNames)
             {
-                stringList2.append(QStringLiteral("%1: %2").arg(pair.first).arg(pair.second));
+                stringList2.append(QStringLiteral("%1: %2").arg(pair.first, pair.second));
             }
 
             bool ok;
@@ -2580,7 +2615,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
                         });
 
-                        QNetworkRequest request = QNetworkRequest(QUrl(QString(QStringLiteral("https://upload.openmv.io/openmv-swd-ids-check.php?board=%1&id=%2")).arg(board).arg(id)));
+                        QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/openmv-swd-ids-check.php?board=%1&id=%2").arg(board, id)));
                         QNetworkReply *reply = manager->get(request);
 
                         if(reply)
@@ -2925,10 +2960,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                     if(!m_portPath.isEmpty())
                     {
 #if defined(Q_OS_WIN)
-                        wchar_t driveLetter[m_portPath.size()];
-                        m_portPath.toWCharArray(driveLetter);
-
-                        if(!ejectVolume(driveLetter[0]))
+                        if (!ejectVolume(static_cast<wchar_t>(m_portPath.at(0).unicode())))
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Disconnect"),
