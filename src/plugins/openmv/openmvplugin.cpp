@@ -532,6 +532,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     m_ioport = new OpenMVPluginSerialPort(QJsonDocument(m_firmwareSettings), this);
     m_iodevice = new OpenMVPluginIO(m_ioport, this);
 
+    connect(this, &OpenMVPlugin::workingDone, this, &OpenMVPlugin::drainDeferred);
+
     ///////////////////////////////////////////////////////////////////////////
 
     m_exampleFilters = QList<exampleFilter_t>();
@@ -1897,15 +1899,17 @@ void OpenMVPlugin::extensionsInitialized()
     connect(m_disableFrameBuffer, &QToolButton::clicked, this, [this] {
         if(m_connected)
         {
+            const bool enableFb = !m_disableFrameBuffer->isChecked();
+
             if(!m_working)
             {
-                m_iodevice->fbEnable(!m_disableFrameBuffer->isChecked());
+                m_iodevice->fbEnable(enableFb);
             }
             else
             {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    Tr::tr("Disable"),
-                    Tr::tr("Busy... please wait..."));
+                deferLatest(QStringLiteral("fbEnable"), [this, enableFb] {
+                    m_iodevice->fbEnable(enableFb);
+                });
             }
         }
     });
@@ -1921,15 +1925,17 @@ void OpenMVPlugin::extensionsInitialized()
     connect(m_jpgCompress, &QToolButton::clicked, this, [this] {
         if(m_connected)
         {
+            const bool enableJpeg = m_jpgCompress->isChecked();
+
             if(!m_working)
             {
-                m_iodevice->jpegEnable(m_jpgCompress->isChecked());
+                m_iodevice->jpegEnable(enableJpeg);
             }
             else
             {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    Tr::tr("JPG"),
-                    Tr::tr("Busy... please wait..."));
+                deferLatest(QStringLiteral("jpegEnable"), [this, enableJpeg] {
+                    m_iodevice->jpegEnable(enableJpeg);
+                });
             }
         }
     });
@@ -3795,9 +3801,7 @@ void OpenMVPlugin::configureSettings()
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Configure Settings"),
-            Tr::tr("Busy... please wait..."));
+        deferNormal([this] { configureSettings(); });
     }
 }
 
@@ -3850,9 +3854,7 @@ void OpenMVPlugin::saveScript()
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Save Script"),
-            Tr::tr("Busy... please wait..."));
+        deferNormal([this] { saveScript(); });
     }
 }
 
@@ -5424,6 +5426,111 @@ QString OpenMVPlugin::tempFileForPythonEditor(const QByteArray &data, const QStr
     }
 
     return QString();
+}
+
+void OpenMVPlugin::postDrain()
+{
+    if (m_deferredDrainPosted) {
+        return;
+    }
+
+    m_deferredDrainPosted = true;
+
+    QMetaObject::invokeMethod(this, [this]() {
+        m_deferredDrainPosted = false;
+        drainDeferred();
+    }, Qt::QueuedConnection);
+}
+
+void OpenMVPlugin::deferNormal(DeferredFn fn)
+{
+    m_deferredNormal.enqueue(std::move(fn));
+    postDrain();
+}
+
+void OpenMVPlugin::deferHigh(DeferredFn fn)
+{
+    m_deferredHigh.enqueue(std::move(fn));
+    postDrain();
+}
+
+void OpenMVPlugin::deferLatest(const QString &key, DeferredFn fn)
+{
+    // Keep key order stable the first time we see it.
+    if (!m_deferredLatest.contains(key)) {
+        m_latestOrder.append(key);
+    }
+
+    m_deferredLatest.insert(key, std::move(fn));
+    postDrain();
+}
+
+void OpenMVPlugin::clearDeferred()
+{
+    m_deferredHigh.clear();
+    m_deferredNormal.clear();
+    m_deferredLatest.clear();
+    m_latestOrder.clear();
+
+    m_deferredDrainPosted = false;
+}
+
+void OpenMVPlugin::drainDeferred()
+{
+    if (!m_connected || m_working) {
+        return;
+    }
+
+    // High priority first, then normal. Each fn may set m_working=true.
+    while (m_connected && !m_working) {
+        if (!m_deferredHigh.isEmpty()) {
+            auto fn = std::move(m_deferredHigh.head());
+            m_deferredHigh.dequeue();
+            fn();
+            continue;
+        }
+
+        if (!m_deferredNormal.isEmpty()) {
+            auto fn = std::move(m_deferredNormal.head());
+            m_deferredNormal.dequeue();
+            fn();
+            continue;
+        }
+
+        break;
+    }
+
+    // Apply latest-wins states when idle (often best after queued ops),
+    // but only if we’re still idle.
+    if (!m_connected || m_working || m_deferredLatest.isEmpty()) {
+        return;
+    }
+
+    // Drain latest-wins in stable key order, removing drained/stale keys in-place.
+    for (int i = 0; i < m_latestOrder.size(); /* increment inside */) {
+        if (!m_connected || m_working) {
+            // If we became busy, stop; remaining latest calls stay deferred.
+            break;
+        }
+
+        const QString &key = m_latestOrder.at(i);
+        auto it = m_deferredLatest.find(key);
+
+        if (it == m_deferredLatest.end()) {
+            // No longer pending; drop the key to prevent growth.
+            m_latestOrder.removeAt(i);
+            continue;
+        }
+
+        // Extract and erase only once we know we can run now.
+        DeferredFn fn = std::move(*it);
+        m_deferredLatest.erase(it);
+
+        // This key has been drained; remove it from the stable-order list.
+        m_latestOrder.removeAt(i);
+
+        fn(); // may set m_working=true
+    }
 }
 
 } // namespace Internal

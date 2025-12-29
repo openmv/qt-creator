@@ -739,6 +739,28 @@ private:
     QByteArray fixScriptForSensor(QByteArray data, bool notExamples = false, bool increaseResolution = false);
     QString tempFileForPythonEditor(const QByteArray &data, const QString &titlePattern);
     QJsonObject getBoardSettings(const QString &title, Utils::QtcSettings *settings, bool autoConnectToBoard = false);
+
+    ///////////////////////////////////////////////////////////////////////////
+
+    using DeferredFn = std::function<void()>;
+
+    QQueue<DeferredFn> m_deferredHigh;
+    QQueue<DeferredFn> m_deferredNormal;
+
+    // Latest-wins bucket (keyed). Stable order via m_latestOrder.
+    QHash<QString, DeferredFn> m_deferredLatest;
+    QStringList m_latestOrder;
+
+    bool m_deferredDrainPosted = false;
+
+    void deferNormal(DeferredFn fn);
+    void deferHigh(DeferredFn fn);
+    void deferLatest(const QString &key, DeferredFn fn);
+
+    void postDrain();
+    void drainDeferred();
+
+    void clearDeferred();
 };
 
 } // namespace Internal

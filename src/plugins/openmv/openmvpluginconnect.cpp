@@ -2934,9 +2934,23 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Connect"),
-            Tr::tr("Busy... please wait..."));
+        deferHigh([this, forceBootloader,
+                         forceFirmwarePath,
+                         forceFlashFSErase,
+                         justEraseFlashFs,
+                         installTheLatestDevelopmentFirmware,
+                         waitForCamera,
+                         previousMapping,
+                         romfsAccess] {
+            connectClicked(forceBootloader,
+                           forceFirmwarePath,
+                           forceFlashFSErase,
+                           justEraseFlashFs,
+                           installTheLatestDevelopmentFirmware,
+                           waitForCamera,
+                           previousMapping,
+                           romfsAccess);
+        });
     }
 }
 
@@ -3149,12 +3163,12 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             ///////////////////////////////////////////////////////////////////
 
             m_working = false;
+
+            clearDeferred();
         }
         else
         {
-            QMessageBox::critical(Core::ICore::dialogParent(),
-                reset ? Tr::tr("Reset") : Tr::tr("Disconnect"),
-                Tr::tr("Busy... please wait..."));
+            deferHigh([this, reset] { disconnectClicked(reset); });
         }
     }
 
@@ -3321,9 +3335,7 @@ void OpenMVPlugin::startClicked()
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Start"),
-            Tr::tr("Busy... please wait..."));
+        deferHigh([this] { startClicked(); });
     }
 }
 
@@ -3486,9 +3498,7 @@ void OpenMVPlugin::stopClicked()
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Stop"),
-            Tr::tr("Busy... please wait..."));
+        deferHigh([this] { stopClicked(); });
     }
 }
 
@@ -3498,7 +3508,7 @@ void OpenMVPlugin::showExamplesDialog()
         Utils::CheckableMessageBox::information(Core::ICore::dialogParent(),
                 Tr::tr("More Examples"),
                 Tr::tr("You can find more examples under the File -> Examples menu.\n\n"
-                   "In particular, checkout the Color-Tracking examples."),
+                   "In particular, checkout the Image Processing -> Color-Tracking and Machine Learning -> TensorFlow examples."),
                 Utils::CheckableDecider(DONT_SHOW_EXAMPLES_AGAIN),
                 QMessageBox::Ok,
                 QMessageBox::Ok);
@@ -3659,9 +3669,7 @@ void OpenMVPlugin::updateCam(bool forceYes)
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Firmware Update"),
-            Tr::tr("Busy... please wait..."));
+        deferNormal([this, forceYes] { updateCam(forceYes); });
     }
 }
 

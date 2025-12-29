@@ -622,10 +622,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 {
     if (m_working)
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Edit ROMFS"),
-            Tr::tr("Busy... please wait..."));
-
+        deferNormal([this, fromConnect, newRomfs] { editRomfsClicked(fromConnect, newRomfs); });
         return;
     }
 
@@ -968,10 +965,7 @@ void OpenMVPlugin::resetRomfsClicked()
 {
     if (m_working)
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Reset ROMFS"),
-            Tr::tr("Busy... please wait..."));
-
+        deferNormal([this] { resetRomfsClicked(); });
         return;
     }
 

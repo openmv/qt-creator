@@ -204,9 +204,7 @@ void OpenMVPlugin::setPortPath(bool silent)
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-                              Tr::tr("Select Drive"),
-                              Tr::tr("Busy... please wait..."));
+        deferNormal([this, silent] { setPortPath(silent); });
     }
 }
 
@@ -476,9 +474,7 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-                              Tr::tr("Save Template"),
-                              Tr::tr("Busy... please wait..."));
+        deferNormal([this, rect] { saveTemplate(rect); });
     }
 }
 
@@ -545,9 +541,7 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-                              Tr::tr("Save Descriptor"),
-                              Tr::tr("Busy... please wait..."));
+        deferNormal([this, rect] { saveDescriptor(rect); });
     }
 }
 
