@@ -32,6 +32,12 @@
 
 #include "openmvtr.h"
 
+#if defined(Q_OS_LINUX)
+#include <fcntl.h>
+#include <unistd.h>
+#include <errno.h>
+#endif
+
 namespace OpenMV {
 namespace Internal {
 
@@ -623,14 +629,27 @@ void OpenMVPlugin::flushPortPath()
                                   Tr::tr("Failed to flush \"%L1\"!").arg(m_portPath));
         }
 #elif defined(Q_OS_LINUX)
-        Utils::Process process;
-        std::chrono::seconds timeout(10);
-        process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("umount")),
-                                              QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath))));
-        process.runBlocking(timeout, Utils::EventLoopMode::On);
+        const QByteArray mp = QFile::encodeName(QDir::cleanPath(m_portPath));
+        int fd = open(mp.constData(), O_RDONLY | O_DIRECTORY | O_CLOEXEC);
+        bool ok = false;
 
-        if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
-        {
+        if (fd < 0) {
+            // Fallback: try opening as a plain file (some FS/mount setups)
+            fd = open(mp.constData(), O_RDONLY | O_CLOEXEC);
+        }
+
+        if (fd >= 0) {
+            ok = (syncfs(fd) == 0);
+            close(fd);
+        }
+
+        if (!ok) {
+            // last-resort coarse global flush
+            sync();
+            ok = true;
+        }
+
+        if (!ok) {
             QMessageBox::critical(Core::ICore::dialogParent(),
                                   Tr::tr("Disconnect"),
                                   Tr::tr("Failed to flush \"%L1\"!").arg(m_portPath));
