@@ -740,6 +740,8 @@ private:
     QString tempFileForPythonEditor(const QByteArray &data, const QString &titlePattern);
     QJsonObject getBoardSettings(const QString &title, Utils::QtcSettings *settings, bool autoConnectToBoard = false);
 
+    void flushPortPath();
+
     ///////////////////////////////////////////////////////////////////////////
 
     using DeferredFn = std::function<void()>;

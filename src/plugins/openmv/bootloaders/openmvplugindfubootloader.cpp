@@ -50,37 +50,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
         connect(m_iodevice, &OpenMVPluginIO::closeResponse,
                 &loop, &QEventLoop::quit);
 
-        if(!m_portPath.isEmpty())
-        {
-#if defined(Q_OS_WIN)
-            if (!ejectVolume(static_cast<wchar_t>(m_portPath.at(0).unicode())))
-            {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    Tr::tr("Disconnect"),
-                    Tr::tr("Failed to eject \"%L1\"!").arg(m_portPath));
-            }
-#elif defined(Q_OS_LINUX)
-            Utils::Process process;
-            std::chrono::seconds timeout(10);
-            process.setCommand(Utils::CommandLine(Utils::FilePath::fromString(QStringLiteral("umount")),
-                                                  QStringList() << QDir::toNativeSeparators(QDir::cleanPath(m_portPath))));
-            process.runBlocking(timeout, Utils::EventLoopMode::On);
-
-            if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
-            {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    Tr::tr("Disconnect"),
-                    Tr::tr("Failed to eject \"%L1\"!").arg(m_portPath));
-            }
-#elif defined(Q_OS_MAC)
-            if(sync_volume_np(m_portPath.toUtf8().constData(), SYNC_VOLUME_FULLSYNC | SYNC_VOLUME_WAIT) < 0)
-            {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    Tr::tr("Disconnect"),
-                    Tr::tr("Failed to eject \"%L1\"!").arg(m_portPath));
-            }
-#endif
-        }
+        flushPortPath();
 
         // We want to enter the bootloader here and not have it exit on us by forcing the bootloader.
         // However, until the V2 protocol, there was a bug in the bootloader that could cause it not

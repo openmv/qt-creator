@@ -50,9 +50,9 @@ BOOL PreventRemovalOfVolume(HANDLE hVolume, BOOL fPrevent);
 BOOL AutoEjectVolume(HANDLE hVolume);
 BOOL CloseVolume(HANDLE hVolume);
 
-LPTSTR szVolumeFormat = TEXT("\\\\.\\%c:");
-LPTSTR szRootFormat = TEXT("%c:\\");
-LPTSTR szErrorFormat = TEXT("Error %d: %s\n");
+LPCTSTR szVolumeFormat = TEXT("\\\\.\\%c:");
+LPCTSTR szRootFormat = TEXT("%c:\\");
+LPCTSTR szErrorFormat = TEXT("Error %d: %s\n");
 
 HANDLE OpenVolume(TCHAR cDriveLetter)
 {
@@ -148,7 +148,7 @@ BOOL PreventRemovalOfVolume(HANDLE hVolume, BOOL fPreventRemoval)
                             NULL);
 }
 
-AutoEjectVolume(HANDLE hVolume)
+BOOL AutoEjectVolume(HANDLE hVolume)
 {
     DWORD dwBytesReturned;
 
@@ -187,10 +187,10 @@ BOOL EjectVolume(TCHAR cDriveLetter)
         return FALSE;
 
     if (fAutoEject)
-        cDriveLetter = cDriveLetter;
+        (void) 0;
     else {
         if (fRemoveSafely)
-            cDriveLetter = cDriveLetter;
+            (void) 0;
     }
 
     return TRUE;
@@ -202,6 +202,29 @@ bool ejectVolume(wchar_t driveLetter)
 {
 #if defined(Q_OS_WIN)
     return EjectVolume(driveLetter);
+#else
+    Q_UNUSED(driveLetter)
+    return false;
+#endif
+}
+
+bool flushVolume(wchar_t driveLetter)
+{
+#if defined(Q_OS_WIN)
+    wchar_t volPath[8];
+    swprintf(volPath, _countof(volPath), L"\\\\.\\%c:", driveLetter);
+
+    HANDLE hVol = CreateFileW(volPath, GENERIC_READ | GENERIC_WRITE,
+                              FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE,
+                              nullptr, OPEN_EXISTING, 0, nullptr);
+
+    if (hVol == INVALID_HANDLE_VALUE) {
+        return false;
+    }
+
+    bool ok = !!FlushFileBuffers(hVol);
+    CloseHandle(hVol);
+    return ok;
 #else
     Q_UNUSED(driveLetter)
     return false;

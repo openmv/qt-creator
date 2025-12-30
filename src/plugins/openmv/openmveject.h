@@ -32,4 +32,5 @@
 #ifndef OPENMVEJECT_H
 #define OPENMVEJECT_H
 bool ejectVolume(wchar_t driveLetter);
+bool flushVolume(wchar_t driveLetter);
 #endif // OPENMVEJECT_H
