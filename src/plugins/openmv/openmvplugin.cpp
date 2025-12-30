@@ -3793,68 +3793,12 @@ void OpenMVPlugin::configureSettings()
     {
         if(OpenMVCameraSettings(QDir::cleanPath(QDir::fromNativeSeparators(m_portPath)) + QStringLiteral("/openmv.config")).exec() == QDialog::Accepted)
         {
-            // Extra disk activity to flush changes...
-            QFile temp(QDir::cleanPath(QDir::fromNativeSeparators(m_portPath)) + QStringLiteral("/openmv.null"));
-            if(temp.open(QIODevice::WriteOnly)) temp.write(QByteArray(FILE_FLUSH_BYTES, 0));
-            temp.remove();
+            flushPortPath();
         }
     }
     else
     {
         deferNormal([this] { configureSettings(); });
-    }
-}
-
-void OpenMVPlugin::saveScript()
-{
-    if(!m_working)
-    {
-        int answer = QMessageBox::question(Core::ICore::dialogParent(),
-            Tr::tr("Save Script"),
-            Tr::tr("Strip comments and convert spaces to tabs?"),
-            QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
-
-        if((answer == QMessageBox::Yes) || (answer == QMessageBox::No))
-        {
-            QByteArray contents = Core::EditorManager::currentEditor() ? Core::EditorManager::currentEditor()->document() ? Core::EditorManager::currentEditor()->document()->contents() : QByteArray() : QByteArray();
-
-            if(importHelper(contents))
-            {
-                Utils::FileSaver file(Utils::FilePath::fromString(m_portPath).pathAppended(QStringLiteral("main.py")));
-
-                if(!file.hasError())
-                {
-                    if(answer == QMessageBox::Yes)
-                    {
-                        contents = loadFilter(contents);
-                    }
-
-                    if((!file.write(contents)) || (!file.finalize()))
-                    {
-                        QMessageBox::critical(Core::ICore::dialogParent(),
-                            Tr::tr("Save Script"),
-                            Tr::tr("Error: %L1!").arg(file.errorString()));
-                    }
-                    else
-                    {
-                        // Extra disk activity to flush changes...
-                        QFile temp(QDir::cleanPath(QDir::fromNativeSeparators(m_portPath)) + QStringLiteral("/openmv.null"));
-                        if(temp.open(QIODevice::WriteOnly)) temp.write(QByteArray(FILE_FLUSH_BYTES, 0));
-                        temp.remove();
-                    }
-                }
-                else
-                {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                        Tr::tr("Save Script"),
-                        Tr::tr("Error: %L1!").arg(file.errorString()));
-                }
-            }
-        }
-    }
-    else
-    {
-        deferNormal([this] { saveScript(); });
     }
 }
 

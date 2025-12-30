@@ -32,10 +32,17 @@
 
 #include "openmvtr.h"
 
-#if defined(Q_OS_LINUX)
+#if defined(Q_OS_WIN)
+#include <windows.h>
+#include <io.h>
+#elif defined(Q_OS_LINUX)
 #include <fcntl.h>
 #include <unistd.h>
 #include <errno.h>
+#elif defined(Q_OS_MAC)
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/mount.h>
 #endif
 
 namespace OpenMV {
@@ -415,6 +422,111 @@ void OpenMVPlugin::setSpacing()
 
     settings->endGroup();
     delete dialog;
+}
+
+static bool flushFileHandle(QFile &f)
+{
+    if (!f.isOpen())
+        return false;
+
+    if (!f.flush())
+        return false;
+
+#if defined(Q_OS_WIN)
+    const int fd = f.handle();
+    if (fd < 0)
+        return false;
+
+    HANDLE h = reinterpret_cast<HANDLE>(_get_osfhandle(fd));
+    if (h == INVALID_HANDLE_VALUE)
+        return false;
+
+    return !!FlushFileBuffers(h);
+
+#elif defined(Q_OS_MAC)
+    // Strongest flush on macOS
+    return (::fcntl(f.handle(), F_FULLFSYNC) == 0);
+
+#else // Linux + other POSIX
+    // fdatasync is enough for file contents
+    return (::fdatasync(f.handle()) == 0);
+#endif
+}
+
+static bool writeFileDirectAndFlush(const QString &filePath, const QByteArray &data, QString *errOut)
+{
+    QFile f(filePath);
+
+    if (!f.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
+        if (errOut) *errOut = f.errorString();
+        return false;
+    }
+
+    const qint64 written = f.write(data);
+    if (written != data.size()) {
+        if (errOut) *errOut = f.errorString().isEmpty()
+            ? QStringLiteral("Short write (%1/%2)").arg(written).arg(data.size())
+            : f.errorString();
+        f.close();
+        return false;
+    }
+
+    if (!flushFileHandle(f)) {
+        if (errOut) {
+#if defined(Q_OS_WIN)
+            *errOut = QStringLiteral("FlushFileBuffers failed (winerr=%1)").arg(GetLastError());
+#else
+            *errOut = QStringLiteral("File flush failed");
+#endif
+        }
+
+        f.close();
+        return false;
+    }
+
+    f.close();
+    return true;
+}
+
+void OpenMVPlugin::saveScript()
+{
+    if(!m_working)
+    {
+        int answer = QMessageBox::question(Core::ICore::dialogParent(),
+                                           Tr::tr("Save Script"),
+                                           Tr::tr("Strip comments and convert spaces to tabs?"),
+                                           QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
+
+        if((answer == QMessageBox::Yes) || (answer == QMessageBox::No))
+        {
+            QByteArray contents = Core::EditorManager::currentEditor() ? Core::EditorManager::currentEditor()->document() ? Core::EditorManager::currentEditor()->document()->contents() : QByteArray() : QByteArray();
+
+            if(importHelper(contents))
+            {
+                if(answer == QMessageBox::Yes)
+                {
+                    contents = loadFilter(contents);
+                }
+
+                QString err;
+
+                if(!writeFileDirectAndFlush(m_portPath + QDir::separator() + QStringLiteral("main.py"), contents, &err))
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                                          Tr::tr("Save Script"),
+                                          Tr::tr("Error: %L1!").arg(err));
+                }
+                else
+                {
+                    flushPortPath();
+                }
+            }
+        }
+    }
+    else
+    {
+        deferNormal([this] { saveScript(); });
+    }
 }
 
 void OpenMVPlugin::saveTemplate(const QRect &rect)
