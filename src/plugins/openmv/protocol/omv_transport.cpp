@@ -46,6 +46,10 @@ OMVTransport::OMVTransport(OMVPort *serial_,
     stats.received = 0;
     stats.checksum = 0;
     stats.sequence = 0;
+
+#ifdef Q_OS_WIN
+    _keep_alive_timer.start();
+#endif
 }
 
 void OMVTransport::setLoggingEnabled(bool enabled)
@@ -257,15 +261,17 @@ void OMVTransport::send_packet(uint8_t opcode,
         qint64 ret = serial->write(pbuf.constData() + written, packet_size - written);
 
         if (ret < 0) {
+            omvDebug() << "Write error:" << ret << serial->errorString();
             throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
         }
 
         written += ret;
 
-        if ((written >= packet_size)) {
+        if (written >= packet_size) {
             break;
         }
 
+        omvDebug() << "Written:" << written << "of" << packet_size;
         serial->flush(); // ignore return
 
         QElapsedTimer elaspedTimer;
@@ -274,6 +280,7 @@ void OMVTransport::send_packet(uint8_t opcode,
         while (serial->bytesToWrite()) {
             serial->waitForBytesWritten(1);
             if(serial->bytesToWrite() && elaspedTimer.hasExpired(timeout * 1000.0)) {
+                omvDebug() << "Write error timeout!";
                 throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
             }
         }
@@ -307,12 +314,22 @@ QVariant OMVTransport::recv_packet(bool poll_events)
 
         Packet packet;
         if (!_process(packet)) {
+            // Anytime we don't receive a valid packet send a keep alive byte to prevent stalls.
+            #ifdef Q_OS_WIN
+            if (_keep_alive_timer.hasExpired(10)) {
+                _send_keep_alive();
+                _keep_alive_timer.restart();
+            }
+            #endif
             if (poll_events) {
                 return QVariant(); // None
             }
-            // QThread::msleep(1);
             continue;
         }
+        // Valid packet received, reset timer.
+        #ifdef Q_OS_WIN
+        _keep_alive_timer.restart();
+        #endif
 
         // Simulate packet drops by randomly dropping parsed packets
         if (drop_rate > 0.0) {
@@ -579,12 +596,6 @@ bool OMVTransport::_process(Packet &out_packet)
             out_packet.header_crc = header_crc;
             out_packet.payload = payload;
 
-            // Anytime we receive a valid packet send a keep alive byte to prevent stalls.
-            // Ensure the keep alive byte is flushed immediately if this is not a fragment.
-            #ifdef Q_OS_WIN
-            if ((flags & OMVPFlags::FRAGMENT) && (!ack_enabled)) _sendKeepAlive();
-            #endif
-
             return true;
         }
     }
@@ -596,12 +607,13 @@ bool OMVTransport::_process(Packet &out_packet)
     Sends a 0 byte on the serial port to keep the serial connection from stalling.
  */
 #ifdef Q_OS_WIN
-void OMVTransport::_sendKeepAlive()
+void OMVTransport::_send_keep_alive()
 {
-// This is only needed on Windows for its serial port drivers. The problem is that
-// the serial port read call will not return any data until a write to the serial
-// port is done. The contents of that write do not that matter, other than one
-// is completed. Afterwhich, the serial port will resume returning data again.
+    // This is only needed on Windows for its serial port drivers. The problem is that
+    // the serial port read call will not return any data until a write to the serial
+    // port is done. The contents of that write do not that matter, other than one
+    // is completed. Afterwhich, the serial port will resume returning data again.
+
     /*
         Send a packet to the camera
     */
@@ -612,6 +624,7 @@ void OMVTransport::_sendKeepAlive()
     qint64 ret = serial->write(QByteArray(1, char(0x00)));
 
     if (ret < 0) {
+        omvDebug() << "Write error:" << ret << serial->errorString();
         throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
     }
 
@@ -619,6 +632,7 @@ void OMVTransport::_sendKeepAlive()
         return;
     }
 
+    omvDebug() << "Written: 0 of 1";
     serial->flush(); // ignore return
 
     QElapsedTimer elaspedTimer;
@@ -627,6 +641,7 @@ void OMVTransport::_sendKeepAlive()
     while (serial->bytesToWrite()) {
         serial->waitForBytesWritten(1);
         if(serial->bytesToWrite() && elaspedTimer.hasExpired(timeout * 1000.0)) {
+            omvDebug() << "Write error timeout!";
             throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
         }
     }

@@ -1758,6 +1758,12 @@
             "name" : "GENX320",
             "id" : "0xB0602003",
             "main" : false
+        },
+        {
+            "name" : "SoftCSI",
+            "id" : "0x50F7",
+            "main" : false,
+            "hidden" : true
         }
     ],
     "protocol" : {

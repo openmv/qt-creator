@@ -1183,6 +1183,8 @@ void OpenMVPluginSerialPort_private::close() {
         return;
     }
 
+    m_camera->disconnect();
+
     try {
         emit closeResponse(false);
     } catch (...) {

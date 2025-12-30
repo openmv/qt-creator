@@ -2395,6 +2395,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     {
                         QString sensorType;
                         bool mainSensor = false;
+                        bool hidden = false;
                         bool found = false;
 
                         for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("sensors")).toArray())
@@ -2403,6 +2404,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             {
                                 sensorType = value.toObject().value(QStringLiteral("name")).toString();
                                 mainSensor = value.toObject().value(QStringLiteral("main")).toBool();
+                                hidden = value.toObject().value(QStringLiteral("hidden")).toBool();
                                 found = true;
                                 break;
                             }
@@ -2414,7 +2416,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         }
 
                         if (mainSensor) sensorTypeList.prepend(sensorType);
-                        else sensorTypeList.append(sensorType);
+                        else if (!hidden || sensorTypeList.isEmpty()) sensorTypeList.append(sensorType);
                     }
 
                     m_sensorType = sensorTypeList.join(QStringLiteral(", "));
@@ -3208,7 +3210,15 @@ void OpenMVPlugin::startClicked()
 
             disconnect(conn);
 
+            // Don't start if already running.
             if(running2)
+            {
+                m_working = false;
+                QTimer::singleShot(0, this, &OpenMVPlugin::workingDone);
+                return;
+            }
+
+            if(0) // previous behavior...
             {
                 m_iodevice->scriptStop();
 
@@ -3314,6 +3324,10 @@ void OpenMVPlugin::startClicked()
         }
 
         ///////////////////////////////////////////////////////////////////////
+
+        QEventLoop loop;
+        QTimer::singleShot(1000, &loop, &QEventLoop::quit); // allow some time for the script to start
+        loop.exec();
 
         m_working = false;
 

@@ -140,7 +140,8 @@ private:
         Necessary to prevent serial stall situations
      */
     #ifdef Q_OS_WIN
-    void _sendKeepAlive();
+    QElapsedTimer _keep_alive_timer;
+    void _send_keep_alive();
     #endif
 
 private:
