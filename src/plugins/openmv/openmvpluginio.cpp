@@ -1655,11 +1655,11 @@ void OpenMVPluginIO::getSystemInfoString()
 
         if(match.hasMatch())
         {
-            stream << "CPU ID: " << match.captured(2) << '\n';
+            stream << "CPU ID: " << match.captured(2) << " - ";
             stream << "Device ID: " << match.captured(3) << '\n';
         }
 
-        stream << QStringLiteral("CSI0: 0x%2").arg(m_sensorID) << '\n';
+        stream << QStringLiteral("CSI0: 0x%1").arg(m_sensorID) << '\n';
 
         if(match.hasMatch())
         {
@@ -1667,8 +1667,8 @@ void OpenMVPluginIO::getSystemInfoString()
         }
 
         stream << "Hardware capabilities:" << '\n';
-        stream << "  USB High-Speed: " << (m_hsOn ? "Yes" : "No") << '\n';
-        stream << "  PMU: " << (m_hasPMU ? "Yes" : "No") << '\n';
+        stream << "  USB High-Speed: " << (m_hsOn ? "Yes" : "No");
+        stream << "\tPMU: " << (m_hasPMU ? "Yes" : "No") << '\n';
         stream << "Profiler: " << (m_profileEnabled ? "Available" : "Not available") << '\n';
         stream << "Firmware version: " << m_firmwareMajor << "." << m_firmwareMinor << "." << m_firmwarePatch;
         systemInfoString(info);

@@ -1302,7 +1302,7 @@ QString OMVCamera::systemInfoString()
     stream
         << "CPU ID: 0x"
         << QString::number(sysinfo.value(QStringLiteral("cpu_id")).toUInt(),
-                           16).rightJustified(8, QChar('0')).toUpper() << '\n';
+                           16).rightJustified(8, QChar('0')).toUpper() << " - ";
 
     // Device ID is now an array of 3 words
     QVariantList dev_id_list = sysinfo.value(QStringLiteral("device_id")).toList();
@@ -1317,12 +1317,12 @@ QString OMVCamera::systemInfoString()
     for (int i = 0; i < chip_list.size(); ++i) {
         uint32_t chip_id = chip_list[i].toUInt();
         if (chip_id != 0) {
-            stream
-                << QStringLiteral("CSI%1: 0x%2")
-                       .arg(i)
-                       .arg(QString::number(chip_id, 16).rightJustified(4, QChar('0')).toUpper()) << '\n';
+            if (i) stream << ", ";
+            stream << QStringLiteral("CSI%1: 0x%2").arg(i)
+                .arg(QString::number(chip_id, 16).rightJustified(4, QChar('0')).toUpper());
         }
     }
+    stream << '\n';
 
     stream << "USB ID: " <<
         QString::number(sysinfo.value(QStringLiteral("usb_vid")).toUInt(),
@@ -1350,25 +1350,25 @@ QString OMVCamera::systemInfoString()
         return sysinfo.value(QString::fromLatin1(key)).toBool() ? "Yes" : "No";
     };
 
-    stream << "  GPU: " << yn("gpu_present") << '\n';
-    stream << "  NPU: " << yn("npu_present") << '\n';
-    stream << "  ISP: " << yn("isp_present") << '\n';
-    stream << "  Video Encoder: " << yn("venc_present") << '\n';
-    stream << "  JPEG Encoder: " << yn("jpeg_present") << '\n';
-    stream << "  DRAM: " << yn("dram_present") << '\n';
-    stream << "  CRC Hardware: " << yn("crc_present") << '\n';
+    stream << "  GPU: " << yn("gpu_present");
+    stream << "\t\tNPU: " << yn("npu_present") << '\n';
+    stream << "  ISP: " << yn("isp_present");
+    stream << "\t\tVideo Encoder: " << yn("venc_present") << '\n';
+    stream << "  JPEG Encoder: " << yn("jpeg_present");
+    stream << "\tDRAM: " << yn("dram_present") << '\n';
+    stream << "  CRC Hardware: " << yn("crc_present");
     stream
-        << "  PMU: "
+        << "\tPMU: "
         << yn("pmu_present")
         << " (" << sysinfo.value(QStringLiteral("pmu_eventcnt")).toUInt()
         << " counters)" << '\n';
 
-    stream << "  Multi-core: " << yn("multicore_present") << '\n';
-    stream << "  WiFi: " << yn("wifi_present") << '\n';
-    stream << "  Bluetooth: " << yn("bt_present") << '\n';
-    stream << "  SD Card: " << yn("sd_present") << '\n';
-    stream << "  Ethernet: " << yn("eth_present") << '\n';
-    stream << "  USB High-Speed: " << yn("usb_highspeed") << '\n';
+    stream << "  Multi-core: " << yn("multicore_present");
+    stream << "\tWiFi: " << yn("wifi_present") << '\n';
+    stream << "  Bluetooth: " << yn("bt_present");
+    stream << "\tSD Card: " << yn("sd_present") << '\n';
+    stream << "  Ethernet: " << yn("eth_present");
+    stream << "\t\tUSB High-Speed: " << yn("usb_highspeed") << '\n';
 
     // Profiler info
     bool profile_available = channelsByName.contains(QStringLiteral("profile"));

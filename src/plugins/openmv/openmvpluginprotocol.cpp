@@ -233,7 +233,8 @@ void OpenMVPlugin::setSpacing()
     int getStateSpacing = settings->value(LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
     int readProfileSpacing = settings->value(LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
 
-    int useGetStateAvailable = !((m_major < OPENMV_ADD_GET_STATE_MAJOR)
+    int useGetStateAvailable =
+      !((m_major < OPENMV_ADD_GET_STATE_MAJOR)
     || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) &&
         (m_minor < OPENMV_ADD_GET_STATE_MINOR))
     || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) &&
@@ -244,6 +245,7 @@ void OpenMVPlugin::setSpacing()
                                   Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                       (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
     dialog->setWindowTitle(Tr::tr("Debug Protocol Settings"));
+    dialog->setSizeGripEnabled(true);
     QVBoxLayout *vlayout = new QVBoxLayout(dialog);
 
     QWidget *mainWidget = new QWidget;
@@ -264,6 +266,7 @@ void OpenMVPlugin::setSpacing()
     infoLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
     infoLabel->setFrameStyle(QFrame::StyledPanel);
     infoLabel->setMinimumWidth(480);
+    infoLabel->setTextFormat(Qt::PlainText);
     connect(m_iodevice, &OpenMVPluginIO::systemInfoString, infoLabel, &QLabel::setText);
     m_iodevice->getSystemInfoString();
     llayout->addWidget(infoLabel);
@@ -286,6 +289,7 @@ void OpenMVPlugin::setSpacing()
     hostStats->setTextInteractionFlags(Qt::TextSelectableByMouse);
     hostStats->setFrameStyle(QFrame::StyledPanel);
     hostStats->setMinimumWidth(240);
+    hostStats->setTextFormat(Qt::PlainText);
     connect(m_iodevice, &OpenMVPluginIO::hostStatsString, hostStats, &QLabel::setText);
     QTimer *hostStatsTimer = new QTimer(dialog);
     connect(hostStatsTimer, &QTimer::timeout, m_iodevice, &OpenMVPluginIO::getHostStatsString);
@@ -306,6 +310,7 @@ void OpenMVPlugin::setSpacing()
     deviceStats->setTextInteractionFlags(Qt::TextSelectableByMouse);
     deviceStats->setFrameStyle(QFrame::StyledPanel);
     deviceStats->setMinimumWidth(240);
+    deviceStats->setTextFormat(Qt::PlainText);
     connect(m_iodevice, &OpenMVPluginIO::deviceStatsString, deviceStats, &QLabel::setText);
     QTimer *deviceStatsTimer = new QTimer(dialog);
     connect(deviceStatsTimer, &QTimer::timeout, m_iodevice, &OpenMVPluginIO::getDeviceStatsString);
@@ -314,6 +319,7 @@ void OpenMVPlugin::setSpacing()
     rdslayout->addWidget(deviceStats);
 
     QWidget *rightWidget = new QWidget;
+    rightWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
     QVBoxLayout *rlayout = new QVBoxLayout(rightWidget);
     rlayout->setContentsMargins(0, 0, 0, 0);
     hlayout->addWidget(rightWidget);
