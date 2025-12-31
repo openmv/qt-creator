@@ -847,7 +847,7 @@ OpenMVProfileView::OpenMVProfileView(Utils::QtcSettings *settings, QWidget *pare
         m_treeView->selectAll();
     });
 
-    connect(m_treeView, &QTreeView::customContextMenuRequested, this, [this, copyAct, selectAllAct] {
+    connect(m_treeView, &QTreeView::customContextMenuRequested, this, [copyAct, selectAllAct] {
         QMenu menu;
         menu.addAction(copyAct);
         menu.addSeparator();
@@ -862,7 +862,7 @@ OpenMVProfileView::OpenMVProfileView(Utils::QtcSettings *settings, QWidget *pare
     filterModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
     filterModel->setSortRole(Qt::UserRole);
     m_treeView->setModel(filterModel);
-    // restoreEventCountersAndHeaders();
+    restoreEventCountersAndHeaders();
 
     connect(m_filterEdit, &QLineEdit::textChanged, this, [this, filterModel] (const QString &text) {
         if (text.isEmpty()) {
@@ -1195,13 +1195,13 @@ QString OpenMVProfileView::selectEventForColumn(int section, const QPoint& globa
         for (const Ev *e : grouped[groupName]) {
             QAction* act = sub->addAction(QLatin1String(e->name));
             act->setData(e->id);
-            // act->setCheckable(true);
+            act->setCheckable(true);
             ag->addAction(act);
             if (currentName == QLatin1String(e->name)) act->setChecked(true);
         }
     }
 
-    QAction* picked = menu.exec(globalPos);
+    QAction *picked = menu.exec(globalPos);
     if (!picked || !picked->isCheckable()) return QString();
 
     m_settings->setValue(QString(QStringLiteral(LAST_PROFILE_DIALOG_EVENT "_%1")).arg(section).toUtf8(), picked->text());
