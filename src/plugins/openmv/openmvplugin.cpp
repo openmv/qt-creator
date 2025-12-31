@@ -2496,6 +2496,48 @@ void OpenMVPlugin::extensionsInitialized()
         }
     }
 
+#ifdef OPENMV_FACTORY_IDE
+    QString filePath = Core::ICore::allUsersResourcePath(QStringLiteral("firmware/scripts/self_test.py")).toString();
+
+    QFile file(filePath);
+
+    if(file.open(QIODevice::ReadOnly))
+    {
+        QByteArray data = file.readAll();
+
+        if((file.error() == QFile::NoError) && (!data.isEmpty()))
+        {
+            Core::EditorManager::cutForwardNavigationHistory();
+            Core::EditorManager::addCurrentPositionToNavigationHistory();
+
+            QString titlePattern = QFileInfo(filePath).baseName().simplified() + QStringLiteral("_$.") + QFileInfo(filePath).completeSuffix();
+
+            TextEditor::BaseTextEditor *self_test_editor = qobject_cast<TextEditor::BaseTextEditor *>(
+                Core::EditorManager::openEditorWithContents("PythonEditor.PythonEditor", &titlePattern, data));
+
+            if(self_test_editor)
+            {
+                self_test_editor->document()->setProperty("diffFilePath", QFileInfo(file).canonicalFilePath());
+                Core::EditorManager::addCurrentPositionToNavigationHistory();
+                self_test_editor->editorWidget()->configureGenericHighlighter();
+                Core::EditorManager::activateEditor(self_test_editor);
+                editor = self_test_editor;
+
+                QTimer::singleShot(0, this, [this, self_test_editor, data] () {
+                    QString filePath = tempFileForPythonEditor(data, self_test_editor->document()->displayName());
+
+                    if(!filePath.isEmpty())
+                    {
+                        self_test_editor->document()->setTemporary(true);
+                        self_test_editor->document()->setFilePath(Utils::FilePath::fromString(filePath));
+                        emit qobject_cast<TextEditor::TextDocument *>(self_test_editor->document())->openFinishedSuccessfully();
+                    }
+                });
+            }
+        }
+    }
+#endif
+
     if(editor ? (editor->document() ? editor->document()->contents().isEmpty() : true) : true)
     {
         QString filePath = Core::ICore::allUsersResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toString();
