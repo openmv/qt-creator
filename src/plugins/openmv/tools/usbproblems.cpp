@@ -54,9 +54,6 @@
 #include <QByteArray>
 #include <QList>
 
-namespace OpenMV {
-namespace Internal {
-
 static QString getDevRegPropString(HDEVINFO h, SP_DEVINFO_DATA &dev, DWORD prop)
 {
     DWORD regType = 0;
@@ -116,9 +113,14 @@ static QString bestDisplayName(HDEVINFO h, SP_DEVINFO_DATA &dev)
 
     return name;
 }
+#endif
+
+namespace OpenMV {
+namespace Internal {
 
 QStringList usbProblemDeviceNames()
 {
+#ifdef Q_OS_WIN
     QStringList out;
 
     HDEVINFO h = SetupDiGetClassDevsW(nullptr, nullptr, nullptr,
@@ -161,16 +163,10 @@ QStringList usbProblemDeviceNames()
 
     SetupDiDestroyDeviceInfoList(h);
     return out;
-}
-
 #else
-
-QStringList usbProblemDeviceNames()
-{
     return QStringList();
-}
-
 #endif
+}
 
 } // namespace Internal
 } // namespace OpenMV
