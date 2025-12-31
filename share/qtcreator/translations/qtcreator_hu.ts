@@ -10,6 +10,19 @@
     </message>
 </context>
 <context>
+    <name>OpenMV::Internal::OpenMVProfileView</name>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <source>Copy</source>
+        <translation>Másolat</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Select All</source>
+        <translation>Válassza az Összes lehetőséget</translation>
+    </message>
+</context>
+<context>
     <name>OpenMVCameraSettings</name>
     <message>
         <location filename="../../../src/plugins/openmv/openmvcamerasettings.ui" />
@@ -201,7 +214,7 @@
         <translation>'%1' szintaktikai definíciójának frissítése a %2 verzióra...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1070" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
         <source>Copy/Convert Python File</source>
         <translation>Python fájl másolása/konvertálása</translation>
     </message>
@@ -2332,7 +2345,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Kimenet</translation>
     </message>
     <message>
-        <location line="+403" />
+        <location line="+406" />
         <source>Reset to Default</source>
         <translation>Alapértelmezés visszaállítása</translation>
     </message>
@@ -2745,7 +2758,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+13" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-672" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-675" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-89" />
         <source>Case Sensitive</source>
         <translation>Kis és nagybetű érzékeny</translation>
@@ -3724,7 +3737,7 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
         <translation>Opciók</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
         <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
         <translation>A fordító ts fájljaiból qm fordítási fájlokat hoz létre, amelyeket egy alkalmazás használhat</translation>
     </message>
@@ -3734,13 +3747,13 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
         <translation>Fordítások kiadása (lrelease)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
+        <location line="-9" />
+        <location line="+10" />
         <source>Linguist</source>
         <translation>Nyelvész</translation>
     </message>
     <message>
-        <location line="-2" />
+        <location line="-12" />
         <source>Synchronizes translator's ts files with the program code</source>
         <translation>Szinkronizálja a fordító ts fájljait a programkóddal</translation>
     </message>
@@ -3761,13 +3774,13 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
     </message>
     <message>
         <location line="+1" />
-        <location line="+15" />
+        <location line="+10" />
         <location line="+5" />
         <source>Text</source>
         <translation>Szöveg</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>Futtatja az aktuális QML fájlt a QML segédprogrammal.</translation>
     </message>
@@ -3793,7 +3806,7 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
         <translation>Qt Quick 2 előnézet (qmlscene)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-16" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Megnyitja az aktuális fájlt a vi</translation>
@@ -7040,7 +7053,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
-        <location line="+785" />
+        <location line="+823" />
         <source>Dataset Editor</source>
         <translation>Adatkészlet-szerkesztő</translation>
     </message>
@@ -7050,13 +7063,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Kérjük, adja meg az osztály nevét</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+320" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+388" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+274" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
@@ -7064,37 +7077,36 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-695" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
         <location line="+19" />
         <location line="+115" />
-        <location line="+1344" />
+        <location line="+1441" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+106" />
+        <location line="+124" />
         <location line="+180" />
-        <location line="+204" />
-        <location line="+14" />
-        <location line="+348" />
+        <location line="+308" />
         <location line="+13" />
-        <location line="+347" />
+        <location line="+168" />
         <location line="+145" />
         <location line="+114" />
         <location line="+129" />
         <location line="+114" />
         <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+364" />
-        <location line="+252" />
-        <location line="+85" />
-        <location line="+972" />
-        <location line="+835" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
+        <location line="+254" />
+        <location line="+86" />
+        <location line="+1015" />
+        <location line="+896" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+523" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
         <location line="+11" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+506" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
         <source>Error: %L1!</source>
@@ -7102,7 +7114,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3755" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3433" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7117,8 +7129,8 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2476" />
-        <location line="+1763" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2471" />
+        <location line="+1446" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>A képfájl mentése ismeretlen okból nem sikerült!</translation>
@@ -7126,14 +7138,14 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+16" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+242" />
+        <location line="+239" />
         <source>Delete</source>
         <translation>Törlés</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-312" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
         <source>Are you sure you want to permanetly delete "%L1"?</source>
         <translation>Biztosan végleg törli a következőt: "%L1"?</translation>
     </message>
@@ -7160,33 +7172,29 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>A fájl átnevezése ismeretlen okból nem sikerült!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5537" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5122" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
         <source>Could not copy file "%1" to "%2".</source>
         <translation>A(z) "%1" fájl nem másolható ide: "%2".</translation>
     </message>
     <message>
-        <location line="+46" />
         <source>Invalid argument (%1) for -override_read_timeout</source>
-        <translation>Érvénytelen argumentum (%1) a -override_read_timeout paraméterhez</translation>
+        <translation type="vanished">Érvénytelen argumentum (%1) a -override_read_timeout paraméterhez</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Missing argument for -override_read_timeout</source>
-        <translation>Hiányzó argumentum: -override_read_timeout</translation>
+        <translation type="vanished">Hiányzó argumentum: -override_read_timeout</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Invalid argument (%1) for -override_read_stall_timeout</source>
-        <translation>Érvénytelen argumentum (%1) a -override_read_stall_timeout paraméterhez</translation>
+        <translation type="vanished">Érvénytelen argumentum (%1) a -override_read_stall_timeout paraméterhez</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Missing argument for -override_read_stall_timeout</source>
-        <translation>Hiányzó argumentum: -override_read_stall_timeout</translation>
+        <translation type="vanished">Hiányzó argumentum: -override_read_stall_timeout</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+40" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>Hiányzik a -serial_number_filter argumentuma</translation>
     </message>
@@ -7198,7 +7206,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2241" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2348" />
         <location line="+9" />
         <location line="+13" />
         <location line="+59" />
@@ -7228,42 +7236,39 @@ Kérjük, zárjon be minden olyan programot, amely az OpenMV IDE alkalmazásadat
         <translation>Szerkessze a LAB küszöbértéket a Threshold Editor segítségével</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+226" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
         <source>Missing argument for -form_key</source>
         <translation>A -form_key argumentum hiányzik</translation>
     </message>
     <message>
-        <location line="+1034" />
+        <location line="+1066" />
         <source>About OpenMV Viewer...</source>
         <translation>Az OpenMV Viewerről...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Körülbelül %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Szerző: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU ÁLTALÁNOS NYILVÁNOS LICENC&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ezt a programot abban a reményben terjesztik, hogy hasznos lesz, de GARANCIA NÉLKÜL; még az ELADHATÓSÁG vagy az ADOTT CÉLRA VALÓ ALKALMASSÁG hallgatólagos garanciája nélkül is. További részletekért lásd a &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License dokumentumot&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Kérdése vagy megjegyzése van?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vegye fel velünk a kapcsolatot a &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io címen&lt;/a&gt;.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Körülbelül %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Szerző: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU ÁLTALÁNOS NYILVÁNOS LICENC&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ezt a programot abban a reményben terjesztik, hogy hasznos lesz, de GARANCIA NÉLKÜL; még az ELADHATÓSÁG vagy az ADOTT CÉLRA VALÓ ALKALMASSÁG hallgatólagos garanciája nélkül is. További részletekért lásd a &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License dokumentumot&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Kérdése vagy megjegyzése van?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vegye fel velünk a kapcsolatot a &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io címen&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <source>OpenMV IDE</source>
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1003" />
+        <location line="-1039" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
     <message>
-        <location line="-517" />
         <source>Invalid argument (%1) for -override_per_command_wait</source>
-        <translation>Érvénytelen argumentum (%1) a -override_per_command_wait esetén</translation>
+        <translation type="vanished">Érvénytelen argumentum (%1) a -override_per_command_wait esetén</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Missing argument for -override_per_command_wait</source>
-        <translation>Hiányzó argumentum a -override_per_command_wait</translation>
+        <translation type="vanished">Hiányzó argumentum a -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="-460" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Érvénytelen argumentum (%1) a -auto_update esetén</translation>
     </message>
@@ -7286,7 +7291,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Hiba a &lt;user_resources&gt; /openmvide/firmware/settings.json: %l1. \ N \ nopenmv IDE verziók elolvasása</translation>
     </message>
     <message>
-        <location line="+195" />
+        <location line="+193" />
         <source>Form Key</source>
         <translation>Űrlapkulcs</translation>
     </message>
@@ -7296,7 +7301,7 @@ Check the json file for errors and fix them.</source>
         <translation>Kérjük, adja meg az űrlapkulcsot</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+82" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7339,7 +7344,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">A Bootloader futtatása (Firmware betöltése)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+24" />
         <source>Ctrl+Shift+L</source>
         <translation>Ctrl+Shift+L</translation>
     </message>
@@ -7423,33 +7428,33 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+77" />
-        <location line="+4044" />
+        <location line="+3722" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Nyissa meg a Terminált</translation>
     </message>
     <message>
-        <location line="-4098" />
+        <location line="-3776" />
         <source>Machine Vision</source>
         <translation>Gépi látás</translation>
     </message>
     <message>
         <location line="+181" />
-        <location line="+3948" />
+        <location line="+3626" />
         <location line="+76" />
         <source>Threshold Editor</source>
         <translation>Küszöb szerkesztő</translation>
     </message>
     <message>
-        <location line="-4019" />
-        <location line="+4097" />
+        <location line="-3697" />
+        <location line="+3775" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Keypoints szerkesztő</translation>
     </message>
     <message>
-        <location line="-4090" />
-        <location line="+4256" />
+        <location line="-3768" />
+        <location line="+3934" />
         <location line="+98" />
         <location line="+24" />
         <location line="+11" />
@@ -7458,7 +7463,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4404" />
+        <location line="-4082" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 család (30 címke)</translation>
     </message>
@@ -7496,16 +7501,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+343" />
+        <location line="+371" />
         <location line="+14" />
-        <location line="+31" />
-        <location line="+823" />
+        <location line="+33" />
+        <location line="+874" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
         <source>Failed to open: "%L1"</source>
         <translation>Nem sikerült megnyitni: "%L1"</translation>
     </message>
     <message>
-        <location line="-1235" />
+        <location line="-1316" />
         <source>DataMatrix Generator</source>
         <translation>DataMatrix generátor</translation>
     </message>
@@ -7532,13 +7537,13 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+228" />
-        <location line="+2320" />
-        <location line="+47" />
-        <location line="+69" />
-        <location line="+1491" />
+        <location line="+2315" />
+        <location line="+1290" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
+        <location line="+67" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
         <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+856" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
         <location line="+208" />
         <source>Please add a file extension!</source>
         <translation>Kérjük, adjon hozzá egy fájl kiterjesztést!</translation>
@@ -7553,7 +7558,7 @@ Check the json file for errors and fix them.</source>
         <translation>Nem lehet felülírni a kimeneti fájlt!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4140" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3818" />
         <source>Video Tools</source>
         <translation>Videóeszközök</translation>
     </message>
@@ -7653,15 +7658,15 @@ Check the json file for errors and fix them.</source>
         <location line="+237" />
         <location line="+141" />
         <location line="+67" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+208" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1343" />
+        <location line="+1440" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+240" />
-        <location line="+970" />
+        <location line="+258" />
+        <location line="+533" />
         <location line="+145" />
         <location line="+114" />
         <location line="+129" />
@@ -7669,18 +7674,18 @@ Check the json file for errors and fix them.</source>
         <location line="+118" />
         <location line="+433" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+286" />
-        <location line="+142" />
-        <location line="+978" />
+        <location line="+288" />
+        <location line="+143" />
+        <location line="+1021" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1297" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
         <location line="+85" />
-        <location line="+565" />
+        <location line="+608" />
         <source>Cancel</source>
         <translation>Megszünteti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3953" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3631" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Feltöltés az Edge Impulse Project-be</translation>
     </message>
@@ -7712,7 +7717,7 @@ Check the json file for errors and fix them.</source>
         <translation>Adatkészlet bezárása</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+34" />
         <source>OpenMV Docs</source>
         <translation>OpenMV Docs</translation>
     </message>
@@ -7732,7 +7737,7 @@ Check the json file for errors and fix them.</source>
         <translation>Az OpenMV kameráról...</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+18" />
         <source>About OpenMV Cam %1</source>
         <translation>Az OpenMV Cam %1-ről</translation>
     </message>
@@ -7771,7 +7776,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">&lt;p&gt;OpenMV IDE angol fordítása: Kwabena W. Agyeman.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+17" />
         <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Partnerek&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -7809,10 +7814,10 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+24" />
         <location line="+7" />
-        <location line="+24" />
+        <location line="+36" />
         <location line="+26" />
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+150" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
         <location line="+54" />
         <location line="+32" />
         <location line="+28" />
@@ -7834,10 +7839,10 @@ Check the json file for errors and fix them.</source>
         <location line="+18" />
         <location line="+23" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-130" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-97" />
         <location line="+73" />
         <location line="+9" />
-        <location line="+85" />
+        <location line="+52" />
         <location line="+4" />
         <location line="+7" />
         <location line="+9" />
@@ -7855,13 +7860,14 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1018" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1062" />
         <location line="+6" />
-        <location line="+26" />
-        <location line="+53" />
+        <location line="+28" />
+        <location line="+52" />
         <location line="+8" />
-        <location line="+33" />
-        <location line="+341" />
+        <location line="+35" />
+        <location line="+320" />
+        <location line="+62" />
         <location line="+99" />
         <location line="+49" />
         <location line="+67" />
@@ -7877,24 +7883,23 @@ Check the json file for errors and fix them.</source>
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+73" />
+        <location line="+87" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
         <location line="+108" />
         <location line="+83" />
-        <location line="+41" />
+        <location line="+42" />
         <location line="+38" />
         <location line="+52" />
         <location line="+38" />
         <location line="+21" />
         <location line="+20" />
-        <location line="+23" />
-        <location line="+106" />
-        <location line="+184" />
+        <location line="+24" />
+        <location line="+121" />
+        <location line="+214" />
         <location line="+33" />
-        <location line="+211" />
-        <location line="+51" />
+        <location line="+215" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+674" />
         <source>Connect</source>
         <translation>Csatlakozás</translation>
@@ -7915,31 +7920,15 @@ Check the json file for errors and fix them.</source>
         <translation>Csak a firmware helyreállítását támogatják az Alif Semiconductor SE eszközök segítségével.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-397" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-303" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-484" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-164" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-250" />
-        <location line="+13" />
-        <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+31" />
-        <location line="+13" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location line="+26" />
         <location line="+7" />
-        <location line="+165" />
         <source>Disconnect</source>
         <translation>Leválasztás</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+19" />
+        <location line="+19" />
         <source>Start (run script)</source>
         <translation>Indítás (szkript futtatása)</translation>
     </message>
@@ -7968,7 +7957,6 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+332" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <source>Stop</source>
         <translation>Megállít</translation>
@@ -7992,47 +7980,31 @@ Check the json file for errors and fix them.</source>
         <translation>Nagyítás, hogy illeszkedjen</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+17" />
+        <location line="+30" />
         <source>JPG</source>
         <translation>JPG</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+1" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG tömöríti a keretpuffert a nagyobb teljesítmény érdekében</translation>
     </message>
     <message>
-        <location line="+17" />
-        <location line="+22" />
-        <location line="+1851" />
-        <location line="+55" />
-        <location line="+112" />
-        <location line="+69" />
-        <location line="+278" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-547" />
-        <location line="+216" />
-        <location line="+167" />
-        <location line="+165" />
-        <location line="+173" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+335" />
-        <location line="+346" />
         <source>Busy... please wait...</source>
-        <translation>Foglalt... kérem várjon...</translation>
+        <translation type="vanished">Foglalt... kérem várjon...</translation>
     </message>
     <message>
-        <location line="-2381" />
-        <location line="+15" />
+        <location line="-25" />
         <source>Disable</source>
         <translation>Letiltás</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+1" />
         <source>Disable the Frame Buffer for maximum performance</source>
         <translation>A maximális teljesítmény érdekében tiltsa le a Frame Buffert</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+48" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Frame Buffer Disabled (Képkockapuffer letiltva) – kattintson újra a Letiltás gombra az engedélyezéshez (jobbra fent)</translation>
     </message>
@@ -8101,7 +8073,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Felbontás (sz:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1536" />
+        <location line="-1574" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
@@ -8111,7 +8083,7 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
     </message>
     <message>
         <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3142" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2478" />
         <source>Load Custom Firmware</source>
         <translation>Töltse be az egyéni firmware -t</translation>
     </message>
@@ -8186,13 +8158,23 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
         <location line="+8" />
         <location line="+31" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-855" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Konvertál</translation>
     </message>
     <message>
-        <location line="+819" />
+        <location line="+425" />
+        <source>Show Code Profiler</source>
+        <translation>Kódprofil megjelenítése</translation>
+    </message>
+    <message>
+        <location line="+101" />
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;A %L4 %L1-ről&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Szerző: Ibrahim Abdelkader és Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GYÁRI VERZIÓ&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Csak engedéllyel rendelkező gyártóknak készült.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU ÁLTALÁNOS NYILVÁNOSSÁGI LICENC (GNU ÁLTALÁNOS NYILVÁNOSSÁGI LICENC)&lt;/bL&gt;&lt;2Copy/p&gt; %L3&lt;/p&gt;&lt;p&gt;Ezt a programot abban a reményben terjesztjük, hogy hasznos lesz, de MINDEN GARANCIA NÉLKÜL; még az ELADHATÓSÁGRA vagy A MEGHATÁROZOTT CÉLRA VALÓ ALKALMASSÁGRA vonatkozó hallgatólagos garancia nélkül. További részletekért tekintse meg a &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU általános nyilvános licencét&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Kérdései vagy megjegyzései vannak?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vegye fel velünk a kapcsolatot a következő címen: &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+331" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Képpontok (%7) - Fókusz (%8)</translation>
@@ -8230,7 +8212,7 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2612" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2693" />
         <source>Board:</source>
         <translation>Tábla:</translation>
     </message>
@@ -8240,7 +8222,7 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
         <translation>Kamerakártya típusa</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+15" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
         <source>Sensor:</source>
         <translation>Érzékelő:</translation>
@@ -8274,14 +8256,14 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
     </message>
     <message>
         <location line="+6" />
-        <location line="+2007" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-319" />
-        <location line="+321" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-291" />
+        <location line="+293" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-573" />
         <source>Drive:</source>
         <translation>Hajtás:</translation>
     </message>
     <message>
-        <location line="-2006" />
+        <location line="+1" />
         <source>Drive associated with port</source>
         <translation>Porthoz társított meghajtó</translation>
     </message>
@@ -8297,8 +8279,8 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
         <translation>Eltérhet a fényképezőgép FPS-étől</translation>
     </message>
     <message>
-        <location line="+234" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2825" />
+        <location line="+267" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2908" />
         <source>Update Available</source>
         <translation>Frissítés elérhető</translation>
     </message>
@@ -8313,7 +8295,7 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
         <translation>Letöltés</translation>
     </message>
     <message>
-        <location line="+207" />
+        <location line="+223" />
         <source>WiFi Programming Disabled!</source>
         <translation>WiFi programozás letiltva!</translation>
     </message>
@@ -8394,17 +8376,17 @@ Az OpenMV Cam firmware-je pánikba esik egy hardverhiba miatt. Ellenőrizze, hog
     </message>
     <message>
         <location line="+93" />
-        <location line="+1595" />
+        <location line="+1176" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Soros port - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1563" />
+        <location line="-1144" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1210" />
+        <location line="+791" />
         <location line="+145" />
         <location line="+114" />
         <location line="+129" />
@@ -8414,7 +8396,7 @@ Az OpenMV Cam firmware-je pánikba esik egy hardverhiba miatt. Ellenőrizze, hog
         <translation>Csatlakozás... (30 másodperces időtúllépés)</translation>
     </message>
     <message>
-        <location line="-2202" />
+        <location line="-1783" />
         <source>
 
 Try doing:
@@ -8467,12 +8449,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1652" />
+        <location line="+1233" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP-kiszolgáló kapcsolat - %1</translation>
     </message>
     <message>
-        <location line="-1578" />
+        <location line="-1159" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Érvénytelen portargumentum (%1) az -open_udp_server_terminalhoz</translation>
     </message>
@@ -8503,12 +8485,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1698" />
+        <location line="+1279" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP szerver kapcsolat - %1</translation>
     </message>
     <message>
-        <location line="-1624" />
+        <location line="-1205" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Érvénytelen portargumentum (%1) a -open_tcp_server_terminal számára</translation>
     </message>
@@ -8519,8 +8501,8 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+55" />
-        <location line="+9" />
-        <location line="+8" />
+        <location line="+18" />
+        <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
@@ -8535,7 +8517,7 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2281" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2388" />
         <location line="+9" />
         <location line="+8" />
         <location line="+19" />
@@ -8543,7 +8525,7 @@ sudo adduser %L1 dialout
         <translation>Regisztrálja az OpenMV kamerát</translation>
     </message>
     <message>
-        <location line="-226" />
+        <location line="-244" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8562,7 +8544,14 @@ ID: %2
 Futtassa a Példák-&gt;HelloWorld-&gt;helloworld.py fájlt a látás minőségének teszteléséhez és a kamera fókuszálásához (ha van).</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
+        <location line="+17" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <source>Registered</source>
+        <translation>Bejegyzett</translation>
+    </message>
+    <message>
+        <location line="-6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8577,9 +8566,9 @@ ID: %2
 Futtassa a Példák-&gt;HelloWorld-&gt;helloworld.py fájlt a látás minőségének teszteléséhez és a kamera fókuszálásához (ha van).</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <location line="+182" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-35" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>Adatbázis hiba!</translation>
     </message>
@@ -8672,33 +8661,30 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Érvénytelenül formázott táblakulcs!</translation>
     </message>
     <message>
-        <location line="+64" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+186" />
-        <location line="+490" />
-        <location line="+153" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+190" />
+        <location line="+472" />
+        <location line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-77" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
     <message>
-        <location line="+86" />
         <source>Configure Settings</source>
-        <translation>Beállítások konfigurálása</translation>
+        <translation type="vanished">Beállítások konfigurálása</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+22" />
-        <location line="+14" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+373" />
+        <location line="+20" />
         <source>Save Script</source>
         <translation>Szkript mentése</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-19" />
         <source>Strip comments and convert spaces to tabs?</source>
         <translation>Törli a megjegyzéseket és konvertálja a szóközöket tabulátorokká?</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8709,34 +8695,33 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     </message>
     <message>
         <location line="-23" />
-        <location line="+1418" />
+        <location line="+1101" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Képfájlok (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1373" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
         <location line="+7" />
         <location line="+17" />
         <location line="+15" />
-        <location line="+11" />
         <source>Save Template</source>
         <translation>Sablon mentése</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="-37" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)</source>
         <translation>Képfájlok (*.bmp *.jpg *.jpeg *.pgm *.ppm)</translation>
     </message>
     <message>
         <location line="+23" />
-        <location line="+69" />
+        <location line="+67" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>Kérjük, válasszon érvényes elérési utat az OpenMV kamerán!</translation>
     </message>
     <message>
-        <location line="-54" />
-        <location line="+69" />
+        <location line="-52" />
+        <location line="+67" />
         <source>"%L1" is longer than a max length of %L2 characters!</source>
         <translation>"%L1" hosszabb, mint a maximális %L2 karakter!</translation>
     </message>
@@ -8745,20 +8730,19 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <location line="+7" />
         <location line="+17" />
         <location line="+15" />
-        <location line="+11" />
         <source>Save Descriptor</source>
         <translation>Leíró mentése</translation>
     </message>
     <message>
-        <location line="-48" />
-        <location line="+1390" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
         <location line="+80" />
         <location line="+21" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>Keypoints fájlok (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1292" />
+        <location line="-1113" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8786,14 +8770,13 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>A „%L1” példafájl nem nyitható meg!</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-457" />
         <location line="+28" />
-        <location line="+29" />
         <source>Select Drive</source>
         <translation>Válassza a Drive lehetőséget</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="-27" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>Nem található érvényes meghajtó az OpenMV kamerához!</translation>
     </message>
@@ -8812,17 +8795,42 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Meghajtó: %L1</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+41" />
         <source>Debug Protocol Settings</source>
         <translation>Hibakeresési protokoll beállításai</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+14" />
+        <source>Protocol Version %1 - System Info:</source>
+        <translation>Protokoll verzió % 1 - Rendszerinformáció:</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Host Stats:</source>
+        <translation>Gazda statisztikái:</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Device Stats:</source>
+        <translation>Készülékstatisztikák:</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Protocol Controls:</source>
+        <translation>Protokollvezérlés:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Dynamic Frame Reading</source>
+        <translation>Dinamikus keretolvasás</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Combined Polling</source>
         <translation>Kombinált szavazás</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+12" />
         <source>Polling (ms)</source>
         <translation>Lekérdezés (ms)</translation>
     </message>
@@ -8837,12 +8845,12 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Lekérdezési beállítások</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+17" />
         <source>Frame Buffer Polling (ms)</source>
         <translation>Keretpuffer lekérdezése (ms)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Script State Polling (ms)</source>
         <translation>Parancsfájl-állapot lekérdezése (ms)</translation>
     </message>
@@ -8852,7 +8860,19 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Szövegpuffer lekérdezése (ms)</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+9" />
+        <source>Code Profiler Polling (ms)</source>
+        <translation>Kódprofil lekérdezése (ms)</translation>
+    </message>
+    <message>
+        <location line="+354" />
+        <location line="+26" />
+        <location line="+7" />
+        <source>Failed to flush "%L1"!</source>
+        <translation>Nem sikerült kiüríteni "%L1"!</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
         <location line="+13" />
         <location line="+31" />
         <location line="+9" />
@@ -8899,7 +8919,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1928" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1977" />
         <source>Please select a serial port</source>
         <translation>Kérjük, válasszon egy soros portot</translation>
     </message>
@@ -9025,7 +9045,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     </message>
     <message>
         <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+716" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
         <source>What would you like to do?</source>
         <translation>Mit szeretnél csinálni?</translation>
     </message>
@@ -9137,7 +9157,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>A generáció kész!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1462" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1508" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Új OpenMV IDE erőforrások állnak rendelkezésre (például példák, firmware, dokumentáció stb.).</translation>
     </message>
@@ -9148,8 +9168,8 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+286" />
-        <location line="+142" />
+        <location line="+288" />
+        <location line="+143" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-420" />
         <location line="+148" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
@@ -9172,7 +9192,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Letöltés...</translation>
     </message>
     <message>
-        <location line="-414" />
+        <location line="-417" />
         <source>Installing...</source>
         <translation>Telepítés...</translation>
     </message>
@@ -9190,75 +9210,86 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     <message>
         <location line="+28" />
         <location line="+6" />
-        <location line="+26" />
+        <location line="+28" />
         <source>Package Update</source>
         <translation>Csomag frissítése</translation>
     </message>
     <message>
-        <location line="-25" />
-        <location line="+252" />
-        <location line="+87" />
+        <location line="-27" />
+        <location line="+254" />
+        <location line="+88" />
         <source>Cannot open the resources file "%L1"!</source>
         <translation>A „%L1” erőforrásfájl nem nyitható meg!</translation>
     </message>
     <message>
-        <location line="-313" />
-        <location line="+252" />
-        <location line="+94" />
+        <location line="-314" />
+        <location line="+254" />
+        <location line="+95" />
         <source>Network request failed "%L1"!</source>
         <translation>A hálózati kérés sikertelen volt "%L1"!</translation>
     </message>
     <message>
-        <location line="-312" />
+        <location line="-315" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>Firmware bináris ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
         <location line="+11" />
         <location line="+119" />
-        <location line="+544" />
+        <location line="+588" />
         <location line="+217" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Törölje a belső zsírfájlrendszert</translation>
     </message>
     <message>
-        <location line="-3069" />
+        <location line="-3160" />
         <location line="+119" />
-        <location line="+545" />
+        <location line="+589" />
         <location line="+216" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Ha engedélyezi ezt az opciót, az OpenMV CAM belső zsírfájlrendszerének minden fájlja törlődik. Ez nem törli a fájlokat egyetlen cserélhető SD -kártyán (ha beillesztve).</translation>
     </message>
     <message>
-        <location line="-3069" />
-        <location line="+664" />
+        <location line="-3160" />
+        <location line="+708" />
         <location line="+216" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>A ROMFS fájlrendszer visszaállítása</translation>
     </message>
     <message>
-        <location line="-3068" />
-        <location line="+664" />
+        <location line="-3159" />
+        <location line="+708" />
         <location line="+215" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Ha engedélyezi ezt az opciót, az OpenMV CAM ROM fájlrendszere visszaállítja az alapértelmezett értéket.</translation>
     </message>
     <message>
-        <location line="-3025" />
+        <location line="-3116" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>Bootloader</translation>
     </message>
     <message>
-        <location line="-113" />
+        <location line="+2947" />
+        <source>You can find more examples under the File -&gt; Examples menu.
+
+In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
+        <translation>További példákat a Fájl -&gt; Példák menüpont alatt találhat. 
+
+Különösen nézze meg a Képfeldolgozás -&gt; Színkövetés és gépi tanulás -&gt; TensorFlow példákat.</translation>
+    </message>
+    <message>
+        <location line="-3060" />
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
         <translation>Firmware elérési út</translation>
@@ -9301,7 +9332,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Ha engedélyezi ezt az opciót, az OpenMV CAM ROM fájlrendszerét frissítik a legújabb fejlesztési kiadásra.</translation>
     </message>
     <message>
-        <location line="+103" />
+        <location line="+104" />
         <source>Extracting...</source>
         <translation>Kibontás...</translation>
     </message>
@@ -9311,9 +9342,9 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Nem sikerült kicsomagolni a firmware-t!</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+148" />
         <location line="+5" />
-        <location line="+49" />
+        <location line="+48" />
         <location line="+5" />
         <location line="+5" />
         <location line="+5" />
@@ -9321,7 +9352,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Ismeretlen deszka</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+233" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>A rendszer DFU módban lévő kártyát észlelt. Mit szeretnél csinálni?</translation>
     </message>
@@ -9350,7 +9381,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Van OpenMV Cam csatlakoztatva, és tégla van?</translation>
     </message>
     <message>
-        <location line="+833" />
+        <location line="+848" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
 Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
@@ -9384,7 +9415,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
         <translation>Csak a *.bin fájlok betöltése támogatott a Picotool bootloader számára!</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+24" />
         <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
@@ -9394,10 +9425,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-119" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-959" />
-        <location line="+642" />
-        <location line="+1676" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-975" />
+        <location line="+656" />
+        <location line="+1707" />
         <source>Please select the board type</source>
         <translation>Kérjük, válassza ki a tábla típusát</translation>
     </message>
@@ -9406,7 +9437,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Törli a belső fájlrendszert?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2206" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2251" />
         <source>No released firmware available for the attached board!</source>
         <translation>A csatolt kártyához nem érhető el kiadott firmware!</translation>
     </message>
@@ -9423,13 +9454,22 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Kérjük, frissítse a rendszertöltőt a legújabb verzióra, és telepítse a SoftDevice-t az OpenMV firmware frissítéséhez. További információ a &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt; oldalon található.</translation>
     </message>
     <message>
-        <location line="-1019" />
-        <location line="+2877" />
+        <location line="-1063" />
+        <location line="+2968" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>FIGYELMEZTETÉS: Az új firmware verzióra történő frissítéshez a FAT fájlrendszer törlését igényli.</translation>
     </message>
     <message>
-        <location line="-2365" />
+        <location line="-2483" />
+        <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
+
+%1</source>
+        <translation>Az Ön operációs rendszere USB-problémákat észlelt az alábbi eszközökkel ezen a rendszeren. Kérjük, javítsa vagy távolítsa el ezeket az eszközöket, mert csatlakozási problémákat okoznak. 
+
+%1</translation>
+    </message>
+    <message>
+        <location line="+71" />
         <source>Just erase the internal FAT file system</source>
         <translation>Csak törölje a belső zsírfájlrendszert</translation>
     </message>
@@ -9445,12 +9485,12 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+219" />
-        <location line="+2115" />
+        <location line="+2162" />
         <source>Upgrade options:</source>
         <translation>Frissítési lehetőségek:</translation>
     </message>
     <message>
-        <location line="-2031" />
+        <location line="-2078" />
         <location line="+167" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -9466,7 +9506,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (Ha ez 5 másodpercnél tovább tart, nyomja meg a Mégse gombot.)</translation>
     </message>
     <message>
-        <location line="+119" />
+        <location line="+133" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Időtúllépési hiba a firmware verzió lekérése közben!</translation>
     </message>
@@ -9483,7 +9523,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location line="+72" />
         <location line="+191" />
-        <location line="+523" />
+        <location line="+570" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Időtúllépési hiba a tábla architektúrája lekérésekor!</translation>
     </message>
@@ -9492,8 +9532,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Nem támogatott tábla architektúra!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-619" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+130" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Válassza le az OpenMV kamerát, majd csatlakoztassa újra...</translation>
     </message>
@@ -9547,12 +9587,12 @@ Folytatni?</translation>
         <translation>Törlés...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+204" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-173" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+273" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+140" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-191" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+46" />
         <location line="+56" />
@@ -9650,7 +9690,7 @@ Folytatni?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+272" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
         <location line="+130" />
         <location line="+41" />
@@ -9677,7 +9717,7 @@ Ebben az esetben kattintson az OK gombra, amikor látja az OpenMV Cam belső fla
         <translation>A firmware fájl üres!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-193" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-160" />
         <source>No IMX settings for the selected board type %L1!</source>
         <translation>Nincsenek IMX beállítások a kiválasztott %L1 kártyatípushoz!</translation>
     </message>
@@ -9687,29 +9727,11 @@ Ebben az esetben kattintson az OK gombra, amikor látja az OpenMV Cam belső fla
         <translation>Nem találhatók IMX beállítások!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-385" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-291" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-486" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+17" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-238" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+326" />
-        <location line="+13" />
-        <location line="+7" />
         <source>Failed to eject "%L1"!</source>
-        <translation>Nem sikerült kivenni a következőt: "%L1"!</translation>
+        <translation type="vanished">Nem sikerült kivenni a következőt: "%L1"!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+10" />
+        <location line="+14" />
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
@@ -9764,14 +9786,14 @@ Kattintson az OK gombra, miután az OpenMV Cam SBL Bootloaderje felsorolta.</tra
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+364" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+99" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+270" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+424" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-1" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+111" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-1" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-42" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+1" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+217" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1" />
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>Kattintson az OK gombra, miután az OpenMV Cam felsorolta, és befejezte a beépített öntesztet (a kék led villog – ez eltart egy ideig).</translation>
     </message>
@@ -9922,7 +9944,7 @@ Kattintson az OK gombra, miután az OpenMV Cam SBL Bootloaderje felsorolta.</tra
         <translation>A PicoTool firmware frissítése nem sikerült!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-509" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521" />
         <source>OpenMV IDE needs to update your bootloader to support ROMFS.
 
 The internal FAT filesystem will be erased!
@@ -9959,12 +9981,12 @@ Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</tra
     </message>
     <message>
         <location line="+11" />
-        <location line="+4" />
+        <location line="+11" />
         <source>Flashing Bootloader</source>
         <translation>Villogó Bootloader</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+14" />
         <source>DFU bootloader reset complete!
 
 </source>
@@ -10005,13 +10027,13 @@ Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</tra
         <translation>A DFU rendszerbetöltő visszaállítása nem sikerült!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-555" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
         <source>None</source>
         <translation>Semmi</translation>
     </message>
     <message>
-        <location line="+18" />
-        <location line="+10" />
+        <location line="+27" />
+        <location line="+16" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>Ismeretlen</translation>
@@ -10022,17 +10044,27 @@ Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</tra
         <translation>Időtúllépési hiba az érzékelő típusának lekérésekor!</translation>
     </message>
     <message>
-        <location line="+217" />
+        <location line="+156" />
+        <source>Unregistered</source>
+        <translation>Nem regisztrált</translation>
+    </message>
+    <message>
+        <location line="+91" />
         <source>Timeout error while learning MTU!</source>
         <translation>Időtúllépési hiba az MTU tanulása közben!</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+134" />
         <source>Board: %L1</source>
         <translation>Tábla: %L1</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
+        <source>Sensors: %L1</source>
+        <translation>Érzékelők: %L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Sensor: %L1</source>
         <translation>Érzékelő: %L1</translation>
     </message>
@@ -10062,39 +10094,137 @@ Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</tra
         <translation> - [ legújabb ]</translation>
     </message>
     <message>
-        <location line="+255" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <source>Failed to open or parse ELF: %1</source>
+        <translation>Nem sikerült megnyitni vagy elemezni az ELF-et: %1</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>No function symbols found (.symtab/.dynsym missing or stripped)</source>
+        <translation>Nem található funkciószimbólum (.symtab/.dynsym hiányzik vagy lecsupaszított)</translation>
+    </message>
+    <message>
+        <location line="+176" />
+        <source>Event %1</source>
+        <translation>Esemény %1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Function</source>
+        <translation>Funkció</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Calls</source>
+        <translation>Hívások</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Min μs</source>
+        <translation>Min μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Max μs</source>
+        <translation>Max μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Total μs</source>
+        <translation>Összesen μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Average μs</source>
+        <translation>Átlagos μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Average Cycles</source>
+        <translation>Átlagos ciklusok</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Percentage</source>
+        <translation>Százalék</translation>
+    </message>
+    <message>
+        <location line="+396" />
+        <location line="+172" />
+        <source>Code Profiler</source>
+        <translation>Code Profiler</translation>
+    </message>
+    <message>
+        <location line="-147" />
+        <source>Flat</source>
+        <translation>Lakás</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Tree</source>
+        <translation>Fa</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Firmware ELF (*.elf)</source>
+        <translation>Firmware ELF (*.elf)</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Filter functions...</source>
+        <translation>Szűrési funkciók...</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Inclusive</source>
+        <translation>Beleértve</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Exclusive</source>
+        <translation>Kizárólagos</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Reset</source>
         <translation>Újraindítás</translation>
     </message>
     <message>
-        <location line="+167" />
-        <source>Start</source>
-        <translation>Rajt</translation>
+        <location line="+165" />
+        <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
+        <translation>Funkciók: %1, Összes hívás: %2, Összes μs: %3, Összes ciklus: %4, Összes esemény: %5</translation>
     </message>
     <message>
-        <location line="+174" />
+        <location line="+9" />
+        <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4</source>
+        <translation>Funkciók: %1, Összes hívás: %2, Összes μs: %3, Összes ciklus: %4</translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="vanished">Rajt</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+578" />
         <source>More Examples</source>
         <translation>További példák</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Color-Tracking examples.</source>
-        <translation>További példákat a Fájl -&gt; Példák menüpont alatt találhat.
+        <translation type="vanished">További példákat a Fájl -&gt; Példák menüpont alatt találhat.
 
 Különösen nézze meg a színkövetési példákat.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <location line="+69" />
         <location line="+9" />
-        <location line="+58" />
         <source>Firmware Update</source>
         <translation>Alapszoftver frissítés</translation>
     </message>
     <message>
-        <location line="-133" />
+        <location line="-75" />
         <source>Update your OpenMV Cam's firmware to the latest version?</source>
         <translation>Frissíti OpenMV Cam firmware-jét a legújabb verzióra?</translation>
     </message>
@@ -10109,7 +10239,7 @@ Különösen nézze meg a színkövetési példákat.</translation>
         <translation>Vissza kell állítania az OpenMV Cam firmware-jét a kiadási verzióra?</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+87" />
         <source>No board settings for the connected board found!</source>
         <translation>A csatlakoztatott tábla nem található táblák beállításai!</translation>
     </message>
@@ -10119,18 +10249,23 @@ Különösen nézze meg a színkövetési példákat.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="-55" />
-        <location line="+110" />
+        <location line="+150" />
         <source>No Image</source>
         <translation>Nincs kép</translation>
     </message>
     <message>
-        <location line="-63" />
+        <location line="-103" />
         <location line="+7" />
         <source>Video Record</source>
         <translation>Videófelvétel</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location line="+69" />
+        <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!</source>
+        <translation>Figyelmeztetés: A JPEG/PNG túl nagy ahhoz, hogy a jelenlegi OpenMV kamerán puffereljen és elküldje az OpenMV IDE-be!</translation>
+    </message>
+    <message>
+        <location line="+83" />
         <location line="+10" />
         <location line="+10" />
         <location line="+10" />
@@ -10240,12 +10375,12 @@ Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4268" />
         <location line="+10" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-283" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
+        <location line="+236" />
         <source>Model Zoo</source>
         <translation>Állatkert</translation>
     </message>
@@ -10255,7 +10390,7 @@ Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
         <translation>Szűrőmodellek tábla típusonként</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+42" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+23" />
         <source>Copy</source>
         <translation>Másolás</translation>
@@ -10334,7 +10469,7 @@ Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-253" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>A lekérdezés sikertelen!</translation>
@@ -10623,7 +10758,7 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Ennek a parancsnak a végrehajtása eltart egy ideig. Kérjük várjon.</translation>
@@ -10776,12 +10911,12 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
     </message>
     <message>
         <location line="-77" />
-        <location line="+565" />
+        <location line="+608" />
         <source>Transcoding File...</source>
         <translation>Fájl átkódolása...</translation>
     </message>
     <message>
-        <location line="-554" />
+        <location line="-597" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10842,9 +10977,9 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
         <translation>Beviteli formátumok beszerzése</translation>
     </message>
     <message>
-        <location line="+44" />
-        <location line="+103" />
-        <location line="+59" />
+        <location line="+38" />
+        <location line="+111" />
+        <location line="+100" />
         <location line="+15" />
         <location line="+372" />
         <location line="+12" />
@@ -10870,12 +11005,21 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
         <translation>Videó konvertálása</translation>
     </message>
     <message>
-        <location line="-837" />
         <source>Failed to launch ffmpeg!</source>
-        <translation>Nem sikerült elindítani az ffmpeg-et!</translation>
+        <translation type="vanished">Nem sikerült elindítani az ffmpeg-et!</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="-989" />
+        <source>Converting</source>
+        <translation>Konvertálás</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>FFMPEG is not supported on this platform.</source>
+        <translation>Az FFMPEG nem támogatott ezen a platformon.</translation>
+    </message>
+    <message>
+        <location line="+100" />
         <source>Unable to write to output video file!</source>
         <translation>Nem lehet írni a kimeneti videofájlba!</translation>
     </message>
@@ -11016,7 +11160,7 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
         <translation>Nincs megfelelő interfész a kiválasztott fájlnévhez!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-757" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
         <source>Please select the target</source>
         <translation>Kérjük, válassza ki a célt</translation>
     </message>
@@ -11056,8 +11200,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+85" />
-        <location line="+11" />
+        <location line="+93" />
         <location line="+9" />
         <location line="+14" />
         <location line="+13" />
@@ -11074,7 +11217,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Szerkesztse a ROMF -eket</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="-620" />
         <location line="+91" />
         <source>A folder with the same name already exists!</source>
         <translation>Az azonos névvel rendelkező mappa már létezik!</translation>
@@ -11127,37 +11270,37 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <location line="+7" />
         <location line="+14" />
         <location line="+19" />
-        <location line="+243" />
+        <location line="+240" />
         <source>Extract File</source>
         <translation>Dosszié</translation>
     </message>
     <message>
-        <location line="-249" />
+        <location line="-246" />
         <source>View/Edit</source>
         <translation>Megtekintés/Szerkesztés</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+240" />
+        <location line="+237" />
         <source>Add File</source>
         <translation>Fájl hozzáadása</translation>
     </message>
     <message>
-        <location line="-239" />
-        <location line="+241" />
+        <location line="-236" />
+        <location line="+238" />
         <source>New Folder</source>
         <translation>Új mappa</translation>
     </message>
     <message>
         <location line="-147" />
         <location line="+14" />
-        <location line="+325" />
+        <location line="+322" />
         <location line="+12" />
         <source>ROMFS is not supported on this board!</source>
         <translation>A ROMFS nem támogatott ezen a táblán!</translation>
     </message>
     <message>
-        <location line="-293" />
+        <location line="-290" />
         <location line="+45" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Nem sikerült kicsomagolni a ROMF -eket!</translation>
@@ -11190,8 +11333,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Mentse el a ROMF -eket a fájlba</translation>
     </message>
     <message>
-        <location line="+106" />
-        <location line="+7" />
+        <location line="+110" />
         <location line="+8" />
         <location line="+12" />
         <location line="+13" />
@@ -11236,7 +11378,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-230" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>Fejlett</translation>
@@ -11261,31 +11403,33 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+172" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+189" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
         <source>Success - Press Ok to close the window</source>
         <translation>Siker - Nyomja meg az OK gombot az ablak bezárásához</translation>
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+6" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+8" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+6" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+5" />
         <source>Failure - Press Cancel to close the window</source>
         <translation>Hiba - Az ablak bezárásához nyomja meg a gombot</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-368" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+126" />
         <location line="+14" />
-        <location line="+137" />
+        <location line="+173" />
         <source>STEdgeAI Compilier</source>
         <translation>Alsó fordító</translation>
     </message>
     <message>
-        <location line="-298" />
+        <location line="-334" />
         <source>Failed to copy JSON file!</source>
         <translation>Nem sikerült másolni a JSON fájlt!</translation>
     </message>
@@ -11296,7 +11440,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-281" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-283" />
         <source>Please specify the compiler settings:</source>
         <translation>Kérjük, adja meg a fordító beállításait:</translation>
     </message>
@@ -11358,7 +11502,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Szellőztető</translation>
     </message>
     <message>
-        <location line="+123" />
+        <location line="+159" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>A STEDGEAI -fordító nem támogatott ezen a platformon.</translation>
     </message>
@@ -11419,61 +11563,69 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
+        <location line="+28" />
+        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+235" />
         <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
         <location line="+28" />
+        <location line="+12" />
+        <location line="+20" />
+        <location line="+21" />
         <location line="+15" />
-        <location line="+144" />
+        <location line="+22" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+11" />
+        <location line="+29" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+41" />
+        <location line="+306" />
         <source>Project Location</source>
         <translation>Projekt helye</translation>
     </message>
     <message>
-        <location line="-886" />
+        <location line="-895" />
+        <location line="+28" />
+        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+21" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+20" />
+        <location line="+21" />
+        <location line="+15" />
         <location line="+22" />
-        <location line="+81" />
-        <location line="+17" />
+        <location line="+24" />
         <location line="+1" />
-        <location line="+8" />
+        <location line="+22" />
         <location line="+1" />
-        <location line="+10" />
+        <location line="+33" />
         <location line="+1" />
-        <location line="+8" />
+        <location line="+18" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+19" />
         <location line="+1" />
         <location line="+11" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+11" />
+        <location line="+29" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+41" />
+        <location line="+28" />
         <location line="+1" />
-        <location line="+12" />
         <location line="+13" />
         <location line="+1" />
+        <location line="+12" />
         <location line="+8" />
         <location line="+1" />
         <location line="+8" />
@@ -11482,38 +11634,30 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+17" />
-        <location line="+32" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+20" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
         <location line="+10" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+15" />
-        <location line="+51" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+22" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+12" />
+        <location line="+94" />
         <source>Location</source>
         <translation>Hely</translation>
     </message>
@@ -11522,7 +11666,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">Qt teszt</translation>
     </message>
     <message>
-        <location line="-516" />
+        <location line="-85" />
         <source>Google Test</source>
         <translation>Google teszt</translation>
     </message>
@@ -11542,49 +11686,49 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Catch2</translation>
     </message>
     <message>
-        <location line="-371" />
+        <location line="-762" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+321" />
+        <location line="+712" />
         <source>Test framework:</source>
         <translation>Teszt keretrendszer:</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="-687" />
         <source>GUI Application</source>
         <translation>GUI alkalmazás</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+324" />
+        <location line="+715" />
         <source>Test suite name:</source>
         <translation>Tesztkészlet neve:</translation>
     </message>
     <message>
-        <location line="-374" />
+        <location line="-790" />
+        <location line="+25" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+22" />
-        <location line="+281" />
+        <location line="+694" />
         <source>Test case name:</source>
         <translation>Teszteset neve:</translation>
     </message>
     <message>
-        <location line="-302" />
+        <location line="-693" />
         <source>Requires QApplication</source>
         <translation>QApplication szükséges</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="-97" />
         <source>Generate setup code</source>
         <translation>Beállítási kód generálása</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
-        <location line="+280" />
+        <location line="+1" />
+        <location line="+98" />
+        <location line="+692" />
         <source>Generate initialization and cleanup code</source>
         <translation>Inicializálási és tisztítási kód létrehozása</translation>
     </message>
@@ -11593,17 +11737,17 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">C++11 engedélyezése</translation>
     </message>
     <message>
-        <location line="-324" />
+        <location line="-766" />
         <source>Googletest source directory (optional):</source>
         <translation>Googleteszt forráskönyvtár (opcionális):</translation>
     </message>
     <message>
-        <location line="-51" />
+        <location line="+51" />
         <source>Boost include directory (optional):</source>
         <translation>Boost include könyvtár (opcionális):</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="-27" />
         <source>Catch2 include directory (optional):</source>
         <translation>A Catch2 tartalmazza a könyvtárat (opcionális):</translation>
     </message>
@@ -11613,154 +11757,154 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Használj Qt könyvtárakat</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-50" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+40" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+107" />
-        <location line="+46" />
-        <location line="+43" />
+        <location line="+45" />
+        <location line="+47" />
+        <location line="+84" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-558" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+40" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+105" />
-        <location line="+48" />
         <location line="+43" />
+        <location line="+49" />
+        <location line="+84" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-558" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+40" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+153" />
-        <location line="+44" />
+        <location line="+92" />
+        <location line="+85" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-559" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+314" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+41" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="+42" />
+        <location line="+50" />
+        <location line="+84" />
         <source>Build system:</source>
         <translation>Rendszer felépítése:</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-559" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Projekt- és tesztinformációk</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-120" />
+        <location line="+23" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="+26" />
+        <location line="+51" />
         <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+79" />
-        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+17" />
-        <location line="+33" />
+        <location line="+164" />
+        <location line="+41" />
         <location line="+18" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+28" />
-        <location line="+142" />
+        <location line="+42" />
+        <location line="+70" />
+        <location line="+220" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+19" />
         <source>Details</source>
         <translation>Részletek</translation>
     </message>
     <message>
-        <location line="-887" />
+        <location line="-869" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+295" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Kit kiválasztása</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-886" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+295" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11768,101 +11912,101 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Készletek</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-886" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+23" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+18" />
-        <location line="+9" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+9" />
         <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+14" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+17" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+19" />
+        <location line="+19" />
         <source>Project Management</source>
         <translation>Projektmenedzsment</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-886" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+23" />
-        <location line="+19" />
-        <location line="+37" />
-        <location line="+9" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+9" />
         <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+14" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+17" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
+        <location line="+41" />
+        <location line="+19" />
+        <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Összegzés</translation>
@@ -11872,9 +12016,9 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">Új egységteszt-projektet hoz létre. Az egységtesztek lehetővé teszik annak ellenőrzését, hogy a kód alkalmas-e a használatra, és nincs-e regresszió.</translation>
     </message>
     <message>
-        <location line="-715" />
-        <location line="+380" />
-        <location line="+165" />
+        <location line="-466" />
+        <location line="+12" />
+        <location line="+456" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Egyéb projekt</translation>
@@ -11884,36 +12028,36 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">Automatikus tesztprojekt</translation>
     </message>
     <message>
-        <location line="-620" />
+        <location line="-57" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Teljesen minősített név, beleértve a névtereket</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+22" />
+        <location line="-645" />
+        <location line="+36" />
+        <location line="+276" />
+        <location line="+80" />
+        <location line="+235" />
         <location line="+19" />
-        <location line="+289" />
-        <location line="+145" />
-        <location line="+40" />
-        <location line="+119" />
+        <location line="+22" />
         <source>Class name:</source>
         <translation>Osztály név:</translation>
     </message>
     <message>
-        <location line="-633" />
-        <location line="+42" />
-        <location line="+433" />
+        <location line="-631" />
+        <location line="+592" />
+        <location line="+18" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Egyéni&gt;</translation>
     </message>
     <message>
-        <location line="-474" />
+        <location line="-646" />
+        <location line="+37" />
+        <location line="+282" />
+        <location line="+73" />
+        <location line="+237" />
+        <location line="+18" />
         <location line="+21" />
-        <location line="+21" />
-        <location line="+294" />
-        <location line="+139" />
-        <location line="+39" />
-        <location line="+119" />
         <source>Base class:</source>
         <translation>Alap osztály:</translation>
     </message>
@@ -11922,7 +12066,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-632" />
+        <location line="-20" />
         <source>Include QObject</source>
         <translation>Tartalmazza a QObject-et</translation>
     </message>
@@ -11964,10 +12108,10 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value('Osztály'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-329" />
+        <location line="+68" />
+        <location line="+262" />
         <location line="+19" />
-        <location line="+315" />
-        <location line="+292" />
         <source>Header file:</source>
         <translation>Fejállomány:</translation>
     </message>
@@ -11976,54 +12120,54 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value('Osztály'), Util.preferredSuffix('text/x-c++src'))}</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+215" />
+        <location line="-673" />
+        <location line="+37" />
+        <location line="+288" />
+        <location line="+68" />
+        <location line="+220" />
         <location line="+1" />
-        <location line="+80" />
-        <location line="+133" />
-        <location line="+39" />
-        <location line="+120" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+19" />
         <source>Source file:</source>
         <translation>Forrás fájl:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+392" />
-        <location line="+34" />
+        <location line="-597" />
         <location line="+20" />
         <location line="+21" />
+        <location line="+34" />
+        <location line="+19" />
+        <location line="+444" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Útvonal:</translation>
     </message>
     <message>
-        <location line="-739" />
-        <location line="+38" />
-        <location line="+429" />
-        <location line="+39" />
+        <location line="-673" />
+        <location line="+37" />
+        <location line="+596" />
+        <location line="+22" />
         <source>Define Class</source>
         <translation>Osztály meghatározása</translation>
     </message>
     <message>
-        <location line="-502" />
+        <location line="+4" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Létrehoz egy C++ fejlécet és egy forrásfájlt egy új osztályhoz, amelyet hozzáadhat egy C++ projekthez.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+65" />
-        <location line="+9" />
+        <location line="-203" />
+        <location line="+130" />
+        <location line="+74" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-73" />
+        <location line="+1" />
         <source>C++ Class</source>
         <translation>C++ osztály</translation>
     </message>
@@ -12063,22 +12207,22 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Létrehoz egy Qt-elemmodellt.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+66" />
-        <location line="+57" />
-        <location line="+62" />
-        <location line="+9" />
-        <location line="+59" />
+        <location line="-231" />
+        <location line="+39" />
+        <location line="+26" />
+        <location line="+65" />
+        <location line="+18" />
+        <location line="+84" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="+1" />
         <source>Qt Item Model</source>
         <translation>Qt cikkmodell</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-56" />
         <source>Qt for Python module:</source>
         <translation>Qt Python modulhoz:</translation>
     </message>
@@ -12112,18 +12256,18 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Új Python osztályfájlt hoz létre.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+158" />
+        <location line="-70" />
+        <location line="+71" />
         <source>Python</source>
         <translation>Piton</translation>
     </message>
     <message>
-        <location line="-157" />
+        <location line="+1" />
         <source>Python Class</source>
         <translation>Python osztály</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+45" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Létrehoz egy CMake alapú tesztprojektet, amelyhez kódrészletet lehet megadni.</translation>
     </message>
@@ -12178,7 +12322,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Kódrészlet</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-244" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Létrehoz egy fejlécfájlt, amelyet hozzáadhat egy C/C++ projekthez.</translation>
     </message>
@@ -12188,7 +12332,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>C/C++ fejlécfájl</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+128" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Létrehoz egy forrásfájlt, amelyet hozzáadhat egy C/C++ projekthez.</translation>
     </message>
@@ -12198,7 +12342,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>C/C++ forrásfájl</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Choose a Form Template</source>
         <translation>Válasszon egy űrlapsablont</translation>
     </message>
@@ -12216,12 +12360,12 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">Qt Designer forma</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-15" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Létrehoz egy töredék árnyékolót a Desktop OpenGL árnyékoló nyelvben (GLSL). A töredékes árnyékolók létrehozzák az OpenGL-lel renderelt háromszögek, pontok és vonalak végső pixelszíneit.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12229,12 +12373,12 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (asztali OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-11" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Létrehoz egy vertex shadert a Desktop OpenGL árnyékoló nyelvben (GLSL). A Vertex shader átalakítja az OpenGL-lel renderelt háromszögek, pontok és vonalak pozícióit, normálisait és textúra koordinátáit.</translation>
     </message>
@@ -12244,7 +12388,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Vertex Shader (asztali OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-11" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Fragment árnyékolót hoz létre az OpenGL/ES 2.0 árnyékolási nyelvben (GLSL/ES). A töredékes árnyékolók létrehozzák az OpenGL-lel renderelt háromszögek, pontok és vonalak végső pixelszíneit.</translation>
     </message>
@@ -12254,7 +12398,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Fragment Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-11" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Létrehoz egy vertex shadert az OpenGL/ES 2.0 árnyékolási nyelven (GLSL/ES). A Vertex shader átalakítja az OpenGL-lel renderelt háromszögek, pontok és vonalak pozícióit, normálisait és textúra koordinátáit.</translation>
     </message>
@@ -12264,7 +12408,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-67" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Java-fájlt hoz létre sablonkóddal.</translation>
     </message>
@@ -12279,7 +12423,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Java fájl</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+14" />
         <source>Stateless library</source>
         <translation>Hontalan könyvtár</translation>
     </message>
@@ -12300,25 +12444,25 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>JS fájl</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Model name:</source>
         <translation>Modell név:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+67" />
+        <location line="-64" />
+        <location line="+65" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Hely:</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
+        <location line="-64" />
+        <location line="+65" />
         <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
         <translation>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" létezik a fájlrendszerben.</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="+1" />
         <source>Model Name and Location</source>
         <translation>Modell neve és helye</translation>
     </message>
@@ -12328,19 +12472,19 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Új üres modellt hoz létre üres diagrammal.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
-        <location line="+62" />
+        <location line="-64" />
+        <location line="+53" />
+        <location line="+12" />
         <source>Modeling</source>
         <translation>Modellezés</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="+1" />
         <source>Model</source>
         <translation>Modell</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Egy ideiglenes fájl segítségével karcolásmodellt hoz létre.</translation>
     </message>
@@ -12350,23 +12494,23 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Scratch modell</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-81" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Üres Nim-fájlt hoz létre UTF-8 karakterkészlet használatával.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+9" />
+        <location line="+14" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-13" />
         <source>Nim File</source>
         <translation>Nim Fájl</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+12" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Üres Nim szkriptfájlt hoz létre UTF-8 karakterkészlet használatával.</translation>
     </message>
@@ -12376,7 +12520,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Nim Script fájl</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+138" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>Üres Python-szkriptfájlt hoz létre UTF-8 karakterkészlet használatával.</translation>
     </message>
@@ -12386,7 +12530,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Python fájl</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-56" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Egy Qt forrásfájl létrehozása (.qrc).</translation>
     </message>
@@ -12396,7 +12540,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Qt erőforrás fájl</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-67" />
         <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
         <translation>Létrehoz egy QML-fájlt alapkóddal, az „import QtQuick” szóval kezdődik.</translation>
     </message>
@@ -12406,21 +12550,21 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>QML fájl (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-32" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Scratch puffert hoz létre egy ideiglenes fájl segítségével.</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
-        <location line="+45" />
+        <location line="+1" />
+        <location line="+57" />
+        <location line="+47" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Általános</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-634" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Ez a varázsló létrehoz egy egyszerű egységteszt -projektet a Boost segítségével.</translation>
     </message>
@@ -12445,21 +12589,21 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Létrehoz egy új egység tesztprojektet a Boost segítségével. Az egységtesztek lehetővé teszik, hogy ellenőrizze, hogy a kód alkalmas -e a használatra, és hogy nincs -e regresszió.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-75" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
         <source>Test Project</source>
         <translation>Tesztprojekt</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-21" />
         <source>Boost Test Project</source>
         <translation>Boost tesztprojekt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Ez a varázsló létrehoz egy egyszerű egységteszt -projektet a CATC2 használatával.</translation>
     </message>
@@ -12494,7 +12638,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>CACL2 tesztprojekt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Ez a varázsló létrehoz egy egyszerű egységteszt -projektet a Google Test segítségével.</translation>
     </message>
@@ -12524,7 +12668,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Google Test projekt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+54" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Ez a varázsló létrehoz egy egyszerű egységteszt -projektet QT teszttel.</translation>
     </message>
@@ -12539,7 +12683,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>QT tesztprojekt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-116" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Ez a varázsló létrehoz egy egyszerű egység tesztprojektet QT Quick Test segítségével.</translation>
     </message>
@@ -12554,17 +12698,17 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>QT gyors tesztprojekt</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+815" />
         <source>Include QQuickItem</source>
         <translation>Tartalmazza a QquickItem -t</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+49" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>Létrehoz egy CMake-alapú tesztprojektet, ahol beírhat egy kódrészletet, hogy összeállítsa és ellenőrizze.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="-121" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Létrehoz egy QT kütyü -tervező űrlapot, amelyet hozzáadhat egy QT widget projekthez. Ez akkor hasznos, ha már létezett osztálya van az UI üzleti logikájához.</translation>
     </message>
@@ -12574,7 +12718,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>QT Widgets Designer forma</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-105" />
         <source>Creates a markdown file.</source>
         <translation>Létrehoz egy markdown fájlt.</translation>
     </message>
@@ -12584,12 +12728,12 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Markdown fájl</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="-57" />
         <source>Scratch Buffer</source>
         <translation>Scratch Buffer</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+12" />
         <source>State chart name:</source>
         <translation>Állami diagram neve:</translation>
     </message>
@@ -12609,7 +12753,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Állami diagram</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+160" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12649,7 +12793,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Vizsgálati eset</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-100" />
         <source>Creates an empty file.</source>
         <translation>Üres fájlt hoz létre.</translation>
     </message>
@@ -12659,7 +12803,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Üres fájl</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+72" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Létrehoz egy fordítási fájlt, amelyet hozzáadhat egy QT projekthez.</translation>
     </message>
@@ -12669,61 +12813,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT fordítási fájl</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-623" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Ez a varázsló egy egyszerű Qt-alapú konzolalkalmazást hoz létre.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+195" />
+        <location line="+92" />
+        <location line="+83" />
         <source>Meson</source>
         <translation>Mezon</translation>
     </message>
     <message>
-        <location line="-326" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="-442" />
+        <location line="+41" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="+42" />
+        <location line="+50" />
+        <location line="+84" />
         <source>Define Build System</source>
         <translation>Define Build System</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="-444" />
+        <location line="+41" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="+42" />
+        <location line="+50" />
+        <location line="+84" />
         <source>Build System</source>
         <translation>Rendszer kiépítése</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-582" />
+        <location line="+147" />
+        <location line="+32" />
+        <location line="+343" />
+        <location line="+70" />
         <source>Translation File</source>
         <translation>Fordítási fájl</translation>
     </message>
     <message>
-        <location line="-479" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-591" />
+        <location line="+147" />
+        <location line="+32" />
+        <location line="+343" />
+        <location line="+70" />
         <source>Translation</source>
         <translation>Fordítás</translation>
     </message>
     <message>
-        <location line="-262" />
+        <location line="-393" />
         <source>Define Python Interpreter</source>
         <translation>Határozza meg a Python tolmácsot</translation>
     </message>
@@ -12738,7 +12882,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Létrehoz egy QT-t a Python alkalmazáshoz, amely tartalmaz egy QT Widgets Designer alapú widget (UI fájl). .UI -t igényel a python átalakításhoz.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+269" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -12753,7 +12897,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Létrehoz egy QT gyors alkalmazást, amelynek lehet mind QML, mind C ++ kódja. Felépítheti az alkalmazást, és telepítheti azt asztali, beágyazott és mobil célplatformokra.</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="-59" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12762,7 +12906,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  A teljes alkalmazás kidolgozásához hozzon létre egy QT Quick Application projektet.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+173" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12779,31 +12923,31 @@ Preselects a desktop Qt for building the application if available.</source>
 Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhető.</translation>
     </message>
     <message>
-        <location line="-337" />
-        <location line="+266" />
-        <location line="+28" />
-        <location line="+44" />
+        <location line="-444" />
+        <location line="+32" />
+        <location line="+299" />
+        <location line="+114" />
         <source>Application (Qt)</source>
         <translation>Alkalmazás (Qt)</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-412" />
         <source>Qt Console Application</source>
         <translation>Qt konzol alkalmazás</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+302" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Ez a varázsló C++ könyvtárprojektet hoz létre.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+308" />
+        <location line="+84" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Határozza meg azokat az alapvető információkat azokról az osztályokról, amelyekre le szeretné generálni a csupasz forráskód fájlokat.</translation>
     </message>
     <message>
-        <location line="-307" />
+        <location line="-83" />
         <source>Shared Library</source>
         <translation>Megosztott könyvtár</translation>
     </message>
@@ -12819,7 +12963,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
     </message>
     <message>
         <location line="+1" />
-        <location line="+46" />
+        <location line="+35" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Típus:</translation>
@@ -12829,7 +12973,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation type="vanished">%{JS: value('Típus') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-33" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -12895,14 +13039,14 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Qt modul:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+116" />
+        <location line="-519" />
+        <location line="+147" />
+        <location line="+70" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+68" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+170" />
+        <location line="+164" />
+        <location line="+59" />
+        <location line="+42" />
         <source>Define Project Details</source>
         <translation>Határozza meg a projekt részleteit</translation>
     </message>
@@ -12911,38 +13055,38 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation type="vanished">Létrehoz egy C++ könyvtárat. Ezzel létrehozható:&lt;ul&gt;&lt;li&gt;egy megosztott C++ könyvtár a &lt;tt&gt;QPluginLoader&lt;/tt&gt; és futásidejű (Plugins) használatához&lt;/li&gt;&lt;li&gt;egy megosztott vagy statikus C++ könyvtár egy másikkal való használatra projekt linkidőben&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-427" />
-        <location line="+18" />
-        <location line="+186" />
-        <location line="+232" />
+        <location line="-513" />
+        <location line="+460" />
+        <location line="+62" />
+        <location line="+7" />
         <source>Library</source>
         <translation>Könyvtár</translation>
     </message>
     <message>
-        <location line="-435" />
+        <location line="-6" />
         <source>C++ Library</source>
         <translation>C++ könyvtár</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-366" />
         <source>Creates a simple Nim application.</source>
         <translation>Egyszerű Nim alkalmazást hoz létre.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+40" />
+        <location line="+229" />
         <location line="+18" />
-        <location line="+18" />
+        <location line="+157" />
         <source>Non-Qt Project</source>
         <translation>Nem Qt projekt</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-403" />
         <source>Nim Application</source>
         <translation>Nim alkalmazás</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+369" />
         <source>Binary</source>
         <translation>Binäris</translation>
     </message>
@@ -12957,13 +13101,13 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Szerző:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+402" />
+        <location line="-544" />
+        <location line="+545" />
         <source>Description:</source>
         <translation>Leírás:</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="+1" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13028,13 +13172,13 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Egyéb</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+386" />
+        <location line="-560" />
+        <location line="+561" />
         <source>License:</source>
         <translation>Licensz:</translation>
     </message>
     <message>
-        <location line="-385" />
+        <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -13075,22 +13219,22 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Határozza meg a projekt konfigurációját</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+253" />
-        <location line="+1" />
-        <location line="+33" />
+        <location line="-296" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
+        <location line="+33" />
+        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
+        <location line="+202" />
         <source>Configuration</source>
         <translation>Konfiguráció</translation>
     </message>
     <message>
-        <location line="-343" />
+        <location line="+5" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Nim alkalmazást hoz létre a Nimble segítségével.</translation>
     </message>
@@ -13100,7 +13244,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Fürge alkalmazás</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="-159" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Egyszerű C-alkalmazást hoz létre függőségek nélkül.</translation>
     </message>
@@ -13110,7 +13254,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Sima C alkalmazás</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="-20" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Egyszerű C++ alkalmazást hoz létre függőségek nélkül.</translation>
     </message>
@@ -13120,7 +13264,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Sima C++ alkalmazás</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+35" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Ez a varázsló egy üres .pro fájlt hoz létre.</translation>
     </message>
@@ -13139,20 +13283,20 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation type="vanished">PySide verzió:</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-218" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Létrehoz egy Qt for Python alkalmazást, amely csak a QApplication fő kódját tartalmazza.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-14" />
+        <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>Alkalmazás (Qt Pythonhoz)</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="-39" />
         <source>Empty Application</source>
         <translation>Üres alkalmazás</translation>
     </message>
@@ -13169,13 +13313,13 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location line="+39" />
+        <location line="-28" />
+        <location line="+37" />
         <source>Project file:</source>
         <translation>Projekt fájl:</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+11" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Létrehoz egy üres ablakot tartalmazó Qt-alkalmazást Pythonhoz.</translation>
     </message>
@@ -13185,15 +13329,15 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Üres ablak</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="-47" />
+        <location line="+15" />
         <location line="+22" />
         <location line="+15" />
-        <location line="+24" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-211" />
+        <location line="-65" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -13202,19 +13346,19 @@ Preselects a desktop Qt for building the application if available.</source>
  Előreválaszt egy asztali QT -t az alkalmazás felépítéséhez, ha rendelkezésre áll.</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+343" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Létrehoz egy C ++ könyvtárat. Létrehozhat: &lt;ul&gt; &lt;li&gt; Megosztott C ++ könyvtár &lt;tt&gt; qpluginloader &lt;/tt&gt; és futási idő (plugins) &lt;/li&gt; &lt;li&gt; megosztott vagy statikus C ++ könyvtár egy másik projekthez való felhasználáshoz a LinkTime -nál. &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="+107" />
+        <location line="-329" />
+        <location line="+15" />
         <location line="+22" />
-        <location line="+39" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="-24" />
+        <location line="+15" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -13248,50 +13392,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Létrehoz egy Qt for Python alkalmazást, amely tartalmaz egy Qt Designer-alapú widgetet (ui fájlt) – .ui-ból Python-ba konvertálás szükséges</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-55" />
         <source>Window UI</source>
         <translation>Ablak UI</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-70" />
+        <location line="+311" />
         <location line="+25" />
-        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-335" />
+        <location line="+311" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-310" />
+        <location line="+311" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-310" />
+        <location line="+311" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-310" />
+        <location line="+311" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-310" />
+        <location line="+311" />
         <location line="+23" />
-        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>Minimálisan szükséges Qt verzió:</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-22" />
         <source>MyItem</source>
         <translation>Saját elem</translation>
     </message>
@@ -13339,9 +13483,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Hozzon létre egy olyan projektet, amely kompatibilis a Qt Design Studióval (.qmlprojecten keresztül) és a Qt Creatorral (a CMakeLists.txt fájlon keresztül). Tartalmaz egy .ui.qml űrlapot, amelyet vizuálisan szerkeszthet a Qt Design Studio programban.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+30" />
-        <location line="+16" />
+        <location line="-324" />
+        <location line="+274" />
+        <location line="+55" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Használja a Qt virtuális billentyűzetet</translation>
     </message>
@@ -13354,12 +13498,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Létrehoz egy üres ablakot tartalmazó Qt Quick alkalmazást. Opcionálisan létrehozhat egy Qt Design Studio projektet.</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="+13" />
         <source>Qt Quick Application</source>
         <translation>Qt Gyors alkalmazás</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="-333" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -13381,12 +13525,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 Ezt csak akkor használja, ha prototípust készít. Ezzel nem lehet teljes alkalmazást létrehozni. Fontolja meg egy Qt Quick Application projekt használatát.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+272" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt Quick UI prototípus</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+146" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Ez a varázsló létrehoz egy Qt Widgets Application projektet. Az alkalmazás alapértelmezés szerint a QApplication-ből származik, és tartalmaz egy üres widgetet.</translation>
     </message>
@@ -13427,27 +13571,27 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Qt Widget alkalmazás</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+34" />
+        <location line="-332" />
         <location line="+18" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Kérjük, állítsa be most a(z) &lt;b&gt;%{vcsName}&lt;/b&gt; fájlt.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+52" />
+        <location line="-75" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>Adattár:</translation>
     </message>
     <message>
         <location line="-93" />
-        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>A tárhely URL-címe érvénytelen</translation>
@@ -13457,24 +13601,24 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-92" />
-        <location line="+54" />
+        <location line="-72" />
         <location line="+21" />
+        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>Könyvtár:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+33" />
+        <location line="-94" />
         <location line="+21" />
         <location line="+21" />
+        <location line="+34" />
         <location line="+19" />
         <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
         <translation>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" létezik a fájlrendszerben.</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-52" />
         <source>Use existing directory</source>
         <translation>Használja a meglévő könyvtárat</translation>
     </message>
@@ -13550,13 +13694,13 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
     </message>
     <message>
         <location line="+3" />
-        <location line="+60" />
+        <location line="+19" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Adja meg a lerakat URL-címét, a fizetési könyvtárat és az elérési utat.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-38" />
         <source>Running Bazaar branch...</source>
         <translation>Működő Bazár fiók...</translation>
     </message>
@@ -13575,9 +13719,9 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Klónoz egy bazári ágat, és megpróbálja betölteni a benne lévő projektet.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
+        <location line="-56" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13585,12 +13729,12 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Projekt importálása</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-38" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazár klón (vagy ág)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-69" />
         <source>Module:</source>
         <translation>Modul:</translation>
     </message>
@@ -13609,7 +13753,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+52" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13617,7 +13761,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Megnézés</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="-95" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Megvizsgál egy CVS-tárat, és megpróbálja betölteni a benne lévő projektet.</translation>
     </message>
@@ -13667,7 +13811,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+48" />
         <source>Running Mercurial clone...</source>
         <translation>Mercurial klón futtatása...</translation>
     </message>
@@ -13702,7 +13846,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Subversion megnézés</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-394" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Ez a varázsló egyéni Qt Creator beépülő modult hoz létre.</translation>
     </message>
@@ -19662,7 +19806,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+683" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
         <source>Python:</source>
         <translation>Piton:</translation>
     </message>
@@ -19672,7 +19816,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Run %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1147" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
         <location line="+283" />
         <source>Name:</source>
         <translation>Név:</translation>
@@ -19763,7 +19907,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Nyelvi kiszolgáló konfigurációja</translation>
     </message>
     <message>
-        <location line="+466" />
+        <location line="+476" />
         <source>Python interpreter:</source>
         <translation>Python tolmács:</translation>
     </message>
@@ -22841,7 +22985,7 @@ Nem lesz alkalmazva a szóközökre a megjegyzésekben és a karakterláncokban.
         <translation>Ez nem egy színterv fájl.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
         <source>derived from QObject</source>
         <comment>group:'C++' trigger:'class'</comment>
         <translation>a QObject-ből származik</translation>
@@ -22912,7 +23056,7 @@ Nem lesz alkalmazva a szóközökre a megjegyzésekben és a karakterláncokban.
         <translation type="vanished">(típusnév READ name WRITE setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>with targets</source>
         <comment>group:'QML' trigger:'NumberAnimation'</comment>
         <translation>célokkal</translation>
@@ -22984,7 +23128,7 @@ Nem lesz alkalmazva a szóközökre a megjegyzésekben és a karakterláncokban.
         <translation>Elkapni a forgatókönyvet</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-31" />
         <source>example</source>
         <comment>group:'Text' trigger:'global'</comment>
         <translation>példa</translation>

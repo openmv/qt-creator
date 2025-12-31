@@ -10,6 +10,19 @@
     </message>
 </context>
 <context>
+    <name>OpenMV::Internal::OpenMVProfileView</name>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <source>Copy</source>
+        <translation>Kopijuoti</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Select All</source>
+        <translation>Pasirinkite Viskas</translation>
+    </message>
+</context>
+<context>
     <name>OpenMVCameraSettings</name>
     <message>
         <location filename="../../../src/plugins/openmv/openmvcamerasettings.ui" />
@@ -201,7 +214,7 @@
         <translation>Atnaujinamas '%1' sintaksės apibrėžimas į %2 versiją...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1070" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
         <source>Copy/Convert Python File</source>
         <translation>Nukopijuokite/konvertuokite „Python“ failą</translation>
     </message>
@@ -2332,7 +2345,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Išvesti&amp;išvesti</translation>
     </message>
     <message>
-        <location line="+403" />
+        <location line="+406" />
         <source>Reset to Default</source>
         <translation>Iš naujo nustatykite iki numatytojo</translation>
     </message>
@@ -2745,7 +2758,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+13" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-672" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-675" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-89" />
         <source>Case Sensitive</source>
         <translation>Skiriamos didžiosios ir mažosios raidės</translation>
@@ -3726,7 +3739,7 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Galimybės</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
         <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
         <translation>Sukuria qm vertimo failus, kuriuos gali naudoti programa iš vertėjo ts failų</translation>
     </message>
@@ -3736,13 +3749,13 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Išleisk vertimus (lrelease)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
+        <location line="-9" />
+        <location line="+10" />
         <source>Linguist</source>
         <translation>Kalbininkas</translation>
     </message>
     <message>
-        <location line="-2" />
+        <location line="-12" />
         <source>Synchronizes translator's ts files with the program code</source>
         <translation>Sinchronizuoja vertėjo ts failus su programos kodu</translation>
     </message>
@@ -3763,13 +3776,13 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
     </message>
     <message>
         <location line="+1" />
-        <location line="+15" />
+        <location line="+10" />
         <location line="+5" />
         <source>Text</source>
         <translation>Tekstas</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>Paleidžia dabartinį QML failą su QML programa.</translation>
     </message>
@@ -3795,7 +3808,7 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Qt Quick 2 peržiūra (qmlscene)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-16" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Atidaro dabartinį failą vi</translation>
@@ -7054,7 +7067,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
-        <location line="+785" />
+        <location line="+823" />
         <source>Dataset Editor</source>
         <translation>Duomenų rinkinio redaktorius</translation>
     </message>
@@ -7064,13 +7077,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Įveskite klasės pavadinimą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+320" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+388" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+274" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
@@ -7078,37 +7091,36 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-695" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
         <location line="+19" />
         <location line="+115" />
-        <location line="+1344" />
+        <location line="+1441" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+106" />
+        <location line="+124" />
         <location line="+180" />
-        <location line="+204" />
-        <location line="+14" />
-        <location line="+348" />
+        <location line="+308" />
         <location line="+13" />
-        <location line="+347" />
+        <location line="+168" />
         <location line="+145" />
         <location line="+114" />
         <location line="+129" />
         <location line="+114" />
         <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+364" />
-        <location line="+252" />
-        <location line="+85" />
-        <location line="+972" />
-        <location line="+835" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
+        <location line="+254" />
+        <location line="+86" />
+        <location line="+1015" />
+        <location line="+896" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+523" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
         <location line="+11" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+506" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
         <source>Error: %L1!</source>
@@ -7116,7 +7128,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3755" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3433" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7131,8 +7143,8 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2476" />
-        <location line="+1763" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2471" />
+        <location line="+1446" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Nepavyko išsaugoti vaizdo failo dėl nežinomos priežasties!</translation>
@@ -7140,14 +7152,14 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+16" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+242" />
+        <location line="+239" />
         <source>Delete</source>
         <translation>Ištrinti</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-312" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
         <source>Are you sure you want to permanetly delete "%L1"?</source>
         <translation>Ar tikrai norite visam laikui ištrinti „%L1“?</translation>
     </message>
@@ -7174,33 +7186,29 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Nepavyko pervardyti failo dėl nežinomos priežasties!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5537" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5122" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
         <source>Could not copy file "%1" to "%2".</source>
         <translation>Nepavyko nukopijuoti failo „%1“ į „%2“.</translation>
     </message>
     <message>
-        <location line="+46" />
         <source>Invalid argument (%1) for -override_read_timeout</source>
-        <translation>Neteisingas argumentas (%1), skirtas -override_read_timeout</translation>
+        <translation type="vanished">Neteisingas argumentas (%1), skirtas -override_read_timeout</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Missing argument for -override_read_timeout</source>
-        <translation>Trūksta -override_read_timeout argumento</translation>
+        <translation type="vanished">Trūksta -override_read_timeout argumento</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Invalid argument (%1) for -override_read_stall_timeout</source>
-        <translation>Neteisingas argumentas (%1), skirtas -override_read_stall_timeout</translation>
+        <translation type="vanished">Neteisingas argumentas (%1), skirtas -override_read_stall_timeout</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Missing argument for -override_read_stall_timeout</source>
-        <translation>Trūksta -override_read_stall_timeout argumento</translation>
+        <translation type="vanished">Trūksta -override_read_stall_timeout argumento</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+40" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>Trūksta -serijos_numerio_filtro argumento</translation>
     </message>
@@ -7212,7 +7220,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2241" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2348" />
         <location line="+9" />
         <location line="+13" />
         <location line="+59" />
@@ -7242,42 +7250,39 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Redaguokite LAB slenkstį naudodami slenksčio rengyklę</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+226" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
         <source>Missing argument for -form_key</source>
         <translation>Trūksta -form_key argumento</translation>
     </message>
     <message>
-        <location line="+1034" />
+        <location line="+1066" />
         <source>About OpenMV Viewer...</source>
         <translation>Apie OpenMV Viewer...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Apie %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autorius: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU BENDROJI VIEŠOJI LICENCIJA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autorių teisės (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ši programa platinama tikintis, kad ji bus naudinga, bet BE JOKIŲ GARANTIJŲ; be net numanomos PERKAMUMO ar TINKAMUMO KONKREČIAM TIKSLUI GARANTIJOS. Daugiau informacijos rasite &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU bendroji viešoji licencija&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Turite klausimų ar komentarų?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Susisiekite su mumis &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Apie %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autorius: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU BENDROJI VIEŠOJI LICENCIJA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autorių teisės (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ši programa platinama tikintis, kad ji bus naudinga, bet BE JOKIŲ GARANTIJŲ; be net numanomos PERKAMUMO ar TINKAMUMO KONKREČIAM TIKSLUI GARANTIJOS. Daugiau informacijos rasite &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU bendroji viešoji licencija&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Turite klausimų ar komentarų?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Susisiekite su mumis &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <source>OpenMV IDE</source>
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1003" />
+        <location line="-1039" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
     <message>
-        <location line="-517" />
         <source>Invalid argument (%1) for -override_per_command_wait</source>
-        <translation>Neteisingas argumentas (%1), skirtas -override_per_command_wait</translation>
+        <translation type="vanished">Neteisingas argumentas (%1), skirtas -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Missing argument for -override_per_command_wait</source>
-        <translation>Trūksta argumento už -override_per_command_wait</translation>
+        <translation type="vanished">Trūksta argumento už -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="-460" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Neteisingas argumentas (%1), skirtas -auto_update</translation>
     </message>
@@ -7300,7 +7305,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Klaidų skaitymas &lt;Sere_resources&gt; /openmvide/firmware/settings.json: %L1.</translation>
     </message>
     <message>
-        <location line="+195" />
+        <location line="+193" />
         <source>Form Key</source>
         <translation>Formos raktas</translation>
     </message>
@@ -7310,7 +7315,7 @@ Check the json file for errors and fix them.</source>
         <translation>Įveskite formos raktą</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+82" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7353,7 +7358,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Paleiskite „Bootloader“ (įkelkite programinę-aparatinę įrangą)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+24" />
         <source>Ctrl+Shift+L</source>
         <translation>Ctrl + Shift + L</translation>
     </message>
@@ -7437,33 +7442,33 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+77" />
-        <location line="+4044" />
+        <location line="+3722" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Atidarykite terminalą</translation>
     </message>
     <message>
-        <location line="-4098" />
+        <location line="-3776" />
         <source>Machine Vision</source>
         <translation>Mašinos vizija</translation>
     </message>
     <message>
         <location line="+181" />
-        <location line="+3948" />
+        <location line="+3626" />
         <location line="+76" />
         <source>Threshold Editor</source>
         <translation>Slenksčio redaktorius</translation>
     </message>
     <message>
-        <location line="-4019" />
-        <location line="+4097" />
+        <location line="-3697" />
+        <location line="+3775" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Pagrindinių taškų redaktorius</translation>
     </message>
     <message>
-        <location line="-4090" />
-        <location line="+4256" />
+        <location line="-3768" />
+        <location line="+3934" />
         <location line="+98" />
         <location line="+24" />
         <location line="+11" />
@@ -7472,7 +7477,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag generatorius</translation>
     </message>
     <message>
-        <location line="-4404" />
+        <location line="-4082" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 šeima (30 žymų)</translation>
     </message>
@@ -7510,16 +7515,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+343" />
+        <location line="+371" />
         <location line="+14" />
-        <location line="+31" />
-        <location line="+823" />
+        <location line="+33" />
+        <location line="+874" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
         <source>Failed to open: "%L1"</source>
         <translation>Nepavyko atidaryti: „%L1“</translation>
     </message>
     <message>
-        <location line="-1235" />
+        <location line="-1316" />
         <source>DataMatrix Generator</source>
         <translation>DataMatrix generatorius</translation>
     </message>
@@ -7546,13 +7551,13 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+228" />
-        <location line="+2320" />
-        <location line="+47" />
-        <location line="+69" />
-        <location line="+1491" />
+        <location line="+2315" />
+        <location line="+1290" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
+        <location line="+67" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
         <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+856" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
         <location line="+208" />
         <source>Please add a file extension!</source>
         <translation>Pridėkite failo plėtinį!</translation>
@@ -7567,7 +7572,7 @@ Check the json file for errors and fix them.</source>
         <translation>Nepavyko perrašyti išvesties failo!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4140" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3818" />
         <source>Video Tools</source>
         <translation>Vaizdo įrašų įrankiai</translation>
     </message>
@@ -7667,15 +7672,15 @@ Check the json file for errors and fix them.</source>
         <location line="+237" />
         <location line="+141" />
         <location line="+67" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+208" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1343" />
+        <location line="+1440" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+240" />
-        <location line="+970" />
+        <location line="+258" />
+        <location line="+533" />
         <location line="+145" />
         <location line="+114" />
         <location line="+129" />
@@ -7683,18 +7688,18 @@ Check the json file for errors and fix them.</source>
         <location line="+118" />
         <location line="+433" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+286" />
-        <location line="+142" />
-        <location line="+978" />
+        <location line="+288" />
+        <location line="+143" />
+        <location line="+1021" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1297" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
         <location line="+85" />
-        <location line="+565" />
+        <location line="+608" />
         <source>Cancel</source>
         <translation>Atšaukti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3953" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3631" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Įkelkite į Edge Impulse projektą</translation>
     </message>
@@ -7726,7 +7731,7 @@ Check the json file for errors and fix them.</source>
         <translation>Uždaryti duomenų rinkinį</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+34" />
         <source>OpenMV Docs</source>
         <translation>OpenMV dokumentai</translation>
     </message>
@@ -7746,7 +7751,7 @@ Check the json file for errors and fix them.</source>
         <translation>Apie OpenMV kamerą...</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+18" />
         <source>About OpenMV Cam %1</source>
         <translation>Apie OpenMV Cam %1</translation>
     </message>
@@ -7785,7 +7790,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">&lt;p&gt;OpenMV IDE vertimas į anglų kalbą, Kwabena W. Agyeman.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+17" />
         <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Partneriai&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -7823,10 +7828,10 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+24" />
         <location line="+7" />
-        <location line="+24" />
+        <location line="+36" />
         <location line="+26" />
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+150" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
         <location line="+54" />
         <location line="+32" />
         <location line="+28" />
@@ -7848,10 +7853,10 @@ Check the json file for errors and fix them.</source>
         <location line="+18" />
         <location line="+23" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-130" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-97" />
         <location line="+73" />
         <location line="+9" />
-        <location line="+85" />
+        <location line="+52" />
         <location line="+4" />
         <location line="+7" />
         <location line="+9" />
@@ -7869,13 +7874,14 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1018" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1062" />
         <location line="+6" />
-        <location line="+26" />
-        <location line="+53" />
+        <location line="+28" />
+        <location line="+52" />
         <location line="+8" />
-        <location line="+33" />
-        <location line="+341" />
+        <location line="+35" />
+        <location line="+320" />
+        <location line="+62" />
         <location line="+99" />
         <location line="+49" />
         <location line="+67" />
@@ -7891,24 +7897,23 @@ Check the json file for errors and fix them.</source>
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+73" />
+        <location line="+87" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
         <location line="+108" />
         <location line="+83" />
-        <location line="+41" />
+        <location line="+42" />
         <location line="+38" />
         <location line="+52" />
         <location line="+38" />
         <location line="+21" />
         <location line="+20" />
-        <location line="+23" />
-        <location line="+106" />
-        <location line="+184" />
+        <location line="+24" />
+        <location line="+121" />
+        <location line="+214" />
         <location line="+33" />
-        <location line="+211" />
-        <location line="+51" />
+        <location line="+215" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+674" />
         <source>Connect</source>
         <translation>Prisijungti</translation>
@@ -7929,31 +7934,15 @@ Check the json file for errors and fix them.</source>
         <translation>Tik programinės įrangos atkūrimas palaikomas naudojant ALIF puslaidininkio SE įrankius.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-397" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-303" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-484" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-164" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-250" />
-        <location line="+13" />
-        <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+31" />
-        <location line="+13" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location line="+26" />
         <location line="+7" />
-        <location line="+165" />
         <source>Disconnect</source>
         <translation>Atsijungti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+19" />
+        <location line="+19" />
         <source>Start (run script)</source>
         <translation>Pradėti (paleisti scenarijų)</translation>
     </message>
@@ -7982,7 +7971,6 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+332" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <source>Stop</source>
         <translation>Sustabdyti</translation>
@@ -8006,47 +7994,31 @@ Check the json file for errors and fix them.</source>
         <translation>Padidinkite, kad tilptų</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+17" />
+        <location line="+30" />
         <source>JPG</source>
         <translation>JPG</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+1" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG suglaudinkite kadrų buferį, kad padidintumėte našumą</translation>
     </message>
     <message>
-        <location line="+17" />
-        <location line="+22" />
-        <location line="+1851" />
-        <location line="+55" />
-        <location line="+112" />
-        <location line="+69" />
-        <location line="+278" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-547" />
-        <location line="+216" />
-        <location line="+167" />
-        <location line="+165" />
-        <location line="+173" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+335" />
-        <location line="+346" />
         <source>Busy... please wait...</source>
-        <translation>Užimta... prašau palaukti...</translation>
+        <translation type="vanished">Užimta... prašau palaukti...</translation>
     </message>
     <message>
-        <location line="-2381" />
-        <location line="+15" />
+        <location line="-25" />
         <source>Disable</source>
         <translation>Išjungti</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+1" />
         <source>Disable the Frame Buffer for maximum performance</source>
         <translation>Išjunkite kadrų buferį, kad pasiektumėte maksimalų našumą</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+48" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Kadrų buferis išjungtas – dar kartą spustelėkite išjungimo mygtuką, kad įjungtumėte (viršuje dešinėje)</translation>
     </message>
@@ -8115,7 +8087,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Res (w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1536" />
+        <location line="-1574" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
@@ -8125,7 +8097,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3142" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2478" />
         <source>Load Custom Firmware</source>
         <translation>Įkelkite pasirinktinę programinę -aparatinę įrangą</translation>
     </message>
@@ -8200,13 +8172,23 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <location line="+8" />
         <location line="+31" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-855" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Konvertuoti modelį</translation>
     </message>
     <message>
-        <location line="+819" />
+        <location line="+425" />
+        <source>Show Code Profiler</source>
+        <translation>Rodyti kodo profiliavimo priemonę</translation>
+    </message>
+    <message>
+        <location line="+101" />
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Apie %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autorius: Ibrahimas Abdelkaderis ir Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GAMYKLINĖ VERSIJA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Skirta tik licencijuotiems gamintojams.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU BENDROJI VIEŠOJI LICENCIJA&lt;/bL&gt;&lt;2Copy/p&gt; %L3&lt;/p&gt;&lt;p&gt;Ši programa platinama tikintis, kad ji bus naudinga, bet BE JOKIOS GARANTIJOS; net be numanomos TINKAMUMO PARDUOTI ar TINKAMUMO TAM TAM TIKSLUI garantijos. Norėdami gauti daugiau informacijos, žr. &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU bendrąją viešąją licenciją&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Turite klausimų ar komentarų?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Susisiekite su mumis adresu &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+331" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>Res (w:%1, h:%2) - IG (x:%3, y:%4, w:%5, h:%6) - pikseliai (%7) - fokusavimas (%8)</translation>
@@ -8244,7 +8226,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2612" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2693" />
         <source>Board:</source>
         <translation>Lenta:</translation>
     </message>
@@ -8254,7 +8236,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>Kameros plokštės tipas</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+15" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
         <source>Sensor:</source>
         <translation>Jutiklis:</translation>
@@ -8288,14 +8270,14 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+6" />
-        <location line="+2007" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-319" />
-        <location line="+321" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-291" />
+        <location line="+293" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-573" />
         <source>Drive:</source>
         <translation>Vairuoti:</translation>
     </message>
     <message>
-        <location line="-2006" />
+        <location line="+1" />
         <source>Drive associated with port</source>
         <translation>Su prievadu susietas diskas</translation>
     </message>
@@ -8311,8 +8293,8 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>Gali skirtis nuo fotoaparato FPS</translation>
     </message>
     <message>
-        <location line="+234" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2825" />
+        <location line="+267" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2908" />
         <source>Update Available</source>
         <translation>Galimas atnaujinimas</translation>
     </message>
@@ -8327,7 +8309,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>parsisiųsti</translation>
     </message>
     <message>
-        <location line="+207" />
+        <location line="+223" />
         <source>WiFi Programming Disabled!</source>
         <translation>„WiFi“ programavimas išjungtas!</translation>
     </message>
@@ -8408,17 +8390,17 @@ Jūsų OpenMV Cam programinė įranga panikuoja dėl aparatinės įrangos gedimo
     </message>
     <message>
         <location line="+93" />
-        <location line="+1595" />
+        <location line="+1176" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Nuoseklus prievadas – %L1 – %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1563" />
+        <location line="-1144" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1210" />
+        <location line="+791" />
         <location line="+145" />
         <location line="+114" />
         <location line="+129" />
@@ -8428,7 +8410,7 @@ Jūsų OpenMV Cam programinė įranga panikuoja dėl aparatinės įrangos gedimo
         <translation>Jungiamasi... (30 sekundžių skirtasis laikas)</translation>
     </message>
     <message>
-        <location line="-2202" />
+        <location line="-1783" />
         <source>
 
 Try doing:
@@ -8481,12 +8463,12 @@ sudo adduser %L1 skambutis
     </message>
     <message>
         <location line="+17" />
-        <location line="+1652" />
+        <location line="+1233" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP serverio ryšys – %1</translation>
     </message>
     <message>
-        <location line="-1578" />
+        <location line="-1159" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Neteisingas prievado argumentas (%1), skirtas -open_udp_server_terminal</translation>
     </message>
@@ -8517,12 +8499,12 @@ sudo adduser %L1 skambutis
     </message>
     <message>
         <location line="+17" />
-        <location line="+1698" />
+        <location line="+1279" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP serverio ryšys – %1</translation>
     </message>
     <message>
-        <location line="-1624" />
+        <location line="-1205" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Neteisingas prievado argumentas (%1), skirtas -open_tcp_server_terminal</translation>
     </message>
@@ -8533,8 +8515,8 @@ sudo adduser %L1 skambutis
     </message>
     <message>
         <location line="+55" />
-        <location line="+9" />
-        <location line="+8" />
+        <location line="+18" />
+        <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
@@ -8549,7 +8531,7 @@ sudo adduser %L1 skambutis
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2281" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2388" />
         <location line="+9" />
         <location line="+8" />
         <location line="+19" />
@@ -8557,7 +8539,7 @@ sudo adduser %L1 skambutis
         <translation>Užsiregistruokite „OpenMV Cam“.</translation>
     </message>
     <message>
-        <location line="-226" />
+        <location line="-244" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8576,7 +8558,14 @@ Liko %3 lentos raktai, leidžiantys registruoti lentos tipą: %1
 Paleiskite Pavyzdžiai-&gt;HelloWorld-&gt;helloworld.py, kad patikrintumėte regėjimo kokybę ir sufokusuotumėte fotoaparatą (jei taikoma).</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
+        <location line="+17" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <source>Registered</source>
+        <translation>Registruotas</translation>
+    </message>
+    <message>
+        <location line="-6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8591,9 +8580,9 @@ ID: %2
 Paleiskite Pavyzdžiai-&gt;HelloWorld-&gt;helloworld.py, kad patikrintumėte regėjimo kokybę ir sufokusuotumėte fotoaparatą (jei taikoma).</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <location line="+182" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-35" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>Duomenų bazės klaida!</translation>
     </message>
@@ -8686,33 +8675,30 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Neteisingai suformatuotas lentos raktas!</translation>
     </message>
     <message>
-        <location line="+64" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+186" />
-        <location line="+490" />
-        <location line="+153" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+190" />
+        <location line="+472" />
+        <location line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-77" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
     <message>
-        <location line="+86" />
         <source>Configure Settings</source>
-        <translation>Konfigūruoti nustatymus</translation>
+        <translation type="vanished">Konfigūruoti nustatymus</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+22" />
-        <location line="+14" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+373" />
+        <location line="+20" />
         <source>Save Script</source>
         <translation>Išsaugoti scenarijų</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-19" />
         <source>Strip comments and convert spaces to tabs?</source>
         <translation>Pašalinti komentarus ir konvertuoti tarpus į skirtukus?</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8723,34 +8709,33 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     </message>
     <message>
         <location line="-23" />
-        <location line="+1418" />
+        <location line="+1101" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Vaizdo failai (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1373" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
         <location line="+7" />
         <location line="+17" />
         <location line="+15" />
-        <location line="+11" />
         <source>Save Template</source>
         <translation>Išsaugoti šabloną</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="-37" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)</source>
         <translation>Vaizdo failai (*.bmp *.jpg *.jpeg *.pgm *.ppm)</translation>
     </message>
     <message>
         <location line="+23" />
-        <location line="+69" />
+        <location line="+67" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>Pasirinkite tinkamą OpenMV kameros kelią!</translation>
     </message>
     <message>
-        <location line="-54" />
-        <location line="+69" />
+        <location line="-52" />
+        <location line="+67" />
         <source>"%L1" is longer than a max length of %L2 characters!</source>
         <translation>„%L1“ yra ilgesnis nei didžiausias %L2 simbolių ilgis!</translation>
     </message>
@@ -8759,20 +8744,19 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <location line="+7" />
         <location line="+17" />
         <location line="+15" />
-        <location line="+11" />
         <source>Save Descriptor</source>
         <translation>Išsaugoti aprašą</translation>
     </message>
     <message>
-        <location line="-48" />
-        <location line="+1390" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
         <location line="+80" />
         <location line="+21" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>Keypoints failai (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1292" />
+        <location line="-1113" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8800,14 +8784,13 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Nepavyko atidaryti pavyzdinio failo „%L1“!</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-457" />
         <location line="+28" />
-        <location line="+29" />
         <source>Select Drive</source>
         <translation>Pasirinkite Diskas</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="-27" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>Nerasta tinkamų diskų, kuriuos būtų galima susieti su jūsų „OpenMV Cam“!</translation>
     </message>
@@ -8826,17 +8809,42 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Diskas: %L1</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+41" />
         <source>Debug Protocol Settings</source>
         <translation>Derinimo protokolo nustatymai</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+14" />
+        <source>Protocol Version %1 - System Info:</source>
+        <translation>Protokolo versija % 1 – Sistemos informacija:</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Host Stats:</source>
+        <translation>Prieglobos statistika:</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Device Stats:</source>
+        <translation>Įrenginio statistika:</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Protocol Controls:</source>
+        <translation>Protokolo valdikliai:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Dynamic Frame Reading</source>
+        <translation>Dinaminis kadrų skaitymas</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Combined Polling</source>
         <translation>Kombinuota apklausa</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+12" />
         <source>Polling (ms)</source>
         <translation>Apklausa (ms)</translation>
     </message>
@@ -8851,12 +8859,12 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Apklausos nustatymai</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+17" />
         <source>Frame Buffer Polling (ms)</source>
         <translation>Kadro buferio apklausa (ms)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Script State Polling (ms)</source>
         <translation>Scenarijaus valstijos apklausa (ms)</translation>
     </message>
@@ -8866,7 +8874,19 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Teksto buferio apklausa (ms)</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+9" />
+        <source>Code Profiler Polling (ms)</source>
+        <translation>Kodo profiliavimo apklausa (ms)</translation>
+    </message>
+    <message>
+        <location line="+354" />
+        <location line="+26" />
+        <location line="+7" />
+        <source>Failed to flush "%L1"!</source>
+        <translation>Nepavyko nuplauti „%L1“!</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
         <location line="+13" />
         <location line="+31" />
         <location line="+9" />
@@ -8913,7 +8933,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1928" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1977" />
         <source>Please select a serial port</source>
         <translation>Pasirinkite nuoseklųjį prievadą</translation>
     </message>
@@ -9039,7 +9059,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     </message>
     <message>
         <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+716" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
         <source>What would you like to do?</source>
         <translation>Ką tu norėtum veikti?</translation>
     </message>
@@ -9153,7 +9173,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Karta baigta!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1462" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1508" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Galimi nauji OpenMV IDE ištekliai (pvz., pavyzdžiai, programinė įranga, dokumentacija ir kt.).</translation>
     </message>
@@ -9164,8 +9184,8 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+286" />
-        <location line="+142" />
+        <location line="+288" />
+        <location line="+143" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-420" />
         <location line="+148" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
@@ -9188,7 +9208,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Atsisiunčiama...</translation>
     </message>
     <message>
-        <location line="-414" />
+        <location line="-417" />
         <source>Installing...</source>
         <translation>Diegiama...</translation>
     </message>
@@ -9206,75 +9226,86 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
     <message>
         <location line="+28" />
         <location line="+6" />
-        <location line="+26" />
+        <location line="+28" />
         <source>Package Update</source>
         <translation>Paketo atnaujinimas</translation>
     </message>
     <message>
-        <location line="-25" />
-        <location line="+252" />
-        <location line="+87" />
+        <location line="-27" />
+        <location line="+254" />
+        <location line="+88" />
         <source>Cannot open the resources file "%L1"!</source>
         <translation>Nepavyko atidaryti išteklių failo „%L1“!</translation>
     </message>
     <message>
-        <location line="-313" />
-        <location line="+252" />
-        <location line="+94" />
+        <location line="-314" />
+        <location line="+254" />
+        <location line="+95" />
         <source>Network request failed "%L1"!</source>
         <translation>Tinklo užklausa nepavyko „%L1“!</translation>
     </message>
     <message>
-        <location line="-312" />
+        <location line="-315" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>Firmware dvejetainė ( *.Bin *.dfu *.img)</translation>
     </message>
     <message>
         <location line="+11" />
         <location line="+119" />
-        <location line="+544" />
+        <location line="+588" />
         <location line="+217" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Ištrinti vidinę riebalų failų sistemą</translation>
     </message>
     <message>
-        <location line="-3069" />
+        <location line="-3160" />
         <location line="+119" />
-        <location line="+545" />
+        <location line="+589" />
         <location line="+216" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Jei įgalinsite šią parinktį, visi „OpenMV Cam“ vidinės riebalų failų sistemos failai bus ištrinti. Tai neištrina failų iš nuimamos SD kortelės (jei įdėta).</translation>
     </message>
     <message>
-        <location line="-3069" />
-        <location line="+664" />
+        <location line="-3160" />
+        <location line="+708" />
         <location line="+216" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Iš naujo nustatykite ROMFS failų sistemą</translation>
     </message>
     <message>
-        <location line="-3068" />
-        <location line="+664" />
+        <location line="-3159" />
+        <location line="+708" />
         <location line="+215" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Jei įgalinsite šią parinktį, „OpenMv Cam“ ROM failų sistema bus iš naujo nustatyta iki numatytųjų.</translation>
     </message>
     <message>
-        <location line="-3025" />
+        <location line="-3116" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>Bootloader</translation>
     </message>
     <message>
-        <location line="-113" />
+        <location line="+2947" />
+        <source>You can find more examples under the File -&gt; Examples menu.
+
+In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
+        <translation>Daugiau pavyzdžių rasite meniu Failas -&gt; Pavyzdžiai. 
+
+Visų pirma, patikrinkite Vaizdo apdorojimas -&gt; Spalvų sekimas ir mašininis mokymasis -&gt; TensorFlow pavyzdžiai.</translation>
+    </message>
+    <message>
+        <location line="-3060" />
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
         <translation>Programinės įrangos kelias</translation>
@@ -9317,7 +9348,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Jei įgalinsite šią parinktį, „OpenMV Cam“ ROM failų sistema bus atnaujinta iki naujausios plėtros leidimo.</translation>
     </message>
     <message>
-        <location line="+103" />
+        <location line="+104" />
         <source>Extracting...</source>
         <translation>Ištraukiama...</translation>
     </message>
@@ -9327,9 +9358,9 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Nepavyko išskleisti programinės įrangos!</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+148" />
         <location line="+5" />
-        <location line="+49" />
+        <location line="+48" />
         <location line="+5" />
         <location line="+5" />
         <location line="+5" />
@@ -9337,7 +9368,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Nežinoma lenta</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+233" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Aptikta DFU režimu veikianti plokštė. Ką tu norėtum veikti?</translation>
     </message>
@@ -9366,7 +9397,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Ar turite prijungtą „OpenMV Cam“ ir ar ji užblokuota?</translation>
     </message>
     <message>
-        <location line="+833" />
+        <location line="+848" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
 Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
@@ -9400,7 +9431,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
         <translation>Tik įkėlimas *.Bin failus palaikomas „Picotool“ įkrovos krautuvui!</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+24" />
         <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
@@ -9410,10 +9441,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-119" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-959" />
-        <location line="+642" />
-        <location line="+1676" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-975" />
+        <location line="+656" />
+        <location line="+1707" />
         <source>Please select the board type</source>
         <translation>Pasirinkite lentos tipą</translation>
     </message>
@@ -9422,7 +9453,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Ištrinti vidinę failų sistemą?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2206" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2251" />
         <source>No released firmware available for the attached board!</source>
         <translation>Pridėtai plokštei nėra išleistos programinės įrangos!</translation>
     </message>
@@ -9439,13 +9470,22 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Atnaujinkite įkrovos įkroviklį į naujausią versiją ir įdiekite „SoftDevice“, kad suaktyvintumėte OpenMV programinę-aparatinę įrangą. Daugiau informacijos rasite adresu &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1019" />
-        <location line="+2877" />
+        <location line="-1063" />
+        <location line="+2968" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Įspėjimas: atnaujinus naują programinės įrangos versiją, reikia ištrinti riebalų failų sistemą.</translation>
     </message>
     <message>
-        <location line="-2365" />
+        <location line="-2483" />
+        <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
+
+%1</source>
+        <translation>Jūsų OS aptiko USB problemų su toliau nurodytais šios sistemos įrenginiais. Pataisykite arba pašalinkite šiuos įrenginius, nes jie sukels ryšio problemų. 
+
+%1</translation>
+    </message>
+    <message>
+        <location line="+71" />
         <source>Just erase the internal FAT file system</source>
         <translation>Tiesiog ištrinkite vidinę riebalų failų sistemą</translation>
     </message>
@@ -9461,12 +9501,12 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+219" />
-        <location line="+2115" />
+        <location line="+2162" />
         <source>Upgrade options:</source>
         <translation>Atnaujinimo parinktys:</translation>
     </message>
     <message>
-        <location line="-2031" />
+        <location line="-2078" />
         <location line="+167" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -9482,7 +9522,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (Jei tai trunka ilgiau nei 5 sekundes, paspauskite atšaukti).</translation>
     </message>
     <message>
-        <location line="+119" />
+        <location line="+133" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Laiko pabaigos klaida gaunant programinės įrangos versiją!</translation>
     </message>
@@ -9499,7 +9539,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location line="+72" />
         <location line="+191" />
-        <location line="+523" />
+        <location line="+570" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Laiko pabaigos klaida gaunant plokštės architektūrą!</translation>
     </message>
@@ -9508,8 +9548,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Nepalaikoma plokštės architektūra!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-619" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+130" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Atjunkite „OpenMV Cam“ ir vėl prijunkite...</translation>
     </message>
@@ -9563,12 +9603,12 @@ Tęsti?</translation>
         <translation>Ištrinama...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+204" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-173" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+273" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+140" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-191" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+46" />
         <location line="+56" />
@@ -9666,7 +9706,7 @@ Tęsti?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+272" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
         <location line="+130" />
         <location line="+41" />
@@ -9693,7 +9733,7 @@ Tokiu atveju spustelėkite Gerai, kai pamatysite „OpenMV Cam“ vidinį „fla
         <translation>Programinės įrangos failas tuščias!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-193" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-160" />
         <source>No IMX settings for the selected board type %L1!</source>
         <translation>Nėra IMX nustatymų pasirinktam plokštės tipui %L1!</translation>
     </message>
@@ -9703,29 +9743,11 @@ Tokiu atveju spustelėkite Gerai, kai pamatysite „OpenMV Cam“ vidinį „fla
         <translation>IMX nustatymų nerasta!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-385" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-291" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-486" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+17" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-238" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+326" />
-        <location line="+13" />
-        <location line="+7" />
         <source>Failed to eject "%L1"!</source>
-        <translation>Nepavyko išstumti „%L1“!</translation>
+        <translation type="vanished">Nepavyko išstumti „%L1“!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+10" />
+        <location line="+14" />
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
@@ -9780,14 +9802,14 @@ Spustelėkite mygtuką Gerai, kai išvardija „OpenMV Cam“ SBL įkrovos progr
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+364" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+99" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+270" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+424" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-1" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+111" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-1" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-42" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+1" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+217" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1" />
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>Spustelėkite mygtuką Gerai, kai „OpenMV Cam“ suskaičiavo ir baigė vykdyti įtaisytąjį savęs patikrinimą (mirksi mėlyna lemputė – tai užtrunka).</translation>
     </message>
@@ -9938,7 +9960,7 @@ Spustelėkite mygtuką Gerai, kai išvardija „OpenMV Cam“ SBL įkrovos progr
         <translation>Nepavyko atnaujinti „PicoTool“ programinės įrangos!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-509" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521" />
         <source>OpenMV IDE needs to update your bootloader to support ROMFS.
 
 The internal FAT filesystem will be erased!
@@ -9975,12 +9997,12 @@ Spustelėkite mygtuką Gerai, kai išvardijo „OpenMV Cam“ DFU įkrovos progr
     </message>
     <message>
         <location line="+11" />
-        <location line="+4" />
+        <location line="+11" />
         <source>Flashing Bootloader</source>
         <translation>Mirksintis įkrovos įkroviklis</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+14" />
         <source>DFU bootloader reset complete!
 
 </source>
@@ -10021,13 +10043,13 @@ Spustelėkite mygtuką Gerai, kai išvardijo „OpenMV Cam“ DFU įkrovos progr
         <translation>Nepavyko atkurti DFU įkrovos programos!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-555" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
         <source>None</source>
         <translation>Nė vienas</translation>
     </message>
     <message>
-        <location line="+18" />
-        <location line="+10" />
+        <location line="+27" />
+        <location line="+16" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>Nežinoma</translation>
@@ -10038,17 +10060,27 @@ Spustelėkite mygtuką Gerai, kai išvardijo „OpenMV Cam“ DFU įkrovos progr
         <translation>Gaunant jutiklio tipą baigėsi skirtojo laiko klaida!</translation>
     </message>
     <message>
-        <location line="+217" />
+        <location line="+156" />
+        <source>Unregistered</source>
+        <translation>Neregistruotas</translation>
+    </message>
+    <message>
+        <location line="+91" />
         <source>Timeout error while learning MTU!</source>
         <translation>Laiko pabaigos klaida mokantis MTU!</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+134" />
         <source>Board: %L1</source>
         <translation>Lenta: %L1</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
+        <source>Sensors: %L1</source>
+        <translation>Jutikliai: %L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Sensor: %L1</source>
         <translation>Jutiklis: %L1</translation>
     </message>
@@ -10078,39 +10110,137 @@ Spustelėkite mygtuką Gerai, kai išvardijo „OpenMV Cam“ DFU įkrovos progr
         <translation> - [ naujausias ]</translation>
     </message>
     <message>
-        <location line="+255" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <source>Failed to open or parse ELF: %1</source>
+        <translation>Nepavyko atidaryti arba išanalizuoti ELF: %1</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>No function symbols found (.symtab/.dynsym missing or stripped)</source>
+        <translation>Funkcinių simbolių nerasta (trūksta .symtab/.dynsym arba jis nuimtas)</translation>
+    </message>
+    <message>
+        <location line="+176" />
+        <source>Event %1</source>
+        <translation>Įvykis %1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Function</source>
+        <translation>Funkcija</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Calls</source>
+        <translation>Skambučiai</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Min μs</source>
+        <translation>Min μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Max μs</source>
+        <translation>Maks. μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Total μs</source>
+        <translation>Iš viso μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Average μs</source>
+        <translation>Vidutinis μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Average Cycles</source>
+        <translation>Vidutinis ciklas</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Percentage</source>
+        <translation>Procentas</translation>
+    </message>
+    <message>
+        <location line="+396" />
+        <location line="+172" />
+        <source>Code Profiler</source>
+        <translation>Kodo profiliuotojas</translation>
+    </message>
+    <message>
+        <location line="-147" />
+        <source>Flat</source>
+        <translation>Butas</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Tree</source>
+        <translation>Medis</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Firmware ELF (*.elf)</source>
+        <translation>Firmware ELF (*.elf)</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Filter functions...</source>
+        <translation>Filtro funkcijos...</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Inclusive</source>
+        <translation>Įskaitytinai</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Exclusive</source>
+        <translation>Išskirtinis</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Reset</source>
         <translation>Nustatyti iš naujo</translation>
     </message>
     <message>
-        <location line="+167" />
-        <source>Start</source>
-        <translation>Pradėti</translation>
+        <location line="+165" />
+        <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
+        <translation>Funkcijos: %1, Iš viso skambučių: %2, Iš viso μs: %3, Iš viso ciklų: %4, Iš viso įvykių: %5</translation>
     </message>
     <message>
-        <location line="+174" />
+        <location line="+9" />
+        <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4</source>
+        <translation>Funkcijos: %1, Iš viso skambučių: %2, Iš viso μs: %3, Iš viso ciklų: %4</translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="vanished">Pradėti</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+578" />
         <source>More Examples</source>
         <translation>Daugiau pavyzdžių</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Color-Tracking examples.</source>
-        <translation>Daugiau pavyzdžių rasite meniu Failas -&gt; Pavyzdžiai.
+        <translation type="vanished">Daugiau pavyzdžių rasite meniu Failas -&gt; Pavyzdžiai.
 
 Visų pirma peržiūrėkite spalvų sekimo pavyzdžius.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <location line="+69" />
         <location line="+9" />
-        <location line="+58" />
         <source>Firmware Update</source>
         <translation>Firmware atnaujinimas</translation>
     </message>
     <message>
-        <location line="-133" />
+        <location line="-75" />
         <source>Update your OpenMV Cam's firmware to the latest version?</source>
         <translation>Atnaujinti „OpenMV Cam“ programinę-aparatinę įrangą į naujausią versiją?</translation>
     </message>
@@ -10125,7 +10255,7 @@ Visų pirma peržiūrėkite spalvų sekimo pavyzdžius.</translation>
         <translation>Reikia iš naujo nustatyti „OpenMV Cam“ programinę-aparatinę įrangą į leidimo versiją?</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+87" />
         <source>No board settings for the connected board found!</source>
         <translation>Jokių prijungtos plokštės plokštės nustatymų rasta!</translation>
     </message>
@@ -10135,18 +10265,23 @@ Visų pirma peržiūrėkite spalvų sekimo pavyzdžius.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="-55" />
-        <location line="+110" />
+        <location line="+150" />
         <source>No Image</source>
         <translation>Nėra paveiksliuko</translation>
     </message>
     <message>
-        <location line="-63" />
+        <location line="-103" />
         <location line="+7" />
         <source>Video Record</source>
         <translation>Vaizdo įrašas</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location line="+69" />
+        <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!</source>
+        <translation>Įspėjimas: JPEG/PNG per didelis, kad būtų galima išsaugoti buferį dabartinėje OpenMV kameroje ir siųsti į OpenMV IDE!</translation>
+    </message>
+    <message>
+        <location line="+83" />
         <location line="+10" />
         <location line="+10" />
         <location line="+10" />
@@ -10256,12 +10391,12 @@ Ar norėtumėte, kad „OpenMV IDE“ nukopijuotų jį į jūsų „OpenMV Cam�
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4268" />
         <location line="+10" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-283" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
+        <location line="+236" />
         <source>Model Zoo</source>
         <translation>Modelio zoologijos sodas</translation>
     </message>
@@ -10271,7 +10406,7 @@ Ar norėtumėte, kad „OpenMV IDE“ nukopijuotų jį į jūsų „OpenMV Cam�
         <translation>Filtrų modeliai pagal lentos tipą</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+42" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+23" />
         <source>Copy</source>
         <translation>Kopijuoti</translation>
@@ -10350,7 +10485,7 @@ Ar norėtumėte, kad „OpenMV IDE“ nukopijuotų jį į jūsų „OpenMV Cam�
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-253" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>Užklausa nepavyko!</translation>
@@ -10639,7 +10774,7 @@ Po sistemos paketo atnaujinimo fotoaparatas turi būti maitinamas.</translation>
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Šios komandos vykdymas užtrunka šiek tiek laiko. Būkite kantrūs.</translation>
@@ -10792,12 +10927,12 @@ Po sistemos paketo atnaujinimo fotoaparatas turi būti maitinamas.</translation>
     </message>
     <message>
         <location line="-77" />
-        <location line="+565" />
+        <location line="+608" />
         <source>Transcoding File...</source>
         <translation>Perkoduojamas failas...</translation>
     </message>
     <message>
-        <location line="-554" />
+        <location line="-597" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10858,9 +10993,9 @@ Po sistemos paketo atnaujinimo fotoaparatas turi būti maitinamas.</translation>
         <translation>Gaukite įvesties formatus</translation>
     </message>
     <message>
-        <location line="+44" />
-        <location line="+103" />
-        <location line="+59" />
+        <location line="+38" />
+        <location line="+111" />
+        <location line="+100" />
         <location line="+15" />
         <location line="+372" />
         <location line="+12" />
@@ -10886,12 +11021,21 @@ Po sistemos paketo atnaujinimo fotoaparatas turi būti maitinamas.</translation>
         <translation>Konvertuoti vaizdo įrašą</translation>
     </message>
     <message>
-        <location line="-837" />
         <source>Failed to launch ffmpeg!</source>
-        <translation>Nepavyko paleisti ffmpeg!</translation>
+        <translation type="vanished">Nepavyko paleisti ffmpeg!</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="-989" />
+        <source>Converting</source>
+        <translation>Konvertavimas</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>FFMPEG is not supported on this platform.</source>
+        <translation>FFMPEG šioje platformoje nepalaikomas.</translation>
+    </message>
+    <message>
+        <location line="+100" />
         <source>Unable to write to output video file!</source>
         <translation>Nepavyko įrašyti į išvesties vaizdo failą!</translation>
     </message>
@@ -11032,7 +11176,7 @@ Po sistemos paketo atnaujinimo fotoaparatas turi būti maitinamas.</translation>
         <translation>Nėra tinkamos pasirinkto failo pavadinimo sąsajos!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-757" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
         <source>Please select the target</source>
         <translation>Pasirinkite tikslą</translation>
     </message>
@@ -11072,8 +11216,7 @@ OpenMV IDE will just copy the model as is.</source>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+85" />
-        <location line="+11" />
+        <location line="+93" />
         <location line="+9" />
         <location line="+14" />
         <location line="+13" />
@@ -11090,7 +11233,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Redaguoti ROMF</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="-620" />
         <location line="+91" />
         <source>A folder with the same name already exists!</source>
         <translation>Aplankas su tuo pačiu pavadinimu jau egzistuoja!</translation>
@@ -11143,37 +11286,37 @@ OpenMV IDE will just copy the model as is.</source>
         <location line="+7" />
         <location line="+14" />
         <location line="+19" />
-        <location line="+243" />
+        <location line="+240" />
         <source>Extract File</source>
         <translation>Ištraukimo failas</translation>
     </message>
     <message>
-        <location line="-249" />
+        <location line="-246" />
         <source>View/Edit</source>
         <translation>Peržiūrėti/redaguoti</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+240" />
+        <location line="+237" />
         <source>Add File</source>
         <translation>Pridėti failą</translation>
     </message>
     <message>
-        <location line="-239" />
-        <location line="+241" />
+        <location line="-236" />
+        <location line="+238" />
         <source>New Folder</source>
         <translation>Naujas aplankas</translation>
     </message>
     <message>
         <location line="-147" />
         <location line="+14" />
-        <location line="+325" />
+        <location line="+322" />
         <location line="+12" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS nepalaiko šioje lentoje!</translation>
     </message>
     <message>
-        <location line="-293" />
+        <location line="-290" />
         <location line="+45" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Nepavyko išpakuoti ROMFS!</translation>
@@ -11206,8 +11349,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Išsaugokite ROMFS į failą</translation>
     </message>
     <message>
-        <location line="+106" />
-        <location line="+7" />
+        <location line="+110" />
         <location line="+8" />
         <location line="+12" />
         <location line="+13" />
@@ -11252,7 +11394,7 @@ OpenMV IDE will just copy the model as is.</source>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-230" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>Išplėstinė</translation>
@@ -11277,31 +11419,33 @@ OpenMV IDE will just copy the model as is.</source>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+172" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+189" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
         <source>Success - Press Ok to close the window</source>
         <translation>Sėkmė - paspauskite Gerai, kad uždarytumėte langą</translation>
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+6" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+8" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+6" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+5" />
         <source>Failure - Press Cancel to close the window</source>
         <translation>Gedimas - paspauskite Atšaukti, kad uždarytumėte langą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-368" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+126" />
         <location line="+14" />
-        <location line="+137" />
+        <location line="+173" />
         <source>STEdgeAI Compilier</source>
         <translation>„Stedge“ kompiliatorius</translation>
     </message>
     <message>
-        <location line="-298" />
+        <location line="-334" />
         <source>Failed to copy JSON file!</source>
         <translation>Nepavyko nukopijuoti JSON failo!</translation>
     </message>
@@ -11312,7 +11456,7 @@ OpenMV IDE will just copy the model as is.</source>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-281" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-283" />
         <source>Please specify the compiler settings:</source>
         <translation>Nurodykite kompiliatoriaus nustatymus:</translation>
     </message>
@@ -11374,7 +11518,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Stedgeai</translation>
     </message>
     <message>
-        <location line="+123" />
+        <location line="+159" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>„Stedgeai Compilier“ nepalaikoma šioje platformoje.</translation>
     </message>
@@ -11435,61 +11579,69 @@ OpenMV IDE will just copy the model as is.</source>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
+        <location line="+28" />
+        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+235" />
         <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
         <location line="+28" />
+        <location line="+12" />
+        <location line="+20" />
+        <location line="+21" />
         <location line="+15" />
-        <location line="+144" />
+        <location line="+22" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+11" />
+        <location line="+29" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+41" />
+        <location line="+306" />
         <source>Project Location</source>
         <translation>Projekto vieta</translation>
     </message>
     <message>
-        <location line="-886" />
+        <location line="-895" />
+        <location line="+28" />
+        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+21" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+20" />
+        <location line="+21" />
+        <location line="+15" />
         <location line="+22" />
-        <location line="+81" />
-        <location line="+17" />
+        <location line="+24" />
         <location line="+1" />
-        <location line="+8" />
+        <location line="+22" />
         <location line="+1" />
-        <location line="+10" />
+        <location line="+33" />
         <location line="+1" />
-        <location line="+8" />
+        <location line="+18" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+19" />
         <location line="+1" />
         <location line="+11" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+11" />
+        <location line="+29" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+41" />
+        <location line="+28" />
         <location line="+1" />
-        <location line="+12" />
         <location line="+13" />
         <location line="+1" />
+        <location line="+12" />
         <location line="+8" />
         <location line="+1" />
         <location line="+8" />
@@ -11498,38 +11650,30 @@ OpenMV IDE will just copy the model as is.</source>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+17" />
-        <location line="+32" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+20" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
         <location line="+10" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+15" />
-        <location line="+51" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+22" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+12" />
+        <location line="+94" />
         <source>Location</source>
         <translation>Vieta</translation>
     </message>
@@ -11538,7 +11682,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">Qt testas</translation>
     </message>
     <message>
-        <location line="-516" />
+        <location line="-85" />
         <source>Google Test</source>
         <translation>Google testas</translation>
     </message>
@@ -11558,49 +11702,49 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Sugauti2</translation>
     </message>
     <message>
-        <location line="-371" />
+        <location line="-762" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+321" />
+        <location line="+712" />
         <source>Test framework:</source>
         <translation>Bandymo sistema:</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="-687" />
         <source>GUI Application</source>
         <translation>GUI programa</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+324" />
+        <location line="+715" />
         <source>Test suite name:</source>
         <translation>Bandymo rinkinio pavadinimas:</translation>
     </message>
     <message>
-        <location line="-374" />
+        <location line="-790" />
+        <location line="+25" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+22" />
-        <location line="+281" />
+        <location line="+694" />
         <source>Test case name:</source>
         <translation>Bandomojo atvejo pavadinimas:</translation>
     </message>
     <message>
-        <location line="-302" />
+        <location line="-693" />
         <source>Requires QApplication</source>
         <translation>Reikia QApplication</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="-97" />
         <source>Generate setup code</source>
         <translation>Sugeneruokite sąrankos kodą</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
-        <location line="+280" />
+        <location line="+1" />
+        <location line="+98" />
+        <location line="+692" />
         <source>Generate initialization and cleanup code</source>
         <translation>Generuokite inicijavimo ir valymo kodą</translation>
     </message>
@@ -11609,17 +11753,17 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">Įgalinti C++11</translation>
     </message>
     <message>
-        <location line="-324" />
+        <location line="-766" />
         <source>Googletest source directory (optional):</source>
         <translation>Googletest šaltinio katalogas (neprivaloma):</translation>
     </message>
     <message>
-        <location line="-51" />
+        <location line="+51" />
         <source>Boost include directory (optional):</source>
         <translation>„Boost include“ katalogas (neprivaloma):</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="-27" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 apima katalogą (neprivaloma):</translation>
     </message>
@@ -11629,154 +11773,154 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Naudokite Qt bibliotekas</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-50" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+40" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+107" />
-        <location line="+46" />
-        <location line="+43" />
+        <location line="+45" />
+        <location line="+47" />
+        <location line="+84" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-558" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+40" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+105" />
-        <location line="+48" />
         <location line="+43" />
+        <location line="+49" />
+        <location line="+84" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-558" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+40" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+153" />
-        <location line="+44" />
+        <location line="+92" />
+        <location line="+85" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-559" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+314" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+41" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="+42" />
+        <location line="+50" />
+        <location line="+84" />
         <source>Build system:</source>
         <translation>Sukurkite sistemą:</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-559" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Informacija apie projektą ir bandymus</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-120" />
+        <location line="+23" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="+26" />
+        <location line="+51" />
         <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+79" />
-        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+17" />
-        <location line="+33" />
+        <location line="+164" />
+        <location line="+41" />
         <location line="+18" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+28" />
-        <location line="+142" />
+        <location line="+42" />
+        <location line="+70" />
+        <location line="+220" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+19" />
         <source>Details</source>
         <translation>Detalės</translation>
     </message>
     <message>
-        <location line="-887" />
+        <location line="-869" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+295" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Komplekto pasirinkimas</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-886" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+295" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11784,101 +11928,101 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Rinkiniai</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-886" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+23" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+18" />
-        <location line="+9" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+9" />
         <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+14" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+17" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+19" />
+        <location line="+19" />
         <source>Project Management</source>
         <translation>Projektų valdymas</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-886" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+23" />
-        <location line="+19" />
-        <location line="+37" />
-        <location line="+9" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+9" />
         <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+14" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+17" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
+        <location line="+41" />
+        <location line="+19" />
+        <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Santrauka</translation>
@@ -11888,9 +12032,9 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">Sukuria naują vieneto bandymo projektą. Vienetų testai leidžia patikrinti, ar kodas tinkamas naudoti ir ar nėra regresijų.</translation>
     </message>
     <message>
-        <location line="-715" />
-        <location line="+380" />
-        <location line="+165" />
+        <location line="-466" />
+        <location line="+12" />
+        <location line="+456" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Kitas projektas</translation>
@@ -11900,36 +12044,36 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">Automatinio bandymo projektas</translation>
     </message>
     <message>
-        <location line="-620" />
+        <location line="-57" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Visiškai tinkamas vardas, įskaitant vardų sritis</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+22" />
+        <location line="-645" />
+        <location line="+36" />
+        <location line="+276" />
+        <location line="+80" />
+        <location line="+235" />
         <location line="+19" />
-        <location line="+289" />
-        <location line="+145" />
-        <location line="+40" />
-        <location line="+119" />
+        <location line="+22" />
         <source>Class name:</source>
         <translation>Klasės pavadinimas:</translation>
     </message>
     <message>
-        <location line="-633" />
-        <location line="+42" />
-        <location line="+433" />
+        <location line="-631" />
+        <location line="+592" />
+        <location line="+18" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Tinkintas&gt;</translation>
     </message>
     <message>
-        <location line="-474" />
+        <location line="-646" />
+        <location line="+37" />
+        <location line="+282" />
+        <location line="+73" />
+        <location line="+237" />
+        <location line="+18" />
         <location line="+21" />
-        <location line="+21" />
-        <location line="+294" />
-        <location line="+139" />
-        <location line="+39" />
-        <location line="+119" />
         <source>Base class:</source>
         <translation>Bazinė klasė:</translation>
     </message>
@@ -11938,7 +12082,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-632" />
+        <location line="-20" />
         <source>Include QObject</source>
         <translation>Įtraukti QObject</translation>
     </message>
@@ -11980,10 +12124,10 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">%{JS: Cpp.classToFileName(value('klasė'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-329" />
+        <location line="+68" />
+        <location line="+262" />
         <location line="+19" />
-        <location line="+315" />
-        <location line="+292" />
         <source>Header file:</source>
         <translation>Antraštės failas:</translation>
     </message>
@@ -11992,54 +12136,54 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">%{JS: Cpp.classToFileName(value('klasė'), Util.preferredSuffix('text/x-c++src'))}</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+215" />
+        <location line="-673" />
+        <location line="+37" />
+        <location line="+288" />
+        <location line="+68" />
+        <location line="+220" />
         <location line="+1" />
-        <location line="+80" />
-        <location line="+133" />
-        <location line="+39" />
-        <location line="+120" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+19" />
         <source>Source file:</source>
         <translation>Šaltinio failas:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+392" />
-        <location line="+34" />
+        <location line="-597" />
         <location line="+20" />
         <location line="+21" />
+        <location line="+34" />
+        <location line="+19" />
+        <location line="+444" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Kelias:</translation>
     </message>
     <message>
-        <location line="-739" />
-        <location line="+38" />
-        <location line="+429" />
-        <location line="+39" />
+        <location line="-673" />
+        <location line="+37" />
+        <location line="+596" />
+        <location line="+22" />
         <source>Define Class</source>
         <translation>Apibrėžkite klasę</translation>
     </message>
     <message>
-        <location line="-502" />
+        <location line="+4" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Sukuria C++ antraštę ir šaltinio failą naujai klasei, kurią galite įtraukti į C++ projektą.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+65" />
-        <location line="+9" />
+        <location line="-203" />
+        <location line="+130" />
+        <location line="+74" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-73" />
+        <location line="+1" />
         <source>C++ Class</source>
         <translation>C++ klasė</translation>
     </message>
@@ -12079,22 +12223,22 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Sukuria Qt elemento modelį.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+66" />
-        <location line="+57" />
-        <location line="+62" />
-        <location line="+9" />
-        <location line="+59" />
+        <location line="-231" />
+        <location line="+39" />
+        <location line="+26" />
+        <location line="+65" />
+        <location line="+18" />
+        <location line="+84" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="+1" />
         <source>Qt Item Model</source>
         <translation>Qt prekės modelis</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-56" />
         <source>Qt for Python module:</source>
         <translation>Qt Python moduliui:</translation>
     </message>
@@ -12128,18 +12272,18 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Sukuria naują Python klasės failą.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+158" />
+        <location line="-70" />
+        <location line="+71" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="-157" />
+        <location line="+1" />
         <source>Python Class</source>
         <translation>Python klasė</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+45" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Sukuria CMake pagrįstą bandomąjį projektą, kuriam galima įvesti kodo fragmentą.</translation>
     </message>
@@ -12194,7 +12338,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Kodo fragmentas</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-244" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Sukuria antraštės failą, kurį galite įtraukti į C/C++ projektą.</translation>
     </message>
@@ -12204,7 +12348,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>C/C++ antraštės failas</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+128" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Sukuria šaltinio failą, kurį galite įtraukti į C/C++ projektą.</translation>
     </message>
@@ -12214,7 +12358,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>C/C++ šaltinio failas</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Choose a Form Template</source>
         <translation>Pasirinkite formos šabloną</translation>
     </message>
@@ -12232,12 +12376,12 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">Qt dizainerio forma</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-15" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Sukuria fragmentų atspalvį darbalaukio OpenGL šešėlių kalboje (GLSL). Fragmentų šešėliuotojai sukuria galutines pikselių spalvas trikampiams, taškams ir linijoms, pateiktoms naudojant OpenGL.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12245,12 +12389,12 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-11" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Sukuria viršūnių atspalvį darbalaukio OpenGL šešėlių kalboje (GLSL). Viršūnių šešėliai transformuoja trikampių, taškų ir linijų, atvaizduotų naudojant OpenGL, padėtis, normaliąsias ir tekstūros koordinates.</translation>
     </message>
@@ -12260,7 +12404,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Vertex Shader (darbalaukio OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-11" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Sukuria fragmentų atspalvį naudojant OpenGL/ES 2.0 šešėliavimo kalbą (GLSL/ES). Fragmentų šešėliuotojai sukuria galutines pikselių spalvas trikampiams, taškams ir linijoms, pateiktoms naudojant OpenGL.</translation>
     </message>
@@ -12270,7 +12414,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Fragment Shader (OpenGL / ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-11" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Sukuria viršūnių atspalvį OpenGL/ES 2.0 šešėliavimo kalba (GLSL/ES). Viršūnių šešėliai transformuoja trikampių, taškų ir linijų, atvaizduotų naudojant OpenGL, padėtis, normaliąsias ir tekstūros koordinates.</translation>
     </message>
@@ -12280,7 +12424,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>„Vertex Shader“ („OpenGL“ / ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-67" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Sukuria Java failą su pagrindiniu kodu.</translation>
     </message>
@@ -12295,7 +12439,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Java failas</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+14" />
         <source>Stateless library</source>
         <translation>Biblioteka be pilietybės</translation>
     </message>
@@ -12316,25 +12460,25 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>JS failas</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Model name:</source>
         <translation>Modelio vardas:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+67" />
+        <location line="-64" />
+        <location line="+65" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Vieta:</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
+        <location line="-64" />
+        <location line="+65" />
         <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
         <translation>„%{JS: Util.toNativeSeparators(value('TargetPath'))}“ egzistuoja failų sistemoje.</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="+1" />
         <source>Model Name and Location</source>
         <translation>Modelio pavadinimas ir vieta</translation>
     </message>
@@ -12344,19 +12488,19 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Sukuria naują tuščią modelį su tuščia diagrama.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
-        <location line="+62" />
+        <location line="-64" />
+        <location line="+53" />
+        <location line="+12" />
         <source>Modeling</source>
         <translation>Modeliavimas</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="+1" />
         <source>Model</source>
         <translation>Modelis</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Sukuria įbrėžimų modelį naudodama laikiną failą.</translation>
     </message>
@@ -12366,23 +12510,23 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Scratch modelis</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-81" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Sukuria tuščią Nim failą naudojant UTF-8 simbolių rinkinį.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+9" />
+        <location line="+14" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-13" />
         <source>Nim File</source>
         <translation>Nim failas</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+12" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Sukuria tuščią Nim scenarijaus failą naudojant UTF-8 simbolių rinkinį.</translation>
     </message>
@@ -12392,7 +12536,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Nim scenarijaus failas</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+138" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>Sukuria tuščią Python scenarijaus failą naudojant UTF-8 simbolių rinkinį.</translation>
     </message>
@@ -12402,7 +12546,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Python failas</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-56" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Sukuria Qt išteklių failą (.qrc).</translation>
     </message>
@@ -12412,7 +12556,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Qt išteklių failas</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-67" />
         <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
         <translation>Sukuria QML failą su pagrindiniu kodu, pradedant nuo "import QtQuick".</translation>
     </message>
@@ -12422,21 +12566,21 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>QML failas (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-32" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Sukuria įbrėžimų buferį naudodama laikiną failą.</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
-        <location line="+45" />
+        <location line="+1" />
+        <location line="+57" />
+        <location line="+47" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Generolas</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-634" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Šis vedlys sukuria paprastą vieneto bandymo projektą, naudodamas „Boost“.</translation>
     </message>
@@ -12461,21 +12605,21 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Sukuria naują vieneto bandymo projektą naudojant „Boost“. Vienetų testai leidžia patikrinti, ar kodas yra tinkamas naudoti ir kad nėra regresijų.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-75" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
         <source>Test Project</source>
         <translation>Bandymo projektas</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-21" />
         <source>Boost Test Project</source>
         <translation>„Boost“ bandymo projektas</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Šis vedlys sukuria paprastą vieneto bandymo projektą, naudodamas „Catch2“.</translation>
     </message>
@@ -12510,7 +12654,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>„Catch2“ bandymo projektas</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Šis vedlys sukuria paprastą vieneto bandymo projektą, naudodamas „Google Test“.</translation>
     </message>
@@ -12540,7 +12684,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>„Google“ bandymo projektas</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+54" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Šis vedlys sukuria paprastą vieneto bandymo projektą, naudodamas QT testą.</translation>
     </message>
@@ -12555,7 +12699,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>QT bandymo projektas</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-116" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Šis vedlys sukuria paprastą vieneto bandymo projektą, naudodamas QT greitą testą.</translation>
     </message>
@@ -12570,17 +12714,17 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>QT greito bandymo projektas</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+815" />
         <source>Include QQuickItem</source>
         <translation>Įtraukite „Qquickitem“</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+49" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>Sukuria CMAKE pagrįstą bandymo projektą, kuriame galite įvesti kodo fragmentą, kad jį sudarytumėte ir patikrintumėte.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="-121" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Sukuria QT valdiklių dizainerio formą, kurią galite pridėti prie QT valdiklio projekto. Tai naudinga, jei jau turite UI verslo logikos klasę.</translation>
     </message>
@@ -12590,7 +12734,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>QT valdiklių dizainerio forma</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-105" />
         <source>Creates a markdown file.</source>
         <translation>Sukuria žymėjimo failą.</translation>
     </message>
@@ -12600,12 +12744,12 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>„Markdown“ failas</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="-57" />
         <source>Scratch Buffer</source>
         <translation>Įbrėžimų buferis</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+12" />
         <source>State chart name:</source>
         <translation>Valstybės diagramos pavadinimas:</translation>
     </message>
@@ -12625,7 +12769,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Valstybės diagrama</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+160" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12665,7 +12809,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Bandymo atvejis</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-100" />
         <source>Creates an empty file.</source>
         <translation>Sukuria tuščią failą.</translation>
     </message>
@@ -12675,7 +12819,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Tuščias failas</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+72" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Sukuria vertimo failą, kurį galite pridėti prie QT projekto.</translation>
     </message>
@@ -12685,61 +12829,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Qt vertimo failas</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-623" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Šis vedlys sukuria paprastą Qt pagrindu veikiančią konsolės programą.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+195" />
+        <location line="+92" />
+        <location line="+83" />
         <source>Meson</source>
         <translation>Mesonas</translation>
     </message>
     <message>
-        <location line="-326" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="-442" />
+        <location line="+41" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="+42" />
+        <location line="+50" />
+        <location line="+84" />
         <source>Define Build System</source>
         <translation>Apibrėžkite kūrimo sistemą</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="-444" />
+        <location line="+41" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="+42" />
+        <location line="+50" />
+        <location line="+84" />
         <source>Build System</source>
         <translation>Sukurti sistemą</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-582" />
+        <location line="+147" />
+        <location line="+32" />
+        <location line="+343" />
+        <location line="+70" />
         <source>Translation File</source>
         <translation>Vertimo failas</translation>
     </message>
     <message>
-        <location line="-479" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-591" />
+        <location line="+147" />
+        <location line="+32" />
+        <location line="+343" />
+        <location line="+70" />
         <source>Translation</source>
         <translation>Vertimas</translation>
     </message>
     <message>
-        <location line="-262" />
+        <location line="-393" />
         <source>Define Python Interpreter</source>
         <translation>Apibrėžkite „Python“ vertėją</translation>
     </message>
@@ -12754,7 +12898,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Sukuria „Python“ programos QT, į kurį įeina QT valdiklių dizainerių pagrindu sukurtas valdiklis (UI failas). Reikalauja .UI į Python konvertavimą.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+269" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -12769,7 +12913,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Sukuria QT greitą programą, kurioje gali būti ir QML, ir C ++ kodas. Galite sukurti programą ir įdiegti ją į darbalaukio, įterptas ir mobiliųjų tikslinių platformų.</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="-59" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12778,7 +12922,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  Norėdami sukurti visą programą, vietoj to sukurkite QT greito programos projektą.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+173" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12795,31 +12939,31 @@ Preselects a desktop Qt for building the application if available.</source>
 Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
     </message>
     <message>
-        <location line="-337" />
-        <location line="+266" />
-        <location line="+28" />
-        <location line="+44" />
+        <location line="-444" />
+        <location line="+32" />
+        <location line="+299" />
+        <location line="+114" />
         <source>Application (Qt)</source>
         <translation>Programa (Qt)</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-412" />
         <source>Qt Console Application</source>
         <translation>Qt konsolės programa</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+302" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Šis vedlys sukuria C++ bibliotekos projektą.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+308" />
+        <location line="+84" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Nurodykite pagrindinę informaciją apie klases, kurioms norite generuoti skeleto šaltinio kodo failus.</translation>
     </message>
     <message>
-        <location line="-307" />
+        <location line="-83" />
         <source>Shared Library</source>
         <translation>Bendrinama biblioteka</translation>
     </message>
@@ -12835,7 +12979,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+46" />
+        <location line="+35" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Tipas:</translation>
@@ -12845,7 +12989,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation type="vanished">%{JS: value('Tipas') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-33" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -12911,14 +13055,14 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Qt modulis:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+116" />
+        <location line="-519" />
+        <location line="+147" />
+        <location line="+70" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+68" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+170" />
+        <location line="+164" />
+        <location line="+59" />
+        <location line="+42" />
         <source>Define Project Details</source>
         <translation>Apibrėžkite projekto detales</translation>
     </message>
@@ -12927,38 +13071,38 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation type="vanished">Sukuria C++ biblioteką. Tai gali būti naudojama norint sukurti:&lt;ul&gt;&lt;li&gt;bendrinama C++ biblioteka, skirta naudoti su &lt;tt&gt;QPluginLoader&lt;/tt&gt; ir vykdymo laiku (įskiepiai)&lt;/li&gt;&lt;li&gt;bendrinama arba statinė C++ biblioteka, skirta naudoti su kitu projektas linktime&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-427" />
-        <location line="+18" />
-        <location line="+186" />
-        <location line="+232" />
+        <location line="-513" />
+        <location line="+460" />
+        <location line="+62" />
+        <location line="+7" />
         <source>Library</source>
         <translation>biblioteka</translation>
     </message>
     <message>
-        <location line="-435" />
+        <location line="-6" />
         <source>C++ Library</source>
         <translation>C++ biblioteka</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-366" />
         <source>Creates a simple Nim application.</source>
         <translation>Sukuria paprastą Nim programą.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+40" />
+        <location line="+229" />
         <location line="+18" />
-        <location line="+18" />
+        <location line="+157" />
         <source>Non-Qt Project</source>
         <translation>Ne Qt projektas</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-403" />
         <source>Nim Application</source>
         <translation>„Nim“ programa</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+369" />
         <source>Binary</source>
         <translation>Dvejetainis</translation>
     </message>
@@ -12973,13 +13117,13 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Autorius:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+402" />
+        <location line="-544" />
+        <location line="+545" />
         <source>Description:</source>
         <translation>Apibūdinimas:</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="+1" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13044,13 +13188,13 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Kita</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+386" />
+        <location line="-560" />
+        <location line="+561" />
         <source>License:</source>
         <translation>Licencija:</translation>
     </message>
     <message>
-        <location line="-385" />
+        <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -13091,22 +13235,22 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Apibrėžkite projekto konfigūraciją</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+253" />
-        <location line="+1" />
-        <location line="+33" />
+        <location line="-296" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
+        <location line="+33" />
+        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
+        <location line="+202" />
         <source>Configuration</source>
         <translation>Konfigūracija</translation>
     </message>
     <message>
-        <location line="-343" />
+        <location line="+5" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Sukuria „Nim“ programą su „Nimble“.</translation>
     </message>
@@ -13116,7 +13260,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Mikli taikymas</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="-159" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Sukuria paprastą C programą be priklausomybių.</translation>
     </message>
@@ -13126,7 +13270,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Paprasta C programa</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="-20" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Sukuria paprastą C++ programą be priklausomybių.</translation>
     </message>
@@ -13136,7 +13280,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Paprasta C++ programa</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+35" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Šis vedlys sukuria tuščią .pro failą.</translation>
     </message>
@@ -13155,20 +13299,20 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation type="vanished">PySide versija:</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-218" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Sukuria Qt Python programai, kurioje yra tik pagrindinis QApplication kodas.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-14" />
+        <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>Programa (Qt, skirta Python)</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="-39" />
         <source>Empty Application</source>
         <translation>Tuščia programa</translation>
     </message>
@@ -13185,13 +13329,13 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location line="+39" />
+        <location line="-28" />
+        <location line="+37" />
         <source>Project file:</source>
         <translation>Projekto failas:</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+11" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Sukuria Qt programą Python, kurioje yra tuščias langas.</translation>
     </message>
@@ -13201,15 +13345,15 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Tuščias langas</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="-47" />
+        <location line="+15" />
         <location line="+22" />
         <location line="+15" />
-        <location line="+24" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-211" />
+        <location line="-65" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -13218,19 +13362,19 @@ Preselects a desktop Qt for building the application if available.</source>
  Iš anksto pasirenka darbalaukį QT, kad būtų galima sukurti programą, jei įmanoma.</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+343" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Sukuria C ++ biblioteką. Galite sukurti: &lt;ul&gt; &lt;li&gt; Bendra C ++ biblioteka, skirta naudoti su &lt;Tt&gt; qpluginloader &lt;/tt&gt; ir runtime (papildiniai) &lt;/li&gt; &lt;li&gt; Bendra arba statinė C ++ biblioteka, skirta naudoti su kitu projektu „LinkTime“ &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="+107" />
+        <location line="-329" />
+        <location line="+15" />
         <location line="+22" />
-        <location line="+39" />
         <source>PySide 2</source>
         <translation>PYSIDE 2</translation>
     </message>
     <message>
-        <location line="-24" />
+        <location line="+15" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -13264,50 +13408,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Sukuria „Qt“, skirtą „Python“ programai, kurioje yra „Qt Designer“ pagrindu sukurtas valdiklis (ui failas) – reikalingas .ui konvertavimas į Python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-55" />
         <source>Window UI</source>
         <translation>Lango vartotojo sąsaja</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-70" />
+        <location line="+311" />
         <location line="+25" />
-        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-335" />
+        <location line="+311" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-310" />
+        <location line="+311" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-310" />
+        <location line="+311" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-310" />
+        <location line="+311" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-310" />
+        <location line="+311" />
         <location line="+23" />
-        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>Minimali reikalinga Qt versija:</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-22" />
         <source>MyItem</source>
         <translation>Mano prekė</translation>
     </message>
@@ -13355,9 +13499,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Sukurkite projektą, kurio struktūra yra suderinama ir su Qt Design Studio (per .qmlproject), ir su Qt Creator (per CMakeLists.txt). Jame yra .ui.qml forma, kurią galite vizualiai redaguoti naudodami Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+30" />
-        <location line="+16" />
+        <location line="-324" />
+        <location line="+274" />
+        <location line="+55" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Naudokite Qt virtualią klaviatūrą</translation>
     </message>
@@ -13370,12 +13514,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Sukuria Qt Quick programą, kurioje yra tuščias langas. Pasirinktinai galite sukurti Qt Design Studio projektą.</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="+13" />
         <source>Qt Quick Application</source>
         <translation>Qt greitoji programa</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="-333" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -13397,12 +13541,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 Naudokite tai tik tuo atveju, jei kuriate prototipą. Naudodami tai negalite sukurti visos programos. Vietoj to apsvarstykite galimybę naudoti Qt greitosios programos projektą.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+272" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt greito vartotojo sąsajos prototipas</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+146" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Šis vedlys sukuria Qt Widgets programos projektą. Programa pagal numatytuosius nustatymus gaunama iš QApplication ir apima tuščią valdiklį.</translation>
     </message>
@@ -13443,27 +13587,27 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Qt valdiklių programa</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+34" />
+        <location line="-332" />
         <location line="+18" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Sukonfigūruokite &lt;b&gt;%{vcsName}&lt;/b&gt; dabar.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+52" />
+        <location line="-75" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>Saugykla:</translation>
     </message>
     <message>
         <location line="-93" />
-        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>Saugyklos URL neteisingas</translation>
@@ -13473,24 +13617,24 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-92" />
-        <location line="+54" />
+        <location line="-72" />
         <location line="+21" />
+        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>Katalogas:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+33" />
+        <location line="-94" />
         <location line="+21" />
         <location line="+21" />
+        <location line="+34" />
         <location line="+19" />
         <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
         <translation>„%{JS: Util.toNativeSeparators('%{TargetPath}')}“ yra failų sistemoje.</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-52" />
         <source>Use existing directory</source>
         <translation>Naudokite esamą katalogą</translation>
     </message>
@@ -13566,13 +13710,13 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+60" />
+        <location line="+19" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Nurodykite saugyklos URL, patikros katalogą ir kelią.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-38" />
         <source>Running Bazaar branch...</source>
         <translation>Veikia turgaus filialas...</translation>
     </message>
@@ -13591,9 +13735,9 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Klonuoja turgaus filialą ir bando įkelti esantį projektą.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
+        <location line="-56" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13601,12 +13745,12 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Importo projektas</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-38" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Turgaus klonas (arba filialas)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-69" />
         <source>Module:</source>
         <translation>Modulis:</translation>
     </message>
@@ -13625,7 +13769,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+52" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13633,7 +13777,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Patikra</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="-95" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Patikrina CVS saugyklą ir bando įkelti esantį projektą.</translation>
     </message>
@@ -13683,7 +13827,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+48" />
         <source>Running Mercurial clone...</source>
         <translation>Veikia Mercurial klonas...</translation>
     </message>
@@ -13718,7 +13862,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>„Subversion Checkout“.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-394" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Šis vedlys sukuria pasirinktinį Qt Creator papildinį.</translation>
     </message>
@@ -19689,7 +19833,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+683" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
         <source>Python:</source>
         <translation>Python:</translation>
     </message>
@@ -19699,7 +19843,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Paleisti %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1147" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
         <location line="+283" />
         <source>Name:</source>
         <translation>Vardas:</translation>
@@ -19790,7 +19934,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Kalbos serverio konfigūracija</translation>
     </message>
     <message>
-        <location line="+466" />
+        <location line="+476" />
         <source>Python interpreter:</source>
         <translation>„Python“ vertėjas:</translation>
     </message>
@@ -22868,7 +23012,7 @@ Nebus taikomas tarpams komentaruose ir eilutėse.</translation>
         <translation>Ne spalvų schemos failas.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
         <source>derived from QObject</source>
         <comment>group:'C++' trigger:'class'</comment>
         <translation>kilęs iš QObject</translation>
@@ -22939,7 +23083,7 @@ Nebus taikomas tarpams komentaruose ir eilutėse.</translation>
         <translation type="vanished">(tipo pavadinimas READ name WRITE setName NOTIFY namePakeistas)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>with targets</source>
         <comment>group:'QML' trigger:'NumberAnimation'</comment>
         <translation>su taikiniais</translation>
@@ -23011,7 +23155,7 @@ Nebus taikomas tarpams komentaruose ir eilutėse.</translation>
         <translation>Gaukite scenarijų</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-31" />
         <source>example</source>
         <comment>group:'Text' trigger:'global'</comment>
         <translation>pavyzdys</translation>

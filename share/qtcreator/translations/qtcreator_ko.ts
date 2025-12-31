@@ -10,6 +10,19 @@
     </message>
 </context>
 <context>
+    <name>OpenMV::Internal::OpenMVProfileView</name>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <source>Copy</source>
+        <translation>복사</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Select All</source>
+        <translation>모두 선택</translation>
+    </message>
+</context>
+<context>
     <name>OpenMVCameraSettings</name>
     <message>
         <location filename="../../../src/plugins/openmv/openmvcamerasettings.ui" />
@@ -201,7 +214,7 @@
         <translation>'%1'에 대한 구문 정의를 %2 버전으로 업데이트하는 중...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1070" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
         <source>Copy/Convert Python File</source>
         <translation>파이썬 파일을 복사/변환합니다</translation>
     </message>
@@ -2332,7 +2345,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>산출</translation>
     </message>
     <message>
-        <location line="+403" />
+        <location line="+406" />
         <source>Reset to Default</source>
         <translation>기본값으로 재설정하십시오</translation>
     </message>
@@ -2745,7 +2758,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+13" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-672" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-675" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-89" />
         <source>Case Sensitive</source>
         <translation>대소문자 구분</translation>
@@ -3724,7 +3737,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>옵션</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
         <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
         <translation>번역자의 ts 파일에서 애플리케이션이 사용할 수 있는 qm 번역 파일을 생성합니다.</translation>
     </message>
@@ -3734,13 +3747,13 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>릴리스 번역(lrelease)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
+        <location line="-9" />
+        <location line="+10" />
         <source>Linguist</source>
         <translation>언어학자</translation>
     </message>
     <message>
-        <location line="-2" />
+        <location line="-12" />
         <source>Synchronizes translator's ts files with the program code</source>
         <translation>번역기의 ts 파일을 프로그램 코드와 동기화</translation>
     </message>
@@ -3761,13 +3774,13 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <location line="+15" />
+        <location line="+10" />
         <location line="+5" />
         <source>Text</source>
         <translation>텍스트</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>QML 유틸리티로 현재 QML 파일을 실행합니다.</translation>
     </message>
@@ -3793,7 +3806,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Qt Quick 2 미리보기(qmlscene)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-16" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>vi에서 현재 파일을 엽니다.</translation>
@@ -7040,7 +7053,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
-        <location line="+785" />
+        <location line="+823" />
         <source>Dataset Editor</source>
         <translation>데이터세트 편집기</translation>
     </message>
@@ -7050,13 +7063,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>클래스 이름을 입력하세요.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+320" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+388" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+274" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
@@ -7064,37 +7077,36 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-695" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
         <location line="+19" />
         <location line="+115" />
-        <location line="+1344" />
+        <location line="+1441" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+106" />
+        <location line="+124" />
         <location line="+180" />
-        <location line="+204" />
-        <location line="+14" />
-        <location line="+348" />
+        <location line="+308" />
         <location line="+13" />
-        <location line="+347" />
+        <location line="+168" />
         <location line="+145" />
         <location line="+114" />
         <location line="+129" />
         <location line="+114" />
         <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+364" />
-        <location line="+252" />
-        <location line="+85" />
-        <location line="+972" />
-        <location line="+835" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
+        <location line="+254" />
+        <location line="+86" />
+        <location line="+1015" />
+        <location line="+896" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+523" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
         <location line="+11" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+506" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
         <source>Error: %L1!</source>
@@ -7102,7 +7114,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3755" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3433" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7117,8 +7129,8 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2476" />
-        <location line="+1763" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2471" />
+        <location line="+1446" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>알 수 없는 이유로 이미지 파일을 저장하지 못했습니다!</translation>
@@ -7126,14 +7138,14 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+16" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+242" />
+        <location line="+239" />
         <source>Delete</source>
         <translation>삭제</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-312" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
         <source>Are you sure you want to permanetly delete "%L1"?</source>
         <translation>"%L1"을(를) 영구적으로 삭제하시겠습니까?</translation>
     </message>
@@ -7160,33 +7172,29 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>알 수 없는 이유로 파일 이름을 바꾸지 못했습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5537" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5122" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
         <source>Could not copy file "%1" to "%2".</source>
         <translation>파일 "%1"을(를) "%2"(으)로 복사할 수 없습니다.</translation>
     </message>
     <message>
-        <location line="+46" />
         <source>Invalid argument (%1) for -override_read_timeout</source>
-        <translation>-override_read_timeout에 대한 잘못된 인수(%1)</translation>
+        <translation type="vanished">-override_read_timeout에 대한 잘못된 인수(%1)</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Missing argument for -override_read_timeout</source>
-        <translation>-override_read_timeout에 대한 누락된 인수</translation>
+        <translation type="vanished">-override_read_timeout에 대한 누락된 인수</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Invalid argument (%1) for -override_read_stall_timeout</source>
-        <translation>-override_read_stall_timeout에 대한 잘못된 인수(%1)</translation>
+        <translation type="vanished">-override_read_stall_timeout에 대한 잘못된 인수(%1)</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Missing argument for -override_read_stall_timeout</source>
-        <translation>-override_read_stall_timeout에 대한 누락된 인수</translation>
+        <translation type="vanished">-override_read_stall_timeout에 대한 누락된 인수</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+40" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>-serial_number_filter에 대한 누락된 인수</translation>
     </message>
@@ -7198,7 +7206,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2241" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2348" />
         <location line="+9" />
         <location line="+13" />
         <location line="+59" />
@@ -7228,42 +7236,39 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>임계값 편집기로 LAB 임계값 편집</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+226" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
         <source>Missing argument for -form_key</source>
         <translation>-form_key에 대한 누락된 인수</translation>
     </message>
     <message>
-        <location line="+1034" />
+        <location line="+1066" />
         <source>About OpenMV Viewer...</source>
         <translation>OpenMV 뷰어 정보...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;%L4 %L1 소개&lt;/b&gt;&lt;/p&gt;&lt;p&gt;: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU 일반 공중 사용 허가&lt;/b&gt;&lt;/p&gt;서 &lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;이 프로그램은 유용할 것이라는 희망으로 배포되지만 어떠한 보증도 없이 배포됩니다. 상품성 또는 특정 목적에의 적합성에 대한 묵시적 보증도 없습니다. 자세한 내용은 &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License를 참조하십시오&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;질문이나 의견이 있으십니까?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io 로 문의하십시오&lt;/a&gt;.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;%L4 %L1 소개&lt;/b&gt;&lt;/p&gt;&lt;p&gt;: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU 일반 공중 사용 허가&lt;/b&gt;&lt;/p&gt;서 &lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;이 프로그램은 유용할 것이라는 희망으로 배포되지만 어떠한 보증도 없이 배포됩니다. 상품성 또는 특정 목적에의 적합성에 대한 묵시적 보증도 없습니다. 자세한 내용은 &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License를 참조하십시오&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;질문이나 의견이 있으십니까?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io 로 문의하십시오&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <source>OpenMV IDE</source>
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1003" />
+        <location line="-1039" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
     <message>
-        <location line="-517" />
         <source>Invalid argument (%1) for -override_per_command_wait</source>
-        <translation>-override_per_command_wait에 대한 잘못된 인수(%1)입니다</translation>
+        <translation type="vanished">-override_per_command_wait에 대한 잘못된 인수(%1)입니다</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Missing argument for -override_per_command_wait</source>
-        <translation>-override_per_command_wait에 대한 인수가 없습니다</translation>
+        <translation type="vanished">-override_per_command_wait에 대한 인수가 없습니다</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="-460" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>-auto_update에 대한 인수가 잘못되었습니다(%1)</translation>
     </message>
@@ -7286,7 +7291,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">v4.3.0 이전에 v4.3.0 이전 에이 파일이없고 리소스 설치시 삭제했을 것입니다.</translation>
     </message>
     <message>
-        <location line="+195" />
+        <location line="+193" />
         <source>Form Key</source>
         <translation>양식 키</translation>
     </message>
@@ -7296,7 +7301,7 @@ Check the json file for errors and fix them.</source>
         <translation>양식 키를 입력하십시오</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+82" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7339,7 +7344,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">부트로더 실행(펌웨어 로드)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+24" />
         <source>Ctrl+Shift+L</source>
         <translation>Ctrl+Shift+L</translation>
     </message>
@@ -7423,33 +7428,33 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+77" />
-        <location line="+4044" />
+        <location line="+3722" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>터미널 열기</translation>
     </message>
     <message>
-        <location line="-4098" />
+        <location line="-3776" />
         <source>Machine Vision</source>
         <translation>머신 비전</translation>
     </message>
     <message>
         <location line="+181" />
-        <location line="+3948" />
+        <location line="+3626" />
         <location line="+76" />
         <source>Threshold Editor</source>
         <translation>임계값 편집기</translation>
     </message>
     <message>
-        <location line="-4019" />
-        <location line="+4097" />
+        <location line="-3697" />
+        <location line="+3775" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>키포인트 편집기</translation>
     </message>
     <message>
-        <location line="-4090" />
-        <location line="+4256" />
+        <location line="-3768" />
+        <location line="+3934" />
         <location line="+98" />
         <location line="+24" />
         <location line="+11" />
@@ -7458,7 +7463,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag 생성기</translation>
     </message>
     <message>
-        <location line="-4404" />
+        <location line="-4082" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 제품군(30개 태그)</translation>
     </message>
@@ -7496,16 +7501,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+343" />
+        <location line="+371" />
         <location line="+14" />
-        <location line="+31" />
-        <location line="+823" />
+        <location line="+33" />
+        <location line="+874" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
         <source>Failed to open: "%L1"</source>
         <translation>열지 못했습니다: "%L1"</translation>
     </message>
     <message>
-        <location line="-1235" />
+        <location line="-1316" />
         <source>DataMatrix Generator</source>
         <translation>데이터 매트릭스 생성기</translation>
     </message>
@@ -7532,13 +7537,13 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+228" />
-        <location line="+2320" />
-        <location line="+47" />
-        <location line="+69" />
-        <location line="+1491" />
+        <location line="+2315" />
+        <location line="+1290" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
+        <location line="+67" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
         <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+856" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
         <location line="+208" />
         <source>Please add a file extension!</source>
         <translation>파일 확장자를 추가해주세요!</translation>
@@ -7553,7 +7558,7 @@ Check the json file for errors and fix them.</source>
         <translation>출력 파일을 덮어쓸 수 없습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4140" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3818" />
         <source>Video Tools</source>
         <translation>비디오 도구</translation>
     </message>
@@ -7653,15 +7658,15 @@ Check the json file for errors and fix them.</source>
         <location line="+237" />
         <location line="+141" />
         <location line="+67" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+208" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1343" />
+        <location line="+1440" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+240" />
-        <location line="+970" />
+        <location line="+258" />
+        <location line="+533" />
         <location line="+145" />
         <location line="+114" />
         <location line="+129" />
@@ -7669,18 +7674,18 @@ Check the json file for errors and fix them.</source>
         <location line="+118" />
         <location line="+433" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+286" />
-        <location line="+142" />
-        <location line="+978" />
+        <location line="+288" />
+        <location line="+143" />
+        <location line="+1021" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1297" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
         <location line="+85" />
-        <location line="+565" />
+        <location line="+608" />
         <source>Cancel</source>
         <translation>취소</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3953" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3631" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Edge Impulse 프로젝트에 업로드</translation>
     </message>
@@ -7712,7 +7717,7 @@ Check the json file for errors and fix them.</source>
         <translation>데이터세트 닫기</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+34" />
         <source>OpenMV Docs</source>
         <translation>OpenMV 문서</translation>
     </message>
@@ -7732,7 +7737,7 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV 캠 정보...</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+18" />
         <source>About OpenMV Cam %1</source>
         <translation>OpenMV 캠 %1 정보</translation>
     </message>
@@ -7771,7 +7776,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">&lt;p&gt;Kwabena W. Agyeman의 OpenMV IDE 영어 번역.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+17" />
         <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;파트너&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -7809,10 +7814,10 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+24" />
         <location line="+7" />
-        <location line="+24" />
+        <location line="+36" />
         <location line="+26" />
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+150" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
         <location line="+54" />
         <location line="+32" />
         <location line="+28" />
@@ -7834,10 +7839,10 @@ Check the json file for errors and fix them.</source>
         <location line="+18" />
         <location line="+23" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-130" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-97" />
         <location line="+73" />
         <location line="+9" />
-        <location line="+85" />
+        <location line="+52" />
         <location line="+4" />
         <location line="+7" />
         <location line="+9" />
@@ -7855,13 +7860,14 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1018" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1062" />
         <location line="+6" />
-        <location line="+26" />
-        <location line="+53" />
+        <location line="+28" />
+        <location line="+52" />
         <location line="+8" />
-        <location line="+33" />
-        <location line="+341" />
+        <location line="+35" />
+        <location line="+320" />
+        <location line="+62" />
         <location line="+99" />
         <location line="+49" />
         <location line="+67" />
@@ -7877,24 +7883,23 @@ Check the json file for errors and fix them.</source>
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+73" />
+        <location line="+87" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
         <location line="+108" />
         <location line="+83" />
-        <location line="+41" />
+        <location line="+42" />
         <location line="+38" />
         <location line="+52" />
         <location line="+38" />
         <location line="+21" />
         <location line="+20" />
-        <location line="+23" />
-        <location line="+106" />
-        <location line="+184" />
+        <location line="+24" />
+        <location line="+121" />
+        <location line="+214" />
         <location line="+33" />
-        <location line="+211" />
-        <location line="+51" />
+        <location line="+215" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+674" />
         <source>Connect</source>
         <translation>연결하다</translation>
@@ -7915,31 +7920,15 @@ Check the json file for errors and fix them.</source>
         <translation>Alif Semiconductor의 SE 도구를 사용하여 펌웨어 복구 만 지원됩니다.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-397" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-303" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-484" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-164" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-250" />
-        <location line="+13" />
-        <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+31" />
-        <location line="+13" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location line="+26" />
         <location line="+7" />
-        <location line="+165" />
         <source>Disconnect</source>
         <translation>연결 끊기</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+19" />
+        <location line="+19" />
         <source>Start (run script)</source>
         <translation>시작(스크립트 실행)</translation>
     </message>
@@ -7968,7 +7957,6 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+332" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <source>Stop</source>
         <translation>멈추다</translation>
@@ -7992,47 +7980,31 @@ Check the json file for errors and fix them.</source>
         <translation>크기에 맞게 확대</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+17" />
+        <location line="+30" />
         <source>JPG</source>
         <translation>JPG</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+1" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG는 고성능을 위해 프레임 버퍼를 압축합니다.</translation>
     </message>
     <message>
-        <location line="+17" />
-        <location line="+22" />
-        <location line="+1851" />
-        <location line="+55" />
-        <location line="+112" />
-        <location line="+69" />
-        <location line="+278" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-547" />
-        <location line="+216" />
-        <location line="+167" />
-        <location line="+165" />
-        <location line="+173" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+335" />
-        <location line="+346" />
         <source>Busy... please wait...</source>
-        <translation>바쁘신데...기다려주세요...</translation>
+        <translation type="vanished">바쁘신데...기다려주세요...</translation>
     </message>
     <message>
-        <location line="-2381" />
-        <location line="+15" />
+        <location line="-25" />
         <source>Disable</source>
         <translation>장애를 입히다</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+1" />
         <source>Disable the Frame Buffer for maximum performance</source>
         <translation>최대 성능을 위해 프레임 버퍼 비활성화</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+48" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>프레임 버퍼 비활성화 - 활성화하려면 비활성화 버튼을 다시 클릭합니다(오른쪽 상단).</translation>
     </message>
@@ -8101,7 +8073,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">해상도(w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1536" />
+        <location line="-1574" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
@@ -8111,7 +8083,7 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
     </message>
     <message>
         <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3142" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2478" />
         <source>Load Custom Firmware</source>
         <translation>사용자 정의 펌웨어를로드하십시오</translation>
     </message>
@@ -8186,13 +8158,23 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
         <location line="+8" />
         <location line="+31" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-855" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>변환 모델</translation>
     </message>
     <message>
-        <location line="+819" />
+        <location line="+425" />
+        <source>Show Code Profiler</source>
+        <translation>코드 프로파일러 표시</translation>
+    </message>
+    <message>
+        <location line="+101" />
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;%L4 %L1 정보&lt;/b&gt;&lt;/p&gt;&lt;p&gt;작성자: Ibrahim Abdelkader 및 Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;공장 버전&lt;/b&gt;&lt;/p&gt;&lt;p&gt;허가를 받은 제조업체에만 해당됩니다.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU 일반 공용 라이센스&lt;/b&gt;&lt;/p&gt;&lt;p&gt;저작권(C) %L2 %L3&lt;/p&gt;&lt;p&gt;이 프로그램은 유용할 것이라는 희망으로 배포되지만 어떠한 보증도 제공하지 않습니다. 상품성이나 특정 목적에의 적합성에 대한 묵시적인 보증도 제공되지 않습니다. 자세한 내용은 &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU 일반 공중 라이선스&lt;/a&gt;를 참조하세요.&lt;/p&gt;&lt;p&gt;&lt;b&gt;질문이나 의견이 있으신가요?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;로 문의하세요.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+331" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>해상도(w:%1, h:%2) - ROI(x:%3, y:%4, w:%5, h:%6) - 픽셀(%7) - 포커스(%8)</translation>
@@ -8230,7 +8212,7 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2612" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2693" />
         <source>Board:</source>
         <translation>판자:</translation>
     </message>
@@ -8240,7 +8222,7 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
         <translation>카메라 보드 유형</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+15" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
         <source>Sensor:</source>
         <translation>감지기:</translation>
@@ -8274,14 +8256,14 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
     </message>
     <message>
         <location line="+6" />
-        <location line="+2007" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-319" />
-        <location line="+321" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-291" />
+        <location line="+293" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-573" />
         <source>Drive:</source>
         <translation>운전하다:</translation>
     </message>
     <message>
-        <location line="-2006" />
+        <location line="+1" />
         <source>Drive associated with port</source>
         <translation>포트와 연결된 드라이브</translation>
     </message>
@@ -8297,8 +8279,8 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
         <translation>카메라 FPS와 다를 수 있음</translation>
     </message>
     <message>
-        <location line="+234" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2825" />
+        <location line="+267" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2908" />
         <source>Update Available</source>
         <translation>업데이트 가능</translation>
     </message>
@@ -8313,7 +8295,7 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
         <translation>다운로드</translation>
     </message>
     <message>
-        <location line="+207" />
+        <location line="+223" />
         <source>WiFi Programming Disabled!</source>
         <translation>WiFi 프로그래밍 비활성화!</translation>
     </message>
@@ -8394,17 +8376,17 @@ LED가 파란색으로 깜박이지만 OpenMV IDE가 OpenMV Cam에 연결할 수
     </message>
     <message>
         <location line="+93" />
-        <location line="+1595" />
+        <location line="+1176" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>직렬 포트 - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1563" />
+        <location line="-1144" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1210" />
+        <location line="+791" />
         <location line="+145" />
         <location line="+114" />
         <location line="+129" />
@@ -8414,7 +8396,7 @@ LED가 파란색으로 깜박이지만 OpenMV IDE가 OpenMV Cam에 연결할 수
         <translation>연결 중...(30초 제한 시간)</translation>
     </message>
     <message>
-        <location line="-2202" />
+        <location line="-1783" />
         <source>
 
 Try doing:
@@ -8467,12 +8449,12 @@ sudo adduser %L1 다이얼아웃
     </message>
     <message>
         <location line="+17" />
-        <location line="+1652" />
+        <location line="+1233" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP 서버 연결 - %1</translation>
     </message>
     <message>
-        <location line="-1578" />
+        <location line="-1159" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>-open_udp_server_terminal에 대한 잘못된 포트 인수(%1)</translation>
     </message>
@@ -8503,12 +8485,12 @@ sudo adduser %L1 다이얼아웃
     </message>
     <message>
         <location line="+17" />
-        <location line="+1698" />
+        <location line="+1279" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP 서버 연결 - %1</translation>
     </message>
     <message>
-        <location line="-1624" />
+        <location line="-1205" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>-open_tcp_server_terminal에 대한 잘못된 포트 인수(%1)</translation>
     </message>
@@ -8519,8 +8501,8 @@ sudo adduser %L1 다이얼아웃
     </message>
     <message>
         <location line="+55" />
-        <location line="+9" />
-        <location line="+8" />
+        <location line="+18" />
+        <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
@@ -8535,7 +8517,7 @@ sudo adduser %L1 다이얼아웃
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2281" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2388" />
         <location line="+9" />
         <location line="+8" />
         <location line="+19" />
@@ -8543,7 +8525,7 @@ sudo adduser %L1 다이얼아웃
         <translation>OpenMV 캠 등록</translation>
     </message>
     <message>
-        <location line="-226" />
+        <location line="-244" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8562,7 +8544,14 @@ ID: %2
 Examples-&gt;HelloWorld-&gt;helloworld.py를 실행하여 비전 품질을 테스트하고 카메라 초점을 맞춥니다(해당되는 경우).</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
+        <location line="+17" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <source>Registered</source>
+        <translation>등기</translation>
+    </message>
+    <message>
+        <location line="-6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8577,9 +8566,9 @@ ID: %2
 Examples-&gt;HelloWorld-&gt;helloworld.py를 실행하여 비전 품질을 테스트하고 카메라 초점을 맞춥니다(해당되는 경우).</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <location line="+182" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-35" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>데이터베이스 오류!</translation>
     </message>
@@ -8672,33 +8661,30 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>잘못된 형식의 보드 키!</translation>
     </message>
     <message>
-        <location line="+64" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+186" />
-        <location line="+490" />
-        <location line="+153" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+190" />
+        <location line="+472" />
+        <location line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-77" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
     <message>
-        <location line="+86" />
         <source>Configure Settings</source>
-        <translation>설정 구성</translation>
+        <translation type="vanished">설정 구성</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+22" />
-        <location line="+14" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+373" />
+        <location line="+20" />
         <source>Save Script</source>
         <translation>스크립트 저장</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-19" />
         <source>Strip comments and convert spaces to tabs?</source>
         <translation>주석을 제거하고 공백을 탭으로 변환하시겠습니까?</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8709,34 +8695,33 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-23" />
-        <location line="+1418" />
+        <location line="+1101" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>이미지 파일(*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1373" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
         <location line="+7" />
         <location line="+17" />
         <location line="+15" />
-        <location line="+11" />
         <source>Save Template</source>
         <translation>템플릿 저장</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="-37" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)</source>
         <translation>이미지 파일(*.bmp *.jpg *.jpeg *.pgm *.ppm)</translation>
     </message>
     <message>
         <location line="+23" />
-        <location line="+69" />
+        <location line="+67" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>OpenMV Cam에서 유효한 경로를 선택하십시오!</translation>
     </message>
     <message>
-        <location line="-54" />
-        <location line="+69" />
+        <location line="-52" />
+        <location line="+67" />
         <source>"%L1" is longer than a max length of %L2 characters!</source>
         <translation>"%L1"이(가) 최대 길이인 %L2자보다 깁니다!</translation>
     </message>
@@ -8745,20 +8730,19 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+7" />
         <location line="+17" />
         <location line="+15" />
-        <location line="+11" />
         <source>Save Descriptor</source>
         <translation>설명자 저장</translation>
     </message>
     <message>
-        <location line="-48" />
-        <location line="+1390" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
         <location line="+80" />
         <location line="+21" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>키포인트 파일(*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1292" />
+        <location line="-1113" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8786,14 +8770,13 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>예제 파일 "%L1"을(를) 열 수 없습니다!</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-457" />
         <location line="+28" />
-        <location line="+29" />
         <source>Select Drive</source>
         <translation>드라이브 선택</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="-27" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>OpenMV Cam과 연결할 유효한 드라이브가 없습니다!</translation>
     </message>
@@ -8812,17 +8795,42 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>드라이브: %L1</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+41" />
         <source>Debug Protocol Settings</source>
         <translation>디버그 프로토콜 설정</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+14" />
+        <source>Protocol Version %1 - System Info:</source>
+        <translation>프로토콜 버전 %1 - 시스템 정보:</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Host Stats:</source>
+        <translation>호스트 통계:</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Device Stats:</source>
+        <translation>장치 통계:</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Protocol Controls:</source>
+        <translation>프로토콜 제어:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Dynamic Frame Reading</source>
+        <translation>동적 프레임 읽기</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Combined Polling</source>
         <translation>결합 폴링</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+12" />
         <source>Polling (ms)</source>
         <translation>폴링(ms)</translation>
     </message>
@@ -8837,12 +8845,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>폴링 설정</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+17" />
         <source>Frame Buffer Polling (ms)</source>
         <translation>프레임 버퍼 폴링(ms)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Script State Polling (ms)</source>
         <translation>스크립트 상태 폴링(ms)</translation>
     </message>
@@ -8852,7 +8860,19 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>텍스트 버퍼 폴링 (ms)</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+9" />
+        <source>Code Profiler Polling (ms)</source>
+        <translation>코드 프로파일러 폴링(ms)</translation>
+    </message>
+    <message>
+        <location line="+354" />
+        <location line="+26" />
+        <location line="+7" />
+        <source>Failed to flush "%L1"!</source>
+        <translation>"%L1"을(를) 플러시하지 못했습니다!</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
         <location line="+13" />
         <location line="+31" />
         <location line="+9" />
@@ -8899,7 +8919,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1928" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1977" />
         <source>Please select a serial port</source>
         <translation>직렬 포트를 선택하십시오</translation>
     </message>
@@ -9025,7 +9045,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+716" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
         <source>What would you like to do?</source>
         <translation>무엇을하고 싶으십니까?</translation>
     </message>
@@ -9137,7 +9157,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>세대 완료!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1462" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1508" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>새로운 OpenMV IDE 리소스를 사용할 수 있습니다(예: 예제, 펌웨어, 설명서 등).</translation>
     </message>
@@ -9148,8 +9168,8 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+7" />
-        <location line="+286" />
-        <location line="+142" />
+        <location line="+288" />
+        <location line="+143" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-420" />
         <location line="+148" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
@@ -9172,7 +9192,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>다운로드 중...</translation>
     </message>
     <message>
-        <location line="-414" />
+        <location line="-417" />
         <source>Installing...</source>
         <translation>설치 중...</translation>
     </message>
@@ -9190,75 +9210,86 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+28" />
         <location line="+6" />
-        <location line="+26" />
+        <location line="+28" />
         <source>Package Update</source>
         <translation>패키지 업데이트</translation>
     </message>
     <message>
-        <location line="-25" />
-        <location line="+252" />
-        <location line="+87" />
+        <location line="-27" />
+        <location line="+254" />
+        <location line="+88" />
         <source>Cannot open the resources file "%L1"!</source>
         <translation>리소스 파일 "%L1"을(를) 열 수 없습니다!</translation>
     </message>
     <message>
-        <location line="-313" />
-        <location line="+252" />
-        <location line="+94" />
+        <location line="-314" />
+        <location line="+254" />
+        <location line="+95" />
         <source>Network request failed "%L1"!</source>
         <translation>네트워크 요청 실패 "%L1"!</translation>
     </message>
     <message>
-        <location line="-312" />
+        <location line="-315" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>펌웨어 바이너리 ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
         <location line="+11" />
         <location line="+119" />
-        <location line="+544" />
+        <location line="+588" />
         <location line="+217" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>내부 지방 파일 시스템을 지우십시오</translation>
     </message>
     <message>
-        <location line="-3069" />
+        <location line="-3160" />
         <location line="+119" />
-        <location line="+545" />
+        <location line="+589" />
         <location line="+216" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>이 옵션을 활성화하면 OpenMV Cam의 내부 지방 파일 시스템의 모든 파일이 삭제됩니다. 제거 가능한 SD 카드의 파일을 지우지 않습니다 (삽입 된 경우).</translation>
     </message>
     <message>
-        <location line="-3069" />
-        <location line="+664" />
+        <location line="-3160" />
+        <location line="+708" />
         <location line="+216" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>ROMFS 파일 시스템을 재설정합니다</translation>
     </message>
     <message>
-        <location line="-3068" />
-        <location line="+664" />
+        <location line="-3159" />
+        <location line="+708" />
         <location line="+215" />
-        <location line="+2114" />
+        <location line="+2161" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>이 옵션을 활성화하면 OpenMV 캠의 ROM 파일 시스템이 기본값으로 다시 재설정됩니다.</translation>
     </message>
     <message>
-        <location line="-3025" />
+        <location line="-3116" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>부트로더</translation>
     </message>
     <message>
-        <location line="-113" />
+        <location line="+2947" />
+        <source>You can find more examples under the File -&gt; Examples menu.
+
+In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
+        <translation>파일 -&gt; 예제 메뉴에서 더 많은 예제를 찾을 수 있습니다. 
+
+특히 이미지 처리 -&gt; 색상 추적 및 기계 학습 -&gt; TensorFlow 예제를 확인하세요.</translation>
+    </message>
+    <message>
+        <location line="-3060" />
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
         <translation>펌웨어 경로</translation>
@@ -9301,7 +9332,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>이 옵션을 활성화하면 OpenMV 캠의 ROM 파일 시스템이 최신 개발 릴리스로 업데이트됩니다.</translation>
     </message>
     <message>
-        <location line="+103" />
+        <location line="+104" />
         <source>Extracting...</source>
         <translation>적출...</translation>
     </message>
@@ -9311,9 +9342,9 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>펌웨어를 추출할 수 없습니다!</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+148" />
         <location line="+5" />
-        <location line="+49" />
+        <location line="+48" />
         <location line="+5" />
         <location line="+5" />
         <location line="+5" />
@@ -9321,7 +9352,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>알 수없는 보드</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+233" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>DFU 모드의 보드가 감지되었습니다. 무엇을하고 싶으십니까?</translation>
     </message>
@@ -9350,7 +9381,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>OpenMV Cam이 연결되어 있고 벽돌로 되어 있습니까?</translation>
     </message>
     <message>
-        <location line="+833" />
+        <location line="+848" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
 Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
@@ -9384,7 +9415,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
         <translation>*.bin 파일 만로드하면 Picotool Bootloader에 대한 지원이 지원됩니다!</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+24" />
         <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
@@ -9394,10 +9425,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-119" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-959" />
-        <location line="+642" />
-        <location line="+1676" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-975" />
+        <location line="+656" />
+        <location line="+1707" />
         <source>Please select the board type</source>
         <translation>보드 종류를 선택해주세요</translation>
     </message>
@@ -9406,7 +9437,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">내부 파일 시스템을 지우시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2206" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2251" />
         <source>No released firmware available for the attached board!</source>
         <translation>부착된 보드에 사용할 수 있는 릴리스된 펌웨어가 없습니다!</translation>
     </message>
@@ -9423,13 +9454,22 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>부트로더를 최신 버전으로 업데이트하고 SoftDevice를 설치하여 OpenMV 펌웨어를 플래시하십시오. 자세한 내용은 &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;에서 확인할 수 있습니다.</translation>
     </message>
     <message>
-        <location line="-1019" />
-        <location line="+2877" />
+        <location line="-1063" />
+        <location line="+2968" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>경고 : 새 펌웨어 버전으로 업그레이드하려면 지방 파일 시스템을 지워야합니다.</translation>
     </message>
     <message>
-        <location line="-2365" />
+        <location line="-2483" />
+        <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
+
+%1</source>
+        <translation>이 시스템에 있는 아래 장치의 OS에서 USB 문제가 감지되었습니다. 연결 문제를 일으킬 수 있으므로 이러한 장치를 수정하거나 제거하십시오. 
+
+% 1</translation>
+    </message>
+    <message>
+        <location line="+71" />
         <source>Just erase the internal FAT file system</source>
         <translation>내부 지방 파일 시스템을 지우십시오</translation>
     </message>
@@ -9445,12 +9485,12 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+219" />
-        <location line="+2115" />
+        <location line="+2162" />
         <source>Upgrade options:</source>
         <translation>업그레이드 옵션 :</translation>
     </message>
     <message>
-        <location line="-2031" />
+        <location line="-2078" />
         <location line="+167" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -9466,7 +9506,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (5초 이상 걸리면 취소를 누르십시오).</translation>
     </message>
     <message>
-        <location line="+119" />
+        <location line="+133" />
         <source>Timeout error while getting firmware version!</source>
         <translation>펌웨어 버전을 가져오는 동안 시간 초과 오류가 발생했습니다!</translation>
     </message>
@@ -9483,7 +9523,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location line="+72" />
         <location line="+191" />
-        <location line="+523" />
+        <location line="+570" />
         <source>Timeout error while getting board architecture!</source>
         <translation>보드 아키텍처를 가져오는 동안 시간 초과 오류가 발생했습니다!</translation>
     </message>
@@ -9492,8 +9532,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">지원되지 않는 보드 아키텍처!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-619" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+130" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>OpenMV Cam을 분리했다가 다시 연결하십시오...</translation>
     </message>
@@ -9547,12 +9587,12 @@ Continue?</source>
         <translation>지우는 중...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+204" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-173" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+273" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+140" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-191" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+46" />
         <location line="+56" />
@@ -9650,7 +9690,7 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+272" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
         <location line="+130" />
         <location line="+41" />
@@ -9677,7 +9717,7 @@ OpenMV Cam에서 main.py를 덮어쓰고 디스크를 지우지 않은 경우 Op
         <translation>펌웨어 파일이 비어 있습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-193" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-160" />
         <source>No IMX settings for the selected board type %L1!</source>
         <translation>선택한 보드 유형 %L1에 대한 IMX 설정이 없습니다!</translation>
     </message>
@@ -9687,29 +9727,11 @@ OpenMV Cam에서 main.py를 덮어쓰고 디스크를 지우지 않은 경우 Op
         <translation>IMX 설정이 없습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-385" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-291" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-486" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+17" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-238" />
-        <location line="+13" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+326" />
-        <location line="+13" />
-        <location line="+7" />
         <source>Failed to eject "%L1"!</source>
-        <translation>"%L1"을(를) 꺼내지 못했습니다!</translation>
+        <translation type="vanished">"%L1"을(를) 꺼내지 못했습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+10" />
+        <location line="+14" />
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
@@ -9764,14 +9786,14 @@ OpenMV Cam의 SBL 부트로더가 열거된 후 확인 버튼을 클릭합니다
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+364" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+99" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+270" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+424" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-1" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+111" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-1" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-42" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+1" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+217" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1" />
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>OpenMV Cam이 열거되고 내장된 자체 테스트 실행을 완료한 후 확인 버튼을 클릭합니다(파란색 LED 깜박임 - 시간이 걸립니다).</translation>
     </message>
@@ -9922,7 +9944,7 @@ OpenMV Cam의 SBL 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation>PicoTool 펌웨어 업데이트 실패!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-509" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521" />
         <source>OpenMV IDE needs to update your bootloader to support ROMFS.
 
 The internal FAT filesystem will be erased!
@@ -9959,12 +9981,12 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
     </message>
     <message>
         <location line="+11" />
-        <location line="+4" />
+        <location line="+11" />
         <source>Flashing Bootloader</source>
         <translation>플래싱 부트로더</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+14" />
         <source>DFU bootloader reset complete!
 
 </source>
@@ -10005,13 +10027,13 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation>DFU 부트로더 재설정 실패!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-555" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
         <source>None</source>
         <translation>없음</translation>
     </message>
     <message>
-        <location line="+18" />
-        <location line="+10" />
+        <location line="+27" />
+        <location line="+16" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>알려지지 않은</translation>
@@ -10022,17 +10044,27 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation>센서 유형을 가져오는 동안 시간 초과 오류가 발생했습니다!</translation>
     </message>
     <message>
-        <location line="+217" />
+        <location line="+156" />
+        <source>Unregistered</source>
+        <translation>미등록</translation>
+    </message>
+    <message>
+        <location line="+91" />
         <source>Timeout error while learning MTU!</source>
         <translation>MTU 학습 중 시간 초과 오류!</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+134" />
         <source>Board: %L1</source>
         <translation>보드: %L1</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
+        <source>Sensors: %L1</source>
+        <translation>센서: %L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Sensor: %L1</source>
         <translation>센서: %L1</translation>
     </message>
@@ -10062,39 +10094,137 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation> - [ 최신 ]</translation>
     </message>
     <message>
-        <location line="+255" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <source>Failed to open or parse ELF: %1</source>
+        <translation>ELF를 열거나 구문 분석하지 못했습니다: %1</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>No function symbols found (.symtab/.dynsym missing or stripped)</source>
+        <translation>함수 기호가 없습니다(.symtab/.dynsym 누락 또는 제거됨).</translation>
+    </message>
+    <message>
+        <location line="+176" />
+        <source>Event %1</source>
+        <translation>이벤트% 1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Function</source>
+        <translation>기능</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Calls</source>
+        <translation>통화</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Min μs</source>
+        <translation>최소 μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Max μs</source>
+        <translation>최대 μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Total μs</source>
+        <translation>총 μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Average μs</source>
+        <translation>평균 μs</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Average Cycles</source>
+        <translation>평균주기</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Percentage</source>
+        <translation>백분율</translation>
+    </message>
+    <message>
+        <location line="+396" />
+        <location line="+172" />
+        <source>Code Profiler</source>
+        <translation>코드 프로파일러</translation>
+    </message>
+    <message>
+        <location line="-147" />
+        <source>Flat</source>
+        <translation>평평한</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Tree</source>
+        <translation>나무</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Firmware ELF (*.elf)</source>
+        <translation>펌웨어 ELF(*.elf)</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Filter functions...</source>
+        <translation>필터 기능...</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Inclusive</source>
+        <translation>포함한</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Exclusive</source>
+        <translation>독점적인</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Reset</source>
         <translation>초기화</translation>
     </message>
     <message>
-        <location line="+167" />
-        <source>Start</source>
-        <translation>시작</translation>
+        <location line="+165" />
+        <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
+        <translation>기능: %1, 총 호출: %2, 총 μs: %3, 총 사이클: %4, 총 이벤트: %5</translation>
     </message>
     <message>
-        <location line="+174" />
+        <location line="+9" />
+        <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4</source>
+        <translation>기능: %1, 총 호출 수: %2, 총 μs: %3, 총 주기: %4</translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="vanished">시작</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+578" />
         <source>More Examples</source>
         <translation>더 많은 예</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Color-Tracking examples.</source>
-        <translation>파일 -&gt; 예제 메뉴에서 더 많은 예제를 찾을 수 있습니다.
+        <translation type="vanished">파일 -&gt; 예제 메뉴에서 더 많은 예제를 찾을 수 있습니다.
 
 특히 색상 추적 예제를 확인하십시오.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <location line="+69" />
         <location line="+9" />
-        <location line="+58" />
         <source>Firmware Update</source>
         <translation>펌웨어 업데이트</translation>
     </message>
     <message>
-        <location line="-133" />
+        <location line="-75" />
         <source>Update your OpenMV Cam's firmware to the latest version?</source>
         <translation>OpenMV Cam의 펌웨어를 최신 버전으로 업데이트하시겠습니까?</translation>
     </message>
@@ -10109,7 +10239,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>OpenMV Cam의 펌웨어를 릴리스 버전으로 재설정해야 합니까?</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+87" />
         <source>No board settings for the connected board found!</source>
         <translation>연결된 보드에 대한 보드 설정이 없습니다!</translation>
     </message>
@@ -10119,18 +10249,23 @@ In particular, checkout the Color-Tracking examples.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="-55" />
-        <location line="+110" />
+        <location line="+150" />
         <source>No Image</source>
         <translation>이미지 없음</translation>
     </message>
     <message>
-        <location line="-63" />
+        <location line="-103" />
         <location line="+7" />
         <source>Video Record</source>
         <translation>비디오 녹화</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location line="+69" />
+        <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!</source>
+        <translation>경고: JPEG/PNG가 너무 커서 현재 OpenMV Cam에서 버퍼링하여 OpenMV IDE로 보낼 수 없습니다!</translation>
+    </message>
+    <message>
+        <location line="+83" />
         <location line="+10" />
         <location line="+10" />
         <location line="+10" />
@@ -10240,12 +10375,12 @@ OpenMV IDE에서 OpenMV Cam으로 복사하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4268" />
         <location line="+10" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-283" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
+        <location line="+236" />
         <source>Model Zoo</source>
         <translation>모델 동물원</translation>
     </message>
@@ -10255,7 +10390,7 @@ OpenMV IDE에서 OpenMV Cam으로 복사하시겠습니까?</translation>
         <translation>보드 유형별 필터 모델</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+42" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+23" />
         <source>Copy</source>
         <translation>복사</translation>
@@ -10334,7 +10469,7 @@ OpenMV IDE에서 OpenMV Cam으로 복사하시겠습니까?</translation>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-253" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>쿼리 실패!</translation>
@@ -10623,7 +10758,7 @@ The camera must be power cycled after a system package update.</source>
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>이 명령은 실행하는 데 시간이 걸립니다. 기다려주십시오.</translation>
@@ -10776,12 +10911,12 @@ The camera must be power cycled after a system package update.</source>
     </message>
     <message>
         <location line="-77" />
-        <location line="+565" />
+        <location line="+608" />
         <source>Transcoding File...</source>
         <translation>파일 트랜스코딩...</translation>
     </message>
     <message>
-        <location line="-554" />
+        <location line="-597" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10842,9 +10977,9 @@ The camera must be power cycled after a system package update.</source>
         <translation>입력 형식 가져오기</translation>
     </message>
     <message>
-        <location line="+44" />
-        <location line="+103" />
-        <location line="+59" />
+        <location line="+38" />
+        <location line="+111" />
+        <location line="+100" />
         <location line="+15" />
         <location line="+372" />
         <location line="+12" />
@@ -10870,12 +11005,21 @@ The camera must be power cycled after a system package update.</source>
         <translation>비디오 변환</translation>
     </message>
     <message>
-        <location line="-837" />
         <source>Failed to launch ffmpeg!</source>
-        <translation>ffmpeg를 실행하지 못했습니다!</translation>
+        <translation type="vanished">ffmpeg를 실행하지 못했습니다!</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="-989" />
+        <source>Converting</source>
+        <translation>변환 중</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>FFMPEG is not supported on this platform.</source>
+        <translation>FFMPEG는 이 플랫폼에서 지원되지 않습니다.</translation>
+    </message>
+    <message>
+        <location line="+100" />
         <source>Unable to write to output video file!</source>
         <translation>출력 비디오 파일에 쓸 수 없습니다!</translation>
     </message>
@@ -11016,7 +11160,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>선택한 파일 이름에 대한 일치하는 인터페이스가 없습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-757" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
         <source>Please select the target</source>
         <translation>목표를 선택하십시오</translation>
     </message>
@@ -11056,8 +11200,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+85" />
-        <location line="+11" />
+        <location line="+93" />
         <location line="+9" />
         <location line="+14" />
         <location line="+13" />
@@ -11074,7 +11217,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>ROMF를 편집하십시오</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="-620" />
         <location line="+91" />
         <source>A folder with the same name already exists!</source>
         <translation>이름이 같은 폴더가 이미 존재합니다!</translation>
@@ -11127,37 +11270,37 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <location line="+7" />
         <location line="+14" />
         <location line="+19" />
-        <location line="+243" />
+        <location line="+240" />
         <source>Extract File</source>
         <translation>추출 파일</translation>
     </message>
     <message>
-        <location line="-249" />
+        <location line="-246" />
         <source>View/Edit</source>
         <translation>보기/편집</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+240" />
+        <location line="+237" />
         <source>Add File</source>
         <translation>파일 추가</translation>
     </message>
     <message>
-        <location line="-239" />
-        <location line="+241" />
+        <location line="-236" />
+        <location line="+238" />
         <source>New Folder</source>
         <translation>새로운 폴더</translation>
     </message>
     <message>
         <location line="-147" />
         <location line="+14" />
-        <location line="+325" />
+        <location line="+322" />
         <location line="+12" />
         <source>ROMFS is not supported on this board!</source>
         <translation>이 보드에서 ROMF는 지원되지 않습니다!</translation>
     </message>
     <message>
-        <location line="-293" />
+        <location line="-290" />
         <location line="+45" />
         <source>Failed to unpack ROMFS!</source>
         <translation>ROMF를 풀지 못했습니다!</translation>
@@ -11190,8 +11333,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>ROMF를 파일에 저장하십시오</translation>
     </message>
     <message>
-        <location line="+106" />
-        <location line="+7" />
+        <location line="+110" />
         <location line="+8" />
         <location line="+12" />
         <location line="+13" />
@@ -11236,7 +11378,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-230" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>고급의</translation>
@@ -11261,31 +11403,33 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+172" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+189" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
         <source>Success - Press Ok to close the window</source>
         <translation>성공 - 확인을 누르면 창을 닫습니다</translation>
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+6" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+8" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+6" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+5" />
         <source>Failure - Press Cancel to close the window</source>
         <translation>실패 - 취소를 눌러 창을 닫습니다</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-368" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+126" />
         <location line="+14" />
-        <location line="+137" />
+        <location line="+173" />
         <source>STEdgeAI Compilier</source>
         <translation>Stedge 컴파일러</translation>
     </message>
     <message>
-        <location line="-298" />
+        <location line="-334" />
         <source>Failed to copy JSON file!</source>
         <translation>JSON 파일을 복사하지 못했습니다!</translation>
     </message>
@@ -11296,7 +11440,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-281" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-283" />
         <source>Please specify the compiler settings:</source>
         <translation>컴파일러 설정을 지정하십시오.</translation>
     </message>
@@ -11358,7 +11502,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Stedgeai</translation>
     </message>
     <message>
-        <location line="+123" />
+        <location line="+159" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>Stedgeai 컴파일리어는이 플랫폼에서 지원되지 않습니다.</translation>
     </message>
@@ -11419,61 +11563,69 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
+        <location line="+28" />
+        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+235" />
         <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
         <location line="+28" />
+        <location line="+12" />
+        <location line="+20" />
+        <location line="+21" />
         <location line="+15" />
-        <location line="+144" />
+        <location line="+22" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+11" />
+        <location line="+29" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+41" />
+        <location line="+306" />
         <source>Project Location</source>
         <translation>프로젝트 위치</translation>
     </message>
     <message>
-        <location line="-886" />
+        <location line="-895" />
+        <location line="+28" />
+        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+21" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+20" />
+        <location line="+21" />
+        <location line="+15" />
         <location line="+22" />
-        <location line="+81" />
-        <location line="+17" />
+        <location line="+24" />
         <location line="+1" />
-        <location line="+8" />
+        <location line="+22" />
         <location line="+1" />
-        <location line="+10" />
+        <location line="+33" />
         <location line="+1" />
-        <location line="+8" />
+        <location line="+18" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+19" />
         <location line="+1" />
         <location line="+11" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+11" />
+        <location line="+29" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+41" />
+        <location line="+28" />
         <location line="+1" />
-        <location line="+12" />
         <location line="+13" />
         <location line="+1" />
+        <location line="+12" />
         <location line="+8" />
         <location line="+1" />
         <location line="+8" />
@@ -11482,38 +11634,30 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+17" />
-        <location line="+32" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+20" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
         <location line="+10" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+15" />
-        <location line="+51" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+22" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+12" />
+        <location line="+94" />
         <source>Location</source>
         <translation>위치</translation>
     </message>
@@ -11522,7 +11666,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">Qt 테스트</translation>
     </message>
     <message>
-        <location line="-516" />
+        <location line="-85" />
         <source>Google Test</source>
         <translation>구글 테스트</translation>
     </message>
@@ -11542,49 +11686,49 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>캐치2</translation>
     </message>
     <message>
-        <location line="-371" />
+        <location line="-762" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+321" />
+        <location line="+712" />
         <source>Test framework:</source>
         <translation>테스트 프레임워크:</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="-687" />
         <source>GUI Application</source>
         <translation>GUI 애플리케이션</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+324" />
+        <location line="+715" />
         <source>Test suite name:</source>
         <translation>테스트 스위트 이름:</translation>
     </message>
     <message>
-        <location line="-374" />
+        <location line="-790" />
+        <location line="+25" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+22" />
-        <location line="+281" />
+        <location line="+694" />
         <source>Test case name:</source>
         <translation>테스트 케이스 이름:</translation>
     </message>
     <message>
-        <location line="-302" />
+        <location line="-693" />
         <source>Requires QApplication</source>
         <translation>QApplication 필요</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="-97" />
         <source>Generate setup code</source>
         <translation>설정 코드 생성</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
-        <location line="+280" />
+        <location line="+1" />
+        <location line="+98" />
+        <location line="+692" />
         <source>Generate initialization and cleanup code</source>
         <translation>초기화 및 정리 코드 생성</translation>
     </message>
@@ -11593,17 +11737,17 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">C++11 활성화</translation>
     </message>
     <message>
-        <location line="-324" />
+        <location line="-766" />
         <source>Googletest source directory (optional):</source>
         <translation>Googletest 소스 디렉토리(선택 사항):</translation>
     </message>
     <message>
-        <location line="-51" />
+        <location line="+51" />
         <source>Boost include directory (optional):</source>
         <translation>부스트 포함 디렉터리(선택 사항):</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="-27" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 포함 디렉터리(선택 사항):</translation>
     </message>
@@ -11613,154 +11757,154 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Qt 라이브러리 사용</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-50" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+40" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+107" />
-        <location line="+46" />
-        <location line="+43" />
+        <location line="+45" />
+        <location line="+47" />
+        <location line="+84" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-558" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+40" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+105" />
-        <location line="+48" />
         <location line="+43" />
+        <location line="+49" />
+        <location line="+84" />
         <source>CMake</source>
         <translation>씨메이크</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-558" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+40" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+153" />
-        <location line="+44" />
+        <location line="+92" />
+        <location line="+85" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-559" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+314" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+17" />
+        <location line="+41" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="+42" />
+        <location line="+50" />
+        <location line="+84" />
         <source>Build system:</source>
         <translation>빌드 시스템:</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-559" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>프로젝트 및 테스트 정보</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-120" />
+        <location line="+23" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="+26" />
+        <location line="+51" />
         <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+79" />
-        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+17" />
-        <location line="+33" />
+        <location line="+164" />
+        <location line="+41" />
         <location line="+18" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+28" />
-        <location line="+142" />
+        <location line="+42" />
+        <location line="+70" />
+        <location line="+220" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+19" />
         <source>Details</source>
         <translation>세부</translation>
     </message>
     <message>
-        <location line="-887" />
+        <location line="-869" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+295" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>키트 선택</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-886" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+295" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11768,101 +11912,101 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>키트</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-886" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+23" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+18" />
-        <location line="+9" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+9" />
         <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+14" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+17" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+19" />
+        <location line="+19" />
         <source>Project Management</source>
         <translation>프로젝트 관리</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-886" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
-        <location line="+23" />
-        <location line="+19" />
-        <location line="+37" />
-        <location line="+9" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+9" />
         <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
+        <location line="+132" />
+        <location line="+18" />
+        <location line="+14" />
+        <location line="+12" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
+        <location line="+44" />
+        <location line="+40" />
         <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+14" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+17" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
+        <location line="+41" />
+        <location line="+19" />
+        <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>요약</translation>
@@ -11872,9 +12016,9 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">새 단위 테스트 프로젝트를 만듭니다. 단위 테스트를 통해 코드가 사용하기에 적합하고 회귀가 없는지 확인할 수 있습니다.</translation>
     </message>
     <message>
-        <location line="-715" />
-        <location line="+380" />
-        <location line="+165" />
+        <location line="-466" />
+        <location line="+12" />
+        <location line="+456" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>다른 프로젝트</translation>
@@ -11884,36 +12028,36 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">자동 테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="-620" />
+        <location line="-57" />
         <source>Fully qualified name, including namespaces</source>
         <translation>네임스페이스를 포함한 정규화된 이름</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+22" />
+        <location line="-645" />
+        <location line="+36" />
+        <location line="+276" />
+        <location line="+80" />
+        <location line="+235" />
         <location line="+19" />
-        <location line="+289" />
-        <location line="+145" />
-        <location line="+40" />
-        <location line="+119" />
+        <location line="+22" />
         <source>Class name:</source>
         <translation>클래스 이름:</translation>
     </message>
     <message>
-        <location line="-633" />
-        <location line="+42" />
-        <location line="+433" />
+        <location line="-631" />
+        <location line="+592" />
+        <location line="+18" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;커스텀&gt;</translation>
     </message>
     <message>
-        <location line="-474" />
+        <location line="-646" />
+        <location line="+37" />
+        <location line="+282" />
+        <location line="+73" />
+        <location line="+237" />
+        <location line="+18" />
         <location line="+21" />
-        <location line="+21" />
-        <location line="+294" />
-        <location line="+139" />
-        <location line="+39" />
-        <location line="+119" />
         <source>Base class:</source>
         <translation>기본 클래스:</translation>
     </message>
@@ -11922,7 +12066,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-632" />
+        <location line="-20" />
         <source>Include QObject</source>
         <translation>QObject 포함</translation>
     </message>
@@ -11964,10 +12108,10 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-329" />
+        <location line="+68" />
+        <location line="+262" />
         <location line="+19" />
-        <location line="+315" />
-        <location line="+292" />
         <source>Header file:</source>
         <translation>헤더 파일:</translation>
     </message>
@@ -11976,54 +12120,54 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+215" />
+        <location line="-673" />
+        <location line="+37" />
+        <location line="+288" />
+        <location line="+68" />
+        <location line="+220" />
         <location line="+1" />
-        <location line="+80" />
-        <location line="+133" />
-        <location line="+39" />
-        <location line="+120" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+19" />
         <source>Source file:</source>
         <translation>소스 파일:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+392" />
-        <location line="+34" />
+        <location line="-597" />
         <location line="+20" />
         <location line="+21" />
+        <location line="+34" />
+        <location line="+19" />
+        <location line="+444" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>길:</translation>
     </message>
     <message>
-        <location line="-739" />
-        <location line="+38" />
-        <location line="+429" />
-        <location line="+39" />
+        <location line="-673" />
+        <location line="+37" />
+        <location line="+596" />
+        <location line="+22" />
         <source>Define Class</source>
         <translation>클래스 정의</translation>
     </message>
     <message>
-        <location line="-502" />
+        <location line="+4" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>C++ 프로젝트에 추가할 수 있는 새 클래스에 대한 C++ 헤더 및 소스 파일을 만듭니다.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+65" />
-        <location line="+9" />
+        <location line="-203" />
+        <location line="+130" />
+        <location line="+74" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-73" />
+        <location line="+1" />
         <source>C++ Class</source>
         <translation>C++ 클래스</translation>
     </message>
@@ -12063,22 +12207,22 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Qt 항목 모델을 만듭니다.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+66" />
-        <location line="+57" />
-        <location line="+62" />
-        <location line="+9" />
-        <location line="+59" />
+        <location line="-231" />
+        <location line="+39" />
+        <location line="+26" />
+        <location line="+65" />
+        <location line="+18" />
+        <location line="+84" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="+1" />
         <source>Qt Item Model</source>
         <translation>Qt 항목 모델</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-56" />
         <source>Qt for Python module:</source>
         <translation>Python용 Qt 모듈:</translation>
     </message>
@@ -12112,18 +12256,18 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>새 Python 클래스 파일을 만듭니다.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+158" />
+        <location line="-70" />
+        <location line="+71" />
         <source>Python</source>
         <translation>파이썬</translation>
     </message>
     <message>
-        <location line="-157" />
+        <location line="+1" />
         <source>Python Class</source>
         <translation>파이썬 클래스</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+45" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>코드 조각을 입력할 수 있는 CMake 기반 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12178,7 +12322,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>코드 조각</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-244" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>C/C++ 프로젝트에 추가할 수 있는 헤더 파일을 만듭니다.</translation>
     </message>
@@ -12188,7 +12332,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>C/C++ 헤더 파일</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+128" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>C/C++ 프로젝트에 추가할 수 있는 소스 파일을 생성합니다.</translation>
     </message>
@@ -12198,7 +12342,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>C/C++ 소스 파일</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Choose a Form Template</source>
         <translation>양식 템플릿 선택</translation>
     </message>
@@ -12216,12 +12360,12 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">Qt 디자이너 양식</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-15" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>GLSL(Desktop OpenGL Shading Language)로 조각 셰이더를 만듭니다. 조각 셰이더는 OpenGL로 렌더링된 삼각형, 점 및 선에 대한 최종 픽셀 색상을 생성합니다.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12229,12 +12373,12 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>단편 셰이더(데스크탑 OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-11" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>GLSL(Desktop OpenGL Shading Language)로 버텍스 셰이더를 생성합니다. 정점 셰이더는 OpenGL로 렌더링된 삼각형, 점 및 선의 위치, 법선 및 텍스처 좌표를 변환합니다.</translation>
     </message>
@@ -12244,7 +12388,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>버텍스 셰이더(데스크탑 OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-11" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>OpenGL/ES 2.0 Shading Language(GLSL/ES)로 조각 셰이더를 만듭니다. 조각 셰이더는 OpenGL로 렌더링된 삼각형, 점 및 선에 대한 최종 픽셀 색상을 생성합니다.</translation>
     </message>
@@ -12254,7 +12398,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>단편 셰이더(OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-11" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>OpenGL/ES 2.0 Shading Language(GLSL/ES)로 정점 셰이더를 생성합니다. 정점 셰이더는 OpenGL로 렌더링된 삼각형, 점 및 선의 위치, 법선 및 텍스처 좌표를 변환합니다.</translation>
     </message>
@@ -12264,7 +12408,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>정점 셰이더(OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-67" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>상용구 코드로 Java 파일을 생성합니다.</translation>
     </message>
@@ -12279,7 +12423,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>자바 파일</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+14" />
         <source>Stateless library</source>
         <translation>상태 비저장 라이브러리</translation>
     </message>
@@ -12300,25 +12444,25 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>JS 파일</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Model name:</source>
         <translation>모델명:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+67" />
+        <location line="-64" />
+        <location line="+65" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>위치:</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
+        <location line="-64" />
+        <location line="+65" />
         <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
         <translation>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" 파일 시스템에 존재합니다.</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="+1" />
         <source>Model Name and Location</source>
         <translation>모델명 및 위치</translation>
     </message>
@@ -12328,19 +12472,19 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>빈 다이어그램이 있는 새 빈 모델을 만듭니다.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
-        <location line="+62" />
+        <location line="-64" />
+        <location line="+53" />
+        <location line="+12" />
         <source>Modeling</source>
         <translation>모델링</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="+1" />
         <source>Model</source>
         <translation>모델</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>임시 파일을 사용하여 스크래치 모델을 생성합니다.</translation>
     </message>
@@ -12350,23 +12494,23 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>스크래치 모델</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-81" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>UTF-8 문자 집합을 사용하여 빈 Nim 파일을 만듭니다.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+9" />
+        <location line="+14" />
         <source>Nim</source>
         <translation>님</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-13" />
         <source>Nim File</source>
         <translation>님 파일</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+12" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>UTF-8 문자 집합을 사용하여 빈 Nim 스크립트 파일을 만듭니다.</translation>
     </message>
@@ -12376,7 +12520,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>님 스크립트 파일</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+138" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>UTF-8 문자 집합을 사용하여 빈 Python 스크립트 파일을 만듭니다.</translation>
     </message>
@@ -12386,7 +12530,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>파이썬 파일</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-56" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Qt 리소스 파일(.qrc)을 만듭니다.</translation>
     </message>
@@ -12396,7 +12540,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Qt 리소스 파일</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-67" />
         <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
         <translation>"import QtQuick"으로 시작하는 상용구 코드로 QML 파일을 생성합니다.</translation>
     </message>
@@ -12406,21 +12550,21 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>QML 파일(Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-32" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>임시 파일을 사용하여 스크래치 버퍼를 생성합니다.</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
-        <location line="+45" />
+        <location line="+1" />
+        <location line="+57" />
+        <location line="+47" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>일반적인</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-634" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>이 마법사는 Boost를 사용하여 간단한 단위 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12445,21 +12589,21 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>부스트를 사용하여 새로운 단위 테스트 프로젝트를 만듭니다. 단위 테스트를 통해 코드가 사용하기에 적합하고 회귀가 없음을 확인할 수 있습니다.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-75" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+21" />
         <source>Test Project</source>
         <translation>테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-21" />
         <source>Boost Test Project</source>
         <translation>테스트 프로젝트 부스트</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>이 마법사는 Catch2를 사용하여 간단한 단위 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12494,7 +12638,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Catch2 테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>이 마법사는 Google 테스트를 사용하여 간단한 단위 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12524,7 +12668,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Google 테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+54" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>이 마법사는 QT 테스트를 사용하여 간단한 단위 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12539,7 +12683,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>QT 테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-116" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>이 마법사는 QT 빠른 테스트를 사용하여 간단한 단위 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12554,17 +12698,17 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>QT 빠른 테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+815" />
         <source>Include QQuickItem</source>
         <translation>Qquickitem을 포함하십시오</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+49" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>CMAKE 기반 테스트 프로젝트를 작성하여 코드 스 니펫을 입력하여 컴파일하고 확인할 수 있습니다.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="-121" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>QT 위젯 프로젝트에 추가 할 수있는 QT 위젯 디자이너 양식을 만듭니다. UI 비즈니스 로직에 대한 기존 클래스가 이미있는 경우 유용합니다.</translation>
     </message>
@@ -12574,7 +12718,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>QT 위젯 디자이너 양식</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-105" />
         <source>Creates a markdown file.</source>
         <translation>마크 다운 파일을 만듭니다.</translation>
     </message>
@@ -12584,12 +12728,12 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>마크 다운 파일</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="-57" />
         <source>Scratch Buffer</source>
         <translation>스크래치 버퍼</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+12" />
         <source>State chart name:</source>
         <translation>상태 차트 이름:</translation>
     </message>
@@ -12609,7 +12753,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>상태 차트</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+160" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12649,7 +12793,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>테스트 케이스</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-100" />
         <source>Creates an empty file.</source>
         <translation>빈 파일을 만듭니다.</translation>
     </message>
@@ -12659,7 +12803,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>빈 파일</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+72" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>QT 프로젝트에 추가 할 수있는 번역 파일을 만듭니다.</translation>
     </message>
@@ -12669,61 +12813,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT 번역 파일</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-623" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>이 마법사는 간단한 Qt 기반 콘솔 응용 프로그램을 만듭니다.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+195" />
+        <location line="+92" />
+        <location line="+83" />
         <source>Meson</source>
         <translation>중간자</translation>
     </message>
     <message>
-        <location line="-326" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="-442" />
+        <location line="+41" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="+42" />
+        <location line="+50" />
+        <location line="+84" />
         <source>Define Build System</source>
         <translation>빌드 시스템 정의</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+21" />
-        <location line="+94" />
+        <location line="-444" />
+        <location line="+41" />
+        <location line="+210" />
         <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="+42" />
+        <location line="+50" />
+        <location line="+84" />
         <source>Build System</source>
         <translation>시스템 구축</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-582" />
+        <location line="+147" />
+        <location line="+32" />
+        <location line="+343" />
+        <location line="+70" />
         <source>Translation File</source>
         <translation>번역 파일</translation>
     </message>
     <message>
-        <location line="-479" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-591" />
+        <location line="+147" />
+        <location line="+32" />
+        <location line="+343" />
+        <location line="+70" />
         <source>Translation</source>
         <translation>번역</translation>
     </message>
     <message>
-        <location line="-262" />
+        <location line="-393" />
         <source>Define Python Interpreter</source>
         <translation>Python 통역사를 정의하십시오</translation>
     </message>
@@ -12738,7 +12882,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT 위젯 디자이너 기반 위젯 (UI 파일)이 포함 된 Python Application 용 QT를 만듭니다. .ui에서 파이썬 변환이 필요합니다.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+269" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -12753,7 +12897,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QML 및 C ++ 코드를 모두 가질 수있는 QT 빠른 응용 프로그램을 만듭니다. 응용 프로그램을 빌드하여 데스크탑, 내장 및 모바일 대상 플랫폼에 배포 할 수 있습니다.</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="-59" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12762,7 +12906,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  전체 응용 프로그램을 개발하려면 대신 QT 빠른 응용 프로그램 프로젝트를 만듭니다.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+173" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12779,31 +12923,31 @@ Preselects a desktop Qt for building the application if available.</source>
 사용 가능한 경우 애플리케이션 구축을 위해 데스크톱 Qt를 미리 선택합니다.</translation>
     </message>
     <message>
-        <location line="-337" />
-        <location line="+266" />
-        <location line="+28" />
-        <location line="+44" />
+        <location line="-444" />
+        <location line="+32" />
+        <location line="+299" />
+        <location line="+114" />
         <source>Application (Qt)</source>
         <translation>애플리케이션(Qt)</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-412" />
         <source>Qt Console Application</source>
         <translation>Qt 콘솔 애플리케이션</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+302" />
         <source>This wizard creates a C++ library project.</source>
         <translation>이 마법사는 C++ 라이브러리 프로젝트를 생성합니다.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+308" />
+        <location line="+84" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>스켈레톤 소스 코드 파일을 생성할 클래스에 대한 기본 정보를 지정하십시오.</translation>
     </message>
     <message>
-        <location line="-307" />
+        <location line="-83" />
         <source>Shared Library</source>
         <translation>공유 라이브러리</translation>
     </message>
@@ -12819,7 +12963,7 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+46" />
+        <location line="+35" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>유형:</translation>
@@ -12829,7 +12973,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{JS: 값('유형') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-33" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -12895,14 +13039,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt 모듈:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+116" />
+        <location line="-519" />
+        <location line="+147" />
+        <location line="+70" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+68" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+170" />
+        <location line="+164" />
+        <location line="+59" />
+        <location line="+42" />
         <source>Define Project Details</source>
         <translation>프로젝트 세부 정보 정의</translation>
     </message>
@@ -12911,38 +13055,38 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">C++ 라이브러리를 생성합니다. 이것은 다음을 생성하는 데 사용할 수 있습니다.&lt;ul&gt;&lt;li&gt;&lt;tt&gt;QPluginLoader&lt;/tt&gt; 및 런타임(플러그인)과 함께 사용하기 위한 공유 C++ 라이브러리&lt;/li&gt;&lt;li&gt;다른 것과 함께 사용하기 위한 공유 또는 정적 C++ 라이브러리 링크타임에 프로젝트&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-427" />
-        <location line="+18" />
-        <location line="+186" />
-        <location line="+232" />
+        <location line="-513" />
+        <location line="+460" />
+        <location line="+62" />
+        <location line="+7" />
         <source>Library</source>
         <translation>도서관</translation>
     </message>
     <message>
-        <location line="-435" />
+        <location line="-6" />
         <source>C++ Library</source>
         <translation>C++ 라이브러리</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-366" />
         <source>Creates a simple Nim application.</source>
         <translation>간단한 Nim 애플리케이션을 만듭니다.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+40" />
+        <location line="+229" />
         <location line="+18" />
-        <location line="+18" />
+        <location line="+157" />
         <source>Non-Qt Project</source>
         <translation>Qt가 아닌 프로젝트</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-403" />
         <source>Nim Application</source>
         <translation>님 신청</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+369" />
         <source>Binary</source>
         <translation>바이너리</translation>
     </message>
@@ -12957,13 +13101,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>작가:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+402" />
+        <location line="-544" />
+        <location line="+545" />
         <source>Description:</source>
         <translation>설명:</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="+1" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13028,13 +13172,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>다른</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+386" />
+        <location line="-560" />
+        <location line="+561" />
         <source>License:</source>
         <translation>특허:</translation>
     </message>
     <message>
-        <location line="-385" />
+        <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>씨</translation>
@@ -13075,22 +13219,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>프로젝트 구성 정의</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+253" />
-        <location line="+1" />
-        <location line="+33" />
+        <location line="-296" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
+        <location line="+33" />
+        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
+        <location line="+202" />
         <source>Configuration</source>
         <translation>구성</translation>
     </message>
     <message>
-        <location line="-343" />
+        <location line="+5" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Nimble을 사용하여 Nim 애플리케이션을 만듭니다.</translation>
     </message>
@@ -13100,7 +13244,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>민첩한 애플리케이션</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="-159" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>종속성이 없는 간단한 C 응용 프로그램을 만듭니다.</translation>
     </message>
@@ -13110,7 +13254,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>일반 C 응용 프로그램</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="-20" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>종속성이 없는 간단한 C++ 응용 프로그램을 만듭니다.</translation>
     </message>
@@ -13120,7 +13264,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>일반 C++ 애플리케이션</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+35" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>이 마법사는 빈 .pro 파일을 생성합니다.</translation>
     </message>
@@ -13139,20 +13283,20 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">파이사이드 버전:</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-218" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>QApplication에 대한 기본 코드만 포함하는 Python용 Qt 응용 프로그램을 만듭니다.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-14" />
+        <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>애플리케이션(Python용 Qt)</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="-39" />
         <source>Empty Application</source>
         <translation>빈 신청서</translation>
     </message>
@@ -13169,13 +13313,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location line="+39" />
+        <location line="-28" />
+        <location line="+37" />
         <source>Project file:</source>
         <translation>프로젝트 파일:</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+11" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>빈 창을 포함하는 Qt for Python 응용 프로그램을 만듭니다.</translation>
     </message>
@@ -13185,15 +13329,15 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>빈 창</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="-47" />
+        <location line="+15" />
         <location line="+22" />
         <location line="+15" />
-        <location line="+24" />
         <source>PySide 6</source>
         <translation>파이사이드 6</translation>
     </message>
     <message>
-        <location line="-211" />
+        <location line="-65" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -13202,19 +13346,19 @@ Preselects a desktop Qt for building the application if available.</source>
  사용 가능한 경우 응용 프로그램을 구축하기 위해 데스크탑 QT를 사전 선택합니다.</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+343" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>C ++ 라이브러리를 만듭니다. &lt;ul&gt; &lt;li&gt; &lt;ul&gt; &lt;li&gt; &lt;tt&gt; qpluginloader &lt;/tt&gt; 및 런타임 (플러그인)과 함께 사용할 공유 C ++ 라이브러리 &lt;/li&gt; &lt;li&gt; 링크 타임에서 다른 프로젝트와 함께 사용하기위한 공유 또는 정적 C ++ 라이브러리 &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="+107" />
+        <location line="-329" />
+        <location line="+15" />
         <location line="+22" />
-        <location line="+39" />
         <source>PySide 2</source>
         <translation>파이 사이드 2</translation>
     </message>
     <message>
-        <location line="-24" />
+        <location line="+15" />
         <source>PySide 5.15</source>
         <translation>파이사이드 5.15</translation>
     </message>
@@ -13248,50 +13392,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Qt Designer 기반 위젯(ui 파일)을 포함하는 Python용 Qt 응용 프로그램을 생성합니다. - .ui에서 Python으로 변환해야 합니다.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-55" />
         <source>Window UI</source>
         <translation>창 UI</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-70" />
+        <location line="+311" />
         <location line="+25" />
-        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-335" />
+        <location line="+311" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-310" />
+        <location line="+311" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-310" />
+        <location line="+311" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-310" />
+        <location line="+311" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-310" />
+        <location line="+311" />
         <location line="+23" />
-        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>최소 필수 Qt 버전:</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-22" />
         <source>MyItem</source>
         <translation>내 아이템</translation>
     </message>
@@ -13339,9 +13483,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Qt Design Studio(.qmlproject를 통해) 및 Qt Creator(CMakeLists.txt를 통해)와 모두 호환되는 구조로 프로젝트를 만듭니다. 여기에는 Qt Design Studio에서 시각적으로 편집할 수 있는 .ui.qml 형식이 포함되어 있습니다.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+30" />
-        <location line="+16" />
+        <location line="-324" />
+        <location line="+274" />
+        <location line="+55" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Qt 가상 키보드 사용</translation>
     </message>
@@ -13354,12 +13498,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">빈 창을 포함하는 Qt Quick 응용 프로그램을 만듭니다. 선택적으로 Qt Design Studio 프로젝트를 만들 수 있습니다.</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="+13" />
         <source>Qt Quick Application</source>
         <translation>Qt 빠른 애플리케이션</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="-333" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -13381,12 +13525,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 프로토타이핑하는 경우에만 사용하십시오. 이것으로 전체 응용 프로그램을 만들 수 없습니다. 대신 Qt Quick Application 프로젝트 사용을 고려하십시오.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+272" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt 퀵 UI 프로토타입</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+146" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>이 마법사는 Qt 위젯 응용 프로그램 프로젝트를 생성합니다. 애플리케이션은 기본적으로 QApplication에서 파생되며 빈 위젯을 포함합니다.</translation>
     </message>
@@ -13427,27 +13571,27 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt 위젯 애플리케이션</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+34" />
+        <location line="-332" />
         <location line="+18" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>지금 &lt;b&gt;%{vcsName}&lt;/b&gt;을(를) 구성하십시오.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+52" />
+        <location line="-75" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>저장소:</translation>
     </message>
     <message>
         <location line="-93" />
-        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>저장소 URL이 유효하지 않습니다.</translation>
@@ -13457,24 +13601,24 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-92" />
-        <location line="+54" />
+        <location line="-72" />
         <location line="+21" />
+        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>예배 규칙서:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+33" />
+        <location line="-94" />
         <location line="+21" />
         <location line="+21" />
+        <location line="+34" />
         <location line="+19" />
         <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
         <translation>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" 파일 시스템에 존재합니다.</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-52" />
         <source>Use existing directory</source>
         <translation>기존 디렉터리 사용</translation>
     </message>
@@ -13550,13 +13694,13 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+3" />
-        <location line="+60" />
+        <location line="+19" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>리포지토리 URL, 체크아웃 디렉터리 및 경로를 지정합니다.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-38" />
         <source>Running Bazaar branch...</source>
         <translation>바자점 운영중...</translation>
     </message>
@@ -13575,9 +13719,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Bazaar 분기를 복제하고 포함된 프로젝트를 로드하려고 시도합니다.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
+        <location line="-56" />
         <location line="+23" />
+        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13585,12 +13729,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>프로젝트 가져오기</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-38" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>바자 클론(또는 브랜치)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-69" />
         <source>Module:</source>
         <translation>기준 치수:</translation>
     </message>
@@ -13609,7 +13753,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+52" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13617,7 +13761,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>점검</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="-95" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>CVS 저장소를 체크아웃하고 포함된 프로젝트를 로드하려고 시도합니다.</translation>
     </message>
@@ -13667,7 +13811,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>힘내 클론</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+48" />
         <source>Running Mercurial clone...</source>
         <translation>Mercurial 클론 실행 중...</translation>
     </message>
@@ -13702,7 +13846,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Subversion 체크아웃</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-394" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>이 마법사는 사용자 정의 Qt Creator 플러그인을 생성합니다.</translation>
     </message>
@@ -19662,7 +19806,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+683" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
         <source>Python:</source>
         <translation>파이썬 :</translation>
     </message>
@@ -19672,7 +19816,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>실행 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1147" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
         <location line="+283" />
         <source>Name:</source>
         <translation>이름:</translation>
@@ -19763,7 +19907,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>언어 서버 구성</translation>
     </message>
     <message>
-        <location line="+466" />
+        <location line="+476" />
         <source>Python interpreter:</source>
         <translation>Python 통역사 :</translation>
     </message>
@@ -22841,7 +22985,7 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>색 구성표 파일이 아닙니다.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
         <source>derived from QObject</source>
         <comment>group:'C++' trigger:'class'</comment>
         <translation>QObject에서 파생</translation>
@@ -22912,7 +23056,7 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation type="vanished">(유형 이름 READ 이름 WRITE setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>with targets</source>
         <comment>group:'QML' trigger:'NumberAnimation'</comment>
         <translation>목표와 함께</translation>
@@ -22984,7 +23128,7 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>시나리오를 잡습니다</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-31" />
         <source>example</source>
         <comment>group:'Text' trigger:'global'</comment>
         <translation>예</translation>

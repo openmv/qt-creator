@@ -10,6 +10,19 @@
     </message>
 </context>
 <context>
+    <name>OpenMV::Internal::OpenMVProfileView</name>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833"/>
+        <source>Copy</source>
+        <translation type="unfinished">עותק</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Select All</source>
+        <translation type="unfinished">בחר הכל</translation>
+    </message>
+</context>
+<context>
     <name>OpenMVCameraSettings</name>
     <message>
         <location filename="../../../src/plugins/openmv/openmvcamerasettings.ui"/>
@@ -201,7 +214,7 @@
         <translation>מעדכן את הגדרת התחביר עבור &apos;%1&apos; לגרסה%2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1070"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984"/>
         <source>Copy/Convert Python File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2328,7 +2341,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>תְפוּקָה</translation>
     </message>
     <message>
-        <location line="+403"/>
+        <location line="+406"/>
         <source>Reset to Default</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2741,7 +2754,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-672"/>
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-675"/>
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-89"/>
         <source>Case Sensitive</source>
         <translation>רגיש רישיות</translation>
@@ -3721,7 +3734,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>אפשרויות</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3"/>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13"/>
         <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>יוצר קבצי תרגום של qm שיכולים לשמש אפליקציה מתוך קבצי ts של המתרגם</translation>
     </message>
@@ -3731,13 +3744,13 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>שחרור תרגומים (לפרסום)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+5"/>
+        <location line="-9"/>
+        <location line="+10"/>
         <source>Linguist</source>
         <translation>בַּלשָׁן</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-12"/>
         <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>מסנכרן את קבצי ה-ts של המתרגם עם קוד התוכנית</translation>
     </message>
@@ -3758,13 +3771,13 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1"/>
-        <location line="+15"/>
+        <location line="+10"/>
         <location line="+5"/>
         <source>Text</source>
         <translation>טֶקסט</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+3"/>
         <source>Runs the current QML file with QML utility.</source>
         <translation>מפעיל את קובץ ה-QML הנוכחי עם כלי השירות QML.</translation>
     </message>
@@ -3790,7 +3803,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>תצוגה מקדימה של Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-16"/>
         <location line="+5"/>
         <source>Opens the current file in vi</source>
         <translation>פותח את הקובץ הנוכחי ב-vi</translation>
@@ -7039,7 +7052,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130"/>
         <location line="+7"/>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155"/>
-        <location line="+785"/>
+        <location line="+823"/>
         <source>Dataset Editor</source>
         <translation>עורך מערכי נתונים</translation>
     </message>
@@ -7049,13 +7062,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>נא להזין שם כיתה</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+320"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287"/>
         <location line="+9"/>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601"/>
         <location line="+31"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+388"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359"/>
         <location line="+9"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+274"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241"/>
         <location line="+9"/>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44"/>
         <location line="+7"/>
@@ -7063,37 +7076,36 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+107"/>
         <location line="+130"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-695"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733"/>
         <location line="+19"/>
         <location line="+115"/>
-        <location line="+1344"/>
+        <location line="+1441"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
-        <location line="+106"/>
+        <location line="+124"/>
         <location line="+180"/>
-        <location line="+204"/>
-        <location line="+14"/>
-        <location line="+348"/>
+        <location line="+308"/>
         <location line="+13"/>
-        <location line="+347"/>
+        <location line="+168"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
         <location line="+114"/>
         <location line="+118"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+364"/>
-        <location line="+252"/>
-        <location line="+85"/>
-        <location line="+972"/>
-        <location line="+835"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365"/>
+        <location line="+254"/>
+        <location line="+86"/>
+        <location line="+1015"/>
+        <location line="+896"/>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107"/>
         <location line="+7"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+523"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551"/>
         <location line="+11"/>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+506"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507"/>
         <location line="+19"/>
         <location line="+11"/>
         <source>Error: %L1!</source>
@@ -7101,7 +7113,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3755"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3433"/>
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467"/>
         <location line="+34"/>
         <location line="+48"/>
@@ -7116,8 +7128,8 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+31"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2476"/>
-        <location line="+1763"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2471"/>
+        <location line="+1446"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353"/>
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>שמירת קובץ התמונה נכשלה מסיבה לא ידועה!</translation>
@@ -7125,14 +7137,14 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+16"/>
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581"/>
-        <location line="+242"/>
+        <location line="+239"/>
         <source>Delete</source>
         <translation>לִמְחוֹק</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+107"/>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-312"/>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309"/>
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>האם אתה בטוח שברצונך למחוק לצמיתות את &quot;%L1&quot;?</translation>
     </message>
@@ -7159,33 +7171,29 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>שינוי שם הקובץ נכשל מסיבה לא ידועה!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5537"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5122"/>
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61"/>
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>לא ניתן היה להעתיק את הקובץ &quot;%1&quot; ל&quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+46"/>
         <source>Invalid argument (%1) for -override_read_timeout</source>
-        <translation>ארגומנט לא חוקי (%1) עבור -override_read_timeout</translation>
+        <translation type="vanished">ארגומנט לא חוקי (%1) עבור -override_read_timeout</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Missing argument for -override_read_timeout</source>
-        <translation>ארגומנט חסר עבור -override_read_timeout</translation>
+        <translation type="vanished">ארגומנט חסר עבור -override_read_timeout</translation>
     </message>
     <message>
-        <location line="+25"/>
         <source>Invalid argument (%1) for -override_read_stall_timeout</source>
-        <translation>ארגומנט לא חוקי (%1) עבור -override_read_stall_timeout</translation>
+        <translation type="vanished">ארגומנט לא חוקי (%1) עבור -override_read_stall_timeout</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Missing argument for -override_read_stall_timeout</source>
-        <translation>ארגומנט חסר עבור -override_read_stall_timeout</translation>
+        <translation type="vanished">ארגומנט חסר עבור -override_read_stall_timeout</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+40"/>
         <source>Missing argument for -serial_number_filter</source>
         <translation>ארגומנט חסר עבור -סידורי_מספר_מסנן</translation>
     </message>
@@ -7197,7 +7205,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+28"/>
         <location line="+28"/>
         <location line="+6"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2241"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2348"/>
         <location line="+9"/>
         <location line="+13"/>
         <location line="+59"/>
@@ -7227,42 +7235,39 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>ערוך את סף LAB עם Threshold Editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+226"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224"/>
         <source>Missing argument for -form_key</source>
         <translation>חסר ארגומנט עבור -form_key</translation>
     </message>
     <message>
-        <location line="+1034"/>
+        <location line="+1066"/>
         <source>About OpenMV Viewer...</source>
         <translation>אודות OpenMV Viewer...</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;אודות %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;מאת: איברהים עבד אלקאדר וקוואבנה ו. אגיימן&lt;/p&gt;&lt;p&gt;&lt;b&gt;גנו רישיון ציבורי כללי&lt;/b&gt;&lt;/p&gt;&lt;p&gt;זכויות יוצרים (C) %L2 %L3&lt;/p&gt;&lt;p&gt;תוכנית זו מופצת בתקווה שהיא תהיה שימושית, אך ללא כל אחריות; אפילו ללא אחריות משתמעת לסחירות או התאמה למטרה מסוימת. עיין ברישיון הציבורי הכללי &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU&lt;/a&gt; לקבלת פרטים נוספים.&lt;/p&gt;&lt;p&gt;&lt;b&gt;שאלות או הערות?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;צרו איתנו קשר בכתובת &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;אודות %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;מאת: איברהים עבד אלקאדר וקוואבנה ו. אגיימן&lt;/p&gt;&lt;p&gt;&lt;b&gt;גנו רישיון ציבורי כללי&lt;/b&gt;&lt;/p&gt;&lt;p&gt;זכויות יוצרים (C) %L2 %L3&lt;/p&gt;&lt;p&gt;תוכנית זו מופצת בתקווה שהיא תהיה שימושית, אך ללא כל אחריות; אפילו ללא אחריות משתמעת לסחירות או התאמה למטרה מסוימת. עיין ברישיון הציבורי הכללי &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU&lt;/a&gt; לקבלת פרטים נוספים.&lt;/p&gt;&lt;p&gt;&lt;b&gt;שאלות או הערות?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;צרו איתנו קשר בכתובת &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+17"/>
         <source>OpenMV IDE</source>
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1003"/>
+        <location line="-1039"/>
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
     <message>
-        <location line="-517"/>
         <source>Invalid argument (%1) for -override_per_command_wait</source>
-        <translation>ארגומנט לא חוקי (%1) עבור -override_per_command_wait</translation>
+        <translation type="vanished">ארגומנט לא חוקי (%1) עבור -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Missing argument for -override_per_command_wait</source>
-        <translation>חסר ארגומנט עבור -override_per_command_wait</translation>
+        <translation type="vanished">חסר ארגומנט עבור -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="-460"/>
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>ארגומנט לא חוקי %1) עבור -auto_update</translation>
     </message>
@@ -7279,7 +7284,7 @@ Check the json file for errors and fix them.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+195"/>
+        <location line="+193"/>
         <source>Form Key</source>
         <translation>מפתח טופס</translation>
     </message>
@@ -7289,7 +7294,7 @@ Check the json file for errors and fix them.</source>
         <translation>הזן את מפתח הטופס</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+82"/>
         <location line="+7"/>
         <location line="+7"/>
         <source>New File</source>
@@ -7332,7 +7337,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">הפעל את תוכנת האתחול (טען קושחה)</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+24"/>
         <source>Ctrl+Shift+L</source>
         <translation>Ctrl+Shift+L</translation>
     </message>
@@ -7416,33 +7421,33 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+77"/>
-        <location line="+4044"/>
+        <location line="+3722"/>
         <location line="+59"/>
         <source>Open Terminal</source>
         <translation>פתח את המסוף</translation>
     </message>
     <message>
-        <location line="-4098"/>
+        <location line="-3776"/>
         <source>Machine Vision</source>
         <translation>Machine Vision</translation>
     </message>
     <message>
         <location line="+181"/>
-        <location line="+3948"/>
+        <location line="+3626"/>
         <location line="+76"/>
         <source>Threshold Editor</source>
         <translation>עורך סף</translation>
     </message>
     <message>
-        <location line="-4019"/>
-        <location line="+4097"/>
+        <location line="-3697"/>
+        <location line="+3775"/>
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216"/>
         <source>Keypoints Editor</source>
         <translation>עורך נקודות מפתח</translation>
     </message>
     <message>
-        <location line="-4090"/>
-        <location line="+4256"/>
+        <location line="-3768"/>
+        <location line="+3934"/>
         <location line="+98"/>
         <location line="+24"/>
         <location line="+11"/>
@@ -7451,7 +7456,7 @@ Check the json file for errors and fix them.</source>
         <translation>Generator AprilTag</translation>
     </message>
     <message>
-        <location line="-4404"/>
+        <location line="-4082"/>
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 משפחת (30 תגים)</translation>
     </message>
@@ -7489,16 +7494,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location line="+343"/>
+        <location line="+371"/>
         <location line="+14"/>
-        <location line="+31"/>
-        <location line="+823"/>
+        <location line="+33"/>
+        <location line="+874"/>
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219"/>
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>הפתיחה נכשלה: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1235"/>
+        <location line="-1316"/>
         <source>DataMatrix Generator</source>
         <translation>מחולל DataMatrix</translation>
     </message>
@@ -7525,13 +7530,13 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+228"/>
-        <location line="+2320"/>
-        <location line="+47"/>
-        <location line="+69"/>
-        <location line="+1491"/>
+        <location line="+2315"/>
+        <location line="+1290"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37"/>
+        <location line="+67"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382"/>
         <location line="+364"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+856"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899"/>
         <location line="+208"/>
         <source>Please add a file extension!</source>
         <translation>נא להוסיף סיומת קובץ!</translation>
@@ -7546,7 +7551,7 @@ Check the json file for errors and fix them.</source>
         <translation>אין אפשרות לדרוס את קובץ הפלט!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4140"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3818"/>
         <source>Video Tools</source>
         <translation>כלי וידאו</translation>
     </message>
@@ -7646,15 +7651,15 @@ Check the json file for errors and fix them.</source>
         <location line="+237"/>
         <location line="+141"/>
         <location line="+67"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+208"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175"/>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0"/>
-        <location line="+1343"/>
+        <location line="+1440"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
-        <location line="+240"/>
-        <location line="+970"/>
+        <location line="+258"/>
+        <location line="+533"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
@@ -7662,18 +7667,18 @@ Check the json file for errors and fix them.</source>
         <location line="+118"/>
         <location line="+433"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127"/>
-        <location line="+286"/>
-        <location line="+142"/>
-        <location line="+978"/>
+        <location line="+288"/>
+        <location line="+143"/>
+        <location line="+1021"/>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1297"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340"/>
         <location line="+85"/>
-        <location line="+565"/>
+        <location line="+608"/>
         <source>Cancel</source>
         <translation>לְבַטֵל</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3953"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3631"/>
         <source>Upload to Edge Impulse Project</source>
         <translation>העלה ל-Edge Impulse Project</translation>
     </message>
@@ -7705,7 +7710,7 @@ Check the json file for errors and fix them.</source>
         <translation>סגור מערך נתונים</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+34"/>
         <source>OpenMV Docs</source>
         <translation>OpenMV Docs</translation>
     </message>
@@ -7725,7 +7730,7 @@ Check the json file for errors and fix them.</source>
         <translation>על OpenMV Cam...</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+18"/>
         <source>About OpenMV Cam %1</source>
         <translation>אודות OpenMV Cam%1</translation>
     </message>
@@ -7764,7 +7769,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">&lt;p&gt;OpenMV IDE תרגום לאנגלית מאת Kwabena W. Agyeman.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+17"/>
         <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;שותפים&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -7802,10 +7807,10 @@ Check the json file for errors and fix them.</source>
         <location line="+16"/>
         <location line="+24"/>
         <location line="+7"/>
-        <location line="+24"/>
+        <location line="+36"/>
         <location line="+26"/>
         <location line="+16"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+150"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117"/>
         <location line="+54"/>
         <location line="+32"/>
         <location line="+28"/>
@@ -7827,10 +7832,10 @@ Check the json file for errors and fix them.</source>
         <location line="+18"/>
         <location line="+23"/>
         <location line="+18"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-130"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-97"/>
         <location line="+73"/>
         <location line="+9"/>
-        <location line="+85"/>
+        <location line="+52"/>
         <location line="+4"/>
         <location line="+7"/>
         <location line="+9"/>
@@ -7848,13 +7853,14 @@ Check the json file for errors and fix them.</source>
         <location line="+16"/>
         <location line="+14"/>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1018"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1062"/>
         <location line="+6"/>
-        <location line="+26"/>
-        <location line="+53"/>
+        <location line="+28"/>
+        <location line="+52"/>
         <location line="+8"/>
-        <location line="+33"/>
-        <location line="+341"/>
+        <location line="+35"/>
+        <location line="+320"/>
+        <location line="+62"/>
         <location line="+99"/>
         <location line="+49"/>
         <location line="+67"/>
@@ -7870,24 +7876,23 @@ Check the json file for errors and fix them.</source>
         <location line="+9"/>
         <location line="+65"/>
         <location line="+6"/>
-        <location line="+73"/>
+        <location line="+87"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+72"/>
         <location line="+108"/>
         <location line="+83"/>
-        <location line="+41"/>
+        <location line="+42"/>
         <location line="+38"/>
         <location line="+52"/>
         <location line="+38"/>
         <location line="+21"/>
         <location line="+20"/>
-        <location line="+23"/>
-        <location line="+106"/>
-        <location line="+184"/>
+        <location line="+24"/>
+        <location line="+121"/>
+        <location line="+214"/>
         <location line="+33"/>
-        <location line="+211"/>
-        <location line="+51"/>
+        <location line="+215"/>
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+674"/>
         <source>Connect</source>
         <translation>לְחַבֵּר</translation>
@@ -7908,31 +7913,15 @@ Check the json file for errors and fix them.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-397"/>
-        <location line="+13"/>
-        <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-303"/>
-        <location line="+13"/>
-        <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-484"/>
-        <location line="+13"/>
-        <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-164"/>
-        <location line="+13"/>
-        <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-250"/>
-        <location line="+13"/>
-        <location line="+7"/>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+31"/>
-        <location line="+13"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119"/>
+        <location line="+26"/>
         <location line="+7"/>
-        <location line="+165"/>
         <source>Disconnect</source>
         <translation>לְנַתֵק</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+19"/>
+        <location line="+19"/>
         <source>Start (run script)</source>
         <translation>התחל (הפעל סקריפט)</translation>
     </message>
@@ -7961,7 +7950,6 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+5"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+332"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5"/>
         <source>Stop</source>
         <translation>תפסיק</translation>
@@ -7985,47 +7973,31 @@ Check the json file for errors and fix them.</source>
         <translation>זום כדי להתאים</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location line="+17"/>
+        <location line="+30"/>
         <source>JPG</source>
         <translation>JPG</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="+1"/>
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG דחוס את מאגר המסגרת לביצועים גבוהים יותר</translation>
     </message>
     <message>
-        <location line="+17"/>
-        <location line="+22"/>
-        <location line="+1851"/>
-        <location line="+55"/>
-        <location line="+112"/>
-        <location line="+69"/>
-        <location line="+278"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-547"/>
-        <location line="+216"/>
-        <location line="+167"/>
-        <location line="+165"/>
-        <location line="+173"/>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+335"/>
-        <location line="+346"/>
         <source>Busy... please wait...</source>
-        <translation>עסוק... אנא המתן...</translation>
+        <translation type="vanished">עסוק... אנא המתן...</translation>
     </message>
     <message>
-        <location line="-2381"/>
-        <location line="+15"/>
+        <location line="-25"/>
         <source>Disable</source>
         <translation>השבת</translation>
     </message>
     <message>
-        <location line="-14"/>
+        <location line="+1"/>
         <source>Disable the Frame Buffer for maximum performance</source>
         <translation>השבת את מאגר המסגרת לביצועים מקסימליים</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+48"/>
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>מאגר מסגרת מושבת - לחץ שוב על כפתור השבת כדי להפעיל (מימין למעלה)</translation>
     </message>
@@ -8094,7 +8066,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Res (w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1536"/>
+        <location line="-1574"/>
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
@@ -8102,7 +8074,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+353"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3142"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2478"/>
         <source>Load Custom Firmware</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8177,13 +8149,23 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <location line="+8"/>
         <location line="+31"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-855"/>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174"/>
         <location line="+27"/>
         <source>Convert Model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+819"/>
+        <location line="+425"/>
+        <source>Show Code Profiler</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+101"/>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+331"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4"/>
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>Res (w:%1, h:%2) - החזר השקעה (x:%3, y:%4, w:%5, h:%6) - פיקסלים (%7) - פוקוס (%8)</translation>
@@ -8221,7 +8203,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+65"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2612"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2693"/>
         <source>Board:</source>
         <translation>גלשן:</translation>
     </message>
@@ -8231,7 +8213,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>סוג לוח מצלמה</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+15"/>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2"/>
         <source>Sensor:</source>
         <translation>חיישן:</translation>
@@ -8265,14 +8247,14 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+6"/>
-        <location line="+2007"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-319"/>
-        <location line="+321"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-291"/>
+        <location line="+293"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-573"/>
         <source>Drive:</source>
         <translation>נהיגה:</translation>
     </message>
     <message>
-        <location line="-2006"/>
+        <location line="+1"/>
         <source>Drive associated with port</source>
         <translation>כונן המשויך ליציאה</translation>
     </message>
@@ -8288,8 +8270,8 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>עשוי להיות שונה מ-FPS של המצלמה</translation>
     </message>
     <message>
-        <location line="+234"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2825"/>
+        <location line="+267"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2908"/>
         <source>Update Available</source>
         <translation>עדכון זמין</translation>
     </message>
@@ -8304,7 +8286,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>הורד</translation>
     </message>
     <message>
-        <location line="+207"/>
+        <location line="+223"/>
         <source>WiFi Programming Disabled!</source>
         <translation>תכנות WiFi מושבת!</translation>
     </message>
@@ -8385,17 +8367,17 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
     </message>
     <message>
         <location line="+93"/>
-        <location line="+1595"/>
+        <location line="+1176"/>
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>יציאה טורית - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1563"/>
+        <location line="-1144"/>
         <location line="+106"/>
         <location line="+96"/>
         <location line="+101"/>
         <location line="+96"/>
-        <location line="+1210"/>
+        <location line="+791"/>
         <location line="+145"/>
         <location line="+114"/>
         <location line="+129"/>
@@ -8405,7 +8387,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>מתחבר... (פסק זמן של 30 שניות)</translation>
     </message>
     <message>
-        <location line="-2202"/>
+        <location line="-1783"/>
         <source>
 
 Try doing:
@@ -8458,12 +8440,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+1652"/>
+        <location line="+1233"/>
         <source>UDP Server Connection - %1</source>
         <translation>חיבור שרת UDP - %1</translation>
     </message>
     <message>
-        <location line="-1578"/>
+        <location line="-1159"/>
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>ארגומנט יציאה לא חוקי (%1) עבור -open_udp_server_terminal</translation>
     </message>
@@ -8494,12 +8476,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17"/>
-        <location line="+1698"/>
+        <location line="+1279"/>
         <source>TCP Server Connection - %1</source>
         <translation>חיבור שרת TCP - %1</translation>
     </message>
     <message>
-        <location line="-1624"/>
+        <location line="-1205"/>
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>ארגומנט יציאה לא חוקי (%1) עבור -open_tcp_server_terminal</translation>
     </message>
@@ -8510,8 +8492,8 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+55"/>
-        <location line="+9"/>
-        <location line="+8"/>
+        <location line="+18"/>
+        <location line="+17"/>
         <location line="+9"/>
         <location line="+8"/>
         <location line="+9"/>
@@ -8526,7 +8508,7 @@ sudo adduser %L1 dialout
         <location line="+6"/>
         <location line="+8"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2281"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2388"/>
         <location line="+9"/>
         <location line="+8"/>
         <location line="+19"/>
@@ -8534,7 +8516,7 @@ sudo adduser %L1 dialout
         <translation>רשום את OpenMV Cam</translation>
     </message>
     <message>
-        <location line="-226"/>
+        <location line="-244"/>
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8553,7 +8535,14 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
 אנא הפעל דוגמאות-&gt;HelloWorld-&gt;helloworld.py כדי לבדוק את איכות הראייה ולמקד את המצלמה (אם רלוונטי).</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+7"/>
+        <location line="+17"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65"/>
+        <source>Registered</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-6"/>
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8568,9 +8557,9 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
 אנא הפעל דוגמאות-&gt;HelloWorld-&gt;helloworld.py כדי לבדוק את איכות הראייה ולמקד את המצלמה (אם רלוונטי).</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+17"/>
         <location line="+182"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-35"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30"/>
         <source>Database Error!</source>
         <translation>שגיאה במסד נתונים!</translation>
     </message>
@@ -8663,33 +8652,30 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>מפתח לוח בפורמט לא חוקי!</translation>
     </message>
     <message>
-        <location line="+64"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+186"/>
-        <location line="+490"/>
-        <location line="+153"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+190"/>
+        <location line="+472"/>
+        <location line="+155"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-77"/>
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
     <message>
-        <location line="+86"/>
         <source>Configure Settings</source>
-        <translation>הגדר הגדרות</translation>
+        <translation type="vanished">הגדר הגדרות</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <location line="+22"/>
-        <location line="+14"/>
-        <location line="+9"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+373"/>
+        <location line="+20"/>
         <source>Save Script</source>
         <translation>שמור סקריפט</translation>
     </message>
     <message>
-        <location line="-44"/>
+        <location line="-19"/>
         <source>Strip comments and convert spaces to tabs?</source>
         <translation>להסיר הערות ולהמיר רווחים לטאבים?</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100"/>
         <location line="+7"/>
         <location line="+18"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117"/>
@@ -8700,34 +8686,33 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-23"/>
-        <location line="+1418"/>
+        <location line="+1101"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>קבצי תמונה (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-1373"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49"/>
         <location line="+7"/>
         <location line="+17"/>
         <location line="+15"/>
-        <location line="+11"/>
         <source>Save Template</source>
         <translation>שמור תבנית</translation>
     </message>
     <message>
-        <location line="-48"/>
+        <location line="-37"/>
         <source>Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)</source>
         <translation>קבצי תמונה (*.bmp *.jpg *.jpeg *.pgm *.ppm)</translation>
     </message>
     <message>
         <location line="+23"/>
-        <location line="+69"/>
+        <location line="+67"/>
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>אנא בחר נתיב חוקי במצלמת OpenMV!</translation>
     </message>
     <message>
-        <location line="-54"/>
-        <location line="+69"/>
+        <location line="-52"/>
+        <location line="+67"/>
         <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
         <translation>&quot;%L1&quot; ארוך מאורך מקסימלי של %L2 תווים!</translation>
     </message>
@@ -8736,20 +8721,19 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+7"/>
         <location line="+17"/>
         <location line="+15"/>
-        <location line="+11"/>
         <source>Save Descriptor</source>
         <translation>שמור מתאר</translation>
     </message>
     <message>
-        <location line="-48"/>
-        <location line="+1390"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88"/>
         <location line="+80"/>
         <location line="+21"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37"/>
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>קבצי נקודות מפתח (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1292"/>
+        <location line="-1113"/>
         <location line="+7"/>
         <location line="+6"/>
         <location line="+7"/>
@@ -8777,14 +8761,13 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>לא ניתן לפתוח את הקובץ לדוגמה &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-457"/>
         <location line="+28"/>
-        <location line="+29"/>
         <source>Select Drive</source>
         <translation>בחר כונן</translation>
     </message>
     <message>
-        <location line="-56"/>
+        <location line="-27"/>
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>לא נמצאו כוננים חוקיים לשיוך למצלמת ה-OpenMV שלך!</translation>
     </message>
@@ -8803,17 +8786,42 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>כונן: %L1</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+41"/>
         <source>Debug Protocol Settings</source>
         <translation>הגדרות פרוטוקול איתור באגים</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
+        <source>Protocol Version %1 - System Info:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Host Stats:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Device Stats:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Protocol Controls:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Dynamic Frame Reading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Combined Polling</source>
         <translation>תשאול משולב</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Polling (ms)</source>
         <translation>תשאול (ms)</translation>
     </message>
@@ -8828,12 +8836,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>הגדרות תשאול</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+17"/>
         <source>Frame Buffer Polling (ms)</source>
         <translation>תשאול מאגר מסגרות (ms)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Script State Polling (ms)</source>
         <translation>סקריפט תשאול מדינה (ms)</translation>
     </message>
@@ -8843,7 +8851,19 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>תשאול מאגר טקסט (ms)</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+9"/>
+        <source>Code Profiler Polling (ms)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+354"/>
+        <location line="+26"/>
+        <location line="+7"/>
+        <source>Failed to flush &quot;%L1&quot;!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34"/>
         <location line="+13"/>
         <location line="+31"/>
         <location line="+9"/>
@@ -8890,7 +8910,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+31"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1928"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1977"/>
         <source>Please select a serial port</source>
         <translation>אנא בחר יציאה טורית</translation>
     </message>
@@ -9016,7 +9036,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+71"/>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+716"/>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713"/>
         <source>What would you like to do?</source>
         <translation>מה תרצה לעשות?</translation>
     </message>
@@ -9129,7 +9149,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>הדור הושלם!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1462"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1508"/>
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>משאבי OpenMV IDE חדשים זמינים (למשל דוגמאות, קושחה, תיעוד וכו&apos;).</translation>
     </message>
@@ -9140,8 +9160,8 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+7"/>
-        <location line="+286"/>
-        <location line="+142"/>
+        <location line="+288"/>
+        <location line="+143"/>
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-420"/>
         <location line="+148"/>
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176"/>
@@ -9164,7 +9184,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>מוריד...</translation>
     </message>
     <message>
-        <location line="-414"/>
+        <location line="-417"/>
         <source>Installing...</source>
         <translation>מתקין...</translation>
     </message>
@@ -9182,75 +9202,84 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+28"/>
         <location line="+6"/>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Package Update</source>
         <translation>עדכון חבילה</translation>
     </message>
     <message>
-        <location line="-25"/>
-        <location line="+252"/>
-        <location line="+87"/>
+        <location line="-27"/>
+        <location line="+254"/>
+        <location line="+88"/>
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>לא ניתן לפתוח את קובץ המשאבים &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-313"/>
-        <location line="+252"/>
-        <location line="+94"/>
+        <location line="-314"/>
+        <location line="+254"/>
+        <location line="+95"/>
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>בקשת הרשת נכשלה &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-312"/>
+        <location line="-315"/>
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
         <location line="+119"/>
-        <location line="+544"/>
+        <location line="+588"/>
         <location line="+217"/>
-        <location line="+2114"/>
+        <location line="+2161"/>
         <location line="+78"/>
         <source>Erase internal FAT file system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-3069"/>
+        <location line="-3160"/>
         <location line="+119"/>
-        <location line="+545"/>
+        <location line="+589"/>
         <location line="+216"/>
-        <location line="+2114"/>
+        <location line="+2161"/>
         <location line="+78"/>
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-3069"/>
-        <location line="+664"/>
+        <location line="-3160"/>
+        <location line="+708"/>
         <location line="+216"/>
-        <location line="+2114"/>
+        <location line="+2161"/>
         <location line="+78"/>
         <source>Reset ROMFS file system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-3068"/>
-        <location line="+664"/>
+        <location line="-3159"/>
+        <location line="+708"/>
         <location line="+215"/>
-        <location line="+2114"/>
+        <location line="+2161"/>
         <location line="+78"/>
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-3025"/>
+        <location line="-3116"/>
         <location line="+45"/>
         <source>Bootloader</source>
         <translation>טוען אתחול</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="+2947"/>
+        <source>You can find more examples under the File -&gt; Examples menu.
+
+In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-3060"/>
+        <location line="+4"/>
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72"/>
         <location line="+4"/>
         <source>Firmware Path</source>
         <translation>נתיב קושחה</translation>
@@ -9293,7 +9322,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+104"/>
         <source>Extracting...</source>
         <translation>מחלץ...</translation>
     </message>
@@ -9303,9 +9332,9 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>לא מצליח לחלץ קושחה!</translation>
     </message>
     <message>
-        <location line="+127"/>
+        <location line="+148"/>
         <location line="+5"/>
-        <location line="+49"/>
+        <location line="+48"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -9313,7 +9342,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+233"/>
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>זוהה לוח במצב DFU. מה תרצה לעשות?</translation>
     </message>
@@ -9342,7 +9371,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>האם יש לך מצלמת OpenMV מחוברת והאם היא מגוונת?</translation>
     </message>
     <message>
-        <location line="+833"/>
+        <location line="+848"/>
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
 Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!</source>
@@ -9374,7 +9403,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+24"/>
         <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
@@ -9382,10 +9411,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-119"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-959"/>
-        <location line="+642"/>
-        <location line="+1676"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-975"/>
+        <location line="+656"/>
+        <location line="+1707"/>
         <source>Please select the board type</source>
         <translation>אנא בחר את סוג הלוח</translation>
     </message>
@@ -9394,7 +9423,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">למחוק את מערכת הקבצים הפנימית?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2206"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2251"/>
         <source>No released firmware available for the attached board!</source>
         <translation>אין קושחה שפורסמה זמינה עבור הלוח המצורף!</translation>
     </message>
@@ -9411,13 +9440,20 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>אנא עדכן את טוען האתחול לגרסה העדכנית ביותר והתקן את ה-SoftDevice כדי להבהב את הקושחה של OpenMV. מידע נוסף ניתן למצוא בכתובת &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1019"/>
-        <location line="+2877"/>
+        <location line="-1063"/>
+        <location line="+2968"/>
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-2365"/>
+        <location line="-2483"/>
+        <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
+
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+71"/>
         <source>Just erase the internal FAT file system</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9433,12 +9469,12 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+219"/>
-        <location line="+2115"/>
+        <location line="+2162"/>
         <source>Upgrade options:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-2031"/>
+        <location line="-2078"/>
         <location line="+167"/>
         <location line="+44"/>
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -9454,7 +9490,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (לחץ על ביטול אם זה לוקח יותר מ-5 שניות).</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+133"/>
         <source>Timeout error while getting firmware version!</source>
         <translation>שגיאת פסק זמן בזמן קבלת גרסת קושחה!</translation>
     </message>
@@ -9471,7 +9507,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location line="+72"/>
         <location line="+191"/>
-        <location line="+523"/>
+        <location line="+570"/>
         <source>Timeout error while getting board architecture!</source>
         <translation>שגיאת זמן קצוב בעת קבלת ארכיטקטורת לוח!</translation>
     </message>
@@ -9480,8 +9516,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">ארכיטקטורת לוח לא נתמכת!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-619"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+130"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97"/>
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>נתק את מצלמת ה-OpenMV שלך ואז חבר אותה מחדש...</translation>
     </message>
@@ -9535,12 +9571,12 @@ Continue?</source>
         <translation>מוחק...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+204"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-173"/>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56"/>
         <location line="+65"/>
         <location line="+78"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+273"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+140"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-191"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90"/>
         <location line="+22"/>
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+46"/>
         <location line="+56"/>
@@ -9638,7 +9674,7 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1"/>
         <location line="+139"/>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+272"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11"/>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1"/>
         <location line="+130"/>
         <location line="+41"/>
@@ -9665,7 +9701,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <translation>קובץ הקושחה ריק!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-193"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-160"/>
         <source>No IMX settings for the selected board type %L1!</source>
         <translation>אין הגדרות IMX עבור סוג הלוח שנבחר %L1!</translation>
     </message>
@@ -9675,29 +9711,11 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <translation>לא נמצאו הגדרות IMX!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-385"/>
-        <location line="+13"/>
-        <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-291"/>
-        <location line="+13"/>
-        <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-486"/>
-        <location line="+13"/>
-        <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+17"/>
-        <location line="+13"/>
-        <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-238"/>
-        <location line="+13"/>
-        <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+326"/>
-        <location line="+13"/>
-        <location line="+7"/>
         <source>Failed to eject &quot;%L1&quot;!</source>
-        <translation>הוצאת &quot;%L1&quot; נכשלה!</translation>
+        <translation type="vanished">הוצאת &quot;%L1&quot; נכשלה!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+10"/>
+        <location line="+14"/>
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
@@ -9752,14 +9770,14 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+1"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+364"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+99"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+270"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+424"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-1"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+111"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-1"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-42"/>
         <location line="+41"/>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+1"/>
         <location line="+51"/>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+217"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1"/>
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>לחץ על כפתור OK לאחר ש-OpenMV Cam שלך מונה וסיים להפעיל את הבדיקה העצמית המובנית שלה (נורית כחולה מהבהבת - זה לוקח זמן).</translation>
     </message>
@@ -9910,7 +9928,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <translation>עדכון הקושחה של PicoTool נכשל!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-509"/>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521"/>
         <source>OpenMV IDE needs to update your bootloader to support ROMFS.
 
 The internal FAT filesystem will be erased!
@@ -9943,12 +9961,12 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
     </message>
     <message>
         <location line="+11"/>
-        <location line="+4"/>
+        <location line="+11"/>
         <source>Flashing Bootloader</source>
         <translation>טוען אתחול מהבהב</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+14"/>
         <source>DFU bootloader reset complete!
 
 </source>
@@ -9989,13 +10007,13 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>איפוס טוען האתחול של DFU נכשל!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-555"/>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254"/>
         <source>None</source>
         <translation>אף אחד</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <location line="+10"/>
+        <location line="+27"/>
+        <location line="+16"/>
         <location line="+56"/>
         <source>Unknown</source>
         <translation>לא ידוע</translation>
@@ -10006,17 +10024,27 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>שגיאת פסק זמן בזמן קבלת סוג חיישן!</translation>
     </message>
     <message>
-        <location line="+217"/>
+        <location line="+156"/>
+        <source>Unregistered</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+91"/>
         <source>Timeout error while learning MTU!</source>
         <translation>שגיאת פסק זמן בזמן לימוד MTU!</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+134"/>
         <source>Board: %L1</source>
         <translation>לוח: %L1</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
+        <source>Sensors: %L1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Sensor: %L1</source>
         <translation>חיישן: %L1</translation>
     </message>
@@ -10046,39 +10074,137 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation> - [ הכי מאוחר ]</translation>
     </message>
     <message>
-        <location line="+255"/>
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669"/>
+        <source>Failed to open or parse ELF: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>No function symbols found (.symtab/.dynsym missing or stripped)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+176"/>
+        <source>Event %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Function</source>
+        <translation type="unfinished">פוּנקצִיָה</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Calls</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Min μs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Max μs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total μs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Average μs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Average Cycles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Percentage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+396"/>
+        <location line="+172"/>
+        <source>Code Profiler</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-147"/>
+        <source>Flat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Tree</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Firmware ELF (*.elf)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Filter functions...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Inclusive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Exclusive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Reset</source>
         <translation>אִתחוּל</translation>
     </message>
     <message>
-        <location line="+167"/>
-        <source>Start</source>
-        <translation>הַתחָלָה</translation>
+        <location line="+165"/>
+        <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+9"/>
+        <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="vanished">הַתחָלָה</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+578"/>
         <source>More Examples</source>
         <translation>דוגמאות נוספות</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Color-Tracking examples.</source>
-        <translation>תוכל למצוא דוגמאות נוספות בתפריט קובץ -&gt; דוגמאות.
+        <translation type="vanished">תוכל למצוא דוגמאות נוספות בתפריט קובץ -&gt; דוגמאות.
 
 בפרט, בדוק את הדוגמאות למעקב אחר צבעים.</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+28"/>
         <location line="+69"/>
         <location line="+9"/>
-        <location line="+58"/>
         <source>Firmware Update</source>
         <translation>עדכון קושחה</translation>
     </message>
     <message>
-        <location line="-133"/>
+        <location line="-75"/>
         <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
         <translation>לעדכן את הקושחה של OpenMV Cam לגרסה העדכנית ביותר?</translation>
     </message>
@@ -10093,7 +10219,7 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>צריך לאפס את הקושחה של OpenMV Cam לגרסת השחרור?</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+87"/>
         <source>No board settings for the connected board found!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10103,18 +10229,23 @@ In particular, checkout the Color-Tracking examples.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="-55"/>
-        <location line="+110"/>
+        <location line="+150"/>
         <source>No Image</source>
         <translation>אין תמונה</translation>
     </message>
     <message>
-        <location line="-63"/>
+        <location line="-103"/>
         <location line="+7"/>
         <source>Video Record</source>
         <translation>הקלטת וידאו</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+69"/>
+        <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+83"/>
         <location line="+10"/>
         <location line="+10"/>
         <location line="+10"/>
@@ -10224,12 +10355,12 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147"/>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590"/>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4268"/>
         <location line="+10"/>
         <location line="+56"/>
         <location line="+7"/>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-283"/>
-        <location line="+239"/>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280"/>
+        <location line="+236"/>
         <source>Model Zoo</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10239,7 +10370,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+42"/>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+23"/>
         <source>Copy</source>
         <translation>עותק</translation>
@@ -10318,7 +10449,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     <message>
         <location line="+0"/>
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0"/>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-253"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296"/>
         <location line="+79"/>
         <source>Query failed!</source>
         <translation>השאילתה נכשלה!</translation>
@@ -10605,7 +10736,7 @@ The camera must be power cycled after a system package update.</source>
         <location line="+50"/>
         <location line="+94"/>
         <location line="+92"/>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395"/>
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431"/>
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332"/>
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>ביצוע הפקודה הזו לוקח זמן מה. אנא התאזר בסבלנות.</translation>
@@ -10758,12 +10889,12 @@ The camera must be power cycled after a system package update.</source>
     </message>
     <message>
         <location line="-77"/>
-        <location line="+565"/>
+        <location line="+608"/>
         <source>Transcoding File...</source>
         <translation>ממיר קובץ...</translation>
     </message>
     <message>
-        <location line="-554"/>
+        <location line="-597"/>
         <location line="+36"/>
         <location line="+11"/>
         <location line="+18"/>
@@ -10824,9 +10955,9 @@ The camera must be power cycled after a system package update.</source>
         <translation>קבל פורמטי קלט</translation>
     </message>
     <message>
-        <location line="+44"/>
-        <location line="+103"/>
-        <location line="+59"/>
+        <location line="+38"/>
+        <location line="+111"/>
+        <location line="+100"/>
         <location line="+15"/>
         <location line="+372"/>
         <location line="+12"/>
@@ -10852,12 +10983,21 @@ The camera must be power cycled after a system package update.</source>
         <translation>המר וידאו</translation>
     </message>
     <message>
-        <location line="-837"/>
         <source>Failed to launch ffmpeg!</source>
-        <translation>הפעלת ffmpeg נכשלה!</translation>
+        <translation type="vanished">הפעלת ffmpeg נכשלה!</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="-989"/>
+        <source>Converting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+112"/>
+        <source>FFMPEG is not supported on this platform.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+100"/>
         <source>Unable to write to output video file!</source>
         <translation>לא ניתן לכתוב לקובץ וידאו פלט!</translation>
     </message>
@@ -10998,7 +11138,7 @@ The camera must be power cycled after a system package update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-757"/>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754"/>
         <source>Please select the target</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11034,8 +11174,7 @@ OpenMV IDE will just copy the model as is.</source>
         <location line="+8"/>
         <location line="+15"/>
         <location line="+8"/>
-        <location line="+85"/>
-        <location line="+11"/>
+        <location line="+93"/>
         <location line="+9"/>
         <location line="+14"/>
         <location line="+13"/>
@@ -11052,7 +11191,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-623"/>
+        <location line="-620"/>
         <location line="+91"/>
         <source>A folder with the same name already exists!</source>
         <translation type="unfinished"></translation>
@@ -11105,37 +11244,37 @@ OpenMV IDE will just copy the model as is.</source>
         <location line="+7"/>
         <location line="+14"/>
         <location line="+19"/>
-        <location line="+243"/>
+        <location line="+240"/>
         <source>Extract File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-249"/>
+        <location line="-246"/>
         <source>View/Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <location line="+240"/>
+        <location line="+237"/>
         <source>Add File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-239"/>
-        <location line="+241"/>
+        <location line="-236"/>
+        <location line="+238"/>
         <source>New Folder</source>
         <translation type="unfinished">תיקייה חדשה</translation>
     </message>
     <message>
         <location line="-147"/>
         <location line="+14"/>
-        <location line="+325"/>
+        <location line="+322"/>
         <location line="+12"/>
         <source>ROMFS is not supported on this board!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-293"/>
+        <location line="-290"/>
         <location line="+45"/>
         <source>Failed to unpack ROMFS!</source>
         <translation type="unfinished"></translation>
@@ -11168,8 +11307,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+106"/>
-        <location line="+7"/>
+        <location line="+110"/>
         <location line="+8"/>
         <location line="+12"/>
         <location line="+13"/>
@@ -11214,7 +11352,7 @@ OpenMV IDE will just copy the model as is.</source>
     </message>
     <message>
         <location line="+15"/>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-230"/>
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266"/>
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224"/>
         <source>Advanced</source>
         <translation type="unfinished"></translation>
@@ -11239,31 +11377,33 @@ OpenMV IDE will just copy the model as is.</source>
     </message>
     <message>
         <location line="+25"/>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+172"/>
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+189"/>
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210"/>
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781"/>
         <source>Success - Press Ok to close the window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+6"/>
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+8"/>
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+6"/>
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+5"/>
         <source>Failure - Press Cancel to close the window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-368"/>
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408"/>
         <location line="+13"/>
         <location line="+13"/>
         <location line="+9"/>
         <location line="+126"/>
         <location line="+14"/>
-        <location line="+137"/>
+        <location line="+173"/>
         <source>STEdgeAI Compilier</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-298"/>
+        <location line="-334"/>
         <source>Failed to copy JSON file!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11274,7 +11414,7 @@ OpenMV IDE will just copy the model as is.</source>
     </message>
     <message>
         <location line="+12"/>
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-281"/>
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-283"/>
         <source>Please specify the compiler settings:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11336,7 +11476,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+159"/>
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11397,61 +11537,69 @@ OpenMV IDE will just copy the model as is.</source>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5"/>
+        <location line="+28"/>
+        <location line="+21"/>
         <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
-        <location line="+22"/>
-        <location line="+81"/>
-        <location line="+235"/>
         <location line="+21"/>
-        <location line="+43"/>
-        <location line="+11"/>
-        <location line="+40"/>
-        <location line="+18"/>
-        <location line="+19"/>
-        <location line="+11"/>
-        <location line="+15"/>
-        <location line="+22"/>
-        <location line="+18"/>
-        <location line="+21"/>
-        <location line="+29"/>
-        <location line="+18"/>
         <location line="+28"/>
+        <location line="+12"/>
+        <location line="+20"/>
+        <location line="+21"/>
         <location line="+15"/>
-        <location line="+144"/>
+        <location line="+22"/>
+        <location line="+132"/>
+        <location line="+18"/>
+        <location line="+18"/>
+        <location line="+15"/>
+        <location line="+11"/>
+        <location line="+29"/>
+        <location line="+19"/>
+        <location line="+43"/>
+        <location line="+41"/>
+        <location line="+306"/>
         <source>Project Location</source>
         <translation>מיקום הפרויקט</translation>
     </message>
     <message>
-        <location line="-886"/>
+        <location line="-895"/>
+        <location line="+28"/>
+        <location line="+21"/>
         <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
+        <location line="+21"/>
+        <location line="+28"/>
+        <location line="+12"/>
+        <location line="+20"/>
+        <location line="+21"/>
+        <location line="+15"/>
         <location line="+22"/>
-        <location line="+81"/>
-        <location line="+17"/>
+        <location line="+24"/>
         <location line="+1"/>
-        <location line="+8"/>
+        <location line="+22"/>
         <location line="+1"/>
-        <location line="+10"/>
+        <location line="+33"/>
         <location line="+1"/>
-        <location line="+8"/>
+        <location line="+18"/>
         <location line="+1"/>
-        <location line="+8"/>
-        <location line="+1"/>
-        <location line="+8"/>
-        <location line="+1"/>
-        <location line="+8"/>
-        <location line="+1"/>
-        <location line="+8"/>
-        <location line="+1"/>
-        <location line="+8"/>
+        <location line="+19"/>
         <location line="+1"/>
         <location line="+11"/>
+        <location line="+18"/>
+        <location line="+18"/>
+        <location line="+15"/>
+        <location line="+11"/>
+        <location line="+29"/>
+        <location line="+19"/>
+        <location line="+43"/>
+        <location line="+41"/>
+        <location line="+28"/>
         <location line="+1"/>
-        <location line="+12"/>
         <location line="+13"/>
         <location line="+1"/>
+        <location line="+12"/>
         <location line="+8"/>
         <location line="+1"/>
         <location line="+8"/>
@@ -11460,38 +11608,30 @@ OpenMV IDE will just copy the model as is.</source>
         <location line="+1"/>
         <location line="+8"/>
         <location line="+1"/>
-        <location line="+17"/>
-        <location line="+32"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+20"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+1"/>
+        <location line="+8"/>
         <location line="+1"/>
         <location line="+8"/>
         <location line="+1"/>
         <location line="+10"/>
-        <location line="+21"/>
-        <location line="+43"/>
-        <location line="+11"/>
-        <location line="+40"/>
-        <location line="+18"/>
-        <location line="+19"/>
-        <location line="+11"/>
-        <location line="+15"/>
-        <location line="+22"/>
-        <location line="+18"/>
-        <location line="+21"/>
-        <location line="+29"/>
-        <location line="+18"/>
-        <location line="+28"/>
-        <location line="+15"/>
-        <location line="+51"/>
         <location line="+1"/>
-        <location line="+17"/>
+        <location line="+8"/>
         <location line="+1"/>
-        <location line="+22"/>
+        <location line="+8"/>
         <location line="+1"/>
-        <location line="+18"/>
-        <location line="+1"/>
-        <location line="+19"/>
-        <location line="+1"/>
-        <location line="+12"/>
+        <location line="+94"/>
         <source>Location</source>
         <translation>מקום</translation>
     </message>
@@ -11500,7 +11640,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">מבחן Qt</translation>
     </message>
     <message>
-        <location line="-516"/>
+        <location line="-85"/>
         <source>Google Test</source>
         <translation>מבחן גוגל</translation>
     </message>
@@ -11520,49 +11660,49 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>לתפוס 2</translation>
     </message>
     <message>
-        <location line="-371"/>
+        <location line="-762"/>
         <location line="+25"/>
         <location line="+26"/>
-        <location line="+321"/>
+        <location line="+712"/>
         <source>Test framework:</source>
         <translation>מסגרת מבחן:</translation>
     </message>
     <message>
-        <location line="-296"/>
+        <location line="-687"/>
         <source>GUI Application</source>
         <translation>יישום GUI</translation>
     </message>
     <message>
         <location line="-75"/>
         <location line="+51"/>
-        <location line="+324"/>
+        <location line="+715"/>
         <source>Test suite name:</source>
         <translation>שם חבילת הבדיקה:</translation>
     </message>
     <message>
-        <location line="-374"/>
+        <location line="-790"/>
+        <location line="+25"/>
         <location line="+24"/>
         <location line="+27"/>
         <location line="+21"/>
-        <location line="+22"/>
-        <location line="+281"/>
+        <location line="+694"/>
         <source>Test case name:</source>
         <translation>שם מקרה מבחן:</translation>
     </message>
     <message>
-        <location line="-302"/>
+        <location line="-693"/>
         <source>Requires QApplication</source>
         <translation>דורש QApplication</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="-97"/>
         <source>Generate setup code</source>
         <translation>צור קוד הגדרה</translation>
     </message>
     <message>
-        <location line="-20"/>
-        <location line="+21"/>
-        <location line="+280"/>
+        <location line="+1"/>
+        <location line="+98"/>
+        <location line="+692"/>
         <source>Generate initialization and cleanup code</source>
         <translation>צור קוד אתחול וניקוי</translation>
     </message>
@@ -11571,17 +11711,17 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">אפשר C++11</translation>
     </message>
     <message>
-        <location line="-324"/>
+        <location line="-766"/>
         <source>Googletest source directory (optional):</source>
         <translation>ספריית המקורות של Googletest (אופציונלי):</translation>
     </message>
     <message>
-        <location line="-51"/>
+        <location line="+51"/>
         <source>Boost include directory (optional):</source>
         <translation>קידום כולל ספרייה (אופציונלי):</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="-27"/>
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 כולל ספרייה (אופציונלי):</translation>
     </message>
@@ -11591,154 +11731,154 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>השתמש בספריות Qt</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-50"/>
+        <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
         <location line="+22"/>
-        <location line="+21"/>
-        <location line="+313"/>
-        <location line="+21"/>
-        <location line="+94"/>
+        <location line="+17"/>
+        <location line="+40"/>
+        <location line="+210"/>
         <location line="+18"/>
-        <location line="+107"/>
-        <location line="+46"/>
-        <location line="+43"/>
+        <location line="+45"/>
+        <location line="+47"/>
+        <location line="+84"/>
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-735"/>
+        <location line="-558"/>
+        <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
         <location line="+22"/>
-        <location line="+21"/>
-        <location line="+313"/>
-        <location line="+21"/>
-        <location line="+94"/>
+        <location line="+17"/>
+        <location line="+40"/>
+        <location line="+210"/>
         <location line="+18"/>
-        <location line="+105"/>
-        <location line="+48"/>
         <location line="+43"/>
+        <location line="+49"/>
+        <location line="+84"/>
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-735"/>
+        <location line="-558"/>
+        <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
         <location line="+22"/>
-        <location line="+21"/>
-        <location line="+313"/>
-        <location line="+21"/>
-        <location line="+94"/>
+        <location line="+17"/>
+        <location line="+40"/>
+        <location line="+210"/>
         <location line="+18"/>
-        <location line="+153"/>
-        <location line="+44"/>
+        <location line="+92"/>
+        <location line="+85"/>
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-736"/>
+        <location line="-559"/>
+        <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
         <location line="+22"/>
-        <location line="+21"/>
-        <location line="+314"/>
-        <location line="+21"/>
-        <location line="+94"/>
+        <location line="+17"/>
+        <location line="+41"/>
+        <location line="+210"/>
         <location line="+18"/>
-        <location line="+104"/>
-        <location line="+48"/>
-        <location line="+44"/>
+        <location line="+42"/>
+        <location line="+50"/>
+        <location line="+84"/>
         <source>Build system:</source>
         <translation>בניית מערכת:</translation>
     </message>
     <message>
-        <location line="-736"/>
+        <location line="-559"/>
+        <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
         <location line="+22"/>
-        <location line="+21"/>
         <source>Project and Test Information</source>
         <translation>מידע על פרויקטים ובדיקות</translation>
     </message>
     <message>
-        <location line="-93"/>
+        <location line="-120"/>
+        <location line="+23"/>
+        <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
         <location line="+22"/>
-        <location line="+21"/>
-        <location line="+25"/>
+        <location line="+26"/>
+        <location line="+51"/>
         <location line="+19"/>
-        <location line="+19"/>
-        <location line="+216"/>
-        <location line="+79"/>
-        <location line="+116"/>
         <location line="+18"/>
         <location line="+4"/>
         <location line="+18"/>
-        <location line="+17"/>
-        <location line="+33"/>
+        <location line="+164"/>
+        <location line="+41"/>
         <location line="+18"/>
-        <location line="+26"/>
-        <location line="+16"/>
-        <location line="+28"/>
-        <location line="+142"/>
+        <location line="+42"/>
+        <location line="+70"/>
+        <location line="+220"/>
+        <location line="+19"/>
+        <location line="+22"/>
+        <location line="+19"/>
         <source>Details</source>
         <translation>פרטים</translation>
     </message>
     <message>
-        <location line="-887"/>
+        <location line="-869"/>
+        <location line="+21"/>
+        <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
         <location line="+22"/>
-        <location line="+21"/>
-        <location line="+79"/>
-        <location line="+237"/>
-        <location line="+44"/>
+        <location line="+28"/>
         <location line="+11"/>
-        <location line="+40"/>
-        <location line="+18"/>
-        <location line="+18"/>
-        <location line="+12"/>
+        <location line="+21"/>
+        <location line="+21"/>
         <location line="+15"/>
         <location line="+22"/>
         <location line="+18"/>
-        <location line="+21"/>
+        <location line="+132"/>
+        <location line="+18"/>
+        <location line="+14"/>
+        <location line="+12"/>
         <location line="+29"/>
         <location line="+18"/>
-        <location line="+28"/>
-        <location line="+14"/>
+        <location line="+44"/>
+        <location line="+40"/>
         <location line="+30"/>
-        <location line="+142"/>
+        <location line="+295"/>
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252"/>
         <source>Kit Selection</source>
         <translation>בחירת ערכה</translation>
     </message>
     <message>
-        <location line="-889"/>
+        <location line="-886"/>
+        <location line="+21"/>
+        <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
         <location line="+22"/>
-        <location line="+21"/>
-        <location line="+79"/>
-        <location line="+237"/>
-        <location line="+44"/>
+        <location line="+28"/>
         <location line="+11"/>
-        <location line="+40"/>
-        <location line="+18"/>
-        <location line="+18"/>
-        <location line="+12"/>
+        <location line="+21"/>
+        <location line="+21"/>
         <location line="+15"/>
         <location line="+22"/>
         <location line="+18"/>
-        <location line="+21"/>
+        <location line="+132"/>
+        <location line="+18"/>
+        <location line="+14"/>
+        <location line="+12"/>
         <location line="+29"/>
         <location line="+18"/>
-        <location line="+28"/>
-        <location line="+14"/>
+        <location line="+44"/>
+        <location line="+40"/>
         <location line="+30"/>
-        <location line="+142"/>
+        <location line="+295"/>
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731"/>
         <location line="+2"/>
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7"/>
@@ -11746,101 +11886,101 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>ערכות</translation>
     </message>
     <message>
-        <location line="-889"/>
+        <location line="-886"/>
+        <location line="+21"/>
+        <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
         <location line="+22"/>
-        <location line="+21"/>
-        <location line="+23"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+18"/>
-        <location line="+9"/>
-        <location line="+9"/>
+        <location line="+28"/>
         <location line="+11"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+12"/>
-        <location line="+9"/>
-        <location line="+12"/>
-        <location line="+14"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+17"/>
-        <location line="+24"/>
-        <location line="+9"/>
-        <location line="+9"/>
         <location line="+21"/>
-        <location line="+44"/>
-        <location line="+11"/>
-        <location line="+40"/>
-        <location line="+18"/>
-        <location line="+18"/>
-        <location line="+12"/>
+        <location line="+21"/>
         <location line="+15"/>
         <location line="+22"/>
         <location line="+18"/>
-        <location line="+21"/>
+        <location line="+132"/>
+        <location line="+18"/>
+        <location line="+14"/>
+        <location line="+12"/>
         <location line="+29"/>
         <location line="+18"/>
-        <location line="+28"/>
-        <location line="+14"/>
+        <location line="+44"/>
+        <location line="+40"/>
         <location line="+30"/>
-        <location line="+142"/>
+        <location line="+9"/>
+        <location line="+14"/>
+        <location line="+12"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+12"/>
+        <location line="+17"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+11"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+24"/>
+        <location line="+19"/>
+        <location line="+22"/>
+        <location line="+19"/>
+        <location line="+19"/>
         <source>Project Management</source>
         <translation>ניהול פרוייקט</translation>
     </message>
     <message>
-        <location line="-889"/>
+        <location line="-886"/>
+        <location line="+21"/>
+        <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
         <location line="+22"/>
-        <location line="+21"/>
-        <location line="+23"/>
-        <location line="+19"/>
-        <location line="+37"/>
-        <location line="+9"/>
-        <location line="+9"/>
+        <location line="+28"/>
         <location line="+11"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+12"/>
-        <location line="+9"/>
-        <location line="+12"/>
-        <location line="+14"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+9"/>
-        <location line="+17"/>
-        <location line="+24"/>
-        <location line="+9"/>
-        <location line="+9"/>
         <location line="+21"/>
-        <location line="+44"/>
-        <location line="+11"/>
-        <location line="+40"/>
-        <location line="+18"/>
-        <location line="+18"/>
-        <location line="+12"/>
+        <location line="+21"/>
         <location line="+15"/>
         <location line="+22"/>
         <location line="+18"/>
-        <location line="+21"/>
+        <location line="+132"/>
+        <location line="+18"/>
+        <location line="+14"/>
+        <location line="+12"/>
         <location line="+29"/>
         <location line="+18"/>
-        <location line="+28"/>
-        <location line="+14"/>
+        <location line="+44"/>
+        <location line="+40"/>
         <location line="+30"/>
-        <location line="+142"/>
+        <location line="+9"/>
+        <location line="+14"/>
+        <location line="+12"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+12"/>
+        <location line="+17"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+11"/>
+        <location line="+9"/>
+        <location line="+9"/>
+        <location line="+24"/>
+        <location line="+41"/>
+        <location line="+19"/>
+        <location line="+19"/>
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305"/>
         <source>Summary</source>
         <translation>סיכום</translation>
@@ -11850,9 +11990,9 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">יוצר פרויקט בדיקת יחידה חדש. בדיקות יחידה מאפשרות לך לוודא שהקוד מתאים לשימוש ושאין רגרסיות.</translation>
     </message>
     <message>
-        <location line="-715"/>
-        <location line="+380"/>
-        <location line="+165"/>
+        <location line="-466"/>
+        <location line="+12"/>
+        <location line="+456"/>
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107"/>
         <source>Other Project</source>
         <translation>פרויקט אחר</translation>
@@ -11862,36 +12002,36 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">פרויקט בדיקה אוטומטית</translation>
     </message>
     <message>
-        <location line="-620"/>
+        <location line="-57"/>
         <source>Fully qualified name, including namespaces</source>
         <translation>שם מלא, כולל מרחבי שמות</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+22"/>
+        <location line="-645"/>
+        <location line="+36"/>
+        <location line="+276"/>
+        <location line="+80"/>
+        <location line="+235"/>
         <location line="+19"/>
-        <location line="+289"/>
-        <location line="+145"/>
-        <location line="+40"/>
-        <location line="+119"/>
+        <location line="+22"/>
         <source>Class name:</source>
         <translation>שם הכיתה:</translation>
     </message>
     <message>
-        <location line="-633"/>
-        <location line="+42"/>
-        <location line="+433"/>
+        <location line="-631"/>
+        <location line="+592"/>
+        <location line="+18"/>
         <source>&lt;Custom&gt;</source>
         <translation>&lt;מותאם אישית&gt;</translation>
     </message>
     <message>
-        <location line="-474"/>
+        <location line="-646"/>
+        <location line="+37"/>
+        <location line="+282"/>
+        <location line="+73"/>
+        <location line="+237"/>
+        <location line="+18"/>
         <location line="+21"/>
-        <location line="+21"/>
-        <location line="+294"/>
-        <location line="+139"/>
-        <location line="+39"/>
-        <location line="+119"/>
         <source>Base class:</source>
         <translation>שיעור בסיס:</translation>
     </message>
@@ -11900,7 +12040,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-632"/>
+        <location line="-20"/>
         <source>Include QObject</source>
         <translation>כלול QObject</translation>
     </message>
@@ -11942,10 +12082,10 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-329"/>
+        <location line="+68"/>
+        <location line="+262"/>
         <location line="+19"/>
-        <location line="+315"/>
-        <location line="+292"/>
         <source>Header file:</source>
         <translation>קובץ הכותרת:</translation>
     </message>
@@ -11954,54 +12094,54 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-625"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+215"/>
+        <location line="-673"/>
+        <location line="+37"/>
+        <location line="+288"/>
+        <location line="+68"/>
+        <location line="+220"/>
         <location line="+1"/>
-        <location line="+80"/>
-        <location line="+133"/>
-        <location line="+39"/>
-        <location line="+120"/>
+        <location line="+19"/>
+        <location line="+22"/>
+        <location line="+19"/>
         <source>Source file:</source>
         <translation>קובץ מקור:</translation>
     </message>
     <message>
-        <location line="-625"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+216"/>
-        <location line="+392"/>
-        <location line="+34"/>
+        <location line="-597"/>
         <location line="+20"/>
         <location line="+21"/>
+        <location line="+34"/>
+        <location line="+19"/>
+        <location line="+444"/>
+        <location line="+19"/>
+        <location line="+22"/>
         <location line="+19"/>
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412"/>
         <source>Path:</source>
         <translation>נָתִיב:</translation>
     </message>
     <message>
-        <location line="-739"/>
-        <location line="+38"/>
-        <location line="+429"/>
-        <location line="+39"/>
+        <location line="-673"/>
+        <location line="+37"/>
+        <location line="+596"/>
+        <location line="+22"/>
         <source>Define Class</source>
         <translation>הגדר מחלקה</translation>
     </message>
     <message>
-        <location line="-502"/>
+        <location line="+4"/>
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>יוצר כותרת C++ וקובץ מקור עבור מחלקה חדשה שתוכל להוסיף לפרויקט C++.</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+65"/>
-        <location line="+9"/>
+        <location line="-203"/>
+        <location line="+130"/>
+        <location line="+74"/>
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-73"/>
+        <location line="+1"/>
         <source>C++ Class</source>
         <translation>Class C++</translation>
     </message>
@@ -12041,22 +12181,22 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>יוצר מודל פריט Qt.</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+66"/>
-        <location line="+57"/>
-        <location line="+62"/>
-        <location line="+9"/>
-        <location line="+59"/>
+        <location line="-231"/>
+        <location line="+39"/>
+        <location line="+26"/>
+        <location line="+65"/>
+        <location line="+18"/>
+        <location line="+84"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-252"/>
+        <location line="+1"/>
         <source>Qt Item Model</source>
         <translation>דגם פריט Qt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-56"/>
         <source>Qt for Python module:</source>
         <translation>Qt עבור מודול Python:</translation>
     </message>
@@ -12090,18 +12230,18 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>יוצר קובץ מחלקה חדש של Python.</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+158"/>
+        <location line="-70"/>
+        <location line="+71"/>
         <source>Python</source>
         <translation>פִּיתוֹן</translation>
     </message>
     <message>
-        <location line="-157"/>
+        <location line="+1"/>
         <source>Python Class</source>
         <translation>כיתת פייתון</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+45"/>
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>יוצר פרויקט בדיקה מבוסס CMake שעבורו ניתן להזין קטע קוד.</translation>
     </message>
@@ -12156,7 +12296,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>קטע קוד</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-244"/>
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>יוצר קובץ כותרת שתוכל להוסיף לפרויקט C/C++.</translation>
     </message>
@@ -12166,7 +12306,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>קובץ כותרת C/C++</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+128"/>
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>יוצר קובץ מקור שתוכל להוסיף לפרויקט C/C++.</translation>
     </message>
@@ -12176,7 +12316,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>קובץ מקור C/C++</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-17"/>
         <source>Choose a Form Template</source>
         <translation>בחר תבנית טופס</translation>
     </message>
@@ -12194,12 +12334,12 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="vanished">טופס מעצב Qt</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-15"/>
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>יוצר הצללה של קטעים ב- Desktop OpenGL Shading Language (GLSL). הצללות קטעים מייצרות את צבעי הפיקסלים הסופיים עבור משולשים, נקודות וקווים המוצגים עם OpenGL.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-26"/>
         <location line="+9"/>
         <location line="+9"/>
         <location line="+9"/>
@@ -12207,12 +12347,12 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="+1"/>
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Shader של Fragment (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-11"/>
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>יוצר הצללה קודקוד ב- Desktop OpenGL Shading Language (GLSL). הצללות קודקוד משנות את המיקומים, הנורמליות וקואורדינטות המרקם של משולשים, נקודות וקווים המוצגים עם OpenGL.</translation>
     </message>
@@ -12222,7 +12362,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-11"/>
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>יוצר הצללה של קטעים בשפת הצללה של OpenGL/ES 2.0 (GLSL/ES). הצללות קטעים מייצרות את צבעי הפיקסלים הסופיים עבור משולשים, נקודות וקווים המוצגים עם OpenGL.</translation>
     </message>
@@ -12232,7 +12372,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Shader שברי (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-11"/>
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>יוצר הצללה קודקוד בשפת הצללה OpenGL/ES 2.0 (GLSL/ES). הצללות קודקוד משנות את המיקומים, הנורמליות וקואורדינטות המרקם של משולשים, נקודות וקווים המוצגים עם OpenGL.</translation>
     </message>
@@ -12242,7 +12382,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-67"/>
         <source>Creates a Java file with boilerplate code.</source>
         <translation>יוצר קובץ Java עם קוד ה-boilerplate.</translation>
     </message>
@@ -12257,7 +12397,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>קובץ Java</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+14"/>
         <source>Stateless library</source>
         <translation>ספרייה חסרת מדינה</translation>
     </message>
@@ -12278,25 +12418,25 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>קובץ JS</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Model name:</source>
         <translation>שם המודל:</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+67"/>
+        <location line="-64"/>
+        <location line="+65"/>
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121"/>
         <source>Location:</source>
         <translation>מקום:</translation>
     </message>
     <message>
-        <location line="-66"/>
-        <location line="+67"/>
+        <location line="-64"/>
+        <location line="+65"/>
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; קיים במערכת הקבצים.</translation>
     </message>
     <message>
-        <location line="-66"/>
+        <location line="+1"/>
         <source>Model Name and Location</source>
         <translation>שם ומיקום הדגם</translation>
     </message>
@@ -12306,19 +12446,19 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>יוצר מודל ריק חדש עם דיאגרמה ריקה.</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+5"/>
-        <location line="+62"/>
+        <location line="-64"/>
+        <location line="+53"/>
+        <location line="+12"/>
         <source>Modeling</source>
         <translation>דוּגמָנוּת</translation>
     </message>
     <message>
-        <location line="-66"/>
+        <location line="+1"/>
         <source>Model</source>
         <translation>דֶגֶם</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-14"/>
         <source>Creates a scratch model using a temporary file.</source>
         <translation>יוצר מודל שריטה באמצעות קובץ זמני.</translation>
     </message>
@@ -12328,23 +12468,23 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>דגם שריטה</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-81"/>
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>יוצר קובץ Nim ריק באמצעות UTF-8 תווים.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+9"/>
+        <location line="+14"/>
         <source>Nim</source>
         <translation>נים</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="-13"/>
         <source>Nim File</source>
         <translation>קובץ נים</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+12"/>
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>יוצר קובץ סקריפט Nim ריק באמצעות ערכת תווים UTF-8.</translation>
     </message>
@@ -12354,7 +12494,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>קובץ סקריפט נים</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+138"/>
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>יוצר קובץ סקריפט ריק של Python באמצעות UTF-8 תווים.</translation>
     </message>
@@ -12364,7 +12504,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>קובץ Python</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-56"/>
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>יוצר קובץ Qt Resource (.qrc).</translation>
     </message>
@@ -12374,7 +12514,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>קובץ משאבים Qt</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-67"/>
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>יוצר קובץ QML עם קוד ה-boilerplate, החל ב-&quot;import QtQuick&quot;.</translation>
     </message>
@@ -12384,21 +12524,21 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>קובץ QML (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-32"/>
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>יוצר מאגר שריטה באמצעות קובץ זמני.</translation>
     </message>
     <message>
-        <location line="-66"/>
-        <location line="+67"/>
-        <location line="+45"/>
+        <location line="+1"/>
+        <location line="+57"/>
+        <location line="+47"/>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105"/>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551"/>
         <source>General</source>
         <translation>כללי</translation>
     </message>
     <message>
-        <location line="-401"/>
+        <location line="-634"/>
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12423,21 +12563,21 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-75"/>
+        <location line="+25"/>
         <location line="+26"/>
         <location line="+25"/>
         <location line="+22"/>
-        <location line="+21"/>
         <source>Test Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-93"/>
+        <location line="-21"/>
         <source>Boost Test Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-48"/>
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12472,7 +12612,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-48"/>
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12502,7 +12642,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+54"/>
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12517,7 +12657,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-116"/>
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12532,17 +12672,17 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+815"/>
         <source>Include QQuickItem</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+49"/>
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="-121"/>
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12552,7 +12692,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="-105"/>
         <source>Creates a markdown file.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12562,12 +12702,12 @@ OpenMV IDE will just copy the model as is.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="-57"/>
         <source>Scratch Buffer</source>
         <translation>מאגר שריטות</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+12"/>
         <source>State chart name:</source>
         <translation>שם תרשים המדינה:</translation>
     </message>
@@ -12587,7 +12727,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>תרשים מצבים</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+160"/>
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12625,7 +12765,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-100"/>
         <source>Creates an empty file.</source>
         <translation>יוצר קובץ ריק.</translation>
     </message>
@@ -12635,7 +12775,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>קובץ ריק</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+72"/>
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12645,61 +12785,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-623"/>
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>אשף זה יוצר יישום מסוף פשוט מבוסס Qt.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+21"/>
-        <location line="+94"/>
+        <location line="+210"/>
         <location line="+18"/>
-        <location line="+195"/>
+        <location line="+92"/>
+        <location line="+83"/>
         <source>Meson</source>
         <translation>מסון</translation>
     </message>
     <message>
-        <location line="-326"/>
-        <location line="+21"/>
-        <location line="+94"/>
+        <location line="-442"/>
+        <location line="+41"/>
+        <location line="+210"/>
         <location line="+18"/>
-        <location line="+104"/>
-        <location line="+48"/>
-        <location line="+44"/>
+        <location line="+42"/>
+        <location line="+50"/>
+        <location line="+84"/>
         <source>Define Build System</source>
         <translation>הגדר מערכת בנייה</translation>
     </message>
     <message>
-        <location line="-328"/>
-        <location line="+21"/>
-        <location line="+94"/>
+        <location line="-444"/>
+        <location line="+41"/>
+        <location line="+210"/>
         <location line="+18"/>
-        <location line="+104"/>
-        <location line="+48"/>
-        <location line="+44"/>
+        <location line="+42"/>
+        <location line="+50"/>
+        <location line="+84"/>
         <source>Build System</source>
         <translation>בניית מערכת</translation>
     </message>
     <message>
-        <location line="-328"/>
-        <location line="+44"/>
-        <location line="+250"/>
-        <location line="+44"/>
-        <location line="+142"/>
+        <location line="-582"/>
+        <location line="+147"/>
+        <location line="+32"/>
+        <location line="+343"/>
+        <location line="+70"/>
         <source>Translation File</source>
         <translation>קובץ תרגום</translation>
     </message>
     <message>
-        <location line="-479"/>
-        <location line="+44"/>
-        <location line="+250"/>
-        <location line="+44"/>
-        <location line="+142"/>
+        <location line="-591"/>
+        <location line="+147"/>
+        <location line="+32"/>
+        <location line="+343"/>
+        <location line="+70"/>
         <source>Translation</source>
         <translation>תִרגוּם</translation>
     </message>
     <message>
-        <location line="-262"/>
+        <location line="-393"/>
         <source>Define Python Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12714,7 +12854,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+269"/>
         <source>Qt 6.4</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12729,14 +12869,14 @@ You should not mix multiple test frameworks in a project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="-59"/>
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+173"/>
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12751,31 +12891,31 @@ Preselects a desktop Qt for building the application if available.</source>
 בוחר מראש Qt לשולחן העבודה לבניית היישום אם זמין.</translation>
     </message>
     <message>
-        <location line="-337"/>
-        <location line="+266"/>
-        <location line="+28"/>
-        <location line="+44"/>
+        <location line="-444"/>
+        <location line="+32"/>
+        <location line="+299"/>
+        <location line="+114"/>
         <source>Application (Qt)</source>
         <translation>יישום (Qt)</translation>
     </message>
     <message>
-        <location line="-337"/>
+        <location line="-412"/>
         <source>Qt Console Application</source>
         <translation>יישום Qt Console</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+302"/>
         <source>This wizard creates a C++ library project.</source>
         <translation>אשף זה יוצר פרויקט ספריית C++.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+308"/>
+        <location line="+84"/>
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>ציין מידע בסיסי על המחלקות שעבורן ברצונך ליצור קובצי קוד מקור של שלד.</translation>
     </message>
     <message>
-        <location line="-307"/>
+        <location line="-83"/>
         <source>Shared Library</source>
         <translation>ספרייה משותפת</translation>
     </message>
@@ -12791,7 +12931,7 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+46"/>
+        <location line="+35"/>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61"/>
         <source>Type:</source>
         <translation>סוּג:</translation>
@@ -12801,7 +12941,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-44"/>
+        <location line="-33"/>
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -12867,14 +13007,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>מודול Qt:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+116"/>
+        <location line="-519"/>
+        <location line="+147"/>
+        <location line="+70"/>
         <location line="+22"/>
         <location line="+18"/>
-        <location line="+68"/>
-        <location line="+26"/>
-        <location line="+16"/>
-        <location line="+170"/>
+        <location line="+164"/>
+        <location line="+59"/>
+        <location line="+42"/>
         <source>Define Project Details</source>
         <translation>הגדר את פרטי הפרויקט</translation>
     </message>
@@ -12883,38 +13023,38 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">יוצר ספריית C++. זה יכול לשמש ליצירת:&lt;ul&gt;&lt;li&gt;ספריית C++ משותפת לשימוש עם &lt;tt&gt;QPluginLoader&lt;/tt&gt; וזמן ריצה (פלאגינים)&lt;/li&gt;&lt;li&gt;ספריית C++ משותפת או סטטית לשימוש עם אחר פרויקט בזמן קישור&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-427"/>
-        <location line="+18"/>
-        <location line="+186"/>
-        <location line="+232"/>
+        <location line="-513"/>
+        <location line="+460"/>
+        <location line="+62"/>
+        <location line="+7"/>
         <source>Library</source>
         <translation>סִפְרִיָה</translation>
     </message>
     <message>
-        <location line="-435"/>
+        <location line="-6"/>
         <source>C++ Library</source>
         <translation>ספריית C++</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="-366"/>
         <source>Creates a simple Nim application.</source>
         <translation>יוצר אפליקציית נים פשוטה.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+40"/>
+        <location line="+229"/>
         <location line="+18"/>
-        <location line="+18"/>
+        <location line="+157"/>
         <source>Non-Qt Project</source>
         <translation>פרויקט שאינו Qt</translation>
     </message>
     <message>
-        <location line="-75"/>
+        <location line="-403"/>
         <source>Nim Application</source>
         <translation>יישום נים</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+369"/>
         <source>Binary</source>
         <translation>בינארי</translation>
     </message>
@@ -12929,13 +13069,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>מְחַבֵּר:</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+402"/>
+        <location line="-544"/>
+        <location line="+545"/>
         <source>Description:</source>
         <translation>תיאור:</translation>
     </message>
     <message>
-        <location line="-401"/>
+        <location line="+1"/>
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13000,13 +13140,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>אַחֵר</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+386"/>
+        <location line="-560"/>
+        <location line="+561"/>
         <source>License:</source>
         <translation>רישיון:</translation>
     </message>
     <message>
-        <location line="-385"/>
+        <location line="+1"/>
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864"/>
         <source>C</source>
         <translation>ג</translation>
@@ -13047,22 +13187,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>הגדר את תצורת הפרויקט</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+253"/>
-        <location line="+1"/>
-        <location line="+33"/>
+        <location line="-296"/>
         <location line="+1"/>
         <location line="+17"/>
         <location line="+1"/>
         <location line="+22"/>
         <location line="+1"/>
+        <location line="+33"/>
+        <location line="+1"/>
         <location line="+18"/>
         <location line="+1"/>
+        <location line="+202"/>
         <source>Configuration</source>
         <translation>תְצוּרָה</translation>
     </message>
     <message>
-        <location line="-343"/>
+        <location line="+5"/>
         <source>Creates a Nim application with Nimble.</source>
         <translation>יוצר אפליקציית Nim עם Nimble.</translation>
     </message>
@@ -13072,7 +13212,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>יישום זריז</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="-159"/>
         <source>Creates a simple C application with no dependencies.</source>
         <translation>יוצר יישום C פשוט ללא תלות.</translation>
     </message>
@@ -13082,7 +13222,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>יישום C רגיל</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="-20"/>
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>יוצר יישום C++ פשוט ללא תלות.</translation>
     </message>
@@ -13092,7 +13232,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>יישום C++ רגיל</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+35"/>
         <source>This wizard creates an empty .pro file.</source>
         <translation>אשף זה יוצר קובץ .pro ריק.</translation>
     </message>
@@ -13111,20 +13251,20 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">גרסת PySide:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-218"/>
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>יוצר יישום Qt for Python המכיל רק את הקוד הראשי עבור QApplication.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-14"/>
+        <location line="+15"/>
         <location line="+22"/>
         <location line="+18"/>
-        <location line="+21"/>
         <source>Application (Qt for Python)</source>
         <translation>יישום (Qt עבור Python)</translation>
     </message>
     <message>
-        <location line="-60"/>
+        <location line="-39"/>
         <source>Empty Application</source>
         <translation>אפליקציה ריקה</translation>
     </message>
@@ -13141,13 +13281,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <location line="+39"/>
+        <location line="-28"/>
+        <location line="+37"/>
         <source>Project file:</source>
         <translation>קובץ הפרויקט:</translation>
     </message>
     <message>
-        <location line="-28"/>
+        <location line="+11"/>
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>יוצר יישום Qt for Python המכיל חלון ריק.</translation>
     </message>
@@ -13157,34 +13297,34 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>חלון ריק</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-47"/>
+        <location line="+15"/>
         <location line="+22"/>
         <location line="+15"/>
-        <location line="+24"/>
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="-65"/>
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+343"/>
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="-329"/>
+        <location line="+15"/>
         <location line="+22"/>
-        <location line="+39"/>
         <source>PySide 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-24"/>
+        <location line="+15"/>
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -13218,50 +13358,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">יוצר יישום Qt for Python הכולל ווידג&apos;ט מבוסס Qt Designer (קובץ ui) - דורש המרת .ui ל-Python</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="-55"/>
         <source>Window UI</source>
         <translation>ממשק המשתמש של חלון</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-70"/>
+        <location line="+311"/>
         <location line="+25"/>
-        <location line="+23"/>
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-47"/>
-        <location line="+48"/>
+        <location line="-335"/>
+        <location line="+311"/>
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-47"/>
-        <location line="+48"/>
+        <location line="-310"/>
+        <location line="+311"/>
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-47"/>
-        <location line="+48"/>
+        <location line="-310"/>
+        <location line="+311"/>
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-47"/>
-        <location line="+48"/>
+        <location line="-310"/>
+        <location line="+311"/>
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-47"/>
+        <location line="-310"/>
+        <location line="+311"/>
         <location line="+23"/>
-        <location line="+25"/>
         <source>Minimum required Qt version:</source>
         <translation>גרסת Qt מינימום נדרשת:</translation>
     </message>
     <message>
-        <location line="-47"/>
+        <location line="-22"/>
         <source>MyItem</source>
         <translation>MyItem</translation>
     </message>
@@ -13309,9 +13449,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">צור פרויקט עם מבנה שתואם הן ל-Qt Design Studio (באמצעות .qmlproject) והן ל-Qt Creator (באמצעות CMakeLists.txt). הוא מכיל טופס .ui.qml שאתה יכול לערוך חזותית ב-Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <location line="+30"/>
-        <location line="+16"/>
+        <location line="-324"/>
+        <location line="+274"/>
+        <location line="+55"/>
         <source>Use Qt Virtual Keyboard</source>
         <translation>השתמש במקלדת וירטואלית Qt</translation>
     </message>
@@ -13324,12 +13464,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">יוצר יישום Qt Quick שמכיל חלון ריק. לחלופין, אתה יכול ליצור פרויקט Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="+13"/>
         <source>Qt Quick Application</source>
         <translation>Qt יישום מהיר</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="-333"/>
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -13351,12 +13491,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 השתמש בזה רק אם אתה מייצר אב טיפוס. אתה לא יכול ליצור יישום מלא עם זה. שקול להשתמש בפרויקט Qt Quick Application במקום זאת.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+272"/>
         <source>Qt Quick UI Prototype</source>
         <translation>אב טיפוס של Qt Quick UI</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+146"/>
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>אשף זה יוצר פרויקט Qt Widgets Application. היישום נובע כברירת מחדל מ-QApplication וכולל ווידג&apos;ט ריק.</translation>
     </message>
@@ -13397,27 +13537,27 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>יישום Qt Widgets</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <location line="+34"/>
+        <location line="-332"/>
         <location line="+18"/>
         <location line="+23"/>
+        <location line="+34"/>
         <location line="+19"/>
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>אנא הגדר את &lt;b&gt;%{vcsName}&lt;/b&gt; כעת.</translation>
     </message>
     <message>
-        <location line="-93"/>
-        <location line="+52"/>
+        <location line="-75"/>
         <location line="+23"/>
+        <location line="+34"/>
         <location line="+19"/>
         <source>Repository:</source>
         <translation>מאגר:</translation>
     </message>
     <message>
         <location line="-93"/>
-        <location line="+34"/>
         <location line="+18"/>
         <location line="+23"/>
+        <location line="+34"/>
         <location line="+19"/>
         <source>Repository URL is not valid</source>
         <translation>כתובת האתר של המאגר אינה חוקית</translation>
@@ -13427,24 +13567,24 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-92"/>
-        <location line="+54"/>
+        <location line="-72"/>
         <location line="+21"/>
+        <location line="+34"/>
         <location line="+19"/>
         <source>Directory:</source>
         <translation>מַדרִיך:</translation>
     </message>
     <message>
-        <location line="-93"/>
-        <location line="+33"/>
+        <location line="-94"/>
         <location line="+21"/>
         <location line="+21"/>
+        <location line="+34"/>
         <location line="+19"/>
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; קיים במערכת הקבצים.</translation>
     </message>
     <message>
-        <location line="-93"/>
+        <location line="-52"/>
         <source>Use existing directory</source>
         <translation>השתמש בספרייה הקיימת</translation>
     </message>
@@ -13520,13 +13660,13 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+3"/>
-        <location line="+60"/>
+        <location line="+19"/>
         <location line="+20"/>
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>ציין כתובת אתר של מאגר, ספריית תשלום ונתיב.</translation>
     </message>
     <message>
-        <location line="-79"/>
+        <location line="-38"/>
         <source>Running Bazaar branch...</source>
         <translation>הפעלת סניף בזאר...</translation>
     </message>
@@ -13545,9 +13685,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>משבט סניף בזאר ומנסה לטעון את הפרויקט הכלול.</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+18"/>
+        <location line="-56"/>
         <location line="+23"/>
+        <location line="+34"/>
         <location line="+19"/>
         <location line="+20"/>
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3"/>
@@ -13555,12 +13695,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>פרויקט ייבוא</translation>
     </message>
     <message>
-        <location line="-79"/>
+        <location line="-38"/>
         <source>Bazaar Clone (Or Branch)</source>
         <translation>שיבוט בזאר (או סניף)</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-69"/>
         <source>Module:</source>
         <translation>מודול:</translation>
     </message>
@@ -13579,7 +13719,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+1"/>
         <location line="+22"/>
         <location line="+1"/>
-        <location line="+18"/>
+        <location line="+52"/>
         <location line="+1"/>
         <location line="+19"/>
         <location line="+1"/>
@@ -13587,7 +13727,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>לבדוק</translation>
     </message>
     <message>
-        <location line="-61"/>
+        <location line="-95"/>
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>בודק מאגר CVS ומנסה לטעון את הפרויקט הכלול.</translation>
     </message>
@@ -13637,7 +13777,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+48"/>
         <source>Running Mercurial clone...</source>
         <translation>מפעיל שיבוט Mercurial...</translation>
     </message>
@@ -13672,7 +13812,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-394"/>
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>אשף זה יוצר תוסף Qt Creator מותאם אישית.</translation>
     </message>
@@ -19614,7 +19754,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12"/>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+683"/>
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693"/>
         <source>Python:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19624,7 +19764,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1147"/>
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157"/>
         <location line="+283"/>
         <source>Name:</source>
         <translation type="unfinished">שֵׁם:</translation>
@@ -19715,7 +19855,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+466"/>
+        <location line="+476"/>
         <source>Python interpreter:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22791,7 +22931,7 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>לא קובץ ערכת צבעים.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5"/>
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6"/>
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>נגזר מ-QObject</translation>
@@ -22862,7 +23002,7 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation type="vanished">(הקלד שם READ name WRITE setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>עם מטרות</translation>
@@ -22934,7 +23074,7 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-31"/>
         <source>example</source>
         <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>דוגמא</translation>
