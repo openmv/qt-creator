@@ -578,7 +578,7 @@
         <location line="+26" />
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
-        <translation>浏览器窗口将打开。 询问时输入代码％1。 
+        <translation>浏览器窗口将打开。 询问时输入代码%1。 
 该代码已复制到您的剪贴板上。</translation>
     </message>
     <message>
@@ -589,7 +589,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+1" />
         <source>The login request failed: %1</source>
-        <translation>登录请求失败：％1</translation>
+        <translation>登录请求失败：%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/copilot/copilotclient.cpp" line="+336" />
@@ -620,17 +620,17 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+3" />
         <source>Apply (%1)</source>
-        <translation>申请（％1）</translation>
+        <translation>申请（%1）</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Apply Word (%1)</source>
-        <translation>应用单词（％1）</translation>
+        <translation>应用单词（%1）</translation>
     </message>
     <message>
         <location line="+13" />
         <source>%1 of %2</source>
-        <translation>％1的％2</translation>
+        <translation>%1的%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+65" />
@@ -710,25 +710,25 @@ The code has been copied to your clipboard.</source>
         <location line="+2" />
         <source>Select path to node.js executable. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to nodejs</extracomment>
-        <translation>选择“ node.js”可执行文件的路径。 有关安装说明，请参见％1。</translation>
+        <translation>选择“ node.js”可执行文件的路径。 有关安装说明，请参见%1。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Path to %1:</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation>通往％1的路径：</translation>
+        <translation>通往%1的路径：</translation>
     </message>
     <message>
         <location line="+3" />
         <source>%1 path</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation>％1路径</translation>
+        <translation>%1路径</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
-        <translation>选择副本Neovim插件中％2的路径。 有关安装说明，请参见％1。</translation>
+        <translation>选择副本Neovim插件中%2的路径。 有关安装说明，请参见%1。</translation>
     </message>
     <message>
         <location line="+5" />
@@ -853,7 +853,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+31" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
-        <translation>启用％1遵守您的同意和适用的％1条款。 您有责任知道并接受使用％1之类的工具的要求和参数。 这可能包括但不限于确保您有权允许％1访问代码的权利，并了解您使用％1的任何含义和产生的建议（例如版权，准确性等）。</translation>
+        <translation>启用%1遵守您的同意和适用的%1条款。 您有责任知道并接受使用%1之类的工具的要求和参数。 这可能包括但不限于确保您有权允许%1访问代码的权利，并了解您使用%1的任何含义和产生的建议（例如版权，准确性等）。</translation>
     </message>
     <message>
         <location line="+16" />
@@ -861,9 +861,9 @@ The code has been copied to your clipboard.</source>
 
 Otherwise you need to specify the path to the %2 file from the Copilot neovim plugin.</source>
         <comment>Markdown text for the copilot instruction label</comment>
-        <translation>Copilot插件需要node.js和副本Neovim插件。 如果您按照％1中所述安装Neovim插件，则该插件将自动找到％3文件。 
+        <translation>Copilot插件需要node.js和副本Neovim插件。 如果您按照%1中所述安装Neovim插件，则该插件将自动找到%3文件。 
 
-否则，您需要从Copilot Neovim插件指定％2文件的路径。</translation>
+否则，您需要从Copilot Neovim插件指定%2文件的路径。</translation>
     </message>
     <message>
         <location line="+14" />
@@ -1379,7 +1379,7 @@ Continue?</source>
         <source>Provide cursors for resizing views.
 If the system cursors for resizing views are not displayed properly, you can use the cursors provided by %1.</source>
         <translation>提供调整视图大小的光标。 
-如果用于调整视图大小的系统光标未正确显示，则可以使用％1提供的光标。</translation>
+如果用于调整视图大小的系统光标未正确显示，则可以使用%1提供的光标。</translation>
     </message>
     <message>
         <location line="+93" />
@@ -1414,7 +1414,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+6" />
         <source>The following environment variables are set and can influence the UI scaling behavior of %1:</source>
-        <translation>设置了以下环境变量，并可能影响％1的UI缩放行为：</translation>
+        <translation>设置了以下环境变量，并可能影响%1的UI缩放行为：</translation>
     </message>
     <message>
         <location line="+7" />
@@ -1948,7 +1948,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+1" />
         <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>这将完全隐藏菜单栏。 您可以通过键入％1。&lt;br&gt; &lt;br&gt;再次显示它，或者从“％3”定位器过滤器（％4）触发“％2”动作。</translation>
+        <translation>这将完全隐藏菜单栏。 您可以通过键入%1。&lt;br&gt; &lt;br&gt;再次显示它，或者从“%3”定位器过滤器（%4）触发“%2”动作。</translation>
     </message>
     <message>
         <location line="+21" />
@@ -2169,7 +2169,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+9" />
         <source>Invalid level: %1</source>
-        <translation>无效级别：％1</translation>
+        <translation>无效级别：%1</translation>
     </message>
     <message>
         <location line="+312" />
@@ -2214,7 +2214,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+10" />
         <source>Invalid regular expression: %1</source>
-        <translation>无效的正则表达式：％1</translation>
+        <translation>无效的正则表达式：%1</translation>
     </message>
     <message>
         <location line="+85" />
@@ -2234,17 +2234,17 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+65" />
         <source>Uncheck All %1</source>
-        <translation>取消全选％1</translation>
+        <translation>取消全选%1</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Check All %1</source>
-        <translation>检查全部％1</translation>
+        <translation>检查全部%1</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Reset All %1</source>
-        <translation>重置全部％1</translation>
+        <translation>重置全部%1</translation>
     </message>
     <message>
         <location line="+31" />
@@ -2264,7 +2264,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+51" />
         <source>Failed to open preset file "%1" for reading.</source>
-        <translation>无法打开预设文件“％1”。</translation>
+        <translation>无法打开预设文件“%1”。</translation>
     </message>
     <message>
         <location line="-172" />
@@ -3436,7 +3436,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+1" />
         <source>Cannot create file "%1".</source>
-        <translation>无法创建文件“％1”。</translation>
+        <translation>无法创建文件“%1”。</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3446,12 +3446,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+164" />
         <source>Create and Open File "%1"</source>
-        <translation>创建并打开文件“％1”</translation>
+        <translation>创建并打开文件“%1”</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Create Directory "%1"</source>
-        <translation>创建目录“％1”</translation>
+        <translation>创建目录“%1”</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3915,7 +3915,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+3" />
         <source>The path to the running %1 itself.</source>
-        <translation>运行％1本身的路径。</translation>
+        <translation>运行%1本身的路径。</translation>
     </message>
     <message>
         <location line="+3" />
@@ -3925,7 +3925,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+4" />
         <source>The directory where %1 puts custom user data.</source>
-        <translation>％1放置自定义用户数据的目录。</translation>
+        <translation>%1放置自定义用户数据的目录。</translation>
     </message>
     <message>
         <location line="+3" />
@@ -4947,12 +4947,12 @@ Double-click to edit item.</source>
     <message>
         <location line="+23" />
         <source>Running in "%1": %2 %3.</source>
-        <translation>在“％1”中运行：％2％3。</translation>
+        <translation>在“%1”中运行：%2%3。</translation>
     </message>
     <message>
         <location line="+17" />
         <source>A timeout occurred running "%1".</source>
-        <translation>暂停运行“％1”。</translation>
+        <translation>暂停运行“%1”。</translation>
     </message>
     <message>
         <source>Running in %1: %2 %3</source>
@@ -5143,7 +5143,7 @@ Double-click to edit item.</source>
     <message>
         <location line="+1" />
         <source>Remove the following files from the version control system (%1)?</source>
-        <translation>从版本控制系统（％1）中删除以下文件？</translation>
+        <translation>从版本控制系统（%1）中删除以下文件？</translation>
     </message>
     <message>
         <location line="+2" />
@@ -5594,7 +5594,7 @@ to version control (%2)
     <message>
         <location line="+21" />
         <source>Plugin Details of %1</source>
-        <translation>插件的详细信息％1</translation>
+        <translation>插件的详细信息%1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/pluginerrorview.cpp" line="+47" />
@@ -5650,7 +5650,7 @@ to version control (%2)
         <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+103" />
         <source>%1 (deprecated)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>％1（弃用）</translation>
+        <translation>%1（弃用）</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5852,7 +5852,7 @@ Reason: %3</source>
     <message>
         <location line="+2" />
         <source>If you temporarily disable %1, the following plugins that depend on it are also disabled: %2.</source>
-        <translation>如果您暂时禁用％1，则依赖于其的以下插件也将被禁用：％2。</translation>
+        <translation>如果您暂时禁用%1，则依赖于其的以下插件也将被禁用：%2。</translation>
     </message>
     <message>
         <source>If you temporarily disable %1, the following plugins that depend on it are also disabled: %2.
@@ -5980,7 +5980,7 @@ Reason: %3</source>
     <message>
         <location line="+3" />
         <source>Expected IID "%1", but found "%2"</source>
-        <translation>预计IID“％1”，但发现“％2”</translation>
+        <translation>预计IID“%1”，但发现“%2”</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6394,7 +6394,7 @@ Would you like to overwrite them?</source>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+257" />
         <source>Error %1</source>
-        <translation>错误％1</translation>
+        <translation>错误%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
@@ -6435,7 +6435,7 @@ Would you like to overwrite them?</source>
         <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
-        <translation>％1 for％2</translation>
+        <translation>%1 for%2</translation>
     </message>
     <message>
         <location line="+223" />
@@ -6483,18 +6483,18 @@ Would you like to overwrite them?</source>
         <location line="+1342" />
         <source>Invalid parameter in "%1":
 %2</source>
-        <translation>“％1”中的无效参数：
- ％2</translation>
+        <translation>“%1”中的无效参数：
+ %2</translation>
     </message>
     <message>
         <location line="+219" />
         <source>Language Server "%1" Initialization Error</source>
-        <translation>语言服务器“％1”初始化错误</translation>
+        <translation>语言服务器“%1”初始化错误</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Initialization error: %1.</source>
-        <translation>初始化错误：％1。</translation>
+        <translation>初始化错误：%1。</translation>
     </message>
     <message>
         <location line="+7" />
@@ -6564,12 +6564,12 @@ Would you like to overwrite them?</source>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
         <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>无法处理消息的MIME类型“％1”。</translation>
+        <translation>无法处理消息的MIME类型“%1”。</translation>
     </message>
     <message>
         <location line="+70" />
         <source>Cannot send data to unstarted server %1</source>
-        <translation>无法将数据发送到未启动的服务器％1</translation>
+        <translation>无法将数据发送到未启动的服务器%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+178" />
@@ -6657,12 +6657,12 @@ Would you like to overwrite them?</source>
         <source>List of file patterns.
 Example: *.cpp%1*.h</source>
         <translation>文件模式列表。 
-示例： *.cpp％1 *.h</translation>
+示例： *.cpp%1 *.h</translation>
     </message>
     <message>
         <location line="+18" />
         <source>Failed to parse JSON at %1: %2</source>
-        <translation>未能以％1：％2解析JSON</translation>
+        <translation>未能以%1：%2解析JSON</translation>
     </message>
     <message>
         <location line="+8" />
@@ -6745,7 +6745,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+21" />
         <source>Re&amp;name %n files</source>
         <translation>
-            <numerusform>RE＆NAME％N文件</numerusform>
+            <numerusform>RE＆NAME%N文件</numerusform>
         </translation>
     </message>
     <message>
@@ -6753,23 +6753,23 @@ See the documentation of the specific language server for valid settings.</sourc
         <source>Files:
 %1</source>
         <translation>文件：
- ％1</translation>
+ %1</translation>
     </message>
     <message>
         <location line="+331" />
         <location line="+227" />
         <source>Find References with %1 for:</source>
-        <translation>查找具有％1的参考：</translation>
+        <translation>查找具有%1的参考：</translation>
     </message>
     <message>
         <location line="-144" />
         <source>Renaming is not supported with %1</source>
-        <translation>不支持重命名的％1</translation>
+        <translation>不支持重命名的%1</translation>
     </message>
     <message>
         <location line="+168" />
         <source>%1 is not reachable anymore.</source>
-        <translation>％1不再可以到达。</translation>
+        <translation>%1不再可以到达。</translation>
     </message>
     <message>
         <location line="+33" />
@@ -6784,7 +6784,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+121" />
         <source>Restart %1</source>
-        <translation>重新启动％1</translation>
+        <translation>重新启动%1</translation>
     </message>
     <message>
         <location line="+5" />
@@ -6804,7 +6804,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+6" />
         <source>Running "%1" to install %2.</source>
-        <translation>运行“％1”以安装％2。</translation>
+        <translation>运行“%1”以安装%2。</translation>
     </message>
     <message>
         <location line="+17" />
@@ -6814,7 +6814,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+1" />
         <source>The installation of "%1" was canceled by the user.</source>
-        <translation>用户取消了“％1”的安装。</translation>
+        <translation>用户取消了“%1”的安装。</translation>
     </message>
     <message>
         <location line="+8" />
@@ -6824,12 +6824,12 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+56" />
         <source>Install %1 language server via npm.</source>
-        <translation>通过NPM安装％1语言服务器。</translation>
+        <translation>通过NPM安装%1语言服务器。</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Setup %1 language server (%2).</source>
-        <translation>设置％1语言服务器（％2）。</translation>
+        <translation>设置%1语言服务器（%2）。</translation>
     </message>
     <message>
         <location line="+4" />
@@ -6844,7 +6844,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+10" />
         <source>%1 Language Server</source>
-        <translation>％1语言服务器</translation>
+        <translation>%1语言服务器</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+48" />
@@ -6927,17 +6927,17 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
         <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>无法用“％1”解码内容。 回到“％2”。</translation>
+        <translation>无法用“%1”解码内容。 回到“%2”。</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>预计“％1”中的整数，但获得了“％2”。</translation>
+        <translation>预计“%1”中的整数，但获得了“%2”。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
         <source>Could not parse JSON message: "%1".</source>
-        <translation>无法解析JSON消息：“％1”。</translation>
+        <translation>无法解析JSON消息：“%1”。</translation>
     </message>
     <message>
         <location line="+3" />
@@ -6947,27 +6947,27 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
         <source>No parameters in "%1".</source>
-        <translation>“％1”中没有参数。</translation>
+        <translation>“%1”中没有参数。</translation>
     </message>
     <message>
         <location line="+213" />
         <source>No ID set in "%1".</source>
-        <translation>“％1”中未设置ID。</translation>
+        <translation>“%1”中未设置ID。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
         <source>Create %1</source>
-        <translation>创建％1</translation>
+        <translation>创建%1</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Rename %1 to %2</source>
-        <translation>重命名％1至％2</translation>
+        <translation>重命名%1至%2</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Delete %1</source>
-        <translation>删除％1</translation>
+        <translation>删除%1</translation>
     </message>
 </context>
 <context>
@@ -7282,7 +7282,7 @@ Please close any programs that are viewing/editing OpenMV IDE's application data
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
-        <translation>解析中的错误&lt;user_resources&gt;/openmvide/firmware/settings.json-％l1！ 
+        <translation>解析中的错误&lt;user_resources&gt;/openmvide/firmware/settings.json-%l1！ 
 
 检查JSON文件中是否有错误并将其修复。</translation>
     </message>
@@ -7903,7 +7903,7 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="-41" />
         <source>No settings for the selected board type %L1!</source>
-        <translation>所选板类型％L1没有设置！</translation>
+        <translation>所选板类型%L1没有设置！</translation>
     </message>
     <message>
         <location line="+9" />
@@ -8073,7 +8073,7 @@ Check the json file for errors and fix them.</source>
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>错误阅读&lt;user_resources&gt;/openmvide/firmware/settings.json：％l1。 
+        <translation>错误阅读&lt;user_resources&gt;/openmvide/firmware/settings.json：%l1。 
 
 v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将其删除。</translation>
     </message>
@@ -9887,13 +9887,13 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
     <message>
         <location line="+14" />
         <source>Your %1 doesn't have an internal FAT file system.</source>
-        <translation>您的％1没有内部FAT文件系统。</translation>
+        <translation>您的%1没有内部FAT文件系统。</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
         <source>Your %1 doesn't have an ROM file system.</source>
-        <translation>您的％1没有ROM文件系统。</translation>
+        <translation>您的%1没有ROM文件系统。</translation>
     </message>
     <message>
         <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
@@ -10513,7 +10513,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <source>Please choose how to split the data to upload.
 OpenMV recommends leaving this at the default 80/20% split.</source>
         <translation>请选择如何拆分数据以上传。
-OpenMV建议将其保留为默认的80/20％分割。</translation>
+OpenMV建议将其保留为默认的80/20%分割。</translation>
     </message>
     <message>
         <location line="+9" />
@@ -11467,7 +11467,7 @@ OpenMV IDE只会按原样复制模型。</translation>
     <message>
         <location line="-22" />
         <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href =“％1”&gt; Stedgeai Core CLI选项&lt;/a&gt;</translation>
+        <translation>&lt;a href =“%1”&gt; Stedgeai Core CLI选项&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11477,12 +11477,12 @@ OpenMV IDE只会按原样复制模型。</translation>
     <message>
         <location line="+2" />
         <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href =“％1”&gt; stedgeai神经艺术CLI选项&lt;/a&gt;</translation>
+        <translation>&lt;a href =“%1”&gt; stedgeai神经艺术CLI选项&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+12" />
         <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href =“％1”&gt; stedgeai重新定位CLI选项&lt;/a&gt;</translation>
+        <translation>&lt;a href =“%1”&gt; stedgeai重新定位CLI选项&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+78" />
@@ -13945,14 +13945,14 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+3" />
         <source>Delete session %1?</source>
-        <translation>删除会话％1？</translation>
+        <translation>删除会话%1？</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Delete these sessions?
     %1</source>
         <translation>删除这些会话？ 
-％1</translation>
+%1</translation>
     </message>
     <message>
         <location line="+308" />
@@ -13962,7 +13962,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+1" />
         <source>Could not restore session %1</source>
-        <translation>无法恢复会话％1</translation>
+        <translation>无法恢复会话%1</translation>
     </message>
     <message>
         <location line="+44" />
@@ -13978,12 +13978,12 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="-41" />
         <source>Could not save session %1</source>
-        <translation>无法保存会话％1</translation>
+        <translation>无法保存会话%1</translation>
     </message>
     <message>
         <location line="+42" />
         <source>Could not save session to file "%1"</source>
-        <translation>无法将会话保存到文件“％1”</translation>
+        <translation>无法将会话保存到文件“%1”</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14094,37 +14094,37 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+72" />
         <source>Could not create directory "%1"</source>
-        <translation>无法创建目录“％1”</translation>
+        <translation>无法创建目录“%1”</translation>
     </message>
     <message>
         <location line="+5" />
         <source>The program "%1" does not exist or is not executable.</source>
-        <translation>程序“％1”不存在或无法执行。</translation>
+        <translation>程序“%1”不存在或无法执行。</translation>
     </message>
     <message>
         <location line="+34" />
         <source>Starting: "%1" %2</source>
-        <translation>开始：“％1”％2</translation>
+        <translation>开始：“%1”%2</translation>
     </message>
     <message>
         <location line="+11" />
         <source>The process "%1" exited normally.</source>
-        <translation>该过程“％1”正常退出。</translation>
+        <translation>该过程“%1”正常退出。</translation>
     </message>
     <message>
         <location line="+3" />
         <source>The process "%1" exited with code %2.</source>
-        <translation>代码％2退出的过程“％1”。</translation>
+        <translation>代码%2退出的过程“%1”。</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Could not start process "%1" %2.</source>
-        <translation>无法开始流程“％1”％2。</translation>
+        <translation>无法开始流程“%1”%2。</translation>
     </message>
     <message>
         <location line="+7" />
         <source>The process "%1" crashed.</source>
-        <translation>该过程“％1”崩溃了。</translation>
+        <translation>该过程“%1”崩溃了。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14184,9 +14184,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <source>Filter: %1
 Excluding: %2
 %3</source>
-        <translation>过滤器：％1
- 排除：％2
- ％3</translation>
+        <translation>过滤器：%1
+ 排除：%2
+ %3</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+73" />
@@ -14196,7 +14196,7 @@ Excluding: %2
     <message>
         <location line="+1" />
         <source>Attach debugger to %1</source>
-        <translation>将调试器附加到％1</translation>
+        <translation>将调试器附加到%1</translation>
     </message>
     <message>
         <location line="+70" />
@@ -14253,7 +14253,7 @@ Excluding: %2
         <location line="+232" />
         <source>application-output-%1.txt</source>
         <extracomment>file name suggested for saving application output, %1 = run configuration display name</extracomment>
-        <translation>应用程序输出％1.TXT</translation>
+        <translation>应用程序输出%1.TXT</translation>
     </message>
     <message>
         <location line="+29" />
@@ -14263,7 +14263,7 @@ Excluding: %2
     <message>
         <location line="+280" />
         <source>PID %1</source>
-        <translation>PID％1</translation>
+        <translation>PID%1</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14306,7 +14306,7 @@ Excluding: %2
         <location line="+14" />
         <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+13" />
         <source>Limit output to %1 characters</source>
-        <translation>将输出限制为％1个字符</translation>
+        <translation>将输出限制为%1个字符</translation>
     </message>
     <message>
         <location line="+7" />
@@ -14343,7 +14343,7 @@ Excluding: %2
     <message>
         <location line="+105" />
         <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>构建目录包含可能有问题的字符“％1”。</translation>
+        <translation>构建目录包含可能有问题的字符“%1”。</translation>
     </message>
     <message>
         <location line="+5" />
@@ -14467,7 +14467,7 @@ Excluding: %2
     <message>
         <location line="+50" />
         <source>No build device is set for the kit "%1".</source>
-        <translation>没有为套件“％1”设置构建设备。</translation>
+        <translation>没有为套件“%1”设置构建设备。</translation>
     </message>
     <message>
         <location line="+8" />
@@ -14477,18 +14477,18 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>构建设备“％1”无法到达项目目录。</translation>
+        <translation>构建设备“%1”无法到达项目目录。</translation>
     </message>
     <message>
         <location line="+11" />
         <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>构建设备“％1”无法到达构建目录。</translation>
+        <translation>构建设备“%1”无法到达构建目录。</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
         <source>Finished %1 of %n steps</source>
         <translation>
-            <numerusform>完成％1％n步骤</numerusform>
+            <numerusform>完成%1%n步骤</numerusform>
         </translation>
     </message>
     <message>
@@ -14504,12 +14504,12 @@ Excluding: %2
     <message>
         <location line="+26" />
         <source>The project %1 is not configured, skipping it.</source>
-        <translation>项目％1未配置，跳过它。</translation>
+        <translation>项目%1未配置，跳过它。</translation>
     </message>
     <message>
         <location line="+11" />
         <source>The build device failed to prepare for the build of %1 (%2).</source>
-        <translation>构建设备未能为构建％1（％2）做准备。</translation>
+        <translation>构建设备未能为构建%1（%2）做准备。</translation>
     </message>
     <message>
         <location line="+138" />
@@ -14607,29 +14607,29 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+83" />
         <source>Running steps for project %1...</source>
-        <translation>为项目％1 ...运行步骤</translation>
+        <translation>为项目%1 ...运行步骤</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Skipping disabled step %1.</source>
-        <translation>跳过禁用的步骤％1。</translation>
+        <translation>跳过禁用的步骤%1。</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+104" />
         <source>Error while building/deploying project %1 (kit: %2)</source>
-        <translation>构建/部署项目％1（套件：％2）时出错</translation>
+        <translation>构建/部署项目%1（套件：%2）时出错</translation>
     </message>
     <message>
         <location line="-100" />
         <source>The kit %1 has configuration issues which might be the root cause for this problem.</source>
-        <translation>套件％1具有配置问题，这可能是造成此问题的根本原因。</translation>
+        <translation>套件%1具有配置问题，这可能是造成此问题的根本原因。</translation>
     </message>
     <message>
         <location line="+4" />
         <location line="+98" />
         <source>When executing step "%1"</source>
-        <translation>执行步骤“％1”时</translation>
+        <translation>执行步骤“%1”时</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14660,7 +14660,7 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+2" />
         <source>Template used to construct the default build directory.&lt;br&gt;&lt;br&gt;The default value can be set using the environment variable &lt;tt&gt;%1&lt;/tt&gt;.</source>
-        <translation>用于构建默认构建目录的模板。&lt;br&gt; &lt;br&gt;可以使用环境变量&lt;tt&gt;％1 &lt;/tt&gt;设置默认值。</translation>
+        <translation>用于构建默认构建目录的模板。&lt;br&gt; &lt;br&gt;可以使用环境变量&lt;tt&gt;%1 &lt;/tt&gt;设置默认值。</translation>
     </message>
     <message>
         <location line="+10" />
@@ -14740,7 +14740,7 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="-25" />
         <source>New name for build configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>构建配置的新名称&lt;b&gt;％1 &lt;/b&gt;：</translation>
+        <translation>构建配置的新名称&lt;b&gt;%1 &lt;/b&gt;：</translation>
     </message>
     <message>
         <location line="+24" />
@@ -14766,12 +14766,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>Remove Build Configuration %1?</source>
-        <translation>删除构建配置％1？</translation>
+        <translation>删除构建配置%1？</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The build configuration &lt;b&gt;%1&lt;/b&gt; is currently being built.</source>
-        <translation>当前正在构建构建配置&lt;b&gt;％1 &lt;/b&gt;。</translation>
+        <translation>当前正在构建构建配置&lt;b&gt;%1 &lt;/b&gt;。</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14786,7 +14786,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+1" />
         <source>Do you really want to delete build configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>您是否真的要删除构建配置&lt;b&gt;％1 &lt;/b&gt;？</translation>
+        <translation>您是否真的要删除构建配置&lt;b&gt;%1 &lt;/b&gt;？</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="-58" />
@@ -14807,17 +14807,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+97" />
         <source>%1 Steps</source>
         <extracomment>%1 is the name returned by BuildStepList::displayName</extracomment>
-        <translation>％1步</translation>
+        <translation>%1步</translation>
     </message>
     <message>
         <location line="+19" />
         <source>No %1 Steps</source>
-        <translation>没有％1步</translation>
+        <translation>没有%1步</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Add %1 Step</source>
-        <translation>添加％1步</translation>
+        <translation>添加%1步</translation>
     </message>
     <message>
         <location line="+94" />
@@ -14847,7 +14847,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>The project file "%1" does not exist.</source>
-        <translation>项目文件“％1”不存在。</translation>
+        <translation>项目文件“%1”不存在。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14950,7 +14950,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
         <source>Project "%1"</source>
-        <translation>项目“％1”</translation>
+        <translation>项目“%1”</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14960,7 +14960,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+30" />
         <source>Project "%1":</source>
-        <translation>项目“％1”：</translation>
+        <translation>项目“%1”：</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -14972,7 +14972,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="-16" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1718" />
         <source>Run %1</source>
-        <translation>运行％1</translation>
+        <translation>运行%1</translation>
     </message>
     <message>
         <location line="+7" />
@@ -14993,7 +14993,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+2" />
         <source>There are %n custom parsers active</source>
         <translation>
-            <numerusform>有％n定制解析器活动</numerusform>
+            <numerusform>有%n定制解析器活动</numerusform>
         </translation>
     </message>
     <message>
@@ -15178,7 +15178,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+44" />
         <source>%n entries</source>
         <translation>
-            <numerusform>％n条目</numerusform>
+            <numerusform>%n条目</numerusform>
         </translation>
     </message>
     <message>
@@ -15332,12 +15332,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopprocesssignaloperation.cpp" line="+69" />
         <source>Cannot kill process with pid %1: %2</source>
-        <translation>无法用PID％1：％2杀死进程</translation>
+        <translation>无法用PID%1：%2杀死进程</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Cannot interrupt process with pid %1: %2</source>
-        <translation>无法用PID％1：％2中断过程</translation>
+        <translation>无法用PID%1：%2中断过程</translation>
     </message>
     <message>
         <location line="+15" />
@@ -15353,7 +15353,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-46" />
         <source>Cannot open process: %1</source>
-        <translation>无法打开过程：％1</translation>
+        <translation>无法打开过程：%1</translation>
     </message>
     <message>
         <location line="+11" />
@@ -15363,12 +15363,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+10" />
         <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
-        <translation>％1不存在。 如果您自己构建％2，请查看https://code.qt.io/cgit/qt-creator/binary-artifacts.git/。</translation>
+        <translation>%1不存在。 如果您自己构建%2，请查看https://code.qt.io/cgit/qt-creator/binary-artifacts.git/。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Cannot start %1. Check src\tools\win64interrupt\win64interrupt.c for more information.</source>
-        <translation>无法开始％1。 查看SRC \ Tools \ Win64interrupt \ Win64interrupt.c以获取更多信息。</translation>
+        <translation>无法开始%1。 查看SRC \ Tools \ Win64interrupt \ Win64interrupt.c以获取更多信息。</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15410,23 +15410,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
         <source>No device for path "%1"</source>
-        <translation>没有路径“％1”的设备</translation>
+        <translation>没有路径“%1”的设备</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
         <source>No device found for path "%1"</source>
-        <translation>找不到路径“％1”的设备</translation>
+        <translation>找不到路径“%1”的设备</translation>
     </message>
     <message>
         <location line="-9" />
         <source>No file access for device "%1"</source>
-        <translation>设备“％1”无文件访问</translation>
+        <translation>设备“%1”无文件访问</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
         <source>%1 (default for %2)</source>
-        <translation>％1（默认为％2）</translation>
+        <translation>%1（默认为%2）</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceprocessesdialog.cpp" line="+103" />
@@ -15497,7 +15497,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+12" />
         <source>Add %1</source>
         <extracomment>Add &lt;Device Type Name&gt;</extracomment>
-        <translation>添加％1</translation>
+        <translation>添加%1</translation>
     </message>
     <message>
         <location line="+34" />
@@ -15517,7 +15517,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+87" />
         <source>Yes (id is "%1")</source>
-        <translation>是的（ID是“％1”）</translation>
+        <translation>是的（ID是“%1”）</translation>
     </message>
     <message>
         <location line="+0" />
@@ -15553,13 +15553,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceusedportsgatherer.cpp" line="+81" />
         <source>Remote error output was: %1</source>
-        <translation>远程错误输出是：％1</translation>
+        <translation>远程错误输出是：%1</translation>
     </message>
     <message numerus="yes">
         <location line="+41" />
         <source>Found %n free ports.</source>
         <translation>
-            <numerusform>找到％n的自由端口。</numerusform>
+            <numerusform>找到%n的自由端口。</numerusform>
         </translation>
     </message>
     <message>
@@ -15646,12 +15646,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+30" />
         <source>No device for given path: "%1".</source>
-        <translation>没有给定路径的设备：“％1”。</translation>
+        <translation>没有给定路径的设备：“%1”。</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Device for path "%1" does not support killing processes.</source>
-        <translation>路径“％1”的设备不支持杀戮过程。</translation>
+        <translation>路径“%1”的设备不支持杀戮过程。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15713,7 +15713,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+78" />
         <source>Project %1</source>
         <comment>Settings, %1 is a language (C++ or QML)</comment>
-        <translation>项目％1</translation>
+        <translation>项目%1</translation>
     </message>
     <message>
         <location line="+9" />
@@ -15823,33 +15823,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+123" />
         <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Unset &lt;a href =“％1”&gt; &lt;b&gt;％1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <translation>Unset &lt;a href =“%1”&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>set &lt;a href =“％1”&gt; &lt;b&gt;％1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;％2 &lt;/b&gt;</translation>
+        <translation>set &lt;a href =“%1”&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>附加&lt;b&gt;％2 &lt;/b&gt;到&lt;a href =“％1”&gt; &lt;b&gt;％1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <translation>附加&lt;b&gt;%2 &lt;/b&gt;到&lt;a href =“%1”&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>prepend &lt;b&gt;％2 &lt;/b&gt; to &lt;a href =“％1”&gt; &lt;b&gt;％1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <translation>prepend &lt;b&gt;%2 &lt;/b&gt; to &lt;a href =“%1”&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>set &lt;a href =“％1”&gt; &lt;b&gt;％1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;％2 &lt;/b&gt; [禁用]</translation>
+        <translation>set &lt;a href =“%1”&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt; [禁用]</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
         <extracomment>%1 is "System Environment" or some such.</extracomment>
-        <translation>使用&lt;b&gt;％1 &lt;/b&gt;</translation>
+        <translation>使用&lt;b&gt;%1 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -15860,7 +15860,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
         <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
-        <translation>使用&lt;b&gt;％1 &lt;/b&gt;和</translation>
+        <translation>使用&lt;b&gt;%1 &lt;/b&gt;和</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+28" />
@@ -15891,7 +15891,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-877" />
         <source>%1 (%2, %3 %4 at %5)</source>
-        <translation>％1（％2，％3％4 at％5）</translation>
+        <translation>%1（%2，%3%4 at%5）</translation>
     </message>
     <message>
         <location line="+1259" />
@@ -15958,57 +15958,57 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+5" />
         <source>Field "%1" has no type.</source>
-        <translation>字段“％1”没有类型。</translation>
+        <translation>字段“%1”没有类型。</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Field "%1" has unsupported type "%2".</source>
-        <translation>字段“％1”具有不支持的“％2”。</translation>
+        <translation>字段“%1”具有不支持的“%2”。</translation>
     </message>
     <message>
         <location line="+18" />
         <source>When parsing Field "%1": %2</source>
-        <translation>解析字段“％1”：％2</translation>
+        <translation>解析字段“%1”：%2</translation>
     </message>
     <message>
         <location line="+208" />
         <source>Label ("%1") data is not an object.</source>
-        <translation>标签（“％1”）数据不是对象。</translation>
+        <translation>标签（“%1”）数据不是对象。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Label ("%1") has no trText.</source>
-        <translation>标签（“％1”）没有TRTEXT。</translation>
+        <translation>标签（“%1”）没有TRTEXT。</translation>
     </message>
     <message>
         <location line="+28" />
         <source>Spacer ("%1") data is not an object.</source>
-        <translation>Spacer（“％1”）数据不是一个object。</translation>
+        <translation>Spacer（“%1”）数据不是一个object。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>Spacer（“％1”）属性“因子”不是整数值。</translation>
+        <translation>Spacer（“%1”）属性“因子”不是整数值。</translation>
     </message>
     <message>
         <location line="+35" />
         <source>LineEdit ("%1") data is not an object.</source>
-        <translation>landedit（“％1”）数据不是对象。</translation>
+        <translation>landedit（“%1”）数据不是对象。</translation>
     </message>
     <message>
         <location line="+16" />
         <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>laneedit（“％1”）在“验证器”中具有无效的正则表达式“％2”。</translation>
+        <translation>laneedit（“%1”）在“验证器”中具有无效的正则表达式“%2”。</translation>
     </message>
     <message>
         <location line="+15" />
         <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>laneedit（“％1”）在“完成”中具有无效的“％2”。</translation>
+        <translation>laneedit（“%1”）在“完成”中具有无效的“%2”。</translation>
     </message>
     <message>
         <location line="+166" />
         <source>TextEdit ("%1") data is not an object.</source>
-        <translation>textedit（“％1”）数据不是对象。</translation>
+        <translation>textedit（“%1”）数据不是对象。</translation>
     </message>
     <message>
         <location line="+83" />
@@ -16018,17 +16018,17 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+26" />
         <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>KIND“％1”不是受支持的“现有主导”，“目录”，“文件”，“ SaveFile”，“ savefile”，“ castionCommand”，“命令”，“任何”。</translation>
+        <translation>KIND“%1”不是受支持的“现有主导”，“目录”，“文件”，“ SaveFile”，“ savefile”，“ castionCommand”，“命令”，“任何”。</translation>
     </message>
     <message>
         <location line="+80" />
         <source>CheckBox ("%1") data is not an object.</source>
-        <translation>复选框（“％1”）数据不是对象。</translation>
+        <translation>复选框（“%1”）数据不是对象。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>检查和未检查状态的复选框（“％1”）值相同。</translation>
+        <translation>检查和未检查状态的复选框（“%1”）值相同。</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16043,27 +16043,27 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+25" />
         <source>%1 ("%2") data is not an object.</source>
-        <translation>％1（“％2”）数据不是对象。</translation>
+        <translation>%1（“%2”）数据不是对象。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>％1（“％2”）“索引”不是整数值。</translation>
+        <translation>%1（“%2”）“索引”不是整数值。</translation>
     </message>
     <message>
         <location line="+6" />
         <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>％1（“％2”）“ disabledendex”不是整数值。</translation>
+        <translation>%1（“%2”）“ disabledendex”不是整数值。</translation>
     </message>
     <message>
         <location line="+7" />
         <source>%1 ("%2") "items" missing.</source>
-        <translation>％1（“％2”）“项目”缺失。</translation>
+        <translation>%1（“%2”）“项目”缺失。</translation>
     </message>
     <message>
         <location line="+4" />
         <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>％1（“％2”）“项目”不是JSON列表。</translation>
+        <translation>%1（“%2”）“项目”不是JSON列表。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16088,7 +16088,7 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+13" />
         <source>No "%1" key found in feature list object.</source>
-        <translation>在功能列表对象中找到没有“％1”密钥。</translation>
+        <translation>在功能列表对象中找到没有“%1”密钥。</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16103,7 +16103,7 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+1" />
         <source>Error message from Version Control System: "%1".</source>
-        <translation>版本控制系统中的错误消息：“％1”。</translation>
+        <translation>版本控制系统中的错误消息：“%1”。</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16116,8 +16116,8 @@ fails because Clang does not understand the target architecture.</source>
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
         <source>Failed to add subproject "%1"
 to project "%2".</source>
-        <translation>未能添加subproject“％1”
- 投影“％2”。</translation>
+        <translation>未能添加subproject“%1”
+ 投影“%2”。</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16125,7 +16125,7 @@ to project "%2".</source>
         <source>Failed to add one or more files to project
 "%1" (%2).</source>
         <translation>未能添加一个或多个文件
- “％1”（％2）。</translation>
+ “%1”（%2）。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -16161,7 +16161,7 @@ to project "%2".</source>
     <message>
         <location line="+1" />
         <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>向导无法生成文件。&lt;br&gt;错误消息是：“％1”。</translation>
+        <translation>向导无法生成文件。&lt;br&gt;错误消息是：“%1”。</translation>
     </message>
     <message>
         <location line="+63" />
@@ -16201,23 +16201,23 @@ to project "%2".</source>
     <message>
         <location line="+58" />
         <source>"%1" does not exist in the file system.</source>
-        <translation>文件系统中不存在“％1”。</translation>
+        <translation>文件系统中不存在“%1”。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Failed to open "%1" as a project.</source>
-        <translation>未能作为一个项目打开“％1”。</translation>
+        <translation>未能作为一个项目打开“%1”。</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
         <source>Failed to open an editor for "%1".</source>
-        <translation>未能打开“％1”的编辑器。</translation>
+        <translation>未能打开“%1”的编辑器。</translation>
     </message>
     <message>
         <location line="-27" />
         <source>No file to open found in "%1".</source>
-        <translation>在“％1”中没有打开的文件。</translation>
+        <translation>在“%1”中没有打开的文件。</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16227,7 +16227,7 @@ to project "%2".</source>
     <message>
         <location line="+1" />
         <source>Failed to open project in "%1".</source>
-        <translation>未能在“％1”中开放项目。</translation>
+        <translation>未能在“%1”中开放项目。</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16248,30 +16248,30 @@ to project "%2".</source>
     <message>
         <location line="+7" />
         <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>生成器的TypeID“％1”尚不清楚。 支持的类型为：“％2”。</translation>
+        <translation>生成器的TypeID“%1”尚不清楚。 支持的类型为：“%2”。</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
         <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>检查JSON向导搜索路径时，路径“％1”不存在。</translation>
+        <translation>检查JSON向导搜索路径时，路径“%1”不存在。</translation>
     </message>
     <message>
         <location line="-228" />
         <source>Checking "%1" for %2.</source>
-        <translation>检查％2的“％1”。</translation>
+        <translation>检查%2的“%1”。</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
         <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>*无法解析“％1”：％2：％3：％4</translation>
+        <translation>*无法解析“%1”：%2：%3：%4</translation>
     </message>
     <message>
         <location line="-223" />
         <source>* Did not find a JSON object in "%1".
 </source>
-        <translation>*在“％1”中找不到JSON对象。</translation>
+        <translation>*在“%1”中找不到JSON对象。</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16282,7 +16282,7 @@ to project "%2".</source>
     <message>
         <location line="-224" />
         <source>JsonWizard: "%1" not found.</source>
-        <translation>JSONWIZARD：未找到“％1”。</translation>
+        <translation>JSONWIZARD：未找到“%1”。</translation>
     </message>
     <message>
         <location line="+96" />
@@ -16297,27 +16297,27 @@ to project "%2".</source>
     <message>
         <location line="+8" />
         <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>页面的类型“％1”是未知的。 支持的类型为：“％2”。</translation>
+        <translation>页面的类型“%1”是未知的。 支持的类型为：“%2”。</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>带有typeID“％1”的页面无效“索引”。</translation>
+        <translation>带有typeID“%1”的页面无效“索引”。</translation>
     </message>
     <message>
         <location line="+89" />
         <source>* Did not find a JSON object in "%1".</source>
-        <translation>*在“％1”中找不到JSON对象。</translation>
+        <translation>*在“%1”中找不到JSON对象。</translation>
     </message>
     <message>
         <location line="+12" />
         <source>* Version %1 not supported.</source>
-        <translation>*版本％1不支持。</translation>
+        <translation>*版本%1不支持。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>* Failed to create: %1</source>
-        <translation>*无法创建：％1</translation>
+        <translation>*无法创建：%1</translation>
     </message>
     <message>
         <location line="+227" />
@@ -16347,12 +16347,12 @@ to project "%2".</source>
     <message>
         <location line="+32" />
         <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>“类型”值“％1”不是“ class”（弃用），“文件”或“项目”。</translation>
+        <translation>“类型”值“%1”不是“ class”（弃用），“文件”或“项目”。</translation>
     </message>
     <message>
         <location line="+4" />
         <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>还设置了“ KIND”是“文件”或“ class”（已弃用）和“％1”。</translation>
+        <translation>还设置了“ KIND”是“文件”或“ class”（已弃用）和“%1”。</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16367,12 +16367,12 @@ to project "%2".</source>
     <message>
         <location line="+10" />
         <source>Icon file "%1" not found.</source>
-        <translation>未找到图标文件“％1”。</translation>
+        <translation>未找到图标文件“%1”。</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Image file "%1" not found.</source>
-        <translation>图像文件“％1”找不到。</translation>
+        <translation>图像文件“%1”找不到。</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16392,12 +16392,12 @@ to project "%2".</source>
     <message>
         <location line="+8" />
         <source>When parsing "generators": %1</source>
-        <translation>解析“生成器”：％1</translation>
+        <translation>解析“生成器”：%1</translation>
     </message>
     <message>
         <location line="+15" />
         <source>When parsing "pages": %1</source>
-        <translation>解析“页面”：％1</translation>
+        <translation>解析“页面”：%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
@@ -16412,34 +16412,34 @@ to project "%2".</source>
     <message>
         <location line="+57" />
         <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>处理“％1”时：&lt;br&gt;％2</translation>
+        <translation>处理“%1”时：&lt;br&gt;%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
         <source>%1 [folder]</source>
-        <translation>％1 [文件夹]</translation>
+        <translation>%1 [文件夹]</translation>
     </message>
     <message>
         <location line="+3" />
         <source>%1 [symbolic link]</source>
-        <translation>％1 [符号链接]</translation>
+        <translation>%1 [符号链接]</translation>
     </message>
     <message>
         <location line="+3" />
         <source>%1 [read only]</source>
-        <translation>％1 [仅读]</translation>
+        <translation>%1 [仅读]</translation>
     </message>
     <message>
         <location line="+6" />
         <source>The directory %1 contains files which cannot be overwritten:
 %2.</source>
-        <translation>目录％1包含无法覆盖的文件：
- ％2。</translation>
+        <translation>目录%1包含无法覆盖的文件：
+ %2。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
         <source>When parsing fields of page "%1": %2</source>
-        <translation>页面“％1”的解析字段：％2</translation>
+        <translation>页面“%1”的解析字段：%2</translation>
     </message>
     <message>
         <location line="+46" />
@@ -16449,7 +16449,7 @@ to project "%2".</source>
     <message>
         <location line="+48" />
         <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>错误解析“套件”中的“％1”页面：％2</translation>
+        <translation>错误解析“套件”中的“%1”页面：%2</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16459,7 +16459,7 @@ to project "%2".</source>
     <message>
         <location line="+6" />
         <source>"Kits" page requires a "%1" set.</source>
-        <translation>“套件”页面需要“％1”集。</translation>
+        <translation>“套件”页面需要“%1”集。</translation>
     </message>
     <message>
         <location line="+62" />
@@ -16469,7 +16469,7 @@ to project "%2".</source>
     <message>
         <location line="+9" />
         <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>“％2”中的正则表达“％1”。 ％3</translation>
+        <translation>“%2”中的正则表达“%1”。 %3</translation>
     </message>
     <message>
         <location line="+46" />
@@ -16484,12 +16484,12 @@ to project "%2".</source>
     <message>
         <location line="+11" />
         <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>模式“％1”不是有效的正则表达式。</translation>
+        <translation>模式“%1”不是有效的正则表达式。</translation>
     </message>
     <message>
         <location line="+23" />
         <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>ScannerGenerator：二进制模式“％1”无效。</translation>
+        <translation>ScannerGenerator：二进制模式“%1”无效。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -16532,7 +16532,7 @@ to project "%2".</source>
         <location line="+669" />
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+319" />
         <source>Clone of %1</source>
-        <translation>克隆％1</translation>
+        <translation>克隆%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="-1479" />
@@ -16547,17 +16547,17 @@ to project "%2".</source>
     <message>
         <location line="+17" />
         <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>文件系统中不存在SYS root“％1”。</translation>
+        <translation>文件系统中不存在SYS root“%1”。</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Sys Root "%1" is not a directory.</source>
-        <translation>系统根目录“％1”不是目录。</translation>
+        <translation>系统根目录“%1”不是目录。</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Sys Root "%1" is empty.</source>
-        <translation>系统根目录“％1”是空的。</translation>
+        <translation>系统根目录“%1”是空的。</translation>
     </message>
     <message>
         <location line="+14" />
@@ -16585,7 +16585,7 @@ to project "%2".</source>
     <message>
         <location line="+45" />
         <source>Compilers produce code for different ABIs: %1</source>
-        <translation>编译器生成不同ABI的代码：％1</translation>
+        <translation>编译器生成不同ABI的代码：%1</translation>
     </message>
     <message>
         <location line="+108" />
@@ -16766,12 +16766,12 @@ to project "%2".</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitchooser.cpp" line="+93" />
         <source>Kit of Active Project: %1</source>
-        <translation>活跃项目的套件：％1</translation>
+        <translation>活跃项目的套件：%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="-52" />
         <source>Desktop (%1)</source>
-        <translation>桌面（％1）</translation>
+        <translation>桌面（%1）</translation>
     </message>
     <message>
         <location line="+131" />
@@ -16803,7 +16803,7 @@ to project "%2".</source>
     <message>
         <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the kit suitable for generating directory names. This value is used for the variable &lt;i&gt;%1&lt;/i&gt;, which for example determines the name of the shadow build directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;Head/&gt; &lt;body&gt; &lt;p&gt;套件的名称适用于生成目录名称。 此值用于变量&lt;i&gt;％1 &lt;/i&gt;，例如确定阴影构建目录的名称。&lt;/p&gt; &lt;/pody&gt; &lt;/hody&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt; &lt;Head/&gt; &lt;body&gt; &lt;p&gt;套件的名称适用于生成目录名称。 此值用于变量&lt;i&gt;%1 &lt;/i&gt;，例如确定阴影构建目录的名称。&lt;/p&gt; &lt;/pody&gt; &lt;/hody&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16833,7 +16833,7 @@ to project "%2".</source>
     <message>
         <location line="+60" />
         <source>Default for %1</source>
-        <translation>默认为％1</translation>
+        <translation>默认为%1</translation>
     </message>
     <message>
         <location line="+11" />
@@ -16849,7 +16849,7 @@ to project "%2".</source>
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-427" />
         <source>%1 (default)</source>
         <extracomment>Mark up a kit as the default one.</extracomment>
-        <translation>％1（默认）</translation>
+        <translation>%1（默认）</translation>
     </message>
     <message>
         <location line="+428" />
@@ -16914,7 +16914,7 @@ to project "%2".</source>
     <message>
         <location line="+1" />
         <source>Override %1:</source>
-        <translation>覆盖％1：</translation>
+        <translation>覆盖%1：</translation>
     </message>
     <message>
         <location line="+46" />
@@ -16929,7 +16929,7 @@ to project "%2".</source>
     <message>
         <location line="+163" />
         <source>&lt;b&gt;Make:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;制作：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;制作：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+3" />
@@ -16939,7 +16939,7 @@ to project "%2".</source>
     <message>
         <location line="+9" />
         <source>&lt;b&gt;Make:&lt;/b&gt; %1 not found in the environment.</source>
-        <translation>&lt;b&gt; make：&lt;/b&gt;％1在环境中找不到。</translation>
+        <translation>&lt;b&gt; make：&lt;/b&gt;%1在环境中找不到。</translation>
     </message>
     <message>
         <location line="+20" />
@@ -16981,67 +16981,67 @@ to project "%2".</source>
     <message>
         <location line="+783" />
         <source>&lt;b&gt;Project:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;项目：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;项目：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;b&gt;Path:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;路径：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;路径：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;b&gt;Kit:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;套件：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;套件：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;b&gt;Build:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;构建：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;构建：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;b&gt;Deploy:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;部署：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;部署：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;b&gt;Run:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;运行：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;运行：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>%1</source>
-        <translation>％1</translation>
+        <translation>%1</translation>
     </message>
     <message>
         <location line="+12" />
         <source>Project: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
-        <translation>项目：&lt;b&gt;％1 &lt;/b&gt; &lt;br/&gt;</translation>
+        <translation>项目：&lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Kit: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
-        <translation>套件：&lt;b&gt;％1 &lt;/b&gt; &lt;br/&gt;</translation>
+        <translation>套件：&lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Build: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
-        <translation>构建：&lt;b&gt;％1 &lt;/b&gt; &lt;br/&gt;</translation>
+        <translation>构建：&lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Deploy: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
-        <translation>部署：&lt;b&gt;％1 &lt;/b&gt; &lt;br/&gt;</translation>
+        <translation>部署：&lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Run: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
-        <translation>运行：&lt;b&gt;％1 &lt;/b&gt; &lt;br/&gt;</translation>
+        <translation>运行：&lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;style type = text/css&gt; a：链接{颜色：rgb（128，128，255）;} &lt;/style&gt;尚未配置项目&lt;b&gt;％1 &lt;/b&gt;尚未配置&lt;br/&gt; &lt;br/&gt;您可以在&lt;a href =“ href =” projectMode“ projectMode”&gt;项目模式&lt;br/&gt; &lt;br/&gt; &lt;br/&gt; &lt;br/&gt; &lt;br/&gt;</translation>
+        <translation>&lt;style type = text/css&gt; a：链接{颜色：rgb（128，128，255）;} &lt;/style&gt;尚未配置项目&lt;b&gt;%1 &lt;/b&gt;尚未配置&lt;br/&gt; &lt;br/&gt;您可以在&lt;a href =“ href =” projectMode“ projectMode”&gt;项目模式&lt;br/&gt; &lt;br/&gt; &lt;br/&gt; &lt;br/&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
@@ -17070,8 +17070,8 @@ to project "%2".</source>
         <location line="+796" />
         <source>Failed to retrieve MSVC Environment from "%1":
 %2</source>
-        <translation>无法从“％1”检索MSVC环境：
- ％2</translation>
+        <translation>无法从“%1”检索MSVC环境：
+ %2</translation>
     </message>
     <message>
         <location line="+83" />
@@ -17118,7 +17118,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Could not open file: "%1": %2</source>
-        <translation>无法打开文件：“％1”：％2</translation>
+        <translation>无法打开文件：“%1”：%2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17189,7 +17189,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Kit %1 is incompatible with kit %2.</source>
-        <translation>套件％1与套件％2不兼容。</translation>
+        <translation>套件%1与套件%2不兼容。</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17229,7 +17229,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+92" />
         <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>项目“％1”已配置为套件“％2”，其中ID％3不再存在。 您可以在％4模式下创建一个新套件或将消失的套件的步骤复制到另一个套件。</translation>
+        <translation>项目“%1”已配置为套件“%2”，其中ID%3不再存在。 您可以在%4模式下创建一个新套件或将消失的套件的步骤复制到另一个套件。</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17250,73 +17250,73 @@ Please close all running instances of your application before starting a build.<
         <location line="+87" />
         <source>%1: Name.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：名称。</translation>
+        <translation>%1：名称。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：通往主文件的完整路径。</translation>
+        <translation>%1：通往主文件的完整路径。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：通往项目目录的完整路径。</translation>
+        <translation>%1：通往项目目录的完整路径。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：活动套件的名称。</translation>
+        <translation>%1：活动套件的名称。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：活动构建配置的名称。</translation>
+        <translation>%1：活动构建配置的名称。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：活动构建配置的类型。</translation>
+        <translation>%1：活动构建配置的类型。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：主动构建配置的完整构建路径。</translation>
+        <translation>%1：主动构建配置的完整构建路径。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：活动构建环境中的变量。</translation>
+        <translation>%1：活动构建环境中的变量。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：活动运行配置的名称。</translation>
+        <translation>%1：活动运行配置的名称。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：可执行的活动运行配置。</translation>
+        <translation>%1：可执行的活动运行配置。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：活动运行配置环境中的变量。</translation>
+        <translation>%1：活动运行配置环境中的变量。</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：主动运行配置的工作目录。</translation>
+        <translation>%1：主动运行配置的工作目录。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+137" />
@@ -17409,7 +17409,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="-347" />
         <source>Close Pro&amp;ject "%1"</source>
-        <translation>关闭项目“％1”</translation>
+        <translation>关闭项目“%1”</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17420,7 +17420,7 @@ Please close all running instances of your application before starting a build.<
         <location line="+0" />
         <location line="+328" />
         <source>Close All Files in Project "%1"</source>
-        <translation>关闭项目“％1”中的所有文件</translation>
+        <translation>关闭项目“%1”中的所有文件</translation>
     </message>
     <message>
         <location line="-316" />
@@ -17484,7 +17484,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <source>Build Project "%1"</source>
-        <translation>构建项目“％1”</translation>
+        <translation>构建项目“%1”</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17494,7 +17494,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Build Project "%1" for All Configurations</source>
-        <translation>为所有配置构建项目“％1”</translation>
+        <translation>为所有配置构建项目“%1”</translation>
     </message>
     <message>
         <location line="+20" />
@@ -17504,7 +17504,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>构建并运行配置“％1”</translation>
+        <translation>构建并运行配置“%1”</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17598,7 +17598,7 @@ Please close all running instances of your application before starting a build.<
         <location line="+9" />
         <location line="+1621" />
         <source>Close Project "%1"</source>
-        <translation>关闭项目“％1”</translation>
+        <translation>关闭项目“%1”</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17608,7 +17608,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <source>Close All Projects Except "%1"</source>
-        <translation>关闭除“％1”以外的所有项目</translation>
+        <translation>关闭除“%1”以外的所有项目</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17644,7 +17644,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Set "%1" as Active Project</source>
-        <translation>将“％1”设置为活动项目</translation>
+        <translation>将“%1”设置为活动项目</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17714,12 +17714,12 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+2" />
         <source>Unload Project %1?</source>
-        <translation>卸载项目％1？</translation>
+        <translation>卸载项目%1？</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The project %1 is currently being built.</source>
-        <translation>当前正在构建项目％1。</translation>
+        <translation>当前正在构建项目%1。</translation>
     </message>
     <message>
         <location line="+1" />
@@ -17771,7 +17771,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+48" />
         <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>打开项目“％1”：没有插件可以打开项目类型“％2”。</translation>
+        <translation>打开项目“%1”：没有插件可以打开项目类型“%2”。</translation>
     </message>
     <message>
         <location line="+195" />
@@ -17803,17 +17803,17 @@ Do you want to ignore them?</source>
     <message>
         <location line="+23" />
         <source>Open Project in "%1"</source>
-        <translation>在“％1”中开放项目</translation>
+        <translation>在“%1”中开放项目</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Open Project "%1"</source>
-        <translation>打开项目“％1”</translation>
+        <translation>打开项目“%1”</translation>
     </message>
     <message>
         <location line="+19" />
         <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>文件“％1”被更名为“％2”，但以下项目无法自动更改：％3</translation>
+        <translation>文件“%1”被更名为“%2”，但以下项目无法自动更改：%3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17826,12 +17826,12 @@ Do you want to ignore them?</source>
     <message>
         <location line="-1139" />
         <source>The following projects failed to automatically remove the file: %1</source>
-        <translation>以下项目未能自动删除文件：％1</translation>
+        <translation>以下项目未能自动删除文件：%1</translation>
     </message>
     <message>
         <location line="+62" />
         <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>构建目标 "%1" 配置不可用：％2 &lt;br&gt;</translation>
+        <translation>构建目标 "%1" 配置不可用：%2 &lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17847,7 +17847,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+3" />
         <source>The project %1 is not configured.</source>
-        <translation>项目％1未配置。</translation>
+        <translation>项目%1未配置。</translation>
     </message>
     <message>
         <location line="+3" />
@@ -17873,7 +17873,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+2" />
         <source>Close %1?</source>
-        <translation>关闭％1？</translation>
+        <translation>关闭%1？</translation>
     </message>
     <message>
         <location line="+1" />
@@ -17883,7 +17883,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+2" />
         <source>Do you want to cancel the build process and close %1 anyway?</source>
-        <translation>您是否要取消构建过程并关闭％1？</translation>
+        <translation>您是否要取消构建过程并关闭%1？</translation>
     </message>
     <message>
         <location line="+164" />
@@ -17893,17 +17893,17 @@ Do you want to ignore them?</source>
     <message>
         <location line="+3" />
         <source>The project "%1" is not configured.</source>
-        <translation>项目“％1”未配置。</translation>
+        <translation>项目“%1”未配置。</translation>
     </message>
     <message>
         <location line="+6" />
         <source>The project "%1" has no active kit.</source>
-        <translation>该项目“％1”没有主动套件。</translation>
+        <translation>该项目“%1”没有主动套件。</translation>
     </message>
     <message>
         <location line="+7" />
         <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>项目“％1”套件“％2”没有主动运行配置。</translation>
+        <translation>项目“%1”套件“%2”没有主动运行配置。</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17913,7 +17913,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+6" />
         <source>Cannot run "%1".</source>
-        <translation>无法运行“％1”。</translation>
+        <translation>无法运行“%1”。</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17923,7 +17923,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+305" />
         <source>%1 in %2</source>
-        <translation>％1中％2</translation>
+        <translation>%1中%2</translation>
     </message>
     <message>
         <location line="+31" />
@@ -17940,7 +17940,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+41" />
         <source>The following subprojects could not be added to project "%1":</source>
-        <translation>无法将以下子标记添加到项目“％1”中：</translation>
+        <translation>无法将以下子标记添加到项目“%1”中：</translation>
     </message>
     <message>
         <location line="+2" />
@@ -17955,7 +17955,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+33" />
         <source>Could not add following files to project %1:</source>
-        <translation>无法将以下文件添加到项目％1：</translation>
+        <translation>无法将以下文件添加到项目%1：</translation>
     </message>
     <message>
         <location line="+2" />
@@ -17968,7 +17968,7 @@ Do you want to ignore them?</source>
         <source>Failed opening terminal.
 %1</source>
         <translation>打开终端失败。 
-％1</translation>
+%1</translation>
     </message>
     <message>
         <location line="+34" />
@@ -17980,7 +17980,7 @@ Do you want to ignore them?</source>
         <source>Remove these files as well?
     %1</source>
         <translation>也删除这些文件？ 
-％1</translation>
+%1</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17991,13 +17991,13 @@ Do you want to ignore them?</source>
         <location line="+1" />
         <source>File "%1" was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>文件“％1”没有被删除，因为该项目在此期间发生了变化。 
+        <translation>文件“%1”没有被删除，因为该项目在此期间发生了变化。 
 请重试。</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Could not remove file "%1" from project "%2".</source>
-        <translation>无法从项目“％2”中删除文件“％1”。</translation>
+        <translation>无法从项目“%2”中删除文件“%1”。</translation>
     </message>
     <message>
         <location line="+36" />
@@ -18023,12 +18023,12 @@ Please try again.</source>
     <message>
         <location line="-9" />
         <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>未能将文件“％1”复制为“％2”：％3。</translation>
+        <translation>未能将文件“%1”复制为“%2”：%3。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Failed to add new file "%1" to the project.</source>
-        <translation>未能在项目中添加新文件“％1”。</translation>
+        <translation>未能在项目中添加新文件“%1”。</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18038,7 +18038,7 @@ Please try again.</source>
     <message>
         <location line="+1" />
         <source>Delete %1 from file system?</source>
-        <translation>从文件系统中删除％1？</translation>
+        <translation>从文件系统中删除%1？</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18048,26 +18048,26 @@ Please try again.</source>
     <message>
         <location line="+1" />
         <source>Could not delete file %1.</source>
-        <translation>无法删除文件％1。</translation>
+        <translation>无法删除文件%1。</translation>
     </message>
     <message>
         <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>项目文件％1不能自动更改。 
+        <translation>项目文件%1不能自动更改。 
 
-无论如何，重命名％2至％3？</translation>
+无论如何，重命名%2至%3？</translation>
     </message>
     <message>
         <location line="+17" />
         <source>The file %1 was renamed to %2, but the project file %3 could not be automatically changed.</source>
-        <translation>文件％1被重命名为％2，但是项目文件％3无法自动更改。</translation>
+        <translation>文件%1被重命名为%2，但是项目文件%3无法自动更改。</translation>
     </message>
     <message>
         <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation>文件％1不能重命名为％2。</translation>
+        <translation>文件%1不能重命名为%2。</translation>
     </message>
     <message>
         <location line="+5" />
@@ -18104,7 +18104,7 @@ Rename %2 to %3 anyway?</source>
         <source>Switched run configuration to
 %1</source>
         <translation>切换运行配置
- ％1</translation>
+ %1</translation>
     </message>
     <message>
         <location line="+9" />
@@ -18124,7 +18124,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+5" />
         <source>Automatically managed by %1 or the installer.</source>
-        <translation>自动由％1或安装程序管理。</translation>
+        <translation>自动由%1或安装程序管理。</translation>
     </message>
     <message>
         <location line="+6" />
@@ -18341,7 +18341,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+1" />
         <source>No build found in %1 matching project %2.</source>
-        <translation>在％1匹配项目％2中没有发现构建。</translation>
+        <translation>在%1匹配项目%2中没有发现构建。</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18356,7 +18356,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+83" />
         <source>%1 - temporary</source>
-        <translation>％1-临时</translation>
+        <translation>%1-临时</translation>
     </message>
     <message>
         <location line="+107" />
@@ -18376,7 +18376,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+1" />
         <source>Could not restore the following project files:&lt;br&gt;&lt;b&gt;%1&lt;/b&gt;</source>
-        <translation>无法还原以下项目文件：&lt;br&gt; &lt;b&gt;％1 &lt;/b&gt;</translation>
+        <translation>无法还原以下项目文件：&lt;br&gt; &lt;b&gt;%1 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18403,7 +18403,7 @@ Rename %2 to %3 anyway?</source>
         <source>Would you like to rename these files as well?
     %1</source>
         <translation>您是否也想重命名这些文件？ 
-％1</translation>
+%1</translation>
     </message>
     <message>
         <location line="+273" />
@@ -18415,7 +18415,7 @@ Rename %2 to %3 anyway?</source>
         <source>You just dragged some files from one project node to another.
 What should %1 do now?</source>
         <translation>您只是将某些文件从一个项目节点拖到另一个项目。 
-％1现在应该做什么？</translation>
+%1现在应该做什么？</translation>
     </message>
     <message>
         <location line="+9" />
@@ -18560,37 +18560,37 @@ What should %1 do now?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-612" />
         <source>Open Session #%1</source>
-        <translation>开放会议＃％1</translation>
+        <translation>开放会议＃%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Ctrl+Meta+%1</source>
-        <translation>CTRL+META+％1</translation>
+        <translation>CTRL+META+%1</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Ctrl+Alt+%1</source>
-        <translation>Ctrl+Alt+％1</translation>
+        <translation>Ctrl+Alt+%1</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Open Recent Project #%1</source>
-        <translation>打开最近的项目＃％1</translation>
+        <translation>打开最近的项目＃%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Ctrl+Shift+%1</source>
-        <translation>Ctrl+Shift+％1</translation>
+        <translation>Ctrl+Shift+%1</translation>
     </message>
     <message>
         <location line="+50" />
         <source>Open %1 "%2"</source>
-        <translation>打开％1“％2”</translation>
+        <translation>打开%1“%2”</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open %1 "%2" (%3)</source>
-        <translation>打开％1“％2”（％3）</translation>
+        <translation>打开%1“%2”（%3）</translation>
     </message>
     <message>
         <location line="+20" />
@@ -18601,12 +18601,12 @@ What should %1 do now?</source>
     <message>
         <location line="+130" />
         <source>%1 (last session)</source>
-        <translation>％1（上一次会议）</translation>
+        <translation>%1（上一次会议）</translation>
     </message>
     <message>
         <location line="+2" />
         <source>%1 (current session)</source>
-        <translation>％1（当前会话）</translation>
+        <translation>%1（当前会话）</translation>
     </message>
     <message>
         <location line="+70" />
@@ -18674,7 +18674,7 @@ What should %1 do now?</source>
         <location line="+10" />
         <source>%1 (%2)</source>
         <extracomment>vanished target display role: vanished target name (device type name)</extracomment>
-        <translation>％1（％2）</translation>
+        <translation>%1（%2）</translation>
     </message>
     <message>
         <location line="+15" />
@@ -18689,7 +18689,7 @@ What should %1 do now?</source>
     <message>
         <location line="+12" />
         <source>Remove Vanished Target "%1"</source>
-        <translation>删除消失的目标“％1”</translation>
+        <translation>删除消失的目标“%1”</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18772,12 +18772,12 @@ What should %1 do now?</source>
     <message>
         <location line="+74" />
         <source>A version control system repository could not be created in "%1".</source>
-        <translation>版本控制系统存储库无法在“％1”中创建。</translation>
+        <translation>版本控制系统存储库无法在“%1”中创建。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Failed to add "%1" to the version control system.</source>
-        <translation>无法将“％1”添加到版本控制系统中。</translation>
+        <translation>无法将“%1”添加到版本控制系统中。</translation>
     </message>
     <message>
         <location line="+94" />
@@ -18835,13 +18835,13 @@ What should %1 do now?</source>
         <location line="+306" />
         <source>Run on %{Device:Name}</source>
         <extracomment>Shown in Run configuration if no executable is given, %1 is device name</extracomment>
-        <translation>运行％{设备：名称}</translation>
+        <translation>运行%{设备：名称}</translation>
     </message>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
         <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
-        <translation>％1（on％{设备：名称}）</translation>
+        <translation>%1（on%{设备：名称}）</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-156" />
@@ -18958,12 +18958,12 @@ What should %1 do now?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-14" />
         <source>Unexpected run control state %1 when worker %2 started.</source>
-        <translation>工人％2开始时意外运行控制状态％1。</translation>
+        <translation>工人%2开始时意外运行控制状态%1。</translation>
     </message>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;center&gt; &lt;i&gt;％1 &lt;/i&gt;仍在运行。&lt;center/&gt; &lt;center&gt;强迫它退出？&lt;/center&gt; &lt;/center&gt; &lt;/body&gt; &lt;/hod&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;center&gt; &lt;i&gt;%1 &lt;/i&gt;仍在运行。&lt;center/&gt; &lt;center&gt;强迫它退出？&lt;/center&gt; &lt;/center&gt; &lt;/body&gt; &lt;/hod&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -19003,12 +19003,12 @@ What should %1 do now?</source>
     <message>
         <location line="+54" />
         <source>%1 exited with code %2</source>
-        <translation>％1通过代码％2</translation>
+        <translation>%1通过代码%2</translation>
     </message>
     <message>
         <location line="+2" />
         <source>%1 crashed.</source>
-        <translation>％1崩溃。</translation>
+        <translation>%1崩溃。</translation>
     </message>
     <message>
         <location line="+2" />
@@ -19018,7 +19018,7 @@ What should %1 do now?</source>
     <message>
         <location line="+47" />
         <source>Starting %1...</source>
-        <translation>开始％1 ...</translation>
+        <translation>开始%1 ...</translation>
     </message>
     <message>
         <location line="+3" />
@@ -19043,7 +19043,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>丢失了调用程序“％1”，或者您可能没有足够的权限来调用该程序。</translation>
+        <translation>丢失了调用程序“%1”，或者您可能没有足够的权限来调用该程序。</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19089,7 +19089,7 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Do you really want to delete the run configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>您真的想删除运行配置&lt;b&gt;％1 &lt;/b&gt;吗？</translation>
+        <translation>您真的想删除运行配置&lt;b&gt;%1 &lt;/b&gt;吗？</translation>
     </message>
     <message>
         <location line="+16" />
@@ -19104,7 +19104,7 @@ What should %1 do now?</source>
     <message>
         <location line="+35" />
         <source>New name for run configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>运行配置的新名称&lt;b&gt;％1 &lt;/b&gt;：</translation>
+        <translation>运行配置的新名称&lt;b&gt;%1 &lt;/b&gt;：</translation>
     </message>
     <message>
         <location line="+69" />
@@ -19114,12 +19114,12 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>Remove Deploy Configuration %1?</source>
-        <translation>删除部署配置％1？</translation>
+        <translation>删除部署配置%1？</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The deploy configuration &lt;b&gt;%1&lt;/b&gt; is currently being built.</source>
-        <translation>当前正在构建部署配置&lt;b&gt;％1 &lt;/b&gt;。</translation>
+        <translation>当前正在构建部署配置&lt;b&gt;%1 &lt;/b&gt;。</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19134,12 +19134,12 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Do you really want to delete deploy configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>您是否真的要删除部署配置&lt;b&gt;％1 &lt;/b&gt;？</translation>
+        <translation>您是否真的要删除部署配置&lt;b&gt;%1 &lt;/b&gt;？</translation>
     </message>
     <message>
         <location line="+22" />
         <source>New name for deploy configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>部署配置的新名称&lt;b&gt;％1 &lt;/b&gt;：</translation>
+        <translation>部署配置的新名称&lt;b&gt;%1 &lt;/b&gt;：</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+542" />
@@ -19173,14 +19173,14 @@ What should %1 do now?</source>
 %1</source>
         <translation>生成文件列表...
 
- ％1</translation>
+ %1</translation>
     </message>
     <message numerus="yes">
         <location line="+11" />
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
         <translation>
-            <numerusform>未显示基本目录以外的％n文件。 
+            <numerusform>未显示基本目录以外的%n文件。 
 这些文件保留了。</numerusform>
         </translation>
     </message>
@@ -19237,12 +19237,12 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Imports existing projects that do not use qmake, CMake, Qbs, Meson, or Autotools.&lt;p&gt;This creates a project file that allows you to use %1 as a code editor and as a launcher for debugging and analyzing tools. If you want to build the project, you might need to edit the generated project file.</source>
-        <translation>导入不使用QMAKE，CMAKE，QB，MESON或AUTOTOOLS的现有项目。&lt;p&gt;这将创建一个项目文件，允许您将％1用作代码编辑器以及用于调试和分析工具的启动器。 如果要构建项目，则可能需要编辑生成的项目文件。</translation>
+        <translation>导入不使用QMAKE，CMAKE，QB，MESON或AUTOTOOLS的现有项目。&lt;p&gt;这将创建一个项目文件，允许您将%1用作代码编辑器以及用于调试和分析工具的启动器。 如果要构建项目，则可能需要编辑生成的项目文件。</translation>
     </message>
     <message>
         <location line="+172" />
         <source>Unknown build system "%1"</source>
-        <translation>未知的构建系统“％1”</translation>
+        <translation>未知的构建系统“%1”</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -19303,7 +19303,7 @@ These files are preserved.</source>
     <message>
         <location line="+71" />
         <source>Enable Kit for Project "%1"</source>
-        <translation>启用项目“％1”的套件</translation>
+        <translation>启用项目“%1”的套件</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19313,7 +19313,7 @@ These files are preserved.</source>
     <message>
         <location line="+9" />
         <source>Disable Kit for Project "%1"</source>
-        <translation>禁用项目“％1”的套件</translation>
+        <translation>禁用项目“%1”的套件</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19323,12 +19323,12 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Disable Kit "%1" in This Project?</source>
-        <translation>在此项目中禁用套件“％1”？</translation>
+        <translation>在此项目中禁用套件“%1”？</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The kit &lt;b&gt;%1&lt;/b&gt; is currently being built.</source>
-        <translation>套件&lt;b&gt;％1 &lt;/b&gt;目前正在构建。</translation>
+        <translation>套件&lt;b&gt;%1 &lt;/b&gt;目前正在构建。</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19379,7 +19379,7 @@ These files are preserved.</source>
         <location line="+105" />
         <source>The following kits can be used for project &lt;b&gt;%1&lt;/b&gt;:</source>
         <comment>%1: Project name</comment>
-        <translation>以下套件可用于项目&lt;b&gt;％1 &lt;/b&gt;：</translation>
+        <translation>以下套件可用于项目&lt;b&gt;%1 &lt;/b&gt;：</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+359" />
@@ -19396,7 +19396,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+63" />
         <source>%1 needs a compiler set up to build. Configure a compiler in the kit options.</source>
-        <translation>％1需要设置以构建的编译器。 在套件选项中配置编译器。</translation>
+        <translation>%1需要设置以构建的编译器。 在套件选项中配置编译器。</translation>
     </message>
     <message>
         <location line="+143" />
@@ -19411,7 +19411,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+110" />
         <source>Cannot open task file %1: %2</source>
-        <translation>无法打开任务文件％1：％2</translation>
+        <translation>无法打开任务文件%1：%2</translation>
     </message>
     <message>
         <location line="+43" />
@@ -19466,7 +19466,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-152" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
-        <translation>&lt;nobr&gt; &lt;b&gt; abi：&lt;/b&gt;％1</translation>
+        <translation>&lt;nobr&gt; &lt;b&gt; abi：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19493,7 +19493,7 @@ These files are preserved.</source>
         <source>If checked, %1 will set up two instances of each x86_64 compiler:
 One for the native x86_64 target, and one for a plain x86 target.
 Enable this if you plan to create 32-bit x86 binaries without using a dedicated cross compiler.</source>
-        <translation>如果已检查，％1将设置每个X86_64编译器的两个实例：
+        <translation>如果已检查，%1将设置每个X86_64编译器的两个实例：
  一个用于本机X86_64目标，一个用于普通X86目标。 
 如果您打算在不使用专用交叉编译器的情况下创建32位X86二进制文件，请启用此功能。</translation>
     </message>
@@ -19521,12 +19521,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="-7" />
         <source>The following compiler was already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;It was not configured again.</source>
-        <translation>已经配置了以下编译器：&lt;br&gt;＆nbsp;％1 &lt;br&gt;它没有再次配置。</translation>
+        <translation>已经配置了以下编译器：&lt;br&gt;＆nbsp;%1 &lt;br&gt;它没有再次配置。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>The following compilers were already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;They were not configured again.</source>
-        <translation>已经配置了以下编译器：&lt;br&gt;＆nbsp;％1 &lt;br&gt;它们没有再次配置。</translation>
+        <translation>已经配置了以下编译器：&lt;br&gt;＆nbsp;%1 &lt;br&gt;它们没有再次配置。</translation>
     </message>
     <message>
         <location line="+76" />
@@ -19603,12 +19603,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <location line="+3" />
         <source>Update %1</source>
         <extracomment>%1 = package name</extracomment>
-        <translation>更新％1</translation>
+        <translation>更新%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Install %1</source>
-        <translation>安装％1</translation>
+        <translation>安装%1</translation>
     </message>
     <message>
         <location line="+3" />
@@ -19623,17 +19623,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+24" />
         <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>“％1”的安装被超时取消。</translation>
+        <translation>“%1”的安装被超时取消。</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The installation of "%1" was canceled by the user.</source>
-        <translation>用户取消了“％1”的安装。</translation>
+        <translation>用户取消了“%1”的安装。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Installing "%1" failed with exit code %2.</source>
-        <translation>安装“％1”失败，出口代码％2。</translation>
+        <translation>安装“%1”失败，出口代码%2。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19711,22 +19711,22 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+3" />
         <source>Python "%1" not found.</source>
-        <translation>找不到python“％1”。</translation>
+        <translation>找不到python“%1”。</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Python "%1" is not executable.</source>
-        <translation>Python“％1”是不可执行的。</translation>
+        <translation>Python“%1”是不可执行的。</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>Python“％1”不包含可用的PIP。 需要PIP从Python软件包索引中安装Python软件包，例如Pyside和Python Language Server。 要使用任何此功能，请确保为该Python安装PIP。</translation>
+        <translation>Python“%1”不包含可用的PIP。 需要PIP从Python软件包索引中安装Python软件包，例如Pyside和Python Language Server。 要使用任何此功能，请确保为该Python安装PIP。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>Python“％1”不包含可用的VENV。 VENV是将项目与全球安装的Python隔离开发环境的推荐方法。</translation>
+        <translation>Python“%1”不包含可用的VENV。 VENV是将项目与全球安装的Python隔离开发环境的推荐方法。</translation>
     </message>
     <message>
         <location line="+32" />
@@ -19741,12 +19741,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+229" />
         <source>Python Language Server (%1)</source>
-        <translation>Python语言服务器（％1）</translation>
+        <translation>Python语言服务器（%1）</translation>
     </message>
     <message>
         <location line="+303" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
-        <translation>以％1（％2）安装Python语言服务器（PYLS）。 语言服务器提供特定的完成和注释。</translation>
+        <translation>以%1（%2）安装Python语言服务器（PYLS）。 语言服务器提供特定的完成和注释。</translation>
     </message>
     <message>
         <location line="+4" />
@@ -19756,7 +19756,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+11" />
         <source>Update Python language server (PyLS) for %1 (%2).</source>
-        <translation>以％1（％2）更新Python语言服务器（PYLS）。</translation>
+        <translation>以%1（%2）更新Python语言服务器（PYLS）。</translation>
     </message>
     <message>
         <location line="+3" />
@@ -19781,7 +19781,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
         <source>No Python interpreter set for kit "%1".</source>
-        <translation>没有用于套件“％1”的Python解释器。</translation>
+        <translation>没有用于套件“%1”的Python解释器。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19807,7 +19807,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+20" />
         <source>Run %1</source>
-        <translation>运行％1</translation>
+        <translation>运行%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
@@ -19829,12 +19829,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+2" />
         <source>"%1" does not exist.</source>
-        <translation>“％1”不存在。</translation>
+        <translation>“%1”不存在。</translation>
     </message>
     <message>
         <location line="+2" />
         <source>"%1" is not an executable file.</source>
-        <translation>“％1”不是可执行文件。</translation>
+        <translation>“%1”不是可执行文件。</translation>
     </message>
     <message>
         <location line="+16" />
@@ -19888,7 +19888,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+22" />
         <source>For a complete list of available options, consult the [Python LSP Server configuration documentation](%1).</source>
-        <translation>有关可用选项的完整列表，请咨询[Python LSP服务器配置文档]（％1）。</translation>
+        <translation>有关可用选项的完整列表，请咨询[Python LSP服务器配置文档]（%1）。</translation>
     </message>
     <message>
         <location line="+12" />
@@ -19934,7 +19934,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+11" />
         <source>Found "%1" (%2)</source>
-        <translation>找到“％1”（％2）</translation>
+        <translation>找到“%1”（%2）</translation>
     </message>
     <message>
         <location line="+9" />
@@ -20281,7 +20281,7 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+195" />
         <source>Cursors: %2</source>
-        <translation>光标：％2</translation>
+        <translation>光标：%2</translation>
     </message>
     <message>
         <location line="+8" />
@@ -20291,7 +20291,7 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location line="+7" />
         <source>(Sel: %1)</source>
-        <translation>（SEL：％1）</translation>
+        <translation>（SEL：%1）</translation>
     </message>
     <message>
         <location line="+18" />
@@ -20653,17 +20653,17 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="+3" />
         <source>%1: The highlight definition for the file determines the position. If no highlight definition is available, the comment is placed after leading whitespaces.</source>
-        <translation>％1：文件的突出显示定义确定位置。 如果没有突出显示的定义，则该注释将在领先的空格之后发表。</translation>
+        <translation>%1：文件的突出显示定义确定位置。 如果没有突出显示的定义，则该注释将在领先的空格之后发表。</translation>
     </message>
     <message>
         <location line="+5" />
         <source>%1: The comment is placed at the start of the line.</source>
-        <translation>％1：评论放置在行开始时。</translation>
+        <translation>%1：评论放置在行开始时。</translation>
     </message>
     <message>
         <location line="+2" />
         <source>%1: The comment is placed after leading whitespaces.</source>
-        <translation>％1：评论是在领导空格​​之后发表的。</translation>
+        <translation>%1：评论是在领导空格​​之后发表的。</translation>
     </message>
     <message>
         <location line="+22" />
@@ -21190,7 +21190,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+2" />
         <source>%1 [customizable]</source>
-        <translation>％1 [可自定义]</translation>
+        <translation>%1 [可自定义]</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+89" />
@@ -23263,12 +23263,12 @@ Excluding: %3
     <message>
         <location line="-25" />
         <source>Failed to format: %1.</source>
-        <translation>无法格式：％1。</translation>
+        <translation>无法格式：%1。</translation>
     </message>
     <message>
         <location line="+175" />
         <source>Error in text formatting: %1</source>
-        <translation>文本格式错误：％1</translation>
+        <translation>文本格式错误：%1</translation>
     </message>
     <message>
         <location line="+16" />
@@ -23649,7 +23649,7 @@ Excluding: %3
     <message>
         <location line="+60" />
         <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>无法在临时目录“％1”上设置权限：％2</translation>
+        <translation>无法在临时目录“%1”上设置权限：%2</translation>
     </message>
     <message>
         <source>The process "%1" could not be started: %2</source>
@@ -24185,37 +24185,37 @@ in "%2".
         <location line="-139" />
         <location line="+409" />
         <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>路径“％1”存在，但不是一个可写的目录。</translation>
+        <translation>路径“%1”存在，但不是一个可写的目录。</translation>
     </message>
     <message>
         <location line="-356" />
         <source>copyFile is not implemented for "%1".</source>
-        <translation>CopyFile未针对“％1”实施。</translation>
+        <translation>CopyFile未针对“%1”实施。</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>不能从“％1”复制，而是目录。</translation>
+        <translation>不能从“%1”复制，而是目录。</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>不能将“％1”复制为“％2”：％3</translation>
+        <translation>不能将“%1”复制为“%2”：%3</translation>
     </message>
     <message>
         <location line="+103" />
         <source>fileContents is not implemented for "%1".</source>
-        <translation>未针对“％1”实施filecontents。</translation>
+        <translation>未针对“%1”实施filecontents。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>writeFileContents is not implemented for "%1".</source>
-        <translation>WriteFileContents未针对“％1”实施。</translation>
+        <translation>WriteFileContents未针对“%1”实施。</translation>
     </message>
     <message>
         <location line="+66" />
         <source>createTempFile is not implemented for "%1".</source>
-        <translation>createTempfile未针对“％1”实施。</translation>
+        <translation>createTempfile未针对“%1”实施。</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24225,7 +24225,7 @@ in "%2".
     <message>
         <location line="+180" />
         <source>Refusing to remove the standard directory "%1".</source>
-        <translation>拒绝删除标准目录“％1”。</translation>
+        <translation>拒绝删除标准目录“%1”。</translation>
     </message>
     <message>
         <location line="+12" />
@@ -24250,7 +24250,7 @@ in "%2".
     <message>
         <location line="+551" />
         <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>无法创建临时文件“％1”（尝试太多）。</translation>
+        <translation>无法创建临时文件“%1”（尝试太多）。</translation>
     </message>
     <message>
         <source>Failed to copy file "%1" to "%2".</source>
@@ -24290,29 +24290,29 @@ in "%2".
     <message>
         <location line="-333" />
         <source>File "%1" does not exist.</source>
-        <translation>文件“％1”不存在。</translation>
+        <translation>文件“%1”不存在。</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Could not open File "%1".</source>
-        <translation>无法打开文件“％1”。</translation>
+        <translation>无法打开文件“%1”。</translation>
     </message>
     <message>
         <location line="+24" />
         <source>Could not open file "%1" for writing.</source>
-        <translation>无法打开文件“％1”。</translation>
+        <translation>无法打开文件“%1”。</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
         <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
         <translation>
-            <numerusform>无法写入文件“％1”（只有％n个字节的％2％编写）。</numerusform>
+            <numerusform>无法写入文件“%1”（只有%n个字节的%2%编写）。</numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
         <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>无法在“％1”（％2）中创建临时文件。</translation>
+        <translation>无法在“%1”（%2）中创建临时文件。</translation>
     </message>
     <message>
         <location line="+138" />
@@ -24590,7 +24590,7 @@ To disable a variable, prefix the line with "#".</source>
         <location line="+15" />
         <location line="+8" />
         <source>Cannot create temporary file %1: %2</source>
-        <translation>无法创建临时文件％1：％2</translation>
+        <translation>无法创建临时文件%1：%2</translation>
     </message>
     <message>
         <location line="+40" />
@@ -24834,12 +24834,12 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+79" />
         <source>The program "%1" could not be found.</source>
-        <translation>找不到“％1”程序。</translation>
+        <translation>找不到“%1”程序。</translation>
     </message>
     <message>
         <location line="+908" />
         <source>Failed to create process interface for "%1".</source>
-        <translation>无法创建“％1”的过程接口。</translation>
+        <translation>无法创建“%1”的过程接口。</translation>
     </message>
     <message>
         <location line="+163" />
@@ -24884,7 +24884,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+4" />
         <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>命令“％1”在％2 ms之后取消。</translation>
+        <translation>命令“%1”在%2 ms之后取消。</translation>
     </message>
     <message>
         <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
@@ -25092,18 +25092,18 @@ Lines starting with "##" will be treated as comments.</source>
         <location line="+34" />
         <source>Failed to install shell script: %1
 %2</source>
-        <translation>无法安装shell脚本：％1
- ％2</translation>
+        <translation>无法安装shell脚本：%1
+ %2</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Timeout while trying to check for %1.</source>
-        <translation>试图检查％1的超时。</translation>
+        <translation>试图检查%1的超时。</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Command "%1" was not found.</source>
-        <translation>找不到命令“％1”。</translation>
+        <translation>找不到命令“%1”。</translation>
     </message>
     <message>
         <location line="+10" />
@@ -25118,7 +25118,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+11" />
         <source>Failed to install shell script: %1</source>
-        <translation>无法安装shell脚本：％1</translation>
+        <translation>无法安装shell脚本：%1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/externalterminalprocessimpl.cpp" line="+124" />
@@ -25129,7 +25129,7 @@ Lines starting with "##" will be treated as comments.</source>
         <location line="+28" />
         <location line="+45" />
         <source>Failed to start terminal process: "%1".</source>
-        <translation>无法启动终端过程：“％1”。</translation>
+        <translation>无法启动终端过程：“%1”。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />

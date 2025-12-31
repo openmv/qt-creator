@@ -6745,7 +6745,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+21" />
         <source>Re&amp;name %n files</source>
         <translation>
-            <numerusform>RE＆NAME％N文件</numerusform>
+            <numerusform>RE＆NAME%N文件</numerusform>
         </translation>
     </message>
     <message>
@@ -8077,7 +8077,7 @@ Check the json file for errors and fix them.</source>
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>错误阅读&lt;user_resources&gt;/openmvide/firmware/settings.json：％l1。 
+        <translation>错误阅读&lt;user_resources&gt;/openmvide/firmware/settings.json：%l1。 
 
 v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将其删除。</translation>
     </message>
@@ -9891,13 +9891,13 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
     <message>
         <location line="+14" />
         <source>Your %1 doesn't have an internal FAT file system.</source>
-        <translation>您的％1没有内部脂肪文件系统。</translation>
+        <translation>您的%1没有内部脂肪文件系统。</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
         <source>Your %1 doesn't have an ROM file system.</source>
-        <translation>您的％1没有ROM文件系统。</translation>
+        <translation>您的%1没有ROM文件系统。</translation>
     </message>
     <message>
         <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
@@ -10517,7 +10517,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <source>Please choose how to split the data to upload.
 OpenMV recommends leaving this at the default 80/20% split.</source>
         <translation>請選擇如何拆分數據以上傳。
-OpenMV建議將其保留為默認的80/20％分割。</translation>
+OpenMV建議將其保留為默認的80/20%分割。</translation>
     </message>
     <message>
         <location line="+9" />
@@ -11471,7 +11471,7 @@ OpenMV IDE只会按原样复制模型。</translation>
     <message>
         <location line="-22" />
         <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href =“％1”&gt; Stedgeai Core CLI选项&lt;/a&gt;</translation>
+        <translation>&lt;a href =“%1”&gt; Stedgeai Core CLI选项&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11481,12 +11481,12 @@ OpenMV IDE只会按原样复制模型。</translation>
     <message>
         <location line="+2" />
         <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href =“％1”&gt; stedgeai神经艺术CLI选项&lt;/a&gt;</translation>
+        <translation>&lt;a href =“%1”&gt; stedgeai神经艺术CLI选项&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+12" />
         <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href =“％1”&gt; stedgeai重新定位CLI选项&lt;/a&gt;</translation>
+        <translation>&lt;a href =“%1”&gt; stedgeai重新定位CLI选项&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+78" />
@@ -14492,7 +14492,7 @@ Excluding: %2
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
         <source>Finished %1 of %n steps</source>
         <translation>
-            <numerusform>完成%1％n步骤</numerusform>
+            <numerusform>完成%1%n步骤</numerusform>
         </translation>
     </message>
     <message>
@@ -14997,7 +14997,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+2" />
         <source>There are %n custom parsers active</source>
         <translation>
-            <numerusform>有％n定制解析器活动</numerusform>
+            <numerusform>有%n定制解析器活动</numerusform>
         </translation>
     </message>
     <message>
@@ -15182,7 +15182,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+44" />
         <source>%n entries</source>
         <translation>
-            <numerusform>％n条目</numerusform>
+            <numerusform>%n条目</numerusform>
         </translation>
     </message>
     <message>
@@ -15563,7 +15563,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+41" />
         <source>Found %n free ports.</source>
         <translation>
-            <numerusform>找到％n的自由端口。</numerusform>
+            <numerusform>找到%n的自由端口。</numerusform>
         </translation>
     </message>
     <message>
@@ -18839,13 +18839,13 @@ What should %1 do now?</source>
         <location line="+306" />
         <source>Run on %{Device:Name}</source>
         <extracomment>Shown in Run configuration if no executable is given, %1 is device name</extracomment>
-        <translation>运行％{设备：名称}</translation>
+        <translation>运行%{设备：名称}</translation>
     </message>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
         <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
-        <translation>%1（on％{设备：名称}）</translation>
+        <translation>%1（on%{设备：名称}）</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-156" />
@@ -19184,7 +19184,7 @@ What should %1 do now?</source>
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
         <translation>
-            <numerusform>未显示基本目录以外的％n文件。
+            <numerusform>未显示基本目录以外的%n文件。
  这些文件保留了。</numerusform>
         </translation>
     </message>
@@ -24310,7 +24310,7 @@ in "%2".
         <location line="+5" />
         <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
         <translation>
-            <numerusform>无法写入文件“%1”（只有％n个字节的%2％编写）。</numerusform>
+            <numerusform>无法写入文件“%1”（只有%n个字节的%2%编写）。</numerusform>
         </translation>
     </message>
     <message>

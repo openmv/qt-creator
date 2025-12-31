@@ -578,7 +578,7 @@
         <location line="+26" />
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
-        <translation>ブラウザウィンドウが開きます。 尋ねられたらコード％1を入力します。
+        <translation>ブラウザウィンドウが開きます。 尋ねられたらコード%1を入力します。
  コードはクリップボードにコピーされています。</translation>
     </message>
     <message>
@@ -589,7 +589,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+1" />
         <source>The login request failed: %1</source>
-        <translation>ログイン要求が失敗しました：％1</translation>
+        <translation>ログイン要求が失敗しました：%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/copilot/copilotclient.cpp" line="+336" />
@@ -620,17 +620,17 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+3" />
         <source>Apply (%1)</source>
-        <translation>適用（％1）</translation>
+        <translation>適用（%1）</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Apply Word (%1)</source>
-        <translation>単語を適用する（％1）</translation>
+        <translation>単語を適用する（%1）</translation>
     </message>
     <message>
         <location line="+13" />
         <source>%1 of %2</source>
-        <translation>％2の％1</translation>
+        <translation>%2の%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+65" />
@@ -710,25 +710,25 @@ The code has been copied to your clipboard.</source>
         <location line="+2" />
         <source>Select path to node.js executable. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to nodejs</extracomment>
-        <translation>node.js実行可能ファイルへのパスを選択します。 インストール手順については％1を参照してください。</translation>
+        <translation>node.js実行可能ファイルへのパスを選択します。 インストール手順については%1を参照してください。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Path to %1:</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation>％1へのパス：</translation>
+        <translation>%1へのパス：</translation>
     </message>
     <message>
         <location line="+3" />
         <source>%1 path</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation>％1パス</translation>
+        <translation>%1パス</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
-        <translation>Copilot Neovimプラグインで％2へのパスを選択します。 インストール手順については％1を参照してください。</translation>
+        <translation>Copilot Neovimプラグインで%2へのパスを選択します。 インストール手順については%1を参照してください。</translation>
     </message>
     <message>
         <location line="+5" />
@@ -853,7 +853,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+31" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
-        <translation>％1を有効にすることは、該当する％1の条件との契約とアビダンスの対象となります。 ％1のようなツールを使用する要件とパラメーターを知り、受け入れることはあなたの責任です。 これには、コードへの％1アクセスを許可する権利を確保すること、および％1の使用と生成された提案（著作権、精度など）の意味を理解することが含まれる場合がありますが、これらに限定されません。</translation>
+        <translation>%1を有効にすることは、該当する%1の条件との契約とアビダンスの対象となります。 %1のようなツールを使用する要件とパラメーターを知り、受け入れることはあなたの責任です。 これには、コードへの%1アクセスを許可する権利を確保すること、および%1の使用と生成された提案（著作権、精度など）の意味を理解することが含まれる場合がありますが、これらに限定されません。</translation>
     </message>
     <message>
         <location line="+16" />
@@ -861,9 +861,9 @@ The code has been copied to your clipboard.</source>
 
 Otherwise you need to specify the path to the %2 file from the Copilot neovim plugin.</source>
         <comment>Markdown text for the copilot instruction label</comment>
-        <translation>Copilotプラグインには、node.jsとCopilot Neovimプラグインが必要です。 ％1で説明されているようにNeoVimプラグインをインストールすると、プラグインは％3ファイルを自動的に見つけます。
+        <translation>Copilotプラグインには、node.jsとCopilot Neovimプラグインが必要です。 %1で説明されているようにNeoVimプラグインをインストールすると、プラグインは%3ファイルを自動的に見つけます。
 
- それ以外の場合、Copilot Neovimプラグインから％2ファイルへのパスを指定する必要があります。</translation>
+ それ以外の場合、Copilot Neovimプラグインから%2ファイルへのパスを指定する必要があります。</translation>
     </message>
     <message>
         <location line="+14" />
@@ -1379,7 +1379,7 @@ Continue?</source>
         <source>Provide cursors for resizing views.
 If the system cursors for resizing views are not displayed properly, you can use the cursors provided by %1.</source>
         <translation>ビューのサイズを変更するためのカーソルを提供します。
- サイズを変更するためのシステムカーソルが適切に表示されない場合は、％1で提供されるカーソルを使用できます。</translation>
+ サイズを変更するためのシステムカーソルが適切に表示されない場合は、%1で提供されるカーソルを使用できます。</translation>
     </message>
     <message>
         <location line="+93" />
@@ -1414,7 +1414,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+6" />
         <source>The following environment variables are set and can influence the UI scaling behavior of %1:</source>
-        <translation>次の環境変数が設定されており、％1のUIスケーリング動作に影響を与える可能性があります。</translation>
+        <translation>次の環境変数が設定されており、%1のUIスケーリング動作に影響を与える可能性があります。</translation>
     </message>
     <message>
         <location line="+7" />
@@ -1948,7 +1948,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+1" />
         <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>これにより、メニューバーが完全に非表示になります。 ％1。&lt;br&gt; &lt;br&gt;と入力すると、「％3」ロケーターフィルターから「％2」アクションをトリガーすることで再度表示できます（％4）。</translation>
+        <translation>これにより、メニューバーが完全に非表示になります。 %1。&lt;br&gt; &lt;br&gt;と入力すると、「%3」ロケーターフィルターから「%2」アクションをトリガーすることで再度表示できます（%4）。</translation>
     </message>
     <message>
         <location line="+21" />
@@ -2169,7 +2169,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+9" />
         <source>Invalid level: %1</source>
-        <translation>無効なレベル：％1</translation>
+        <translation>無効なレベル：%1</translation>
     </message>
     <message>
         <location line="+312" />
@@ -2214,7 +2214,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+10" />
         <source>Invalid regular expression: %1</source>
-        <translation>無効な正規表現：％1</translation>
+        <translation>無効な正規表現：%1</translation>
     </message>
     <message>
         <location line="+85" />
@@ -2234,17 +2234,17 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+65" />
         <source>Uncheck All %1</source>
-        <translation>すべての％1のチェックを外します</translation>
+        <translation>すべての%1のチェックを外します</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Check All %1</source>
-        <translation>すべての％1を確認してください</translation>
+        <translation>すべての%1を確認してください</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Reset All %1</source>
-        <translation>すべての％1をリセットします</translation>
+        <translation>すべての%1をリセットします</translation>
     </message>
     <message>
         <location line="+31" />
@@ -2264,7 +2264,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+51" />
         <source>Failed to open preset file "%1" for reading.</source>
-        <translation>読み取り用にプリセットファイル「％1」を開くことができませんでした。</translation>
+        <translation>読み取り用にプリセットファイル「%1」を開くことができませんでした。</translation>
     </message>
     <message>
         <location line="-172" />
@@ -3436,7 +3436,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+1" />
         <source>Cannot create file "%1".</source>
-        <translation>ファイル「％1」を作成できません。</translation>
+        <translation>ファイル「%1」を作成できません。</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3446,12 +3446,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+164" />
         <source>Create and Open File "%1"</source>
-        <translation>ファイル「％1」を作成して開きます</translation>
+        <translation>ファイル「%1」を作成して開きます</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Create Directory "%1"</source>
-        <translation>ディレクトリ「％1」を作成する</translation>
+        <translation>ディレクトリ「%1」を作成する</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3915,7 +3915,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+3" />
         <source>The path to the running %1 itself.</source>
-        <translation>実行％1自体へのパス。</translation>
+        <translation>実行%1自体へのパス。</translation>
     </message>
     <message>
         <location line="+3" />
@@ -3925,7 +3925,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+4" />
         <source>The directory where %1 puts custom user data.</source>
-        <translation>ディレクトリでは、％1がカスタムユーザーデータを配置します。</translation>
+        <translation>ディレクトリでは、%1がカスタムユーザーデータを配置します。</translation>
     </message>
     <message>
         <location line="+3" />
@@ -4947,12 +4947,12 @@ Double-click to edit item.</source>
     <message>
         <location line="+23" />
         <source>Running in "%1": %2 %3.</source>
-        <translation>「％1」で実行：％2％3。</translation>
+        <translation>「%1」で実行：%2%3。</translation>
     </message>
     <message>
         <location line="+17" />
         <source>A timeout occurred running "%1".</source>
-        <translation>「％1」の実行時にタイムアウトが発生しました。</translation>
+        <translation>「%1」の実行時にタイムアウトが発生しました。</translation>
     </message>
     <message>
         <source>Running in %1: %2 %3</source>
@@ -5143,7 +5143,7 @@ Double-click to edit item.</source>
     <message>
         <location line="+1" />
         <source>Remove the following files from the version control system (%1)?</source>
-        <translation>バージョン制御システム（％1）から次のファイルを削除しますか？</translation>
+        <translation>バージョン制御システム（%1）から次のファイルを削除しますか？</translation>
     </message>
     <message>
         <location line="+2" />
@@ -5594,7 +5594,7 @@ to version control (%2)
     <message>
         <location line="+21" />
         <source>Plugin Details of %1</source>
-        <translation>％1のプラグインの詳細</translation>
+        <translation>%1のプラグインの詳細</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/pluginerrorview.cpp" line="+47" />
@@ -5650,7 +5650,7 @@ to version control (%2)
         <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+103" />
         <source>%1 (deprecated)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>％1（非推奨）</translation>
+        <translation>%1（非推奨）</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5852,7 +5852,7 @@ Reason: %3</source>
     <message>
         <location line="+2" />
         <source>If you temporarily disable %1, the following plugins that depend on it are also disabled: %2.</source>
-        <translation>％1を一時的に無効にすると、それに依存する次のプラグインも無効になります：％2。</translation>
+        <translation>%1を一時的に無効にすると、それに依存する次のプラグインも無効になります：%2。</translation>
     </message>
     <message>
         <source>If you temporarily disable %1, the following plugins that depend on it are also disabled: %2.
@@ -5980,7 +5980,7 @@ Reason: %3</source>
     <message>
         <location line="+3" />
         <source>Expected IID "%1", but found "%2"</source>
-        <translation>予想されるiid "％1"ですが、「％2」が見つかりました</translation>
+        <translation>予想されるiid "%1"ですが、「%2」が見つかりました</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6394,7 +6394,7 @@ Would you like to overwrite them?</source>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+257" />
         <source>Error %1</source>
-        <translation>エラー％1</translation>
+        <translation>エラー%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
@@ -6435,7 +6435,7 @@ Would you like to overwrite them?</source>
         <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
-        <translation>％2の％1</translation>
+        <translation>%2の%1</translation>
     </message>
     <message>
         <location line="+223" />
@@ -6483,18 +6483,18 @@ Would you like to overwrite them?</source>
         <location line="+1342" />
         <source>Invalid parameter in "%1":
 %2</source>
-        <translation>「％1」の無効なパラメーター：
- ％2</translation>
+        <translation>「%1」の無効なパラメーター：
+ %2</translation>
     </message>
     <message>
         <location line="+219" />
         <source>Language Server "%1" Initialization Error</source>
-        <translation>言語サーバー "％1"初期化エラー</translation>
+        <translation>言語サーバー "%1"初期化エラー</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Initialization error: %1.</source>
-        <translation>初期化エラー：％1。</translation>
+        <translation>初期化エラー：%1。</translation>
     </message>
     <message>
         <location line="+7" />
@@ -6564,17 +6564,17 @@ Would you like to overwrite them?</source>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
         <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>メッセージのmimeタイプ「％1」を処理できません。</translation>
+        <translation>メッセージのmimeタイプ「%1」を処理できません。</translation>
     </message>
     <message>
         <location line="+70" />
         <source>Cannot send data to unstarted server %1</source>
-        <translation>非起動サーバー％1にデータを送信できません</translation>
+        <translation>非起動サーバー%1にデータを送信できません</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+178" />
         <source>Unexpectedly finished. Restarting in %1 seconds.</source>
-        <translation>予想外に終了しました。 ％1秒で再起動します。</translation>
+        <translation>予想外に終了しました。 %1秒で再起動します。</translation>
     </message>
     <message>
         <location line="+10" />
@@ -6657,12 +6657,12 @@ Would you like to overwrite them?</source>
         <source>List of file patterns.
 Example: *.cpp%1*.h</source>
         <translation>ファイルパターンのリスト。
- 例： *.cpp％1 *.h</translation>
+ 例： *.cpp%1 *.h</translation>
     </message>
     <message>
         <location line="+18" />
         <source>Failed to parse JSON at %1: %2</source>
-        <translation>％1：％2でJSONを解析できませんでした</translation>
+        <translation>%1：%2でJSONを解析できませんでした</translation>
     </message>
     <message>
         <location line="+8" />
@@ -6745,7 +6745,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+21" />
         <source>Re&amp;name %n files</source>
         <translation>
-            <numerusform>re＆name％nファイル</numerusform>
+            <numerusform>re＆name%nファイル</numerusform>
         </translation>
     </message>
     <message>
@@ -6753,23 +6753,23 @@ See the documentation of the specific language server for valid settings.</sourc
         <source>Files:
 %1</source>
         <translation>ファイル：
- ％1</translation>
+ %1</translation>
     </message>
     <message>
         <location line="+331" />
         <location line="+227" />
         <source>Find References with %1 for:</source>
-        <translation>：の％1の参照を見つける：</translation>
+        <translation>：の%1の参照を見つける：</translation>
     </message>
     <message>
         <location line="-144" />
         <source>Renaming is not supported with %1</source>
-        <translation>修復は％1ではサポートされていません</translation>
+        <translation>修復は%1ではサポートされていません</translation>
     </message>
     <message>
         <location line="+168" />
         <source>%1 is not reachable anymore.</source>
-        <translation>％1はもう到達できなくなりました。</translation>
+        <translation>%1はもう到達できなくなりました。</translation>
     </message>
     <message>
         <location line="+33" />
@@ -6784,7 +6784,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+121" />
         <source>Restart %1</source>
-        <translation>再起動％1</translation>
+        <translation>再起動%1</translation>
     </message>
     <message>
         <location line="+5" />
@@ -6804,32 +6804,32 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+6" />
         <source>Running "%1" to install %2.</source>
-        <translation>「％1」を実行して％2をインストールします。</translation>
+        <translation>「%1」を実行して%2をインストールします。</translation>
     </message>
     <message>
         <location line="+17" />
         <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>「％1」のインストールは、タイムアウトによってキャンセルされました。</translation>
+        <translation>「%1」のインストールは、タイムアウトによってキャンセルされました。</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The installation of "%1" was canceled by the user.</source>
-        <translation>「％1」のインストールは、ユーザーによってキャンセルされました。</translation>
+        <translation>「%1」のインストールは、ユーザーによってキャンセルされました。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Installing "%1" failed with exit code %2.</source>
-        <translation>「％1」のインストールは、出口コード％2で失敗しました。</translation>
+        <translation>「%1」のインストールは、出口コード%2で失敗しました。</translation>
     </message>
     <message>
         <location line="+56" />
         <source>Install %1 language server via npm.</source>
-        <translation>npm経由で％1言語サーバーをインストールします。</translation>
+        <translation>npm経由で%1言語サーバーをインストールします。</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Setup %1 language server (%2).</source>
-        <translation>セットアップ％1言語サーバー（％2）。</translation>
+        <translation>セットアップ%1言語サーバー（%2）。</translation>
     </message>
     <message>
         <location line="+4" />
@@ -6844,7 +6844,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+10" />
         <source>%1 Language Server</source>
-        <translation>％1言語サーバー</translation>
+        <translation>%1言語サーバー</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+48" />
@@ -6927,47 +6927,47 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
         <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>「％1」でコンテンツをデコードできません。 「％2」に戻ります。</translation>
+        <translation>「%1」でコンテンツをデコードできません。 「%2」に戻ります。</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>「％1」で整数を予想しましたが、「％2」を取得しました。</translation>
+        <translation>「%1」で整数を予想しましたが、「%2」を取得しました。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
         <source>Could not parse JSON message: "%1".</source>
-        <translation>JSONメッセージ：「％1」を解析できませんでした。</translation>
+        <translation>JSONメッセージ：「%1」を解析できませんでした。</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Expected a JSON object, but got a JSON "%1" value.</source>
-        <translation>JSONオブジェクトを期待していましたが、JSON "％1"値を取得しました。</translation>
+        <translation>JSONオブジェクトを期待していましたが、JSON "%1"値を取得しました。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
         <source>No parameters in "%1".</source>
-        <translation>「％1」にパラメーターはありません。</translation>
+        <translation>「%1」にパラメーターはありません。</translation>
     </message>
     <message>
         <location line="+213" />
         <source>No ID set in "%1".</source>
-        <translation>「％1」にIDが設定されていません。</translation>
+        <translation>「%1」にIDが設定されていません。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
         <source>Create %1</source>
-        <translation>％1を作成します</translation>
+        <translation>%1を作成します</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Rename %1 to %2</source>
-        <translation>％1を％2に変更します</translation>
+        <translation>%1を%2に変更します</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Delete %1</source>
-        <translation>削除％1</translation>
+        <translation>削除%1</translation>
     </message>
 </context>
 <context>
@@ -7247,7 +7247,7 @@ OpenMV IDEのアプリケーションデータを表示/編集しているプロ
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt; &lt;b&gt;約％L4％L1 &lt;/b&gt; &lt;/p&gt; &lt;p&gt; by：Ibrahim Abdelkader＆Kwabena W. Agyeman &lt;/p&gt; &lt;p&gt; &lt;b&gt; Gnu General Public License &lt;/b&gt; &lt; /p&gt; &lt;p&gt;著作権（c）％L2％L3 &lt;/p&gt; &lt;p&gt;このプログラムは、それが有用であることを期待して配布されますが、保証はありません。 商品性や特定の目的に対するフィットネスの暗黙の保証さえありません。 &lt;a href = "https://github.com/openmv/qt-creator/raw/master/license.gpl3-exect"&gt; Gnu General Public License &lt;/a&gt;を参照してください。 &gt; &lt;b&gt;質問またはコメント？&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href = "mailto：openmv@openmv.io"&gt; openmv@openmv.io &lt;/a&gt;。&lt;/p&gt;までお問い合わせください</translation>
+        <translation type="vanished">&lt;p&gt; &lt;b&gt;約%L4%L1 &lt;/b&gt; &lt;/p&gt; &lt;p&gt; by：Ibrahim Abdelkader＆Kwabena W. Agyeman &lt;/p&gt; &lt;p&gt; &lt;b&gt; Gnu General Public License &lt;/b&gt; &lt; /p&gt; &lt;p&gt;著作権（c）%L2%L3 &lt;/p&gt; &lt;p&gt;このプログラムは、それが有用であることを期待して配布されますが、保証はありません。 商品性や特定の目的に対するフィットネスの暗黙の保証さえありません。 &lt;a href = "https://github.com/openmv/qt-creator/raw/master/license.gpl3-exect"&gt; Gnu General Public License &lt;/a&gt;を参照してください。 &gt; &lt;b&gt;質問またはコメント？&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href = "mailto：openmv@openmv.io"&gt; openmv@openmv.io &lt;/a&gt;。&lt;/p&gt;までお問い合わせください</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7261,7 +7261,7 @@ OpenMV IDEのアプリケーションデータを表示/編集しているプロ
     </message>
     <message>
         <source>Invalid argument (%1) for -override_per_command_wait</source>
-        <translation type="vanished">-override_per_command_waitの無効な引数（％1）</translation>
+        <translation type="vanished">-override_per_command_waitの無効な引数（%1）</translation>
     </message>
     <message>
         <source>Missing argument for -override_per_command_wait</source>
@@ -7270,7 +7270,7 @@ OpenMV IDEのアプリケーションデータを表示/編集しているプロ
     <message>
         <location line="-460" />
         <source>Invalid argument (%1) for -auto_update</source>
-        <translation>-auto_updateの無効な引数（％1）</translation>
+        <translation>-auto_updateの無効な引数（%1）</translation>
     </message>
     <message>
         <location line="+6" />
@@ -7282,13 +7282,13 @@ OpenMV IDEのアプリケーションデータを表示/編集しているプロ
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
-        <translation>解析のエラー&lt;user_resources&gt;/openmvide/firmware/settings.json-％l1！
+        <translation>解析のエラー&lt;user_resources&gt;/openmvide/firmware/settings.json-%l1！
 
  JSONファイルのエラーを確認し、修正します。</translation>
     </message>
     <message>
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.\n\nOpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation type="vanished">&lt;user_resources&gt;/openmvide/firmware/settings.json：％l1。\ n \ nopenmv ideバージョンは、v4.3.0がこのファイルを持たず、リソースのインストール時に削除していました。</translation>
+        <translation type="vanished">&lt;user_resources&gt;/openmvide/firmware/settings.json：%l1。\ n \ nopenmv ideバージョンは、v4.3.0がこのファイルを持たず、リソースのインストール時に削除していました。</translation>
     </message>
     <message>
         <location line="+193" />
@@ -7907,7 +7907,7 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="-41" />
         <source>No settings for the selected board type %L1!</source>
-        <translation>選択したボードタイプ％L1の設定はありません！</translation>
+        <translation>選択したボードタイプ%L1の設定はありません！</translation>
     </message>
     <message>
         <location line="+9" />
@@ -8077,7 +8077,7 @@ Check the json file for errors and fix them.</source>
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>&lt;user_resources&gt;/openmvide/firmware/settings.json：％l1。 
+        <translation>&lt;user_resources&gt;/openmvide/firmware/settings.json：%l1。 
 
 V4.3.0の前にOpenMV IDEバージョンにはこのファイルがなく、リソースのインストール時に削除しました。</translation>
     </message>
@@ -8177,13 +8177,13 @@ V4.3.0の前にOpenMV IDEバージョンにはこのファイルがなく、リ�
         <location line="+331" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
-        <translation>res（w：％1、h：％2） -  roi（x：％3、y：％4、w：％5、h：％6） - ピクセル（％7） - フォーカス（％8）</translation>
+        <translation>res（w：%1、h：%2） -  roi（x：%3、y：%4、w：%5、h：%6） - ピクセル（%7） - フォーカス（%8）</translation>
     </message>
     <message>
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+9" />
         <source>Res (w:%1, h:%2) - Focus (%3)</source>
-        <translation>res（w：％1、h：％2） - フォーカス（％3）</translation>
+        <translation>res（w：%1、h：%2） - フォーカス（%3）</translation>
     </message>
     <message>
         <location line="+79" />
@@ -9885,13 +9885,13 @@ OpenMV Cam の SBL ブートローダーが列挙されたら、[OK] ボタン�
     <message>
         <location line="+14" />
         <source>Your %1 doesn't have an internal FAT file system.</source>
-        <translation>％1には内部脂肪ファイルシステムがありません。</translation>
+        <translation>%1には内部脂肪ファイルシステムがありません。</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
         <source>Your %1 doesn't have an ROM file system.</source>
-        <translation>％1にはROMファイルシステムがありません。</translation>
+        <translation>%1にはROMファイルシステムがありません。</translation>
     </message>
     <message>
         <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
@@ -10511,7 +10511,7 @@ OpenMV IDEをOpenMV Camにコピーしますか？</translation>
         <source>Please choose how to split the data to upload.
 OpenMV recommends leaving this at the default 80/20% split.</source>
         <translation>アップロードするデータを分割する方法を選択してください。
-OpenMVは、これをデフォルトの80/20％分割のままにしておくことをお勧めします。</translation>
+OpenMVは、これをデフォルトの80/20%分割のままにしておくことをお勧めします。</translation>
     </message>
     <message>
         <location line="+9" />
@@ -11465,7 +11465,7 @@ OpenMV IDEは、そのままモデルをコピーするだけです。</translat
     <message>
         <location line="-22" />
         <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "％1"&gt; stedgeai core cli options &lt;/a&gt;</translation>
+        <translation>&lt;a href = "%1"&gt; stedgeai core cli options &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11475,12 +11475,12 @@ OpenMV IDEは、そのままモデルをコピーするだけです。</translat
     <message>
         <location line="+2" />
         <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "％1"&gt; stedgeai Neural-art CLIオプション&lt;/a&gt;</translation>
+        <translation>&lt;a href = "%1"&gt; stedgeai Neural-art CLIオプション&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+12" />
         <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "％1"&gt; stedgeai再配置CLIオプション&lt;/a&gt;</translation>
+        <translation>&lt;a href = "%1"&gt; stedgeai再配置CLIオプション&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+78" />
@@ -13943,14 +13943,14 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+3" />
         <source>Delete session %1?</source>
-        <translation>セッション％1を削除しますか？</translation>
+        <translation>セッション%1を削除しますか？</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Delete these sessions?
     %1</source>
         <translation>これらのセッションを削除しますか？
- ％1</translation>
+ %1</translation>
     </message>
     <message>
         <location line="+308" />
@@ -13960,7 +13960,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+1" />
         <source>Could not restore session %1</source>
-        <translation>セッション％1を復元できませんでした</translation>
+        <translation>セッション%1を復元できませんでした</translation>
     </message>
     <message>
         <location line="+44" />
@@ -13976,12 +13976,12 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="-41" />
         <source>Could not save session %1</source>
-        <translation>セッション％1を節約できませんでした</translation>
+        <translation>セッション%1を節約できませんでした</translation>
     </message>
     <message>
         <location line="+42" />
         <source>Could not save session to file "%1"</source>
-        <translation>セッションを保存して「％1」をファイルすることができませんでした</translation>
+        <translation>セッションを保存して「%1」をファイルすることができませんでした</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14092,37 +14092,37 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+72" />
         <source>Could not create directory "%1"</source>
-        <translation>ディレクトリ「％1」を作成できませんでした</translation>
+        <translation>ディレクトリ「%1」を作成できませんでした</translation>
     </message>
     <message>
         <location line="+5" />
         <source>The program "%1" does not exist or is not executable.</source>
-        <translation>プログラム「％1」は存在しないか、実行できません。</translation>
+        <translation>プログラム「%1」は存在しないか、実行できません。</translation>
     </message>
     <message>
         <location line="+34" />
         <source>Starting: "%1" %2</source>
-        <translation>開始： "％1"％2</translation>
+        <translation>開始： "%1"%2</translation>
     </message>
     <message>
         <location line="+11" />
         <source>The process "%1" exited normally.</source>
-        <translation>プロセス「％1」は正常に終了しました。</translation>
+        <translation>プロセス「%1」は正常に終了しました。</translation>
     </message>
     <message>
         <location line="+3" />
         <source>The process "%1" exited with code %2.</source>
-        <translation>プロセス「％1」はコード％2で終了しました。</translation>
+        <translation>プロセス「%1」はコード%2で終了しました。</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Could not start process "%1" %2.</source>
-        <translation>プロセスを開始できませんでした "％1"％2。</translation>
+        <translation>プロセスを開始できませんでした "%1"%2。</translation>
     </message>
     <message>
         <location line="+7" />
         <source>The process "%1" crashed.</source>
-        <translation>プロセス「％1」がクラッシュしました。</translation>
+        <translation>プロセス「%1」がクラッシュしました。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14182,9 +14182,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <source>Filter: %1
 Excluding: %2
 %3</source>
-        <translation>フィルター：％1
- 除外：％2
- ％3</translation>
+        <translation>フィルター：%1
+ 除外：%2
+ %3</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+73" />
@@ -14194,7 +14194,7 @@ Excluding: %2
     <message>
         <location line="+1" />
         <source>Attach debugger to %1</source>
-        <translation>デバッガーを％1に添付します</translation>
+        <translation>デバッガーを%1に添付します</translation>
     </message>
     <message>
         <location line="+70" />
@@ -14251,7 +14251,7 @@ Excluding: %2
         <location line="+232" />
         <source>application-output-%1.txt</source>
         <extracomment>file name suggested for saving application output, %1 = run configuration display name</extracomment>
-        <translation>Application-Output-％1.txt</translation>
+        <translation>Application-Output-%1.txt</translation>
     </message>
     <message>
         <location line="+29" />
@@ -14261,7 +14261,7 @@ Excluding: %2
     <message>
         <location line="+280" />
         <source>PID %1</source>
-        <translation>PID％1</translation>
+        <translation>PID%1</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14304,7 +14304,7 @@ Excluding: %2
         <location line="+14" />
         <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+13" />
         <source>Limit output to %1 characters</source>
-        <translation>出力を％1文字に制限します</translation>
+        <translation>出力を%1文字に制限します</translation>
     </message>
     <message>
         <location line="+7" />
@@ -14341,7 +14341,7 @@ Excluding: %2
     <message>
         <location line="+105" />
         <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>ビルドディレクトリには、潜在的に問題のある文字「％1」が含まれています。</translation>
+        <translation>ビルドディレクトリには、潜在的に問題のある文字「%1」が含まれています。</translation>
     </message>
     <message>
         <location line="+5" />
@@ -14465,7 +14465,7 @@ Excluding: %2
     <message>
         <location line="+50" />
         <source>No build device is set for the kit "%1".</source>
-        <translation>キット「％1」にはビルドデバイスが設定されていません。</translation>
+        <translation>キット「%1」にはビルドデバイスが設定されていません。</translation>
     </message>
     <message>
         <location line="+8" />
@@ -14475,12 +14475,12 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>ビルドデバイス「％1」は、プロジェクトディレクトリに到達できません。</translation>
+        <translation>ビルドデバイス「%1」は、プロジェクトディレクトリに到達できません。</translation>
     </message>
     <message>
         <location line="+11" />
         <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>ビルドデバイス「％1」はビルドディレクトリに到達できません。</translation>
+        <translation>ビルドデバイス「%1」はビルドディレクトリに到達できません。</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
@@ -14502,12 +14502,12 @@ Excluding: %2
     <message>
         <location line="+26" />
         <source>The project %1 is not configured, skipping it.</source>
-        <translation>プロジェクト％1は構成されておらず、スキップします。</translation>
+        <translation>プロジェクト%1は構成されておらず、スキップします。</translation>
     </message>
     <message>
         <location line="+11" />
         <source>The build device failed to prepare for the build of %1 (%2).</source>
-        <translation>ビルドデバイスは、％1（％2）のビルドの準備に失敗しました。</translation>
+        <translation>ビルドデバイスは、%1（%2）のビルドの準備に失敗しました。</translation>
     </message>
     <message>
         <location line="+138" />
@@ -14605,29 +14605,29 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+83" />
         <source>Running steps for project %1...</source>
-        <translation>プロジェクト％1のランニングステップ...</translation>
+        <translation>プロジェクト%1のランニングステップ...</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Skipping disabled step %1.</source>
-        <translation>障害者のスキップステップ％1。</translation>
+        <translation>障害者のスキップステップ%1。</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+104" />
         <source>Error while building/deploying project %1 (kit: %2)</source>
-        <translation>プロジェクト％1（キット：％2）の構築/展開中のエラー</translation>
+        <translation>プロジェクト%1（キット：%2）の構築/展開中のエラー</translation>
     </message>
     <message>
         <location line="-100" />
         <source>The kit %1 has configuration issues which might be the root cause for this problem.</source>
-        <translation>Kit％1には、この問題の根本原因となる可能性のある構成の問題があります。</translation>
+        <translation>Kit%1には、この問題の根本原因となる可能性のある構成の問題があります。</translation>
     </message>
     <message>
         <location line="+4" />
         <location line="+98" />
         <source>When executing step "%1"</source>
-        <translation>ステップを実行するとき "％1"</translation>
+        <translation>ステップを実行するとき "%1"</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14658,7 +14658,7 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+2" />
         <source>Template used to construct the default build directory.&lt;br&gt;&lt;br&gt;The default value can be set using the environment variable &lt;tt&gt;%1&lt;/tt&gt;.</source>
-        <translation>デフォルトのビルドディレクトリを構築するために使用されるテンプレート&lt;br&gt; &lt;br&gt;環境変数&lt;tt&gt;％1 &lt;/tt&gt;を使用してデフォルト値を設定できます。</translation>
+        <translation>デフォルトのビルドディレクトリを構築するために使用されるテンプレート&lt;br&gt; &lt;br&gt;環境変数&lt;tt&gt;%1 &lt;/tt&gt;を使用してデフォルト値を設定できます。</translation>
     </message>
     <message>
         <location line="+10" />
@@ -14738,7 +14738,7 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="-25" />
         <source>New name for build configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>ビルド構成の新しい名前&lt;b&gt;％1 &lt;/b&gt;：</translation>
+        <translation>ビルド構成の新しい名前&lt;b&gt;%1 &lt;/b&gt;：</translation>
     </message>
     <message>
         <location line="+24" />
@@ -14764,12 +14764,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>Remove Build Configuration %1?</source>
-        <translation>ビルド構成％1を削除しますか？</translation>
+        <translation>ビルド構成%1を削除しますか？</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The build configuration &lt;b&gt;%1&lt;/b&gt; is currently being built.</source>
-        <translation>ビルド構成&lt;b&gt;％1 &lt;/b&gt;は現在構築されています。</translation>
+        <translation>ビルド構成&lt;b&gt;%1 &lt;/b&gt;は現在構築されています。</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14784,7 +14784,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+1" />
         <source>Do you really want to delete build configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>ビルド構成&lt;b&gt;％1 &lt;/b&gt;を本当に削除したいですか？</translation>
+        <translation>ビルド構成&lt;b&gt;%1 &lt;/b&gt;を本当に削除したいですか？</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="-58" />
@@ -14805,17 +14805,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+97" />
         <source>%1 Steps</source>
         <extracomment>%1 is the name returned by BuildStepList::displayName</extracomment>
-        <translation>％1ステップ</translation>
+        <translation>%1ステップ</translation>
     </message>
     <message>
         <location line="+19" />
         <source>No %1 Steps</source>
-        <translation>％1ステップなし</translation>
+        <translation>%1ステップなし</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Add %1 Step</source>
-        <translation>％1ステップを追加します</translation>
+        <translation>%1ステップを追加します</translation>
     </message>
     <message>
         <location line="+94" />
@@ -14845,7 +14845,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>The project file "%1" does not exist.</source>
-        <translation>プロジェクトファイル「％1」は存在しません。</translation>
+        <translation>プロジェクトファイル「%1」は存在しません。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14948,7 +14948,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
         <source>Project "%1"</source>
-        <translation>プロジェクト「％1」</translation>
+        <translation>プロジェクト「%1」</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14958,7 +14958,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+30" />
         <source>Project "%1":</source>
-        <translation>プロジェクト「％1」：</translation>
+        <translation>プロジェクト「%1」：</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -14970,7 +14970,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="-16" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1718" />
         <source>Run %1</source>
-        <translation>実行％1を実行します</translation>
+        <translation>実行%1を実行します</translation>
     </message>
     <message>
         <location line="+7" />
@@ -14991,7 +14991,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+2" />
         <source>There are %n custom parsers active</source>
         <translation>
-            <numerusform>％nカスタムパーサーがアクティブです</numerusform>
+            <numerusform>%nカスタムパーサーがアクティブです</numerusform>
         </translation>
     </message>
     <message>
@@ -15176,7 +15176,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+44" />
         <source>%n entries</source>
         <translation>
-            <numerusform>％nエントリ</numerusform>
+            <numerusform>%nエントリ</numerusform>
         </translation>
     </message>
     <message>
@@ -15330,12 +15330,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopprocesssignaloperation.cpp" line="+69" />
         <source>Cannot kill process with pid %1: %2</source>
-        <translation>PID％1：％2でプロセスを殺すことはできません</translation>
+        <translation>PID%1：%2でプロセスを殺すことはできません</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Cannot interrupt process with pid %1: %2</source>
-        <translation>PID％1：％2でプロセスを中断することはできません</translation>
+        <translation>PID%1：%2でプロセスを中断することはできません</translation>
     </message>
     <message>
         <location line="+15" />
@@ -15351,7 +15351,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-46" />
         <source>Cannot open process: %1</source>
-        <translation>プロセスを開くことができません：％1</translation>
+        <translation>プロセスを開くことができません：%1</translation>
     </message>
     <message>
         <location line="+11" />
@@ -15361,12 +15361,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+10" />
         <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
-        <translation>％1は存在しません。 自分で％2を構築した場合は、https：//code.qt.io/cgit/qt-creator/binary-artifacts.git/をご覧ください。</translation>
+        <translation>%1は存在しません。 自分で%2を構築した場合は、https：//code.qt.io/cgit/qt-creator/binary-artifacts.git/をご覧ください。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Cannot start %1. Check src\tools\win64interrupt\win64interrupt.c for more information.</source>
-        <translation>％1を起動できません。 詳細については、src \ tools \ win64interrupt \ win64interrupt.cを確認してください。</translation>
+        <translation>%1を起動できません。 詳細については、src \ tools \ win64interrupt \ win64interrupt.cを確認してください。</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15408,23 +15408,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
         <source>No device for path "%1"</source>
-        <translation>パス用のデバイス "％1"</translation>
+        <translation>パス用のデバイス "%1"</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
         <source>No device found for path "%1"</source>
-        <translation>パス "％1"のデバイスは見つかりません</translation>
+        <translation>パス "%1"のデバイスは見つかりません</translation>
     </message>
     <message>
         <location line="-9" />
         <source>No file access for device "%1"</source>
-        <translation>デバイス「％1」のファイルアクセスなし</translation>
+        <translation>デバイス「%1」のファイルアクセスなし</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
         <source>%1 (default for %2)</source>
-        <translation>％1（％2のデフォルト）</translation>
+        <translation>%1（%2のデフォルト）</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceprocessesdialog.cpp" line="+103" />
@@ -15495,7 +15495,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+12" />
         <source>Add %1</source>
         <extracomment>Add &lt;Device Type Name&gt;</extracomment>
-        <translation>％1を追加します</translation>
+        <translation>%1を追加します</translation>
     </message>
     <message>
         <location line="+34" />
@@ -15515,7 +15515,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+87" />
         <source>Yes (id is "%1")</source>
-        <translation>はい（IDは「％1」です）</translation>
+        <translation>はい（IDは「%1」です）</translation>
     </message>
     <message>
         <location line="+0" />
@@ -15551,13 +15551,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceusedportsgatherer.cpp" line="+81" />
         <source>Remote error output was: %1</source>
-        <translation>リモートエラー出力は次のとおりでした：％1</translation>
+        <translation>リモートエラー出力は次のとおりでした：%1</translation>
     </message>
     <message numerus="yes">
         <location line="+41" />
         <source>Found %n free ports.</source>
         <translation>
-            <numerusform>％nフリーポートが見つかりました。</numerusform>
+            <numerusform>%nフリーポートが見つかりました。</numerusform>
         </translation>
     </message>
     <message>
@@ -15644,12 +15644,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+30" />
         <source>No device for given path: "%1".</source>
-        <translation>指定されたパスのデバイスはありません：「％1」。</translation>
+        <translation>指定されたパスのデバイスはありません：「%1」。</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Device for path "%1" does not support killing processes.</source>
-        <translation>パス「％1」のデバイスは、殺害プロセスをサポートしていません。</translation>
+        <translation>パス「%1」のデバイスは、殺害プロセスをサポートしていません。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15711,7 +15711,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+78" />
         <source>Project %1</source>
         <comment>Settings, %1 is a language (C++ or QML)</comment>
-        <translation>プロジェクト％1</translation>
+        <translation>プロジェクト%1</translation>
     </message>
     <message>
         <location line="+9" />
@@ -15821,33 +15821,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+123" />
         <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>unset &lt;a href = "％1"&gt; &lt;b&gt;％1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <translation>unset &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>&lt;a href = "％1"&gt; &lt;b&gt;％1 &lt;/b&gt; &lt;/a&gt;から&lt;b&gt;％2 &lt;/b&gt;を設定します</translation>
+        <translation>&lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;から&lt;b&gt;%2 &lt;/b&gt;を設定します</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>&lt;b&gt;％2 &lt;/b&gt;から&lt;a href = "％1"&gt; &lt;b&gt;％1 &lt;/b&gt; &lt;/a&gt;を追加します</translation>
+        <translation>&lt;b&gt;%2 &lt;/b&gt;から&lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;を追加します</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>prepend &lt;b&gt;％2 &lt;/b&gt;から&lt;a href = "％1"&gt; &lt;b&gt;％1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <translation>prepend &lt;b&gt;%2 &lt;/b&gt;から&lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>&lt;a href = "％1"&gt; &lt;b&gt;％1 &lt;/b&gt; &lt;/a&gt;から&lt;b&gt;％2 &lt;/b&gt; [無効]</translation>
+        <translation>&lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;から&lt;b&gt;%2 &lt;/b&gt; [無効]</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
         <extracomment>%1 is "System Environment" or some such.</extracomment>
-        <translation>&lt;b&gt;％1 &lt;/b&gt;を使用します</translation>
+        <translation>&lt;b&gt;%1 &lt;/b&gt;を使用します</translation>
     </message>
     <message>
         <location line="+2" />
@@ -15858,7 +15858,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
         <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
-        <translation>&lt;b&gt;％1 &lt;/b&gt;を使用します</translation>
+        <translation>&lt;b&gt;%1 &lt;/b&gt;を使用します</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+28" />
@@ -15889,7 +15889,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-877" />
         <source>%1 (%2, %3 %4 at %5)</source>
-        <translation>％1（％2、％3％4％5）</translation>
+        <translation>%1（%2、%3%4%5）</translation>
     </message>
     <message>
         <location line="+1259" />
@@ -15956,57 +15956,57 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+5" />
         <source>Field "%1" has no type.</source>
-        <translation>フィールド「％1」にはタイプがありません。</translation>
+        <translation>フィールド「%1」にはタイプがありません。</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Field "%1" has unsupported type "%2".</source>
-        <translation>フィールド「％1」には、サポートされていないタイプ「％2」があります。</translation>
+        <translation>フィールド「%1」には、サポートされていないタイプ「%2」があります。</translation>
     </message>
     <message>
         <location line="+18" />
         <source>When parsing Field "%1": %2</source>
-        <translation>フィールドを解析するとき "％1"：％2</translation>
+        <translation>フィールドを解析するとき "%1"：%2</translation>
     </message>
     <message>
         <location line="+208" />
         <source>Label ("%1") data is not an object.</source>
-        <translation>ラベル（ "％1"）データはオブジェクトではありません。</translation>
+        <translation>ラベル（ "%1"）データはオブジェクトではありません。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Label ("%1") has no trText.</source>
-        <translation>ラベル（ "％1"）にはtrtextがありません。</translation>
+        <translation>ラベル（ "%1"）にはtrtextがありません。</translation>
     </message>
     <message>
         <location line="+28" />
         <source>Spacer ("%1") data is not an object.</source>
-        <translation>Spacer（ "％1"）データはオブジェクトではありません。</translation>
+        <translation>Spacer（ "%1"）データはオブジェクトではありません。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>Spacer（ "％1"）プロパティ "Factor"は整数値ではありません。</translation>
+        <translation>Spacer（ "%1"）プロパティ "Factor"は整数値ではありません。</translation>
     </message>
     <message>
         <location line="+35" />
         <source>LineEdit ("%1") data is not an object.</source>
-        <translation>lineedit（ "％1"）データはオブジェクトではありません。</translation>
+        <translation>lineedit（ "%1"）データはオブジェクトではありません。</translation>
     </message>
     <message>
         <location line="+16" />
         <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>lineedit（ "％1"）は、「バリデーター」に無効な正規表現「％2」を持っています。</translation>
+        <translation>lineedit（ "%1"）は、「バリデーター」に無効な正規表現「%2」を持っています。</translation>
     </message>
     <message>
         <location line="+15" />
         <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>lineedit（ "％1"）は、「完了」に無効な値「％2」を持っています。</translation>
+        <translation>lineedit（ "%1"）は、「完了」に無効な値「%2」を持っています。</translation>
     </message>
     <message>
         <location line="+166" />
         <source>TextEdit ("%1") data is not an object.</source>
-        <translation>TextEdit（ "％1"）データはオブジェクトではありません。</translation>
+        <translation>TextEdit（ "%1"）データはオブジェクトではありません。</translation>
     </message>
     <message>
         <location line="+83" />
@@ -16016,17 +16016,17 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+26" />
         <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>Kind "％1"は、サポートされている「既存のdirectory」、「ディレクトリ」、「ファイル」、「savefile」、 "expstincecommand"、 "command"、 "any"の1つではありません。</translation>
+        <translation>Kind "%1"は、サポートされている「既存のdirectory」、「ディレクトリ」、「ファイル」、「savefile」、 "expstincecommand"、 "command"、 "any"の1つではありません。</translation>
     </message>
     <message>
         <location line="+80" />
         <source>CheckBox ("%1") data is not an object.</source>
-        <translation>チェックボックス（ "％1"）データはオブジェクトではありません。</translation>
+        <translation>チェックボックス（ "%1"）データはオブジェクトではありません。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>チェックボックス（ "％1"）チェックされた状態と未チェック状態の値は同一です。</translation>
+        <translation>チェックボックス（ "%1"）チェックされた状態と未チェック状態の値は同一です。</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16041,27 +16041,27 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+25" />
         <source>%1 ("%2") data is not an object.</source>
-        <translation>％1（ "％2"）データはオブジェクトではありません。</translation>
+        <translation>%1（ "%2"）データはオブジェクトではありません。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>％1（ "％2"） "インデックス"は整数値ではありません。</translation>
+        <translation>%1（ "%2"） "インデックス"は整数値ではありません。</translation>
     </message>
     <message>
         <location line="+6" />
         <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>％1（ "％2"） "disabledindex"は整数値ではありません。</translation>
+        <translation>%1（ "%2"） "disabledindex"は整数値ではありません。</translation>
     </message>
     <message>
         <location line="+7" />
         <source>%1 ("%2") "items" missing.</source>
-        <translation>％1（ "％2"） "アイテム"がありません。</translation>
+        <translation>%1（ "%2"） "アイテム"がありません。</translation>
     </message>
     <message>
         <location line="+4" />
         <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>％1（ "％2"） "アイテム"はJSONリストではありません。</translation>
+        <translation>%1（ "%2"） "アイテム"はJSONリストではありません。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16086,7 +16086,7 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+13" />
         <source>No "%1" key found in feature list object.</source>
-        <translation>機能リストオブジェクトに見つかった「％1」キーはありません。</translation>
+        <translation>機能リストオブジェクトに見つかった「%1」キーはありません。</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16101,7 +16101,7 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+1" />
         <source>Error message from Version Control System: "%1".</source>
-        <translation>バージョン制御システムからのエラーメッセージ： "％1"。</translation>
+        <translation>バージョン制御システムからのエラーメッセージ： "%1"。</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16114,8 +16114,8 @@ fails because Clang does not understand the target architecture.</source>
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
         <source>Failed to add subproject "%1"
 to project "%2".</source>
-        <translation>サブプロジェクト「％1」を追加できなかった
- 「％2」を投影します。</translation>
+        <translation>サブプロジェクト「%1」を追加できなかった
+ 「%2」を投影します。</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16123,7 +16123,7 @@ to project "%2".</source>
         <source>Failed to add one or more files to project
 "%1" (%2).</source>
         <translation>プロジェクトに1つ以上のファイルを追加できませんでした
- 「％1」（％2）。</translation>
+ 「%1」（%2）。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -16159,7 +16159,7 @@ to project "%2".</source>
     <message>
         <location line="+1" />
         <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>ウィザードはファイルの生成に失敗しました。&lt;br&gt;エラーメッセージは「％1」でした。</translation>
+        <translation>ウィザードはファイルの生成に失敗しました。&lt;br&gt;エラーメッセージは「%1」でした。</translation>
     </message>
     <message>
         <location line="+63" />
@@ -16199,23 +16199,23 @@ to project "%2".</source>
     <message>
         <location line="+58" />
         <source>"%1" does not exist in the file system.</source>
-        <translation>「％1」はファイルシステムには存在しません。</translation>
+        <translation>「%1」はファイルシステムには存在しません。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Failed to open "%1" as a project.</source>
-        <translation>プロジェクトとして「％1」を開くことに失敗しました。</translation>
+        <translation>プロジェクトとして「%1」を開くことに失敗しました。</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
         <source>Failed to open an editor for "%1".</source>
-        <translation>「％1」のエディターを開くことに失敗しました。</translation>
+        <translation>「%1」のエディターを開くことに失敗しました。</translation>
     </message>
     <message>
         <location line="-27" />
         <source>No file to open found in "%1".</source>
-        <translation>「％1」にあるファイルを開くファイルはありません。</translation>
+        <translation>「%1」にあるファイルを開くファイルはありません。</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16225,7 +16225,7 @@ to project "%2".</source>
     <message>
         <location line="+1" />
         <source>Failed to open project in "%1".</source>
-        <translation>「％1」でプロジェクトを開くことに失敗しました。</translation>
+        <translation>「%1」でプロジェクトを開くことに失敗しました。</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16246,30 +16246,30 @@ to project "%2".</source>
     <message>
         <location line="+7" />
         <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>ジェネレーターのTypeID「％1」は不明です。 サポートされているTypeIDは、「％2」です。</translation>
+        <translation>ジェネレーターのTypeID「%1」は不明です。 サポートされているTypeIDは、「%2」です。</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
         <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>JSONウィザード検索パスをチェックするとき、パス「％1」は存在しません。</translation>
+        <translation>JSONウィザード検索パスをチェックするとき、パス「%1」は存在しません。</translation>
     </message>
     <message>
         <location line="-228" />
         <source>Checking "%1" for %2.</source>
-        <translation>％2の「％1」を確認します。</translation>
+        <translation>%2の「%1」を確認します。</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
         <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>*「％1」：％2：％3：％4を解析できませんでした</translation>
+        <translation>*「%1」：%2：%3：%4を解析できませんでした</translation>
     </message>
     <message>
         <location line="-223" />
         <source>* Did not find a JSON object in "%1".
 </source>
-        <translation>*「％1」にJSONオブジェクトが見つかりませんでした。</translation>
+        <translation>*「%1」にJSONオブジェクトが見つかりませんでした。</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16280,7 +16280,7 @@ to project "%2".</source>
     <message>
         <location line="-224" />
         <source>JsonWizard: "%1" not found.</source>
-        <translation>JsonWizard： "％1"が見つかりません。</translation>
+        <translation>JsonWizard： "%1"が見つかりません。</translation>
     </message>
     <message>
         <location line="+96" />
@@ -16295,27 +16295,27 @@ to project "%2".</source>
     <message>
         <location line="+8" />
         <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>PageのTypeID「％1」は不明です。 サポートされているTypeIDは、「％2」です。</translation>
+        <translation>PageのTypeID「%1」は不明です。 サポートされているTypeIDは、「%2」です。</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>TypeID「％1」のページには、「インデックス」が無効になります。</translation>
+        <translation>TypeID「%1」のページには、「インデックス」が無効になります。</translation>
     </message>
     <message>
         <location line="+89" />
         <source>* Did not find a JSON object in "%1".</source>
-        <translation>*「％1」にJSONオブジェクトが見つかりませんでした。</translation>
+        <translation>*「%1」にJSONオブジェクトが見つかりませんでした。</translation>
     </message>
     <message>
         <location line="+12" />
         <source>* Version %1 not supported.</source>
-        <translation>*バージョン％1サポートされていません。</translation>
+        <translation>*バージョン%1サポートされていません。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>* Failed to create: %1</source>
-        <translation>*作成に失敗しました：％1</translation>
+        <translation>*作成に失敗しました：%1</translation>
     </message>
     <message>
         <location line="+227" />
@@ -16345,12 +16345,12 @@ to project "%2".</source>
     <message>
         <location line="+32" />
         <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>「種類の「値」％1」は「クラス」（非推奨）、「ファイル」、または「プロジェクト」ではありません。</translation>
+        <translation>「種類の「値」%1」は「クラス」（非推奨）、「ファイル」、または「プロジェクト」ではありません。</translation>
     </message>
     <message>
         <location line="+4" />
         <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>「種類」は「ファイル」または「クラス」（非推奨）であり、「％1」も設定されています。</translation>
+        <translation>「種類」は「ファイル」または「クラス」（非推奨）であり、「%1」も設定されています。</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16365,12 +16365,12 @@ to project "%2".</source>
     <message>
         <location line="+10" />
         <source>Icon file "%1" not found.</source>
-        <translation>アイコンファイル「％1」が見つかりません。</translation>
+        <translation>アイコンファイル「%1」が見つかりません。</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Image file "%1" not found.</source>
-        <translation>画像ファイル「％1」が見つかりません。</translation>
+        <translation>画像ファイル「%1」が見つかりません。</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16390,12 +16390,12 @@ to project "%2".</source>
     <message>
         <location line="+8" />
         <source>When parsing "generators": %1</source>
-        <translation>「ジェネレーター」を解析する場合：％1</translation>
+        <translation>「ジェネレーター」を解析する場合：%1</translation>
     </message>
     <message>
         <location line="+15" />
         <source>When parsing "pages": %1</source>
-        <translation>「ページ」を解析するとき：％1</translation>
+        <translation>「ページ」を解析するとき：%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
@@ -16410,34 +16410,34 @@ to project "%2".</source>
     <message>
         <location line="+57" />
         <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>「％1」を処理する場合：&lt;br&gt;％2</translation>
+        <translation>「%1」を処理する場合：&lt;br&gt;%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
         <source>%1 [folder]</source>
-        <translation>％1 [フォルダー]</translation>
+        <translation>%1 [フォルダー]</translation>
     </message>
     <message>
         <location line="+3" />
         <source>%1 [symbolic link]</source>
-        <translation>％1 [シンボリックリンク]</translation>
+        <translation>%1 [シンボリックリンク]</translation>
     </message>
     <message>
         <location line="+3" />
         <source>%1 [read only]</source>
-        <translation>％1 [読み取りのみ]</translation>
+        <translation>%1 [読み取りのみ]</translation>
     </message>
     <message>
         <location line="+6" />
         <source>The directory %1 contains files which cannot be overwritten:
 %2.</source>
-        <translation>ディレクトリ％1には、上書きできないファイルが含まれています。
- ％2。</translation>
+        <translation>ディレクトリ%1には、上書きできないファイルが含まれています。
+ %2。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
         <source>When parsing fields of page "%1": %2</source>
-        <translation>ページ「％1」のフィールドを解析する場合：％2</translation>
+        <translation>ページ「%1」のフィールドを解析する場合：%2</translation>
     </message>
     <message>
         <location line="+46" />
@@ -16447,7 +16447,7 @@ to project "%2".</source>
     <message>
         <location line="+48" />
         <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>「キット」ページで「％1」を解析するエラー：％2</translation>
+        <translation>「キット」ページで「%1」を解析するエラー：%2</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16457,7 +16457,7 @@ to project "%2".</source>
     <message>
         <location line="+6" />
         <source>"Kits" page requires a "%1" set.</source>
-        <translation>「キット」ページには「％1」セットが必要です。</translation>
+        <translation>「キット」ページには「%1」セットが必要です。</translation>
     </message>
     <message>
         <location line="+62" />
@@ -16467,7 +16467,7 @@ to project "%2".</source>
     <message>
         <location line="+9" />
         <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>無効な正規表現「％1」で「％2」。 ％3</translation>
+        <translation>無効な正規表現「%1」で「%2」。 %3</translation>
     </message>
     <message>
         <location line="+46" />
@@ -16482,12 +16482,12 @@ to project "%2".</source>
     <message>
         <location line="+11" />
         <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>パターン「％1」は有効な正規表現ではありません。</translation>
+        <translation>パターン「%1」は有効な正規表現ではありません。</translation>
     </message>
     <message>
         <location line="+23" />
         <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>scannergenerator：バイナリパターン "％1"は無効です。</translation>
+        <translation>scannergenerator：バイナリパターン "%1"は無効です。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -16530,7 +16530,7 @@ to project "%2".</source>
         <location line="+669" />
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+319" />
         <source>Clone of %1</source>
-        <translation>％1のクローン</translation>
+        <translation>%1のクローン</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="-1479" />
@@ -16545,17 +16545,17 @@ to project "%2".</source>
     <message>
         <location line="+17" />
         <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>SYSルート「％1」はファイルシステムには存在しません。</translation>
+        <translation>SYSルート「%1」はファイルシステムには存在しません。</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Sys Root "%1" is not a directory.</source>
-        <translation>SYSルート「％1」はディレクトリではありません。</translation>
+        <translation>SYSルート「%1」はディレクトリではありません。</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Sys Root "%1" is empty.</source>
-        <translation>sys root "％1"は空です。</translation>
+        <translation>sys root "%1"は空です。</translation>
     </message>
     <message>
         <location line="+14" />
@@ -16583,7 +16583,7 @@ to project "%2".</source>
     <message>
         <location line="+45" />
         <source>Compilers produce code for different ABIs: %1</source>
-        <translation>コンパイラは、異なるABIのコードを作成します：％1</translation>
+        <translation>コンパイラは、異なるABIのコードを作成します：%1</translation>
     </message>
     <message>
         <location line="+108" />
@@ -16764,12 +16764,12 @@ to project "%2".</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitchooser.cpp" line="+93" />
         <source>Kit of Active Project: %1</source>
-        <translation>アクティブプロジェクトのキット：％1</translation>
+        <translation>アクティブプロジェクトのキット：%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="-52" />
         <source>Desktop (%1)</source>
-        <translation>デスクトップ（％1）</translation>
+        <translation>デスクトップ（%1）</translation>
     </message>
     <message>
         <location line="+131" />
@@ -16801,7 +16801,7 @@ to project "%2".</source>
     <message>
         <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the kit suitable for generating directory names. This value is used for the variable &lt;i&gt;%1&lt;/i&gt;, which for example determines the name of the shadow build directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt;ディレクトリ名の生成に適したキットの名前。 この値は変数&lt;i&gt;％1 &lt;/i&gt;に使用されます。たとえば、Shadow Build Directoryの名前を決定します。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt;ディレクトリ名の生成に適したキットの名前。 この値は変数&lt;i&gt;%1 &lt;/i&gt;に使用されます。たとえば、Shadow Build Directoryの名前を決定します。&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16831,7 +16831,7 @@ to project "%2".</source>
     <message>
         <location line="+60" />
         <source>Default for %1</source>
-        <translation>％1のデフォルト</translation>
+        <translation>%1のデフォルト</translation>
     </message>
     <message>
         <location line="+11" />
@@ -16847,7 +16847,7 @@ to project "%2".</source>
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-427" />
         <source>%1 (default)</source>
         <extracomment>Mark up a kit as the default one.</extracomment>
-        <translation>％1（デフォルト）</translation>
+        <translation>%1（デフォルト）</translation>
     </message>
     <message>
         <location line="+428" />
@@ -16912,7 +16912,7 @@ to project "%2".</source>
     <message>
         <location line="+1" />
         <source>Override %1:</source>
-        <translation>オーバーライド％1：</translation>
+        <translation>オーバーライド%1：</translation>
     </message>
     <message>
         <location line="+46" />
@@ -16927,7 +16927,7 @@ to project "%2".</source>
     <message>
         <location line="+163" />
         <source>&lt;b&gt;Make:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt; make：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt; make：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+3" />
@@ -16937,7 +16937,7 @@ to project "%2".</source>
     <message>
         <location line="+9" />
         <source>&lt;b&gt;Make:&lt;/b&gt; %1 not found in the environment.</source>
-        <translation>&lt;b&gt; make：&lt;/b&gt;％1環境にはありません。</translation>
+        <translation>&lt;b&gt; make：&lt;/b&gt;%1環境にはありません。</translation>
     </message>
     <message>
         <location line="+20" />
@@ -16979,72 +16979,72 @@ to project "%2".</source>
     <message>
         <location line="+783" />
         <source>&lt;b&gt;Project:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;プロジェクト：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;プロジェクト：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;b&gt;Path:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;パス：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;パス：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;b&gt;Kit:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;キット：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;キット：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;b&gt;Build:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;ビルド：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;ビルド：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;b&gt;Deploy:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;展開：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;展開：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;b&gt;Run:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;実行：&lt;/b&gt;％1</translation>
+        <translation>&lt;b&gt;実行：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>%1</source>
-        <translation>％1</translation>
+        <translation>%1</translation>
     </message>
     <message>
         <location line="+12" />
         <source>Project: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
-        <translation>プロジェクト：&lt;b&gt;％1 &lt;/b&gt; &lt;br/&gt;</translation>
+        <translation>プロジェクト：&lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Kit: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
-        <translation>キット：&lt;b&gt;％1 &lt;/b&gt; &lt;br/&gt;</translation>
+        <translation>キット：&lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Build: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
-        <translation>ビルド：&lt;b&gt;％1 &lt;/b&gt; &lt;br/&gt;</translation>
+        <translation>ビルド：&lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Deploy: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
-        <translation>展開：&lt;b&gt;％1 &lt;/b&gt; &lt;br/&gt;</translation>
+        <translation>展開：&lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Run: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
-        <translation>実行：&lt;b&gt;％1 &lt;/b&gt; &lt;br/&gt;</translation>
+        <translation>実行：&lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;style type = text/css&gt; a：link {color：rgb（128、128、255）;} &lt;/style&gt;プロジェクト&lt;b&gt;％1 &lt;/b&gt;はまだ構成されていません&lt;br/&gt; &lt;br/&lt;br/ &gt; &lt;a href = "projectmode"&gt;プロジェクトモード&lt;/a&gt; &lt;br/&gt;で構成できます</translation>
+        <translation>&lt;style type = text/css&gt; a：link {color：rgb（128、128、255）;} &lt;/style&gt;プロジェクト&lt;b&gt;%1 &lt;/b&gt;はまだ構成されていません&lt;br/&gt; &lt;br/&lt;br/ &gt; &lt;a href = "projectmode"&gt;プロジェクトモード&lt;/a&gt; &lt;br/&gt;で構成できます</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
         <source>Falling back to use the cached environment for "%1" after:</source>
-        <translation>「％1」の後にキャッシュされた環境を使用するために戻る：</translation>
+        <translation>「%1」の後にキャッシュされた環境を使用するために戻る：</translation>
     </message>
     <message>
         <location line="+483" />
@@ -17068,8 +17068,8 @@ to project "%2".</source>
         <location line="+796" />
         <source>Failed to retrieve MSVC Environment from "%1":
 %2</source>
-        <translation>「％1」からMSVC環境を取得できなかった：
- ％2</translation>
+        <translation>「%1」からMSVC環境を取得できなかった：
+ %2</translation>
     </message>
     <message>
         <location line="+83" />
@@ -17116,7 +17116,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Could not open file: "%1": %2</source>
-        <translation>ファイルを開くことができませんでした： "％1"：％2</translation>
+        <translation>ファイルを開くことができませんでした： "%1"：%2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17187,7 +17187,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Kit %1 is incompatible with kit %2.</source>
-        <translation>キット％1は、kit％2と互換性がありません。</translation>
+        <translation>キット%1は、kit%2と互換性がありません。</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17227,7 +17227,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+92" />
         <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>プロジェクト「％1」は、ID％3でキット「％2」用に構成されましたが、これはもう存在しません。 新しいキットを作成するか、消失したキットの手順を％4モードで別のキットにコピーできます。</translation>
+        <translation>プロジェクト「%1」は、ID%3でキット「%2」用に構成されましたが、これはもう存在しません。 新しいキットを作成するか、消失したキットの手順を%4モードで別のキットにコピーできます。</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17242,79 +17242,79 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+265" />
         <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>「％1」でQML _*。QMファイルを見つけることができませんでした</translation>
+        <translation>「%1」でQML _*。QMファイルを見つけることができませんでした</translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：名前。</translation>
+        <translation>%1：名前。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：メインファイルへのフルパス。</translation>
+        <translation>%1：メインファイルへのフルパス。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：プロジェクトディレクトリへのフルパス。</translation>
+        <translation>%1：プロジェクトディレクトリへのフルパス。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：アクティブキットの名前。</translation>
+        <translation>%1：アクティブキットの名前。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：アクティブビルド構成の名前。</translation>
+        <translation>%1：アクティブビルド構成の名前。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：アクティブビルド構成のタイプ。</translation>
+        <translation>%1：アクティブビルド構成のタイプ。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：アクティブビルド構成のフルビルドパス。</translation>
+        <translation>%1：アクティブビルド構成のフルビルドパス。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：アクティブビルド環境の変数。</translation>
+        <translation>%1：アクティブビルド環境の変数。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：アクティブな実行構成の名前。</translation>
+        <translation>%1：アクティブな実行構成の名前。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：Active Run構成の実行可能ファイル。</translation>
+        <translation>%1：Active Run構成の実行可能ファイル。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：アクティブな実行構成の環境内の変数。</translation>
+        <translation>%1：アクティブな実行構成の環境内の変数。</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
         <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>％1：Active Run構成の作業ディレクトリ。</translation>
+        <translation>%1：Active Run構成の作業ディレクトリ。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+137" />
@@ -17407,7 +17407,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="-347" />
         <source>Close Pro&amp;ject "%1"</source>
-        <translation>プロジェクト「％1」を閉じる</translation>
+        <translation>プロジェクト「%1」を閉じる</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17418,7 +17418,7 @@ Please close all running instances of your application before starting a build.<
         <location line="+0" />
         <location line="+328" />
         <source>Close All Files in Project "%1"</source>
-        <translation>プロジェクト「％1」のすべてのファイルを閉じる</translation>
+        <translation>プロジェクト「%1」のすべてのファイルを閉じる</translation>
     </message>
     <message>
         <location line="-316" />
@@ -17482,7 +17482,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <source>Build Project "%1"</source>
-        <translation>プロジェクト「％1」をビルドする</translation>
+        <translation>プロジェクト「%1」をビルドする</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17492,7 +17492,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Build Project "%1" for All Configurations</source>
-        <translation>すべての構成にプロジェクト「％1」をビルドします</translation>
+        <translation>すべての構成にプロジェクト「%1」をビルドします</translation>
     </message>
     <message>
         <location line="+20" />
@@ -17502,7 +17502,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>構成のためにビルド＆実行「％1」</translation>
+        <translation>構成のためにビルド＆実行「%1」</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17596,7 +17596,7 @@ Please close all running instances of your application before starting a build.<
         <location line="+9" />
         <location line="+1621" />
         <source>Close Project "%1"</source>
-        <translation>プロジェクト「％1」を閉じる</translation>
+        <translation>プロジェクト「%1」を閉じる</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17606,7 +17606,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <source>Close All Projects Except "%1"</source>
-        <translation>「％1」を除くすべてのプロジェクトを閉じる</translation>
+        <translation>「%1」を除くすべてのプロジェクトを閉じる</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17642,7 +17642,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Set "%1" as Active Project</source>
-        <translation>「％1」をアクティブプロジェクトとして設定します</translation>
+        <translation>「%1」をアクティブプロジェクトとして設定します</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17712,12 +17712,12 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+2" />
         <source>Unload Project %1?</source>
-        <translation>プロジェクト％1をアンロードしますか？</translation>
+        <translation>プロジェクト%1をアンロードしますか？</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The project %1 is currently being built.</source>
-        <translation>プロジェクト％1は現在構築されています。</translation>
+        <translation>プロジェクト%1は現在構築されています。</translation>
     </message>
     <message>
         <location line="+1" />
@@ -17769,7 +17769,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+48" />
         <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>失敗したオープニングプロジェクト「％1」：プロジェクトタイプ「％2」を開くことはできません。</translation>
+        <translation>失敗したオープニングプロジェクト「%1」：プロジェクトタイプ「%2」を開くことはできません。</translation>
     </message>
     <message>
         <location line="+195" />
@@ -17801,17 +17801,17 @@ Do you want to ignore them?</source>
     <message>
         <location line="+23" />
         <source>Open Project in "%1"</source>
-        <translation>「％1」のオープンプロジェクト</translation>
+        <translation>「%1」のオープンプロジェクト</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Open Project "%1"</source>
-        <translation>オープンプロジェクト「％1」</translation>
+        <translation>オープンプロジェクト「%1」</translation>
     </message>
     <message>
         <location line="+19" />
         <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>ファイル「％1」は「％2」に名前が変更されましたが、次のプロジェクトを自動的に変更できませんでした：％3</translation>
+        <translation>ファイル「%1」は「%2」に名前が変更されましたが、次のプロジェクトを自動的に変更できませんでした：%3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17824,12 +17824,12 @@ Do you want to ignore them?</source>
     <message>
         <location line="-1139" />
         <source>The following projects failed to automatically remove the file: %1</source>
-        <translation>次のプロジェクトでは、ファイルを自動的に削除できませんでした：％1</translation>
+        <translation>次のプロジェクトでは、ファイルを自動的に削除できませんでした：%1</translation>
     </message>
     <message>
         <location line="+62" />
         <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>「％1」の構築は無効になっています：％2 &lt;br&gt;</translation>
+        <translation>「%1」の構築は無効になっています：%2 &lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17845,7 +17845,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+3" />
         <source>The project %1 is not configured.</source>
-        <translation>プロジェクト％1は構成されていません。</translation>
+        <translation>プロジェクト%1は構成されていません。</translation>
     </message>
     <message>
         <location line="+3" />
@@ -17871,7 +17871,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+2" />
         <source>Close %1?</source>
-        <translation>閉じる％1？</translation>
+        <translation>閉じる%1？</translation>
     </message>
     <message>
         <location line="+1" />
@@ -17881,7 +17881,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+2" />
         <source>Do you want to cancel the build process and close %1 anyway?</source>
-        <translation>とにかく、ビルドプロセスをキャンセルし、％1を閉じることができますか？</translation>
+        <translation>とにかく、ビルドプロセスをキャンセルし、%1を閉じることができますか？</translation>
     </message>
     <message>
         <location line="+164" />
@@ -17891,17 +17891,17 @@ Do you want to ignore them?</source>
     <message>
         <location line="+3" />
         <source>The project "%1" is not configured.</source>
-        <translation>プロジェクト「％1」は構成されていません。</translation>
+        <translation>プロジェクト「%1」は構成されていません。</translation>
     </message>
     <message>
         <location line="+6" />
         <source>The project "%1" has no active kit.</source>
-        <translation>プロジェクト「％1」にはアクティブキットがありません。</translation>
+        <translation>プロジェクト「%1」にはアクティブキットがありません。</translation>
     </message>
     <message>
         <location line="+7" />
         <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>プロジェクト「％2」のキット「％1」には、アクティブな実行構成がありません。</translation>
+        <translation>プロジェクト「%2」のキット「%1」には、アクティブな実行構成がありません。</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17911,7 +17911,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+6" />
         <source>Cannot run "%1".</source>
-        <translation>「％1」を実行できません。</translation>
+        <translation>「%1」を実行できません。</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17921,7 +17921,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+305" />
         <source>%1 in %2</source>
-        <translation>％2の％2</translation>
+        <translation>%2の%2</translation>
     </message>
     <message>
         <location line="+31" />
@@ -17938,7 +17938,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+41" />
         <source>The following subprojects could not be added to project "%1":</source>
-        <translation>次のサブプロジェクトをプロジェクト「％1」に追加することはできませんでした。</translation>
+        <translation>次のサブプロジェクトをプロジェクト「%1」に追加することはできませんでした。</translation>
     </message>
     <message>
         <location line="+2" />
@@ -17953,7 +17953,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+33" />
         <source>Could not add following files to project %1:</source>
-        <translation>プロジェクト％1に次のファイルを追加できませんでした。</translation>
+        <translation>プロジェクト%1に次のファイルを追加できませんでした。</translation>
     </message>
     <message>
         <location line="+2" />
@@ -17966,7 +17966,7 @@ Do you want to ignore them?</source>
         <source>Failed opening terminal.
 %1</source>
         <translation>失敗したオープニングターミナル。
- ％1</translation>
+ %1</translation>
     </message>
     <message>
         <location line="+34" />
@@ -17978,7 +17978,7 @@ Do you want to ignore them?</source>
         <source>Remove these files as well?
     %1</source>
         <translation>これらのファイルも削除しますか？
- ％1</translation>
+ %1</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17989,13 +17989,13 @@ Do you want to ignore them?</source>
         <location line="+1" />
         <source>File "%1" was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>その間にプロジェクトが変更されたため、ファイル「％1」は削除されませんでした。
+        <translation>その間にプロジェクトが変更されたため、ファイル「%1」は削除されませんでした。
  もう一度やり直してください。</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Could not remove file "%1" from project "%2".</source>
-        <translation>プロジェクト「％2」からファイル「％1」を削除できませんでした。</translation>
+        <translation>プロジェクト「%2」からファイル「%1」を削除できませんでした。</translation>
     </message>
     <message>
         <location line="+36" />
@@ -18021,12 +18021,12 @@ Please try again.</source>
     <message>
         <location line="-9" />
         <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>ファイル「％1」を「％2」にコピーしなかった：％3。</translation>
+        <translation>ファイル「%1」を「%2」にコピーしなかった：%3。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Failed to add new file "%1" to the project.</source>
-        <translation>プロジェクトに新しいファイル「％1」を追加できませんでした。</translation>
+        <translation>プロジェクトに新しいファイル「%1」を追加できませんでした。</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18036,7 +18036,7 @@ Please try again.</source>
     <message>
         <location line="+1" />
         <source>Delete %1 from file system?</source>
-        <translation>ファイルシステムから％1を削除しますか？</translation>
+        <translation>ファイルシステムから%1を削除しますか？</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18046,26 +18046,26 @@ Please try again.</source>
     <message>
         <location line="+1" />
         <source>Could not delete file %1.</source>
-        <translation>ファイル％1を削除できませんでした。</translation>
+        <translation>ファイル%1を削除できませんでした。</translation>
     </message>
     <message>
         <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>プロジェクトファイル％1を自動的に変更することはできません。
+        <translation>プロジェクトファイル%1を自動的に変更することはできません。
 
- とにかく％2から％3に名前を変更しますか？</translation>
+ とにかく%2から%3に名前を変更しますか？</translation>
     </message>
     <message>
         <location line="+17" />
         <source>The file %1 was renamed to %2, but the project file %3 could not be automatically changed.</source>
-        <translation>ファイル％1は％2に名前が変更されましたが、プロジェクトファイル％3は自動的に変更できませんでした。</translation>
+        <translation>ファイル%1は%2に名前が変更されましたが、プロジェクトファイル%3は自動的に変更できませんでした。</translation>
     </message>
     <message>
         <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation>ファイル％1を％2に変更できませんでした。</translation>
+        <translation>ファイル%1を%2に変更できませんでした。</translation>
     </message>
     <message>
         <location line="+5" />
@@ -18102,7 +18102,7 @@ Rename %2 to %3 anyway?</source>
         <source>Switched run configuration to
 %1</source>
         <translation>に切り替えた実行構成
- ％1</translation>
+ %1</translation>
     </message>
     <message>
         <location line="+9" />
@@ -18122,7 +18122,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+5" />
         <source>Automatically managed by %1 or the installer.</source>
-        <translation>％1またはインストーラーによって自動的に管理されます。</translation>
+        <translation>%1またはインストーラーによって自動的に管理されます。</translation>
     </message>
     <message>
         <location line="+6" />
@@ -18339,7 +18339,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+1" />
         <source>No build found in %1 matching project %2.</source>
-        <translation>％1マッチングプロジェクト％2で見つかったビルドはありません。</translation>
+        <translation>%1マッチングプロジェクト%2で見つかったビルドはありません。</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18354,7 +18354,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+83" />
         <source>%1 - temporary</source>
-        <translation>％1-一時的な</translation>
+        <translation>%1-一時的な</translation>
     </message>
     <message>
         <location line="+107" />
@@ -18374,7 +18374,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+1" />
         <source>Could not restore the following project files:&lt;br&gt;&lt;b&gt;%1&lt;/b&gt;</source>
-        <translation>次のプロジェクトファイルを復元できませんでした：&lt;br&gt; &lt;b&gt;％1 &lt;/b&gt;</translation>
+        <translation>次のプロジェクトファイルを復元できませんでした：&lt;br&gt; &lt;b&gt;%1 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18401,7 +18401,7 @@ Rename %2 to %3 anyway?</source>
         <source>Would you like to rename these files as well?
     %1</source>
         <translation>これらのファイルも名前を変更しますか？
- ％1</translation>
+ %1</translation>
     </message>
     <message>
         <location line="+273" />
@@ -18413,7 +18413,7 @@ Rename %2 to %3 anyway?</source>
         <source>You just dragged some files from one project node to another.
 What should %1 do now?</source>
         <translation>あるプロジェクトノードから別のプロジェクトノードにいくつかのファイルをドラッグしました。
- ％1は今何をすべきですか？</translation>
+ %1は今何をすべきですか？</translation>
     </message>
     <message>
         <location line="+9" />
@@ -18558,37 +18558,37 @@ What should %1 do now?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-612" />
         <source>Open Session #%1</source>
-        <translation>オープンセッション＃％1</translation>
+        <translation>オープンセッション＃%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Ctrl+Meta+%1</source>
-        <translation>Ctrl+Meta+％1</translation>
+        <translation>Ctrl+Meta+%1</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Ctrl+Alt+%1</source>
-        <translation>Ctrl+alt+％1</translation>
+        <translation>Ctrl+alt+%1</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Open Recent Project #%1</source>
-        <translation>最近のプロジェクト＃％1を開きます</translation>
+        <translation>最近のプロジェクト＃%1を開きます</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Ctrl+Shift+%1</source>
-        <translation>Ctrl+Shift+％1</translation>
+        <translation>Ctrl+Shift+%1</translation>
     </message>
     <message>
         <location line="+50" />
         <source>Open %1 "%2"</source>
-        <translation>Open％1 "％2"</translation>
+        <translation>Open%1 "%2"</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open %1 "%2" (%3)</source>
-        <translation>Open％1 "％2"（％3）</translation>
+        <translation>Open%1 "%2"（%3）</translation>
     </message>
     <message>
         <location line="+20" />
@@ -18599,12 +18599,12 @@ What should %1 do now?</source>
     <message>
         <location line="+130" />
         <source>%1 (last session)</source>
-        <translation>％1（最終セッション）</translation>
+        <translation>%1（最終セッション）</translation>
     </message>
     <message>
         <location line="+2" />
         <source>%1 (current session)</source>
-        <translation>％1（現在のセッション）</translation>
+        <translation>%1（現在のセッション）</translation>
     </message>
     <message>
         <location line="+70" />
@@ -18672,7 +18672,7 @@ What should %1 do now?</source>
         <location line="+10" />
         <source>%1 (%2)</source>
         <extracomment>vanished target display role: vanished target name (device type name)</extracomment>
-        <translation>％1（％2）</translation>
+        <translation>%1（%2）</translation>
     </message>
     <message>
         <location line="+15" />
@@ -18687,7 +18687,7 @@ What should %1 do now?</source>
     <message>
         <location line="+12" />
         <source>Remove Vanished Target "%1"</source>
-        <translation>消滅したターゲット「％1」を削除する</translation>
+        <translation>消滅したターゲット「%1」を削除する</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18770,12 +18770,12 @@ What should %1 do now?</source>
     <message>
         <location line="+74" />
         <source>A version control system repository could not be created in "%1".</source>
-        <translation>バージョン制御システムリポジトリを「％1」で作成できませんでした。</translation>
+        <translation>バージョン制御システムリポジトリを「%1」で作成できませんでした。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Failed to add "%1" to the version control system.</source>
-        <translation>バージョン制御システムに「％1」を追加できませんでした。</translation>
+        <translation>バージョン制御システムに「%1」を追加できませんでした。</translation>
     </message>
     <message>
         <location line="+94" />
@@ -18833,13 +18833,13 @@ What should %1 do now?</source>
         <location line="+306" />
         <source>Run on %{Device:Name}</source>
         <extracomment>Shown in Run configuration if no executable is given, %1 is device name</extracomment>
-        <translation>％{device：name}を実行します</translation>
+        <translation>%{device：name}を実行します</translation>
     </message>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
         <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
-        <translation>％1（on％{device：name}）</translation>
+        <translation>%1（on%{device：name}）</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-156" />
@@ -18956,12 +18956,12 @@ What should %1 do now?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-14" />
         <source>Unexpected run control state %1 when worker %2 started.</source>
-        <translation>予期しない実行制御状態％1ワーカー％2が開始されたとき。</translation>
+        <translation>予期しない実行制御状態%1ワーカー%2が開始されたとき。</translation>
     </message>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;center&gt; &lt;i&gt;％1 &lt;/i&gt;はまだ実行されています</translation>
+        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;center&gt; &lt;i&gt;%1 &lt;/i&gt;はまだ実行されています</translation>
     </message>
     <message>
         <location line="+2" />
@@ -19001,12 +19001,12 @@ What should %1 do now?</source>
     <message>
         <location line="+54" />
         <source>%1 exited with code %2</source>
-        <translation>％1コード％2で終了しました</translation>
+        <translation>%1コード%2で終了しました</translation>
     </message>
     <message>
         <location line="+2" />
         <source>%1 crashed.</source>
-        <translation>％1クラッシュ。</translation>
+        <translation>%1クラッシュ。</translation>
     </message>
     <message>
         <location line="+2" />
@@ -19016,7 +19016,7 @@ What should %1 do now?</source>
     <message>
         <location line="+47" />
         <source>Starting %1...</source>
-        <translation>開始％1 ...</translation>
+        <translation>開始%1 ...</translation>
     </message>
     <message>
         <location line="+3" />
@@ -19041,7 +19041,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>呼び出されたプログラム「％1」が欠落しているか、プログラムを呼び出すための許可が不十分な場合があります。</translation>
+        <translation>呼び出されたプログラム「%1」が欠落しているか、プログラムを呼び出すための許可が不十分な場合があります。</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19087,7 +19087,7 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Do you really want to delete the run configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>実行構成&lt;b&gt;％1 &lt;/b&gt;を本当に削除したいですか？</translation>
+        <translation>実行構成&lt;b&gt;%1 &lt;/b&gt;を本当に削除したいですか？</translation>
     </message>
     <message>
         <location line="+16" />
@@ -19102,7 +19102,7 @@ What should %1 do now?</source>
     <message>
         <location line="+35" />
         <source>New name for run configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>実行構成の新しい名前&lt;b&gt;％1 &lt;/b&gt;：</translation>
+        <translation>実行構成の新しい名前&lt;b&gt;%1 &lt;/b&gt;：</translation>
     </message>
     <message>
         <location line="+69" />
@@ -19112,12 +19112,12 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>Remove Deploy Configuration %1?</source>
-        <translation>展開構成％1を削除しますか？</translation>
+        <translation>展開構成%1を削除しますか？</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The deploy configuration &lt;b&gt;%1&lt;/b&gt; is currently being built.</source>
-        <translation>展開構成&lt;b&gt;％1 &lt;/b&gt;は現在構築されています。</translation>
+        <translation>展開構成&lt;b&gt;%1 &lt;/b&gt;は現在構築されています。</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19132,12 +19132,12 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Do you really want to delete deploy configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>展開構成&lt;b&gt;％1 &lt;/b&gt;を本当に削除したいですか？</translation>
+        <translation>展開構成&lt;b&gt;%1 &lt;/b&gt;を本当に削除したいですか？</translation>
     </message>
     <message>
         <location line="+22" />
         <source>New name for deploy configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>展開構成の新しい名前&lt;b&gt;％1 &lt;/b&gt;：</translation>
+        <translation>展開構成の新しい名前&lt;b&gt;%1 &lt;/b&gt;：</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+542" />
@@ -19171,14 +19171,14 @@ What should %1 do now?</source>
 %1</source>
         <translation>ファイルリストの生成...
 
- ％1</translation>
+ %1</translation>
     </message>
     <message numerus="yes">
         <location line="+11" />
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
         <translation>
-            <numerusform>ベースディレクトリの外側にある％nファイルを表示しません。
+            <numerusform>ベースディレクトリの外側にある%nファイルを表示しません。
  これらのファイルは保存されています。</numerusform>
         </translation>
     </message>
@@ -19235,12 +19235,12 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Imports existing projects that do not use qmake, CMake, Qbs, Meson, or Autotools.&lt;p&gt;This creates a project file that allows you to use %1 as a code editor and as a launcher for debugging and analyzing tools. If you want to build the project, you might need to edit the generated project file.</source>
-        <translation>Qmake、Cmake、QBS、Meson、またはAutoToolsを使用しない既存のプロジェクトをインポートします。&lt;p&gt;これにより、コードエディターとして％1を使用できるプロジェクトファイルを作成し、ツールのデバッグと分析のためのランチャーとして作成します。 プロジェクトを構築する場合は、生成されたプロジェクトファイルを編集する必要がある場合があります。</translation>
+        <translation>Qmake、Cmake、QBS、Meson、またはAutoToolsを使用しない既存のプロジェクトをインポートします。&lt;p&gt;これにより、コードエディターとして%1を使用できるプロジェクトファイルを作成し、ツールのデバッグと分析のためのランチャーとして作成します。 プロジェクトを構築する場合は、生成されたプロジェクトファイルを編集する必要がある場合があります。</translation>
     </message>
     <message>
         <location line="+172" />
         <source>Unknown build system "%1"</source>
-        <translation>不明なビルドシステム "％1"</translation>
+        <translation>不明なビルドシステム "%1"</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -19301,7 +19301,7 @@ These files are preserved.</source>
     <message>
         <location line="+71" />
         <source>Enable Kit for Project "%1"</source>
-        <translation>プロジェクト「％1」のキットを有効にする</translation>
+        <translation>プロジェクト「%1」のキットを有効にする</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19311,7 +19311,7 @@ These files are preserved.</source>
     <message>
         <location line="+9" />
         <source>Disable Kit for Project "%1"</source>
-        <translation>プロジェクト「％1」のキットを無効にする</translation>
+        <translation>プロジェクト「%1」のキットを無効にする</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19321,12 +19321,12 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Disable Kit "%1" in This Project?</source>
-        <translation>このプロジェクトでキット「％1」を無効にしますか？</translation>
+        <translation>このプロジェクトでキット「%1」を無効にしますか？</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The kit &lt;b&gt;%1&lt;/b&gt; is currently being built.</source>
-        <translation>キット&lt;b&gt;％1 &lt;/b&gt;は現在構築されています。</translation>
+        <translation>キット&lt;b&gt;%1 &lt;/b&gt;は現在構築されています。</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19377,7 +19377,7 @@ These files are preserved.</source>
         <location line="+105" />
         <source>The following kits can be used for project &lt;b&gt;%1&lt;/b&gt;:</source>
         <comment>%1: Project name</comment>
-        <translation>次のキットは、プロジェクト&lt;b&gt;％1 &lt;/b&gt;に使用できます。</translation>
+        <translation>次のキットは、プロジェクト&lt;b&gt;%1 &lt;/b&gt;に使用できます。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+359" />
@@ -19394,7 +19394,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+63" />
         <source>%1 needs a compiler set up to build. Configure a compiler in the kit options.</source>
-        <translation>％1は、構築するためにセットアップされたコンパイラが必要です。 キットオプションでコンパイラを構成します。</translation>
+        <translation>%1は、構築するためにセットアップされたコンパイラが必要です。 キットオプションでコンパイラを構成します。</translation>
     </message>
     <message>
         <location line="+143" />
@@ -19409,7 +19409,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+110" />
         <source>Cannot open task file %1: %2</source>
-        <translation>タスクファイル％1：％2を開くことができません</translation>
+        <translation>タスクファイル%1：%2を開くことができません</translation>
     </message>
     <message>
         <location line="+43" />
@@ -19464,7 +19464,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-152" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
-        <translation>&lt;NoBr&gt; &lt;b&gt; ABI：&lt;/b&gt;％1</translation>
+        <translation>&lt;NoBr&gt; &lt;b&gt; ABI：&lt;/b&gt;%1</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19491,7 +19491,7 @@ These files are preserved.</source>
         <source>If checked, %1 will set up two instances of each x86_64 compiler:
 One for the native x86_64 target, and one for a plain x86 target.
 Enable this if you plan to create 32-bit x86 binaries without using a dedicated cross compiler.</source>
-        <translation>チェックした場合、％1は各x86_64コンパイラの2つのインスタンスをセットアップします。
+        <translation>チェックした場合、%1は各x86_64コンパイラの2つのインスタンスをセットアップします。
  ネイティブx86_64ターゲット用、もう1つはプレーンx86ターゲット用です。
  専用のクロスコンパイラを使用せずに32ビットx86バイナリを作成する予定がある場合は、これを有効にします。</translation>
     </message>
@@ -19519,12 +19519,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="-7" />
         <source>The following compiler was already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;It was not configured again.</source>
-        <translation>次のコンパイラは既に構成されています：&lt;br&gt;＆nbsp;％1 &lt;br&gt;再度構成されていません。</translation>
+        <translation>次のコンパイラは既に構成されています：&lt;br&gt;＆nbsp;%1 &lt;br&gt;再度構成されていません。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>The following compilers were already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;They were not configured again.</source>
-        <translation>次のコンパイラはすでに構成されています：&lt;br&gt;＆nbsp;％1 &lt;br&gt;それらは再び構成されていません。</translation>
+        <translation>次のコンパイラはすでに構成されています：&lt;br&gt;＆nbsp;%1 &lt;br&gt;それらは再び構成されていません。</translation>
     </message>
     <message>
         <location line="+76" />
@@ -19601,12 +19601,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <location line="+3" />
         <source>Update %1</source>
         <extracomment>%1 = package name</extracomment>
-        <translation>更新％1</translation>
+        <translation>更新%1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Install %1</source>
-        <translation>％1をインストールします</translation>
+        <translation>%1をインストールします</translation>
     </message>
     <message>
         <location line="+3" />
@@ -19621,17 +19621,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+24" />
         <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>「％1」のインストールは、タイムアウトによってキャンセルされました。</translation>
+        <translation>「%1」のインストールは、タイムアウトによってキャンセルされました。</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The installation of "%1" was canceled by the user.</source>
-        <translation>「％1」のインストールは、ユーザーによってキャンセルされました。</translation>
+        <translation>「%1」のインストールは、ユーザーによってキャンセルされました。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Installing "%1" failed with exit code %2.</source>
-        <translation>「％1」のインストールは、出口コード％2で失敗しました。</translation>
+        <translation>「%1」のインストールは、出口コード%2で失敗しました。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19709,22 +19709,22 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+3" />
         <source>Python "%1" not found.</source>
-        <translation>Python "％1"が見つかりません。</translation>
+        <translation>Python "%1"が見つかりません。</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Python "%1" is not executable.</source>
-        <translation>Python "％1"は実行可能ではありません。</translation>
+        <translation>Python "%1"は実行可能ではありません。</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>Python "％1"には使用可能なPIPが含まれていません。 PysideやPython Language ServerなどのPythonパッケージインデックスからPythonパッケージをインストールするには、PIPが必要です。 その機能のいずれかを使用するには、そのPythonにPIPがインストールされていることを確認します。</translation>
+        <translation>Python "%1"には使用可能なPIPが含まれていません。 PysideやPython Language ServerなどのPythonパッケージインデックスからPythonパッケージをインストールするには、PIPが必要です。 その機能のいずれかを使用するには、そのPythonにPIPがインストールされていることを確認します。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>Python "％1"には使用可能なvenvが含まれていません。 Venvは、グローバルにインストールされているPythonからプロジェクトの開発環境を分離する推奨方法です。</translation>
+        <translation>Python "%1"には使用可能なvenvが含まれていません。 Venvは、グローバルにインストールされているPythonからプロジェクトの開発環境を分離する推奨方法です。</translation>
     </message>
     <message>
         <location line="+32" />
@@ -19739,12 +19739,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+229" />
         <source>Python Language Server (%1)</source>
-        <translation>Python言語サーバー（％1）</translation>
+        <translation>Python言語サーバー（%1）</translation>
     </message>
     <message>
         <location line="+303" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
-        <translation>％1（％2）のPython言語サーバー（Pyls）をインストールします。 言語サーバーは、Python固有の完了と注釈を提供します。</translation>
+        <translation>%1（%2）のPython言語サーバー（Pyls）をインストールします。 言語サーバーは、Python固有の完了と注釈を提供します。</translation>
     </message>
     <message>
         <location line="+4" />
@@ -19754,7 +19754,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+11" />
         <source>Update Python language server (PyLS) for %1 (%2).</source>
-        <translation>％1（％2）のPython言語サーバー（Pyls）を更新します。</translation>
+        <translation>%1（%2）のPython言語サーバー（Pyls）を更新します。</translation>
     </message>
     <message>
         <location line="+3" />
@@ -19779,7 +19779,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
         <source>No Python interpreter set for kit "%1".</source>
-        <translation>キット「％1」用のPythonインタープリターセットはありません。</translation>
+        <translation>キット「%1」用のPythonインタープリターセットはありません。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19805,7 +19805,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+20" />
         <source>Run %1</source>
-        <translation>実行％1を実行します</translation>
+        <translation>実行%1を実行します</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
@@ -19827,12 +19827,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+2" />
         <source>"%1" does not exist.</source>
-        <translation>「％1」は存在しません。</translation>
+        <translation>「%1」は存在しません。</translation>
     </message>
     <message>
         <location line="+2" />
         <source>"%1" is not an executable file.</source>
-        <translation>「％1」は実行可能ファイルではありません。</translation>
+        <translation>「%1」は実行可能ファイルではありません。</translation>
     </message>
     <message>
         <location line="+16" />
@@ -19886,7 +19886,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+22" />
         <source>For a complete list of available options, consult the [Python LSP Server configuration documentation](%1).</source>
-        <translation>利用可能なオプションの完全なリストについては、[Python LSPサーバー構成ドキュメント]（％1）を参照してください。</translation>
+        <translation>利用可能なオプションの完全なリストについては、[Python LSPサーバー構成ドキュメント]（%1）を参照してください。</translation>
     </message>
     <message>
         <location line="+12" />
@@ -19932,7 +19932,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+11" />
         <source>Found "%1" (%2)</source>
-        <translation>「％1」（％2）が見つかりました</translation>
+        <translation>「%1」（%2）が見つかりました</translation>
     </message>
     <message>
         <location line="+9" />
@@ -20279,7 +20279,7 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+195" />
         <source>Cursors: %2</source>
-        <translation>カーソル：％2</translation>
+        <translation>カーソル：%2</translation>
     </message>
     <message>
         <location line="+8" />
@@ -20289,7 +20289,7 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location line="+7" />
         <source>(Sel: %1)</source>
-        <translation>（SEL：％1）</translation>
+        <translation>（SEL：%1）</translation>
     </message>
     <message>
         <location line="+18" />
@@ -20651,17 +20651,17 @@ Backspace キーが押された時のインデントの動作を指定します�
     <message>
         <location line="+3" />
         <source>%1: The highlight definition for the file determines the position. If no highlight definition is available, the comment is placed after leading whitespaces.</source>
-        <translation>％1：ファイルのハイライト定義が位置を決定します。 ハイライトの定義が利用できない場合、コメントは主要な白人の後に配置されます。</translation>
+        <translation>%1：ファイルのハイライト定義が位置を決定します。 ハイライトの定義が利用できない場合、コメントは主要な白人の後に配置されます。</translation>
     </message>
     <message>
         <location line="+5" />
         <source>%1: The comment is placed at the start of the line.</source>
-        <translation>％1：コメントは行の開始時に配置されます。</translation>
+        <translation>%1：コメントは行の開始時に配置されます。</translation>
     </message>
     <message>
         <location line="+2" />
         <source>%1: The comment is placed after leading whitespaces.</source>
-        <translation>％1：コメントは、主要な空白の後に配置されます。</translation>
+        <translation>%1：コメントは、主要な空白の後に配置されます。</translation>
     </message>
     <message>
         <location line="+22" />
@@ -21188,7 +21188,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+2" />
         <source>%1 [customizable]</source>
-        <translation>％1 [カスタマイズ可能]</translation>
+        <translation>%1 [カスタマイズ可能]</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+89" />
@@ -23261,12 +23261,12 @@ Excluding: %3
     <message>
         <location line="-25" />
         <source>Failed to format: %1.</source>
-        <translation>フォーマットに失敗しました：％1。</translation>
+        <translation>フォーマットに失敗しました：%1。</translation>
     </message>
     <message>
         <location line="+175" />
         <source>Error in text formatting: %1</source>
-        <translation>テキスト形式のエラー：％1</translation>
+        <translation>テキスト形式のエラー：%1</translation>
     </message>
     <message>
         <location line="+16" />
@@ -23647,7 +23647,7 @@ Excluding: %3
     <message>
         <location line="+60" />
         <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>一時ディレクトリ「％1」：％2にアクセス許可を設定できません</translation>
+        <translation>一時ディレクトリ「%1」：%2にアクセス許可を設定できません</translation>
     </message>
     <message>
         <source>The process "%1" could not be started: %2</source>
@@ -24182,37 +24182,37 @@ in "%2".
         <location line="-139" />
         <location line="+409" />
         <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>パス「％1」は存在しますが、書き込み可能なディレクトリではありません。</translation>
+        <translation>パス「%1」は存在しますが、書き込み可能なディレクトリではありません。</translation>
     </message>
     <message>
         <location line="-356" />
         <source>copyFile is not implemented for "%1".</source>
-        <translation>copyFileは「％1」には実装されていません。</translation>
+        <translation>copyFileは「%1」には実装されていません。</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>「％1」からコピーすることはできません。これはディレクトリではありません。</translation>
+        <translation>「%1」からコピーすることはできません。これはディレクトリではありません。</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>「％1」を「％2」にコピーすることはできません：％3</translation>
+        <translation>「%1」を「%2」にコピーすることはできません：%3</translation>
     </message>
     <message>
         <location line="+103" />
         <source>fileContents is not implemented for "%1".</source>
-        <translation>Filecontentsは「％1」には実装されていません。</translation>
+        <translation>Filecontentsは「%1」には実装されていません。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>writeFileContents is not implemented for "%1".</source>
-        <translation>writefilecontentsは「％1」には実装されていません。</translation>
+        <translation>writefilecontentsは「%1」には実装されていません。</translation>
     </message>
     <message>
         <location line="+66" />
         <source>createTempFile is not implemented for "%1".</source>
-        <translation>createTempfileは「％1」には実装されていません。</translation>
+        <translation>createTempfileは「%1」には実装されていません。</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24222,7 +24222,7 @@ in "%2".
     <message>
         <location line="+180" />
         <source>Refusing to remove the standard directory "%1".</source>
-        <translation>標準ディレクトリ「％1」の削除を拒否します。</translation>
+        <translation>標準ディレクトリ「%1」の削除を拒否します。</translation>
     </message>
     <message>
         <location line="+12" />
@@ -24247,7 +24247,7 @@ in "%2".
     <message>
         <location line="+551" />
         <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>一時的なファイル「％1」の作成に失敗しました（トライが多すぎます）。</translation>
+        <translation>一時的なファイル「%1」の作成に失敗しました（トライが多すぎます）。</translation>
     </message>
     <message>
         <source>Failed to copy file "%1" to "%2".</source>
@@ -24287,29 +24287,29 @@ in "%2".
     <message>
         <location line="-333" />
         <source>File "%1" does not exist.</source>
-        <translation>ファイル「％1」は存在しません。</translation>
+        <translation>ファイル「%1」は存在しません。</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Could not open File "%1".</source>
-        <translation>ファイル「％1」を開くことができませんでした。</translation>
+        <translation>ファイル「%1」を開くことができませんでした。</translation>
     </message>
     <message>
         <location line="+24" />
         <source>Could not open file "%1" for writing.</source>
-        <translation>書き込みのためにファイル「％1」を開くことができませんでした。</translation>
+        <translation>書き込みのためにファイル「%1」を開くことができませんでした。</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
         <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
         <translation>
-            <numerusform>「％1」をファイルするように書き込むことができませんでした（記述されたnバイトのof％の2つだけ）。</numerusform>
+            <numerusform>「%1」をファイルするように書き込むことができませんでした（記述されたnバイトのof%の2つだけ）。</numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
         <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>「％1」（％2）で一時ファイルを作成できませんでした。</translation>
+        <translation>「%1」（%2）で一時ファイルを作成できませんでした。</translation>
     </message>
     <message>
         <location line="+138" />
@@ -24587,7 +24587,7 @@ To disable a variable, prefix the line with "#".</source>
         <location line="+15" />
         <location line="+8" />
         <source>Cannot create temporary file %1: %2</source>
-        <translation>一時的なファイル％1：％2を作成できません</translation>
+        <translation>一時的なファイル%1：%2を作成できません</translation>
     </message>
     <message>
         <location line="+40" />
@@ -24831,12 +24831,12 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+79" />
         <source>The program "%1" could not be found.</source>
-        <translation>プログラム「％1」は見つかりませんでした。</translation>
+        <translation>プログラム「%1」は見つかりませんでした。</translation>
     </message>
     <message>
         <location line="+908" />
         <source>Failed to create process interface for "%1".</source>
-        <translation>「％1」のプロセスインターフェイスを作成できませんでした。</translation>
+        <translation>「%1」のプロセスインターフェイスを作成できませんでした。</translation>
     </message>
     <message>
         <location line="+163" />
@@ -24881,7 +24881,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+4" />
         <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>コマンド「％1」は、％2 msの後にキャンセルされました。</translation>
+        <translation>コマンド「%1」は、%2 msの後にキャンセルされました。</translation>
     </message>
     <message>
         <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
@@ -25089,18 +25089,18 @@ Lines starting with "##" will be treated as comments.</source>
         <location line="+34" />
         <source>Failed to install shell script: %1
 %2</source>
-        <translation>シェルスクリプトのインストールに失敗しました：％1
- ％2</translation>
+        <translation>シェルスクリプトのインストールに失敗しました：%1
+ %2</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Timeout while trying to check for %1.</source>
-        <translation>％1をチェックしようとするときのタイムアウト。</translation>
+        <translation>%1をチェックしようとするときのタイムアウト。</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Command "%1" was not found.</source>
-        <translation>コマンド「％1」は見つかりませんでした。</translation>
+        <translation>コマンド「%1」は見つかりませんでした。</translation>
     </message>
     <message>
         <location line="+10" />
@@ -25115,7 +25115,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+11" />
         <source>Failed to install shell script: %1</source>
-        <translation>シェルスクリプトのインストールに失敗しました：％1</translation>
+        <translation>シェルスクリプトのインストールに失敗しました：%1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/externalterminalprocessimpl.cpp" line="+124" />
@@ -25126,7 +25126,7 @@ Lines starting with "##" will be treated as comments.</source>
         <location line="+28" />
         <location line="+45" />
         <source>Failed to start terminal process: "%1".</source>
-        <translation>端末プロセスを開始できませんでした： "％1"。</translation>
+        <translation>端末プロセスを開始できませんでした： "%1"。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
