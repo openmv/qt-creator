@@ -3,7 +3,6 @@ add_qtc_plugin(OpenMV
   PLUGIN_DEPENDS Core TextEditor Python Copilot
   SOURCES
     openmvplugin.cpp openmvplugin.h openmvtr.h
-    openmvpluginprotocol.cpp
     openmvpluginconnect.cpp openmvpluginconnect.h
     openmvmodelzoo.cpp openmvmodelzoo.h
     openmvromfs.cpp openmvromfs.h
@@ -14,6 +13,7 @@ add_qtc_plugin(OpenMV
     bootloaders/openmvpluginarduinodfubootloader.cpp
     bootloaders/openmvpluginbossacbootloader.cpp
     bootloaders/openmvpluginpicotoolbootloader.cpp
+    openmvpluginprotocol.cpp
     openmvpluginparse.cpp
     openmvplugindoc.cpp
     openmveject.cpp openmveject.h
@@ -50,6 +50,7 @@ add_qtc_plugin(OpenMV
     tools/tag36h11.c tools/tag36h11.h
     tools/tag36artoolkit.c tools/tag36artoolkit.h
     tools/thresholdeditor.cpp  tools/thresholdeditor.h
+    tools/usbproblems.cpp tools/usbproblems.h
     tools/videotools.cpp tools/videotools.h
     tools/vela.cpp tools/vela.h
     qcustomplot/qcustomplot.cpp qcustomplot/qcustomplot.h
@@ -83,6 +84,7 @@ target_sources(OpenMV
 target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::GuiPrivate)
 
 if (WIN32)
+    target_link_libraries(OpenMV PRIVATE setupapi cfgmgr32)
     target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::ZlibPrivate)
 else()
     extend_qtc_plugin(OpenMV

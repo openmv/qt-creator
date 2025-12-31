@@ -33,6 +33,7 @@
 #include "openmvpluginconnect.h"
 
 #include "app/app_version.h"
+#include "tools/usbproblems.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -1057,6 +1058,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         }
 
         m_working = true;
+
+        QStringList problems = usbProblemDeviceNames();
+
+        if (!problems.isEmpty())
+        {
+            QMessageBox::warning(Core::ICore::dialogParent(),
+                                 Tr::tr("Connect"),
+                                 Tr::tr("USB problems were detected by your OS with the devices below on this system. "
+                                        "Please fix or remove these devices as they will cause connection issues.\n\n%1").
+                                 arg(problems.join(QStringLiteral("\n"))));
+        }
 
         QStringList stringList;
         QElapsedTimer waitForCameraTimeout;

@@ -144,7 +144,7 @@ QList<QString> getDevices()
     {
         QStringList list, cannot, in = process.stdOut().split(QRegularExpression(QStringLiteral("\n|\r\n|\r")), Qt::SkipEmptyParts);
 
-        for(const QString &string : in)
+        for(const QString &string : qAsConst(in))
         {
             QRegularExpressionMatch match = QRegularExpression(QStringLiteral("Found DFU: \\[([A-Fa-f0-9:]+)\\].+?alt=0.+?serial=\"(.+?)\"")).match(string);
 
@@ -319,7 +319,7 @@ void downloadFirmware(const QString &details,
                                QStringLiteral("--fn") <<
                                QDir::toNativeSeparators(QDir::cleanPath(path));
 
-            command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             dialog->show();
@@ -437,7 +437,7 @@ void downloadFirmware(const QString &details,
                                QStringLiteral("-u") <<
                                QDir::toNativeSeparators(QDir::cleanPath(path));
 
-            command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             dialog->show();
@@ -596,7 +596,7 @@ void downloadFirmware(const QString &details,
     {
         timeout *= (QFileInfo(path).size() / (4 * 1024 * 1024));
 
-        switch (QDateTime::currentDateTime().toSecsSinceEpoch() % 4)
+        switch (QDateTime::currentSecsSinceEpoch() % 4)
         {
             case 0: {
                 dialog->appendColoredText(Tr::tr("This may take a while, coffee break?"), true);
@@ -622,7 +622,7 @@ void downloadFirmware(const QString &details,
         dialog->appendColoredText(extraMessage, true);
     }
 
-    command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+    command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
     dialog->show();
