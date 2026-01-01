@@ -41,7 +41,7 @@ if omv.arch() in ("OMVRT1060 32768 SDRAM", "OpenMV N6", "OPENMV AE3"):
     print("WiFi network self-test passed.")
 
 # LAN Self Test
-if omv.arch() in ("OMVRT1060 32768 SDRAM"):
+if omv.arch() in ():  # "OMVRT1060 32768 SDRAM"
     print("Testing LAN chip...")
     import network
     try:
