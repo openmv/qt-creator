@@ -755,50 +755,52 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
         }
     }
 
-    if (appLoaded || hardMaintenanceRequired) // Erase Mram
-    {
-        QStringList args = QStringList() << QStringLiteral("-e") << QStringLiteral("APP");
+    // THIS IS NOT SAFE - BOARD DIES AFTER ERASE - DEBUG WITH ALIF!
+    //
+    // if (appLoaded || hardMaintenanceRequired) // Erase Mram
+    // {
+    //     QStringList args = QStringList() << QStringLiteral("-e") << QStringLiteral("APP");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(appWriteMramBinary.toString()).arg(args.join(QLatin1Char(' ')));
-        dialog->appendColoredText(command);
+    //     QString command = QString(QStringLiteral("%1 %2")).arg(appWriteMramBinary.toString()).arg(args.join(QLatin1Char(' ')));
+    //     dialog->appendColoredText(command);
 
-        std::chrono::seconds timeout(300); // 5 minutes...
-        process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
-        process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
-        process.setProcessMode(Utils::ProcessMode::Writer);
-        process.setWorkingDirectory(appWriteMramBinary.parentDir());
-        process.setCommand(Utils::CommandLine(appWriteMramBinary, args));
-        process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+    //     std::chrono::seconds timeout(300); // 5 minutes...
+    //     process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+    //     process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+    //     process.setProcessMode(Utils::ProcessMode::Writer);
+    //     process.setWorkingDirectory(appWriteMramBinary.parentDir());
+    //     process.setCommand(Utils::CommandLine(appWriteMramBinary, args));
+    //     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
-        if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
-        {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+    //     if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+    //     {
+    //         QMessageBox box(QMessageBox::Critical, Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+    //             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+    //             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    //         box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+    //         box.setDefaultButton(QMessageBox::Ok);
+    //         box.setEscapeButton(QMessageBox::Cancel);
+    //         box.exec();
 
-            result = false;
-            goto cleanup;
-        }
-        else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
-        {
-            result = false;
-            goto cleanup;
-        }
+    //         result = false;
+    //         goto cleanup;
+    //     }
+    //     else if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+    //     {
+    //         result = false;
+    //         goto cleanup;
+    //     }
 
-        if (QMessageBox::information(Core::ICore::dialogParent(),
-            Tr::tr("Alif Tools"),
-            Tr::tr("Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled, reconnect your OpenMV Cam to your computer, and then press Ok."),
-            QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
-        != QMessageBox::Ok)
-        {
-            result = false;
-            goto cleanup;
-        }
-    }
+    //     if (QMessageBox::information(Core::ICore::dialogParent(),
+    //         Tr::tr("Alif Tools"),
+    //         Tr::tr("Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled, reconnect your OpenMV Cam to your computer, and then press Ok."),
+    //         QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
+    //     != QMessageBox::Ok)
+    //     {
+    //         result = false;
+    //         goto cleanup;
+    //     }
+    // }
 
     if(hardMaintenanceRequired
     || (sesVersionMajor < current_version_major)
@@ -955,6 +957,18 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
                 goto cleanup;
             }
         }
+    }
+
+    if ((appLoaded || hardMaintenanceRequired) &&
+        QMessageBox::information(Core::ICore::dialogParent(),
+                                 Tr::tr("Alif Tools"),
+                                 Tr::tr("Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled. "\
+                                        "Leave your OpenMV Cam unconnected until instructed to reconnect it."),
+                                 QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
+        != QMessageBox::Ok)
+    {
+        result = false;
+        goto cleanup;
     }
 
 cleanup:
