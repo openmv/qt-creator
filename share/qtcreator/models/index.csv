@@ -24,4 +24,4 @@
 "stmicroelectronics/pose_estimation", "(OPENMV_AE3|OPENMV_N6)"
 "stmicroelectronics/semantic_segmentation/deeplab_v3", "(OPENMV_N6)"
 "stmicroelectronics/semantic_segmentation", "(OPENMV_N6)"
-"stmicroelectronics", "(OPENMV_AE3|OPENMV_N6)"
+"stmicroelectronics", "(OPENMV_RT1060|OPENMV4P|ARDUINO_GIGA|ARDUINO_PORTENTA_H7|ARDUINO_NICLA_VISION|OPENMV_AE3|OPENMV_N6)"
