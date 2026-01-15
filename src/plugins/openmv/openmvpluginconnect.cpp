@@ -1536,6 +1536,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             settings->endGroup();
         }
 
+        bool isOldVidPid = false;
         bool isOpenMVDfu = false;
         bool isIMX = false;
         bool isAlif = false;
@@ -1558,6 +1559,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if (arduinoPort.hasVendorIdentifier() && arduinoPort.hasProductIdentifier())
             {
+                isOldVidPid = (arduinoPort.productIdentifier() == OPENMVCAM_VID) && (arduinoPort.productIdentifier() == OPENMVCAM_PID);
                 isArduinoDFU = isBootloaderType(m_firmwareSettings, arduinoPort.vendorIdentifier(), arduinoPort.productIdentifier(), QStringLiteral("arduino_dfu"));
                 isBossac = isBootloaderType(m_firmwareSettings, arduinoPort.vendorIdentifier(), arduinoPort.productIdentifier(), QStringLiteral("bossac"));
                 isPicotool = isBootloaderType(m_firmwareSettings, arduinoPort.vendorIdentifier(), arduinoPort.productIdentifier(), QStringLiteral("picotool"));
@@ -1754,7 +1756,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         // V2 Protocol ////////////////////////////////////////////////////////
 
-        if(!forceBootloaderBricked)
+        if(!forceBootloaderBricked && isOldVidPid)
         {
             QEventLoop loop;
 
@@ -1801,7 +1803,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 if(m_reconnects < RECONNECTS_MAX)
                 {
                     m_reconnects += 1;
-
                     QThread::msleep(10);
                     CLOSE_RECONNECT_END();
                 }
