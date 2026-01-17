@@ -2630,7 +2630,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
                         });
 
-                        QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/openmv-swd-ids-check.php?board=%1&id=%2").arg(board, id)));
+                        // Keep http as https sometimes doesn't work sometimes at the factory.
+                        QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("http://upload.openmv.io/openmv-swd-ids-check.php?board=%1&id=%2").arg(board, id)));
                         QNetworkReply *reply = manager->get(request);
 
                         if(reply)

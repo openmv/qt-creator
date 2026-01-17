@@ -3487,7 +3487,8 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
 
         connect(&manager, &QNetworkAccessManager::finished, &loop, &QEventLoop::quit);
 
-        QNetworkRequest request = QNetworkRequest(QUrl(QString(QStringLiteral("https://upload.openmv.io/openmv-swd-ids-insert.php?board=%1&id=%2&form_key=%3")).arg(board).arg(id).arg(m_formKey)));
+        // Keep http as https sometimes doesn't work sometimes at the factory.
+        QNetworkRequest request = QNetworkRequest(QUrl(QString(QStringLiteral("http://upload.openmv.io/openmv-swd-ids-insert.php?board=%1&id=%2&form_key=%3")).arg(board).arg(id).arg(m_formKey)));
         QNetworkReply *reply = manager.get(request);
 
         if(reply)
