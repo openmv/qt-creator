@@ -247,7 +247,7 @@ void OpenMVPluginSerialPort_private::open(const QString &portName) {
         int override_events = obj.value(QStringLiteral("overrideEvents")).toInt(-1);
         if (override_events >= 0) events = bool(override_events);
 
-        double timeout = 1.0;
+        double timeout = 5.0;
         double override_timeout = obj.value(QStringLiteral("overrideTimeout")).toDouble(-1.0);
         if (override_timeout >= 0.0) timeout = override_timeout;
 

@@ -282,24 +282,26 @@ void OMVCamera::resync()
         throw OMVPTimeoutException(QStringLiteral("Serial not open for resync"));
     }
 
-    if (transport) {
-        delete transport;
-        transport = nullptr;
-    }
-
-    // Use the protocol defaults for the initial connection
-    transport = new OMVTransport(serial,
-                                 /*crc*/ true,
-                                 /*seq*/ true,
-                                 /*max_payload*/ OMVProto::MIN_PAYLOAD_SIZE,
-                                 /*timeout*/ timeoutSec,
-                                 /*event_callback*/ [this](uint8_t ch, uint16_t ev) {
-                                     this->handleEvent(ch, ev);
-                                 },
-                                 /*drop_rate*/ dropRate);
-
     // Perform resync sequence on timeout
     for (int attempt = 0; attempt < maxRetry; ++attempt) {
+        if (transport) {
+            delete transport;
+            transport = nullptr;
+        }
+
+        const double graceTimeoutSec = 1.0;
+        const double attemptTimeoutSec = attempt ? graceTimeoutSec : qMax(timeoutSec, graceTimeoutSec);
+        // Use the protocol defaults for the initial connection
+        transport = new OMVTransport(serial,
+                                     /*crc*/ true,
+                                     /*seq*/ true,
+                                     /*max_payload*/ OMVProto::MIN_PAYLOAD_SIZE,
+                                     /*timeout*/ attemptTimeoutSec,
+                                     /*event_callback*/ [this](uint8_t ch, uint16_t ev) {
+                                         this->handleEvent(ch, ev);
+                                     },
+                                     /*drop_rate*/ dropRate);
+
         try {
             transport->reset_sequence();
             transport->send_packet(OMVPOpcode::PROTO_SYNC, 0, 0);
