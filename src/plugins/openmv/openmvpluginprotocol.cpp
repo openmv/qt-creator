@@ -266,8 +266,10 @@ void OpenMVPlugin::setSpacing()
     infoLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
     infoLabel->setFrameStyle(QFrame::StyledPanel);
     infoLabel->setMinimumWidth(480);
-    infoLabel->setTextFormat(Qt::PlainText);
-    connect(m_iodevice, &OpenMVPluginIO::systemInfoString, infoLabel, &QLabel::setText);
+    infoLabel->setTextFormat(Qt::RichText);
+    connect(m_iodevice, &OpenMVPluginIO::systemInfoString, infoLabel, [infoLabel] (const QString &text) {
+        infoLabel->setText(QString("<pre>%1</pre>").arg(text));
+    });
     m_iodevice->getSystemInfoString();
     llayout->addWidget(infoLabel);
 
@@ -289,8 +291,10 @@ void OpenMVPlugin::setSpacing()
     hostStats->setTextInteractionFlags(Qt::TextSelectableByMouse);
     hostStats->setFrameStyle(QFrame::StyledPanel);
     hostStats->setMinimumWidth(240);
-    hostStats->setTextFormat(Qt::PlainText);
-    connect(m_iodevice, &OpenMVPluginIO::hostStatsString, hostStats, &QLabel::setText);
+    hostStats->setTextFormat(Qt::RichText);
+    connect(m_iodevice, &OpenMVPluginIO::hostStatsString, hostStats, [hostStats] (const QString &text) {
+        hostStats->setText(QString("<pre>%1</pre>").arg(text));
+    });
     QTimer *hostStatsTimer = new QTimer(dialog);
     connect(hostStatsTimer, &QTimer::timeout, m_iodevice, &OpenMVPluginIO::getHostStatsString);
     hostStatsTimer->start(1000);
@@ -310,8 +314,10 @@ void OpenMVPlugin::setSpacing()
     deviceStats->setTextInteractionFlags(Qt::TextSelectableByMouse);
     deviceStats->setFrameStyle(QFrame::StyledPanel);
     deviceStats->setMinimumWidth(240);
-    deviceStats->setTextFormat(Qt::PlainText);
-    connect(m_iodevice, &OpenMVPluginIO::deviceStatsString, deviceStats, &QLabel::setText);
+    deviceStats->setTextFormat(Qt::RichText);
+    connect(m_iodevice, &OpenMVPluginIO::deviceStatsString, deviceStats, [deviceStats] (const QString &text) {
+        deviceStats->setText(QString("<pre>%1</pre>").arg(text));
+    });
     QTimer *deviceStatsTimer = new QTimer(dialog);
     connect(deviceStatsTimer, &QTimer::timeout, m_iodevice, &OpenMVPluginIO::getDeviceStatsString);
     deviceStatsTimer->start(1000);
@@ -345,6 +351,10 @@ void OpenMVPlugin::setSpacing()
     getStateGroup->setChecked(useGetState);
     getStateGroup->setEnabled(useGetStateAvailable);
     rlayout->addWidget(getStateGroup);
+
+#ifdef Q_OS_MAC
+    rlayout->addSpacing(10);
+#endif
 
     QFormLayout *getStateGroupLayout = new QFormLayout(getStateGroup);
 

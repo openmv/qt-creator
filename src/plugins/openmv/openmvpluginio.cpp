@@ -1668,7 +1668,7 @@ void OpenMVPluginIO::getSystemInfoString()
 
         stream << "Hardware capabilities:" << '\n';
         stream << "  USB High-Speed: " << (m_hsOn ? "Yes" : "No");
-        stream << "\tPMU: " << (m_hasPMU ? "Yes" : "No") << '\n';
+        stream << "\t\tPMU: " << (m_hasPMU ? "Yes" : "No") << '\n';
         stream << "Profiler: " << (m_profileEnabled ? "Available" : "Not available") << '\n';
         stream << "Firmware version: " << m_firmwareMajor << "." << m_firmwareMinor << "." << m_firmwarePatch;
         systemInfoString(info);

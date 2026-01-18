@@ -1351,22 +1351,22 @@ QString OMVCamera::systemInfoString()
     };
 
     stream << "  GPU: " << yn("gpu_present");
-    stream << "\t\tNPU: " << yn("npu_present") << '\n';
+    stream << "\t\t\tNPU: " << yn("npu_present") << '\n';
     stream << "  ISP: " << yn("isp_present");
-    stream << "\t\tVideo Encoder: " << yn("venc_present") << '\n';
+    stream << "\t\t\tVideo Encoder: " << yn("venc_present") << '\n';
     stream << "  JPEG Encoder: " << yn("jpeg_present");
-    stream << "\tDRAM: " << yn("dram_present") << '\n';
+    stream << "\t\tDRAM: " << yn("dram_present") << '\n';
     stream << "  CRC Hardware: " << yn("crc_present");
     stream
-        << "\tPMU: "
+        << "\t\tPMU: "
         << yn("pmu_present")
         << " (" << sysinfo.value(QStringLiteral("pmu_eventcnt")).toUInt()
         << " counters)" << '\n';
 
     stream << "  Multi-core: " << yn("multicore_present");
-    stream << "\tWiFi: " << yn("wifi_present") << '\n';
+    stream << "\t\tWiFi: " << yn("wifi_present") << '\n';
     stream << "  Bluetooth: " << yn("bt_present");
-    stream << "\tSD Card: " << yn("sd_present") << '\n';
+    stream << "\t\tSD Card: " << yn("sd_present") << '\n';
     stream << "  Ethernet: " << yn("eth_present");
     stream << "\t\tUSB High-Speed: " << yn("usb_highspeed") << '\n';
 
@@ -1393,8 +1393,8 @@ QString OMVCamera::systemInfoString()
     print_ver("Bootloader", "bootloader_version");
 
     stream
-        << "Protocol capabilities: "
-        << "CRC=" << caps_crc
+        << "Protocol capabilities:\n"
+        << "  CRC=" << caps_crc
         << ", SEQ=" << caps_seq
         << ", ACK=" << caps_ack
         << ", EVENTS=" << caps_events
