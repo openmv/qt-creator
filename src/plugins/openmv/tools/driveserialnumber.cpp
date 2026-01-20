@@ -36,10 +36,10 @@
 
 #include "myqserialportinfo.h"
 
+#if defined(Q_OS_MAC)
 #include <CoreFoundation/CoreFoundation.h>
 #include <DiskArbitration/DiskArbitration.h>
 
-#if defined(Q_OS_MAC)
 #include <IOKit/IOKitLib.h>
 #include <IOKit/IOBSD.h>
 #endif
