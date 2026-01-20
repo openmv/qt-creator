@@ -153,6 +153,12 @@ void OpenMVPlugin::setPortPath(bool silent)
             }
         }
 
+        // If strict matching didn't work. Allow for weak matching if there's only one drive.
+        if(drives.isEmpty() && m_availableDrives.size() == 1)
+        {
+            drives.append(m_availableDrives.at(0).first);
+        }
+
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
         settings->beginGroup(SERIAL_PORT_SETTINGS_GROUP);
 
