@@ -138,7 +138,7 @@ void OpenMVPlugin::setPortPath(bool silent)
     {
         QStringList drives;
 
-        for(const QPair<QString, QString> &pair : m_availableDrives)
+        for(const QPair<QString, QString> &pair : qAsConst(m_availableDrives))
         {
             const QString rootPath = pair.first;
             const QString serialNumber = pair.second;

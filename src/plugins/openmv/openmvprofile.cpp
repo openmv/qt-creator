@@ -887,7 +887,7 @@ OpenMVProfileView::OpenMVProfileView(Utils::QtcSettings *settings, QWidget *pare
         if (section >= OpenMVProfileModel::ColumnCount) {
             QString name = selectEventForColumn(section - OpenMVProfileModel::ColumnCount, header->mapToGlobal(pos));
             if (!name.isEmpty()) {
-                m_model->setHeaderData(section, name);
+                m_model->setHeaderDataValue(section, name);
             }
         }
     });
@@ -1231,7 +1231,7 @@ void OpenMVProfileView::restoreEventCountersAndHeaders()
         }
 
         if (eventId != -1) {
-            m_model->setHeaderData(col + OpenMVProfileModel::ColumnCount, chosen);
+            m_model->setHeaderDataValue(col + OpenMVProfileModel::ColumnCount, chosen);
             emit setEventCounter(col, eventId);
         }
     }

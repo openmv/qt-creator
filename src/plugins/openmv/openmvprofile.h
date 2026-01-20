@@ -74,7 +74,7 @@ public:
     void setRecords(const QList<profile_record_t> &records, bool tree);
     void clear();
     void setSymbolMap(const QHash<qulonglong, QString>  m, const QMap<qulonglong, qulonglong> &s) { symMap_ = m; symMapSizes_ = s; }
-    void setHeaderData(int section, const QString &name) { headerData_[section] = name; }
+    void setHeaderDataValue(int section, const QString &name) { headerData_[section] = name; }
 
 private:
 
