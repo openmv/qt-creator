@@ -99,8 +99,8 @@ if (WIN32)
     spsdk/windows
     stcubeprogrammer/windows)
   set(donwloaded_resource_directories
-    https://upload.openmv.io/stedgeai/stedgeai-win-2.1.0.tar.gz
-    https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-mingw-w64-x86_64-arm-none-eabi.zip)
+    https://upload.openmv.io/stedgeai/stedgeai-win-3.0.0.tar.gz
+    https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi.zip)
 endif()
 
 if (APPLE)
@@ -120,8 +120,8 @@ if (APPLE)
     stcubeprogrammer/mac)
   set(resource_files ${resource_files} pydfu/pydfu.py)
   set(donwloaded_resource_directories
-    https://upload.openmv.io/stedgeai/stedgeai-macarm-2.1.0.tar.gz
-    https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi.tar.xz)
+    https://upload.openmv.io/stedgeai/stedgeai-macarm-3.0.0.tar.gz
+    https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-darwin-arm64-arm-none-eabi.tar.xz)
 endif()
 
 if(UNIX AND NOT APPLE)
@@ -137,7 +137,7 @@ if(UNIX AND NOT APPLE)
         vela/aarch64
         pydfu)
       set(donwloaded_resource_directories
-        https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-aarch64-arm-none-eabi.tar.xz)
+        https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-aarch64-arm-none-eabi.tar.xz)
     else()
       set(resource_directories ${resource_directories}
         alif/linux-x86_64
@@ -154,8 +154,8 @@ if(UNIX AND NOT APPLE)
         stcubeprogrammer/linux64
         pydfu)
       set(donwloaded_resource_directories
-        https://upload.openmv.io/stedgeai/stedgeai-linux64-2.1.0.tar.gz
-        https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi.tar.xz)
+        https://upload.openmv.io/stedgeai/stedgeai-linux64-3.0.0.tar.gz
+        https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz)
     endif()
   else()
     if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm*")
